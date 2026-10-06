@@ -1,0 +1,78 @@
+<h2>Turn a verbal claim into a relationship</h2>
+<p>A model becomes easier to examine when its quantities and relationships are explicit. Suppose a taxi fare consists of a $4 starting charge plus $2 per kilometer. Let x be kilometers traveled and y be dollars charged. The rule is y = 4 + 2x. It makes a testable prediction, specifies units, and exposes an assumption: the per-kilometer charge is constant over the trip.</p>
+<p>A <strong>variable</strong> can take different values. A <strong>parameter</strong> is treated as fixed for a particular exercise. Here x varies; the numbers 4 and 2 are parameters. A parameter can change between scenarios: a new tariff could change the starting charge. Always distinguish a quantity chosen by an actor, a quantity determined within the model, and an input taken as given.</p>
+<p>An equation says two expressions are equal. An identity holds by the definitions involved, such as total spending equaling the sum of spending categories. A behavioral equation describes how an actor responds, such as a proposed relationship between price and quantity demanded. The mathematical equality sign does not make a behavioral relationship an accounting truth.</p>
+
+<h2>Solve equations while preserving equality</h2>
+<p>Perform the same legitimate operation on both sides. To solve 4 + 2x = 18, subtract 4 from both sides to obtain 2x = 14, then divide both sides by 2 to obtain x = 7. Substitute 7 into the original expression: 4 + 2 × 7 = 18. Substitution checks the answer and can detect algebraic mistakes.</p>
+<p>Division requires a nonzero divisor. Multiplying both sides by zero destroys information. Squaring both sides can introduce solutions that did not satisfy the original equation, so check candidates afterward. If an equation represents an economic problem, mathematical solutions must also satisfy its domain and constraints. A negative number of purchased books may solve a rearranged expression but still be infeasible.</p>
+<p>An inequality describes a feasible range. A budget of $20 with books priced at $5 and meals at $2 permits nonnegative quantities x and y satisfying:</p>
+<div class="equation">5x + 2y ≤ 20
+x ≥ 0, y ≥ 0</div>
+<p>Equality identifies bundles that spend the entire budget. Inequality also permits unspent money. Multiplying or dividing an inequality by a negative number reverses its direction: −2x ≤ 6 implies x ≥ −3. The reversal follows from the ordering of negative numbers, not from an arbitrary convention.</p>
+
+<h2>Functions, domains and slopes</h2>
+<p>A function assigns one output to each input in its domain. The notation y = f(x) means that y is the output associated with x. For f(x) = 4 + 2x, f(3) = 10. Domain restrictions describe allowed inputs: distance is nonnegative, and a fare rule might apply only within a service area.</p>
+<p>A linear function has the form y = a + bx. The intercept a is the output when x = 0. The slope b is the change in output per additional unit of input. More generally, the slope between two points is:</p>
+<div class="equation">Slope = (y₂ − y₁) / (x₂ − x₁), for x₂ ≠ x₁</div>
+<p>The slope carries units. A fare slope of 2 means $2 per kilometer. A budget slope describing meals against books means meals forgone per additional book. Changing units changes the numerical slope without changing the underlying relationship. A distance measured in meters rather than kilometers gives a fare slope of $0.002 per meter.</p>
+<p>A positive slope means the modeled quantities move in the same direction; a negative slope means they move in opposite directions. Neither sign establishes causation in observed data. A model specifying a causal mechanism and a graph of an observed association are different objects.</p>
+
+<aside class="worked">
+<h3>Worked example 1 — Read a budget line</h3>
+<p>With a $20 budget, books at $5 each and meals at $2 each, the full-spending boundary is 5x + 2y = 20. Rearrange:</p>
+<div class="equation">2y = 20 − 5x
+y = 10 − 2.5x</div>
+<ol><li>If x = 0, then y = 10: all money goes to meals.</li><li>If y = 0, then x = 4: all money goes to books.</li><li>If x = 2, then y = 5. Spending is 5 × 2 + 2 × 5 = $20.</li><li>The slope is −2.5 meals per book. Another book costs as much as 2.5 meals.</li></ol>
+<figure><svg viewBox="0 0 500 390" role="img" aria-labelledby="budget-title budget-description" style="width:100%;max-width:500px;height:auto"><title id="budget-title">Budget line for books and meals</title><desc id="budget-description">The feasible boundary slopes from zero books and ten meals to four books and zero meals. Two books and five meals lies on the line. Bundles below the line are feasible under the budget.</desc><path d="M80 50V330H440" fill="none" stroke="#172336" stroke-width="2"/><path d="M80 70L400 330" fill="none" stroke="#ad253c" stroke-width="3"/><path d="M240 200V330M80 200H240" fill="none" stroke="#8592a3" stroke-dasharray="5 5"/><circle cx="240" cy="200" r="5" fill="#172336"/><g font-family="system-ui" font-size="16" fill="#172336"><text x="57" y="352">0</text><text x="230" y="352">2</text><text x="393" y="352">4</text><text x="48" y="77">10</text><text x="55" y="206">5</text><text x="205" y="382">Books (x)</text><text x="10" y="30">Meals (y)</text><text x="255" y="194">(2, 5)</text><text x="125" y="280">Feasible bundles</text></g></svg><figcaption class="meta">The line is a constraint, not a prediction of what the consumer chooses.</figcaption></figure>
+<p>The pictured line permits fractional goods as a mathematical representation. If only whole books and meals are available, restrict x and y to nonnegative integers. The line still describes the cost trade-off, but some points are unavailable. A preference model is needed to predict which feasible point the consumer prefers.</p>
+</aside>
+
+<h2>Graphs and inverse relationships</h2>
+<p>A graph labels an input-output relationship on axes. Always inspect the labels, units and ranges before interpreting it. The same relationship can look very different when an axis is truncated or its scale is changed. A vertical line can describe an equation in two variables, but it is not an ordinary function y = f(x) because one input would correspond to many outputs.</p>
+<p>An invertible relationship can be rewritten with the other variable as the output. If quantity demanded is Q = 120 − 2P, solving for price gives P = 60 − Q/2. The slope of quantity with respect to price is −2 units per dollar; the slope of price with respect to quantity is −0.5 dollars per unit. These are different units and correspond to different axis arrangements.</p>
+<p>Economics often places price on the vertical axis and quantity on the horizontal axis even when a demand equation is written as Q(P). State the inverse form when interpreting that graph. Do not assume that the displayed graph's slope is the coefficient in the original equation.</p>
+
+<aside class="worked">
+<h3>Worked example 2 — Solve a simple market model</h3>
+<p>Suppose buyers demand Q<sub>d</sub> = 120 − 2P and sellers supply Q<sub>s</sub> = 20 + 3P, measured in units per day and dollars per unit. The proposed equilibrium has equal quantities demanded and supplied.</p>
+<ol><li>Set 120 − 2P = 20 + 3P.</li><li>Subtract 20 and add 2P on both sides: 100 = 5P.</li><li>Divide by 5: P = $20 per unit.</li><li>Substitute in each equation: Q<sub>d</sub> = 120 − 40 = 80 and Q<sub>s</sub> = 20 + 60 = 80.</li></ol>
+<p>At P = $10, demand is 100 while supply is 50. The model has excess demand of 50 units at that price. Explaining how price actually adjusts requires assumptions about bargaining, contracts, inventories and institutions. Solving an equality does not itself establish the adjustment process or prove that the equations fit a real market.</p>
+</aside>
+
+<h2>Nonlinear relationships</h2>
+<p>Not every relationship has a constant slope. If total cost is C(q) = 10 + q<sup>2</sup>, increasing output from 1 to 2 raises cost from 11 to 14, an additional 3. Increasing output from 2 to 3 raises cost from 14 to 19, an additional 5. The same output increment has a different cost consequence at a different starting point.</p>
+<p>Compounding uses powers. An amount growing at rate r for n periods becomes its initial amount multiplied by (1 + r)<sup>n</sup>. A logarithm reverses exponentiation: if a<sup>x</sup> = b with appropriate positive values and a ≠ 1, then x = log<sub>a</sub>(b). Logarithms will help solve growth and timing problems. They do not permit the real logarithm of a negative quantity.</p>
+<p>Piecewise functions describe rules that change across ranges. A cost can be $5 per unit up to capacity and $8 per extra unit afterward. Write the ranges explicitly. Ignoring a threshold can produce an incorrect optimum even when the arithmetic within each range is correct.</p>
+
+<h2>Check the economic interpretation</h2>
+<p>After solving, verify equality or inequality in the original expressions. Then check the units, domain, constraints and meaning. Ask which parameters were fixed and whether their values are plausible. A mathematical result is conditional on the specification.</p>
+<p>The equation is a language for reasoning, not a substitute for it. A precise model can expose a mistaken claim, but it can also produce a precise answer to the wrong question. Tie each symbol back to a measured or conceptual economic quantity.</p>
+
+<h2>Exercises</h2>
+<ol class="exercises">
+<li>A service charges $6 plus $3 per hour. Write its charge as a function of hours, calculate the charge for four hours, and solve for the hours corresponding to a $27 charge. State the units of its slope.</li>
+<li>A $60 budget purchases goods x at $10 each and y at $5 each. Write the feasible set and full-spending boundary. Find both intercepts and the slope of y against x. Is (4, 5) feasible?</li>
+<li>Solve 7 + 4x = 31 and verify your answer by substitution. Then solve −3x ≤ 12 and explain why the inequality direction changes.</li>
+<li>Demand is Q<sub>d</sub> = 150 − 3P and supply is Q<sub>s</sub> = 30 + 2P. Find equilibrium price and quantity. Calculate excess demand at P = 20.</li>
+<li>Rewrite Q = 80 − 4P with P as a function of Q. Give the slope and units for each representation. State a nonnegative-quantity domain for P.</li>
+<li>For C(q) = 20 + 2q + q<sup>2</sup>, calculate costs at q = 0, 1, 2 and 3 and the additional cost of each unit. Does a constant additional cost describe this rule?</li>
+<li>A $100 amount grows by 10% per period. Write the amount after n periods and calculate it after two periods. Solve 100 × 1.1<sup>n</sup> = 121 by recognizing the power. Explain why n is a period count.</li>
+<li>A graph shows sales and advertising moving together. Explain what its slope could describe and why that relationship alone does not show that more advertising causes the observed sales increase. Propose one alternative explanation.</li>
+</ol>
+<details class="solutions"><summary>Solutions and evaluation criteria</summary>
+<ol>
+<li>Charge f(h) = 6 + 3h dollars. Four hours costs $18. Set 6 + 3h = 27 to obtain h = 7 hours. The slope is $3 per hour.</li>
+<li>The set is 10x + 5y ≤ 60 with x,y ≥ 0. The boundary is y = 12 − 2x, with intercepts (0,12) and (6,0). The slope is −2 y-units per x-unit. Bundle (4,5) costs $65 and is infeasible.</li>
+<li>4x = 24, so x = 6; 7 + 4 × 6 = 31. Dividing the inequality by −3 gives x ≥ −4. Values at or above −4 satisfy the original inequality.</li>
+<li>150 − 3P = 30 + 2P implies 120 = 5P, hence P = 24 and Q = 78. At P = 20, demand is 90 and supply is 70, giving excess demand of 20.</li>
+<li>P = 20 − Q/4. The Q-on-P slope is −4 quantity units per dollar; the P-on-Q slope is −0.25 dollars per quantity unit. For nonnegative prices and quantities, 0 ≤ P ≤ 20.</li>
+<li>Costs are 20, 23, 28 and 35. Additional costs are 3, 5 and 7. The function is nonlinear and its additional cost increases over these quantities.</li>
+<li>The amount is 100 × 1.1<sup>n</sup>. After two periods it is $121, so n = 2 solves the equation. The base is the per-period growth factor; the exponent counts applications of that factor.</li>
+<li>The slope describes an association given the graph's measurement and scales. Firms may advertise more when they expect unusually high demand, or seasonal factors may increase both advertising and sales. A causal claim needs a credible counterfactual and a design that handles confounding. Several explanations are acceptable if their mechanisms are clear.</li>
+</ol></details>
+<h2>Teach-back and retention</h2>
+<p><strong>Teach-back:</strong> explain the budget diagram without using the word “slope” until you have described what one more book requires giving up. Then connect that description to the equation.</p>
+<p><strong>Delayed check:</strong> invent a new two-good budget and market-clearing problem, solve each from scratch, and verify your results in the original equations.</p>
+<h2>Where this leads</h2>
+<p>Calculus studies nonlinear marginal changes and optimization. Linear algebra handles many equations simultaneously. Econometrics estimates relationships from data and examines their interpretation. Throughout these developments, the essential habit is to state the variables, units, domain, assumptions and question before solving.</p>
