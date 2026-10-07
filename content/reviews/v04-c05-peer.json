@@ -1,0 +1,63 @@
+{
+  "chapter": "v04-c05",
+  "reviewer": "regression specialist; bounded read-only peer review delegated by root",
+  "date": "2026-10-07",
+  "result": "No blocking mathematical, exercise-answer, original-fixture code or SVG-coordinate discrepancy found; two low-severity clarity improvements suggested",
+  "scope": [
+    "Read entire chapter, all eight exercise prompts and matched solutions, both worked examples, teach-back and delayed check",
+    "Read Python renderer/report code, JSON input and metadata, README, all four actual SVG files, checker and all proposed source records",
+    "Ran chapter checker and separately recomputed core statistics and reverse-mapped actual SVG coordinates without importing the generator or checker",
+    "Retrieved all four cited official source routes and inspected relevant method/guidance passages"
+  ],
+  "findings": [
+    {
+      "id": "v04-c05-peer-01",
+      "severity": "low",
+      "status": "suggested clarification; not an arithmetic defect",
+      "location": "content/chapters/v04-c05.html:68",
+      "finding": "The main-text covariance paragraph replaces independence with correlation -0.75 and then refers to the normal-critical-value interval, without explicitly restating joint normality. The variance formula is valid without normality, but normally distributed marginals plus covariance alone do not guarantee a normal difference. Exercise 6 already correctly stipulates a joint normal correlation.",
+      "recommended_change": "Say 'If the estimators are jointly normal with correlation -0.75...' before computing the changed SE and interval, preserving the distinction between the general variance identity and the normal interval calculation."
+    },
+    {
+      "id": "v04-c05-peer-02",
+      "severity": "low",
+      "status": "suggested laboratory clarity improvement; original frozen figures are correct",
+      "location": "content/projects/v04-c05-charts.py:126 and :138; content/chapters/v04-c05.html:100",
+      "finding": "The renderer deliberately hard-codes SVG descriptions, axis domains and the revenue base label to the original fixture. The delayed check asks learners to change bin width or base year. Numerical edits alone can therefore leave descriptions and labels describing the original figure; for example, changed histogram counts do not update the hard-coded description. The chapter/README already limit the program to a fixed fixture, so this is a teaching caveat rather than a defect in the delivered artifacts.",
+      "recommended_change": "Add one sentence to the README or delayed-check prompt requiring learners to revise titles, descriptions, base labels and axis limits along with transformed data when experimenting with the fixed renderer."
+    }
+  ],
+  "mathematical_review": {
+    "histogram_and_medians": "Verified sample total 200, mean 25, midpoint median 19, half-sample quartiles 13.5/23.5, IQR 10 and fences -1.5/38.5. The empirical median interval [18,20] and inverse-ECDF median 18 are correct. Counts 4/3/1, shares 1/2,3/8,1/8 and density heights 1/40,3/160,1/320 give total unit area. The largest-income share is 39%; deletion changes the mean to 122/7. Density units, end-point rules, flag-versus-error distinction and unequal-bin warning are correct.",
+    "time_and_scales": "Verified nominal index paths and compounded 72.8%/33.1% gains, versus dollar gains 728/3310. Rebasing exercise produces 250/3 and 144 for A; 1000/11 and 121 for B; 44%/21% and dollar gains 528/2310. Linear/log distinction, zero/negative log boundary, 100 log(1.2), cropped bar length ratio 2 versus actual growth 10%, dual-axis caution and rate denominators are consistent.",
+    "scatter": "Independently obtained means 5/12 and raw centered sums 58/154/86; correlation 0.9099637547345425. Each group has centered sums 2/2/-2 and correlation -1. Within term -4 plus between term 90 reproduces 86. The decomposition follows by centered cross-term cancellation. Nonlinear exercise has y=x squared, mean y=2 and zero centered crossproduct despite deterministic dependence. Causal and selection caveats are appropriate.",
+    "uncertainty": "Under the stated independent normal estimator model, marginal endpoints 92.16/107.84 and 104.16/119.84 overlap. Independent contrast endpoints are 0.912565670994935 and 23.087434329005063. Joint normal correlation -0.75 gives covariance -12, variance 56, SE sqrt(56), and interval -2.6672969561538498 to 26.667296956153848. All exercise numbers match; frequentist versus posterior, pointwise versus simultaneous, individual spread versus mean precision distinctions are appropriate, subject to the low-severity wording clarification above.",
+    "exercise_matching": "All eight prompts have complete responses to every determinate and interpretive component. Exercise 1 mean 5/median 4/quartiles 1 and 8/IQR 7/ECDF 5/8 and density heights are correct. Exercise 2 erroneous share-height area fraction 2/9 is correct. Exercise 7 arithmetic interpolation 221/2 implies 10.5% then 21/221, whereas geometric interpolation gives 110 and 10% each; neither is observed. Exercise 8 supplies concrete repairs and at least two conclusions a chart cannot independently establish. Open responses have meaningful evaluation criteria."
+  },
+  "svg_coordinate_review": {
+    "method": "Parsed delivered XML and independently inverted displayed affine axis scales; no browser rendering or screenshot used.",
+    "histogram": "Rectangles at x 80/210/340 decode to left edges 0/20/40. Widths 130/130/260 decode to 20/20/40. Top y 100/150/275 decode to heights 1/40,3/160,1/320. Geometric pixel-area shares are 1/2,3/8,1/8.",
+    "revenue_index": "Both polylines decode to years 2021..2024 with A values 100/120/144/172.8 and B 100/110/121/133.1, within stated serialized-coordinate rounding. Explicit cropped range 80..180 matches the axes, descriptions and caption.",
+    "scatter": "Circle centers decode to A (1,8),(2,7),(3,6); square centers, including half-width/height offsets, decode to B (7,18),(8,17),(9,16). Shape/color group encoding matches legend and alt description.",
+    "intervals": "Horizontal span endpoints decode exactly to 2304/25,2696/25 and 2604/25,2996/25 USD (92.16,107.84,104.16,119.84); mean marks decode to 100 and 112. Descriptions and caption distinguish marginal levels from the separately calculated difference."
+  },
+  "execution": {
+    "command": "python3 book/scripts/check_v04_c05.py",
+    "result": "passed",
+    "independent_checks": "Separate standard-library calculations reproduced income summaries, pooled correlation, both contrast intervals, missing-month interpolation and reverse coordinate decoding for every plotted series/type.",
+    "code_scope": "The original fixed integer fixture is handled consistently. Input/report paths are relative to the program. Code only writes four prefixed SVG files when explicitly requested. Renderer and README honestly limit arbitrary-data validation; no new general-purpose guarantees inferred."
+  },
+  "sources": {
+    "result": "All four official links retrieved and relevant content inspected",
+    "nist_histogram": "Supports count/share/area normalization; chapter does not overclaim that a visual shape validates a probability law.",
+    "nist_scatter": "Supports paired coordinates, curvature/spread diagnostics and conditioning plots; chapter correctly avoids the source's overly broad causality-implies-observed-association sentence.",
+    "ons_axes": "Supports baseline, position-chart and dual-axis display guidance; chapter distinguishes recommendations from mathematical necessities and does not blindly prohibit useful logarithmic scales.",
+    "ons_uncertainty": "Supports displaying and explaining intervals; chapter appropriately supplies its own formal model instead of adopting the source's informal probability/overlap language."
+  },
+  "limitations": [
+    "This is a specialist agent peer review, not independent human academic certification.",
+    "No browser visual, mobile or print QA was performed or claimed; XML and coordinate accuracy cannot establish legibility or clipping in every rendered context.",
+    "Source inspection is scoped to relevant methods and does not validate all content on the cited pages.",
+    "The source manuscript, code, assets and shared files were not edited; root owns corrections, integration and acceptance."
+  ]
+}

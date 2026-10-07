@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "kind": "original synthetic teaching cases",
+    "created": "2026-10-07",
+    "edition_boundary": "2026-10-06",
+    "observations": "No actual worker, course, firm or market observations. Potential outcomes and structural mechanisms are deliberately supplied for auditing."
+  },
+  "outcome_unit": "thousand USD over twelve months at a fixed price basis",
+  "training_groups": [
+    {"x": 0, "n": 50, "treated": 40, "y0": 20, "y1": 26},
+    {"x": 1, "n": 50, "treated": 10, "y0": 40, "y1": 42}
+  ],
+  "lottery": {
+    "treated_count": 2,
+    "workers": [
+      {"id": "A", "y0": 10, "y1": 12},
+      {"id": "B", "y0": 20, "y1": 24},
+      {"id": "C", "y0": 30, "y1": 36},
+      {"id": "D", "y0": 40, "y1": 48}
+    ]
+  },
+  "mediation": {
+    "u_values": [0, 1, 2, 3, 4],
+    "intercept": 10,
+    "d_to_m": 2,
+    "direct": 3,
+    "m_to_y": 4,
+    "controlled_m": 2
+  },
+  "collider": {"threshold": 2, "intercept": 10, "b_to_y": 4},
+  "equivalent_worlds": [
+    {"name": "A", "y0_intercept": 20, "y0_u": 0, "effect": 10},
+    {"name": "B", "y0_intercept": 20, "y0_u": 10, "effect": 0},
+    {"name": "C", "y0_intercept": 20, "y0_u": 20, "effect": -10}
+  ]
+}

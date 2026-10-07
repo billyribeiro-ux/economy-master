@@ -1,0 +1,26 @@
+[
+  {
+    "id": "v04-c06-random",
+    "title": "Python 3.14 documentation: random — Generate pseudo-random numbers",
+    "url": "https://docs.python.org/3.14/library/random.html",
+    "use": "Local Random instances, random() interval and 53-bit precision, deterministic generator state, and narrowly scoped reproducibility guarantee.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved and inspected generator introduction, Random and seed/state descriptions and Notes on Reproducibility. Supports documented semantics, not a claim that the documentation's currently served point release was available at the edition boundary. No copied documentation examples. Local observed execution is CPython 3.14.6."
+  },
+  {
+    "id": "v04-c06-statistics",
+    "title": "Python 3.14 documentation: statistics — variance and sample summaries",
+    "url": "https://docs.python.org/3.14/library/statistics.html#statistics.variance",
+    "use": "Sample variance with n-1 denominator, distinction from population variance, and minimum two-observation requirement.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official statistics reference and inspected variance/pvariance/stdev sections, including caller responsibility for a supplied mean and iid interpretation. The manuscript independently derives the denominator and applies it to original replication differences; documentation does not certify the simulation design."
+  },
+  {
+    "id": "v04-c06-variance-reduction",
+    "title": "Art B. Owen, Monte Carlo theory, methods and examples: Chapter 8, Variance reduction",
+    "url": "https://artowen.su.domains/mc/Ch-var-basic.pdf",
+    "use": "Further study of antithetic sampling, cost-aware comparison and synchronized common random numbers.",
+    "checked": "2026-10-07",
+    "verification": "Inspected author-hosted PDF sections 8.1, 8.2 and 8.6: equal-cost variance comparison, pairing and correct independent unit, covariance sign, random-draw synchronization and deterministic payoff functions. Formula checks are mathematical review; original inventory table, economic examples, questions, explanations and implementation are not reproduced from Owen. No whole-book verification claimed."
+  }
+]

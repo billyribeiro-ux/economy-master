@@ -1,0 +1,60 @@
+{
+  "chapter": "v04-c07",
+  "title": "Regression as projection",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "state": "review",
+  "review_type": "Specialist author mathematical, computational, source and instructional review; root independently audits and alone accepts in dependency order",
+  "reviewed": {
+    "reasoning": "Derived normal equations componentwise and proved existence/global minimization through orthogonal projection and the exact loss decomposition. Distinguished full-column-rank unique coefficients from always-unique fitted vectors/residuals and off-support prediction nonuniqueness. Defined projection symmetry/idempotence, intercept/simple-regression formulas, centered/uncentered fit identities and constant-outcome R-squared undefinedness. Proved partialling via minimizing over other columns and then the residualized quadratic. Derived units/basis transformations, QR triangular solving, leverage bounds/trace/response and simple-regression new-point sensitivity weights. Separated residual orthogonality, population disturbances, predictive validity and causal identification throughout. Statistical inference remains explicitly outside this finite-sample chapter.",
+    "arithmetic": "Two worked datasets independently checked using centered sums, within-group means, exact coefficient multiplication and a distinct rational Gram-Schmidt projection algorithm. Cost-line coefficients are 7/10,6/5; SSE 9/5 and R-squared 4/5. Labor-group coefficients are 10,2,4; SSE 12 and R-squared 35/41. Cubic interpolation and evaluation contrast verified: MSE 17/100 for line versus 461 for cubic on the two fixed invented evaluation records. Verified projection symmetry/idempotence, leverage and normal equations, 117 coefficient perturbation loss decompositions, 36 design/outcome grid cases and one large nearly dependent exact design.",
+    "solutions": "All eight original exercises have complete solutions, including derivation/global-minimum proof, a fresh numerical regression, unit/centering transforms, redundant-column null-space family and off-support distinction, group shifts and aggregate-slope changes, intercept/R-squared boundaries, exact leverage influence updates, and the overfitting/causal critique. Open evaluation design solution gives explicit timing/support/diagnostic/causal criteria. Independent checker covers all determinate quantities and delayed-check answers; analytic proof and interpretive claims were read separately.",
+    "instruction": "Starts from the descriptive loss and defines dimensions, design columns, coefficient units and residuals before derivation. Uses prior linear algebra/calculus without unexplained new theorems. Two fully worked cases show direct normal-equation and independent partialling calculations. Explains R-squared denominator conventions, near dependencies, the role of an intercept and fixed train/evaluation separation. Laboratory uses only Python standard-library Fraction arithmetic and previously taught elimination, with readable JSON integer inputs, documented bounds, command-line invocation and downloadable readme. Teach-back and 48-hour retention check are included.",
+    "sources": "Retrieved the official MIT projection/least-squares session and reused its previously verified lecture-summary route; inspected author-hosted Boyd/Vandenberghe PDF §12.3 for QR/back substitution and §13.2 for validation; inspected official Fraction construction/arithmetic documentation. Three distinctly prefixed proposed catalogue records include exact URLs, intended use, date and inspection scope. Sources support method/further-study routes; all examples, problems, prose and code are original.",
+    "structure": "Static manuscript fragment uses h2/h3, two worked asides, eight exercise list items and eight matching main solution list items plus a separate delayed solution. All three flat download links target real files. Local checker validates exact data-source/proposed-source agreement and executes the displayed Fraction snippet. Prerequisite c06 and successor c08 reflect the fixed batch contract. No central curriculum, source catalogue, checkpoint, build, hosting or other chapter edits were performed."
+  },
+  "artifacts": [
+    "content/chapters/v04-c07.html",
+    "content/projects/v04-c07-regression.py",
+    "content/projects/v04-c07-cases.json",
+    "content/projects/v04-c07-readme.txt",
+    "scripts/check_v04_c07.py",
+    "content/reviews/v04-c07-sources.json"
+  ],
+  "validation": {
+    "command": "python3 book/scripts/check_v04_c07.py",
+    "result": "passed",
+    "integration_api": "check() returns a dict with chapter/status/checks/limitations; standalone execution prints JSON",
+    "checks": [
+      "Exact coefficient/loss reference tables, independent Gram-Schmidt projections, projection matrix identities and 117 global-loss perturbations",
+      "36 additional polynomial/design grids and one large nearly dependent exact design",
+      "Direct centered-sum, group-residual and unit/basis transformation calculations",
+      "All eight determinate exercise components, delayed check, rank/constant/saturation/intercept boundaries, leverage and extrapolation sensitivity",
+      "Fixed synthetic evaluation outcomes remain excluded from training; input objects and files remain unchanged",
+      "19 invalid/schema/type/rank files rejected under ordinary and -O Python, plus missing-file and invalid-encoding failures",
+      "Success from another current directory, import without output, valid JSON CLI report and one executed instructional snippet",
+      "Worked/exercise/solution counts, flat download existence, source IDs and instructional labels"
+    ]
+  },
+  "corrections": [
+    "An initial README transcription listed the cubic prediction at x=6 as 71; exact execution showed 72, which was independently substituted and corrected before handoff.",
+    "Made the constant-outcome centered R-squared result explicitly undefined rather than adopting a software-specific convention.",
+    "Explained off-support prediction nonuniqueness under redundant columns, separating unique training projections from unique extrapolations.",
+    "Kept exact normal-equation elimination bounded and distinguished it from recommended factorization approaches for floating data; no explicit inverse or new package installation."
+  ],
+  "limitations": [
+    "Author review and root audit are not independent human academic certification or learner testing.",
+    "All examples and evaluation outcomes are synthetic; the package establishes neither real forecast accuracy nor a causal effect.",
+    "Finite computational grids do not prove every possible program modification correct; interpretive and analytic review are separately required.",
+    "The exact-arithmetic program requires bounded integer inputs and a leading intercept and rejects deficient rank. It is not a large-data or floating numerical regression library and does not report inferential intervals.",
+    "Primary sources were inspected only for recorded methods and further-study routes, not in their entirety or as frozen historical documentation.",
+    "Whole-library source/link integration and prerequisite-ordered acceptance remain with root.",
+    "Visual/mobile/print UI QA remains pending following the previously recorded browser-policy rejection; no workaround was attempted."
+  ],
+  "acceptance": "Complete specialist package ready for root's independent review; no central acceptance or publication action performed.",
+  "root_integration": {
+    "status": "accepted",
+    "review_record": "reviews/v04-c05-c08.json",
+    "note": "Root and scoped peer findings resolved; original author handoff history retained."
+  }
+}

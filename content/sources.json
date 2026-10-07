@@ -910,5 +910,109 @@
     "use": "date/datetime fromisoformat, timezone-aware astimezone and fixed-format isoformat output for validated numeric-offset timestamps.",
     "checked": "2026-10-07",
     "verification": "Official documentation retrieved; fromisoformat, astimezone and isoformat descriptions inspected. Loader deliberately validates a narrower seconds-plus-numeric-offset format and preserves four-digit early years."
+  },
+  {
+    "id": "v04-c05-nist-histogram",
+    "title": "NIST/SEMATECH e-Handbook: Histogram",
+    "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda33e.htm",
+    "use": "Count/share/density histogram distinctions and normalization; original unequal-width example",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official handbook section; inspected definitions and normalized-count forms. Shape is not treated as proof of a population distribution."
+  },
+  {
+    "id": "v04-c05-nist-scatter",
+    "title": "NIST/SEMATECH e-Handbook: Scatter Plot",
+    "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/scatterp.htm",
+    "use": "Paired-coordinate diagnostic, nonlinear patterns, changing spread and grouped displays",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official method reference; inspected definition, diagnostic patterns and conditioning plots. Did not adopt its blanket implication from causality to observed association; chapter explicitly permits masking/cancellation."
+  },
+  {
+    "id": "v04-c05-ons-axes",
+    "title": "Office for National Statistics: Axes and gridlines",
+    "url": "https://service-manual.ons.gov.uk/data-visualisation/guidance/axes-and-gridlines",
+    "use": "Magnitude-bar baseline, position plots, comparable scales and dual-axis cautions",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official design guidance; inspected axis start, consistent scales and dual-axis sections. Publication preferences are distinguished from mathematical requirements; chapter independently derives log-scale meaning."
+  },
+  {
+    "id": "v04-c05-ons-uncertainty",
+    "title": "Office for National Statistics: Showing uncertainty in charts",
+    "url": "https://service-manual.ons.gov.uk/data-visualisation/guidance/showing-uncertainty-in-charts",
+    "use": "Interval/band displays and explicit uncertainty annotations",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official visual guidance; inspected display and annotation sections. Did not adopt informal frequentist-probability wording or treat interval overlap as a test; chapter derives a direct difference interval under stated dependence."
+  },
+  {
+    "id": "v04-c06-random",
+    "title": "Python 3.14 documentation: random — Generate pseudo-random numbers",
+    "url": "https://docs.python.org/3.14/library/random.html",
+    "use": "Local Random instances, random() interval and 53-bit precision, deterministic generator state, and narrowly scoped reproducibility guarantee.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved and inspected generator introduction, Random and seed/state descriptions and Notes on Reproducibility. Supports documented semantics, not a claim that the documentation's currently served point release was available at the edition boundary. No copied documentation examples. Local observed execution is CPython 3.14.6."
+  },
+  {
+    "id": "v04-c06-statistics",
+    "title": "Python 3.14 documentation: statistics — variance and sample summaries",
+    "url": "https://docs.python.org/3.14/library/statistics.html#statistics.variance",
+    "use": "Sample variance with n-1 denominator, distinction from population variance, and minimum two-observation requirement.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official statistics reference and inspected variance/pvariance/stdev sections, including caller responsibility for a supplied mean and iid interpretation. The manuscript independently derives the denominator and applies it to original replication differences; documentation does not certify the simulation design."
+  },
+  {
+    "id": "v04-c06-variance-reduction",
+    "title": "Art B. Owen, Monte Carlo theory, methods and examples: Chapter 8, Variance reduction",
+    "url": "https://artowen.su.domains/mc/Ch-var-basic.pdf",
+    "use": "Further study of antithetic sampling, cost-aware comparison and synchronized common random numbers.",
+    "checked": "2026-10-07",
+    "verification": "Inspected author-hosted PDF sections 8.1, 8.2 and 8.6: equal-cost variance comparison, pairing and correct independent unit, covariance sign, random-draw synchronization and deterministic payoff functions. Formula checks are mathematical review; original inventory table, economic examples, questions, explanations and implementation are not reproduced from Owen. No whole-book verification claimed."
+  },
+  {
+    "id": "v04-c07-mit-projection",
+    "title": "MIT OpenCourseWare — Projection Matrices and Least Squares",
+    "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/least-squares-determinants-and-eigenvalues/projection-matrices-and-least-squares/",
+    "use": "Further-study route for least-squares projection geometry and normal equations; chapter derives these results and uses original examples and exercises.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official session page, reusing the earlier verified mit-linear-projection route whose lecture-summary PDF was previously inspected; current session also retrieved MIT's 2010 Lecture 16 description. This establishes the relevant course route, not independent certification of the original manuscript."
+  },
+  {
+    "id": "v04-c07-boyd-vandenberghe",
+    "title": "Stephen Boyd and Lieven Vandenberghe — Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares",
+    "url": "https://web.stanford.edu/~boyd/vmls/vmls.pdf",
+    "use": "Further study of QR and triangular solves (§12.3) and predictive validation (§13.2). Original chapter finite-sample examples, exercise solutions and exact benchmark are independently developed.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved author-hosted PDF and inspected §12.3 at printed pages 231–233 (PDF pages 240–242) on QR and back substitution and §13.2 at printed pages 260–267 (PDF pages 269–276) on generalization, test data and time-ordered validation. No source exercises or prose reproduced."
+  },
+  {
+    "id": "v04-c07-fractions",
+    "title": "Python 3.14 standard library — fractions: Rational numbers",
+    "url": "https://docs.python.org/3.14/library/fractions.html",
+    "use": "Exact rational construction from integer pairs and rational arithmetic in the small offline benchmark.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official versioned documentation and inspected constructor/rational arithmetic behavior and float-conversion caveat. The code deliberately accepts integer inputs; documentation is not claimed to be frozen at the edition boundary."
+  },
+  {
+    "id": "v04-c08-potential-outcomes",
+    "title": "Scott Cunningham — Causal Inference: The Remix, Potential Outcomes and Randomization",
+    "url": "https://mixtape.scunning.com/04-potential_outcomes_and_randomization",
+    "use": "Method reference for potential outcomes, observed-outcome identity, ATE/ATT, selection decomposition, randomized assignment and treatment stability. Original numerical examples and explicit finite-lottery proof are supplied in the chapter.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved the author-hosted open chapter and inspected sections 4.2–4.5, including equations 4.4–4.8 and the selection/randomization/SUTVA discussion. Inspection covers these stable methods, not every claim in the live edition or a frozen publication version. Chapter distinguishes finite-sample realized imbalance from expectation over randomized assignment."
+  },
+  {
+    "id": "v04-c08-adjustment",
+    "title": "Scott Cunningham — Causal Inference: The Remix, Unconfoundedness",
+    "url": "https://mixtape.scunning.com/05-causal_cross_sectional_designs",
+    "use": "Conditional exchangeability, target-specific averaging, positivity/common support and the distinction between adjustment and regression extrapolation.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved the author-hosted open chapter and inspected section 5.3: conditional independence, common support, weighted ATE derivation (equations 5.7 and 5.10–5.17), weaker ATT conditions, plus the later functional-form discussion. The manuscript explicitly separates population positivity from empirical cell counts and labels extrapolation as an additional assumption. No source numerical examples or code reproduced."
+  },
+  {
+    "id": "v04-c08-bad-controls",
+    "title": "Carlos Cinelli, Andrew Forney and Judea Pearl — A Crash Course in Good and Bad Control (original university-hosted methodological note, 14 August 2019)",
+    "url": "https://causality.cs.ucla.edu/blog/index.php/2019/08/",
+    "use": "Primary-author university note on causal control roles, pre-treatment collider bias, mediator adjustment and why timing alone is insufficient. The chapter's structural and enumerative examples are original.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved UCLA's original author note and inspected models 1–3, 7 and 11–16 and their explanatory paragraphs. In particular, model 7 describes a pre-treatment collider; models 11–12 explain blocked mediated channels; models 14–16 show that post-treatment timing alone does not settle validity. The note links a later extended article, but that article is not claimed as inspected."
   }
 ]

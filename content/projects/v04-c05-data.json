@@ -1,0 +1,7 @@
+{
+  "provenance": "Original synthetic teaching data for v04-c05, created 2026-10-07. No observed households, firms or estimated population effects. Reuse and modification for teaching with attribution to the Economics & Finance Mastery Library are permitted.",
+  "income": {"unit": "thousand USD per household per year", "values": [10,12,15,18,20,22,25,78], "bin_edges": [0,20,40,80], "quantiles": "Median averages the two central observations for even n; quartiles are medians of the lower and upper halves, excluding the central observation for odd n."},
+  "revenue": {"unit": "nominal USD per year; common currency, no inflation adjustment", "years": [2021,2022,2023,2024], "A": [1000,1200,1440,1728], "B": [10000,11000,12100,13310]},
+  "scatter": {"x_unit": "training hours", "y_unit": "output units", "grain": "one synthetic worker per row; groups are recorded starting-condition categories, not randomized treatments", "rows": [{"group":"A","x":1,"y":8},{"group":"A","x":2,"y":7},{"group":"A","x":3,"y":6},{"group":"B","x":7,"y":18},{"group":"B","x":8,"y":17},{"group":"B","x":9,"y":16}]},
+  "uncertainty": {"unit":"USD", "model":"Independent normally distributed unbiased mean estimators with known standard errors; illustrative 1.96 critical value, approximately 95% marginal coverage", "critical":1.96, "estimates":[{"label":"A","mean":100,"se":4},{"label":"B","mean":112,"se":4}]}
+}

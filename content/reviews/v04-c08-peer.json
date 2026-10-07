@@ -1,0 +1,113 @@
+{
+  "chapter": "v04-c08",
+  "title": "Identification and confounding",
+  "reviewer": "monte_carlo specialist, bounded independent peer review",
+  "date": "2026-10-07",
+  "scope": "Read-only audit of the chapter, eight exercise solutions, all worked examples, benchmark program, inputs, README and author checker. This review record is the only file written by the peer reviewer.",
+  "status": "passed-no-material-findings",
+  "findings": [],
+  "severity_summary": {
+    "blocking": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "reasoning_review": [
+    {
+      "topic": "Estimands, treatment definition and observed outcome",
+      "result": "Correctly distinguishes unit, timing, course completion versus offer, outcome units, consistency, well-defined versions and no interference. ATE/ATT targets are explicit. The observed outcome identity and ATT plus baseline-selection decomposition hold under the stated existence and group-support conditions; the separate ATT-minus-ATE mismatch is retained."
+    },
+    {
+      "topic": "Identification and standardization proof",
+      "result": "Identification is correctly defined by agreement across models sharing the observable distribution. The finite-discrete proof uses total expectation, conditional exchangeability and consistency in the correct order; positivity supplies the observed means on target support. The stronger joint independence assumption is explicitly distinguished from sufficient mean restrictions. ATT uses treated target weights, with its weaker untreated-counterfactual conditions acknowledged. No claim that fit, balance or more observations verifies exchangeability is made."
+    },
+    {
+      "topic": "Population support versus empirical cells",
+      "result": "The manuscript correctly separates population positivity from finite-sample empty or small cells. Extrapolation and restricted-target alternatives are labeled honestly. The program's standardization reads only x,d,y and returns unavailable when an observed comparison cell is missing; it does not fill that cell from deliberately supplied potential outcomes."
+    },
+    {
+      "topic": "Complete randomized lottery",
+      "result": "With fixed potential outcomes and fixed nonempty treatment/control sizes, each inclusion probability is n1/N, proving unbiasedness by linearity even though assignments across units are dependent. The target is the finite population, not automatically a wider workforce. Chance imbalance, noncompliance, attrition and interference are distinguished from that design result."
+    },
+    {
+      "topic": "Mediator and controlled direct effect",
+      "result": "Structural substitution gives the stated total effects. The controlled direct effect concerns the joint intervention on D and M, while conditioning at a supported m compares different U values. Those contrasts coincide here because U has no additional route to Y. Both examples have full-rank 1,D,M columns and explicitly supported comparisons. The text correctly avoids a general claim that mediator regression identifies a direct effect."
+    },
+    {
+      "topic": "Pre-treatment collider",
+      "result": "The path D<-A->C<-B->Y and the eight-state construction correctly show induced selection despite pre-treatment timing and positivity in both C strata. Conditioning changes the distribution of B and therefore of both potential outcomes across D; conditional exchangeability fails. All individual treatment effects remain zero, including within the restricted C=1 target."
+    },
+    {
+      "topic": "Observational equivalence",
+      "result": "All three complete models yield the same two-point observed distribution while their ATEs are +10, 0 and -10. Unconditional exchangeability would rule out the latter two; observed fit cannot justify that assumption. Measuring U would reveal deterministic assignment and therefore no overlap. The mandate claim also exceeds the stated no-interference setting."
+    }
+  ],
+  "independent_arithmetic": {
+    "worked_example_1": {
+      "treated_mean": "146/5",
+      "untreated_mean": "36",
+      "observed_gap": "-34/5",
+      "ATE": "4",
+      "ATT": "26/5",
+      "selection_term": "-12",
+      "method": "Independently expanded 100-person potential-outcome vectors, selected indices, and recomputed every group mean and decomposition with exact fractions."
+    },
+    "worked_example_2_and_exercise_5": {
+      "six_differences": ["-17", "-6", "5", "5", "16", "27"],
+      "assignment_mean": "5",
+      "assignment_variance": "605/3",
+      "method": "Independent pair enumeration plus a distinct finite-population variance cross-check S1^2/2 + S0^2/2 - Stau^2/4 = 240/2 + (500/3)/2 - (20/3)/4 = 605/3. The exact assignment distribution correctly uses denominator six."
+    },
+    "mediator_worked_case": {
+      "untreated_mean": "18",
+      "treated_mean": "29",
+      "total_effect": "11",
+      "controlled_direct_effect": "3",
+      "outcomes_at_m_2": [18, 21]
+    },
+    "worked_example_3": {
+      "cells_order_C0D0_C0D1_C1D0_C1D1": [
+        {"count": 3, "mean": "34/3"},
+        {"count": 1, "mean": "10"},
+        {"count": 1, "mean": "14"},
+        {"count": 3, "mean": "38/3"}
+      ],
+      "raw_gap_and_true_ATE": "0",
+      "contrast_in_each_stratum": "-4/3",
+      "standardized_contrast": "-4/3",
+      "method": "Enumerated all independent A,B,E triples directly and calculated cell means and conditional B probabilities."
+    }
+  },
+  "eight_exercise_audit": [
+    {"number": 1, "result": "Complete: offer estimand, eligible-worker unit, timing/units, receipt selection, missing future counterfactual and interference mechanism are all correctly handled."},
+    {"number": 2, "result": "Exact means 162/5 and 32, gap 2/5, ATT 22/5, ATE 4 and selection -4; identity verified independently."},
+    {"number": 3, "result": "ATE 5 and ATT 6; standardized levels 25.5/20.5 and 23/17 correctly use distinct target weights. Given target shares are compatible with positive treatment probabilities, for example total treatment prevalence 1/4."},
+    {"number": 4, "result": "Proof correctly identifies missing untreated conditional mean at X=1 with nonzero target weight 1/3. The prediction adds an assumption; the stated restricted-target, new-design, structural-restriction and bounds alternatives are honest."},
+    {"number": 5, "result": "C,D treated gives 27; six-value mean 5 and variance 605/3 verified independently. Population assignment variance versus estimated sample variance is explained correctly."},
+    {"number": 6, "result": "Total effect 8, group means 9 and 17, direct effect 2, fixed-M=3 outcomes 11 and 13. Both treatment states have observed support at M=3; the exact regression isolates 2 rather than total 8."},
+    {"number": 7, "result": "Selected triples (0,1,1), (1,0,1), (1,1,0), (1,1,1); conditional contrast -4/3 and true restricted ATE zero. The solution correctly names exchangeability, not positivity, as the failed condition."},
+    {"number": 8, "result": "Observed pairs (0,20),(1,30) verified for all three models; effects +10/0/-10. Memo criteria correctly distinguish descriptive fit, identification assumptions and scale/interference limits."}
+  ],
+  "code_and_contract_review": [
+    "Read the complete program and JSON contract. Exact fractions are retained in all means, differences and assignment moments; the output serializer represents Fraction objects as exact strings.",
+    "Checked declared population, support, lottery and numeric bounds, integer/bool distinction, duplicate JSON field rejection, finite-value rejection, exact unit contract, explicit error exits and script-relative default input.",
+    "Verified standardization with dictionary rows that raise on any attempted access to fields other than x,d,y; both ATE and ATT standardizations passed. No hidden potential outcomes were read.",
+    "The supplied checker passed: 104 training designs, 21 lottery designs, all worked/exercise arithmetic, mediator support and collider boundaries, broken observational-equivalence detection, 14 invalid contracts and 17 invalid-file cases in ordinary and optimized execution.",
+    "The supplied checker also passed quiet import, input nonmutation, unrelated-working-directory CLI, three worked asides/eight exercises/eight solutions, source ID inventory and flat download links.",
+    "README baseline values, units, supported modifications and limitations agree with manuscript, JSON and program behavior. No unsupported random or Monte Carlo inference is claimed for exact enumeration."
+  ],
+  "reviewed_sha256": {
+    "content/chapters/v04-c08.html": "39e35128190f0a262704cef4c3f0a62c58afdcd872b62c9d9ed4d5f2568744d3",
+    "content/projects/v04-c08-identification.py": "b3212ffe0aa561aee796a10693b9db9a9d41917bedeab2fd36c35a611e14243a",
+    "content/projects/v04-c08-cases.json": "501d52e87fb46169512005a90bfe17c07824412806a87926754242c7b308b11b",
+    "content/projects/v04-c08-README.txt": "43eb925a156f77c8caeae7450228278b8ec215618891775f3953a63e370ae40c",
+    "scripts/check_v04_c08.py": "aa428a2384e8ea2e77905774e0b40c3ba8f62d7519a874f9a7224351111ae160"
+  },
+  "limitations": [
+    "This is an independent agent peer review, not independent human academic certification.",
+    "The primary-source catalogue and author inspection records were read for scope and citation alignment; external pages were not re-retrieved during this bounded review.",
+    "Synthetic computations verify implications of stipulated mechanisms, not real-world exchangeability, external validity or absence of interference.",
+    "No visual, mobile or print UI review was performed or claimed.",
+    "Root retains final integration, prerequisite-order acceptance and publishing responsibility."
+  ],
+  "handoff": "No material correction requested. Ready for root's final review and acceptance after dependencies are satisfied. No manuscript, project, checker or shared file was modified."
+}

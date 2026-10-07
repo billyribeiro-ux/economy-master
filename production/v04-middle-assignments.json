@@ -1,0 +1,149 @@
+{
+  "batch": "v04-middle",
+  "authorization": "User requested parallel specialists; persisted production contract authorizes bounded specialist work.",
+  "state": "verified-awaiting-publication",
+  "integration_owner": "root",
+  "acceptance_order": [
+    "v04-c05",
+    "v04-c06",
+    "v04-c07",
+    "v04-c08"
+  ],
+  "shared_files_owner": "root",
+  "fixed_contract": {
+    "format": "Original HTML manuscript fragments; standard-library Python; offline operation.",
+    "minimum": "2 fully worked examples and 8 original exercises with complete solutions; assumptions, units, limitations, teach-back and delayed check.",
+    "review": "Each specialist reviews its manuscript and supplies a executable numerical/behavior checker; root independently audits and alone accepts, builds and publishes. Drafting may overlap prerequisite work; acceptance may not.",
+    "sources": "Primary sources inspected; exact URLs and inspection scope recorded. Source suggestions are separate files until integration.",
+    "prohibitions": [
+      "No editing another assignment or central curriculum/source/checkpoint/build/verify/hosting files",
+      "No commits, pushes, deployment or further agents",
+      "No framework, new installation, paid services, or claims of error-free/world-best authorship"
+    ]
+  },
+  "assignments": [
+    {
+      "chapter": "v04-c05",
+      "owner": "root",
+      "scope": [
+        "Distributions",
+        "time series",
+        "scatterplots",
+        "scales",
+        "uncertainty",
+        "misleading comparisons"
+      ],
+      "outcome": "Choose and interpret figures that expose rather than conceal evidence.",
+      "state": "accepted-by-root",
+      "owned_paths": [
+        "content/chapters/v04-c05.html",
+        "content/projects/v04-c05-*",
+        "scripts/check_v04_c05.py",
+        "content/reviews/v04-c05-author.json",
+        "content/reviews/v04-c05-sources.json"
+      ],
+      "review_record": "content/reviews/v04-c05-c08.json"
+    },
+    {
+      "chapter": "v04-c06",
+      "owner": "monte_carlo",
+      "scope": [
+        "Random seeds",
+        "simulation design",
+        "sampling uncertainty",
+        "variance reduction",
+        "reproducibility"
+      ],
+      "outcome": "Estimate quantities by simulation and assess Monte Carlo error.",
+      "state": "accepted-by-root",
+      "owned_paths": [
+        "content/chapters/v04-c06.html",
+        "content/projects/v04-c06-*",
+        "scripts/check_v04_c06.py",
+        "content/reviews/v04-c06-author.json",
+        "content/reviews/v04-c06-sources.json"
+      ],
+      "review_record": "content/reviews/v04-c05-c08.json"
+    },
+    {
+      "chapter": "v04-c07",
+      "owner": "regression",
+      "scope": [
+        "Projection",
+        "normal equations",
+        "coefficients",
+        "residuals",
+        "fit",
+        "extrapolation"
+      ],
+      "outcome": "Derive ordinary least squares and interpret fitted values and residuals.",
+      "state": "accepted-by-root",
+      "owned_paths": [
+        "content/chapters/v04-c07.html",
+        "content/projects/v04-c07-*",
+        "scripts/check_v04_c07.py",
+        "content/reviews/v04-c07-author.json",
+        "content/reviews/v04-c07-sources.json"
+      ],
+      "review_record": "content/reviews/v04-c05-c08.json"
+    },
+    {
+      "chapter": "v04-c08",
+      "owner": "causal_identification",
+      "scope": [
+        "Potential outcomes introduction",
+        "selection",
+        "confounding",
+        "controls",
+        "bad controls",
+        "identification"
+      ],
+      "outcome": "Distinguish descriptive associations from identified causal effects.",
+      "state": "accepted-by-root",
+      "owned_paths": [
+        "content/chapters/v04-c08.html",
+        "content/projects/v04-c08-*",
+        "scripts/check_v04_c08.py",
+        "content/reviews/v04-c08-author.json",
+        "content/reviews/v04-c08-sources.json"
+      ],
+      "review_record": "content/reviews/v04-c05-c08.json"
+    }
+  ],
+  "peer_reviews": [
+    {
+      "chapter": "v04-c05",
+      "reviewer": "regression",
+      "owned_output": "content/reviews/v04-c05-peer.json",
+      "scope": "Read-only independent manuscript/math/exercise/laboratory review; root resolves findings.",
+      "state": "completed",
+      "root_disposition": "All suggestions resolved; no open material finding."
+    },
+    {
+      "chapter": "v04-c06",
+      "reviewer": "causal_identification",
+      "owned_output": "content/reviews/v04-c06-peer.json",
+      "scope": "Read-only independent manuscript/math/exercise/laboratory review; root resolves findings.",
+      "state": "completed",
+      "root_disposition": "All suggestions resolved; no open material finding."
+    },
+    {
+      "chapter": "v04-c08",
+      "reviewer": "monte_carlo",
+      "owned_output": "content/reviews/v04-c08-peer.json",
+      "scope": "Read-only independent manuscript/math/exercise/laboratory review; root resolves findings.",
+      "state": "completed",
+      "root_disposition": "All suggestions resolved; no open material finding."
+    }
+  ],
+  "verification": {
+    "accepted_chapters": 44,
+    "chapter_words": 156353,
+    "solved_chapter_exercises": 352,
+    "html_pages": 52,
+    "status": "passed",
+    "offline_files": 92,
+    "offline_bytes": 1431741,
+    "visual_ui": "pending"
+  }
+}

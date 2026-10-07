@@ -1,0 +1,61 @@
+{
+  "chapter": "v04-c08",
+  "title": "Identification and confounding",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "state": "review",
+  "review_type": "Specialist author conceptual, derivation, arithmetic, source and executable review; root independently reviews and alone accepts in dependency order",
+  "reviewed": {
+    "reasoning": "Defined unit, target population, binary intervention, outcome period and earnings units before potential outcomes; distinguished offer from receipt and before-after measurements from counterfactuals. Explicitly stated well-defined intervention, consistency and no-interference scope. Derived observed-outcome identity, ATT plus baseline-selection identity and the separate ATT-versus-ATE target mismatch. Defined identification by agreement across observationally compatible models, distinguishing estimation and inference. Proved finite discrete standardization with total expectation, exchangeability, consistency and the positivity role stated separately. Conditional mean exchangeability is noted as sufficient for means; stronger joint independence is the teaching assumption. ATT weights and weaker requirements are described without claiming identical target support. Separated finite-sample empty cells from population positivity, and observational diagnostics from proof of exchangeability. Randomized complete assignment proof uses each unit's assignment probability and linearity, not false independence of the assignments.",
+    "arithmetic": "Training population: treated mean 29.2, control mean 36, raw gap -6.8, ATT 5.2, ATE 4, baseline selection -12. Lottery: all six assignments explicitly enumerated, mean 5 and exact variance 605/3. Mediation structural substitution produces total 11 and controlled direct 3, with full-rank exact regression and joint observed support at M=2. Pre-treatment collider example enumerates eight states, gives raw 0 / true 0 / adjusted −4/3, and has both treatment states in both C strata; the failure is conditional exchangeability, not positivity. Three complete models generate identical observed pairs but effects 10 / 0 / −10. Independent checks use grouped Fraction identities, bitmask rather than combination enumeration, and conditional probability arithmetic.",
+    "solutions": "Reviewed all eight exact prompts against their ordered solutions. Exercised changed treatment selection, heterogeneous-effect target weights, missing-counterfactual support diagnosis, all lottery outcomes and exact assignment variance, a distinct mediator model and its supported fixed-m comparison, collider state listing and observational equivalence. Open design/memo questions include acceptable alternatives and evaluation criteria. Distinguishes the effect on an actually selected target from population interventions and notes interference at policy scale.",
+    "instruction": "Explains selection before introducing exchangeability; teaches total expectation standardization before using it as a causal estimator. Provides three fully worked cases and a separate structural mediator calculation, complete exercises/solutions, assumptions, boundary cases, teach-back and delayed retention check. Controls are conditioning operations rather than interventions; causal roles depend on the question and full structure. No universal pre-treatment-only or adjust-everything rule is asserted. Direct-effect interpretation is tied to a joint intervention and additional assumptions; ordinary mediator regression is not given a general causal guarantee. Regression fit/orthogonality cannot establish causality. Scope remains an undergraduate identification introduction, with richer methods routed to planned Volume 12.",
+    "sources": "Inspected Cunningham's author-hosted open Potential Outcomes and Randomization sections 4.2–4.5, Unconfoundedness section 5.3 and relevant later functional-form discussion, and Cinelli/Forney/Pearl's original UCLA-hosted August 2019 methodological note (models 1–3, 7, 11–16). Source records specify exact live URLs and inspection limits. An initial attempt to retrieve the What If PDF failed; it is not cited or claimed as inspected. All examples, exercises, tables, structural numerical mechanisms and benchmark code are original.",
+    "structure": "Plain static HTML fragment with h2/h3 headings, three worked asides, eight top-level exercise items and matching complete solution items, source IDs, capability/prerequisite and retention prompts. Download hrefs are flat filenames matching the build convention. Predecessor points to v04-c07.html; the unwritten successor and Volume 12 route through clearly labeled curriculum links. No external runtime requests, installation, framework, generated imagery or UI workaround. Root retains central integration/build/acceptance responsibility."
+  },
+  "artifacts": [
+    "content/chapters/v04-c08.html",
+    "content/projects/v04-c08-cases.json",
+    "content/projects/v04-c08-identification.py",
+    "content/projects/v04-c08-README.txt",
+    "scripts/check_v04_c08.py",
+    "content/reviews/v04-c08-sources.json"
+  ],
+  "validation": {
+    "command": "python3 book/scripts/check_v04_c08.py",
+    "result": "passed",
+    "integration_api": "check() returns status/checks/limitations dictionary; standalone execution prints JSON",
+    "checks": [
+      "104 grouped-versus-expanded training cases, including negative outcomes, heterogeneous effects, target-specific support and empty target boundaries",
+      "21 independent bitmask-versus-combination finite lotteries with exact expectation and variance",
+      "Worked-example tables and exercise arithmetic, mediator total/direct effects, full-rank exact fit and joint intervention support",
+      "Collider conditional probability calculation, all eight states, zero-effect boundary and missing-support variants",
+      "Three observationally equivalent causal worlds and deliberate broken-equivalence detection",
+      "14 invalid schema/type/unit cases; 17 malformed/invalid file cases rejected under both normal and -O execution",
+      "Quiet import, default CLI from unrelated current directory, missing-file diagnostic and input nonmutation",
+      "Static chapter structure, sources, download existence and retention/predecessor/successor prompts"
+    ]
+  },
+  "corrections": [
+    "Designed the pre-treatment collider example with observed overlap in every C stratum to isolate the exchangeability failure.",
+    "Separated synthetic truth computations from observed-only standardization and made missing observed cells yield an unavailable result rather than hidden-outcome imputation.",
+    "Distinguished controlled direct effects defined by structural joint interventions from estimable conditional observed comparisons when support is absent.",
+    "Explicitly justified full rank for the exact mediator regression, and distinguished finite-assignment variance from an estimated sample variance.",
+    "Limited source review claims to actually inspected sections; failed PDF retrieval did not become a verified citation."
+  ],
+  "limitations": [
+    "Author review is not independent human expert certification or learner testing; root's integration and dependency-order review is pending.",
+    "Live author-hosted source pages were inspected for specified stable methods, not frozen or verified in their entirety. The original UCLA note is cited as a methodological note, not mislabeled as its later journal article.",
+    "All data and structural mechanisms are synthetic assumptions authored on 2026-10-07 for the 2026-10-06 edition boundary; they are not actual dated worker or market observations.",
+    "Exact enumeration validates consequences of the mechanisms, not real-world exchangeability, no interference, correct measurement or policy transportability.",
+    "General mediation identification, causal confidence intervals, full graphical criteria, longitudinal treatment and broad econometric methods are outside this chapter's scope.",
+    "Whole-library link/source integration, build and canonical acceptance remain with root.",
+    "Visual/mobile/print QA remains pending after previously recorded browser-policy rejection; no workaround was attempted."
+  ],
+  "acceptance": "Complete specialist chapter package submitted for root's independent review and integration. No central curriculum, checkpoint, source catalogue, hosting, build, acceptance, commit, push or deployment mutation performed.",
+  "root_integration": {
+    "status": "accepted",
+    "review_record": "reviews/v04-c05-c08.json",
+    "note": "Root and scoped peer findings resolved; original author handoff history retained."
+  }
+}

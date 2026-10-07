@@ -1,0 +1,79 @@
+{
+  "chapter": "v04-c06",
+  "title": "Simulation and Monte Carlo",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "state": "review",
+  "review_type": "Specialist author review of derivations, arithmetic, instruction, sources and executable behavior; root independently reviews and alone accepts after v04-c05",
+  "reviewed": {
+    "reasoning": "Derived unbiasedness and variance of the iid Monte Carlo average, the n-1 sample-variance correction, finite-variance estimated-scale CLT interval conditions and the distinction between an unbiased variance estimator and its square root. Separated outcome dispersion, Monte Carlo error, numerical/implementation error and model/input uncertainty. Prespecified-run intervals are not promised sequential coverage. Derived the zero-count one-sided binomial upper bound and its fixed-model interpretation. Explained deterministic seeds versus the ideal iid sampling experiment, reproducible random-call order and dependent copied runs. Derived common-random-number covariance reduction with independent pairs as the replication unit, equal payoff budgets, negative-covariance failure, antithetic pair variance, a one-dimensional monotonicity covariance proof and a nonmonotone counterexample.",
+    "arithmetic": "Independently enumerated original demand states through integer tickets and an alternate payoff algebra; exact raw moments verify A/B means, covariance, paired and independent variances and the factor-six variance reduction. Exhaustive 64 n=3 iid sample experiments verify unbiased mean, variance-of-mean and n-1 sample variance. Reconstructed the seeded transcript by alternate threshold/payoff lookup and rational raw sums. Checked both worked examples, all numerical exercise outputs, confidence endpoints, run-size ceilings, fee invariance, rare-event endpoint inversion and zero-count probability. Antithetic indicator moments and reflection examples use exact fractions.",
+    "solutions": "All eight original exercises have complete solutions. They cover target/replication design, derivation, sample arithmetic, rare events, paired comparisons and costs, reproducibility/selection errors, antithetic moments and an applied audit/sensitivity memo. The open project specifies evaluation criteria and an illustrative ranking-reversal case. All displayed Python blocks were executed in their stated context; the shell invocation was exercised through the portable CLI.",
+    "instruction": "Defines simulator, estimand, replication, iid target, variance and MCSE before using them. Reuses prior probability, confidence and programming chapters explicitly. Teaches a discrete inverse-CDF sampler and local seed object before the benchmark. Explains integer cents, variance units, exact rational references, finite supported inputs, deterministic payoff functions and why program validation cannot validate economic assumptions. Distinguishes paired policies from independent pairs and names the proper unit for antithetic error estimates. Adds teach-back and delayed-check tasks. No untaught package or third-party installation is required.",
+    "sources": "Inspected three primary-source routes: official Python 3.14 random and statistics references, plus Art Owen's author-hosted variance-reduction chapter sections 8.1, 8.2 and 8.6. Proposed source entries record precise use, URL, date and inspection limits. Existing internal probability chapters support prerequisite derivations; all prose, economic values, questions and implementation are original. Versioned documentation is used for stable semantics, not a claim about the historical availability of its currently served point-release header.",
+    "structure": "HTML fragment contains two worked-example asides, eight exercise items and eight matching complete solution items, capability and prerequisite statement, formulas with assumptions/units/boundaries, source links, teach-back, delayed check and successor link. Source IDs exactly match the proposed array. Three download hrefs use flat filenames because the shared builder copies project files to the distribution root. No wrapper or h1 is included. Whole-library links/build and prerequisite-order acceptance remain with root."
+  },
+  "artifacts": [
+    "content/chapters/v04-c06.html",
+    "content/projects/v04-c06-inventory.py",
+    "content/projects/v04-c06-case.json",
+    "content/projects/v04-c06-readme.txt",
+    "scripts/check_v04_c06.py",
+    "content/reviews/v04-c06-sources.json"
+  ],
+  "validation": {
+    "command": "python3 book/scripts/check_v04_c06.py",
+    "result": "passed",
+    "integration_api": "check() returns a dictionary containing status, checks and limitations; standalone execution prints JSON",
+    "observed_runtime": "CPython 3.14.6",
+    "checks": [
+      "Quiet import, unchanged input object/file, repeatable local seed and explicit three-draw order",
+      "Exact four-ticket/16-joint-state moment checks and 64 complete n=3 iid sample experiments",
+      "Seeded counts and both sample summaries reconstructed by alternate threshold/payoff lookup and exact raw moments",
+      "Deterministic support, equal/reversed policies, zero/maximum stocks, zero-weight support, half-open CDF boundaries and sensitivity reversal",
+      "Both worked examples and every numerical exercise, including rare-event inversion, sample-size ceilings, fee shift and antithetic identities",
+      "27 direct invalid contracts and 31 malformed/invalid CLI documents rejected in ordinary and -O execution; missing/encoding failures",
+      "Successful execution from a separate working directory with read-relative-to-script inputs and unchanged input bytes",
+      "Two worked examples, eight exercises/solutions, three real flat download links, three source IDs and all displayed Python snippets checked"
+    ],
+    "exact_reference": {
+      "expected_profit_a_cents": 43000,
+      "expected_profit_b_cents": 45000,
+      "expected_difference_cents": 2000,
+      "paired_replication_variance_cents2": 50000000,
+      "independent_replication_variance_cents2": 300000000,
+      "sensitivity_weights_2_1_1_mean_difference_cents": -500,
+      "sensitivity_weights_2_1_1_paired_variance_cents2": 68750000
+    },
+    "seeded_output": {
+      "seed": 20261006,
+      "replications": 10000,
+      "demand_counts_60_90_120": [
+        2423,
+        5029,
+        2548
+      ],
+      "paired_mean_cents": 2125,
+      "paired_estimated_mcse_cents": 70.49776232937714,
+      "independent_mean_cents": 2112,
+      "independent_estimated_mcse_cents": 171.6149491421913
+    }
+  },
+  "limitations": [
+    "Specialist author review is not independent human validation; root's integration and mathematical review are pending.",
+    "Simulation inference uses the ideal independent-uniform experiment approximated by a deterministic pseudorandom stream. A passing seeded transcript is evidence of replay, not a proof of stochastic independence.",
+    "The normal Monte Carlo interval is approximate, especially for rare or skewed outcomes; no empirical coverage guarantee is inferred from a single contained exact answer.",
+    "Integer probability weights are exact for enumeration, while generic inverse-CDF simulation has finite-grid/rounding approximations; the baseline quarter boundaries are grid-compatible.",
+    "All economic inputs are synthetic assumptions, not observed October 2026 data; neither code checks nor more replications validate demand, timing, omitted costs or preferences.",
+    "The benchmark supports bounded discrete one-day inventory comparisons, not parameter estimation, Markov chains, importance sampling or unrestricted sequential stopping.",
+    "Source checks cover the recorded methods only, not whole-document verification.",
+    "Whole-library structural/citation integration and dependency-order acceptance remain root responsibilities.",
+    "Visual/mobile/print UI QA remains pending after the recorded browser-policy rejection; no workaround was attempted."
+  ],
+  "acceptance": "Complete specialist package ready for root review and integration after v04-c05. No central curriculum, source catalogue, checkpoint, build, hosting, commit or deployment mutation performed.",
+  "root_integration": {
+    "status": "accepted",
+    "review_record": "reviews/v04-c05-c08.json",
+    "note": "Root and scoped peer findings resolved; original author handoff history retained."
+  }
+}

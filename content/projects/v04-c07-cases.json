@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "kind": "synthetic",
+    "created": "2026-10-07",
+    "edition_boundary": "2026-10-06",
+    "description": "Original invented teaching records for finite-sample regression geometry. No observations or empirical causal effects are claimed."
+  },
+  "cases": [
+    {
+      "id": "cost_line",
+      "predictor_names": ["intercept", "output_hundreds"],
+      "predictor_units": ["1", "hundred finished units"],
+      "outcome_name": "total_cost",
+      "outcome_unit": "thousand USD",
+      "design": [[1, 0], [1, 1], [1, 2], [1, 3]],
+      "outcomes": [1, 2, 2, 5],
+      "evaluation_design": [[1, 4], [1, 5]],
+      "evaluation_outcomes": [6, 7],
+      "prediction_design": [[1, 6]]
+    },
+    {
+      "id": "labor_groups",
+      "predictor_names": ["intercept", "batches", "weekend"],
+      "predictor_units": ["1", "batch", "indicator 0 or 1"],
+      "outcome_name": "paid_labor",
+      "outcome_unit": "hour",
+      "design": [[1, 0, 0], [1, 1, 0], [1, 2, 0], [1, 1, 1], [1, 2, 1], [1, 3, 1]],
+      "outcomes": [11, 10, 15, 15, 20, 19],
+      "evaluation_design": [],
+      "evaluation_outcomes": [],
+      "prediction_design": [[1, 2, 0], [1, 2, 1]]
+    },
+    {
+      "id": "cost_cubic",
+      "predictor_names": ["intercept", "output_hundreds", "output_squared", "output_cubed"],
+      "predictor_units": ["1", "hundred finished units", "(hundred finished units)^2", "(hundred finished units)^3"],
+      "outcome_name": "total_cost",
+      "outcome_unit": "thousand USD",
+      "design": [[1, 0, 0, 0], [1, 1, 1, 1], [1, 2, 4, 8], [1, 3, 9, 27]],
+      "outcomes": [1, 2, 2, 5],
+      "evaluation_design": [[1, 4, 16, 64], [1, 5, 25, 125]],
+      "evaluation_outcomes": [6, 7],
+      "prediction_design": [[1, 6, 36, 216]]
+    }
+  ]
+}

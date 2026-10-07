@@ -1,0 +1,99 @@
+{
+  "chapter": "v04-c06",
+  "title": "Simulation and Monte Carlo",
+  "reviewer": "Separate causal-identification specialist agent, read-only peer assignment",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "status": "passed-no-material-findings",
+  "acceptance_authority": "Coordinator alone accepts and integrates; this review does not change canonical state.",
+  "scope": [
+    "content/chapters/v04-c06.html",
+    "content/projects/v04-c06-case.json",
+    "content/projects/v04-c06-inventory.py",
+    "content/projects/v04-c06-readme.txt",
+    "scripts/check_v04_c06.py",
+    "content/reviews/v04-c06-author.json",
+    "content/reviews/v04-c06-sources.json"
+  ],
+  "findings": [],
+  "severity_summary": {
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "required_corrections": "None identified within the reviewed scope."
+  },
+  "derivation_review": {
+    "replication_and_mcse": "The target is a scalar model expectation. A whole dependent path is one replication when evaluating its scalar payoff. The sample-mean unbiasedness proof uses linearity; its variance uses independence and finite variance. The n-1 correction follows from the stated sum-of-squares identity. The manuscript correctly distinguishes variance-estimator unbiasedness from the square root's unbiasedness, individual-outcome dispersion from MCSE, finite first versus second moments, positive population variance for the estimated-scale CLT, and dependent-row covariance terms.",
+    "coverage_and_zero_events": "The ordinary 1.96 interval is labeled approximate, conditional on the fixed model, and distinct from prediction or input uncertainty. Rare/skewed outcomes, zero sample variance and data-dependent stopping are qualified. For zero iid Bernoulli events, inverting (1-p)^n=0.05 gives the stated one-sided bound; the exercise also distinguishes the 0.025 endpoint for an equal-tail two-sided interval. Zero observed events do not prove zero model probability.",
+    "common_random_numbers": "The paired difference preserves policy marginals, with independent scenario pairs as replications. Expanding Var(B-A) gives Var(A)+Var(B)-2Cov(A,B); positive covariance reduces the comparison variance and negative covariance increases it. Sample variance is correctly computed from paired differences. The comparison uses two payoff evaluations per replication in each method; the text explicitly distinguishes equal evaluation budgets from equal measured runtime. Synchronization and deterministic payoff functions are taught, and variance reduction is not claimed to improve every realization.",
+    "antithetic": "Both U and 1-U are uniform in the ideal continuous model. Pair-mean variance is (sigma squared plus covariance)/2, and m independent pairs divide it by m. The covariance identity using independent U and V expands correctly to twice Cov(f(U),f(1-U)); monotonicity makes each product nonpositive. The linear example cancels exactly. The symmetric quadratic has identical paired payoffs and therefore doubles variance relative to two independent evaluations. The finite-grid zero-to-one reflection issue is explicitly qualified. No unsupported antithetic implementation is claimed in the inventory program.",
+    "reproducibility_and_units": "A local generator is initialized once, with explicit shared/independent-A/independent-B draw order. The deterministic-seed versus ideal-iid distinction is explicit; cloned runs and seed selection are not treated as extra independent evidence. Runtime/version and inputs/code are required alongside the seed. Exact population moments use integer cents and rational weights; reported means, MCSEs and endpoints convert by 100 and variances by 10000. Generic rational-weight finite-grid approximations are disclosed. All economic inputs are synthetic."
+  },
+  "independent_calculations": {
+    "method": "Inline standard-library Python calculations independently formed USD payoffs, weighted rational raw moments and empirical raw sums. These did not call the benchmark's payoff, exact-reference or summary functions. A separate local random.Random reconstruction reproduced the stated draw order and transcript; it checks reproducibility, not generator independence.",
+    "inventory": {
+      "profit_a_usd": [280, 480, 480],
+      "profit_b_usd": [200, 500, 600],
+      "mean_a_usd": 430,
+      "mean_b_usd": 450,
+      "variance_a_usd2": 7500,
+      "variance_b_usd2": 22500,
+      "covariance_usd2": 12500,
+      "mean_difference_usd": 20,
+      "paired_variance_usd2": 5000,
+      "independent_variance_usd2": 30000,
+      "variance_reduction_factor": 6,
+      "paired_mcse_n2500_usd": 1.4142135623730951,
+      "independent_comparisons_matching_n2500_paired": 15000,
+      "fee_25_usd_mean_difference_usd": -5,
+      "fee_25_usd_paired_variance_usd2": 5000,
+      "weights_2_1_1_mean_difference_usd": -5,
+      "weights_2_1_1_paired_variance_usd2": 6875
+    },
+    "seeded_transcript": {
+      "seed": 20261006,
+      "replications": 10000,
+      "shared_counts": [2423, 5029, 2548],
+      "paired_mean_usd": 21.25,
+      "paired_sample_variance_usd2": 4969.934493449345,
+      "paired_mcse_usd": 0.7049776232937713,
+      "paired_interval_usd": [19.868243858344208, 22.631756141655792],
+      "independent_mean_usd": 21.12,
+      "independent_sample_variance_usd2": 29451.690769076908,
+      "independent_mcse_usd": 1.716149491421913,
+      "independent_interval_usd": [17.75634699681305, 24.48365300318695]
+    },
+    "antithetic": {
+      "indicator_pair_mean": "1/5",
+      "indicator_pair_variance": "3/50",
+      "independent_two_indicator_mean_variance": "2/25",
+      "variance_reduction_percent": 25,
+      "quadratic_single_payoff_variance": "1/180",
+      "quadratic_pair_mean_to_two_independent_variance_ratio": 2
+    }
+  },
+  "exercise_review": [
+    {"number": 1, "result": "Correct. Whole five-year paths are replications; exponent error, parameter uncertainty and Monte Carlo variation are distinguished. Within-path dependence and decision timing are retained."},
+    {"number": 2, "result": "Correct derivations; MCSE 1.5 USD, interval [69.06,74.94], planned n=3458. Pilot-scale error, approximate normality, fixed stopping and model uncertainty are qualified."},
+    {"number": 3, "result": "Correct: mean22, squared-deviation sum9600, sample variance9600/99, MCSE0.9847319278, interval[20.0699254214,23.9300745786]. True mean20 is outside this realized interval; daily outcomes remain10/30."},
+    {"number": 4, "result": "Correct: upper bound0.0014967448951882841 and zero-count probability0.13519992539749945 at p=0.001. One-sided versus two-sided endpoints and zero-sample-variance limits are accurately explained."},
+    {"number": 5, "result": "Correct: E[AB]=206000, covariance12500, paired variance5000, MCSEsqrt(2) at2500 pairs, matching independent n15000. The25 USD fee changes the mean to-5 and leaves variance unchanged."},
+    {"number": 6, "result": "Correct local-generator loop and explanations for reinitialization, cloned seeded runs, selecting the best seed and shifted draw order. The author checker executes the displayed snippet."},
+    {"number": 7, "result": "Correct pair distribution, moments, cost-matched comparison and pair-based MCSE; the symmetric-quadratic counterexample correctly shows variance doubling."},
+    {"number": 8, "result": "Complete open-project evaluation criteria. Exact-reference, seed replay, observed accuracy reversal, weights[2,1,1] sensitivity, equal-policy edge case, budget rules and limits of a contained reference mean are all correctly handled."}
+  ],
+  "executable_audit": {
+    "author_checker_command": "python3 book/scripts/check_v04_c06.py",
+    "author_checker_result": "passed",
+    "reviewed_behavior": "Inspected validation, duplicate-field/nonfinite guards, sorted support and weight handling, pure integer payoff, inverse-CDF boundaries, exact Fraction moments, sample variance on replication differences, local generator and fixed draw order, interpreter metadata, relative-to-script path and explicit error exits. The checker exercises ordinary and optimized invalid-input handling, cross-directory execution, input nonmutation and economic edge cases.",
+    "code_scope_limit": "Low-level payoff and exact-reference helpers assume a validated case; simulate and the file reader validate at their entry points. This matches the documented small offline teaching-tool contract."
+  },
+  "limitations": [
+    "This is a separate AI specialist review, not independent human academic certification or learner testing.",
+    "No manuscript, program, shared state or checkpoint was edited; only this peer review file was created.",
+    "Primary source records were inspected for scope and alignment; the already-recorded external retrievals were not redundantly repeated in this bounded audit.",
+    "Finite checks establish the tested calculations and behavior, not every possible modified case, random-number independence, exact normal-interval coverage or economic validity.",
+    "No visual, mobile, browser or print QA was performed or claimed.",
+    "Whole-library links, integration, dependency-order acceptance and publication remain the coordinator's responsibility."
+  ]
+}
