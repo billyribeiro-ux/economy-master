@@ -1,6 +1,6 @@
 # Economics & Finance — Mastery Library
 
-A dependency-free HTML textbook and curriculum. All text is original instructional synthesis. Edition 0.1 is a growing working manuscript governed by `../MASTER_PLAN.md`, not a university credential or a replacement for supervised doctoral research.
+A dependency-free HTML textbook and curriculum. All text is original instructional synthesis. Edition 0.1 is a growing working manuscript governed by `PRODUCTION_PLAN.md`, not a university credential or a replacement for supervised doctoral research.
 
 ## Read
 

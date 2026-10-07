@@ -341,11 +341,14 @@ def main():
     previous_volumes = {v['id']: v for v in previous.get('volumes', [])}
     for v in VOLUMES:
         if v['id'] in previous_volumes:
-            v['status'] = previous_volumes[v['id']]['status']
+            old_volume = previous_volumes[v['id']]
+            for key in ('status', 'assessment_status', 'review_record', 'review_limitations'):
+                if key in old_volume: v[key] = old_volume[key]
         for c in v['chapters']:
             old = previous_chapters.get(c['id'], {})
             c['status'] = old.get('status', c['status'])
             c['review'] = old.get('review', c['review'])
+            if 'review_record' in old: c['review_record'] = old['review_record']
     plan = {'title': 'Economics & Finance — Mastery Library', 'edition': '0.1',
             'edition_boundary': '2026-10-06', 'planned_volumes': 18, 'planned_chapters': 216,
             'primary_research_field': 'Macro-finance', 'supporting_field': 'Financial econometrics',

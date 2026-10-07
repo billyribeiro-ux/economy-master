@@ -1,0 +1,25 @@
+{
+  "provenance": "Original synthetic teaching case. All numbers are constructed; no actual business or market observations.",
+  "currency": "illustrative dollars",
+  "owner_capital": 1500,
+  "opening_loan": 1000,
+  "equipment_purchase": 800,
+  "inventory_unit_cost": 30,
+  "sale_price": 50,
+  "monthly_interest_rate": 0.02,
+  "months": [
+    {"month": 1, "units_purchased": 30, "units_sold": 12, "other_expense": 80, "principal_payment": 0},
+    {"month": 2, "units_purchased": 10, "units_sold": 15, "other_expense": 90, "principal_payment": 100},
+    {"month": 3, "units_purchased": 0, "units_sold": 10, "other_expense": 70, "principal_payment": 100}
+  ],
+  "future_project": {
+    "initial_cost": 600,
+    "receipt_horizon_years": 1,
+    "annual_discount_benchmark": 0.10,
+    "scenarios": [{"probability": 0.5, "receipt": 900}, {"probability": 0.3, "receipt": 600}, {"probability": 0.2, "receipt": 300}],
+    "cash_buffer_minimum": 1000,
+    "proposed_owner_withdrawal": 400
+  },
+  "price_index_growth_to_month_3": 0.10,
+  "assumptions": ["All sales collected in the sale month", "Inventory bought before that month's sales", "Interest charged on opening loan balance", "Principal paid at month end", "No depreciation, tax, inventory losses or other changes", "Project receipts net of all subsequent project costs"]
+}

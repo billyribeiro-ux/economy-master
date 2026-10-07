@@ -5,6 +5,7 @@ from urllib.parse import urlsplit, unquote
 import json
 import math
 import re
+import importlib.util
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -121,6 +122,91 @@ def check_arithmetic():
     assert 100-2*32==10+26==36 and 6*36==216
     assert 100-2*20==60 and 10+20==30
     assert near(((45-50)/50)/((12-10)/10),-.5)
+    # Chapters 7–8: basket/deflator and conditional-count calculations.
+    assert 2*2+3*10==34 and 2*3+3*11==39
+    assert near((4/34)*.5+(30/34)*.1,39/34-1)
+    assert near(3400/34,3900/39)
+    assert near(53000/1.08,49074.07407407407)
+    assert near(1.06/1.08-1,-.01851851851851849)
+    assert near(100*1.08*1.03,111.24)
+    assert near(4*6+22,46) and near(46/40,1.15)
+    assert near(130/125-1,.04)
+    assert near(60000/1.2,63000/1.26)
+    assert round((1.12/1.07-1)*100,2)==4.67
+    assert near(100*1.10*1.02,112.2)
+    assert near(.8*.05+.2*.2,.08) and near(.2*.05+.8*.2,.17)
+    assert near(.7*100+.3*(-50),55)
+    assert near(150*.6-50,40)
+    assert 100+9900==10000 and 90+990==1080 and near(90/1080,1/12)
+    assert near(.4*200+.6*(-100),20)
+    assert near(300*.3-100,-10) and near(300*.5-100,50)
+    assert near(80/(80+90),8/17)
+    assert near(.05*(-100),-5)
+    assert near(.6*80-.4*40,32) and near(.6*80-32,16)
+    # Chapters 9–10: paired balance sheets and descriptive effects.
+    assert 100+400==450+50
+    assert 100+450==500+50
+    assert 60+450==460+50 and 60+440==450+50
+    assert 20+400==370+50 and 20+340-370==-10
+    assert 80+360==390+50
+    assert 55+360==365+50 and 55+345==350+50
+    assert 600-75-540==-15
+    assert (1300-1000)-(1200-1000)==100
+    assert near(40/200,.2) and near(60/200,.3)
+    assert near((.3-.2)/.3,1/3)
+    assert (650-500)-(500-400)==50
+    # Chapters 11–12: consolidated margins and full integration case.
+    assert near(-500+600/1.1,45.454545454545)
+    assert near((50+40)/(200+800),.09)
+    assert near(100*1.06*1.02,108.12)
+    assert 1800+1200-1000-800+1200-60==2340
+    assert 1200-800-60==340
+    assert 2340+1000==1200+1800+340
+    assert near(.6*1200+.4*700,1000)
+    assert near(1000/1.1-800,109.090909090909)
+    assert near(1200/1.1-800,290.90909090909)
+    assert near(700/1.1-800,-163.636363636363)
+    assert near((700+500*.36)/1.1,800)
+    assert near(.6*870+.4*370,670)
+    assert 870-550==320 and 370-550==-180
+    assert 2240+1000==1100+2140
+    assert 2340+900==1200+2040
+    assert round((700+500*.3)/1.1-800,2)==-27.27
+    assert round((700+500*.5)/1.1-800,2)==63.64
+    assert near(.6*840+.4*340,640)
+    assert near(370+500*.36,550)
+    # Volume 1 exams are independently recalculated from their question inputs.
+    assert near(100/80-1,.25) and near(90/100-1,-.1) and near(90/80-1,.125)
+    assert near((3.6-3)/3,.2)
+    assert 1500+900-700-500+750-45-100==1805
+    assert 750-500-45==205 and 1805+700==800+1500+205
+    assert round(-700+400/1.1+400/1.1**2,2)==-5.79
+    assert near(.6*120+.4*(-80),40) and near(200*.5-80,20)
+    assert near(1000*.02*.9,18) and near(1000*.98*.05,49)
+    assert 90-2*25==15+25==40
+    assert 90-2*26==15+23==38 and 3*38==114
+    assert (1040-800)-(780-600)==60
+    assert near(110/1250,.088) and near(1.2*.8-1,-.04)
+    assert 2000+1000-1200-600+600-80-200==1520
+    assert 1000-600-80==320 and 1520+1200+400==800+2000+320
+    assert round(sum(220/1.1**t for t in (1,2,3))-600,2)==-52.89
+    assert near(220-220/1.1,20) and -600+3*220==60
+    assert near(.5*150+.5*(-50),50) and near(200*.4-50,30)
+    assert near(.5*150-50,25)
+    assert 140-2*20==20+4*20==100
+    assert 140-2*24==20+4*18==92 and 6*92==552
+    # Project benchmark runs against its documented synthetic fixture.
+    spec=importlib.util.spec_from_file_location('v01_project',ROOT/'content/projects/v01-solution.py')
+    module=importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+    result=module.solve(json.loads((ROOT/'content/projects/v01-case.json').read_text()))
+    assert [r['cash'] for r in result['months']]==[1300,1540,1852]
+    assert [r['inventory_units'] for r in result['months']]==[18,13,3]
+    assert [r['debt'] for r in result['months']]==[1000,900,800]
+    assert result['cumulative_profit']==442 and result['closing_assets']==2742 and result['closing_equity']==1942
+    assert result['expected_project_receipt']==690 and near(result['benchmark_npv'],690/1.1-600)
+    assert result['cash_after_project']==1252 and result['cash_after_project_and_withdrawal']==852
+    assert result['project_meets_buffer'] is True and result['project_and_withdrawal_meet_buffer'] is False
+    assert near(result['closing_cash_in_initial_purchasing_power'],1852/1.1)
 
 def main():
     plan = json.loads((ROOT/'content/curriculum.json').read_text())
@@ -131,7 +217,7 @@ def main():
     require = lambda condition,message: errors.append(message) if not condition else None
     require(len(volumes)==18 and len(chapters)==216,'Curriculum scope differs from contract')
     all_ids = set(volumes)|set(chapters)
-    graph = {v['id']:v['prerequisites'] for v in volumes.values()}
+    graph = {v['id']:v['prerequisites']+[v['chapters'][-1]['id']] for v in volumes.values()}
     graph.update({c['id']:c['prerequisites'] for c in chapters.values()})
     for name,deps in graph.items():
         require(all(dep in all_ids for dep in deps),f'{name}: unknown prerequisite')
@@ -162,6 +248,16 @@ def main():
         require('Teach-back' in text and 'Delayed check' in text,f'{c["id"]}: missing teaching/retention check')
         if c['status']=='accepted':
             require(all(c['review'].values()),f'{c["id"]}: acceptance without complete review record')
+            require(bool(c.get('review_record')) and (ROOT/'content'/c.get('review_record','')).is_file(),f'{c["id"]}: missing recorded editorial review')
+    for v in volumes.values():
+        package=ROOT/'content/assessments'/f'{v["id"]}.html'
+        if package.exists():
+            package_text=package.read_text()
+            for component in ('diagnostic','Form A','Form B','project','retention','Rubric'):
+                require(component.lower() in package_text.lower(),f'{v["id"]}: missing assessment component {component}')
+        if v['status']=='accepted':
+            require(package.exists(),f'{v["id"]}: accepted without assessment package')
+            require(all(c['status']=='accepted' for c in v['chapters']),f'{v["id"]}: accepted with unfinished chapters')
     pages = {}
     for path in DIST.glob('*.html'):
         doc = Document(); doc.feed(path.read_text()); pages[path.name]=doc
@@ -179,7 +275,7 @@ def main():
     check_arithmetic()
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
-              'checks':['curriculum scope','acyclic prerequisites','chapter package structure','local links and anchors','source IDs','Volume 1 chapters 1–6 worked-example and solution arithmetic'],
+              'checks':['curriculum scope','acyclic prerequisites including volume completion','chapter and assessment package structure','local links and anchors','source IDs','Volume 1 chapters 1–12 and exam arithmetic','Volume 1 project benchmark and reconciliations'],
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     (ROOT/'verification-report.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report,ensure_ascii=False))
