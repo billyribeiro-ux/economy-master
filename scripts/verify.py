@@ -10,6 +10,7 @@ from check_v02_calculus import check as check_v02_calculus
 from check_v02_linear import check as check_v02_linear
 from check_v02_optimization import check as check_v02_optimization
 from check_v02_duality import check as check_v02_duality
+from check_v02_analysis import check as check_v02_analysis
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -285,13 +286,15 @@ def main():
     v02_linear_check = check_v02_linear()
     v02_optimization_check = check_v02_optimization()
     v02_duality_check = check_v02_duality()
+    v02_analysis_check = check_v02_analysis()
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
-              'checks':['curriculum scope','acyclic prerequisites including volume completion','chapter and assessment package structure','local links and anchors','source IDs','Volume 1 chapters 1–12 and exam arithmetic','Volume 1 project benchmark and reconciliations','Volume 2 chapters 1–4 numerical results, derivative cross-checks, quadrature and error bounds','Volume 2 chapters 5–6 exact systems, projection identities, eigenstructure, covariance, dynamics and QR reconstruction','Volume 2 chapters 7–8 derivative responses, nonlinear equilibrium roots, KKT residuals, value transitions and envelope calculations','Volume 2 chapter 9 dual certificates, separation, value subgradients and comparative statics','Accepted-volume notation/concept index and synthesis'],
+              'checks':['curriculum scope','acyclic prerequisites including volume completion','chapter and assessment package structure','local links and anchors','source IDs','Volume 1 chapters 1–12 and exam arithmetic','Volume 1 project benchmark and reconciliations','Volume 2 chapters 1–4 numerical results, derivative cross-checks, quadrature and error bounds','Volume 2 chapters 5–6 exact systems, projection identities, eigenstructure, covariance, dynamics and QR reconstruction','Volume 2 chapters 7–8 derivative responses, nonlinear equilibrium roots, KKT residuals, value transitions and envelope calculations','Volume 2 chapter 9 dual certificates, separation, value subgradients and comparative statics','Accepted-volume notation/concept index and synthesis','Volume 2 chapter 10 uniform tails, fixed-point error certificates, counterexamples, spectral projectors and implicit roots'],
               'volume_2_numerical_check': v02_check,
               'volume_2_linear_check': v02_linear_check,
               'volume_2_optimization_check': v02_optimization_check,
               'volume_2_duality_check': v02_duality_check,
+              'volume_2_analysis_check': v02_analysis_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     (ROOT/'verification-report.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report,ensure_ascii=False))
