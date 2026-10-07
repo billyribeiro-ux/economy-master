@@ -7,6 +7,7 @@ import math
 import re
 import importlib.util
 from check_v02_calculus import check as check_v02_calculus
+from check_v02_linear import check as check_v02_linear
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -275,10 +276,12 @@ def main():
                 require(unquote(url.fragment) in pages[target.name].ids,f'{name}: missing anchor {href}')
     check_arithmetic()
     v02_check = check_v02_calculus()
+    v02_linear_check = check_v02_linear()
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
-              'checks':['curriculum scope','acyclic prerequisites including volume completion','chapter and assessment package structure','local links and anchors','source IDs','Volume 1 chapters 1–12 and exam arithmetic','Volume 1 project benchmark and reconciliations','Volume 2 chapters 1–4 numerical results, derivative cross-checks, quadrature and error bounds'],
+              'checks':['curriculum scope','acyclic prerequisites including volume completion','chapter and assessment package structure','local links and anchors','source IDs','Volume 1 chapters 1–12 and exam arithmetic','Volume 1 project benchmark and reconciliations','Volume 2 chapters 1–4 numerical results, derivative cross-checks, quadrature and error bounds','Volume 2 chapters 5–6 exact systems, projection identities, eigenstructure, covariance, dynamics and QR reconstruction'],
               'volume_2_numerical_check': v02_check,
+              'volume_2_linear_check': v02_linear_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     (ROOT/'verification-report.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report,ensure_ascii=False))
