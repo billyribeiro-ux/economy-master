@@ -1,0 +1,38 @@
+{
+  "volume": "v02",
+  "date": "2026-10-07",
+  "review_type": "Author mathematical, instructional and numerical review; no independent specialist certification",
+  "chapter_scope": "v02-c07 and v02-c08 only; Volume 2 remains in production",
+  "chapter_reviews": {
+    "v02-c07": {
+      "reasoning": "Checked multivariable-limit quantifiers, partial versus total differentiability, continuous-partial sufficiency through coordinate increments, continuous counterexample with nonlinear directional responses, gradient geometry and units, Jacobian dimensions/chain order, continuous mixed-partial conditions, vector Taylor remainder, local implicit/inverse-function hypotheses and differentiation of a chosen equilibrium branch.",
+      "arithmetic": "Quadratic levels and increments, gradient-direction products, Hessian eigenvalues, production responses, inverse Jacobian products, substituted chain derivative and both equilibrium systems independently recomputed. Nonlinear solutions cross-checked by bisection rather than relying only on the printed root expression.",
+      "instruction": "Defines domains, balls, level sets, gradients, Jacobians and Hessians before their use. Gives both partial-derivative and all-directional-derivative failure examples. Local branch existence is distinguished from formal differentiation and global uniqueness; general existence proof is explicitly deferred to later analysis methods.",
+      "solutions": "All eight prompts have corresponding complete calculations and counterexamples. Input/output orders, positivity restrictions and coordinate changes are explicit. Taylor prediction errors are checked against the original function."
+    },
+    "v02-c08": {
+      "reasoning": "Checked local/global/strict optimality distinctions, compact/coercive existence claims, interior first- and second-order conditions, concavity tangent bounds and uniqueness, regular equality tangent geometry, KKT signs under one fixed convention, feasibility/complementarity, LICQ necessity, convex sufficiency proof, Slater domain/attainment assumptions, constrained Lagrangian curvature and regime-qualified envelope derivatives.",
+      "arithmetic": "Log allocation, benefit value and resource derivative; quadratic corner/interior/slack regimes; all KKT multipliers and residuals; changed-benefit exercises; constrained quadratic equality; box constraint; circle extrema; and transition-value calculations independently recomputed using exact fractions or elementary numerical evaluations.",
+      "instruction": "Does not infer optimality from stationarity alone. States necessary and sufficient conditions separately, demonstrates a true optimum without KKT multipliers, explains active constraints with zero multipliers, and restricts smooth envelope reasoning to regular regimes. Uses original allocations with explicit objective units.",
+      "solutions": "All eight exercises have calculations plus the relevant global certificate, tangent test or qualification critique. Boundary and degenerate cases receive their own arguments."
+    }
+  },
+  "shared_review": {
+    "sources": "Official MIT multivariable unit pages and implicit-function lecture PDF retrieved. Stanford authors duality slides and Yinyu Ye review notes retrieved for specialist condition checks and further study. The full Convex Optimization book PDF timed out; no claim of reading it is made. All problems and synthetic numerical examples are original.",
+    "structure": "Two worked examples, eight exercises and matching solutions per chapter; explicit scope, assumptions, teach-back, delayed check and method-specific source routes. HTML build checks local links, anchors, source IDs and the prerequisite graph.",
+    "numerical_scope": "check_v02_optimization.py checks determinate examples and exercises, original-function responses, equilibrium roots and KKT identities. Finite calculations do not prove quantified theorems; analytic arguments and hypotheses were reviewed separately."
+  },
+  "corrections": [
+    "Added an integral remainder argument to justify the multivariable Taylor small-error condition across all nearby directions.",
+    "Made the open convex domain and finite attained optimum explicit in the simplified Slater statement.",
+    "Kept equality multiplier signs tied to the displayed Lagrangian normalization.",
+    "Recorded full implicit-function and spectral-theorem existence proofs as later analysis obligations rather than implying their general proofs are already supplied."
+  ],
+  "limitations": [
+    "No independent human mathematical specialist review has occurred.",
+    "No learner trial has assessed difficulty or retention.",
+    "Visual, mobile and print UI QA remain pending after the previously recorded browser policy rejection.",
+    "Volume 2 Chapters 9–12 and its assessment/project/consolidation package remain unfinished."
+  ],
+  "acceptance": "Both chapter packages meet author review requirements for the working edition; unfinished analysis proofs, volume material and learner competence are not represented as complete."
+}
