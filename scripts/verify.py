@@ -17,6 +17,7 @@ from check_v02_assessment import check as check_v02_assessment
 from check_v03_probability import check as check_v03_probability
 from check_v03_moments import check as check_v03_moments
 from check_v03_conditioning_limits import check as check_v03_conditioning_limits
+from check_v03_estimation_inference import check as check_v03_estimation_inference
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -303,9 +304,10 @@ def main():
     v03_probability_check = check_v03_probability()
     v03_moments_check = check_v03_moments()
     v03_conditioning_limits_check = check_v03_conditioning_limits()
+    v03_estimation_inference_check = check_v03_estimation_inference()
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
-              'checks':['curriculum scope','acyclic prerequisites including volume completion','chapter and assessment package structure','local links and anchors','source IDs','Volume 1 chapters 1–12 and exam arithmetic','Volume 1 project benchmark and reconciliations','Volume 2 chapters 1–4 numerical results, derivative cross-checks, quadrature and error bounds','Volume 2 chapters 5–6 exact systems, projection identities, eigenstructure, covariance, dynamics and QR reconstruction','Volume 2 chapters 7–8 derivative responses, nonlinear equilibrium roots, KKT residuals, value transitions and envelope calculations','Volume 2 chapter 9 dual certificates, separation, value subgradients and comparative statics','Accepted-volume notation/concept index and synthesis','Volume 2 chapter 10 uniform tails, fixed-point error certificates, counterexamples, spectral projectors and implicit roots','Volume 2 chapters 11–12 exact dynamics, independent ODE integration, roots/quadrature/error bounds and Bellman policy certificates','Volume 2 diagnostic, distinct exams, retention and constrained-allocation project with exact active-set/dual checks','Volume 3 chapters 1–2 weighted event laws, exhaustive sampling counts, conditional/odds updates, sequential/selected evidence and exact probability lab','Volume 3 chapters 3–4 count distributions, CDF endpoints, density quadrature and tail bounds, exact moments/covariance, portfolio and finite-population certificates, mixed laws and heavy-tail integrals','Volume 3 chapters 5–6 conditional forecast losses, triangular densities, random-sum/latent states, exact binomial tails, common-shock and convergence counterexamples, maximal-inequality terms and CLT smooth-transition checks'],
+              'checks':['curriculum scope','acyclic prerequisites including volume completion','chapter and assessment package structure','local links and anchors','source IDs','Volume 1 chapters 1–12 and exam arithmetic','Volume 1 project benchmark and reconciliations','Volume 2 chapters 1–4 numerical results, derivative cross-checks, quadrature and error bounds','Volume 2 chapters 5–6 exact systems, projection identities, eigenstructure, covariance, dynamics and QR reconstruction','Volume 2 chapters 7–8 derivative responses, nonlinear equilibrium roots, KKT residuals, value transitions and envelope calculations','Volume 2 chapter 9 dual certificates, separation, value subgradients and comparative statics','Accepted-volume notation/concept index and synthesis','Volume 2 chapter 10 uniform tails, fixed-point error certificates, counterexamples, spectral projectors and implicit roots','Volume 2 chapters 11–12 exact dynamics, independent ODE integration, roots/quadrature/error bounds and Bellman policy certificates','Volume 2 diagnostic, distinct exams, retention and constrained-allocation project with exact active-set/dual checks','Volume 3 chapters 1–2 weighted event laws, exhaustive sampling counts, conditional/odds updates, sequential/selected evidence and exact probability lab','Volume 3 chapters 3–4 count distributions, CDF endpoints, density quadrature and tail bounds, exact moments/covariance, portfolio and finite-population certificates, mixed laws and heavy-tail integrals','Volume 3 chapters 5–6 conditional forecast losses, triangular densities, random-sum/latent states, exact binomial tails, common-shock and convergence counterexamples, maximal-inequality terms and CLT smooth-transition checks','Volume 3 chapters 7–8 exhaustive sampling/bootstrap laws, likelihood/exposure boundaries, normal/t pivots, exact binomial tails/intervals and coverage diagnostics, power/sample-size calculations, Holm strong-control state checks and equivalence'],
               'volume_2_numerical_check': v02_check,
               'volume_2_linear_check': v02_linear_check,
               'volume_2_optimization_check': v02_optimization_check,
@@ -317,6 +319,7 @@ def main():
               'volume_3_probability_check': v03_probability_check,
               'volume_3_distributions_moments_check': v03_moments_check,
               'volume_3_conditioning_limits_check': v03_conditioning_limits_check,
+              'volume_3_estimation_inference_check': v03_estimation_inference_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     (ROOT/'verification-report.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report,ensure_ascii=False))
