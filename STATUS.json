@@ -41,13 +41,17 @@
     "The 26-chapter edition privately deployed successfully on 7 October 2026 at 20:31 UTC; first two probability chapters are live.",
     "Volume 3 Chapters 3–4 written and author-reviewed: random variables/support, PMF/PDF/CDF and mixed laws, Bernoulli/binomial/Poisson/exponential/normal models, Gaussian normalization proof, quantiles/transformations, moment existence, expectation/variance/covariance/correlation, common moments, diversification, finite-population correction and partition moment decomposition. Each contains two worked examples and eight fully solved exercises.",
     "Independent exact-state enumeration, Poisson tail certificates, density quadrature and Gaussian tail bounds, centered/raw moment comparisons, exhaustive 4,845 finite-population samples, joint/cross-moments, constrained minimum-variance certificates and heavy-tail finite-cutoff checks integrated into the verifier. Written proof/solution/source review recorded separately; a draft count complement was caught and corrected.",
-    "Checked 28-chapter edition: 82,751 chapter words, 7,937 assessment/reference words, 224 solved chapter exercises and two complete volume packages. Offline ZIP refreshed with 46 files and 755,678 bytes. Integrated structural/numerical checks and generated JavaScript syntax check passed; visual/mobile/print UI QA remains pending."
+    "Checked 28-chapter edition: 82,751 chapter words, 7,937 assessment/reference words, 224 solved chapter exercises and two complete volume packages. Offline ZIP refreshed with 46 files and 755,678 bytes. Integrated structural/numerical checks and generated JavaScript syntax check passed; visual/mobile/print UI QA remains pending.",
+    "The 28-chapter edition privately deployed successfully on 7 October 2026 at 20:51 UTC; the distributions and moments chapters are live.",
+    "Volume 3 Chapters 5–6 completed and author-reviewed: joint and marginal laws, density-based conditional versions, tower/total variance/forecast projections, singular laws and independent random sums; convergence modes, Markov/Chebyshev, integrable weak-law truncation proof, complete finite-variance strong-law proof and complete finite-variance iid CLT smooth-replacement proof, quantitative error assumptions, shared shocks, heavy tails and estimated scales. Two worked examples and eight fully solved exercises each.",
+    "Independent exact finite-state/latent/random-sum enumeration, triangular-domain density quadrature, exact binomial tail and Gaussian comparisons, forecast-error identities, common-shock/typewriter counterexamples, first-crossing maximal-inequality terms, dyadic tails and smooth-transition/Taylor checks integrated into the verifier. Five specialist primary-source routes added and proof/solution/source audit recorded separately.",
+    "Checked 30-chapter edition: 91,672 chapter words, 7,937 assessment/reference words, 240 solved chapter exercises and two complete volume packages. Offline ZIP refreshed with 48 files and 821,215 bytes. Integrated structural/numerical checks and generated JavaScript syntax check passed; visual/mobile/print UI QA remains pending."
   ],
-  "current_work": "28-chapter edition author-reviewed and ready for final rebuild, offline packaging and private publication. Next authoring: v03-c05 joint distributions and conditional expectation, then v03-c06 large samples and convergence.",
+  "current_work": "30-chapter edition author-reviewed; finish accepted-state build/checks, refresh offline package and privately publish. Next authoring: v03-c07 sampling and estimation, then v03-c08 confidence intervals and hypothesis tests.",
   "next_actions": [
-    "Finish checks/package and privately publish the 28-chapter edition using the existing Site",
-    "Write and review v03-c05: joint/marginal laws, continuous conditioning, conditional moments and iterated expectation/total variance",
-    "Write and review v03-c06: convergence modes, laws of large numbers and central-limit reasoning with conditions and finite-sample caveats",
+    "Finish checks/package and privately publish the 30-chapter edition using the existing Site",
+    "Write and review v03-c07: sampling designs, estimators, bias/variance/consistency, standard errors, introductory maximum likelihood and bootstrap",
+    "Write and review v03-c08: confidence intervals, hypothesis tests, size/power/p-values, economic significance and multiple testing",
     "Complete remaining Volume 3 chapters and full assessment/project package, then remaining volumes and terminal acceptance"
   ],
   "review_issues": [
@@ -59,11 +63,18 @@
     "project_id": "appgprj_6ac52f5d03948191b8aaa5d45486bdf3",
     "status": "succeeded",
     "successful_url": "https://economics-finance-mastery-library.willribeirodrums.chatgpt.site",
-    "last_pushed_commit": "d2d35acbc70cb2e2edefe8a7764caa7b57a4ac0e",
-    "deployment_id": "appgdep_6ac6ac03e1e881918f7a132efe74f2aa",
-    "version_id": "appgprj_6ac52f5d03948191b8aaa5d45486bdf3~appgver_e5b868980a2c819186500f175d921365"
+    "last_pushed_commit": "4351449cf8d40ebe82fc6b7c6382b728aa2f3d40",
+    "deployment_id": "appgdep_6ac6b0c4944081918840c64433c74b35",
+    "version_id": "appgprj_6ac52f5d03948191b8aaa5d45486bdf3~appgver_e5bbaf011ef081919e68d50ac531df51"
   },
-  "proof_followups": [],
+  "proof_followups": [
+    {
+      "target": "v03-c12",
+      "task": "After formal integration is established, supply a full iid strong-law proof under E[|X|] < infinity using variable-level truncation, summable tail/variance control, independent-series maximal bounds and a proved Kronecker averaging lemma. v03-c06 already fully proves the finite-variance strong law and states the general integrable version honestly as a further-study theorem.",
+      "source": "tao-probability-laws",
+      "origin": "v03-c06 author proof audit"
+    }
+  ],
   "completed_proof_followups": [
     {
       "target": "v02-c10",
