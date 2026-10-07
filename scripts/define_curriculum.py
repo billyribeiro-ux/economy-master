@@ -342,7 +342,7 @@ def main():
     for v in VOLUMES:
         if v['id'] in previous_volumes:
             old_volume = previous_volumes[v['id']]
-            for key in ('status', 'assessment_status', 'review_record', 'review_limitations'):
+            for key in ('status', 'assessment_status', 'review_record', 'review_limitations', 'project_inputs', 'project_benchmark'):
                 if key in old_volume: v[key] = old_volume[key]
         for c in v['chapters']:
             old = previous_chapters.get(c['id'], {})

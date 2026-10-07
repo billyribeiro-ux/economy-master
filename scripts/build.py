@@ -22,6 +22,14 @@ def plaintext(value):
 def status_label(value):
     return 'Author-reviewed' if value == 'accepted' else value.title()
 
+def print_fragment(body, prefix):
+    """Namespace local anchors when many independent pages share print.html."""
+    ids = set(re.findall(r'\bid=["\']([^"\']+)["\']', body))
+    body = re.sub(r'\bid=(["\'])([^"\']+)\1',
+                  lambda m: 'id='+m[1]+prefix+'--'+m[2]+m[1], body)
+    return re.sub(r'\bhref=(["\'])#([^"\']+)\1',
+                  lambda m: 'href='+m[1]+'#'+(prefix+'--' if m[2] in ids else '')+m[2]+m[1], body)
+
 def main():
     original_plan = ROOT.parent/'MASTER_PLAN.md'
     if original_plan.exists():
@@ -137,9 +145,9 @@ def main():
             navigation += '<a href="curriculum.html">See the remaining curriculum</a>'
         navigation += '</nav>'
         write_page(c['id']+'.html',c['title'],header+'<article class="prose">'+body+'</article>'+further+navigation)
-        print_content += f'<section class="print-chapter" id="{c["id"]}">{header}<article class="prose">{body}</article>{further}</section>'
+        print_content += f'<section class="print-chapter" id="{c["id"]}">{header}<article class="prose">{print_fragment(body,c["id"])}</article>{further}</section>'
         if c['number']==len(v['chapters']) and v['id'] in packages:
-            print_content += f'<section class="print-chapter">{packages[v["id"]]}</section>'
+            print_content += f'<section class="print-chapter">{print_fragment(packages[v["id"]],v["id"]+"-assessment")}</section>'
     write_page('print.html','Printable reading edition',print_content)
     (DIST/'search-index.js').write_text('window.MASTERY_SEARCH = '+json.dumps(search_index,ensure_ascii=False).replace('</','<\\/')+';\n')
     summary = {'volumes_planned':len(plan['volumes']),'chapters_planned':len(chapters),

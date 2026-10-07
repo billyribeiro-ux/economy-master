@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "chapter_packages_available": 22,
-  "html_pages_checked": 28,
+  "chapter_packages_available": 24,
+  "html_pages_checked": 31,
   "curriculum_chapters": 216,
   "checks": [
     "curriculum scope",
@@ -16,7 +16,9 @@
     "Volume 2 chapters 7\u20138 derivative responses, nonlinear equilibrium roots, KKT residuals, value transitions and envelope calculations",
     "Volume 2 chapter 9 dual certificates, separation, value subgradients and comparative statics",
     "Accepted-volume notation/concept index and synthesis",
-    "Volume 2 chapter 10 uniform tails, fixed-point error certificates, counterexamples, spectral projectors and implicit roots"
+    "Volume 2 chapter 10 uniform tails, fixed-point error certificates, counterexamples, spectral projectors and implicit roots",
+    "Volume 2 chapters 11\u201312 exact dynamics, independent ODE integration, roots/quadrature/error bounds and Bellman policy certificates",
+    "Volume 2 diagnostic, distinct exams, retention and constrained-allocation project with exact active-set/dual checks"
   ],
   "volume_2_numerical_check": {
     "scope": "v02-c01 through v02-c04",
@@ -78,6 +80,37 @@
       "implicit roots, Jacobian response and small-ball constants"
     ],
     "limitation": "These finite calculations check original examples; completeness, compactness, spectral and implicit-function theorems require the separate analytic proof review."
+  },
+  "volume_2_dynamics_check": {
+    "scope": "v02-c11",
+    "methods": [
+      "exact recurrence and matrix-power reconstruction",
+      "independent RK4 integration of coupled, forced, logistic and cubic paths",
+      "weighted decay identity and Euler boundary checks"
+    ],
+    "limitation": "Finite calculations check examples; general stability, Picard and series arguments have separate analytic review."
+  },
+  "volume_2_numerics_check": {
+    "scope": "v02-c12",
+    "methods": [
+      "80-step rational root bracket and exact Newton iterates",
+      "exact quadrature errors and Simpson kernel identities",
+      "Euler global-error comparisons",
+      "exact Bellman residuals and all stationary policies",
+      "downloadable float benchmark cross-checks and termination safeguards"
+    ],
+    "limitation": "Analytic hypotheses and quantified error proofs are reviewed separately; float outputs are not outward-rounded interval certificates."
+  },
+  "volume_2_assessment_check": {
+    "scope": "Volume 2 diagnostic, Form A, Form B, delayed check and project",
+    "methods": [
+      "exact fractional exam residuals and quadrature",
+      "normal-equation reconstruction and independent RK4 solutions",
+      "exact project active-set/KKT/dual matching across all supplied capacities",
+      "benchmark cross-check, sensitivity and envelope integral",
+      "off-baseline dense feasible-search comparisons"
+    ],
+    "limitation": "Numerical recomputation complements separate proof/rubric review; it is not independent assessment of a learner."
   },
   "errors": [],
   "limitations": [
