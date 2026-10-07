@@ -1,0 +1,25 @@
+{
+  "title": "Learning before a risky allocation — original synthetic laboratory",
+  "provenance": "All laws, observations, costs and controls authored for this library on 7 October 2026. No real customers, market prices or October economic observations. Educational reuse with attribution is permitted by the project author.",
+  "units": {"payoffs_and_fees": "dollars per decision", "risk_aversion": "inverse dollars", "probabilities": "dimensionless", "counts": "independent labeled Bernoulli trials conditional on their respective parameters"},
+  "assumptions": [
+    "Separate population-rate and state-stratified report-validation training experiments; no trial is reused across likelihood factors.",
+    "Independent beta priors on good-state prevalence p, sensitivity s and false-positive probability f; training likelihood factors by parameter.",
+    "Future state is good with probability p; report is positive with probability s when good and f when bad.",
+    "Actions invest or abstain have unchanged state-contingent payoffs; information can be ignored; a fee is paid once before report observation regardless of action.",
+    "The fixed-parameter simulation reference is an explicit educational world for sampling and out-of-sample checks; it is distinct from the posterior belief and does not replace it.",
+    "Multiple future observations in a posterior predictive experiment share latent parameters; independent draws at posterior means are a different experiment."
+  ],
+  "training": {
+    "prevalence": {"alpha": 2, "beta": 3, "successes": 8, "trials": 20},
+    "sensitivity": {"alpha": 2, "beta": 2, "successes": 30, "trials": 40},
+    "false_positive": {"alpha": 2, "beta": 8, "successes": 10, "trials": 50}
+  },
+  "payoff": {"good": 90, "bad": -30, "abstain": 0},
+  "fees": [0, 2, 5, 10],
+  "risk_aversion": [0, 0.01, 0.03],
+  "prior_sensitivity": [{"alpha": 1, "beta": 1}, {"alpha": 10, "beta": 10}, {"alpha": 2, "beta": 8}],
+  "future_count_trials": 10,
+  "sampling": {"n": 20, "reference_p": 0.4, "alpha": 0.05, "null_p": 0.25, "coverage_grid": [0.01, 0.1, 0.25, 0.4, 0.7, 0.9, 0.99]},
+  "simulation": {"seed": 20261006, "trials": 5000, "p": 0.35, "sensitivity": 0.8, "false_positive": 0.15, "sharpening_power": 2}
+}
