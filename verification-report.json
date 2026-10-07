@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "chapter_packages_available": 26,
-  "html_pages_checked": 33,
+  "chapter_packages_available": 28,
+  "html_pages_checked": 35,
   "curriculum_chapters": 216,
   "checks": [
     "curriculum scope",
@@ -19,7 +19,8 @@
     "Volume 2 chapter 10 uniform tails, fixed-point error certificates, counterexamples, spectral projectors and implicit roots",
     "Volume 2 chapters 11\u201312 exact dynamics, independent ODE integration, roots/quadrature/error bounds and Bellman policy certificates",
     "Volume 2 diagnostic, distinct exams, retention and constrained-allocation project with exact active-set/dual checks",
-    "Volume 3 chapters 1\u20132 weighted event laws, exhaustive sampling counts, conditional/odds updates, sequential/selected evidence and exact probability lab"
+    "Volume 3 chapters 1\u20132 weighted event laws, exhaustive sampling counts, conditional/odds updates, sequential/selected evidence and exact probability lab",
+    "Volume 3 chapters 3\u20134 count distributions, CDF endpoints, density quadrature and tail bounds, exact moments/covariance, portfolio and finite-population certificates, mixed laws and heavy-tail integrals"
   ],
   "volume_2_numerical_check": {
     "scope": "v02-c01 through v02-c04",
@@ -126,6 +127,26 @@
       "downloadable lab compared against independent finite calculations"
     ],
     "limitation": "Finite calculations check original problems; probability axioms, continuity and general conditional identities have separate analytic review."
+  },
+  "volume_3_distributions_moments_check": {
+    "status": "passed",
+    "chapters": [
+      "v03-c03",
+      "v03-c04"
+    ],
+    "checks": [
+      "Exhaustive labeled without/with-replacement and independent Bernoulli count laws",
+      "Discrete CDF endpoints and Poisson sums, moments, tail certificate and rare-event comparison",
+      "Independent quadrature for density normalization, exponential probabilities/moments and Gaussian intervals/moments",
+      "Mixed-law atoms, quantiles and transformed heavy-tail/Cauchy finite-cutoff integrals; divergence reviewed analytically",
+      "Exact centered versus raw payoff moments, affine exposures, squared loss and global portfolio variance certificate",
+      "Continuous polynomial moments and exhaustive 4,845 finite-population samples with position covariance",
+      "Exact joint marginal/cross-moments, dependent-uncorrelated counterexample and partition variance decomposition",
+      "Inconsistent covariance rejection and repaired constrained minimum-variance certificate"
+    ],
+    "limitations": [
+      "Finite numerical checks do not prove the stated general identities or infinite-tail divergence; written derivations reviewed separately."
+    ]
   },
   "errors": [],
   "limitations": [
