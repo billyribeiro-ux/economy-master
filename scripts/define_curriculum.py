@@ -348,6 +348,9 @@ def main():
             old = previous_chapters.get(c['id'], {})
             c['status'] = old.get('status', c['status'])
             c['review'] = old.get('review', c['review'])
+            # Method-specific references added during authoring are part of the
+            # canonical chapter state, not disposable generated defaults.
+            c['sources'] = old.get('sources', c['sources'])
             if 'review_record' in old: c['review_record'] = old['review_record']
     plan = {'title': 'Economics & Finance — Mastery Library', 'edition': '0.1',
             'edition_boundary': '2026-10-06', 'planned_volumes': 18, 'planned_chapters': 216,
