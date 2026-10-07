@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "title": "Synthetic household-month and dated-payment fixtures",
+    "creator": "Economics & Finance Mastery Library",
+    "created": "2026-10-07",
+    "edition_boundary": "2026-10-06",
+    "provenance": "Original teaching data, constructed for this chapter; no real households, transactions or empirical estimates.",
+    "reuse": "May be reused and modified with this library's exercises; no third-party data access is required.",
+    "population": "Four fictional roster households A-D; the observation table contains reported household-months, not a complete panel.",
+    "units": "income_cents and amount_cents are integer cents of one fictional dollar currency; 100 cents = 1 dollar. No inflation or currency conversion is implied.",
+    "weights": "Positive integer demonstration weights, not estimated survey weights; use only observed incomes in the complete-case weighted denominator.",
+    "dates": "month is the first calendar day YYYY-MM-01 representing that whole month; event times include numeric UTC offsets and have second resolution.",
+    "missingness": "JSON null denotes unreported income, zero denotes recorded zero income, and no observation row denotes absence of a report.",
+    "raw_roster": "Contains an intentional exact duplicate of A for diagnosing multiplicative joins; it is never substituted silently for the canonical roster."
+  },
+  "households": [
+    {"household_id": "A", "region": "North", "weight": 1},
+    {"household_id": "B", "region": "North", "weight": 3},
+    {"household_id": "C", "region": "South", "weight": 2},
+    {"household_id": "D", "region": "South", "weight": 4}
+  ],
+  "raw_roster": [
+    {"household_id": "A", "region": "North", "weight": 1},
+    {"household_id": "A", "region": "North", "weight": 1},
+    {"household_id": "B", "region": "North", "weight": 3},
+    {"household_id": "C", "region": "South", "weight": 2},
+    {"household_id": "D", "region": "South", "weight": 4}
+  ],
+  "observations": [
+    {"obs_id": "a1", "household_id": "A", "month": "2024-01-01", "income_cents": 10000},
+    {"obs_id": "a2", "household_id": "A", "month": "2024-02-01", "income_cents": 12000},
+    {"obs_id": "b1", "household_id": "B", "month": "2024-01-01", "income_cents": 30000},
+    {"obs_id": "b2", "household_id": "B", "month": "2024-02-01", "income_cents": null},
+    {"obs_id": "c1", "household_id": "C", "month": "2024-01-01", "income_cents": 0},
+    {"obs_id": "c2", "household_id": "C", "month": "2024-02-01", "income_cents": 6000},
+    {"obs_id": "c3", "household_id": "C", "month": "2024-03-01", "income_cents": 9000}
+  ],
+  "events": [
+    {"event_id": "e1", "time_with_offset": "2024-01-31T23:30:00-02:00", "amount_cents": 100},
+    {"event_id": "e2", "time_with_offset": "2024-02-01T00:30:00+02:00", "amount_cents": 200},
+    {"event_id": "e3", "time_with_offset": "2024-02-29T23:59:59+00:00", "amount_cents": 300},
+    {"event_id": "e4", "time_with_offset": "2024-03-01T00:00:00+00:00", "amount_cents": 400},
+    {"event_id": "e5", "time_with_offset": "2024-02-01T00:00:00+00:00", "amount_cents": 500}
+  ]
+}

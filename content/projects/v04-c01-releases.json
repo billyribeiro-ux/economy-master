@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "creator": "Economics & Finance Mastery Library",
+    "kind": "Original synthetic teaching fixture; no observed economic series",
+    "created": "2026-10-07",
+    "access": "Supplied with this chapter, no credentials or external download required",
+    "reuse": "This original synthetic fixture and its companion laboratory code may be used, modified and redistributed for teaching and research with attribution to this library; no third-party data are included.",
+    "case_assumptions": "A single synthetic economy, monthly spending flows, no seasonal adjustment, common fixed base-price index; each row jointly releases spending and index at the end of its availability date. Revision dates are invented."
+  },
+  "units": {"nominal_spending": "USD", "price_index": "base=100"},
+  "expected_periods": ["2025-01", "2025-02", "2025-03"],
+  "dictionary": {
+    "period": "Reference calendar month, YYYY-MM; monthly flow rather than annualized rate or stock",
+    "available_on": "Inclusive information-availability date, YYYY-MM-DD; cutoff means after the day's release. No intraday timing is modeled.",
+    "nominal_spending": "Nonnegative integer dollars spent in the reference month at current prices, no thousands multiplier",
+    "price_index": "Positive integer index on a common fixed price base equal to 100; real spending = 100 * nominal_spending / price_index",
+    "key": "The pair (period, available_on) uniquely identifies one joint vintage observation; period alone is not a key in the release history.",
+    "missing": "No missing fields allowed in this small case; an unavailable required month rejects the requested complete-quarter summary."
+  },
+  "rows": [
+    {"period": "2025-01", "available_on": "2025-02-15", "nominal_spending": 100000, "price_index": 100},
+    {"period": "2025-02", "available_on": "2025-03-15", "nominal_spending": 121000, "price_index": 110},
+    {"period": "2025-03", "available_on": "2025-04-15", "nominal_spending": 132000, "price_index": 120},
+    {"period": "2025-01", "available_on": "2025-05-15", "nominal_spending": 102000, "price_index": 100},
+    {"period": "2025-02", "available_on": "2025-05-15", "nominal_spending": 120000, "price_index": 108},
+    {"period": "2025-03", "available_on": "2025-05-15", "nominal_spending": 138000, "price_index": 115}
+  ]
+}

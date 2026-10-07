@@ -1,0 +1,82 @@
+{
+  "chapter": "v04-c02",
+  "title": "Spreadsheets and financial models",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "reviewer": "financial_modeling specialist agent, author review",
+  "status": "review",
+  "acceptance": "Complete draft delivered for root's independent review and prerequisite-ordered acceptance; this agent has not changed canonical chapter acceptance or shared production state.",
+  "scope": [
+    "Cell addresses, formulas, relative/absolute/mixed references and formula-copy intent",
+    "Cash-flow signs, time-zero versus end-of-period timing, rate/unit conventions and economic model boundary",
+    "Explicit working-capital and equipment timelines, independent net-present-value calculation routes and rounding",
+    "Bank reconciliation, independently sourced target, supported corrections and offsetting-error counterexamples",
+    "Formula-based two-input sensitivity table, conditional break-even threshold and scenario limitations",
+    "Input validation, formula inspection, tolerances, perturbation tests, provenance and remaining model risk"
+  ],
+  "package": {
+    "worked_examples": 2,
+    "exercises": 8,
+    "complete_solutions": 8,
+    "manuscript": "content/chapters/v04-c02.html",
+    "inputs": "content/projects/v04-c02-inputs.json",
+    "benchmark": "content/projects/v04-c02-benchmark.py",
+    "checker": "scripts/check_v04_c02.py",
+    "proposed_sources": "content/reviews/v04-c02-sources.json"
+  },
+  "checks": {
+    "arithmetic": "Independent Fraction-based direct discount powers verify all four-date cash flows, present values, the shifted-time-zero mistake, rounding discrepancy, nine sensitivity cells, slope/intercept and quantity break-even. Gross receipts/payment identities verify two bank reconciliations and offsetting mistakes. All determinate exercise values were recomputed, including a missing zero period, partial working-capital recovery, reduced disposal proceeds, effective annual/monthly rates, capex change, cash-flow delay and zero rate.",
+    "reasoning": "Audited signs and units; time zero stays undiscounted and periodic NPV starts at t=1. Working capital is distinct from operating cash and released only under an explicit recovery assumption. Reconciliation residual sign and independent-target requirement are stated; passing a net identity does not prove gross-flow accuracy. Sensitivity slope is positive because margin is positive; the threshold is conditional and supplies no probabilities. Discount-rate monotonicity is restricted to nonnegative future cash flows. Cash flows exclude taxes and financing under a stated teaching boundary; no real investment recommendation is inferred.",
+    "solutions": "All eight prompts have matching solutions. Exercises 1–6 and 8 include complete reference translations or determinate calculations; Exercises 7–8 give concrete evaluation criteria and example reasoning for open audit/evidence questions. The delayed net operating cash flow is explicitly distinguished from gross receipts. All exercise methods are introduced before use.",
+    "sources": "Inspected the two exact official Microsoft routes recorded in v04-c02-sources.json. Used reference-copy and NPV function conventions accurately. The reference page contains an incidental prose direction error; the manuscript follows the correctly stated coordinate definitions/table. Source claims are scoped to software syntax, not validation of economic forecasts. All numerical examples and synthetic inputs are authored for this chapter.",
+    "instruction": "Introduces workbook/cell/formula/range/format meanings before references; establishes timelines and units before NPV; supplies a full input and formula map before sensitivity copying. Covers absent/zero values, intermediate rounding, partial recovery, zero/negative-rate boundaries and interpretive limits. Includes a practical model/audit-log deliverable, teach-back, delayed check and successor link.",
+    "structure": "Own checker confirms an HTML fragment with no h1, two worked-example asides, eight exercise and eight solution list items, required retention prompts, exact source IDs and existing project files. The sensitivity expression is extracted from the actual manuscript, copied with a restricted A1 translator, and evaluated by a safe arithmetic interpreter against a separately derived exact revenue/payment decomposition. Source package links use flat dist-root filenames as required by build.py. Central build, cross-reference acceptance and full-library verification belong to root."
+  },
+  "verification_commands": [
+    {
+      "command": "python3 book/scripts/check_v04_c02.py",
+      "result": "passed",
+      "coverage": "Seven grouped structural, formula, exact-arithmetic and benchmark/invalid-input checks; check() returns a dict with status, checks and limitations."
+    },
+    {
+      "command": "python3 book/content/projects/v04-c02-benchmark.py",
+      "result": "passed",
+      "coverage": "Offline JSON output includes complete base timeline, nine sensitivity cells, bank residual before and after correction, input provenance and limitations."
+    }
+  ],
+  "key_results": {
+    "cash_flows": [
+      -12000,
+      3500,
+      4500,
+      8500
+    ],
+    "discount_rate": 0.1,
+    "npv_exact_fraction": "1713000/1331",
+    "npv_dollars": 1287.0022539444028,
+    "quantity_break_even_multiplier": 0.9128244274809161,
+    "bank_residual_before": -225,
+    "bank_residual_after": 0
+  },
+  "limitations": [
+    "This is agent author review, not independent academic certification, human expert review or learner testing. Root acceptance remains pending.",
+    "Formula-map review, a restricted arithmetic/reference interpreter and an independent Python benchmark are not a real spreadsheet application's recalculation test. No Excel, LibreOffice or other workbook engine, GUI, formula cache or application-specific settings were tested; no workbook file is supplied or requested.",
+    "The benchmark intentionally supports exactly three annual periods, nonnegative quantity and payment-magnitude inputs, finite rates greater than -1, and the stated synthetic cash-flow boundary. It is a teaching implementation, not a general valuation engine.",
+    "The numeric checker verifies the examples and solutions, not empirical plausibility of input forecasts or appropriate discount rates. Independent implementations can share a flawed assumption.",
+    "Browser visual/mobile/print UI QA remains pending because the earlier local-file browser attempt was blocked by security policy. No browser workaround was attempted.",
+    "Central build, all-library offline links and integration of source identifiers must still be performed by root after prerequisite review."
+  ],
+  "integration": [
+    "Merge the two proposed source entries into content/sources.json and assign those source IDs to v04-c02.",
+    "Import check_v04_c02.check into the shared verifier and retain its reported limitations.",
+    "Accept only after v04-c01 is accepted and root has completed its independent review.",
+    "Keep project files in content/projects; their manuscript href values intentionally omit projects/ because the builder copies them to dist root.",
+    "No shared curriculum, checkpoint, central source, build/verify, hosting, commit or deployment files were modified by this specialist."
+  ],
+  "root_integration": {
+    "status": "accepted-by-root",
+    "date": "2026-10-07",
+    "record": "reviews/v04-c01-c04.json",
+    "validation": "Complete 40-chapter/48-page integrated structural and numerical check passed. Individual author-handoff pending notes describe the earlier submission stage."
+  }
+}

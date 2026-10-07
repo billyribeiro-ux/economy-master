@@ -1,0 +1,62 @@
+{
+  "chapter": "v04-c03",
+  "title": "Python fundamentals for analysis",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "state": "review",
+  "review_type": "Specialist author instructional, arithmetic, source and executable-behavior review; root independently reviews and alone accepts in dependency order",
+  "reviewed": {
+    "reasoning": "Reviewed exact integer money units versus approximate discounting, annual effective basis-point conversion, t=0 versus later year ends, pure functions and mutation/aliasing, explicit type/value/schema/unit validation, error propagation and failure-versus-zero distinction. Separated economic assumptions and materiality from floating representation error and numeric test tolerances. Documented finite supported rate/horizon/magnitude bounds and the distinct mathematical r=-1 singularity. External validation never relies on assert; assertions are taught only as test/internal checks, with explicit -O removal discussion.",
+    "arithmetic": "Recomputed order sales, variable cost, contribution and fixed-cost profit from separate order-margin grouping; verified the new-order/fixed-cost exercise. Independently derived NPV using exact fractions and backwards Horner recurrence, distinct from the program's forward discounted powers. Baseline is 430000/121 cents; exercise case is 74840000/9261 cents. Checked zero-rate and time-zero boundaries, one-period and negative-rate cases, exact cancellation and the one-period indexing error factor. A 49-case exact-reference grid includes both supported rate endpoints, 100-year horizon and maximum input magnitudes with scale-aware comparison tolerances.",
+    "solutions": "All eight exercise prompts have complete solutions. Executed all thirteen displayed Python instructional/solution blocks in presented order with the explicitly supplied downloaded validator; verified the intentionally broken function's printed value, None return and input mutation, then the pure correction. Checked value/type expressions, integer-cent signed outputs and invalid values, order sensitivity, NPV displays and exact references, safe file-reading pattern, and test design criteria. Open critique/test-design solutions specify acceptable mechanisms rather than a single preferred wording.",
+    "instruction": "Introduces script/terminal distinction, assignment/comments/calls, types/operators/collections, indentation/conditions/loops, function return/contracts, exceptions, approximate arithmetic, imports, file/JSON handling, then the complete offline NPV program and assertions. Explains helper syntax used in the download, including exact-type checks, chained comparisons, short-circuit or, strip, keyword configuration, path resolution, decoder callback, entry-point guard and exit status. Defines necessary numerical units and timing before using them. Downloadable program, JSON and text README require no third-party installation; README provides one-command execution and modification experiments.",
+    "sources": "Inspected eleven narrowly scoped official Python 3.14 documentation routes for primitive syntax/collections, control/functions, exceptions, floating arithmetic, math, decimal further study, files/encoding, pathlib, JSON and assert. Proposed catalogue entries retain URL, use, check date and inspection scope. Versioned documentation supports method semantics, not a claim about a historical Python point release; Python 3.14.6 is the locally observed execution environment. Original prose, monetary problems, synthetic file and code are author-created.",
+    "structure": "Fragment contains no document wrapper or h1, two worked-example asides, eight exercise items and eight solution items, capability/prerequisite statement, assumptions and boundaries, sources, teach-back, delayed check and successor link. Local checker matches all data-source IDs to proposed catalogue and checks real download targets. Download hrefs are flat because build.py copies content/projects files to the distribution root. Root retains responsibility for whole-library build, source integration, links and dependency-order acceptance."
+  },
+  "artifacts": [
+    "content/chapters/v04-c03.html",
+    "content/projects/v04-c03-cashflow.py",
+    "content/projects/v04-c03-case.json",
+    "content/projects/v04-c03-readme.txt",
+    "scripts/check_v04_c03.py",
+    "content/reviews/v04-c03-sources.json"
+  ],
+  "validation": {
+    "command": "python3 book/scripts/check_v04_c03.py",
+    "result": "passed",
+    "integration_api": "check() returns a dict with status, checks and limitations; standalone execution prints JSON",
+    "observed_runtime": "Python 3.14.6",
+    "checks": [
+      "Import inspected for absence of input/output work and executed without output; baseline CLI/report arithmetic verified",
+      "49 rational-reference cases with alternate recurrence, bounds, cancellation and nonmutation",
+      "20 direct invalid-argument cases",
+      "22 malformed/schema/unit/type/duplicate documents rejected under both ordinary and optimized -O execution",
+      "Read-only successful execution from a different working directory; original input bytes unchanged",
+      "Missing-file and invalid UTF-8 errors produce nonzero status and diagnostics with no numeric report",
+      "Independent integer/order sensitivity, type and time-shift arithmetic",
+      "13 displayed Python blocks executed; worked/exercise/solution counts, source IDs and downloadable files checked"
+    ]
+  },
+  "corrections": [
+    "Corrected download URLs to the flat distribution root after root clarified the build copying convention.",
+    "Made the math import explicit in the displayed numerical core and stated where learners place test assertions relative to the SystemExit entry point.",
+    "Documented shallow copying, boolean rejection, short-circuit validation, duplicate JSON names and deliberate numerical bounds rather than silently accepting plausible-looking input.",
+    "Kept the minimal file-reading solution explicitly separate from the complete schema and duplicate-name validation in the supplied program."
+  ],
+  "limitations": [
+    "Author review is not independent human or learner testing; root's integration/dependency review is pending.",
+    "The eleven external documentation pages were inspected for the specified methods, not verified in their entirety or frozen as an exact historical point release.",
+    "All data are synthetic assumptions created on 2026-10-07 for the 2026-10-06 edition boundary, not observed October market data.",
+    "The program supports bounded local USD annual cases and approximate float discounting, not contractual settlement, irregular-date valuation, large-data processing or a hostile-input service.",
+    "Finite execution grids do not prove every possible modification correct or validate economic forecasts and discount-rate assumptions.",
+    "Whole-library structural/citation integration and prerequisite-order acceptance remain with root.",
+    "Visual/mobile/print UI QA remains pending after the previously recorded browser-policy rejection; no workaround was attempted."
+  ],
+  "acceptance": "Complete specialist chapter package ready for root's independent review and integration; no central acceptance, build, checkpoint, hosting, commit or deployment mutation performed.",
+  "root_integration": {
+    "status": "accepted-by-root",
+    "date": "2026-10-07",
+    "record": "reviews/v04-c01-c04.json",
+    "validation": "Complete 40-chapter/48-page integrated structural and numerical check passed. Individual author-handoff pending notes describe the earlier submission stage."
+  }
+}

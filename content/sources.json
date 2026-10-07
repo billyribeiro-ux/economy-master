@@ -686,5 +686,229 @@
     "use": "Measure/product foundations, conditional expectation existence/uniqueness and projection, martingales/stopping and graduate extensions.",
     "checked": "2026-10-07",
     "verification": "Author-hosted 409-page notes retrieved. Contents/date, sigma-finite product/Fubini statement and proof route, conditional existence/uniqueness, Hilbert projection construction, predictable transforms and stopped-process results inspected. Not a full independent audit of the notes or manuscript. Failed legacy Stanford/Duke PDF retrievals were not used as evidence."
+  },
+  {
+    "id": "v04-c01-aea-data-faq",
+    "title": "AEA Data and Code Availability Policy: Frequently Asked Questions",
+    "url": "https://www.aeaweb.org/journals/data/faq",
+    "use": "Professional data/code availability, documentation, deposit licensing and restricted-data distinctions",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official FAQ; inspected code/output checks, accessibility, license choices, archive versus repository and restricted-sharing sections. No claim that library passed AEA review."
+  },
+  {
+    "id": "v04-c01-fred-realtime",
+    "title": "St. Louis Fed: Real-Time Periods",
+    "url": "https://fred.stlouisfed.org/docs/api/fred/realtime_period.html",
+    "use": "Reference periods versus historical information availability and inclusive real-time boundaries",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official documentation; inspected current-information default, historical ALFRED mode and inclusive realtime_start/end. Synthetic case is not actual FRED data."
+  },
+  {
+    "id": "v04-c01-git-recording",
+    "title": "Git book: Recording Changes to the Repository",
+    "url": "https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository",
+    "use": "Working tree, staging, diff and recording changes",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official Git book chapter; inspected staged versus unstaged changes, ignore patterns and commit workflow."
+  },
+  {
+    "id": "v04-c01-python-hashlib",
+    "title": "Python standard library: hashlib",
+    "url": "https://docs.python.org/3/library/hashlib.html",
+    "use": "SHA-256 byte fingerprint interface",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official documentation; inspected SHA-256 constructor, update and hexadecimal digest interface. Version-neutral method used; current page does not establish a historical October software release."
+  },
+  {
+    "id": "v04-c02-references",
+    "title": "Microsoft Support — Switch between relative, absolute, and mixed references",
+    "url": "https://support.microsoft.com/en-us/excel/switch-between-relative-absolute-and-mixed-references",
+    "use": "A1-style reference copying: unlocked coordinates shift, dollar signs fix their respective coordinates. Supports spreadsheet syntax, not economic assumptions or model validation.",
+    "checked": "2026-10-07",
+    "verification": "Official page retrieved and inspected, including reference definitions and the four-row copy table. Used the correct coordinate rules; did not repeat the page's incidental wording error describing a row move as a column move. Chapter copy examples and financial problems are original. No spreadsheet application recalculation or GUI interaction performed."
+  },
+  {
+    "id": "v04-c02-npv",
+    "title": "Microsoft Support — NPV function",
+    "url": "https://support.microsoft.com/en-us/excel/functions/npv-function",
+    "use": "Excel NPV syntax, rate per period, equally spaced end-of-period values, time-zero addition outside the function's future-flow range, and treatment of nonnumeric/empty range cells.",
+    "checked": "2026-10-07",
+    "verification": "Official page retrieved and inspected: Description, Syntax, value ordering, array/reference treatment and Remarks on time zero. The chapter derives original timelines and values rather than reproducing Microsoft examples. Documentation inspection is distinct from runtime verification; no Excel engine was used. Stable method conventions only, with no invented October 2026 market observations."
+  },
+  {
+    "id": "v04-c03-introduction",
+    "title": "Python 3.14 tutorial — An Informal Introduction to Python",
+    "url": "https://docs.python.org/3.14/tutorial/introduction.html",
+    "use": "Assignment, basic numerical operators, strings, list indexing/mutation and aliasing; economic examples are original.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official versioned documentation and inspected number, string, list and initial-programming sections. Method verification, not a historical point-release or economic-data claim."
+  },
+  {
+    "id": "v04-c03-data-structures",
+    "title": "Python 3.14 tutorial — Data Structures",
+    "url": "https://docs.python.org/3.14/tutorial/datastructures.html",
+    "use": "Dictionary keys, access, replacement and membership; collection operations.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official versioned documentation and inspected dictionary/collection passages, including unique keys, absent-key errors and key replacement."
+  },
+  {
+    "id": "v04-c03-control-flow",
+    "title": "Python 3.14 tutorial — More Control Flow Tools",
+    "url": "https://docs.python.org/3.14/tutorial/controlflow.html",
+    "use": "Conditionals, loops, range, function definitions, arguments, docstrings and return values.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official versioned tutorial and inspected control-flow/function-definition passages, including local variables and None when return is omitted."
+  },
+  {
+    "id": "v04-c03-errors",
+    "title": "Python 3.14 tutorial — Errors and Exceptions",
+    "url": "https://docs.python.org/3.14/tutorial/errors.html",
+    "use": "Syntax versus runtime errors; explicit raising, selected handlers and propagation.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official tutorial and inspected exception types and handling sequence. Original validation contracts and error experiments executed separately."
+  },
+  {
+    "id": "v04-c03-floating-point",
+    "title": "Python 3.14 tutorial — Floating-Point Arithmetic: Issues and Limitations",
+    "url": "https://docs.python.org/3.14/tutorial/floatingpoint.html",
+    "use": "Binary representation error, approximate comparison, rounding/display distinction and summation limitations.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official tutorial and inspected decimal representation, comparison and rounding discussion. Chapter's monetary/tolerance examples are independently calculated."
+  },
+  {
+    "id": "v04-c03-math",
+    "title": "Python 3.14 standard library — math",
+    "url": "https://docs.python.org/3.14/library/math.html",
+    "use": "math.fsum accuracy, isclose tolerance semantics and isfinite behavior.",
+    "checked": "2026-10-07",
+    "verification": "Inspected official fsum, isclose and isfinite entries, including near-zero absolute tolerance and finite-precision caveats. No claim of exact float NPV."
+  },
+  {
+    "id": "v04-c03-decimal",
+    "title": "Python 3.14 standard library — decimal",
+    "url": "https://docs.python.org/3.14/library/decimal.html",
+    "use": "Further-study route for explicit decimal precision and rounding policies; separate analysis from contractual settlement.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official documentation and inspected the introductory exact decimal representation, finite precision and rounding-context discussion. Decimal settlement is identified as further study, not implemented here."
+  },
+  {
+    "id": "v04-c03-files",
+    "title": "Python 3.14 tutorial — Input and Output",
+    "url": "https://docs.python.org/3.14/tutorial/inputoutput.html",
+    "use": "Formatting, file modes, UTF-8 encoding, with-block closure and JSON file reading.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official tutorial and inspected file mode/truncation, explicit encoding, closure under exceptions and JSON load passages. Program read-only behavior tested separately."
+  },
+  {
+    "id": "v04-c03-pathlib",
+    "title": "Python 3.14 standard library — pathlib",
+    "url": "https://docs.python.org/3.14/library/pathlib.html",
+    "use": "Path construction, resolved parent directory and portable neighboring-file lookup.",
+    "checked": "2026-10-07",
+    "verification": "Inspected official parent/resolve semantics, including symlink resolution; separately executed the program with an unrelated current working directory."
+  },
+  {
+    "id": "v04-c03-json",
+    "title": "Python 3.14 standard library — json",
+    "url": "https://docs.python.org/3.14/library/json.html",
+    "use": "Data decoding/encoding, JSON-to-Python type mapping, malformed-input errors and object_pairs_hook duplicate-name checks.",
+    "checked": "2026-10-07",
+    "verification": "Inspected official load/dumps behavior, conversion table, JSONDecodeError relationship to ValueError, nonstandard nonfinite constants and repeated-name/object-pair-hook behavior. Type/schema validation and duplicate rejection executed separately."
+  },
+  {
+    "id": "v04-c03-assert",
+    "title": "Python 3.14 language reference — The assert statement",
+    "url": "https://docs.python.org/3.14/reference/simple_stmts.html#the-assert-statement",
+    "use": "Assertions as internal/test checks and their removal under optimization; explicit exceptions for external validation.",
+    "checked": "2026-10-07",
+    "verification": "Inspected the official assert statement semantics and -O removal passage. Valid and invalid program inputs are separately tested under ordinary and optimized execution."
+  },
+  {
+    "id": "v04-c04-python-array",
+    "title": "Python 3.13 documentation: array — Efficient arrays of numeric values",
+    "url": "https://docs.python.org/3.13/library/array.html",
+    "use": "Constrained sequence types, q/d type codes, mutable length, indexing, concatenation and repetition; supports the standard-library representation distinction, not economic alignment claims.",
+    "checked": "2026-10-07",
+    "verification": "Official documentation retrieved; opening description, type-code table and sequence-operation section inspected. Established APIs only; no claim that the live documentation patch version was available at the 2026-10-06 edition boundary."
+  },
+  {
+    "id": "v04-c04-python-sqlite",
+    "title": "Python 3.13 documentation: sqlite3 — DB-API 2.0 interface for SQLite databases",
+    "url": "https://docs.python.org/3.13/library/sqlite3.html",
+    "use": "In-memory connection, execute/executemany, question-mark binding, supported Python/SQLite types, Row and explicit connection close.",
+    "checked": "2026-10-07",
+    "verification": "Official documentation retrieved; tutorial, parameter binding, connection, row factory and type-conversion sections inspected. Benchmark independently run with local Python 3.14.6 and SQLite 3.53.3; live page patch version is not presented as an edition-boundary release fact."
+  },
+  {
+    "id": "v04-c04-sqlite-select",
+    "title": "SQLite language reference: SELECT",
+    "url": "https://www.sqlite.org/lang_select.html",
+    "use": "Row-pair joins, outer-join NULL extension before WHERE, grouping/HAVING, bare-column warning, DISTINCT, ordering and VALUES syntax.",
+    "checked": "2026-10-07",
+    "verification": "Official language reference retrieved; FROM/join, WHERE, aggregate/grouping, bare-column and SELECT syntax sections inspected. Hand-derived join counts and SQL behavior checked on synthetic fixtures."
+  },
+  {
+    "id": "v04-c04-sqlite-aggregates",
+    "title": "SQLite language reference: Built-in Aggregate Functions",
+    "url": "https://www.sqlite.org/lang_aggfunc.html",
+    "use": "COUNT(*) versus COUNT(x), AVG and SUM missing-value/empty-set behavior, invalid numeric text in AVG, integer and real summation limits.",
+    "checked": "2026-10-07",
+    "verification": "Official documentation retrieved; avg, count, sum and total sections inspected. Count/mean/sum behavior exercised on nonempty, all-NULL and empty groups. No newly introduced percentile or extension feature used."
+  },
+  {
+    "id": "v04-c04-sqlite-expressions",
+    "title": "SQLite language reference: SQL Language Expressions",
+    "url": "https://www.sqlite.org/lang_expr.html",
+    "use": "NULL comparison and IS semantics, arithmetic division, BETWEEN inclusivity and EXISTS membership queries.",
+    "checked": "2026-10-07",
+    "verification": "Official language reference retrieved; operators, IS/IS NOT, BETWEEN and EXISTS sections inspected. NULL, integer/real division, bound inputs and EXISTS results checked locally."
+  },
+  {
+    "id": "v04-c04-sqlite-null",
+    "title": "SQLite documentation: NULL Handling in SQLite",
+    "url": "https://www.sqlite.org/nulls.html",
+    "use": "Missing-value arithmetic, particularly zero multiplied by NULL; historical cross-engine table not used to make current claims about other databases.",
+    "checked": "2026-10-07",
+    "verification": "Official notes and SQLite column of behavior table inspected; zero-times-NULL independently executed. Historical comparison dates are not treated as contemporary external-engine verification."
+  },
+  {
+    "id": "v04-c04-sqlite-dates",
+    "title": "SQLite documentation: Date And Time Functions",
+    "url": "https://www.sqlite.org/lang_datefunc.html",
+    "use": "Date/time storage representations, datetime conversion of numeric UTC offsets, julianday difference for explicitly chosen endpoints.",
+    "checked": "2026-10-07",
+    "verification": "Official documentation retrieved; overview, time-values and timezone-offset discussion inspected. Five offset-bearing examples cross-checked with independent arithmetic and Python; February 2024 duration checked."
+  },
+  {
+    "id": "v04-c04-sqlite-types",
+    "title": "SQLite documentation: Datatypes In SQLite",
+    "url": "https://www.sqlite.org/datatype3.html",
+    "use": "Ordinary table flexible storage and column affinity; reason for explicit Python validation and database checks.",
+    "checked": "2026-10-07",
+    "verification": "Official datatype reference retrieved; storage-class and affinity sections inspected. Does not assert that column declarations alone validate source measurement semantics."
+  },
+  {
+    "id": "v04-c04-sqlite-schema",
+    "title": "SQLite language reference: CREATE TABLE",
+    "url": "https://www.sqlite.org/lang_createtable.html",
+    "use": "Primary-key, UNIQUE and NOT NULL constraints, including explicit nonmissing keys in ordinary SQLite tables.",
+    "checked": "2026-10-07",
+    "verification": "Official reference retrieved; column definitions, primary-key NULL caveat, UNIQUE, CHECK and NOT NULL sections inspected. Duplicate and missing key insertions tested."
+  },
+  {
+    "id": "v04-c04-sqlite-foreignkeys",
+    "title": "SQLite documentation: Foreign Key Support",
+    "url": "https://www.sqlite.org/foreignkeys.html",
+    "use": "Referential integrity and explicit PRAGMA foreign_keys = ON per connection before loading.",
+    "checked": "2026-10-07",
+    "verification": "Official reference retrieved; enabling-support and introductory referential-integrity sections inspected. Orphan observation rejected by both loader and enabled database constraint."
+  },
+  {
+    "id": "v04-c04-python-datetime",
+    "title": "Python 3.13 documentation: datetime — Basic date and time types",
+    "url": "https://docs.python.org/3.13/library/datetime.html",
+    "use": "date/datetime fromisoformat, timezone-aware astimezone and fixed-format isoformat output for validated numeric-offset timestamps.",
+    "checked": "2026-10-07",
+    "verification": "Official documentation retrieved; fromisoformat, astimezone and isoformat descriptions inspected. Loader deliberately validates a narrower seconds-plus-numeric-offset format and preserves four-digit early years."
   }
 ]

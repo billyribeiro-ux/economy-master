@@ -1,0 +1,66 @@
+{
+  "chapter": "v04-c04",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "status": "review",
+  "review_type": "Specialist author review and executable checks; root independent audit and dependency-ordered acceptance remain separate",
+  "prerequisite_assumptions": [
+    "v04-c03 teaches types, lists/dictionaries, loops, functions, exceptions and files before this chapter is accepted.",
+    "This manuscript introduces set uniqueness, list and generator comprehensions, singleton tuples and try/finally before their first use, rather than assuming they are taught in c03."
+  ],
+  "reviewed": {
+    "reasoning": "Audited shape versus label alignment, list/array versus mathematical vector semantics, fixed type versus fixed length, dictionary overwrite risk, row grain and composite keys, one-to-many/many-to-one/many-to-many row multiplication, exact duplicate versus conflicting/versioned records, existence filtering, and the failure of SUM(DISTINCT amount) as a repair. Checked left-join ON versus WHERE populations including the OR IS NULL nonrepair for out-of-month-only records. Checked observed zero versus present missing measurement versus absent report, SQL NULL comparisons, counts, empty/all-NULL aggregates, group count weighting, complete-case weight denominator, repeated household-month population, UTC offset conversion and half-open calendar boundaries.",
+    "arithmetic": "Separate Python label maps, nested-loop row-pair enumeration, exact Fraction denominators and explicit panel enumeration agree with SQL results. Worked revenues 19000/22000 cents total 41000. January observed mean 40000/3 cents, zero-filled 10000; raw duplicate join 50000 rather than 40000, 25% inflation. February counts 4 roster/3 reports/2 observed, total 18000 cents, observed mean 9000 and zero-filled 4500. Weighted means January 100000/6 cents and February 24000/3; incorrect full-roster February denominator yields 2400 cents. UTC February e1/e3/e5 total 900 cents versus original-local-date total 1000; inclusive upper endpoint would give 1300. January-February grid has 8 cells, 6 reports, 5 incomes, 58000 cents, observed mean 11600 and zero-filled mean 7250. Many-to-many exercise yields 6 rows and 450 cents versus 150 retained by EXISTS.",
+    "solutions": "Solved all eight prompts against the exact fixture and supplied complete numeric answers, queries or explicit evaluation criteria. Exercises cover array alignment, grain/keys, duplicate inflation, left joins/counts/NULL, grouping/weights, dates, multiplicative joins/EXISTS and a panel critique. Separate checker includes each determinate calculation and input rejection relevant to the solution. Retention mutation replaces B's missing February income with recorded zero and verifies observed count 3, unchanged total 18000 cents, observed mean 6000 cents, observed weight 6 and weighted mean 4000 cents.",
+    "instruction": "Capability, prerequisite and motivating errors are explicit. Arrays and new Python forms precede computation; table grain/keys precede SQL/join operations; SQL vocabulary, placeholders and connection lifecycle precede query exercises. NULL/counts precede aggregation and complete-case weighting, and normalized dates precede interval tasks. Every operation needed in the exercises has an explanation or an earlier example. All data are synthetic, currency units/weights/month interpretation are stated, and the chapter limits claims about missingness, representativeness and real populations.",
+    "sources": "Eleven official SQLite/Python sources retrieved and relevant sections inspected. Exact scoped proposed entries live in v04-c04-sources.json; all eleven source IDs appear in the manuscript. Documentation is a live reference, so patch-version labels are not asserted as release facts at the edition boundary. No current economic observations or third-party empirical data are invented.",
+    "structure": "HTML fragment has no document wrapper or h1; two worked asides, eight exercise li items and eight corresponding complete solution li items, teach-back and delayed check. All eleven pre/code blocks were extracted, HTML-decoded and executed successfully in appropriate fresh/in-memory contexts. Project links use flattened publication paths per integration owner correction. Source-entry schema and citation IDs checked. Next planned chapter correctly points to the Volume 4 curriculum route for Visualization and descriptive evidence. Root owns integrated build/link/print checks."
+  },
+  "executable_verification": {
+    "commands": [
+      "python3 book/content/projects/v04-c04-sql-lab.py",
+      "python3 book/scripts/check_v04_c04.py"
+    ],
+    "checker_result": "passed",
+    "check_count": 94,
+    "runtime": {
+      "python": "3.14.6",
+      "sqlite": "3.53.3"
+    },
+    "independence": "SQL outputs compared with direct Python row enumeration, keyed arithmetic, fractions and independently subtracted time offsets. Not merely a rerun of the same query.",
+    "additional_checks": [
+      "All 11 manuscript code blocks executed, including schema, array code, Python connection example and SQL queries.",
+      "Benchmark invoked by absolute path while working directory was /private/tmp; relative fixture lookup passed.",
+      "Duplicate roster and household-month inputs, orphan/missing keys, impossible/noncanonical dates, numeric strings, booleans, fractional cents, zero weights, absent time offsets, unsupported subseconds and malformed offset bounds rejected.",
+      "Database independently rejects duplicate household-month, orphan foreign key and NULL primary key.",
+      "Bound string containing SQL-like syntax remains a literal value.",
+      "UTC normalization preserves four-digit year 0001; offset hours/minutes explicitly bounded."
+    ]
+  },
+  "corrections": [
+    "Aligned download links with build.py's flat project copying rule after integration-owner correction.",
+    "Corrected planned successor title to v04-c05 Visualization and descriptive evidence.",
+    "Added prerequisite-safe explanations for new Python shorthand and connection cleanup.",
+    "Replaced platform-dependent strftime year formatting with UTC isoformat and explicitly validated numeric offset bounds."
+  ],
+  "remaining_issues": [
+    "Root must integrate sources and checker, independently audit, and accept only after v04-c03 prerequisite acceptance.",
+    "Integrated build and whole-book cross-reference checks are root-owned and were not run by this assignment.",
+    "Visual/mobile/print browser QA is pending after the earlier browser-policy rejection; no workaround attempted.",
+    "Author review and finite fixture checks are not external academic certification or guarantees for arbitrary data, numerical magnitudes or SQLite build options."
+  ],
+  "owned_artifacts": [
+    "content/chapters/v04-c04.html",
+    "content/projects/v04-c04-case.json",
+    "content/projects/v04-c04-sql-lab.py",
+    "scripts/check_v04_c04.py",
+    "content/reviews/v04-c04-author.json",
+    "content/reviews/v04-c04-sources.json"
+  ],
+  "root_integration": {
+    "status": "accepted-by-root",
+    "date": "2026-10-07",
+    "record": "reviews/v04-c01-c04.json",
+    "validation": "Complete 40-chapter/48-page integrated structural and numerical check passed. Individual author-handoff pending notes describe the earlier submission stage."
+  }
+}

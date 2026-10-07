@@ -1,0 +1,86 @@
+{
+  "batch": "v04-opening",
+  "authorization": "User explicitly requested parallel specialist agents on 2026-10-07.",
+  "state": "accepted-awaiting-publication",
+  "integration_owner": "root",
+  "acceptance_order": [
+    "v04-c01",
+    "v04-c02",
+    "v04-c03",
+    "v04-c04"
+  ],
+  "shared_files_owner": "root",
+  "fixed_contract": {
+    "format": "Original HTML manuscript fragments; standard-library Python; offline operation.",
+    "minimum": "2 fully worked examples and 8 original exercises with complete solutions; assumptions, units, limitations, teach-back and delayed check.",
+    "review": "Each specialist reviews its manuscript and supplies a executable numerical/behavior checker; root independently audits and alone accepts, builds and publishes. Drafting may overlap prerequisite work; acceptance may not.",
+    "sources": "Primary sources inspected; exact URLs and inspection scope recorded. Source suggestions are separate files until integration.",
+    "prohibitions": [
+      "No editing another assignment or central curriculum/source/checkpoint/build/verify/hosting files",
+      "No commits, pushes, deployment or further agents",
+      "No framework, new installation, paid services, or claims of error-free/world-best authorship"
+    ]
+  },
+  "assignments": [
+    {
+      "chapter": "v04-c01",
+      "owner": "root",
+      "scope": "Reproducible work and data provenance; integration and independent review",
+      "state": "accepted-by-root",
+      "owned_paths": [
+        "content/chapters/v04-c01.html",
+        "content/projects/v04-c01-*",
+        "scripts/check_v04_c01.py",
+        "content/reviews/v04-c01-author.json",
+        "content/reviews/v04-c01-sources.json"
+      ]
+    },
+    {
+      "chapter": "v04-c02",
+      "owner": "financial_modeling",
+      "scope": "Cell references, formulas, cash-flow timelines, reconciliation, sensitivity tables, audit checks",
+      "state": "accepted-by-root",
+      "owned_paths": [
+        "content/chapters/v04-c02.html",
+        "content/projects/v04-c02-*",
+        "scripts/check_v04_c02.py",
+        "content/reviews/v04-c02-author.json",
+        "content/reviews/v04-c02-sources.json"
+      ]
+    },
+    {
+      "chapter": "v04-c03",
+      "owner": "economic_computation",
+      "scope": "Types, loops, functions, exceptions, assertions, files, standard library",
+      "state": "accepted-by-root",
+      "owned_paths": [
+        "content/chapters/v04-c03.html",
+        "content/projects/v04-c03-*",
+        "scripts/check_v04_c03.py",
+        "content/reviews/v04-c03-author.json",
+        "content/reviews/v04-c03-sources.json"
+      ]
+    },
+    {
+      "chapter": "v04-c04",
+      "owner": "structured_data",
+      "scope": "Arrays, joins, aggregation, SQL, missing values, dates, duplicate keys",
+      "state": "accepted-by-root",
+      "owned_paths": [
+        "content/chapters/v04-c04.html",
+        "content/projects/v04-c04-*",
+        "scripts/check_v04_c04.py",
+        "content/reviews/v04-c04-author.json",
+        "content/reviews/v04-c04-sources.json"
+      ]
+    }
+  ],
+  "additional_review": {
+    "owner": "financial_modeling",
+    "task": "Bounded read-only peer audit of root v04-c01 manuscript, laboratory and solutions for material timing/unit/behavior errors",
+    "owned_write_paths": [],
+    "status": "completed-with-one-correction",
+    "root_responsibility": "Root owns corrections and integration; peer review is internal agent review, not human certification",
+    "finding": "c01 allowed a completed monthly flow before month-end; root added a month-end validation guard and explicit rejection test. Frozen examples unaffected."
+  }
+}

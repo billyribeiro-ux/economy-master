@@ -119,6 +119,12 @@ Publish meaningful intermediate editions only after coherent material exists; cl
 
 Use plain HTML, local CSS/JavaScript, and standard-library Python to generate navigation, indexing and the print edition. Search must work from `file://` without network requests. Avoid frameworks, generated decorative imagery, paid APIs, dependency churn, redundant rewriting and repetitive browsing. This reduces overhead; it does not remove necessary derivations, practice or review. Do not use repeated boilerplate to inflate apparent coverage.
 
+## Parallel production
+
+On 7 October 2026 the user explicitly authorized parallel economics/finance specialists. Use up to three specialist authors alongside the coordinating author. Before dispatch, persist each assignment's exact chapter scope, owned paths, prerequisite assumptions, deliverables and review gates in `book/production/`. Preserve those boundaries throughout the assignment. Specialists may draft adjacent chapters simultaneously against the agreed prerequisite specifications; acceptance still follows the dependency graph.
+
+Each specialist owns its chapter, distinctly prefixed supporting files, checker, proposed-source list and author review. The coordinator alone changes the canonical curriculum, source catalogue, checkpoint, shared build/verification code and hosting state; independently audits submitted content and solutions; and publishes coherent accepted batches. Specialists do not publish, overwrite another assignment or spawn further agents. Reuse verified stable sources and the existing implementation. Review reduces error risk but is not a guarantee of error-free work or independent human certification.
+
 ## Continuity protocol
 
 Keep an active goal until the terminal checklist passes. After every coherent batch, update `book/STATUS.json` with the exact last completed work, pending review issues and next actions. On continuation, read this plan and checkpoint, inspect the current manuscripts, and continue from the first unfinished task. Do not restart planning, silently reduce scope or repeatedly ask the user to continue. User corrections amend the contract and checkpoint while preserving completed work.

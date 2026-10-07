@@ -1,0 +1,90 @@
+[
+  {
+    "id": "v04-c04-python-array",
+    "title": "Python 3.13 documentation: array — Efficient arrays of numeric values",
+    "url": "https://docs.python.org/3.13/library/array.html",
+    "use": "Constrained sequence types, q/d type codes, mutable length, indexing, concatenation and repetition; supports the standard-library representation distinction, not economic alignment claims.",
+    "checked": "2026-10-07",
+    "verification": "Official documentation retrieved; opening description, type-code table and sequence-operation section inspected. Established APIs only; no claim that the live documentation patch version was available at the 2026-10-06 edition boundary."
+  },
+  {
+    "id": "v04-c04-python-sqlite",
+    "title": "Python 3.13 documentation: sqlite3 — DB-API 2.0 interface for SQLite databases",
+    "url": "https://docs.python.org/3.13/library/sqlite3.html",
+    "use": "In-memory connection, execute/executemany, question-mark binding, supported Python/SQLite types, Row and explicit connection close.",
+    "checked": "2026-10-07",
+    "verification": "Official documentation retrieved; tutorial, parameter binding, connection, row factory and type-conversion sections inspected. Benchmark independently run with local Python 3.14.6 and SQLite 3.53.3; live page patch version is not presented as an edition-boundary release fact."
+  },
+  {
+    "id": "v04-c04-sqlite-select",
+    "title": "SQLite language reference: SELECT",
+    "url": "https://www.sqlite.org/lang_select.html",
+    "use": "Row-pair joins, outer-join NULL extension before WHERE, grouping/HAVING, bare-column warning, DISTINCT, ordering and VALUES syntax.",
+    "checked": "2026-10-07",
+    "verification": "Official language reference retrieved; FROM/join, WHERE, aggregate/grouping, bare-column and SELECT syntax sections inspected. Hand-derived join counts and SQL behavior checked on synthetic fixtures."
+  },
+  {
+    "id": "v04-c04-sqlite-aggregates",
+    "title": "SQLite language reference: Built-in Aggregate Functions",
+    "url": "https://www.sqlite.org/lang_aggfunc.html",
+    "use": "COUNT(*) versus COUNT(x), AVG and SUM missing-value/empty-set behavior, invalid numeric text in AVG, integer and real summation limits.",
+    "checked": "2026-10-07",
+    "verification": "Official documentation retrieved; avg, count, sum and total sections inspected. Count/mean/sum behavior exercised on nonempty, all-NULL and empty groups. No newly introduced percentile or extension feature used."
+  },
+  {
+    "id": "v04-c04-sqlite-expressions",
+    "title": "SQLite language reference: SQL Language Expressions",
+    "url": "https://www.sqlite.org/lang_expr.html",
+    "use": "NULL comparison and IS semantics, arithmetic division, BETWEEN inclusivity and EXISTS membership queries.",
+    "checked": "2026-10-07",
+    "verification": "Official language reference retrieved; operators, IS/IS NOT, BETWEEN and EXISTS sections inspected. NULL, integer/real division, bound inputs and EXISTS results checked locally."
+  },
+  {
+    "id": "v04-c04-sqlite-null",
+    "title": "SQLite documentation: NULL Handling in SQLite",
+    "url": "https://www.sqlite.org/nulls.html",
+    "use": "Missing-value arithmetic, particularly zero multiplied by NULL; historical cross-engine table not used to make current claims about other databases.",
+    "checked": "2026-10-07",
+    "verification": "Official notes and SQLite column of behavior table inspected; zero-times-NULL independently executed. Historical comparison dates are not treated as contemporary external-engine verification."
+  },
+  {
+    "id": "v04-c04-sqlite-dates",
+    "title": "SQLite documentation: Date And Time Functions",
+    "url": "https://www.sqlite.org/lang_datefunc.html",
+    "use": "Date/time storage representations, datetime conversion of numeric UTC offsets, julianday difference for explicitly chosen endpoints.",
+    "checked": "2026-10-07",
+    "verification": "Official documentation retrieved; overview, time-values and timezone-offset discussion inspected. Five offset-bearing examples cross-checked with independent arithmetic and Python; February 2024 duration checked."
+  },
+  {
+    "id": "v04-c04-sqlite-types",
+    "title": "SQLite documentation: Datatypes In SQLite",
+    "url": "https://www.sqlite.org/datatype3.html",
+    "use": "Ordinary table flexible storage and column affinity; reason for explicit Python validation and database checks.",
+    "checked": "2026-10-07",
+    "verification": "Official datatype reference retrieved; storage-class and affinity sections inspected. Does not assert that column declarations alone validate source measurement semantics."
+  },
+  {
+    "id": "v04-c04-sqlite-schema",
+    "title": "SQLite language reference: CREATE TABLE",
+    "url": "https://www.sqlite.org/lang_createtable.html",
+    "use": "Primary-key, UNIQUE and NOT NULL constraints, including explicit nonmissing keys in ordinary SQLite tables.",
+    "checked": "2026-10-07",
+    "verification": "Official reference retrieved; column definitions, primary-key NULL caveat, UNIQUE, CHECK and NOT NULL sections inspected. Duplicate and missing key insertions tested."
+  },
+  {
+    "id": "v04-c04-sqlite-foreignkeys",
+    "title": "SQLite documentation: Foreign Key Support",
+    "url": "https://www.sqlite.org/foreignkeys.html",
+    "use": "Referential integrity and explicit PRAGMA foreign_keys = ON per connection before loading.",
+    "checked": "2026-10-07",
+    "verification": "Official reference retrieved; enabling-support and introductory referential-integrity sections inspected. Orphan observation rejected by both loader and enabled database constraint."
+  },
+  {
+    "id": "v04-c04-python-datetime",
+    "title": "Python 3.13 documentation: datetime — Basic date and time types",
+    "url": "https://docs.python.org/3.13/library/datetime.html",
+    "use": "date/datetime fromisoformat, timezone-aware astimezone and fixed-format isoformat output for validated numeric-offset timestamps.",
+    "checked": "2026-10-07",
+    "verification": "Official documentation retrieved; fromisoformat, astimezone and isoformat descriptions inspected. Loader deliberately validates a narrower seconds-plus-numeric-offset format and preserves four-digit early years."
+  }
+]

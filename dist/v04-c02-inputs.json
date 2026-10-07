@@ -1,0 +1,38 @@
+{
+  "provenance": {
+    "kind": "original synthetic teaching assumptions",
+    "created": "2026-10-07",
+    "edition_boundary": "2026-10-06",
+    "source": "Authored for v04-c02; no observed company, bank or market data",
+    "access": "Included for offline reuse with the chapter",
+    "currency": "hypothetical dollars",
+    "time": "t=0 now; t=1,2,3 annual period ends",
+    "prices": "All cash amounts use the same nominal-dollar convention; no inflation adjustment",
+    "boundary": "Incremental cash flows before financing and taxes; no unpaid customer balances, debt, tax effects or intermediate capital purchases. Working capital is paid at t=0; its t=3 recovery is an explicit project input, equal to the original outlay in the base case."
+  },
+  "project": {
+    "discount_rate": 0.10,
+    "price_per_unit": 12,
+    "variable_cost_per_unit": 7,
+    "fixed_cash_cost_per_year": 1500,
+    "initial_equipment_outlay": 10000,
+    "initial_working_capital": 2000,
+    "terminal_equipment_receipt": 1000,
+    "terminal_working_capital_recovery": 2000,
+    "quantity_multiplier": 1,
+    "base_annual_units": [1000, 1200, 1400]
+  },
+  "sensitivity": {
+    "discount_rates": [0.05, 0.10, 0.15],
+    "quantity_multipliers": [0.8, 1, 1.2]
+  },
+  "bank_reconciliation": {
+    "opening_cash": 2500,
+    "customer_receipts": 8200,
+    "recorded_supplier_payments": 5400,
+    "wage_payments": 2100,
+    "equipment_payments": 1800,
+    "independent_bank_closing_cash": 1175,
+    "confirmed_omitted_supplier_payment": 225
+  }
+}
