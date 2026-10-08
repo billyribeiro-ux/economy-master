@@ -1,0 +1,192 @@
+{
+  "chapter": "v07-c05",
+  "title": "Debt, leases and financing obligations",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "reviewer": "monte_carlo specialist author",
+  "status": "ready_for_root_review",
+  "acceptance_authority": "Root coordinator only; this is an author audit, not chapter acceptance, assurance opinion or standards-compliance certification.",
+  "scope": {
+    "worked_examples": 3,
+    "exercises": 8,
+    "solutions": 8,
+    "word_count": 6055,
+    "word_count_method": "HTMLParser text nodes and Unicode word regex, excluding tags",
+    "assets": "Original two-year Ridgeway borrower/lessee model, exact rational stdlib benchmark, JSON input and README; 29 generated commencement, annual and closing entries."
+  },
+  "content_review": {
+    "prerequisites": "Read master plan, current checkpoint, canonical c05 specification and fixed ownership contract. Coordinated c04 historical cost/contra-depreciation/carrying amount and c06 residual-equity boundaries. Read the saved c04 asset/register and effective-interest interfaces after its author saved them. Reused c01 debit-positive entries, c02 cash bridges, c03 chronology discipline and v01-c05 present values.",
+    "definitions_and_clock": "Borrower, principal, face, coupon, maturity, amortized carrying value, fee, lessee/lessor, ROU and covenant defined before use. Every model amount is kCU and rates are per complete annual interval. Main dates are synthetic 1January2025 and31December2025/2026, with supplied receipt-before-payment ordering; no real observations or fine-date funding claim.",
+    "proofs": "Derived forward recurrence from backward PV and proved remaining-payment identity by induction, zero terminal amount and lifetime expense=sum payments-net proceeds. Proved strict monotonicity/unique nonnegative yield under positive initial proceeds and nonnegative dated payments; sign-changing cash streams explicitly outside that proof. Derived coupon-versus-yield premium/discount identity including zero-rate boundary.",
+    "note": "Independently recomputed gross102 minus eligible fee2 gives net100; coupon8 and face104.2 are different amounts. Exact10% PV gives note100->102->0, interest10/10.2 and payments8/112.2. Expense20.2 equals coupons16 plus discount/fee4.2. No fee double count or terminal balancing plug. Current market value is not silently substituted for fixed amortized carrying value.",
+    "lease": "PV66/1.1+72.6/1.1^2=120. ROU120 depreciates60/year; liability120->66->0 with interest12/6.6 and principal54/66. No ownership transfer/options/incentives/restoration/initial lease cost or impairment. Prepayment enters asset but not unpaid liability a second time. Negative-amortization leases are explicitly excluded from the benchmark cash-allocation contract.",
+    "full_entity": "Initial assets320=liabilities220+equity100; subsequent profit18/3.2; cash166/81.2; closing assets286/121.2 and equity118/121.2. Owned equipment80 has four-year zero-residual life, remains40 at horizon. Both old financing liabilities settle but continuing business assets remain.",
+    "cash_scope": "Commencement gross cash and noncash lease addition are disclosed separately. Movement CFO100/85.4 and CFF-54/-170.2 start from commencement cash120. Full-calendar2025 combines startup: CFO100, CFI-80, CFF146, cash0->166. Code returns both views. Indirect CFO adds depreciation80 and note accretion2/2.2. Alternative all-interest-financing exercise removes duplicate accretion addback and preserves total cash.",
+    "covenants_and_liquidity": "Toy covenant explicitly includes carrying note/lease debt and positive book equity; D<=1.5E. Base168/118 passes with9 headroom; revenue230 stress gives cash136, equity88 and headroom-36, a breach despite positive cash. Equality and nonpositive-equity branches checked. Coverage ratio is separately defined, not mislabeled as the covenant. No automatic waiver, acceleration or facility availability assumed.",
+    "settlement_and_commitments": "Full extinguishment compares consideration with carrying value, not total future cash or a hypothetical market price. Exercise97 settlement against102 produces gain5; no market-yield-only entry. Undrawn/expired/uncommitted lines do not create cash or remove liabilities. New borrowing8.8 funds the explicitly stated buffer but remains a new liability. Fee, guarantee and commitment scope is not generalized to zero recognition.",
+    "solutions": "All eight prompts/solutions read together and independently recomputed: simple accrual, premium, fee-adjusted zero coupon, prepaid lease, consistent cash reclassification, two explicitly authorized covenant repairs, maturity buffer/refinancing and market-versus-settlement value. Answered teach-back and delayed unpaid-coupon case show leverage compliance does not imply payment compliance.",
+    "sources": "Actual five primary contents inspected: MIT2003 debt lecture, archived AASB9 December2022 relevant paragraphs, IFRS September2020 investor explanation, FASB In Focus revisedJune2020 and IASB October2022 covenant announcement. Uses and historical versions recorded. Public IFRS16 overview also inspected; attempted full2021 IFRS16 PDF redirected to subscription page and was not represented as read.",
+    "code_and_check_scope": "Exact rational strings, bounded schema, no floats/network/packages/randomness; explicit validation remains under -O. Input path relative to script. Independent backward PV reference and manually transcribed29journal events supplement stock/flow identities; few consequential invalid financial contracts and report mutations checked. No broad software fuzzing or visual claim."
+  },
+  "resolved_findings": [
+    {
+      "origin": "root outline review",
+      "finding": "Initial face, gross lender cash, fee-adjusted net proceeds and startup cash classification needed distinct labels.",
+      "resolution": "Explicit values104.2/102/100, gross financing receipts/fee and noncash lease addition in chapter/program/README; classification declared as a model convention."
+    },
+    {
+      "origin": "author reporting-period audit",
+      "finding": "Separately taught commencement block could be mistaken for a transaction outside the2025 annual statement.",
+      "resolution": "Added full-calendar2025 CFO100/CFI-80/CFF146 and cash0->166 alongside post-commencement movement view; benchmark returns both, and reclassification/settlement solutions bridge them."
+    },
+    {
+      "origin": "author cash-allocation boundary audit",
+      "finding": "Payment-minus-interest is a cash principal allocation only within the maintained lease-payment domain.",
+      "resolution": "Explicitly restrict benchmark leases to each annual payment covering that year interest; reject negative-amortization lease input. Note discount accretion remains supported and distinguished."
+    },
+    {
+      "origin": "author prerequisite-link audit",
+      "finding": "First draft pointed present-value readers to v02-c05, which is linear algebra.",
+      "resolution": "Corrected route to the actually taught v01-c05 time-value chapter and added route expectation to checker."
+    }
+  ],
+  "validation": {
+    "checker_result": {
+      "status": "passed",
+      "checks": [
+        "Independent baseline balances, gross commencement cash/noncash addition, full first-year cash bridge, backward PVs and terminal/lifetime schedules",
+        "Manual independent posting of 29 commencement/annual/closing entries and every modeled cash prefix",
+        "Covenant pass/equality/breach/nonpositive-equity cases, premium reversal, prepaid lease and coherent zero-rate boundary",
+        "All eight solved exercises and delayed missed-coupon case independently recomputed, including classification, repairs and extinguishment",
+        "Nine consequential invalid contract/funding cases and three report mutations caught; quiet API and portable normal/-O CLI verified",
+        "Three worked cases, eight matching solutions, answered teach-back/retention and all owned artifact/source routes checked structurally"
+      ],
+      "counts": {
+        "journals": 29,
+        "liability_schedules": 2,
+        "covenant_cases": 4,
+        "other_financial_boundary_cases": 3,
+        "invalid_contracts": 9,
+        "report_mutations_caught": 3,
+        "exercises": 8,
+        "worked_examples": 3
+      },
+      "limitations": [
+        "Bounded author numerical/structural audit, not documentary assurance or current standards-compliance certification.",
+        "Annual cash order and recognition/classification assumptions are supplied; fine-date liquidity and remedies need actual contracts.",
+        "Exact rational amounts omit actual currency rounding policy, options, taxes, FX and lease/debt remeasurement.",
+        "Visual/mobile/print UI QA remains pending; no visual claim."
+      ]
+    },
+    "quiet_API": {
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "strict_JSON_serializable": true
+    },
+    "CLI": "Portable normal and -O CLI match the full API result; inconsistent PV contract exits2 with JSON invalid_input under -O.",
+    "owned_whitespace_conflicts": "Direct scan of owned manuscript/code/input/README/source files found no trailing whitespace or conflict markers.",
+    "exact_outputs_kcu": {
+      "note_initial": "100",
+      "note_expenses": [
+        "10",
+        "10.2"
+      ],
+      "note_payments": [
+        "8",
+        "112.2"
+      ],
+      "note_closing": [
+        "102",
+        "0"
+      ],
+      "lease_initial": "120",
+      "lease_interest": [
+        "12",
+        "6.6"
+      ],
+      "lease_principal": [
+        "54",
+        "66"
+      ],
+      "lease_closing": [
+        "66",
+        "0"
+      ],
+      "initial_cash": "120",
+      "initial_assets": "320",
+      "initial_liabilities": "220",
+      "initial_equity": "100",
+      "annual_profit": [
+        "18",
+        "3.2"
+      ],
+      "closing_cash": [
+        "166",
+        "81.2"
+      ],
+      "closing_assets": [
+        "286",
+        "121.2"
+      ],
+      "closing_liabilities": [
+        "168",
+        "0"
+      ],
+      "closing_equity": [
+        "118",
+        "121.2"
+      ],
+      "movement_CFO": [
+        "100",
+        "85.4"
+      ],
+      "movement_CFF": [
+        "-54",
+        "-170.2"
+      ],
+      "full_2025_CFO_CFI_CFF": [
+        "100",
+        "-80",
+        "146"
+      ],
+      "stress_cash": "136",
+      "stress_equity": "88",
+      "stress_covenant_headroom": "-36"
+    },
+    "retention": "Unpaid first coupon leaves note110, cash174, A294=L176+E118, profit18, CFO108 and leverage headroom1; payment was still missed."
+  },
+  "hashes": {
+    "content/chapters/v07-c05.html": {
+      "sha256": "3f17fa5cd65fccfb4415f6aac331a1bcd1f292606ec94f3209b4ba7143a4e1d5",
+      "bytes": 41079
+    },
+    "content/projects/v07-c05-analysis.py": {
+      "sha256": "22b4fafad3cfb4cc84af8f07be824159570a7be39388e75363b6ea84aa0d1ca8",
+      "bytes": 14795
+    },
+    "content/projects/v07-c05-inputs.json": {
+      "sha256": "0e19f480e4132d9ab0b392f8e1e73629d1f5fe46ae2e860065da36e3cbdb4527",
+      "bytes": 632
+    },
+    "content/projects/v07-c05-README.txt": {
+      "sha256": "ae2fc311eead862e68f2ec8a02d7619604a8167bdb2a628bcd5b7b7ca81275be",
+      "bytes": 8654
+    },
+    "scripts/check_v07_c05.py": {
+      "sha256": "dd3997a853aeae945f889f318865c423607fe23fb30ff3b682193dc2a11a3a4e",
+      "bytes": 15525
+    },
+    "content/reviews/v07-c05-sources.json": {
+      "sha256": "3598430088bd1ae9f7a5db0f153ef6027d1aa1560861bbea62fbb4a490afa216",
+      "bytes": 4521
+    }
+  },
+  "open_findings": [],
+  "limitations": [
+    "Root alone owns source-catalogue/shared integration, dependency-order acceptance and publishing.",
+    "Supplied synthetic contracts and rates are not observed funding offers or documentary accounting evidence.",
+    "Recognition/classification and selected historical primary methods are explicitly scoped; no comprehensive current IFRS/US-GAAP comparison or legal advice is claimed.",
+    "Annual cash ordering omits intra-year gaps; full financial options, taxes, FX, rounding policy, lease modifications and debt restructuring remain outside the model.",
+    "Visual/mobile/print UI QA remains pending; no browser workaround or visual verification claim."
+  ]
+}

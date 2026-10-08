@@ -1,0 +1,202 @@
+{
+  "chapter": "v07-c08",
+  "title": "Managerial accounting and cost decisions",
+  "author": "regression specialist",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "review_type": "Author instructional, decision-model, accounting, exact numerical, source and reproducibility audit",
+  "state": "author-review-complete",
+  "status": "passed author checks; pending independent root review and acceptance after v07-c07",
+  "assignment": "production/v06-assessment-v07-opening-assignments.json",
+  "scope": {
+    "canonical_coverage": [
+      "Cost behavior",
+      "break-even",
+      "allocation",
+      "activity-based costing",
+      "make-or-buy",
+      "capacity"
+    ],
+    "outcome": "Use contribution margins and relevant costs for operational decisions.",
+    "chapter_words": 6241,
+    "worked_examples": 4,
+    "exercises": 8,
+    "complete_solutions": 8,
+    "additional_cases": "Fully calculated special-order comparisons and absorption-versus-variable inventory-profit/cash bridge.",
+    "teach_back": "Answered explanation of allocated product loss, unused capacity, opportunity cost and integer/second-resource boundaries.",
+    "retention": "Answered increase in P variable cost, independently proved optimality and reoptimized busy order threshold.",
+    "lab": "Exact offline finite enumeration and activity-cost reconciliation with original JSON and README; no dependencies or network.",
+    "ownership": "Only c08 chapter, three c08-prefixed assets, checker, author and source proposals written. No child agents, central state, commits, hosting or other manuscripts."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v07-c08.html",
+      "bytes": 42896,
+      "sha256": "ec2cd12b4f0594e88bfbbae5b80440abbaeaa93dde8db08d9707476cd081b9af"
+    },
+    {
+      "path": "content/projects/v07-c08-analysis.py",
+      "bytes": 8055,
+      "sha256": "307cb66c965fb5042e6c170b56871fb1b16aa025a7a08b628b000f57feb5e8df"
+    },
+    {
+      "path": "content/projects/v07-c08-inputs.json",
+      "bytes": 649,
+      "sha256": "deab41927ceec7d3923117277a687f1f3e1f8ce2af8538ff912c72d0bcae0395"
+    },
+    {
+      "path": "content/projects/v07-c08-README.txt",
+      "bytes": 5272,
+      "sha256": "4ade7d3111237bc4f925a2d368b81986127c09aab6ef20d8213c4718fd0cd816"
+    },
+    {
+      "path": "scripts/check_v07_c08.py",
+      "bytes": 13989,
+      "sha256": "c6e33197202d9f9b06a35e3cf0556723c3ca824c40f15cf759d504533ffaecbb"
+    },
+    {
+      "path": "content/reviews/v07-c08-sources.json",
+      "bytes": 4695,
+      "sha256": "ef960a38dc30b3bfcba10ceff6a79090430a2d9bc72c1186e483354181fa8c7a"
+    }
+  ],
+  "reasoning_checks": [
+    "Cost object/traceability and activity-based cost behavior are separate classifications. Fixed versus variable is not equated with unavoidable versus avoidable; sunk expenditure is distinct from relevant future resale or alternative-use value.",
+    "Contribution includes all supplied variable costs. One-product break-even and target-profit formulas are derived, with zero/negative contribution, zero fixed cost, integer quantities and infeasible thresholds addressed. Multi-product break-even explicitly freezes a unit mix and distinguishes revenue shares.",
+    "Original main case specifies CU, one-month horizon, whole quantities, demand caps, two separate resources, rounded partial batches, all-cash no-inventory accounting and opening cash/equity. Fixed capacity services remain committed; no implicit cancellation saving is assumed.",
+    "Traditional actual-hour full allocation and practical-capacity ABC are distinguished. Every machine/setup/common cost reconciles to company expense, including unused capacity. Product-level resource assignments are never treated as automatically avoidable cash.",
+    "Main optimum has an independent analytic upper-bound certificate; equality proves unique global maximizer (80,28) even in the relaxation. Expanded setup-bound (80,44) has a separate upper-bound proof. The integer one-hour tie is retained, with no claim that a continuous marginal value always equals an integer increment.",
+    "Special-order idle and busy contexts have explicitly different available regular demand. Busy cost reoptimizes the complete regular plan after reserving both resources. External preparation/delivery 40 is separate from committed pools; no duplicate opportunity-cost charge.",
+    "Make/buy case is a separate next-month decision, not extra load on the main 300-hour budget. Avoidable batch cost, unchanged depreciation/common cost, additional buying inspection and released-capacity contribution are explicitly separated. Quote ceilings follow complete incremental scenarios.",
+    "Absorption/variable bridge fixes normal production capacity, rate, inventory conditions, no variances/write-downs and no payment lag. Both profit presentations reconcile to identical cash; only fixed manufacturing cost is deferred. No financial-reporting compliance rule or automatic overproduction recommendation is asserted.",
+    "Quality/contract admissibility, risk-neutral expected value, liquidity and external harm are distinguished. A positive private expected value does not establish compliance with the stipulated quality condition or positive social value.",
+    "All eight prompt/solution pairs were manually matched for inputs, units, endpoints, assumptions and requested explanations. Numerical tests support this prose audit rather than claiming to replace it."
+  ],
+  "numerical_checks": [
+    {
+      "name": "Exact baseline/optimum statements, pool allocations and fixed-mix break-even",
+      "status": "pass"
+    },
+    {
+      "name": "Global certificates, independently reduced optimization, integer ties and resource boundaries",
+      "status": "pass",
+      "capacity_cases": 12
+    },
+    {
+      "name": "Opportunity-cost reoptimization, make/buy and answered delayed check",
+      "status": "pass"
+    },
+    {
+      "name": "All eight independent exact exercise calculations",
+      "status": "pass",
+      "results": {
+        "1": {
+          "break_even": [
+            100,
+            150
+          ],
+          "demand120_best": 100
+        },
+        "2": [
+          "210/11",
+          "210/13",
+          "100",
+          "110",
+          "500"
+        ],
+        "3": [
+          "660",
+          "1260",
+          "300",
+          "180"
+        ],
+        "4": [
+          "4200",
+          "-30",
+          "5040"
+        ],
+        "5": [
+          "6",
+          "44",
+          "-14",
+          "142/3",
+          "126"
+        ],
+        "6": [
+          "600",
+          "750",
+          "30",
+          "68/5",
+          "60",
+          "71/5"
+        ],
+        "7": [
+          "1140",
+          "840",
+          "900",
+          "600",
+          "240"
+        ],
+        "8": [
+          "300",
+          "100",
+          "-50"
+        ]
+      }
+    },
+    {
+      "name": "Inventory-profit/cash bridge and zero-output/zero-margin boundaries",
+      "status": "pass"
+    },
+    {
+      "name": "Eight meaningful failures and two decision/accounting error detectors",
+      "status": "pass",
+      "invalid_cases": 8
+    },
+    {
+      "name": "Fragment, four worked cases, eight solved exercises and scoped primary links",
+      "status": "pass",
+      "worked": 4,
+      "sources": 6
+    },
+    {
+      "name": "Portable normal/optimized CLI and quiet exact JSON API",
+      "status": "pass"
+    }
+  ],
+  "commands_and_contracts": [
+    {
+      "command": "python3 book/scripts/check_v07_c08.py",
+      "result": "pass; eight groups"
+    },
+    {
+      "command": "python3 -O book/scripts/check_v07_c08.py",
+      "result": "pass; eight groups; no reliance on Python assert"
+    },
+    {
+      "command": "capture import/check() stdout+stderr; json.dumps(check(), allow_nan=False)",
+      "result": "quiet, directly serializable without fallback; repeated after final README clarification"
+    },
+    {
+      "command": "isolated temporary lab/input copy; normal/-O CLI and invalid-unit run",
+      "result": "exact baseline reproduced, unsupported unit input rejected without result JSON"
+    }
+  ],
+  "source_checks": {
+    "proposals": 6,
+    "actual_primary_inspection": "Actual MIT lecture PDFs, the original-author HBS excerpt and original-author OpenStax publisher sections inspected. PDF slide/body and section scopes are recorded in source proposals; not merely course overview pages.",
+    "excluded_claims": "Historical company anecdotes, generic GAAP assertions, universal practical-capacity percentages and source numerical examples are not imported. The HBS working-paper PDF route failed; only the successfully inspected official author excerpt is claimed.",
+    "originality": "All chapter prose, Meridian and exercise cases, proofs, numeric examples, code and data are original. No source exercise or passage is reproduced."
+  },
+  "findings": [],
+  "limitations": [
+    "Original finite synthetic decisions; input demand, avoidability, driver validity, quality and probabilities require evidence.",
+    "Global enumeration covers the stated integer set; algebraic bounds separately prove the specified optima, not arbitrary large production problems.",
+    "Internal before-tax teaching conventions, not current reporting compliance or an assertion that allocated cost is avoidable.",
+    "No browser, mobile or print visual QA.",
+    "Author review is not external academic/professional certification; root acceptance follows prerequisite order.",
+    "The main lab has deliberately finite capped demands, integer hours/batches and positive fixed pools. It is not a general costing system, full stochastic optimizer or estimator of true avoidable costs.",
+    "No browser/mobile/print visual QA was attempted under the standing restriction."
+  ],
+  "handoff": "All seven owned artifacts ready for independent root read/review and dependency-ordered acceptance."
+}

@@ -1,0 +1,425 @@
+{
+  "units": "Money in kCU; Orion quantities in thousands; prices in CU per unit. Exact rational strings. Asset lives in whole years.",
+  "inventory": {
+    "bases": {
+      "FIFO": [
+        {
+          "period": "X1",
+          "opening_inventory": "200",
+          "purchases": "300",
+          "revenue": "600",
+          "cogs": "260",
+          "operating_expense": "80",
+          "profit": "260",
+          "closing_layers": [
+            {
+              "quantity": "80",
+              "unit_cost": "3"
+            }
+          ],
+          "closing_quantity": "80",
+          "closing_inventory": "240",
+          "inventory_change": "40",
+          "cash_after_purchase": "200",
+          "cash_after_sale": "800",
+          "closing_cash": "720",
+          "cfo": "220",
+          "assets": "960",
+          "liabilities": "100",
+          "share_capital": "600",
+          "retained": "260",
+          "equity": "860",
+          "residuals": {
+            "inventory": "0",
+            "balance_sheet": "0",
+            "indirect_cfo": "0",
+            "cash_bridge": "0"
+          }
+        },
+        {
+          "period": "X2",
+          "opening_inventory": "240",
+          "purchases": "400",
+          "revenue": "540",
+          "cogs": "280",
+          "operating_expense": "90",
+          "profit": "170",
+          "closing_layers": [
+            {
+              "quantity": "90",
+              "unit_cost": "4"
+            }
+          ],
+          "closing_quantity": "90",
+          "closing_inventory": "360",
+          "inventory_change": "120",
+          "cash_after_purchase": "320",
+          "cash_after_sale": "860",
+          "closing_cash": "770",
+          "cfo": "50",
+          "assets": "1130",
+          "liabilities": "100",
+          "share_capital": "600",
+          "retained": "430",
+          "equity": "1030",
+          "residuals": {
+            "inventory": "0",
+            "balance_sheet": "0",
+            "indirect_cfo": "0",
+            "cash_bridge": "0"
+          }
+        }
+      ],
+      "LIFO": [
+        {
+          "period": "X1",
+          "opening_inventory": "200",
+          "purchases": "300",
+          "revenue": "600",
+          "cogs": "340",
+          "operating_expense": "80",
+          "profit": "180",
+          "closing_layers": [
+            {
+              "quantity": "80",
+              "unit_cost": "2"
+            }
+          ],
+          "closing_quantity": "80",
+          "closing_inventory": "160",
+          "inventory_change": "-40",
+          "cash_after_purchase": "200",
+          "cash_after_sale": "800",
+          "closing_cash": "720",
+          "cfo": "220",
+          "assets": "880",
+          "liabilities": "100",
+          "share_capital": "600",
+          "retained": "180",
+          "equity": "780",
+          "residuals": {
+            "inventory": "0",
+            "balance_sheet": "0",
+            "indirect_cfo": "0",
+            "cash_bridge": "0"
+          }
+        },
+        {
+          "period": "X2",
+          "opening_inventory": "160",
+          "purchases": "400",
+          "revenue": "540",
+          "cogs": "360",
+          "operating_expense": "90",
+          "profit": "90",
+          "closing_layers": [
+            {
+              "quantity": "80",
+              "unit_cost": "2"
+            },
+            {
+              "quantity": "10",
+              "unit_cost": "4"
+            }
+          ],
+          "closing_quantity": "90",
+          "closing_inventory": "200",
+          "inventory_change": "40",
+          "cash_after_purchase": "320",
+          "cash_after_sale": "860",
+          "closing_cash": "770",
+          "cfo": "50",
+          "assets": "970",
+          "liabilities": "100",
+          "share_capital": "600",
+          "retained": "270",
+          "equity": "870",
+          "residuals": {
+            "inventory": "0",
+            "balance_sheet": "0",
+            "indirect_cfo": "0",
+            "cash_bridge": "0"
+          }
+        }
+      ]
+    },
+    "common_FIFO_bridge": [
+      {
+        "period": "X1",
+        "opening_reserve": "0",
+        "closing_reserve": "80",
+        "reserve_change": "80",
+        "cogs_adjustment": "-80",
+        "profit_adjustment": "80",
+        "equity_adjustment": "80",
+        "cash_adjustment": "0",
+        "residuals": {
+          "profit": "0",
+          "equity": "0",
+          "cash": "0"
+        }
+      },
+      {
+        "period": "X2",
+        "opening_reserve": "80",
+        "closing_reserve": "160",
+        "reserve_change": "80",
+        "cogs_adjustment": "-80",
+        "profit_adjustment": "80",
+        "equity_adjustment": "160",
+        "cash_adjustment": "0",
+        "residuals": {
+          "profit": "0",
+          "equity": "0",
+          "cash": "0"
+        }
+      }
+    ]
+  },
+  "asset": {
+    "original_start_revision_asset": "80",
+    "revised_annual_depreciation": "80/3",
+    "corrected_start_revision_asset": "60",
+    "corrected_annual_depreciation": "30",
+    "earliest_comparative_opening_equity_correction": "-10",
+    "last_comparative_profit_correction": "-10",
+    "cumulative_prior_asset_equity_correction": "-20",
+    "prior_correction_cash": "0",
+    "prior_correction_in_discovery_profit": "0",
+    "schedules": {
+      "original": [
+        {
+          "period": "X1",
+          "opening_asset": "120",
+          "depreciation": "20",
+          "closing_asset": "100",
+          "profit": "80",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        },
+        {
+          "period": "X2",
+          "opening_asset": "100",
+          "depreciation": "20",
+          "closing_asset": "80",
+          "profit": "80",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        },
+        {
+          "period": "X3",
+          "opening_asset": "80",
+          "depreciation": "20",
+          "closing_asset": "60",
+          "profit": "80",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        },
+        {
+          "period": "X4",
+          "opening_asset": "60",
+          "depreciation": "20",
+          "closing_asset": "40",
+          "profit": "80",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        },
+        {
+          "period": "X5",
+          "opening_asset": "40",
+          "depreciation": "20",
+          "closing_asset": "20",
+          "profit": "80",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        },
+        {
+          "period": "X6",
+          "opening_asset": "20",
+          "depreciation": "20",
+          "closing_asset": "0",
+          "profit": "80",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        }
+      ],
+      "new_estimate": [
+        {
+          "period": "X1",
+          "opening_asset": "120",
+          "depreciation": "20",
+          "closing_asset": "100",
+          "profit": "80",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        },
+        {
+          "period": "X2",
+          "opening_asset": "100",
+          "depreciation": "20",
+          "closing_asset": "80",
+          "profit": "80",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        },
+        {
+          "period": "X3",
+          "opening_asset": "80",
+          "depreciation": "80/3",
+          "closing_asset": "160/3",
+          "profit": "220/3",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        },
+        {
+          "period": "X4",
+          "opening_asset": "160/3",
+          "depreciation": "80/3",
+          "closing_asset": "80/3",
+          "profit": "220/3",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        },
+        {
+          "period": "X5",
+          "opening_asset": "80/3",
+          "depreciation": "80/3",
+          "closing_asset": "0",
+          "profit": "220/3",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        },
+        {
+          "period": "X6",
+          "opening_asset": "0",
+          "depreciation": "0",
+          "closing_asset": "0",
+          "profit": "100",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        }
+      ],
+      "corrected_history": [
+        {
+          "period": "X1",
+          "opening_asset": "120",
+          "depreciation": "30",
+          "closing_asset": "90",
+          "profit": "70",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        },
+        {
+          "period": "X2",
+          "opening_asset": "90",
+          "depreciation": "30",
+          "closing_asset": "60",
+          "profit": "70",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        },
+        {
+          "period": "X3",
+          "opening_asset": "60",
+          "depreciation": "30",
+          "closing_asset": "30",
+          "profit": "70",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        },
+        {
+          "period": "X4",
+          "opening_asset": "30",
+          "depreciation": "30",
+          "closing_asset": "0",
+          "profit": "70",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        },
+        {
+          "period": "X5",
+          "opening_asset": "0",
+          "depreciation": "0",
+          "closing_asset": "0",
+          "profit": "100",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        },
+        {
+          "period": "X6",
+          "opening_asset": "0",
+          "depreciation": "0",
+          "closing_asset": "0",
+          "profit": "100",
+          "cfo": "100",
+          "asset_residual": "0",
+          "cash_reconciliation_residual": "0"
+        }
+      ]
+    }
+  },
+  "segments": {
+    "segments": [
+      {
+        "name": "Hardware",
+        "external_revenue": "300",
+        "internal_revenue": "40",
+        "revenue": "340",
+        "significant_expenses": {
+          "cost_category": "220",
+          "payroll": "40"
+        },
+        "other_segment_expenses": "26",
+        "included_expenses": "286",
+        "profit": "54",
+        "assets": "180"
+      },
+      {
+        "name": "Services",
+        "external_revenue": "200",
+        "internal_revenue": "0",
+        "revenue": "200",
+        "significant_expenses": {
+          "cost_category": "80",
+          "payroll": "50"
+        },
+        "other_segment_expenses": "34",
+        "included_expenses": "164",
+        "profit": "36",
+        "assets": "120"
+      }
+    ],
+    "segment_revenue_sum": "540",
+    "segment_profit_sum": "90",
+    "internal_revenue_eliminated": "40",
+    "internal_expense_eliminated": "40",
+    "external_revenue": "500",
+    "operating_expenses": "440",
+    "operating_profit": "60",
+    "profit_before_tax": "52",
+    "net_income": "39",
+    "assets": "330",
+    "cfo": null,
+    "residuals": {
+      "external_revenue": "0",
+      "operating_profit": "0"
+    }
+  }
+}

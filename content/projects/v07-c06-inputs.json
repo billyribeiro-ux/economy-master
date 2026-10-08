@@ -1,0 +1,25 @@
+{
+  "schema": "v07-c06-original-equity-group-v1",
+  "provenance": "Original synthetic teaching cases; no observed company data or estimated fair values.",
+  "units": "Money in kCU (thousands of currency units); shares in thousands; prices and par in CU per share. Exact rational strings.",
+  "time": "Fictional year X1. Group control begins 1 January; events follow listed order through 31 December. Share case is a separate company with its own ordered dates.",
+  "conventions": "Debit-positive ledgers; ordinary residual common equity. No tax, OCI, FX, transaction costs, impairment, share retirement, options or preference shares. Group uses proportionate NCI, acquisition-date identifiable fair values equal supplied carrying amounts, unchanged nondepreciable land, no goodwill amortization or impairment in this case, and separate-parent cost investment/dividend-income convention. All dividends declared and paid on their stated date; external liabilities unchanged.",
+  "shares": {
+    "name": "Juniper", "opening_cash": "50", "other_assets": "150", "liabilities": "80", "opening_shares": "100", "par": "1/2", "opening_apic": "30", "opening_retained": "40", "observer_shares": "40",
+    "events": [
+      {"date": "X1-02-01", "kind": "issue", "shares": "25", "price": "2"},
+      {"date": "X1-06-30", "kind": "cash_service", "amount": "30"},
+      {"date": "X1-07-01", "kind": "dividend", "amount": "10"},
+      {"date": "X1-08-01", "kind": "repurchase", "shares": "20", "price": "3"},
+      {"date": "X1-10-01", "kind": "reissue", "shares": "5", "price": "4"}
+    ]
+  },
+  "group": {
+    "parent": "Cedar", "subsidiary": "Brook", "control_stipulated": true, "business_stipulated": true,
+    "ownership": "3/4", "consideration": "150",
+    "parent_opening": {"cash": "300", "land": "200", "external_liabilities": "100", "share_capital": "300", "retained": "100"},
+    "sub_opening": {"cash": "40", "external_receivables": "20", "inventory": "40", "land": "100", "external_liabilities": "40", "share_capital": "100", "retained": "60"},
+    "post": {"parent_service_cash": "80", "parent_operating_cash": "50", "batch_external_cost": "40", "batch_transfer_price": "60", "batch_fraction_sold_outside": "1/2", "outside_revenue_if_entire_batch_sold": "200", "sub_operating_cash": "20", "intercompany_cash_settlement": "45", "sub_dividend": "16", "parent_dividend": "20"},
+    "event_order": ["1 January: acquire existing shares from outside sellers; subsidiary receives no consideration", "30 June: parent cash services and operating payments", "1 July: parent buys batch for cash then transfers it on credit to subsidiary", "30 September: subsidiary sells stated fraction for cash and pays operating costs", "1 October: subsidiary settles part of intercompany payable", "1 November: subsidiary declares and pays dividend", "1 December: parent declares and pays dividend", "31 December: close company income and dividends; prepare consolidation worksheet"]
+  }
+}

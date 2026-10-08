@@ -1,0 +1,163 @@
+{
+  "assessment": "v07-support",
+  "reviewer": "cost_peer specialist, separate from support author/root",
+  "date": "2026-10-08",
+  "assignment": "production/v07-assessment-assignments.json",
+  "review_type": "Independent complete support prose, determinate answers, instructional routes and focused source-code review",
+  "state": "peer-review-complete",
+  "status": "passed; one low-severity navigation finding resolved; pending coordinator package acceptance",
+  "scope": {
+    "diagnostic_items": 8,
+    "diagnostic_points": 32,
+    "retention_items": 6,
+    "retention_points": 60,
+    "oral_prompts": 4,
+    "chapter_routes": 12,
+    "read_targets": [
+      "content/assessments/parts/v07-support-opening.html",
+      "content/assessments/parts/v07-support-closing.html",
+      "scripts/check_v07_assessment.py"
+    ],
+    "owned_path": "content/reviews/v07-support-peer.json",
+    "code_review": "Read full check_v07_assessment.py; executed only quiet support_check. Reviewed assembly comparison, required section anchors, point/solution pairing and chapter-route logic; specialist checker internals and complete assembly execution outside this support-review scope."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/assessments/parts/v07-support-opening.html",
+      "bytes": 9658,
+      "sha256": "2b98dc87dd0ba4f6243248dc25f63f91de08d1f049fdf7373b2126a1373b62cd"
+    },
+    {
+      "path": "content/assessments/parts/v07-support-closing.html",
+      "bytes": 17362,
+      "sha256": "5930bd5b0f743d3579fdfc7eab4779c20bc512d3beddd57396c0bf401d846b34"
+    },
+    {
+      "path": "scripts/check_v07_assessment.py",
+      "bytes": 5856,
+      "sha256": "267beb1ca6546b40706c917ecdcf3924d201490b0bc18ae673cdc11ee8b99b60"
+    }
+  ],
+  "diagnostic_review": [
+    {
+      "item": "v07-d1",
+      "result": "Margins 20% and 25%; difference 5 percentage points and 25% relative; sales growth 20%, profit growth 50%. Positive bases and period units explicit.",
+      "prerequisite": "v01-c02 ratios, percentages and profit margins"
+    },
+    {
+      "item": "v07-d2",
+      "result": "Dated cash path 70, -20, 90 identifies Monday gap 20 despite positive Friday cash; no unsupported financing assumption.",
+      "prerequisite": "v01-c04 stock/flow bridge; v01-c09 dated credit obligation"
+    },
+    {
+      "item": "v07-d3",
+      "result": "A=160, L=115, E=45; matching debt prevents instant equity increase.",
+      "prerequisite": "v01-c04 explicitly teaches assets, liabilities, residual equity and borrowing entry consequences"
+    },
+    {
+      "item": "v07-d4",
+      "result": "Workshop net 9 versus rent 12; incremental -3, sunk 50 excluded, alternatives mutually exclusive; nonmonetary benefits require additional facts.",
+      "prerequisite": "v01-c01 feasible opportunity cost and sunk costs"
+    },
+    {
+      "item": "v07-d5",
+      "result": "q=20, each unit contributes 6 and covers fixed 120; break-even model is not evidence of demand.",
+      "prerequisite": "v01-c03 elementary algebra and identities/models; v01-c06 marginal decision interpretation"
+    },
+    {
+      "item": "v07-d6",
+      "result": "PV=100, with 100 times 1.1 squared equal to 121; end-two-years, annual effective compounding and applicable rate supplied.",
+      "prerequisite": "v01-c05 dated value and compounding"
+    },
+    {
+      "item": "v07-d7",
+      "result": "B annualized 400/3 depends on representative missing months; observed totals do not identify comparable annual capacity.",
+      "prerequisite": "v01-c02 period scaling and v01-c10 conditional models"
+    },
+    {
+      "item": "v07-d8",
+      "result": "Customer mix, payment calendar or seasonality are coherent competing mechanisms; matched dated invoice/receipt evidence distinguishes observations from extrapolation and does not alone identify causation. Open-answer alternatives accepted.",
+      "prerequisite": "v01-c08 evidence and causal limits; v01-c11 clear conditional communication"
+    }
+  ],
+  "retention_review": [
+    {
+      "item": "v07-r1",
+      "result": "Separate signed-journal oracle balances every entry and closes all seven balances at cash 50, AR 40, inventory 25, PPE 40, AP 40, debt 35, equity 80; NI 20, direct/indirect CFO 30, total assets 155. No unexplained investment/financing flow."
+    },
+    {
+      "item": "v07-r2",
+      "result": "Prospective asset depreciation 18, close 42. Effective interest 8 then 8.16; note closes 102 then 104.16. Independent two-period closed-form recurrence agrees; cash coupons differ from expense."
+    },
+    {
+      "item": "v07-r3",
+      "result": "Remove dividend income 14 and downstream margin 6: group 80, NCI 12, parent 68. The downstream elimination belongs to parent profit. Separate provision gives DTA 3 and after-tax loss 9 with no immediate cash under stated full recognition."
+    },
+    {
+      "item": "v07-r4",
+      "result": "Full-alternative cash comparison including continuing overhead gives buy benefit 800 CU=0.8 kCU; avoided unit-cost difference 1000 is offset by feasible new contribution 1800. NOPAT 24 and ROIC 16% use the supplied average capital."
+    },
+    {
+      "item": "v07-r5",
+      "result": "Required closing debt 30 exceeds 25; capped new draw 15 leaves cash 10 and minimum-buffer gap 5. Cancellation changes K from -5 to 1, so new draw 14 closes debt 24 and cash 15. Only end-year feasibility follows. Additional AR 15 reduces CFO 15 with unchanged recognition/loss assumptions."
+    },
+    {
+      "item": "v07-r6",
+      "result": "Stipulated reversal-policy amount 46 versus no-reversal amount 40; profit difference 6, immediate measurement cash difference zero. Actual applicability requires framework, date, category and evidence. Silence proves neither existence nor falsity; invoice-matched receipts and performance evidence target different assertions."
+    }
+  ],
+  "oral_and_instruction_review": [
+    "Read all four complete prompts, benchmarks and changed-assumption follow-ups. Criteria ask for entity/timing, internally consistent reasoning, targeted evidence and changed decision; no unique opinion is imposed for open financial judgments.",
+    "Profit/cash benchmark distinguishes earned sales, collections, inventory purchases, supplier payments and investment/depreciation. Customer advances supply a taught reversal of the timing story.",
+    "Balanced-but-wrong counterexample is complete under an explicit no-tax illustration: correct assets 90=liabilities 40+equity 50 versus wrongly capitalized 10 giving assets 100=liabilities 40+equity 60. Conditional tax effects are explicitly required when relevant. Estimate versus error is taught in c04/c11.",
+    "Financing benchmark requires investor/terms/approvals/completion date and share count, plus debt limits, interest and covenant conditions. Opening/closing weighted-share timing and ownership-versus-value distinctions are taught in c06; contingent equity is not asserted available.",
+    "Evidence benchmark requires symmetric normalization and corroboration, accepts alternative business explanations and avoids unsupported intent or legal conclusions. Nonresponse is treated as missing evidence.",
+    "Diagnostic relies on accepted Volume 1 methods; actual prerequisite teaching paragraphs/sections inspected. Examinations follow all twelve accepted v07 chapters. No advanced accounting method is silently required before the diagnostic.",
+    "Advance thresholds match the production contract: 85% overall and 75% per essential domain/category, project plus oral transfer. Retention equivalents 51/60 and 7.5/10 are coherent. Thresholds and workloads are author choices with no institutional/calibration claim.",
+    "Carry-through credit and equivalent-method/alternative-decision acceptance avoid multiple penalties for one arithmetic error. Critical material accounting/funding/evidence errors require repair independently of total score. Remediation calls for a changed fresh problem and teach-back rather than memorized answers.",
+    "Every notation row was checked for scope: stock date/entity, gross/net AR, cash reconciliation, EBITDA limitations, days numerator/denominator, carrying/current-asset CA distinction, NCI/unit contribution, matched NOPAT capital and revolver timing.",
+    "All twelve concept routes are present. The corrected c01/c02 labels and repair tasks now match actual transaction/recognition and financial-statement teaching. Successor synthesis links to the planned curriculum anchor and labels later finance-core/volumes as unfinished."
+  ],
+  "code_and_validation": [
+    {
+      "check": "Fresh import and support_check under captured stdout/stderr; strict JSON serialization",
+      "result": "Pass, quiet; reported seven support groups. Diagnostic arithmetic and all six retention calculations agree with manual independent solutions."
+    },
+    {
+      "check": "Separate exact arithmetic and signed-journal oracle",
+      "result": "Pass; seven numerical diagnostic anchors, six retention cases, downstream profit attribution, whole-alternative make/buy, dated financing, oral balance counterexample and threshold equivalences."
+    },
+    {
+      "check": "Two final support fragments parsed together with strict tag stack",
+      "result": "Pass; one h1, unique IDs, all eight diagnostic and six retention prompts, captioned tables, real linked chapter files and no trailing whitespace."
+    },
+    {
+      "check": "Assembly code read",
+      "result": "Exact expected-part concatenation detects stale final assembly; duplicate IDs, required support/exam/project anchors, both forms point totals, unique solution mapping and all twelve chapter routes are required before returning constituent results."
+    },
+    {
+      "check": "Final route correction and stable payload hashes",
+      "result": "Pass; three payloads unchanged during final verification."
+    }
+  ],
+  "source_scope": "No new external claim or primary-source lookup was required. Cases stipulate their rules; support uses accepted chapter concepts. Specialist-standard/source verification is inherited only within the accepted chapter scopes, not claimed as fresh full-standard inspection.",
+  "findings": [
+    {
+      "id": "v07-support-peer-01",
+      "severity": "low",
+      "status": "resolved",
+      "location": "Opening D1 coverage routes and closing concept-index c01/c02 rows",
+      "finding": "The first two chapter route labels/tasks pointed statement learning at c01 and recognition/accrual learning at c02, obscuring the canonical teaching sequence.",
+      "resolution": "Coordinator changed c01 to transactions and recognition with balanced entries, and c02 to financial statements with the three-statement/cash bridge. Peer verified exact final rows against chapter teaching."
+    }
+  ],
+  "open_findings": [],
+  "limitations": [
+    "Scope covers the two support fragments and support/assembly checker logic. It is not an independent full review of both exams and project; those have separately recorded specialist/coordinator reviews.",
+    "Only support_check was executed here; final assembled checker and full-library build, integration and publication remain coordinator tasks.",
+    "No browser, mobile, keyboard or print visual QA performed.",
+    "Timing and advancement thresholds have not been empirically calibrated or externally academically certified.",
+    "Accounting and evidence examples are fictional or expressly stipulated; no external documentation was authenticated and no legal, reporting-compliance or fraud conclusion is established."
+  ],
+  "handoff": "Support peer review passes on exact three payload hashes. Coordinator may assemble and accept the full package after remaining exam/project and whole-library gates."
+}

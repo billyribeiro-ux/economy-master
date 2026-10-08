@@ -1,0 +1,154 @@
+{
+  "chapter": "v07-c09",
+  "title": "Financial ratios and business diagnosis",
+  "author": "financial diagnosis specialist",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "review_type": "Author full instructional, accounting, exact numerical, source and reproducibility audit",
+  "state": "author-review-complete",
+  "status": "passed author checks; pending independent coordinator review and prerequisite acceptance",
+  "assignment": "production/v07-recovery-assignments.json",
+  "scope": {
+    "canonical_coverage": [
+      "Liquidity",
+      "leverage",
+      "margins",
+      "turnover",
+      "ROIC",
+      "DuPont",
+      "peer selection"
+    ],
+    "outcome": "Interpret ratios in context and explain accounting comparability limitations.",
+    "chapter_words": 6689,
+    "worked_examples": 4,
+    "exercises": 8,
+    "complete_solutions": 8,
+    "teach_back": "Answered explanation of growth/profit/cash/funding, policy-induced return trend and documentary evidence.",
+    "retention": "Answered additional15 credit sales collected within the period, including tax, income, CFO, cash, equity, ROIC and revised average-equity ROE.",
+    "case": "Original Aster two360-day-period business in kCU, three balanced balance sheets, two complete income and cash-flow statements, matched-average returns and all-cash-excluded IC.",
+    "comparison": "Full50/20-versus30/40 book-depreciation bridge with unchanged tax deductions, DTA recognition/reversal, both cash statements identical, reversed ROE/ROIC trends and identical terminal statements.",
+    "ownership": "Only c09 manuscript, three prefixed case assets, checker and author/source records written. No shared state, hosting or child agents."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v07-c09.html",
+      "bytes": 48795,
+      "sha256": "3241ba4e60fdf5cd0fa9c02795847550d5fc2d5ee7661e377c633effce7384ff"
+    },
+    {
+      "path": "content/projects/v07-c09-inputs.json",
+      "bytes": 1200,
+      "sha256": "4d61f3a37e93eb24c743456ba310a36aa3c680cc975cb40724a91cc4deaa37f1"
+    },
+    {
+      "path": "content/projects/v07-c09-analysis.py",
+      "bytes": 11382,
+      "sha256": "0e63a5257efac19878a47db198210db3d9a8e8ba63242f38758df459ca4aeeae"
+    },
+    {
+      "path": "content/projects/v07-c09-README.txt",
+      "bytes": 8026,
+      "sha256": "fdacea0c90fa28e1b3445b9b165e5f979fcb877a169e09cac464622e641c0bc5"
+    },
+    {
+      "path": "scripts/check_v07_c09.py",
+      "bytes": 21416,
+      "sha256": "133b5f9baab4f4e1d4ebba6007b6290bdabccb327c7db729df6c3510be6aad51"
+    },
+    {
+      "path": "content/reviews/v07-c09-sources.json",
+      "bytes": 4440,
+      "sha256": "7e04cd45a776373f11aebdffecfa92a95f400e7f91d38f388bc33df844606621"
+    }
+  ],
+  "reasoning_checks": [
+    "Every ratio declares stock/flow timing, common entity/currency, capital ownership and numerator/denominator interpretation. Average versus ending/beginning balances, seasonality, acquisition timing and simple annualization boundaries are taught before exercises.",
+    "Aster sales and goods purchases are entirely credit; separate depreciation never enters inventory COGS. All three balance sheets close, PPE/debt/equity roll, direct and indirect CFO agree, and purchases are not counted twice as cash.",
+    "Current/quick/cash resources and interest-bearing debt/total-liability measures are distinct. Financing obligations, netting convention, EBITDA limitations and dated cash funding are explained without universal normative ratios or covenant claims.",
+    "Payable days use purchases while inventory days use COGS and receivable days use credit sales. Underlying physical, collection and contract mechanisms remain hypotheses; aggregates are not invoice-specific durations.",
+    "Three-factor and five-factor DuPont are explicitly derived by cancellation with matching averages and domains. Equity multiplier is not one plus interest-bearing debt/equity. Leverage spread derivation is separately limited to fixed beginning capital, no operating liabilities/cash/tax and no feedback.",
+    "ROIC matches hypothetical after-tax operating earnings with explicit operating capital. DTA/DTL treatment, all-cash exclusion and financing-side equality are reconciled, without treating NOPAT as cash or asserting every firm can use a nominal tax benefit.",
+    "Alternative depreciation is a controlled measurement comparison, not a claim that either pattern is freely permissible. Both numerator and intermediate capital change; deferred tax restores identical cash and terminal balances. DTA recoverability is explicitly supplied rather than proved by calculation.",
+    "Peer selection precedes ranking and addresses operating activity, geography, asset age, period, acquisition and consolidation differences. Median versus aggregated denominator-weighted ratios are distinguished. Adjusted peer return uses supplied continuing-operation capital.",
+    "Zero sales/interest/PBT and negative or tiny equity/capital are explained rather than assigned fabricated normal ratios. Signed negative-coverage numerators are distinguished from nonpositive denominators; unsupported tax-loss rules are outside the transaction lab.",
+    "All eight complete prompt/solution pairs and both teaching answers manually matched for inputs, requested outputs, units, domains and interpretation. Independent exact calculations support but do not replace the prose review."
+  ],
+  "numerical_checks": [
+    {
+      "name": "Independent sixty-entry signed journal for both two-period measurement paths",
+      "status": "pass"
+    },
+    {
+      "name": "Exact baseline ratios, two capital constructions, DuPont identities and reversed-trend policy counterexample",
+      "status": "pass"
+    },
+    {
+      "name": "Nine independently reconciled transfers",
+      "status": "pass",
+      "scenarios": [
+        "Additional collections",
+        "Cost pressure with negative CFO",
+        "Closing principal repayment",
+        "Answered delayed sales case",
+        "Tax0",
+        "Tax1/5",
+        "Tax1/3",
+        "Opposite allocation creating DTL",
+        "All money scaled by37"
+      ]
+    },
+    {
+      "name": "Signed numerator, negative/zero and near-zero denominator tests; zero-profit case preserving direct/three-factor but invalidating five-factor ROE",
+      "status": "pass"
+    },
+    {
+      "name": "Eighteen invalid-input failures and two consequential accounting-error detectors",
+      "status": "pass"
+    },
+    {
+      "name": "Eight exact numerical exercise benchmarks",
+      "status": "pass"
+    },
+    {
+      "name": "Balanced fragment, four worked cases, eight exercise/solution pairs, four matching primary citations and all offline links",
+      "status": "pass"
+    },
+    {
+      "name": "Quiet import/run/check APIs, strict JSON and portable normal/optimized CLI with explicit failing input",
+      "status": "pass"
+    }
+  ],
+  "commands_and_contracts": [
+    {
+      "command": "python3 book/scripts/check_v07_c09.py",
+      "result": "pass; eight focused groups"
+    },
+    {
+      "command": "python3 -O book/scripts/check_v07_c09.py",
+      "result": "pass; eight groups; no Python assert dependency"
+    },
+    {
+      "command": "capture import/check stdout+stderr and json.dumps(check(), allow_nan=False)",
+      "result": "quiet, serializable with no fallback"
+    },
+    {
+      "command": "isolated temporary case/input copies; normal/-O CLI from a different working directory; invalid-units CLI",
+      "result": "exact baseline reproduced; unsupported units fail with status2 and no result JSON"
+    }
+  ],
+  "source_checks": {
+    "proposals": 4,
+    "actual_primary_inspection": "NYU lecture PDF, original-author July2007 return-measures PDF, dated SEC2007 guide and official AASB112 September2023 compilation inspected at recorded scopes.",
+    "scope_limits": "No current market or industry data claimed. SEC debt/liability shorthand and unsupported causal interpretations in lecture notes are not adopted. No universal reporting/choice/compliance rule inferred.",
+    "originality": "All prose, Aster and exercise numbers, proofs, worked cases, input data and code original; no source passages, case numbers or exercise banks reproduced."
+  },
+  "findings": [],
+  "limitations": [
+    "Synthetic conditional business model; invoice quality, tax recoverability, asset consumption, peer suitability and feasible operating changes need independent evidence.",
+    "Endpoint averages proxy intra-year exposure; no transaction-weighted path supplied. All-cash exclusion is a declared ROIC convention, not proof that operations need zero cash.",
+    "Narrow two-period lab requires nonnegative book/tax profit and supported deferred tax; no general tax-loss, multirate, consolidation, lease or acquisition engine.",
+    "No guarantee of error-free work, professional certification, a real investment result or institutional acceptance.",
+    "No browser/mobile/print visual QA; coordinator integrates structural build and prerequisite-ordered acceptance."
+  ],
+  "handoff": "All seven owned artifacts saved and ready for independent root read/review; source/checkpoint/acceptance/publishing remain coordinator-owned."
+}

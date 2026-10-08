@@ -1,0 +1,259 @@
+{
+  "batch": "v07-disconnection-recovery",
+  "date": "2026-10-08",
+  "authorization": "User explicitly reconfirmed specialist delegation and autonomous review/execution in the active 8 October 2026 session; MASTER_PLAN.md also records earlier authorization.",
+  "recovered_state": "75 chapters published; 77 accepted in canonical source including c05 with final coordinator review; c06/c08 peer work was not saved and no former agents remain; c07 peer review passed with correction saved; c09 has no manuscript.",
+  "coordinator": "Canonical curriculum, shared source catalogue, checkpoint, build/verifier, acceptance review, private publishing and offline archive.",
+  "assignments": [
+    {
+      "task": "v07-c06-peer-review",
+      "owner": "equity_peer",
+      "state": "passed",
+      "prerequisites": "Existing complete chapter package; acceptance follows preceding canonical chapter.",
+      "owned_paths": [
+        "content/reviews/v07-c06-peer.json"
+      ],
+      "read_scope": [
+        "content/chapters/v07-c06.html",
+        "content/projects/v07-c06-*",
+        "scripts/check_v07_c06.py",
+        "content/reviews/v07-c06-author.json",
+        "content/reviews/v07-c06-sources.json"
+      ],
+      "deliverables": "Read the entire chapter, each worked example and every prompt/solution, benchmark/checker/data/README and source scope. Independently recompute all determinate results and assess teaching/logic/conditions. Run focused check once; report material findings to coordinator rather than editing author files. Save exact final peer record with reviewed payload SHA256 and honest boundaries.",
+      "gates": "No open material findings. Complete source/mathematical/instructional/solution review. Review record cannot claim unperformed checks or full current standards compliance. No shared edits, publishing, or child agents."
+    },
+    {
+      "task": "v07-c08-peer-review",
+      "owner": "cost_peer",
+      "state": "passed",
+      "prerequisites": "Existing complete chapter package; acceptance follows preceding canonical chapter.",
+      "owned_paths": [
+        "content/reviews/v07-c08-peer.json"
+      ],
+      "read_scope": [
+        "content/chapters/v07-c08.html",
+        "content/projects/v07-c08-*",
+        "scripts/check_v07_c08.py",
+        "content/reviews/v07-c08-author.json",
+        "content/reviews/v07-c08-sources.json"
+      ],
+      "deliverables": "Read the entire chapter, each worked example and every prompt/solution, benchmark/checker/data/README and source scope. Independently recompute all determinate results and assess teaching/logic/conditions. Run focused check once; report material findings to coordinator rather than editing author files. Save exact final peer record with reviewed payload SHA256 and honest boundaries.",
+      "gates": "No open material findings. Complete source/mathematical/instructional/solution review. Review record cannot claim unperformed checks or full current standards compliance. No shared edits, publishing, or child agents."
+    },
+    {
+      "task": "v07-c09",
+      "owner": "financial_diagnosis",
+      "state": "assigned",
+      "canonical_specification": {
+        "id": "v07-c09",
+        "number": 9,
+        "title": "Financial ratios and business diagnosis",
+        "outcome": "Interpret ratios in context and explain accounting comparability limitations.",
+        "coverage": [
+          "Liquidity",
+          "leverage",
+          "margins",
+          "turnover",
+          "ROIC",
+          "DuPont",
+          "peer selection"
+        ],
+        "prerequisites": [
+          "v07-c08"
+        ],
+        "level": "Undergraduate",
+        "status": "planned",
+        "manuscript": "chapters/v07-c09.html",
+        "sources": [
+          "mit-finance",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "owned_paths": [
+        "content/chapters/v07-c09.html",
+        "content/projects/v07-c09-*",
+        "scripts/check_v07_c09.py",
+        "content/reviews/v07-c09-author.json",
+        "content/reviews/v07-c09-sources.json"
+      ],
+      "prerequisites": "Draft against existing complete c08 and accepted c01-c05; acceptance awaits c08.",
+      "deliverables": "Full financial-ratios chapter from fixed scope in production/v06-assessment-v07-opening-assignments.json. At least three substantial original worked examples and eight complete original prompt/solution pairs, answered teach-back/retention, primary sources actually inspected, exact reproducible standard-library business/peer case with units/timing and reconciled statements.",
+      "gates": "Full author review and independent numerical checks; source proposals, SHA256 payload record, quiet strict-JSON check(); read all applicable instructions. No shared edits, hosting or child agents."
+    },
+    {
+      "task": "v07-c10",
+      "owner": "root",
+      "state": "authoring",
+      "canonical_specification": {
+        "id": "v07-c10",
+        "number": 10,
+        "title": "Three-statement forecasting",
+        "outcome": "Build linked forecasts with a transparent financing policy.",
+        "coverage": [
+          "Revenue drivers",
+          "operating expenses",
+          "working capital",
+          "capex",
+          "financing",
+          "cash balancing"
+        ],
+        "prerequisites": [
+          "v07-c09"
+        ],
+        "level": "Undergraduate",
+        "status": "planned",
+        "manuscript": "chapters/v07-c10.html",
+        "sources": [
+          "mit-finance",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "owned_paths": [
+        "content/chapters/v07-c10.html",
+        "content/projects/v07-c10-*",
+        "scripts/check_v07_c10.py",
+        "content/reviews/v07-c10-author.json",
+        "content/reviews/v07-c10-sources.json"
+      ],
+      "prerequisites": "Draft against c01-c08 written packages and c09 fixed ratio/ROIC contract; accept only after c09.",
+      "deliverables": "Original driver-based two-year three-statement forecast with tax/interest/cash conventions, sales/working-capital/capex/debt/equity rollforwards, algebraic funding closure, adverse scenario and explicit model checks; >=3worked cases, eight full original solutions, answered teachback/retention, primary-source scope, stdlib exact benchmark and meaningful numerical checks.",
+      "gates": "Full mathematical/numerical/source/instruction review; distinguish conditional assumptions from forecast evidence. No hidden cash plug or unsupported current standards claims."
+    },
+    {
+      "task": "v07-c11",
+      "owner": "equity_peer",
+      "state": "authoring",
+      "canonical_specification": {
+        "id": "v07-c11",
+        "number": 11,
+        "title": "Accounting standards, disclosure and comparability",
+        "outcome": "Identify where accounting-policy differences require adjustment and dated source verification.",
+        "coverage": [
+          "IFRS and US GAAP concepts",
+          "disclosure",
+          "estimates",
+          "restatements",
+          "segment reporting",
+          "jurisdiction"
+        ],
+        "prerequisites": [
+          "v07-c10"
+        ],
+        "level": "Undergraduate",
+        "status": "planned",
+        "manuscript": "chapters/v07-c11.html",
+        "sources": [
+          "mit-finance",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "owned_paths": [
+        "content/chapters/v07-c11.html",
+        "content/projects/v07-c11-*",
+        "scripts/check_v07_c11.py",
+        "content/reviews/v07-c11-author.json",
+        "content/reviews/v07-c11-sources.json"
+      ],
+      "prerequisites": "Draft against fixed previous chapter contract; acceptance requires ['v07-c10']. c01-c08 manuscripts available; c09/c10 being authored.",
+      "deliverables": "Teach a repeatable comparison process: entity/date/framework/version/effective-date, recognition versus measurement/presentation/disclosure, policy choice versus estimate revision versus prior-period error and illustrative retrospective/prospective bridges under stated facts. Use scoped actual primary IFRS and U.S. standard/regulator evidence and disclose access limits; no sweeping framework equivalence. Teach segment reporting and management-measure reconciliation, current/restated comparatives, currency/fiscal calendar/perimeter and disclosure evidence. Three original worked cases and eight varied complete solutions including policy-only cash-invariant adjustment, estimate/error contrast, segment-to-total reconciliation and ambiguous-source diagnosis. Supplied facts do not imply every alternative is an available election. Small stdlib exact comparison lab with source/date/assumption documentation. Answered teachback/retention and review hashes.",
+      "gates": "Full source/arithmetic/method/instruction/prompt-solution review; quiet JSON checker, author hashes and source proposals. No shared edits, publishing or child agents. Send early numerical model/units/timing contract to root."
+    },
+    {
+      "task": "v07-c12",
+      "owner": "cost_peer",
+      "state": "authoring",
+      "canonical_specification": {
+        "id": "v07-c12",
+        "number": 12,
+        "title": "Forensic analysis and accounting integration",
+        "outcome": "Diagnose a business using reconciled accounts and explicit alternative explanations.",
+        "coverage": [
+          "Cash-versus-profit gaps",
+          "covenant risk",
+          "red flags",
+          "normalization",
+          "business model economics"
+        ],
+        "prerequisites": [
+          "v07-c11"
+        ],
+        "level": "Undergraduate",
+        "status": "planned",
+        "manuscript": "chapters/v07-c12.html",
+        "sources": [
+          "mit-finance",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "owned_paths": [
+        "content/chapters/v07-c12.html",
+        "content/projects/v07-c12-*",
+        "scripts/check_v07_c12.py",
+        "content/reviews/v07-c12-author.json",
+        "content/reviews/v07-c12-sources.json"
+      ],
+      "prerequisites": "Draft against fixed previous chapter contract; acceptance requires ['v07-c11']. c01-c08 manuscripts available; c09/c10 being authored.",
+      "deliverables": "Integrate accounting diagnosis in a full original reconciled company case: profit/CFO/working-capital movement and actual debt/covenant headroom under a supplied fictional contract; contrast benign growth, measurement error and possible aggressive reporting without treating a red flag as proof of intent. State normalization assumptions, economic costs, entity/timing and covenant definitions; trace any proposed correction through balance sheet/profit/cash/tax conventions instead of inventing cash. Three original worked cases, eight complete varied exercises/solutions, answered teachback/retention and source scope. Small stdlib reproducible ledger/analysis with alternate correction/scenario, evidence-request plan and instructor reasoning criteria. Scope legal/forensic claims using actually inspected primary sources. Do not claim audit assurance or fraud detection.",
+      "gates": "Full source/arithmetic/method/instruction/prompt-solution review; quiet JSON checker, author hashes and source proposals. No shared edits, publishing or child agents. Send early numerical model/units/timing contract to root."
+    },
+    {
+      "task": "v07-c10-peer-review",
+      "owner": "financial_diagnosis",
+      "state": "assigned-after-c09-handoff",
+      "owned_paths": [
+        "content/reviews/v07-c10-peer.json"
+      ],
+      "prerequisites": "Full root-authored c10 is complete; c09 acceptance required before c10 acceptance.",
+      "read_scope": [
+        "content/chapters/v07-c10.html",
+        "content/projects/v07-c10-*",
+        "scripts/check_v07_c10.py",
+        "content/reviews/v07-c10-author.json",
+        "content/reviews/v07-c10-sources.json"
+      ],
+      "deliverables": "Read all manuscript/examples/exercises/solutions/code/input/README and source scopes; independently reconstruct cash/debt/tax/asset/equity, average-interest closure and all exercise anchors. Run focused check once. Report findings to root and save final exact payload hashes in peer review.",
+      "gates": "No open material findings; source/math/instructional review and honest bounds. No author/shared edits, publishing or child agents."
+    }
+  ]
+}

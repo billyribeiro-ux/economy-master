@@ -1,0 +1,225 @@
+{
+  "chapter": "v07-c04",
+  "title": "Long-lived assets and investment accounting",
+  "author": "regression specialist",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "review_type": "Author instructional, accounting, exact numerical, source and reproducibility audit",
+  "state": "author-review-complete",
+  "status": "passed author checks; pending independent root review and acceptance after v07-c03",
+  "assignment": "production/v06-assessment-v07-opening-assignments.json",
+  "scope": {
+    "canonical_coverage": [
+      "Capitalization",
+      "depreciation",
+      "amortization",
+      "impairment",
+      "disposals",
+      "investment assets"
+    ],
+    "outcome": "Track asset investment and distinguish accounting expense from economic depreciation.",
+    "chapter_words": 6289,
+    "worked_examples": 4,
+    "exercises": 8,
+    "complete_solutions": 8,
+    "teach_back": "Answered mechanism explanation using the main lifecycle and contrasting measurement boundaries.",
+    "retention": "Answered lower-sale-price transfer case, reconstructing profit, cash, equity and lifetime expense.",
+    "lab": "Original exact-rational offline fixed-calendar lifecycle; 3 reporting periods, supplied JSON and README; no network or packages.",
+    "ownership": "Only c04 chapter, three c04-prefixed project files, checker and c04 source/author review records written. Root owns central state, acceptance, builds, commits and publication."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v07-c04.html",
+      "bytes": 42332,
+      "sha256": "cefc555269fd145abce0abd9ad080f4500ca196b9132056d1d0d2762c931816c"
+    },
+    {
+      "path": "content/projects/v07-c04-analysis.py",
+      "bytes": 6510,
+      "sha256": "f34bb9841a724977c344433fd0d13932a2b4295cb9ae99410b6c2408af92ffbf"
+    },
+    {
+      "path": "content/projects/v07-c04-inputs.json",
+      "bytes": 730,
+      "sha256": "500a6cb406e2888c9a20276c1dc8bd027b3c43014ab4a3d2e63761fab8e425ef"
+    },
+    {
+      "path": "content/projects/v07-c04-README.txt",
+      "bytes": 4276,
+      "sha256": "2aa96c128c1079449d158585fa6b4695e3dce8a57e36d8f05645e99d55095759"
+    },
+    {
+      "path": "scripts/check_v07_c04.py",
+      "bytes": 14550,
+      "sha256": "5a4b1cbb92c372e01f5b6539e7585a7a3ca2e7271bc9cf47d2ee35de26450417"
+    },
+    {
+      "path": "content/reviews/v07-c04-sources.json",
+      "bytes": 5153,
+      "sha256": "4f3b81d94a9aab9a0ee36c2df2a5194563aa5362c6eeb6f45d3f0eb68c96c759"
+    }
+  ],
+  "reasoning_checks": [
+    "Capitalization requires recognition and eligible cost evidence; purchase cash, resource measurement and periodic expense are separated. Significant components/replacements are distinguished from routine maintenance without inventing a generalized standards engine.",
+    "Historical cost, accumulated depreciation and impairment are reconciled separately. Both contra balances are credit-normal asset reductions, not cash reserves or liabilities. Disposal removes all related accounts.",
+    "Straight-line and usage allocation are derived with nonnegative costs/residual, positive life/output denominators and explicit elapsed/use domains. Zero elapsed, residual above carrying amount and usage beyond the initial estimate are addressed. Depreciation is a period cost only under the service-case assumptions; other-asset absorption is explicitly acknowledged.",
+    "The revised remaining-life calculation is prospective, based on new information. It is distinguished from a prior-period error and a change of measurement basis.",
+    "Recoverable amount uses the higher supplied sale/use route after depreciation; no automatic cost-model write-up. Independently assessable cash inflows are assumed; CGU valuation and goodwill allocation are outside scope. Reversal requires changed estimates and the hypothetical no-impairment carrying ceiling; passage of time alone and goodwill are excluded.",
+    "Alder sale control transfer and both cash settlements occur on 30 June 2027 after six months of depreciation. Gross receipt and fee remain visible; the arithmetic net is not a universal permission to net real statement presentation.",
+    "The lifecycle identity D+J-g=C-S is derived algebraically and checked against independent journals; unchanged proceeds imply timing changes cannot change undiscounted final profit in the closed case. This does not validate classification or imply no tax/valuation consequences.",
+    "Finite-life intangibles begin amortization at availability; legal and economic limits, indefinite-life reassessment, six development criteria and the no-reinstatement boundary are explicit. Research and pre-eligibility expense are not silently capitalized.",
+    "Investment property is distinguished by use from owned operating property and ordinary-course inventory. Cost/fair-value examples have fixed policies and supplied reliable valuation. Financial-claim amortized-cost eligibility is stipulated, not asserted for every investment; the effective-interest recursion is derived from fixed cash flows.",
+    "Economic depreciation uses constant-rate unchanged-information present values; its capital-recovery/return identity is derived. A news example distinguishes unexpected price change from physical wear or systematic cost allocation.",
+    "Every exercise prompt was manually matched to its full solution, including units, partial periods, current versus cumulative profit, separate asset entries and evidence boundaries. The checker verifies arithmetic, not prose by proxy."
+  ],
+  "numerical_checks": [
+    {
+      "name": "Independent double-entry journal and all three statement bridges",
+      "status": "pass",
+      "exact_period_fields": 36
+    },
+    {
+      "name": "Estimate, impairment and disposal transfer cases including answered retention",
+      "status": "pass",
+      "changed_cases": 5
+    },
+    {
+      "name": "Allocation domains, usage and capped reversal",
+      "status": "pass"
+    },
+    {
+      "name": "All eight exact exercise solutions and balanced disposal",
+      "status": "pass",
+      "results": {
+        "1": [
+          "91",
+          "12",
+          "8",
+          "-20",
+          "-12",
+          "-91",
+          "47",
+          "83",
+          "130"
+        ],
+        "2": [
+          "45/2",
+          "63/2",
+          "27",
+          "135/2",
+          "36",
+          "9"
+        ],
+        "3": [
+          "60",
+          "18",
+          "42",
+          "24",
+          "6",
+          "264/5"
+        ],
+        "4": [
+          "30",
+          "25/2",
+          "75/2",
+          "45/2",
+          "60",
+          "20"
+        ],
+        "5": [
+          "6",
+          "30",
+          "42",
+          "44",
+          "2",
+          "-4"
+        ],
+        "6": [
+          "39",
+          "16",
+          "13/4",
+          "77/4",
+          "143/4",
+          "55"
+        ],
+        "7": [
+          "93",
+          "3",
+          "105",
+          "15",
+          "-90",
+          "8",
+          "44/5",
+          "84/5"
+        ],
+        "8": [
+          "3",
+          "3",
+          "0",
+          "4",
+          "-4"
+        ]
+      }
+    },
+    {
+      "name": "Present value, economic depreciation, intangibles and investment examples",
+      "status": "pass"
+    },
+    {
+      "name": "Meaningful unit, calendar, funding and depreciation-domain rejection",
+      "status": "pass",
+      "cases": 10
+    },
+    {
+      "name": "Independent checks reject double-counted gain and undeleted contra balance",
+      "status": "pass",
+      "mutants_caught": 2
+    },
+    {
+      "name": "HTML, eight matched exercises, answered retention and seven scoped sources",
+      "status": "pass",
+      "worked_examples": 4,
+      "sources": 7
+    },
+    {
+      "name": "Portable standalone normal/optimized execution and quiet JSON API",
+      "status": "pass"
+    }
+  ],
+  "commands_and_contracts": [
+    {
+      "command": "python3 book/scripts/check_v07_c04.py",
+      "result": "pass; all nine groups"
+    },
+    {
+      "command": "python3 -O book/scripts/check_v07_c04.py",
+      "result": "pass; checks do not depend on Python assert"
+    },
+    {
+      "command": "import module; capture stdout/stderr; json.dumps(check(), allow_nan=False)",
+      "result": "quiet; directly JSON-serializable, no fallback serializer"
+    },
+    {
+      "command": "isolated temporary copy of lab/input, normal and -O CLI",
+      "result": "matches exact baseline output; invalid-unit CLI exits with an error and no result JSON"
+    }
+  ],
+  "source_checks": {
+    "proposals": 7,
+    "actual_primary_content": "Official AASB issuer body text, IFRS Foundation public About section and actual MIT lecture PDF inspected. Paragraph/page scope and exclusions recorded in the seven source proposals.",
+    "version_boundary": "Selected December 2022 AASB compilations and March 2021 AASB108 compilation are deliberately dated method references. The fictional lifecycle including 2027 uses frozen teaching conventions, not a current-jurisdiction compliance assertion.",
+    "access_limit": "Full subscription IFRS texts were not accessed. Official public issuer AASB content was used legitimately for the scoped detailed methods. The IFRS9 overview supports only the stated recognition/classification boundary, with an original stipulated no-loss claim for exact accretion.",
+    "originality": "All prose, company cases, numeric examples, problems, solutions, inputs and code are original. No source exercises or data are reproduced."
+  },
+  "findings": [],
+  "limitations": [
+    "Synthetic fixed-calendar cases; no empirical useful-life, fair-value or impairment estimate is validated.",
+    "Exact identities and independent journals support, but do not replace, the written recognition and source-scope audit.",
+    "Selected dated AASB/IAS method conventions, not a complete or universally current accounting standard.",
+    "No browser, mobile or print visual QA.",
+    "Author audit is not external academic, professional or jurisdiction-specific certification.",
+    "Real recognition, life, fair-value and impairment estimates need documentary evidence and the applicable reporting-date standard. Construction, taxes, leases, revaluation, held-for-sale accounting and complex financial assets are outside this chapter’s case scope.",
+    "Visual browser/mobile/print QA remains pending under the standing local-preview restriction. No attempt to circumvent it was made."
+  ],
+  "handoff": "Ready for independent root content/code review; acceptance and shared integration remain root-only."
+}

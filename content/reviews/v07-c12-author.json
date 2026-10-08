@@ -1,0 +1,151 @@
+{
+  "chapter": "v07-c12",
+  "title": "Forensic analysis and accounting integration",
+  "author": "cost_peer specialist",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "review_type": "Author accounting, exact numerical, instructional, source-scope and reproducibility review",
+  "state": "author-review-complete",
+  "status": "passed author checks; pending independent coordinator review and prerequisite-ordered acceptance",
+  "assignment": "production/v07-recovery-assignments.json",
+  "scope": {
+    "canonical_coverage": [
+      "Cash-versus-profit gaps",
+      "covenant risk",
+      "red flags",
+      "normalization",
+      "business model economics"
+    ],
+    "outcome": "Diagnose a business using reconciled accounts and explicit alternative explanations.",
+    "worked_examples": 3,
+    "exercises": 8,
+    "complete_solutions": 8,
+    "instruction": "Answered teach-back and delayed check; explicit evidence-plan priorities and grading criteria for open memo.",
+    "lab": "Complete opening/closing entity accounts, direct/indirect operating cash, error corrections, exact fictional covenant, financing alternatives and separately reconciled incremental growth.",
+    "ownership": "Only c12 manuscript, three c12-prefixed lab assets, c12 checker and author/source records. No shared edits, publishing or child agents."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v07-c12.html",
+      "bytes": 40990,
+      "sha256": "36516bd38cff4bd62e95f483ed39dd36c7e48362277e964c8bc887f571874cb5"
+    },
+    {
+      "path": "content/projects/v07-c12-inputs.json",
+      "bytes": 2211,
+      "sha256": "269fabe4b355b452f28ff918228202266ce947f44f27989bd76a5c418bc55e0e"
+    },
+    {
+      "path": "content/projects/v07-c12-analysis.py",
+      "bytes": 9392,
+      "sha256": "f951b8c8cbe0953c285cf5f613ae2a5701ca84d486b2f92d4a811f133b991a13"
+    },
+    {
+      "path": "content/projects/v07-c12-README.txt",
+      "bytes": 7415,
+      "sha256": "718f6d02a6492dd02d3b052e5c030060acb695cfa328eca7eb5f8000f3e740b4"
+    },
+    {
+      "path": "scripts/check_v07_c12.py",
+      "bytes": 12444,
+      "sha256": "adde01ef3d212032b57e5fe92aa27aa956e2c8b8ffeff1c4de68b17eee8b22bb"
+    },
+    {
+      "path": "content/reviews/v07-c12-sources.json",
+      "bytes": 2912,
+      "sha256": "18966bcc7abfe562b1831e6818fe3aca6a66c4098438c8f6c62c431ede06e95d"
+    }
+  ],
+  "manual_reasoning_checks": [
+    "Unit and period contract is explicit: one year, kCU, one entity, no hidden accounts, no FX/acquisitions/deferred tax. Interest classification and20% current-tax rule are stipulated teaching conventions. Correcting book/tax expense does not change observed tax cash16.",
+    "Reconciled all baseline accounts: opening600; draft assets724=liabilities362+equity362; reported NI112,CFO64,CFI-60,CFF-30,closing cash54. Direct customer/supplier/operating cash agrees independently with indirect profit adjustments.",
+    "Service correction has supplied unperformed/no-right/no-payment/no-cost-release facts. Reverse revenue/AR40 and current tax/payable8; NI/equity fall32. Corrected assets684=liabilities354+equity330. The CFO changes-32+40-8 cancel. Error correction does not identify intent.",
+    "Contract algebra uses actual stated definitions, positive denominator, eligible cash, cap10, ratio limit1 and cash minimum40. Corrected net debt176 exceeds covenant EBITDA170. Numerator headroom-6 is not automatically repaired by debt repayment funded from existing cash; the cash source and date matter.",
+    "Financing scenarios change both cash and debt/equity consistently. Restricted cash10 reduces eligibility without disappearing from balance-sheet cash. Separate minimum cash can fail even with unchanged net-debt leverage. Hypothetical actions must occur before measurement; no implied retrospective cure or automatic acceleration.",
+    "Normalization reconciles management245 to corrected accounting160, symmetric recurring165 and separately contractual170. Recurring marketing25 stays. Removing favorable settlement15 has the opposite sign to adding back severance20; a recurring severance estimate5 changes normalized EBITDA to160.",
+    "Unit economics supplies a conditional constant-cost/capacity range;4.5 contribution and195 fixed recurring cash imply130/3 continuous installations,44 whole installations. Neither operating EBITDA break-even nor noncash depreciation eliminates maintenance investment, financing or working-capital needs.",
+    "Growth example has independent direct/indirect and balance-sheet closure: incremental NI67.2,CFO13.2,investment30,cash-16.8,net assets85.2=AP18+equity67.2. Slower collection changes cash but not stipulated recognition; an annual delta is not a complete next-year cash calendar.",
+    "Capitalized repair15 correction reduces EBITDA/EBIT15,tax/payable3,NI/equity12,PPE15; CFO falls15 and CFI improves15 while total cash stays54. Both accounts and covenant headroom are recalculated.",
+    "Read and solved every prompt against its answer. The allowance exercise explicitly offers either net-receivable movement or gross movement plus noncash add-back, avoiding double counting. Cohort collection supports settlement but not year-end performance or remaining collectibility. Open memo has concrete fact and reasoning criteria.",
+    "All source claims are scoped to the actual inspected bodies. No audit assurance, fraud classification, authenticated-document claim, full standards compliance or guaranteed business outcome is asserted."
+  ],
+  "numerical_checks": [
+    {
+      "name": "Independent signed journal: ten correction, funding, boundary and tax-payment cases",
+      "status": "pass",
+      "cases": 10
+    },
+    {
+      "name": "Exact leverage boundary, separate liquidity gate, cash-funded repayment and delayed check",
+      "status": "pass"
+    },
+    {
+      "name": "Symmetric recurring economics, replacement investment and independently reconciled growth cash",
+      "status": "pass"
+    },
+    {
+      "name": "Every determinate exercise recalculated; open memo graded by explicit manuscript criteria",
+      "status": "pass",
+      "exercises": 8
+    },
+    {
+      "name": "Fourteen meaningful domain failures and two consequential accounting-error detectors",
+      "status": "pass",
+      "invalid_cases": 14
+    },
+    {
+      "name": "Three worked cases, eight full solution pairs, answered retention and four scoped primary sources",
+      "status": "pass"
+    },
+    {
+      "name": "Portable normal/optimized benchmark CLI, quiet API and explicit invalid-input failure",
+      "status": "pass"
+    }
+  ],
+  "commands_and_contracts": [
+    {
+      "command": "python3 book/scripts/check_v07_c12.py",
+      "result": "pass; seven focused groups"
+    },
+    {
+      "command": "capture fresh checker import and check(); json.dumps(result, allow_nan=False)",
+      "result": "quiet checker API and strict JSON pass; final README scenario wording present"
+    },
+    {
+      "command": "checker temporary-copy normal/-O benchmark CLI and invalid-unit CLI",
+      "result": "exact offline result matches API; invalid units fail with no result JSON"
+    },
+    {
+      "command": "Final fragment parse and trailing-whitespace scan of all six payloads after coordinator wording correction",
+      "result": "pass; arithmetic unchanged, no redundant full numerical rerun"
+    }
+  ],
+  "source_checks": {
+    "proposals": 4,
+    "actually_inspected": "Official PCAOB AS2401 paragraphs.05-.13,.54,.57-.61; AS1105.02,.05-.10 and adjacent.10A; SEC actual Section100.01-.06 and displayed13December2022 metadata; IFRS IAS7 public About and amendment-history text.",
+    "scope_boundaries": "Full gated IAS7 not accessed. PCAOB material provides scoped evidence/intent distinctions, not an audit performed by the library. Fictional contract/tax conventions are not asserted to follow actual law.",
+    "originality": "All Atlas/exercise prose, figures, model inputs, ledger oracle, code and hypothetical facts are original. No source example or lengthy passage reproduced."
+  },
+  "findings": [
+    {
+      "id": "v07-c12-coordinator-01",
+      "severity": "low",
+      "status": "resolved",
+      "location": "Case contract, Section2",
+      "finding": "The broad statement that all operating costs except depreciation settle in cash could obscure inventory/COGS and trade-payable timing.",
+      "resolution": "Narrowed to other operating expenses, with explicit inventory-purchase/payables roll-forward and separate tax-payment lag. No figures or computational model changed."
+    }
+  ],
+  "limitations": [
+    "Synthetic accounting identities and stipulated recognition/tax/contract facts; no authenticated external evidence, legal conclusion or fraud detection.",
+    "Annual cash and covenant gates do not establish intra-year solvency or authorize a retroactive cure.",
+    "Source inspection is scoped, not full current reporting/audit compliance certification.",
+    "Browser, mobile and print visual QA not performed.",
+    "The benchmark deliberately excludes current-tax receivables/refunds/loss regimes and rejects those edits rather than silently applying an invented rule.",
+    "The growth module is incremental to a specified comparator, not a full second-year entity forecast. Funding needed to retain comparator cash may differ from peak dated liquidity need.",
+    "Qualitative evidence_facts strings describe the original case; scalar interventions are explicitly hypothetical changes in facts and cannot override real transaction evidence.",
+    "Author review does not replace separate coordinator/peer review; acceptance requires the preceding chapter."
+  ],
+  "handoff": "Complete c12 author package is ready for independent review. Coordinator alone registers sources/manuscript, accepts in dependency order and performs whole-library build/publication.",
+  "open_findings": []
+}

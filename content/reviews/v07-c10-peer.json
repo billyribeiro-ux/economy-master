@@ -1,0 +1,211 @@
+{
+  "chapter": "v07-c10",
+  "title": "Three-statement forecasting",
+  "reviewer": "financial diagnosis specialist",
+  "date": "2026-10-08",
+  "assignment": "production/v07-recovery-assignments.json",
+  "review_type": "Independent specialist full-manuscript, prompt-solution, method, primary-source and computation audit",
+  "status": "passed",
+  "recommendation": "Ready for coordinator acceptance after v07-c09 and shared integration gates.",
+  "read_scope": [
+    "content/chapters/v07-c10.html",
+    "content/projects/v07-c10-inputs.json",
+    "content/projects/v07-c10-analysis.py",
+    "content/projects/v07-c10-README.txt",
+    "scripts/check_v07_c10.py",
+    "content/reviews/v07-c10-sources.json",
+    "content/reviews/v07-c10-author.json"
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v07-c10.html",
+      "bytes": 30643,
+      "sha256": "87740a375473cf385aecaea8954d478adee422386303703c323fe8e501ea20e0"
+    },
+    {
+      "path": "content/projects/v07-c10-inputs.json",
+      "bytes": 900,
+      "sha256": "7d21f9c7f34a94f0348196a3bd1e689b5e3ec83b322a475c813934c19bab90cf"
+    },
+    {
+      "path": "content/projects/v07-c10-analysis.py",
+      "bytes": 7928,
+      "sha256": "307bd7330d1133df4cf90c8b3104a2d38fda8c8a36f0be472e5d06019830b99e"
+    },
+    {
+      "path": "content/projects/v07-c10-README.txt",
+      "bytes": 5441,
+      "sha256": "7c54a5beb410734ff369678ce17c90ef96809b6ef9f5c06e92760e0bb06d0c87"
+    },
+    {
+      "path": "scripts/check_v07_c10.py",
+      "bytes": 10713,
+      "sha256": "ade00e408ddd9900a14d79d4935c92a29436c849913980c2644c5753400c9270"
+    },
+    {
+      "path": "content/reviews/v07-c10-sources.json",
+      "bytes": 2610,
+      "sha256": "bf59cd5fea4a6eafbb89b589472b936e74b91b328035927df402168b1803b02a"
+    },
+    {
+      "path": "content/reviews/v07-c10-author.json",
+      "bytes": 3015,
+      "sha256": "c62cb95be665ae1c2ce1123a3f588686061d5d38d13f36d0647b0caeb2b43ead"
+    }
+  ],
+  "author_payload_hashes_verified": 6,
+  "coverage": {
+    "worked_examples_read": 3,
+    "exercise_solution_pairs_read": 8,
+    "teachback_and_retention_read": true,
+    "all_input_code_readme_read": true
+  },
+  "method_review": [
+    "Forecast/scenario/budget distinction and quantity-price interaction taught before problems. Case units are kCU, thousands of units and CU unit prices; original illustrative annual periods are not observed data.",
+    "Opening balances, wholly credit sales/purchases, AR/inventory/AP rollforwards, purchase-based AP target, expense-payment timing, year-end service convention and book/tax equality consistently applied.",
+    "Old assets and new year-end capex are separate depreciation cohorts. Opening debt determines main-case interest; final-date revolver changes therefore do not cause current interest. Endogenous next-year interest correctly carries forward.",
+    "Cash minimum, total revolver limit, zero-debt lower bound and retained excess cash are explicitly distinguished. A failed funding year is not represented as a feasible balance sheet or followed by an unsupported later forecast.",
+    "Average-debt example is a separate contract. Algebra has funding slope1-k>0; positive, zero-debt and binding-limit branches checked. Full current tax relief is an assumption tested against positive profit in manuscript examples, not established by the helper.",
+    "Cash gap and gross debt gap differ under average interest; intrayear availability and annual ending cash remain separate constraints. Financing access and operating capacity are not certified by arithmetic.",
+    "All eight solutions answer exact prompts; open reasoning asks for concrete evidence or operational premises. Teach-back and capex-retention answers propagate tax, interest, depreciation and capital consistently.",
+    "Exercise7 correctly demonstrates that A=L+E can survive contradictory cash paths. The wrong immediate-expensing tax assumption is explicitly identified and the correct schedule restored; a fictional equity plug is rejected."
+  ],
+  "independent_recomputations": {
+    "baseline_method": "Independently computed revenue/cost/working-capital/capital/equity paths, then derived required revolver from total closing assets minus nonrevolver claims with cash20. Separately reconstructed direct cash and compared to source output; this differs from the lab cash-financing formula.",
+    "baseline": [
+      {
+        "year": 1,
+        "NI": "40",
+        "CFO": "16",
+        "revolver": "44",
+        "assets": "285",
+        "equity": "155"
+      },
+      {
+        "year": 2,
+        "NI": "1212/25",
+        "CFO": "2889/50",
+        "revolver": "1311/50",
+        "assets": "310",
+        "equity": "4837/25"
+      }
+    ],
+    "stress_and_transfer": [
+      "Slow collection: NI40/CFO-24/required84; limit60 leaves cash-4 and gap24 against minimum20.",
+      "Cancel dividend then defer capex14: capex36, PPE126, assets311, liabilities146, equity165, debt60.",
+      "Collect10 earlier: Year1 CFO26/debt34/equity155; Year2 interest8.4 and NI49.28, with10 additional AR increase preventing double counting.",
+      "Capex40 retention: Year1 NI40/CFO16/PPE130/revolver34; Year2 depreciation28/interest8.4/NI50.88."
+    ],
+    "average_debt_method": "Independent cash(R) linear function evaluated at zero debt and allowed debt; required balance derived from its slope24/25 rather than copying the helper expression.",
+    "average_debt_branches": [
+      {
+        "K": "-8",
+        "opening": "10",
+        "limit": "50",
+        "required": "40",
+        "cash_at_allowed_debt": "20",
+        "gap": "0"
+      },
+      {
+        "K": "-8",
+        "opening": "10",
+        "limit": "35",
+        "required": "40",
+        "cash_at_allowed_debt": "76/5",
+        "gap": "24/5"
+      },
+      {
+        "K": "2",
+        "opening": "20",
+        "limit": "50",
+        "required": "365/8",
+        "interest": "105/32",
+        "profit_before_tax": "855/32",
+        "cash": "25"
+      },
+      {
+        "K": "2",
+        "opening": "20",
+        "limit": "40",
+        "required": "365/8",
+        "cash_at_allowed_debt": "98/5",
+        "gap": "27/5"
+      },
+      {
+        "K": "80",
+        "opening": "30",
+        "limit": "60",
+        "required": "0",
+        "cash_after_interest_and_repayment": "244/5"
+      }
+    ],
+    "exercise7": {
+      "wrong_NI": "0",
+      "wrong_current_tax": "0",
+      "routes": [
+        {
+          "route": "direct",
+          "cfo": "26",
+          "required_draw": "34",
+          "closing_equity": "115",
+          "A_minus_L_minus_E": "50"
+        },
+        {
+          "route": "indirect",
+          "cfo": "-24",
+          "required_draw": "84",
+          "closing_equity": "115",
+          "A_minus_L_minus_E": "0"
+        }
+      ],
+      "correct_restoration": {
+        "tax": "10",
+        "NI": "40",
+        "CFO": "16",
+        "draw": "44",
+        "equity": "155"
+      },
+      "interpretation": "Wrong indirect route balances but fails cash truth and funding cap; wrong direct route leaves50 balance residual. Neither is a valid forecast."
+    },
+    "other_exercises": {
+      "1": "Sales400/462; change62=40+20+2; growth31/200.",
+      "2": "Purchases360; supplier payment349; omitted inventory cash35.",
+      "4": "Repay30 only; zero debt and cash50 under main-case K definition.",
+      "8": "Annual cash15; March31 funding25; April1 facility misses the payment date."
+    }
+  },
+  "source_review": [
+    {
+      "id": "v07-c10-mit-financial-plan",
+      "url": "https://ocw.mit.edu/courses/15-390-new-enterprises-spring-2013/pages/assignments/assignment-9/",
+      "result": "Actual Financial Section body independently opened/read: explicit sales/cost assumptions, sensitivity and timed financing need support the brief attribution. Linked templates/evaluation PDFs were not required or inspected."
+    },
+    {
+      "id": "v07-c10-mit-analysis",
+      "url": "https://www.ocw.mit.edu/courses/15-511-financial-accounting-summer-2004/3194d8a51e842fa0c43b51963aff65e8_lec8.pdf",
+      "result": "Actual38-page official lecture independently inspected, title/date and slides3–7 support planning/pro forma expectations attribution. Historical company ratios and later rule-of-thumb material are not imported."
+    },
+    {
+      "id": "v07-c10-damodaran-wc",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/noncashwc.htm",
+      "result": "Actual faculty page independently read: noncash/nondebt perimeter, unstable base-year changes, component differences and supplier-credit limitations support scoped use. No current data or industry calibration inferred."
+    }
+  ],
+  "validation": {
+    "focused_checker": "python3 book/scripts/check_v07_c10.py",
+    "runs": 1,
+    "result": "passed all five groups",
+    "quiet_lab_import_and_api": "pass; stdout and stderr captured",
+    "strict_json": "pass via focused check",
+    "author_hashes": "six matched; peer hashes include author record"
+  },
+  "findings": [],
+  "open_material_findings": [],
+  "limitations": [
+    "Agent peer review is not independent human academic or professional certification.",
+    "Annual synthetic forecasts do not establish intrayear liquidity, demand/capacity, actual tax law, contract access or legal distribution permission.",
+    "Average-debt helper relies on externally supplied full current tax-relief capacity; manuscript verifies that branch only for its worked examples.",
+    "Visual/mobile/print UI QA and whole-library integration remain coordinator tasks."
+  ],
+  "ownership": "Only content/reviews/v07-c10-peer.json written for this assignment; no c10 author payload or shared state changed."
+}

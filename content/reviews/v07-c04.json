@@ -1,0 +1,60 @@
+{
+  "chapter": "v07-c04",
+  "date": "2026-10-08",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating author independently of specialist author regression",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Read the complete manuscript, four worked examples, eight complete prompt/solution pairs, teach-back/retention, all inputs, full benchmark, README and focused checker financial logic.",
+  "author_review": "reviews/v07-c04-author.json",
+  "independent_recomputation": [
+    "Acquisition 120, period cost14, initial depreciation13.5, profit-2.5, cash91 and assets/equity197.5.",
+    "Prospective revised depreciation24, pre-impairment82.5, recoverable64.5 and loss18; cash126 plus carrying64.5 equal equity190.5.",
+    "Sale after depreciation9 removes cost120/accumulated depreciation46.5/impairment18; gross cash60 less fee1.5 gives net58.5 and gain3. Current profit14, CFO20, terminal cash/equity204.5 and cumulative profit4.5.",
+    "Independently reconstructed each exercise: cost91/dep8/equity130; usage22.5/31.5/27; revised life18 yearly; impairment30 and reversal22.5 capped at60; disposal gain2 with zero CFO; intangibles expense19.25/carry35.75; property profits3/15 and claim interest8/8.8; improper training capitalization overstates asset/profit3 and shifts CFO/CFI4.",
+    "Derived lifecycle D+J-g=C-S and economic depreciation45/55 from PV100/55; checked interim news is distinct from physical wear. Delayed sale53 gives loss4, current profit7, ending197.5 and lifetime profit-2.5."
+  ],
+  "sources": "Seven final registered records match proposals. Author actual primary body inspections are explicitly scoped and dated. Root separately inspected the official AASB136 body for impairment-reversal ceiling and the passage-of-time limitation; archived compilation is not treated as a universal current filing rule.",
+  "computation": "Nine focused groups passed root execution: independent double-entry ledger and36period targets; five changed financial cases; all exercise arithmetic; allocation and reversal boundaries; ten invalid cases; two economically consequential output mutants; portable normal/optimized CLI and quiet strict-JSON API.",
+  "integration": "Shared checker integration and acceptance-state full-library validation follow this content review; source acceptance is not a new deployment.",
+  "reviewed_author_payload_hashes_verified": 6,
+  "hashes": {
+    "content/chapters/v07-c04.html": {
+      "sha256": "cefc555269fd145abce0abd9ad080f4500ca196b9132056d1d0d2762c931816c",
+      "bytes": 42332
+    },
+    "content/projects/v07-c04-analysis.py": {
+      "sha256": "f34bb9841a724977c344433fd0d13932a2b4295cb9ae99410b6c2408af92ffbf",
+      "bytes": 6510
+    },
+    "content/projects/v07-c04-inputs.json": {
+      "sha256": "500a6cb406e2888c9a20276c1dc8bd027b3c43014ab4a3d2e63761fab8e425ef",
+      "bytes": 730
+    },
+    "content/projects/v07-c04-README.txt": {
+      "sha256": "2aa96c128c1079449d158585fa6b4695e3dce8a57e36d8f05645e99d55095759",
+      "bytes": 4276
+    },
+    "scripts/check_v07_c04.py": {
+      "sha256": "5a4b1cbb92c372e01f5b6539e7585a7a3ca2e7271bc9cf47d2ee35de26450417",
+      "bytes": 14550
+    },
+    "content/reviews/v07-c04-sources.json": {
+      "sha256": "4f3b81d94a9aab9a0ee36c2df2a5194563aa5362c6eeb6f45d3f0eb68c96c759",
+      "bytes": 5153
+    }
+  },
+  "open_content_findings": [],
+  "limitations": [
+    "Agent review is not independent human accounting certification.",
+    "Recoverable values, useful lives and fair values are supplied; arithmetic does not establish credible valuation evidence.",
+    "Fixed-case program checks reporting-period closing cash; it is not a dated intra-period financing engine.",
+    "Visual/mobile/print UI QA remains pending."
+  ]
+}

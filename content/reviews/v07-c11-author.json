@@ -1,0 +1,124 @@
+{
+  "chapter": "v07-c11",
+  "title": "Accounting standards, disclosure and comparability",
+  "review_type": "Author financial, mathematical, source, instructional and prompt-solution review; coordinator acceptance pending",
+  "reviewed": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "status": "passed_author_review",
+  "written_words": 5342,
+  "scope": {
+    "worked_examples": 3,
+    "exercises_with_complete_solutions": 8,
+    "teach_back": "Answered prompt with criteria, equation and evidence/version check",
+    "retention": "Five answered delayed items",
+    "artifacts": "Full static manuscript; exact synthetic JSON cases; standard-library benchmark; preserved strict-JSON output; README; independent focused checker; nine scoped primary-source proposals"
+  },
+  "financial_review": [
+    "Report identity, legal and group perimeter, calendar, units/currency, framework, standard/adoption version, original/revised comparative and source locator precede ratios or adjustments.",
+    "Recognition, measurement, presentation and disclosure are distinguished with original examples. An analytical common-basis bridge is separated from a permitted accounting-policy election and from causal/economic comparability.",
+    "Derived COGS_F-COGS_L=R_open-R_close by subtraction of inventory stock-flow identities. Ending reserve adjusts the stock; change in reserve adjusts no-tax profit. Opening equity plus current flow reconciles ending equity; profit and inventory changes cancel in indirect CFO.",
+    "Orion FIFO/LIFO cost layers and full no-tax statements independently reconstructed. Baseline X1 profits260/180, inventory240/160, cash720, CFO220; X2 profits170/90, inventory360/200, cash770, CFO50. Cash after each purchase is200 then320. Equity stock differences80 then160 match reserves.",
+    "Liquidation shows reversal: X3 profits40/200 and reserve change-160, cash1170/CFO400/inventory0/equity1070 both; cumulative profits470 both. Falling-cost and equal-cost probes show formula signs are not tied to rising prices.",
+    "New estimate uses carrying80 with remaining3 years, depreciation80/3 prospectively; corrected original four-year history uses30 per year, cumulative prior correction-20, earliest comparative opening-10 plus period profit-10. Prior correction does not enter discovery-year profit or cash.",
+    "Segment report revenue540 minus internal40 equals external500. Segment profit90 already nets internal revenue against its matching included expense; corporate20/sharecomp10/interest8/tax13 give operating60/PBT52/NI39. Assets180+120+50-20=330; no complete balance sheet or CFO is inferred.",
+    "Matched transfer-price change40 to50 shifts segment profits54/36 to64/26 without changing consolidated results. Recasting segment composition repairs growth rates without changing group revenue.",
+    "Source/version exercise preserves unknown compliance/adoption facts. Currency/perimeter growth8% still spans53 weeks; conditional uniform-week adjustment gives79/1325 growth, not an observed same-period result or profit improvement."
+  ],
+  "exercise_review": [
+    {
+      "exercise": 1,
+      "target": "Requires exact filing/framework/IASB compliance/auditor/adoption evidence; issuer eligibility and IFRS18 effective period cannot be inferred from provider/webpage labels."
+    },
+    {
+      "exercise": 2,
+      "target": "Purchases280; FIFO opening150/closing185/COGS245/profit85; opening/closing equity adjustments30/45; CFO50 under each basis. Adding45 instead of15 double-counts opening reserve30."
+    },
+    {
+      "exercise": 3,
+      "target": "FIFO/LIFO profits40/200; reserve160 to0; CFO400/cash1170/A1170/L100/E1070 both, cumulative profit470."
+    },
+    {
+      "exercise": 4,
+      "target": "Cost150/residual30/original6 years: prior annual20, carrying110; revised remaining2 gives annual40, profit50/CFO90; prior expense unchanged, next carrying70 then30."
+    },
+    {
+      "exercise": 5,
+      "target": "Explicit zero initial RE. Opening-X2 RE80 to70 and machine100 to90; X2 profit80 to70; closing RE160 to140/machine80 to60; start-X3 cumulative correction-20, current profit70 rather than50."
+    },
+    {
+      "exercise": 6,
+      "target": "Other expenses26/34; group revenue500/operating60/PBT52/NI39/assets330. PBT12 double-subtracts internal sale. CFO unavailable."
+    },
+    {
+      "exercise": 7,
+      "target": "Recast prior A240/B160 gives both5% and group5%. Unrecast A growth-2/65, B20%; group totals400 to420 unchanged."
+    },
+    {
+      "exercise": 8,
+      "target": "Documented adjusted revenue540 and growth8%; equal52-week growth unidentified without added data. Uniform-week conditional revenue28080/53 and growth79/1325; two evidence requests must address timing, economic mix, costs or bridge definitions."
+    }
+  ],
+  "instruction_review": [
+    "Every computational exercise has its method introduced in sections3–6 or cited prerequisites; all eight prompts have complete determinate answers or explicit evaluation criteria.",
+    "Three original cases have separate entity/timing/unit conventions; the no-tax limitation is confined to the first two cases, while segment tax13 is supplied expense without cash assumptions.",
+    "Policy permissions, actual useful-life evidence, materiality, practicability and segment reportability are not asserted by the numerical program. Unknown segment CFO is null rather than zero.",
+    "Historical and revised disclosures are preserved separately to distinguish ex-post corrected analysis from information available at a decision date. Real-world intent or audit assurance is not inferred."
+  ],
+  "source_review": {
+    "proposed_count": 9,
+    "actually_inspected": "Actual IFRS IAS8/IAS2/IFRS8/IFRS18 About/history bodies; AASB108 2023–2026 operative metadata and scoped paragraphs; AASB8 2021–2026 metadata and segments/measurement/reconciliation/comparatives paragraphs; actual FASB2015-11 and2023-07 PDF front matter, summary and relevant amendments; SEC manual6310.1–.3 and neighboring6320.1–.2.",
+    "dated_framework_limits": "IFRS18 mandatory2027 and earlier-application permission are not conflated with an issuer adoption date. Renamed IAS8 public page is identified. AASB local/Tier2 clauses are not generalized. FASB ASUs are amendment communications rather than standalone authoritative Codification.",
+    "access_limit": "Full gated IFRS normative texts and complete current FASB Codification were not inspected. Source proposals give the exact body/paragraph scope; no source problems or illustrations reproduced."
+  },
+  "validation": {
+    "status": "passed",
+    "command": "python3 book/scripts/check_v07_c11.py",
+    "check_groups": 8,
+    "checks": [
+      "Quiet strict-JSON benchmark API and preserved output agree; independent expanded-unit cost and external-cash/net-asset oracle",
+      "Four inventory probes: full liquidation, identical costs, falling costs and zero sales",
+      "Independent cumulative-depreciation oracle, opening-comparative correction split and four remaining-life/residual probes",
+      "Segment revenue/expense/profit/assets reconciliation and matched internal transfer invariance; missing CFO stays null",
+      "All determinate exercise and retention results independently recomputed; open source/evidence answers read against criteria",
+      "Four consequential wrong-report mutations detected: closing-reserve income, invented cash, incorrect reserve bridge and prior error in current profit",
+      "Fourteen financially consequential invalid funding, quantity, timing, precision, asset-life and segment contracts rejected",
+      "Normal and optimized benchmark CLI run from /tmp matches API; three worked examples/eight matching solutions/four downloads/answered retrieval/nine used source routes"
+    ],
+    "counts": {
+      "inventory_probes": 4,
+      "asset_probes": 4,
+      "matched_segment_transfer": 1,
+      "invalid_contracts": 14,
+      "wrong_report_mutations": 4,
+      "exercises": 8
+    }
+  },
+  "findings": [
+    {
+      "id": "v07-c11-root-01",
+      "severity": "low",
+      "status": "resolved",
+      "origin": "Coordinator independent manuscript/solution review",
+      "location": "Exercise5",
+      "finding": "Absolute retained-earnings answers required an initial balance not explicitly supplied.",
+      "resolution": "Added the explicit assumption that opening-X1 retained earnings are zero; final prompt re-read against the solution and hashed after correction."
+    }
+  ],
+  "open_findings": [],
+  "limitations": [
+    "Author review and executable checks are not independent human academic/accounting certification or a filing opinion.",
+    "No full current framework equivalence, tax/election result, actual source evidence about an issuer, legal jurisdiction conclusion, fraud identification or audit assurance is established.",
+    "The lab implements stated no-tax simple unit FIFO/LIFO and straight-line cases plus a partial segment disclosure packet; dollar-value LIFO, taxes, impairment, complex transitions and comprehensive segment reportability are outside scope.",
+    "The independent unit-expansion inventory oracle covers integer quantities in original/probe cases. The benchmark supports rational quantities, but no exhaustive generic-software verification is claimed.",
+    "No browser/mobile/print/visual QA performed; coordinator owns shared structure, canonical source registration, dependency acceptance and publication."
+  ],
+  "sha256": {
+    "content/chapters/v07-c11.html": "aa424c793ae5d8d690dc1b58616b7fc98b69b0f202f67eb9725f0c29ab9ef661",
+    "content/projects/v07-c11-inputs.json": "611c3a38074d82f3805e3fec3935dd46431df0e71f9a1ae886bfa21fc71aa906",
+    "content/projects/v07-c11-analysis.py": "8b43c881cd4ce6a596c827ad9b77806dd32f3f3d7aeb7bc2d69253b1661a3dd4",
+    "content/projects/v07-c11-output.json": "7127179f761a963748f8c296a546066adbaa93f0f543dec975148b9e4ea2a9a5",
+    "content/projects/v07-c11-README.txt": "5b3c9d2d33ef0fb6ff1ece49bc6eb0c7e30338b10c049a10c63f9c1ccbc2974c",
+    "scripts/check_v07_c11.py": "f4d765e4f1d083f3aca99a3b0793acff81d4661fae3cbaf4fe4b82f11c351c8d",
+    "content/reviews/v07-c11-sources.json": "c81a5ceddd542807c350cab7d969626238659eff732312310ff33d1fb18de093"
+  }
+}

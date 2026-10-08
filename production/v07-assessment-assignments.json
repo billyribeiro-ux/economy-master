@@ -1,0 +1,94 @@
+{
+  "batch": "v07-assessment",
+  "date": "2026-10-08",
+  "authorization": "User explicitly instructed coordinator and economy/finance specialist agents to review and run all work autonomously in active session.",
+  "canonical_volume": {
+    "id": "v07",
+    "title": "Accounting and business analysis",
+    "assessment": "Build and reconcile financial statements, assess earnings quality and translate accounting into economic cash flows.",
+    "project": "Construct a fully reconciled three-statement model from a supplied original business case and write a financial-quality assessment."
+  },
+  "prerequisite_contract": "All 12 Volume 7 chapters are accepted. Use their taught conventions; package acceptance awaits completed independent coordinator review.",
+  "shared_rules": [
+    "No shared canonical/source/checkpoint/build/hosting edits or child agents. Coordinator alone assembles and accepts.",
+    "Original cases and complete solutions, clear entity/period/currency/timing/tax assumptions. No institutional accreditation or calibration claims.",
+    "Reuse existing inspected stable sources where appropriate; propose any genuinely required new primary source with actual scope.",
+    "Every determined answer independently recomputed. Quiet JSON-serializable checker with meaningful financial/logic checks and a final exact payload hash record. Avoid huge redundant behavior-testing matrices.",
+    "Notify coordinator early with case architecture, numerical anchors and coverage; preserve owned paths."
+  ],
+  "assignments": [
+    {
+      "task": "v07-exam-a",
+      "owner": "equity_peer",
+      "state": "completed-and-coordinator-reviewed",
+      "owned_paths": [
+        "content/assessments/parts/v07-exam-a.html",
+        "scripts/check_v07_exam_a.py",
+        "content/reviews/v07-exam-a-author.json",
+        "content/reviews/v07-exam-a-sources.json"
+      ],
+      "deliverable": "Complete FormA for Volume7: original100point180minute closed-notes/calculator-permitted exam, five20point questions containing four5point parts each. Twenty exact IDs v07-a-q1a...v07-a-q5d with data-points=5, matched full worked solutions and explicit point rubrics. Use h2 id=form-a for exam and h2 id=solutions-a for solutions, no h1 or page wrapper. Solutions details should be labeled. Include an author coverage record.",
+      "coverage": "D1 transactions/three statements/operating cycles (c01-c03); D2 long-lived assets/debt/effective interest/leases (c04-c05); D3 ordinary equity/consolidation/tax/accrual quality (c06-c07); D4 relevant cost/capacity/ratio diagnosis (c08-c09); D5 financing forecast/comparability/forensic inference (c10-c12). Spread related subskills across five questions without opaque overstuffing; each part should be doable in about9minutes.",
+      "distinction": "Primary form; use unfamiliar original cases and integrated transfers, not a recap of chapter exact examples.",
+      "review_gates": "All20prompt/solution pairs solved, points100 and domain coverage explicit; original cases close stock/flow/cash, positive denominator and contractual/legal evidence assumptions stated. No open material findings. Complete numerical checker and final author hash record."
+    },
+    {
+      "task": "v07-exam-b",
+      "owner": "cost_peer",
+      "state": "completed-and-coordinator-reviewed",
+      "owned_paths": [
+        "content/assessments/parts/v07-exam-b.html",
+        "scripts/check_v07_exam_b.py",
+        "content/reviews/v07-exam-b-author.json",
+        "content/reviews/v07-exam-b-sources.json"
+      ],
+      "deliverable": "Complete FormB for Volume7: original100point180minute closed-notes/calculator-permitted exam, five20point questions containing four5point parts each. Twenty exact IDs v07-b-q1a...v07-b-q5d with data-points=5, matched full worked solutions and explicit point rubrics. Use h2 id=form-b for exam and h2 id=solutions-b for solutions, no h1 or page wrapper. Solutions details should be labeled. Include an author coverage record.",
+      "coverage": "D1 transactions/three statements/operating cycles (c01-c03); D2 long-lived assets/debt/effective interest/leases (c04-c05); D3 ordinary equity/consolidation/tax/accrual quality (c06-c07); D4 relevant cost/capacity/ratio diagnosis (c08-c09); D5 financing forecast/comparability/forensic inference (c10-c12). Spread related subskills across five questions without opaque overstuffing; each part should be doable in about9minutes.",
+      "distinction": "Reassessment MUST have genuinely distinct structures/decisions, not just changed chapter/FormA numbers. Send outline to root early; coordinate with FormA author through root to avoid overlap.",
+      "review_gates": "All20prompt/solution pairs solved, points100 and domain coverage explicit; original cases close stock/flow/cash, positive denominator and contractual/legal evidence assumptions stated. No open material findings. Complete numerical checker and final author hash record."
+    },
+    {
+      "task": "v07-project",
+      "owner": "financial_diagnosis",
+      "state": "completed-and-coordinator-reviewed",
+      "owned_paths": [
+        "content/assessments/parts/v07-project.html",
+        "content/projects/v07-assessment-*",
+        "scripts/check_v07_project.py",
+        "content/reviews/v07-project-author.json",
+        "content/reviews/v07-project-sources.json"
+      ],
+      "deliverable": "Substantial original open-resource8\u201312hour author-designed project: supplied original business case, a fully reconciled three-statement model and financial-quality decision memo. Supply complete opening balances and transaction/operating/financing inputs with explicit dates, units, provenance, tax and measurement conventions; standard-library benchmark, preserved output and README. Learner reconstructs a historical closing period, tests at least one material documented accounting correction/reclassification, forecasts a base and adverse operating/funding scenario with explicit financing limits, compares diagnostics, and defends funding/quality/evidence decisions. Include100point rubric, itemized deliverables, complete instructor numerical benchmark/guide and acceptable alternative-reasoning criteria. No real market dataset is required by this canonical project; all fictional inputs labeled.",
+      "structure": "HTML fragment with h2 id=project; include Rubric and instructor-guide labels and direct flat offline links to prefixed assets. Avoid duplicating chapter cases; one integrated coherent entity, fully supplied contract rather than an overcomplicated universal tax/reporting engine. All required techniques taught in c01-c12.",
+      "review_gates": "Historical/forecast statements, direct/indirect cash, debt/equity/tax/asset rollforwards, correction invariants, funding feasibility and all manuscript benchmark amounts independently checked. Actual evidence needs separate judgment; no fraud or standards-compliance certification. No open material findings."
+    },
+    {
+      "task": "v07-support-and-assembly",
+      "owner": "root",
+      "state": "completed-and-coordinator-reviewed",
+      "owned_paths": [
+        "content/assessments/parts/v07-support-opening.html",
+        "content/assessments/parts/v07-support-closing.html",
+        "content/assessments/v07.html",
+        "scripts/check_v07_assessment.py",
+        "content/reviews/v07-assessment.json"
+      ],
+      "deliverable": "Eight prerequisite diagnostic questions and full answers; common exam administration and five-domain coverage; six delayed retention questions and full answers; oral transfer criteria; remediation, notation and concept indices and successor synthesis. Assemble final package; independently review every specialist prompt/solution, lab and rubric; integrate canonical acceptance, sources and verification only after gates pass."
+    },
+    {
+      "task": "v07-support-peer",
+      "owner": "cost_peer",
+      "state": "completed-and-coordinator-reviewed",
+      "owned_paths": [
+        "content/reviews/v07-support-peer.json"
+      ],
+      "read_only_targets": [
+        "content/assessments/parts/v07-support-opening.html",
+        "content/assessments/parts/v07-support-closing.html",
+        "scripts/check_v07_assessment.py"
+      ],
+      "deliverable": "Independently solve all eight diagnostic and six retention items and audit prerequisite adequacy, explicit assumptions, oral criteria, scoring/advancement and conceptual/notation index. Do not edit target files; report findings to root and save exact reviewed hashes and open/resolved findings in owned review path. Code review focuses support_check and assembly logic; specialist checkers separately owned."
+    }
+  ],
+  "state": "accepted; whole-library verification and offline integrity passed; publication pending"
+}

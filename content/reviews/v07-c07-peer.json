@@ -1,0 +1,267 @@
+{
+  "chapter": "v07-c07",
+  "review_type": "Independent scoped peer review",
+  "reviewer": "causal_identification specialist",
+  "date": "2026-10-08",
+  "status": "passed",
+  "open_findings": [],
+  "scope": {
+    "manuscript": "Entire chapter, all three worked examples, eight exercise prompts and complete solutions, teach-back benchmark and delayed-check answer read.",
+    "program": "Full input, benchmark source, README, focused checker and author/source records read.",
+    "independent_work": "Separate exact closed-form oracle from external receipts/payments and future tax consequences, independent of the benchmark and root checker, compared nine period fields plus terminal wealth across 12 cases. Every exercise calculation also solved and reviewed against its prompt.",
+    "authority": "Only this peer JSON written; no author/shared changes, publishing or child delegation."
+  },
+  "findings": [
+    {
+      "id": "v07-c07-peer-01",
+      "severity": "low",
+      "status": "resolved",
+      "location": "content/chapters/v07-c07.html, Worked example 3, paragraph after the A/B CFO calculations (line 71 in reviewed file)",
+      "finding": "Original interpretation suggested Company B might be contracting and releasing balances despite the supplied no-other-items changes: receivables rise five and payables fall five, absorbing ten of cash.",
+      "requested_correction": "State the actual working-capital absorption and explain that depreciation twenty more than offsets it; avoid inferring a growth trajectory from the supplied data.",
+      "resolution_verified": "Coordinator replaced the sentence with the exact ten-unit absorption/twenty-unit depreciation explanation and an explicit no-growth-trajectory inference. Final text inspected; no numerical change required."
+    }
+  ],
+  "independent_results": {
+    "baseline": {
+      "year1": "PBT58; taxable55; current11; paid8; current payable3; DTA2.4; DTL4; deferred expense1.6; total tax12.6; NI45.4; CFO92; cash132; A164.4=L19+E145.4.",
+      "year2": "PBT40; taxable48; current9.6; paid12.6; deferred expense-1.6; total tax8; NI32; CFO45.4; cash/equity177.4. Equipment, provision, payable, DTA and DTL all zero.",
+      "terminal": "Total tax cash and expense20.6; total NI77.4=ending cash177.4 minus original equity100; total CFO137.4 minus date0 equipment60 also77.4."
+    },
+    "parameter_cases": [
+      {
+        "case": "baseline",
+        "NI": [
+          "45.4",
+          "32"
+        ],
+        "CFO": [
+          "92",
+          "45.4"
+        ],
+        "terminal_cash": "177.4"
+      },
+      {
+        "case": "year1 estimate20, settlement12",
+        "NI": [
+          "39",
+          "38.4"
+        ],
+        "CFO": [
+          "92",
+          "45.4"
+        ],
+        "terminal_cash": "177.4"
+      },
+      {
+        "case": "book depreciation40/20",
+        "NI": [
+          "37.4",
+          "40"
+        ],
+        "CFO": [
+          "92",
+          "45.4"
+        ],
+        "terminal_cash": "177.4"
+      },
+      {
+        "case": "year1 tax paid11",
+        "NI": [
+          "45.4",
+          "32"
+        ],
+        "CFO": [
+          "89",
+          "48.4"
+        ],
+        "terminal_cash": "177.4"
+      },
+      {
+        "case": "future enacted rate25%",
+        "NI": [
+          "45",
+          "30"
+        ],
+        "CFO": [
+          "92",
+          "43"
+        ],
+        "terminal_cash": "175"
+      },
+      {
+        "case": "settlement16",
+        "NI": [
+          "45.4",
+          "28.8"
+        ],
+        "CFO": [
+          "92",
+          "42.2"
+        ],
+        "terminal_cash": "174.2"
+      },
+      {
+        "case": "equal book/tax depreciation30/30",
+        "NI": [
+          "45.4",
+          "32"
+        ],
+        "CFO": [
+          "92",
+          "45.4"
+        ],
+        "terminal_cash": "177.4"
+      },
+      {
+        "case": "estimate60 at full supplied capacity",
+        "NI": [
+          "7",
+          "70.4"
+        ],
+        "CFO": [
+          "92",
+          "45.4"
+        ],
+        "terminal_cash": "177.4"
+      },
+      {
+        "case": "settlement60 at zero year2 taxable profit",
+        "NI": [
+          "45.4",
+          "-6.4"
+        ],
+        "CFO": [
+          "92",
+          "7"
+        ],
+        "terminal_cash": "139"
+      },
+      {
+        "case": "no repair estimate or settlement",
+        "NI": [
+          "55",
+          "32"
+        ],
+        "CFO": [
+          "92",
+          "55"
+        ],
+        "terminal_cash": "187"
+      },
+      {
+        "case": "zero tax rates and zero year1 tax installment",
+        "NI": [
+          "58",
+          "40"
+        ],
+        "CFO": [
+          "100",
+          "58"
+        ],
+        "terminal_cash": "198"
+      },
+      {
+        "case": "book depreciation0/60",
+        "NI": [
+          "69.4",
+          "8"
+        ],
+        "CFO": [
+          "92",
+          "45.4"
+        ],
+        "terminal_cash": "177.4"
+      }
+    ],
+    "exercise_targets": [
+      "1: closing current payable5; deferred expense2; total tax16; NI54; expense-minus-cash1 equals payable change-1 plus deferred2.",
+      "2: asset tax base60/difference30/DTL6; already-taxed receivable base20/difference0; repair liability base0/deductible difference15/DTA3; nondeductible fine base4/difference0. Arithmetic net does not authorize offset.",
+      "3: book40/20 gives PBT48/50, deferred expense-0.4/+0.4, total tax10.6/10, NI37.4/40, unchanged CFO and terminal wealth.",
+      "4: cancelable marketing creates no obligation; separate provision PV100, after one year110, time expense10/cash0; next accretion11 settles121.",
+      "5: DTA1.6 initially, unrecognized2; new capacity14 gives DTA2.8, noncash benefit1.2 and remaining unrecognized0.8.",
+      "6: enacted future25% gives year1 DTL5/DTA3/tax13/NI45, year2 current12/deferred-2/tax10/NI30/cash tax15; final cash175. Lifetime tax rise2.4 is not remeasurement0.4 counted again.",
+      "7: management53 versus stated consistent34. Recurrence/recognition evidence matters; neither adjusted performance measure is a cash reconciliation.",
+      "8: CFO60 rather than180; receivable sign causes120 error. Added DTA benefit10 raises NI110 but requires deferred adjustment-10, leaving CFO60."
+    ],
+    "worked_analytical_cases": "A CFO50 and B CFO75; accrual ratios6% and-2%. Selective metric52, consistent22, supported normalized-cost alternative25. All numbers are original conditional illustrations, not evidence identifying fraud.",
+    "cash_bridge_derivation": "Substituting NI into NI+book depreciation+change in provision+deferred expense+change in current payable cancels noncash allocations and replaces recognized repair/current tax expense with actual settlement/tax cash. Scope excludes acquisition/OCI/equity/FX movements and double-counted working-capital items."
+  },
+  "source_verification": [
+    {
+      "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-12-income-taxes/",
+      "actually_read": "Public About body: current payable/overpayment, enacted or substantively enacted law, temporary differences and DTA conditions. Full gated IAS12 not inspected."
+    },
+    {
+      "url": "https://standards.aasb.gov.au/aasb-112-sep-2023",
+      "actually_read": "Official compilation title/date; paragraphs7-8 tax-base definitions and examples; paragraph24 recognition condition and25-26 mechanism;47 future rates;53-54 no discounting and56 reassessment. Neighboring initial-recognition exception text inspected; not a full-standard audit."
+    },
+    {
+      "url": "https://standards.aasb.gov.au/aasb-137-dec-2022",
+      "actually_read": "Official dated body: definitions10-11, recognition14, present/past-obligation16-18, discounting45-46 and reassessment/use59-65. These support stated conceptual boundaries, not the invented repair evidence."
+    },
+    {
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures",
+      "actually_read": "Actual Section100.01-100.06 body and last-update13December2022 metadata. Recurrence, inconsistent/asymmetric adjustments, altered recognition and labels match the scoped U.S. staff-reference use."
+    }
+  ],
+  "execution": {
+    "focused_checker": {
+      "status": "passed",
+      "chapter": "v07-c07",
+      "checks": [
+        "Independent signed journals, 30 exact period targets and terminal cash/equity reconciliation",
+        "Six economic transfers: estimate/release, book allocation, payment timing, enacted future rate, settlement news and tax timing",
+        "All eight determinate exercise answers, worked analytical comparisons and retention timing checked",
+        "Eleven financially meaningful unit, timing, funding, recognition-domain and precision failures rejected",
+        "Independent checks reject reversed deferred-tax sign and omitted opening tax settlement",
+        "Three worked cases, eight matched full solutions, answered instruction and four scoped primary sources",
+        "Portable normal/optimized CLI equals quiet exact strict-JSON API"
+      ],
+      "limitations": [
+        "Exact synthetic accounting and bounded input cases do not verify real tax law or recognition evidence.",
+        "Open-ended evidence judgments require the manuscript rubric; numerical checks cannot identify reporting intent.",
+        "Visual/mobile/print UI QA remains pending."
+      ]
+    },
+    "normal_and_optimized_CLI": "Both checker CLIs passed; the checker itself also ran benchmark normal/-O from temporary working directories.",
+    "quiet_API": "Fresh checker import and check() captured no stdout/stderr; result serialized with allow_nan=False.",
+    "author_payload": "All six payload hashes in current author record match actual final files."
+  },
+  "reviewed_hashes": {
+    "content/chapters/v07-c07.html": {
+      "sha256": "9d426177e4baa5bfdfdf9d4501dfe85828704f41579f770b2369790f5dc16710",
+      "bytes": 33571
+    },
+    "content/projects/v07-c07-inputs.json": {
+      "sha256": "5f74355d8d4df323682aebffdac12ac1a0258864543485b81577d821d9d26898",
+      "bytes": 793
+    },
+    "content/projects/v07-c07-analysis.py": {
+      "sha256": "36c32e5fbaaf55f57f9e364839a2e908dece7022da87f85ffca909c27e3cfbf6",
+      "bytes": 7680
+    },
+    "content/projects/v07-c07-README.txt": {
+      "sha256": "209709aec2f7651b9f6a8d2a1d78a5c8d47d333756ca803d3d3c8d0eeb968d91",
+      "bytes": 4644
+    },
+    "scripts/check_v07_c07.py": {
+      "sha256": "318bced6357bb983029e76a98056fff648fc164ce2c227a230457c9dd6176023",
+      "bytes": 10717
+    },
+    "content/reviews/v07-c07-sources.json": {
+      "sha256": "a746e169785915fae0d1017a74b44f046ad6bc58bcbf515bb0e87c746b6b0aa4",
+      "bytes": 2925
+    },
+    "content/reviews/v07-c07-author.json": {
+      "sha256": "f4d6a8da997d9918279ad9d78980a2807e61cd8349f7cf8d4e8c42b8be1f6136",
+      "bytes": 4686
+    }
+  },
+  "limitations": [
+    "Peer review verifies the stated synthetic arithmetic, derivations, teaching logic and inspected source scope; it is not real tax advice or full standards compliance certification.",
+    "Recognition evidence, future-tax-capacity forecasts and reporting intent are supplied or discussed; arithmetic cannot establish them.",
+    "The program checks period-end funding only; intra-year liquidity dates and tax-loss/carryforward/offset regimes are outside its supplied contract.",
+    "No browser, mobile, visual or print QA performed. No external human/institutional certification claimed."
+  ]
+}

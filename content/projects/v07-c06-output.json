@@ -1,0 +1,440 @@
+{
+  "units": "Money in kCU (thousands of currency units); shares in thousands; prices and par in CU per share. Exact rational strings.",
+  "shares": {
+    "ledger": {
+      "cash": "80",
+      "other_assets": "150",
+      "liabilities": "-80",
+      "capital": "-125/2",
+      "apic_issue": "-135/2",
+      "apic_treasury": "-5",
+      "retained": "-60",
+      "treasury": "45",
+      "revenue": "0",
+      "dividends": "0"
+    },
+    "journal": [
+      {
+        "date": "X1-02-01",
+        "event": "issue",
+        "debit_minus_credit": {
+          "cash": "50",
+          "capital": "-25/2",
+          "apic_issue": "-75/2"
+        },
+        "cash_after": "100",
+        "balance_residual": "0"
+      },
+      {
+        "date": "X1-06-30",
+        "event": "cash_service",
+        "debit_minus_credit": {
+          "cash": "30",
+          "revenue": "-30"
+        },
+        "cash_after": "130",
+        "balance_residual": "0"
+      },
+      {
+        "date": "X1-07-01",
+        "event": "dividend",
+        "debit_minus_credit": {
+          "dividends": "10",
+          "cash": "-10"
+        },
+        "cash_after": "120",
+        "balance_residual": "0"
+      },
+      {
+        "date": "X1-08-01",
+        "event": "repurchase",
+        "debit_minus_credit": {
+          "treasury": "60",
+          "cash": "-60"
+        },
+        "cash_after": "60",
+        "balance_residual": "0"
+      },
+      {
+        "date": "X1-10-01",
+        "event": "reissue",
+        "debit_minus_credit": {
+          "cash": "20",
+          "treasury": "-15",
+          "apic_treasury": "-5"
+        },
+        "cash_after": "80",
+        "balance_residual": "0"
+      },
+      {
+        "date": "X1-12-31",
+        "event": "close profit",
+        "debit_minus_credit": {
+          "revenue": "30",
+          "retained": "-30"
+        },
+        "cash_after": "80",
+        "balance_residual": "0"
+      },
+      {
+        "date": "X1-12-31",
+        "event": "close dividends",
+        "debit_minus_credit": {
+          "dividends": "-10",
+          "retained": "10"
+        },
+        "cash_after": "80",
+        "balance_residual": "0"
+      }
+    ],
+    "share_snapshots": [
+      {
+        "date": "X1-02-01",
+        "issued": "125",
+        "treasury_shares": "0",
+        "outstanding": "125",
+        "observer_fraction": "8/25"
+      },
+      {
+        "date": "X1-06-30",
+        "issued": "125",
+        "treasury_shares": "0",
+        "outstanding": "125",
+        "observer_fraction": "8/25"
+      },
+      {
+        "date": "X1-07-01",
+        "issued": "125",
+        "treasury_shares": "0",
+        "outstanding": "125",
+        "observer_fraction": "8/25"
+      },
+      {
+        "date": "X1-08-01",
+        "issued": "125",
+        "treasury_shares": "20",
+        "outstanding": "105",
+        "observer_fraction": "8/21"
+      },
+      {
+        "date": "X1-10-01",
+        "issued": "125",
+        "treasury_shares": "15",
+        "outstanding": "110",
+        "observer_fraction": "4/11"
+      }
+    ],
+    "profit": "30",
+    "net_owner_cash": "0",
+    "assets": "230",
+    "liabilities": "80",
+    "equity": "150",
+    "apic_total": "145/2",
+    "issued": "125",
+    "outstanding": "110",
+    "treasury_shares": "15",
+    "residuals": {
+      "balance_sheet": "0",
+      "equity_rollforward": "0"
+    }
+  },
+  "group": {
+    "acquisition": {
+      "cash": "190",
+      "assets": "580",
+      "liabilities": "140",
+      "parent_equity": "400",
+      "nci": "40",
+      "goodwill": "30",
+      "net_acquisition_cash_outflow": "110",
+      "elimination_debit_minus_credit": {
+        "sub_capital": "100",
+        "sub_preacquisition_retained": "60",
+        "goodwill": "30",
+        "investment": "-150",
+        "nci": "-40"
+      }
+    },
+    "parent": {
+      "ledger": {
+        "cash": "177",
+        "land": "200",
+        "external_liabilities": "-100",
+        "share_capital": "-300",
+        "retained": "-142",
+        "investment": "150",
+        "revenue": "0",
+        "expense": "0",
+        "inventory": "0",
+        "intra_receivable": "15",
+        "cogs": "0",
+        "dividend_income": "0",
+        "dividends": "0"
+      },
+      "journal": [
+        {
+          "date": "X1-01-01",
+          "event": "purchase existing subsidiary shares",
+          "debit_minus_credit": {
+            "investment": "150",
+            "cash": "-150"
+          },
+          "cash_after": "150",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-06-30",
+          "event": "external services",
+          "debit_minus_credit": {
+            "cash": "80",
+            "revenue": "-80"
+          },
+          "cash_after": "230",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-06-30",
+          "event": "operating costs",
+          "debit_minus_credit": {
+            "expense": "50",
+            "cash": "-50"
+          },
+          "cash_after": "180",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-07-01",
+          "event": "external batch purchase",
+          "debit_minus_credit": {
+            "inventory": "40",
+            "cash": "-40"
+          },
+          "cash_after": "140",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-07-01",
+          "event": "downstream credit sale",
+          "debit_minus_credit": {
+            "intra_receivable": "60",
+            "revenue": "-60"
+          },
+          "cash_after": "140",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-07-01",
+          "event": "batch cost",
+          "debit_minus_credit": {
+            "cogs": "40",
+            "inventory": "-40"
+          },
+          "cash_after": "140",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-10-01",
+          "event": "receive settlement",
+          "debit_minus_credit": {
+            "cash": "45",
+            "intra_receivable": "-45"
+          },
+          "cash_after": "185",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-11-01",
+          "event": "dividend from subsidiary",
+          "debit_minus_credit": {
+            "cash": "12",
+            "dividend_income": "-12"
+          },
+          "cash_after": "197",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-12-01",
+          "event": "pay parent owners",
+          "debit_minus_credit": {
+            "dividends": "20",
+            "cash": "-20"
+          },
+          "cash_after": "177",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-12-31",
+          "event": "close profit",
+          "debit_minus_credit": {
+            "revenue": "140",
+            "dividend_income": "12",
+            "cogs": "-40",
+            "expense": "-50",
+            "retained": "-62"
+          },
+          "cash_after": "177",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-12-31",
+          "event": "close dividend",
+          "debit_minus_credit": {
+            "dividends": "-20",
+            "retained": "20"
+          },
+          "cash_after": "177",
+          "balance_residual": "0"
+        }
+      ],
+      "profit": "62",
+      "assets": "542",
+      "liabilities": "100",
+      "equity": "442",
+      "balance_residual": "0"
+    },
+    "subsidiary": {
+      "ledger": {
+        "cash": "59",
+        "external_receivables": "20",
+        "inventory": "70",
+        "land": "100",
+        "external_liabilities": "-40",
+        "share_capital": "-100",
+        "retained": "-94",
+        "intra_payable": "-15",
+        "revenue": "0",
+        "cogs": "0",
+        "expense": "0",
+        "dividends": "0",
+        "dividend_income": "0"
+      },
+      "journal": [
+        {
+          "date": "X1-07-01",
+          "event": "purchase from parent",
+          "debit_minus_credit": {
+            "inventory": "60",
+            "intra_payable": "-60"
+          },
+          "cash_after": "40",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-09-30",
+          "event": "outside batch sale",
+          "debit_minus_credit": {
+            "cash": "100",
+            "revenue": "-100"
+          },
+          "cash_after": "140",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-09-30",
+          "event": "sold batch cost",
+          "debit_minus_credit": {
+            "cogs": "30",
+            "inventory": "-30"
+          },
+          "cash_after": "140",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-09-30",
+          "event": "operating costs",
+          "debit_minus_credit": {
+            "expense": "20",
+            "cash": "-20"
+          },
+          "cash_after": "120",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-10-01",
+          "event": "pay parent",
+          "debit_minus_credit": {
+            "intra_payable": "45",
+            "cash": "-45"
+          },
+          "cash_after": "75",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-11-01",
+          "event": "pay all subsidiary owners",
+          "debit_minus_credit": {
+            "dividends": "16",
+            "cash": "-16"
+          },
+          "cash_after": "59",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-12-31",
+          "event": "close profit",
+          "debit_minus_credit": {
+            "revenue": "100",
+            "dividend_income": "0",
+            "cogs": "-30",
+            "expense": "-20",
+            "retained": "-50"
+          },
+          "cash_after": "59",
+          "balance_residual": "0"
+        },
+        {
+          "date": "X1-12-31",
+          "event": "close dividend",
+          "debit_minus_credit": {
+            "dividends": "-16",
+            "retained": "16"
+          },
+          "cash_after": "59",
+          "balance_residual": "0"
+        }
+      ],
+      "profit": "50",
+      "assets": "249",
+      "liabilities": "55",
+      "equity": "194",
+      "balance_residual": "0"
+    },
+    "consolidated": {
+      "assets_by_account": {
+        "cash": "236",
+        "external_receivables": "20",
+        "inventory": "60",
+        "land": "300",
+        "goodwill": "30"
+      },
+      "assets": "646",
+      "liabilities": "140",
+      "parent_equity": "915/2",
+      "nci": "97/2",
+      "total_equity": "506",
+      "revenue": "180",
+      "cogs": "20",
+      "operating_expense": "70",
+      "profit": "90",
+      "parent_profit": "155/2",
+      "nci_profit": "25/2",
+      "cfo_post_acquisition": "70",
+      "financing_post_acquisition": "-24",
+      "eliminations": {
+        "investment": "150",
+        "intra_balance": "15",
+        "intra_sales": "60",
+        "parent_dividend_income": "12",
+        "unrealized_inventory_margin": "10"
+      },
+      "residuals": {
+        "balance_sheet": "0",
+        "profit_bridge": "0",
+        "cash_bridge": "0",
+        "asset_elimination": "0",
+        "nci_net_assets": "0",
+        "acquisition": "0"
+      }
+    }
+  }
+}

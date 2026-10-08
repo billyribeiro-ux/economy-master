@@ -1,7 +1,7 @@
 {
   "batch": "v06-assessment-v07-opening",
   "date": "2026-10-08",
-  "state": "authoring",
+  "state": "accepted-first-package-published-accounting-authoring-continues",
   "authorization": "Explicit user authorization for coordinator plus three specialist agents; full216chapter goal remains active.",
   "workflow": [
     "No child agents, shared-file edits or publishing; coordinator alone owns canonical state, source catalogue, shared verifier and hosting.",
@@ -23,7 +23,7 @@
     {
       "owner": "root",
       "task": "v06-assessment",
-      "state": "accepted-awaiting-publication",
+      "state": "accepted-and-published",
       "owned_paths": [
         "content/assessments/v06.html",
         "content/projects/v06-assessment-*",
@@ -36,7 +36,7 @@
     {
       "owner": "regression",
       "task": "economics-core",
-      "state": "accepted-awaiting-publication",
+      "state": "accepted-and-published",
       "canonical_specification": {
         "id": "economics-core",
         "title": "Economics core examination",
@@ -62,12 +62,12 @@
         "content/reviews/economics-core-author.json",
         "content/reviews/economics-core-sources.json"
       ],
-      "fixed_scope": "Complete cumulative economics-core package joining Volume5micro/game/information/welfare models to Volume6macro/international models with Volume1–4methods. Two distinct original100point written forms with full solutions and item/domain scoring, a substantial original open-resource integrative practical with documented synthetic inputs, reproducible standard-library benchmark and instructor evaluation, oral transfer/delayed retention with answers and diagnostic/remediation guidance. Include at least one fully closed microallocation/distribution mechanism and at least one macro/fiscal/external reconciliation plus an explicit empirical identification critique. Avoid mechanically copying volume/chapter examinations. Coverage map, chosen time/resource policy, mastery thresholds/critical errors as authored choices, full finite/global/domain checks. Match existing cumulative-page architecture, flat downloadable asset names. Root integrates shared canonical fields; acceptance awaits v06volume."
+      "fixed_scope": "Complete cumulative economics-core package joining Volume5micro/game/information/welfare models to Volume6macro/international models with Volume1\u20134methods. Two distinct original100point written forms with full solutions and item/domain scoring, a substantial original open-resource integrative practical with documented synthetic inputs, reproducible standard-library benchmark and instructor evaluation, oral transfer/delayed retention with answers and diagnostic/remediation guidance. Include at least one fully closed microallocation/distribution mechanism and at least one macro/fiscal/external reconciliation plus an explicit empirical identification critique. Avoid mechanically copying volume/chapter examinations. Coverage map, chosen time/resource policy, mastery thresholds/critical errors as authored choices, full finite/global/domain checks. Match existing cumulative-page architecture, flat downloadable asset names. Root integrates shared canonical fields; acceptance awaits v06volume."
     },
     {
       "owner": "causal_identification",
       "task": "v07-c01",
-      "state": "accepted-awaiting-publication",
+      "state": "accepted-and-published",
       "canonical_specification": {
         "title": "Transactions and double-entry accounting",
         "outcome": "Record transactions and preserve the accounting equation.",
@@ -97,7 +97,7 @@
     {
       "owner": "monte_carlo",
       "task": "v07-c02",
-      "state": "accepted-awaiting-publication",
+      "state": "accepted-and-published",
       "canonical_specification": {
         "title": "Balance sheet, income statement and cash flow",
         "outcome": "Explain and reconcile the three principal statements.",
@@ -127,7 +127,7 @@
     {
       "owner": "monte_carlo",
       "task": "v07-c03",
-      "state": "accepted-awaiting-publication",
+      "state": "accepted-and-published",
       "canonical_specification": {
         "id": "v07-c03",
         "number": 3,
@@ -174,7 +174,7 @@
     {
       "owner": "regression",
       "task": "v07-c04",
-      "state": "assigned",
+      "state": "accepted-awaiting-batch-verification-and-publication",
       "canonical_specification": {
         "id": "v07-c04",
         "number": 4,
@@ -221,7 +221,7 @@
     {
       "owner": "monte_carlo",
       "task": "v07-c05",
-      "state": "assigned",
+      "state": "author-complete-awaiting-acceptance",
       "canonical_specification": {
         "id": "v07-c05",
         "number": 5,
@@ -269,7 +269,7 @@
     {
       "owner": "causal_identification",
       "task": "v07-c06",
-      "state": "assigned",
+      "state": "author-complete-awaiting-acceptance",
       "canonical_specification": {
         "id": "v07-c06",
         "number": 6,
@@ -312,6 +312,156 @@
         "content/reviews/v07-c06-sources.json"
       ],
       "fixed_scope": "Complete Equity, consolidation and ownership chapter. Teach owner contributions/distributions, share capital/additional paid-in capital/retained earnings and treasury-share conventions, dilution versus transfers of value and book versus market values. Distinguish percentage ownership, voting/control and economic claims within dated inspected primary-source scope. Build a fully reconciled original simple parent/subsidiary group case: acquisition-date investment elimination, identifiable net assets, explicitly stipulated goodwill and noncontrolling-interest measurement, post-acquisition profit attribution, dividends and intragroup balances/transactions with actual elimination reasoning. Avoid untaught complex consolidation/tax/fair-value assertions; introduce every required concept and clearly state exclusions. Include at least three substantial original worked cases, eight complete original exercises/solutions, answered teach-back and retention, sources and proportionate exact standard-library benchmark/input/README. Check company and group equity/cash equations separately; show why subsidiary revenue cannot simply be multiplied by ownership percentage when consolidated. No claim that all ownership stakes require full consolidation; control conditions are substantive. Draft against saved c01-c03 and fixed c04/c05 contracts; acceptance follows c05. Send original early share/acquisition numerical outline before writing. Only listed paths; no shared edits, hosting or children. Save chapter with its referenced assets/source proposals ready, notify root and deliver complete author review plus final hashes."
+    },
+    {
+      "owner": "root",
+      "task": "v07-c07",
+      "state": "author-complete-awaiting-acceptance",
+      "canonical_specification": {
+        "id": "v07-c07",
+        "number": 7,
+        "title": "Taxes, accruals and earnings quality",
+        "outcome": "Identify timing differences and assess sustainability of reported earnings.",
+        "coverage": [
+          "Current and deferred tax concepts",
+          "accruals",
+          "provisions",
+          "one-offs",
+          "manipulation incentives"
+        ],
+        "prerequisites": [
+          "v07-c06"
+        ],
+        "level": "Undergraduate",
+        "status": "planned",
+        "manuscript": "chapters/v07-c07.html",
+        "sources": [
+          "mit-finance",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "owned_paths": [
+        "content/chapters/v07-c07.html",
+        "content/projects/v07-c07-*",
+        "scripts/check_v07_c07.py",
+        "content/reviews/v07-c07-author.json",
+        "content/reviews/v07-c07-sources.json"
+      ],
+      "fixed_scope": "Complete Taxes, accruals and earnings quality chapter. Teach current income tax versus expense and cash paid, asset/liability tax bases and temporary versus permanent differences, deferred tax assets/liabilities and recognition uncertainty, provisions versus ordinary accruals, reversal and estimation evidence, one-off/non-GAAP adjustments, management incentives and earnings-quality diagnosis. Build an original fully reconciled two-period fictional single-company tax/asset/provision/cash model using explicitly supplied tax law and rates; demonstrate accelerated tax depreciation and paid-only provision deductibility with complete reversals. Include at least three worked cases, eight full original exercises/solutions, answered teach-back/retention, scoped actually inspected primary sources, simple exact stdlib inputs/benchmark and independent financial checker. Distinguish measurement error, genuine economic change and deliberate reporting choices without inferring fraud from a ratio. No current jurisdictional tax advice or comprehensive IAS12/USGAAP compliance claim. Draft against c04-c06 fixed interfaces; acceptance follows c06.",
+      "early_model": {
+        "name": "Northstar Calibration",
+        "units": "kCU; two fictional years",
+        "date0": "Equity cash100 buys equipment60, cash40; book depreciation30/30, tax deduction50/10.",
+        "year1": "Revenue210, ordinary cash cost105, nondeductible cash fine5, repair provision12 with no settlement; PBT58/taxable55/current11, tax cash8/payable3; DTA2.4/DTL4/deferred expense1.6/total tax12.6/NI45.4; CFO92/cash132/A164.4=L19+E145.4.",
+        "year2": "Revenue180/cost110, repair cash12 extinguishes provision; PBT40/taxable48/current9.6, tax cash12.6 clears allpayable; deferred expense-1.6/tax total8/NI32; CFO45.4/final cash and equity177.4.",
+        "boundaries": "Fully recognized DTA under supplied future taxable resources; gross presentation; fixed synthetic law, no losses, other temporary differences or actual jurisdiction claim. Larger initial estimate20 with unchanged settlement shifts aftertax6.4 across periods but neither cash nor lifetimeprofit77.4. Future enacted rate25% causes year1deferred2/NI45 and year2NI30/finalcash175.",
+        "next": "Write complete c07 manuscript, README, sources, exercises and focused checker; support tax-base, recognition and provision claims using actually read IAS12 overview, AASB112 Sep2023, AASB137 Dec2022 and SEC nonGAAP staff CFIs100.01-100.06."
+      }
+    },
+    {
+      "owner": "regression",
+      "task": "v07-c08",
+      "state": "author-complete-awaiting-acceptance",
+      "canonical_specification": {
+        "id": "v07-c08",
+        "number": 8,
+        "title": "Managerial accounting and cost decisions",
+        "outcome": "Use contribution margins and relevant costs for operational decisions.",
+        "coverage": [
+          "Cost behavior",
+          "break-even",
+          "allocation",
+          "activity-based costing",
+          "make-or-buy",
+          "capacity"
+        ],
+        "prerequisites": [
+          "v07-c07"
+        ],
+        "level": "Undergraduate",
+        "status": "planned",
+        "manuscript": "chapters/v07-c08.html",
+        "sources": [
+          "mit-finance",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "owned_paths": [
+        "content/chapters/v07-c08.html",
+        "content/projects/v07-c08-*",
+        "scripts/check_v07_c08.py",
+        "content/reviews/v07-c08-author.json",
+        "content/reviews/v07-c08-sources.json"
+      ],
+      "fixed_scope": "Complete Managerial accounting and cost decisions chapter. Teach cost behavior and relevant-range assumptions, contribution margin and multi-product break-even, fixed versus variable versus avoidable costs, sunk and opportunity costs, overhead allocation and activity-based costing with complete pool/driver reconciliations, special orders/make-or-buy and scarce-capacity decisions. Include an original coherent operating case with explicit quantities, periods, cost/cash conventions, bottleneck/resource constraints, feasible global optimum or defensible enumeration and sensitivity boundaries. Explain why allocated full cost alone does not determine an incremental decision and why capacity, quality and external effects can change it. At least three substantial worked cases, eight fully solved original exercises, answered teach-back/retention, scoped inspected primary teaching sources, proportionate exact stdlib benchmark/inputs/README/checker. Do not overstate product-level overhead as causally avoidable. Provide an absorption-versus-variable inventory-profit bridge if used, with fixed-cost capacity assumptions, without turning it into an unsupported compliance rule. Draft against c01-c06 and fixed c07 contract; acceptance follows c07. Send early independent numerical anchors and save manuscript only with links/assets/source proposals ready. No shared edits, publishing or children; final author record includes hashes."
+    },
+    {
+      "task": "v07-c09",
+      "owner": "financial_diagnosis",
+      "state": "assigned",
+      "canonical_specification": {
+        "id": "v07-c09",
+        "number": 9,
+        "title": "Financial ratios and business diagnosis",
+        "outcome": "Interpret ratios in context and explain accounting comparability limitations.",
+        "coverage": [
+          "Liquidity",
+          "leverage",
+          "margins",
+          "turnover",
+          "ROIC",
+          "DuPont",
+          "peer selection"
+        ],
+        "prerequisites": [
+          "v07-c08"
+        ],
+        "level": "Undergraduate",
+        "status": "planned",
+        "manuscript": "chapters/v07-c09.html",
+        "sources": [
+          "mit-finance",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "owned_paths": [
+        "content/chapters/v07-c09.html",
+        "content/projects/v07-c09-*",
+        "scripts/check_v07_c09.py",
+        "content/reviews/v07-c09-author.json",
+        "content/reviews/v07-c09-sources.json"
+      ],
+      "fixed_scope": "Author complete Financial ratios and business diagnosis chapter. Cover liquidity, leverage, margins, turnover, ROIC, DuPont, peer selection and comparability. Teach numerator-denominator/stock-flow/entity/date consistency, average versus ending balances, negative/near-zero equity and tax/loss boundaries, operating versus financing definitions and reconciliation, ROE decomposition and risk versus operating performance. Use an original fully reconciled two-period business case and a meaningful peer or accounting-policy comparison with all statements, definitions, tax convention and explicit units. Explain ratios as diagnostic questions with competing mechanisms, not universal normative thresholds. At least three substantial worked examples, eight fully solved varied original exercises, answered teachback/retention, inspected scoped primary sources, exact stdlib reproducible input/analysis/README and meaningful quiet JSON-serializable checker. Include real transfer/sensitivity and a false-comparability counterexample; every method required by exercises must be taught. c08 prerequisite package written under review; draft against its fixed contract, acceptance awaits c08. Send early case/units/timing and numeric anchors to root before writing full manuscript. Do not edit canonical/source catalogue/checkpoint/shared verifier/other files or publish/spawn. Propose all sources in owned source record; final author review includes hashes and actual checks/limits. Preserve edition cutoff 6 October 2026; primary source access today is not proof standards valid universally."
     }
   ],
   "opening_prerequisites": "All v06chapters accepted/published at f88bdbf2ae239bd23e6abdf94b02d4c1293e4817; Volume6assessment pending. v07-c01 canonical prerequisite v01 accepted; c02acceptance requires c01.",
@@ -378,6 +528,35 @@
         "content/reviews/v07-c03-peer.json"
       ],
       "fixed_scope": "Independently read and recompute all3worked/eight exercise solutions/retention in c03, especially gross/net receivable allowance-writeoff-recovery bridges, advance revenue timing, inventory/AP supplier cash, cycle denominators versus actualcalendarfunding, supplierdiscount/credit decisions and changedallowance ratio counterexample. Read actual linked lab/inputs/README/source scope; use independent primitiveledgers and boundary checks. Author finishing targeted checker and prose spacing; coordinate final reviewedhashes after authorfreeze. Own reviewonly; no author/shared edits. Cite actual primary-body inspection only for bodies actually opened. UIQA and realdocumentverification excluded."
+    },
+    {
+      "task": "v07-c07-peer-review",
+      "owner": "causal_identification",
+      "state": "passed",
+      "owned_paths": [
+        "content/reviews/v07-c07-peer.json"
+      ],
+      "fixed_scope": "Independently read and audit complete c07 manuscript, all three worked examples/eight full solutions/teachback/retention and exact tax/provision lab with inputs/README/checker. Recompute signed tax-base, current/deferred/cash, estimate/reversal and rate-change reasoning; assess whether every exercise is taught and source scope honest. Read actual relevant primary bodies when needed. Check finite/current/terminal stock-flow reconciliation, DTA recoverability and reporting-versus-cash judgments. Do not alter root-owned files: report concrete findings and coordinate any revisions before final hashes. Run focused check and verify author payload hashes; save exact final reviewed hashes and actual scope, not UI/institutional certification. No child agents, shared edits or publishing.",
+      "review_record": "content/reviews/v07-c07-peer.json"
+    },
+    {
+      "task": "v07-c06-peer-review",
+      "owner": "accounting_peer",
+      "state": "running",
+      "owned_paths": [
+        "content/reviews/v07-c06-peer.json"
+      ],
+      "fixed_scope": "Independently audit full c06 equity/consolidation chapter, all four worked examples/eight prompt-solution pairs/retention, inputs/benchmark/output/README, sources and author record. Recompute parent/subsidiary/group equity and cash, acquisition investment/goodwill/NCI elimination, intragroup balance/profit removal and upstream/downstream allocation; check treasury shares/dilution/control assumptions and complete exercise answers. Root already validated early original model anchors. Report concrete findings and coordinate author fixes before final hashes; do not alter another owned file. Run focused checker and verify final reviewed hashes. No shared edits, publishing, children or UI claims.",
+      "dispatch_note": "Replacement accounting_peer successfully spawned after previous worker finished and followup dispatch failed."
+    },
+    {
+      "task": "v07-c08-peer-review",
+      "owner": "cost_decisions_peer",
+      "state": "assigned",
+      "owned_paths": [
+        "content/reviews/v07-c08-peer.json"
+      ],
+      "fixed_scope": "Independently read full c08 manuscript, all four worked examples/eight prompt-solution pairs/answered teachback and retention, complete benchmark/inputs/README/checker/sources/author record. Recompute CVP, exact capacity optimization with integer/batch boundaries, ABC reconciliation and unused capacity, relevant cost/special order/make-buy, absorption-variable income versus cash, all exercise transfer cases. Inspect primary evidence where specialist statements need checking. Report corrections immediately to root and do not edit author files. Run focused checker, verify author payload hashes, record independent final artifact hashes and actual review scope. No shared edits, publishing, children or UI QA claims."
     }
   ]
 }

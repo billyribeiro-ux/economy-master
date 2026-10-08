@@ -1,0 +1,14 @@
+{
+  "case": "Meridian Components one-month teaching model",
+  "units": {"money":"CU", "output":"whole units", "machine":"hours", "setup":"batches", "period":"one month"},
+  "opening_cash_and_equity": 20000,
+  "products": {
+    "S": {"price":100,"variable":70,"hours":2,"batch_size":10,"demand":80},
+    "P": {"price":160,"variable":100,"hours":5,"batch_size":2,"demand":50}
+  },
+  "capacity": {"machine_hours":300,"setup_batches":30},
+  "pools": {"machine":1800,"setups":900,"common":300},
+  "baseline": {"S":60,"P":24},
+  "mix": {"S":5,"P":2},
+  "special_order": {"quantity":10,"price":85,"variable":70,"hours":2,"batch_size":10,"extra_cash":40}
+}

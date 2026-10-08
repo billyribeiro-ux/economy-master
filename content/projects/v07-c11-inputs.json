@@ -1,0 +1,35 @@
+{
+  "schema": "v07-c11-original-comparison-v1",
+  "provenance": "Original synthetic cases; no observed issuer data, estimated fair values or legal elections. Fictional years X1 onward.",
+  "units": "Money in kCU; Orion quantities in thousands; prices in CU per unit. Exact rational strings. Asset lives in whole years.",
+  "edition_boundary": "2026-10-06",
+  "source_checked": "2026-10-08",
+  "inventory": {
+    "entity": "Orion",
+    "assumptions": "Counterfactual annual periodic FIFO and unit LIFO applied to the same interchangeable goods; no tax, impairment, FX, interest, depreciation, dividends, credit, acquisition or other inventory movement. This is not an issuer's policy election or dollar-value LIFO model. Cash purchases precede cash sales and then other operating payments each year; the opening inventory was already owned before X1.",
+    "opening_cash": "500",
+    "liabilities": "100",
+    "share_capital": "600",
+    "opening_retained": "0",
+    "opening_layers": [{"quantity": "100", "unit_cost": "2"}],
+    "periods": [
+      {"period": "X1", "purchases": [{"quantity": "100", "unit_cost": "3"}], "sold": "120", "sale_price": "5", "operating_cash": "80"},
+      {"period": "X2", "purchases": [{"quantity": "100", "unit_cost": "4"}], "sold": "90", "sale_price": "6", "operating_cash": "90"}
+    ]
+  },
+  "asset": {
+    "entity": "Separate machine case",
+    "assumptions": "Available for use from start X1, straight-line, no impairment, tax, disposal, revaluation or later capex. Revision at the start of the year after elapsed_years. New-estimate history and original-information error history are alternatives. Error is material and fully reconstructible; earliest comparative is the last completed year. Constant cash operating profit before depreciation, no other accruals.",
+    "cost": "120", "residual": "0", "original_life": 6, "elapsed_years": 2, "revised_remaining_life": 3, "correct_original_life": 4, "cash_profit_before_depreciation": "100"
+  },
+  "segments": {
+    "entity": "Vector",
+    "period": "X1",
+    "assumptions": "Both segments are stipulated reportable. Same currency, period and consolidated perimeter. Internal transfers are fully consumed or sold outside in the year; all seller internal revenue is included in buyer expenses, no remaining unrealized profit. Segment figures exclude corporate operating costs, share compensation, interest and tax. Supplied income and asset disclosures are not full statements and contain no CFO data.",
+    "items": [
+      {"name": "Hardware", "external_revenue": "300", "internal_revenue": "40", "significant_expenses": {"cost_category": "220", "payroll": "40"}, "other_segment_expenses": "26", "assets": "180"},
+      {"name": "Services", "external_revenue": "200", "internal_revenue": "0", "significant_expenses": {"cost_category": "80", "payroll": "50"}, "other_segment_expenses": "34", "assets": "120"}
+    ],
+    "internal_expense_included": "40", "corporate_operating": "20", "share_compensation": "10", "interest": "8", "tax_expense": "13", "corporate_assets": "50", "internal_receivables": "20"
+  }
+}

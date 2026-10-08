@@ -1,0 +1,46 @@
+{
+  "case": "Rowan Industrial Supply: original integrated accounting project",
+  "provenance": "All records, dates, contracts and forecasts are fictional author-created teaching inputs; no issuer or observed market data.",
+  "units": "money=kCU; quantity=thousand units; unit prices=CU; shares=thousand ordinary shares",
+  "opening_date": "2024-12-31",
+  "historical_close": "2025-12-31",
+  "forecast_close": "2026-12-31",
+  "days_per_year": 365,
+  "tax_rate": "1/4",
+  "opening": {
+    "cash": 25, "receivables": 50, "inventory": 75, "ppe": 200,
+    "payables": 40, "tax_payable": 0, "dtl": 0,
+    "term_debt": 120, "current_term": 10, "revolver": 0,
+    "share_capital": 100, "retained_earnings": 90, "shares": 100
+  },
+  "historical": {
+    "quantity": 80, "price": 10, "unit_cost": 6,
+    "credit_purchases": 505, "customer_receipts": 760, "supplier_payments": 480,
+    "ordinary_cash_opex": 170, "maintenance_paid": 20,
+    "old_asset_depreciation": 40, "genuine_capex": 60,
+    "interest_paid": 12, "current_tax_paid": 15,
+    "term_repayment": 10, "revolver_draw": 30, "dividend": 20,
+    "current_term_at_close": 20
+  },
+  "evidence": [
+    {"id": "H-SALES", "date": "2025-12-31", "scope": "Complete2025 aggregation", "facts": "800 earned credit sales; cost of sold units480; receipts760 and supplier payments480 independently matched to the fictional bank record. No returns, bad debts, FX or unlisted flows."},
+    {"id": "H-REPAIR", "date": "2025-12-31", "scope": "Invoice and work log supplied as authenticated case facts", "facts": "The20 paid services are routine lubrication, cleaning and minor consumables already used during2025. No asset replacement, major inspection component, new capacity or future service was purchased. The unissued draft incorrectly debited PPE20, charged no depreciation on that item and classified its cash payment as investing. Correct treatment in this case is2025 operating expense and operating cash."},
+    {"id": "H-TAX", "date": "2025-12-31", "scope": "Fictional tax worksheet", "facts": "Maintenance20 was already deducted in taxable profit. Tax rate25%; book/tax otherwise identical. Draft current tax19.5 was correct, draft DTL5 related entirely to the invalid asset, and15 was actually paid. Correcting the unissued draft changes deferred tax, not current tax or historical tax cash."},
+    {"id": "H-ASSETS", "date": "2025-12-31", "scope": "Asset and payment register", "facts": "Genuine equipment60 is acquired and cash-paid at close, begins service1January2026, zero residual, five-year straight-line life. Original equipment200 at31December2024 has five remaining years at40 annually. All later genuine capex enters service only the following1January."},
+    {"id": "H-FINANCE", "date": "2025-12-31", "scope": "Historical bank/owner records", "facts": "Term principal10 repaid, revolver30 drawn and dividend20 paid at final date; all2025 interest12 used opening debt120 at10%. Original equity is100 share capital plus90 retained earnings;100 thousand ordinary shares, no other ownership classes."},
+    {"id": "F-OPERATIONS", "date": "2026-01-01", "scope": "Conditional forecast register", "facts": "Base and adverse drivers are alternative assumptions, not observed2026 outcomes or assigned probabilities. Ordinary opex185 and routine maintenance20 are paid as incurred in both. Deferring at most30 of80 year-end capex leaves the required50; maintained2026 sales/costs and required maintenance are unaffected under the supplied engineering premise, which needs evidence in real use."},
+    {"id": "F-FINANCE", "date": "2026-12-31", "scope": "Fictional final-date funding contract", "facts": "Term20 must be repaid; revolver total outstanding may not exceed75; minimum closing unrestricted cash25. Revolver changes and any share subscription settle before final-date capex/principal/dividend payments. No current interest on final-date changes. Conditional ordinary-share subscription capacity30 at3CU per share, no fees; it is not a committed receipt until invoked. Annual endpoints do not establish within-year liquidity."}
+  ],
+  "forecast_policy": {
+    "interest_rate": "1/10", "new_asset_life": 5,
+    "old_asset_depreciation": 40, "ordinary_cash_opex": 185, "maintenance_paid": 20,
+    "planned_capex": 80, "minimum_capex": 50, "planned_dividend": 20,
+    "term_repayment": 20, "current_term_at_close": 20,
+    "minimum_cash": 25, "revolver_limit": 75,
+    "subscription_capacity": 30, "subscription_price": 3
+  },
+  "scenarios": {
+    "base": {"quantity": 90, "price": 10, "unit_cost": 6, "receivables_sales": "3/25", "inventory_cogs": "1/4", "payables_purchases": "1/5"},
+    "adverse": {"quantity": 84, "price": 10, "unit_cost": "25/4", "receivables_sales": "1/5", "inventory_cogs": "3/10", "payables_purchases": "1/5"}
+  }
+}

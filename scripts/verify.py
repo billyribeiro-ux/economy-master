@@ -64,6 +64,16 @@ from check_v06_assessment import check as check_v06_assessment
 from check_v07_c01 import check as check_v07_c01
 from check_v07_c02 import check as check_v07_c02
 from check_v07_c03 import check as check_v07_c03
+from check_v07_c04 import check as check_v07_c04
+from check_v07_c05 import check as check_v07_c05
+from check_v07_c06 import check as check_v07_c06
+from check_v07_c07 import check as check_v07_c07
+from check_v07_c08 import check as check_v07_c08
+from check_v07_c09 import check as check_v07_c09
+from check_v07_c10 import check as check_v07_c10
+from check_v07_c11 import check as check_v07_c11
+from check_v07_c12 import check as check_v07_c12
+from check_v07_assessment import check as check_v07_assessment
 from check_economics_core import check as check_economics_core
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -449,8 +459,13 @@ def main():
         ('v06-c11', check_v06_c11), ('v06-c12', check_v06_c12))}
     v06_assessment_check = check_v06_assessment()
     economics_core_check = check_economics_core()
-    v07_opening_check = {'v07-c01': check_v07_c01(), 'v07-c02': check_v07_c02(),
-                         'v07-c03': check_v07_c03()}
+    v07_assessment_check = check_v07_assessment()
+    v07_chapter_check = {'v07-c01': check_v07_c01(), 'v07-c02': check_v07_c02(),
+                         'v07-c03': check_v07_c03(), 'v07-c04': check_v07_c04(),
+                         'v07-c05': check_v07_c05(), 'v07-c06': check_v07_c06(),
+                         'v07-c07': check_v07_c07(), 'v07-c08': check_v07_c08(),
+                         'v07-c09': check_v07_c09(), 'v07-c10': check_v07_c10(),
+                         'v07-c11': check_v07_c11(), 'v07-c12': check_v07_c12()}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -484,9 +499,11 @@ def main():
               'volume_6_middle_checks': v06_middle_check,
               'volume_6_closing_checks': v06_closing_check,
               'volume_6_assessment_check': v06_assessment_check,
-              'volume_7_opening_checks': v07_opening_check,
+              'volume_7_assessment_check': v07_assessment_check,
+              'volume_7_chapter_checks': v07_chapter_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
-    report['checks'].extend(['Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package',
+    report['checks'].extend(['Volume 7 full accounting chapter set, two distinct 100-point exams, diagnostic/retention, exact historical correction and constrained forecast project',
+        'Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package',
         'Volume 6 chapters 5–8: labor transition and matching domains, bargaining/entry and effort values, bounded hysteresis; exact bank ledgers and reserve-market branches; nominal rigidity, expectation paths and shock-mixture regression; finite stabilization systems and independently enumerated rate-floor equilibria',
         'Volume 6 chapters 1–4: national-account ledgers and Fisher chain identities; exact discrete Solow transitions and growth accounting; innovation, skill and diffusion paths and IV observational equivalence; household constraints, precautionary saving, dated investment and reproducible synthetic labs',
         'Volume 5 diagnostic, distinct exams, retention and market-intervention project: global choice/deviation/IC and welfare checks, exact assignment inference, certified policy intervals, independent scalar output oracle, fixed ex ante decisions and reproducible input contracts',

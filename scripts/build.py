@@ -40,6 +40,14 @@ def main():
     chapters = [(v, c) for v in plan['volumes'] for c in v['chapters']]
     manuscripts = {c['id']: (ROOT/'content'/c['manuscript']).read_text()
                    for _, c in chapters if (ROOT/'content'/c['manuscript']).exists()}
+    # Forward references to unwritten chapters lead to their labeled curriculum
+    # entry. Do not generate empty chapter pages or hide genuinely unknown links.
+    planned_targets = {c['id'] for _, c in chapters if c['id'] not in manuscripts}
+    def chapter_links(body):
+        return re.sub(r'\bhref=(["\'])(v\d{2}-c\d{2})\.html(?:#[^"\']*)?\1',
+                      lambda m: 'href='+m[1]+'curriculum.html#'+m[2]+m[1]
+                      if m[2] in planned_targets else m[0], body)
+    manuscripts = {cid: chapter_links(body) for cid, body in manuscripts.items()}
     packages = {v['id']: (ROOT/'content/assessments'/f'{v["id"]}.html').read_text()
                 for v in plan['volumes'] if (ROOT/'content/assessments'/f'{v["id"]}.html').exists()}
     cross_specs = plan.get('cross_volume_assessments', [])

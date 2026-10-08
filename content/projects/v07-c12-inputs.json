@@ -1,0 +1,21 @@
+{
+  "case": "Atlas Field Systems integration case",
+  "units": {"money": "kCU", "period": "one year", "packages": "whole installations"},
+  "opening": {"cash":80,"receivables":120,"inventory":100,"ppe":300,"payables":90,"tax_payable":0,"debt":250,"equity":260},
+  "operations": {"revenue":1000,"cost_of_sales":600,"cash_costs_before_recovery":215,"cash_settlement_recovery":15,"depreciation":40,"interest":20,"tax_rate":"1/5","tax_paid":16,"severance":20,"marketing":25},
+  "closing_reported": {"receivables":200,"inventory":150,"payables":120},
+  "flows": {"capex":60,"debt_principal_paid":20,"dividends":10},
+  "contract": {"max_net_debt_to_covenant_ebitda":"1","severance_cap":10,"min_eligible_cash":40},
+  "corrections": {"premature_revenue":40,"capitalized_repair":0},
+  "actions": {"new_equity":0,"extra_debt_payment":0,"restricted_cash":0},
+  "growth": {"new_packages":20,"price":12,"unit_cost":"15/2","extra_fixed_cash":0,"depreciation":6,"interest":0,"capex":30,"receivables":48,"inventory":30,"payables":18},
+  "evidence_facts": [
+    "Synthetic case facts, not actual documents or independently observed company data.",
+    "The reported 1000 includes a 40 receivable/revenue entry for January service; no year-end service was performed, no unconditional payment right existed, no cash was received and no related cost was released.",
+    "Case recognition rule: this service earns revenue only after the specified service and customer acceptance. Therefore the 40 entry must be reversed; intent is not supplied.",
+    "The 215 cash operating payments contain ordinary costs170, recurring marketing25 and severance20. Separate cash settlement recovery15 reduces net operating expense to200.",
+    "Taxable profit equals corrected book pretax profit at20%; paid tax16 remains a historical cash fact. No deferred tax, loss relief, refund or tax-law claim.",
+    "Any optional capitalized repair correction concerns a payment already in capex60, with no future benefit and no current depreciation recorded on that item.",
+    "All funding actions are hypothetical transactions completed before the modeled test. Later funding cannot retroactively cure a prior test without contractual authority."
+  ]
+}

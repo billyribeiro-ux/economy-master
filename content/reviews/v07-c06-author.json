@@ -1,0 +1,124 @@
+{
+  "chapter": "v07-c06",
+  "title": "Equity, consolidation and ownership",
+  "review_type": "Author mathematical, financial, instructional and source-scope review; coordinator acceptance pending",
+  "reviewed": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "status": "passed_author_review",
+  "written_words": 6155,
+  "scope": {
+    "worked_examples": 4,
+    "exercises_with_complete_solutions": 8,
+    "teach_back": "Prompt, concrete numerical example and criteria supplied",
+    "retention": "Five answered delayed items",
+    "artifacts": "Static fragment; exact synthetic input; standard-library journal/consolidation program; preserved output; README; independently formulated checker; six actual-inspection source proposals"
+  },
+  "financial_review": [
+    "Ordinary residual equity is stipulated; liabilities versus equity depend on contractual terms rather than instrument names. Par/market prices, capital/APIC/retained earnings and cash are separated.",
+    "Share issuance, dividends, treasury cost, reissue above/below cost and closing are debit-credit reconciled. Issued, treasury and outstanding counts differ; observer never trades; unsupported buybacks/reissues or negative cash fail.",
+    "Dilution wealth change n(Np-V)/(N+n) derived from unchanged old-business value and issue cash. Fair-price issue/buyback examples separate ownership fractions, book equity and economic value. Simple prospective per-share earnings comparison is not presented as reported EPS.",
+    "Control is stipulated independently of ownership. Business status, matched dates/policies, identifiable fair values, proportionate NCI and separate-parent cost/dividend-income method are explicit. No simple majority rule or universal full-consolidation claim.",
+    "Acquisition worksheet balances: eliminate subsidiary capital100/pre-acquisition RE60, add goodwill30, remove investment150, recognize NCI40. Acquisition assets580=liabilities140+parent equity400+NCI40. Cash perimeter changes300 to190 through net acquisition outflow110.",
+    "Parent separate cash177/A542/L100/E442/profit62 and subsidiary cash59/A249/L55/E194/profit50 independently reconciled before consolidation.",
+    "Entire intragroup sale60 and balance15 eliminated; inventory margin10 removed. External-revenue180, external goods cost20 and other costs70 give group profit90. Dividend income12 is internal. Downstream margin belongs entirely to parent owners; NCI share12.5 and parent share77.5.",
+    "Group closing assets646/liabilities140/parent equity457.5/NCI48.5 reconcile, independently from combined assets791 minus investment150/internal balance15/unrealized10 plus goodwill30. Cash236 reconciles both company sums and outside cashflow190+70-24.",
+    "Upstream alternative adjusts subsidiary profit before NCI attribution. Full-NCI alternative changes measurement/goodwill without changing cash. Dividends leave group profit invariant but alter external cash and NCI; cash feasibility and legal distribution capacity remain separate."
+  ],
+  "exercise_review": [
+    {
+      "exercise": 1,
+      "target": "Capital30/APIC40/RE35; A135=L30+E105; profit12."
+    },
+    {
+      "exercise": 2,
+      "target": "Below-cost reissues first debit treasury APIC5, then RE10; cash95/APIC67.5/RE50/treasury15/outstanding120; E165; profit unchanged."
+    },
+    {
+      "exercise": 3,
+      "target": "New price2.9; old wealth232, loss8/new gain8; fair-price issue leaves wealth240."
+    },
+    {
+      "exercise": 4,
+      "target": "Full NCI50/GW40/acquisition A590/E450; cash190 and cost investment150 unchanged; control-price scaling is not a fair-value proof."
+    },
+    {
+      "exercise": 5,
+      "target": "P profit62/cash192; S profit120/cash144; group revenue280/cost40/profit170; NCI30/parent140; inventory40/cash336/E586/A726."
+    },
+    {
+      "exercise": 6,
+      "target": "Group88 in both directions; upstream NCI12/parent76, downstream NCI15/parent73."
+    },
+    {
+      "exercise": 7,
+      "target": "Zero S dividend: P profit50/cash165/E430, S profit50/cash75/E210, group cash240/profit90/parent E457.5/NCI52.5/E510/A650."
+    },
+    {
+      "exercise": 8,
+      "target": "Distinguishes economic rights/control/full consolidation/treasury/NCI/legal cash; significant-influence example income6/dividend2.4/closing investment53.6."
+    }
+  ],
+  "source_review": {
+    "proposed_count": 6,
+    "bodies_actually_inspected": [
+      "OpenStax section14.2 issuance and treasury reissue sections",
+      "MIT 15.515 Fall2003 Session17 actual PDF, especially physical pages3-8",
+      "IFRS Foundation May2011 control presentation, especially slides4,7-10",
+      "IFRS3 public About/history body",
+      "IFRS Foundation Module19 version2019-07, 2015SME-based, printed56-57 comparison",
+      "IAS32 public About body"
+    ],
+    "additional_scope_inspection": "IFRS10 public overview inspected for control basis and investment-entity exception; incorporated in scoped control source record.",
+    "access_limit": "Direct full IFRS3 and IFRS10 normative PDF requests led to the subscription page; full gated standards were not accessed. Public overviews/educational bodies support only the explicitly stated scope.",
+    "dated_limits": "Historical MIT percentage/presentation shortcuts and old standards statements were not imported as current requirements. Historical SME goodwill comparison is labeled; subsequent amortization policy not transferred to the model. No external observed numbers or source examples reproduced."
+  },
+  "validation": {
+    "status": "passed",
+    "checks": [
+      "Quiet exact-rational API and preserved baseline output agree",
+      "Independent external-resource and cash oracle matches acquisition, both companies, group, NCI and all eliminations",
+      "Juniper account balances, seven cash/posting prefixes and five ownership snapshots independently matched",
+      "Below-cost reissues exhaust treasury APIC then debit RE without a profit loss; full reissue removes treasury",
+      "12 meaningful group sensitivities: zero/full sale, full/minority ownership with stipulated control, settlement and dividends",
+      "All eight solution numerical targets and delayed-check arithmetic independently recomputed; conceptual scope reviewed separately",
+      "Oracle rejects four deliberately wrong reports: scaled revenue, wrong NCI, retained margin and internal dividend cash",
+      "14 consequential invalid cases rejected: classification scope, ownership, funding, inventory, share rights and exact numeric type",
+      "Portable normal/optimized CLI, four flat downloads, four worked cases, eight solution pairs and answered retention"
+    ],
+    "counts": {
+      "group_sensitivities": 12,
+      "invalid_contracts": 14,
+      "wrong_report_mutations": 4,
+      "exercises": 8
+    },
+    "sha256": {
+      "content/chapters/v07-c06.html": "1311449f02607461d2a0214474de14b38b9a38fe71a762998daba989df2d2547",
+      "content/projects/v07-c06-inputs.json": "07648b0911716681f008db38ba17cdfbcd012f853beee3ddfe434707b5758544",
+      "content/projects/v07-c06-analysis.py": "5aa4bcb76ca0a0868d0d97182da1406811af03d0c467220e4da9fe1217c0f087",
+      "content/projects/v07-c06-output.json": "5993d1af5b7db0c6fa7b3ff6280d0a57b4550a9cae5aa560120d1eafd11ad334",
+      "content/projects/v07-c06-README.txt": "e3a7e2325d07071b74dabe7cdbfe936e8a6b43a6a1aa52ebec047042ef04c8b1",
+      "content/reviews/v07-c06-sources.json": "daff4bfafae3b0f98fa5e55fd1ce1fb99f2f8f44200c65ddec8d1e81c3fc8ba5"
+    },
+    "limitations": [
+      "Financial arithmetic and stated model contracts only; actual control, valuation, legal distributability and complete standards compliance are not established.",
+      "No visual/browser/print QA or external human certification.",
+      "Independent parameter oracle fixes the stated opening balances and core operating primitives; it is not a generic consolidation engine."
+    ]
+  },
+  "findings": [],
+  "limitations": [
+    "Author review and exact synthetic checks are not external human certification or a compliance opinion.",
+    "No visual/mobile/browser/print QA was performed; parent handles structural integration and acceptance.",
+    "No full legal/control/valuation or advanced consolidation/deferred-tax/impairment analysis; supplied facts and exclusions are explicit.",
+    "Checker oracle covers stated opening accounts and core primitives, varying ownership/price/fraction/settlement/dividends. It does not pretend to be a general consolidation software audit."
+  ],
+  "sha256": {
+    "content/chapters/v07-c06.html": "1311449f02607461d2a0214474de14b38b9a38fe71a762998daba989df2d2547",
+    "content/projects/v07-c06-inputs.json": "07648b0911716681f008db38ba17cdfbcd012f853beee3ddfe434707b5758544",
+    "content/projects/v07-c06-analysis.py": "5aa4bcb76ca0a0868d0d97182da1406811af03d0c467220e4da9fe1217c0f087",
+    "content/projects/v07-c06-output.json": "5993d1af5b7db0c6fa7b3ff6280d0a57b4550a9cae5aa560120d1eafd11ad334",
+    "content/projects/v07-c06-README.txt": "e3a7e2325d07071b74dabe7cdbfe936e8a6b43a6a1aa52ebec047042ef04c8b1",
+    "scripts/check_v07_c06.py": "a039393bf15a2013b8265b7ad70ada74474652c24c0466f622ec7ea847e22e1e",
+    "content/reviews/v07-c06-sources.json": "daff4bfafae3b0f98fa5e55fd1ce1fb99f2f8f44200c65ddec8d1e81c3fc8ba5"
+  }
+}

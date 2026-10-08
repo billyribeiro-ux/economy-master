@@ -1,0 +1,187 @@
+{
+  "chapter": "v07-c08",
+  "review_type": "Independent scoped peer review",
+  "reviewer": "cost_peer specialist",
+  "date": "2026-10-08",
+  "status": "passed",
+  "open_findings": [],
+  "findings": [],
+  "scope": {
+    "manuscript": "Entire chapter, four worked examples, additional idle/busy special-order and inventory cases, all eight exercise prompts and full solutions, teach-back and delayed-check answer read.",
+    "program": "All three prefixed lab assets, complete checker and complete author/source records read. No uninspected author claim is treated as peer verification.",
+    "independent_work": "Re-derived the global capacity certificates, decision differences, fixed-mix break-even and inventory timing bridges. Solved every determinate exercise. Independently constructed a P-first frontier oracle and exact cost-transfer targets before comparing the lab.",
+    "authority": "Only this peer JSON written. No manuscript/shared edits, publishing, canonical acceptance or child agents."
+  },
+  "instruction_and_reasoning": [
+    "Cost behavior and traceability are separated from relevant future differences; fixed amounts may be avoidable while sunk cost is not a future saving. Future resale proceeds and alternative use are included once.",
+    "Break-even formulas state contribution, mix, relevant range, integer and capacity conditions. The step-cost exercise correctly compares feasible branch maxima rather than applying a global linear formula.",
+    "All fixed pools reconcile under both actual-hour allocation and practical-capacity ABC. Unused capacity remains a company cost, not a payment automatically avoided by dropping a product.",
+    "For 300 hours, 30x+60y=12(2x+5y)+6x<=4080, with equality uniquely at (80,28). At 400 hours, rounded batch feasibility implies y<=60-x/5 and contribution<=3600+18x<=5040, attained only at (80,44). Demand and setup feasibility are explicitly checked.",
+    "At 301 hours the objective is a multiple of 30 and its continuous bound is 4092; therefore contribution cannot exceed 4080. Equality candidates (80,28) and (78,29) are feasible. Integer increments need not match the relaxation slope.",
+    "Idle and busy special orders use explicitly different regular demand facts. Busy opportunity cost compares optimally reconfigured feasible regular plans; the separate setup and external payment are neither omitted nor double-counted.",
+    "Make/buy and inventory cases are explicitly separate from the main operating ledger. Absorption and variable presentations share cash and physical facts; only fixed manufacturing expense timing differs.",
+    "Risk-neutral expected private benefit, expected external harm, certification and funding feasibility remain distinct. The open explanation questions state what evidence earns credit.",
+    "Methods required by every exercise are taught before use; all requested calculations and explanations are addressed. Teaching and retention prompts have actual benchmarks. Canonical prerequisite acceptance and whole-site integration remain coordinator tasks."
+  ],
+  "independent_results": {
+    "baseline": "60 S / 24 P: hours240, setups18, revenue9840, variable6600, contribution3240, fixed3000, profit/cash240, ending cash/equity20240. Whole-mix minimum12 bundles versus continuous100/9; eleven bundles lose30.",
+    "allocation": "Traditional pool1500/1500 gives margins300/-60. ABC assigns900/1080, leaves unused360+360 and common300; company profit240. Dropping P without replacement loses1440 contribution, leaving profit-1200.",
+    "optimum": "80 S / 28 P: contribution4080, profit1080, revenue12480, variable8400, closing cash/equity21080. ABC1200+1260+unused setup240+common300=3000.",
+    "capacity": "305 hours gives (80,29), contribution4140; 310 gives (80,30), contribution4200; 400 gives (80,44), contribution5040 using380 hours and30 setups. Expansion value must be compared with its separate fee.",
+    "special_order": "Idle increment110 and quote74. Busy regular reoptimization(80,24) gives contribution3840, opportunity240, increment-130, quote98.",
+    "make_buy": "Make1700 versus purchase/inspection1800 favors make100 when idle; alternative net contribution500 yields buy advantage400, maximum quote21; idle quote ceiling16.",
+    "worked_inventory": "Absorption profit1000/inventory800 versus variable profit800/inventory600; both yield operating cash200, difference200 equals fixed manufacturing cost deferred.",
+    "exercise_targets": [
+      "1: break-even100 and150; signs negative0-99, zero100, negative101-149, zero150, positive151-160; demand120 optimum100 with profit0 versus-180 at120.",
+      "2: contribution110 or130 per three-unit bundle; continuous210/11 or210/13 bundles; whole20 or17; first nonloss profits100 or110; 60-unit profits100 or500.",
+      "3: rates2/hour and30/setup; X660,Y1260,unused300+180; total2400. Immediate committed-pool cash saving from removing Y is zero.",
+      "4: expanded310-hour optimum(80,30), contribution4200, gross gain120, net-30 after150 fee. 400-hour optimum(80,44), contribution5040/profit2040 before fee, gross gain960.",
+      "5: busy gain6/quote44; penalty gives-14/quote142/3. Idle gain126/quote24, or gain106 if the20 penalty still applies.",
+      "6: make600,purchase750, alternative180, buying advantage30/quote68/5; extra resale30 gives advantage60/quote71/5. Book disposal accounting is not a second cash flow.",
+      "7: absorption profit1140/inventory900; variable profit840/inventory600; operating cash240 under both; fixed manufacturing deferral300.",
+      "8: expected rework300; private benefit100; social benefit-50. Certification remains unmet; a positive expected value does not establish quality admissibility or bad-state funding."
+    ],
+    "delayed_check": "P variable110: unique(80,28), contribution3800/profit800, busy displaced contribution200, order increment-90/quote94. Supplied ABC rates remain6/hour and30/setup.",
+    "peer_cost_transfers": [
+      {
+        "case": "baseline",
+        "optimal": [
+          80,
+          28
+        ],
+        "contribution": 4080,
+        "profit": 1080,
+        "busy_opportunity": 240,
+        "busy_quote": 98
+      },
+      {
+        "case": "P variable110",
+        "optimal": [
+          80,
+          28
+        ],
+        "contribution": 3800,
+        "profit": 800,
+        "busy_opportunity": 200,
+        "busy_quote": 94
+      },
+      {
+        "case": "S variable75",
+        "optimal": [
+          80,
+          28
+        ],
+        "contribution": 3680,
+        "profit": 680,
+        "busy_opportunity": 240,
+        "busy_quote": 98
+      },
+      {
+        "case": "S variable80",
+        "optimal": [
+          25,
+          50
+        ],
+        "contribution": 3500,
+        "profit": 500,
+        "busy_opportunity": 200,
+        "busy_quote": 94
+      },
+      {
+        "case": "P variable170, negative contribution",
+        "optimal": [
+          80,
+          0
+        ],
+        "contribution": 2400,
+        "profit": -600,
+        "busy_opportunity": 0,
+        "busy_quote": 74
+      }
+    ],
+    "peer_frontier": "Independent P-first endpoint oracle passed eleven hour/setup/margin cases: (300,30),(301,30),(305,30),(310,30),(400,30),(280,29),(300,20),(280,19), and three switched/negative-margin cases. This reduces over the P choices and maximizes feasible S, separately from the lab pair enumeration and checker S-first oracle."
+  },
+  "source_verification": [
+    {
+      "id": "v07-c08-mit-cost-behavior",
+      "url": "https://ocw.mit.edu/courses/15-963-management-accounting-and-control-spring-2007/c0e4e8a92624f3eff86232c0b2df69cf_lec2.pdf",
+      "actually_read": "Actual official 48-page PDF text inspected for cost objects/behavior/traceability, contribution versus gross margin, relevant range and fixed-mix CVP; displayed slides 2-5, 16-22 and 33-35 support the chapter scope. Source examples and historical company/risk claims are not adopted."
+    },
+    {
+      "id": "v07-c08-mit-allocation",
+      "url": "https://www.ocw.mit.edu/courses/15-963-management-accounting-and-control-spring-2007/1ee7ce7d8d25d6622cc7957bfc33fe32_lec6.pdf",
+      "actually_read": "Actual official 22-page PDF text inspected: displayed slides 2-8 and 10-17 on common-cost pools, bases, homogeneous pools, cause-and-effect driver evidence and denominator/seasonality effects. Historical GAAP, tax and contracts statements are not treated as current compliance authority."
+    },
+    {
+      "id": "v07-c08-hbs-capacity",
+      "url": "https://www.library.hbs.edu/working-knowledge/rethinking-activity-based-costing",
+      "actually_read": "Actual Kaplan/Anderson excerpt on official HBS site read: resource supply capacity rates, non-time drivers, practical-capacity and unused-capacity tables, subsequent supply decisions and rate updating. It supports resource-supply logic; this chapter does not purport to implement full time-driven ABC or import a universal capacity percentage."
+    },
+    {
+      "id": "v07-c08-openstax-relevant",
+      "url": "https://openstax.org/books/principles-managerial-accounting/pages/10-1-identify-relevant-information-for-decision-making",
+      "actually_read": "Actual publisher body read for differential costs/revenues, qualitative factors, avoidability, sunk costs, future unchanged costs and opportunity costs. Chapter correctly conditions avoidability on the decision/horizon rather than adopting every broad label-based statement in the source."
+    },
+    {
+      "id": "v07-c08-openstax-constraints",
+      "url": "https://openstax.org/books/principles-managerial-accounting/pages/10-6-evaluate-and-determine-how-to-make-decisions-when-resources-are-constrained",
+      "actually_read": "Actual publisher body read for contribution per constrained resource, bottleneck relief and the sample product-mix method. Chapter narrows the ranking rule with demand, integer, batch and second-resource conditions; source company/legal anecdotes are unused."
+    },
+    {
+      "id": "v07-c08-mit-inventory",
+      "url": "https://ocw.mit.edu/courses/15-963-management-accounting-and-control-spring-2007/e0cea5d98a8841f275be44102b117c3b_lec14.pdf",
+      "actually_read": "Actual official 18-page PDF text inspected for displayed introductory slides 2-6: absorption, unsold fixed manufacturing cost and production incentives. Chapter independently supplies a fixed-rate, normal-capacity, no-variance cash-reconciled bridge rather than asserting general reporting compliance."
+    }
+  ],
+  "execution": {
+    "focused_checker": "Imported scripts/check_v07_c08.py and ran check() once with captured stdout/stderr; passed all eight groups and emitted no incidental output. Returned record serialized with allow_nan=False.",
+    "groups": [
+      "Exact baseline/optimum statements, allocations and fixed-mix break-even",
+      "Global certificates, twelve reduced-optimization cases, integer ties and resource boundaries",
+      "Opportunity-cost reoptimization, make/buy and delayed check",
+      "All eight exact exercise calculations",
+      "Inventory/cash bridge and zero-output/zero-margin boundaries",
+      "Eight invalid cases and two decision/accounting error detectors",
+      "HTML fragment, four worked cases, eight matched solutions and six scoped source links",
+      "Portable normal/optimized benchmark CLI and exact JSON API"
+    ],
+    "peer_oracle": "Five independent full cost/quote transfer cases and eleven P-first frontier cases passed.",
+    "author_payload": "All six payload hashes in the inspected author record match actual files."
+  },
+  "reviewed_hashes": {
+    "content/chapters/v07-c08.html": {
+      "sha256": "ec2cd12b4f0594e88bfbbae5b80440abbaeaa93dde8db08d9707476cd081b9af",
+      "bytes": 42896
+    },
+    "content/projects/v07-c08-inputs.json": {
+      "sha256": "deab41927ceec7d3923117277a687f1f3e1f8ce2af8538ff912c72d0bcae0395",
+      "bytes": 649
+    },
+    "content/projects/v07-c08-analysis.py": {
+      "sha256": "307cb66c965fb5042e6c170b56871fb1b16aa025a7a08b628b000f57feb5e8df",
+      "bytes": 8055
+    },
+    "content/projects/v07-c08-README.txt": {
+      "sha256": "4ade7d3111237bc4f925a2d368b81986127c09aab6ef20d8213c4718fd0cd816",
+      "bytes": 5272
+    },
+    "scripts/check_v07_c08.py": {
+      "sha256": "c6e33197202d9f9b06a35e3cf0556723c3ca824c40f15cf759d504533ffaecbb",
+      "bytes": 13989
+    },
+    "content/reviews/v07-c08-sources.json": {
+      "sha256": "ef960a38dc30b3bfcba10ceff6a79090430a2d9bc72c1186e483354181fa8c7a",
+      "bytes": 4695
+    },
+    "content/reviews/v07-c08-author.json": {
+      "sha256": "e88188f5b6ad1a8a68ce23d4bc710ebac32f1b70360386fe82064b099ba4d181",
+      "bytes": 9936
+    }
+  },
+  "limitations": [
+    "Peer review checks the stated synthetic economics, arithmetic, instructional logic and inspected source scopes. It is not external human certification or a full current accounting-standards audit.",
+    "The lab is a finite two-product internal before-tax model. Demand, quality, driver appropriateness, avoidability and alternative-use contribution are supplied facts, not estimated or verified business evidence.",
+    "The lab validates enough opening cash for all regular demand but does not model dated funding for arbitrary edited special-order commitments, uncertainty or financing. Decisions with changed timing or cash constraints require those consequences to be added, as the chapter states.",
+    "No browser, mobile, visual or print QA performed. Whole-library structural integration, source registration and prerequisite-ordered acceptance remain coordinator tasks."
+  ]
+}
