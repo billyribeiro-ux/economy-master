@@ -1,0 +1,26 @@
+{
+  "created": "2026-10-08",
+  "parent_assignment": "production/v09-middle-assignments.json",
+  "agent": "financial_diagnosis",
+  "task": "Read-only independent peer audit of root-authored v09-c05 after completing c08 author package",
+  "owned_paths": [
+    "content/reviews/v09-c05-peer.json"
+  ],
+  "read_scope": [
+    "content/chapters/v09-c05.html",
+    "content/projects/v09-c05-inputs.json",
+    "content/projects/v09-c05-analysis.py",
+    "content/projects/v09-c05-output.json",
+    "content/projects/v09-c05-manifest.json",
+    "content/projects/v09-c05-README.txt",
+    "scripts/check_v09_c05.py",
+    "content/reviews/v09-c05-sources.json",
+    "content/reviews/v09-c05-author.json"
+  ],
+  "requirements": [
+    "Read full manuscript and all eight prompts/solutions and retention benchmark; audit finite FTAP strict positivity proof, completeness/unique-claim proof, SDF covariance and utility boundary.",
+    "Independently recompute all worked and exercise anchors, inspect full code/domain, and run supplied checker without treating its output as proof.",
+    "No edits to root manuscript, shared files or another package. Report concrete findings with repair text and mathematical evidence. Freeze all read payload hashes in peer record.",
+    "Do not spawn agents or publish."
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "case": "Aster State Claims",
+  "provenance": "Original synthetic one-period teaching market; no observed prices or investment recommendations.",
+  "currency": "CU",
+  "horizon": "date 0 to date 1",
+  "policy": "frictionless unrestricted real holdings; no interim margin, default, tax or trading cost",
+  "states": [
+    "low",
+    "middle",
+    "high"
+  ],
+  "arithmetic": "Exact rational strings; no simulated or historical observations",
+  "complete_market": {
+    "payoff_rows_bond_stock_call": [
+      [
+        "1",
+        "60",
+        "0"
+      ],
+      [
+        "1",
+        "100",
+        "0"
+      ],
+      [
+        "1",
+        "140",
+        "40"
+      ]
+    ],
+    "prices_bond_stock_call": [
+      "24/25",
+      "96",
+      "48/5"
+    ],
+    "call_strike": "100",
+    "payoff_determinant": "1600",
+    "complete": true,
+    "no_arbitrage": true,
+    "state_prices": [
+      "6/25",
+      "12/25",
+      "6/25"
+    ],
+    "arrow_replication_asset_units": [
+      [
+        "5/2",
+        "-1/40",
+        "1/40"
+      ],
+      [
+        "-3/2",
+        "1/40",
+        "-1/20"
+      ],
+      [
+        "0",
+        "0",
+        "1/40"
+      ]
+    ],
+    "gross_safe_return": "25/24",
+    "simple_safe_return": "1/24",
+    "claim_payoffs": [
+      "10",
+      "30",
+      "70"
+    ],
+    "claim_replication_asset_units": [
+      "-20",
+      "1/2",
+      "1/2"
+    ],
+    "claim_price": "168/5",
+    "claim_price_by_state_prices": "168/5",
+    "quote_experiment": {
+      "quote": "34",
+      "fair_price": "168/5",
+      "quoted_claim_units": "-1",
+      "replica_asset_units": [
+        "-20",
+        "1/2",
+        "1/2"
+      ],
+      "initial_cost_before_banking": "-2/5",
+      "additional_bond_units": "5/12",
+      "net_initial_cost": "0",
+      "terminal_payoffs": [
+        "5/12",
+        "5/12",
+        "5/12"
+      ],
+      "arbitrage": true
+    },
+    "call_quote_diagnostics": [
+      {
+        "call_quote": "0",
+        "state_prices": [
+          "0",
+          "24/25",
+          "0"
+        ],
+        "no_arbitrage": false,
+        "certificate": {
+          "replicated_state": "low",
+          "unbanked_arrow_price": "0",
+          "asset_units_after_banking": [
+            "5/2",
+            "-1/40",
+            "1/40"
+          ],
+          "initial_cost": "0",
+          "terminal_payoffs": [
+            "1",
+            "0",
+            "0"
+          ]
+        }
+      },
+      {
+        "call_quote": "24",
+        "state_prices": [
+          "3/5",
+          "-6/25",
+          "3/5"
+        ],
+        "no_arbitrage": false,
+        "certificate": {
+          "replicated_state": "middle",
+          "unbanked_arrow_price": "-6/25",
+          "asset_units_after_banking": [
+            "-5/4",
+            "1/40",
+            "-1/20"
+          ],
+          "initial_cost": "0",
+          "terminal_payoffs": [
+            "1/4",
+            "5/4",
+            "1/4"
+          ]
+        }
+      }
+    ]
+  },
+  "incomplete_bond_stock_market": {
+    "rank": 2,
+    "complete": false,
+    "k": "24/25",
+    "state_price_family": "(bond_price-k+t, k-2*t, t)",
+    "digital_price_lower_strict": "0",
+    "digital_price_upper_strict": "12/25",
+    "subhedge_bond_stock_units": [
+      "0",
+      "0"
+    ],
+    "subhedge_payoffs": [
+      "0",
+      "0",
+      "0"
+    ],
+    "superhedge_bond_stock_units": [
+      "-3/4",
+      "1/80"
+    ],
+    "superhedge_payoffs": [
+      "0",
+      "1/2",
+      "1"
+    ],
+    "listed_digital_experiments": [
+      {
+        "digital_quote": "0",
+        "state_prices_after_listing": [
+          "0",
+          "24/25",
+          "0"
+        ],
+        "no_arbitrage": false,
+        "certificate": {
+          "bond_stock_units": [
+            "0",
+            "0"
+          ],
+          "digital_units": "1",
+          "initial_cost": "0",
+          "terminal_payoffs": [
+            "0",
+            "0",
+            "1"
+          ]
+        }
+      },
+      {
+        "digital_quote": "4/25",
+        "state_prices_after_listing": [
+          "4/25",
+          "16/25",
+          "4/25"
+        ],
+        "no_arbitrage": true,
+        "certificate": null
+      },
+      {
+        "digital_quote": "6/25",
+        "state_prices_after_listing": [
+          "6/25",
+          "12/25",
+          "6/25"
+        ],
+        "no_arbitrage": true,
+        "certificate": null
+      },
+      {
+        "digital_quote": "8/25",
+        "state_prices_after_listing": [
+          "8/25",
+          "8/25",
+          "8/25"
+        ],
+        "no_arbitrage": true,
+        "certificate": null
+      },
+      {
+        "digital_quote": "12/25",
+        "state_prices_after_listing": [
+          "12/25",
+          "0",
+          "12/25"
+        ],
+        "no_arbitrage": false,
+        "certificate": {
+          "bond_stock_units": [
+            "-3/4",
+            "1/80"
+          ],
+          "digital_units": "-1",
+          "initial_cost": "0",
+          "terminal_payoffs": [
+            "0",
+            "1/2",
+            "0"
+          ]
+        }
+      }
+    ]
+  },
+  "physical_pricing": {
+    "physical_probabilities": [
+      "1/5",
+      "1/2",
+      "3/10"
+    ],
+    "discount_factor": [
+      "6/5",
+      "24/25",
+      "4/5"
+    ],
+    "mean_discount_factor": "24/25",
+    "variance_discount_factor": "12/625",
+    "risk_neutral_probabilities": [
+      "1/4",
+      "1/2",
+      "1/4"
+    ],
+    "stock_expected_payoff": "104",
+    "stock_expected_gross_return": "13/12",
+    "stock_expected_simple_return": "1/12",
+    "stock_excess_payoffs": [
+      "-5/12",
+      "0",
+      "5/12"
+    ],
+    "stock_expected_excess_return": "1/24",
+    "stock_return_variance": "49/576",
+    "discount_return_covariance": "-1/25",
+    "fundamental_prices": [
+      "24/25",
+      "96",
+      "48/5"
+    ],
+    "expected_discounted_stock_gross_return": "1",
+    "stock_sharpe_squared": "1/49",
+    "sdf_bound_squared": "1/48",
+    "cauchy_gap": "1/30000",
+    "bound_attaining_payoff": [
+      "493/600",
+      "637/600",
+      "733/600"
+    ],
+    "bound_attaining_price": "1",
+    "bound_attaining_asset_units": [
+      "277/600",
+      "3/500",
+      "-1/500"
+    ],
+    "bound_attaining_mean_excess": "1/50",
+    "bound_attaining_variance": "12/625"
+  },
+  "alternative_physical_pricing": {
+    "physical_probabilities": [
+      "3/10",
+      "1/2",
+      "1/5"
+    ],
+    "discount_factor": [
+      "4/5",
+      "24/25",
+      "6/5"
+    ],
+    "mean_discount_factor": "24/25",
+    "variance_discount_factor": "12/625",
+    "risk_neutral_probabilities": [
+      "1/4",
+      "1/2",
+      "1/4"
+    ],
+    "stock_expected_payoff": "96",
+    "stock_expected_gross_return": "1",
+    "stock_expected_simple_return": "0",
+    "stock_excess_payoffs": [
+      "-5/12",
+      "0",
+      "5/12"
+    ],
+    "stock_expected_excess_return": "-1/24",
+    "stock_return_variance": "49/576",
+    "discount_return_covariance": "1/25",
+    "fundamental_prices": [
+      "24/25",
+      "96",
+      "48/5"
+    ],
+    "expected_discounted_stock_gross_return": "1",
+    "stock_sharpe_squared": "1/49",
+    "sdf_bound_squared": "1/48",
+    "cauchy_gap": "1/30000",
+    "bound_attaining_payoff": [
+      "733/600",
+      "637/600",
+      "493/600"
+    ],
+    "bound_attaining_price": "1",
+    "bound_attaining_asset_units": [
+      "877/600",
+      "-1/250",
+      "-1/500"
+    ],
+    "bound_attaining_mean_excess": "1/50",
+    "bound_attaining_variance": "12/625"
+  },
+  "log_utility_euler": {
+    "utility_discount": "24/25",
+    "current_consumption": "1",
+    "future_consumption": [
+      "4/5",
+      "1",
+      "6/5"
+    ],
+    "marginal_rate_of_substitution": [
+      "6/5",
+      "24/25",
+      "4/5"
+    ],
+    "claim_price": "168/5",
+    "claim_quote_utility_derivative_at_zero_trade": "-2/5",
+    "scope": "Constructed positive consumption/endowment and an interior marginal trade; no market-clearing equilibrium inferred"
+  }
+}

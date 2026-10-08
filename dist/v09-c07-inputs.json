@@ -1,0 +1,212 @@
+{
+  "case_id": "v09-c07-efficiency-1",
+  "provenance": "Original synthetic conditional markets, authored sign panel, beliefs and funding contracts. No observed returns, fitted anomaly, historical backtest or October2026 market data.",
+  "conventions": {
+    "currency": "CU",
+    "returns": "simple_total_decimal",
+    "taxes": "none",
+    "safe_gross": "1",
+    "physical_probabilities": "separate_from_state_prices",
+    "panel_unit": "one_CU_gross_win_or_loss_per_trade",
+    "selection": "max_training_wins_then_lexical_id_before_holdout",
+    "null": "independent_fair_signs_with_independent_candidate_tests_only_for_family_formula",
+    "behavior": "subjective_mean_variance_of_terminal_cash_wealth",
+    "funding": "integer_pairs_long_unpledgeable_short_proceeds_locked_full_liquidation_on_failed_margin",
+    "fee_timing": "all_pair_trading_fees_paid_after_closing_cash_release"
+  },
+  "pricing": {
+    "payoffs": [
+      "120",
+      "80"
+    ],
+    "physical": [
+      "1/2",
+      "1/2"
+    ],
+    "regimes": [
+      {
+        "id": "quiet",
+        "state_prices": [
+          "9/20",
+          "11/20"
+        ]
+      },
+      {
+        "id": "stress",
+        "state_prices": [
+          "7/20",
+          "13/20"
+        ]
+      }
+    ]
+  },
+  "selection": {
+    "cost_per_trade": "1/10",
+    "rules": [
+      {
+        "id": "A01",
+        "training": "+++++++--+++",
+        "holdout": "+----+++"
+      },
+      {
+        "id": "A02",
+        "training": "+++---++++++",
+        "holdout": "++-+++++"
+      },
+      {
+        "id": "A03",
+        "training": "---++++++++-",
+        "holdout": "-+++++--"
+      },
+      {
+        "id": "A04",
+        "training": "++++++++----",
+        "holdout": "+++----+"
+      },
+      {
+        "id": "A05",
+        "training": "++++-----+++",
+        "holdout": "-----+++"
+      },
+      {
+        "id": "A06",
+        "training": "+-----++++++",
+        "holdout": "+--+++++"
+      },
+      {
+        "id": "A07",
+        "training": "---+++++++--",
+        "holdout": "-++++---"
+      },
+      {
+        "id": "A08",
+        "training": "++++++------",
+        "holdout": "++++---+"
+      },
+      {
+        "id": "A09",
+        "training": "+++------+++",
+        "holdout": "-----++-"
+      },
+      {
+        "id": "A10",
+        "training": "------++++++",
+        "holdout": "---++++-"
+      },
+      {
+        "id": "A11",
+        "training": "---++++++---",
+        "holdout": "-++++---"
+      },
+      {
+        "id": "A12",
+        "training": "++++++------",
+        "holdout": "++-----+"
+      },
+      {
+        "id": "A13",
+        "training": "++-------+++",
+        "holdout": "++---+++"
+      },
+      {
+        "id": "A14",
+        "training": "------+++++-",
+        "holdout": "---++++-"
+      },
+      {
+        "id": "A15",
+        "training": "---+++++----",
+        "holdout": "-+++----"
+      },
+      {
+        "id": "A16",
+        "training": "+++++-------",
+        "holdout": "+------+"
+      },
+      {
+        "id": "A17",
+        "training": "+--------+++",
+        "holdout": "++---+++"
+      },
+      {
+        "id": "A18",
+        "training": "------++++--",
+        "holdout": "---++++-"
+      },
+      {
+        "id": "A19",
+        "training": "---+++------",
+        "holdout": "-+++----"
+      },
+      {
+        "id": "A20",
+        "training": "++----------",
+        "holdout": "+++----+"
+      }
+    ]
+  },
+  "event": {
+    "prior_quote_minute": 480,
+    "information_minute": 510,
+    "entry_minute": 540,
+    "exit_minute": 960,
+    "prior_mid": "100",
+    "entry_mid": "108",
+    "entry_ask": "109",
+    "exit_mid": "111",
+    "exit_bid": "110",
+    "entry_fee": "1/4",
+    "exit_fee": "1/4",
+    "information_fee": "1"
+  },
+  "behavior": {
+    "prior_high": "1/2",
+    "true_good_likelihoods": [
+      "3/4",
+      "1/4"
+    ],
+    "optimistic_good_likelihoods": [
+      "9/10",
+      "1/10"
+    ],
+    "payoffs": [
+      "140",
+      "60"
+    ],
+    "risk_aversion": [
+      "1/100",
+      "1/288"
+    ],
+    "supply": "2",
+    "initial_cash_each": "500"
+  },
+  "information": {
+    "payoffs": [
+      "0",
+      "6"
+    ],
+    "probabilities": [
+      "1/2",
+      "1/2"
+    ],
+    "fixed_price": "3",
+    "fee": "1",
+    "contract": "one_unit_optional_buy_fixed_quote_before_signal_not_equilibrium"
+  },
+  "funding": {
+    "wealth": "125",
+    "pairs": 1,
+    "cheap_entry": "95",
+    "dear_entry": "105",
+    "maintenance_margin": "1/5",
+    "convergence_quote": "100",
+    "divergence_cheap": "80",
+    "divergence_dear": "120",
+    "divergence_probability": "1/4",
+    "terminal_common_payoffs": [
+      "90",
+      "110"
+    ],
+    "total_closing_fee_per_pair": "2"
+  }
+}

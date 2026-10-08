@@ -1,0 +1,264 @@
+{
+  "chapter": "v09-c06",
+  "date": "2026-10-08",
+  "author": "cost_peer",
+  "state": "author-review-complete; coordinator review and dependency acceptance pending",
+  "assignment": "production/v09-middle-assignments.json",
+  "scope": "Complete advanced factor-model teaching, four worked cases, eight original fully solved exercises, answered teach-back and retention; exact finite-state pricing, conditional approximate APT, nontraded-factor normalization, multifactor OLS, cross-sectional estimation and a lagged factor-construction cash ledger. All nine owned files complete; no shared edits or publishing.",
+  "visible_text_words": 6076,
+  "worked_examples": 4,
+  "exercises": 8,
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "reasoning_review": [
+    "Same-horizon simple/excess returns, safe gross versus simple rates, and beginning-wealth exposures match the prerequisite contracts. A traded zero-cost factor is a payoff per reference notional, not a simple return on zero initial equity.",
+    "Exact spanning is proved both with the positive-SDF pricing identity and a complete trading argument. The full safe payoff and initial replica budget are retained; a clone quote compares the exact same dated payoff.",
+    "Projection orthogonality to factors is distinguished from SDF orthogonality. Alpha equals -Rf*Cov(m,residual); the Cauchy bound and its moment assumptions are explicit. The original positive-kernel example prices a factor-orthogonal residual with positive alpha and an actual hedged loss state.",
+    "Approximate pricing requires residual variance tending to zero and a uniform bound on SDF variation relative to its mean. Equal-weight residual variance is derived under bounded variances and zero pairwise residual covariances. It does not establish sure finite arbitrage or zero alpha for every individual asset.",
+    "The product-SDF family is strictly positive in each finite economy, prices the stated zero-cost claims, and has unbounded coefficient of variation across N. Its finite loss state and explicit N=4 loss probability prevent conflating asymptotic concentration with a sure statewise profit.",
+    "Nontraded-factor risk prices are covariance prices, not unconditional factor means. Centering, rescaling and the traded-factor special case are derived with units. Factor fit, economic mechanism and feasible replication remain different requirements.",
+    "OLS normal equations, full-rank uniqueness, factor covariance, R-squared conditions and omitted-variable identities are derived. A descriptive residual mean square is not called an alpha standard error; conditional covariance/inference assumptions are stated separately.",
+    "Cross-sectional estimation uses supplied prior-window betas, no free intercept under the maintained safe-rate restriction, and mean excess returns in the same evaluation window as the factor means. First-stage error, weighting, dependence, rank and model uncertainty are not silently removed.",
+    "The construction case uses information available at the trade, actual shares and prices, drift-aware traded volume, explicit reusable short proceeds, zero cash interest, fixed notional, cash-paid execution and borrow costs, and final liquidation. Account returns use changing equity; factor payoffs per fixed notional are not mislabeled as compound investor returns.",
+    "All eight exercise prompts were solved against their stated data. Seven have exact numerical reconstructions in the checker. The eighth has an explicit five-failure research rubric with acceptable repair/evidence criteria. Teach-back and all four retention questions have answers. Methods are taught before use.",
+    "The planned v12-c09 link matches the canonical title and is visibly labeled planned. Same-batch successor wording is neutral; manuscript routes and all five flat offline asset links follow existing conventions."
+  ],
+  "numerical_validation": {
+    "status": "passed",
+    "command": "python3 -B book/scripts/check_v09_c06.py",
+    "groups": 9,
+    "comparisons": 1321,
+    "domain_rejections": 18,
+    "count_scope": "Includes exact financial anchors, output-field/reference comparisons, structure, integrity and portable CLI results; not 1321 different financial derivations.",
+    "checks": [
+      {
+        "name": "Exact state prices, full replication budgets, clone arbitrage and priced factor-orthogonal residual",
+        "status": "passed"
+      },
+      {
+        "name": "Independent finite product-kernel enumeration, residual variance, loss states and uniform-bound distinction",
+        "status": "passed"
+      },
+      {
+        "name": "Independent centered-moment OLS, residuals, omitted-factor slope/alpha and descriptive fit",
+        "status": "passed"
+      },
+      {
+        "name": "Separate cross-sectional normal equations, estimated premiums and normalization limits",
+        "status": "passed"
+      },
+      {
+        "name": "Independent drifted-dollar cash ledger, complete liquidation and factor-versus-account measurement",
+        "status": "passed"
+      },
+      {
+        "name": "All seven determinate exercise reconstructions and numerical retention; open E8 evaluated by explicit prose rubric",
+        "status": "passed"
+      },
+      {
+        "name": "Eighteen meaningful domain rejections, rank failures and targeted allowed numerical edits",
+        "status": "passed"
+      },
+      {
+        "name": "Complete preserved output, actual chapter structure, scoped source reuse and final asset integrity",
+        "status": "passed"
+      },
+      {
+        "name": "Isolated standard-library offline execution under normal and optimized Python",
+        "status": "passed"
+      }
+    ],
+    "independent_routes": [
+      "Complete pricing states reconstructed through asset quantities and safe funding, separately from the model excess-return formula; every gross claim price and hedged payoff checked.",
+      "All 16 four-residual states enumerated to verify product-kernel prices, mean, variance, positivity and loss probability independently of binomial formulas.",
+      "OLS slopes recovered from centered two-by-two covariance equations, independently of exact Gaussian elimination; residuals and omitted-factor identities recomputed.",
+      "Cross-sectional coefficients reconstructed with an explicit two-by-two inverse; residual orthogonality and exercise sensitivity checked.",
+      "Factor trading reconstructed with signed dollar holdings and drift, independently of the analysis share/price ledger; every period and final closure reconciled.",
+      "All determinate exercise results and numerical retention anchors independently checked; the open research audit received manual reasoning review.",
+      "Two targeted valid edits checked: doubling execution cost changes final cash by exactly the original execution cost; zero residual scale restores exact spanning."
+    ],
+    "portable_execution": "Quiet import and run; complete preserved strict JSON; default and explicit-input CLI from an isolated copied directory under normal and optimized Python. Finite square-root comparisons use 1e-12 tolerance; other reported economics remain exact rational strings."
+  },
+  "critical_anchors": {
+    "pricing": {
+      "safe_gross": "51/50",
+      "factor_expected_payoffs": [
+        "3/100",
+        "1/50"
+      ],
+      "replica_safe_weight": "-1/4",
+      "replica_mean_excess": "1/25",
+      "clone_quote": "49/50",
+      "clone_arbitrage_safe_position": "27/100",
+      "clone_sure_payoff": "51/2500",
+      "priced_residual_alpha": "1/250",
+      "residual_hedge_payoffs": [
+        "11/250",
+        "-9/250"
+      ],
+      "both_claim_fair_prices": [
+        "1",
+        "1"
+      ]
+    },
+    "approximate_pricing": {
+      "N4_mean": "1/50",
+      "N4_residual_variance": "1/100",
+      "N4_loss_probability": "5/16",
+      "finite_worst_payoff": "-9/50",
+      "product_sdf_cv_squared": "(101/100)^N-1",
+      "hypothetical_K_half_N100_alpha_bound": "1/100"
+    },
+    "sample": {
+      "full_ols": [
+        "1/500",
+        "5/4",
+        "-1/2"
+      ],
+      "full_sse": "1/5000",
+      "full_r_squared": "20/21",
+      "one_factor_ols": [
+        "-3/1000",
+        "1"
+      ],
+      "one_factor_r_squared": "16/21",
+      "cross_section_lambda": [
+        "3/250",
+        "9/500"
+      ],
+      "cross_section_residuals": [
+        "1/500",
+        "1/500",
+        "-1/500",
+        "0"
+      ]
+    },
+    "trading": {
+      "gross_profit": "11",
+      "rebalance_volumes": [
+        "200",
+        "405/2",
+        "405/2",
+        "205"
+      ],
+      "final_liquidation_volume": "200",
+      "all_trading_cost": "101/100",
+      "all_borrow_cost": "2/5",
+      "final_cash": "10959/100",
+      "investor_cumulative_return": "959/10000",
+      "mean_lagged_gross_factor": "11/400",
+      "unavailable_hindsight_gross_mean": "7/200"
+    },
+    "exercise_transfer": {
+      "E1_overpriced_clone_sure_payoff": "39/1250",
+      "E1_quote_normalized_expected_return": "29/412",
+      "E2_macro_risk_price": "2/5",
+      "E2_required_mean_excess": "1/100",
+      "E3_idiosyncratic_variance": "9/40000",
+      "E3_common_added_variance": "9/8000",
+      "E4_full_coefficients": [
+        "1/125",
+        "5/4",
+        "1/4"
+      ],
+      "E4_r_squared": "125/129",
+      "E4_omitted_coefficients": [
+        "21/2000",
+        "11/8"
+      ],
+      "E5_redundant_design_sse": "1/1000",
+      "E6_new_lambda": [
+        "27/2125",
+        "31/1700"
+      ],
+      "E6_new_residuals": [
+        "9/1700",
+        "3/1700",
+        "-1/340",
+        "-1/850"
+      ],
+      "E7_final_cash": "54587/500"
+    }
+  },
+  "sources": {
+    "proposal_file": "content/reviews/v09-c06-sources.json",
+    "new_ids": [
+      "v09-c06-mit-apt",
+      "v09-c06-french-construction"
+    ],
+    "exact_reused_ids": [
+      "mit-linear-projection",
+      "v09-c04-fama-french-tests"
+    ],
+    "inspection": "Actual MIT official PDF APT/factor-choice text and French official factor-construction HTML inspected in recorded scopes. Accepted projection and dated Fama-French methodological records reused exactly within their verified scopes. No source dataset, source exercise or historical performance magnitude imported. Image-only equations are not claimed as extracted proof evidence."
+  },
+  "resolved_findings": [
+    {
+      "origin": "author scope review",
+      "finding": "The empirical comparison must state whether factor and test-asset means use the same window, separately from the earlier beta-estimation window.",
+      "resolution": "Manuscript and input/README provenance now explicitly align the eight evaluation months and retain supplied prior-window beta estimates. Numerical results unchanged."
+    },
+    {
+      "origin": "author reference review",
+      "finding": "The planned financial-econometrics extension must use its actual canonical chapter ID.",
+      "resolution": "Confirmed canonical v12-c09 and corrected the planned extension route before freeze."
+    }
+  ],
+  "open_findings": [],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v09-c06.html",
+      "bytes": 46606,
+      "sha256": "b1ea00ba26f67259e10bef85476b382e599490fd06b274f0f09b6f99e99c11ae"
+    },
+    {
+      "path": "content/projects/v09-c06-inputs.json",
+      "bytes": 4529,
+      "sha256": "487ec481aa65a6f6a22f48e961258004a998722d5dcbadcdd051be18899c5e24"
+    },
+    {
+      "path": "content/projects/v09-c06-analysis.py",
+      "bytes": 15895,
+      "sha256": "454401a787239d4c3e5f23ccaa203d6dc44b479b2bb4afed344e71ed842499e1"
+    },
+    {
+      "path": "content/projects/v09-c06-output.json",
+      "bytes": 12810,
+      "sha256": "9dd5c13e0eab50cbfea04d9df6974e0d4711322d7d13468d081b457486f5d109"
+    },
+    {
+      "path": "content/projects/v09-c06-manifest.json",
+      "bytes": 824,
+      "sha256": "ca22197c12fd8204c83f992e24cacd326846b7e0b28aeca6e67e5dcb036953d3"
+    },
+    {
+      "path": "content/projects/v09-c06-README.txt",
+      "bytes": 10954,
+      "sha256": "2262d4c6523c58c625afcf76a6c4907866f8e9e4d3145d60eb45421877ce06da"
+    },
+    {
+      "path": "scripts/check_v09_c06.py",
+      "bytes": 20675,
+      "sha256": "dce01b3f812b5f49fda63905444888222f8a7ff76082db9ae2f85d33f5817124"
+    },
+    {
+      "path": "content/reviews/v09-c06-sources.json",
+      "bytes": 3911,
+      "sha256": "62f82a8b65e74f81e404aa272e09ef245453d9ba4131ddcdd3b901f59c952701"
+    }
+  ],
+  "limitations": [
+    "Author and later agent review are not external human certification or a guarantee of error-free material.",
+    "The chapter proves exact finite spanning and one sufficient conditional residual-pricing bound, not all infinite-market APT results.",
+    "All cases are synthetic. The package does not authenticate data, validate empirical premiums, establish causal compensation or investor skill, or forecast returns.",
+    "The lab is intentionally bounded to its guarded state law, eight-row sample and four-asset/four-period ranking contract. It is not a general SDF calibration, inference, margin or trading engine; extreme floating-point magnitudes and arbitrary malformed schemas are outside the numerical contract.",
+    "Observed-date cash solvency and no intraperiod margin calls are stipulated; actual financing availability, market impact and capacity require additional evidence.",
+    "Coordinator independent review, prerequisite acceptance, shared integration, whole-library verification and publication remain separate. Visual, keyboard, mobile and print QA are not claimed by this focused checker."
+  ]
+}

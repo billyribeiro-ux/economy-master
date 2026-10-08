@@ -1,0 +1,200 @@
+{
+  "case": "Ilex factor research desk",
+  "created": "2026-10-08",
+  "provenance": "Original synthetic cases. Pricing states, sample observations and trading records are separate constructions, not market data or empirical evidence.",
+  "conventions": {
+    "pricing": "one period, eight equiprobable independent sign states; safe and factor funds initially cost one; unrestricted frictionless positions",
+    "factor_units": "zero-cost terminal payoff per one CU reference notional, not a return on zero initial equity",
+    "sample": "eight synthetic equal monthly excess-return observations; cross-section betas are supplied prior-window estimates; no empirical inference",
+    "trading": "four model months; lagged signals; no distributions, taxes or cash interest; short proceeds reusable; fixed long/short notional; fees paid in cash; no interim margin calls; final liquidation"
+  },
+  "pricing": {
+    "safe_gross": "51/50",
+    "kernel_sign_coefficients": [
+      "1/4",
+      "1/5",
+      "1/10"
+    ],
+    "factor_shock_scales": [
+      "3/25",
+      "1/10"
+    ],
+    "replica_factor_exposures": [
+      "3/2",
+      "-1/4"
+    ],
+    "priced_residual_scale": "1/25",
+    "clone_quote": "49/50"
+  },
+  "diversification": {
+    "residual_scale": "1/5",
+    "pricing_tilt": "1/10",
+    "safe_gross": "51/50",
+    "hypothetical_uniform_sdf_cv_bound": "1/2",
+    "asset_counts": [
+      1,
+      4,
+      25,
+      100
+    ]
+  },
+  "empirical": {
+    "description": "The first panel has all eight (x,z,h) sign combinations: f1=.01+.02x; f2=.015+.01x+.02z; y=.002+1.25f1-.5f2+.005h. The separate four-test-asset summary has supplied prior-window beta estimates and mean excess returns over those same eight evaluation months.",
+    "observations": [
+      {
+        "period": 1,
+        "factor_1": "-1/100",
+        "factor_2": "-3/200",
+        "asset_excess": "-1/125"
+      },
+      {
+        "period": 2,
+        "factor_1": "-1/100",
+        "factor_2": "-3/200",
+        "asset_excess": "1/500"
+      },
+      {
+        "period": 3,
+        "factor_1": "-1/100",
+        "factor_2": "1/40",
+        "asset_excess": "-7/250"
+      },
+      {
+        "period": 4,
+        "factor_1": "-1/100",
+        "factor_2": "1/40",
+        "asset_excess": "-9/500"
+      },
+      {
+        "period": 5,
+        "factor_1": "3/100",
+        "factor_2": "1/200",
+        "asset_excess": "4/125"
+      },
+      {
+        "period": 6,
+        "factor_1": "3/100",
+        "factor_2": "1/200",
+        "asset_excess": "21/500"
+      },
+      {
+        "period": 7,
+        "factor_1": "3/100",
+        "factor_2": "9/200",
+        "asset_excess": "3/250"
+      },
+      {
+        "period": 8,
+        "factor_1": "3/100",
+        "factor_2": "9/200",
+        "asset_excess": "11/500"
+      }
+    ],
+    "cross_section_betas": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "1"
+      ],
+      [
+        "2",
+        "-1"
+      ]
+    ],
+    "cross_section_mean_excess": [
+      "7/500",
+      "1/50",
+      "7/250",
+      "3/500"
+    ]
+  },
+  "construction": {
+    "assets": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "fixed_long_notional": "100",
+    "initial_collateral": "100",
+    "one_way_trading_cost": "1/1000",
+    "short_borrow_cost_per_period": "1/1000",
+    "observations": [
+      {
+        "start": 0,
+        "end": 1,
+        "signal_available": 0,
+        "signals": [
+          "4",
+          "3",
+          "2",
+          "1"
+        ],
+        "simple_returns": [
+          "1/25",
+          "1/50",
+          "-1/100",
+          "0"
+        ]
+      },
+      {
+        "start": 1,
+        "end": 2,
+        "signal_available": 1,
+        "signals": [
+          "1",
+          "4",
+          "3",
+          "2"
+        ],
+        "simple_returns": [
+          "-1/50",
+          "1/100",
+          "3/100",
+          "-1/100"
+        ]
+      },
+      {
+        "start": 2,
+        "end": 3,
+        "signal_available": 2,
+        "signals": [
+          "2",
+          "1",
+          "4",
+          "3"
+        ],
+        "simple_returns": [
+          "1/100",
+          "-3/100",
+          "1/50",
+          "1/25"
+        ]
+      },
+      {
+        "start": 3,
+        "end": 4,
+        "signal_available": 3,
+        "signals": [
+          "3",
+          "2",
+          "1",
+          "4"
+        ],
+        "simple_returns": [
+          "-1/100",
+          "1/50",
+          "-1/50",
+          "1/100"
+        ]
+      }
+    ]
+  }
+}

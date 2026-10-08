@@ -1,0 +1,186 @@
+{
+  "chapter": "v09-c05",
+  "title": "Arbitrage, state prices and discount factors",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "author": "coordinating author",
+  "assignment": "production/v09-middle-assignments.json",
+  "state": "author-review-complete",
+  "status": "Author checks pass; separate peer review and dependency-ordered coordinator acceptance pending.",
+  "canonical_outcome": "Price contingent payoffs using no-arbitrage and stochastic discount-factor reasoning.",
+  "counts": {
+    "chapter_words": 5671,
+    "worked_examples": 4,
+    "exercises": 8,
+    "complete_solutions": 8,
+    "source_records": 2,
+    "owned_paths": 9,
+    "hashed_payloads": 8
+  },
+  "coverage": {
+    "Replication": [
+      "market",
+      "worked-1",
+      "exercise-1",
+      "exercise-2"
+    ],
+    "state prices": [
+      "state-prices",
+      "worked-2",
+      "exercise-3"
+    ],
+    "pricing kernel": [
+      "sdf",
+      "worked-4",
+      "marginal-utility",
+      "exercise-5",
+      "exercise-7"
+    ],
+    "completeness": [
+      "completeness",
+      "worked-3",
+      "exercise-4",
+      "exercise-8"
+    ],
+    "fundamental pricing equation": [
+      "sdf",
+      "worked-4",
+      "exercise-5",
+      "exercise-6"
+    ]
+  },
+  "gates": {
+    "arithmetic": "pass",
+    "reasoning": "pass",
+    "solutions": "pass",
+    "sources": "pass",
+    "instruction": "pass",
+    "structure": "pass"
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v09-c05.html",
+      "bytes": 38851,
+      "sha256": "ca42871489dbc436dcf096a1ff718db50de993e5182d84b35eae844c91a219d0"
+    },
+    {
+      "path": "content/projects/v09-c05-inputs.json",
+      "bytes": 802,
+      "sha256": "290b97c579684d4a10a460e9b9bd8ed60d524acef489e3ab10188fd15371ccf9"
+    },
+    {
+      "path": "content/projects/v09-c05-analysis.py",
+      "bytes": 11888,
+      "sha256": "dd2b8c4ca92b43346694eab9a3c1f2b7dd416eace43a47a01c1314021ca3e7ad"
+    },
+    {
+      "path": "content/projects/v09-c05-output.json",
+      "bytes": 7907,
+      "sha256": "33e70ffd7214b5f51c2de2c26c431c7a6bcfa0b3b73b6e5405ce17c84e6866c2"
+    },
+    {
+      "path": "content/projects/v09-c05-manifest.json",
+      "bytes": 950,
+      "sha256": "01711a36d9f0feeac57eedcbd12e60f7eab7e82db413c2ee9f3f4d4b76ec3bef"
+    },
+    {
+      "path": "content/projects/v09-c05-README.txt",
+      "bytes": 7916,
+      "sha256": "bf1a2b48ad759ca3ee9c3da62d18fa78ab8005bd5bf9af9a40381180e5d67020"
+    },
+    {
+      "path": "scripts/check_v09_c05.py",
+      "bytes": 15665,
+      "sha256": "7e8d4f8c2ab4a89def492061e36d0445fd8ddbbb228066fd59f80e0bd195d164"
+    },
+    {
+      "path": "content/reviews/v09-c05-sources.json",
+      "bytes": 1907,
+      "sha256": "300cd38a5230065b27446ec2c5222fb3afc09786c11aa02b86769a85d7e72885"
+    }
+  ],
+  "derivation_review": [
+    "Finite states all have positive physical probability. Unit-payoff bond price is positive; unrestricted signed real quantities, one horizon and no interim funding, costs or default are explicit. Gross safe R_f and risky G are distinguished from simple R and r_f.",
+    "No-arbitrage definition includes negative initial cost and nonnegative terminal payoff; banking initial receipts establishes equivalent zero-cost criterion. Law of one price and linear functional are proved separately from positivity.",
+    "Fundamental theorem necessity constructs the residual at a closest simplex point to the zero-cost payoff subspace; compactness, closed finite-dimensional subspace, segment derivative and d_s>=norm(d)^2>0 establish strict positivity before bond normalization. Sufficiency checks positive and zero terminal-payoff cases.",
+    "Completeness is payoff-column rank S; uniqueness of q follows from the transpose kernel. Incomplete positive solutions admit q+-epsilon v perturbations. Unique price for a claim iff in traded span follows from its orthogonal residual; unique q does not imply unique holdings with redundant assets.",
+    "Sub/superhedge arbitrages and open digital bounds are proved for the exact Aster case; general endpoint claims are qualified. Lab supports changed stock quotes and both lower-subhedge branches.",
+    "m=q/pi, E[m]=B, Q=q/B, fundamental pricing and excess-payoff equations have correct units and normalization. Physical belief changes keep q fixed and alter m and expected return, not the no-arbitrage price.",
+    "Covariance risk-premium identity and absolute Cauchy bound derived with zero-variance/constant-kernel/equality cases. Attainability distinguished from moment inequality; explicit priced payoff achieves equality only because complete unrestricted market permits its replica.",
+    "Consumption Euler equation uses increasing differentiable concave utility and interior two-sided feasible trades; buy-only zero holding gives E[mX]<=p. No aggregate equilibrium, representative investor or empirical consumption calibration claimed."
+  ],
+  "worked_example_review": [
+    {
+      "number": 1,
+      "finding": "Exact original three-state replica costs33.6; quoted34 produces .4 receipt invested in5/12 bond; full zero-cost quantities and all future payoffs reconcile."
+    },
+    {
+      "number": 2,
+      "finding": "q=(.24,.48,.24) prices all assets and H; altered call24 gives q_middle=-.24 and an explicit banked Arrow arbitrage."
+    },
+    {
+      "number": 3,
+      "finding": "Removing call yields family(t,.96-2t,t), strict digital interval(0,.48), two positive interior extensions, endpoint arbitrages and unique affine price38.4."
+    },
+    {
+      "number": 4,
+      "finding": "Two positive physical laws reverse expected excess stock return while prices and normalizedQ agree; covariance identities and squared Sharpe/Cauchy bound checked."
+    }
+  ],
+  "exercise_review": [
+    {
+      "number": 1,
+      "finding": "H1 replica(-10,.3,.5),price24;quote23 gives banked sure payoff25/24 and correct short positions."
+    },
+    {
+      "number": 2,
+      "finding": "All Arrow replicas solve exact matrix; call24 and0 produce distinct negative/zero state-price arbitrages."
+    },
+    {
+      "number": 3,
+      "finding": "All requested projection proof steps supplied; invertible two-state system has law of one price but q=(-.5,1.5), with3bonds-stock zero-cost payoff(3,1)."
+    },
+    {
+      "number": 4,
+      "finding": "Digital.36 gives positive(.36,.24,.36); both endpoints ruled out; affine claim price38.4 unique despite rank2."
+    },
+    {
+      "number": 5,
+      "finding": "Both m vectors, Q, all traded prices, physical means and covariance signs checked; naive physical discount99.84 fails observed stock price96."
+    },
+    {
+      "number": 6,
+      "finding": "Exact variances12/625 and49/576; priced tight-bound payoff(493,637,733)/600 replicated by(277/600,3/500,-1/500);cost1,premium1/50,variance12/625."
+    },
+    {
+      "number": 7,
+      "finding": "Log MRS recovers m and33.6;buy-only quote34 yields derivative-.4 and correct one-sided condition with equilibrium limits."
+    },
+    {
+      "number": 8,
+      "finding": "Negative incomplete pricing extension does not preclude positive q; middle digital price interval(0,.96);actual negative-priced digital yields explicit zero-cost positive payoff, unavailable claim does not."
+    }
+  ],
+  "numerical_checks": {
+    "status": "pass",
+    "groups": 7,
+    "comparisons": 680,
+    "meaningful_domain_rejections": 21,
+    "coverage": [
+      "Independent interpolation, state-price duality and every dated arbitrage certificate",
+      "Physical-law changes, covariance premium, normalized Q and attainable-bound distinction",
+      "New-claim exercise, linear-versus-positive pricing, Euler boundary and unidentified digital",
+      "Meaningful price, grid and belief edits; lower-subhedge branch and constant-SDF boundary",
+      "Strict finite-state, rational-number, probability, provenance and policy domain",
+      "Complete JSON regression, four-file hashes and portable standalone execution",
+      "Instructional anchors, four worked cases, eight solved transfers and offline links"
+    ]
+  },
+  "retention_review": "Answers include price6.72,scaled replica(-4,.1,.1),digital.50 upper-hedge trade plus1/48 bond,proof reconstruction and existence-versus-uniqueness distinction.",
+  "sources_review": "Two actual primary PDF bodies inspected within recorded sections. No author problem, source case or historical estimate reproduced.",
+  "open_issues": [],
+  "limitations": [
+    "Synthetic finite-state one-period theorem; no continuous-time theorem, empirical estimate or feasible real funding contract inferred.",
+    "Author review is not external human academic certification; separate specialist peer audit and full-library checks remain required."
+  ]
+}

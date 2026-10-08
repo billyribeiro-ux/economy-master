@@ -1,0 +1,376 @@
+{
+  "case_id": "v09-c07-efficiency-1",
+  "status": "calculated",
+  "pricing": {
+    "payoffs": [
+      "120",
+      "80"
+    ],
+    "physical_probabilities": [
+      "1/2",
+      "1/2"
+    ],
+    "regimes": [
+      {
+        "regime": "quiet",
+        "price": "98",
+        "state_prices": [
+          "9/20",
+          "11/20"
+        ],
+        "SDF": [
+          "9/10",
+          "11/10"
+        ],
+        "gross_returns": [
+          "60/49",
+          "40/49"
+        ],
+        "expected_return": "1/49",
+        "expected_SDF": "1",
+        "priced_gross_return": "1",
+        "SDF_return_covariance": "-1/49",
+        "financed_one_share_payoffs": [
+          "22",
+          "-18"
+        ]
+      },
+      {
+        "regime": "stress",
+        "price": "94",
+        "state_prices": [
+          "7/20",
+          "13/20"
+        ],
+        "SDF": [
+          "7/10",
+          "13/10"
+        ],
+        "gross_returns": [
+          "60/47",
+          "40/47"
+        ],
+        "expected_return": "3/47",
+        "expected_SDF": "1",
+        "priced_gross_return": "1",
+        "SDF_return_covariance": "-3/47",
+        "financed_one_share_payoffs": [
+          "26",
+          "-14"
+        ]
+      }
+    ],
+    "constant_quiet_benchmark_stress_residual": "100/2303"
+  },
+  "selection": {
+    "candidates": [
+      {
+        "id": "A01",
+        "training_wins": 10,
+        "training_gross_profit": "8",
+        "training_net_profit": "34/5",
+        "holdout_wins": 4
+      },
+      {
+        "id": "A02",
+        "training_wins": 9,
+        "training_gross_profit": "6",
+        "training_net_profit": "24/5",
+        "holdout_wins": 7
+      },
+      {
+        "id": "A03",
+        "training_wins": 8,
+        "training_gross_profit": "4",
+        "training_net_profit": "14/5",
+        "holdout_wins": 5
+      },
+      {
+        "id": "A04",
+        "training_wins": 8,
+        "training_gross_profit": "4",
+        "training_net_profit": "14/5",
+        "holdout_wins": 4
+      },
+      {
+        "id": "A05",
+        "training_wins": 7,
+        "training_gross_profit": "2",
+        "training_net_profit": "4/5",
+        "holdout_wins": 3
+      },
+      {
+        "id": "A06",
+        "training_wins": 7,
+        "training_gross_profit": "2",
+        "training_net_profit": "4/5",
+        "holdout_wins": 6
+      },
+      {
+        "id": "A07",
+        "training_wins": 7,
+        "training_gross_profit": "2",
+        "training_net_profit": "4/5",
+        "holdout_wins": 4
+      },
+      {
+        "id": "A08",
+        "training_wins": 6,
+        "training_gross_profit": "0",
+        "training_net_profit": "-6/5",
+        "holdout_wins": 5
+      },
+      {
+        "id": "A09",
+        "training_wins": 6,
+        "training_gross_profit": "0",
+        "training_net_profit": "-6/5",
+        "holdout_wins": 2
+      },
+      {
+        "id": "A10",
+        "training_wins": 6,
+        "training_gross_profit": "0",
+        "training_net_profit": "-6/5",
+        "holdout_wins": 4
+      },
+      {
+        "id": "A11",
+        "training_wins": 6,
+        "training_gross_profit": "0",
+        "training_net_profit": "-6/5",
+        "holdout_wins": 4
+      },
+      {
+        "id": "A12",
+        "training_wins": 6,
+        "training_gross_profit": "0",
+        "training_net_profit": "-6/5",
+        "holdout_wins": 3
+      },
+      {
+        "id": "A13",
+        "training_wins": 5,
+        "training_gross_profit": "-2",
+        "training_net_profit": "-16/5",
+        "holdout_wins": 5
+      },
+      {
+        "id": "A14",
+        "training_wins": 5,
+        "training_gross_profit": "-2",
+        "training_net_profit": "-16/5",
+        "holdout_wins": 4
+      },
+      {
+        "id": "A15",
+        "training_wins": 5,
+        "training_gross_profit": "-2",
+        "training_net_profit": "-16/5",
+        "holdout_wins": 3
+      },
+      {
+        "id": "A16",
+        "training_wins": 5,
+        "training_gross_profit": "-2",
+        "training_net_profit": "-16/5",
+        "holdout_wins": 2
+      },
+      {
+        "id": "A17",
+        "training_wins": 4,
+        "training_gross_profit": "-4",
+        "training_net_profit": "-26/5",
+        "holdout_wins": 5
+      },
+      {
+        "id": "A18",
+        "training_wins": 4,
+        "training_gross_profit": "-4",
+        "training_net_profit": "-26/5",
+        "holdout_wins": 4
+      },
+      {
+        "id": "A19",
+        "training_wins": 3,
+        "training_gross_profit": "-6",
+        "training_net_profit": "-36/5",
+        "holdout_wins": 3
+      },
+      {
+        "id": "A20",
+        "training_wins": 2,
+        "training_gross_profit": "-8",
+        "training_net_profit": "-46/5",
+        "holdout_wins": 4
+      }
+    ],
+    "selected_before_holdout": "A01",
+    "selected_training_wins": 10,
+    "selected_training_gross_profit": "8",
+    "selected_training_net_profit": "34/5",
+    "single_prespecified_rule_tail": "79/4096",
+    "independent_family_tail": "570005578930638036519448664129431645422214306265104317222606053637978175/1766847064778384329583297500742918515827483896875618958121606201292619776",
+    "independent_family_tail_approx": 0.32261172474604294,
+    "bonferroni_bound": "395/1024",
+    "frozen_holdout_wins": 4,
+    "frozen_holdout_tail": "163/256",
+    "frozen_holdout_gross_profit": "0",
+    "frozen_holdout_net_profit": "-4/5",
+    "inference_scope": "One-sided fair-sign null; family equality requires independent candidate tests; no risk-adjusted return or empirical skill claim."
+  },
+  "event": {
+    "unavailable_prior_mid_to_exit_mid_return": "11/100",
+    "postrelease_mid_to_mid_return": "1/36",
+    "entry_cash_including_information": "441/4",
+    "exit_cash_after_fee": "439/4",
+    "net_profit": "-1/2",
+    "net_return_on_total_cash": "-2/441",
+    "net_profit_if_information_free": "1/2",
+    "break_even_information_fee": "1/2",
+    "information_minutes_before_execution": 30
+  },
+  "behavior": {
+    "true_posterior": "3/4",
+    "optimistic_posterior": "9/10",
+    "belief_equilibrium": {
+      "beliefs_high": [
+        "3/4",
+        "9/10"
+      ],
+      "subjective_means": [
+        "120",
+        "132"
+      ],
+      "subjective_variances": [
+        "1200",
+        "576"
+      ],
+      "risk_curvatures": [
+        "12",
+        "2"
+      ],
+      "price": "888/7",
+      "holdings": [
+        "-4/7",
+        "18/7"
+      ],
+      "cash_after_trade": [
+        "34268/49",
+        "14732/49"
+      ],
+      "terminal_wealth": [
+        [
+          "30348/49",
+          "32588/49"
+        ],
+        [
+          "32372/49",
+          "22292/49"
+        ]
+      ],
+      "one_supporting_state_price_vector": [
+        "117/140",
+        "23/140"
+      ]
+    },
+    "correct_belief_counterfactual": {
+      "beliefs_high": [
+        "3/4",
+        "3/4"
+      ],
+      "subjective_means": [
+        "120",
+        "120"
+      ],
+      "subjective_variances": [
+        "1200",
+        "1200"
+      ],
+      "risk_curvatures": [
+        "12",
+        "25/6"
+      ],
+      "price": "11040/97",
+      "holdings": [
+        "50/97",
+        "144/97"
+      ],
+      "cash_after_trade": [
+        "5223380/9409",
+        "4185620/9409"
+      ],
+      "terminal_wealth": [
+        [
+          "5902380/9409",
+          "5514380/9409"
+        ],
+        [
+          "6141140/9409",
+          "5023700/9409"
+        ]
+      ],
+      "one_supporting_state_price_vector": [
+        "261/388",
+        "127/388"
+      ]
+    },
+    "price_difference_from_counterfactual": "8856/679",
+    "one_share_short_terminal_gains": [
+      "-92/7",
+      "468/7"
+    ],
+    "physical_expected_short_gain": "48/7"
+  },
+  "information": {
+    "best_without_information": "0",
+    "conditional_optional_gains": [
+      "0",
+      "3"
+    ],
+    "informed_expected_gain_before_fee": "3/2",
+    "gross_value_of_information": "3/2",
+    "incremental_value_after_fee": "1/2",
+    "optimal_acquisition": "buy",
+    "if_signal_fully_reprices_quote_incremental_value": "-1"
+  },
+  "funding": {
+    "entry_capital_per_pair": "116",
+    "stress_survival_capital_per_pair": "134",
+    "maximum_entry_pairs": 1,
+    "maximum_stress_surviving_pairs": 0,
+    "requested_pairs": 1,
+    "entry_capital_required": "116",
+    "status": "entered",
+    "initial_long_asset": "95",
+    "initial_short_liability": "105",
+    "initial_locked_collateral": "126",
+    "initial_free_cash": "9",
+    "stress_long_mark": "80",
+    "stress_short_mark": "120",
+    "stress_marked_equity_before_fees": "95",
+    "stress_required_collateral": "144",
+    "stress_topup_required": "18",
+    "stress_margin_survives": false,
+    "stress_action": "fully_close_both_legs_at_stress_quotes",
+    "free_cash_after_stress_topup_if_survives": null,
+    "total_fee_at_closing": "2",
+    "convergence_net_gain": "8",
+    "divergence_net_gain": "-32",
+    "convergence_final_wealth": "133",
+    "divergence_final_wealth": "93",
+    "physical_expected_net_gain": "-2",
+    "common_terminal_payoffs": [
+      "90",
+      "110"
+    ],
+    "scope": "Specified two-path quotes and binding contract; not an unrestricted no-arbitrage equilibrium."
+  },
+  "limits": [
+    "Original invented populations, beliefs, sign panel and contracts; no empirical efficiency finding.",
+    "State prices differ from physical probabilities; selected profits are not identified alpha.",
+    "Belief counterfactual holds preferences/supply fixed; observed prices alone do not identify biased beliefs.",
+    "Funding outcomes depend on interim calls, locked proceeds, no long collateral and after-release fees.",
+    "Rational values remain exact strings; only the named family-tail approximation is floating point."
+  ]
+}

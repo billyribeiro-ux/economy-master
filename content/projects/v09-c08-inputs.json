@@ -1,0 +1,215 @@
+{
+  "case": "Moraine Mandate Review",
+  "provenance": "Entirely original synthetic teaching data. Future calendar labels are fictional, not observations or forecasts. No external datasets or live prices.",
+  "conventions": {
+    "frequency": "monthly",
+    "periods_per_year": 12,
+    "currency": "CU",
+    "returns": "simple total returns, decimal per period",
+    "fee_basis": "beginning_nav_charged_after_return_before_flow",
+    "benchmark": "cash_plus_market_excess",
+    "benchmark_fee": "0",
+    "attribution": "two_sector_static_with_boundary_rebalance",
+    "panel_policy": "all_entries_exits_inclusive_terminal_return",
+    "post_exit_cash_return": "0"
+  },
+  "monthly": {
+    "dates": [
+      "2027-01-31",
+      "2027-02-28",
+      "2027-03-31",
+      "2027-04-30",
+      "2027-05-31",
+      "2027-06-30",
+      "2027-07-31",
+      "2027-08-31"
+    ],
+    "risk_free": [
+      "0.002",
+      "0.002",
+      "0.002",
+      "0.002",
+      "0.002",
+      "0.002",
+      "0.002",
+      "0.002"
+    ],
+    "market_excess": [
+      "-0.015",
+      "-0.015",
+      "-0.015",
+      "-0.015",
+      "0.025",
+      "0.025",
+      "0.025",
+      "0.025"
+    ],
+    "style_factor": [
+      "-0.006",
+      "-0.006",
+      "0.014",
+      "0.014",
+      "-0.006",
+      "-0.006",
+      "0.014",
+      "0.014"
+    ],
+    "fund_gross": [
+      "-0.021",
+      "-0.015",
+      "-0.011",
+      "-0.005",
+      "0.027",
+      "0.033",
+      "0.037",
+      "0.043"
+    ],
+    "fee_rate": "0.002",
+    "initial_nav": "1000",
+    "end_contributions": [
+      "0",
+      "0",
+      "0",
+      "500",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "mandate": "Frozen at date 0, 1 January 2027: compare same-currency total-return wealth with the supplied monthly policy index. This index is stipulated frictionlessly investable at zero fee only in this case. Report gross and net outcomes, leverage/style exposures and every external cash flow. A fitted factor model supplements, never silently replaces, this benchmark.",
+    "factor_scope": "M is the excess return of the stipulated investable policy index over cash; Z is a synthetic zero-cost long-short style payoff per fixed CU notional. The observed sequences are constructed for an attribution exercise, not random samples proving a premium. Funding/short costs for any actual replication would need separate specification."
+  },
+  "attribution": {
+    "initial_wealth": "100",
+    "sectors": [
+      "Growth",
+      "Resilient"
+    ],
+    "periods": [
+      {
+        "label": "sleeve month 1",
+        "portfolio_weights": [
+          "0.7",
+          "0.3"
+        ],
+        "benchmark_weights": [
+          "0.6",
+          "0.4"
+        ],
+        "portfolio_sector_returns": [
+          "0.10",
+          "0.02"
+        ],
+        "benchmark_sector_returns": [
+          "0.08",
+          "0.03"
+        ]
+      },
+      {
+        "label": "sleeve month 2",
+        "portfolio_weights": [
+          "0.5",
+          "0.5"
+        ],
+        "benchmark_weights": [
+          "0.6",
+          "0.4"
+        ],
+        "portfolio_sector_returns": [
+          "-0.03",
+          "0.04"
+        ],
+        "benchmark_sector_returns": [
+          "-0.02",
+          "0.03"
+        ]
+      }
+    ],
+    "scope": "A separate fully invested long-only two-month sleeve, not a sector reconstruction of the eight-month fund. Holdings are fixed within each month, then costlessly rebalanced to the supplied next-month weights. No external flows, fees, taxes or other assets."
+  },
+  "panel": {
+    "period_labels": [
+      "Y1",
+      "Y2",
+      "Y3",
+      "Y4"
+    ],
+    "ranking_end_period": 2,
+    "initial_cohort": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "select_top": 2,
+    "funds": [
+      {
+        "id": "A",
+        "entry_period": 1,
+        "exit_period": null,
+        "net_returns": [
+          "0.10",
+          "0.10",
+          "-0.05",
+          "-0.05"
+        ]
+      },
+      {
+        "id": "B",
+        "entry_period": 1,
+        "exit_period": null,
+        "net_returns": [
+          "0.05",
+          "0.05",
+          "0.08",
+          "0.08"
+        ]
+      },
+      {
+        "id": "C",
+        "entry_period": 1,
+        "exit_period": 3,
+        "net_returns": [
+          "0.20",
+          "0",
+          "-0.50",
+          null
+        ]
+      },
+      {
+        "id": "D",
+        "entry_period": 1,
+        "exit_period": null,
+        "net_returns": [
+          "-0.10",
+          "-0.10",
+          "0.02",
+          "0.02"
+        ]
+      },
+      {
+        "id": "E",
+        "entry_period": 3,
+        "exit_period": null,
+        "net_returns": [
+          null,
+          null,
+          "0.15",
+          "0.15"
+        ]
+      },
+      {
+        "id": "F",
+        "entry_period": 2,
+        "exit_period": 4,
+        "net_returns": [
+          null,
+          "0.30",
+          "0",
+          "-0.20"
+        ]
+      }
+    ],
+    "scope": "Separate four-year synthetic fund universe. All entries are announced and investable at that year opening. Exits occur after that year total net liquidation return. Returns include fund fees and liquidation proceeds; no extra investor dealing cost. Fixed-cohort strategies retain closure proceeds as zero-return cash; an all-available strategy instead rebalances equally at each next opening. No backfilled or imputed pre-entry returns. Initial cohort is fixed at date 0; ranking occurs after Y2, and Y3-Y4 is the untouched outcome window."
+  }
+}

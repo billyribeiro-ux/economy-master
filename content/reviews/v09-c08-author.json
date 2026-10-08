@@ -1,0 +1,302 @@
+{
+  "chapter": "v09-c08",
+  "title": "Active management and performance evaluation",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "author": "financial diagnosis specialist",
+  "assignment": "production/v09-middle-assignments.json",
+  "state": "author-review-complete",
+  "status": "Author review passed; coordinator acceptance, dependency gates and publication remain separate.",
+  "canonical_outcome": "Assess whether performance reflects skill, risk, selection or luck.",
+  "counts": {
+    "chapter_words": 6891,
+    "worked_examples": 4,
+    "exercises": 8,
+    "complete_solutions": 8,
+    "source_records": 5,
+    "owned_paths": 9,
+    "hashed_payloads": 8
+  },
+  "coverage": {
+    "Benchmark choice": [
+      "mandate",
+      "decision",
+      "worked-1",
+      "exercise-1",
+      "exercise-8"
+    ],
+    "alpha": [
+      "alpha",
+      "worked-1",
+      "exercise-3",
+      "exercise-8"
+    ],
+    "attribution": [
+      "attribution",
+      "worked-2",
+      "exercise-4",
+      "exercise-7"
+    ],
+    "information ratio": [
+      "ratios",
+      "worked-1",
+      "exercise-2",
+      "exercise-3"
+    ],
+    "persistence": [
+      "persistence",
+      "worked-4",
+      "exercise-6",
+      "exercise-8"
+    ],
+    "fees": [
+      "cash",
+      "worked-3",
+      "exercise-1",
+      "exercise-5"
+    ],
+    "survivorship": [
+      "persistence",
+      "worked-4",
+      "exercise-6",
+      "exercise-8"
+    ]
+  },
+  "gates": {
+    "arithmetic": "pass",
+    "reasoning": "pass",
+    "solutions": "pass",
+    "sources": "pass within inspected scopes",
+    "instruction": "pass",
+    "structure": "pass within the owned fragment and portable bundle; full assembled library remains coordinator-owned"
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v09-c08.html",
+      "bytes": 53795,
+      "sha256": "6ac6cdfca13033ceca2fb34a77d9ca3537beb5824c916355e14e380c1826136b"
+    },
+    {
+      "path": "content/projects/v09-c08-inputs.json",
+      "bytes": 5497,
+      "sha256": "76ec3fc7444fd12e6c08b93a30fe449171c462040e5e0740096f158bf2ffec2a"
+    },
+    {
+      "path": "content/projects/v09-c08-analysis.py",
+      "bytes": 19074,
+      "sha256": "dfd7d74515e73ebde18cba74b01ac5915969811cbcc9cb507f2ab517c188860f"
+    },
+    {
+      "path": "content/projects/v09-c08-output.json",
+      "bytes": 19303,
+      "sha256": "aaaf83e76aa68794c2c437ae1c12bb04234ba0ce404f7fe402cc4459943a4388"
+    },
+    {
+      "path": "content/projects/v09-c08-manifest.json",
+      "bytes": 954,
+      "sha256": "a450f9055a32c2b138e13f78940d20f6d16a30bddb4cd21ee86baaf352509462"
+    },
+    {
+      "path": "content/projects/v09-c08-README.txt",
+      "bytes": 14268,
+      "sha256": "c6465b1b7b509101cdd0ab27a6c3f7296e7c65000e734c8e7adb1e91f1ad78c1"
+    },
+    {
+      "path": "scripts/check_v09_c08.py",
+      "bytes": 25645,
+      "sha256": "03e21f4a94ffeb323f7ad7798871996ef2ea1304867ec0117074f21588ab06f7"
+    },
+    {
+      "path": "content/reviews/v09-c08-sources.json",
+      "bytes": 4440,
+      "sha256": "65b1e36e108ee2b2b717ce2e7369da59a4428d844236e1017bd34daa6de7ac98"
+    }
+  ],
+  "derivation_review": [
+    "Ex-ante mandate/benchmark, supplementary factor comparator and peer population are different defined questions. Active mean is not relabeled alpha or skill. The closed-market aggregate active/passive identity uses beginning-dollar weights, a complete universe and an explicit conditional net-cost ordering.",
+    "Tracking-error sample variance uses n-1 and the active differential; Sharpe uses the period-specific cash differential. Variance decomposition includes active-benchmark covariance. Zero denominators return undefined, and scale invariance does not imply unlimited implementation.",
+    "The additive-horizon variance derivation counts h diagonal terms and 2(h-k) covariance pairs at lag k. Square-root scaling requires stable moments and zero serial covariances; it is not exact compounded-return risk. The t=IR*sqrt(n) identity is separated from valid sampling inference.",
+    "OLS intercept, slopes and the active-mean decomposition follow from full-rank normal equations with an intercept. The disclosed synthetic factor construction is not a pricing model. Observed factor means and explanatory fit do not establish premiums or skill.",
+    "Constant beginning-NAV fees shift means/intercepts and preserve centered moments and residuals. Classic fixed-design coefficient variance is derived from the linear estimator with covariance sigma-squared I; residual degrees of freedom and unvalidated normal-reference/selection assumptions are explicit.",
+    "Single-period allocation/selection/interaction identity proved by expansion and the zero sum of active weights. Alternative grouping, zero-sector-return boundaries, intraperiod trading and causal limitations are explained.",
+    "Multiperiod product difference is proved by telescoping hybrid portfolio/benchmark wealth. The exact chronological link is disclosed and its component order dependence demonstrated; arithmetic summation, compounding active differences and relative terminal wealth are distinct quantities.",
+    "Fee and contribution ordering is explicit. The fund and benchmark receive the same contribution after month 4 return and fee. TWR and MWR have different bases. Positive initial capital and nonnegative intervening contributions give a strictly increasing terminal-value polynomial and unique positive gross MWR root.",
+    "Panel includes all entrants/exits and complete terminal payouts. Initial cohort is fixed at date 0, ranking uses only Y1-Y2, and holdout allocations are frozen before Y3. Selected closure proceeds stay in zero-return cash. Dynamic all-available rebalancing and hindsight survivor filtering are separate strategies.",
+    "Top-set permutation reference assumes exchangeability rather than inferring it. Small-sample persistence, selected intervals and regression coefficients are not presented as statistical or prospective skill findings. Decision criteria include actual mandate, costs, capacity and independent evidence."
+  ],
+  "worked_example_review": [
+    {
+      "number": 1,
+      "anchor": "worked-1",
+      "finding": "All eight return rows, orthogonal factor coefficients, benchmark-active means, n-1 tracking error, Sharpe, conditional horizon statistics, residual degrees of freedom and omitted-factor intercept reconcile independently."
+    },
+    {
+      "number": 2,
+      "anchor": "worked-2",
+      "finding": "Both periods have complete sector weights/returns, A/S/I and beginning/end holdings. Exact 108.138 versus 106 CU wealth closes to 2.138 percentage points; links, relative wealth denominator and noncausal limits are explicit."
+    },
+    {
+      "number": 3,
+      "anchor": "worked-3",
+      "finding": "Eight complete NAV/fee/flow rows reconcile with independent contribution lots. Fund and matched benchmark TWR, unique monthly MWR, fee total and currency opportunity gap are computed with the same month-4 timestamp."
+    },
+    {
+      "number": 4,
+      "anchor": "worked-4",
+      "finding": "Every fund entry/exit and terminal return retained; initial ranking, closure cash, survivor distortion, all-cohort and all-available results and the exchangeable top-set reference are independently computed."
+    }
+  ],
+  "exercise_review": [
+    {
+      "number": 1,
+      "prompt": "Close a complete active/passive market and fee ledger; compare value weights with equal manager weights.",
+      "solution": "Gross total profit 80 CU; active-dollar gross 8%; active net 7 1/3%, passive net 7.9%; total net profit 75.6 CU; equal-manager gross mean 9.5%. Full condition and individual-manager explanation supplied.",
+      "status": "complete"
+    },
+    {
+      "number": 2,
+      "prompt": "Estimate four-observation IR and compare zero-serial-covariance with lag-one-correlated additive annual scaling.",
+      "solution": "Mean 0.005; sample variance 1/6000; monthly IR 0.387298; annual independent variance 1/500 and IR 1.341641; lag-one-adjusted variance 7/2400 and ratio 1.110984; compound/inference limitations explicit.",
+      "status": "complete"
+    },
+    {
+      "number": 3,
+      "prompt": "Prove synthetic normal equations; compare factor omission and constant fee increase.",
+      "solution": "Gross alpha 0.001, net -0.001 and slopes 1.2/0.5; market-only net alpha 0.001. Fee 0.003 gives active mean 0.001, full alpha -0.002, market-only alpha zero and unchanged TE with IR 0.132288.",
+      "status": "complete"
+    },
+    {
+      "number": 4,
+      "prompt": "Calculate sector A/S/I, identify omitted interaction, and change weights to benchmark.",
+      "solution": "Original totals 0.005/0.008/0.003; omitted amount 0.003. Equal weights give portfolio return 0.068 and effects 0/0.008/0; no causal-skill interpretation.",
+      "status": "complete"
+    },
+    {
+      "number": 5,
+      "prompt": "Reconcile two dated fee contracts and an intervening contribution; solve TWR and MWR.",
+      "solution": "Beginning-NAV fees give 186.01 CU, TWR -2.99%, unique monthly MWR approximately -4.738167%. Ending-wealth fees give 186.1299 CU and TWR -2.9701%; both complete cash ledgers and fee-date reasoning supplied.",
+      "status": "complete"
+    },
+    {
+      "number": 6,
+      "prompt": "Audit frozen initial-cohort selection, closure cash and entrants; change terminal loss and compute exchangeable reference.",
+      "solution": "A/C selected; outcome -29.875%; survivor distortion 20.125 percentage points; all initial cohort -9.7675%. C loss -20% gives selected -14.875%, all initial -2.2675%, dynamic four-year return 13.6875%; zero-overlap reference 1/6 under its stated assumption.",
+      "status": "complete"
+    },
+    {
+      "number": 7,
+      "prompt": "Prove telescoping attribution and reverse the period schedules.",
+      "solution": "Original linked effects 0.01038/0.005848/0.005152; reversed 0.010325/0.00592/0.005135. Both total 0.02138; compounded active differences 0.02108. Full proof and interpretation supplied.",
+      "status": "complete"
+    },
+    {
+      "number": 8,
+      "prompt": "Compute fee-adjusted selected-alpha nominal intervals and write a full decision audit.",
+      "solution": "Net alpha 0.15% monthly; gross nominal interval [-0.092%,0.692%], net [-0.242%,0.542%]. Full memo/evaluation criteria cover every requested benchmark/cohort/model/cost/inference/holdout/implementation defect without validating post-selection coverage.",
+      "status": "complete"
+    }
+  ],
+  "numerical_anchors": {
+    "monthly_net_active_mean": "1/500",
+    "tracking_error_sample_variance": "1/17500",
+    "net_information_ratio_approx": 0.2645751311064591,
+    "gross_factor_alpha": "1/1000",
+    "net_factor_alpha": "-1/1000",
+    "net_market_only_alpha": "1/1000",
+    "factor_loadings": [
+      "6/5",
+      "1/2"
+    ],
+    "factor_residual_df": 5,
+    "factor_residual_sse": "9/125000",
+    "classic_alpha_variance": "4401/2000000000",
+    "net_twr_eight_months_approx": 0.07173667525029302,
+    "fund_terminal_nav_cu_approx": 1641.039861312793,
+    "benchmark_terminal_nav_cu_approx": 1611.9506086051956,
+    "matched_terminal_difference_cu_approx": 29.089252707597314,
+    "fund_monthly_mwr_approx": 0.013522542670350912,
+    "benchmark_monthly_mwr_approx": 0.010824388409675478,
+    "sleeve_compound_gap": "1069/50000",
+    "sleeve_relative_wealth_return": "1069/53000",
+    "selected_panel_holdout_return": "-239/800",
+    "initial_cohort_holdout_return": "-3907/40000",
+    "all_available_four_year_return": "2561/32000",
+    "hindsight_survivor_four_year_return": "22329/160000"
+  },
+  "numerical_checks": {
+    "status": "pass",
+    "groups": 9,
+    "comparisons": 318,
+    "meaningful_domain_rejections": 17,
+    "coverage": [
+      "Independent contrast returns, means, n-1 risks and conditional horizon ratios",
+      "Orthogonal-regressor coefficient/uncertainty oracle, omitted factor and constant-fee intervention",
+      "All dated cash/fee rows from independent contribution lots, quadratic MWR and changed flow timestamp",
+      "Currency holdings, four-counterfactual attribution, exact chronological and reversed links",
+      "All entries/exits, independent selection and liquidation ledgers, survivor distortion and terminal-loss edit",
+      "All remaining aggregate arithmetic, autocovariance, alternative fee and nominal interval exercise anchors",
+      "Positive constant differential has undefined ratio; explicit full liquidation remains in selected cohort",
+      "Seventeen contradictory policy, timing, rank, wealth, attribution and survivorship contracts rejected",
+      "Complete reference, manifest, source/HTML structure and isolated normal/optimized offline execution"
+    ]
+  },
+  "commands_and_contracts": [
+    {
+      "command": "python3 book/scripts/check_v09_c08.py",
+      "result": "Pass; initial 317 comparisons, then 318 including the coordinator-requested fragment h1 contract."
+    },
+    {
+      "command": "Capture checker import and check() stdout/stderr; json.dumps(result, allow_nan=False)",
+      "result": "Final check quiet, strict JSON; 9 groups, 318 comparisons and 17 domain rejections passed."
+    },
+    {
+      "command": "Run isolated copies of input/script from another working directory under normal Python and python -O",
+      "result": "Both portable offline executions produce full preserved output and empty stderr."
+    },
+    {
+      "command": "Verify four-file manifest and eight final non-author SHA-256/byte-size records",
+      "result": "Manifest passed in checker; final author payload hashes recorded below."
+    }
+  ],
+  "source_review": {
+    "record": "content/reviews/v09-c08-sources.json",
+    "existing_exact_records": [
+      "v09-c01-gips-methods"
+    ],
+    "new_inspected_records": [
+      "v09-c08-sharpe-arithmetic",
+      "v09-c08-sharpe-ratio",
+      "v09-c08-cfa-attribution",
+      "v09-c08-carhart-persistence"
+    ],
+    "scope": "Sharpe author-hosted 1991 aggregate/benchmark argument and 1994 ratio/horizon/correlation sections; actual Bacon 2019 PDF printed pp. 10-17 on attribution conventions/linking; Carhart 1997 publisher full text Data, performance models, lagged sorting and model-sensitive alpha persistence. Existing GIPS calculation/fee perimeter reused exactly within prior inspection.",
+    "qualification": "No historical datasets, figures or numerical findings imported; no present performance, universal cost ordering, priced-factor-premium or compliance claim. All sample data and presented examples/solutions are original."
+  },
+  "resolved_findings": [
+    {
+      "origin": "coordinator architecture review",
+      "finding": "Keep the sample factor construction separate from priced premiums, retain selection dates and closures, and use an identical fee/flow timestamp in every return comparison.",
+      "resolution": "Those contracts appear in inputs, chapter, README and output. Full return/entry/exit and closure-cash ledgers are explicit; the month-4 contribution is after return and fee for both fund and benchmark."
+    },
+    {
+      "origin": "coordinator manuscript structural review",
+      "finding": "The fragment included its own eyebrow and h1 although the shared builder supplies the chapter title.",
+      "resolution": "Removed duplicate eyebrow/h1 and used an instructional h2. The focused checker now requires zero fragment h1 elements, preserving the shared single-h1 page contract."
+    },
+    {
+      "origin": "author scope and boundary review",
+      "finding": "Date labels, null histories, complete-loss observations and undefined ratios require explicit contracts to avoid silent interpretation.",
+      "resolution": "Consecutive calendar month-end validation; all live/terminal returns required and pre-entry/post-exit backfill rejected; panel complete loss allowed only as an explicit terminal observation; zero TE and zero residual standard errors produce JSON null ratios with stated limits."
+    }
+  ],
+  "open_findings": [],
+  "limitations": [
+    "All cases are synthetic; future-looking dates are labels, not actual data or forecasts.",
+    "Exact accounting, fitted coefficients and conditional standard errors do not establish priced factors, significance, manager skill or future returns.",
+    "The monthly model has a fixed benchmark/fee policy and nonnegative-contribution root contract; the attribution sleeve and four-year panel are separate bounded cases.",
+    "No transaction-level general attribution, general IRR, missing-data imputation, manager database, selection correction or standards-compliance engine is claimed.",
+    "All future chapter routes remain visibly planned; acceptance follows the agreed prerequisite dependency order.",
+    "Agent author checks are not independent human certification; the coordinator owns subject-matter acceptance, assembled structural/UI/print validation and publishing."
+  ],
+  "handoff": "Nine owned paths complete and frozen after final author review and the coordinator structural repair; no shared files or hosting changed and no child agents used."
+}

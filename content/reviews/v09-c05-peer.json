@@ -1,0 +1,303 @@
+{
+  "chapter": "v09-c05",
+  "title": "Arbitrage, state prices and discount factors",
+  "date": "2026-10-08",
+  "reviewer": "financial diagnosis specialist, separate from coordinating author",
+  "assignment": "production/v09-middle-c05-peer-assignment.json",
+  "state": "peer-review-complete",
+  "status": "pass; no open material finding; coordinator retains acceptance and publication authority",
+  "read_scope": [
+    "content/chapters/v09-c05.html",
+    "content/projects/v09-c05-inputs.json",
+    "content/projects/v09-c05-analysis.py",
+    "content/projects/v09-c05-output.json",
+    "content/projects/v09-c05-manifest.json",
+    "content/projects/v09-c05-README.txt",
+    "scripts/check_v09_c05.py",
+    "content/reviews/v09-c05-sources.json",
+    "content/reviews/v09-c05-author.json"
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v09-c05.html",
+      "bytes": 38851,
+      "sha256": "ca42871489dbc436dcf096a1ff718db50de993e5182d84b35eae844c91a219d0"
+    },
+    {
+      "path": "content/projects/v09-c05-inputs.json",
+      "bytes": 802,
+      "sha256": "290b97c579684d4a10a460e9b9bd8ed60d524acef489e3ab10188fd15371ccf9"
+    },
+    {
+      "path": "content/projects/v09-c05-analysis.py",
+      "bytes": 11888,
+      "sha256": "dd2b8c4ca92b43346694eab9a3c1f2b7dd416eace43a47a01c1314021ca3e7ad"
+    },
+    {
+      "path": "content/projects/v09-c05-output.json",
+      "bytes": 7907,
+      "sha256": "33e70ffd7214b5f51c2de2c26c431c7a6bcfa0b3b73b6e5405ce17c84e6866c2"
+    },
+    {
+      "path": "content/projects/v09-c05-manifest.json",
+      "bytes": 950,
+      "sha256": "01711a36d9f0feeac57eedcbd12e60f7eab7e82db413c2ee9f3f4d4b76ec3bef"
+    },
+    {
+      "path": "content/projects/v09-c05-README.txt",
+      "bytes": 7916,
+      "sha256": "bf1a2b48ad759ca3ee9c3da62d18fa78ab8005bd5bf9af9a40381180e5d67020"
+    },
+    {
+      "path": "scripts/check_v09_c05.py",
+      "bytes": 15665,
+      "sha256": "7e8d4f8c2ab4a89def492061e36d0445fd8ddbbb228066fd59f80e0bd195d164"
+    },
+    {
+      "path": "content/reviews/v09-c05-sources.json",
+      "bytes": 1907,
+      "sha256": "300cd38a5230065b27446ec2c5222fb3afc09786c11aa02b86769a85d7e72885"
+    },
+    {
+      "path": "content/reviews/v09-c05-author.json",
+      "bytes": 8743,
+      "sha256": "03411660598efafd276932a84096e5509548d0032b77d5ca14e3396626f5da90"
+    }
+  ],
+  "full_content_review": {
+    "manuscript": "All 117 source lines read, including four fully worked examples, every one of eight complete prompt/solution pairs, proof arguments, teach-back and retention benchmark.",
+    "code_and_assets": "All 265 analysis lines, all 280 checker lines, complete 369-line output, inputs, README, manifest, proposed sources and author record inspected.",
+    "ownership": "Only this peer review record was written; no author, shared, hosting or other specialist files changed during peer audit."
+  },
+  "proof_review": [
+    {
+      "topic": "Finite first fundamental theorem",
+      "finding": "Pass. Financed columns span exactly zero-cost payoffs with the positive-price unit bond. The simplex is compact and disjoint from the closed finite-dimensional zero-cost subspace. The minimum squared-distance residual is nonzero and orthogonal to that subspace; its feasible-segment derivative yields d_s >= ||d||^2 > 0. Bond normalization then prices every column. Sufficiency covers both nonzero nonnegative payoffs and negative-cost zero payoffs. No completeness or investor utility is silently assumed."
+    },
+    {
+      "topic": "Completeness and uniqueness",
+      "finding": "Pass. Full row rank makes the transpose kernel trivial. In the incomplete no-arbitrage case, small positive/negative null-space perturbations preserve strict positivity and quoted prices. The orthogonal residual of a nonreplicable claim changes its value under those extensions, proving claim-specific uniqueness iff replicability. Redundant holdings are correctly distinguished from state-price uniqueness."
+    },
+    {
+      "topic": "Incomplete price bounds",
+      "finding": "Pass. The high-state digital family, strict endpoint exclusion and explicit sub/superhedge certificates are derived for the declared equal-spaced three-state market. No assertion that all incomplete-market endpoint bounds share this form. The changed-stock-price branch with a nonzero lower hedge also closes."
+    },
+    {
+      "topic": "SDF, physical and pricing laws",
+      "finding": "Pass. m=q/pi, E[m]=B, Q=q/B and unit-cost gross return pricing have consistent units. Changing positive physical probabilities at fixed traded prices changes m and physical moments without changing q or Q. Zero-cost excess payoffs are not called returns on zero capital."
+    },
+    {
+      "topic": "Covariance bound and attainability",
+      "finding": "Pass. The covariance identity and absolute Cauchy bound have correct signs and boundary cases. Equality requires perfect centered proportionality, with negative sign for a positive premium. The priced tight-bound payoff is actually replicated in this complete unrestricted market; an incomplete or constrained menu is not assumed to attain every point satisfying the moment inequality."
+    },
+    {
+      "topic": "Marginal utility and constraints",
+      "finding": "Pass. The Euler condition is restricted to increasing differentiable concave utility, positive consumption and feasible two-sided local trades. The one-sided buy-only derivative has the correct <= inequality. A constructed consumption kernel is explicitly separate from an aggregate equilibrium or empirical consumption calibration."
+    }
+  ],
+  "independent_calculation_method": "Executed a separate read-only exact Fraction audit through stdin. Used determinant expansion over permutations and Cramer solutions for primal/dual pricing rather than the benchmark Gaussian solver; pairwise-state covariance sums rather than either supplied centered-moment or second-moment implementation; direct state-by-state initial/final cash certificates and an explicit numerical witness for the projection proof.",
+  "independent_math_comparisons": 140,
+  "separate_checker_and_hash_comparisons": 18,
+  "total_peer_comparisons": 158,
+  "independent_anchors": {
+    "state_prices": [
+      "6/25",
+      "12/25",
+      "6/25"
+    ],
+    "matrix_determinant": "1600",
+    "original_H_replica": [
+      "-20",
+      "1/2",
+      "1/2"
+    ],
+    "original_H_price": "168/5",
+    "overquote_34_banked_sure_payoff": "5/12",
+    "exercise1_replica": [
+      "-10",
+      "3/10",
+      "1/2"
+    ],
+    "exercise1_price": "24",
+    "underquote_23_banked_sure_payoff": "25/24",
+    "arrow_replicas": [
+      [
+        "5/2",
+        "-1/40",
+        "1/40"
+      ],
+      [
+        "-3/2",
+        "1/40",
+        "-1/20"
+      ],
+      [
+        "0",
+        "0",
+        "1/40"
+      ]
+    ],
+    "call_quote24_banked_payoffs": [
+      "1/4",
+      "5/4",
+      "1/4"
+    ],
+    "call_quote0": "Both low and high Arrow claims have zero price; a positive-probability free gain is attainable.",
+    "projection_witness": {
+      "simplex_point": [
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      "residual": [
+        "1/6",
+        "1/3",
+        "1/6"
+      ],
+      "squared_norm": "1/6",
+      "financed_span_projection": [
+        "1/3",
+        "-1/3",
+        "1/3"
+      ]
+    },
+    "two_state_counterexample": "Three bonds minus one stock costs zero and pays (3,1), despite a unique linear pricing functional.",
+    "high_digital_strict_interval": [
+      "0",
+      "12/25"
+    ],
+    "quote_9_over_25_positive_extension": [
+      "9/25",
+      "6/25",
+      "9/25"
+    ],
+    "affine_claim_price": "192/5",
+    "retention_claim_price": "168/25",
+    "retention_quote_half_banked_payoffs": [
+      "1/48",
+      "25/48",
+      "1/48"
+    ],
+    "original_stock_expected_gross": "13/12",
+    "alternative_stock_expected_gross": "1",
+    "discount_return_covariances": [
+      "-1/25",
+      "1/25"
+    ],
+    "kernel_variance": "12/625",
+    "stock_return_variance": "49/576",
+    "stock_squared_sharpe": "1/49",
+    "kernel_squared_bound": "1/48",
+    "tight_bound_states": [
+      "493/600",
+      "637/600",
+      "733/600"
+    ],
+    "tight_bound_holdings": [
+      "277/600",
+      "3/500",
+      "-1/500"
+    ],
+    "tight_bound_price": "1",
+    "tight_bound_premium": "1/50",
+    "log_kernel": [
+      "6/5",
+      "24/25",
+      "4/5"
+    ],
+    "buy_only_H_derivative": "-2/5",
+    "incomplete_negative_extension": "(3/5,-6/25,3/5) prices the bond/stock but does not exclude a positive extension; listing the middle digital at -6/25 creates a zero-cost banked payoff (1/4,5/4,1/4).",
+    "additional_asymmetric_variant": {
+      "stock_price": "104",
+      "call_price": "14",
+      "strict_digital_bounds": [
+        "1/5",
+        "29/50"
+      ],
+      "tested_digital_quotes": [
+        "19/100",
+        "1/5",
+        "3/10",
+        "29/50",
+        "3/5"
+      ],
+      "result": "All dual equations, endpoint/outside certificates and state cash close independently."
+    }
+  },
+  "exercise_review": [
+    {
+      "number": 1,
+      "status": "pass",
+      "coverage": "New claim replication, both prices, reversed underquote trade and every dated position."
+    },
+    {
+      "number": 2,
+      "status": "pass",
+      "coverage": "All three Arrow replicas; negative and zero state-price arbitrages; strict rather than weak positivity."
+    },
+    {
+      "number": 3,
+      "status": "pass",
+      "coverage": "All requested proof steps and separate two-state linear-but-nonpositive pricing counterexample."
+    },
+    {
+      "number": 4,
+      "status": "pass",
+      "coverage": "Positive incomplete family, interior quote, both endpoints, affine unique price and redundant-security rank."
+    },
+    {
+      "number": 5,
+      "status": "pass",
+      "coverage": "Both physical kernels and normalization, all asset prices, expected stock returns, covariance signs and wrong physical discount."
+    },
+    {
+      "number": 6,
+      "status": "pass",
+      "coverage": "Both variances, exact squared bounds, tight payoff price/states/holdings/premium and attainable covariance sign."
+    },
+    {
+      "number": 7,
+      "status": "pass",
+      "coverage": "Log marginal rate of substitution, H valuation, buy-only derivative, concavity and missing aggregate-equilibrium conditions."
+    },
+    {
+      "number": 8,
+      "status": "pass",
+      "coverage": "Existence versus one negative extension, unidentified untraded claim, and actual negative-quote listing/financing certificate with complete evaluation criteria."
+    }
+  ],
+  "sources_review": [
+    {
+      "id": "v09-c05-princeton-pricing",
+      "url": "https://markus.scholar.princeton.edu/document/195",
+      "status": "Actual official 63-page PDF independently opened. Inspected notation/no-arbitrage definitions, price functional and finite theorem in slides 27–32, uniqueness/completeness through slide 39, and state-price/SDF/covariance representations through slide 45. Source scope matches chapter use; original projection proof checked independently."
+    },
+    {
+      "id": "v09-c05-cochrane-equation",
+      "url": "https://www.johnhcochrane.com/s/samplechapters-dy5d.pdf",
+      "status": "Actual author-hosted 68-page PDF independently opened; copyright is 2001. Inspected Chapter 1 Euler derivation and payoff/return distinction, covariance pricing and printed page 20 mean-variance bound. Chapter properly qualifies attainability and makes no historical empirical claim."
+    }
+  ],
+  "supplied_checker": {
+    "execution": "Imported and called check() once under stdout/stderr capture, then serialized with allow_nan=False.",
+    "quiet": true,
+    "strict_json": true,
+    "status": "pass",
+    "groups": 7,
+    "comparisons": 680,
+    "meaningful_domain_rejections": 21,
+    "scope": "Additional evidence after independent calculations and full proof/code reading, not treated as a proof of the chapter."
+  },
+  "artifact_evidence": {
+    "author_payload_hashes": "All eight authored byte sizes and SHA-256 values independently match the current files.",
+    "complete_reference_and_manifest": "Read and inspected; included supplied checker verifies full output and all four distributed manifest payloads.",
+    "portable_execution": "Supplied focused run tests both stdout mode and explicit --input/--output mode from isolated temporary copies and a different working directory."
+  },
+  "findings": [],
+  "open_material_findings": [],
+  "recommendation": "Ready for coordinator dependency-ordered acceptance. No author repair requested by this independent review.",
+  "limitations": [
+    "Finite synthetic one-period model only; no empirical market certification, continuous-time extension or actual trading feasibility is established.",
+    "Agent peer review is independent of the chapter author but is not independent human academic certification. Full-library UI/print/publishing gates remain coordinator-owned."
+  ]
+}
