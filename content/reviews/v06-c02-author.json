@@ -1,0 +1,103 @@
+{
+  "chapter": "v06-c02",
+  "title": "Growth and the Solow model",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "state": "review",
+  "review_type": "Specialist author mathematical, arithmetic, instructional and scoped primary-source review; root independently reads and alone accepts",
+  "reviewed": {
+    "specification_and_interface": "Read current MASTER_PLAN, book production plan/AGENTS, STATUS, exact canonical c02 specification and v06-opening-assignments contract. Drafted against c01 fixed physical-capital versus measured-accounting interface; c01 was not yet available at the initial interface read. Sent core notation and boundary conditions to root and the c03 author. Root subsequently reported a complete independent manuscript/solution read with no material finding. Acceptance remains prerequisite-ordered and root-owned.",
+    "timing_units_and_normalization": "Defined beginning capital, current physical output/consumption/gross investment, old-stock depreciation and next-period usability. Defined workers at fixed hours and the conditions for a population interpretation; labor-augmenting A differs from Hicks-neutral Z. Defined chosen normalized production units rather than treating the Cobb–Douglas coefficient as dimensionless across arbitrary units. Derived aggregate, per-worker and per-effective-worker laws, exact future product denominator Gamma=(1+n)(1+g), and maintenance d=delta+n+g+ng. Explained dilution versus physical destruction, d versus a depreciation fraction, and continuous rates versus discrete approximations. No current-dollar or chain-volume addition is asserted.",
+    "steady_states_and_convergence": "Derived the unique positive Cobb–Douglas fixed point for positive saving and maintenance, retaining the additional zero fixed point. Proved sign of change and strict map monotonicity under alpha in (0,1), delta in [0,1], n,g nonnegative, Gamma positive, d positive. Monotone bounded sequences have a positive limit; continuity and positive fixed-point uniqueness identify it. The proof establishes no overshoot and convergence only for strictly positive initial capital. Derived the local multiplier and its [alpha,1) bound, explicitly distinguishing local approximation from exact global speed. Separate cases cover zero capital, zero saving, full saving, zero maintenance and full depreciation. The changed linear production exercise explicitly removes diminishing returns.",
+    "levels_growth_and_golden_rule": "Derived balanced aggregate, per-worker and per-effective-worker growth; excluded percentage growth of zero consumption. Separated saving-induced levels/transitions from exogenous sustained productivity growth and technology-level versus technology-growth experiments. Derived golden-rule globality from strict concavity, feasible endpoints and the unique interior first-order condition; proved the feasible saving rate equals alpha. Explicitly compared whole consumption paths when reducing excessive saving and retained the impact sacrifice for a saving increase from below. No automatic lifetime-welfare or optimal-household-saving claim is made.",
+    "growth_accounting_and_identification": "Derived an exact finite-log identity for positive data and fixed stipulated alpha, separately computing ordinary gross factors and log changes. Distinguished Z=A^(1-alpha), measured stock versus capital services, factor-share interpretation assumptions and approximate weighted percentage arithmetic. Constructed and checked an explicit utilization technology reproducing identical observed K,L,Y with constant true A. The residual is an accounting object under maintained input definitions; it neither identifies technology nor a policy cause. The open critique solution supplies concrete alternative mechanisms, counterfactual requirements, measurement needs and a time-horizon argument.",
+    "worked_examples": "Three complete original synthetic cases: dated stock/dilution reconciliation and approximation error; saving increases, golden rule and overaccumulation consumption dominance; exact growth accounting and utilization observational equivalence. Large synthetic teaching-period rates are explicitly not observed annual estimates.",
+    "exercise_solution_alignment": "Read all eight prompts and their corresponding complete solutions. Recomputed the rising-stock/falling-ratio ledger; cube-root fixed point and global proof; changed g and separate A-level shock; inverse steady-consumption target with an all-date dominance proof; all boundary cases and the altered linear technology; cross-economy conditional-convergence critique; two-input finite growth accounting; and the program-evaluation critique. The last exercise has explicit evaluation criteria and illustrative reasoning rather than a claimed unique empirical answer. Teach-back is answered and a fresh delayed check has a full numeric/conceptual solution.",
+    "lab": "Two original offline files: a fixed square-root-technology standard-library transition script and README. Script exposes a quiet benchmark and simulate API, fixed physical units/rates/period convention, actual aggregate ledger, independently evaluated normalized discrepancy, 40 transitions plus a separate terminal state, positive fixed-point references and a zero-initial-state flag. The supported changes are initial k, saving and bounded integer horizon; invalid signs, bounds, booleans, nonfinite inputs and wrong types are rejected. Output is floating point and openly distinguished from exact first steps and analytic limits. No external inputs, installations, forecasts or fitted causal effects.",
+    "sources": "Retrieved actual official MIT PDFs and the author-hosted Alogoskoufis chapter, not just course overview links. The three source proposals name exact inspected passages and distinguish discrete versus continuous conventions, source assumptions versus the independently developed cases, and actual inspection scope. Source exercise banks, figures and empirical tables were not reproduced. Only established method content predating the edition boundary is used."
+  },
+  "artifacts": [
+    "content/chapters/v06-c02.html",
+    "content/projects/v06-c02-solow.py",
+    "content/projects/v06-c02-README.txt",
+    "scripts/check_v06_c02.py",
+    "content/reviews/v06-c02-sources.json",
+    "content/reviews/v06-c02-author.json"
+  ],
+  "artifact_sha256": {
+    "content/chapters/v06-c02.html": "3f271c218c43b65832e7124dd70d635eb2925692783cb432ec2a63ece541b74e",
+    "content/projects/v06-c02-solow.py": "d553d783683ee5700dc88fdf5fa98ee3269be6efd34439aa2a00b041f7d357ae",
+    "content/projects/v06-c02-README.txt": "427a55e3009cbe968069a5976169b308841deae7eab7b74e91354ba1b609e0b6",
+    "scripts/check_v06_c02.py": "5b212ecc82362a6e33103894bf1d7e491a13ead04ec445a5619c658475d2e75c",
+    "content/reviews/v06-c02-sources.json": "ea51a8094f9e6db990534d393b080a2b994dae2dda6289e1304b98ed1ef32b2e"
+  },
+  "hash_scope": "Hashes cover final chapter, checker, source proposals and both downloadable assets; this author record does not hash itself.",
+  "validation": {
+    "result": "passed",
+    "commands": [
+      "python3 book/scripts/check_v06_c02.py",
+      "python3 -O book/scripts/check_v06_c02.py",
+      "quiet runpy check() from /private/tmp followed by ordinary json.dumps(report, allow_nan=False)",
+      "standalone lab CLI from /private/tmp with JSON parsing and empty stderr",
+      "owned Python AST parsing, source JSON parsing, trailing-whitespace check and owned git diff --check"
+    ],
+    "integration_api": "check() is quiet and directly JSON serializable with no fallback serializer. Explicit require checks survive optimized Python. The checker uses runpy for the lab and does not create bytecode assets.",
+    "counts": {
+      "worked": 3,
+      "exercises": 8,
+      "solutions": 8,
+      "text_words": 5792,
+      "source_ids": [
+        "v06-c02-alogoskoufis-discrete",
+        "v06-c02-mit-solow",
+        "v06-c02-mit-accounting"
+      ],
+      "download_files": [
+        "v06-c02-solow.py",
+        "v06-c02-README.txt"
+      ]
+    },
+    "numerical_evidence": {
+      "positive_parameter_cases": 68,
+      "exact_one_step_checks": 2229,
+      "golden_rule_feasible_points": 404,
+      "consumption_target_points": 101,
+      "independent_lab_transition_rows": 120,
+      "lab_boundary_runs": 3,
+      "invalid_lab_cases_rejected": 12,
+      "normalization_reference": "k1=73/242, Gamma=121/100, d=1/4",
+      "saving_change_references": "next k=146/121 and 1014/121; golden k=4,c=1",
+      "residual_reference": "Z gross factor11/10; maintained A gross factor121/100; constant alternative A=5/4 with u=4/5 then121/125",
+      "terminal_40_period_k": {
+        "accumulation": 0.9867725009241013,
+        "saving_increase": 3.947090003696405,
+        "saving_reduction": 4.0500256670492
+      }
+    },
+    "checks": [
+      "balanced fragment, unique IDs, 3 worked/8 solved exercises, retention, source alignment and flat assets",
+      "dated physical stock/flow ledger and exact future-worker denominator, cross-term approximation error",
+      "saving-change aggregate ledgers, golden-rule resource/first-order conditions and transition bounds",
+      "exact change identities, no-overshoot signs and local multiplier bounds across positive-state cases",
+      "independent completed-square global golden-rule certificate, endpoints and feasible saving grid",
+      "exact growth-factor accounting, log identity, A/Z distinction and utilization observational equivalence",
+      "exercises 1–4: complete ledger, cube-root steady state, changed growth versus level, inverse target and transition dominance",
+      "zero capital/saving, full saving/replacement, zero maintenance and changed-return boundaries; conditional-convergence counterexample",
+      "exercise 7 finite-factor/log accounting and complete delayed numerical answer; exercise 8 assessed by separate prose review",
+      "three independent 40-period ledger/normalized paths, exact first steps, boundary runs, input rejection and quiet JSON lab"
+    ]
+  },
+  "findings": [],
+  "unresolved_content_issues": [],
+  "limitations": [
+    "Internal author/root review is not independent human academic certification, learner testing or evidence of empirical generalizability.",
+    "Finite grids and trajectories supplement the separately reviewed analytic convergence and global-consumption arguments; they do not prove limits or causal identification.",
+    "Synthetic constant-saving, exogenous-efficiency homogeneous-good economies omit adjustment costs, endogenous innovation, household saving optimization and empirical aggregation issues; later chapters develop selected extensions.",
+    "The downloadable fixture fixes alpha, rates, units and period convention and uses floating-point square roots. It is not a general calibration or forecasting API.",
+    "The open policy critique is assessed by explicit reasoning criteria and full prose review, not by parser counts or numeric assertions.",
+    "Primary source inspection is limited to recorded passages; no whole-course or empirical-paper certification is claimed.",
+    "Root owns prerequisite acceptance, central source/curriculum/checkpoint updates, whole-library build/link verification and publication. Only assigned c02 artifacts were written.",
+    "Browser visual/mobile/print QA remains pending under the existing restriction; no workaround or visual-quality claim was made."
+  ],
+  "acceptance": "Complete author package ready for root final checker/source review and dependency-ordered integration after c01."
+}

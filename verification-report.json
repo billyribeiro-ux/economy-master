@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "chapter_packages_available": 60,
-  "html_pages_checked": 71,
+  "chapter_packages_available": 64,
+  "html_pages_checked": 75,
   "curriculum_chapters": 216,
   "cross_volume_packages_available": 1,
   "checks": [
@@ -28,6 +28,7 @@
     "Volume 3 chapters 11\u201312 proper losses, calibration/resolution, weighted-report and random-skill distortions, joint-state information values/garbling, information projections, dyadic/spike integrals, stopped martingale histories, heavy-tail truncation and maximal/Kronecker diagnostics",
     "Volume 3 diagnostic, distinct exams, retention, posterior/predictive/information project, independent integration/coverage and seeded paired-score checks",
     "Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package",
+    "Volume 6 chapters 1\u20134: national-account ledgers and Fisher chain identities; exact discrete Solow transitions and growth accounting; innovation, skill and diffusion paths and IV observational equivalence; household constraints, precautionary saving, dated investment and reproducible synthetic labs",
     "Volume 5 diagnostic, distinct exams, retention and market-intervention project: global choice/deviation/IC and welfare checks, exact assignment inference, certified policy intervals, independent scalar output oracle, fixed ex ante decisions and reproducible input contracts",
     "Volume 5 chapters 9\u201312: contract IC/IR and global wage comparisons, monitoring/multitask/ownership incentives; corrective tax and public-good/congestion/bargaining ledgers; auction deviation and revenue identities, matching enumeration; reference and temporal choices, exact assignment inference and welfare criteria",
     "Volume 5 chapters 5\u20138: exchange and production wealth/market ledgers, supporting transfers and missing-market improvements; global monopoly and discrimination branches, Cournot activity and Bertrand deviations; mixed support and all-subgame contingent plans; selected quality, signaling beliefs and screening IC/IR/rent/distortion identities",
@@ -2897,6 +2898,229 @@
       "Numerical checks supplement the separate full written review, not replace it.",
       "Finite checks do not prove general theorems or externally assess learner competence; visual/mobile/print QA remains separate."
     ]
+  },
+  "volume_6_opening_checks": {
+    "v06-c01": {
+      "status": "passed",
+      "worked_examples": 3,
+      "solved_exercises": 8,
+      "complete_industry_ledgers": 2,
+      "positive_basket_identity_cases": 256,
+      "invalid_basket_cases": 3,
+      "chain_levels": [
+        200.0,
+        281.70906978654415,
+        340.2951899844172
+      ],
+      "checks": [
+        "industry/final-use/income reconciliation",
+        "inventory holding gains",
+        "national/net/discrepancy bridges",
+        "exact Fisher identities and chaining",
+        "nonadditivity and reference invariance",
+        "physical/value capital bridge",
+        "terms-of-trade budgets",
+        "distribution and retention calculations"
+      ],
+      "limitations": [
+        "Numerical checks supplement the separate accounting and instructional review."
+      ]
+    },
+    "v06-c02": {
+      "chapter": "v06-c02",
+      "status": "passed",
+      "checks": [
+        "balanced fragment, unique IDs, 3 worked/8 solved exercises, retention, source alignment and flat assets",
+        "dated physical stock/flow ledger and exact future-worker denominator, cross-term approximation error",
+        "saving-change aggregate ledgers, golden-rule resource/first-order conditions and transition bounds",
+        "exact change identities, no-overshoot signs and local multiplier bounds across positive-state cases",
+        "independent completed-square global golden-rule certificate, endpoints and feasible saving grid",
+        "exact growth-factor accounting, log identity, A/Z distinction and utilization observational equivalence",
+        "exercises 1\u20134: complete ledger, cube-root steady state, changed growth versus level, inverse target and transition dominance",
+        "zero capital/saving, full saving/replacement, zero maintenance and changed-return boundaries; conditional-convergence counterexample",
+        "exercise 7 finite-factor/log accounting and complete delayed numerical answer; exercise 8 assessed by separate prose review",
+        "three independent 40-period ledger/normalized paths, exact first steps, boundary runs, input rejection and quiet JSON lab"
+      ],
+      "results": {
+        "structure": {
+          "worked": 3,
+          "exercises": 8,
+          "solutions": 8,
+          "text_words": 5792,
+          "source_ids": [
+            "v06-c02-alogoskoufis-discrete",
+            "v06-c02-mit-solow",
+            "v06-c02-mit-accounting"
+          ],
+          "download_files": [
+            "v06-c02-solow.py",
+            "v06-c02-README.txt"
+          ]
+        },
+        "worked_1": {
+          "Y": "50",
+          "I": "25/2",
+          "C": "75/2",
+          "depreciation": "1",
+          "net_investment": "23/2",
+          "next_K": "73/2",
+          "next_A": "11/10",
+          "next_L": "110",
+          "next_k": "73/242",
+          "next_worker_k": "73/220",
+          "Gamma": "121/100",
+          "d": "1/4",
+          "delta_k": "25/484",
+          "approximate_k_star": "625/576"
+        },
+        "worked_2": {
+          "saving_increase_next_k": "146/121",
+          "saving_reduction_next_k": "1014/121",
+          "golden_k": "4",
+          "golden_c": "1",
+          "above_golden_consumption_floor": "1",
+          "old_high_saving_c": "3/4"
+        },
+        "stability_checks": {
+          "parameter_cases": 68,
+          "exact_one_step_comparisons": 2229,
+          "worked_local_multiplier": "217/242",
+          "scope": "Finite checks supplement the separately reviewed monotone bounded-sequence proof."
+        },
+        "golden_certificates": {
+          "maintenance_cases": 4,
+          "exact_feasible_points": 404,
+          "identity": "c_GR-c(x)=d*(x-1/(2d))^2, x=sqrt(k), alpha=1/2"
+        },
+        "worked_3": {
+          "Z_factor": "11/10",
+          "maintained_A_factor": "121/100",
+          "naive_percentage_residual": "21/200",
+          "constant_alternative_A": "5/4",
+          "u0": "4/5",
+          "u1": "121/125",
+          "reproduced_Y": [
+            "100",
+            "121"
+          ]
+        },
+        "exercises_1_to_4": {
+          "exercise_1": {
+            "Y": "60",
+            "I": "18",
+            "C": "42",
+            "depreciation": "18/5",
+            "net_investment": "72/5",
+            "next_K": "252/5",
+            "next_A": "5/2",
+            "next_L": "60",
+            "next_k": "42/125",
+            "next_worker_k": "21/25"
+          },
+          "exercise_2": {
+            "k": "8",
+            "c": "6/5",
+            "rho": "14/15"
+          },
+          "exercise_3": {
+            "Gamma": "33/25",
+            "d": "9/25",
+            "k": "625/1296",
+            "y": "25/36",
+            "c": "25/48"
+          },
+          "exercise_4": {
+            "saving_interval": [
+              "2/5",
+              "3/5"
+            ],
+            "impact_c": "6/5",
+            "target_tests": 101
+          }
+        },
+        "exercises_5_and_6": {
+          "no_saving_factor": "96/121",
+          "full_replacement_next_k": "1/4",
+          "full_replacement_k_star": "1/16",
+          "altered_linear_technology_factor": "11/10",
+          "P_Q_worker_output_ratio": "2"
+        },
+        "exercise_7_and_retention": {
+          "Z_factor": "11/10",
+          "A_factor": "121/100",
+          "worker_output_factor": "6/5",
+          "incorrect_arithmetic_residual": "127/1000",
+          "delayed_next_k": "6/5",
+          "delayed_k_star": "4",
+          "delayed_c_star": "6/5",
+          "delayed_golden_k": "25/4",
+          "delayed_golden_c": "5/4"
+        },
+        "lab": {
+          "transition_rows": 120,
+          "horizon": 40,
+          "terminal_k": {
+            "accumulation": 0.9867725009241013,
+            "saving_increase": 3.947090003696405,
+            "saving_reduction": 4.0500256670492
+          },
+          "invalid_inputs_rejected": 12,
+          "boundary_runs": 3,
+          "json_serializable": true
+        }
+      },
+      "limitations": [
+        "Exact arithmetic, polynomial certificates and finite grids supplement the separate full proof/prose review.",
+        "Finite trajectories do not prove global convergence, a limiting growth rate or causal identification.",
+        "The author/root review separately assesses exercise 8 and the qualitative answers; parser counts cannot establish their correctness.",
+        "Floating-point paths are checked against independent recurrence and exact first steps; no real economy is calibrated.",
+        "The lab fixes alpha, rates, physical units and the teaching-period convention; it is not a general estimation API.",
+        "Source structure/alignment is checked here; actual primary passage inspection is recorded in the source proposals.",
+        "No browser visual/mobile/print QA; root retains integration and dependency-ordered acceptance."
+      ]
+    },
+    "v06-c03": {
+      "status": "passed",
+      "checks": [
+        "Research: three independent interior loss identities, two boundary thresholds, four endpoint domains and private/social appropriation arithmetic",
+        "Accounting ambiguity, bounded innovation at zero/positive skills, geometric knowledge path and exact steady-schooling loss identity",
+        "Benchmark research values and schooling recursions checked against independent exact closed forms, including zero/full depreciation boundaries",
+        "Five diffusion paths matched ratio closed forms; no absorption, static frontier, zero/zero fixed-point nonuniqueness and old-frontier timing audited",
+        "All four IV states, direct covariance sums, identical observational distributions, distinct intervention responses, exclusion failure and relevance boundary",
+        "Executable: quiet import, exact preserved output, arbitrary-CWD default, candidate-limited labels, direct-channel sensitivity and 15 invalid cases rejected by API and CLI",
+        "Structure: four worked cases, eight aligned full solutions, answered retention, four existing flat downloads and three scoped inspected primary sources"
+      ],
+      "invalid_cases": 15,
+      "input_sha256": "2fa254148f2b74607bb1ea93fc6a7044f4c4c541e3e69424598e133a60ab75f2",
+      "limitations": [
+        "Author numerical/structural audit, not independent human validation or empirical model evidence.",
+        "Finite grid spot checks complement the manuscript's exact concavity and contraction proofs; they do not replace continuous-domain arguments.",
+        "The downloadable research program compares supplied candidates; general continuous optimization is proved in prose, not implemented as a numerical optimizer.",
+        "Historical paper inspection is scoped; no historical dataset or coefficient is independently replicated.",
+        "Root owns prerequisite acceptance, integration and publication; visual/mobile/print UI QA remains pending."
+      ]
+    },
+    "v06-c04": {
+      "status": "passed",
+      "checks": [
+        "Dated budgets, positive feasibility, independent Euler bisection, borrowing KKT and delayed-check exact results",
+        "Linear-utility zero-consumption endpoints and all-plan tie; required terminal bequest budget",
+        "All lifecycle/constraint/shock ledgers and a nonunit-return telescoping/annuity check",
+        "Finite-risk log roots and Euler residuals; exact quadratic-utility risk-aversion counterexample",
+        "Higher-return/lower-saving example verified directly without inferring levels from the Euler ratio",
+        "All investment cash ledgers independently interpolated and globally optimized; three deliberate timing/bound mutations caught",
+        "Physical/accounting resource distinction and explicit consumption observational equivalence",
+        "Executable lab agrees with independent references; quiet strict-JSON API and 16 invalid-input cases verified",
+        "Optimized lab runs from a different working directory with default relative-to-script inputs",
+        "Balanced chapter fragment, four worked examples, eight aligned solutions, answered retention and scoped source/download routes"
+      ],
+      "limitations": [
+        "Analytic concavity, boundary, Jensen and identification arguments also require manuscript review; finite computations alone are not proofs of every stated theorem.",
+        "The lab deliberately covers certain-income log households and finite quadratic investment only; no empirical beliefs, causal effects or general stochastic lifecycle solution is claimed.",
+        "Source content was inspected within the recorded scopes; this is author review rather than external human certification.",
+        "Visual/mobile/print UI QA remains pending; no browser workaround, shared integration, acceptance or publication is performed here."
+      ]
+    }
   },
   "errors": [],
   "limitations": [

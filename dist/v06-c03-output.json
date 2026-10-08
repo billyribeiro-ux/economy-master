@@ -1,0 +1,347 @@
+{
+  "scope": "Exact synthetic model calculations; supplied research candidates only",
+  "research": [
+    {
+      "id": "worked",
+      "candidates": [
+        {
+          "r": "0",
+          "Y0": "100",
+          "Y1": "100",
+          "J": "200",
+          "private_incremental_payoff": "0",
+          "uncaptured_future_increment": "0"
+        },
+        {
+          "r": "1/4",
+          "Y0": "75",
+          "Y1": "145",
+          "J": "220",
+          "private_incremental_payoff": "25/4",
+          "uncaptured_future_increment": "55/4"
+        },
+        {
+          "r": "1/2",
+          "Y0": "50",
+          "Y1": "175",
+          "J": "225",
+          "private_incremental_payoff": "25/12",
+          "uncaptured_future_increment": "275/12"
+        },
+        {
+          "r": "1",
+          "Y0": "0",
+          "Y1": "425/2",
+          "J": "425/2",
+          "private_incremental_payoff": "-175/8",
+          "uncaptured_future_increment": "275/8"
+        }
+      ],
+      "best_supplied_social": [
+        "1/2"
+      ],
+      "best_supplied_private": [
+        "1/4"
+      ]
+    },
+    {
+      "id": "exercise",
+      "candidates": [
+        {
+          "r": "0",
+          "Y0": "80",
+          "Y1": "80",
+          "J": "125",
+          "private_incremental_payoff": "0",
+          "uncaptured_future_increment": "0"
+        },
+        {
+          "r": "1/2",
+          "Y0": "40",
+          "Y1": "560/3",
+          "J": "145",
+          "private_incremental_payoff": "20",
+          "uncaptured_future_increment": "0"
+        },
+        {
+          "r": "1",
+          "Y0": "0",
+          "Y1": "240",
+          "J": "135",
+          "private_incremental_payoff": "10",
+          "uncaptured_future_increment": "0"
+        }
+      ],
+      "best_supplied_social": [
+        "1/2"
+      ],
+      "best_supplied_private": [
+        "1/2"
+      ]
+    },
+    {
+      "id": "retention",
+      "candidates": [
+        {
+          "r": "0",
+          "Y0": "80",
+          "Y1": "80",
+          "J": "160",
+          "private_incremental_payoff": "0",
+          "uncaptured_future_increment": "0"
+        },
+        {
+          "r": "1/4",
+          "Y0": "60",
+          "Y1": "105",
+          "J": "165",
+          "private_incremental_payoff": "5",
+          "uncaptured_future_increment": "0"
+        },
+        {
+          "r": "1",
+          "Y0": "0",
+          "Y1": "285/2",
+          "J": "285/2",
+          "private_incremental_payoff": "-35/2",
+          "uncaptured_future_increment": "0"
+        }
+      ],
+      "best_supplied_social": [
+        "1/4"
+      ],
+      "best_supplied_private": [
+        "1/4"
+      ]
+    }
+  ],
+  "innovation_path": {
+    "growth": "1/2",
+    "A": [
+      "80",
+      "120",
+      "180"
+    ]
+  },
+  "schooling": [
+    {
+      "id": "worked",
+      "h": [
+        "1",
+        "5/4",
+        "23/16",
+        "101/64"
+      ],
+      "unique_fixed_point": "2",
+      "boundary": "positive depreciation"
+    },
+    {
+      "id": "retention",
+      "h": [
+        "1",
+        "3/2",
+        "7/4"
+      ],
+      "unique_fixed_point": "2",
+      "boundary": "positive depreciation"
+    },
+    {
+      "id": "no_depreciation",
+      "h": [
+        "1",
+        "3/2",
+        "2",
+        "5/2"
+      ],
+      "unique_fixed_point": null,
+      "boundary": "linear growth, no finite fixed point"
+    }
+  ],
+  "diffusion": [
+    {
+      "id": "worked",
+      "lambda": "1/2",
+      "rho": "2/5",
+      "unique_relative_fixed_point": "2/3",
+      "path": [
+        {
+          "period": 0,
+          "F": "100",
+          "A": "40",
+          "relative_A": "2/5"
+        },
+        {
+          "period": 1,
+          "F": "125",
+          "A": "70",
+          "relative_A": "14/25"
+        },
+        {
+          "period": 2,
+          "F": "625/4",
+          "A": "195/2",
+          "relative_A": "78/125"
+        },
+        {
+          "period": 3,
+          "F": "3125/16",
+          "A": "1015/8",
+          "relative_A": "406/625"
+        }
+      ]
+    },
+    {
+      "id": "higher_skill",
+      "lambda": "2/3",
+      "rho": "4/15",
+      "unique_relative_fixed_point": "8/11",
+      "path": [
+        {
+          "period": 0,
+          "F": "100",
+          "A": "40",
+          "relative_A": "2/5"
+        },
+        {
+          "period": 1,
+          "F": "125",
+          "A": "80",
+          "relative_A": "16/25"
+        },
+        {
+          "period": 2,
+          "F": "625/4",
+          "A": "110",
+          "relative_A": "88/125"
+        }
+      ]
+    },
+    {
+      "id": "retention",
+      "lambda": "1/2",
+      "rho": "1/3",
+      "unique_relative_fixed_point": "1/2",
+      "path": [
+        {
+          "period": 0,
+          "F": "100",
+          "A": "20",
+          "relative_A": "1/5"
+        },
+        {
+          "period": 1,
+          "F": "150",
+          "A": "60",
+          "relative_A": "2/5"
+        },
+        {
+          "period": 2,
+          "F": "225",
+          "A": "105",
+          "relative_A": "7/15"
+        }
+      ]
+    },
+    {
+      "id": "no_absorption",
+      "lambda": "0",
+      "rho": "4/5",
+      "unique_relative_fixed_point": "0",
+      "path": [
+        {
+          "period": 0,
+          "F": "100",
+          "A": "40",
+          "relative_A": "2/5"
+        },
+        {
+          "period": 1,
+          "F": "125",
+          "A": "40",
+          "relative_A": "8/25"
+        },
+        {
+          "period": 2,
+          "F": "625/4",
+          "A": "40",
+          "relative_A": "32/125"
+        }
+      ]
+    },
+    {
+      "id": "static",
+      "lambda": "0",
+      "rho": "1",
+      "unique_relative_fixed_point": null,
+      "path": [
+        {
+          "period": 0,
+          "F": "100",
+          "A": "40",
+          "relative_A": "2/5"
+        },
+        {
+          "period": 1,
+          "F": "100",
+          "A": "40",
+          "relative_A": "2/5"
+        },
+        {
+          "period": 2,
+          "F": "100",
+          "A": "40",
+          "relative_A": "2/5"
+        }
+      ]
+    }
+  ],
+  "iv": {
+    "rows": [
+      {
+        "probability": "1/4",
+        "Z": -1,
+        "V": -1,
+        "R": "1",
+        "y1": "1/2",
+        "y2": "1/2",
+        "u2": "3/10"
+      },
+      {
+        "probability": "1/4",
+        "Z": -1,
+        "V": 1,
+        "R": "3",
+        "y1": "3/2",
+        "y2": "3/2",
+        "u2": "9/10"
+      },
+      {
+        "probability": "1/4",
+        "Z": 1,
+        "V": -1,
+        "R": "-3",
+        "y1": "-3/2",
+        "y2": "-3/2",
+        "u2": "-9/10"
+      },
+      {
+        "probability": "1/4",
+        "Z": 1,
+        "V": 1,
+        "R": "-1",
+        "y1": "-1/2",
+        "y2": "-1/2",
+        "u2": "-3/10"
+      }
+    ],
+    "cov_Z_R": "-2",
+    "cov_Z_y1": "-1",
+    "cov_Z_y2": "-1",
+    "cov_Z_u2": "-3/5",
+    "iv1": "1/2",
+    "iv2": "1/2",
+    "same_observables": true,
+    "intervention_effect1": "1/2",
+    "intervention_effect2": "1/5"
+  }
+}

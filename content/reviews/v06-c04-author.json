@@ -1,0 +1,181 @@
+{
+  "chapter": "v06-c04",
+  "title": "Consumption, saving and investment",
+  "review_type": "Author mathematical, arithmetic, instructional, source and reproducibility audit",
+  "author": "monte_carlo specialist",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "state": "author-review-complete",
+  "status": "passed author checks; awaiting root dependency-ordered acceptance",
+  "assignment": "production/v06-opening-assignments.json",
+  "scope": {
+    "canonical_coverage": [
+      "Permanent income",
+      "Life cycle",
+      "Liquidity constraints",
+      "Investment",
+      "Adjustment costs",
+      "Expectations"
+    ],
+    "prerequisite_contract": "Drafted against the fixed national-account and physical-capital timing interfaces for v06-c01 through c03 and the accepted optimization, probability and microeconomics prerequisites. Acceptance waits for the prerequisite chapters and root's integration review.",
+    "owned_files_only": true,
+    "worked_examples": 4,
+    "exercises_with_complete_solutions": 8,
+    "teach_back": "Prompt and answered checklist",
+    "retention": "Changed-parameter delayed check with full answer",
+    "supporting_lab": "Original synthetic JSON inputs, exact standard-library program and README; flat download paths and no network or package dependency",
+    "shared_actions": "No central curriculum/source/checkpoint/build/verification file was edited; no child agent, commit, hosting or publication action was performed."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v06-c04.html",
+      "bytes": 41312,
+      "sha256": "9d31aa1dff12439e5432df199946ccd1c1ed697161e99690cfd4ec9ca91f6611"
+    },
+    {
+      "path": "content/projects/v06-c04-analysis.py",
+      "bytes": 5910,
+      "sha256": "4d7e65e7e6dac1f689be81a606ef344921ca06a3bb9e798fac7ec405ea237b44"
+    },
+    {
+      "path": "content/projects/v06-c04-inputs.json",
+      "bytes": 1380,
+      "sha256": "37b9e04025b54a2d4d0340cfe7553c6365c0afd91340989c4622c8f88acc2136"
+    },
+    {
+      "path": "content/projects/v06-c04-README.txt",
+      "bytes": 3927,
+      "sha256": "e0b705608186a42ace8b3b7afbace97ff2509f0cc2e83b38297ddf582bedacb3"
+    },
+    {
+      "path": "scripts/check_v06_c04.py",
+      "bytes": 17474,
+      "sha256": "2daf3b30f6b2f0714abcf51260026f8bf63bd423a9cd2f610a88700e86104cd9"
+    },
+    {
+      "path": "content/reviews/v06-c04-sources.json",
+      "bytes": 4513,
+      "sha256": "5fb91fd0b25c4cd92232ddb6e218963177f9b8801a2ea9b1cc1dd35a95079d18"
+    }
+  ],
+  "resolved_review_findings": [
+    {
+      "id": "v06-c04-root-01",
+      "severity": "low",
+      "location": "Section 2 utility curvature assumptions",
+      "finding": "Strict concavity and twice differentiability alone do not imply a strictly negative second derivative at every point, whereas the displayed strict F'' inequality used that stronger premise.",
+      "resolution": "Explicitly maintain u'(c)>0 and u''(c)<0 throughout the positive-consumption domain before deriving F''<0. All nonlinear numerical cases satisfy this condition. The separately stated linear-utility boundary case is outside that assumption.",
+      "status": "resolved; final manuscript rechecked"
+    },
+    {
+      "id": "v06-c04-root-02",
+      "severity": "suggestion",
+      "location": "Teach-back",
+      "finding": "An answered checklist would help self-study learners close the explanation task.",
+      "resolution": "Added a checklist covering budgets, terminal assumptions, feasible transfers and the boundary inequality, news/receipt/risk/loan distinctions, and the firm's dated resource costs and terminal payoff.",
+      "status": "implemented"
+    },
+    {
+      "id": "v06-c04-root-03",
+      "severity": "medium",
+      "location": "Aggregate saving and government-investment convention",
+      "finding": "A table using G to include government gross investment cannot identify Y-C-G as gross national saving without regrouping government investment.",
+      "resolution": "The paragraph now explicitly defines G as government consumption only and I_accounts as all domestic gross investment, including government investment, and states the difference from the earlier table convention. Government-free numerical cases are unchanged.",
+      "status": "resolved; final manuscript rechecked"
+    },
+    {
+      "id": "v06-c04-root-04",
+      "severity": "low",
+      "location": "Successor navigation",
+      "finding": "The successor chapter v06-c05 is still unwritten, so its direct reader-page link fails integrated normal/print structural checks.",
+      "resolution": "Label the successor as planned and link to curriculum.html#v06 until its manuscript exists.",
+      "status": "resolved; final route re-read"
+    }
+  ],
+  "mathematical_review": [
+    "The two dated household equations distinguish already-matured initial wealth, current nonasset income, a position carried forward and a saving flow. R is the gross real return over the same period as income. Terminal exhaustion is derived only under increasing final utility, no bequest motive and nonnegative terminal wealth.",
+    "Positive-consumption feasibility is checked before any Euler calculation. The borrowing rule and natural repayment boundary are both retained. Log attainment is justified by divergent negative utility at excluded zero-consumption endpoints and compactness away from them; general continuous-at-zero utility is handled on the closed feasible interval.",
+    "The interior Euler condition and lower-bound KKT inequality have the correct sign. A concave supporting-tangent inequality certifies globality; the multiplier is nonnegative and complementary, with weakly binding zero-multiplier contact distinguished from a strict desire for more credit.",
+    "The log closed form is derived from the Euler condition and present-value budget; clipping cannot violate positive consumption under the stated parameter domain. Linear utility supplies endpoint and continuum-of-optima cases, avoiding an unjustified universal interior claim.",
+    "The finite lifecycle present-value equation is obtained by telescoping dated budgets. Constant consumption requires beta*R=1 and no binding interim constraint. Transitory and remaining-horizon persistent news are priced with the correct annuity denominator; future income already anticipated is distinguished from new information and liquid resources.",
+    "Finite-state expected marginal utility is derived with nonanticipative saving and positive consumption in every state. The precautionary comparison holds mean resources, return, preferences, insurance opportunities and relevant constraints fixed, explicitly requires a common feasible certain optimum and strictly convex marginal utility, and is limited to an attained interior risky solution for a strict saving increase.",
+    "Risk aversion alone is shown insufficient using increasing quadratic utility on its stated feasible range, where marginal utility is affine and the risk penalty is independent of saving. Rational expectations, subjective forecasts and perfect foresight are distinguished; neither preferences nor beliefs are identified from consumption alone.",
+    "The finite firm objective separately dates purchase and adjustment resources, next-period net operating return and post-production resale after a second depreciation interval. The user cost Rp0-p1(1-delta) and R*phi*I term use date-1 units. The quadratic solution checks irreversibility and the upper cap with global derivative/difference certificates.",
+    "Accounting gross investment, physical installation, depreciation, installation services and financial transfers remain distinct. The aggregate resource identity includes real adjustment costs, and the supplied capitalization convention is stated rather than generalized to all measured assets or jurisdictions. Accounting equality is not presented as a causal theory of saving and investment."
+  ],
+  "worked_example_checks": [
+    {
+      "example": 1,
+      "result": "Unrestricted (c0,c1,s)=(60,75,-20); borrowing cap 8 gives (48,90,-8), multiplier 1/144, and both present-value totals 120. The local current-resource MPC is 1/2 when slack and 1 when the limit remains binding."
+    },
+    {
+      "example": 2,
+      "result": "Incomes (30,90,0) support unrestricted consumption (40,40,40), assets (-10,40,0); no borrowing gives (30,45,45), assets (0,45,0). Once-only future news 12 raises unrestricted consumption to 44; persistent news 12 raises it to 52; constrained future news gives (30,51,51)."
+    },
+    {
+      "example": 3,
+      "result": "Certain income 4 gives saving 0. Future incomes 2/6 equally likely give initial derivative 1/12 and unique saving sqrt(6)-2 = approximately 0.449489742783178, current consumption approximately 3.55051025721682, and positive final consumptions sqrt(6) and 4+sqrt(6). The correct quadratic is 2s^2+8s-4=0."
+    },
+    {
+      "example": 4,
+      "result": "Incremental value is (12/5)I-(3/5)I^2. Optimum I=2, K1=8, total PV 216/5, gain 12/5. Cap one gives I=1, K1=7, PV 213/5, gain 9/5 and derivative 6/5. With zero adjustment cost and original cap, I=3 and gain 18/5."
+    }
+  ],
+  "exercise_checks": [
+    {
+      "exercise": 1,
+      "result": "Unrestricted consumption is 540/11 at both dates and saving -210/11. Cap ten gives consumption (40,60), saving -10, multiplier 1/120 and PV 90; beta*R=1 does not override the binding credit rule."
+    },
+    {
+      "exercise": 2,
+      "result": "Feasible s is [-5,20]. Beta one chooses s=20 and (c0,c1)=(0,37); beta 1/2 chooses s=-5 and (25,19/2); beta 10/11 makes every feasible s optimal. Required terminal bequest 3 reduces consumption wealth by 3/R. Unlimited unpaid terminal debt gives unbounded consumption and, for log/linear utility, unbounded value."
+    },
+    {
+      "exercise": 3,
+      "result": "Four-date consumption 33 and assets (-15,18,33,0) become (18,38,38,38) and (0,28,38,0) under no borrowing. Unrestricted transitory/persistent news give consumption 36/45. Constrained extra current income gives (30,38,38,38); extra date-1 income gives (18,42,42,42), with exact dated asset and complementary-slackness checks."
+    },
+    {
+      "exercise": 4,
+      "result": "The log risky root is (3sqrt(6)-6)/2, approximately 0.674234614174767, from 2s^2+12s-9=0. Quadratic utility gives derivative -2s and optimum zero under either income distribution, with a constant risky utility penalty 9/2."
+    },
+    {
+      "exercise": 5,
+      "result": "Saving is 60/(1+sqrt(R)); R one gives (s,c0,c1)=(30,30,30), R four gives (20,40,80). Both dated budgets and the marginal-utility Euler equation hold, while the consumption ratio rises and saving falls."
+    },
+    {
+      "exercise": 6,
+      "result": "Resale price three gives I=5/2, K1=17/2, gain 15/4 and total PV 963/20; cap two gives I=2, gain 18/5 and PV 48. The separate low-operating-return case has formal I=-2/3 but unique feasible optimum I=0, because every positive installation has negative incremental value."
+    },
+    {
+      "exercise": 7,
+      "result": "Measured gross investment and gross national saving are each 10; resource use is 90+8+2=100; next physical capital is 53 and its change is 3. Internal share and loan transfers do not add further current production or physical machines."
+    },
+    {
+      "exercise": 8,
+      "result": "The constrained high-income model and unconstrained lower-income model both give c0=48 and s=-8, but planned c1 is 90 versus 60. The answer correctly separates a falsified literal certainty from a possible forecast realization and requires expected-marginal-utility reoptimization under nondegenerate risk. The open research portions have explicit evidence, comparison, identifying-assumption and threat criteria."
+    }
+  ],
+  "validation": {
+    "normal_cli": "python3 -B book/scripts/check_v06_c04.py — passed ten check groups",
+    "optimized_portable_cli": "python3 -B -O /Users/billyribeiro/Desktop/economy-master/book/scripts/check_v06_c04.py from /private/tmp — passed ten check groups",
+    "final_quiet_api": "Loaded the final checker by absolute path from /private/tmp under python3 -B -O, captured stdout while loading and calling check(), observed no output, and serialized the returned passed result with json.dumps(...,allow_nan=False).",
+    "syntax": "Both Python files parsed successfully with ast.parse; no package installation or bytecode artifact was required.",
+    "independence": "Household candidates are checked from direct dated budgets and marginal utility, then against bisection of the monotone Euler residual rather than the lab's algebraic formula. Firm objective coefficients are recovered independently from three direct cash-flow evaluations, with endpoint/vertex comparison and exact difference identities. Lifecycle paths are reconstructed from dated ledgers, and finite-risk Euler roots are checked by a second bisection.",
+    "mutations": "Missing future discounting, double depreciation of terminal proceeds and ignoring the installation cap each disagree with independently certified results and are caught.",
+    "input_validation": "Sixteen invalid cases were rejected: nonfinite values, booleans/text in numeric fields, zero/negative parameters outside the domain, excessive magnitude or decimal exponent, invalid depreciation, duplicate names and invalid version/synthetic metadata. Validation uses explicit exceptions and remains active under Python optimization.",
+    "lab_portability": "The lab ran with -B -O from a different working directory, resolved its default JSON beside the script and exactly matched the quiet API report. All result quantities are exact rational strings; no network or external package is used.",
+    "structure": "Balanced HTML fragment with no h1, four worked asides, eight top-level exercises and eight aligned complete solutions, answered teach-back and delayed check, four proposed source routes and three flat artifact links. Root retains complete cross-batch link/build integration.",
+    "method_sources": "Four actual primary instructor/author PDFs inspected within the precise scopes documented in v06-c04-sources.json. No source example, figure, empirical estimate or current observation was copied. Failed screenshots are recorded separately from successful PDF-text inspection."
+  },
+  "pending_issues": [
+    "Root final dependency-ordered acceptance after v06-c01 through c03, central source registration and whole-library integration checks.",
+    "Visual, mobile and print UI QA remains pending under the standing browser restriction; no workaround or visual claim was made."
+  ],
+  "limitations": [
+    "Author checks and root's preliminary independent read are internal review, not external human academic certification or empirical calibration.",
+    "The chapter develops finite household and investment cases. It does not establish infinite-horizon transversality, heterogeneous-agent aggregation, a general stochastic lifecycle solution, risk-adjusted firm valuation or identified preference/belief estimates.",
+    "The examples and lab are synthetic and conditional on their stated timing, preferences, credit, market and accounting assumptions.",
+    "Computational checks supplement the analytic proofs. They do not verify current economic observations, all primary-source claims or every future extension."
+  ],
+  "recommendation": "Complete author package is ready for root's final subject-matter and integration gates; no unresolved author-level mathematical or numerical finding remains at these hashes."
+}

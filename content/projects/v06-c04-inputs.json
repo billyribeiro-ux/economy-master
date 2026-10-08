@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "synthetic": true,
+  "units": "Households: real consumption-good units. Firms: real dollars and physical capital units. R is the gross return over one common period.",
+  "households": [
+    {"name": "worked_unrestricted", "x0": 40, "y1": 100, "R": 1.25, "beta": 1, "B": 30},
+    {"name": "worked_credit_limit", "x0": 40, "y1": 100, "R": 1.25, "beta": 1, "B": 8},
+    {"name": "alternative_belief", "x0": 40, "y1": 70, "R": 1.25, "beta": 1, "B": 30},
+    {"name": "zero_future_income", "x0": 12, "y1": 0, "R": 1, "beta": 1, "B": 0}
+  ],
+  "firms": [
+    {"name": "worked_firm", "K0": 8, "delta": 0.25, "R": 1.25, "p0": 2, "p1": 2, "phi": 0.4, "alpha": 10, "gamma": 1, "Ibar": 4},
+    {"name": "capacity_one", "K0": 8, "delta": 0.25, "R": 1.25, "p0": 2, "p1": 2, "phi": 0.4, "alpha": 10, "gamma": 1, "Ibar": 1},
+    {"name": "higher_resale", "K0": 8, "delta": 0.25, "R": 1.25, "p0": 2, "p1": 3, "phi": 0.4, "alpha": 10, "gamma": 1, "Ibar": 4},
+    {"name": "higher_resale_cap_two", "K0": 8, "delta": 0.25, "R": 1.25, "p0": 2, "p1": 3, "phi": 0.4, "alpha": 10, "gamma": 1, "Ibar": 2},
+    {"name": "low_operating_return", "K0": 8, "delta": 0.25, "R": 1.25, "p0": 2, "p1": 2, "phi": 0.4, "alpha": 6, "gamma": 1, "Ibar": 4},
+    {"name": "no_adjustment_cost", "K0": 8, "delta": 0.25, "R": 1.25, "p0": 2, "p1": 2, "phi": 0, "alpha": 10, "gamma": 1, "Ibar": 4}
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "chapter": "v06-c01",
+  "date": "2026-10-08",
+  "status": "author-reviewed-pending-batch-integration",
+  "review_type": "Root original author accounting, mathematical and instructional review; internal review, not external certification.",
+  "reviewed": {
+    "reasoning": "Defined production boundary, basic/market-price bridge, net product versus other production taxes, expenditure import cancellation, income allocation, current-price inventories, GDP/GDI discrepancy, domestic/national and gross/net bridges. Derived positive-basket Fisher factor reversal and reference invariance, demonstrated chain nonadditivity, distinguished purchasing power from output volume and physical capital from asset revaluation. Cross-chapter saving audit split government consumption from government gross investment before defining domestic saving; current-account/national-disposable-income extension clearly scoped.",
+    "arithmetic": "Independent exact Python ledger and index checker passes both industry ledgers, all eight exercise calculations and retention;256 exhaustive small positive-basket identities and three rejected invalid baskets. Original chain targets200,281.70906978654415,340.2951899844172.",
+    "solutions": "Read each of eight exercise prompts against full solution; calculations, constraints and required distinctions supplied. Open welfare critique provides explicit grading criteria and additional measurements. Three fully worked examples, teach-back answer and separate delayed answer.",
+    "sources": "Three actual official BEA source records scoped in chapter-specific source proposals. PDF formula pages18–19 were rendered and visually inspected; dated concepts/methods versions stated and later-update limit explicit. No invented current data.",
+    "instruction": "Prerequisites, units, dates and assumptions precede calculations. Index formulas restricted to positive baskets; stock timing and synthetic versus measured capital distinguished. Sources supply methods, original examples supply practice.",
+    "structure": "Chapter-specific HTML balance, unique anchors, example/exercise/solution counts and proposal source IDs pass. Full library build/link/acceptance verification pending."
+  },
+  "unresolved_material_content_findings": [],
+  "pending": [
+    "Batch integration and whole-library structural checks",
+    "Separate peer review if an available specialist finishes its owned work"
+  ],
+  "limitations": [
+    "Internal author review does not establish external academic certification.",
+    "Visual/mobile/print UI QA remains pending under the recorded browser restriction."
+  ],
+  "reviewed_sha256": {
+    "content/chapters/v06-c01.html": "3e1c83459fb5764fb25f92b3e67746c91bc0ef36a0949cad0ddbbe433a617943",
+    "scripts/check_v06_c01.py": "c5d95233b360758444220765d18e53a667487ad726c89b2f7e3fcc0b56eb98ad",
+    "content/reviews/v06-c01-sources.json": "4651e1794bd8a7be6d7b6122209743d0ac9fd1f71b45119b367cf49693a52d03"
+  },
+  "resolved_findings": [
+    {
+      "finding": "Using G including government investment in the saving definition would understate conventional domestic saving.",
+      "resolution": "Split Gc and Ig, define total investment Iall and derive Sdom−Iall=NX with a new19−54=−35 example; c04 matching convention clarification requested."
+    },
+    {
+      "finding": "Inventory examples attributed sales to consumption without specifying the buyer.",
+      "resolution": "Both old-inventory discussion and Exercise2 explicitly name household final-consumption purchases; no arithmetic changed."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "chapter": "v06-c01",
+  "review_type": "Independent bounded peer review of the complete national-accounts chapter, eight solutions, checker and source scope",
+  "reviewer": "monte_carlo specialist; distinct from the root author",
+  "date": "2026-10-08",
+  "state": "peer-review-complete",
+  "status": "passed; two findings resolved by root",
+  "assignment": "production/v06-opening-assignments.json — peer_assignments",
+  "scope": {
+    "read_only_inputs": [
+      "content/chapters/v06-c01.html",
+      "scripts/check_v06_c01.py",
+      "content/reviews/v06-c01-sources.json",
+      "content/reviews/v06-c01-author.json"
+    ],
+    "owned_output": "content/reviews/v06-c01-peer.json",
+    "coverage": "Read the complete manuscript, all three worked examples, all eight prompts and complete solutions, teach-back and delayed answer, full checker implementation and both author/source records. Independently recomputed all numerical groups and reviewed the accounting and index proofs. The reviewer made no c01 manuscript, checker, source or central-file edit; root applied the reported corrections.",
+    "separate_author_task": "At root's explicit request, the matching government-consumption/investment convention was clarified in the reviewer's separately owned c04 manuscript and its author hash refreshed. This does not alter the read-only boundary of the c01 peer task."
+  },
+  "reviewed_hashes": [
+    {"path": "content/chapters/v06-c01.html", "bytes": 37448, "sha256": "3e1c83459fb5764fb25f92b3e67746c91bc0ef36a0949cad0ddbbe433a617943"},
+    {"path": "scripts/check_v06_c01.py", "bytes": 10302, "sha256": "c5d95233b360758444220765d18e53a667487ad726c89b2f7e3fcc0b56eb98ad"},
+    {"path": "content/reviews/v06-c01-sources.json", "bytes": 3124, "sha256": "4651e1794bd8a7be6d7b6122209743d0ac9fd1f71b45119b367cf49693a52d03"},
+    {"path": "content/reviews/v06-c01-author.json", "bytes": 3579, "sha256": "edb088fdc74ca153407c44a2afe24a939ef29ee361ec6724c80e733e45ff294f"}
+  ],
+  "findings": [
+    {
+      "id": "v06-c01-peer-01",
+      "severity": "medium",
+      "category": "definition consistency",
+      "location": "Domestic saving and the government-investment convention",
+      "finding": "The chapter initially used G for government consumption plus gross investment, then called Y-C-G domestic saving. That residual subtracts public capital formation and is not conventional gross domestic saving. Both root's cross-chapter integration review and this peer identified the conflict.",
+      "proposed_fix": "Split government consumption Gc from government gross investment Ig, define Iall=I+Ig and derive Sdom=Y-C-Gc with Sdom-Iall=X-M.",
+      "status": "resolved by root",
+      "verification": "Re-read the final paragraph, including the alternative model convention and the distinction between domestic saving/net exports and national disposable income/current account. Independently recomputed Gc=16, Ig=4, Iall=54, Sdom=19 and 19-54=-35=20-55. The updated checker contains the same convention case and passes."
+    },
+    {
+      "id": "v06-c01-peer-02",
+      "severity": "low",
+      "category": "prompt assumption clarity",
+      "location": "Old-inventory discussion and Exercise 2",
+      "finding": "Both passages assigned inventory sales to household consumption without specifying the purchaser or final use. The GDP result was determined, but the requested C category needed that use assumption.",
+      "proposed_fix": "State that the old inventory is sold to households for final consumption.",
+      "status": "resolved by root",
+      "verification": "The final general paragraph and Exercise 2 each explicitly say 'to households for final consumption.' Current-price withdrawals, production and holding-gain arithmetic remain unchanged. The revised prompt now determines the stated consumption entry."
+    }
+  ],
+  "unresolved_material_findings": [],
+  "reasoning_review": [
+    "GDP boundaries distinguish domestic production from ownership, current production from asset transfers and holding gains, and intermediate inputs from final consumption or capital formation. The basic-price/product-tax bridge is separated from other production taxes within value added. The synthetic ledgers explicitly exclude product taxes and margins, avoiding double counting.",
+    "The domestic-output and imported-input cancellation argument supports the expenditure identity. Current inventory additions belong to production, and current-price withdrawals offset sale of old output. Financial loans and existing-share transactions are kept separate from production. A separately supplied current service would require its own entry, but no unmentioned service is invented.",
+    "Gross/net adjustments consistently subtract CFC once. The conceptual GDP/GDI equivalence is distinguished from separately measured series. Under the explicitly scoped BEA presentation, SD=GDP-GDI, GNP=GDP+NPI and GNI=GDI+NPI=GNP-SD. National primary income is not confused with net exports or current transfers.",
+    "The exact Fisher factor-reversal proof cancels the two cross-valuations and uses positive sums to select the positive square root. Reference scaling is multiplication by a common constant and therefore preserves growth. The original component counterexample establishes nonadditivity; current-price shares remain valid while chained component/aggregate ratios need not be shares. Negative net flows are explicitly outside the elementary positive-basket formulas.",
+    "The terms-of-trade cases distinguish fixed domestic production from command over a distinct imported good. They reconcile nominal expenditure at each date and do not claim a full equilibrium trade response or an unconditional utility ranking.",
+    "Physical capital timing treats depreciation of opening stock, additions available at the next date and separate catastrophic losses explicitly. Revaluation precedes all transactions in the stated examples, making the holding-gain decomposition determinate. The physical law is not applied mechanically to independent chain-volume currency series.",
+    "Welfare discussion distinguishes production, resident income, distribution, leisure, environmental outcomes and valuation assumptions. The open exercise supplies evaluation criteria instead of asserting a GDP-to-welfare conversion or mandating political weights. Empirical vintage, price basis, units, frequency and annualization distinctions are taught before use."
+  ],
+  "independent_answers": {
+    "worked_1": "Production, expenditure and income each give GDP 170. Value added is (50,70,50); C135, I50, G20, X20, M55 reconcile. Compensation100+CFC20+other production taxes10+net surplus40=170. With NPI=-10: GNI160, NDP150, NNI140.",
+    "worked_2": "Nominal values (200,320,520); period-0-price values (200,310,580). Fisher quantity-link squares are 248/125 and 143/98. Independently computed aggregate levels are 200, 281.70906978654415 and approximately 340.29518998441716, with deflators 100, 113.59236684941295 and 152.8085072327387. Component sums are 200,310,580; period-2 B nominal share is 3/13, while its invalid chain ratio exceeds one.",
+    "worked_3": "Export receipts remain60. Import quantities fall30 to20 as their price rises2 to3; consumption spending and GDP remain100. Nominal GDP in imported-good units falls50 to100/3; the trade-price ratio falls1/2 to1/3. This is purchasing power, not a physical sum of unlike goods.",
+    "exercise_1": "Farm/manufacturer value added60/100; GDP160 in all three ledgers. C105, I60, G20, X30, M55. GNI150, NDP140, NNI130. Every industry income row matches its value added.",
+    "exercise_2": "Household final consumption25, current-price inventory investment30-25=5, GDP30. Inventory balance rises10, decomposed into investment5 plus holding gain5. Root's buyer clarification makes the C entry fully specified.",
+    "exercise_3": "Gross fixed investment105 and imports100 produce direct domestic GDP5 from the installation service; the domestic loan finances the acquisition without generating another production entry.",
+    "exercise_4": "Nominal values120/180 and cross-values170/130. Quantity link squared51/26, price link squared39/34; their squared product9/4 gives exact factor reversal3/2. Chain value168.06592113261345, deflator107.1008320943125. Fixed-base growth5/12 differs from Fisher growth approximately0.400549342772.",
+    "exercise_5": "SD10, NPI-20, GNP480, GNI470, NDP460, net domestic income450 and NNI430. Subtracting the same CFC or adding the same foreign-income adjustment preserves the measured ten-unit discrepancy.",
+    "exercise_6": "Physical closing capital85; opening value160 and closing255. Gross investment60-CFC30-catastrophic loss15+holding gain80=95 value increase. Gross investment is neither the value change nor the current-price net physical change15.",
+    "exercise_7": "Export receipts200 then160 purchase100 then80 imports. Nominal GDP500 then400; fixed production100 units and initial-price GDP500. GDP in imported-good units250 then200. Domestic consumption60 units is unchanged but imported consumption falls20 units; both expenditure accounts reconcile.",
+    "exercise_8": "Mean income100/3 to40 rises20%; median30 to20 falls1/3, and two households lose income. A typical-household or welfare claim needs an explicit definition, distribution and relevant outcomes/preferences; the supplied open criteria properly require three additional measurements and an evaluative basis.",
+    "stock_and_inventory_text": "Opening100 capital units, depreciation10 and investment15 produce105 units. Opening/closing values200/315 change115=holding gain100+investment45-CFC30. Selling old inventory at12 produces C12 and inventory investment-12, net zero GDP; the holding gain2 is excluded.",
+    "retention": "Nominal80 to108 grows7/20; initial-price real80 to90 grows1/8; the deflator grows1/5. (9/8)(6/5)=27/20 exactly. Real GDP per person20 to18 falls1/10.",
+    "corrected_saving_bridge": "With Y170, C135, Gc16, Ig4 and private I50, gross domestic saving19 and all investment54 give -35, equal to X20-M55. The expenditure total remains170."
+  },
+  "validation": {
+    "normal_checker": "python3 -B book/scripts/check_v06_c01.py passed: eight groups, three worked examples, eight solutions, two complete industry ledgers, 256 small positive-basket identity cases and three invalid baskets rejected.",
+    "optimized_portable_api": "Loaded the checker by absolute path and called check() from /private/tmp under python3 -B -O. Captured stdout remained empty and json.dumps(...,allow_nan=False) succeeded; all eight groups passed.",
+    "independent_calculations": "A separate in-memory Fraction-based script, without importing the author checker or helpers, recomputed three worked examples, eight exercise groups and retention. It constructed both income/final-use ledgers, exact cross-valuations and Fisher squared identities, inventory holding gains, stock-value bridges, trade budgets and mean/median growth directly from prompt inputs. A separate exact calculation checked the corrected government-investment saving bridge.",
+    "post_fix_review": "Read both root-corrected buyer phrases, the revised saving paragraph, the new checker lines and the updated author review. Reran the final checker under -B -O successfully and recorded hashes of the final four reviewed files.",
+    "checker_logic": "Read the entire implementation. Fraction arithmetic establishes cross-value and accounting identities before float square roots; the written cancellation proof supplies generality beyond the 256 sampled baskets. Positive-basket input restrictions and invalid dimension/nonpositive cases are explicit. Ledger helpers operate on fixed internal records rather than claiming a general public national-accounts validation API.",
+    "source_scope": "Read all three proposal records and the manuscript's attached source claims. The routes are the actual BEA concepts chapter, methods chapter and official index. December2024/December2023 versions and subsequent-update limits are stated; no current empirical values are invented. Per the bounded assignment, reused root's documented primary-content inspection rather than re-fetching stable sources. This peer does not claim a second complete PDF audit.",
+    "instruction_and_structure": "All required methods are taught in the chapter or accepted prerequisites. Every exercise has a complete answer to its requested calculations and interpretations; the open welfare critique has explicit criteria. Teach-back and delayed check both have answers. The existing parser verifies balanced markup, unique IDs, three worked examples, eight prompts/solutions and source-proposal coverage. No visual inspection or shared build was performed by this peer."
+  },
+  "limitations": [
+    "Internal independent-agent peer review is not external human academic certification or empirical classroom validation.",
+    "This is a bounded introductory account and index review, not a complete implementation of BEA quarterly benchmarking, chain contributions, negative-flow indexes, sector accounts or all subsequent method revisions.",
+    "All numerical economies are synthetic. The calculations establish their stated identities and comparisons, not causal effects of actual policy, trade or household behavior.",
+    "Source scope was reviewed using the documented primary inspection; this peer did not independently re-retrieve every source page.",
+    "Visual/mobile/print UI QA remains pending under the standing browser restriction. Root owns cross-batch build/link checks, acceptance and publication."
+  ],
+  "recommendation": "No unresolved material finding remains at the final hashes. The chapter is ready for root's final dependency and integration gates."
+}

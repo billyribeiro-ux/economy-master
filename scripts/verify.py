@@ -48,6 +48,10 @@ from check_v05_c10 import check as check_v05_c10
 from check_v05_c11 import check as check_v05_c11
 from check_v05_c12 import check as check_v05_c12
 from check_v05_assessment import check as check_v05_assessment
+from check_v06_c01 import check as check_v06_c01
+from check_v06_c02 import check as check_v06_c02
+from check_v06_c03 import check as check_v06_c03
+from check_v06_c04 import check as check_v06_c04
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -421,6 +425,9 @@ def main():
         ('v05-c09', check_v05_c09), ('v05-c10', check_v05_c10),
         ('v05-c11', check_v05_c11), ('v05-c12', check_v05_c12))}
     v05_assessment_check = check_v05_assessment()
+    v06_opening_check = {name: checker() for name, checker in (
+        ('v06-c01', check_v06_c01), ('v06-c02', check_v06_c02),
+        ('v06-c03', check_v06_c03), ('v06-c04', check_v06_c04))}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -449,8 +456,10 @@ def main():
               'volume_5_middle_checks': v05_middle_check,
               'volume_5_closing_checks': v05_closing_check,
               'volume_5_assessment_check': v05_assessment_check,
+              'volume_6_opening_checks': v06_opening_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     report['checks'].extend(['Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package',
+        'Volume 6 chapters 1–4: national-account ledgers and Fisher chain identities; exact discrete Solow transitions and growth accounting; innovation, skill and diffusion paths and IV observational equivalence; household constraints, precautionary saving, dated investment and reproducible synthetic labs',
         'Volume 5 diagnostic, distinct exams, retention and market-intervention project: global choice/deviation/IC and welfare checks, exact assignment inference, certified policy intervals, independent scalar output oracle, fixed ex ante decisions and reproducible input contracts',
         'Volume 5 chapters 9–12: contract IC/IR and global wage comparisons, monitoring/multitask/ownership incentives; corrective tax and public-good/congestion/bargaining ledgers; auction deviation and revenue identities, matching enumeration; reference and temporal choices, exact assignment inference and welfare criteria',
         'Volume 5 chapters 5–8: exchange and production wealth/market ledgers, supporting transfers and missing-market improvements; global monopoly and discrimination branches, Cournot activity and Bertrand deviations; mixed support and all-subgame contingent plans; selected quality, signaling beliefs and screening IC/IR/rent/distortion identities',

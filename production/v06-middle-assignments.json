@@ -1,0 +1,138 @@
+{
+  "batch": "v06-middle",
+  "date": "2026-10-08",
+  "authorization": "Standing explicit user authorization for three bounded specialists alongside root",
+  "state": "queued-after-v06-opening-acceptance-publication",
+  "integration_owner": "root",
+  "acceptance_dependency": "Opening chapters c01–c04 must be accepted before c05; then accept c05,c06,c07,c08 in canonical order. Drafting may run in parallel against this interface after dispatch.",
+  "fixed_contract": {
+    "ownership": "Edit only assigned chapter/prefixed assets/checker/author review/source proposal. No children, shared files, commits or hosting. Root owns canonical curriculum, source catalogue, checkpoint, shared checks and publication.",
+    "format": "Static HTML fragments and local assets; standard-library Python; no frameworks, installations or paid services.",
+    "gates": "Complete canonical coverage and outcomes, explicit domains/units/timing/prerequisites, at least two fully worked original examples and eight complete aligned solutions, boundary/global checks, teach-back and answered retention, primary method sources actually inspected, quiet JSON-compatible independent checker and hashed author review. Root audits and accepts; no certification or current-data fabrication.",
+    "shared_interface": "Prior v06 c01–c04 distinguish nominal/current-price accounts from physical model quantities, discrete dated capital, household Euler/borrowing constraints and finite investment. When using S=Y−C−G, G must mean government consumption alone and I all domestic gross investment; U.S. expenditure G including government investment needs a separate split. Price level P, inflation pi, nominal net rate i and real net rate r are locally defined with exact gross-factor relations before approximation. c07/c08 any equations linking inflation and activity must state expected dates, shock units and equilibrium conditions; do not treat an accounting identity as an estimated causal equation. Planned successors link to curriculum until written."
+  },
+  "assignments": [
+    {
+      "owner": "root",
+      "chapter": "v06-c05",
+      "task": "Labor markets and unemployment",
+      "state": "queued",
+      "canonical_specification": {
+        "title": "Labor markets and unemployment",
+        "outcome": "Explain employment dynamics using search, incentives and institutional mechanisms.",
+        "coverage": [
+          "Participation",
+          "matching",
+          "unemployment flows",
+          "wage setting",
+          "efficiency wages",
+          "hysteresis"
+        ],
+        "prerequisites": [
+          "v06-c04"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v06-c05.html",
+        "content/projects/v06-c05-*",
+        "scripts/check_v06_c05.py",
+        "content/reviews/v06-c05-author.json",
+        "content/reviews/v06-c05-sources.json"
+      ],
+      "fixed_scope": "Teach employment/unemployment/nonparticipation definitions with population/working-age/force denominators and jurisdiction-specific official source scope. Derive dated two-state and an explicit entry/exit extension with opening-stock flow accounting; solve steady states and stability/boundaries, distinguish incidence from duration. Explain matching/vacancies with feasible job-finding/filling probabilities, wage-setting/efficiency-wage incentives under explicit information/outside-option assumptions, and a bounded persistence/hysteresis mechanism without calling every slow transition hysteresis. Include original reconciled labor-market and incentive/matching cases, eight fully solved exercises, measurement/identification critique and primary methods actually inspected. No invented current employment observation."
+    },
+    {
+      "owner": "regression",
+      "chapter": "v06-c06",
+      "task": "Money, banking and monetary transmission",
+      "state": "queued",
+      "canonical_specification": {
+        "title": "Money, banking and monetary transmission",
+        "outcome": "Trace monetary-policy mechanisms without relying on a mechanical deposit multiplier.",
+        "coverage": [
+          "Money demand",
+          "policy rates",
+          "reserves",
+          "bank balance sheets",
+          "credit",
+          "transmission"
+        ],
+        "prerequisites": [
+          "v06-c05"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v06-c06.html",
+        "content/projects/v06-c06-*",
+        "scripts/check_v06_c06.py",
+        "content/reviews/v06-c06-author.json",
+        "content/reviews/v06-c06-sources.json"
+      ],
+      "fixed_scope": "Teach money functions/demand and monetary operating mechanisms with explicit units and time/price conventions. Reconcile a two-bank loan/deposit/reserve-payment balance sheet, capital/equity and liquidity constraints, interbank versus central-bank reserve creation and consolidation. Explain policy-rate implementation with a scoped floor/corridor model, administered-rate and reserve conditions, policy transmission through real expected rates, asset prices, credit and expectations; do not rely on a mechanical fixed deposit multiplier. Provide a clearly bounded original monetary-demand/rate mechanism and a fully balanced bank/central-bank transaction example, eight fully solved exercises and primary official methods actually inspected. Date and jurisdiction any actual operating-regime claim; no invented October2026 data or current policy-rate claim without verification."
+    },
+    {
+      "owner": "causal_identification",
+      "chapter": "v06-c07",
+      "task": "Inflation, expectations and nominal rigidity",
+      "state": "queued",
+      "canonical_specification": {
+        "title": "Inflation, expectations and nominal rigidity",
+        "outcome": "Explain inflation dynamics and distinguish supply from demand disturbances.",
+        "coverage": [
+          "Quantity theory conditions",
+          "Phillips curves",
+          "expectations",
+          "price stickiness",
+          "shocks"
+        ],
+        "prerequisites": [
+          "v06-c06"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v06-c07.html",
+        "content/projects/v06-c07-*",
+        "scripts/check_v06_c07.py",
+        "content/reviews/v06-c07-author.json",
+        "content/reviews/v06-c07-sources.json"
+      ],
+      "fixed_scope": "Teach price-level versus inflation/growth units, nominal/real exact compounding, money-growth accounting MV=PY and explicit conditions for a quantity-theory causal prediction. Derive a bounded expectations/Phillips mechanism with all timing and parameters stated, adaptive versus model-consistent expectations, nominal rigidity and short-run supply/demand disturbance comparisons; distinguish expected inflation, realized inflation and policy regime. Explain what observations can/cannot identify supply versus demand using original contrasting shock cases; derive dynamic stability/boundaries for any recursion and avoid estimating empirical slopes from assumed numbers. Include two or more complete original worked examples/eight fully solved exercises and inspected primary methods; actual empirical/current claims need dated support. Leave the full RBC/NK equilibrium comparison for c08 and graduate microfoundations for volume14."
+    },
+    {
+      "owner": "monte_carlo",
+      "chapter": "v06-c08",
+      "task": "Business cycles and stabilization models",
+      "state": "queued",
+      "canonical_specification": {
+        "title": "Business cycles and stabilization models",
+        "outcome": "Compare short-run models and identify their assumptions and predictions.",
+        "coverage": [
+          "IS-LM",
+          "aggregate demand-supply",
+          "RBC introduction",
+          "New Keynesian introduction",
+          "stabilization"
+        ],
+        "prerequisites": [
+          "v06-c07"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v06-c08.html",
+        "content/projects/v06-c08-*",
+        "scripts/check_v06_c08.py",
+        "content/reviews/v06-c08-author.json",
+        "content/reviews/v06-c08-sources.json"
+      ],
+      "fixed_scope": "Build and compare internally complete short-run stabilization models: derive a bounded linear IS-LM system with goods/money markets, solve comparative statics and feasible domains, distinguish a money-supply instrument from an interest-rate rule. Connect aggregate-demand/supply and inflation/output mechanisms with explicit price versus inflation and timing conventions. Supply an introductory real-business-cycle resource/productivity/intertemporal channel and a fully specified small New Keynesian expectations/rate/Phillips system under a stated finite-horizon or equilibrium-selection condition; solve original shocks without importing infinite-horizon determinacy claims not proved. Compare demand/supply/financial or policy shocks, stabilization tradeoffs and model/evidence limits. At least two fully solved model comparisons/eight fully solved exercises; all prerequisites taught or derived and primary method sources actually inspected. No universal claim that one model explains every crisis."
+    }
+  ]
+}

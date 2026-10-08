@@ -12,20 +12,19 @@
     {
       "url": "https://www.bea.gov/resources/methodologies/nipa-handbook/pdf/chapter-02.pdf",
       "title": "BEA NIPA Handbook Chapter2:Fundamental Concepts",
-      "inspection": "Actual31pagePDF retrieved. Read extracted PDFpages1\u201310: production/asset boundaries, market/nonmarket/imputations, domestic/national distinction, income/saving exclusions, expenditure identity/import offset and GDIcomponents. Remaining sections not yet inspected. Subsequent find inspection also read value-added/current-production and statistical-discrepancy text onPDFpages10\u201312; no source historical numerical example will be reused.",
+      "inspection": "Actual31pagePDF retrieved. Read extracted PDFpages1–10: production/asset boundaries, market/nonmarket/imputations, domestic/national distinction, income/saving exclusions, expenditure identity/import offset and GDIcomponents. Remaining sections not yet inspected. Subsequent find inspection also read value-added/current-production and statistical-discrepancy text onPDFpages10–12; no source historical numerical example will be reused.",
       "next": "Read valueadded and principal real/price measures, accounting framework and account tables; screenshot tables/figures used. Original chapter examples must be independent."
     },
     {
       "url": "https://www.bea.gov/resources/methodologies/nipa-handbook/pdf/chapter-04.pdf",
       "title": "BEA NIPA Handbook Chapter4:Estimating Methods",
-      "inspection": "Find inspection read surrounding Fisher/chaining/reference-year text on PDFpages18\u201320, but extracted formulas are garbled. Formula screenshot and nonadditivity/deflator sections still need inspection before a source verification record is accepted.",
+      "inspection": "Find inspection read surrounding Fisher/chaining/reference-year text on PDFpages18–20, but extracted formulas are garbled. Formula screenshot and nonadditivity/deflator sections still need inspection before a source verification record is accepted.",
       "next": "Read Fisher quantity/price links, chaining, reference-year scaling, nonadditivity, implicitdeflator and contributions. Derive original smallbasket counterexample and tests."
     }
   ],
   "next_actions": [
-    "Complete Volume5acceptance/publication before starting canonical Volume6authoring",
-    "Finish primarysourceinspection, persist scoped source proposals then author v06-c01 under fixed productioncontract",
-    "Distinguish GDPproduction quantities, purchasingpower/command income, physical capital and welfare; no invented observations"
+    "Run original ledger/index/capital/trade checker and review manuscript",
+    "Integrate source proposals and dependency-ordered chapter review with specialist submissions"
   ],
   "original_example_designs": [
     {
@@ -75,8 +74,8 @@
         "exports": 20,
         "imports": 55
       },
-      "checks": "VA sum170; expenditure135+50+20+20\u221255=170; income100+20+10+40=170. Intermediate imports10+20 and final imports25. Foreign primary-income receipts8/payments18 giveGNI160; CFC20 givesNDP150/NNI140. Explain conventions and government purchases from private service output.",
-      "extension": "Sell old inventory valued10 for12 after pure price increase: consumption12 and withdrawal\u221212 contribute zero current production; holdinggain2 is not current output. Distinguish current-value stock changes from inventory volume transactions."
+      "checks": "VA sum170; expenditure135+50+20+20−55=170; income100+20+10+40=170. Intermediate imports10+20 and final imports25. Foreign primary-income receipts8/payments18 giveGNI160; CFC20 givesNDP150/NNI140. Explain conventions and government purchases from private service output.",
+      "extension": "Sell old inventory valued10 for12 after pure price increase: consumption12 and withdrawal−12 contribute zero current production; holdinggain2 is not current output. Distinguish current-value stock changes from inventory volume transactions."
     },
     {
       "state": "proposed; original basket arithmetic, future full independent checker required",
@@ -125,5 +124,7 @@
       ],
       "checks": "First quantitylink is sqrt((31/20)*(32/25)); second sqrt((11/8)*(52/49)). Chained aggregate referenced to period0 is200times accumulated links; separate one-good component realvalues sum310and580, so they differ from aggregate chainvolumes. Verify factor reversal PF*QF=nominalratio and reference rescaling invariance. No actual price observation or current official baseyear asserted."
     }
-  ]
+  ],
+  "state": "source-inspection-complete-manuscript-checker-written-review-pending",
+  "source_inspection_completed": "Actual BEA Ch2 PDF pages1–17; Ch4 pages18–21 and26–28; formula pages18–19 rendered and visually inspected. Scoped proposals in content/reviews/v06-c01-sources.json supersede the earlier queued inspection notes."
 }
