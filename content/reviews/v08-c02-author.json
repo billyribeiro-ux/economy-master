@@ -1,0 +1,197 @@
+{
+  "chapter": "v08-c02",
+  "title": "Free cash flow and discounting",
+  "author": "financial diagnosis specialist",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "assignment": "production/v08-opening-assignments.json",
+  "state": "author-review-complete",
+  "status": "passed author checks; pending independent coordinator review and prerequisite-ordered acceptance",
+  "review_type": "Full cash-flow, pricing, mathematical, numerical, prompt/solution, instructional, source and reproducibility audit",
+  "coverage": {
+    "canonical": [
+      "FCFF",
+      "FCFE",
+      "reinvestment",
+      "terminal value",
+      "nominal-real consistency",
+      "currency consistency"
+    ],
+    "outcome": "Derive cash flows to the firm and equity and choose consistent discount rates.",
+    "prerequisites": "Accepted Volume7 accounting/cash/tax/financing knowledge and the agreed v08-c01 dated incremental cash/NPV contract; acceptance remains sequential.",
+    "chapter_words": 6087,
+    "worked_examples": 4,
+    "exercises": 8,
+    "complete_solutions": 8,
+    "teach_back": "Answered NI/CFO/FCFF/FCFE bridge and certain-claim versus shield-adjusted operating rate.",
+    "delayed_check": "Answered collection delay shifts5 from date1 to date2, with unchanged income but equity value lower by100/441 and recomputed market weights.",
+    "case": "Original Cedar finite two-year service runoff; full operating inputs, balanced account paths, immediate cash taxes, final-date debt changes and complete payouts.",
+    "financing": "Explicit certain debt/equity claims priced at5%; baseline debt40→20→0 matches market V200→100→0 and20% weights, giving compatible4.75% FCFF rate. Actual total investor cash equals FCFF plus the cash interest-tax saving.",
+    "consistency": "Separate deterministic inflation and currency examples, product discount factors, same-date operating/total/equity bridges, and independently derived date-H geometric continuation.",
+    "boundaries": "Changed debt policy, delayed collections, unavailable tax deduction, contingent cash access, negative free cash, nominal contract distinction, uncertain inflation/FX and nonconvergent continuation.",
+    "extension": "Growth, marginal capital return and fade economics left explicitly to c03; estimation of risky discount rates and financing-policy risk to c04.",
+    "ownership": "Only c02 manuscript, three c02-prefixed lab assets, c02 checker and c02 source/author records edited; no shared canonical/state/hosting changes or child agents."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v08-c02.html",
+      "bytes": 42572,
+      "sha256": "ee3156bc5d75057a506724fdc541d46af894b2a93c1f270883361ae6990c727a"
+    },
+    {
+      "path": "content/projects/v08-c02-inputs.json",
+      "bytes": 2236,
+      "sha256": "fc7aaaaa3ae09ceb92a027f8036a025ea786b815d46a5f0c33f649ec46d77812"
+    },
+    {
+      "path": "content/projects/v08-c02-analysis.py",
+      "bytes": 9561,
+      "sha256": "9c7463a9c2b4e48fa9942aa0c7d51b5c81d37f8384146d986a3e03af24d27656"
+    },
+    {
+      "path": "content/projects/v08-c02-README.txt",
+      "bytes": 7784,
+      "sha256": "b99c2317dc8d4c1f2a2d6da11ce9ead05416cf3872d4ea85892882e6ed5c8399"
+    },
+    {
+      "path": "scripts/check_v08_c02.py",
+      "bytes": 16414,
+      "sha256": "79443def10bc9e55ca1ce112d96ebbf86d449a04a2565d2af3b6f1133b0efa07"
+    },
+    {
+      "path": "content/reviews/v08-c02-sources.json",
+      "bytes": 3746,
+      "sha256": "5347367b14a66a1762d5827b607a23e6f7db2bc67c8f22a10ee31db471bd8785"
+    }
+  ],
+  "reasoning_checks": [
+    "FCFF derived first from operating cash less unlevered cash tax and investment; the EBIT*(1-tax) version explicitly requires positive taxable operating profit, matching book/tax depreciation and immediate tax payment. Tax balances stay outside operating working capital in this convention.",
+    "FCFE derived independently from net income, from actual operating cash and from FCFF. The general relation uses current cash saving S=T_unlevered−T_levered; statutory tax times interest is limited to full immediate deductibility. Gross lender plus shareholder cash equals FCFF+S, preventing an unnoticed tax mismatch.",
+    "Operating reinvestment reconciles to the exact capital-stock change. The depreciation addback is not a cash receipt and final-date capex does not create current-year depreciation. Negative reinvestment in Cedar is a finite runoff release, not a perpetual growth assumption.",
+    "Cedar receipts, expense payments, current tax, debt amortization, distributions and book equity independently close both years with zero cash. Date2 terminal zero follows supplied contract cessation, collection and exhausted asset service/value, not merely zero carrying values.",
+    "All Cedar cash and financing benefits are certain by explicit teaching assumption, so the common5% investor rate is coherent. Total investor cash is priced before computing compatible market weights/WACC; FCFF/equity equality is not imposed by a plug or arbitrary discount rates.",
+    "Market values are after each date’s distributions and principal changes. Debt cash is valued at the matching contractual rate and happens to be par. Book operating capital and book equity are explicitly distinguished from market values. Debt is deducted once in the operating-to-equity route and never again after FCFE valuation.",
+    "Separate unlevered and tax-shield present values sum to200; adding a second shield to WACC-discounted FCFF would overvalue the same financing benefit. Changed debt evolves market weights and compatible period rates; the lab uses cumulative products rather than exponentiating the last rate.",
+    "Operating-to-ordinary-equity bridges include only assets excluded from operating cash and deduct only matching excluded claims. Required cash already modeled, paid distributions, claim values, fully consolidated outside ownership and obligation double counting are distinguished.",
+    "Exact nominal-real cancellation uses a known price path and gross-rate product, with uncertainty and fixed nominal contract caveats. Actual nominal tax schedules should be modeled before deflation where depreciation rules are nominal.",
+    "Currency quote is home units per foreign unit. Conversion occurs at each payment date under an explicitly consistent known hypothetical path. No future spot prediction, universal purchasing-power parity, or forward/expected-spot equality is inferred; joint cash/exchange covariance is identified under uncertainty.",
+    "Continuation begins at H+1 and is valued at H after explicit cash. Geometric convergence is proved under −1<g<r with r>−1 and positive next cash. Supplied next cash is not grown twice; a going concern does not also release all required working capital.",
+    "Every worked and exercise prompt matched to its complete answer for supplied data, units, dates, tax convention and economic interpretation. Conceptual answers have explicit completion criteria; the fully numerical tests supplement this manual audit."
+  ],
+  "exercise_audit": [
+    {
+      "exercise": 1,
+      "status": "pass",
+      "coverage": "Algebraic NI/FCFF/FCFE bridges; missing shield in gross payout identity; economic versus actual/legal payout and depreciation distinctions."
+    },
+    {
+      "exercise": 2,
+      "status": "pass",
+      "coverage": "New one-year direct/indirect CFO and all closing claims; debt issuance changes final payout/claims without altering current operations or beginning-debt interest."
+    },
+    {
+      "exercise": 3,
+      "status": "pass",
+      "coverage": "Explicit cash taxes imply actual saving1, FCFE30 and shortcut overstatement1.5; future deduction evidence is not invented."
+    },
+    {
+      "exercise": 4,
+      "status": "pass",
+      "coverage": "Market claims and unit-correct20 CU/share; required cash, outside ownership, excluded obligation and paid dividend treated once."
+    },
+    {
+      "exercise": 5,
+      "status": "pass",
+      "coverage": "Nominal7.1% equals real5% with known2% inflation; equal PV82000/441 and exact mismatch2456/441."
+    },
+    {
+      "exercise": 6,
+      "status": "pass",
+      "coverage": "Foreign-to-home dated conversion produces312/324.48 and equivalent200 kF/600 kH values; covariance and risky-pricing limitations stated."
+    },
+    {
+      "exercise": 7,
+      "status": "pass",
+      "coverage": "TV2=300 and value22775/81; first continuation payments, convergence failure and working-capital double counting addressed."
+    },
+    {
+      "exercise": 8,
+      "status": "pass",
+      "coverage": "Changed debt causes FCFE108/63.25, equity70660/441, changed market weight168/421 and both compatible period rates; financing benefit and real-world limits distinguished."
+    }
+  ],
+  "numerical_checks": [
+    {
+      "name": "Independent eighteen-entry journal, cash/capital/tax/claim identities and both equity valuations",
+      "status": "pass",
+      "entries": 18
+    },
+    {
+      "name": "Independent dated pricing, debt-policy and collection transfers, money scaling and zero-tax boundary",
+      "status": "pass"
+    },
+    {
+      "name": "Nominal/real cancellation, each currency payment and independent geometric continuation tail",
+      "status": "pass"
+    },
+    {
+      "name": "All eight prompt/solution pairs: algebra audit and exact numerical exercises2–8, with answered retention",
+      "status": "pass"
+    },
+    {
+      "name": "Nine meaningful domain failures and four consequential claim/shield/timing error detections",
+      "status": "pass"
+    },
+    {
+      "name": "Four worked cases/eight full pairs, flat assets/sources, strict quiet JSON and portable normal/optimized CLI",
+      "status": "pass"
+    }
+  ],
+  "commands_and_contracts": [
+    {
+      "command": "python3 book/scripts/check_v08_c02.py",
+      "result": "pass; six focused groups"
+    },
+    {
+      "command": "python3 -O: capture checker import/check output; json.dumps(check(), allow_nan=False)",
+      "result": "quiet strict JSON; six groups pass without Python assert dependence"
+    },
+    {
+      "command": "temporary input/script copies; normal and optimized lab CLI from another working directory",
+      "result": "identical exact JSON and no stderr"
+    },
+    {
+      "command": "invalid-units CLI",
+      "result": "status2, clear stderr and no result JSON"
+    }
+  ],
+  "source_checks": {
+    "proposals": 4,
+    "record": "content/reviews/v08-c02-sources.json",
+    "inspection": "Actual Damodaran definition, consistency and terminal derivation HTML bodies and official MIT2003 WACC/APV PDF inspected at recorded scopes.",
+    "scope_limits": "No historical source market figures used as current observations; no broad source normalization, legal payout, government-risk or purchasing-power-parity claim adopted.",
+    "originality": "All prose, Cedar and separate cases, exercise data, calculations, independent journal, checker and benchmark are original; no source exercise or financial example copied."
+  },
+  "resolved_findings": [
+    {
+      "origin": "author input-domain audit",
+      "finding": "The lab should not permit current depreciation of final-date new capex.",
+      "resolution": "Explicitly require period depreciation not to exceed opening PPE; baseline service schedule remains25 old in year1,15 old+10 new in year2."
+    },
+    {
+      "origin": "first checker execution",
+      "finding": "A100-term geometric-tail check used an overly tight0.25 bound for the supplied ratio.",
+      "resolution": "Corrected the verified remainder bound to0.5. The exact partial-sum-plus-remainder identity and every manuscript valuation were unchanged."
+    }
+  ],
+  "open_findings": [],
+  "limitations": [
+    "Cedar and all rates are fictional supplied assumptions. In a risky business, debt policy, equity returns, tax-shield timing/risk and distress can change together; this chapter does not estimate those inputs.",
+    "The small runoff lab supports two annual periods, current usable taxes, no new equity funding and a complete zero ending balance. It is not a general reporting, loss-tax, currency forecasting or financial-services valuation engine.",
+    "Annual end-date cash and potential payout do not establish daily cash feasibility, legal distribution permission or actual lender availability.",
+    "Known inflation and conversion identities do not resolve uncertain inflation, exchange covariance, restricted access or risk pricing.",
+    "Geometric convergence is necessary for the supplied positive stable-growth tail, not evidence that its investment/competition assumptions are sustainable.",
+    "Author/agent review is not independent human certification or a guarantee of error-free work. Coordinator owns prerequisite acceptance, shared build/checks and publication; browser/mobile/print visual QA remains separate."
+  ],
+  "handoff": "Seven owned artifacts saved; six-payload hashes identify the reviewed package. Ready for full independent coordinator review."
+}

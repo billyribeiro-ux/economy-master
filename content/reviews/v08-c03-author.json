@@ -1,0 +1,222 @@
+{
+  "chapter": "v08-c03",
+  "title": "Valuation models and terminal assumptions",
+  "author": "equity and valuation specialist",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "assignment": "production/v08-opening-assignments.json",
+  "state": "author-review-complete",
+  "status": "passed_author_review",
+  "acceptance": "Pending independent coordinator review and prerequisite-ordered acceptance; this author record does not change canonical status.",
+  "review_type": "Full manuscript, every worked example and exercise/solution, answered teaching/retention, all owned lab files, checker and scoped primary-source review",
+  "coverage": {
+    "outcome": "Value an operating business using explicit growth and reinvestment economics.",
+    "canonical": {
+      "DCF": "Dated multistage FCFF, operating/equity claim bridge, horizon extension and independent economic-profit identity.",
+      "perpetuities": "Geometric derivation and convergence; next-period numerator, continuation date, finite life and run-off distinctions.",
+      "value drivers": "Sales/capital, operating margin, taxes, maintenance, net PPE, working capital and complete capital/cash path.",
+      "ROIC": "Average versus incremental return; old-capital earnings changes; explicit conditions for g = incremental ROIC times reinvestment.",
+      "growth": "Stable reinvestment and numerator; derivative with first future NOPAT fixed; value creation, neutrality and destruction.",
+      "fade": "Finite decline in returns on all productive capital, with independently tracked investment cohorts and maintained replacement policy.",
+      "terminal constraints": "Capital, sustainable investment, margins, relevant market, nominal/currency basis and financing/risk compatibility; no automatic perpetual continuation."
+    },
+    "prerequisite_contract": "Uses v08-c02 FCFF, operating-to-equity and dated nominal/currency conventions; rate estimation and general financing-policy compatibility remain with v08-c04.",
+    "chapter_words": 5506,
+    "worked_examples": 3,
+    "exercises": 8,
+    "complete_solutions": 8,
+    "teaching": "Answered committee explanation separating terminal share from perpetual excess profit, with a timeline, final reinvestment, economic-profit identity and evidence requirement.",
+    "retention": "Four answered items: three determinate calculations and one finite-life/renewal judgment.",
+    "lab": "Original Mariner Calibration Services case, four downloadable files, exact standard-library benchmark and nine coherent discount/growth sensitivity cells.",
+    "ownership": "Only c03 manuscript, four c03-prefixed lab assets, c03 checker and source/author records changed; no shared canonical files, build, hosting or child agents."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v08-c03.html",
+      "bytes": 39600,
+      "sha256": "5531b5b600915723f97da608733066d67358e7dd4a86b51bb17d46f5d9bf21f9"
+    },
+    {
+      "path": "content/projects/v08-c03-inputs.json",
+      "bytes": 3200,
+      "sha256": "2408d68430207b5450414f8ca9ca9e81853c87dde2e03834ab56f614bbd2e807"
+    },
+    {
+      "path": "content/projects/v08-c03-analysis.py",
+      "bytes": 10368,
+      "sha256": "ef827b23a25cb6f36ea2ecd270dc1d7a8a4f7352dfd716d6f2ea77a5787b9e4b"
+    },
+    {
+      "path": "content/projects/v08-c03-output.json",
+      "bytes": 8028,
+      "sha256": "b9f6ab5df4c356446c632f996151db90e807ee7aa89ed329b95ac08c913bc432"
+    },
+    {
+      "path": "content/projects/v08-c03-README.txt",
+      "bytes": 5658,
+      "sha256": "4833f9c6fa4c9eb21d942174bd4c53a716957a12133198ad7722acf6075aceb6"
+    },
+    {
+      "path": "scripts/check_v08_c03.py",
+      "bytes": 19134,
+      "sha256": "d7fc8b05f44ed5a3e35b681ae8c2217f29729ec45d2afbf9be21a6d337d43849"
+    },
+    {
+      "path": "content/reviews/v08-c03-sources.json",
+      "bytes": 3432,
+      "sha256": "81aee09801cf05ba40abba4fe8c88359acfc5d1976045f41e7c2626b116d73fe"
+    }
+  ],
+  "reasoning_checks": [
+    "Continuation at H covers cash from H+1 and excludes explicit F_H. It is not a second sale or liquidation receipt. The geometric series is derived under r and g above minus one and g below r; positive cash with g at or above r does not acquire a valid negative value from the fraction.",
+    "Operating capital excludes excess cash and debt. Net investment equals capex minus D&A plus change in operating NWC only under the stated clean perimeter, with no omitted acquisition, impairment, currency or revaluation movement.",
+    "The old/new earnings identity is derived before the shortcut. g = marginal ROIC times reinvestment requires maintained earnings on old capital, correct implementation timing and funded replacement; average historical accounting ROIC is not substituted for marginal return.",
+    "The fixed-first-NOPAT stable-growth derivative is independently checked. Comparisons across return rows have different opening capital, while growth comparisons within each row hold opening capital and first earnings fixed. The derivative sign follows return minus required return.",
+    "Mariner's declining ROIC applies to every productive capital cohort. NOPAT can fall while capital grows; explicit old/new contributions explain every transition without a hidden asset destruction or a naive g = current ROIC times b shortcut.",
+    "Every explicit year closes PPE, NWC and total operating capital and reconciles FCFF through both NOPAT minus net investment and the operating-expense/tax/NWC/capex bridge. Cash operating cost is defined as expense excluding D&A before working-capital settlement adjustments, not independently observed supplier cash.",
+    "The final explicit return has already reached 10%, and year-4 reinvestment already switches to 30%. This produces K4 = 606.8348, NOPAT5 = 60.68348 and FCFF5 = 42.478436 before TV4 is calculated. Growth sensitivities regenerate this boundary investment, capital and cash.",
+    "The finite economic-profit identity is proved by telescoping capital terms. An independent checker sums productive cohorts and values their economic profit, rather than calling the benchmark's year-row or DCF routines.",
+    "Every sensitivity cell maintains the stated return/capital model and changes the complete terminal policy. The R = r row is exactly flat despite changing terminal shares; the R greater than r and R less than r rows have opposite growth effects. Sensitivity is not a probability distribution or a confidence interval.",
+    "Extending the identical base-policy cash path from four to six explicit years leaves total value unchanged and lowers terminal share. The README separately explains why changing the policy-switch date in the extended sensitivity creates a different path.",
+    "The equity bridge adds only separately valued date-0 excess cash and nonoperating assets and subtracts the debt market claim once. Units kCU divided by thousands of ordinary shares give CU per share. No second financing interest deduction or tax-shield addition enters FCFF.",
+    "Terminal sustainability is distinguished from geometric convergence. Relevant-market limits, real/nominal and currency definitions, competitive duration, maintenance, taxes and risk/financing policy require evidence. Negative growth, finite life, greater-than-NOPAT investment and distress need models beyond the bounded lab.",
+    "All eight prompt/solution pairs were read for supplied data, determinacy, dates, units, calculation and economic interpretation. All methods are introduced before their exercises; the open evidence portion has explicit completion criteria and illustrative reasoning."
+  ],
+  "worked_example_audit": [
+    {
+      "example": 1,
+      "status": "pass",
+      "result": "TV2 = 416; V0 = 2650/7; terminal share = 325/371. Both explicit cash dates and the next-period numerator are checked."
+    },
+    {
+      "example": 2,
+      "status": "pass",
+      "result": "For fixed first NOPAT 96, r = 8% and g = 2%, values are 800, 1200 and 1400 at R = 4%, 8% and 16%; each no-growth comparator is 1200. Capital and reinvestment are funded consistently."
+    },
+    {
+      "example": 3,
+      "status": "pass",
+      "result": "Four capital/asset/cash rows, first continuation year, complete sensitivity, operating/equity/share values and independent economic-profit reconciliation agree exactly."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "exercise": 1,
+      "status": "pass",
+      "result": "TV2 = 700, V0 = 482750/729, incorrect-numerator understatement = 62500/2187; supplied first continuation jump can differ from the later stable rate."
+    },
+    {
+      "exercise": 2,
+      "status": "pass",
+      "result": "Average ROIC 20%, reinvestment 40%, new earnings 4, next NOPAT 77.6 and total growth minus 3%; historical-return and omitted-erosion errors separated."
+    },
+    {
+      "exercise": 3,
+      "status": "pass",
+      "result": "Opening capital 400; investments 0, 12 and 24; FCFF 72, 60 and 48; values 600, 2000/3 and 800, with positive derivative."
+    },
+    {
+      "exercise": 4,
+      "status": "pass",
+      "result": "NOPAT 45, investment 18, capex 26.4, NWC addition 3.6, closing capital 318 and FCFF 27; next NOPAT 38.16 gives minus 15.2% growth, decomposed as old minus 9 plus new 2.16."
+    },
+    {
+      "exercise": 5,
+      "status": "pass",
+      "result": "F5 = 42.478436, F6 = 43.75278908, K6 = TV6 = 643.79103932. The date-4 continuation remains 606.8348, V0 remains 70340/121, and terminal share falls to about 62.513213%."
+    },
+    {
+      "exercise": 6,
+      "status": "pass",
+      "result": "Three terminal-growth policies produce different year-4 investment, FCFF and capital but identical F4 plus TV4 of 648.076. Freezing investment while changing next earnings violates the maintained capital-return law."
+    },
+    {
+      "exercise": 7,
+      "status": "pass",
+      "result": "Positive cash with r = 7% and g = 8% has a divergent discounted sum, not value minus 1000. g = 3% and R = 2% implies 150% reinvestment, requiring a different funding/sustainability model. Finite contract calls for dated remaining cash and net closure."
+    },
+    {
+      "exercise": 8,
+      "status": "pass",
+      "result": "Required reinvestment 10 gives FCFF 40, operating value 1000, equity 915 and CU 91.5/share. Omitted reinvestment overstates value by 250. Four distinct evidence areas and assessment criteria are supplied."
+    }
+  ],
+  "numerical_checks": {
+    "status": "passed",
+    "groups": [
+      "Quiet benchmark, preserved exact output and strict JSON",
+      "Independent productive-cohort and economic-profit valuation; PPE/NWC/cash closure and return fade",
+      "Nine coherent sensitivity cells and three return-spread signs; frozen-boundary error detected",
+      "Unchanged-policy horizon extension, capital/claim/share scaling and zero-cash boundary",
+      "Ten meaningful invalid model contracts rejected",
+      "All worked examples, eight solutions and four retention answers independently checked",
+      "Chapter structure, four offline assets and four scoped primary sources"
+    ],
+    "anchors": {
+      "operating_value_kCU": "70340/121",
+      "equity_value_kCU": "51585/121",
+      "value_per_share_CU": "10317/484",
+      "terminal_value_date_4_kCU": "1517087/2500",
+      "terminal_share": "137917/193435"
+    },
+    "invalid_contracts_rejected": [
+      "g equals r",
+      "reinvestment above NOPAT",
+      "terminal return jump",
+      "terminal policy frozen",
+      "negative implied cash operating cost",
+      "negative residual equity",
+      "binary float input",
+      "Boolean monetary input",
+      "nonconsecutive years",
+      "zero opening capital"
+    ]
+  },
+  "commands_and_contracts": [
+    {
+      "command": "python3 -B book/scripts/check_v08_c03.py",
+      "result": "Seven focused groups passed."
+    },
+    {
+      "command": "python3 -B -O: captured checker import/check(); json.dumps(result, allow_nan=False)",
+      "result": "Final seven groups passed with no stdout or stderr; strict JSON, no dependence on assert statements."
+    },
+    {
+      "command": "Temporary flattened copies of benchmark and input; normal default-input and optimized explicit-input CLI from /private/tmp",
+      "result": "Both exact JSON results equal preserved output, no stderr, no repository writes."
+    }
+  ],
+  "source_checks": {
+    "record": "content/reviews/v08-c03-sources.json",
+    "primary_sources": 4,
+    "inspection": "Actual author-hosted Damodaran growth, excess-return and stable-growth HTML bodies and relevant passages of the 24-page terminal-value PDF inspected at the recorded scopes.",
+    "limits": "No source market number or company example is used as a current observation. Image-only equations, historical risk heuristics and a universal growth-versus-risk-free rule are not claimed as independently verified exact formulas. Original derivations specify their own assumptions.",
+    "originality": "All prose, numerical cases, questions, capital paths, benchmark and independent checker are original; no source example or exam-bank problem reproduced."
+  },
+  "resolved_findings": [
+    {
+      "origin": "coordinator timing review",
+      "finding": "The final explicit investment switch and sensitivity policy need to be explicit at the continuation boundary.",
+      "resolution": "Manuscript and lab guide state that year 4 already uses 30% reinvestment. Every growth sensitivity regenerates final investment, FCFF, capital and next-year NOPAT before continuation valuation."
+    },
+    {
+      "origin": "coordinator editorial review",
+      "finding": "The initial fictional case name duplicated a different Chapter 1 case; an old Field Services suffix remained during renaming.",
+      "resolution": "Renamed the complete case to Mariner Calibration Services in manuscript and lab metadata, removed the residual suffix, and explicitly separated it from Chapters 1 and 2. Numerical assumptions are unchanged."
+    },
+    {
+      "origin": "author cash-bridge clarity review",
+      "finding": "The cash operating cost label could be mistaken for independently observed supplier payments despite a separate NWC adjustment.",
+      "resolution": "Defined it in the chapter and guide as operating expense excluding D&A before working-capital settlement adjustments. The NWC bridge supplies cash timing; all numerical outputs remain unchanged."
+    }
+  ],
+  "open_findings": [],
+  "limitations": [
+    "Conditional fictional capital and cash economics are verified; no actual business earnings, demand, tax law, return persistence or appropriate discount rate is authenticated.",
+    "The benchmark uses annual end-date investment, positive profit and returns, a constant productive-capital convention, maintained replacement and no noncash capital movement. It does not establish intra-year liquidity or provide a general distress, financing, capital-vintage, loss-tax or liquidation engine.",
+    "The independent arithmetic oracle and full author audit reduce error risk but are not independent human academic certification or guarantees of valuation accuracy.",
+    "Source inspection is scoped methodological review; it is not a wholesale factual endorsement of the historical source documents.",
+    "Coordinator owns dependency acceptance, shared build/link verification and publishing. Browser, mobile and print visual QA remain separate and are not claimed here."
+  ],
+  "handoff": "Eight owned artifacts saved, including this record. Seven final payload hashes below identify the reviewed package; ready for independent coordinator acceptance."
+}

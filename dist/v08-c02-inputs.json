@@ -1,0 +1,17 @@
+{
+  "case": "Cedar Service Runoff: original free-cash-flow case",
+  "units": "kCU; annual end-date cash; effective annual rates",
+  "dates": ["2026-12-31", "2027-12-31", "2028-12-31"],
+  "provenance": "Original fictional teaching inputs. Every future amount is certain by assumption, not an observation or a real forecast. No external dataset.",
+  "contract": "Standalone ordinary-equity service business; receivables are the only noncash working capital. All other operating costs and taxes are paid currently. Book and tax depreciation agree. Taxable profits remain nonnegative and every interest deduction is used immediately. Debt is issued at par, earns the same certain annual return as all other claims, and changes at each year-end after interest. No new equity, cash retention, asset sale, transaction costs, other claims or unlisted transactions. All available equity cash is distributed. Equipment is exhausted and receivables collected at date 2, when debt and business value are zero.",
+  "tax_rate": "1/4",
+  "certain_rate": "1/20",
+  "opening": {"cash": 0, "receivables": "17/2", "ppe": 40, "debt": 40, "book_equity": "17/2"},
+  "periods": [
+    {"sales": 322, "cash_operating_costs": 175, "depreciation": 25, "capex": 10, "closing_receivables": "11/2", "closing_debt": 20},
+    {"sales": 249, "cash_operating_costs": 125, "depreciation": 25, "capex": 0, "closing_receivables": 0, "closing_debt": 0}
+  ],
+  "real_nominal": {"real_cash": [60, 90], "real_rate": "1/20", "inflation": "1/25", "price_index_at_zero": 1},
+  "currency": {"foreign_cash": [105, "441/4"], "foreign_rate": "1/20", "home_rate": "2/25", "spot_home_per_foreign": 2, "future_home_per_foreign": ["72/35", "2592/1225"], "contract": "Separate hypothetical certain payments and known exchange path with frictionless conversion; matching rates/path supplied for a consistency identity, not an exchange-rate forecast."},
+  "continuation": {"explicit_cash": [30, 36], "rate": "1/10", "next_cash": 40, "growth": "1/50", "contract": "Separate illustrative operating claim. Date-3 cash is already after required reinvestment; it then grows at 2% forever at a supplied compatible constant 10% discount rate. Date-2 continuation excludes date-2 explicit cash."}
+}

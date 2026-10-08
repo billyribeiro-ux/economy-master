@@ -1,0 +1,51 @@
+{
+  "case_id": "v08-c01-kestrel",
+  "provenance": "Original fictional teaching cases; no observed company, market or tax data.",
+  "units": "kCU",
+  "timing": "time_0_then_annual_end_dates",
+  "tax_convention": "immediate_full_use_of_all_incremental_tax_effects",
+  "discount_rate": "0.10",
+  "main": {
+    "name": "Kestrel three-year packaging line",
+    "equipment_outlay": 90,
+    "revenue": [150, 170, 150],
+    "cash_operating_cost": [90, 102, 90],
+    "additional_fixed_cost": [12, 12, 12],
+    "lost_existing_contribution": [6, 8, 6],
+    "foregone_rent": [5, 5, 5],
+    "tax_depreciation": [30, 30, 30],
+    "working_capital_balances": [15, 20, 18, 0],
+    "terminal_sale": 18,
+    "tax_rate": "0.25",
+    "sunk_study": 9,
+    "unchanged_allocated_cost": [7, 7, 7],
+    "committed_time_0_funding": 80
+  },
+  "comparisons": {
+    "scale_small": [-40, 56],
+    "scale_large": [-100, 130],
+    "timing_early": [-100, 130, 0],
+    "timing_late": [-100, 0, 150],
+    "multiple_irr": [-100, 240, -143],
+    "no_irr": [-100, 180, -90],
+    "borrowing": [80, -96]
+  },
+  "equal_service": {
+    "years": 2,
+    "identical_replacement_available": true,
+    "same_service_and_zero_terminal_resale": true,
+    "options": [
+      {"name": "short", "life": 1, "initial_cost": 24, "annual_cost": 6},
+      {"name": "long", "life": 2, "initial_cost": 42, "annual_cost": 5}
+    ]
+  },
+  "capital_budget": {
+    "available_now": 100,
+    "indivisible_and_additive": true,
+    "projects": [
+      {"name": "A", "initial_cost": 60, "year_1_receipt": "92.4"},
+      {"name": "B", "initial_cost": 50, "year_1_receipt": "75.9"},
+      {"name": "C", "initial_cost": 50, "year_1_receipt": "75.9"}
+    ]
+  }
+}

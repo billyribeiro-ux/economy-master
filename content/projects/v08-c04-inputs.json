@@ -1,0 +1,72 @@
+{
+  "provenance": "Original fictional teaching cases created for v08-c04; no observed market data or jurisdictional tax rules.",
+  "units": "kCU; annual effective rates as decimal strings; all cash at year-end",
+  "moment_case": {
+    "probabilities": [
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4"
+    ],
+    "market_shocks": [
+      "-0.10",
+      "-0.02",
+      "0.02",
+      "0.10"
+    ],
+    "residual_shocks": [
+      "0.02",
+      "-0.02",
+      "-0.02",
+      "0.02"
+    ],
+    "x_market_loading": "1.5",
+    "x_residual_loading": "1",
+    "z_market_loading": "0.5",
+    "z_residual_loading": "6",
+    "risk_free": "0.03",
+    "equity_premium": "0.05"
+  },
+  "one_period": {
+    "market_equity": "700",
+    "market_debt": "300",
+    "book_equity": "300",
+    "book_debt": "300",
+    "equity_beta": "1.2",
+    "risk_free": "0.03",
+    "debt_return": "0.03",
+    "equity_premium": "0.05",
+    "current_tax_rate": "0.25",
+    "expected_unlevered_cash": "1069.75",
+    "fully_usable_current_deduction": true
+  },
+  "no_tax_comparable": {
+    "peer_equity": "400",
+    "peer_debt": "200",
+    "peer_equity_beta": "1.6",
+    "peer_debt_beta": "0.2",
+    "target_debt_fraction": "0.2",
+    "target_debt_beta": "0.2",
+    "risk_free": "0.03",
+    "equity_premium": "0.05"
+  },
+  "finite_apv": {
+    "initial_investment": "125",
+    "expected_unlevered_cash": [
+      "48",
+      "53",
+      "58"
+    ],
+    "unlevered_return": "0.10",
+    "risk_free": "0.04",
+    "debt_balances": [
+      "60",
+      "40",
+      "20",
+      "0"
+    ],
+    "tax_rate": "0.25",
+    "tax_use": "current",
+    "contract": "Debt service and specified tax credit payments are certain in this case; certainty is stipulated, not inferred from the expected operating cash."
+  }
+}

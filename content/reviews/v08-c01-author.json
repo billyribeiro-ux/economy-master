@@ -1,0 +1,212 @@
+{
+  "chapter": "v08-c01",
+  "title": "Value creation and capital budgeting",
+  "author": "cost_peer specialist",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "assignment": "production/v08-opening-assignments.json",
+  "review_type": "Author full prose/problem/solution, exact finance, source-scope, instruction and reproducibility review",
+  "state": "author-review-complete",
+  "status": "passed author checks; pending separate coordinator review and prerequisite-ordered acceptance",
+  "scope": {
+    "outcome": "Evaluate incremental project cash flows and reconcile NPV with decision criteria.",
+    "canonical_coverage": [
+      "NPV",
+      "IRR",
+      "opportunity costs",
+      "sunk costs",
+      "cash flow",
+      "mutually exclusive projects"
+    ],
+    "prerequisites": [
+      "v03",
+      "v05",
+      "v07"
+    ],
+    "worked_examples": 4,
+    "exercises": 8,
+    "complete_solutions": 8,
+    "teaching": "Answered three-minute teach-back and independent dated retention problem. Definitions and proof conditions precede the required exercises.",
+    "lab": "Finite original operating/tax/working-capital/disposal project; exclusive cash-stream comparisons, conventional and quadratic IRR analysis, matched-service replacement and exhaustive small capital-budget selection.",
+    "ownership": "Only v08-c01 manuscript, prefix lab files, checker, source proposals and author review. No shared source/curriculum/checkpoint/build/hosting edits or child agents."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v08-c01.html",
+      "bytes": 41425,
+      "sha256": "c3be89f6a2d73f1f904386c3105eb6287614eda346dafcfd6dbd68e2ede65b40"
+    },
+    {
+      "path": "content/projects/v08-c01-inputs.json",
+      "bytes": 1692,
+      "sha256": "6eb43ef66d25acc9042cd78731eaf3f16c596c6ed9747abf0adabd9264eae02a"
+    },
+    {
+      "path": "content/projects/v08-c01-analysis.py",
+      "bytes": 11921,
+      "sha256": "42966ea759f4b235bbfc141acdd94d2bfc6f4a98e14626896e877fceef5b033f"
+    },
+    {
+      "path": "content/projects/v08-c01-results.json",
+      "bytes": 9885,
+      "sha256": "1c9ad9f2a75accf84cddc0f610d3192a11dcc94ad1da62d8bcbdee73acd5d40a"
+    },
+    {
+      "path": "content/projects/v08-c01-README.txt",
+      "bytes": 7687,
+      "sha256": "b9711bca4c9988cd10dddd2025bd7bccf9f2be920048f86f5d550fb2ba1e375d"
+    },
+    {
+      "path": "scripts/check_v08_c01.py",
+      "bytes": 16761,
+      "sha256": "b56c36b1cdff5ed42ee99a89d9f6165d698918c43a65f19d57f5978387c174f9"
+    },
+    {
+      "path": "content/reviews/v08-c01-sources.json",
+      "bytes": 2705,
+      "sha256": "52c3cbaca9bf4d28da6c538bc6a7c5a971ac00d9aa3fdd3c964d66b086aa29e8"
+    }
+  ],
+  "instruction_and_reasoning_checks": [
+    "Read the full canonical specification, exact persisted ownership/prerequisite contract, repository instructions and verifier conventions. Existing accepted teaching in v01-c05 and v07-c04/c08/c10/c12 supplies dated value, accounting, relevant cost and cash feasibility; the chapter introduces the new capital-budgeting definitions before use.",
+    "With/without comparison uses the affected whole business and a realistic counterfactual. Sunk studies have no future refunds/tax effects; unchanged allocations cancel. Only incremental displaced contribution enters, and mutually exclusive resource alternatives are not summed.",
+    "Every example states monetary units, time-0 versus annual end dates, entity/alternative boundary, terminal behavior and supplied rate. The rate is not inferred from a loan coupon, company return or current market observation. Rate estimation and FCFF/FCFE claims remain in c02/c04.",
+    "NPV follows from dated factors. Additivity is explicitly conditional on a valid common linear valuation of the combined streams; project interactions require rebuilding the combined cash case. Different risk adjustments do not justify an arbitrary common incremental rate.",
+    "Tax bridge derives operating cash from margin minus tax and independently from after-tax profit plus depreciation. The fictional tax convention permits immediate full use, including losses; delayed/unusable tax benefits require a different schedule. Book and tax depreciation coincide only in the main example.",
+    "Kestrel includes foregone taxable rent and cannibalized contribution, adds equipment cash once, invests working capital at date 0, and releases each change at its specified date. Terminal working-capital release and after-tax equipment proceeds are separate. Full recovery is a supplied liquidation fact, not an automatic consequence of stopping a forecast.",
+    "All Kestrel values were independently reconstructed by comparing complete company cash and tax with and without the project. A separate incremental cash/working-capital/PPE/equity ledger closes at every date; a negative cash change is not an authorized negative actual cash balance.",
+    "Cash sequence (-105,30.25,41.75,66.75) yields exact NPV 19045/2662 at 10%, conventional IRR about 13.357868%, and a distinct time-0 funding gap 25 under committed funds 80. The ledger and NPV do not establish interim treasury feasibility or a financing commitment.",
+    "Conventional IRR proof covers the full domain r > -1: negative initial cash, nonnegative later cash, at least one positive; continuity, strict monotonicity and endpoint limits imply one root. A positive root additionally requires NPV at zero above zero. Negative and zero roots are retained by the solver.",
+    "Original nonconventional cases are fully factored or completed-square proofs, not one guessed solver root. (-100,240,-143) has 10% and 30%; (-100,180,-90) has no admissible root. The borrowing orientation reverses the conventional acceptance comparison.",
+    "Mutually exclusive scale comparison proves the NPV difference equals the value of the increment, under the same valid rate. The one-year scale counterexample contains no intermediate receipt, so no unsupported reinvestment story explains the ranking. Timing crossover is derived algebraically and alternatives are also compared with rejection.",
+    "Payback respects supplied end dates rather than inventing smooth within-year cash; later cash and the opportunity rate explain its limitations. The chosen profitability-index definition is stated and is not claimed to solve an indivisible budget problem.",
+    "Unequal-life comparison explicitly supplies identical service, a finite matched horizon, replacement availability, dates and zero terminal resale. Complete cash schedules and annual equivalents agree only under those assumptions. A shorter service requirement needs actual resale/redeployment facts rather than an automatic repeat.",
+    "Exercise 1 supplies a new counterfactual contribution loss and separates incomplete project valuation from funding proceeds. Exercise 2 conserves lifetime cash while reducing present value through timing. Exercise 3 explicitly changes tax usability date and values the separate later benefit.",
+    "Exercises 4 and 5 distinguish conventional uniqueness, negative/admissible roots, multiple roots and no real roots. Exercise 6 computes a fresh timing crossover. Exercise 7 exhausts feasible combinations and shows the ratio heuristic failure. Exercise 8 gives a complete common service horizon and a bounded missing-information critique.",
+    "Every exercise solution and all retention figures were independently recalculated against the exact prompt. Open components have specific evaluation criteria that accept defensible reasoning and require missing facts to be named rather than invented.",
+    "Three scoped primary references actually inspected. Historical examples/market observations, broad reinvestment rhetoric and heuristic universal ranking claims from sources are not adopted. All cases, amounts, proofs, code and prose are original.",
+    "Fragment has four recognizable worked asides, exactly eight exercise/solution items, stable IDs, matched source proposals, answered teaching/retention and flat offline asset links. Adjacent planned chapters link to curriculum anchors until accepted; no draft is called complete or accepted."
+  ],
+  "numerical_checks": [
+    {
+      "name": "Whole-firm counterfactual tax/cash, all-period incremental ledger, backward NPV and dated funding gap",
+      "status": "pass"
+    },
+    {
+      "name": "Six economic interventions: sunk/allocation, rent, collection timing, financing, tax and zero-rate limits",
+      "status": "pass"
+    },
+    {
+      "name": "Positive/negative/zero conventional roots, admissible brackets, exact multiple/no-root proofs and borrowing reversal",
+      "status": "pass"
+    },
+    {
+      "name": "Exclusive scale/timing, incremental crossover, complete replacement schedule and constrained project set",
+      "status": "pass"
+    },
+    {
+      "name": "All eight determinate exercise solutions, counterfactual/tax-timing extensions and delayed retention solved",
+      "status": "pass"
+    },
+    {
+      "name": "Nine relevant domain failures and three consequential cash-flow error detectors",
+      "status": "pass"
+    },
+    {
+      "name": "Four worked cases/eight solution pairs, three scoped sources, offline assets, preserved output and quiet portable CLI",
+      "status": "pass"
+    }
+  ],
+  "anchor_results": {
+    "main_cash_flows": [
+      "-105",
+      "121/4",
+      "167/4",
+      "267/4"
+    ],
+    "main_npv_exact": "19045/2662",
+    "main_npv_decimal": 7.154395191585274,
+    "main_irr_decimal": 0.1335786837938347,
+    "time_0_funding_gap": 25,
+    "slower_collection_npv_exact": "17365/2662",
+    "multiple_irrs": [
+      "1/10",
+      "3/10"
+    ],
+    "no_irr_numerator": "-100*(x-0.9)^2-9",
+    "scale_npv": [
+      "120/11",
+      "200/11"
+    ],
+    "timing_crossover": "2/13",
+    "service_present_cost": [
+      "6804/121",
+      "6132/121"
+    ],
+    "service_annual_cost": [
+      "162/5",
+      "146/5"
+    ],
+    "capital_budget_optimum": [
+      "B",
+      "C"
+    ],
+    "capital_budget_npv": 38,
+    "retention_npv": "930/121",
+    "retention_funding_gap": 6
+  },
+  "commands_and_contracts": [
+    {
+      "command": "python3 book/scripts/check_v08_c01.py",
+      "result": "Pass; seven focused financial/logic/structure/portable-output groups."
+    },
+    {
+      "command": "Fresh checker import and check() under redirected stdout/stderr; strict JSON serialization",
+      "result": "Pass on final payload; no output from import/check and report is JSON serializable with allow_nan=False."
+    },
+    {
+      "command": "Benchmark copied with input to temporary offline directory; normal CLI, followed by explicit wrong-unit CLI",
+      "result": "Portable output equals preserved/API result; invalid units produce nonzero exit with no result JSON."
+    },
+    {
+      "command": "Final trailing-whitespace scan of all seven reviewed payloads",
+      "result": "Pass. No whole-library build or UI acceptance claimed."
+    }
+  ],
+  "source_checks": {
+    "proposals": 3,
+    "records": "content/reviews/v08-c01-sources.json",
+    "actually_inspected": [
+      {
+        "id": "v08-c01-mit-budgeting",
+        "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/06b2ce70ad26ae3d3be8d94145495be6_MIT15_401F08_lec18.pdf",
+        "scope": "Actual official 37-page PDF text inspected: slides 3–10, 18, 20–31 and 34–35. Some equation glyphs are absent from extracted text; chapter formulas and original numerical cases were independently derived and checked rather than attributed to unseen glyphs. Dated market beta examples and historical survey statistics are not reused. No copied exercises or universal current-tax claim."
+      },
+      {
+        "id": "v08-c01-damodaran-interactions",
+        "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/acf3E/book/ch6.pdf",
+        "scope": "Actual author-hosted 45-page PDF inspected in scoped sections: capital-rationing setup and limitations, PDF pages 1–5; equivalent-annuity/replication and generalized horizon comparison, PDF pages 11–13; opportunity costs and cannibalization, PDF pages 14–17. The text's broad IRR-reinvestment narrative and heuristic project-ranking claims are not adopted: this chapter derives comparisons algebraically and enumerates its finite constrained set. Old company examples, forecasts and tax facts are not used as current evidence. Original chapter examples do not reproduce the source cases."
+      },
+      {
+        "id": "v08-c01-openstax-npv",
+        "url": "https://openstax.org/books/principles-finance/pages/16-2-net-present-value-npv-method",
+        "scope": "Actual section body inspected, including definition, equation and the source timeline/table; no source figures or exercises reproduced. The chapter supplies its own opportunity-rate, funding and mutual-exclusion conditions. Linked IRR section was inspected for context but is not cited or adopted as authority for a mechanical reinvestment assumption."
+      }
+    ],
+    "access_note": "The www.stern.nyu.edu copy returned 403; the official pages.stern.nyu.edu author-hosted copy was successfully read and is the recorded URL. MIT extraction omits some equation glyphs; original formulas were independently derived, not asserted to have been read from those missing glyphs.",
+    "copyright_and_originality": "Original business facts, problems, proofs and explanations; no copied source example or extended passage."
+  },
+  "findings": [],
+  "open_findings": [],
+  "limitations": [
+    "Author review is not separate academic certification; final coordinator audit and canonical acceptance remain pending.",
+    "Fictional finite liquidation, immediately usable linear tax effects, supported replacement and funding assumptions; no actual tax/jurisdiction or current-market-rate claim.",
+    "Supplied project discount rate; no WACC/CAPM estimation, financing-side valuation or general equity cash-flow model in this chapter.",
+    "The main gap tests time 0 only; no complete intraperiod treasury calendar or financing execution.",
+    "Benchmark conventional IRR routine is deliberately restricted; quadratic routine covers three dates. It does not claim a general all-root result for arbitrary later obligations.",
+    "Service comparison assumes an integer matched horizon and stated repetition; budget enumeration assumes additive independent indivisible one-year projects.",
+    "Exact arithmetic and synthetic evidence do not authenticate commercial forecasts, determine investment risk or prove legal/operational feasibility.",
+    "No browser/mobile/keyboard/print visual QA; whole-library integration and publication are coordinator tasks."
+  ],
+  "handoff": "Complete v08-c01 author package is ready for independent coordinator review. Coordinator alone registers the proposed sources, accepts against v03/v05/v07, builds/checks the library and publishes."
+}

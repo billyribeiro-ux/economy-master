@@ -74,6 +74,10 @@ from check_v07_c10 import check as check_v07_c10
 from check_v07_c11 import check as check_v07_c11
 from check_v07_c12 import check as check_v07_c12
 from check_v07_assessment import check as check_v07_assessment
+from check_v08_c01 import check as check_v08_c01
+from check_v08_c02 import check as check_v08_c02
+from check_v08_c03 import check as check_v08_c03
+from check_v08_c04 import check as check_v08_c04
 from check_economics_core import check as check_economics_core
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -466,6 +470,8 @@ def main():
                          'v07-c07': check_v07_c07(), 'v07-c08': check_v07_c08(),
                          'v07-c09': check_v07_c09(), 'v07-c10': check_v07_c10(),
                          'v07-c11': check_v07_c11(), 'v07-c12': check_v07_c12()}
+    v08_opening_check = {'v08-c01': check_v08_c01(), 'v08-c02': check_v08_c02(),
+                         'v08-c03': check_v08_c03(), 'v08-c04': check_v08_c04()}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -501,8 +507,10 @@ def main():
               'volume_6_assessment_check': v06_assessment_check,
               'volume_7_assessment_check': v07_assessment_check,
               'volume_7_chapter_checks': v07_chapter_check,
+              'volume_8_opening_checks': v08_opening_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
-    report['checks'].extend(['Volume 7 full accounting chapter set, two distinct 100-point exams, diagnostic/retention, exact historical correction and constrained forecast project',
+    report['checks'].extend(['Volume 8 chapters 1–4: incremental capital budgeting and IRR domains; FCFF/FCFE and dated claim pricing; coherent capital/return fade and terminal sensitivity; covariance, policy-specific leverage, WACC and finite APV with independent pricing checks',
+        'Volume 7 full accounting chapter set, two distinct 100-point exams, diagnostic/retention, exact historical correction and constrained forecast project',
         'Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package',
         'Volume 6 chapters 5–8: labor transition and matching domains, bargaining/entry and effort values, bounded hysteresis; exact bank ledgers and reserve-market branches; nominal rigidity, expectation paths and shock-mixture regression; finite stabilization systems and independently enumerated rate-floor equilibria',
         'Volume 6 chapters 1–4: national-account ledgers and Fisher chain identities; exact discrete Solow transitions and growth accounting; innovation, skill and diffusion paths and IV observational equivalence; household constraints, precautionary saving, dated investment and reproducible synthetic labs',

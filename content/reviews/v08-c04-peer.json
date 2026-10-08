@@ -1,0 +1,197 @@
+{
+  "chapter": "v08-c04",
+  "reviewer": "cost_peer specialist, separate from coordinating author",
+  "date": "2026-10-08",
+  "assignment": "production/v08-opening-review-assignments.json",
+  "state": "peer-review-complete",
+  "status": "passed; one low-severity spacing finding resolved; coordinator acceptance and integration pending",
+  "scope": {
+    "worked_examples": 4,
+    "exercises_with_complete_solutions": 8,
+    "answered_teachback_and_retention": true,
+    "read_targets": [
+      "content/chapters/v08-c04.html",
+      "content/projects/v08-c04-README.txt",
+      "content/projects/v08-c04-analysis.py",
+      "content/projects/v08-c04-inputs.json",
+      "content/projects/v08-c04-output.json",
+      "scripts/check_v08_c04.py",
+      "content/reviews/v08-c04-sources.json",
+      "content/reviews/v08-c04-author.json"
+    ],
+    "owned_path": "content/reviews/v08-c04-peer.json",
+    "coverage": "Read the entire manuscript, every prompt and solution, all prefixed lab files, full checker, source proposals and final author record. Recomputed all determinate examples and exercises, checked derivations and teaching assumptions, and inspected actual scoped primary-source bodies. No manuscript, lab, shared state or hosting edits by this reviewer."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v08-c04.html",
+      "bytes": 40099,
+      "sha256": "33e9a8acf5fc4149f4c0220c7abcbc404926289c3c60d3435ca1ba8c3b35b818"
+    },
+    {
+      "path": "content/projects/v08-c04-README.txt",
+      "bytes": 4257,
+      "sha256": "fd6e121bf4889ce8f35104eac889aaa9b190f72345ced0eb6892547b0127ce05"
+    },
+    {
+      "path": "content/projects/v08-c04-analysis.py",
+      "bytes": 7836,
+      "sha256": "d2d6387352c00c90454caa7bff91d81674808fe4228197c3f157685927225e6d"
+    },
+    {
+      "path": "content/projects/v08-c04-inputs.json",
+      "bytes": 1761,
+      "sha256": "471f37839a3396d78e85af6f35965a1ad06623eb737c714aeaaf15da7fea0347"
+    },
+    {
+      "path": "content/projects/v08-c04-output.json",
+      "bytes": 2209,
+      "sha256": "801cdc33a9024ca91f156c957665e671436320fdc604b3e0f6642b5d792b2ab0"
+    },
+    {
+      "path": "scripts/check_v08_c04.py",
+      "bytes": 11930,
+      "sha256": "1765b1598f044d10755530821326660dea13191c9a0da39d1689864fc0a17938"
+    },
+    {
+      "path": "content/reviews/v08-c04-sources.json",
+      "bytes": 2678,
+      "sha256": "81549513bcf68024734484e9bd35ec2902ba226e44ec49e22d410e04e271f8cf"
+    },
+    {
+      "path": "content/reviews/v08-c04-author.json",
+      "bytes": 3149,
+      "sha256": "c34d45bdaed67baa48f6f0b90536c7ddf57dc5f3aed52c46c2a7a4caac7aaaf9"
+    }
+  ],
+  "derivation_and_worked_case_review": [
+    {
+      "target": "Projection, covariance and worked example 1",
+      "result": "Centering the least-squares objective gives beta = Cov/Var; the residual is orthogonal to the market, not necessarily independent. The variance decomposition follows by the zero cross term. Market variance is 0.0052, residual variance 0.0004; x has beta 1.5 and variance 0.0121, while z has beta 0.5 and variance 0.0157. The supplied 3% benchmark and 5% premium imply required returns 10.5% and 5.5%. The covariance identity does not itself establish CAPM pricing or estimate the premium."
+    },
+    {
+      "target": "Independent joint state-pricing certificate",
+      "result": "In addition to reading the checker's positive weights, independently constructed the affine stochastic discount factor M_s = [1 - (125/13)m_s]/1.03 under equal physical probabilities. It is strictly positive in all four final states. Its risk-neutral weights are (51, 31, 21, 1)/104, sum to one, assign weighted market shock -0.05 and weighted residual shock zero. These weights price the market, x and z gross-return claims jointly at one. This certificate verifies the exact final finite distribution; it is not an empirical validation of CAPM."
+    },
+    {
+      "target": "One-period WACC derivation and worked example 2",
+      "result": "The date-1 liquidation and par risk-free debt assumptions imply expected unlevered cash = V + E*rE + D*rD*(1-tax). At E 700 and D 300 the WACC is 6.975%; operating cash 1069.75 plus shield 2.25 equals debt 309 plus expected equity 763. Constructed state operating cash is (985.75, 1052.95, 1086.55, 1153.75), sufficient for the stipulated debt; separate taxable capacity is explicit. Book weights produce 5.625% and value 1012.781065, not additional economic value."
+    },
+    {
+      "target": "One-period WACC/APV closure",
+      "result": "Independent affine-kernel valuation gives equity 700, debt 300, shield S = 225/103, and unlevered operations VU = 102775/103. The operating beta is 840/VU = 17304/20555 and its required return is 7.209194843%. Operating value plus shield is exactly 1000. The combined-claims pretax weighted return of 7.2% differs from the operating return because the combined claims include the separate risk-free shield asset."
+    },
+    {
+      "target": "No-tax leverage and worked example 3",
+      "result": "The portfolio identity gives peer operating beta 17/15, target equity beta 41/30 at D/E 1/4, equity return 59/600 and debt return 4%. The weighted required return is 13/150, exactly the operating required return. Lower debt return does not create a financing benefit in the stipulated no-tax model. D/V and D/E are distinguished."
+    },
+    {
+      "target": "Finite, perpetual fixed-debt and constant-ratio policies",
+      "result": "The general identity betaE*E + betaD*D = betaU*VU + betaS*S is correctly applied. The (1-tax) leverage factor requires the separately stipulated perpetual fixed-debt shield with S = tax*D and betaS = betaD. If betaS = betaU, rearrangement instead removes that factor. The manuscript does not assert that every constant-ratio policy has identical shield risk; it explicitly retains the rebalancing convention. A finite loan uses its actual schedule and does not receive a perpetual shield value."
+    },
+    {
+      "target": "Finite APV and worked example 4",
+      "result": "Independent dated discount factors give operating value 131.014274981, shield value 1.124544834 and APV NPV 7.138819815 = 167003095/23393656. Debt service (22.4, 21.6, 20.8) has PV 60, and equity value less its 65 contribution gives the same NPV. Delayed tax use gives shield PV 1.066796 and NPV 7.081071; no tax use gives NPV 6.014275. Full payment and usable taxes in every state are explicit assumptions, not conclusions inferred from mean cash. The arbitrary midpoint discount-rate and double-counted borrowing shortcuts are correctly rejected."
+    },
+    {
+      "target": "Rate sensitivity and decision interpretation",
+      "result": "Beta/premium endpoints give equity returns 7% and 11.4%, WACC 5.575% and 8.655%, and values 1013.2607 and 984.5382 for the fixed expected cash. The text correctly identifies these as input sensitivities, not probability bounds, and explains that preserving target market weights requires financing adjustments. It does not mislabel this a fixed-debt sensitivity."
+    }
+  ],
+  "exercise_review": [
+    {
+      "item": 1,
+      "result": "Beta 0.75, correlation 0.5 and required return 7.5%; the more volatile second equity has beta 0.5 and required return 6%. A historical realized average does not establish a forward required return. All supplied moments satisfy the covariance bounds."
+    },
+    {
+      "item": 2,
+      "result": "Equity return 10.5%, WACC 7.5%, value 800. Equity receipt 530.4 plus debt 332.8 equals operating cash 860 plus shield 3.2. Book weights yield WACC 5.5% and value 815.165877. One-year liquidation, par debt and current usable tax saving are supplied."
+    },
+    {
+      "item": 3,
+      "result": "Certain bond price 104/1.06 = 98.113208. The defaultable claim has expected receipt 103.2, promised yield 13.684211% and expected return 8.631579%; their difference is expected shortfall 4.8 divided by price 95. Real-world probabilities, default-date receipt and absence of a supplied market-risk comparison are clear."
+    },
+    {
+      "item": 4,
+      "result": "Operating beta 1.2, target equity beta 23/15, equity return 10.666667%, debt return 4%, WACC and unlevered return 9%. Target D/E is 1/3. The solution applies the supplied no-tax model rather than a tax-adjusted formula."
+    },
+    {
+      "item": 5,
+      "result": "Under the explicit fixed-perpetual-debt shield contract, operating beta is 1 and target equity beta 19/16 = 1.1875. The no-tax division gives 0.9 and omits the assumed shield asset. A finite amortizing loan cannot inherit S = tax*D merely from a statutory tax percentage."
+    },
+    {
+      "item": 6,
+      "result": "Operating value 125.619834711; shield 0.569526627; APV NPV 6.189361338. Debt service 27 and 26 has PV 50. Delayed credit 0.6 at date 2 has PV 0.554733728 and NPV 6.174568439. The unchanged face credit is worth less solely because the first part arrives later."
+    },
+    {
+      "item": 7,
+      "result": "Nominal cash 208.08 and nominal rate 7.1% produce exactly the same PV 181.405895692 as real cash 200 discounted at 5%. Deterministic inflation is stated; foreign-currency rate substitution requires a consistent cash-conversion and risk model."
+    },
+    {
+      "item": 8,
+      "result": "The common 9% hurdle gives A NPV 2.752294 and B NPV -1.834862. Matched rates give A -0.884956 and B 0.943396, reversing both decisions. The evidence memo rubric asks for model-consistent inputs, uncertainty and missing evidence and accepts a defensible valuation plan instead of rewarding fabricated precision."
+    }
+  ],
+  "instruction_review": [
+    "The capability, assumed probability tools and links to prior finance chapters are explicit. Definitions precede formulas; every required exercise method is taught by a derivation or worked case.",
+    "The general portfolio-equilibrium derivation of CAPM is honestly deferred to Volume 9. This chapter distinguishes the projection identity, conditional pricing restriction, empirical estimates and supplied forward inputs.",
+    "Market versus book capital, coupon versus current yield versus expected debt return, cash tax versus accounting expense, and value versus incremental NPV are consistently distinguished.",
+    "Nominal/real, currency, horizon, units and annual effective rate conventions are supplied. Fictional tax rules and market-like numbers are not presented as current observations.",
+    "Teach-back and delayed answers are complete: volatility/beta contrast, circumstances favoring explicit APV, D/E = (D/V)/(1-D/V), rebalancing/shield distinction, zero net value of fair loan proceeds and liability, and 763 + 309 = 1069.75 + 2.25.",
+    "The extension points to planned later chapters rather than representing those manuscripts as completed. Open-ended input and policy judgments retain explicit criteria and do not require an unsupported unique opinion."
+  ],
+  "code_and_validation": [
+    {
+      "check": "Full code and input/output audit",
+      "result": "Read the complete rational-arithmetic model and checker. Checked probability/moment handling, unit and scalar domains, state claims, market weights, expected-cash closure, debt/tax policy assumptions, amortization, present-value timing, serialization and CLI path handling. Supplied reference output agrees with the stated contract."
+    },
+    {
+      "check": "Fresh checker import and check under captured stdout/stderr",
+      "result": "Passed all six focused groups; import and check are quiet and the result serializes as strict JSON. The run includes eight consequential invalid-contract rejections, final HTML/source/asset structure, exact stored output equality and CLI execution from a temporary working directory."
+    },
+    {
+      "check": "Independent exact calculations outside the lab/checker",
+      "result": "Passed a separately constructed positive affine pricing kernel, state-valued claims and operating/shield decomposition, no-tax leverage identities, dated finite-loan/APV reconciliation and all eight exercise calculations. These calculations did not call the lab helpers."
+    },
+    {
+      "check": "Final payload identity",
+      "result": "Verified the frozen final manuscript and all seven author payload entries against their exact byte lengths and SHA256 hashes; the final author record is additionally hashed in this peer record."
+    }
+  ],
+  "inspected_sources": [
+    {
+      "id": "v08-c04-mit-capm",
+      "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/411d7d9df37d4d0440b18e17e8cea3a9_MIT15_401F08_lec15.pdf",
+      "inspection": "Opened the actual official 29-page PDF and read extracted slide text, particularly slides 3-9 and 17-27 on covariance pricing, CAPM implementation, market proxies and empirical limits. Mathematical expressions with incomplete extraction were independently reconstructed from the chapter's identities; no visual-equation or full empirical-replication claim. No source case or historical estimate is reused as current data."
+    },
+    {
+      "id": "v08-c04-mit-capital",
+      "url": "https://ocw.mit.edu/courses/15-402-finance-theory-ii-spring-2003/e443d44f154134f976fda9c95889f6b6_lec14bcostcapital.pdf",
+      "inspection": "Opened the actual official 53-page PDF and read scoped WACC, market weights, expected debt return, marginal tax, comparable-project and APV sections plus fixed-debt/fixed-ratio appendices A/B. Independently reconstructed the shield/beta equations where extracted text was garbled. The chapter does not adopt an arbitrary midpoint rate for uncertain shields or import historical usage assertions."
+    },
+    {
+      "id": "v08-c04-damodaran-cost",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/costofcapital.pdf",
+      "inspection": "Opened the actual author-hosted 28-page April 2016 paper. Read title/date and scoped project-risk, currency/horizon/default benchmark, historical/implied premium, default-spread and beta-estimation/model-limit sections. Historical company/rate tables and the complete paper's empirical content were not independently audited and are not used as current observations."
+    }
+  ],
+  "findings": [
+    {
+      "id": "v08-c04-peer-01",
+      "severity": "low",
+      "status": "resolved",
+      "location": "Several solution and cross-reference prose joins",
+      "finding": "A few inline terms lacked visible separating spaces, including text adjacent to a strong tag and the nominal-rate phrase 'satisfies1+r'.",
+      "resolution": "Reported to coordinator, who corrected the joins and refreshed author hashes. Peer inspected the final text and verified the frozen manuscript hash 33e9a8acf5fc4149f4c0220c7abcbc404926289c3c60d3435ca1ba8c3b35b818. Numerical content is unchanged."
+    }
+  ],
+  "open_findings": [],
+  "limitations": [
+    "This is independent agent review, not external human academic certification or a guarantee of error-free content.",
+    "The lab validates the supplied fictional finite-state and financing contracts and its documented tax-policy variations. It is not a general estimator or a proof that arbitrary combinations of altered shocks, premiums and financing parameters have a jointly feasible state-price law.",
+    "Positive state prices establish internal compatibility for the exact final example, not real-world CAPM validity, actual tax capacity, credit access or regulatory compliance.",
+    "Source inspection is confined to the recorded sections and extracted text; full source reproduction, figure inspection and historical empirical replication were not performed.",
+    "No browser, mobile, keyboard or print visual QA was performed. Whole-library integration, dependency acceptance and publication remain coordinator tasks."
+  ],
+  "handoff": "Full subject-matter peer review passes for these exact eight reviewed payload hashes, with no open findings. Coordinator may accept the chapter after prerequisite and integration gates."
+}

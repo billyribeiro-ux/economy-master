@@ -1,0 +1,453 @@
+{
+  "case_id": "v08-c01-kestrel",
+  "units": "kCU",
+  "rate": {
+    "exact": "1/10",
+    "decimal": 0.1
+  },
+  "main": {
+    "rows": [
+      {
+        "year": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "cash_margin": {
+          "exact": "37",
+          "decimal": 37.0
+        },
+        "tax_depreciation": {
+          "exact": "30",
+          "decimal": 30.0
+        },
+        "taxable_operating_profit": {
+          "exact": "7",
+          "decimal": 7.0
+        },
+        "operating_tax_cash": {
+          "exact": "7/4",
+          "decimal": 1.75
+        },
+        "after_tax_operating_profit": {
+          "exact": "21/4",
+          "decimal": 5.25
+        },
+        "operating_cash_before_working_capital": {
+          "exact": "141/4",
+          "decimal": 35.25
+        },
+        "working_capital_change": {
+          "exact": "5",
+          "decimal": 5.0
+        },
+        "after_tax_sale": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "project_cash_flow": {
+          "exact": "121/4",
+          "decimal": 30.25
+        }
+      },
+      {
+        "year": {
+          "exact": "2",
+          "decimal": 2.0
+        },
+        "cash_margin": {
+          "exact": "43",
+          "decimal": 43.0
+        },
+        "tax_depreciation": {
+          "exact": "30",
+          "decimal": 30.0
+        },
+        "taxable_operating_profit": {
+          "exact": "13",
+          "decimal": 13.0
+        },
+        "operating_tax_cash": {
+          "exact": "13/4",
+          "decimal": 3.25
+        },
+        "after_tax_operating_profit": {
+          "exact": "39/4",
+          "decimal": 9.75
+        },
+        "operating_cash_before_working_capital": {
+          "exact": "159/4",
+          "decimal": 39.75
+        },
+        "working_capital_change": {
+          "exact": "-2",
+          "decimal": -2.0
+        },
+        "after_tax_sale": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "project_cash_flow": {
+          "exact": "167/4",
+          "decimal": 41.75
+        }
+      },
+      {
+        "year": {
+          "exact": "3",
+          "decimal": 3.0
+        },
+        "cash_margin": {
+          "exact": "37",
+          "decimal": 37.0
+        },
+        "tax_depreciation": {
+          "exact": "30",
+          "decimal": 30.0
+        },
+        "taxable_operating_profit": {
+          "exact": "7",
+          "decimal": 7.0
+        },
+        "operating_tax_cash": {
+          "exact": "7/4",
+          "decimal": 1.75
+        },
+        "after_tax_operating_profit": {
+          "exact": "21/4",
+          "decimal": 5.25
+        },
+        "operating_cash_before_working_capital": {
+          "exact": "141/4",
+          "decimal": 35.25
+        },
+        "working_capital_change": {
+          "exact": "-18",
+          "decimal": -18.0
+        },
+        "after_tax_sale": {
+          "exact": "27/2",
+          "decimal": 13.5
+        },
+        "project_cash_flow": {
+          "exact": "267/4",
+          "decimal": 66.75
+        }
+      }
+    ],
+    "cash_flows": [
+      {
+        "exact": "-105",
+        "decimal": -105.0
+      },
+      {
+        "exact": "121/4",
+        "decimal": 30.25
+      },
+      {
+        "exact": "167/4",
+        "decimal": 41.75
+      },
+      {
+        "exact": "267/4",
+        "decimal": 66.75
+      }
+    ],
+    "npv": {
+      "exact": "19045/2662",
+      "decimal": 7.154395191585274
+    },
+    "terminal_tax_basis": {
+      "exact": "0",
+      "decimal": 0.0
+    },
+    "sale_tax_cash": {
+      "exact": "9/2",
+      "decimal": 4.5
+    },
+    "time_0_cash_required": {
+      "exact": "105",
+      "decimal": 105.0
+    },
+    "unfunded_at_time_0": {
+      "exact": "25",
+      "decimal": 25.0
+    },
+    "ignored_sunk_study": {
+      "exact": "9",
+      "decimal": 9.0
+    },
+    "ignored_unchanged_allocations": [
+      {
+        "exact": "7",
+        "decimal": 7.0
+      },
+      {
+        "exact": "7",
+        "decimal": 7.0
+      },
+      {
+        "exact": "7",
+        "decimal": 7.0
+      }
+    ],
+    "irr": {
+      "lower": "82681200531714549813548911/618970019642690137449562112",
+      "upper": "5167575033232159363346807/38685626227668133590597632",
+      "estimate": 0.1335786837938347,
+      "domain": "r > -1; unique conventional root; estimate is rounded"
+    }
+  },
+  "comparisons": {
+    "scale_small": {
+      "cash_flows": [
+        {
+          "exact": "-40",
+          "decimal": -40.0
+        },
+        {
+          "exact": "56",
+          "decimal": 56.0
+        }
+      ],
+      "npv": {
+        "exact": "120/11",
+        "decimal": 10.909090909090908
+      },
+      "irr": {
+        "lower": "61897001964269013744956211/154742504910672534362390528",
+        "upper": "247588007857076054979824845/618970019642690137449562112",
+        "estimate": 0.4,
+        "domain": "r > -1; unique conventional root; estimate is rounded"
+      }
+    },
+    "scale_large": {
+      "cash_flows": [
+        {
+          "exact": "-100",
+          "decimal": -100.0
+        },
+        {
+          "exact": "130",
+          "decimal": 130.0
+        }
+      ],
+      "npv": {
+        "exact": "200/11",
+        "decimal": 18.181818181818183
+      },
+      "irr": {
+        "lower": "185691005892807041234868633/618970019642690137449562112",
+        "upper": "92845502946403520617434317/309485009821345068724781056",
+        "estimate": 0.3,
+        "domain": "r > -1; unique conventional root; estimate is rounded"
+      }
+    },
+    "timing_early": {
+      "cash_flows": [
+        {
+          "exact": "-100",
+          "decimal": -100.0
+        },
+        {
+          "exact": "130",
+          "decimal": 130.0
+        },
+        {
+          "exact": "0",
+          "decimal": 0.0
+        }
+      ],
+      "npv": {
+        "exact": "200/11",
+        "decimal": 18.181818181818183
+      },
+      "irr": {
+        "lower": "185691005892807041234868633/618970019642690137449562112",
+        "upper": "92845502946403520617434317/309485009821345068724781056",
+        "estimate": 0.3,
+        "domain": "r > -1; unique conventional root; estimate is rounded"
+      }
+    },
+    "timing_late": {
+      "cash_flows": [
+        {
+          "exact": "-100",
+          "decimal": -100.0
+        },
+        {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        {
+          "exact": "150",
+          "decimal": 150.0
+        }
+      ],
+      "npv": {
+        "exact": "2900/121",
+        "decimal": 23.96694214876033
+      },
+      "irr": {
+        "lower": "17388792182480717805815365/77371252455336267181195264",
+        "upper": "139110337459845742446522921/618970019642690137449562112",
+        "estimate": 0.22474487139158905,
+        "domain": "r > -1; unique conventional root; estimate is rounded"
+      }
+    },
+    "multiple_irr": {
+      "cash_flows": [
+        {
+          "exact": "-100",
+          "decimal": -100.0
+        },
+        {
+          "exact": "240",
+          "decimal": 240.0
+        },
+        {
+          "exact": "-143",
+          "decimal": -143.0
+        }
+      ],
+      "npv": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "irr": {
+        "roots": [
+          {
+            "exact": "1/10",
+            "decimal": 0.1
+          },
+          {
+            "exact": "3/10",
+            "decimal": 0.3
+          }
+        ],
+        "discriminant": "400",
+        "classification": "all admissible exact roots"
+      }
+    },
+    "no_irr": {
+      "cash_flows": [
+        {
+          "exact": "-100",
+          "decimal": -100.0
+        },
+        {
+          "exact": "180",
+          "decimal": 180.0
+        },
+        {
+          "exact": "-90",
+          "decimal": -90.0
+        }
+      ],
+      "npv": {
+        "exact": "-1300/121",
+        "decimal": -10.743801652892563
+      },
+      "irr": {
+        "roots": [],
+        "discriminant": "-3600",
+        "classification": "no real IRR"
+      }
+    },
+    "borrowing": {
+      "cash_flows": [
+        {
+          "exact": "80",
+          "decimal": 80.0
+        },
+        {
+          "exact": "-96",
+          "decimal": -96.0
+        }
+      ],
+      "npv": {
+        "exact": "-80/11",
+        "decimal": -7.2727272727272725
+      },
+      "irr": {
+        "roots": [
+          {
+            "exact": "1/5",
+            "decimal": 0.2
+          }
+        ],
+        "classification": "one-period root; cash orientation matters"
+      }
+    }
+  },
+  "equal_service": [
+    {
+      "name": "short",
+      "cash_costs": [
+        {
+          "exact": "24",
+          "decimal": 24.0
+        },
+        {
+          "exact": "30",
+          "decimal": 30.0
+        },
+        {
+          "exact": "6",
+          "decimal": 6.0
+        }
+      ],
+      "present_cost": {
+        "exact": "6804/121",
+        "decimal": 56.231404958677686
+      },
+      "equivalent_annual_cost": {
+        "exact": "162/5",
+        "decimal": 32.4
+      }
+    },
+    {
+      "name": "long",
+      "cash_costs": [
+        {
+          "exact": "42",
+          "decimal": 42.0
+        },
+        {
+          "exact": "5",
+          "decimal": 5.0
+        },
+        {
+          "exact": "5",
+          "decimal": 5.0
+        }
+      ],
+      "present_cost": {
+        "exact": "6132/121",
+        "decimal": 50.67768595041322
+      },
+      "equivalent_annual_cost": {
+        "exact": "146/5",
+        "decimal": 29.2
+      }
+    }
+  ],
+  "capital_budget": {
+    "feasible_subsets": 5,
+    "maximum_npv": {
+      "exact": "38",
+      "decimal": 38.0
+    },
+    "optimal_sets": [
+      [
+        "B",
+        "C"
+      ]
+    ]
+  },
+  "limits": [
+    "Fictional, immediately usable linear tax effects; no actual jurisdiction.",
+    "Supplied rate, not a rate-estimation or financing-value model.",
+    "Time-0 funding gap only; no full treasury calendar.",
+    "General nonconventional IRRs require separate all-root analysis."
+  ]
+}

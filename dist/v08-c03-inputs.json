@@ -1,0 +1,69 @@
+{
+  "spec_version": 1,
+  "case": "Mariner Calibration Services: original finite-return-fade model",
+  "provenance": "Original fictional teaching assumptions, not observed company or market data. Prepared 2026-10-08.",
+  "amount_unit": "kCU",
+  "currency": "CU, a fictional currency",
+  "period": "one year; all free cash flow and reinvestment at year-end",
+  "valuation_date": "date 0, immediately after any date-0 distributions",
+  "parameters": {
+    "initial_operating_capital": "500",
+    "ppe_share_of_capital": "4/5",
+    "depreciation_rate_on_opening_ppe": "1/20",
+    "sales_per_opening_capital": "1",
+    "operating_tax_rate": "1/4",
+    "operating_discount_rate": "1/10",
+    "stable_roic": "1/10",
+    "stable_growth": "3/100",
+    "excess_cash_value": "30",
+    "nonoperating_asset_value": "15",
+    "debt_market_value": "200",
+    "ordinary_shares_thousands": "20"
+  },
+  "stages": [
+    {
+      "year": 1,
+      "roic": "1/5",
+      "reinvestment_rate": "1/2"
+    },
+    {
+      "year": 2,
+      "roic": "4/25",
+      "reinvestment_rate": "1/4"
+    },
+    {
+      "year": 3,
+      "roic": "3/25",
+      "reinvestment_rate": "1/4"
+    },
+    {
+      "year": 4,
+      "roic": "1/10",
+      "reinvestment_rate": "terminal"
+    }
+  ],
+  "sensitivity": {
+    "discount_rates": [
+      "2/25",
+      "1/10",
+      "3/25"
+    ],
+    "stable_growth_rates": [
+      "0",
+      "3/100",
+      "3/50"
+    ]
+  },
+  "maintained_assumptions": [
+    "NOPAT in year t equals the supplied ROIC times beginning-year operating capital; that ROIC applies to all capital then productive.",
+    "Net reinvestment at end t becomes productive in t+1; capital has no acquisition, currency, impairment, revaluation or other noncash movement.",
+    "Net PPE is always 80 percent of operating capital; operating NWC is 20 percent and excludes excess cash, debt and interest.",
+    "Depreciation is 5 percent of opening net PPE; capex replaces that book consumption and finances the PPE share of net investment. This is a case policy, not an empirical maintenance estimate.",
+    "Cash operating costs, required reinvestment and tax are feasible under the supplied annual aggregate model. Tax deductions match book depreciation and all operating tax is paid; no deferred tax or unusable loss exists.",
+    "Return on all opening capital reaches the stable return in the final explicit year; that year's reinvestment already uses stable growth divided by stable ROIC.",
+    "Stable growth is nonnegative, below the supplied operating discount rate, and no greater than stable ROIC; reinvestment is internally financed from positive NOPAT in this bounded model.",
+    "Discount rates are hypothetical appropriate rates for these operating cash claims under the maintained risk and financing convention; the model does not estimate them or add another tax shield.",
+    "The equity bridge uses separately supplied date-0 market claim values. It does not model debt repayment or default; negative residual equity is outside its non-distress scope.",
+    "No interim cash calendar, uncertainty probabilities, market-comparable evidence, calibration or perpetual competitive advantage is inferred from arithmetic."
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "batch": "v08-opening",
+  "date": "2026-10-08",
+  "authorization": "Active user expressly authorized coordinating agent and economics/finance specialist subagents to review and execute autonomously; MASTER_PLAN parallel-production contract applies.",
+  "previous_goal_turn": "Progress: accepted, verified and privately published84chapters/seven volume packages; deployment recorded in production/v07-deployment.json.",
+  "shared_rules": [
+    "Original substantive chapter; teach prerequisites and definitions before exercises. Minimum two worked cases and eight complete original exercises/solutions, with answered teach-back and retention, assumptions, units, timing, source and extension routes. Depth over word padding.",
+    "Own only assigned chapter, prefix-specific lab/checker/source/author-review paths. No shared canonical/source/checkpoint/build/hosting edits, no other chapters and no child agents. Root alone accepts and publishes.",
+    "Plain HTML conventions consistent with accepted chapters: worked examples recognized by existing verifier; <ol class=\"exercises\"> and <details class=\"solutions\"><ol> for eight exercises/answers; precise <h2> anchors; Teach-back and Delayed check labels. Inspect an existing chapter and scripts/verify.py parser before drafting.",
+    "Use standard-library Python, original fictional inputs and scoped primary sources. Record actual inspected source content and date; sources returned as a JSON list with id,title,url,use,checked,verification. Reuse existing stable IDs where appropriate; do not copy source exercises.",
+    "Supply a focused meaningful numerical checker with a quiet check() function returning strict JSON, independently reconstructed financial results and full problem/solution audit. Avoid unnecessary test matrices or framework/install overhead. Record exact final SHA256 hashes of all owned payloads, resolved/open findings and coverage in author record.",
+    "Send architecture/critical assumptions and numerical anchors early. Preserve visible spaces between prose, numbers and units. Do not declare accepted; acceptance waits for coordinator and prerequisites."
+  ],
+  "assignments": [
+    {
+      "chapter": "v08-c01",
+      "owner": "cost_peer",
+      "state": "completed",
+      "canonical_spec": {
+        "id": "v08-c01",
+        "number": 1,
+        "title": "Value creation and capital budgeting",
+        "outcome": "Evaluate incremental project cash flows and reconcile NPV with decision criteria.",
+        "coverage": [
+          "NPV",
+          "IRR",
+          "opportunity costs",
+          "sunk costs",
+          "cash flow",
+          "mutually exclusive projects"
+        ],
+        "prerequisites": [
+          "v03",
+          "v05",
+          "v07"
+        ],
+        "level": "Undergraduate",
+        "status": "planned",
+        "manuscript": "chapters/v08-c01.html",
+        "sources": [
+          "mit-finance",
+          "hbs-finance-curriculum",
+          "wharton-finance-courses"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "owned_paths": [
+        "content/chapters/v08-c01.html",
+        "content/projects/v08-c01-*",
+        "scripts/check_v08_c01.py",
+        "content/reviews/v08-c01-sources.json",
+        "content/reviews/v08-c01-author.json"
+      ],
+      "scope": "Incremental project cash flows; time-0 versus end-date spending; operating taxes/depreciation shield/after-tax disposal and working-capital recovery under explicit fictional tax rules; opportunity cost/cannibalization/sunk costs. Derive NPV and value-additivity for appropriate supplied discount factors; IRR computation/meaning, unique conventional case and multiple/no-IRR counterexamples; mutually exclusive scale/timing rankings and incremental comparison. Distinguish financing from project operating cash and value from budget feasibility. Unequal-life comparison only under stated service/replacement horizon. Avoid unsupported claim that a ranking conflict is mechanically caused by an assumed IRR reinvestment rate.",
+      "prerequisite_contract": "Volumes3,5,7 accepted. c01 teaches dated incremental NPV and IRR; c02 teaches FCFF/FCFE and compatible nominal/currency discounting; c03 teaches coherent multistage cash/reinvestment/terminal economics; c04 estimates/risk-matches rates. Adjacent work may draft concurrently against this contract, but acceptance follows c01->c02->c03->c04."
+    },
+    {
+      "chapter": "v08-c02",
+      "owner": "financial_diagnosis",
+      "state": "completed",
+      "canonical_spec": {
+        "id": "v08-c02",
+        "number": 2,
+        "title": "Free cash flow and discounting",
+        "outcome": "Derive cash flows to the firm and equity and choose consistent discount rates.",
+        "coverage": [
+          "FCFF",
+          "FCFE",
+          "reinvestment",
+          "terminal value",
+          "nominal-real consistency",
+          "currency consistency"
+        ],
+        "prerequisites": [
+          "v08-c01"
+        ],
+        "level": "Undergraduate",
+        "status": "planned",
+        "manuscript": "chapters/v08-c02.html",
+        "sources": [
+          "mit-finance",
+          "hbs-finance-curriculum",
+          "wharton-finance-courses"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "owned_paths": [
+        "content/chapters/v08-c02.html",
+        "content/projects/v08-c02-*",
+        "scripts/check_v08_c02.py",
+        "content/reviews/v08-c02-sources.json",
+        "content/reviews/v08-c02-author.json"
+      ],
+      "scope": "Derive FCFF from operations and FCFE from net income and from FCFF with interest/tax/net borrowing. Distinguish enterprise operating value from total firm/equity value, cash/nonoperating assets/debt claims and ex-dividend timing. Show coherent finite cash-flow/valuation reconciliation using supplied consistent rates and financing policy; never force equality with inconsistent debt evolution or double-count shields. Teach nominal-real rate/cash consistency and currency conversion with explicitly dated hypothetical exchange path/discount rates. Introduce terminal value as date-H remaining continuation cash claim with convergence assumptions, leaving ROIC/growth/fade depth to c03 and rate estimation to c04. No current market observations.",
+      "prerequisite_contract": "Volumes3,5,7 accepted. c01 teaches dated incremental NPV and IRR; c02 teaches FCFF/FCFE and compatible nominal/currency discounting; c03 teaches coherent multistage cash/reinvestment/terminal economics; c04 estimates/risk-matches rates. Adjacent work may draft concurrently against this contract, but acceptance follows c01->c02->c03->c04."
+    },
+    {
+      "chapter": "v08-c03",
+      "owner": "equity_peer",
+      "state": "completed",
+      "canonical_spec": {
+        "id": "v08-c03",
+        "number": 3,
+        "title": "Valuation models and terminal assumptions",
+        "outcome": "Value an operating business using explicit growth and reinvestment economics.",
+        "coverage": [
+          "DCF",
+          "perpetuities",
+          "value drivers",
+          "ROIC",
+          "growth",
+          "fade",
+          "terminal constraints"
+        ],
+        "prerequisites": [
+          "v08-c02"
+        ],
+        "level": "Undergraduate",
+        "status": "planned",
+        "manuscript": "chapters/v08-c03.html",
+        "sources": [
+          "mit-finance",
+          "hbs-finance-curriculum",
+          "wharton-finance-courses"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "owned_paths": [
+        "content/chapters/v08-c03.html",
+        "content/projects/v08-c03-*",
+        "scripts/check_v08_c03.py",
+        "content/reviews/v08-c03-sources.json",
+        "content/reviews/v08-c03-author.json"
+      ],
+      "scope": "Multistage DCF with explicit continuation date/next-period cash, operating-to-equity bridge, coherent NOPAT/invested-capital/reinvestment stock-flow path. Derive g=ROIC_new*reinvestment under the exact capital productivity/timing conditions and stable FCFF=NOPAT*(1-g/ROIC), g<discount rate, sustainable margins/leverage and growth. Separate return on existing capital from incremental return, explain growth can destroy value, show finite fade/competitive convergence with a fully closed original forecast and terminal conditions. Sensitivity to g/r and terminal share; no mechanical perpetuity when assumptions fail. Supplied discount rates; c04 will teach estimation.",
+      "prerequisite_contract": "Volumes3,5,7 accepted. c01 teaches dated incremental NPV and IRR; c02 teaches FCFF/FCFE and compatible nominal/currency discounting; c03 teaches coherent multistage cash/reinvestment/terminal economics; c04 estimates/risk-matches rates. Adjacent work may draft concurrently against this contract, but acceptance follows c01->c02->c03->c04."
+    },
+    {
+      "chapter": "v08-c04",
+      "owner": "root",
+      "state": "completed",
+      "canonical_spec": {
+        "id": "v08-c04",
+        "number": 4,
+        "title": "Risk, cost of capital and WACC",
+        "outcome": "Estimate financing costs and explain when WACC is inappropriate.",
+        "coverage": [
+          "Cost of equity",
+          "beta introduction",
+          "debt costs",
+          "market weights",
+          "leverage",
+          "project risk"
+        ],
+        "prerequisites": [
+          "v08-c03"
+        ],
+        "level": "Undergraduate",
+        "status": "planned",
+        "manuscript": "chapters/v08-c04.html",
+        "sources": [
+          "mit-finance",
+          "hbs-finance-curriculum",
+          "wharton-finance-courses"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "owned_paths": [
+        "content/chapters/v08-c04.html",
+        "content/projects/v08-c04-*",
+        "scripts/check_v08_c04.py",
+        "content/reviews/v08-c04-sources.json",
+        "content/reviews/v08-c04-author.json"
+      ],
+      "scope": "Risk, cost of capital and WACC: supplied/estimated risk-free benchmark and equity premium, covariance beta with risk-versus-total-volatility distinction and conditional CAPM introduction; marginal borrowing cost versus coupon/YTM under default, market weights and usable marginal tax shield; levered/unlevered beta assumptions, project/comparable risk, nominal/currency/period matching and stable-policy WACC limits. Teach fixed debt/changing leverage or constrained tax use as APV/explicit financing cases instead of blindly reusing WACC. Full original numerical lab and at least eight solved exercises; all market-like numbers hypothetical.",
+      "prerequisite_contract": "Volumes3,5,7 accepted. c01 teaches dated incremental NPV and IRR; c02 teaches FCFF/FCFE and compatible nominal/currency discounting; c03 teaches coherent multistage cash/reinvestment/terminal economics; c04 estimates/risk-matches rates. Adjacent work may draft concurrently against this contract, but acceptance follows c01->c02->c03->c04."
+    }
+  ],
+  "state": "completed"
+}
