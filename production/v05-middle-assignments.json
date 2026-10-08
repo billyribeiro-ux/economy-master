@@ -1,0 +1,139 @@
+{
+  "batch": "Volume 5 Chapters 5–8",
+  "date": "2026-10-07",
+  "previous_turn_classification": "progress: four complete chapters accepted, verified, archived and privately published",
+  "source_commit_at_open": "1528990824644ba89892596d00e33147b8d1730c",
+  "coordination": "Fixed chapter authors may draft adjacent dependencies in parallel against these contracts. Root alone accepts c05 then c06 then c07 then c08, edits shared state/build/source catalogue, and publishes. No children and no overlapping writes.",
+  "common_deliverables": "Original HTML fragment (no h1), capability/prerequisite definitions, complete assumptions/derivations, >=2 aside.worked cases and 8 ol.exercises items with matching complete answers inside details.solutions; exact Teach-back and Delayed check strings with retention answers. Sources actually inspected, source proposals as array of id/title/url/use/checked/verification with owned prefix. Standard-library checker exposes quiet check() returning directly JSON-serializable status/checks/limitations; exact arithmetic where useful, independent checks of all worked/solution targets. Own author review states what was reviewed and concrete limits. No framework/dependencies/generated imagery/hosting or shared edits. Minimal additional assets only if needed.",
+  "acceptance_gates": [
+    "Root full manuscript/proof/solution/source review",
+    "Independent numerical checker passes",
+    "Complete original instructional package",
+    "Prerequisite-order acceptance",
+    "Shared build/local-link/source/structure checks",
+    "Offline archive and same owner-private Site publication"
+  ],
+  "assignments": [
+    {
+      "owner": "regression",
+      "chapter": "v05-c05",
+      "title": "General equilibrium and welfare",
+      "canonical_specification": {
+        "outcome": "Analyze exchange and production interactions across markets.",
+        "coverage": [
+          "Edgeworth box",
+          "Walras law",
+          "Pareto efficiency",
+          "welfare theorems",
+          "missing markets"
+        ],
+        "prerequisites": [
+          "v05-c04"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v05-c05.html",
+        "scripts/check_v05_c05.py",
+        "content/reviews/v05-c05-author.json",
+        "content/reviews/v05-c05-sources.json",
+        "content/projects/v05-c05-* (only if instruction actually needs an offline asset)"
+      ],
+      "content": "Define pure-exchange and production economies, commodity/endowment/ownership income, price normalization, individual optimization and aggregate feasibility. Explain Edgeworth-box coordinates and contract curve with a readable original static diagram or clear coordinate representation; derive a complete original two-consumer equilibrium with endogenous wealth and both market checks, Walras law and its omitted-positive-price qualification. Define Pareto efficiency versus distribution; prove the first welfare result at a clearly specified finite-economy scope, distinguishing convexity from its other assumptions. State the second welfare theorem with its actual convexity/support/transfer and equilibrium-versus-quasiequilibrium caveats; provide a constructive supporting-price/transfer example and an appropriate restricted proof rather than an unproved universal assertion. Include production interaction/ownership and missing-market limitations with a solved case. At least two fully worked examples (three if needed), eight complete solved exercises, proof/transfer/critique, teach-back and answered delayed check; source inspection and independent exact numerical checker. Do not claim general equilibrium existence/uniqueness or dynamic stability without proof; graduate global existence and full nonsmooth support extensions remain later.",
+      "state": "accepted"
+    },
+    {
+      "owner": "monte_carlo",
+      "chapter": "v05-c06",
+      "title": "Monopoly, oligopoly and pricing",
+      "canonical_specification": {
+        "outcome": "Solve market-power models and compare price and quantity competition.",
+        "coverage": [
+          "Monopoly",
+          "markup",
+          "price discrimination",
+          "Cournot",
+          "Bertrand",
+          "entry barriers"
+        ],
+        "prerequisites": [
+          "v05-c05"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v05-c06.html",
+        "scripts/check_v05_c06.py",
+        "content/reviews/v05-c06-author.json",
+        "content/reviews/v05-c06-sources.json",
+        "content/projects/v05-c06-* (only if instruction actually needs an offline asset)"
+      ],
+      "content": "Derive profit-maximizing monopoly quantity/price from inverse demand and economic cost, global/corner/shutdown qualifications, MR and interior Lerner-elasticity condition with exact assumptions; explain deadweight loss versus transfers under the prior quasilinear welfare setup. Teach first-degree and third-degree discrimination with an original solved segmented-price case, no resale/observability/incentive constraints and welfare qualifications; introduce second-degree menus only conceptually and hand their IC derivation to c08/c09. Define the minimal simultaneous-action best-response/Nash concepts before deriving original Cournot duopoly quantities, profits and welfare, then show Bertrand homogeneous-good price competition with capacities, equal-cost/tie-rule/continuous-price hypotheses and deviation proof. Compare market definitions/product differentiation and entry barriers/fixed costs without claiming that any market structure is empirically identified by firm count. At least two fully worked examples (three if useful), eight fully solved exercises, proof/transfer/critique, teach-back and answered delayed check; source inspection and exact independent checker. c07 develops general game theory so do not assume its results as already taught.",
+      "state": "accepted"
+    },
+    {
+      "owner": "causal_identification",
+      "chapter": "v05-c07",
+      "title": "Game theory and strategic behavior",
+      "canonical_specification": {
+        "outcome": "Identify equilibria and credible strategies in static and dynamic games.",
+        "coverage": [
+          "Dominance",
+          "Nash",
+          "mixed strategies",
+          "extensive form",
+          "backward induction",
+          "commitment"
+        ],
+        "prerequisites": [
+          "v05-c06"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v05-c07.html",
+        "scripts/check_v05_c07.py",
+        "content/reviews/v05-c07-author.json",
+        "content/reviews/v05-c07-sources.json",
+        "content/projects/v05-c07-* (only if instruction actually needs an offline asset)"
+      ],
+      "content": "Define finite normal-form games, actions versus complete contingent strategies, payoffs/information/timing and common knowledge as assumptions. Strict versus weak dominance and deletion caveats; best responses and Nash equilibrium with full deviation inequalities, inefficient/multiple/no-pure examples. Derive mixed strategy probabilities by making the opponent indifferent, check support and off-support deviations, distinguish a belief/probability from a deterministic compromise; give finite mixed existence as a precisely scoped theorem with clear proof-route limits rather than claiming a full fixed-point proof. Define extensive form, histories/information sets, subgames, sequential rationality and subgame-perfect equilibrium. Solve an original observed-action entry/commitment game by backward induction, show a noncredible Nash threat and why irreversible commitment changes the game/payoffs; mention repeated-game horizon/monitoring limits only if pedagogically needed. At least two full worked examples, eight complete solved exercises incl proof/transfer/critique, teach-back and answered delayed check. Primary method content inspection and independent exact payoff/deviation/tree checks. This chapter is complete-information core; c08 teaches private types, Bayes updating and signaling equilibrium.",
+      "state": "accepted"
+    },
+    {
+      "owner": "root",
+      "chapter": "v05-c08",
+      "title": "Information, signaling and selection",
+      "canonical_specification": {
+        "outcome": "Explain how asymmetric information changes trade and incentives.",
+        "coverage": [
+          "Adverse selection",
+          "signaling",
+          "screening",
+          "pooling",
+          "separating equilibria",
+          "lemons"
+        ],
+        "prerequisites": [
+          "v05-c07"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v05-c08.html",
+        "scripts/check_v05_c08.py",
+        "content/reviews/v05-c08-author.json",
+        "content/reviews/v05-c08-sources.json",
+        "content/projects/v05-c08-* (only if instruction actually needs an offline asset)"
+      ],
+      "content": "Teach hidden pre-contract types/adverse selection versus hidden actions/moral hazard, information sets and selection-conditioned beliefs. Derive an original competitive lemons market including pooling candidate consistency, composition changes and no-trade/equilibrium branches; avoid equating all private information with market failure. Build a two-type costly signaling model with competitive receiver wages/beliefs, Bayes rule on path, sequential incentives, pooling/separating outcomes and off-path-belief qualifications; explain education as a signal versus productivity and why equilibrium need not identify causality. Teach screening menus and self-selection through an original two-type IC/IR calculation and information rent, distinguishing signaling from screening and noting later contract extensions. Two or more full worked examples, eight complete solved exercises incl transfer/critique, teach-back and answered delayed check, inspected primary source routes and independent exact checker. Root owns shared acceptance, source merging, build/verify and hosting.",
+      "state": "accepted"
+    }
+  ],
+  "batch_state": "accepted-verified-archived-awaiting-publication",
+  "review_record": "content/reviews/v05-c05-c08.json"
+}

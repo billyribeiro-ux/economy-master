@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "chapter_packages_available": 52,
-  "html_pages_checked": 62,
+  "chapter_packages_available": 56,
+  "html_pages_checked": 66,
   "curriculum_chapters": 216,
   "cross_volume_packages_available": 1,
   "checks": [
@@ -28,6 +28,7 @@
     "Volume 3 chapters 11\u201312 proper losses, calibration/resolution, weighted-report and random-skill distortions, joint-state information values/garbling, information projections, dyadic/spike integrals, stopped martingale histories, heavy-tail truncation and maximal/Kronecker diagnostics",
     "Volume 3 diagnostic, distinct exams, retention, posterior/predictive/information project, independent integration/coverage and seeded paired-score checks",
     "Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package",
+    "Volume 5 chapters 5\u20138: exchange and production wealth/market ledgers, supporting transfers and missing-market improvements; global monopoly and discrimination branches, Cournot activity and Bertrand deviations; mixed support and all-subgame contingent plans; selected quality, signaling beliefs and screening IC/IR/rent/distortion identities",
     "Volume 5 chapters 1\u20134: consumer interiors/corners/ties and revealed-preference cycles; exact duality/Slutsky and compensated welfare with numeraire boundaries; conditional production costs, global supply/shutdown and existence limits; market tax ledgers, entry and rationing allocation",
     "Volume 4 diagnostic, distinct exam forms, delayed transfer and historical empirical project: exact arithmetic, code contracts under optimization, source-vintage reconstruction, rounding envelopes, projection identities and forecast-selection isolation",
     "Volume 4 chapters 9\u201312: temporal forecast/release selection and leakage mutations; calendar panel keys, aggregation and exact dependent shock laws; independent numerical error bounds and fault detection; frozen official BLS reconstruction, rounding grid, provenance and integrity contracts",
@@ -1186,6 +1187,431 @@
       },
       "limitations": [
         "Finite checks supplement written proofs and assumptions; no empirical, general-equilibrium or external academic certification."
+      ]
+    }
+  },
+  "volume_5_middle_checks": {
+    "v05-c05": {
+      "chapter": "v05-c05",
+      "status": "passed",
+      "checks": [
+        "Balanced chapter, three worked cases, eight matched solutions, answered retention check, prior/successor links, three scoped source records and all five coordinate-table rows.",
+        "Exact exchange budgets, both markets, endogenous wealth, nominal normalization and net trades; 81 distinct endowment economies, each with independent cubic global-choice certificates and two nonclearing price checks.",
+        "47 contract-curve targets have equal MRS, budget-balanced transfers, individually globally optimal demands and both markets clearing; both redistribution cases have a loser.",
+        "Satiation example is feasible and Pareto improving despite equilibrium choice; zero-wealth/zero-price quasiequilibrium has better affordable bundles, while alternative support prices make the target a consumer optimum.",
+        "Four production/ownership scenarios reconcile every profit, budget and resource; global profit-square certificates, independent capped-demand bisection and direct consumer utility comparisons verify the equilibrium branches and the zero-wealth boundary.",
+        "Pollution case: exact derivative factorization, low-output boundary, 1,890 feasible quantity/allocation comparisons and rational logarithm bounds verify both strictly positive individual gains and all resource balances.",
+        "Nonconvex production: exact global utility bound over frontier/disposal cases and 288 nonzero nonnegative price pairs exhibit a profitable endpoint deviation; the universal no-support inequality is proved in the manuscript.",
+        "Missing insurance and complete contingent-market comparison checked through exact state resources, wealth, net claims and a separate global product certificate; delayed exchange example reconciles both markets and budgets."
+      ],
+      "results": {
+        "exchange": {
+          "worked_price": [
+            "1",
+            "1"
+          ],
+          "worked_bundles": [
+            [
+              "4",
+              "8"
+            ],
+            [
+              "8",
+              "4"
+            ]
+          ],
+          "altered_price": "11/9",
+          "altered_bundles": [
+            [
+              "28/11",
+              "56/9"
+            ],
+            [
+              "104/11",
+              "52/9"
+            ]
+          ],
+          "off_equilibrium_excess": [
+            "-7/2",
+            "7"
+          ],
+          "parameter_cases": 81
+        },
+        "support": {
+          "worked_price": "4/3",
+          "worked_transfers": [
+            "-7",
+            "7"
+          ],
+          "exercise_price": "4/5",
+          "exercise_transfers": [
+            "21/5",
+            "-21/5"
+          ],
+          "interior_curve_points_checked": 47
+        },
+        "production": [
+          {
+            "price": "2",
+            "output": "4",
+            "input": "4",
+            "profit": "4",
+            "wealth": [
+              "15",
+              "9"
+            ],
+            "consumption": [
+              [
+                "9",
+                "3"
+              ],
+              [
+                "7",
+                "1"
+              ]
+            ]
+          },
+          {
+            "price": "2",
+            "output": "4",
+            "input": "4",
+            "profit": "4",
+            "wealth": [
+              "12",
+              "12"
+            ],
+            "consumption": [
+              [
+                "6",
+                "3"
+              ],
+              [
+                "10",
+                "1"
+              ]
+            ]
+          },
+          {
+            "price": "3",
+            "output": "6",
+            "input": "9",
+            "profit": "9",
+            "wealth": [
+              "75/4",
+              "41/4"
+            ],
+            "consumption": [
+              [
+                "39/4",
+                "3"
+              ],
+              [
+                "5/4",
+                "3"
+              ]
+            ]
+          },
+          {
+            "price": "3",
+            "output": "6",
+            "input": "9",
+            "profit": "9",
+            "wealth": [
+              "12",
+              "17"
+            ],
+            "consumption": [
+              [
+                "3",
+                "3"
+              ],
+              [
+                "8",
+                "3"
+              ]
+            ]
+          }
+        ],
+        "missing_pollution_price": {
+          "private_output": "4",
+          "efficient_output": "3",
+          "new_bundles": [
+            [
+              "10",
+              "7/3"
+            ],
+            [
+              "31/4",
+              "2/3"
+            ]
+          ],
+          "individual_gain_lower_bounds": [
+            0.14142754564836285,
+            0.32071377282418145
+          ],
+          "global_objective_grid": 1890
+        },
+        "nonconvexity": {
+          "efficient_utility": "4",
+          "infeasible_midpoint": [
+            "-1",
+            "2"
+          ],
+          "price_pairs_with_profitable_deviation": 288
+        },
+        "insurance_and_retention": {
+          "state_price": [
+            "1",
+            "1"
+          ],
+          "insured_bundles": [
+            [
+              "5",
+              "5"
+            ],
+            [
+              "5",
+              "5"
+            ]
+          ],
+          "ex_ante_utility_gain": 0.5108256237659907,
+          "delayed_price": "2/3",
+          "delayed_bundles": [
+            [
+              "3",
+              "2"
+            ],
+            [
+              "3",
+              "2"
+            ]
+          ]
+        }
+      },
+      "limitations": [
+        "Finite checks supplement the separately reviewed analytic welfare/support arguments; no general equilibrium existence, uniqueness or dynamic stability theorem is established.",
+        "All economies and welfare changes are synthetic; no empirical preference, technology, causal policy impact or administrative feasibility is identified.",
+        "The general convex separation result is stated with scoped conditions and source; the chapter proves only the restricted constructive support result and cheaper-bundle upgrade.",
+        "Floating bisection and logarithmic objective grids are independent numerical references; the accounting, optimality-gap and individual-gain certificates retain exact rational checks.",
+        "Source retrieval verifies only recorded method passages. Browser visual/mobile/print QA and learner testing were not performed."
+      ]
+    },
+    "v05-c06": {
+      "chapter": "v05-c06",
+      "status": "passed",
+      "checks": [
+        "Worked 1: global quadratic candidates, Lerner, exact benefit/cost surplus and buyer-loss transfer reconciliation",
+        "Exercise 1: nonlinear cost global extrema, marginal/average distinctions, elasticity, capacity and like-for-like efficient benchmark",
+        "Exercise 2: exact operating-versus-shutdown fee tie, sunk-cost alternatives and uncollectable gains under uniform pricing",
+        "Worked 2 and exercise 4: every common-price branch, separated global quantities, independent welfare accounts and opposite discrimination effects",
+        "Exercise 3: all relevant uniform-price intervals and all 16 consumer subsets, with exact perfect-discrimination revenue and surplus",
+        "Worked 3 and exercise 5: 50 exact global response comparisons, 250 bounded deviations, active-set equilibria, productive versus output losses and rejected negative output",
+        "Worked 3: exact Bertrand welfare and 201 price deviations checked; general uniqueness remains a written case proof",
+        "Exercise 6: global cartel deviation, profitable price undercut and capacity/rationing deviation without claiming a new equilibrium",
+        "Exercise 7: post-entry operating profit, irreversible one-period investment and fixed-cost duplication/financing distinction",
+        "Exercise 8: all 225 price profiles and all unilateral integer deviations; exact 2.9-dollar deviation yields 9.99 instead of 5.5",
+        "Delayed check: fresh monopoly/Cournot/Bertrand quantities, prices, profits, consumer surplus and deadweight losses",
+        "Static fragment: three worked examples, eight paired solutions, answered retention, strategic definitions, source schema and owned citation IDs"
+      ],
+      "reference_values": {
+        "uniform_monopoly": {
+          "Q": "36",
+          "price": "54",
+          "profits": [
+            "1296"
+          ],
+          "CS": "648",
+          "total_surplus": "1944"
+        },
+        "segmented_cases": [
+          {
+            "uniform": {
+              "quantities": [
+                "25",
+                "5"
+              ],
+              "prices": [
+                "25",
+                "25"
+              ],
+              "profit": "450",
+              "CS_by_group": [
+                "625/2",
+                "25/2"
+              ],
+              "CS": "325",
+              "total_surplus": "775"
+            },
+            "discrimination": {
+              "quantities": [
+                "20",
+                "10"
+              ],
+              "prices": [
+                "30",
+                "20"
+              ],
+              "profit": "500",
+              "CS_by_group": [
+                "200",
+                "50"
+              ],
+              "CS": "250",
+              "total_surplus": "750"
+            }
+          },
+          {
+            "uniform": {
+              "quantities": [
+                "35",
+                "0"
+              ],
+              "prices": [
+                "45",
+                "45"
+              ],
+              "profit": "1225",
+              "CS_by_group": [
+                "1225/2",
+                "0"
+              ],
+              "CS": "1225/2",
+              "total_surplus": "3675/2"
+            },
+            "discrimination": {
+              "quantities": [
+                "35",
+                "5"
+              ],
+              "prices": [
+                "45",
+                "15"
+              ],
+              "profit": "1250",
+              "CS_by_group": [
+                "1225/2",
+                "25/2"
+              ],
+              "CS": "625",
+              "total_surplus": "1875"
+            }
+          }
+        ],
+        "cournot": {
+          "Q": "48",
+          "price": "42",
+          "profits": [
+            "576",
+            "576"
+          ],
+          "CS": "1152",
+          "total_surplus": "2304"
+        },
+        "asymmetric_cournot": {
+          "Q": "42",
+          "price": "42",
+          "profits": [
+            "900",
+            "144"
+          ],
+          "CS": "882",
+          "total_surplus": "1926"
+        },
+        "bertrand": {
+          "Q": "72",
+          "price": "18",
+          "profits": [
+            "0",
+            "0"
+          ],
+          "CS": "2592",
+          "total_surplus": "2592"
+        },
+        "integer_price_equilibria": [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "delayed_models": [
+          {
+            "Q": "30",
+            "price": "36",
+            "profits": [
+              "900"
+            ],
+            "CS": "450",
+            "total_surplus": "1350"
+          },
+          {
+            "Q": "40",
+            "price": "26",
+            "profits": [
+              "400",
+              "400"
+            ],
+            "CS": "800",
+            "total_surplus": "1600"
+          },
+          {
+            "Q": "60",
+            "price": "6",
+            "profits": [
+              "0",
+              "0"
+            ],
+            "CS": "1800",
+            "total_surplus": "1800"
+          }
+        ]
+      },
+      "limitations": [
+        "Exact case calculations and finite deviation checks supplement the written global, equilibrium and welfare proofs; they do not establish general theorems by enumeration.",
+        "The discrete-price game is exhaustively checked. The continuous-price Bertrand uniqueness result relies on the manuscript's full deviation-case argument and stated assumptions.",
+        "The capacity exercise only rejects a proposed equilibrium; it does not solve an unrestricted capacity-constrained pricing game.",
+        "All examples are synthetic. No empirical conduct, market definition, discrimination legality or current institutional observation is established.",
+        "Source inspection is scoped in the proposal file. No visual, mobile, print or independent-human QA is claimed; root owns shared integration and acceptance."
+      ]
+    },
+    "v05-c07": {
+      "status": "passed",
+      "checks": [
+        "Expansion: exact best responses, unique pure NE, 121 mixed-profile deviation audits, profit sums and affine invariance",
+        "Weak deletion: both original NE, removal of (D,L), and distinct surviving sets for the two deletion orders",
+        "Scheduling: no pure NE, independent joint-weight payoff sum, all support/off-support inequalities, mixed dominance and 288 rational profiles",
+        "Exercise 4: altered payoff forces Left probability 1/5, keeps U probability 4/7, and excludes Idle",
+        "Exercise 5: old candidate fails by 1/14; 2706 exact profiles check Idle-only equilibrium interval including both endpoints",
+        "Entry: both pure Nash profiles, 441 mixed-profile checks of z>=3/5 family, and independent all-subgame deviation audit",
+        "Commitment: all pure plans and every subgame deviation at seven costs for both technologies; exact cost-4/cost-0 initial mixing ties",
+        "Exercise 8: two pure and one mixed coordination equilibrium, four observed contingent plans, unique observed SPNE, hidden-action strategy restriction",
+        "Delayed check: exact zero-sum mixing/payoffs and cost-5 continuation plan from independent tree enumeration",
+        "Static manuscript: three worked examples, eight matching complete solutions, answered retention, five scoped source records and prerequisite/successor routes"
+      ],
+      "limitations": [
+        "Exact finite probability grids diagnose the stated cases; the written support arguments establish the full continuous equilibrium sets.",
+        "The tree oracle covers finite perfect-information pure plans. Hidden-information strategy feasibility is checked separately; no general sequential-equilibrium or behavioral/mixed equivalence solver is claimed.",
+        "Mixed finite-game existence invokes a fixed-point theorem; this checker does not prove it or certify empirical equilibrium selection.",
+        "All payoffs and mechanisms are hypothetical. Complete information, observability, risk neutrality and irreversible commitment are stated model assumptions.",
+        "Prerequisite-order acceptance, integrated links/build, external expert review and visual/mobile/print QA remain the coordinator's gates; no UI QA is claimed here."
+      ]
+    },
+    "v05-c08": {
+      "status": "passed",
+      "checks": [
+        "selected composition, offer deviations and boundary",
+        "inspection and continuous-quality resource ledgers",
+        "Bayes listing posterior and eight solved exercise targets",
+        "separating IC interval, global off-path bounds and pooling deviations",
+        "screening all IC/IR, completed-square certificate, exclusion and ties",
+        "profit-rent-welfare identities and delayed transfer case"
+      ],
+      "limitations": [
+        "Finite arithmetic supplements the written global proofs.",
+        "No empirical validation, general PBE refinement or UI QA."
       ]
     }
   },

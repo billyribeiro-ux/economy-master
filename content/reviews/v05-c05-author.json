@@ -1,0 +1,54 @@
+{
+  "chapter": "v05-c05",
+  "title": "General equilibrium and welfare",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "state": "review",
+  "review_type": "Specialist author proof, arithmetic, instructional and scoped primary-source review; root independently audits and alone accepts",
+  "reviewed": {
+    "economy_and_accounting": "Defined finite consumers, commodities and firms; dated/state-specific commodities; consumption and physical endowments; signed net outputs; complete ownership shares; endowment-plus-profit wealth; balanced lump-sum transfers; consumer and firm global optimization; resource feasibility and positive-price clearing with disposal. Distinguished individual price taking from an empirical claim of negligible influence. Derived Walras law by summing exhausted budgets and ownership shares, including the positive omitted-price condition, zero-price excess-demand counterexample, nominal normalization and the required scaling of transfers. No universal existence, uniqueness or adjustment-stability theorem is claimed.",
+    "geometry_and_exchange": "The complete original coordinate representation gives both Edgeworth origins, all five plotted-point bundles and aggregate resources, then explains opposite affordable sides of the common boundary. Derived endowment-dependent wealth and optimizing expenditure shares, solved the exchange price and independently checked both markets and each budget. Derived the common-MRS necessity using an explicitly feasible beneficial small trade. Derived the interior contract curve, established support-based global efficiency and treated its efficient endpoints and inefficient remaining boundaries separately. Distinguished the full contract curve from a fixed-endowment equilibrium or individually rational trading subset.",
+    "first_welfare_theorem": "Proved the weakly preferred bundle cost lemma with a budget-slack/LNS argument, strict cost inequality for a strictly preferred bundle, aggregate expenditure contradiction and the alternative-production profit bound. Stated own-consumption preferences, fully specified priced opportunities, finite sums, feasibility, ownership and existing global optima. Identified that convexity, differentiability and uniqueness are not required for this implication. The satiation exercise gives a valid price-taking equilibrium that is Pareto dominated and locates the failed LNS hypothesis.",
+    "second_welfare_theorem": "Stated a scoped finite-dimensional convex support result for continuous convex LNS preferences on nonnegative consumption sets and convex free-disposal production, distinguishing weak cost support from full optimizing equilibrium. Explained the separating-set route without claiming to have proved the general separating-hyperplane theorem. Proved the continuity/convex-set/cheaper-bundle upgrade and showed precisely why zero wealth at zero support prices defeats it. Fully proved restricted smooth interior exchange decentralization from MRS equality, concavity's global inequality and balanced transfers. Log representations handle the product-utility targets only after inferior axes are separately checked. Production transfer accounting explicitly also requires global profit support. Nonconvex technology and implementability limits are not presented as universal failure claims.",
+    "production_and_missing_markets": "The production case uses an exact profit-square certificate and capped consumer demands, validates the positive-numeraire branch, and closes endowment, input, output and profit accounts without double counting. Ownership redistribution is neutral for quantities only on the verified quasilinear branch. The pollution extension specifies price-taking ambient pollution and the firm's unpriced impact, solves the corner/interior planner branches, and constructs a feasible allocation that strictly improves both consumers. Its individual log-gain bounds establish a Pareto improvement rather than merely a sum increase. Missing state-contingent insurance is treated separately, with ex ante utility, exact resource/claim accounting and enforceability assumptions.",
+    "solutions": "Read and solved all eight original questions against their exact prompts: off-equilibrium wealth/Walras/normalization; changed endowment equilibrium; another supported contract-curve target; LNS lemma and satiation counterexample; quasiequilibrium and alternate full support; changed-production coefficients and ownership; nonconvex efficient technology with a universal endpoint-profit contradiction; and absent versus complete contingent insurance. Each determinate problem has complete calculations and reasoning. Critique responses identify the relevant assumptions and comparison sets. The delayed check supplies its price, wealth, demands and both market checks.",
+    "instruction_and_sources": "The chapter has its canonical capability and accepted prerequisite, definitions before use, explicit units and original synthetic scope, three worked cases, eight complete matched solutions, Teach-back and an answered Delayed check. It links the successor without assuming market-power or strategic results. Actual primary material was retrieved and inspected: Costinot's 35-page MIT exchange lecture and Townsend's two 14-page official welfare/limits transcripts, with narrow passage scopes recorded. Source graphs, exercises and empirical cases were not copied; loose transcript statements and self-corrected slips were not repeated. A coordinate table meets the geometry requirement without adding an unnecessary asset or claiming browser inspection."
+  },
+  "artifacts": [
+    "content/chapters/v05-c05.html",
+    "scripts/check_v05_c05.py",
+    "content/reviews/v05-c05-sources.json",
+    "content/reviews/v05-c05-author.json"
+  ],
+  "validation": {
+    "commands": [
+      "python3 book/scripts/check_v05_c05.py",
+      "python3 -O book/scripts/check_v05_c05.py",
+      "runpy check() with captured stdout and ordinary json.dumps(report); ordinary and optimized JSON CLI execution from a different working directory",
+      "Python AST parsing, owned review/source JSON parsing and git diff --check on owned paths"
+    ],
+    "result": "passed",
+    "integration_api": "check() is quiet and returns chapter/status/checks/results/limitations directly serializable by ordinary json.dumps; the checker itself enforces that contract. Explicit require() validations remain active under optimized Python. CLI prints ordinary JSON without a fallback serializer.",
+    "checks": [
+      "Balanced HTML fragment with three worked cases, eight exercise/solution pairs, all five actual Edgeworth coordinate rows, teaching gates, prerequisite/successor routes and three aligned source proposals",
+      "81 distinct endowment economies with exact equilibrium budgets and both markets; independent factorized cubic global-choice gaps for both consumers and 162 nonclearing price cases satisfying Walras law",
+      "47 interior contract-curve allocations with equal MRS, exact individual demands, zero-sum transfers and global choice certificates; worked transfers (-7,+7) and exercise transfers (+21/5,-21/5), each with an identified loser relative to the original equilibrium",
+      "Satiation, zero-price omitted-market, quasiequilibrium same-cost improvement and alternate full-support boundary examples",
+      "Four production/ownership scenarios with exact profits, budgets, input/output resources, profit-square certificates and consumer objective checks; independent equilibrium bisection uses capped rather than assumed-interior demand",
+      "Pollution optimum q=3 independently certified through exact derivative factorization and the low-output branch; 1,890 feasible allocation comparisons and rational alternating-series log bounds show both individual welfare gains are strictly positive",
+      "Nonconvex economy's global utility bound and 288 price-pair endpoint deviations supplement the manuscript's universal no-support inequality",
+      "State-insurance resource/wealth/net-claim identities and independent product-maximization certificate; delayed equilibrium price 2/3 and both budgets/markets"
+    ]
+  },
+  "corrections": [],
+  "limitations": [
+    "Internal specialist/root review is not independent human academic certification or learner testing.",
+    "The general finite-dimensional separation result is scoped and sourced but not fully proved. The manuscript proves its restricted constructive decentralization result, cheaper-bundle upgrade and finite first welfare theorem. Graduate global existence, general nonsmooth support and equilibrium dynamics remain outside this chapter.",
+    "Finite computational grids supplement exact algebraic certificates and separate analytic review. They do not prove all modified economies have unique or stable equilibria.",
+    "All preferences, technologies, endowments, pollution effects and state probabilities are synthetic. No empirical identification, policy implementation or administrative feasibility is established.",
+    "Primary-source verification concerns only the inspected method passages, not entire courses or every claim in their transcripts.",
+    "Root retains independent manuscript review, whole-library links/sources/dependencies, canonical acceptance, build and publication responsibilities.",
+    "Browser visual/mobile/print QA remains pending under the existing recorded policy restriction; no workaround or visual-quality claim was made."
+  ],
+  "acceptance": "Complete author package ready for root's independent audit and dependency-ordered acceptance; no shared or central files changed."
+}

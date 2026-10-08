@@ -1,0 +1,74 @@
+{
+  "chapter": "v05-c08",
+  "title": "Information, signaling and selection",
+  "reviewer": "causal_identification specialist; separate author of v05-c07",
+  "review_type": "Independent conceptual and mathematical peer audit; read-only manuscript review",
+  "status": "passed",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "authorization": "Root explicitly assigned the additional focused c08 review and authorized this review-file path after completion of c07. No c08 manuscript, checker, source proposal or central file was edited.",
+  "scope": {
+    "files_read": [
+      "content/chapters/v05-c08.html — all 111 lines, including all three worked cases, eight prompts/solutions, teach-back and delayed answer",
+      "scripts/check_v05_c08.py — entire program",
+      "content/reviews/v05-c08-sources.json — all four scoped source proposals"
+    ],
+    "requested_focus": [
+      "Lemons posted-offer deviations, selection and the alpha=1/2 boundary",
+      "Signaling assessments, on/off-path beliefs, competitive wage-stage deviations and all worker signal deviations",
+      "Screening IC/IR feasibility, fee bounds, global quantity concavity, exclusion, ties and surplus",
+      "Every worked and exercise numerical target, retention answers, assumptions and scope"
+    ]
+  },
+  "findings": [],
+  "checks": [
+    {
+      "topic": "Lemons mechanism and boundary",
+      "locations": "content/chapters/v05-c08.html:18, :19, :23–32, :98–99",
+      "result": "Correct under the stated common posted-offer protocol, participation at equality, quality-independent splitting, sufficient funds and no capacity limit. Zero profit is explicitly only a candidate test. Alpha1/3 implies low-only p6; raising a single buyer's offer above6 either buys L at a loss or both types at expected value10 below their admission price12. Alpha3/4 gives all-trade p15 and the p13 deviation against p6 earns2. At alpha1/2 both p6 and p12 survive weak best responses because an offer12 against p6 yields zero rather than positive profit. The manuscript appropriately does not infer uniqueness at equality.",
+      "independent_calculation": "Wrote a separate exact Fraction two-buyer deviation payoff: a deviator below the rival's price gets no trade, equality gives half of each participating type, and a higher offer gets all eligible types. Checked 81 quarter-dollar offers from0 to20 for each of four candidates (alpha1/3,p6; alpha3/4,p15; alpha1/2,p6; alpha1/2,p12), with maximum deviation profit0 throughout; separately p13 against alpha3/4,p6 yields2. Reviewed the written all-price intervals, which carry the continuous claim beyond this grid."
+    },
+    {
+      "topic": "Selection, resources and continuous unraveling",
+      "locations": "content/chapters/v05-c08.html:13–15, :25, :31–33, :97–99",
+      "result": "Bayes denominator and positive-participation qualification are correct. Exogenous listing is kept distinct from endogenous price participation. Observed-quality gains10/3, hidden-quality gains4/3 and loss2 use the initial-seller denominator. Mandatory universal inspection costs1 once per initial asset, producing net7/3 and gain1 relative to uninspected trade; its fixed financing assumption is explicit. Uniform-quality participation yields mean p/2 for0<p<=1 and total gains(a-1)/2; a3/2 has no positive-volume trade while a5/2 supports all-trade p5/4.",
+      "independent_calculation": "Recomputed listing mass7/12, H mass1/12, posterior1/7 and expected value54/7 directly. Integrated z on[0,p] as p^2/2 and divided by participation mass p; verified the a3/2 and a5/2 full-information gains1/4 and3/4 and all price regimes analytically. No division by zero at no trade is used."
+    },
+    {
+      "topic": "Signaling PBE and wage-stage responses",
+      "locations": "content/chapters/v05-c08.html:35–54, :100–101, :109–110",
+      "result": "The signaling-game PBE definition is deliberately scoped. Atom Bayes formulas are not misapplied to continuous mixed draws. Employer expected productivity4+6mu is supported by an explicit competing-bid continuation after every signal, including off path. All type deviations are checked globally under the stated wage schedule. Separating signals satisfy2<=s<=6, with weak endpoint incentives; pooling at zero works for off-path mu0 but fails for mu1/2. Refinement discussion is motivation for an added restriction, not an assertion that Bayes alone fixes unused-signal beliefs.",
+      "independent_calculation": "Checked employer deviations directly: against a rival wage equal to value, a lower bid loses, a tie yields zero and a higher bid earns negative expected profit. Used 13 beliefs k/12 and 50 listed bids per belief (including the exact equilibrium value). Separately evaluated low/high signal payoff functions at s2,3,6 against an exact finite signal grid plus each on-path signal, and reviewed the global bound that every other signal pays4 and adds nonnegative cost. Recomputed s1 low deviation7>4, s7 high deviation4>3, pooling deviation ranges e<1 and e<1/3, and e2 refinement comparisons4<6<8. Expected net outputs at s2 ands3 are16/3 and5. Delayed variant gives interval[3,6], worker payoffs3/5, cost2 and net output4."
+    },
+    {
+      "topic": "Screening implementation and global optimum",
+      "locations": "content/chapters/v05-c08.html:57–83, :102–104",
+      "result": "Adding IC yields monotone quantities, and the fee bounds follow from low IR and high IC with the correct payment direction. Attaining both bounds satisfies the other two restrictions. The reduced objective is strictly concave for0<lambda<1; the stationary high quantity thetaH and clipped low quantity satisfy monotonicity, so no omitted constraint invalidates the claimed global optimum. The feasible reduction includes pooling and exclusion. Weak intended-choice ties are disclosed, and strict epsilon fees approach the baseline profit without claiming exact strong implementation.",
+      "independent_calculation": "Without using the manuscript's fee or quantity formulas, represented the four original IC/IR inequalities as linear halfspaces in (tL,tH). Enumerated all pairwise boundary intersections, retained feasible payment vertices and scored profit directly. Searched all1,369 quantity pairs (qL,qH) on{0,1/3,...,12}^2 for each of three cases, including nonmonotone pairs whose fee regions were infeasible. The unique sampled optimum in each case reproduced baseline quantities(2,8), fees(8,56), profit12; transfer quantities(5/3,7), fees(5,127/3), profit43/6; exclusion quantities(0,8), fees(0,64), profit64/3. This is an independent finite diagnostic; the reviewed concavity argument establishes global continuous optimality."
+    },
+    {
+      "topic": "Screening ledgers and all solution targets",
+      "locations": "content/chapters/v05-c08.html:68–78, :102–104",
+      "result": "Baseline low utilities0/-24 and high utilities8/8 satisfy all four IC/IR comparisons. Profits6/24 average12; rent8/3 gives total44/3. Full information16 minus44/3 is4/3; the firm's profit loss4 separates rent8/3 from distortion4/3. The transfer case gives low fees5, high fees127/3, profit43/6, rent5/3, total53/6, first-best19/2 and distortion2/3. Exclusion begins at lambda1/2 and atlambda2/3 yields profit/total64/3, zero rent and loss8/3 against full-information24. Observable-type fees fail high IC by16; epsilon fees make both desired options strictly preferred, with profit reduction4epsilon/3. All conclusions retain the stated no-resale, deterministic-menu, quasilinear and outside-option assumptions.",
+      "independent_calculation": "Recomputed utilities, payments, costs and expected totals from the original theta*q-t and q^2/2 expressions rather than treating transfers as resource costs. The payment-vertex calculation independently reproduces every reported menu. Reviewed each of the eight exact exercise prompts against its supplied answer; no missing determinate part or conflicting convention found."
+    },
+    {
+      "topic": "Scope, evidence and source attribution",
+      "locations": "content/chapters/v05-c08.html:20, :41, :53–54, :63, :83",
+      "result": "The text labels numerical cases hypothetical, distinguishes observed associations from causal productivity effects, bounds PBE/refinement coverage and separates hidden information from subsequent hidden actions. Source proposals specify pages/slides inspected by the author. The MIT lemons source's bargaining protocol is distinguished from the original competing posted-offer model; Holmstrom's privately informed procurement suppliers are distinguished from the chapter's privately informed buyers and reversed transfer direction. No original-source empirical finding or complete general theorem is improperly claimed by these scoped uses.",
+      "review_limit": "This focused peer audit read the source records and checked the manuscript's attribution/scope consistency. It did not re-download and independently inspect all four primary documents; direct source inspection remains the author's recorded work and the root source gate."
+    },
+    {
+      "topic": "Executable verification",
+      "result": "Ran python3 book/scripts/check_v05_c08.py successfully and read its complete implementation. Its exact selected-composition, wage/signal, screening-constraint, profit-rent-welfare and completed-square assertions pass in normal Python execution. The separate peer calculations above do not call its menu() function or import the checker to compute the independent targets."
+    }
+  ],
+  "limitations": [
+    "No material finding within the requested conceptual/mathematical scope is not a guarantee of error-free content or external academic certification.",
+    "Finite offer, signal and quantity grids are diagnostics, not proofs of continuous-game equilibrium or global optimality; the corresponding written all-deviation and concavity arguments were reviewed separately.",
+    "This is the chapter's specified two-type and posted-offer/competitive-wage/deterministic-menu scope, not a general mechanism-design or equilibrium-refinement audit.",
+    "No empirical validation, UI/mobile/print QA, acceptance-state change, shared edits, commit or publication was performed.",
+    "Root retains final prerequisite-order acceptance, integrated structure/link/source gates and publication."
+  ],
+  "recommendation": "Accept after root's remaining integrated gates; no substantive correction requested by this focused peer review."
+}

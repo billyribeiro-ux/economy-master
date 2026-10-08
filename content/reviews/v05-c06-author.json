@@ -1,0 +1,76 @@
+{
+  "chapter": "v05-c06",
+  "title": "Monopoly, oligopoly and pricing",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "state": "review",
+  "review_type": "Specialist author mathematical, arithmetic, instructional and source review; root independently reviews and alone accepts after v05-c05",
+  "reviewed": {
+    "canonical_scope": "Covers monopoly, markup, price discrimination, Cournot, Bertrand and entry barriers, addressing the canonical outcome of solving market-power models and comparing price/quantity competition. Uses the agreed c05 prerequisite contract and the accepted c03/c04 cost, activation and quasilinear-surplus framework. Defines simultaneous action, best responses and Nash deviation inequalities before the quantity game; general game theory is correctly handed to c07 and hidden-type menu IC analysis to c08/c09.",
+    "monopoly_reasoning": "Derived MR from revenue and Lerner from an explicitly positive elasticity magnitude and differentiable local inverse. Required positive sales/price, an unconstrained smooth optimum and correctly scoped marginal cost; distinguished a first-order candidate from a global solution, capacity boundaries, kinks and activation. Completed-square global arguments and compact-domain existence scope are explicit. Separated avoidable opening charges from already unavoidable payments. Welfare uses a stated quasilinear/no-externality/fixed-quality/efficient-allocation model; transfers, real fixed costs and lost gains from trade are not conflated.",
+    "discrimination_reasoning": "First-degree pricing is derived from personalized quantity/payment offers and participation relative to the outside option, with observability, enforceability, ability to pay, no resale and indifference acceptance. The strict-participation supremum caveat is stated. Third-degree demand groups are observable and separately priced; group MR equals common MC at active smooth choices, with excluded-group and common-price choke branches checked. The two original segmented cases establish that an unchanged total with misallocation can lower welfare, while opening an excluded market can raise it. Profit improvements are confined to a nested costless feasible-policy set. No universal welfare sign or private-type observability assumption is imported into the menu discussion.",
+    "oligopoly_reasoning": "Cournot payoffs are defined for every nonnegative output using a zero price floor and strictly positive marginal cost. The global best response is proved on the positive-price quadratic branch and compared with the zero-price loss tail. Symmetric equilibrium excludes inactive patterns; asymmetric exercise checks corner responses explicitly. Joint-profit sharing is tested against a global deviation. Bertrand states homogeneous product, continuous nonnegative prices, equal positive costs, equal tie splitting, informed customer allocation, unlimited individual capacity and absence of avoidable participation fees/repeated incentives. The equilibrium and uniqueness proof exhausts below-cost, unequal-cost-level quotes, positive-margin ties/unequal prices and zero-sales cases. Capacity and price-grid changes are analyzed with their actual deviation domains rather than treating the baseline conclusion as universal.",
+    "entry_and_interpretation": "Entry compares an irreversible cost with post-entry Cournot profit over an explicitly undiscounted one-period horizon. Independently derived fixed-cost subadditivity distinguishes efficient plant scale from output, financing, exclusion and regulation. Market boundaries, product differentiation and empirical identification limits are stated without current legal or institutional assertions. Firm counts, positive markups and price-average-cost gaps do not by themselves establish conduct or welfare.",
+    "worked_examples_and_solutions": "Three full worked examples and eight complete matching solutions were solved and checked. They include nonlinear monopoly cost with binding capacity; opening-cost ties and committed losses; discrete personalized buyers; a segmented market-opening transfer; asymmetric Cournot production/output losses and an inactive firm; cartel and Bertrand deviations plus a capacity counterexample; entry versus plant-duplication costs; and a complete integer-price Nash proof with a continuous undercut. All required methods precede the exercises. Delayed questions have complete fresh numerical answers.",
+    "sources": "Retrieved actual official Glenn Ellison MIT 14.271 PDFs for lectures 1, 3, 5 and 16, inspecting the recorded method-specific slide ranges. The manuscript's positive elasticity convention and equal-cost/equal-tie Bertrand assumptions are distinguished from other source conventions. No source problems, numerical examples, images, general excessive-entry theorem or empirical/legal conclusion is copied. Source records include exact scope and limitations; four prefixed IDs match the four HTML citations.",
+    "structure": "Static fragment with no h1, explicit capability/prerequisite, definitions and units, three aside.worked cases, one eight-item ol.exercises and matching ordered solutions, Teach-back, answered Delayed check, adjacent chapter routes and later-menu handoff. Analytic tables compare pricing allocations and market models. No extra lab/assets were necessary. No visual/mobile/print QA claim was made."
+  },
+  "artifacts": [
+    "content/chapters/v05-c06.html",
+    "scripts/check_v05_c06.py",
+    "content/reviews/v05-c06-sources.json",
+    "content/reviews/v05-c06-author.json"
+  ],
+  "validation": {
+    "command": "python3 book/scripts/check_v05_c06.py",
+    "result": "passed",
+    "integration_api": "Quiet import and check() return a directly JSON-serializable dict containing status, checks, reference_values and limitations. Exact fractions are converted to strings in exposed reference values. The standalone CLI prints JSON, and check() internally enforces json.dumps(..., allow_nan=False). No network or explicit file writes.",
+    "additional_modes": [
+      "Optimized Python -O import and check(): 12 groups passed; strict JSON serialization succeeded",
+      "Absolute-path quiet import and check() from /private/tmp: 12 groups passed; strict JSON serialization succeeded"
+    ],
+    "checks": [
+      "Exact global quadratic candidate extrema for monopoly, efficient output and capacity-constrained alternatives; Lerner and benefit-minus-cost accounts",
+      "Avoidable opening-cost tie/exit and sunk-cost operating/shutdown comparisons",
+      "Independent choke-interval enumeration of all common-price demand branches and exact separate-group optima; both welfare directions and full-information benchmark",
+      "All relevant uniform reservation-price intervals and all 16 finite buyer subsets for the personalized-trade example",
+      "50 global Cournot response comparisons, 250 bounded deviations, active-set equilibrium checks including negative-candidate rejection, and productive versus output-gap accounting",
+      "201 rational-price deviations against the continuous Bertrand cost-price candidate, with the full continuum uniqueness proof reviewed separately",
+      "Cartel's global deviation, price undercut and efficient-rationing capacity deviation; post-entry cost comparison",
+      "All 225 integer-price profiles with 6,750 unilateral payoff checks, identifying equilibria (2,2) and (3,3); exact continuous deviation to 2.9",
+      "Fresh delayed monopoly, Cournot and Bertrand outputs and welfare",
+      "Fragment counts/anchors, strategic-definition presence, source schema and citation matching; full-library build remains root-owned"
+    ],
+    "reference_values": {
+      "baseline_monopoly": {"Q": 36, "p": 54, "profit": 1296, "CS": 648, "DWL": 648},
+      "baseline_cournot": {"quantities": [24, 24], "p": 42, "profits": [576, 576], "CS": 1152, "DWL": 288},
+      "baseline_bertrand": {"Q": 72, "p": 18, "profits": [0, 0], "CS": 2592, "DWL": 0},
+      "worked_segmented_uniform": {"prices": [25, 25], "quantities": [25, 5], "profit": 450, "CS": 325, "surplus": 775},
+      "worked_segmented_discrimination": {"prices": [30, 20], "quantities": [20, 10], "profit": 500, "CS": 250, "surplus": 750},
+      "exercise_1_unconstrained": {"Q": 10, "p": 50, "profit": 300, "CS": 100, "DWL": 50},
+      "exercise_1_capacity": {"Q": 8, "p": 54, "profit": 288, "CS": 64, "MR_minus_MC": 12, "feasible_DWL": 0},
+      "exercise_3_uniform": {"p": 41, "Q": 2, "profit": 42, "CS": 11, "DWL": 9},
+      "exercise_3_perfect": {"Q": 3, "revenue": 122, "profit": 62, "CS": 0, "DWL": 0},
+      "exercise_4_surplus_change": "75/2",
+      "exercise_5_asymmetric": {"quantities": [30, 12], "p": 42, "profits": [900, 144], "CS": 882, "surplus": 1926, "output_loss": 450, "production_loss": 216},
+      "exercise_5_corner": {"quantities": [36, 0], "p": 48, "profits": [1296, 0]},
+      "exercise_6_cartel_deviation": {"proposed_profit": 648, "best_deviation_q": 27, "deviation_profit": 729},
+      "exercise_6_capacity_deviation_profit": 30,
+      "exercise_7_entry_net_payoffs": [-124, 76],
+      "exercise_8_grid_profit": "11/2",
+      "exercise_8_continuous_deviation_profit": "999/100",
+      "delayed_DWL_monopoly_cournot_bertrand": [450, 200, 0]
+    }
+  },
+  "limitations": [
+    "Internal author/root review is not independent human academic certification.",
+    "The continuous-model global and equilibrium proofs require mathematical reading; exact finite cases and sampled deviations cannot establish arbitrary continuum claims.",
+    "The capacity exercise rejects a specified price pair only. No general capacity-constrained equilibrium existence, uniqueness or rationing-invariance claim is made.",
+    "The first-degree extraction result requires its restrictive information, participation, financing and enforcement conditions; the chapter does not solve second-degree private-type menus.",
+    "Every numerical case is synthetic. No actual firm's conduct, demand elasticity, discrimination practice, legal status or market definition is established.",
+    "Source inspection covers the listed topics and slide ranges rather than every extension in the four PDFs.",
+    "No visual, mobile or print QA was performed; the standing browser-policy restriction was respected.",
+    "Acceptance in prerequisite order, shared build/source/checkpoint integration, offline archive and publication remain root responsibilities."
+  ],
+  "acceptance": "Complete specialist c06 package ready for root's independent review after c05. Only four assigned c06 files were written; no shared edits, children, commits, hosting or publication actions."
+}

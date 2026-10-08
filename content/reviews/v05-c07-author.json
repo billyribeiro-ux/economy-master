@@ -1,0 +1,50 @@
+{
+  "chapter": "v05-c07",
+  "title": "Game theory and strategic behavior",
+  "status": "review",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "scope": "Complete original finite complete-information chapter: three fully worked cases, eight original exercises with complete solutions, a teach-back, answered delayed check, five inspected primary method sources and an independent exact standard-library checker. No separate project asset is needed for these small payoff matrices and finite trees.",
+  "review": {
+    "prerequisites": "Read the master plan, book instructions, checkpoint, canonical c06–c08 entries and persisted v05-middle assignment. C06 supplies the best-response/Cournot/Bertrand motivation by its concurrent prerequisite contract; c07 defines its own game, payoff, information and timing notation. Earlier probability and expected-utility routes are linked. Both successor references now point to the present c08 manuscript. File presence is not an assertion of dependency-order acceptance.",
+    "normal_form_and_units": "Players, finite nonempty pure-choice sets, real payoffs, rival profiles, best-response correspondences and every unilateral Nash inequality are explicit. An action in a one-move game is distinguished from a complete contingent strategy in a dynamic game's normal form. Complete information/common knowledge and perfect information/observed history are separated. Numerical firm payoffs are hypothetical thousands of USD over one quarter under risk neutrality; other preferences need utility payoffs. Positive affine transformations preserve lotteries' rankings; arbitrary increasing transformations need not. Firm profit sums are not claimed to exhaust welfare.",
+    "dominance_and_deletion": "Strict and weak domination are defined separately, including the strict-somewhere convention for weak dominance and domination by a mixture. The positive expected-gain argument excludes strict domination from equilibrium. Iterated strict deletion preserves original Nash support by induction but is not presented as a universal equilibrium solver. The original weak table has pure equilibria (U,L) and (D,L); deleting D first then R removes the latter, whereas deleting R first leaves both tied row actions. No unsupported order-independence theorem is asserted.",
+    "mixed_strategy_proof": "Independent product probabilities, support and expected payoffs are defined. Necessity of best support actions is proved by shifting positive probability off an inferior action; sufficiency and the pure-deviation criterion follow because a mixture averages pure payoffs. Original scheduling probabilities x4/7 and y2/7 pass every supported/off-support inequality and yield 10/7 and12/7. Joint weights8/49,20/49,6/49,15/49 independently reproduce both expectations. Idle is strictly dominated by the original mixture (1/3,2/3), although neither pure action dominates it; this plus the strict best-response cycle establishes uniqueness.",
+    "existence_scope": "The finite mixed Nash theorem is stated with finite nonempty choice sets and real finite expected-utility payoffs. Compact convex probability simplices, continuous/affine expected payoffs and the best-response fixed-point route are identified, but Kakutani is explicitly invoked without proof. The support proof is not represented as a general existence proof. Continuous/unbounded actions, efficiency, uniqueness and behavioral convergence are not inferred from finite existence.",
+    "extensive_form_and_proof": "Histories, terminal payoffs, player/actions at nodes, information sets, perfect recall and complete off-path plans are defined. Mixed-over-plans and behavioral local randomization are distinguished without claiming their general equivalence. Subgames must start at singleton information sets, contain descendants and avoid cutting information sets. SPNE requires Nash in every subgame, including the whole game. Sequential rationality and SPNE's limitation when proper subgames are absent are stated. A restricted finite-perfect-information induction proves the backward-induction construction, including deviations combining an earlier action with later plan changes. Ties remain possible, and no infinite-horizon or uniqueness theorem is claimed.",
+    "entry_and_commitment": "Original entry payoffs Out(0,8), Enter/Accommodate(3,4), Enter/Fight(-2,-1) imply two pure Nash profiles and unique SPNE Enter/Accommodate. Incumbent Fight is credible only after the separate observed irreversible Lock mechanism physically removes Accommodate; a sunk expenditure alone does not. At c1 Lock gives incumbent7 versus4, with E Out after Lock and Enter after No, plus I's off-path Accommodate after No/Enter. Costs below4, equal4 and above4 retain all initial choice ties; reversible positive-cost commitment does not deter and is not chosen. Cost0 ties are handled separately in the reversible version.",
+    "exercise_audit": "All eight prompts were solved against their exact requested scope. Exercise1 best responses, unique mixed/pure outcome, affine diagonal values16 and7 and profit-sum critique; exercise2 both weak-deletion orders; exercise3 the two-direction support proof and mixed domination; exercise4 changed row payoff8 yielding x4/7,y1/5 and payoffs8/5,12/7 with uniqueness; exercise5 higher Idle3/2 invalidates the old profile by1/14 and yields exactly Idle certain with y in[1/4,3/10], including an exhaustive support argument; exercise6 all mixed entry equilibria Out with Fight probability>=3/5 plus Enter/Accommodate; exercise7 irreversible/reversible cost regimes, ties, off-path plans and mechanism critique criteria; exercise8 simultaneous coordination's two pure and one mixed equilibrium, observed contingent plans and unique SPNE, then the hidden-action information set/no-proper-subgame limitation. Each technique appears before the exercises.",
+    "retention": "Teach-back has explicit evaluation criteria. Delayed zero-sum game requires x=y3/5 and expected payoffs12/5,-12/5 with no pure equilibrium; cost5 entry commitment chooses No but specifies Enter/Out and the off-path accommodation response. Complete answers are supplied.",
+    "sources": "Retrieved and inspected Ozdaglar's author-hosted Staticgameschapter sections2,3,3.1,4.1 and Yildiz's university chapters3,4,9,11 at the specified sections. MIT's official Fall2025 lecture-notes listing was inspected to verify Yildiz's 2012 authorship, avoiding attribution to the host course's different instructor. Proposed records delimit inspected methods and omitted extensions. No source numerical problem, exam bank or empirical observation is reproduced.",
+    "independent_computation": "The checker reads each original matrix directly, averages independent joint outcomes with exact Fraction arithmetic, and tests all pure deviations. Exact probability grids diagnose support families and changed-payoff failures. A separate finite-tree oracle enumerates complete pure plans and every unilateral deviation in every singleton-rooted subgame; it does not implement the manuscript's backward-induction recurrence or import a chapter solution program. Seven cost values are checked in both irreversible and reversible trees. The hidden-action restriction is checked by tying the two column instructions and reconstructing the simultaneous matrix. Structure/source inventory checks are separate from mathematical proof review. check() is quiet, safe to import and returns JSON-serializable strings/lists; standalone execution prints one JSON report."
+  },
+  "artifacts": [
+    "content/chapters/v05-c07.html",
+    "scripts/check_v05_c07.py",
+    "content/reviews/v05-c07-sources.json"
+  ],
+  "validation": {
+    "command": "python3 book/scripts/check_v05_c07.py",
+    "result": "passed",
+    "checks": [
+      "Expansion dominance, all pure equilibria and121 exact mixed/affine profiles",
+      "Weak-dominance ties and the two distinct deletion paths",
+      "Scheduling support/off-support conditions, joint weights, mixed dominance and288 exact rational profiles",
+      "Own-payoff change, excluded-action profitable deviation and2706 high-Idle profiles including interval endpoints",
+      "Entry normal form,441 exact mixed profiles and independent full subgame deviations",
+      "Every pure complete plan at seven costs in each commitment technology, plus initial mixing ties",
+      "Coordination mixed payoffs, observed-action SPNE and hidden-action strategy feasibility",
+      "Delayed numerical answers, three worked cases, eight matched solutions and five source records"
+    ]
+  },
+  "limitations": [
+    "Root owns independent editorial acceptance in c05,c06,c07,c08 dependency order and integrated build/local-link/source verification.",
+    "Finite probability grids do not prove continuous equilibrium-set exhaustiveness; the written case/support arguments carry those claims.",
+    "The tree oracle enumerates pure strategies in finite perfect-information trees; it is not a general imperfect-information, sequential-equilibrium or infinite-game solver.",
+    "Finite mixed equilibrium existence is a stated theorem with a fixed-point proof route, not a supplied full fixed-point proof.",
+    "All examples are hypothetical. Model assumptions about information, observability, risk neutrality and irreversible feasible choices are not empirical findings or causal forecasts.",
+    "Private types, belief updating, signaling and selection belong to c08. General refinements, repeated-game theory and graduate existence results remain extension topics.",
+    "No visual/mobile/print UI QA or external human certification was performed. No shared state, other manuscript, hosting, commit or publication was modified."
+  ],
+  "acceptance": "Complete authored package submitted in review; root retains acceptance and integration."
+}

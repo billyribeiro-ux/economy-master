@@ -39,6 +39,10 @@ from check_v05_c01 import check as check_v05_c01
 from check_v05_c02 import check as check_v05_c02
 from check_v05_c03 import check as check_v05_c03
 from check_v05_c04 import check as check_v05_c04
+from check_v05_c05 import check as check_v05_c05
+from check_v05_c06 import check as check_v05_c06
+from check_v05_c07 import check as check_v05_c07
+from check_v05_c08 import check as check_v05_c08
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -405,6 +409,9 @@ def main():
     v05_opening_check = {name: checker() for name, checker in (
         ('v05-c01', check_v05_c01), ('v05-c02', check_v05_c02),
         ('v05-c03', check_v05_c03), ('v05-c04', check_v05_c04))}
+    v05_middle_check = {name: checker() for name, checker in (
+        ('v05-c05', check_v05_c05), ('v05-c06', check_v05_c06),
+        ('v05-c07', check_v05_c07), ('v05-c08', check_v05_c08))}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -430,8 +437,10 @@ def main():
               'volume_4_assessment_check': v04_assessment_check,
               'foundation_assessment_check': foundation_check,
               'volume_5_opening_checks': v05_opening_check,
+              'volume_5_middle_checks': v05_middle_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     report['checks'].extend(['Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package',
+        'Volume 5 chapters 5–8: exchange and production wealth/market ledgers, supporting transfers and missing-market improvements; global monopoly and discrimination branches, Cournot activity and Bertrand deviations; mixed support and all-subgame contingent plans; selected quality, signaling beliefs and screening IC/IR/rent/distortion identities',
         'Volume 5 chapters 1–4: consumer interiors/corners/ties and revealed-preference cycles; exact duality/Slutsky and compensated welfare with numeraire boundaries; conditional production costs, global supply/shutdown and existence limits; market tax ledgers, entry and rationing allocation',
         'Volume 4 diagnostic, distinct exam forms, delayed transfer and historical empirical project: exact arithmetic, code contracts under optimization, source-vintage reconstruction, rounding envelopes, projection identities and forecast-selection isolation',
         'Volume 4 chapters 9–12: temporal forecast/release selection and leakage mutations; calendar panel keys, aggregation and exact dependent shock laws; independent numerical error bounds and fault detection; frozen official BLS reconstruction, rounding grid, provenance and integrity contracts',
