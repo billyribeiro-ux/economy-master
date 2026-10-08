@@ -1014,5 +1014,133 @@
     "use": "Primary-author university note on causal control roles, pre-treatment collider bias, mediator adjustment and why timing alone is insufficient. The chapter's structural and enumerative examples are original.",
     "checked": "2026-10-07",
     "verification": "Retrieved UCLA's original author note and inspected models 1–3, 7 and 11–16 and their explanatory paragraphs. In particular, model 7 describes a pre-treatment collider; models 11–12 explain blocked mediated channels; models 14–16 show that post-treatment timing alone does not settle validity. The note links a later extended article, but that article is not claimed as inspected."
+  },
+  {
+    "id": "v04-c09-accuracy",
+    "title": "Rob J Hyndman and George Athanasopoulos — Forecasting: Principles and Practice, 3rd edition, 5.8 Evaluating point forecast accuracy",
+    "url": "https://otexts.com/fpp3/accuracy.html",
+    "use": "Further study of forecast versus fitted errors, MAE/RMSE units and percentage-denominator limitations. The chapter develops original examples and an explicit separate validation role.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved author-hosted chapter; inspected training/test, error definitions, scale-dependent and percentage error sections. Source illustrative datasets and code are not reproduced. Its approximate sample split size is not adopted as a universal rule; empirical claims in its examples are not claimed as independently verified."
+  },
+  {
+    "id": "v04-c09-rolling",
+    "title": "Hyndman and Athanasopoulos — Forecasting: Principles and Practice, 3rd edition, 5.10 Time series cross-validation",
+    "url": "https://otexts.com/fpp3/tscv.html",
+    "use": "Further study of rolling origins and horizon-specific forecast evaluation. The original lab adds explicit releases, candidate selection and fixed-origin versus updating protocols.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved author-hosted chapter and inspected temporal order and repeated-origin/horizon discussion. Did not reproduce its Google data/results, figures or R examples. No universal claim that residual error must be below realized forecast error or horizons must worsen every case is adopted."
+  },
+  {
+    "id": "v04-c09-leakage",
+    "title": "scikit-learn developers — Common pitfalls: Data leakage",
+    "url": "https://scikit-learn.org/stable/common_pitfalls.html#data-leakage",
+    "use": "Training-only learning of preprocessing transformations and applying them consistently on held-out data. Principle is used in an original small stdlib teaching case, without a scikit-learn dependency.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official documentation and inspected sections12.1–12.2 on preprocessing, leakage and per-split feature selection. Source library examples are not copied. Live documentation is not a claim about an exact historical point release; leakage is defined relative to the declared task, including explicitly different transductive tasks."
+  },
+  {
+    "id": "v04-c09-selection",
+    "title": "Gavin C. Cawley and Nicola L. C. Talbot (2010), On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+    "url": "https://www.jmlr.org/papers/v11/cawley10a.html",
+    "use": "Original research route on optimizing noisy model-selection criteria and evaluation bias. Chapter supplies its own finite two-candidate example and expectation inequality.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved JMLR original paper landing page and inspected abstract and bibliographic record, volume11 pages2079–2107. Full article calculations are not claimed as independently checked; citation supports the topic/further-study route, not the chapter original numerical demonstration."
+  },
+  {
+    "id": "v04-c10-stata-panel",
+    "title": "Stata — xtset: Declare data to be panel data",
+    "url": "https://www.stata.com/manuals/xtxtset.pdf",
+    "use": "Primary software-author explanation of within-panel calendar ordering, time steps, missing dates and panel balance. Chapter implements concepts with original standard-library Python.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official 15-page PDF; inspected within-panel lag interpretation, yearly/monthly gap examples and strongly/weakly balanced terminology, especially printed pages 5 and 8–10. No software installation or reproduction of vendor datasets. Chapter defines its own complete-date balance explicitly."
+  },
+  {
+    "id": "v04-c10-bea-deflation",
+    "title": "U.S. Bureau of Economic Analysis — How are personal consumption expenditures prices and quantities derived?",
+    "url": "https://www.bea.gov/help/faq/521",
+    "use": "Method source for appropriate detailed price-index deflation and chain-weighted aggregation; original one-good example separately derives exact period-specific deflation.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official FAQ (page records modification 2026-10-02); inspected reference-year-100 detailed deflation and Fisher chain aggregation statements. No current PCE observations used and no claim that the synthetic example reproduces the complete official methodology."
+  },
+  {
+    "id": "v04-c10-bea-annualization",
+    "title": "U.S. Bureau of Economic Analysis — Why does BEA publish percent changes in quarterly series at annual rates?",
+    "url": "https://www.bea.gov/help/faq/122",
+    "use": "Quarterly growth annualization through four-quarter compounding; distinguish growth-rate annualization from annualized flow-level units.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official FAQ and inspected quarterly-ratio and fourth-power formulas. Chapter uses original illustrative values rather than source historical GDP calculations or current releases."
+  },
+  {
+    "id": "v04-c10-mit-stationarity",
+    "title": "Anna Mikusheva, MIT OpenCourseWare — Lecture Notes 1: Stationarity, Lag Operator, ARMA, and Covariance Structure",
+    "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/4f2256b0a9c3157a2676806ed261eb8f_MIT14_384F13_lec1.pdf",
+    "use": "Further-study route for covariance stationarity, lag operators and moving-average covariance structure; chapter gives original finite-shock proofs and numerical laws.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official six-page PDF and inspected stationarity definitions, lag/MA constructions, random-walk variance and covariance structure. Internal notes cite Fall 2007 while OCW route/course metadata is Fall 2013; no unsupported edition/page claim beyond that inspected document. Infinite ARMA theory is identified as further study rather than assumed proved here."
+  },
+  {
+    "id": "v04-c10-fpp-stationarity",
+    "title": "Rob J Hyndman and George Athanasopoulos — Forecasting: Principles and Practice, 3rd ed., Stationarity and differencing",
+    "url": "https://otexts.com/fpp3/stationarity.html",
+    "use": "Author-hosted further study connecting trends, seasonal differences and transformations to forecasting; original moment calculations establish the particular laws in this chapter.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved chapter and inspected differencing/random-walk/drift/seasonal-difference discussion and caution about unnecessary differencing. Did not treat a rapidly decaying ACF as a universal condition of stationarity or a graph/test as proof; our common-random-component counterexample makes that limitation explicit. No source datasets or code copied."
+  },
+  {
+    "id": "v04-c11-assert",
+    "title": "Python 3.14 language reference: the assert statement",
+    "url": "https://docs.python.org/3.14/reference/simple_stmts.html#the-assert-statement",
+    "use": "Debugging assertions, __debug__, and omission of assertion code under optimized execution; supports explicit input-validation and persistent audit-gate distinction.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved the official reference and inspected section 7.3, including the -O code-generation behavior. The lab separately exercises ordinary and optimized behavior; no claim of whole-reference verification."
+  },
+  {
+    "id": "v04-c11-float",
+    "title": "Python 3.14 tutorial: Floating-Point Arithmetic — Issues and Limitations",
+    "url": "https://docs.python.org/3.14/tutorial/floatingpoint.html",
+    "use": "Binary representation, typical 53-bit binary64 arithmetic, distinction between stored and displayed values, exact recovery of float representations and differences among summation strategies.",
+    "checked": "2026-10-07",
+    "verification": "Inspected representation-error discussion, 53-bit description and summation paragraphs. Our inputs, stress calculations, proofs and examples are original; the naive loop is deliberately explicit rather than making a version-dependent claim about built-in sum. Live versioned documentation is used for stable semantics, not historical availability of the currently served point release."
+  },
+  {
+    "id": "v04-c11-math",
+    "title": "Python 3.14 library reference: math — floating-point comparisons and summation",
+    "url": "https://docs.python.org/3.14/library/math.html",
+    "use": "isclose absolute/relative criterion, isfinite behavior and fsum's accurate summation with documented rounding/platform qualifications.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved and inspected isclose, isfinite, fsum and nearby floating-point manipulation entries. The source warns that platform arithmetic can affect the least significant bit; the manuscript therefore uses exact observed-error checks and does not claim universally exact fsum."
+  },
+  {
+    "id": "v04-c11-stability",
+    "title": "Nicholas J. Higham: What Is Numerical Stability?",
+    "url": "https://nhigham.com/2020/08/04/what-is-numerical-stability/",
+    "use": "Forward and backward error, numerical stability as an algorithm property and its relationship to problem conditioning and the specified perturbation model.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved the author's methodological article and inspected definitions, conditioning discussion and distinctions among error models. The chapter independently derives its own componentwise sum bound, original one-cent cases, pairwise variance identity and absolute input-perturbation bound. No source numerical example or extensive passage reproduced."
+  },
+  {
+    "id": "v04-c12-bls-release",
+    "title": "U.S. Bureau of Labor Statistics — Employment Situation News Release, July 2024 (2 August 2024 vintage)",
+    "url": "https://www.bls.gov/news.release/archives/empsit_08022024.htm",
+    "use": "Primary empirical source: release date/identifier, Household Survey Data headline targets, full Table A-1 TOTAL column header and selected levels/rates; archived technical-note definitions, reference period, seasonal adjustment, revisions and sampling/nonsampling limits. Supplies six actual historical aggregate records; chapter reconstruction and examples are original.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved archived HTML through web retrieval and inspected release USDL-24-1571, 2 August 2024 08:30 EDT; narrative rate4.3, monthly +0.2 percentage point, unemployment +352,000 and July7.2million. Inspected all nine Table A-1 column labels and TOTAL population/labor-force/employed/unemployed/rate/not-in-labor-force rows before manually transcribing positions1,2,3,4,8,9 for July2023/June2024/July2024 NSA and SA. Inspected footnote1 (population not seasonally adjusted), annual population-control note, household definitions/reference week, seasonal-adjustment/revision and reliability discussion. Summary Table A corroborated SA values. Scope is these specified sections, not every figure or claim in the release. A separate direct curl download returned HTTP403; no raw HTML file or original-source-byte hash is claimed. Frozen files are clearly labeled local manual extracts. Survey microdata, weights, seasonal factors and standard errors were not reconstructed. All six rates and the three baseline targets reproduce at declared display precision; annual SA rounding-order departure and two -1-thousand component residuals are recorded rather than silently balanced. Government public-use basis separately sourced below."
+  },
+  {
+    "id": "v04-c12-cps-definitions",
+    "title": "U.S. Bureau of Labor Statistics — Current Population Survey concepts and definitions",
+    "url": "https://www.bls.gov/cps/definitions.htm",
+    "use": "Primary definitions of civilian noninstitutional population age16+, United States geography, labor force, unemployed including temporary-layoff search exception, unemployment-rate denominator, participation and seasonal adjustment. Supports interpreting counts as estimated persons rather than survey sample size or payroll jobs.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved live official definitions and inspected civilian noninstitutional population/exclusions, geography50states and DC, employed/unemployed/labor-force criteria, unemployment-rate formula and seasonal-adjustment discussion. Definitions were cross-checked with the archived release's technical note. This is a live explanatory page inspected on the stated date, not a frozen copy asserted to be identical in2024, and not a claim to verify every labor-force definition or all methodological revisions."
+  },
+  {
+    "id": "v04-c12-public-use",
+    "title": "U.S. Bureau of Labor Statistics — Copyright Information",
+    "url": "https://www.bls.gov/opub/copyright-information.htm",
+    "use": "Official public-use basis for the minimal attributed numeric extract, with exceptions for previously copyrighted photographs/illustrations and the separate BLS-emblem limitation. Package reproduces neither images nor emblem.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official Copyright Information page and inspected the public-domain statement for BLS publications, source-attribution request, exception for previously copyrighted photos/illustrations and emblem notice. The chapter cites this actual policy URL rather than the obsolete copyright.htm route. Records the source's stated reuse basis; does not imply that every external linked asset or third-party publication is public domain. Access route and reuse basis remain separate provenance fields."
   }
 ]

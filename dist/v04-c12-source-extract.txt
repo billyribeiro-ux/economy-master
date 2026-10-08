@@ -1,0 +1,55 @@
+MANUALLY TRANSCRIBED NUMERIC EXTRACT; NOT A BYTE-FOR-BYTE SOURCE DOWNLOAD
+Source: U.S. Bureau of Labor Statistics, The Employment Situation -- July 2024
+Release identifier: USDL-24-1571
+Release time: 2024-08-02 at 08:30 America/New_York (EDT)
+URL: https://www.bls.gov/news.release/archives/empsit_08022024.htm
+Retrieved and checked: 2026-10-07
+Table A-1: Employment status of the civilian population by sex and age
+Selected group: TOTAL; civilian noninstitutional population age 16 and over
+Geography: United States (50 states and District of Columbia)
+Level unit: thousands of persons; unemployment rate: percent
+
+The full Table A-1 header was inspected. Its columns run:
+NSA July 2023; NSA June 2024; NSA July 2024; SA July 2023;
+SA March 2024; SA April 2024; SA May 2024; SA June 2024; SA July 2024.
+The six selected columns below are original positions 1,2,3,4,8,9.
+NSA = not seasonally adjusted. SA = seasonally adjusted.
+The civilian population itself is not seasonally adjusted; its identical
+values appear in both sets of source columns (Table A-1 footnote 1).
+Commas used as source thousands separators are removed in the data block.
+The rates retain the source's one decimal place. No numbers were imputed.
+
+BEGIN DATA
+period|adjustment|population_thousands|labor_force_thousands|employed_thousands|unemployed_thousands|not_in_labor_force_thousands|published_rate_percent
+2023-07|NSA|267002|168354|161982|6372|98649|3.8
+2024-06|NSA|268438|169007|161774|7233|99431|4.3
+2024-07|NSA|268644|169723|162038|7685|98921|4.5
+2023-07|SA|267002|167113|161209|5904|99889|3.5
+2024-06|SA|268438|168009|161199|6811|100429|4.1
+2024-07|SA|268644|168429|161266|7163|100215|4.3
+END DATA
+
+Target facts independently read in the release's Household Survey Data text:
+July 2024 SA unemployment rate: 4.3 percent.
+June-to-July 2024 SA rate change: +0.2 percentage point.
+June-to-July 2024 SA unemployed level change: +352 thousand persons.
+July 2024 SA unemployed level in narrative display: 7.2 million persons.
+July 2023 SA unemployment rate: 3.5 percent.
+
+This is a small extract of actual published survey estimates, not synthetic
+worker observations. BLS microdata weighting, population controls, seasonal
+adjustment estimation and sampling variances are not reproduced by this file.
+The source table notes annual updated population controls; the release's
+technical note describes seasonal adjustment, revisions and survey error.
+
+Access: the archived HTML release was available through the web retrieval
+tool without account or payment. A separate direct curl download returned
+HTTP 403. No raw HTML download or original-source-byte hash is claimed.
+Numeric values were transcribed from the successfully retrieved full table
+and checked against its TOTAL row labels and complete column header.
+
+Public-use basis: BLS Copyright Information states that BLS publications
+are public domain except previously copyrighted photos/illustrations and
+requests source citation. This extract includes no images or BLS emblem.
+Policy URL: https://www.bls.gov/opub/copyright-information.htm
+The benchmark and teaching explanations are original author work.

@@ -1,0 +1,63 @@
+{
+  "chapter": "v04-c09",
+  "reviewer": "regression specialist; bounded read-only peer review delegated by root",
+  "date": "2026-10-07",
+  "result": "No blocking mathematical, temporal-information, exercise-answer or original-fixture implementation defect found; one low-severity assumption clarification suggested",
+  "inspected_scope": [
+    "Entire chapter, both worked examples, every exercise prompt and corresponding solution, teach-back and delayed check",
+    "Complete v04-c09-validation.py, case JSON and README, including schema/unit bounds, history eligibility, candidate/tie selection, updating versus fixed-origin protocols, scoring date and CLI behavior",
+    "Complete check_v04_c09.py; executed its standalone check successfully",
+    "Independent rational reconstruction of all worked forecast/error tables and loss values, plus additional delayed-early-label and delayed-final-score-label experiments"
+  ],
+  "findings": [
+    {
+      "id": "v04-c09-peer-01",
+      "severity": "low",
+      "status": "suggested assumption clarification; examples and exercise are already finite with positive costs",
+      "location": "content/chapters/v04-c09.html:20",
+      "finding": "The asymmetric-cost quantile passage differentiates expected loss and divides by c_u+c_o without explicitly stating the cost and integrability assumptions. The intended positive finite shortage/excess costs and finite conditional first moment are clear in the numerical exercise but should be stated for the general derivative claim.",
+      "recommended_change": "Precede the derivation with 'For positive finite c_u and c_o and E[|Y| | X=x] < infinity...' (or an appropriately qualified nonnegative-cost version). This avoids an undefined zero-total-cost ratio or differentiation of an infinite expectation."
+    }
+  ],
+  "formula_and_concept_review": {
+    "risk_identity": "Conditional test-average expectation follows from fixed-rule conditioning and matching test marginals; the manuscript correctly separates independence needed for ordinary variance calculations from the expectation identity. Independent new-outcome assumptions and finite second moments are explicit for the bias/noise/training-variance expansion. Cross-validation training-size and chronological-regime limitations are correctly distinguished.",
+    "loss_and_selection": "MAE/MSE/RMSE dimensions and ranking claims are correct. Brier scores are0.25 and0.41. The finite two-candidate selection construction has expected minimum9 versus fixed candidate risk10. The pointwise minimum inequality and its comparison with the selected true risk are valid for the stated fixed candidate risks and finite expectations without candidate-score independence. The manuscript does not incorrectly generalize this to arbitrary random risk definitions.",
+    "split_roles": "Training, validation and final test information roles are consistently separated. Feature selection, imputation and tuning are required to occur inside permitted splits; nested evaluation and group-versus-time targets are explained appropriately. The text correctly distinguishes a whole predeclared updating procedure from a fixed fitted vector and does not treat later test outcomes as forbidden forever when they become valid past inputs.",
+    "uncertainty": "Paired loss differences retain covariance from common cases. The iid SE premise is explicit and not applied automatically to four chronological losses, overlapping horizons or folds with shared training histories. Limited test cases and possible distribution changes are acknowledged; no causal or trading-profit guarantee is asserted."
+  },
+  "independent_numerical_checks": {
+    "validation": "Drift forecasts320/3,110,566/5,235/2 produce errors4/3,1,9/5,1/2 and MSE5641/3600. Mean errors6,39/5,21/2,12 produce MSE35109/400; naive MSE43/4. The recorded winner is drift.",
+    "updating_final": "Drift forecasts844/7,953/8,1060/9,599/5 produce errors-25/7,-25/8,2/9,-4/5 and MSE147393481/25401600. Naive errors-1,-1,2,1 give7/4. Mean errors19/2,67/9,87/10,98/11 give147373547/1960200. Drift-minus-naive MSE is102940681/25401600.",
+    "fixed_origin_final": "Origin8 drift forecasts844/7,862/7,880/7,898/7 produce errors-25/7,-50/7,-54/7,-65/7 and MSE5133/98. Fixed naive forecast118 gives errors-1,-2,0,1 and MSE3/2. All displayed exact and rounded comparisons agree.",
+    "other_exercises": "Asymmetric costs for actions10,12,20 are18,16,8 USD; piecewise expected cost proves20 optimal while the conditional mean is12. Permitted/leaked imputation predictions16 and242/3 agree. Unequal-fold pooled MSE is37/5 versus equal-fold mean5. Paired differences-9,-9,-9,55 have mean7, sample variance1024 and iid SE16. Selection state enumeration averages to9."
+  },
+  "temporal_and_code_checks": {
+    "reference_vs_release": "history_as_of requires both period<=origin and released<=origin, sorted by reference period. forecast receives only eligible history and target, and drift uses elapsed target-minus-latest-reference distance. No target actual is passed into forecast. evaluate adds actual outcomes only for retrospective scoring and rejects labels not released by scored_as_of.",
+    "selection_vs_test": "Validation is scored at the recorded boundary and candidate selection with deterministic naive/mean/drift tie order precedes final-loss construction. Updating and fixed-origin final experiments use separately appropriate history. The same final comparison candidates are reported without changing selected_method. Final scoring may wait until all labels mature; this is separated from the earlier prediction origins.",
+    "additional_early_label_mutation": "Delayed period1's release until8. At origin4 the eligible history is periods2,3,4 and drift forecast for5 becomes213/2, using elapsed reference time correctly. At origin8 the newly released old period1 joins history and target9 forecast is844/7. Selection remains based on mature validation targets rather than requiring every initial record to be available from the beginning.",
+    "additional_final_label_mutation": "Delayed period12's release until18. test_scored_as_of becomes18 while every updating/fixed forecast and realized numerical loss remains identical; the later scoring date creates no look-ahead feature.",
+    "contracts": "Exact unit/MSE/candidate-order validation matches report labels. Unique complete period keys, integer nonnegative demand and valid delayed release indices are checked. Fewer than two eligible records refuses the complete comparison even though a standalone naive rule could need fewer; this stricter common-comparison contract is documented. Internal helpers assume validated inputs, as the README states. Original files are read-only and default lookup is relative to the script."
+  },
+  "exercise_solution_match": [
+    "Exercise1: identifies borrower/loan exposure, three-month outcome window, unavailable April label, matured chronological scoring and whole-borrower separation for unseen borrowers.",
+    "Exercise2: recomputes all losses, evaluates all three actions, proves the minimum using cost pieces and distinguishes mean from decision-optimal quantile.",
+    "Exercise3: enumerates all four states, proves the general inequality and correctly isolates where independence is used.",
+    "Exercise4: reconstructs available history, validation errors, exact final-loss difference and limited interpretation.",
+    "Exercise5: gives every fixed-origin forecast/loss, explains permitted updating and computes the delayed-origin9 forecast862/7.",
+    "Exercise6: identifies future-feature leakage, avoids an unsupported improvement claim and repairs feature/tuning selection inside inner/outer information boundaries.",
+    "Exercise7: distinguishes fold weighting and gives complete paired variance/SE arithmetic plus the dependence limitation.",
+    "Exercise8: provides concrete required original scores, mutation audit criteria and a prospective re-evaluation plan instead of retrospectively calling a new winner untouched."
+  ],
+  "executed_checker": {
+    "command": "python3 book/scripts/check_v04_c09.py",
+    "result": "passed",
+    "scope": "Forecast/eligible-history reconstruction, all exact reference losses, future-label/release mutations, constant/linear/tie and affine checks, determinate exercises and bias-variance enumeration, invalid input contracts and copied offline CLI under ordinary and optimized Python."
+  },
+  "limitations": [
+    "This agent peer review is not independent human academic certification or learner testing.",
+    "Synthetic paths establish no empirical forecast accuracy, representative future regime or causal effect.",
+    "External source pages were not independently re-retrieved in this bounded review; mathematical and temporal claims were inspected directly in the manuscript/code.",
+    "No browser/mobile/print visual QA was performed or claimed. Numerical and structural checks cannot establish rendered usability.",
+    "Only this peer review JSON was written; root owns any correction, acceptance and central integration."
+  ]
+}

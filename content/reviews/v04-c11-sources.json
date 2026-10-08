@@ -1,0 +1,34 @@
+[
+  {
+    "id": "v04-c11-assert",
+    "title": "Python 3.14 language reference: the assert statement",
+    "url": "https://docs.python.org/3.14/reference/simple_stmts.html#the-assert-statement",
+    "use": "Debugging assertions, __debug__, and omission of assertion code under optimized execution; supports explicit input-validation and persistent audit-gate distinction.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved the official reference and inspected section 7.3, including the -O code-generation behavior. The lab separately exercises ordinary and optimized behavior; no claim of whole-reference verification."
+  },
+  {
+    "id": "v04-c11-float",
+    "title": "Python 3.14 tutorial: Floating-Point Arithmetic — Issues and Limitations",
+    "url": "https://docs.python.org/3.14/tutorial/floatingpoint.html",
+    "use": "Binary representation, typical 53-bit binary64 arithmetic, distinction between stored and displayed values, exact recovery of float representations and differences among summation strategies.",
+    "checked": "2026-10-07",
+    "verification": "Inspected representation-error discussion, 53-bit description and summation paragraphs. Our inputs, stress calculations, proofs and examples are original; the naive loop is deliberately explicit rather than making a version-dependent claim about built-in sum. Live versioned documentation is used for stable semantics, not historical availability of the currently served point release."
+  },
+  {
+    "id": "v04-c11-math",
+    "title": "Python 3.14 library reference: math — floating-point comparisons and summation",
+    "url": "https://docs.python.org/3.14/library/math.html",
+    "use": "isclose absolute/relative criterion, isfinite behavior and fsum's accurate summation with documented rounding/platform qualifications.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved and inspected isclose, isfinite, fsum and nearby floating-point manipulation entries. The source warns that platform arithmetic can affect the least significant bit; the manuscript therefore uses exact observed-error checks and does not claim universally exact fsum."
+  },
+  {
+    "id": "v04-c11-stability",
+    "title": "Nicholas J. Higham: What Is Numerical Stability?",
+    "url": "https://nhigham.com/2020/08/04/what-is-numerical-stability/",
+    "use": "Forward and backward error, numerical stability as an algorithm property and its relationship to problem conditioning and the specified perturbation model.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved the author's methodological article and inspected definitions, conditioning discussion and distinctions among error models. The chapter independently derives its own componentwise sum bound, original one-cent cases, pairwise variance identity and absolute input-perturbation bound. No source numerical example or extensive passage reproduced."
+  }
+]

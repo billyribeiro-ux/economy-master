@@ -18,7 +18,8 @@ editorial/numerical review. This is not independent academic certification.
 The whole library remains in production. Planned entries are not manuscripts.
 
 PRODUCTION_PLAN.md defines the scope and completion standards.
-All supplied business-case numbers are synthetic.
+Original synthetic teaching cases are labeled. Historical empirical extracts
+identify their official sources, release vintages, units and access conditions.
 The optional Python project benchmark needs only standard-library Python.
 Edition boundary: 6 October 2026.
 '''

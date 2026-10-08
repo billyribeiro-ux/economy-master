@@ -1,0 +1,42 @@
+[
+  {
+    "id": "v04-c10-stata-panel",
+    "title": "Stata — xtset: Declare data to be panel data",
+    "url": "https://www.stata.com/manuals/xtxtset.pdf",
+    "use": "Primary software-author explanation of within-panel calendar ordering, time steps, missing dates and panel balance. Chapter implements concepts with original standard-library Python.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official 15-page PDF; inspected within-panel lag interpretation, yearly/monthly gap examples and strongly/weakly balanced terminology, especially printed pages 5 and 8–10. No software installation or reproduction of vendor datasets. Chapter defines its own complete-date balance explicitly."
+  },
+  {
+    "id": "v04-c10-bea-deflation",
+    "title": "U.S. Bureau of Economic Analysis — How are personal consumption expenditures prices and quantities derived?",
+    "url": "https://www.bea.gov/help/faq/521",
+    "use": "Method source for appropriate detailed price-index deflation and chain-weighted aggregation; original one-good example separately derives exact period-specific deflation.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official FAQ (page records modification 2026-10-02); inspected reference-year-100 detailed deflation and Fisher chain aggregation statements. No current PCE observations used and no claim that the synthetic example reproduces the complete official methodology."
+  },
+  {
+    "id": "v04-c10-bea-annualization",
+    "title": "U.S. Bureau of Economic Analysis — Why does BEA publish percent changes in quarterly series at annual rates?",
+    "url": "https://www.bea.gov/help/faq/122",
+    "use": "Quarterly growth annualization through four-quarter compounding; distinguish growth-rate annualization from annualized flow-level units.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official FAQ and inspected quarterly-ratio and fourth-power formulas. Chapter uses original illustrative values rather than source historical GDP calculations or current releases."
+  },
+  {
+    "id": "v04-c10-mit-stationarity",
+    "title": "Anna Mikusheva, MIT OpenCourseWare — Lecture Notes 1: Stationarity, Lag Operator, ARMA, and Covariance Structure",
+    "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/4f2256b0a9c3157a2676806ed261eb8f_MIT14_384F13_lec1.pdf",
+    "use": "Further-study route for covariance stationarity, lag operators and moving-average covariance structure; chapter gives original finite-shock proofs and numerical laws.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved official six-page PDF and inspected stationarity definitions, lag/MA constructions, random-walk variance and covariance structure. Internal notes cite Fall 2007 while OCW route/course metadata is Fall 2013; no unsupported edition/page claim beyond that inspected document. Infinite ARMA theory is identified as further study rather than assumed proved here."
+  },
+  {
+    "id": "v04-c10-fpp-stationarity",
+    "title": "Rob J Hyndman and George Athanasopoulos — Forecasting: Principles and Practice, 3rd ed., Stationarity and differencing",
+    "url": "https://otexts.com/fpp3/stationarity.html",
+    "use": "Author-hosted further study connecting trends, seasonal differences and transformations to forecasting; original moment calculations establish the particular laws in this chapter.",
+    "checked": "2026-10-07",
+    "verification": "Retrieved chapter and inspected differencing/random-walk/drift/seasonal-difference discussion and caution about unnecessary differencing. Did not treat a rapidly decaying ACF as a universal condition of stationarity or a graph/test as proof; our common-random-component counterexample makes that limitation explicit. No source datasets or code copied."
+  }
+]

@@ -29,6 +29,10 @@ from check_v04_c05 import check as check_v04_c05
 from check_v04_c06 import check as check_v04_c06
 from check_v04_c07 import check as check_v04_c07
 from check_v04_c08 import check as check_v04_c08
+from check_v04_c09 import check as check_v04_c09
+from check_v04_c10 import check as check_v04_c10
+from check_v04_c11 import check as check_v04_c11
+from check_v04_c12 import check as check_v04_c12
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -327,6 +331,9 @@ def main():
     v04_middle_check = {name: checker() for name, checker in (
         ('v04-c05', check_v04_c05), ('v04-c06', check_v04_c06),
         ('v04-c07', check_v04_c07), ('v04-c08', check_v04_c08))}
+    v04_closing_check = {name: checker() for name, checker in (
+        ('v04-c09', check_v04_c09), ('v04-c10', check_v04_c10),
+        ('v04-c11', check_v04_c11), ('v04-c12', check_v04_c12))}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'checks':['curriculum scope','acyclic prerequisites including volume completion','chapter and assessment package structure','local links and anchors','source IDs','Volume 1 chapters 1–12 and exam arithmetic','Volume 1 project benchmark and reconciliations','Volume 2 chapters 1–4 numerical results, derivative cross-checks, quadrature and error bounds','Volume 2 chapters 5–6 exact systems, projection identities, eigenstructure, covariance, dynamics and QR reconstruction','Volume 2 chapters 7–8 derivative responses, nonlinear equilibrium roots, KKT residuals, value transitions and envelope calculations','Volume 2 chapter 9 dual certificates, separation, value subgradients and comparative statics','Accepted-volume notation/concept index and synthesis','Volume 2 chapter 10 uniform tails, fixed-point error certificates, counterexamples, spectral projectors and implicit roots','Volume 2 chapters 11–12 exact dynamics, independent ODE integration, roots/quadrature/error bounds and Bellman policy certificates','Volume 2 diagnostic, distinct exams, retention and constrained-allocation project with exact active-set/dual checks','Volume 3 chapters 1–2 weighted event laws, exhaustive sampling counts, conditional/odds updates, sequential/selected evidence and exact probability lab','Volume 3 chapters 3–4 count distributions, CDF endpoints, density quadrature and tail bounds, exact moments/covariance, portfolio and finite-population certificates, mixed laws and heavy-tail integrals','Volume 3 chapters 5–6 conditional forecast losses, triangular densities, random-sum/latent states, exact binomial tails, common-shock and convergence counterexamples, maximal-inequality terms and CLT smooth-transition checks','Volume 3 chapters 7–8 exhaustive sampling/bootstrap laws, likelihood/exposure boundaries, normal/t pivots, exact binomial tails/intervals and coverage diagnostics, power/sample-size calculations, Holm strong-control state checks and equivalence','Volume 3 chapters 9–10 exact Bayesian posterior/predictive laws, independent beta/gamma/normal integration, credible-coverage counterexample, losses/Bayes factors and prior sensitivity, insurance/utility/domain calculations, CARA-normal exposure and ambiguity/equal-moment counterexamples','Volume 3 chapters 11–12 proper losses, calibration/resolution, weighted-report and random-skill distortions, joint-state information values/garbling, information projections, dyadic/spike integrals, stopped martingale histories, heavy-tail truncation and maximal/Kronecker diagnostics','Volume 3 diagnostic, distinct exams, retention, posterior/predictive/information project, independent integration/coverage and seeded paired-score checks'],
@@ -347,8 +354,10 @@ def main():
               'volume_3_assessment_check': v03_assessment_check,
               'volume_4_opening_checks': v04_opening_check,
               'volume_4_middle_checks': v04_middle_check,
+              'volume_4_closing_checks': v04_closing_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
-    report['checks'].extend(['Volume 4 chapters 5–8: histogram density/ECDF/index/correlation/contrast calculations and delivered SVG coordinates; exact versus seeded Monte Carlo, replication and variance reduction; rational projection versus elimination, fit and holdout boundaries; causal standardization, assignment lotteries, mediator/collider and observational equivalence',
+    report['checks'].extend(['Volume 4 chapters 9–12: temporal forecast/release selection and leakage mutations; calendar panel keys, aggregation and exact dependent shock laws; independent numerical error bounds and fault detection; frozen official BLS reconstruction, rounding grid, provenance and integrity contracts',
+        'Volume 4 chapters 5–8: histogram density/ECDF/index/correlation/contrast calculations and delivered SVG coordinates; exact versus seeded Monte Carlo, replication and variance reduction; rational projection versus elimination, fit and holdout boundaries; causal standardization, assignment lotteries, mediator/collider and observational equivalence',
         'Accepted chapters require accepted prerequisites',
         'Volume 4 chapters 1–4: exact vintage/deflator and file-order checks, financial-model formula/sensitivity audit, executable Python contracts and instruction, SQL joins/missingness/weights/calendar comparisons'])
     (ROOT/'verification-report.json').write_text(json.dumps(report,indent=2)+'\n')

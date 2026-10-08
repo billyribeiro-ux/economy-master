@@ -1,0 +1,67 @@
+{
+  "chapter": "v04-c11",
+  "title": "Computational reliability and numerical audits",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "state": "review",
+  "review_type": "Specialist author mathematical, instructional, source and executable audit; root independently reviews and alone accepts after v04-c10",
+  "reviewed": {
+    "reasoning": "Built beyond v02-c12 and v04-c03: the chapter audits a complete computational claim rather than repeating root-finding or introductory syntax. Distinguished target/units/source integrity, exact arithmetic, representation error, accumulation error, conditioning and algorithm stability. Derived the componentwise sum condition number and attainable perturbation bound, the sequential-summation gamma bound via product expansion/geometric majorization with assumptions, and separate conversion-plus-arithmetic error accounting. Derived the pairwise population-variance identity and an absolute-input-error bound |Delta V| <= 2 eta sqrt(V) + eta^2. Specified population versus sample variance targets, squared-unit conversion, near-zero and nonfinite comparisons, and limits of invariants and peer reproduction. No claim that cancellation automatically proves unstable subtraction or that backward stability removes poor conditioning.",
+    "arithmetic": "Verified both one-cent stress examples by integer and represented-rational arithmetic: first list loses one cent during accumulation, second before accumulation. Exact gamma bound for the first is 6666666666666667/1501199875790165 cents, approximately 4.440892098500627. Independently checked variance through rational raw moments against the program's pairwise identity and centered candidate; baseline 2/3 cents^2, dollar variance 1/15000, observed centered error 1/27021597764222976 cents^2. Checked all exercise and retention arithmetic, sign certificates, conditioning, transformations, variance sensitivity and tolerance decisions. Delayed case exact3 versus floating4 verified under declared binary64 ties-to-even behavior.",
+    "solutions": "Eight original exercises have complete solutions or explicit evaluation criteria. They cover source/units contracts, conditioning, gamma/representation audit, independent variance identities, input-error derivation, fault-sensitive tests, optimized validation and peer reproduction. All four displayed Python blocks executed in their required context. The mutation-check block succeeds for a pure sum and detects a routine that sorts the caller's list. Added delayed-check answers at root's request, including sums, variance units and mutation-test pointer.",
+    "instruction": "Defines contracts, invariants, transformation tests, fault variants, precision, unit roundoff, absolute/relative error, conditioning, forward/backward error and reproduction packages before their substantive use. Explains why multiple invariants can all pass a zero or wrong-denominator variance routine. Explicitly distinguishes removable assert statements from validation and audit gates that use if/raise. The download retains exact integer data, bounded local inputs, independent reference arithmetic, informative diagnostics, provenance and program/input fingerprints. No installation, framework, paid service or empirical observation is introduced.",
+    "sources": "Inspected four primary-source routes: official Python assert reference, floating-point tutorial, math reference for isclose/isfinite/fsum, and Nicholas Higham's author-hosted numerical stability article. The source proposals record exact URLs, use and inspection limits. Mathematical examples and derivations are original. Documentation is used for stable semantics rather than asserting the edition-boundary availability of a currently served point-release header.",
+    "structure": "Static HTML fragment contains two worked examples, eight exercises and eight complete matching solutions, capability/prerequisites, assumptions/units/boundaries, source links, teach-back, delayed check with answer closure and successor link. All four data-source IDs match the proposed array. Project downloads use flat filenames. No document wrapper, framework or UI-validation claim is included. Root remains responsible for full-library integration and prerequisite-order acceptance."
+  },
+  "artifacts": [
+    "content/chapters/v04-c11.html",
+    "content/projects/v04-c11-audit.py",
+    "content/projects/v04-c11-case.json",
+    "content/projects/v04-c11-README.txt",
+    "scripts/check_v04_c11.py",
+    "content/reviews/v04-c11-sources.json"
+  ],
+  "validation": {
+    "command": "python3 book/scripts/check_v04_c11.py",
+    "result": "passed",
+    "integration_api": "check() returns status, checks and limitations; standalone execution prints JSON",
+    "observed_runtime": "CPython 3.14.6, binary64 round-to-nearest",
+    "checks": [
+      "Quiet import, nonmutation, exact baseline sums/variance/units and all six detected deliberately broken variants",
+      "Twelve sum/permutation/boundary cases with rational represented-value, representation-error and gamma-bound analysis",
+      "24 moment cases against an independent exact raw-moment oracle, including singletons, constants, large shifts, extreme signs and 200 entries",
+      "All determinate exercises and delayed answers; 81 exact perturbation scenarios for the derived variance-input bound",
+      "19 invalid contracts and 22 malformed/invalid CLI documents rejected normally and under -O; missing and invalid-encoding failures",
+      "Portable run from another directory, program/input hashes, unchanged inputs and identical numerical/gate results across optimized modes",
+      "Direct demonstration that compiled assert validation disappears under optimization while explicit checks remain",
+      "Two worked examples, eight matched solutions, four executed Python blocks, two executed CLI modes, citations/downloads and retention closure"
+    ],
+    "baseline": {
+      "exact_ledger_net_cents": "1",
+      "left_ledger_sum_cents": 0,
+      "fsum_ledger_cents": 1,
+      "exact_conversion_probe_net_cents": "1",
+      "conversion_probe_representation_error_cents": "1",
+      "conversion_probe_accumulation_error_cents": "0",
+      "conversion_probe_fsum_cents": 0,
+      "exact_margin_mean_cents": "100000002",
+      "exact_population_variance_cents2": "2/3",
+      "exact_population_variance_dollars2": "1/15000",
+      "centered_variance_cents2": 0.6666666666666666,
+      "raw_second_moment_variance_cents2": 0,
+      "detected_broken_variants": 6
+    }
+  },
+  "limitations": [
+    "Author checks do not replace root review or independent human academic assessment.",
+    "The sum-error theorem assumes the declared arithmetic model; the bounded integer-valued cases avoid overflow and problematic underflow. Exotic floating-point environments are explicitly unsupported.",
+    "The centered-variance comparison budget is a declared engineering test criterion, not a universal derived accuracy guarantee. Exact observed errors are reported separately.",
+    "Fixed fault variants and finite edge grids do not prove every possible modified implementation correct.",
+    "Integer or rational correctness cannot verify omitted/duplicated transactions, economic measurement, units missing from an original source or the decision's appropriateness.",
+    "All inputs are original synthetic stress cases, not observed October 2026 institution or market data.",
+    "Source inspection is limited to the methods recorded in the proposal file; no whole-document verification is claimed.",
+    "No visual, mobile or print UI review was performed; the existing browser-policy restriction was respected.",
+    "Root retains shared-file, whole-library build, acceptance and publishing responsibilities."
+  ],
+  "acceptance": "Complete specialist package ready for independent root review after v04-c10. No shared curriculum, source catalogue, checkpoint, build, hosting, commit or deployment changes were made."
+}

@@ -1,0 +1,59 @@
+{
+  "volume": "v04",
+  "date": "2026-10-07",
+  "chapter_scope": [
+    "v04-c09",
+    "v04-c10",
+    "v04-c11",
+    "v04-c12"
+  ],
+  "review_type": "Three bounded specialist authors plus coordinating author; root full manuscript, mathematical, solution and program audit; separate read-only peer reviews of c09, c10 and c11. Internal review, not independent human academic certification.",
+  "ownership_record": "production/v04-closing-assignments.json",
+  "reviewed": {
+    "reasoning": "Root read all four complete manuscripts and all exercise/solution pairs, and inspected each program's calculation and validation logic. C09: conditional-risk expectation versus independence for variance; independent-new-outcome bias/variance identity; quantile decision assumptions; pointwise selection optimism; nested/group/time splits and permitted preprocessing; reference time, release time, scoring time and prespecified updating versus fixed-origin forecasts. C10: calendar lag versus previous row, missing active reports versus documented nonoperation, observed/endpoint/complete cohorts and entry/exit decomposition; stock/flow/rate/growth aggregation, one-good deflation and chain-index limits; explicit MA, random-walk and differenced-trend moments, stationary common component and dependent sample means. C11: integer accounting versus float conversion, conditional roundoff model and gamma bound, componentwise sum conditioning versus algorithm stability, exact pairwise variance identity, variance input-perturbation proof and squared-unit conversion, explicit validation versus removable assertions and limits of invariant tests. C12: fixed published-aggregate target and vintage, ratio and display operations, conditional monotone rounding envelope, integer identity tolerance, provenance versus local hash integrity, full comparison grid with changed estimands, and separation from sampling inference, causal identification and prediction.",
+    "arithmetic": "Integrated checkers passed for all four new packages. Root independently traced c09 forecast weights and selection/final-loss arithmetic, c10 cohort totals/deflation and finite-shock covariance formulas, c11 cancellation/conversion errors, variance identity and perturbation bounds. Root independently recalculated c12 with 45-digit Decimal arithmetic: all four contrasts, both denominator mistakes, relative versus percentage-point change, the corrupted denominator and rounding-envelope endpoints. Chapter checkers additionally exercise release/future-label mutations, exact linear paths, affine transformations, independent calendar reconstruction and exhaustive shock states, independent exact moment oracles and deliberate faulty algorithms, official-value cross-products, signed rounding boundaries and integrity mutations. These finite checks supplement the written derivations; they do not prove arbitrary modifications correct.",
+    "solutions": "All 32 new exercise prompts checked against complete answers and explicit open-response criteria. Forecast choice remains fixed during final comparison. Panel answers distinguish economic targets and missingness. Numerical answers distinguish source input, representation and arithmetic errors. Replication answers retain discrepancies and do not infer a source's undisplayed precision. Delayed checks have answers. No sampling, causal or forecast guarantee is inferred from descriptive reconstruction or synthetic cases.",
+    "sources": "Sixteen scoped primary-source records integrated: forecasting authors and original model-selection paper abstract, official software documentation, BEA methods, MIT time-series notes, Higham's numerical-stability explanation and official BLS archived release/definitions/public-use policy. Root separately inspected the forecasting and model-selection routes, MIT definitions and covariance section, Higham's stability definitions, BLS full Table A-1 header/TOTAL rows, technical notes, definitions and public-use statement. C12's six actual historical records are a manually checked minimal government-data extract; a failed direct download and successful web retrieval are disclosed. Local hashes cover local transcription bytes only. Source inspection scope is recorded per entry; no whole-paper or whole-release verification is claimed.",
+    "instruction": "Each new chapter has its capability, actual prerequisite, two worked examples, eight complete exercise solutions, assumptions/units/boundaries, teach-back and delayed check. Four runnable offline packages include original code and instructions; c09-c11 use labeled synthetic inputs, while c12 supplies a documented historical empirical extract and preserved benchmark. Predecessor c08 now links the available prediction chapter; c12 honestly labels the volume assessment as planned. Offline README distinguishes synthetic cases and historical empirical extracts.",
+    "structure": "Final acceptance-state build and integrated verification passed 48 accepted chapters and 56 HTML pages, including accepted prerequisites, all source IDs/local links/anchors, chapter structures and all prior accepted volume packages. Generated search JavaScript syntax and diff whitespace checks passed. Offline archive contains 111 files and 1,633,977 bytes. Browser visual/mobile/print QA remains pending and is not inferred from these checks."
+  },
+  "individual_author_records": [
+    "reviews/v04-c09-author.json",
+    "reviews/v04-c10-author.json",
+    "reviews/v04-c11-author.json",
+    "reviews/v04-c12-author.json"
+  ],
+  "peer_reviews": [
+    "reviews/v04-c09-peer.json",
+    "reviews/v04-c10-peer.json",
+    "reviews/v04-c11-peer.json"
+  ],
+  "corrections": [
+    "Root c10 review required the shared-shock example to state cross-firm uncorrelated individual disturbances; author added the explicit condition.",
+    "Root c10 review found that nonempty unit metadata could disagree with hardcoded USD/base labels. Author now enforces exact supported units, January 2024 inclusion and index 100, with ordinary/-O rejection checks and documentation. Hand rebasing remains a separate exercise.",
+    "Root c11 review requested explicit delayed-check results: exact sum 3 versus float 4, mean 10, variance 8/3 cents squared = 1/3750 USD squared, and a mutation-check pointer; author supplied them.",
+    "C09 peer requested positive finite asymmetric costs and a finite conditional first moment before the expected-loss derivative. Root added these assumptions.",
+    "C11 peer distinguished JSON booleans from JSON numbers. Root changed the validation paragraph to refer to a purported monetary field decoding to a boolean or float.",
+    "Shared c08 checker still expected its planned-successor link after the actual c09 chapter was linked. Root updated that structural expectation and the integrated run passed."
+  ],
+  "peer_issue_resolution": {
+    "v04-c09-peer-01": "Resolved: positive finite costs and finite conditional E|Y| stated immediately before the asymmetric-loss derivation.",
+    "v04-c11-peer-01": "Resolved: wording now describes the decoded monetary field, without classifying a JSON boolean as a JSON number."
+  },
+  "verification_commands": [
+    "python3 scripts/build.py",
+    "python3 scripts/verify.py",
+    "node --check dist/search-index.js",
+    "python3 scripts/package_offline.py",
+    "git diff --check"
+  ],
+  "limitations": [
+    "Internal specialist/coordinator/peer review is not external academic review or assessment of learner competence.",
+    "Synthetic labs do not establish empirical predictive accuracy, stationarity, population representativeness or economic source validity.",
+    "C12 reconstructs rounded published BLS aggregates; survey microdata estimation, seasonal adjustment and sampling variance are outside its scope. Local transcription hashes do not certify official origin.",
+    "Numerical guarantees require their stated contracts; the c11 variance comparison budget is an engineering criterion rather than a global algorithm theorem.",
+    "Browser visual/mobile/print UI QA remains pending; the recorded security restriction has not been circumvented.",
+    "Volume 4's assessment/project package, cross-volume foundation examination and the rest of the 216-chapter library remain unfinished."
+  ],
+  "acceptance": "Accepted by root in prerequisite order after full manuscript, solution, source, instruction, numerical and structural review; all separate peer findings resolved and final acceptance-state checks passed. This completes the twelve chapter manuscripts of Volume 4, not its assessment/project package or the full library."
+}

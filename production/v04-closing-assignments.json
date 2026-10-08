@@ -1,0 +1,173 @@
+{
+  "batch": "v04-closing",
+  "authorization": "User explicitly requested parallel economics/finance specialists; production contract retains this authorization.",
+  "state": "verified-awaiting-publication",
+  "integration_owner": "root",
+  "acceptance_order": [
+    "v04-c09",
+    "v04-c10",
+    "v04-c11",
+    "v04-c12"
+  ],
+  "shared_files_owner": "root",
+  "fixed_contract": {
+    "format": "Original substantial HTML chapter fragments, standard-library Python, offline labs. No framework/install/paid services.",
+    "minimum": "Two fully worked examples, eight original exercises with complete solutions and open-response criteria, capability, prerequisites, assumptions/units/boundaries, teach-back and delayed check.",
+    "review": "Specialist supplies author review and executable independent numerical/behavior checker; root audits, integrates and accepts in dependency order. Adjacent drafts may proceed against exact prerequisite contracts.",
+    "sources": "Retrieve relevant primary sources; record exact inspected claims and URLs in separate proposals. Never substitute generic curriculum links or claim full source verification.",
+    "prohibitions": [
+      "No shared curriculum/source/checkpoint/build/hosting changes",
+      "No edits to other assignments",
+      "No publishing, commits, pushes or child agents",
+      "No browser/security-policy workaround or visual/mobile/print QA claim"
+    ]
+  },
+  "assignments": [
+    {
+      "chapter": "v04-c09",
+      "owner": "root",
+      "title": "Prediction and model validation",
+      "outcome": "Evaluate models using splits that respect economic timing and information availability.",
+      "scope": [
+        "Train-validation-test",
+        "time splits",
+        "leakage",
+        "overfitting",
+        "baseline comparisons",
+        "losses"
+      ],
+      "prerequisites": [
+        "v04-c08"
+      ],
+      "state": "accepted",
+      "owned_paths": [
+        "content/chapters/v04-c09.html",
+        "content/projects/v04-c09-*",
+        "scripts/check_v04_c09.py",
+        "content/reviews/v04-c09-author.json",
+        "content/reviews/v04-c09-sources.json"
+      ],
+      "specific_contract": "Prediction target, information time and horizon; train/validation/test and rolling origin; learned preprocessing fitted inside splits; grouped versus temporal deployment targets; selection optimism; loss and baseline comparisons. Original exact forecast laboratory with timing/leakage mutation checks.",
+      "root_review": "content/reviews/v04-c09-c12.json"
+    },
+    {
+      "chapter": "v04-c10",
+      "owner": "regression",
+      "title": "Time-series and panel data basics",
+      "outcome": "Prepare longitudinal data and identify dependence and aggregation pitfalls.",
+      "scope": [
+        "Lags",
+        "trends",
+        "stationarity intuition",
+        "panel keys",
+        "survivorship",
+        "frequencies",
+        "deflation"
+      ],
+      "prerequisites": [
+        "v04-c09"
+      ],
+      "state": "accepted",
+      "owned_paths": [
+        "content/chapters/v04-c10.html",
+        "content/projects/v04-c10-*",
+        "scripts/check_v04_c10.py",
+        "content/reviews/v04-c10-author.json",
+        "content/reviews/v04-c10-sources.json"
+      ],
+      "specific_contract": "Calendar-correct lags versus preceding row; entity-time keys/missingness/entry-exit and survivorship; stock/flow/rate aggregation and deflation; covariance stationarity versus trending/nonstationary examples with assumptions; no generic stationarity proof from a plot. Reproducible synthetic time/panel lab.",
+      "root_review": "content/reviews/v04-c09-c12.json"
+    },
+    {
+      "chapter": "v04-c11",
+      "owner": "monte_carlo",
+      "title": "Computational reliability and numerical audits",
+      "outcome": "Verify outputs through invariants, simple cases and independent calculations.",
+      "scope": [
+        "Assertions",
+        "tests",
+        "edge cases",
+        "units",
+        "precision",
+        "numerical conditioning",
+        "peer reproduction"
+      ],
+      "prerequisites": [
+        "v04-c10"
+      ],
+      "state": "accepted",
+      "owned_paths": [
+        "content/chapters/v04-c11.html",
+        "content/projects/v04-c11-*",
+        "scripts/check_v04_c11.py",
+        "content/reviews/v04-c11-author.json",
+        "content/reviews/v04-c11-sources.json"
+      ],
+      "specific_contract": "Reliability of actual computational claims: invariants, independent reference methods, units, zero/boundaries, explicit input validation versus removable assert, absolute/relative precision, cancellation/conditioning versus algorithm stability; executable audit laboratory and deliberately broken variants detected. Complement earlier v02-c12 rather than merely repeat it.",
+      "root_review": "content/reviews/v04-c09-c12.json"
+    },
+    {
+      "chapter": "v04-c12",
+      "owner": "causal_identification",
+      "title": "Empirical integration and replication",
+      "outcome": "Reproduce a small empirical result and document departures from the original analysis.",
+      "scope": [
+        "Source retrieval",
+        "reconstruction",
+        "robustness",
+        "replication report",
+        "limits of inference"
+      ],
+      "prerequisites": [
+        "v04-c11"
+      ],
+      "state": "accepted",
+      "owned_paths": [
+        "content/chapters/v04-c12.html",
+        "content/projects/v04-c12-*",
+        "scripts/check_v04_c12.py",
+        "content/reviews/v04-c12-author.json",
+        "content/reviews/v04-c12-sources.json"
+      ],
+      "specific_contract": "Actually reproduce a small externally sourced empirical descriptive result with primary public data frozen locally and documented provenance, units/vintage/access/license; reconstruction and discrepancy log, prespecified robustness and limits. Do not present a synthetic-only case as empirical replication. A bounded official historical statistical result plus original reconstruction is acceptable; avoid copyrighted large datasets. Supply exact expected original versus reconstructed output and independent checks.",
+      "root_review": "content/reviews/v04-c09-c12.json"
+    }
+  ],
+  "peer_reviews": [
+    {
+      "chapter": "v04-c09",
+      "owner": "regression",
+      "owned_paths": [
+        "content/reviews/v04-c09-peer.json"
+      ],
+      "scope": "Read-only independent full mathematical, temporal-information, solution and laboratory audit; root alone implements corrections. No children or shared edits.",
+      "state": "complete; findings resolved"
+    },
+    {
+      "chapter": "v04-c10",
+      "owner": "monte_carlo",
+      "owned_paths": [
+        "content/reviews/v04-c10-peer.json"
+      ],
+      "scope": "Read-only independent stationarity/panel/aggregation, solution and laboratory audit; root alone implements corrections. No children or shared edits.",
+      "state": "complete; findings resolved"
+    },
+    {
+      "chapter": "v04-c11",
+      "owner": "causal_identification",
+      "owned_paths": [
+        "content/reviews/v04-c11-peer.json"
+      ],
+      "scope": "Read-only independent numerical reliability proof, units, solution and laboratory review. Root owns corrections; no children or shared edits.",
+      "state": "complete; findings resolved"
+    }
+  ],
+  "integration": {
+    "accepted_chapters": 48,
+    "html_pages_checked": 56,
+    "review": "content/reviews/v04-c09-c12.json",
+    "offline_files": 111,
+    "offline_bytes": 1633977,
+    "pending": "Private publication; volume assessment/project and remainder of library; visual/mobile/print QA"
+  }
+}

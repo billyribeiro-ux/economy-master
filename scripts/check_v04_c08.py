@@ -261,7 +261,7 @@ def check():
         if href.startswith("v04-c08-"):
             require("/" not in href and (ROOT / "content/projects" / href).is_file(), "flat download target")
     require("Teach-back:" in manuscript and "Delayed check:" in manuscript, "retention prompts")
-    require("v04-c07.html" in parser.links and "curriculum.html#v04" in parser.links, "dependency and planned successor")
+    require("v04-c07.html" in parser.links and "v04-c09.html" in parser.links, "dependency and available successor")
     return {
         "status": "passed",
         "checks": [

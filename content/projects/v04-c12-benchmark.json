@@ -1,0 +1,221 @@
+{
+  "all_six_rate_displays_match": true,
+  "comparison_grid": [
+    {
+      "adjustment": "SA",
+      "comparison": "month",
+      "earlier_period": "2024-06",
+      "later_period": "2024-07",
+      "ratio_difference_pp_approx": 0.19888107875641098,
+      "ratio_difference_pp_exact": "625317200/3144176429",
+      "round_after_subtraction_pp": "0.2",
+      "subtract_published_rates_pp": "0.2",
+      "unemployed_level_change_thousands": 352
+    },
+    {
+      "adjustment": "SA",
+      "comparison": "year",
+      "earlier_period": "2023-07",
+      "later_period": "2024-07",
+      "ratio_difference_pp_approx": 0.7198917796369063,
+      "ratio_difference_pp_exact": "20262560300/28146675477",
+      "round_after_subtraction_pp": "0.7",
+      "subtract_published_rates_pp": "0.8",
+      "unemployed_level_change_thousands": 1259
+    },
+    {
+      "adjustment": "NSA",
+      "comparison": "month",
+      "earlier_period": "2024-06",
+      "later_period": "2024-07",
+      "ratio_difference_pp_approx": 0.2482617656775172,
+      "ratio_difference_pp_exact": "7121233600/28684375061",
+      "round_after_subtraction_pp": "0.2",
+      "subtract_published_rates_pp": "0.2",
+      "unemployed_level_change_thousands": 452
+    },
+    {
+      "adjustment": "NSA",
+      "comparison": "year",
+      "earlier_period": "2023-07",
+      "later_period": "2024-07",
+      "ratio_difference_pp_approx": 0.7430843005309488,
+      "ratio_difference_pp_exact": "1179586300/1587419219",
+      "round_after_subtraction_pp": "0.7",
+      "subtract_published_rates_pp": "0.7",
+      "unemployed_level_change_thousands": 1313
+    }
+  ],
+  "diagnostics": {
+    "july_sa_unemployed_millions_display": "7.2",
+    "july_sa_unemployed_over_employed_percent": 4.441729812855779,
+    "july_sa_unemployed_over_population_percent": 2.666353985199744
+  },
+  "discrepancy_log": [
+    {
+      "id": "D01",
+      "issue": "Unrounded level ratios and printed rates use different precision.",
+      "resolution": "Compare nearest-tenth displays and preserve both ratios and source rates; investigate any mismatch.",
+      "status": "display-agreement"
+    },
+    {
+      "id": "D02",
+      "issue": "Annual SA change: published rates subtract to 0.8, while subtraction before rounding gives 0.7 percentage point.",
+      "resolution": "Different display operations; report both with their definitions. This is a secondary comparison, not failure of the primary monthly target.",
+      "status": "rounding-order-comparison"
+    },
+    {
+      "id": "D03",
+      "issue": "Check component identities without altering published levels.",
+      "nonzero_residuals": [
+        {
+          "adjustment": "NSA",
+          "identity": "population_identity_residual_thousands",
+          "period": "2023-07",
+          "residual_thousands": -1
+        },
+        {
+          "adjustment": "SA",
+          "identity": "labor_force_identity_residual_thousands",
+          "period": "2024-06",
+          "residual_thousands": -1
+        }
+      ],
+      "resolution": "Retain all published values. Three separately rounded levels can have an integer residual of magnitude one; exact undisplayed levels are unavailable.",
+      "status": "compatible-with-rounding"
+    },
+    {
+      "id": "D04",
+      "issue": "Original survey weighting, seasonal-adjustment estimation and sampling uncertainty are not reconstructed.",
+      "resolution": "Limit success claim to the stated published-aggregate descriptive calculation.",
+      "status": "scope-limit"
+    }
+  ],
+  "identities_compatible_with_component_rounding": true,
+  "primary_replication": {
+    "all_match": true,
+    "month_change_pp": {
+      "original": "0.2",
+      "reconstructed": "0.2"
+    },
+    "rate_percent": {
+      "original": "4.3",
+      "reconstructed": "4.3"
+    },
+    "target": "July 2024 U.S. household-survey total unemployment release statistics, 2024-08-02 vintage, SA",
+    "unemployed_change_thousands": {
+      "original": 352,
+      "reconstructed": 352
+    }
+  },
+  "reproducibility": {
+    "hash_scope": "local transcription bytes, not the original website",
+    "implementation": "CPython",
+    "input_sha256": {
+      "v04-c12-data.json": "5451b6a958005a3efcbddb28395646e8f4b7987cf368f7144ee00c086bfc57c9",
+      "v04-c12-source-extract.txt": "bb0d95fb839149975a5abc99689e68236ac4a954ad676d28d540b51f8e197b35"
+    },
+    "network_required": false,
+    "python_version": "3.14.6",
+    "source_release": "2024-08-02",
+    "source_url": "https://www.bls.gov/news.release/archives/empsit_08022024.htm"
+  },
+  "row_audits": [
+    {
+      "adjustment": "NSA",
+      "display_matches": true,
+      "labor_force_identity_residual_thousands": 0,
+      "level_rounding_envelope_percent": [
+        3.784573622920682,
+        3.7851900910880976
+      ],
+      "period": "2023-07",
+      "population_identity_residual_thousands": -1,
+      "published_minus_ratio_pp": 0.015118143911044584,
+      "published_rate_percent": "3.8",
+      "ratio_display_percent": "3.8",
+      "ratio_percent_approx": 3.784881856088955,
+      "ratio_percent_exact": "35400/9353"
+    },
+    {
+      "adjustment": "SA",
+      "display_matches": true,
+      "labor_force_identity_residual_thousands": 0,
+      "level_rounding_envelope_percent": [
+        3.5326290215931087,
+        3.533248560101728
+      ],
+      "period": "2023-07",
+      "population_identity_residual_thousands": 0,
+      "published_minus_ratio_pp": -0.032938789920592654,
+      "published_rate_percent": "3.5",
+      "ratio_display_percent": "3.5",
+      "ratio_percent_approx": 3.5329387899205926,
+      "ratio_percent_exact": "590400/167113"
+    },
+    {
+      "adjustment": "NSA",
+      "display_matches": true,
+      "labor_force_identity_residual_thousands": 0,
+      "level_rounding_envelope_percent": [
+        4.279395884798012,
+        4.280012898912172
+      ],
+      "period": "2024-06",
+      "population_identity_residual_thousands": 0,
+      "published_minus_ratio_pp": 0.020295609057612997,
+      "published_rate_percent": "4.3",
+      "ratio_display_percent": "4.3",
+      "ratio_percent_approx": 4.279704390942387,
+      "ratio_percent_exact": "723300/169007"
+    },
+    {
+      "adjustment": "SA",
+      "display_matches": true,
+      "labor_force_identity_residual_thousands": -1,
+      "level_rounding_envelope_percent": [
+        4.053639823938528,
+        4.0542591595068105
+      ],
+      "period": "2024-06",
+      "population_identity_residual_thousands": 0,
+      "published_minus_ratio_pp": 0.04605050919891196,
+      "published_rate_percent": "4.1",
+      "ratio_display_percent": "4.1",
+      "ratio_percent_approx": 4.053949490801088,
+      "ratio_percent_exact": "681100/168009"
+    },
+    {
+      "adjustment": "NSA",
+      "display_matches": true,
+      "labor_force_identity_residual_thousands": 0,
+      "level_rounding_envelope_percent": [
+        4.527658220576408,
+        4.528274094477751
+      ],
+      "period": "2024-07",
+      "population_identity_residual_thousands": 0,
+      "published_minus_ratio_pp": -0.027966156619904196,
+      "published_rate_percent": "4.5",
+      "ratio_display_percent": "4.5",
+      "ratio_percent_approx": 4.527966156619904,
+      "ratio_percent_exact": "768500/169723"
+    },
+    {
+      "adjustment": "SA",
+      "display_matches": true,
+      "labor_force_identity_residual_thousands": 0,
+      "level_rounding_envelope_percent": [
+        4.252521084489356,
+        4.2531400564631285
+      ],
+      "period": "2024-07",
+      "population_identity_residual_thousands": 0,
+      "published_minus_ratio_pp": 0.04716943044250099,
+      "published_rate_percent": "4.3",
+      "ratio_display_percent": "4.3",
+      "ratio_percent_approx": 4.252830569557499,
+      "ratio_percent_exact": "716300/168429"
+    }
+  ]
+}

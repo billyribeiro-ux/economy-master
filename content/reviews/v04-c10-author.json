@@ -1,0 +1,56 @@
+{
+  "chapter": "v04-c10",
+  "title": "Time-series and panel data basics",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "state": "review",
+  "review_type": "Specialist author mathematical, computational, source and instructional review; root independently audits and alone accepts in dependency order",
+  "reviewed": {
+    "reasoning": "Defined entity–month grain, unique keys, observation/reference versus information time and true calendar lag lookup. Distinguished observed zero, active missing report, documented nonoperation and outside-window history. Defined cohort/population targets before comparing balanced/endpoint/changing composition and future-survival selection. Derived matched-period deflation under an explicit one-good law and separated official chain aggregation. Derived stock/flow/exposure-rate/return/annualization operations from their units. Defined finite-second-moment covariance stationarity and proved the MA(1), deterministic-trend and random-walk moment claims, sample-mean covariance sum, first-difference covariance and common-component failure of learning the population mean. Explicitly required cross-firm uncorrelated individual shocks in the panel covariance paragraph after root preliminary review.",
+    "arithmetic": "Worked panel real values, calendar lags, active/observed denominators, cohort means and entry/exit decomposition independently reconciled. January/February/March observed means are 700/3,710/3,200; endpoint cohort growth0, complete-window growth1/5 and evolving observed-mean growth-1/7. Quarter nominal700 deflates monthly to620; mean-index shortcut7000/11 differs; consistent aggregate index3500/31. Inventory, pooled/exposure rate and compounded wealth calculations checked independently. Exact shock enumeration confirms gamma0=5,gamma1=2, four-period mean variance2, random-walk variance20 at t5 and shared ten-firm mean variance47/5.",
+    "solutions": "All eight original exercises have complete numerical/analytic or criterion-based solutions. Independently checked calendar-gap/December rollover logic, all population targets, deflation/rebasing, a separate aggregation-transfer case, full MA covariance/mean precision, random-walk versus deterministic-trend differences, sample ACF zero-lag-one/nonzero-lag-two example, and shared-shock panel inference critique. Delayed check supplies exact real growth and differenced-noise moments. Open answers state concrete timing, population, missingness and dependence criteria without claiming a universal estimator.",
+    "instruction": "Starts from the calendar/population question, then teaches keys/lags, deflation, a worked sparse panel, membership/dependence, economic aggregation, a second worked quarter and stationary/nonstationary laws. Probability assumptions and units are explicit before every calculation. Finite-shock covariance derivations establish the methods used by exercises without appealing to an unexplained stationarity test or large-sample theorem. Offline stdlib lab has plain JSON inputs, an operating roster, price metadata, instructions, exact fractions, explicit boundaries and a tested instructional snippet. c09 timing and c11 reliability links match the fixed assignment.",
+    "sources": "Inspected five primary routes: official Stata panel/lag/gap documentation; BEA detailed deflation/chain aggregation and compounded quarterly growth annualization; Mikusheva's MIT stationarity/covariance notes; Hyndman/Athanasopoulos's author-hosted stationarity/differencing chapter. Recorded precise URL/use/date/scope and avoided overgeneralizing FPP's ACF heuristic. All examples, data, laws, prose and code are original. An inaccessible FRED-help route was not used or proposed; a BLS escalation page was inspected but not needed in the final chapter.",
+    "structure": "Static fragment has capability/prerequisites, two fully worked example asides, eight exercise list items, eight matching main solution items, separate delayed solution, teach-back and successor link. Three flat download references point to the program, JSON data and README. Five proposed source IDs match manuscript data-source attributes. No central or other-assignment writes, build, acceptance, commit or publication action performed."
+  },
+  "artifacts": [
+    "content/chapters/v04-c10.html",
+    "content/projects/v04-c10-panel.py",
+    "content/projects/v04-c10-data.json",
+    "content/projects/v04-c10-readme.txt",
+    "scripts/check_v04_c10.py",
+    "content/reviews/v04-c10-sources.json"
+  ],
+  "validation": {
+    "command": "python3 book/scripts/check_v04_c10.py",
+    "result": "passed",
+    "integration_api": "check() returns a dict with chapter/status/checks/limitations; standalone execution prints JSON",
+    "checks": [
+      "All 12 grid lags versus independent datetime predecessor and row scanning; 84 month rollover cases",
+      "Exact panel cohort/observation/roster accounting and 24 jointly shuffled input variants",
+      "Missing-endpoint mutation changes available totals and cohort; true zero preserves level differences but yields undefined growth",
+      "Period deflation, index rebasing by hand, sequential wealth, stocks/flows/exposure rates and exercise transfer values",
+      "64-state MA moment enumeration and 30 coefficient/window variance grids; 32 random-walk paths and differenced-trend covariance enumeration",
+      "2,048-state shared-shock panel variance, sample ACF and delayed-check answers",
+      "37 malformed/date/key/type/unit/base/count/law input documents rejected under ordinary and optimized Python; wrong currency labels, alternate real base, a changed January index normalization and a window excluding the base are explicitly rejected",
+      "Successful CLI from another working directory, input nonmutation, missing-file/encoding diagnostics and executed calendar snippet",
+      "Worked/exercise/solution counts, source IDs, real flat downloads and instructional gates"
+    ]
+  },
+  "corrections": [
+    "Reconciled February observed real subtotal directly from rows as110+300+300=710 and retained only the correct710/3 mean in the final manuscript.",
+    "Root's preliminary mathematical review requested explicit cross-firm independence/uncorrelatedness of individual disturbances; added it so the stated shared-shock covariance follows from the assumptions.",
+    "Root's preliminary code review identified that nonempty unit strings alone would permit mislabeled currencies/base units. The final lab enforces the exact original unit contract, requires January2024 within the window with index100, and rejects alternate labels/base normalizations. Hand rebasing remains taught independently, with fixture limits documented and substantive wrong-unit/base tests.",
+    "Added explicit mean-square convergence of the averaged individual noise to show why a stationary common-component process need not learn its population mean from one path; nonvanishing variance is not used alone as a universal convergence argument."
+  ],
+  "limitations": [
+    "Internal specialist/root review is not independent human academic certification or learner testing.",
+    "Panel rows and stochastic laws are synthetic; no empirical stationarity, forecasting accuracy, sample representativeness or causal effect is established.",
+    "The bounded monthly program freezes its USD/month and January2024=100 unit/base contract. It does not recover unknown active sales, verify roster truth, identify mergers, implement general chain-index methods or supply longitudinal inference.",
+    "Finite computational checks do not prove every modified program correct; analytic and economic-target judgments were reviewed separately.",
+    "Source retrieval verifies only recorded method passages and links, not entire works or every current institutional practice.",
+    "Root retains whole-library dependency, source/link and build integration responsibilities.",
+    "Visual/mobile/print UI QA remains pending after the previously recorded browser-policy rejection; no workaround was attempted."
+  ],
+  "acceptance": "Complete specialist package ready for root's independent review and integration; no central acceptance or publication action performed."
+}

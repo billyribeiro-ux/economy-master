@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "provenance": "Original synthetic teaching data and probability laws, created 2026-10-07 for edition boundary 2026-10-06. No observed firms, economic releases or causal estimates.",
+  "units": {"nominal_sales": "USD per calendar month", "real_sales": "January 2024 price USD per calendar month", "price_index": "January 2024=100, one good with base price 1 USD", "inventory": "units at month end", "return": "basis points per month, fully reinvested without external cash flows"},
+  "window": {"start": "2024-01", "end": "2024-03"},
+  "roster": [
+    {"entity": "A", "active_from": "2024-01", "active_through": "2024-03"},
+    {"entity": "B", "active_from": "2024-01", "active_through": "2024-03"},
+    {"entity": "C", "active_from": "2024-02", "active_through": "2024-03"},
+    {"entity": "D", "active_from": "2024-01", "active_through": "2024-02"}
+  ],
+  "prices": [{"month": "2024-01", "index": 100}, {"month": "2024-02", "index": 110}, {"month": "2024-03", "index": 120}],
+  "sales": [
+    {"entity": "A", "month": "2024-01", "nominal_usd": 100},
+    {"entity": "A", "month": "2024-02", "nominal_usd": 121},
+    {"entity": "A", "month": "2024-03", "nominal_usd": 144},
+    {"entity": "B", "month": "2024-01", "nominal_usd": 200},
+    {"entity": "B", "month": "2024-03", "nominal_usd": 216},
+    {"entity": "C", "month": "2024-02", "nominal_usd": 330},
+    {"entity": "C", "month": "2024-03", "nominal_usd": 360},
+    {"entity": "D", "month": "2024-01", "nominal_usd": 400},
+    {"entity": "D", "month": "2024-02", "nominal_usd": 330}
+  ],
+  "quarter": [
+    {"month": "2024-01", "nominal_usd": 120, "end_inventory": 10, "defects": 2, "deliveries": 10, "return_bps": 1000},
+    {"month": "2024-02", "nominal_usd": 220, "end_inventory": 16, "defects": 3, "deliveries": 30, "return_bps": -1000},
+    {"month": "2024-03", "nominal_usd": 360, "end_inventory": 9, "defects": 6, "deliveries": 20, "return_bps": 2000}
+  ],
+  "annualized_quarter_flow_usd": 480,
+  "law": {"mean": 10, "shock_magnitude": 2, "ma_numerator": 1, "ma_denominator": 2, "average_length": 4, "random_walk_horizon": 5}
+}

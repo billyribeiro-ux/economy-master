@@ -1,0 +1,62 @@
+{
+  "chapter": "v04-c12",
+  "title": "Empirical integration and replication",
+  "status": "review",
+  "reviewer": "Specialist author; submitted for root's independent editorial and dependency-order review",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "scope": "Complete fixed v04-c12 assignment: actual externally sourced descriptive reconstruction, provenance/vintage/units/reuse basis, original instruction, two fully worked examples, eight complete exercise solutions, frozen offline empirical extract, benchmark report/code and independent checker. No volume assessment or central integration work performed.",
+  "review": {
+    "factual": "Reconstructed the BLS Employment Situation July 2024 household-survey TOTAL seasonally adjusted rate and monthly changes from the archived 2 August 2024 release. Inspected the actual complete nine-column Table A-1 header and selected TOTAL rows before selecting positions 1, 2, 3, 4, 8, 9; not search-snippet transcription. Six actual historical aggregate records preserve July 2023/June 2024/July 2024 under NSA and SA. Distinguishes observation month, release vintage and 2026 source-inspection date. Population is civilian noninstitutional age 16+ in the 50 states and DC; counts are estimated persons in thousands, not payroll jobs or respondent sample sizes. Population itself is not adjusted, as footnote 1 states. Official definitions include the temporary-layoff search exception and are cross-checked against the archived technical note.",
+    "arithmetic": "Exact ratio reconstruction gives July SA 4.252830569557499 percent, June SA 4.053949490801088 percent, monthly difference 0.198881078756411 percentage point, and unemployed change 352 thousand: original displays 4.3, 0.2 and 352 are reproduced. All six rate displays match. SA annual displayed rates subtract to 0.8 percentage point while ratio subtraction gives 0.719891779636906, rounding to 0.7. Difference-of-display-errors identity explains the gap. NSA monthly/yearly raw differences are 0.248261765677517 and 0.743084300530949 percentage point. June SA labor-force identity and July 2023 NSA population identity each have -1 thousand residual; all other inspected identities have zero. Conditional half-thousand rounding bounds give the July rate envelope 4.252521084489356 to 4.253140056463129 percent. These bounds are explicitly unrelated to sampling confidence.",
+    "reasoning": "Defines published-aggregate computational reconstruction without claiming microdata replication. Establishes the ratio denominator, units, rounding rule and narrow target before calculation. Derives monotone ratio bounds and the three-error identity tolerance. Separates arithmetic compatibility, input integrity, source provenance and empirical validity. Explains that duplicated transcription plus hashing cannot establish official authenticity. A changed June denominator of 168109 thousand still produces 4.1 percent but has a 99-thousand residual, demonstrating the insufficiency of headline-only checks. No universal subgroup-additivity rule or universal display tolerance is asserted.",
+    "solutions": "Independently calculated every determinate prompt using high-precision Decimal division and exact cross-products, including NSA monthly rate/count, SA annual rounding errors, wrong denominators, percentage-point versus relative-percent growth, identity bound and the invented-denominator error, and the complete comparison grid. Open provenance, reporting and memo questions have explicit criteria and illustrative reasoning. The memo is within its 200-word limit. All tools required by the exercises are taught before use; invented mutation values are clearly distinguished from the frozen real data.",
+    "instruction": "Approximately 4227 words including solutions and table text. Two worked asides, eight exercises with corresponding solutions, teach-back and delayed check. Source retrieval/provenance follows explicit target specification; discrepancy analysis precedes robustness and reporting. The four-cell SA/NSA by monthly/yearly grid is fully reported, its estimand changes disclosed, and its known-result teaching protocol is not mislabeled as a preregistration. Statistical uncertainty, causal identification and predictive evaluation are distinct limitations. A one-page project report, ledger, independent arithmetic and temporary mutation exercise have a 100-point rubric in the README.",
+    "sources": "Three scoped primary-source proposals: archived BLS release/table/technical note, official CPS concepts/definitions, official BLS public-use statement. Numeric extract is attributed government data and includes no images or emblem. A direct curl request returned HTTP403 after successful web retrieval; the local extract is openly labeled manual transcription, and no raw website download/hash is claimed. Live definitions/reuse pages have inspection dates and are not represented as frozen 2024 versions. A local manifest hashes the transcription text and analysis JSON; it does not authenticate origin.",
+    "implementation": "Original standard-library Python with Fraction arithmetic, explicit input/type/metadata/duplicate-field checks, exact local SHA-256 verification and independently parsed text-versus-JSON comparison. Output includes exact fraction fields, convenient decimal approximations, every comparison, dynamic mismatch statuses and reproducibility metadata. Invalid input exits 1, usage exits 2 and numerical failure exits 3. Works under Python -O and from another working directory; no network/runtime dependency/input rewriting. Preserved benchmark report matches current code. Checker uses a separate official-value reference, high-precision Decimal arithmetic, corner enumeration and controlled temporary mutations.",
+    "structure": "Static HTML fragment using h2/h3, semantic table headings/captions, two worked asides and eight matched exercise/solution list items. Six flat project links follow the shared build convention. Predecessor is v04-c11; Volume 4 assessment remains a planned curriculum route. Three source IDs exactly match proposed source records. No shared manuscript, checkpoint, build, source catalogue, deployment or UI operation performed. Whole-library rendering/link integration remains with root."
+  },
+  "artifacts": [
+    "content/chapters/v04-c12.html",
+    "content/projects/v04-c12-source-extract.txt",
+    "content/projects/v04-c12-data.json",
+    "content/projects/v04-c12-manifest.json",
+    "content/projects/v04-c12-replication.py",
+    "content/projects/v04-c12-benchmark.json",
+    "content/projects/v04-c12-README.txt",
+    "scripts/check_v04_c12.py",
+    "content/reviews/v04-c12-sources.json"
+  ],
+  "validation": {
+    "command": "python3 book/scripts/check_v04_c12.py",
+    "result": "passed",
+    "python": "3.14.6",
+    "integration_api": "check() returns a status/checks/limitations dictionary; standalone CLI prints JSON.",
+    "checks": [
+      "Six records and 36 numeric source fields against separately recorded complete-header Table A-1 reference",
+      "Independent 65-digit Decimal rates/displays, exact ratio cross-products and four comparison cells",
+      "54 bounded input-rounding grid points, all six component reconciliations and both nonzero residuals",
+      "2807 signed display/tie/zero cases and zero/full-rate envelope boundaries",
+      "Explicit component-error enumeration and invented denominator mutation that fools rounded rates but fails identity checks",
+      "18 invalid type/schema/key/unit/denominator cases, duplicate JSON keys and nonfinite constants",
+      "Both normal and optimized CLI validation; hash drift, transcription disagreement, numerical mismatch status, missing/invalid manifest and usage errors",
+      "Unrelated-directory execution, frozen-input nonmutation, preserved benchmark equivalence and all flat source/download/exercise structure"
+    ]
+  },
+  "corrections": [
+    "Replaced initially fixed baseline discrepancy descriptions with dynamic display/identity status fields so altered valid inputs are not automatically declared explained.",
+    "Rejected boolean manifest schema versions explicitly; retained exact fixed source URL validation.",
+    "Corrected the six-decimal display of the deliberately corrupted denominator example to 4.051538 percent after independent calculation.",
+    "Separated the official published annual rate difference from reconstructed rounded-level ratio differences and declined to infer full-precision BLS estimates.",
+    "Preserved two source nonaddition residuals rather than altering published counts to force balance."
+  ],
+  "limitations": [
+    "This reproduces a bounded real published descriptive result, not the survey microdata estimation, sampling variances, seasonal-adjustment procedures or all original release claims.",
+    "Frozen inputs are a manually inspected numeric extract; local hashes detect change against the manifest but cannot prove original-source authenticity. Raw archived HTML bytes were not successfully downloaded by curl.",
+    "Rounding envelopes condition on half-thousand level rounding and are not uncertainty intervals for population truth. Annual comparisons cross a January population-control update that this package does not decompose.",
+    "Six overlapping period/adjustment aggregates do not identify a causal policy effect, establish a forecast, demonstrate a persistent trend or supply independent replicated samples.",
+    "Author and computational review are not independent human academic certification or learner testing. Root still owns canonical source integration, full build, dependency-order acceptance and publishing.",
+    "Visual/mobile/print QA remains pending after the recorded browser-policy rejection; no UI workaround or visual QA claim was made."
+  ],
+  "acceptance": "Complete specialist package submitted for root review; state remains review until root integrates and accepts it."
+}

@@ -1,0 +1,170 @@
+{
+  "chapter": "v04-c10",
+  "title": "Time-series and panel data basics",
+  "reviewer": "monte_carlo specialist, bounded independent peer review",
+  "date": "2026-10-07",
+  "scope": "Read-only audit of the chapter, both worked examples, every exercise and solution, delayed check, program, JSON data, README, author checker and proposed source record. Only this peer-review JSON was written.",
+  "status": "passed-no-material-findings",
+  "findings": [],
+  "severity_summary": {
+    "blocking": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "reasoning_review": [
+    {
+      "topic": "Calendar keys and unknown values",
+      "result": "Entity plus calendar-month key defines a lag. Missing dates are not compressed into adjacent periods; December-to-January rollover is correct. The grid distinguishes unreported active operations, nonoperation and observations outside the analysis window. A lag may be observed even when the current value is absent; growth still remains unavailable."
+    },
+    {
+      "topic": "Population and panel composition",
+      "result": "Observed monthly means, endpoint-reported cohorts and complete-window cohorts use different inclusion rules and are correctly distinguished. Complete cases can select future reporting or survival. For the explicit closed-roster sales-flow target only, documented nonoperation contributes zero; an unknown active report prevents a complete total. The continuing/entry/exit identity is an endpoint accounting identity, not a causal effect."
+    },
+    {
+      "topic": "Deflation and aggregation units",
+      "result": "The original one-good model justifies 100 times nominal flow divided by the matched monthly index. Summing those constant-base flows differs from dividing their nominal sum by an unweighted mean index. The chapter distinguishes this construction from official chain aggregation. Flow totals, endpoint stocks, exposure-weighted rates and compounded returns have explicit different targets. Annualized flow levels and annualized growth rates are kept separate."
+    },
+    {
+      "topic": "Stationary moments and mean uncertainty",
+      "result": "Weak stationarity is correctly restricted to finite second moments, constant mean and lag-dependent covariance. The MA(1) covariance follows from the shared shock. Counting n-h pairs at lag h derives the exact finite-n average variance. Neither serial dependence nor a stationary dependent law justifies the independent-observation standard error."
+    },
+    {
+      "topic": "Stationarity versus learning the population mean",
+      "result": "The common-component process C+u_t is stationary but its time average converges in mean square to C. The argument establishes averaged-noise mean-square convergence directly, rather than improperly inferring nonconvergence solely from a nonvanishing variance. With nondegenerate C, the probability limit cannot also be the fixed population mean zero."
+    },
+    {
+      "topic": "Trends, random walks and diagnostics",
+      "result": "Deterministic trend changes the mean while the initialized random walk changes variance. Detrending and differencing have the stated different implications; differencing trend-plus-iid noise introduces negative lag-one covariance. The sample ACF convention is explicitly defined, with constant-path and missing-calendar limitations. A short path or zero estimated correlation is not presented as proof of independence or stationarity."
+    },
+    {
+      "topic": "Cross-entity common shocks",
+      "result": "Fixed firm effects and the independence/uncorrelatedness conditions are explicit. Shared variance survives cross-sectional averaging: ten firms do not provide ten independent observations under the stipulated law. Documentation criteria correctly connect inference targets, sampling, time dependence, cross-entity dependence and missingness."
+    }
+  ],
+  "independent_arithmetic": {
+    "worked_example_1": {
+      "real_A": [
+        "100",
+        "110",
+        "120"
+      ],
+      "observed_monthly_means": [
+        "700/3",
+        "710/3",
+        "200"
+      ],
+      "endpoint_cohort_means": [
+        "150",
+        "150"
+      ],
+      "complete_window_means": [
+        "100",
+        "120"
+      ],
+      "growth_by_target": [
+        "-1/7",
+        "0",
+        "1/5"
+      ],
+      "endpoint_change": "0 + 300 - 400 = -100",
+      "result": "Independently reconciled exact fractions, active/observed counts and B March missing-calendar-lag interpretation."
+    },
+    "worked_example_2": {
+      "quarter_real_sales": "620",
+      "unweighted_index_shortcut": "7000/11",
+      "consistent_aggregate_index": "3500/31",
+      "quarter_end_inventory": "9",
+      "endpoint_stock_mean": "35/3",
+      "pooled_defect_rate": "11/60",
+      "mean_monthly_defect_rate": "1/5",
+      "compounded_return": "47/250",
+      "quarter_flow": "120",
+      "result": "Independently recomputed period-specific deflation, exposure weighting, sequential wealth and units."
+    },
+    "ma_coefficient_cross_check": {
+      "cases": 20,
+      "method": "Represented the average as a sum of independent shocks with collected coefficients, then summed four times squared coefficients. Compared with covariance-sum formula for n=1,2,4,17 and theta=-3/2,-1,0,1/2,2. This differs from the checker enumeration method.",
+      "result": "All exact results agreed; baseline four-observation mean variance is 2."
+    },
+    "common_shock_mean_variance": "9 + 10*(1/10)^2*4 = 47/5",
+    "delayed_check": "Real amounts 90 and 110, level increase 20 and observed two-month growth 2/9; monthly growth unknown. Differenced iid variance-1 shocks have variance 2 and lag-one covariance -1."
+  },
+  "eight_exercise_audit": [
+    {
+      "number": 1,
+      "result": "K monthly lag/difference/growth unavailable; two-month growth 1/4. J lag7, difference1, growth1/7. Calendar-key explanation correct."
+    },
+    {
+      "number": 2,
+      "result": "Observed means 700/3 to200 give -1/7; endpoint A/B means150 to150 give0; complete-window A100 to120 gives1/5. Total decomposition0+300-400=-100. Unknown active B sales cannot be assigned zero."
+    },
+    {
+      "number": 3,
+      "result": "Nominal44%, inflation20%, real20% satisfy gross identity. Rebased indices1000/11,100,1200/11 and real amounts110,121,132 are correct; growth is unchanged. Quarter620 and implicit index3500/31 verified."
+    },
+    {
+      "number": 4,
+      "result": "Pooled rate1/8 differs from equally weighted2/15; endpoint inventory7; return-1/400; quarter flow120. Time-average stock and exact cross-month weekly allocation are unidentified from the summaries."
+    },
+    {
+      "number": 5,
+      "result": "Mean10, variance5, lag covariances2 and0; four-average variance2 and SE sqrt(2), versus iid variance5/4 and SE sqrt(5)/2. Stationarity permits the constant positive autocorrelation."
+    },
+    {
+      "number": 6,
+      "result": "Trend mean3t/variance4; walk mean0/variance4t. Walk horizon5 variance20 and Cov(W2,W5)=8. Differenced trend variance8/adjacent covariance-4, differenced walk variance4/adjacent covariance0. A deterministic subtraction cannot change growing walk variance."
+    },
+    {
+      "number": 7,
+      "result": "Sample mean0 and denominator2 give lag-one ACF0 and lag-two -1/2. The independence/stationarity claim is rejected for the correct reasons; date gaps and constant denominator boundary addressed."
+    },
+    {
+      "number": 8,
+      "result": "Individual variance13, pairwise covariance9 and average variance47/5 versus independence13/10. More firms retain C. Open-response criteria require target, keys, mechanism, availability and dependency assumptions, and identify complete-case selection."
+    }
+  ],
+  "code_and_contract_review": [
+    "Complete program and JSON contract read. Exact Fraction arithmetic is used for deflation, ratios, moment formulas and outputs. No fitted stationarity or panel-inference result is claimed.",
+    "Script-relative input, quiet import, explicit validation, duplicate JSON field rejection, bounded exact integers excluding bool/float/nonfinite values, calendar/roster/price coverage, fixed unit and base normalization, quarter completeness and nonnegative gross-return constraints are coherent.",
+    "Independently removed B March: March complete total and endpoint decomposition become unavailable, endpoint cohort becomes A and observed March mean becomes210.",
+    "Independently tested an entirely nonoperating roster: observed means remain unavailable while the explicitly defined complete roster total is zero; endpoint decomposition totals zero.",
+    "Independently tested a 100 percent first-month account loss: the quarter compounded return remains -1. Ten invalid scalar/date mutations were rejected.",
+    "The supplied checker passed: twelve grid lags,84 rollover cases,24 order-invariance cases,37 invalid CLI documents in normal and optimized execution,64-state MA law,30 MA coefficient/window variants,32 random-walk paths,2048 shared-shock panel states and all example/exercise/retention results.",
+    "Checker also passed import/nonmutation, portable CLI and file errors, snippet execution, two worked examples, eight matched exercises/solutions, flat download links and source-ID inventory. README expected values, unit limits and missingness scope match code and chapter."
+  ],
+  "checks_run": [
+    {
+      "command": "python3 book/scripts/check_v04_c10.py",
+      "exit_code": 0,
+      "status": "passed"
+    },
+    {
+      "command": "Independent in-memory peer arithmetic and boundary script",
+      "exit_code": 0,
+      "status": "passed",
+      "reported": {
+        "ma_coefficient_variances": 20,
+        "invalid_cases_rejected": 10,
+        "worked_examples": 2,
+        "exercises": 8,
+        "delayed_check": "passed"
+      }
+    }
+  ],
+  "reviewed_sha256": {
+    "content/chapters/v04-c10.html": "71455db02e10097b15a6c7f29d29bba8d6a10c5f9f8ef85c6cf3211e844e52a2",
+    "content/projects/v04-c10-panel.py": "30cbd4f4a6b3be363192c022ad8cc5b27848a7f8eebf11144d99be6a26af2084",
+    "content/projects/v04-c10-data.json": "628472235ae39903cc1fcf58587bbd0c679baf91b73fd709287e51270566a3f3",
+    "content/projects/v04-c10-readme.txt": "ad19579060250eeff8d6a41f853b60e7c9ae163604a9c5f4e27173feb58b8f46",
+    "scripts/check_v04_c10.py": "dcbecdc1c4c82c22b6e6301aeb371f1fbfbf7b5aecc08e48959c8899b2c952d1",
+    "content/reviews/v04-c10-sources.json": "a02ecdfff7269b5fe454c62fbf14b9c6305b0c6ff8a2e4b6b373c6d549e3b6e9"
+  },
+  "limitations": [
+    "This is a separate agent peer audit, not external human academic certification.",
+    "Proposed primary-source entries and author inspection records were read for scope and citation alignment; external pages were not re-retrieved during this bounded review.",
+    "The finite synthetic inputs and stipulated probability laws do not establish empirical stationarity, valid missingness assumptions, causal effects or external representativeness.",
+    "The local tool assumes the supplied roster and unit labels are economically true; syntactic validation cannot verify those facts.",
+    "No visual, mobile or print UI review was performed or claimed. Root retains final integration, prerequisite-order acceptance and publication."
+  ],
+  "handoff": "No material correction requested. Ready for root final review. No manuscript, program, dataset, checker or central file was changed."
+}

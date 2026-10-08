@@ -1,0 +1,67 @@
+{
+  "chapter": "v04-c11",
+  "title": "Computational reliability and numerical audits",
+  "reviewer": "Independent specialist peer (causal-identification/replication author)",
+  "date": "2026-10-07",
+  "status": "passed",
+  "scope": "Read-only audit of the complete manuscript and eight solutions, delayed answers, synthetic input, program, README and independent checker. Reviewed source records for scope alignment without repeating external source retrieval. Only this peer-review record was written; no manuscript, program, shared state, publishing or child-agent operation was performed.",
+  "files_reviewed": [
+    "content/chapters/v04-c11.html",
+    "content/projects/v04-c11-audit.py",
+    "content/projects/v04-c11-case.json",
+    "content/projects/v04-c11-README.txt",
+    "scripts/check_v04_c11.py",
+    "content/reviews/v04-c11-sources.json"
+  ],
+  "findings": [
+    {
+      "id": "v04-c11-peer-01",
+      "severity": "low",
+      "location": "content/chapters/v04-c11.html, Assertions, validation and tests serve different purposes",
+      "text": "A JSON number can be a boolean or float after decoding",
+      "issue": "JSON booleans are a distinct JSON type. The intended warning is valid for a purported monetary field whose decoded Python value has the wrong type, but the current sentence incorrectly calls the boolean a JSON number.",
+      "suggested_change": "A purported monetary field can decode to a boolean or float; silently converting it to integer cents can lose information.",
+      "impact": "Editorial precision only. The actual exact-type validator correctly rejects booleans, floats and strings and remains active under -O. No numerical result or gate depends on this wording.",
+      "status": "resolved: root applied the suggested wording; peer verified the corrected sentence in the manuscript"
+    }
+  ],
+  "review_conclusions": {
+    "conditioning_and_stability": "Correctly separates sensitivity of the exact target from algorithm error and states the perturbation model. The componentwise relative sum condition number is derived by the triangle inequality, including attainability of its bound, and output-relative conditioning is left undefined at an exact zero net. Absolute error remains meaningful. Backward stability is described with its error model and supported problem scope; cancellation is not incorrectly equated with unstable subtraction. A backward-stable sum can have poor relative forward accuracy on an ill-conditioned sum.",
+    "sum_bound": "The product expansion and geometric majorant justify gamma_k = ku/(1-ku) for k = n-1 and ku < 1. Represented inputs, normal-range round-to-nearest operations, no overflow and no problematic underflow are explicit assumptions. The first input is used directly, so n-1 additions is appropriate. The implementation computes the bound with exact Fraction arithmetic on the represented binary values and separates net conversion error from subsequent accumulation. Original integer sums stay exact even when their values exceed binary64's exact-integer range.",
+    "variance_identity_and_sensitivity": "Independently expanded the unordered pair identity, yielding population variance equal to pair-square sum divided by n squared. The centered implementation subtracts the integer anchor before float conversion. The input perturbation expansion is correct; the cross term is bounded by 2 eta sqrt(V), and the error variance is at most eta squared. Squaring a nonnegative rearrangement permits independent exact-rational verification of the inequality without relying on floating square roots. Zero variance and common translation are treated correctly. The engineering comparison budget is explicitly distinguished from a global numerical theorem and economic measurement error.",
+    "units_and_targets": "Population-list variance uses n; the n-1 calculation is correctly tied to the usual iid wider-population unbiased estimator. Cents-to-USD variance conversion divides by 10000, not 100. Sum-error budgets have cents units; variance sensitivity and error budgets have cents-squared units. Standard error is not confused with either variance target. A matching scalar sum does not establish nonmutation, completeness or truthful measurement.",
+    "exercises_and_retention": "Solved and matched every determinate part of all eight exercises, reviewed the explicit criteria for the contract and reproduction memo, and checked the added delayed answers. All values agree. The constant-zero and wrong-denominator examples show why transformations alone cannot certify a variance routine. The explicit validation replacement rejects booleans and survives optimization. Both retention results, exact net3 versus sequential float4 and variance8/3 cents-squared =1/3750 USD-squared, are correct.",
+    "implementation_and_inference_scope": "Strict file schema, duplicate-field handling, nonfinite rejection, supported bounds, exact reference arithmetic, audit-gate behavior and recorded hashes match the documentation. Fixed broken-variant fixtures remain separate from user-modified data. The five boundary cases inspected preserve the supported runtime assumptions. The program's pass status is appropriately limited to listed computations/fixtures, and finite tests are not represented as economic validation or a proof for every modified program. No substantive defect was found."
+  },
+  "executed_checks": [
+    {
+      "command": "python3 book/scripts/check_v04_c11.py",
+      "result": "passed",
+      "observed_scope": "Baseline sums/units/errors; all six broken variants; 12 sum cases; 24 moment cases; all exercise and delayed answers; 81 perturbation scenarios; 19 invalid contracts and 22 bad documents in normal and optimized execution; quiet import, portable CLI, unchanged files, hashes, snippets and structural/source/download alignment."
+    },
+    {
+      "method": "Independent peer calculations in an ephemeral inline standard-library Python process, without invoking the author checker as a reference",
+      "result": "passed",
+      "observed_scope": "Five exact-versus-represented summation cases, all six permutations of the first ledger, eight centered/pairwise variance cases, all monetary-unit conversions, 375 exact-rational sensitivity scenarios, two independently substituted faulty variance candidates, five boundary-length/magnitude cases and one valid constant-margin modification. In-memory substitutions were restored and no program or case file was changed."
+    }
+  ],
+  "independent_results": {
+    "first_ledger": "Exact and represented net1 cent; sequential float0; conversion error0; accumulation error1; gamma bound4.440892098500627 cents; all six permutations yield either0 or1 in float and exact1 in integers.",
+    "conversion_probe": "Original net1; represented net0; conversion error1; subsequent sequential accumulation error0; fsum cannot recover the discarded cent.",
+    "sum_exercise": "Net15 cents, sum absolute entries1999995, condition number133333; relative-input absolute budget1.999995 cents gives [13.000005,16.999995]; one-cent-per-entry budget3 gives [12,18]. Both remain positive.",
+    "variance_baseline": "Mean100000002 cents; population variance2/3 cents-squared =1/15000 USD-squared; exact error of displayed float0.6666666666666666 is1/27021597764222976 cents-squared.",
+    "variance_exercise": "Mean100000004; variance8/3 cents-squared =1/3750 USD-squared; translate to [2,4,6] gives mean4 and variance8/3; scale by-3 gives mean-12 and variance24.",
+    "sensitivity": "Independent rational checks covered 5^3 error vectors at each of three cases, including zero variance:375 scenarios. The stated numerical bounds0.173299316185545 and0.878996580927726 cents-squared agree.",
+    "fault_detection": "Replacing centered_moments in memory with either a constant-zero variance or an n-1 variance caused build_report to reject the baseline at the centered variance versus exact reference gate. The valid [7,7,7] case passed with variance0 while retaining all six fixed fault detections.",
+    "boundaries": "200 identical positive maximal margins, 200 identical negative maximal margins, 200 alternating maximal positive/negative margins, 199 maximal margins plus one one-cent-lower margin, and a singleton zero all passed the declared reference/gate checks.",
+    "delayed_answers": "[10^16,3,-10^16] gives exact3 cents and left-to-right float4 due to intermediate ties-to-even rounding; original entries are exactly represented. [8,10,12] gives mean10 and variance8/3 cents-squared =1/3750 USD-squared."
+  },
+  "limitations": [
+    "This is an independent computational and written specialist audit, not external human academic certification or proof of all possible executions.",
+    "Finite perturbation and boundary checks complement, but do not replace, the reviewed algebraic proofs and stated binary64 assumptions.",
+    "Source records were read for claim alignment; this bounded peer pass did not independently retrieve the external Python or Higham pages, so source-retrieval credit remains with the author/root review.",
+    "No visual/mobile/print QA was performed or claimed; no browser security restriction was bypassed.",
+    "Root applied the minor wording correction and owns whole-library build/integration, prerequisite-order acceptance and publication."
+  ],
+  "recommendation": "Ready for root acceptance. The low-severity JSON-type wording correction is verified as resolved; no material mathematical, arithmetic, solution or executable-gate finding remains."
+}
