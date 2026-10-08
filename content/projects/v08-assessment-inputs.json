@@ -1,0 +1,211 @@
+{
+  "case": "Nacre Process Controls",
+  "version": "1.0",
+  "provenance": "Original synthetic teaching inputs, created 2026-10-08. No observed company, security, market quote, tax jurisdiction or lender commitment is represented.",
+  "units": {
+    "money": "thousand fictional currency units (kCU)",
+    "quantity": "thousand units",
+    "unit_price": "CU per unit",
+    "rates": "exact annual nominal fractions",
+    "old_shares": "thousand ordinary shares"
+  },
+  "dates": [
+    "2027-01-01",
+    "2028-01-01",
+    "2029-01-01",
+    "2030-01-01"
+  ],
+  "first_continuing_payment": "2031-01-01",
+  "timing": "All operating receipts, payments, tax, investment and financing changes occur in a synchronized year-end batch. Debt and cash interest use opening balances. End-year capex starts service next year; the supplied depreciation schedule is the asset-register assumption. No within-year funding claim is made.",
+  "opening": {
+    "operating_nwc": "75",
+    "ppe": "425",
+    "cash": "60",
+    "nonoperating_asset_sale_value": "30",
+    "term_principal": "250",
+    "term_market_value": "250",
+    "old_shares": "50"
+  },
+  "offer": {
+    "seller_equity_price": "500",
+    "outside_buyer_fee": "8",
+    "maximum_new_equity": "70",
+    "management_initial_payout": "20"
+  },
+  "operations": {
+    "unit_price": "10",
+    "fixed_cash_cost": "120",
+    "depreciation": [
+      "30",
+      "33",
+      "36"
+    ],
+    "capex": [
+      "50",
+      "60",
+      "99/4"
+    ],
+    "tax_rate": "1/4",
+    "interest_deductible": false
+  },
+  "scenarios": {
+    "base": {
+      "quantity": [
+        "60",
+        "66",
+        "72"
+      ],
+      "variable_unit_cost": "6",
+      "closing_nwc_sales_ratio": [
+        "3/20",
+        "3/20",
+        "3/20"
+      ]
+    },
+    "downside": {
+      "quantity": [
+        "54",
+        "60",
+        "66"
+      ],
+      "variable_unit_cost": "31/5",
+      "closing_nwc_sales_ratio": [
+        "1/5",
+        "9/50",
+        "3/20"
+      ]
+    }
+  },
+  "pricing": {
+    "risk_free_rate": "1/25",
+    "asset_beta": "6/5",
+    "equity_risk_premium": "1/20",
+    "operating_required_return": "1/10",
+    "cash_after_tax_return": "1/25",
+    "assumption": "Illustrative project-risk inputs imply an operating required return of 10%. Each scenario is a conditional expected operating forecast, not a complete set of priced states. No scenario probabilities are supplied. All excluded financial cash is worth par and earns its own 4% required return; retaining it has no additional agency or transaction cost. Debt market quotes are supplied separately and are not inferred from promised coupons or these two sensitivities."
+  },
+  "terminal": {
+    "nominal_growth": "1/50",
+    "revenue_opening_capital_turnover": "16/13",
+    "normalized_ebitda_margin": "9/50",
+    "depreciation_sales_ratio": "1/20",
+    "nwc_sales_ratio": "3/20",
+    "assumption": "At the start of year 4 the current backlog cycle normalizes. All opening operating capital earns the return implied by turnover, margin, depreciation and tax. Capital and NOPAT then grow at 2%; end-year net reinvestment equals growth times opening capital. No liquidation or wholesale working-capital release occurs."
+  },
+  "finance": {
+    "minimum_cash": "30",
+    "term_coupon": "3/50",
+    "term_repayments": [
+      "150",
+      "50",
+      "50"
+    ],
+    "revolver_coupon": "3/50",
+    "revolver_commitment": "120",
+    "gross_debt_ebitda_cap": "7/4",
+    "revolver_maturity_year": 3,
+    "replacement_note_cap": "80",
+    "replacement_note_coupon": "3/50",
+    "contract": "These are fictional enforceable contracts with no fees, transaction costs or tax shields. The term debt is retained at acquisition; consent is supplied and no change-of-control acceleration exists. At ends 1/2, after scheduled term amortization, total term plus revolving debt cannot exceed 1.75 times that year's EBITDA; the revolver outstanding cannot exceed 120. Minimum cash 30 applies at all modeled dates. Surplus cash repays the revolver first; if it reaches zero, remaining cash is retained. All remaining term and revolving principal must be paid at end 3. A signed replacement commitment then issues an undated fixed-coupon note at par for only the amount needed to restore cash 30. Its face cannot exceed 80 or 1.75 times normalized year 4 EBITDA, and prior compliance is required. It pays 6% annually from end 4, with no scheduled principal repayment; no uncommitted renewal is assumed. No new equity after date 0 is authorized. Initial and later payouts must satisfy every applicable constraint. Operating EBIT tax is 25%, interest is nondeductible, and the 4% cash return is already after tax. No leases, preferred claims, pensions, noncontrolling interests or other target claims exist."
+  },
+  "benchmark_policy": {
+    "sell_nonoperating_asset": true,
+    "new_equity": "70",
+    "initial_payout": "0"
+  },
+  "peers": {
+    "measurement": "Complete supplied candidate universe at date 0. All money kCU. Forward year 1 EBITDA uses the same forecast vintage and full consolidation perimeter; debt and NCI are market claim values. All financial cash and nonoperating holdings are excluded from operating EV. No leases. Adjustments are supplied one-off evidence assumptions, not universal accounting permissions. Normalized margin for Nacre forward year 1 is 18%, applied to that scenario's year 1 revenue; the base backlog contribution 12 is temporary.",
+    "candidates": [
+      {
+        "id": "P1",
+        "name": "Fable Instruments",
+        "equity": "390",
+        "debt": "200",
+        "cash": "30",
+        "nonoperating_asset": "10",
+        "nci": "0",
+        "reported_ebitda": "90",
+        "normalization_adjustment": "10",
+        "evidence": "A separately documented 10 restructuring payment depresses the supplied forward measure. The case guarantees no recurrence or substitute expense in normalized operations.",
+        "eligible": true,
+        "reason": "Mature physical instruments with comparable operating-capital and margin economics."
+      },
+      {
+        "id": "P2",
+        "name": "Kestrel Gauges",
+        "equity": "530",
+        "debt": "230",
+        "cash": "40",
+        "nonoperating_asset": "0",
+        "nci": "0",
+        "reported_ebitda": "144",
+        "normalization_adjustment": "-24",
+        "evidence": "A temporary backlog contract bonus 24 is included in forward EBITDA and ends after year 1.",
+        "eligible": true,
+        "reason": "Mature physical instruments; remove the documented cyclical bonus symmetrically."
+      },
+      {
+        "id": "P3",
+        "name": "Morrow Controls",
+        "equity": "700",
+        "debt": "270",
+        "cash": "40",
+        "nonoperating_asset": "0",
+        "nci": "45",
+        "reported_ebitda": "160",
+        "normalization_adjustment": "-10",
+        "evidence": "The supplied management EBITDA subtotal includes 10 from an asset disposal; remove it. The entire subsidiary EBITDA is consolidated, so include the 45 outside ownership claim in EV.",
+        "eligible": true,
+        "reason": "Mature physical controls; the denominator and all consolidated claims can be matched."
+      },
+      {
+        "id": "P4",
+        "name": "Thread Software",
+        "equity": "440",
+        "debt": "0",
+        "cash": "40",
+        "nonoperating_asset": "0",
+        "nci": "0",
+        "reported_ebitda": "100",
+        "normalization_adjustment": "0",
+        "evidence": "Software subscription platform with customer-acquisition economics and capital intensity unlike the physical manufacturers.",
+        "eligible": false,
+        "reason": "Operating and reinvestment economics differ; exclusion is not based on the low multiple."
+      },
+      {
+        "id": "P5",
+        "name": "Vesper Devices",
+        "equity": "30",
+        "debt": "250",
+        "cash": "10",
+        "nonoperating_asset": "0",
+        "nci": "0",
+        "reported_ebitda": "-5",
+        "normalization_adjustment": "0",
+        "evidence": "Financially distressed manufacturer with negative normalized EBITDA. Its distress remains relevant to the risk discussion.",
+        "eligible": false,
+        "reason": "Negative denominator is unsuitable for this positive-profit multiple comparison; do not hide the candidate."
+      }
+    ]
+  },
+  "sensitivities": {
+    "operating_returns": [
+      "9/100",
+      "1/10",
+      "11/100"
+    ],
+    "terminal_growth": [
+      "1/100",
+      "1/50",
+      "3/100"
+    ],
+    "intervention_extra_downside_nwc_year1": "10",
+    "intervention_terminal_roic": "23/200"
+  },
+  "limits": [
+    "No empirical estimate, legal opinion, general reporting engine, full default-pricing model or probabilistic expected-NPV claim.",
+    "The pricing model is an operating-asset valuation approximation with supplied risk assumptions; debt quotes and contractual funding feasibility are separate inputs.",
+    "Annual synchronized payments do not establish intrayear liquidity. Required cash is an excluded financial asset earning its own fair return, not operating NWC or an extra terminal cash-flow release.",
+    "The replacement note is an explicit indefinite obligation whose coupon remains in future treasury cash, not free cash or an omitted maturity."
+  ]
+}

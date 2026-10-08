@@ -86,6 +86,7 @@ from check_v08_c09 import check as check_v08_c09
 from check_v08_c10 import check as check_v08_c10
 from check_v08_c11 import check as check_v08_c11
 from check_v08_c12 import check as check_v08_c12
+from check_v08_assessment import check as check_v08_assessment
 from check_economics_core import check as check_economics_core
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -484,6 +485,7 @@ def main():
                         'v08-c07': check_v08_c07(), 'v08-c08': check_v08_c08()}
     v08_closing_check = {'v08-c09': check_v08_c09(), 'v08-c10': check_v08_c10(),
                          'v08-c11': check_v08_c11(), 'v08-c12': check_v08_c12()}
+    v08_assessment_check = check_v08_assessment()
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -522,8 +524,10 @@ def main():
               'volume_8_opening_checks': v08_opening_check,
               'volume_8_middle_checks': v08_middle_check,
               'volume_8_closing_checks': v08_closing_check,
+              'volume_8_assessment_check': v08_assessment_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     report['checks'].extend(['Volume 8 chapters 1–4: incremental capital budgeting and IRR domains; FCFF/FCFE and dated claim pricing; coherent capital/return fade and terminal sensitivity; covariance, policy-specific leverage, WACC and finite APV with independent pricing checks',
+        'Volume 8 diagnostic, two distinct 100-point exams, oral/delayed transfer and investment-committee project: exact cash/claim pricing, terminal capital, dated funding and participation boundaries, matched peers and conditional board decisions',
         'Volume 7 full accounting chapter set, two distinct 100-point exams, diagnostic/retention, exact historical correction and constrained forecast project',
         'Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package',
         'Volume 6 chapters 5–8: labor transition and matching domains, bargaining/entry and effort values, bounded hysteresis; exact bank ledgers and reserve-market branches; nominal rigidity, expectation paths and shock-mixture regression; finite stabilization systems and independently enumerated rate-floor equilibria',

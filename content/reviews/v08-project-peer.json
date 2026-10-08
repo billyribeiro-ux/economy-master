@@ -1,0 +1,167 @@
+{
+  "package": "v08-project",
+  "reviewer": "cost_peer specialist, separate from project author and coordinating reviewer",
+  "date": "2026-10-08",
+  "assignment": "production/v08-project-peer-assignment.json",
+  "state": "peer-review-complete",
+  "status": "passed; coordinator acceptance and whole-library integration remain separate",
+  "scope": {
+    "owned_path": "content/reviews/v08-project-peer.json",
+    "project_deliverables": 6,
+    "scoring_domains": 6,
+    "total_points": 100,
+    "coverage": "Read the complete student brief and instructor guide, every numerical schedule and intervention/teach-back/retention answer, all project assets, focused checker, source proposal and final author record. Independently reconstructed both operating paths, terminal capital, conditional valuation, owner/company flows, complete treasury paths, peer comparisons, all stated boundaries and the documented sensitivity grid.",
+    "payload_edits_by_peer": false,
+    "read_targets": [
+      "content/assessments/parts/v08-project.html",
+      "content/projects/v08-assessment-inputs.json",
+      "content/projects/v08-assessment-analysis.py",
+      "content/projects/v08-assessment-output.json",
+      "content/projects/v08-assessment-manifest.json",
+      "content/projects/v08-assessment-README.txt",
+      "scripts/check_v08_project.py",
+      "content/reviews/v08-project-author.json",
+      "content/reviews/v08-project-sources.json"
+    ]
+  },
+  "independent_reconstruction": [
+    {
+      "target": "Operating profit, cash and capital",
+      "result": "Computed revenue and cash costs directly from quantities; calculated tax on EBIT; rolled forward NWC and PPE independently. Base FCFF is 65/2, 189/4, 405/4 and downside FCFF is -58/5, 117/4, 1827/20. Both FCFF = NOPAT + depreciation - capex - change in NWC and FCFF = NOPAT - change in operating capital close. Date-3 capital is 2275/4 and 2239/4. Financial cash and debt do not enter operating NWC or FCFF."
+    },
+    {
+      "target": "All-capital terminal normalization and continuing investment",
+      "result": "Turnover 16/13, margin 18%, depreciation/sales 5% and tax 25% imply R = 12% on all opening capital. NOPAT4 = RK3 and net investment4 = gK3 give FCFF4 = 455/8 and 2239/40. Independently reconstructed terminal NWC, depreciation, capex 395/8 and 107387/2600, PPE, and closing capital = 1.02 K3. TV3 = 11375/16 and 11195/16 starts with the date-4 flow; no second NWC or cash liquidation is added."
+    },
+    {
+      "target": "Conditional operating DCF and ownership bridge",
+      "result": "Operating values are 1806975/2662 and 147123/242. Subtracting the old net claim bridge of 160 gives old equity; the new 70 subscription increases company cash and buyer outlay equally. The purchase price 500 and outside fee 8 do not enter target cash. Buyer NPV = EV - 668 = 28759/2662 and -14533/242. The price cap under the stated nonnegative-in-both rule is 106467/242. These are conditional forecasts, not exhaustive priced states or a probability-weighted optimum."
+    },
+    {
+      "target": "Sensitivity and reverse valuation",
+      "result": "Recomputed all 18 supplied r/g cells directly from the independently reconstructed explicit FCFF and K3, changing both reinvestment and the tail denominator. Break-even all-capital ROIC is 1677491/14218750 and 1839113/13993750. Omitting reinvestment overstates date-0 value by 284375/2662 and 279875/2662. R = 11.5% implies margin 419/2400 and NPVs -169339/10648 and -919327/10648. A separate 10 collection delay reduces conditional operating PV by 100/121; its combined downside NPV is -928127/10648, with the funding failure still explicitly present."
+    },
+    {
+      "target": "Benchmark treasury and genuine maturity",
+      "result": "Used an independent net-resources route that subtracts all opening revolving debt before determining a new closing balance, rather than copying the author's incremental-draw implementation. Starting cash 160 gives base closing cash 33.9, 30, 75.74636 and revolver 0, 3.494, 0. Downside revolver is 40.2, 68.162, then zero after maturity. At date 3 all old term/revolver principal is extinguished and the separate replacement note supplies exactly 817543/25000 = 32.70172 to restore cash 30. Its fixed annual coupon is 2452629/1250000. The year-4 residual 69016121/1250000 is positive; with nonnegative FCFF growth, fixed cash income and fixed coupon, year 4 is the tightest modeled tail period. No note principal maturity or rollover is invented."
+    },
+    {
+      "target": "Exact boundaries and rejected policies",
+      "result": "Derived date-1 effective revolving capacity 49.1 from the gross-debt covenant, then required opening cash 7875/52. Minimum subscription with sale is 3195/52; without sale it is 4755/52, exceeding authorized 70. Maximum initial payout is 445/52; maximum temporary extra NWC is 89/10, yielding total NWC ratio 1169/5400. Independently checked all five complete boundary paths and later note caps. Reconstructed all five rejected paths and their first failure only: gaps 95.1, 63.9, 22.3, 11.9 and 1.1. A 0.01 step below equity or above payout fails by 0.0104; NWC 0.01 beyond its bound fails by 0.01. Lower seller consideration does not automatically repair company cash."
+    },
+    {
+      "target": "Peer universe and consistent claims",
+      "result": "Reconstructed all five candidate EV and normalized EBITDA values, including P3 NCI and symmetric removal of favorable temporary items. Qualified multiples are 5.5, 6 and 6.5; aggregate EV/EBITDA is 449/74, not the median. Target forward year-1 normalized EBITDA is 108 and 97.2, distinct from year-4 EBITDA. Old equity ranges are 434/488/542 and 374.6/423.2/471.8. Software exclusion follows economic scope and negative-EBITDA distress remains visible. Neither the range nor triangulation is represented as a confidence interval."
+    },
+    {
+      "target": "Teaching, decision and grading",
+      "result": "The six deliverables are matched by a full benchmark, memo criteria and reproducibility guide. All 100 points and six 75% domain floors reconcile, with fractional credit and error carry-forward explicit. Critical mistakes concern actual claim, timing, capital, probability and funding errors rather than disagreement with an illustrative recommendation. The memo identifies six decision-linked evidence requests, governance and escalation. Intervention, oral explanation and delayed retention prompts all have complete answers; no new unintroduced method is required."
+    }
+  ],
+  "source_review": {
+    "mode": "Reuse of five accepted scoped primary-method records",
+    "ids": [
+      "v08-c03-growth",
+      "v08-c03-closure",
+      "v08-c04-mit-capm",
+      "v08-c07-anatomy",
+      "v08-c07-definitions"
+    ],
+    "exact_canonical_record_equality": true,
+    "scope": "Read proposed records and verified exact equality with current content/sources.json. Read source-linked claim context in the project. Reused the existing accepted inspections of stable methodological sources; this peer task did not perform redundant new browser retrieval. The records support reinvestment, terminal closure, CAPM scope and consistent multiples, not invented company facts, quotes, probabilities or contractual enforceability."
+  },
+  "findings": [
+    {
+      "id": "v08-project-peer-fixed-benchmark-policy",
+      "severity": "moderate input-contract precision",
+      "status": "resolved",
+      "observation": "The optional case-copy input contained benchmark sale and payout fields that run() silently ignored. An in-memory sale=false or payout=20 edit returned the unchanged sale=true, payout=0, cash160 funded benchmark. The coordinator additionally noted the literal equity70 labels while contribution was dynamically read.",
+      "repair": "Author explicitly fixed the canonical benchmark contract to sale=true, contribution70, payout0 in validate(), retaining treasury() arguments for named alternatives. README documents the bounded scope. Analogous fixed payout 20 and delay 10 experiment labels are also validated and documented.",
+      "verification": "Independently confirmed all three inconsistent canonical policy edits (sale=false, payout20, contribution66) now raise ValueError; original numerical output is unchanged. This is a narrow guard, not an expanded general-purpose engine. The focused checker covers these two named experiment edits as part of 13 bounded-domain rejections."
+    }
+  ],
+  "open_material_findings": [],
+  "limits": [
+    "This is agent peer review, not external human academic or professional certification.",
+    "The case is a bounded synthetic model with supplied conditional operating-risk assumptions, quoted financing and an undated replacement note; no empirical default-pricing, legal or market-data validation is claimed.",
+    "Annual synchronized payment feasibility does not establish intrayear liquidity.",
+    "No acceptance-state whole-library build, visual/mobile/keyboard/print UI check, deployment or shared-file edit was performed by this peer; those remain coordinator tasks."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/assessments/parts/v08-project.html",
+      "bytes": 50810,
+      "sha256": "d373c04ab3f9a980dcc7a759c4e110851ee88158411f4af00a140746a8af41e9"
+    },
+    {
+      "path": "content/projects/v08-assessment-inputs.json",
+      "bytes": 9273,
+      "sha256": "5f7e9849c2606ee0d1ad4b30ae0d2af55bf0abbbf3f6754fd6627b3f4543fec3"
+    },
+    {
+      "path": "content/projects/v08-assessment-analysis.py",
+      "bytes": 22847,
+      "sha256": "edddc7abc8c22f1542b4f324535fbf24ebd869e33acd63d3334e055d96ed36cb"
+    },
+    {
+      "path": "content/projects/v08-assessment-output.json",
+      "bytes": 41058,
+      "sha256": "b89e3f5bd692b9e973556185f864af8f2033857fed4868e64cf3f650dd47086f"
+    },
+    {
+      "path": "content/projects/v08-assessment-manifest.json",
+      "bytes": 1144,
+      "sha256": "6fdfcf36ef719e177a71839aa94c817f06972cb10d08d39a2d3b4355c72dc876"
+    },
+    {
+      "path": "content/projects/v08-assessment-README.txt",
+      "bytes": 17291,
+      "sha256": "cf416b8cf2688e8f0424a6775925ce5f91717d1b49a4f24a1004b81c4b867ef2"
+    },
+    {
+      "path": "scripts/check_v08_project.py",
+      "bytes": 22350,
+      "sha256": "309d8292651873ac59182ecd0e4932bbe01a96d1d087b5db6e71e4565d7b62bb"
+    },
+    {
+      "path": "content/reviews/v08-project-author.json",
+      "bytes": 16115,
+      "sha256": "053f74817c132b0d5e6a9533bb4db0917207231a50ba489c92631969ed890e4c"
+    },
+    {
+      "path": "content/reviews/v08-project-sources.json",
+      "bytes": 4424,
+      "sha256": "e74e23ea97e817224629793e77a1b729f154ff47ab7f50e16119fcb5b7c2865c"
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "coordinator_acceptance": false,
+    "author_freeze_confirmed": true,
+    "author_eight_payload_hashes_match_actual_files": true,
+    "focused_checker": "scripts/check_v08_project.py",
+    "focused_result": {
+      "check_groups": 8,
+      "independent_comparisons": 333,
+      "domain_rejections": 13,
+      "quiet_import_and_check": true,
+      "strict_json": true
+    },
+    "peer_independent_checks": {
+      "route": "Separate ephemeral Fraction computations using direct operating receipts and independent net resources after paying opening debt; no import of author model/checker for the numerical reconstruction.",
+      "additional_exact_comparisons": 265,
+      "boundary_paths": 5,
+      "rejected_paths": 5,
+      "return_growth_cells": 18,
+      "terminal_roic_interventions": 2
+    },
+    "targeted_model_tests": [
+      "Each of three contradictory canonical policy fields rejects instead of being ignored.",
+      "The three documented one-step-beyond equity, payout and collection thresholds fail at date 1 by their independently derived amounts."
+    ],
+    "offline_execution": "Focused checker verified copied script/input operation from another directory, both normal and optimized Python, exact full preserved JSON and empty stderr.",
+    "manifest": "All four distributed asset sizes and SHA-256 digests match.",
+    "source_records": "All five source proposals exactly equal canonical accepted records."
+  },
+  "handoff": "All assigned content and code reviewed, including final author record. All nine reviewed input hashes match the frozen files and the author's eight declared payload hashes. No open material finding; coordinator owns acceptance, integration and publication."
+}
