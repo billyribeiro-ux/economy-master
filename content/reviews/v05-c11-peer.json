@@ -1,0 +1,123 @@
+{
+  "chapter": "v05-c11",
+  "title": "Auctions, matching and market design",
+  "date": "2026-10-08",
+  "review_type": "Independent specialist peer audit; read-only except this review artifact",
+  "status": "passed-with-resolved-findings",
+  "scope": [
+    "Read every paragraph, the three full worked examples, all eight questions and complete solutions, teach-back criteria and delayed solution.",
+    "Read complete check_v05_c11.py, author review and three source proposals; ran standalone checker successfully.",
+    "Independent exact auction ledgers, continuous-domain argument audit, round-based DA, complete and incomplete matching enumeration, and scoped primary-source inspection."
+  ],
+  "findings": [
+    {
+      "id": "v05-c11-peer-01",
+      "severity": "minor",
+      "location": "content/chapters/v05-c11.html:52",
+      "original_finding": "The stability proof originally said a rejected applicant always leaves the institution holding somebody preferred. An unacceptable applicant may be rejected while the institution remains empty, so that sentence did not cover the stated incomplete-list domain.",
+      "requested_correction": "Separate rejection of an unacceptable partner, who cannot form a blocking pair, from acceptable-applicant rejection followed by an improving held partner.",
+      "status": "resolved",
+      "verification": "Root added both branches. Re-read the corrected paragraph and independently checked a one-applicant/one-institution case in which the institution finds the applicant unacceptable and remains empty."
+    },
+    {
+      "id": "v05-c11-peer-02",
+      "severity": "minor",
+      "location": "content/chapters/v05-c11.html:2",
+      "original_finding": "The c07 prerequisite link called its material Bayesian best responses even though the fixed c07 core covers complete-information best responses and dominance; private information follows in c08.",
+      "requested_correction": "Label the c07 route best responses and dominance.",
+      "status": "resolved",
+      "verification": "Root changed the link label; final text inspected."
+    }
+  ],
+  "unresolved_findings": [],
+  "proof_audit": [
+    "Second-price threshold proof covers winning, losing and equality, reserve eligibility and report-independent tie priority. Truthfulness is weak dominance, not a unique best response or a common-value bidding formula.",
+    "Uniform first-price derivative has the sign of v-z on the positive imitation domain; zero and A type boundaries, zero bid, support endpoint and all above-support bids are considered. The proof establishes the displayed equilibrium rather than uniqueness.",
+    "Revenue identity is derived from both incentive inequalities, monotone X, continuous-X squeeze and the fundamental theorem of calculus. Independence keeps the opponents distribution fixed across own-type comparisons; the boundary utility and distinction between interim and conditional payments are explicit.",
+    "The common-value calculation conditions on own H and rival L, not all winning events; tied H signals and the payment rule are explicitly left for a complete bidding calculation.",
+    "DA termination, corrected stability and first-achievable-rejection proposer-optimality proofs cover finite strict own-partner preferences with outside options. The first achievable rejection must retain an acceptable alternative; the earlier-rejection contradiction and blocking-pair conclusion are valid.",
+    "The general DA proposer strategy-proofness theorem is stated honestly and deferred to v13-c11. It is not inferred merely from proposer optimality or finite tests.",
+    "Serial-dictatorship truthfulness follows from report-independent priority and an unchanged available set. Under truthful rankings the earliest-changed-person argument proves one-sided Pareto efficiency. Two-sided stable matchings are Pareto efficient for all participants under strict own-partner preferences, without asserting applicant-only efficiency or cardinal welfare from rank sums.",
+    "Fixed compulsory fees preserve the allocation and bidding comparisons but change boundary utility; voluntary entry requires a new analysis. Reserves, correlation, risk aversion, asymmetry and institutional deviations are not assigned universal revenue rankings."
+  ],
+  "independent_computations": {
+    "auction_oracle": "Used direct sorting for second-price settlement, survival integrals for expected maximum/minimum and reserve allocation, and direct state/signal probabilities. No chapter checker functions were imported for these computations.",
+    "second_price_deviation_checks": 47250,
+    "second_price_scope": "Three bidders; all six tie priorities; every bidder position; values and both rival bids 0 through 4; reserves 0,2,5; deviations 0 through 6. This finite audit supplements the analytic threshold proof.",
+    "first_price_checks": "Direct expected utility comparisons across n=2,3,4, five types each and 41 bids including zero and above-support bids; exact 1323 interim type/report IC comparisons. Independent 10000-midpoint numerical payment integrations each agreed with exact expected revenues within 1e-6.",
+    "matching_oracle": "Implemented independent simultaneous-round DA; enumerated all 34 complete or partial assignments for the three-by-three case and all partial assignments for each two-by-two profile.",
+    "stable_three_by_three": [
+      "A-X, B-Y, C-Z",
+      "A-Y, B-X, C-Z"
+    ],
+    "receiver_manipulation_trace": [
+      "X holds C; Y holds B",
+      "X holds C; Y holds A",
+      "X holds B; Y holds A",
+      "X holds B; Y holds A; Z holds C"
+    ],
+    "serial_deviation_checks": 108,
+    "incomplete_two_by_two_profiles": 625,
+    "proposer_report_deviations": 6250,
+    "additional_matching_checks": "For every incomplete profile, independently checked stability and proposer optimality against all partial stable matchings. For all six serial priorities checked one-sided Pareto efficiency and all unilateral complete-list reports. For the stated stable three-by-three assignments checked all-participant Pareto comparisons against all 34 assignments."
+  },
+  "exercise_targets": [
+    {
+      "exercise": 1,
+      "verified": "Reserves 0/80/100: payments 75/80/0; buyer surpluses 21/16/0; total gains 96/96/0. Deviations give bidder utilities 0,21,-21 as stated."
+    },
+    {
+      "exercise": 2,
+      "verified": "Bid64; win16/25; payment1024/25; utility512/25. Bid60 gives win9/16,payment135/4,utility81/4. Bid80 gives utility16; full-domain comparison correct."
+    },
+    {
+      "exercise": 3,
+      "verified": "Bid60; win64/125; interim payment768/25; utility256/25. Expected maximum80, revenue60, buyer surplus20, ex ante per bidder5."
+    },
+    {
+      "exercise": 4,
+      "verified": "Reserve60: sale3/4,revenue50,allocated value70,buyer surplus20. Reserve0: sale1,revenue40,value80,buyer surplus40."
+    },
+    {
+      "exercise": 5,
+      "verified": "Posterior high-state probabilities3/4 and1/2; expected values75 and50; profit conditional on H,L at payment70 is-20. Not overall profit or solved equilibrium."
+    },
+    {
+      "exercise": 6,
+      "verified": "Both proposal traces, exactly two stable complete assignments, X false B,C,A trace and true gain from second choice A to first choice B."
+    },
+    {
+      "exercise": 7,
+      "verified": "Serial C,A,B yields C-X,A-Y,B-Z; exactly blocking pairs(A,X),(B,X). Truthfulness, one-sided Pareto proof and scoped two-sided stable-efficiency statement are valid."
+    },
+    {
+      "exercise": 8,
+      "verified": "Fee2 from each of three bidders raises revenue60 to66, leaves gains90 and reduces buyer surplus30 to24; lowest-type utility-2 changes revenue-equivalence boundary. Voluntary-entry limitation correct."
+    }
+  ],
+  "delayed_check": "Two bidders U[0,90], type60: bid30, win2/3, utility20, expected revenue30, expected gains60 and aggregate buyer surplus30. Applicant-proposing DA yields A-Y,B-X and is stable.",
+  "sources_independently_inspected": [
+    {
+      "id": "v05-c11-levin-auctions",
+      "url": "https://web.stanford.edu/~jdlevin/Econ%20286/Auctions.pdf",
+      "scope": "Actual October2004 PDF sections1.1–1.4 and common-value opening, pp.1–8; checked correspondence to chapter assumptions and proof route. No later general revenue-ranking claim imported."
+    },
+    {
+      "id": "v05-c11-manea-matching",
+      "url": "https://ocw.mit.edu/courses/14-16-strategy-and-information-spring-2016/53dbe8d681978367f9c04182aa3c9b97_MIT14_16S16_Matching.pdf",
+      "scope": "Actual source cover credits Kojima; slide labels8–18 and33–37 cover strict preferences, outside options, DA, proposer optimality, receiver manipulation and stated proposer strategy-proofness theorem. Historical market claims not used."
+    },
+    {
+      "id": "v05-c11-cornell-serial",
+      "url": "https://www.cs.cornell.edu/~rafael/networks-html/chapter13.html",
+      "scope": "Actual author-hosted sections13.1–13.2 and Theorems13.1–13.2, including strict-preference and own-object conditions. No current institutional applications or uniqueness theorem claimed."
+    }
+  ],
+  "final_manuscript_sha256": "b26038461af87523848e69ebc3fd40577cd21c0c64005821f7502603653da097",
+  "limitations": [
+    "Finite bid grids and matching domains diagnose the original examples and supplement written arguments; they are not proofs for arbitrary continuous auctions or matching markets.",
+    "General DA truthfulness proof remains the explicitly recorded graduate followup.",
+    "Peer calculations were run independently in standard-library Python tool cells; only this review record was persisted for c11.",
+    "No empirical effectiveness, external human certification or visual/mobile/print QA is established. Root retains acceptance, shared integration and publication."
+  ]
+}

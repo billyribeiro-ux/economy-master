@@ -1,0 +1,59 @@
+{
+  "chapter": "v05-c12",
+  "title": "Behavioral economics and microeconomic evidence",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "review_type": "Author review and independent exact computation, submitted for root acceptance",
+  "owned_files": [
+    "content/chapters/v05-c12.html",
+    "content/projects/v05-c12-experiment.json",
+    "content/projects/v05-c12-randomization.py",
+    "content/projects/v05-c12-output.json",
+    "content/projects/v05-c12-README.txt",
+    "scripts/check_v05_c12.py",
+    "content/reviews/v05-c12-sources.json",
+    "content/reviews/v05-c12-author.json"
+  ],
+  "checks": {
+    "status": "passed",
+    "numerical": [
+      "Reference model: four parameter cases, thresholds from direct bundle utility, strict-side/tie checks, fixed-bundle reversals and both lottery solutions",
+      "Time and welfare: direct date-weighted stream sums for worked, exercise and delayed cases; naive beliefs, sophisticated continuation, threshold ties, beta=1 and heterogeneous welfare",
+      "Randomization: closed-form hypergeometric oracle, 70 assignments, p=1/7 and positive p=1/14; 639 exact size cutoffs spanning every binary null population; six-person retention p=1/10",
+      "Synthetic truth: independent bit masks and Neyman variance identity give mean 1/2 and variance 1/16; all 256 missing-counterfactual schedules give [-1/8,7/8]; four attrition completions give [1/4,3/4]",
+      "Separation tests: remove oracle, substitute compatible zero effects, permute labels and change an actual outcome; observed inference uses observed information only",
+      "Executable: quiet import, reproducible preserved JSON, default input from unrelated working directory, unchanged input hash, and 17 direct plus CLI invalid-input rejections",
+      "Multiplicity: exact 0.2262190625 family rejection probability, three individual versus one Bonferroni rejection; historical ratio arithmetic only",
+      "Structure: three original worked cases, eight matched full solutions, answered retention, prerequisite route, four existing flat downloads and five scoped primary-source records"
+    ],
+    "quiet_json_serializable_check": true,
+    "prose_and_proof_audit": [
+      "Fixed reference, linear money utility, affordability, quality/information and transaction assumptions precede the WTP/WTA formulas; loss aversion distinguished from diminishing sensitivity and risk aversion.",
+      "Exponential time consistency proved by the common positive continuation factor under fixed information and feasibility; strict beta-delta reversal derived with boundary ties.",
+      "Fully naive beliefs beta-hat=1 kept separate from actual beta; sophisticated behavior obtained from the later choice, with no commitment, hard commitment, reminder and beta=1 branches.",
+      "Fee is a real resource-using service; date-0, undiscounted and date-1 criteria kept separate, with heterogeneity and no all-self Pareto claim.",
+      "Uniform fixed-size assignment, measurement time, potential outcomes and no-interference assumptions explicit; inclusive sharp-null test proved by finite ranking with ties rather than a continuous approximation.",
+      "Null enumeration holds observed outcomes fixed; supplied synthetic oracle instead changes outcomes with reassignment. Same observed data permit distinct effects. Logical compatibility and missing-outcome bounds are not mislabeled as confidence intervals.",
+      "Assignment versus sampling, attrition, compliance, post-treatment selection, demand/measurement, multiplicity, preregistration and external validity discussed without implying randomization identifies a latent psychological mechanism.",
+      "All eight original problems solved independently; proof/transfer/critique and concrete evaluation criteria included. Teach-back and delayed questions have answer targets.",
+      "Historical replication statement is limited to the author-deposited 2016 abstract sample and criterion; no data reanalysis, full-methods review or universal replication-rate extrapolation claimed."
+    ]
+  },
+  "resolved_authoring_issues": [
+    {
+      "severity": "minor",
+      "issue": "Root requested readable spacing instead of joined numeric tokens in exercises and answers.",
+      "resolution": "Expanded parameters to explicit equalities and inserted ordinary prose spacing throughout exercises, solutions, delayed answers and README; preserved quantities."
+    }
+  ],
+  "input_sha256": "87a2c7289e42912cec43f1f153bab0cbd6a724c46ec85a6b037fb927a125355a",
+  "limitations": [
+    "Numerical checks verify these original finite models and experiment; they do not establish prevalence, a real psychological mechanism, transportability or welfare of an actual intervention.",
+    "The experiment program requires the specified complete lottery and complete binary outcomes. Sharp-null inference is not a heterogeneous-average-effect confidence procedure.",
+    "Synthetic oracle outcomes are known only by construction. Logical missing-counterfactual bounds are not confidence intervals.",
+    "Source inspections are scoped in the source proposals; the replication paper is cited from its actual author-deposited abstract and metadata, without reanalysis or a full methods audit.",
+    "Analytic proofs and open-ended exercise evaluation also require editorial reading; a checker cannot certify all prose. Root retains acceptance, integrated verification and publication.",
+    "Visual/mobile/print UI QA and external expert validation were not performed."
+  ],
+  "acceptance": "Complete authored package submitted in review; root owns dependency-order acceptance, shared source integration, build and publication."
+}

@@ -1,0 +1,74 @@
+{
+  "chapter": "v05-c09",
+  "title": "Contracts, incentives and organizations",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "state": "review",
+  "review_type": "Specialist author arithmetic, global-optimization, incentive, instruction and scoped primary-source review; root independently audits and alone accepts",
+  "reviewed": {
+    "timing_and_scope": "Read the canonical c09 scope, closing assignment and prerequisite c08 manuscript. Distinguished post-contract private action from pre-contract hidden type, observation from enforceability, and commitment from an unenforceable promise. Defined principal and agent objectives, outside utility, IR, all-action IC, outcome payments and explicit limited liability. All numerical economies are original synthetic laws. No empirical causal, legal or universal institutional claims are made.",
+    "wage_contract": "Derived H wage cost using the two global IR and nonnegative-failure-wage lower bounds and an attaining schedule, with the minimum spread, possible nonuniqueness, rent formula, L implementation and global H/L/no-hiring comparisons. Traced each constraint in the worked example, the observable-effort benchmark, and the excluded negative-wage schedule. Distinguished a transfer rent from resource cost. Treated weak recommended-action and acceptance ties, strict epsilon perturbations and supremum versus attainment. Payment caps and equal outcome distributions establish actual infeasible boundaries. Exercise 1 explicitly retains the alternate zero-failure-wage optimum when the outside option rises; exercise 8 includes every IC comparison after adding a third action.",
+    "risk_and_information": "The square-root model explicitly changes the units of effort cost and reservation utility. Its exact weighted-square identity proves the global wage minimum and computes a fixed-effort certainty equivalent and dollar risk premium separately from utility rent. The original case and exercise both have zero utility rent but positive risk compensation. No general certainty-equivalent or universal binding-IR assertion is inferred from the special model.",
+    "monitoring": "Specified the report law, conditional independence, timing, verifiability, inability to falsify and real audit fee. IR supplies a global lower bound for all joint revenue/report wage contracts, attained by the simple report-only schedule. Compared private profits and combined payoffs separately: the wage saving is a rent transfer while the audit consumes resources. Added a joint success-and-pass contract that attains the same wage cost with strict action incentives, keeping participation at equality. The report-only epsilon construction is labeled as such. Proved the conditional-redundancy mean-wage replacement for each action under risk neutrality; did not infer that noisy reports are generally useless or that information is always worth buying.",
+    "multitasking": "Specified fixed total attention, hidden task allocation, quadratic dollar costs, noise realized after choice, a verifiable proxy, uncontractible value and the nonnegative linear contract class. Derived the unique effort response including the cap; proved a global principal profit bound and constructed its attaining contract. Verified realized wages, expected metric, cost, value and rent for bonuses 0, 4 and 6. The high bonus raises the proxy but lowers profit, while the intermediate bonus improves profit. The changed-quality exercise solves the feasible boundary rather than using an unavailable negative bonus. The manuscript explicitly limits its conclusions to the stated task technology and contract class.",
+    "ownership": "Explained incomplete contracting, asset residual control, relationship-specific investment and hold-up without ownership-of-labor or universal-integration claims. Stated all timing, information, advance contracting restrictions, transferable payoffs and the assumed equal-surplus bargaining rule. Derived retained gross investment returns from three explicit outside-payoff schedules. Checked every investment state, both unilateral deviations and both parties' realized payoffs, plus efficient ex post trade and first-best ex ante investment. Fixed adoption transfers are distinguished from setup resource costs. The lower-investment-cost exercise reverses the ownership ranking and the setup exercise derives the full weak/strict compensation region.",
+    "solutions_and_instruction": "Read and solved all eight exact prompts against their full ordered solutions: a higher outside option and alternate optimum; cap/uninformative-action feasibility; square-root compensation; auditing and conditional redundancy proof; changed task value; changed investment cost; fixed transfer/setup feasibility; and the new middle-effort deviation. The manuscript has four worked cases, approximately 5,976 whitespace-counted text words, explicit assumptions/units/boundaries, accepted prerequisite and next-chapter routes, Teach-back with answer criteria and a complete fresh delayed solution. No project asset was needed for the canonical conceptual/derivation scope.",
+    "primary_sources": "Retrieved and inspected actual official MIT Part 2 PDF text for hidden action, IC/IR, risk/informativeness and multitasking, and actual author-hosted Hart article text for incomplete contracts and asset control. The two proposal records delimit the passages read, differences between source assumptions and original models, and unsuccessful alternative retrievals. No article figures, exercises or empirical examples were reproduced. Numerical examples and proofs were constructed for this chapter. The two source IDs are unique and aligned with the manuscript."
+  },
+  "artifacts": [
+    "content/chapters/v05-c09.html",
+    "scripts/check_v05_c09.py",
+    "content/reviews/v05-c09-sources.json",
+    "content/reviews/v05-c09-author.json"
+  ],
+  "validation": {
+    "commands": [
+      "python3 book/scripts/check_v05_c09.py",
+      "python3 -O book/scripts/check_v05_c09.py",
+      "runpy check() with captured stdout and ordinary json.dumps(report), including execution from another working directory",
+      "Python AST parsing, owned review/source JSON parsing and owned git diff --check"
+    ],
+    "result": "passed",
+    "integration_api": "check() is quiet and returns chapter/status/checks/results/limitations using only directly JSON-serializable values. Ordinary json.dumps(report) is enforced internally; neither API nor CLI uses a fallback serializer. Explicit require() checks remain active in optimized Python.",
+    "checks": [
+      "Balanced original HTML fragment, unique chapter-prefixed anchors, four worked cases, eight exercise/solution pairs, teaching gates, adjacent routes and two aligned source proposals",
+      "Independent exact rational Gaussian elimination and constraint-intersection enumeration solve the finite wage linear programs, rather than merely reusing the manuscript's cost formula",
+      "81 parameter economies across outside-option, action-cost and probability branches; exact rent identities, low-effort costs, main and higher-reservation optima, negative-wage exclusion, epsilon perturbations, capped and uninformative infeasibility",
+      "Square-root utility and weighted-square identity in two cases, with 1,015 feasible rational-grid alternatives supplementing global certificates; exact certainty equivalents, risk premia and utility rents",
+      "Full four-state audit wage LP, report-only and strict joint contract utilities, cost thresholds, private versus combined payoff accounting, and effort-specific redundant-report expectation identities",
+      "4,802 exact task effort comparisons with global quadratic difference certificates across 98 bonus/objective cases, including realized noisy wages, wage-floor rents, optimal bonus and changed-objective boundary",
+      "All four investment states and both unilateral deviations in six ownership/cost economies, exact resource identities and enumerated first-best investments; 221 setup/transfer pairs check the analytic compensation region",
+      "Three-action H, M and L wage optimization with every IC constraint, the original contract's profitable omitted deviation, principal action comparisons and the delayed contract/tie/rent answer"
+    ]
+  },
+  "corrections": [
+    {
+      "origin": "Root's independent full-manuscript review",
+      "location": "Exercise 1 prompt and complete solution",
+      "finding": "The initial prompt incorrectly presupposed that every zero failure wage became suboptimal, while the correct solution allowed an alternative optimum with a larger spread.",
+      "resolution": "Prompt now asks why the original schedule fails participation and whether another zero-failure-wage optimum exists. Solution explicitly computes (0,88/3), expected wage 22 and utilities H=10, L=22/3. Independent LP returns both this vertex and (4,28)."
+    },
+    {
+      "origin": "Root's independent full-manuscript review",
+      "location": "Delayed check answer",
+      "finding": "Expected wage was said to exceed rather than be at least each weak lower bound.",
+      "resolution": "Changed to 'must be at least both'; numerical answer unchanged."
+    },
+    {
+      "origin": "Author's joint-state contract audit",
+      "location": "Worked example 2",
+      "finding": "The report-only effort tie should not imply that every minimum-cost joint audit contract also ties actions.",
+      "resolution": "Added the success-and-pass wage 64/3, its probabilities 3/4 versus 1/16, mean H wage 16 and strict effort utilities 4 versus 4/3. The epsilon construction is explicitly report-only and participation tie remains stated."
+    }
+  ],
+  "limitations": [
+    "Internal author/root review is not independent human academic certification, learner testing or proof of empirical generalizability.",
+    "The finite wage models, fixed-attention linear contract and binary investment cases are complete under their assumptions; they do not prove general optimal-contract, bargaining, multitask or property-rights theorems.",
+    "The ownership example stipulates its bargaining division and outside-payoff technology. Different bargaining, wealth, verifiability, actions or task technologies require new calculations.",
+    "Finite grids and parser checks supplement the separately reviewed proofs and prose; counts and arithmetic alone cannot verify an entire argument.",
+    "Primary inspection is limited to the recorded method passages and does not certify whole courses, complete papers or empirical findings outside the cited scope.",
+    "Root retains dependency-ordered acceptance, whole-library source/link/build checks, central checkpoint changes and publication. No central files or other chapters were changed.",
+    "Browser visual/mobile/print QA remains pending under the existing recorded restriction; no workaround or visual-quality claim was made."
+  ],
+  "acceptance": "Complete author package ready for root's independent final audit and integration; root alone marks canonical acceptance."
+}

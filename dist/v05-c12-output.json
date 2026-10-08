@@ -1,0 +1,93 @@
+{
+  "case_id": "v05-c12-eight-person-default",
+  "synthetic": true,
+  "observed_only_analysis": {
+    "n": 8,
+    "n_treated": 4,
+    "n_control": 4,
+    "treated_completions": 4,
+    "control_completions": 1,
+    "difference_in_completion_rates": "3/4",
+    "assignment_count": 70,
+    "sharp_null": "Y_i(1) = Y_i(0) for every unit",
+    "two_sided_rule": "inclusive absolute difference at least the observed absolute difference",
+    "two_sided_extreme_count": 10,
+    "two_sided_p": "1/7",
+    "positive_tail_p_for_predeclared_direction_only": "1/14",
+    "null_distribution": [
+      {
+        "difference": "-3/4",
+        "count": 5,
+        "probability": "1/14"
+      },
+      {
+        "difference": "-1/4",
+        "count": 30,
+        "probability": "3/7"
+      },
+      {
+        "difference": "1/4",
+        "count": 30,
+        "probability": "3/7"
+      },
+      {
+        "difference": "3/4",
+        "count": 5,
+        "probability": "1/14"
+      }
+    ]
+  },
+  "limitations": [
+    "The exact p-value tests an individual sharp null, not an arbitrary heterogeneous zero average effect.",
+    "The lottery targets these fixed units; it is not random sampling of a wider population.",
+    "The measured assignment effect does not identify a psychological mechanism or welfare.",
+    "Complete outcomes and the stated assignment law are required; missing outcomes are rejected."
+  ],
+  "separate_oracle_audit": {
+    "interpretation": "synthetic potential outcomes supplied by the author, not empirically observed truth",
+    "individual_effects": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    "true_finite_population_ate": "1/2",
+    "assignment_mean_difference": "1/2",
+    "assignment_variance_of_difference": "1/16",
+    "assignment_distribution_under_oracle": [
+      {
+        "difference": "0",
+        "count": 4,
+        "probability": "2/35"
+      },
+      {
+        "difference": "1/4",
+        "count": 19,
+        "probability": "19/70"
+      },
+      {
+        "difference": "1/2",
+        "count": 24,
+        "probability": "12/35"
+      },
+      {
+        "difference": "3/4",
+        "count": 19,
+        "probability": "19/70"
+      },
+      {
+        "difference": "1",
+        "count": 4,
+        "probability": "2/35"
+      }
+    ],
+    "compatible_zero_effect_schedule": {
+      "rule": "set y0 and y1 both equal to each unit's observed outcome",
+      "ate": "0"
+    }
+  }
+}

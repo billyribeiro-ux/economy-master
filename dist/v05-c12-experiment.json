@@ -1,0 +1,49 @@
+{
+  "case_id": "v05-c12-eight-person-default",
+  "synthetic": true,
+  "provenance": "Original author-created teaching case. No actual participants, empirical measurements or external dataset.",
+  "created": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "design": {
+    "unit": "one hypothetical eligible person",
+    "target": "finite-population effect of assigned interface on completion among these eight people",
+    "assignment_law": "uniform_complete_randomization",
+    "n_treated": 4,
+    "assignment_time": "relative day 0, before interface delivery and outcomes",
+    "treatment": "preselected session-booking option, freely changeable",
+    "control": "same session-booking option initially unselected",
+    "held_fixed": "stated prices, available final options and information",
+    "outcome": "binary completion of the session by the end of relative day 7",
+    "outcome_availability": "end of relative day 7 for every person",
+    "units": "0 or 1 per person; differences are completion-rate units",
+    "test": "two_sided_absolute_difference_sharp_null",
+    "assumptions": [
+      "The interface is delivered exactly as assigned; subsequent adoption remains voluntary.",
+      "Potential outcomes depend on own assignment only; no interference.",
+      "No missing outcomes; the measurement rule is the same in both arms.",
+      "All subsets of four people have probability 1/70, independent of their fixed potential outcomes.",
+      "The absolute mean-difference statistic and test direction are selected before outcome access."
+    ]
+  },
+  "observed": [
+    {"id": "P01", "assignment": 1, "outcome": 1},
+    {"id": "P02", "assignment": 1, "outcome": 1},
+    {"id": "P03", "assignment": 1, "outcome": 1},
+    {"id": "P04", "assignment": 1, "outcome": 1},
+    {"id": "P05", "assignment": 0, "outcome": 1},
+    {"id": "P06", "assignment": 0, "outcome": 0},
+    {"id": "P07", "assignment": 0, "outcome": 0},
+    {"id": "P08", "assignment": 0, "outcome": 0}
+  ],
+  "oracle_warning": "The following potential outcomes are deliberately supplied synthetic truth for a separate instructional audit. They would not both be observable for any actual participant. They are not used by the sharp-null test.",
+  "synthetic_oracle": [
+    {"id": "P01", "y0": 0, "y1": 1},
+    {"id": "P02", "y0": 0, "y1": 1},
+    {"id": "P03", "y0": 1, "y1": 1},
+    {"id": "P04", "y0": 1, "y1": 1},
+    {"id": "P05", "y0": 1, "y1": 1},
+    {"id": "P06", "y0": 0, "y1": 1},
+    {"id": "P07", "y0": 0, "y1": 1},
+    {"id": "P08", "y0": 0, "y1": 0}
+  ]
+}

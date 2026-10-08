@@ -1,0 +1,78 @@
+{
+  "batch": "v05-assessment",
+  "date": "2026-10-08",
+  "authorization": "Standing explicit user authorization for parallel specialist production",
+  "state": "specified-not-accepted",
+  "integration_owner": "root",
+  "canonical_specification": {
+    "assessment": "Solve choice and equilibrium problems and evaluate welfare, strategy and information mechanisms.",
+    "project": "Analyze a market intervention with explicit supply-demand or strategic foundations, welfare calculations and empirical limitations."
+  },
+  "fixed_contract": {
+    "format": "Original static HTML fragments, standard-library Python, offline assets; no new dependencies/services.",
+    "ownership": "Specialists write only owned paths, no children/shared writes/commits/hosting. Root composes canonical assessment, accepts and publishes. Draft against the twelve now-written chapter methods; final volume acceptance requires all twelve accepted chapters and all package gates.",
+    "exam_design": "Distinct 100-point Forms A/B, five20-point essential domains, four5-point parts per domain, 180minutes closed notes with basic calculator. State all inputs, units, assumptions and any needed finite tables. Complete solutions, per-part scoring, critical-error rules and alternative defensible-answer criteria. Original transfer rather than copied chapter exercises. Keep workload feasible; no unintroduced theorem proof.",
+    "domains": [
+      "D1 individual choice, duality and production/costs (c01–03)",
+      "D2 competitive/general equilibrium, incidence and welfare (c04–05)",
+      "D3 market power and strategic interaction (c06–07)",
+      "D4 information, selection/signaling/screening and contracts (c08–09)",
+      "D5 externalities, allocation design and behavioral evidence (c10–12)"
+    ],
+    "review": "Quiet JSON-serializable independent checker and author review for each task. Root audits exact prompt/answer alignment, methods, numerical targets and rubric; structural checks and no claimed UI QA."
+  },
+  "assignments": [
+    {
+      "owner": "regression",
+      "task": "Form A",
+      "state": "assigned",
+      "owned_paths": [
+        "content/assessment-parts/v05-form-a.html",
+        "scripts/check_v05_exam_a.py",
+        "content/reviews/v05-exam-a-author.json"
+      ],
+      "content": "ID form-a; no h1. Five domain questions with four5-point parts each, complete solutions/scoring.",
+      "mechanism_allocation": "D1 smooth interior consumer demand/expenditure or compensated comparison, plus convex production cost/output choice. D2 linear competitive tax ledger and a two-person exchange equilibrium with endowment wealth/Walras/first-welfare reasoning. D3 unequal-cost Cournot active responses and a finite observed entry game requiring complete plans/subgame credibility. D4 original lemons participation or two-type screening IC, plus a finite limited-liability wage contract with all action/participation alternatives. D5 a corrective externality/finance comparison, second-price truthful incentives and a small present-bias or assigned-interface interpretation requiring explicit welfare criterion. Distinguish rather than overload one subpart; supply all data and select new manageable parameters."
+    },
+    {
+      "owner": "monte_carlo",
+      "task": "Distinct Form B",
+      "state": "assigned",
+      "owned_paths": [
+        "content/assessment-parts/v05-form-b.html",
+        "scripts/check_v05_exam_b.py",
+        "content/reviews/v05-exam-b-author.json"
+      ],
+      "content": "ID form-b; no h1. Five20-point domains, four5-point parts each, full solutions/scoring. Reassessment changes economic mechanisms, not just numbers.",
+      "mechanism_allocation": "D1 consumer corner/duality or revealed-choice feasibility, plus conditional input cost and shutdown/global supply comparison. D2 a different competitive intervention or rationing ledger, then production/general-equilibrium profit ownership or a concrete welfare-theorem assumption failure. D3 segmented monopoly with common-price comparison and a mixed-strategy game with off-support/tie interpretation. D4 signaling IC/off-path beliefs and an informative-audit or omitted-action contracting comparison that separates profit from joint surplus. D5 public-good provision with feasible financing or congested-use toll, an original three-by-three deferred-acceptance/stability task, and an exact small randomized behavioral contrast or reference-dependent choice with identification/welfare limits. No general DA truthfulness proof or advanced theory beyond chapter instruction. Supply any assignment counts needed to keep arithmetic feasible. At least one explicit evidence-versus-model critique."
+    },
+    {
+      "owner": "causal_identification",
+      "task": "Integrative market-intervention project",
+      "state": "assigned",
+      "owned_paths": [
+        "content/assessment-parts/v05-project.html",
+        "content/projects/v05-project-*",
+        "scripts/check_v05_project.py",
+        "content/reviews/v05-project-author.json",
+        "content/reviews/v05-project-sources.json"
+      ],
+      "content": "ID project; no h1. Complete original synthetic market intervention analysis with frozen inputs/provenance, standard-library benchmark and preserved outputs/README, deliverables,100-point rubric and instructor guide. No invented empirical findings; reuse primary chapter references where sufficient.",
+      "mechanism_allocation": "Explicit linear demand and convex private costs plus external damage, benchmark competition versus Cournot with a fixed small number of firms and active-set bounds, compare feasible tax/cap or standard interventions with correct budget/resource/incidence accounts. Include enforcement/administration and parameter sensitivity plus an explicit empirical identification/data-collection plan. Separate welfare-efficient target from revenue/profit and achievable incentive outcomes. Supply synthetic data/parameters marked as such, original finite scenarios and independently verifiable analytical targets. Project integrates economics with Vol4 reproducibility; it need not cover every chapter."
+    },
+    {
+      "owner": "root",
+      "task": "Diagnostic, administration, retention, remediation, notation/index, synthesis and integration",
+      "state": "specified-not-started",
+      "owned_paths": [
+        "content/assessment-parts/v05-support.html",
+        "content/assessments/v05.html",
+        "scripts/check_v05_assessment.py",
+        "content/reviews/v05-assessment.json",
+        "shared canonical/checkpoint/build/hosting"
+      ],
+      "content": "Self-contained prior-tools diagnostic with solutions; five-domain exam advancement/critical-error protocol; original delayed transfer and oral defense with answers/rubric; remediation linking all12chapters, notation/concept index and synthesis. Assemble owned fragments and integrate checkers only after complete review. Accept volume after chapter/package gates."
+    }
+  ],
+  "dispatch_note": "Three specialist assessment tasks dispatched after completed chapter author/peer handoffs; FormsA/B and market project drafting. Root support and integration remain outstanding. These packages are not represented as written or accepted."
+}

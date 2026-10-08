@@ -1,0 +1,80 @@
+{
+  "chapter": "v05-c10",
+  "title": "Externalities and public goods",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "state": "review",
+  "review_type": "Specialist author factual, mathematical, arithmetic, instructional and source review; root independently audits and alone accepts after v05-c09",
+  "reviewed": {
+    "canonical_scope_and_prerequisites": "Covers external costs, Pigouvian taxes, public goods, free riding, Coase conditions and congestion. The capability is a comparison of corrective instruments under informational and institutional constraints. Builds on accepted c04/c05 welfare and c07 best responses and the frozen c09 contracting/participation prerequisite contract. Defines the voluntary-contribution and bargaining mechanisms locally, without assuming unfinished advanced mechanism design. Distinguishes synthetic model implications, distributional judgments and empirical identification.",
+    "external_cost_reasoning": "Defined direct external effects, total versus marginal damage, private versus social margins and quasilinear money-equivalent harm before use. Derived the competitive equilibrium condition and the benefit-minus-cost-minus-damage objective; stated concavity/global and boundary requirements. The Pigouvian tax is MD at the efficient target, not old output or total damage. Full CS/PS/recipient/harm accounts agree with the independent resource objective. Incidence is interpreted under the Chapter 4 remittance assumptions. Positive external benefits and subsidy implementation are scoped to otherwise undistorted funding/incentive assumptions, with existing market power and fiscal distortions explicitly outside the simple sufficient argument.",
+    "instrument_reasoning": "Separated an aggregate environmental target from cost-effective allocation of control. The heterogeneous-abatement example uses global completed-square minimization and recognizes source capacity inequalities instead of imposing interior marginal-cost equalities everywhere. Fixed unconditional permit rents, auction revenue and real abatement costs remain separate. The tax/cap comparison has explicit timing, known slopes, private information arrival, equal state probabilities, bounds and no revision/administration assumptions. State welfare losses are derived exactly. Root's initial read identified that the optimal-tax statement needed clipping/tail treatment: the manuscript now gives the bounded response, confines concavity to the untruncated tax interval, and proves the remaining nonnegative-tax tail cannot improve the objective. The independent checker enumerates those branches. Output-based proxies, changing emission intensity, heterogeneous damages and instrument-specific verification expense are treated explicitly; no universal policy ranking is asserted.",
+    "public_good_reasoning": "Defines nonrivalry and nonexcludability by range and institution, distinguishes club/common-pool cases and avoids ownership-based definitions. Derives vertical marginal-benefit aggregation from the quasilinear resource objective, provides zero/capacity/kink conditions, and gives the regular interior compensated MRS argument with feasible numeraire reallocations. Nonquasilinear statements remain local necessary conditions. Saturating benefit functions define all possible contribution deviations without negative marginal benefits after satiation. Best responses are global and wealth-feasible; all two-person active patterns are exhausted for unique Nash provision. Efficient provision is checked on every satiation branch. The balanced financing interval is derived from both participation constraints; equal financing can harm the earlier free rider. Crowding out is restricted to the supplied quasilinear, fixed-finance, slack-wealth model and stops at zero private contribution.",
+    "congestion_reasoning": "Uses trips per hour, dollars per trip and dollars per hour consistently. Derives the marginal social resource cost of n times own cost and separates the extra delay term from already-internalized own cost. The toll implements the efficient atomistic flow in the specified single-facility, common-time-value, no-other-route model. Direct welfare and user-surplus-plus-recipient-revenue accounts agree. Neither reduced travel time nor higher total surplus is represented as a gain for every traveler. Congested use is correctly distinguished from a pure nonrival public good.",
+    "bargaining_reasoning": "Clear enforceable entitlements specify the disagreement activity/payoffs; activity contractibility, complete information, representation, transfer feasibility, no income effects and successful bargaining are separate requirements. Both rights assignments use global private/joint objectives and explicit individually rational transfer intervals whose widths equal joint gains. The example establishes possible efficient agreements, not a unique bargaining solution or an automatic result from rights alone. The constrained-payment exercise first bounds feasible activities using the producer's participation square, globally maximizes over that interval and then constructs a transfer satisfying the neighbor's participation. Fixed real transaction costs are deducted from available gains and can prevent agreement under one rights assignment while leaving another feasible in principle.",
+    "exercises_and_instruction": "Four fully worked cases and eight original, complete matching solutions were independently solved. Exercises cover a new corrective wedge and full ledger; an active abatement bound; proof and transfer of the uncertainty loss ratio; a distinct public-good contribution/finance case; crowding-out and efficient zero provision; a new congestion schedule and ledger; payment-limited bargaining and costly disagreement; and a discrete technology/monitoring-cost instrument reversal. Every required method is taught before the exercises, and cases state their units, feasible domains, uncertainty, financing and enforcement assumptions. Teach-back has explicit evaluation guidance and an illustrative answer; the delayed check supplies a fresh numerical answer.",
+    "sources": "Actually retrieved and inspected two Emmanuel Saez Berkeley instructor PDFs and two Hunt Allcott MIT OpenCourseWare instructor PDFs. Proposed source records state method-specific physical page ranges, scope and excluded empirical/legal/historical content. Four prefixed IDs agree with the chapter's cited links. Sources establish the method routes; all numerical examples, payoff schedules, proofs and exercises are original. No source figure, problem set or numerical illustration was copied. Source inspection is not represented as verification of every source claim or as a current policy/legal review.",
+    "structure_and_ownership": "Original static HTML fragment with no h1, explicit capability/prerequisite, four aside.worked cases, one eight-item ol.exercises and one matching ordered solution list inside details.solutions, unique IDs, exact Teach-back/Delayed check labels and answers, adjacent chapter links and deeper-study scope. No standalone project asset was needed for these exact analytic models. Only four owned c10 files were created/edited; no shared manuscript, curriculum, source catalogue, status, build, hosting or publication files were changed, and no children were spawned."
+  },
+  "artifacts": [
+    "content/chapters/v05-c10.html",
+    "scripts/check_v05_c10.py",
+    "content/reviews/v05-c10-sources.json",
+    "content/reviews/v05-c10-author.json"
+  ],
+  "validation": {
+    "command": "python3 book/scripts/check_v05_c10.py",
+    "result": "passed",
+    "check_groups": 13,
+    "integration_api": "Quiet import and check() return a directly JSON-serializable dict containing status, checks, reference_values and limitations. Exact fractions are exposed as integers or rational strings. The standalone CLI prints strict JSON and check() enforces allow_nan=False. Standard library only, relative-to-script manuscript/source inputs, no network or explicit runtime writes. Checks use explicit exceptions and remain active under Python -O.",
+    "additional_modes": [
+      "python3 -B -O quiet import and check(): 13 groups passed; stdout capture was empty and strict JSON serialization succeeded",
+      "Absolute-path python3 -B quiet import and check() from /private/tmp: 13 groups passed; stdout capture was empty and strict JSON serialization succeeded",
+      "Owned-file git diff --check completed without whitespace errors"
+    ],
+    "checks": [
+      "Exact quadratic endpoint/stationary global output targets and independent trapezoid integration of benefit, cost and damage; wedge, incidence and all resource/payment accounts",
+      "Heterogeneous-abatement bounded minimization and independently bounded private charge responses, including the binding first-source limit",
+      "State-by-state efficient objectives and exact tax/cap losses; every nonnegative-tax response branch and the zero-emission tail, with a distinct transfer exercise",
+      "Saturating public-benefit breakpoints and stationary candidates, active-set contribution equilibrium and piecewise best responses; balanced participation financing and equal-fee comparison",
+      "Government provision, nonnegative-contribution exhaustion and zero-efficient-provision corner",
+      "Own/external congestion costs, direct global welfare and user/recipient ledgers for worked and exercise schedules",
+      "Coase private and joint global objectives, both rights' participation intervals, transfer-limited construction and transaction-cost infeasibility",
+      "All three instruments' discrete technology choices, real monitoring resources and no tax-revenue double-counting",
+      "Fresh delayed-check calculations, balanced static fragment, source schema/citation agreement and exact exercise/solution counts"
+    ],
+    "reference_values": {
+      "worked_externality": {"private_Q": 24, "efficient_Q": 18, "tax": 18, "buyer_price": 48, "seller_price": 30, "revenue": 324, "private_welfare": 576, "corrected_welfare": 648, "gain": 72},
+      "worked_abatement": {"abatement": [9, 3], "cost": 54, "price": 9, "uniform_cost": 72},
+      "exercise_2_abatement": {"abatement": [12, 8], "cost": 168, "price": 24, "uniform_cost": 200},
+      "uncertainty_losses_tax_cap": [["1/6", "2/3"], ["8/3", "2/3"], ["2/9", 2]],
+      "worked_public_good": {"contributions": [8, 0], "efficient_G": 9, "voluntary_surplus": 80, "efficient_surplus": 81, "fee_1_interval": ["105/2", "107/2"], "improving_fees": [53, 1]},
+      "exercise_4_public_good": {"contributions": [2, 0], "efficient_G": 4, "voluntary_net_benefits": [2, 10], "improving_fees": [28, 4], "improved_net_benefits": [4, 12]},
+      "worked_congestion": {"untolled_flow": 16, "efficient_flow": 12, "toll": 6, "receipts": 72, "surplus_gain": 16},
+      "exercise_6_congestion": {"untolled_flow": 18, "efficient_flow": 12, "toll": 12, "receipts": 144, "surplus_gain": 54},
+      "worked_coase": {"efficient_activity": 8, "joint_surplus": 96, "producer_payment_interval_under_neighbor_rights": [32, 128], "neighbor_payment_interval_under_producer_rights": [16, 40]},
+      "exercise_7": {"activity": 9, "payment": 9, "payoffs": [144, "-99/2"], "joint_surplus": "189/2", "loss": "3/2"},
+      "exercise_8": {"cleaning_gain_before_administration": 40, "emission_tax_net_gain": -20, "verified_standard_net_gain": 35},
+      "delayed_check": {"private_Q": 18, "efficient_Q": 12, "tax": 12, "buyer_price": 28, "seller_price": 16, "revenue": 144, "surplus_gain": 54}
+    }
+  },
+  "resolved_findings": [
+    {
+      "origin": "Root preliminary proof audit",
+      "finding": "The initial global constant-tax optimality statement described an untruncated quadratic while sufficiently large taxes produce a zero-emission bound.",
+      "resolution": "Added the clipped private response, concavity only on [0,10], and an explicit monotonicity/zero-emission argument for every tax above10. Checker independently enumerates every relevant policy-tax interval and the tail in both displayed cases and the exercise transfer."
+    }
+  ],
+  "limitations": [
+    "Author and root review are internal mathematical/editorial checks, not independent human academic certification.",
+    "Exact numerical and branch checks cover the supplied synthetic models; general institutional claims and continuum arguments still require mathematical reading.",
+    "Price/quantity ranking is an explicitly bounded linear-quadratic, equally likely two-state comparison, not a general uncertainty theorem.",
+    "General public-good efficiency beyond quasilinearity is a regular interior local necessary condition, not a full mechanism or global welfare-support theorem.",
+    "Bargaining results assume an efficient agreement can actually be implemented, and do not solve a general strategic bargaining game or informational problem.",
+    "No current legal, regulatory, empirical causal or actual policy recommendation is established by these hypothetical quantities and costs.",
+    "Primary source inspection is limited to the recorded methods and physical page ranges.",
+    "Visual, mobile and print UI QA remains pending; the standing browser restriction was respected and no workaround was attempted.",
+    "Root retains final independent acceptance in c09-to-c10 dependency order, shared build/link/source/status integration, offline archive and publication."
+  ],
+  "acceptance": "Complete specialist c10 package ready for root's independent review after c09; no central acceptance state was changed."
+}
