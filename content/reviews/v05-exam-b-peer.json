@@ -1,0 +1,177 @@
+{
+  "assessment": "v05-form-b",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "reviewer_role": "Independent specialist peer; Form A author, not Form B author",
+  "assignment": "production/v05-assessment-assignments.json: peer_review_assignments",
+  "status": "passed",
+  "recommendation": "Ready for root integration. All twenty parts and scoring allocations agree with the independent review; one nonblocking clarity finding was resolved by root and reinspected.",
+  "reviewed_files": [
+    {
+      "path": "content/assessment-parts/v05-form-b.html",
+      "sha256": "4901cbaaaa77274ac81b6f536916d45c3285cbff78e849275990317eedfc9e8a",
+      "scope": "Entire manuscript: all twenty questions, full solutions and scoring, all supplied tables, administration, critical-error rules and method links; final root clarification reinspected"
+    },
+    {
+      "path": "scripts/check_v05_exam_b.py",
+      "sha256": "8fe802226a3a3e48cae53f739ade4e15e7cd4033c6e2c8fd8689315d578f5aff",
+      "scope": "Entire checker including parser, global branch extrema, wage LP intersections, matching/assignment enumeration, CLI and quiet JSON API"
+    }
+  ],
+  "findings": [
+    {
+      "id": "v05-b-peer-01",
+      "severity": "low",
+      "blocking": false,
+      "status": "resolved",
+      "location": "content/assessment-parts/v05-form-b.html:39, D4 employment-model introduction",
+      "finding": "The worker's risk neutrality was explicit, while the principal's expected-profit objective was initially only conveyed by the optimization task and calculations.",
+      "proposed_fix": "Explicitly state that the principal is risk neutral and maximizes expected profit.",
+      "resolution": "Root added exactly that model assumption. Peer reread the current paragraph and recorded the final manuscript hash above. No numerical calculation, optimal wage, adoption comparison or score changes.",
+      "original_manuscript_sha256": "ee3d6912fb6be70090a06174092f48ca7f02bd119e3d2a26a8064d7c3e6ac4b2"
+    }
+  ],
+  "unresolved_findings": [],
+  "part_by_part_audit": [
+    {
+      "part": "D1(a)",
+      "result": "passed",
+      "independent_solution": "Utility per dollar selects (6,0), U=18 initially and (0,12), U=12 after the price change. The stated linear upper bounds attain equality only at these corners, proving globality. The old bundle costs24 at new prices and fails the12-dollar budget.",
+      "rubric": "Five points: two bundle/utility points, two global-corner comparison points and one feasibility point."
+    },
+    {
+      "part": "D1(b)",
+      "result": "passed",
+      "independent_solution": "Expenditure is u min(px/3,py). At px=3py the complete minimizing line is3x+y=u with nonnegative goods; u=0 leaves only the origin. CV6 uses new-price target18 and bundle(0,18); EV4 uses old-price target12 and bundle(4,0). The reference targets and positive-loss convention align.",
+      "rubric": "Five points for expenditure, tie set, CV, EV and target/interpretation components."
+    },
+    {
+      "part": "D1(c)",
+      "result": "passed",
+      "independent_solution": "Cost6L+4K=3(2L+K)+K is at least30, uniquely attained atL5,K0. At wage8, cost=4(2L+K), so every nonnegative pair on2L+K=10 costs40 and minimizes. Positive prices rule out excess inputs. The corner and complete tie segment are correctly distinguished from a unique interior tangency.",
+      "rubric": "Five points for initial pair, global bound, tie set, tie cost and tangency limitation."
+    },
+    {
+      "part": "D1(d)",
+      "result": "passed",
+      "independent_solution": "Operating profit increases strictly on0<q<=10 at each tested price. Atp4, capacity profit-9 loses to shutdown-7; atp5 capacity gives1; atp21/5 exactlyq0 andq10 tie at-7. All strictly intermediate positive quantities are worse. The unavoidable7 cancels in the choice comparison but remains in profit.",
+      "rubric": "Five points for the global candidate, two numerical decisions, disconnected tie and intermediate-output/unavoidable-bill explanation."
+    },
+    {
+      "part": "D2(a)",
+      "result": "passed",
+      "independent_solution": "At19/2 precisely B1-B3 and S1-S3 trade, CS27/2 andPS25/2 total26. Independent enumeration gives best surplus by volume0through4 of0,16,25,26,19. The fourth unit loses7, so the supplied allocation is globally efficient.",
+      "rubric": "Five points for participants, two surplus components, total and fourth-unit/global reasoning."
+    },
+    {
+      "part": "D2(b)",
+      "result": "passed",
+      "independent_solution": "At7, two sellers supply and three buyers demand. Rationing to B2/B3 gives CS10,PS7,total17. Serving B1/B2 with the same supply gives25. The total loss9 splits into restricted-trade loss1 and misallocation8; the price payment itself remains a transfer.",
+      "rubric": "Five points distinguish quantity, CS/PS, actual total, fixed-supply benchmark and loss decomposition."
+    },
+    {
+      "part": "D2(c)",
+      "result": "passed",
+      "independent_solution": "Firm supplyq=p and profitp squared/2 follow from a global square. Household wealth includes that profit. Clearing yields p squared+p-12=0; positive root3 givesq3,profit9/2,income49/2,z31/2. The numeraire interior is valid; its consumption plus production input is20 and its budget and output market clear. Concavity verifies the household's chosen branch.",
+      "rubric": "Five points cover firm optimum, household clearing, price/output, ownership-consumption ledger and all feasibility/resource checks."
+    },
+    {
+      "part": "D2(d)",
+      "result": "passed",
+      "independent_solution": "Omitting owned profit gives claimedz11 and leaves9/2 numeraire unallocated. Feasible utility20-q squared/2+12ln(1+q) on[0,sqrt40] has derivative numerator(3-q)(q+4), increasing then decreasing at3. Strict concavity gives the same global proof. With only this household and its owned technology, that global utility maximum is Pareto efficient; an omitted affected party would change the claim.",
+      "rubric": "Five points for claimedz, missing ownership payment, feasible objective, global proof and scoped efficiency."
+    },
+    {
+      "part": "D3(a)",
+      "result": "passed",
+      "independent_solution": "Both-group profit486-(3/2)(p-22) squared has feasible optimum22 and quantities21/6. A-only profit450-(p-34) squared/2 has feasible optimum34. No sales earns0. Comparing these complete branches proves global common-price profit486.",
+      "rubric": "Five points require both branches, quantities, no-sales comparison and global choice."
+    },
+    {
+      "part": "D3(b)",
+      "result": "passed",
+      "independent_solution": "Separate quantities15/12 and prices34/16 earn gross594, net514 after real verification80, beating486. Independent integration of benefits minus real costs yields common total945 and separate total811. Total quantity remains27, but misallocation costs54 and verification80, giving134 less total surplus despite28 more profit.",
+      "rubric": "Five points distinguish quantities/prices, private adoption, both total-surplus values and allocation/transfer/resource interpretation."
+    },
+    {
+      "part": "D3(c)",
+      "result": "passed",
+      "independent_solution": "Row indifference givesPr(L)=1/3; column indifference givesPr(A)=3/5 in A/B. Full mix(3/5,2/5,0) gives row4/3 and column9/5. C pays1 and is strictly worse. All supported and off-support pure deviations are accounted for; expected payoff linearity then excludes profitable mixed deviations.",
+      "rubric": "Five points: two indifference/probability components, full candidate, both payoffs and off-support check."
+    },
+    {
+      "part": "D3(d)",
+      "result": "passed",
+      "independent_solution": "The same profile remains Nash iff k<=4/3. At equality C may remain unused: a best response need not put positive probability on every maximizing action. Column incentives are unchanged at zero C probability. Atk2, switching toC gains2/3. The prompt asks about this candidate, not a complete enumeration of new equilibria, and the answer respects that scope.",
+      "rubric": "Five points: two for the necessary/sufficient condition, then column invariance, boundary interpretation and explicit deviation."
+    },
+    {
+      "part": "D4(a)",
+      "result": "passed",
+      "independent_solution": "Both signals occur on path, giving posteriorH1 at credential1 and0 at credential0. Wages10/4 give H8 versus deviation4, L4 versus deviation3; both participate. The finite permitted signal set makes the deviation list exhaustive and avoids an untested continuous credential.",
+      "rubric": "Five points for beliefs/wages, H comparison, L comparison, participation and complete-equilibrium justification."
+    },
+    {
+      "part": "D4(b)",
+      "result": "passed",
+      "independent_solution": "Pooling wage7 deters H when2+6mu<=7, so mu<=5/6. L's credential payoff-3+6mu never exceeds3 on[0,1]. Thus the full supporting interval is[0,5/6], including a weak H tie at its upper endpoint. Pooling total7 exceeds separating6 because only H incurs cost2 in half the population. Bayes cannot select a posterior at the unused signal; no stronger refinement result is claimed.",
+      "rubric": "Five points for pooling wage, H constraint, L/probability intersection, both resource totals and off-path explanation."
+    },
+    {
+      "part": "D4(c)",
+      "result": "passed",
+      "independent_solution": "Output IC requires spread16; IR requires expected wage10, while limited liability plus IC implies12. Wages(0,16) attain that global bound, utilities4/4 implement the declared tie, and IR is slack. Expected H profit36 beats L14 and no hiring0. A flat2 is globally cheapest for L by participation. Root's clarified expected-profit objective now makes the principal's risk assumption explicit.",
+      "rubric": "Five points for IC, combined global bound, attaining schedule/tie, H profit and all alternatives."
+    },
+    {
+      "part": "D4(d)",
+      "result": "passed",
+      "independent_solution": "Within the explicitly report-only audit class, IC requires wage spread32/3. Since H passes surely and failure wage is nonnegative, expected H wage is at least32/3, attained at(0,32/3). Effort utilities8/3 meet reservation2. Principal109/3 beats36 by1/3; audited L yields13. Joint payoff39 is one below unaudited40, matching the real audit cost. The prohibition of joint output/report wages is explicit and essential; no unspecified joint distribution or independence is needed.",
+      "rubric": "Five points for audited bound, schedule, all private alternatives, worker/joint totals and rent-versus-resource explanation."
+    },
+    {
+      "part": "D5(a)",
+      "result": "passed",
+      "independent_solution": "Summed marginal benefits equal marginal cost atG4. Surplus16-(G-4) squared globally exceeds endpoint values0 and15. Benefits28/12 and fees16/8 yield strict gains12/4. The stated general fee intervalT1 in(12,24],T2=24-T1 is correct. The financing is accepted and enforceable, not claimed to be a unilateral voluntary-contribution equilibrium.",
+      "rubric": "Five points for summed margins, quantity, boundaries, balanced fees and both strict gains; alternative checked fee pairs accepted."
+    },
+    {
+      "part": "D5(b)",
+      "result": "passed",
+      "independent_solution": "Rejections occur in order R rejectsN, S rejectsO, R rejectsM, S rejectsM. Final M-T,N-S,O-R gives every institution its first choice, so none can satisfy the institution-side condition of a blocking pair. All matches are acceptable. Independent enumeration of all six complete matchings confirms this matching's stability. Rankings do not supply comparable cardinal utility magnitudes.",
+      "rubric": "Five points: two for the rejection chain, one final matching, one complete stability reason and one cardinal-welfare limit."
+    },
+    {
+      "part": "D5(c)",
+      "result": "passed",
+      "independent_solution": "Observed contrast1 is100 percentage points. Independent counts C(3,K)C(4,3-K) are4,18,12,1 over35 assignments. T(K)=(7K-9)/12 gives-3/4,-1/6,5/12,1. OnlyK3 has absolute statistic at least1, yielding inclusive two-sidedp1/35<0.05. Doubling the positive tail gives2/35 and a different rule/decision because unequal group sizes produce asymmetric support. The sharp individual null, probability conditioning and nonposterior interpretation are precise.",
+      "rubric": "Five points for observed units, statistic/support, inclusive tail, decision/precise null and asymmetry."
+    },
+    {
+      "part": "D5(d)",
+      "result": "passed",
+      "independent_solution": "The stipulated real per-enrollment margin7-9=-2 and per-assigned-default cost1/2 imply plug-in welfare-5/2 per person at the observed rate contrast1. The solution distinguishes this conditional value from missing potential outcomes, mechanism identification and population generalization. Random assignment does not isolate inattention from action costs or endorsement, and volunteers are not a random sample of all settings. The interface fee is correctly charged per assigned person, not per extra enrollee.",
+      "rubric": "Five points for the explicit criterion, computation, mechanism alternative, population scope and uncertainty/premise distinction."
+    }
+  ],
+  "validation": {
+    "commands_and_results": [
+      "python3 book/scripts/check_v05_exam_b.py: passed all twenty part checks and structure",
+      "Optimized Python runpy check() from /private/tmp with stdout capture: quiet and passed; ordinary json.dumps(report, allow_nan=False) passed",
+      "Separate peer stdlib exact recomputation without importing author checker: passed global consumer/cost comparisons, all market volumes, production accounts, pricing branches, mixed support, signal beliefs, contract lower bounds, public finance, all six matchings and the hypergeometric absolute tail",
+      "Final expected-profit clarification reread; final manuscript and checker SHA-256 recorded"
+    ],
+    "checker_assessment": "The code reads supplied HTML tables where relevant and uses exact branch extrema, feasible wage vertices, blocking-pair enumeration and all35 random assignments. Fractions are converted before returning, so direct JSON serialization succeeds. Explicit require() checks remain active in optimized Python. Numerical checks are appropriately described as complements to prose and proof review.",
+    "structure_and_scoring": "Five domains and twenty5-point parts total100. All twenty full answers and rubrics were manually matched to the prompts, including 'one each' allocations, and each rubric sums to five. The180-minute closed-note/basic-calculator conditions, complete finite inputs, tie rules and critical-error remediation are supplied. Namespaced IDs and all twelve chapter routes are present.",
+    "taught_methods": "Methods are within the twelve written Volume5 chapters and prior mathematical/probability prerequisites. Reinspected c12's exact fixed-size sharp-null test, inclusive absolute tails, finite-sample uncertainty and assignment-versus-mechanism discussion. The other mechanisms use established choice/duality, production, equilibrium, strategic, contracting, public-good and matching tools. No general matching truthfulness theorem or new estimator is required.",
+    "cross_form_distinctness": "Form B changes Form A's principal mechanisms to linear corners/tie sets/capacity shutdown; discrete rationing/production ownership; segmented monopoly/mixed supports; finite signaling/report-only auditing; and public-good financing/matching/unequal-arm experimental evidence. Both retain the same essential domain framework without reusing the main Form A cases."
+  },
+  "limitations": [
+    "Independent agent peer review within the production team is not external human academic certification or empirical difficulty/time validation.",
+    "Finite computations supplement the directly reviewed analytic global arguments, assumptions, prompts and scoring; grids alone cannot prove all possible economies or deviations.",
+    "The hashes identify the final reviewed snapshot. Later substantive edits require follow-up review; the inspected root correction is a nonnumerical clarification.",
+    "Stable previously inspected chapter methods were reused; no new external factual claim required retrieval.",
+    "No visual/mobile/print UI QA or browser workaround was performed.",
+    "Only content/reviews/v05-exam-b-peer.json was written by this peer task. Root owns author corrections, central state, integration, acceptance and publication."
+  ]
+}

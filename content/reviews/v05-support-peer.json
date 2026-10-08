@@ -1,0 +1,207 @@
+{
+  "assessment": "v05-support",
+  "review_type": "Independent bounded peer review of diagnostic, retention, oral transfer, scoring, routes and support checker",
+  "reviewer": "monte_carlo specialist; distinct from the support author",
+  "date": "2026-10-08",
+  "state": "peer-review-complete",
+  "status": "passed; one low-priority assumption clarification resolved by root",
+  "assignment": "production/v05-assessment-assignments.json — support_peer_assignment",
+  "scope": {
+    "read_only_inputs": [
+      "content/assessment-parts/v05-support.html",
+      "scripts/check_v05_assessment.py"
+    ],
+    "context_inputs": [
+      "content/assessment-parts/v05-project.html",
+      "content/projects/v05-project-data.json",
+      "scripts/check_v04_assessment.py",
+      "content/curriculum.json",
+      "Relevant accepted prerequisite and Volume 5 chapter methods and local reference routes"
+    ],
+    "owned_output": "content/reviews/v05-support-peer.json",
+    "coverage": "Read every support prompt, answer, scoring rule, remediation route and synthesis section; independently solved all eight diagnostic, six retention and three oral guide tasks. Read the complete support checker and its read-only assembly logic, including the reused HTML section parser. No source, project, central state, assembly output or shared file was edited by this reviewer.",
+    "review_boundary": "The oral project's supplied primitives and benchmark implications were independently checked where used by the support guide. This record does not replace the full project author/peer reviews or root's complete package integration gates."
+  },
+  "reviewed_hashes": {
+    "final_support": {
+      "path": "content/assessment-parts/v05-support.html",
+      "sha256": "694c347f8bcaf9513a987f99f13bd54870ac9a9f6e732b08beebb4d177b9eb58",
+      "bytes": 31720
+    },
+    "support_and_assembly_checker": {
+      "path": "scripts/check_v05_assessment.py",
+      "sha256": "e8a525d36f9378e23111ee35cb73ec309ae7f7b4418d268c1d3890abff69b461",
+      "bytes": 11713
+    },
+    "context_project_fragment": {
+      "path": "content/assessment-parts/v05-project.html",
+      "sha256": "e5775d1865be14849179d815ce8d921b049ed51500e709b4ddf9d0d710bda9e8",
+      "bytes": 32027
+    },
+    "context_project_data": {
+      "path": "content/projects/v05-project-data.json",
+      "sha256": "e62d69e64fccf87898cc1fecdef9b7c1003b884db89bf28d9fe03c1787eb0e67",
+      "bytes": 8321
+    },
+    "initial_support_before_root_clarification": {
+      "path": "content/assessment-parts/v05-support.html",
+      "sha256": "8670aa07f3e2788e7414f09ac7ab188cdae4e63489ac27901b3a7efc44c2efec",
+      "bytes": 31637
+    }
+  },
+  "findings": [
+    {
+      "id": "v05-support-peer-01",
+      "severity": "low",
+      "category": "explicit primitive normalization",
+      "location": "Retention task 2, absolute welfare accounting",
+      "finding": "The original prompt gave marginal benefit, marginal private cost and total harm but did not explicitly normalize the levels of gross benefit and production cost at zero output. Quantities and welfare differences were determined, but the stated absolute welfare levels 285, 288 and 289 required that normalization.",
+      "proposed_fix": "Specify that gross benefit and production cost are zero at Q = 0 and that there are no other costs.",
+      "status": "resolved",
+      "resolved_by": "root",
+      "resolution_verification": "Re-read the corrected prompt, which now states exactly that normalization and absence of other costs; recorded the final support SHA-256 and reran the optimized portable support-only checker successfully. No quantity, welfare difference, solution arithmetic or scoring changed."
+    }
+  ],
+  "unresolved_material_findings": [],
+  "task_reviews": [
+    {
+      "task": "Diagnostic 1",
+      "status": "passed",
+      "independent_answer": "Charge 8 to 10 is a 25% increase. Participation 40% to 50% is an increase of 10 percentage points and a 25% relative increase.",
+      "audit": "The baseline and units distinguish relative percentages from percentage points; both use methods already taught before Volume 5."
+    },
+    {
+      "task": "Diagnostic 2",
+      "status": "passed",
+      "independent_answer": "For 10q - q^2 on [0,3], the stationary point 5 is infeasible. The unique maximizer is q = 3, with value 21.",
+      "audit": "The derivative is at least 4 throughout the feasible interval; equivalently, the quadratic is 25 - (q - 5)^2. The boundary certificate proves global optimality."
+    },
+    {
+      "task": "Diagnostic 3",
+      "status": "passed",
+      "independent_answer": "The integral of 6 - 2x from 0 to 2 is 8 USD, also the trapezoid area 2(6 + 2)/2.",
+      "audit": "The marginal dollar-per-unit schedule is integrated over units; the answer is a dollar level rather than a marginal value."
+    },
+    {
+      "task": "Diagnostic 4",
+      "status": "passed",
+      "independent_answer": "The equations x + 2y = 10 and 3x + y = 15 give x = 4 and y = 3. This solution violates x <= 3.",
+      "audit": "Solving the equalities does not establish feasibility under the additional constraint."
+    },
+    {
+      "task": "Diagnostic 5",
+      "status": "passed",
+      "independent_answer": "The positive-signal probability is (1/3)(3/4) + (2/3)(1/4) = 5/12. The posterior high-type probability is (1/4)/(5/12) = 3/5.",
+      "audit": "The posterior correctly combines the base rate and likelihood; it is not the 3/4 likelihood."
+    },
+    {
+      "task": "Diagnostic 6",
+      "status": "passed",
+      "independent_answer": "A has expected monetary loss 8(1/4) = 2; B has certain loss 3. A minimizes expected monetary loss.",
+      "audit": "Choosing B can reflect risk preferences or a different objective. An expected-money calculation alone does not establish that every person must prefer A."
+    },
+    {
+      "task": "Diagnostic 7",
+      "status": "passed",
+      "independent_answer": "121 discounted for two years at 10% annually is 100. The one-year payment 12 has present value 120/11, greater than 10.",
+      "audit": "The dates and annual effective compounding convention are applied consistently."
+    },
+    {
+      "task": "Diagnostic 8",
+      "status": "passed",
+      "independent_answer": "For the six equally likely two-of-four assignments to fixed outcomes (1,1,0,0), the difference in means is 1, 0, 0, 0, 0, -1. The absolute-tail probability at the observed statistic 1 is 1/3.",
+      "audit": "The tail is conditional on the sharp null and assignment mechanism; it is not the probability that the null is true. Exact finite randomization and null-tail interpretation are already taught in the prerequisite volumes."
+    },
+    {
+      "task": "Retention 1",
+      "status": "passed",
+      "independent_answer": "For U = min{x,2y}, expenditure is (px + py/2)u. At income 18, old prices (1,2) give bundle (9,9/2) and utility 9; new prices (2,2) give (6,3) and utility 6. New-price expenditure for old utility is 27, so CV = 9. Old-price expenditure for new utility is 12, so EV = 6.",
+      "audit": "A target u requires x >= u and y >= u/2. Positive prices attain the target cheapest at equality, proving the expenditure formula globally without a differentiability assumption. The two money measures use the correct targets and reference prices."
+    },
+    {
+      "task": "Retention 2",
+      "status": "passed after root normalization clarification",
+      "independent_answer": "Untaxed Q = 18 and price 22. With tax 6, Q = 15, buyer price 25 and seller price 19. Taxed consumer and producer surplus are each 225/2, revenue is 90 and damage is 30, giving welfare 285. Primitive welfare is 34Q - Q^2 = 289 - (Q - 17)^2; efficient Q = 17 gives 289, compared with untaxed welfare 288.",
+      "audit": "Receipts cancel as transfers within the stated welfare population. Damage is deducted once. The globally efficient quantity follows from the square identity, and the excessive tax lowers welfare relative to both the optimum and no tax. Absolute welfare levels now have an explicit zero-output normalization."
+    },
+    {
+      "task": "Retention 3",
+      "status": "passed",
+      "independent_answer": "With P = max{44 - q1 - q2,0} and costs 8 and 20, best responses are max{0,(44 - ci - qj)/2}. Equilibrium is (16,4), price 24, profits (256,16). Raising firm 2's cost to 28 makes the formal interior candidate (56/3,-4/3) infeasible; equilibrium is (18,0), price 26, profits (324,0).",
+      "audit": "The positive-price profit branch is strictly concave and the zero-price positive-output tail has negative profit. The inactive firm's raw response at the new outcome is -1, so zero is its global best response; the answer does not report a negative output as an equilibrium."
+    },
+    {
+      "task": "Retention 4",
+      "status": "passed",
+      "independent_answer": "Proposed wages (0,20) give worker utilities (8,12,10), inducing M. Implementing H requires wage spread at least 40 because of the M deviation, so its minimum expected wage is 32, attained at (0,40); utilities are (16,26,26). L costs 1 in expected wages and yields principal profit 23. M costs 14/3, attained at (0,20/3), and yields profit 112/3. H yields 16; the principal chooses M.",
+      "audit": "All action deviations, participation, limited liability and the supplied weak-implementation tie convention are used. The M spread interval is [20/3,40]; its attained utilities are (8/3,8/3,-2/3). A global lower wage bound certifies each action's minimum cost; the principal then compares all actions, rather than confusing the cheapest H contract with the best action."
+    },
+    {
+      "task": "Retention 5",
+      "status": "passed",
+      "independent_answer": "With reserve 25 and values (30,20,12), bidder 1 wins, pays 25 and obtains utility 5. In the supplied matching example, applicant-proposing deferred acceptance returns A-Y and B-X. Neither unmatched pair blocks: X prefers B to A, and B prefers X to Y.",
+      "audit": "The auction proof uses the arbitrary effective winning threshold max{reserve, highest rival bid}, covers values above, below and equal to that threshold, and respects fixed ties. It establishes weak dominance for every rival bid profile rather than only the displayed profile. The matching answer checks acceptability and every unmatched pair, not merely termination of the algorithm."
+    },
+    {
+      "task": "Retention 6",
+      "status": "passed",
+      "independent_answer": "For two treated among five with fixed outcomes (1,1,0,0,0), let K be treated successes. T = (5K - 4)/6 takes values -2/3, 1/6 and 1 with counts 3, 6 and 1. The observed absolute-tail probability is 1/10. All 32 compatible binary missing-outcome schedules yield logical average-effect bounds [0,1], with both endpoints attainable.",
+      "audit": "Every individual effect is between zero and one under these observed extreme outcomes, but the data leave the missing potential outcomes free. These are logical bounds, not confidence limits. The sharp-null assignment tail, a treatment's behavioral effect, psychological mechanism, welfare and transport to other populations remain distinct claims."
+    },
+    {
+      "task": "Oral 1",
+      "status": "passed",
+      "independent_answer": "At the project's symmetric baseline, total production cost is 20Q + Q^2/4 and resource welfare is 80Q - 5Q^2/4 = 1280 - (5/4)(Q - 32)^2. Efficient Q is 32, with each firm producing 16. The Cournot first-order condition is 80 - t - qj - 3qi = 0; the implementing tax is 16, whereas marginal damage at the target is 32. With tax administration cost 20, revenue is 512, net public funds 492 and net welfare 1260, versus unregulated 1200.",
+      "audit": "The tax accounts for existing market power: t = marginal damage - bqi at an interior target. The guide requires the actual best-response condition and feasible bounds, not memorization of marginal damage as a universal rate. Quantities satisfy capacity and tax bounds; the quadratic certificate establishes the resource target globally. Uniform-tax implementability needs qualification with heterogeneous targets."
+    },
+    {
+      "task": "Oral 2",
+      "status": "passed",
+      "independent_answer": "At harm slope 1/4, efficient Q = 320/7 requires tax -80/7, outside the nonnegative tax set; no policy yields 1800, exceeding deployed-tax welfare 1780 and deployed-standard welfare 1765. At harm slope 4, target Q = 160/11 requires tax 560/11, above the ceiling 40; the best feasible tax gives Q = 20 and net welfare 480, while the equal standard reaches the target and yields 6015/11. With each capacity reduced to 12, no-policy Q = 24 is the constrained target and yields 1200; tax and standard activation reduce that to 1180 and 1165. With baseline quantities and administration costs increased to 100 and 115, best deployed tax and standard yield 1180 and 1165, below no-policy 1200.",
+      "audit": "The guide correctly distinguishes the constrained resource target, instrument implementation, real administrative cost and public financing transfers. A negative or above-ceiling unconstrained rate is not reported as an admissible policy. Nontradable equal standards are interpreted using the actual project's institutional definition. These comparisons were independently recomputed from the frozen primitives."
+    },
+    {
+      "task": "Oral 3",
+      "status": "passed",
+      "independent_answer": "A defensible illustrative design defines product/geographic markets, eligible units and a time horizon; assigns or credibly compares the actual policy at the relevant market or cluster level; predeclares prices, quantities, costs, emissions and administrative outcomes; addresses spillovers, compliance and missing outcomes; and explains which additional primitives are needed to convert measured effects into resource welfare and distributional consequences.",
+      "audit": "The guide supplies evaluation criteria for this open task rather than imposing one empirical design. It separates a reduced-form policy effect from estimated demand, costs and conduct, and rejects an unconditional before-after causal claim. Prices alone do not identify welfare, and affected outsiders must be included when relevant. Credible alternative designs can earn full credit under the same explicit criteria."
+    }
+  ],
+  "scoring_and_instruction": {
+    "diagnostic": "Eight tasks at four points each total 32, with two points for calculation and two for reasoning/units. The 40-minute, closed-notes/basic-calculator instructions and 28/32 target are explicit; failed distinctions require remediation.",
+    "written_exams": "The support protocol consistently specifies 180 minutes, 100 points, five 20-point domains, an 85/100 overall threshold and 15/20 in every domain. It distinguishes assessment performance from credentialing and requires the project and oral transfer as additional gates.",
+    "oral": "Three tasks at four points each use one point each for target/assumptions, argument, feasible alternative/boundary and clear explanation/check. At least 3/4 in each task is required; critical errors need repair. Self-recording is distinguished from independent human assessment.",
+    "retention": "Six tasks at ten points each total 60, with allocations 4+3+3, 3+4+3, 5+5, 2+3+3+2, 5+5 and 3+2+3+2. The 7-14 day delay, 75-minute window, 51/60 overall threshold and 7.5/10 in every task are stated; half-points are allowed.",
+    "rubric_alignment": "Scores reward the calculations, global or deviation arguments and interpretations actually requested. Arithmetic carry-through, defensible alternatives and critical-error remediation are coherent across the package. Thresholds are expressly library design choices, not institutional standards.",
+    "prerequisite_fit": "Diagnostic methods are taught in Volumes 1-4. Retention and oral methods are taught in the linked accepted Volume 5 chapters, supported by prior calculus, optimization, probability and causal-inference methods. No unavailable quantile, outside dataset, unfamiliar software or advanced untaught theorem is required.",
+    "routes": "All twelve Volume 5 chapter routes appear and their local files exist. Prior-chapter remediation routes were checked. The generated curriculum anchors v06 and v13 and assessments anchor economics-core exist and agree with canonical IDs; unfinished successor/cumulative content is identified as planned rather than represented as accepted instruction. The concept index and synthesis preserve appropriate distinctions among choice, equilibrium, welfare, incentives and evidence."
+  },
+  "validation": {
+    "support_checker_normal": {
+      "command": "python3 -B book/scripts/check_v05_assessment.py --support-only",
+      "status": "passed",
+      "check_groups": 8
+    },
+    "support_checker_optimized_portable": {
+      "command": "python3 -B -O /Users/billyribeiro/Desktop/economy-master/book/scripts/check_v05_assessment.py --support-only",
+      "cwd": "/private/tmp",
+      "status": "passed",
+      "check_groups": 8,
+      "final_text_rerun": true
+    },
+    "independent_peer_recalculation": "Separate in-memory standard-library Fraction calculations used prompt and frozen project inputs without importing the author checker or its helpers. All 17 task groups passed, including complete six- and ten-assignment distributions, all 32 compatible binary potential-outcome schedules, independent wage comparisons, explicit resource integrals, global quadratic factors and all oral parameter cases. No peer program artifact or extra output file was created.",
+    "existing_checker_scope": "The eight support-check groups cover diagnostic arithmetic, expenditure targets, tax ledgers, 1284 Cournot deviation counterchecks and branch identities, independent wage half-plane vertices, 137842 reserve-auction deviation/tie checks, unmatched matching pairs, complete finite treatment assignments and compatible schedules, and support structure/routes. The existing checker checks oral groups structurally; this peer independently checked their project arithmetic and interpretations.",
+    "structure": "A separate full HTML stack parser found balanced support markup. Local chapter targets were checked on disk; relevant cumulative and successor anchors were checked in generated pages and against canonical IDs.",
+    "assembly_logic_read_only_review": "assemble() substitutes Form A plus Form B for ASSESSMENT_FORMS and the project for INTEGRATIVE_PROJECT. The full checker requires exact assembled equality, a single h1, unique IDs, form-a/form-b/project anchors, matched five-domain prompt and solution counts, no unfilled markers, registered source IDs and successful component checkers. The imported section parser was inspected. Full assembly/integration was not run or written by this peer; root owns that gate.",
+    "post_fix_verification": "The explicit zero-output normalization was re-read in the final support text; final hashes were recorded and the optimized portable support checker was rerun successfully."
+  },
+  "limitations": [
+    "This is internal independent-agent peer review, not external human academic certification or empirical validation of timing and difficulty.",
+    "Finite numerical grids supplement, rather than prove, continuum optimality or universal auction deviations. The written global certificates and threshold proofs were reviewed separately.",
+    "The review reuses inspected primary method routes in accepted chapters and introduces no new empirical, legal or historical claim; it does not re-retrieve every underlying source.",
+    "Synthetic case conclusions are conditional on the supplied preferences, technology, information, assignment mechanisms, bounds and tie conventions. Oral research design remains an open task with evaluation criteria.",
+    "No visual, mobile or print UI QA was performed. The standing browser restriction was respected without workaround.",
+    "Root retains full project and examination integration, shared structural/offline verification, acceptance and publication. This record changes no central production state."
+  ],
+  "recommendation": "No unresolved material finding. The support fragment is ready for root's final assessment-package acceptance gates at the recorded final hashes."
+}

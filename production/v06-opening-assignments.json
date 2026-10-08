@@ -1,0 +1,142 @@
+{
+  "batch": "v06-opening",
+  "date": "2026-10-08",
+  "authorization": "Standing explicit user authorization for up to three specialist authors alongside root",
+  "state": "specified-not-dispatched",
+  "acceptance_dependency": "Complete and accept the Volume5 assessment package before accepting v06-c01; subsequent chapter acceptance follows canonical prerequisites.",
+  "integration_owner": "root",
+  "fixed_contract": {
+    "format": "Original static HTML chapter fragments, standard-library Python, local assets only; no framework, installation, paid service or generated imagery.",
+    "ownership": "Authors edit only owned paths; no children/shared files/commits/hosting. Root owns canonical curriculum, sources, checkpoint, shared build/verify and publication.",
+    "chapter_gates": "Full canonical outcome/coverage, defined assumptions/units/notation, formal derivations and global/boundary checks, at least2fully worked original examples and8exercises with complete aligned solutions, teach-back and answered delayed check, primary method sources actually inspected and scoped, exact/independent quiet JSON-serializable checker, author review with hashes/pending issues. No abridged overview or empirical/current claim without source.",
+    "shared_interface": "Prior volumes1\u20135 provide optimization, probability, inference, strategic interaction and welfare. c01 supplies national-account identities and distinguishes real quantities from nominal expenditure and measurement conventions. Standard physical homogeneous-capital timing is K[t+1]=(1\u2212delta)K[t]+I[t], I gross investment; this stylized model is distinct from actual chain-volume data. c02 defines labor-augmenting productivity A, labor L, k=K/(AL), y=Y/(AL) and exact discrete time population/productivity growth denominators before invoking continuous approximations. Authors define any additional notation locally. No 2026 observations are invented."
+  },
+  "assignments": [
+    {
+      "owner": "root",
+      "chapter": "v06-c01",
+      "task": "National accounts and macro measurement",
+      "state": "specified-not-dispatched",
+      "canonical_specification": {
+        "title": "National accounts and macro measurement",
+        "outcome": "Reconcile output, expenditure and income measures and explain what GDP omits.",
+        "coverage": [
+          "GDP",
+          "value added",
+          "expenditure identity",
+          "deflators",
+          "real income",
+          "stocks versus flows"
+        ],
+        "prerequisites": [
+          "v02",
+          "v03",
+          "v05"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v06-c01.html",
+        "content/projects/v06-c01-*",
+        "scripts/check_v06_c01.py",
+        "content/reviews/v06-c01-author.json",
+        "content/reviews/v06-c01-sources.json"
+      ],
+      "fixed_scope": "Original closed production/expenditure/income ledger with intermediate inputs, final use, inventories, imports/exports and factor/income/tax/depreciation reconciliation under a clearly specified accounting convention. Teach nominal GDP, fixed-base real measures, implicit deflator and a small chain-index example with nonadditivity, GDP/GNI and domestic/resident distinction, gross/net and real income/terms-of-trade limits. Distinguish physical capital laws from measured current-value stocks/flows and welfare omissions. Use actual official BEA/national-account method sources; verify current standard versions before naming them, no fabricated vintage. At least2complete worked ledgers and8solved transfer/critique exercises."
+    },
+    {
+      "owner": "regression",
+      "chapter": "v06-c02",
+      "task": "Growth and the Solow model",
+      "state": "specified-not-dispatched",
+      "canonical_specification": {
+        "title": "Growth and the Solow model",
+        "outcome": "Derive steady states and distinguish level effects from sustained growth.",
+        "coverage": [
+          "Capital accumulation",
+          "depreciation",
+          "population",
+          "technology",
+          "convergence",
+          "growth accounting"
+        ],
+        "prerequisites": [
+          "v06-c01"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v06-c02.html",
+        "content/projects/v06-c02-*",
+        "scripts/check_v06_c02.py",
+        "content/reviews/v06-c02-author.json",
+        "content/reviews/v06-c02-sources.json"
+      ],
+      "fixed_scope": "Derive aggregate and per-worker/per-effective-worker capital laws with explicit discrete timing and exact (1+n)(1+g) denominator; state when continuous rates/approximations are used. Cobb-Douglas interior/zero boundaries, steady states, convergence/stability argument, golden-rule consumption and feasible saving rate, transitional versus sustained growth effects, growth accounting versus causal attribution. At least2original fully worked examples and8solved exercises including parameter changes, boundary cases, transition arithmetic and identification critique. Do not silently treat a production residual as an identified technology shock."
+    },
+    {
+      "owner": "causal_identification",
+      "chapter": "v06-c03",
+      "task": "Innovation, human capital and institutions",
+      "state": "specified-not-dispatched",
+      "canonical_specification": {
+        "title": "Innovation, human capital and institutions",
+        "outcome": "Compare mechanisms of long-run development with appropriate evidence.",
+        "coverage": [
+          "Endogenous growth",
+          "human capital",
+          "diffusion",
+          "institutions",
+          "geography",
+          "identification"
+        ],
+        "prerequisites": [
+          "v06-c02"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v06-c03.html",
+        "content/projects/v06-c03-*",
+        "scripts/check_v06_c03.py",
+        "content/reviews/v06-c03-author.json",
+        "content/reviews/v06-c03-sources.json"
+      ],
+      "fixed_scope": "Develop mechanisms beyond exogenous Solow productivity: a bounded explicit knowledge/innovation law with resource costs and scale assumptions, human-capital accumulation/returns and diffusion/catch-up, institutional and geographic channels. Supply formal derivations and original worked calculations rather than a list of theories. Include at least one accurately scoped primary empirical paper with its identification argument, actual source inspected and limitations; distinguish accounting, model implications and causal evidence. No universal ranking or institutional monocause. At least2worked examples and8complete exercises spanning mechanism, calculation, comparison, competing explanations and research critique. General equilibrium endogenous innovation frontiers remain for later graduate/research chapters."
+    },
+    {
+      "owner": "monte_carlo",
+      "chapter": "v06-c04",
+      "task": "Consumption, saving and investment",
+      "state": "specified-not-dispatched",
+      "canonical_specification": {
+        "title": "Consumption, saving and investment",
+        "outcome": "Derive intertemporal decisions and connect household and firm behavior to aggregates.",
+        "coverage": [
+          "Permanent income",
+          "life cycle",
+          "liquidity constraints",
+          "investment",
+          "adjustment costs",
+          "expectations"
+        ],
+        "prerequisites": [
+          "v06-c03"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v06-c04.html",
+        "content/projects/v06-c04-*",
+        "scripts/check_v06_c04.py",
+        "content/reviews/v06-c04-author.json",
+        "content/reviews/v06-c04-sources.json"
+      ],
+      "fixed_scope": "Derive two-period intertemporal choice from dated budget and a stated utility domain, global Euler/interior conditions, borrowing-limit KKT inequalities and boundary/terminal cases. Explain permanent-income/life-cycle predictions, transitory/permanent shocks, expectations and precautionary effects only under explicit assumptions. Derive a finite investment problem with depreciation and convex adjustment cost, user cost and timing, and distinguish financial transfers from aggregate capital formation. Supply at least2fully worked original cases and8fully solved exercises with changed constraints, resource reconciliation and model-versus-evidence critique. No unsupported automatic inference that observed consumption identifies expectations or preference parameters."
+    }
+  ]
+}

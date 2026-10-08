@@ -2,7 +2,7 @@
   "batch": "v05-assessment",
   "date": "2026-10-08",
   "authorization": "Standing explicit user authorization for parallel specialist production",
-  "state": "specified-not-accepted",
+  "state": "accepted-verified-awaiting-private-publication",
   "integration_owner": "root",
   "canonical_specification": {
     "assessment": "Solve choice and equilibrium problems and evaluate welfare, strategy and information mechanisms.",
@@ -13,11 +13,11 @@
     "ownership": "Specialists write only owned paths, no children/shared writes/commits/hosting. Root composes canonical assessment, accepts and publishes. Draft against the twelve now-written chapter methods; final volume acceptance requires all twelve accepted chapters and all package gates.",
     "exam_design": "Distinct 100-point Forms A/B, five20-point essential domains, four5-point parts per domain, 180minutes closed notes with basic calculator. State all inputs, units, assumptions and any needed finite tables. Complete solutions, per-part scoring, critical-error rules and alternative defensible-answer criteria. Original transfer rather than copied chapter exercises. Keep workload feasible; no unintroduced theorem proof.",
     "domains": [
-      "D1 individual choice, duality and production/costs (c01–03)",
-      "D2 competitive/general equilibrium, incidence and welfare (c04–05)",
-      "D3 market power and strategic interaction (c06–07)",
-      "D4 information, selection/signaling/screening and contracts (c08–09)",
-      "D5 externalities, allocation design and behavioral evidence (c10–12)"
+      "D1 individual choice, duality and production/costs (c01\u201303)",
+      "D2 competitive/general equilibrium, incidence and welfare (c04\u201305)",
+      "D3 market power and strategic interaction (c06\u201307)",
+      "D4 information, selection/signaling/screening and contracts (c08\u201309)",
+      "D5 externalities, allocation design and behavioral evidence (c10\u201312)"
     ],
     "review": "Quiet JSON-serializable independent checker and author review for each task. Root audits exact prompt/answer alignment, methods, numerical targets and rubric; structural checks and no claimed UI QA."
   },
@@ -25,7 +25,7 @@
     {
       "owner": "regression",
       "task": "Form A",
-      "state": "assigned",
+      "state": "accepted-by-root",
       "owned_paths": [
         "content/assessment-parts/v05-form-a.html",
         "scripts/check_v05_exam_a.py",
@@ -37,7 +37,7 @@
     {
       "owner": "monte_carlo",
       "task": "Distinct Form B",
-      "state": "assigned",
+      "state": "accepted-by-root",
       "owned_paths": [
         "content/assessment-parts/v05-form-b.html",
         "scripts/check_v05_exam_b.py",
@@ -49,7 +49,7 @@
     {
       "owner": "causal_identification",
       "task": "Integrative market-intervention project",
-      "state": "assigned",
+      "state": "accepted-by-root",
       "owned_paths": [
         "content/assessment-parts/v05-project.html",
         "content/projects/v05-project-*",
@@ -63,7 +63,7 @@
     {
       "owner": "root",
       "task": "Diagnostic, administration, retention, remediation, notation/index, synthesis and integration",
-      "state": "specified-not-started",
+      "state": "accepted-by-root",
       "owned_paths": [
         "content/assessment-parts/v05-support.html",
         "content/assessments/v05.html",
@@ -74,5 +74,56 @@
       "content": "Self-contained prior-tools diagnostic with solutions; five-domain exam advancement/critical-error protocol; original delayed transfer and oral defense with answers/rubric; remediation linking all12chapters, notation/concept index and synthesis. Assemble owned fragments and integrate checkers only after complete review. Accept volume after chapter/package gates."
     }
   ],
-  "dispatch_note": "Three specialist assessment tasks dispatched after completed chapter author/peer handoffs; FormsA/B and market project drafting. Root support and integration remain outstanding. These packages are not represented as written or accepted."
+  "dispatch_note": "All three specialist packages complete and root accepted; cross-form/support peer records have no unresolved material findings. Integrated publication checks pending.",
+  "source_chapter_edition": {
+    "project_id": "appgprj_6ac52f5d03948191b8aaa5d45486bdf3",
+    "status": "succeeded",
+    "successful_url": "https://economics-finance-mastery-library.willribeirodrums.chatgpt.site",
+    "last_pushed_commit": "1dcaa7452df3d860700569dcd57e732f00e1cd89",
+    "deployment_id": "appgdep_6ac79606ba648191914202d1fca3e373",
+    "version_id": "appgprj_6ac52f5d03948191b8aaa5d45486bdf3~appgver_d2176b859f648191b398f1ba2593f608",
+    "updated_at": "2026-10-08T13:09:38.934966+00:00"
+  },
+  "early_outline_checks": {
+    "form_a": "Root spot-checked consumer Hicksian(6,24)/cost72, exchangeprice4/3, unequal-cost Cournot and inactive branch, wage action reversal and tax/cap netwelfare86/92. Commitment no-lock actual value4 versus delayed5.76\u2212fee gives maximumfee1.76; irreversible device and real service cost required. Full manuscript/checker review remains pending.",
+    "form_b": "Root spot-checked consumerCV6/EV4, shutdowncutoff4.2, rationingwelfare17versus25, productionGEprice/quantity3 andprofit4.5, segmentednetprofit514versus486. Unequal3-of-7 absolute-tail sharp-nullp1/35 is correct; signaling must cover all allowed signals. Full package review pending.",
+    "project": "Original P100\u2212Q, C_i20q_i+q_i\u00b2/2,q_i\u226440,DQ\u00b2/2: competitiveQ160/3,CournotQ40,efficientQ32/W1280. Optimaluniformtax16forCournot versus mechanicalMDtax32 yieldsQ24/W1200; taxnet1260,nontradableequalcap16net1245 with statedfees. Root checked these targets and requires capped bestresponse proof, no-policy feeavoidance and globalactivebounds; full draft/benchmark review pending."
+  },
+  "peer_review_assignments": [
+    {
+      "owner": "regression",
+      "task": "Independent Form B manuscript, solution, rubric, taught-method and checker review",
+      "state": "complete-with-resolved-clarification",
+      "owned_paths": [
+        "content/reviews/v05-exam-b-peer.json"
+      ],
+      "contract": "Read-only review of Form B and dependencies; independently solve all20parts, audit globality/beliefs/IC/welfare/assignment tails and rubric. Run existing checker; record exact findings and proposed fixes. Do not edit author files or shared state. No children or hosting."
+    },
+    {
+      "owner": "monte_carlo",
+      "task": "Independent Form A manuscript, solution, rubric, taught-method and checker review",
+      "state": "complete-with-resolved-clarification",
+      "owned_paths": [
+        "content/reviews/v05-exam-a-peer.json"
+      ],
+      "contract": "Read-only review of Form A and dependencies; independently solve all20parts, audit globality/entry plans/selection/IC/welfare/date utilities and rubric. Run existing checker; record exact findings and proposed fixes. Do not edit author files or shared state. No children or hosting."
+    }
+  ],
+  "support_peer_assignment": {
+    "owner": "monte_carlo",
+    "task": "Independent support-fragment review after current exam peer task finishes",
+    "state": "complete-with-resolved-clarification",
+    "owned_paths": [
+      "content/reviews/v05-support-peer.json"
+    ],
+    "contract": "Read-only root support/checker review: independently solve8diagnostic,6retention and3oral guide tasks, inspect all scores/links/prerequisite methods; run support checker. Record findings and hashes only; no source/shared edits, children or hosting."
+  },
+  "next_batch_contract": "production/v06-opening-assignments.json; specified only, not dispatched",
+  "validation": {
+    "full_library": "passed71pages,60acceptedchapters,5acceptedvolumepackages",
+    "arithmetic_and_projects": "passed",
+    "javascript_syntax": "passed",
+    "whitespace": "passed",
+    "visual_ui": "pending; no workaround"
+  }
 }

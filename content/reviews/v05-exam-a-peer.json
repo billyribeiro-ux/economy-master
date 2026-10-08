@@ -1,0 +1,187 @@
+{
+  "assessment": "v05-form-a",
+  "review_type": "Independent bounded peer review of all20Form A parts, complete solutions, scoring and numerical checker",
+  "reviewer": "monte_carlo specialist; distinct from the Form A author",
+  "date": "2026-10-08",
+  "state": "peer-review-complete",
+  "status": "passed; one low-priority wording finding resolved by root",
+  "assignment": "production/v05-assessment-assignments.json — peer_review_assignments",
+  "scope": {
+    "read_only_inputs": [
+      "content/assessment-parts/v05-form-a.html",
+      "scripts/check_v05_exam_a.py"
+    ],
+    "owned_output": "content/reviews/v05-exam-a-peer.json",
+    "coverage": "Read every prompt, input, solution and rubric; independently solved all20parts, reviewed the complete checker implementation, ran its CLI and optimized/portable quiet integration API, and checked taught-method and cross-form scope. No author or shared file was edited by the peer reviewer.",
+    "format": "Five20-point domains, four5-point parts per domain,100points total,180minutes closed notes with basic calculator. All needed numerical inputs and game timing are supplied; all20parts have complete scoring allocations totaling five. All12Volume5 chapter method routes are present."
+  },
+  "reviewed_hashes": {
+    "final_manuscript": {
+      "path": "content/assessment-parts/v05-form-a.html",
+      "sha256": "c708dbc88ba17bfc4989baa559cbf8ed1535b979cc952ff45fbd38f6693b223d",
+      "bytes": 36191
+    },
+    "checker": {
+      "path": "scripts/check_v05_exam_a.py",
+      "sha256": "091b3293d1d7cdb91f0b1fe0fccf43b5581d57af0032c1a2516a47d8a410ebdd",
+      "bytes": 20445
+    },
+    "initial_manuscript_before_root_wording_fix": {
+      "path": "content/assessment-parts/v05-form-a.html",
+      "sha256": "f07981b4c60b63125754ef55ef5f09b7f1a8fdac5a6a2f4bd53fda734b1b2d40",
+      "bytes": 36205
+    }
+  },
+  "findings": [
+    {
+      "id": "v05-a-peer-01",
+      "severity": "low",
+      "category": "instructional wording",
+      "location": "v05-a-s5d, temporal-self interpretation",
+      "finding": "The original sentence 'Every temporal self therefore does not benefit' could be read as claiming that no self benefits, contrary to the preceding correctly calculated date-0 gain. The intended claim is that not every self benefits.",
+      "proposed_fix": "Replace with 'Not every temporal self benefits.'",
+      "status": "resolved",
+      "resolved_by": "root",
+      "resolution_verification": "Re-read the current manuscript, verified the replacement sentence is present and the original sentence absent, recorded its new SHA-256 and reran the existing checker successfully. No numerical, economic or scoring answer changed."
+    }
+  ],
+  "unresolved_material_findings": [],
+  "part_reviews": [
+    {
+      "part": "D1(a)",
+      "result": "passed",
+      "independent_answer": "Demand is (2m/(3px),m/(3py)); old bundle(12,6),utility864; new bundle(3/2,6),utility27/2.",
+      "reasoning_audit": "Positive affordable interior utility excludes either axis; budget substitution gives a cubic increasing then decreasing around its sole positive stationary point. Budget endpoints, binding and globality are explicit. Utility differences are correctly treated as ordinal rather than dollar losses."
+    },
+    {
+      "part": "D1(b)",
+      "result": "passed",
+      "independent_answer": "At new prices, target864 is attained at(6,24), expenditure72, compensation54. Repricing the old basket costs102 and requires84extra,30more than optimal compensation.",
+      "reasoning_audit": "Minimization of8x+864/x² has positive second derivative and diverges as x approaches0or infinity, so the reported point is a global minimum. Target utility and compensation reference prices match the prompt."
+    },
+    {
+      "part": "D1(c)",
+      "result": "passed",
+      "independent_answer": "Conditional L=q²; C=2q²+3q; MC=4q+3; AC=2q+3 for q>0; C''=4.",
+      "reasoning_audit": "Strictly positive labor cost makes the input requirement bind; all costs and unit/domain qualifications are correct, including zero-output cost versus undefined AC."
+    },
+    {
+      "part": "D1(d)",
+      "result": "passed",
+      "independent_answer": "At price11, q2,L4,revenue22,cost14,profit8. Every price in[0,3] uniquely induces zero.",
+      "reasoning_audit": "The complete-square certificate establishes the unbounded-domain global optimum; the low-price polynomial inequality covers the entire stated interval including its endpoint."
+    },
+    {
+      "part": "D2(a)",
+      "result": "passed",
+      "independent_answer": "Untaxed Q15,p20; taxed Q12,pb26,ps17; buyer/seller incidence6and3.",
+      "reasoning_audit": "Demand, supply, wedge and remittance equivalence are consistently scoped to the given price-taking/enforcement environment."
+    },
+    {
+      "part": "D2(b)",
+      "result": "passed",
+      "independent_answer": "Before tax CS225,PS225/2,total675/2. After CS144,PS72,revenue108,total324. DWL27/2; private-surplus loss243/2 equals revenue108 plus DWL27/2.",
+      "reasoning_audit": "Independent direct integration of benefit and cost matches every triangle and transfer account; public receipts are included once and are not treated as destroyed resources."
+    },
+    {
+      "part": "D2(c)",
+      "result": "passed",
+      "independent_answer": "Wealths6p,6; demands A(3,3p),B(4/p,2); equilibrium p4/3,A(3,4),B(3,2),wealths8,6.",
+      "reasoning_audit": "Solved independently using y clearing, then checked x clearing and both budgets. Endowment values rather than fixed exogenous incomes determine purchasing power."
+    },
+    {
+      "part": "D2(d)",
+      "result": "passed",
+      "independent_answer": "At p2, excess demands(-1,2) have value0 without clearing. At equilibrium every weak improvement costs at least8forAand6forB, with a strict excess for any strictly improved person, contradicting total resource value14.",
+      "reasoning_audit": "The manuscript's local-nonsatiation expenditure argument is valid for these globally optimized own-consumption preferences. Independently, AM-GM yields cost>=2sqrt(pUA) for A and cost>=3(p²UB/4)^(1/3) for B; the current positive targets give8and6and strict target increases raise those bounds. No interpersonal utility or equality claim is made."
+    },
+    {
+      "part": "D3(a)",
+      "result": "passed",
+      "independent_answer": "BRi=max{0,(62-ci-qj)/2}; equilibrium(22,10),price30,profits(484,100).",
+      "reasoning_audit": "The concave positive-price branch and strictly negative positive-output payoff on the zero-price tail jointly justify global responses. Both equilibrium actions satisfy the actual deviation inequalities."
+    },
+    {
+      "part": "D3(b)",
+      "result": "passed",
+      "independent_answer": "Interior equations give(86/3,-10/3),infeasible; actual equilibrium(27,0),price35,profits(729,0).",
+      "reasoning_audit": "The solution checks the inactive firm's response, rejects the other single-active and all-inactive patterns, and does not retain a negative candidate as an equilibrium."
+    },
+    {
+      "part": "D3(c)",
+      "result": "passed",
+      "independent_answer": "I's plans areAA,AF,FA,FFin(Standard,Specialized)order. Unique SPNE is(Standard,AF),path Standard-Accommodate,payoff(5,7).",
+      "reasoning_audit": "Both strict continuation choices are evaluated, including Fight after the unreached Specialized history. The entrant compares all three resulting terminal options."
+    },
+    {
+      "part": "D3(d)",
+      "result": "passed",
+      "independent_answer": "All pure Nash profiles are(Standard,AA),(Standard,AF),(Out,FF); only(Standard,AF)is subgame perfect.",
+      "reasoning_audit": "Independently enumerated all12complete-plan profiles and all unilateral changes. Specialized cannot be a Nash outcome; ordinary Nash versus conditional credibility is explained with the correct incumbent incentives."
+    },
+    {
+      "part": "D4(a)",
+      "result": "passed",
+      "independent_answer": "At share1/4, low-only price9is stable; all-type buyer value12falls below high participation price13. Realized gains3versus verifiable-quality5.",
+      "reasoning_audit": "Lower offers lose sellers to existing higher offers; intermediate higher offers buy low quality at a loss; every offer high enough to attract both types is unprofitable. Equality participation and independent tie splitting are supplied."
+    },
+    {
+      "part": "D4(b)",
+      "result": "passed",
+      "independent_answer": "At share1/2,pooling price15sustains full trade and gains6. Against low-only9,offering14attracts all assets with profit1perasset.",
+      "reasoning_audit": "The changed population and the endogenous participating composition are distinguished from a pure price transfer, and the full offer-deviation requirement is applied."
+    },
+    {
+      "part": "D4(c)",
+      "result": "passed",
+      "independent_answer": "H requires wage spread>=24and expected wage>=11byIR; limited liability plusIC gives the tighter lower bound16. Wages(0,24)attain it; both effort utilities8,rent5;ICandfailurefloorbind,IRslack.",
+      "reasoning_audit": "The global bound does not rely merely on binding IR. Both effort utilities and the designated-action weak implementation convention are explicitly checked."
+    },
+    {
+      "part": "D4(d)",
+      "result": "passed",
+      "independent_answer": "At success54,profits L23,H24,nohire0; at success48,profits L21,H20,nohire0. Observable H costs11and yields29at original revenues,5above hidden H.",
+      "reasoning_audit": "The low-effort flat wage3attains its IR minimum; all alternatives are compared at both revenues. With effort verifiable, wages11forHand0forLinduce H under the supplied participation rule. The5difference is a risk-neutral incentive rent, not a risk premium."
+    },
+    {
+      "part": "D5(a)",
+      "result": "passed",
+      "independent_answer": "Unregulated Q12,W72; W=96-(3/2)(Q-8)²,so Q8,W96. Corrective tax8gives buyer price22and retained seller price14.",
+      "reasoning_audit": "Damage is integrated once and marginal damage is evaluated at the target. The fixed administrative costs affect instrument activation/ranking while leaving each positive-target maximization unchanged here."
+    },
+    {
+      "part": "D5(b)",
+      "result": "passed",
+      "independent_answer": "Tax receipts64,net public funds54,net resource surplus86. Cap permit price8,rents64,public lump-sum funding4,net resource surplus92. No intervention gives72; cap wins.",
+      "reasoning_audit": "Passive permit ownership outside the producer sector makes the separated producer-surplus/rent ledger unambiguous. Free allocation retains permit opportunity cost. Administrative resources are subtracted; funding payments and public receipts cancel as transfers."
+    },
+    {
+      "part": "D5(c)",
+      "result": "passed",
+      "independent_answer": "Bidder1wins,pays34,gets13;total gains47. Its bid40is another best response against the specified rival bids.",
+      "reasoning_audit": "The proof exhausts arbitrary highest-rival-bid comparisons h<v,h>v,h=vand accounts for fixed tie priority. It correctly distinguishes weak dominant truthfulness from uniqueness of a best response to one rival profile."
+    },
+    {
+      "part": "D5(d)",
+      "result": "passed after root wording clarification",
+      "independent_answer": "Date0redemption4,retention144/25;date1redemption10,retention36/5. Sophisticated locking gives119/25at date0and gain19/25;naive forecast retention72/5at date1leads to no lock followed by actual redemption. Undiscounted-flow gain is17-10=7.",
+      "reasoning_audit": "Immediate service cost is not discounted, future flows use the correct date-specific beta/delta weights, naive beliefs differ from actual preferences, and the sunk fee does not enter the date1incremental choice. Date0andflow criteria are kept distinct from date1preferences and from empirical effects of a reminder. The single ambiguous negation was corrected by root and re-read."
+    }
+  ],
+  "validation": {
+    "existing_checker_cli": {"command": "python3 -B book/scripts/check_v05_exam_a.py", "status": "passed", "check_groups": 6},
+    "optimized_portable_api": "Absolute-path import and check() from /private/tmp under python3 -B -O passed all6groups; captured stdout remained empty and json.dumps(...,allow_nan=False) succeeded.",
+    "independent_peer_recalculation": "Separate in-memory standard-library Fraction calculations used the prompt inputs without importing the author checker or its helpers. All20parts were recomputed and passed, including all12entry profiles, direct integrated ledgers, alternate y-market equilibrium solution, binding wage comparisons and date-specific utilities. No peer script artifact or other output file was created.",
+    "post_fix_check": "Re-read the exact root-corrected temporal sentence, confirmed the old wording was absent, recorded final hashes and reran the existing checker successfully against that final manuscript.",
+    "rubric_and_methods": "All20rubrics independently total5points and align with the requested calculations, constraints and interpretations; 5domains total100points. Required consumer/producer optimization, local-nonsatiation welfare proof, active-set responses, complete-plan Nash/subgames, selection,IC/IR, Pigouvian accounting, auction threshold proof and dated preferences are present in the linked chapter methods. No unfamiliar quantile or external data lookup is needed."
+  },
+  "limitations": [
+    "This is internal independent-agent peer review, not external human academic certification or empirical timing/difficulty validation.",
+    "The checker uses some finite grids to supplement analytic arguments. Such grids alone do not prove continuum optimality, universal deviation claims or the welfare theorem; those written arguments were separately reviewed.",
+    "The review reuses the chapters' inspected primary method routes and introduces no new empirical, legal or historical source claim; it does not re-retrieve every source PDF.",
+    "All assessment cases are synthetic and conditional on their explicitly stated preferences, institutions, information and tie rules.",
+    "No visual, mobile or print UI QA was performed. Browser restrictions were respected without workaround.",
+    "Root retains full package integration, shared structural/offline checks, advancement protocol, acceptance and publication. This record changes no central state."
+  ],
+  "recommendation": "No unresolved material finding; content is ready for root's final assessment-package acceptance gates at the recorded final hashes."
+}

@@ -1,0 +1,242 @@
+{
+  "project_id": "v05-market-intervention",
+  "synthetic": true,
+  "created": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "provenance": "All numbers and scenarios are original author-created hypothetical inputs, not observations, fitted estimates or real policy recommendations. No external dataset is embedded.",
+  "timing": {
+    "period": "one hypothetical operating period",
+    "availability": "All scenario primitives are supplied before analysis. They are stipulated common knowledge within a deterministic scenario.",
+    "decision": "Regulator selects one instrument before firms choose outputs simultaneously. Consumers then buy at the market-clearing inverse-demand price.",
+    "uncertainty_exercise": "Regulator commits before the damage state is revealed. Firms know their unchanged private demand/costs; damage does not enter their private profit. Weights are supplied assumptions, not estimated frequencies."
+  },
+  "units": {
+    "output": "units per operating period",
+    "price_tax_linear_cost": "USD per output unit",
+    "demand_slope_quadratic_cost_damage_slope": "USD per squared output unit in the fixed-period normalization",
+    "benefit_cost_damage_profit_revenue_administration_welfare": "USD per operating period"
+  },
+  "model": {
+    "inverse_demand": "P(Q) = A - b Q on the entire feasible output box; validated b*sum(capacities) <= A",
+    "cost": "C_i(q_i) = c_i*q_i + k_i*q_i^2/2; no private fixed costs",
+    "damage": "D(Q) = h*Q^2/2; one emission unit per output unit, no separate abatement margin",
+    "welfare": "B(Q) - sum(C_i) - D(Q) - real administration, with B(Q)=A*Q-b*Q^2/2",
+    "competition": "Price-taking benchmark using the same two production technologies; not a claim that two real firms ignore market power.",
+    "cournot": "Two independent quantity setters; fixed participants; no entry, collusion, uncertainty about private primitives or repeated-game incentives.",
+    "standard": "Equal nontradable firm upper bounds q_i <= min(physical_capacity_i,s); free allocation; no permit trading or permit auction revenue.",
+    "tax": "Uniform nonnegative unit charge t in [0,tax_ceiling]; no subsidy; transfers have no additional collection/financing distortion beyond stated administration.",
+    "administration": "A deployed tax or standard incurs its fixed real cost even if it has no output effect. A separately specified no-policy option incurs zero administration.",
+    "budget": "Government net cash equals tax receipts minus administration. A negative balance is financed by an available lump-sum public numeraire endowment; positive balances are retained or rebated lump sum. The real administration cost is counted once.",
+    "preferences": "Quasilinear dollar benefits, no binding income or financing constraint, unweighted total surplus including affected outsiders. This is an efficiency criterion, not a distributional ethical ranking."
+  },
+  "protocol": {
+    "regimes": [
+      "competition",
+      "cournot"
+    ],
+    "baseline_report_tax_rates": [
+      "0",
+      "16",
+      "32",
+      "40"
+    ],
+    "baseline_report_standard": "16",
+    "policy_tie_rule": "Maximize exact net welfare; then prefer no policy, then tax, then standard. Within equal tax welfare choose lower t; within equal standard welfare choose larger s.",
+    "stress_test": "Carry baseline Cournot tax 16 and standard 16 unchanged into every deterministic scenario; also report scenario-specific optimized policies separately.",
+    "chart": "Baseline Cournot net welfare versus tax t from 0 to 40 in steps of 1; deployed-tax cost applies at t=0 too. Plot no-policy welfare as a distinct labeled reference."
+  },
+  "scenarios": [
+    {
+      "id": "baseline",
+      "label": "Symmetric baseline",
+      "demand_intercept": "100",
+      "demand_slope": "1",
+      "damage_slope": "1",
+      "firms": [
+        {
+          "id": "F1",
+          "linear_cost": "20",
+          "quadratic_cost": "1",
+          "capacity": "40"
+        },
+        {
+          "id": "F2",
+          "linear_cost": "20",
+          "quadratic_cost": "1",
+          "capacity": "40"
+        }
+      ],
+      "tax_ceiling": "40",
+      "tax_administration": "20",
+      "standard_administration": "35",
+      "standard_ceiling": "40"
+    },
+    {
+      "id": "low_damage",
+      "label": "Low marginal damage",
+      "demand_intercept": "100",
+      "demand_slope": "1",
+      "damage_slope": "1/4",
+      "firms": [
+        {
+          "id": "F1",
+          "linear_cost": "20",
+          "quadratic_cost": "1",
+          "capacity": "40"
+        },
+        {
+          "id": "F2",
+          "linear_cost": "20",
+          "quadratic_cost": "1",
+          "capacity": "40"
+        }
+      ],
+      "tax_ceiling": "40",
+      "tax_administration": "20",
+      "standard_administration": "35",
+      "standard_ceiling": "40"
+    },
+    {
+      "id": "high_damage",
+      "label": "High marginal damage",
+      "demand_intercept": "100",
+      "demand_slope": "1",
+      "damage_slope": "4",
+      "firms": [
+        {
+          "id": "F1",
+          "linear_cost": "20",
+          "quadratic_cost": "1",
+          "capacity": "40"
+        },
+        {
+          "id": "F2",
+          "linear_cost": "20",
+          "quadratic_cost": "1",
+          "capacity": "40"
+        }
+      ],
+      "tax_ceiling": "40",
+      "tax_administration": "20",
+      "standard_administration": "35",
+      "standard_ceiling": "40"
+    },
+    {
+      "id": "tight_capacity",
+      "label": "Both physical capacities bind",
+      "demand_intercept": "100",
+      "demand_slope": "1",
+      "damage_slope": "1",
+      "firms": [
+        {
+          "id": "F1",
+          "linear_cost": "20",
+          "quadratic_cost": "1",
+          "capacity": "12"
+        },
+        {
+          "id": "F2",
+          "linear_cost": "20",
+          "quadratic_cost": "1",
+          "capacity": "12"
+        }
+      ],
+      "tax_ceiling": "40",
+      "tax_administration": "20",
+      "standard_administration": "35",
+      "standard_ceiling": "40"
+    },
+    {
+      "id": "costly_administration",
+      "label": "Larger real administration costs",
+      "demand_intercept": "100",
+      "demand_slope": "1",
+      "damage_slope": "1",
+      "firms": [
+        {
+          "id": "F1",
+          "linear_cost": "20",
+          "quadratic_cost": "1",
+          "capacity": "40"
+        },
+        {
+          "id": "F2",
+          "linear_cost": "20",
+          "quadratic_cost": "1",
+          "capacity": "40"
+        }
+      ],
+      "tax_ceiling": "40",
+      "tax_administration": "100",
+      "standard_administration": "115",
+      "standard_ceiling": "40"
+    },
+    {
+      "id": "asymmetric_cost",
+      "label": "Unequal linear costs",
+      "demand_intercept": "100",
+      "demand_slope": "1",
+      "damage_slope": "1",
+      "firms": [
+        {
+          "id": "F1",
+          "linear_cost": "20",
+          "quadratic_cost": "1",
+          "capacity": "40"
+        },
+        {
+          "id": "F2",
+          "linear_cost": "44",
+          "quadratic_cost": "1",
+          "capacity": "40"
+        }
+      ],
+      "tax_ceiling": "40",
+      "tax_administration": "20",
+      "standard_administration": "35",
+      "standard_ceiling": "40"
+    },
+    {
+      "id": "inactive_firm",
+      "label": "Second firm too costly to operate",
+      "demand_intercept": "100",
+      "demand_slope": "1",
+      "damage_slope": "1",
+      "firms": [
+        {
+          "id": "F1",
+          "linear_cost": "20",
+          "quadratic_cost": "1",
+          "capacity": "40"
+        },
+        {
+          "id": "F2",
+          "linear_cost": "100",
+          "quadratic_cost": "1",
+          "capacity": "40"
+        }
+      ],
+      "tax_ceiling": "40",
+      "tax_administration": "20",
+      "standard_administration": "35",
+      "standard_ceiling": "40"
+    }
+  ],
+  "damage_uncertainty": {
+    "states": [
+      {
+        "scenario_id": "low_damage",
+        "probability": "1/4"
+      },
+      {
+        "scenario_id": "baseline",
+        "probability": "1/2"
+      },
+      {
+        "scenario_id": "high_damage",
+        "probability": "1/4"
+      }
+    ],
+    "assumption": "Only h differs across these states. A single fixed instrument is selected ex ante; it cannot be changed after observing h."
+  }
+}

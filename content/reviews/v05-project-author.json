@@ -1,0 +1,71 @@
+{
+  "package": "v05-project",
+  "title": "Correcting a market with two distortions",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "status": "author-check-passed-submitted-for-root-acceptance",
+  "review_type": "Original author package plus independent exact computation; root editorial acceptance remains separate",
+  "owned_files": [
+    "content/assessment-parts/v05-project.html",
+    "content/projects/v05-project-data.json",
+    "content/projects/v05-project-analysis.py",
+    "content/projects/v05-project-output.json",
+    "content/projects/v05-project-manifest.json",
+    "content/projects/v05-project-README.txt",
+    "scripts/check_v05_project.py",
+    "content/reviews/v05-project-sources.json",
+    "content/reviews/v05-project-author.json"
+  ],
+  "input_path": "content/projects/v05-project-data.json",
+  "benchmark_path": "content/projects/v05-project-analysis.py",
+  "preserved_output_path": "content/projects/v05-project-output.json",
+  "checks": [
+    "Independent scalar output oracle and primitive ledger checks for seven scenarios/two regimes/planner; 69 active intervals certify full policy domains and 93 endpoint/stationary candidates",
+    "All 14 instructor policy/welfare targets, baseline tax/cap implementation and incidence, asymmetric three-branch standard and exact 36 allocation loss, zero-output and capacity corners",
+    "Fixed-policy stress preserves tax/standard 16; ex ante weights give h=25/16, tax=1360/49 and welfare=50220/49; original policies yield 972/957 versus no-policy 750; all 41 chart points verified",
+    "Mutation audit: reversing all firm records reverses quantities without changing policy/welfare; altered asymmetric damage reoptimizes and passes independent global certificates",
+    "Executable contracts: quiet import, exact preserved output, three file hashes, unchanged input, unrelated working directory and -O; 19 direct and optimized-CLI invalid cases rejected",
+    "Manuscript contracts: project anchor, unique prefixed IDs, five flat downloads, complete instructor/rubric/critical-error sections and three explicitly reused chapter method sources"
+  ],
+  "quiet_json_serializable_check": true,
+  "instruction_review": [
+    "Self-contained one-period market, timing, primitive units, quasilinear welfare, observable fixed emission mapping, physical capacities and fixed participants specified.",
+    "Feasible uniform tax and equal nontradable firm standard distinguished from subsidies, discriminatory instruments and permit markets. Administration is a real fixed cost for any deployed instrument; no intervention is separately available at zero cost.",
+    "Government receipts, private profits, consumer surplus, external harm and net cash reconcile to resource surplus without double-counted transfers or administration. A stipulated lump-sum public numeraire endowment funds negative public cash; compensation of losers is not asserted.",
+    "Competitive price-taking benchmark distinguished from two-firm Cournot incentives. Strict concavity, clipped-response contraction and active-set lower/interior/upper inequalities supply global output results.",
+    "Best feasible policies exhaust every valid affine policy interval, all endpoints/stationary points and fixed administration/no-policy comparisons. The plotted tax grid is not used for optimization.",
+    "All seven scenarios and both conduct regimes solved, including low/high damage, tax upper boundary, physical upper boundaries, inactive-firm zero boundary, high administration and a fully solved asymmetric allocation/standard comparison.",
+    "Asymmetric Cournot uniform taxes preserve a 12-unit firm-output difference while the efficient allocation requires 24; efficient total output therefore need not imply efficient productive allocation. Excluded discriminatory taxes are diagnostic only.",
+    "Fixed baseline-policy stress results are separated from scenario-specific reoptimization. Ex ante uncertainty fixes the policy before damage is observed, uses stipulated probabilities and reconciles the weighted state ledger; no estimated uncertainty or adaptive-policy claim.",
+    "Complete deliverables and 100-point rubric with five 20-point domains/four five-point criteria each; 85 overall and 15 per domain stated as author criteria, critical errors require revision.",
+    "Instructor guide supplies baseline ledgers/incidence, every recommended policy/welfare target, full asymmetric standard branches, all boundary explanations, uncertainty targets and open-response evidence criteria.",
+    "Identification plan distinguishes equilibrium correlation, structural primitives, policy assignment, exposure/harm measurement and welfare valuation. It supplies concrete timing, confounding and post-treatment-control critiques without inventing data."
+  ],
+  "resolved_findings": [
+    {
+      "severity": "minor",
+      "location": "content/assessment-parts/v05-project.html, global calculation uniqueness paragraph",
+      "finding": "Root noted that the competitive maximization characterization must include the deployed tax and effective bounds.",
+      "resolution": "Corrected to B−sum C−tQ over the effective output box including standards; planner target remains B−sum C−D over physical bounds. Checker requires the corrected objective text."
+    }
+  ],
+  "source_policy": "Three existing accepted primary-method IDs reused with original inspection scopes and explicit project_reuse fields. No duplicate catalogue IDs or new empirical findings proposed.",
+  "hashes": {
+    "content/assessment-parts/v05-project.html": "e5775d1865be14849179d815ce8d921b049ed51500e709b4ddf9d0d710bda9e8",
+    "content/projects/v05-project-data.json": "e62d69e64fccf87898cc1fecdef9b7c1003b884db89bf28d9fe03c1787eb0e67",
+    "content/projects/v05-project-analysis.py": "0bf7df0350e13131df3c4f9a3182c4fa75eab3edd815bd07ad44aedb7f1e4482",
+    "content/projects/v05-project-output.json": "4cef8dfe718e26609db9d0d6873456b0a6beaea2c715dd6cd00aec8391c7886a",
+    "content/projects/v05-project-manifest.json": "19bc20cd03b7e29f0c8acf35aa68396464259487d8b8f448ae13dd7e41e65f4d",
+    "content/projects/v05-project-README.txt": "117596b58be9d5d7e0390fc717ab373ce925c48b20bb5454c1fcc591bbe2d0f1",
+    "scripts/check_v05_project.py": "ac93be3b21f5f4dc332e257e8563a626ece43c8bc4ce929af6d8457e81fb71ed",
+    "content/reviews/v05-project-sources.json": "296e2c7ca05de7ee477c497f770ef534d6cd72deccd54d978fac5fdd56dd17a2"
+  },
+  "limitations": [
+    "Independent scalar roots and affine incentive certificates verify the supplied two-firm convex model and feasible instruments; they do not validate real conduct, demand, cost, damage or enforcement assumptions.",
+    "Unweighted quasilinear welfare and lump-sum finance are stipulated criteria/assumptions. Neither a welfare increase nor this checker establishes Pareto compensation or ethical agreement.",
+    "The uncertainty exercise permits damage changes only, with supplied weights and a single ex ante instrument. It is not estimation, a confidence interval or an adaptive policy experiment.",
+    "Source records reuse accepted chapter primary inspections; project parameters, examples and proofs are original. No empirical dataset or current legal assertion is embedded.",
+    "Human-readable proof, prompt/answer and policy interpretation still require editorial review. Root retains volume acceptance, integration and publication; no visual/mobile/print UI QA or external human certification is claimed."
+  ],
+  "acceptance": "Complete authored project package submitted; no shared curriculum/checkpoint/build/hosting files changed. Root owns volume acceptance, integration and publication."
+}

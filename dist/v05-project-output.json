@@ -1,0 +1,6316 @@
+{
+  "project_id": "v05-market-intervention",
+  "synthetic": true,
+  "scenarios": [
+    {
+      "id": "baseline",
+      "label": "Symmetric baseline",
+      "efficient_target_without_administration": {
+        "regime": "planner",
+        "policy": {
+          "kind": "none",
+          "value": "0"
+        },
+        "quantities": [
+          "16",
+          "16"
+        ],
+        "total_output": "32",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "68",
+        "retained_price_after_tax": "68",
+        "gross_benefit": "2688",
+        "private_costs": [
+          "448",
+          "448"
+        ],
+        "consumer_surplus": "512",
+        "firm_profits": [
+          "640",
+          "640"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "0",
+        "government_net_cash": "0",
+        "external_damage": "512",
+        "gross_welfare_before_administration": "1280",
+        "net_welfare": "1280"
+      },
+      "competition": {
+        "no_policy": {
+          "regime": "competition",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "80/3",
+            "80/3"
+          ],
+          "total_output": "160/3",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "140/3",
+          "retained_price_after_tax": "140/3",
+          "gross_benefit": "35200/9",
+          "private_costs": [
+            "8000/9",
+            "8000/9"
+          ],
+          "consumer_surplus": "12800/9",
+          "firm_profits": [
+            "3200/9",
+            "3200/9"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "12800/9",
+          "gross_welfare_before_administration": "6400/9",
+          "net_welfare": "6400/9"
+        },
+        "policy_search": {
+          "tax": {
+            "optimum_deployed_instrument": {
+              "regime": "competition",
+              "policy": {
+                "kind": "tax",
+                "value": "32"
+              },
+              "quantities": [
+                "16",
+                "16"
+              ],
+              "total_output": "32",
+              "effective_output_bounds": [
+                "40",
+                "40"
+              ],
+              "active_bounds": [
+                "interior",
+                "interior"
+              ],
+              "buyer_price": "68",
+              "retained_price_after_tax": "36",
+              "gross_benefit": "2688",
+              "private_costs": [
+                "448",
+                "448"
+              ],
+              "consumer_surplus": "512",
+              "firm_profits": [
+                "128",
+                "128"
+              ],
+              "tax_receipts": "1024",
+              "real_administration": "20",
+              "government_net_cash": "1004",
+              "external_damage": "512",
+              "gross_welfare_before_administration": "1280",
+              "net_welfare": "1260"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "80/3",
+                  "80/3"
+                ],
+                "net_welfare": "6220/9"
+              },
+              {
+                "value": "32",
+                "quantities": [
+                  "16",
+                  "16"
+                ],
+                "net_welfare": "1260"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "40/3",
+                  "40/3"
+                ],
+                "net_welfare": "11020/9"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "0",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "80/3",
+                    "-1/3"
+                  ],
+                  [
+                    "80/3",
+                    "-1/3"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              }
+            ]
+          },
+          "standard": {
+            "optimum_deployed_instrument": {
+              "regime": "competition",
+              "policy": {
+                "kind": "standard",
+                "value": "16"
+              },
+              "quantities": [
+                "16",
+                "16"
+              ],
+              "total_output": "32",
+              "effective_output_bounds": [
+                "16",
+                "16"
+              ],
+              "active_bounds": [
+                "upper",
+                "upper"
+              ],
+              "buyer_price": "68",
+              "retained_price_after_tax": "68",
+              "gross_benefit": "2688",
+              "private_costs": [
+                "448",
+                "448"
+              ],
+              "consumer_surplus": "512",
+              "firm_profits": [
+                "640",
+                "640"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "35",
+              "government_net_cash": "-35",
+              "external_damage": "512",
+              "gross_welfare_before_administration": "1280",
+              "net_welfare": "1245"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "0",
+                  "0"
+                ],
+                "net_welfare": "-35"
+              },
+              {
+                "value": "16",
+                "quantities": [
+                  "16",
+                  "16"
+                ],
+                "net_welfare": "1245"
+              },
+              {
+                "value": "80/3",
+                "quantities": [
+                  "80/3",
+                  "80/3"
+                ],
+                "net_welfare": "6085/9"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "80/3",
+                  "80/3"
+                ],
+                "net_welfare": "6085/9"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "80/3",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "80/3",
+                    "0"
+                  ],
+                  [
+                    "80/3",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "80/3",
+                "upper": "80/3",
+                "q_affine": [
+                  [
+                    "40",
+                    "-1/2"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "upper"
+                ]
+              },
+              {
+                "lower": "80/3",
+                "upper": "80/3",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "40",
+                    "-1/2"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "80/3",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          }
+        },
+        "recommended_feasible_policy": {
+          "regime": "competition",
+          "policy": {
+            "kind": "tax",
+            "value": "32"
+          },
+          "quantities": [
+            "16",
+            "16"
+          ],
+          "total_output": "32",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "68",
+          "retained_price_after_tax": "36",
+          "gross_benefit": "2688",
+          "private_costs": [
+            "448",
+            "448"
+          ],
+          "consumer_surplus": "512",
+          "firm_profits": [
+            "128",
+            "128"
+          ],
+          "tax_receipts": "1024",
+          "real_administration": "20",
+          "government_net_cash": "1004",
+          "external_damage": "512",
+          "gross_welfare_before_administration": "1280",
+          "net_welfare": "1260"
+        }
+      },
+      "cournot": {
+        "no_policy": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "20",
+            "20"
+          ],
+          "total_output": "40",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "60",
+          "retained_price_after_tax": "60",
+          "gross_benefit": "3200",
+          "private_costs": [
+            "600",
+            "600"
+          ],
+          "consumer_surplus": "800",
+          "firm_profits": [
+            "600",
+            "600"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "800",
+          "gross_welfare_before_administration": "1200",
+          "net_welfare": "1200"
+        },
+        "policy_search": {
+          "tax": {
+            "optimum_deployed_instrument": {
+              "regime": "cournot",
+              "policy": {
+                "kind": "tax",
+                "value": "16"
+              },
+              "quantities": [
+                "16",
+                "16"
+              ],
+              "total_output": "32",
+              "effective_output_bounds": [
+                "40",
+                "40"
+              ],
+              "active_bounds": [
+                "interior",
+                "interior"
+              ],
+              "buyer_price": "68",
+              "retained_price_after_tax": "52",
+              "gross_benefit": "2688",
+              "private_costs": [
+                "448",
+                "448"
+              ],
+              "consumer_surplus": "512",
+              "firm_profits": [
+                "384",
+                "384"
+              ],
+              "tax_receipts": "512",
+              "real_administration": "20",
+              "government_net_cash": "492",
+              "external_damage": "512",
+              "gross_welfare_before_administration": "1280",
+              "net_welfare": "1260"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "20",
+                  "20"
+                ],
+                "net_welfare": "1180"
+              },
+              {
+                "value": "16",
+                "quantities": [
+                  "16",
+                  "16"
+                ],
+                "net_welfare": "1260"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "10",
+                  "10"
+                ],
+                "net_welfare": "1080"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "0",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "20",
+                    "-1/4"
+                  ],
+                  [
+                    "20",
+                    "-1/4"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              }
+            ]
+          },
+          "standard": {
+            "optimum_deployed_instrument": {
+              "regime": "cournot",
+              "policy": {
+                "kind": "standard",
+                "value": "16"
+              },
+              "quantities": [
+                "16",
+                "16"
+              ],
+              "total_output": "32",
+              "effective_output_bounds": [
+                "16",
+                "16"
+              ],
+              "active_bounds": [
+                "upper",
+                "upper"
+              ],
+              "buyer_price": "68",
+              "retained_price_after_tax": "68",
+              "gross_benefit": "2688",
+              "private_costs": [
+                "448",
+                "448"
+              ],
+              "consumer_surplus": "512",
+              "firm_profits": [
+                "640",
+                "640"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "35",
+              "government_net_cash": "-35",
+              "external_damage": "512",
+              "gross_welfare_before_administration": "1280",
+              "net_welfare": "1245"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "0",
+                  "0"
+                ],
+                "net_welfare": "-35"
+              },
+              {
+                "value": "16",
+                "quantities": [
+                  "16",
+                  "16"
+                ],
+                "net_welfare": "1245"
+              },
+              {
+                "value": "20",
+                "quantities": [
+                  "20",
+                  "20"
+                ],
+                "net_welfare": "1165"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "20",
+                  "20"
+                ],
+                "net_welfare": "1165"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "20",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "20",
+                    "0"
+                  ],
+                  [
+                    "20",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "20",
+                "upper": "20",
+                "q_affine": [
+                  [
+                    "80/3",
+                    "-1/3"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "upper"
+                ]
+              },
+              {
+                "lower": "20",
+                "upper": "20",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "80/3",
+                    "-1/3"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "20",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          }
+        },
+        "recommended_feasible_policy": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "tax",
+            "value": "16"
+          },
+          "quantities": [
+            "16",
+            "16"
+          ],
+          "total_output": "32",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "68",
+          "retained_price_after_tax": "52",
+          "gross_benefit": "2688",
+          "private_costs": [
+            "448",
+            "448"
+          ],
+          "consumer_surplus": "512",
+          "firm_profits": [
+            "384",
+            "384"
+          ],
+          "tax_receipts": "512",
+          "real_administration": "20",
+          "government_net_cash": "492",
+          "external_damage": "512",
+          "gross_welfare_before_administration": "1280",
+          "net_welfare": "1260"
+        }
+      }
+    },
+    {
+      "id": "low_damage",
+      "label": "Low marginal damage",
+      "efficient_target_without_administration": {
+        "regime": "planner",
+        "policy": {
+          "kind": "none",
+          "value": "0"
+        },
+        "quantities": [
+          "160/7",
+          "160/7"
+        ],
+        "total_output": "320/7",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "380/7",
+        "retained_price_after_tax": "380/7",
+        "gross_benefit": "172800/49",
+        "private_costs": [
+          "35200/49",
+          "35200/49"
+        ],
+        "consumer_surplus": "51200/49",
+        "firm_profits": [
+          "25600/49",
+          "25600/49"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "0",
+        "government_net_cash": "0",
+        "external_damage": "12800/49",
+        "gross_welfare_before_administration": "12800/7",
+        "net_welfare": "12800/7"
+      },
+      "competition": {
+        "no_policy": {
+          "regime": "competition",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "80/3",
+            "80/3"
+          ],
+          "total_output": "160/3",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "140/3",
+          "retained_price_after_tax": "140/3",
+          "gross_benefit": "35200/9",
+          "private_costs": [
+            "8000/9",
+            "8000/9"
+          ],
+          "consumer_surplus": "12800/9",
+          "firm_profits": [
+            "3200/9",
+            "3200/9"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "3200/9",
+          "gross_welfare_before_administration": "16000/9",
+          "net_welfare": "16000/9"
+        },
+        "policy_search": {
+          "tax": {
+            "optimum_deployed_instrument": {
+              "regime": "competition",
+              "policy": {
+                "kind": "tax",
+                "value": "80/7"
+              },
+              "quantities": [
+                "160/7",
+                "160/7"
+              ],
+              "total_output": "320/7",
+              "effective_output_bounds": [
+                "40",
+                "40"
+              ],
+              "active_bounds": [
+                "interior",
+                "interior"
+              ],
+              "buyer_price": "380/7",
+              "retained_price_after_tax": "300/7",
+              "gross_benefit": "172800/49",
+              "private_costs": [
+                "35200/49",
+                "35200/49"
+              ],
+              "consumer_surplus": "51200/49",
+              "firm_profits": [
+                "12800/49",
+                "12800/49"
+              ],
+              "tax_receipts": "25600/49",
+              "real_administration": "20",
+              "government_net_cash": "24620/49",
+              "external_damage": "12800/49",
+              "gross_welfare_before_administration": "12800/7",
+              "net_welfare": "12660/7"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "80/3",
+                  "80/3"
+                ],
+                "net_welfare": "15820/9"
+              },
+              {
+                "value": "80/7",
+                "quantities": [
+                  "160/7",
+                  "160/7"
+                ],
+                "net_welfare": "12660/7"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "40/3",
+                  "40/3"
+                ],
+                "net_welfare": "13420/9"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "0",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "80/3",
+                    "-1/3"
+                  ],
+                  [
+                    "80/3",
+                    "-1/3"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              }
+            ]
+          },
+          "standard": {
+            "optimum_deployed_instrument": {
+              "regime": "competition",
+              "policy": {
+                "kind": "standard",
+                "value": "160/7"
+              },
+              "quantities": [
+                "160/7",
+                "160/7"
+              ],
+              "total_output": "320/7",
+              "effective_output_bounds": [
+                "160/7",
+                "160/7"
+              ],
+              "active_bounds": [
+                "upper",
+                "upper"
+              ],
+              "buyer_price": "380/7",
+              "retained_price_after_tax": "380/7",
+              "gross_benefit": "172800/49",
+              "private_costs": [
+                "35200/49",
+                "35200/49"
+              ],
+              "consumer_surplus": "51200/49",
+              "firm_profits": [
+                "25600/49",
+                "25600/49"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "35",
+              "government_net_cash": "-35",
+              "external_damage": "12800/49",
+              "gross_welfare_before_administration": "12800/7",
+              "net_welfare": "12555/7"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "0",
+                  "0"
+                ],
+                "net_welfare": "-35"
+              },
+              {
+                "value": "160/7",
+                "quantities": [
+                  "160/7",
+                  "160/7"
+                ],
+                "net_welfare": "12555/7"
+              },
+              {
+                "value": "80/3",
+                "quantities": [
+                  "80/3",
+                  "80/3"
+                ],
+                "net_welfare": "15685/9"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "80/3",
+                  "80/3"
+                ],
+                "net_welfare": "15685/9"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "80/3",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "80/3",
+                    "0"
+                  ],
+                  [
+                    "80/3",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "80/3",
+                "upper": "80/3",
+                "q_affine": [
+                  [
+                    "40",
+                    "-1/2"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "upper"
+                ]
+              },
+              {
+                "lower": "80/3",
+                "upper": "80/3",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "40",
+                    "-1/2"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "80/3",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          }
+        },
+        "recommended_feasible_policy": {
+          "regime": "competition",
+          "policy": {
+            "kind": "tax",
+            "value": "80/7"
+          },
+          "quantities": [
+            "160/7",
+            "160/7"
+          ],
+          "total_output": "320/7",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "380/7",
+          "retained_price_after_tax": "300/7",
+          "gross_benefit": "172800/49",
+          "private_costs": [
+            "35200/49",
+            "35200/49"
+          ],
+          "consumer_surplus": "51200/49",
+          "firm_profits": [
+            "12800/49",
+            "12800/49"
+          ],
+          "tax_receipts": "25600/49",
+          "real_administration": "20",
+          "government_net_cash": "24620/49",
+          "external_damage": "12800/49",
+          "gross_welfare_before_administration": "12800/7",
+          "net_welfare": "12660/7"
+        }
+      },
+      "cournot": {
+        "no_policy": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "20",
+            "20"
+          ],
+          "total_output": "40",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "60",
+          "retained_price_after_tax": "60",
+          "gross_benefit": "3200",
+          "private_costs": [
+            "600",
+            "600"
+          ],
+          "consumer_surplus": "800",
+          "firm_profits": [
+            "600",
+            "600"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "200",
+          "gross_welfare_before_administration": "1800",
+          "net_welfare": "1800"
+        },
+        "policy_search": {
+          "tax": {
+            "optimum_deployed_instrument": {
+              "regime": "cournot",
+              "policy": {
+                "kind": "tax",
+                "value": "0"
+              },
+              "quantities": [
+                "20",
+                "20"
+              ],
+              "total_output": "40",
+              "effective_output_bounds": [
+                "40",
+                "40"
+              ],
+              "active_bounds": [
+                "interior",
+                "interior"
+              ],
+              "buyer_price": "60",
+              "retained_price_after_tax": "60",
+              "gross_benefit": "3200",
+              "private_costs": [
+                "600",
+                "600"
+              ],
+              "consumer_surplus": "800",
+              "firm_profits": [
+                "600",
+                "600"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "20",
+              "government_net_cash": "-20",
+              "external_damage": "200",
+              "gross_welfare_before_administration": "1800",
+              "net_welfare": "1780"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "20",
+                  "20"
+                ],
+                "net_welfare": "1780"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "10",
+                  "10"
+                ],
+                "net_welfare": "1230"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "0",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "20",
+                    "-1/4"
+                  ],
+                  [
+                    "20",
+                    "-1/4"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              }
+            ]
+          },
+          "standard": {
+            "optimum_deployed_instrument": {
+              "regime": "cournot",
+              "policy": {
+                "kind": "standard",
+                "value": "40"
+              },
+              "quantities": [
+                "20",
+                "20"
+              ],
+              "total_output": "40",
+              "effective_output_bounds": [
+                "40",
+                "40"
+              ],
+              "active_bounds": [
+                "interior",
+                "interior"
+              ],
+              "buyer_price": "60",
+              "retained_price_after_tax": "60",
+              "gross_benefit": "3200",
+              "private_costs": [
+                "600",
+                "600"
+              ],
+              "consumer_surplus": "800",
+              "firm_profits": [
+                "600",
+                "600"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "35",
+              "government_net_cash": "-35",
+              "external_damage": "200",
+              "gross_welfare_before_administration": "1800",
+              "net_welfare": "1765"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "0",
+                  "0"
+                ],
+                "net_welfare": "-35"
+              },
+              {
+                "value": "20",
+                "quantities": [
+                  "20",
+                  "20"
+                ],
+                "net_welfare": "1765"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "20",
+                  "20"
+                ],
+                "net_welfare": "1765"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "20",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "20",
+                    "0"
+                  ],
+                  [
+                    "20",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "20",
+                "upper": "20",
+                "q_affine": [
+                  [
+                    "80/3",
+                    "-1/3"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "upper"
+                ]
+              },
+              {
+                "lower": "20",
+                "upper": "20",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "80/3",
+                    "-1/3"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "20",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          }
+        },
+        "recommended_feasible_policy": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "20",
+            "20"
+          ],
+          "total_output": "40",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "60",
+          "retained_price_after_tax": "60",
+          "gross_benefit": "3200",
+          "private_costs": [
+            "600",
+            "600"
+          ],
+          "consumer_surplus": "800",
+          "firm_profits": [
+            "600",
+            "600"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "200",
+          "gross_welfare_before_administration": "1800",
+          "net_welfare": "1800"
+        }
+      }
+    },
+    {
+      "id": "high_damage",
+      "label": "High marginal damage",
+      "efficient_target_without_administration": {
+        "regime": "planner",
+        "policy": {
+          "kind": "none",
+          "value": "0"
+        },
+        "quantities": [
+          "80/11",
+          "80/11"
+        ],
+        "total_output": "160/11",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "940/11",
+        "retained_price_after_tax": "940/11",
+        "gross_benefit": "163200/121",
+        "private_costs": [
+          "20800/121",
+          "20800/121"
+        ],
+        "consumer_surplus": "12800/121",
+        "firm_profits": [
+          "54400/121",
+          "54400/121"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "0",
+        "government_net_cash": "0",
+        "external_damage": "51200/121",
+        "gross_welfare_before_administration": "6400/11",
+        "net_welfare": "6400/11"
+      },
+      "competition": {
+        "no_policy": {
+          "regime": "competition",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "80/3",
+            "80/3"
+          ],
+          "total_output": "160/3",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "140/3",
+          "retained_price_after_tax": "140/3",
+          "gross_benefit": "35200/9",
+          "private_costs": [
+            "8000/9",
+            "8000/9"
+          ],
+          "consumer_surplus": "12800/9",
+          "firm_profits": [
+            "3200/9",
+            "3200/9"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "51200/9",
+          "gross_welfare_before_administration": "-32000/9",
+          "net_welfare": "-32000/9"
+        },
+        "policy_search": {
+          "tax": {
+            "optimum_deployed_instrument": {
+              "regime": "competition",
+              "policy": {
+                "kind": "tax",
+                "value": "40"
+              },
+              "quantities": [
+                "40/3",
+                "40/3"
+              ],
+              "total_output": "80/3",
+              "effective_output_bounds": [
+                "40",
+                "40"
+              ],
+              "active_bounds": [
+                "interior",
+                "interior"
+              ],
+              "buyer_price": "220/3",
+              "retained_price_after_tax": "100/3",
+              "gross_benefit": "20800/9",
+              "private_costs": [
+                "3200/9",
+                "3200/9"
+              ],
+              "consumer_surplus": "3200/9",
+              "firm_profits": [
+                "800/9",
+                "800/9"
+              ],
+              "tax_receipts": "3200/3",
+              "real_administration": "20",
+              "government_net_cash": "3140/3",
+              "external_damage": "12800/9",
+              "gross_welfare_before_administration": "1600/9",
+              "net_welfare": "1420/9"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "80/3",
+                  "80/3"
+                ],
+                "net_welfare": "-32180/9"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "40/3",
+                  "40/3"
+                ],
+                "net_welfare": "1420/9"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "0",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "80/3",
+                    "-1/3"
+                  ],
+                  [
+                    "80/3",
+                    "-1/3"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              }
+            ]
+          },
+          "standard": {
+            "optimum_deployed_instrument": {
+              "regime": "competition",
+              "policy": {
+                "kind": "standard",
+                "value": "80/11"
+              },
+              "quantities": [
+                "80/11",
+                "80/11"
+              ],
+              "total_output": "160/11",
+              "effective_output_bounds": [
+                "80/11",
+                "80/11"
+              ],
+              "active_bounds": [
+                "upper",
+                "upper"
+              ],
+              "buyer_price": "940/11",
+              "retained_price_after_tax": "940/11",
+              "gross_benefit": "163200/121",
+              "private_costs": [
+                "20800/121",
+                "20800/121"
+              ],
+              "consumer_surplus": "12800/121",
+              "firm_profits": [
+                "54400/121",
+                "54400/121"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "35",
+              "government_net_cash": "-35",
+              "external_damage": "51200/121",
+              "gross_welfare_before_administration": "6400/11",
+              "net_welfare": "6015/11"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "0",
+                  "0"
+                ],
+                "net_welfare": "-35"
+              },
+              {
+                "value": "80/11",
+                "quantities": [
+                  "80/11",
+                  "80/11"
+                ],
+                "net_welfare": "6015/11"
+              },
+              {
+                "value": "80/3",
+                "quantities": [
+                  "80/3",
+                  "80/3"
+                ],
+                "net_welfare": "-32315/9"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "80/3",
+                  "80/3"
+                ],
+                "net_welfare": "-32315/9"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "80/3",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "80/3",
+                    "0"
+                  ],
+                  [
+                    "80/3",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "80/3",
+                "upper": "80/3",
+                "q_affine": [
+                  [
+                    "40",
+                    "-1/2"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "upper"
+                ]
+              },
+              {
+                "lower": "80/3",
+                "upper": "80/3",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "40",
+                    "-1/2"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "80/3",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          }
+        },
+        "recommended_feasible_policy": {
+          "regime": "competition",
+          "policy": {
+            "kind": "standard",
+            "value": "80/11"
+          },
+          "quantities": [
+            "80/11",
+            "80/11"
+          ],
+          "total_output": "160/11",
+          "effective_output_bounds": [
+            "80/11",
+            "80/11"
+          ],
+          "active_bounds": [
+            "upper",
+            "upper"
+          ],
+          "buyer_price": "940/11",
+          "retained_price_after_tax": "940/11",
+          "gross_benefit": "163200/121",
+          "private_costs": [
+            "20800/121",
+            "20800/121"
+          ],
+          "consumer_surplus": "12800/121",
+          "firm_profits": [
+            "54400/121",
+            "54400/121"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "35",
+          "government_net_cash": "-35",
+          "external_damage": "51200/121",
+          "gross_welfare_before_administration": "6400/11",
+          "net_welfare": "6015/11"
+        }
+      },
+      "cournot": {
+        "no_policy": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "20",
+            "20"
+          ],
+          "total_output": "40",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "60",
+          "retained_price_after_tax": "60",
+          "gross_benefit": "3200",
+          "private_costs": [
+            "600",
+            "600"
+          ],
+          "consumer_surplus": "800",
+          "firm_profits": [
+            "600",
+            "600"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "3200",
+          "gross_welfare_before_administration": "-1200",
+          "net_welfare": "-1200"
+        },
+        "policy_search": {
+          "tax": {
+            "optimum_deployed_instrument": {
+              "regime": "cournot",
+              "policy": {
+                "kind": "tax",
+                "value": "40"
+              },
+              "quantities": [
+                "10",
+                "10"
+              ],
+              "total_output": "20",
+              "effective_output_bounds": [
+                "40",
+                "40"
+              ],
+              "active_bounds": [
+                "interior",
+                "interior"
+              ],
+              "buyer_price": "80",
+              "retained_price_after_tax": "40",
+              "gross_benefit": "1800",
+              "private_costs": [
+                "250",
+                "250"
+              ],
+              "consumer_surplus": "200",
+              "firm_profits": [
+                "150",
+                "150"
+              ],
+              "tax_receipts": "800",
+              "real_administration": "20",
+              "government_net_cash": "780",
+              "external_damage": "800",
+              "gross_welfare_before_administration": "500",
+              "net_welfare": "480"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "20",
+                  "20"
+                ],
+                "net_welfare": "-1220"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "10",
+                  "10"
+                ],
+                "net_welfare": "480"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "0",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "20",
+                    "-1/4"
+                  ],
+                  [
+                    "20",
+                    "-1/4"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              }
+            ]
+          },
+          "standard": {
+            "optimum_deployed_instrument": {
+              "regime": "cournot",
+              "policy": {
+                "kind": "standard",
+                "value": "80/11"
+              },
+              "quantities": [
+                "80/11",
+                "80/11"
+              ],
+              "total_output": "160/11",
+              "effective_output_bounds": [
+                "80/11",
+                "80/11"
+              ],
+              "active_bounds": [
+                "upper",
+                "upper"
+              ],
+              "buyer_price": "940/11",
+              "retained_price_after_tax": "940/11",
+              "gross_benefit": "163200/121",
+              "private_costs": [
+                "20800/121",
+                "20800/121"
+              ],
+              "consumer_surplus": "12800/121",
+              "firm_profits": [
+                "54400/121",
+                "54400/121"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "35",
+              "government_net_cash": "-35",
+              "external_damage": "51200/121",
+              "gross_welfare_before_administration": "6400/11",
+              "net_welfare": "6015/11"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "0",
+                  "0"
+                ],
+                "net_welfare": "-35"
+              },
+              {
+                "value": "80/11",
+                "quantities": [
+                  "80/11",
+                  "80/11"
+                ],
+                "net_welfare": "6015/11"
+              },
+              {
+                "value": "20",
+                "quantities": [
+                  "20",
+                  "20"
+                ],
+                "net_welfare": "-1235"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "20",
+                  "20"
+                ],
+                "net_welfare": "-1235"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "20",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "20",
+                    "0"
+                  ],
+                  [
+                    "20",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "20",
+                "upper": "20",
+                "q_affine": [
+                  [
+                    "80/3",
+                    "-1/3"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "upper"
+                ]
+              },
+              {
+                "lower": "20",
+                "upper": "20",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "80/3",
+                    "-1/3"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "20",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          }
+        },
+        "recommended_feasible_policy": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "standard",
+            "value": "80/11"
+          },
+          "quantities": [
+            "80/11",
+            "80/11"
+          ],
+          "total_output": "160/11",
+          "effective_output_bounds": [
+            "80/11",
+            "80/11"
+          ],
+          "active_bounds": [
+            "upper",
+            "upper"
+          ],
+          "buyer_price": "940/11",
+          "retained_price_after_tax": "940/11",
+          "gross_benefit": "163200/121",
+          "private_costs": [
+            "20800/121",
+            "20800/121"
+          ],
+          "consumer_surplus": "12800/121",
+          "firm_profits": [
+            "54400/121",
+            "54400/121"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "35",
+          "government_net_cash": "-35",
+          "external_damage": "51200/121",
+          "gross_welfare_before_administration": "6400/11",
+          "net_welfare": "6015/11"
+        }
+      }
+    },
+    {
+      "id": "tight_capacity",
+      "label": "Both physical capacities bind",
+      "efficient_target_without_administration": {
+        "regime": "planner",
+        "policy": {
+          "kind": "none",
+          "value": "0"
+        },
+        "quantities": [
+          "12",
+          "12"
+        ],
+        "total_output": "24",
+        "effective_output_bounds": [
+          "12",
+          "12"
+        ],
+        "active_bounds": [
+          "upper",
+          "upper"
+        ],
+        "buyer_price": "76",
+        "retained_price_after_tax": "76",
+        "gross_benefit": "2112",
+        "private_costs": [
+          "312",
+          "312"
+        ],
+        "consumer_surplus": "288",
+        "firm_profits": [
+          "600",
+          "600"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "0",
+        "government_net_cash": "0",
+        "external_damage": "288",
+        "gross_welfare_before_administration": "1200",
+        "net_welfare": "1200"
+      },
+      "competition": {
+        "no_policy": {
+          "regime": "competition",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "12",
+            "12"
+          ],
+          "total_output": "24",
+          "effective_output_bounds": [
+            "12",
+            "12"
+          ],
+          "active_bounds": [
+            "upper",
+            "upper"
+          ],
+          "buyer_price": "76",
+          "retained_price_after_tax": "76",
+          "gross_benefit": "2112",
+          "private_costs": [
+            "312",
+            "312"
+          ],
+          "consumer_surplus": "288",
+          "firm_profits": [
+            "600",
+            "600"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "288",
+          "gross_welfare_before_administration": "1200",
+          "net_welfare": "1200"
+        },
+        "policy_search": {
+          "tax": {
+            "optimum_deployed_instrument": {
+              "regime": "competition",
+              "policy": {
+                "kind": "tax",
+                "value": "0"
+              },
+              "quantities": [
+                "12",
+                "12"
+              ],
+              "total_output": "24",
+              "effective_output_bounds": [
+                "12",
+                "12"
+              ],
+              "active_bounds": [
+                "upper",
+                "upper"
+              ],
+              "buyer_price": "76",
+              "retained_price_after_tax": "76",
+              "gross_benefit": "2112",
+              "private_costs": [
+                "312",
+                "312"
+              ],
+              "consumer_surplus": "288",
+              "firm_profits": [
+                "600",
+                "600"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "20",
+              "government_net_cash": "-20",
+              "external_damage": "288",
+              "gross_welfare_before_administration": "1200",
+              "net_welfare": "1180"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "12",
+                  "12"
+                ],
+                "net_welfare": "1180"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "12",
+                  "12"
+                ],
+                "net_welfare": "1180"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "0",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "12",
+                    "0"
+                  ],
+                  [
+                    "12",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          },
+          "standard": {
+            "optimum_deployed_instrument": {
+              "regime": "competition",
+              "policy": {
+                "kind": "standard",
+                "value": "40"
+              },
+              "quantities": [
+                "12",
+                "12"
+              ],
+              "total_output": "24",
+              "effective_output_bounds": [
+                "12",
+                "12"
+              ],
+              "active_bounds": [
+                "upper",
+                "upper"
+              ],
+              "buyer_price": "76",
+              "retained_price_after_tax": "76",
+              "gross_benefit": "2112",
+              "private_costs": [
+                "312",
+                "312"
+              ],
+              "consumer_surplus": "288",
+              "firm_profits": [
+                "600",
+                "600"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "35",
+              "government_net_cash": "-35",
+              "external_damage": "288",
+              "gross_welfare_before_administration": "1200",
+              "net_welfare": "1165"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "0",
+                  "0"
+                ],
+                "net_welfare": "-35"
+              },
+              {
+                "value": "12",
+                "quantities": [
+                  "12",
+                  "12"
+                ],
+                "net_welfare": "1165"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "12",
+                  "12"
+                ],
+                "net_welfare": "1165"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "0",
+                "upper": "12",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              },
+              {
+                "lower": "12",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "12",
+                    "0"
+                  ],
+                  [
+                    "12",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          }
+        },
+        "recommended_feasible_policy": {
+          "regime": "competition",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "12",
+            "12"
+          ],
+          "total_output": "24",
+          "effective_output_bounds": [
+            "12",
+            "12"
+          ],
+          "active_bounds": [
+            "upper",
+            "upper"
+          ],
+          "buyer_price": "76",
+          "retained_price_after_tax": "76",
+          "gross_benefit": "2112",
+          "private_costs": [
+            "312",
+            "312"
+          ],
+          "consumer_surplus": "288",
+          "firm_profits": [
+            "600",
+            "600"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "288",
+          "gross_welfare_before_administration": "1200",
+          "net_welfare": "1200"
+        }
+      },
+      "cournot": {
+        "no_policy": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "12",
+            "12"
+          ],
+          "total_output": "24",
+          "effective_output_bounds": [
+            "12",
+            "12"
+          ],
+          "active_bounds": [
+            "upper",
+            "upper"
+          ],
+          "buyer_price": "76",
+          "retained_price_after_tax": "76",
+          "gross_benefit": "2112",
+          "private_costs": [
+            "312",
+            "312"
+          ],
+          "consumer_surplus": "288",
+          "firm_profits": [
+            "600",
+            "600"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "288",
+          "gross_welfare_before_administration": "1200",
+          "net_welfare": "1200"
+        },
+        "policy_search": {
+          "tax": {
+            "optimum_deployed_instrument": {
+              "regime": "cournot",
+              "policy": {
+                "kind": "tax",
+                "value": "0"
+              },
+              "quantities": [
+                "12",
+                "12"
+              ],
+              "total_output": "24",
+              "effective_output_bounds": [
+                "12",
+                "12"
+              ],
+              "active_bounds": [
+                "upper",
+                "upper"
+              ],
+              "buyer_price": "76",
+              "retained_price_after_tax": "76",
+              "gross_benefit": "2112",
+              "private_costs": [
+                "312",
+                "312"
+              ],
+              "consumer_surplus": "288",
+              "firm_profits": [
+                "600",
+                "600"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "20",
+              "government_net_cash": "-20",
+              "external_damage": "288",
+              "gross_welfare_before_administration": "1200",
+              "net_welfare": "1180"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "12",
+                  "12"
+                ],
+                "net_welfare": "1180"
+              },
+              {
+                "value": "32",
+                "quantities": [
+                  "12",
+                  "12"
+                ],
+                "net_welfare": "1180"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "10",
+                  "10"
+                ],
+                "net_welfare": "1080"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "32",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "20",
+                    "-1/4"
+                  ],
+                  [
+                    "20",
+                    "-1/4"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "32",
+                "upper": "32",
+                "q_affine": [
+                  [
+                    "68/3",
+                    "-1/3"
+                  ],
+                  [
+                    "12",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "upper"
+                ]
+              },
+              {
+                "lower": "32",
+                "upper": "32",
+                "q_affine": [
+                  [
+                    "12",
+                    "0"
+                  ],
+                  [
+                    "68/3",
+                    "-1/3"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "32",
+                "q_affine": [
+                  [
+                    "12",
+                    "0"
+                  ],
+                  [
+                    "12",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          },
+          "standard": {
+            "optimum_deployed_instrument": {
+              "regime": "cournot",
+              "policy": {
+                "kind": "standard",
+                "value": "40"
+              },
+              "quantities": [
+                "12",
+                "12"
+              ],
+              "total_output": "24",
+              "effective_output_bounds": [
+                "12",
+                "12"
+              ],
+              "active_bounds": [
+                "upper",
+                "upper"
+              ],
+              "buyer_price": "76",
+              "retained_price_after_tax": "76",
+              "gross_benefit": "2112",
+              "private_costs": [
+                "312",
+                "312"
+              ],
+              "consumer_surplus": "288",
+              "firm_profits": [
+                "600",
+                "600"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "35",
+              "government_net_cash": "-35",
+              "external_damage": "288",
+              "gross_welfare_before_administration": "1200",
+              "net_welfare": "1165"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "0",
+                  "0"
+                ],
+                "net_welfare": "-35"
+              },
+              {
+                "value": "12",
+                "quantities": [
+                  "12",
+                  "12"
+                ],
+                "net_welfare": "1165"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "12",
+                  "12"
+                ],
+                "net_welfare": "1165"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "0",
+                "upper": "12",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              },
+              {
+                "lower": "12",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "12",
+                    "0"
+                  ],
+                  [
+                    "12",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          }
+        },
+        "recommended_feasible_policy": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "12",
+            "12"
+          ],
+          "total_output": "24",
+          "effective_output_bounds": [
+            "12",
+            "12"
+          ],
+          "active_bounds": [
+            "upper",
+            "upper"
+          ],
+          "buyer_price": "76",
+          "retained_price_after_tax": "76",
+          "gross_benefit": "2112",
+          "private_costs": [
+            "312",
+            "312"
+          ],
+          "consumer_surplus": "288",
+          "firm_profits": [
+            "600",
+            "600"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "288",
+          "gross_welfare_before_administration": "1200",
+          "net_welfare": "1200"
+        }
+      }
+    },
+    {
+      "id": "costly_administration",
+      "label": "Larger real administration costs",
+      "efficient_target_without_administration": {
+        "regime": "planner",
+        "policy": {
+          "kind": "none",
+          "value": "0"
+        },
+        "quantities": [
+          "16",
+          "16"
+        ],
+        "total_output": "32",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "68",
+        "retained_price_after_tax": "68",
+        "gross_benefit": "2688",
+        "private_costs": [
+          "448",
+          "448"
+        ],
+        "consumer_surplus": "512",
+        "firm_profits": [
+          "640",
+          "640"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "0",
+        "government_net_cash": "0",
+        "external_damage": "512",
+        "gross_welfare_before_administration": "1280",
+        "net_welfare": "1280"
+      },
+      "competition": {
+        "no_policy": {
+          "regime": "competition",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "80/3",
+            "80/3"
+          ],
+          "total_output": "160/3",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "140/3",
+          "retained_price_after_tax": "140/3",
+          "gross_benefit": "35200/9",
+          "private_costs": [
+            "8000/9",
+            "8000/9"
+          ],
+          "consumer_surplus": "12800/9",
+          "firm_profits": [
+            "3200/9",
+            "3200/9"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "12800/9",
+          "gross_welfare_before_administration": "6400/9",
+          "net_welfare": "6400/9"
+        },
+        "policy_search": {
+          "tax": {
+            "optimum_deployed_instrument": {
+              "regime": "competition",
+              "policy": {
+                "kind": "tax",
+                "value": "32"
+              },
+              "quantities": [
+                "16",
+                "16"
+              ],
+              "total_output": "32",
+              "effective_output_bounds": [
+                "40",
+                "40"
+              ],
+              "active_bounds": [
+                "interior",
+                "interior"
+              ],
+              "buyer_price": "68",
+              "retained_price_after_tax": "36",
+              "gross_benefit": "2688",
+              "private_costs": [
+                "448",
+                "448"
+              ],
+              "consumer_surplus": "512",
+              "firm_profits": [
+                "128",
+                "128"
+              ],
+              "tax_receipts": "1024",
+              "real_administration": "100",
+              "government_net_cash": "924",
+              "external_damage": "512",
+              "gross_welfare_before_administration": "1280",
+              "net_welfare": "1180"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "80/3",
+                  "80/3"
+                ],
+                "net_welfare": "5500/9"
+              },
+              {
+                "value": "32",
+                "quantities": [
+                  "16",
+                  "16"
+                ],
+                "net_welfare": "1180"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "40/3",
+                  "40/3"
+                ],
+                "net_welfare": "10300/9"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "0",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "80/3",
+                    "-1/3"
+                  ],
+                  [
+                    "80/3",
+                    "-1/3"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              }
+            ]
+          },
+          "standard": {
+            "optimum_deployed_instrument": {
+              "regime": "competition",
+              "policy": {
+                "kind": "standard",
+                "value": "16"
+              },
+              "quantities": [
+                "16",
+                "16"
+              ],
+              "total_output": "32",
+              "effective_output_bounds": [
+                "16",
+                "16"
+              ],
+              "active_bounds": [
+                "upper",
+                "upper"
+              ],
+              "buyer_price": "68",
+              "retained_price_after_tax": "68",
+              "gross_benefit": "2688",
+              "private_costs": [
+                "448",
+                "448"
+              ],
+              "consumer_surplus": "512",
+              "firm_profits": [
+                "640",
+                "640"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "115",
+              "government_net_cash": "-115",
+              "external_damage": "512",
+              "gross_welfare_before_administration": "1280",
+              "net_welfare": "1165"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "0",
+                  "0"
+                ],
+                "net_welfare": "-115"
+              },
+              {
+                "value": "16",
+                "quantities": [
+                  "16",
+                  "16"
+                ],
+                "net_welfare": "1165"
+              },
+              {
+                "value": "80/3",
+                "quantities": [
+                  "80/3",
+                  "80/3"
+                ],
+                "net_welfare": "5365/9"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "80/3",
+                  "80/3"
+                ],
+                "net_welfare": "5365/9"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "80/3",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "80/3",
+                    "0"
+                  ],
+                  [
+                    "80/3",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "80/3",
+                "upper": "80/3",
+                "q_affine": [
+                  [
+                    "40",
+                    "-1/2"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "upper"
+                ]
+              },
+              {
+                "lower": "80/3",
+                "upper": "80/3",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "40",
+                    "-1/2"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "80/3",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          }
+        },
+        "recommended_feasible_policy": {
+          "regime": "competition",
+          "policy": {
+            "kind": "tax",
+            "value": "32"
+          },
+          "quantities": [
+            "16",
+            "16"
+          ],
+          "total_output": "32",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "68",
+          "retained_price_after_tax": "36",
+          "gross_benefit": "2688",
+          "private_costs": [
+            "448",
+            "448"
+          ],
+          "consumer_surplus": "512",
+          "firm_profits": [
+            "128",
+            "128"
+          ],
+          "tax_receipts": "1024",
+          "real_administration": "100",
+          "government_net_cash": "924",
+          "external_damage": "512",
+          "gross_welfare_before_administration": "1280",
+          "net_welfare": "1180"
+        }
+      },
+      "cournot": {
+        "no_policy": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "20",
+            "20"
+          ],
+          "total_output": "40",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "60",
+          "retained_price_after_tax": "60",
+          "gross_benefit": "3200",
+          "private_costs": [
+            "600",
+            "600"
+          ],
+          "consumer_surplus": "800",
+          "firm_profits": [
+            "600",
+            "600"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "800",
+          "gross_welfare_before_administration": "1200",
+          "net_welfare": "1200"
+        },
+        "policy_search": {
+          "tax": {
+            "optimum_deployed_instrument": {
+              "regime": "cournot",
+              "policy": {
+                "kind": "tax",
+                "value": "16"
+              },
+              "quantities": [
+                "16",
+                "16"
+              ],
+              "total_output": "32",
+              "effective_output_bounds": [
+                "40",
+                "40"
+              ],
+              "active_bounds": [
+                "interior",
+                "interior"
+              ],
+              "buyer_price": "68",
+              "retained_price_after_tax": "52",
+              "gross_benefit": "2688",
+              "private_costs": [
+                "448",
+                "448"
+              ],
+              "consumer_surplus": "512",
+              "firm_profits": [
+                "384",
+                "384"
+              ],
+              "tax_receipts": "512",
+              "real_administration": "100",
+              "government_net_cash": "412",
+              "external_damage": "512",
+              "gross_welfare_before_administration": "1280",
+              "net_welfare": "1180"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "20",
+                  "20"
+                ],
+                "net_welfare": "1100"
+              },
+              {
+                "value": "16",
+                "quantities": [
+                  "16",
+                  "16"
+                ],
+                "net_welfare": "1180"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "10",
+                  "10"
+                ],
+                "net_welfare": "1000"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "0",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "20",
+                    "-1/4"
+                  ],
+                  [
+                    "20",
+                    "-1/4"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              }
+            ]
+          },
+          "standard": {
+            "optimum_deployed_instrument": {
+              "regime": "cournot",
+              "policy": {
+                "kind": "standard",
+                "value": "16"
+              },
+              "quantities": [
+                "16",
+                "16"
+              ],
+              "total_output": "32",
+              "effective_output_bounds": [
+                "16",
+                "16"
+              ],
+              "active_bounds": [
+                "upper",
+                "upper"
+              ],
+              "buyer_price": "68",
+              "retained_price_after_tax": "68",
+              "gross_benefit": "2688",
+              "private_costs": [
+                "448",
+                "448"
+              ],
+              "consumer_surplus": "512",
+              "firm_profits": [
+                "640",
+                "640"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "115",
+              "government_net_cash": "-115",
+              "external_damage": "512",
+              "gross_welfare_before_administration": "1280",
+              "net_welfare": "1165"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "0",
+                  "0"
+                ],
+                "net_welfare": "-115"
+              },
+              {
+                "value": "16",
+                "quantities": [
+                  "16",
+                  "16"
+                ],
+                "net_welfare": "1165"
+              },
+              {
+                "value": "20",
+                "quantities": [
+                  "20",
+                  "20"
+                ],
+                "net_welfare": "1085"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "20",
+                  "20"
+                ],
+                "net_welfare": "1085"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "20",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "20",
+                    "0"
+                  ],
+                  [
+                    "20",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "20",
+                "upper": "20",
+                "q_affine": [
+                  [
+                    "80/3",
+                    "-1/3"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "upper"
+                ]
+              },
+              {
+                "lower": "20",
+                "upper": "20",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "80/3",
+                    "-1/3"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "20",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          }
+        },
+        "recommended_feasible_policy": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "20",
+            "20"
+          ],
+          "total_output": "40",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "60",
+          "retained_price_after_tax": "60",
+          "gross_benefit": "3200",
+          "private_costs": [
+            "600",
+            "600"
+          ],
+          "consumer_surplus": "800",
+          "firm_profits": [
+            "600",
+            "600"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "800",
+          "gross_welfare_before_administration": "1200",
+          "net_welfare": "1200"
+        }
+      }
+    },
+    {
+      "id": "asymmetric_cost",
+      "label": "Unequal linear costs",
+      "efficient_target_without_administration": {
+        "regime": "planner",
+        "policy": {
+          "kind": "none",
+          "value": "0"
+        },
+        "quantities": [
+          "128/5",
+          "8/5"
+        ],
+        "total_output": "136/5",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "364/5",
+        "retained_price_after_tax": "364/5",
+        "gross_benefit": "58752/25",
+        "private_costs": [
+          "20992/25",
+          "1792/25"
+        ],
+        "consumer_surplus": "9248/25",
+        "firm_profits": [
+          "1024",
+          "224/5"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "0",
+        "government_net_cash": "0",
+        "external_damage": "9248/25",
+        "gross_welfare_before_administration": "5344/5",
+        "net_welfare": "5344/5"
+      },
+      "competition": {
+        "no_policy": {
+          "regime": "competition",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "104/3",
+            "32/3"
+          ],
+          "total_output": "136/3",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "164/3",
+          "retained_price_after_tax": "164/3",
+          "gross_benefit": "31552/9",
+          "private_costs": [
+            "11648/9",
+            "4736/9"
+          ],
+          "consumer_surplus": "9248/9",
+          "firm_profits": [
+            "5408/9",
+            "512/9"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "9248/9",
+          "gross_welfare_before_administration": "5920/9",
+          "net_welfare": "5920/9"
+        },
+        "policy_search": {
+          "tax": {
+            "optimum_deployed_instrument": {
+              "regime": "competition",
+              "policy": {
+                "kind": "tax",
+                "value": "136/5"
+              },
+              "quantities": [
+                "128/5",
+                "8/5"
+              ],
+              "total_output": "136/5",
+              "effective_output_bounds": [
+                "40",
+                "40"
+              ],
+              "active_bounds": [
+                "interior",
+                "interior"
+              ],
+              "buyer_price": "364/5",
+              "retained_price_after_tax": "228/5",
+              "gross_benefit": "58752/25",
+              "private_costs": [
+                "20992/25",
+                "1792/25"
+              ],
+              "consumer_surplus": "9248/25",
+              "firm_profits": [
+                "8192/25",
+                "32/25"
+              ],
+              "tax_receipts": "18496/25",
+              "real_administration": "20",
+              "government_net_cash": "17996/25",
+              "external_damage": "9248/25",
+              "gross_welfare_before_administration": "5344/5",
+              "net_welfare": "5244/5"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "104/3",
+                  "32/3"
+                ],
+                "net_welfare": "5740/9"
+              },
+              {
+                "value": "136/5",
+                "quantities": [
+                  "128/5",
+                  "8/5"
+                ],
+                "net_welfare": "5244/5"
+              },
+              {
+                "value": "32",
+                "quantities": [
+                  "24",
+                  "0"
+                ],
+                "net_welfare": "1036"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "20",
+                  "0"
+                ],
+                "net_welfare": "980"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "32",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "40",
+                    "-1/2"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "lower"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "32",
+                "q_affine": [
+                  [
+                    "104/3",
+                    "-1/3"
+                  ],
+                  [
+                    "32/3",
+                    "-1/3"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              }
+            ]
+          },
+          "standard": {
+            "optimum_deployed_instrument": {
+              "regime": "competition",
+              "policy": {
+                "kind": "standard",
+                "value": "68/5"
+              },
+              "quantities": [
+                "68/5",
+                "68/5"
+              ],
+              "total_output": "136/5",
+              "effective_output_bounds": [
+                "68/5",
+                "68/5"
+              ],
+              "active_bounds": [
+                "upper",
+                "upper"
+              ],
+              "buyer_price": "364/5",
+              "retained_price_after_tax": "364/5",
+              "gross_benefit": "58752/25",
+              "private_costs": [
+                "9112/25",
+                "17272/25"
+              ],
+              "consumer_surplus": "9248/25",
+              "firm_profits": [
+                "3128/5",
+                "1496/5"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "35",
+              "government_net_cash": "-35",
+              "external_damage": "9248/25",
+              "gross_welfare_before_administration": "4624/5",
+              "net_welfare": "4449/5"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "0",
+                  "0"
+                ],
+                "net_welfare": "-35"
+              },
+              {
+                "value": "68/5",
+                "quantities": [
+                  "68/5",
+                  "68/5"
+                ],
+                "net_welfare": "4449/5"
+              },
+              {
+                "value": "56/3",
+                "quantities": [
+                  "56/3",
+                  "56/3"
+                ],
+                "net_welfare": "6853/9"
+              },
+              {
+                "value": "152/7",
+                "quantities": [
+                  "152/7",
+                  "120/7"
+                ],
+                "net_welfare": "5387/7"
+              },
+              {
+                "value": "104/3",
+                "quantities": [
+                  "104/3",
+                  "32/3"
+                ],
+                "net_welfare": "5605/9"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "104/3",
+                  "32/3"
+                ],
+                "net_welfare": "5605/9"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "104/3",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "104/3",
+                    "0"
+                  ],
+                  [
+                    "32/3",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "56/3",
+                "upper": "104/3",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "28",
+                    "-1/2"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "56/3",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          }
+        },
+        "recommended_feasible_policy": {
+          "regime": "competition",
+          "policy": {
+            "kind": "tax",
+            "value": "136/5"
+          },
+          "quantities": [
+            "128/5",
+            "8/5"
+          ],
+          "total_output": "136/5",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "364/5",
+          "retained_price_after_tax": "228/5",
+          "gross_benefit": "58752/25",
+          "private_costs": [
+            "20992/25",
+            "1792/25"
+          ],
+          "consumer_surplus": "9248/25",
+          "firm_profits": [
+            "8192/25",
+            "32/25"
+          ],
+          "tax_receipts": "18496/25",
+          "real_administration": "20",
+          "government_net_cash": "17996/25",
+          "external_damage": "9248/25",
+          "gross_welfare_before_administration": "5344/5",
+          "net_welfare": "5244/5"
+        }
+      },
+      "cournot": {
+        "no_policy": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "23",
+            "11"
+          ],
+          "total_output": "34",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "66",
+          "retained_price_after_tax": "66",
+          "gross_benefit": "2822",
+          "private_costs": [
+            "1449/2",
+            "1089/2"
+          ],
+          "consumer_surplus": "578",
+          "firm_profits": [
+            "1587/2",
+            "363/2"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "578",
+          "gross_welfare_before_administration": "975",
+          "net_welfare": "975"
+        },
+        "policy_search": {
+          "tax": {
+            "optimum_deployed_instrument": {
+              "regime": "cournot",
+              "policy": {
+                "kind": "tax",
+                "value": "68/5"
+              },
+              "quantities": [
+                "98/5",
+                "38/5"
+              ],
+              "total_output": "136/5",
+              "effective_output_bounds": [
+                "40",
+                "40"
+              ],
+              "active_bounds": [
+                "interior",
+                "interior"
+              ],
+              "buyer_price": "364/5",
+              "retained_price_after_tax": "296/5",
+              "gross_benefit": "58752/25",
+              "private_costs": [
+                "14602/25",
+                "9082/25"
+              ],
+              "consumer_surplus": "9248/25",
+              "firm_profits": [
+                "14406/25",
+                "2166/25"
+              ],
+              "tax_receipts": "9248/25",
+              "real_administration": "20",
+              "government_net_cash": "8748/25",
+              "external_damage": "9248/25",
+              "gross_welfare_before_administration": "5164/5",
+              "net_welfare": "5064/5"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "23",
+                  "11"
+                ],
+                "net_welfare": "955"
+              },
+              {
+                "value": "68/5",
+                "quantities": [
+                  "98/5",
+                  "38/5"
+                ],
+                "net_welfare": "5064/5"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "13",
+                  "1"
+                ],
+                "net_welfare": "795"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "0",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "23",
+                    "-1/4"
+                  ],
+                  [
+                    "11",
+                    "-1/4"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              }
+            ]
+          },
+          "standard": {
+            "optimum_deployed_instrument": {
+              "regime": "cournot",
+              "policy": {
+                "kind": "standard",
+                "value": "64/3"
+              },
+              "quantities": [
+                "64/3",
+                "104/9"
+              ],
+              "total_output": "296/9",
+              "effective_output_bounds": [
+                "64/3",
+                "64/3"
+              ],
+              "active_bounds": [
+                "upper",
+                "interior"
+              ],
+              "buyer_price": "604/9",
+              "retained_price_after_tax": "604/9",
+              "gross_benefit": "222592/81",
+              "private_costs": [
+                "5888/9",
+                "46592/81"
+              ],
+              "consumer_surplus": "43808/81",
+              "firm_profits": [
+                "20992/27",
+                "5408/27"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "35",
+              "government_net_cash": "-35",
+              "external_damage": "43808/81",
+              "gross_welfare_before_administration": "8800/9",
+              "net_welfare": "8485/9"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "0",
+                  "0"
+                ],
+                "net_welfare": "-35"
+              },
+              {
+                "value": "68/5",
+                "quantities": [
+                  "68/5",
+                  "68/5"
+                ],
+                "net_welfare": "4449/5"
+              },
+              {
+                "value": "14",
+                "quantities": [
+                  "14",
+                  "14"
+                ],
+                "net_welfare": "889"
+              },
+              {
+                "value": "64/3",
+                "quantities": [
+                  "64/3",
+                  "104/9"
+                ],
+                "net_welfare": "8485/9"
+              },
+              {
+                "value": "23",
+                "quantities": [
+                  "23",
+                  "11"
+                ],
+                "net_welfare": "940"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "23",
+                  "11"
+                ],
+                "net_welfare": "940"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "23",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "23",
+                    "0"
+                  ],
+                  [
+                    "11",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "14",
+                "upper": "23",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "56/3",
+                    "-1/3"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "14",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          }
+        },
+        "recommended_feasible_policy": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "tax",
+            "value": "68/5"
+          },
+          "quantities": [
+            "98/5",
+            "38/5"
+          ],
+          "total_output": "136/5",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "364/5",
+          "retained_price_after_tax": "296/5",
+          "gross_benefit": "58752/25",
+          "private_costs": [
+            "14602/25",
+            "9082/25"
+          ],
+          "consumer_surplus": "9248/25",
+          "firm_profits": [
+            "14406/25",
+            "2166/25"
+          ],
+          "tax_receipts": "9248/25",
+          "real_administration": "20",
+          "government_net_cash": "8748/25",
+          "external_damage": "9248/25",
+          "gross_welfare_before_administration": "5164/5",
+          "net_welfare": "5064/5"
+        }
+      }
+    },
+    {
+      "id": "inactive_firm",
+      "label": "Second firm too costly to operate",
+      "efficient_target_without_administration": {
+        "regime": "planner",
+        "policy": {
+          "kind": "none",
+          "value": "0"
+        },
+        "quantities": [
+          "80/3",
+          "0"
+        ],
+        "total_output": "80/3",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "zero"
+        ],
+        "buyer_price": "220/3",
+        "retained_price_after_tax": "220/3",
+        "gross_benefit": "20800/9",
+        "private_costs": [
+          "8000/9",
+          "0"
+        ],
+        "consumer_surplus": "3200/9",
+        "firm_profits": [
+          "3200/3",
+          "0"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "0",
+        "government_net_cash": "0",
+        "external_damage": "3200/9",
+        "gross_welfare_before_administration": "3200/3",
+        "net_welfare": "3200/3"
+      },
+      "competition": {
+        "no_policy": {
+          "regime": "competition",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "40",
+            "0"
+          ],
+          "total_output": "40",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "upper",
+            "zero"
+          ],
+          "buyer_price": "60",
+          "retained_price_after_tax": "60",
+          "gross_benefit": "3200",
+          "private_costs": [
+            "1600",
+            "0"
+          ],
+          "consumer_surplus": "800",
+          "firm_profits": [
+            "800",
+            "0"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "800",
+          "gross_welfare_before_administration": "800",
+          "net_welfare": "800"
+        },
+        "policy_search": {
+          "tax": {
+            "optimum_deployed_instrument": {
+              "regime": "competition",
+              "policy": {
+                "kind": "tax",
+                "value": "80/3"
+              },
+              "quantities": [
+                "80/3",
+                "0"
+              ],
+              "total_output": "80/3",
+              "effective_output_bounds": [
+                "40",
+                "40"
+              ],
+              "active_bounds": [
+                "interior",
+                "zero"
+              ],
+              "buyer_price": "220/3",
+              "retained_price_after_tax": "140/3",
+              "gross_benefit": "20800/9",
+              "private_costs": [
+                "8000/9",
+                "0"
+              ],
+              "consumer_surplus": "3200/9",
+              "firm_profits": [
+                "3200/9",
+                "0"
+              ],
+              "tax_receipts": "6400/9",
+              "real_administration": "20",
+              "government_net_cash": "6220/9",
+              "external_damage": "3200/9",
+              "gross_welfare_before_administration": "3200/3",
+              "net_welfare": "3140/3"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "40",
+                  "0"
+                ],
+                "net_welfare": "780"
+              },
+              {
+                "value": "80/3",
+                "quantities": [
+                  "80/3",
+                  "0"
+                ],
+                "net_welfare": "3140/3"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "20",
+                  "0"
+                ],
+                "net_welfare": "980"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "0",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "40",
+                    "-1/2"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "lower"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "0",
+                "q_affine": [
+                  [
+                    "40",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "lower"
+                ]
+              }
+            ]
+          },
+          "standard": {
+            "optimum_deployed_instrument": {
+              "regime": "competition",
+              "policy": {
+                "kind": "standard",
+                "value": "80/3"
+              },
+              "quantities": [
+                "80/3",
+                "0"
+              ],
+              "total_output": "80/3",
+              "effective_output_bounds": [
+                "80/3",
+                "80/3"
+              ],
+              "active_bounds": [
+                "upper",
+                "zero"
+              ],
+              "buyer_price": "220/3",
+              "retained_price_after_tax": "220/3",
+              "gross_benefit": "20800/9",
+              "private_costs": [
+                "8000/9",
+                "0"
+              ],
+              "consumer_surplus": "3200/9",
+              "firm_profits": [
+                "3200/3",
+                "0"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "35",
+              "government_net_cash": "-35",
+              "external_damage": "3200/9",
+              "gross_welfare_before_administration": "3200/3",
+              "net_welfare": "3095/3"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "0",
+                  "0"
+                ],
+                "net_welfare": "-35"
+              },
+              {
+                "value": "80/3",
+                "quantities": [
+                  "80/3",
+                  "0"
+                ],
+                "net_welfare": "3095/3"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "40",
+                  "0"
+                ],
+                "net_welfare": "765"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "40",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "40",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "lower"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "lower"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "0",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "-1/2"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "0",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          }
+        },
+        "recommended_feasible_policy": {
+          "regime": "competition",
+          "policy": {
+            "kind": "tax",
+            "value": "80/3"
+          },
+          "quantities": [
+            "80/3",
+            "0"
+          ],
+          "total_output": "80/3",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "zero"
+          ],
+          "buyer_price": "220/3",
+          "retained_price_after_tax": "140/3",
+          "gross_benefit": "20800/9",
+          "private_costs": [
+            "8000/9",
+            "0"
+          ],
+          "consumer_surplus": "3200/9",
+          "firm_profits": [
+            "3200/9",
+            "0"
+          ],
+          "tax_receipts": "6400/9",
+          "real_administration": "20",
+          "government_net_cash": "6220/9",
+          "external_damage": "3200/9",
+          "gross_welfare_before_administration": "3200/3",
+          "net_welfare": "3140/3"
+        }
+      },
+      "cournot": {
+        "no_policy": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "80/3",
+            "0"
+          ],
+          "total_output": "80/3",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "zero"
+          ],
+          "buyer_price": "220/3",
+          "retained_price_after_tax": "220/3",
+          "gross_benefit": "20800/9",
+          "private_costs": [
+            "8000/9",
+            "0"
+          ],
+          "consumer_surplus": "3200/9",
+          "firm_profits": [
+            "3200/3",
+            "0"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "3200/9",
+          "gross_welfare_before_administration": "3200/3",
+          "net_welfare": "3200/3"
+        },
+        "policy_search": {
+          "tax": {
+            "optimum_deployed_instrument": {
+              "regime": "cournot",
+              "policy": {
+                "kind": "tax",
+                "value": "0"
+              },
+              "quantities": [
+                "80/3",
+                "0"
+              ],
+              "total_output": "80/3",
+              "effective_output_bounds": [
+                "40",
+                "40"
+              ],
+              "active_bounds": [
+                "interior",
+                "zero"
+              ],
+              "buyer_price": "220/3",
+              "retained_price_after_tax": "220/3",
+              "gross_benefit": "20800/9",
+              "private_costs": [
+                "8000/9",
+                "0"
+              ],
+              "consumer_surplus": "3200/9",
+              "firm_profits": [
+                "3200/3",
+                "0"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "20",
+              "government_net_cash": "-20",
+              "external_damage": "3200/9",
+              "gross_welfare_before_administration": "3200/3",
+              "net_welfare": "3140/3"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "80/3",
+                  "0"
+                ],
+                "net_welfare": "3140/3"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "40/3",
+                  "0"
+                ],
+                "net_welfare": "780"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "0",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "80/3",
+                    "-1/3"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "lower"
+                ]
+              }
+            ]
+          },
+          "standard": {
+            "optimum_deployed_instrument": {
+              "regime": "cournot",
+              "policy": {
+                "kind": "standard",
+                "value": "40"
+              },
+              "quantities": [
+                "80/3",
+                "0"
+              ],
+              "total_output": "80/3",
+              "effective_output_bounds": [
+                "40",
+                "40"
+              ],
+              "active_bounds": [
+                "interior",
+                "zero"
+              ],
+              "buyer_price": "220/3",
+              "retained_price_after_tax": "220/3",
+              "gross_benefit": "20800/9",
+              "private_costs": [
+                "8000/9",
+                "0"
+              ],
+              "consumer_surplus": "3200/9",
+              "firm_profits": [
+                "3200/3",
+                "0"
+              ],
+              "tax_receipts": "0",
+              "real_administration": "35",
+              "government_net_cash": "-35",
+              "external_damage": "3200/9",
+              "gross_welfare_before_administration": "3200/3",
+              "net_welfare": "3095/3"
+            },
+            "candidate_audit": [
+              {
+                "value": "0",
+                "quantities": [
+                  "0",
+                  "0"
+                ],
+                "net_welfare": "-35"
+              },
+              {
+                "value": "80/3",
+                "quantities": [
+                  "80/3",
+                  "0"
+                ],
+                "net_welfare": "3095/3"
+              },
+              {
+                "value": "40",
+                "quantities": [
+                  "80/3",
+                  "0"
+                ],
+                "net_welfare": "3095/3"
+              }
+            ],
+            "affine_regions": [
+              {
+                "lower": "80/3",
+                "upper": "40",
+                "q_affine": [
+                  [
+                    "80/3",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "interior",
+                  "lower"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "80/3",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "lower"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "0",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "-1/3"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "interior"
+                ]
+              },
+              {
+                "lower": "0",
+                "upper": "0",
+                "q_affine": [
+                  [
+                    "0",
+                    "1"
+                  ],
+                  [
+                    "0",
+                    "1"
+                  ]
+                ],
+                "states": [
+                  "upper",
+                  "upper"
+                ]
+              }
+            ]
+          }
+        },
+        "recommended_feasible_policy": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "none",
+            "value": "0"
+          },
+          "quantities": [
+            "80/3",
+            "0"
+          ],
+          "total_output": "80/3",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "zero"
+          ],
+          "buyer_price": "220/3",
+          "retained_price_after_tax": "220/3",
+          "gross_benefit": "20800/9",
+          "private_costs": [
+            "8000/9",
+            "0"
+          ],
+          "consumer_surplus": "3200/9",
+          "firm_profits": [
+            "3200/3",
+            "0"
+          ],
+          "tax_receipts": "0",
+          "real_administration": "0",
+          "government_net_cash": "0",
+          "external_damage": "3200/9",
+          "gross_welfare_before_administration": "3200/3",
+          "net_welfare": "3200/3"
+        }
+      }
+    }
+  ],
+  "baseline_instrument_comparisons": {
+    "competition": [
+      {
+        "regime": "competition",
+        "policy": {
+          "kind": "none",
+          "value": "0"
+        },
+        "quantities": [
+          "80/3",
+          "80/3"
+        ],
+        "total_output": "160/3",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "140/3",
+        "retained_price_after_tax": "140/3",
+        "gross_benefit": "35200/9",
+        "private_costs": [
+          "8000/9",
+          "8000/9"
+        ],
+        "consumer_surplus": "12800/9",
+        "firm_profits": [
+          "3200/9",
+          "3200/9"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "0",
+        "government_net_cash": "0",
+        "external_damage": "12800/9",
+        "gross_welfare_before_administration": "6400/9",
+        "net_welfare": "6400/9"
+      },
+      {
+        "regime": "competition",
+        "policy": {
+          "kind": "tax",
+          "value": "0"
+        },
+        "quantities": [
+          "80/3",
+          "80/3"
+        ],
+        "total_output": "160/3",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "140/3",
+        "retained_price_after_tax": "140/3",
+        "gross_benefit": "35200/9",
+        "private_costs": [
+          "8000/9",
+          "8000/9"
+        ],
+        "consumer_surplus": "12800/9",
+        "firm_profits": [
+          "3200/9",
+          "3200/9"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "20",
+        "government_net_cash": "-20",
+        "external_damage": "12800/9",
+        "gross_welfare_before_administration": "6400/9",
+        "net_welfare": "6220/9"
+      },
+      {
+        "regime": "competition",
+        "policy": {
+          "kind": "tax",
+          "value": "16"
+        },
+        "quantities": [
+          "64/3",
+          "64/3"
+        ],
+        "total_output": "128/3",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "172/3",
+        "retained_price_after_tax": "124/3",
+        "gross_benefit": "30208/9",
+        "private_costs": [
+          "5888/9",
+          "5888/9"
+        ],
+        "consumer_surplus": "8192/9",
+        "firm_profits": [
+          "2048/9",
+          "2048/9"
+        ],
+        "tax_receipts": "2048/3",
+        "real_administration": "20",
+        "government_net_cash": "1988/3",
+        "external_damage": "8192/9",
+        "gross_welfare_before_administration": "10240/9",
+        "net_welfare": "10060/9"
+      },
+      {
+        "regime": "competition",
+        "policy": {
+          "kind": "tax",
+          "value": "32"
+        },
+        "quantities": [
+          "16",
+          "16"
+        ],
+        "total_output": "32",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "68",
+        "retained_price_after_tax": "36",
+        "gross_benefit": "2688",
+        "private_costs": [
+          "448",
+          "448"
+        ],
+        "consumer_surplus": "512",
+        "firm_profits": [
+          "128",
+          "128"
+        ],
+        "tax_receipts": "1024",
+        "real_administration": "20",
+        "government_net_cash": "1004",
+        "external_damage": "512",
+        "gross_welfare_before_administration": "1280",
+        "net_welfare": "1260"
+      },
+      {
+        "regime": "competition",
+        "policy": {
+          "kind": "tax",
+          "value": "40"
+        },
+        "quantities": [
+          "40/3",
+          "40/3"
+        ],
+        "total_output": "80/3",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "220/3",
+        "retained_price_after_tax": "100/3",
+        "gross_benefit": "20800/9",
+        "private_costs": [
+          "3200/9",
+          "3200/9"
+        ],
+        "consumer_surplus": "3200/9",
+        "firm_profits": [
+          "800/9",
+          "800/9"
+        ],
+        "tax_receipts": "3200/3",
+        "real_administration": "20",
+        "government_net_cash": "3140/3",
+        "external_damage": "3200/9",
+        "gross_welfare_before_administration": "11200/9",
+        "net_welfare": "11020/9"
+      },
+      {
+        "regime": "competition",
+        "policy": {
+          "kind": "standard",
+          "value": "16"
+        },
+        "quantities": [
+          "16",
+          "16"
+        ],
+        "total_output": "32",
+        "effective_output_bounds": [
+          "16",
+          "16"
+        ],
+        "active_bounds": [
+          "upper",
+          "upper"
+        ],
+        "buyer_price": "68",
+        "retained_price_after_tax": "68",
+        "gross_benefit": "2688",
+        "private_costs": [
+          "448",
+          "448"
+        ],
+        "consumer_surplus": "512",
+        "firm_profits": [
+          "640",
+          "640"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "35",
+        "government_net_cash": "-35",
+        "external_damage": "512",
+        "gross_welfare_before_administration": "1280",
+        "net_welfare": "1245"
+      }
+    ],
+    "cournot": [
+      {
+        "regime": "cournot",
+        "policy": {
+          "kind": "none",
+          "value": "0"
+        },
+        "quantities": [
+          "20",
+          "20"
+        ],
+        "total_output": "40",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "60",
+        "retained_price_after_tax": "60",
+        "gross_benefit": "3200",
+        "private_costs": [
+          "600",
+          "600"
+        ],
+        "consumer_surplus": "800",
+        "firm_profits": [
+          "600",
+          "600"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "0",
+        "government_net_cash": "0",
+        "external_damage": "800",
+        "gross_welfare_before_administration": "1200",
+        "net_welfare": "1200"
+      },
+      {
+        "regime": "cournot",
+        "policy": {
+          "kind": "tax",
+          "value": "0"
+        },
+        "quantities": [
+          "20",
+          "20"
+        ],
+        "total_output": "40",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "60",
+        "retained_price_after_tax": "60",
+        "gross_benefit": "3200",
+        "private_costs": [
+          "600",
+          "600"
+        ],
+        "consumer_surplus": "800",
+        "firm_profits": [
+          "600",
+          "600"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "20",
+        "government_net_cash": "-20",
+        "external_damage": "800",
+        "gross_welfare_before_administration": "1200",
+        "net_welfare": "1180"
+      },
+      {
+        "regime": "cournot",
+        "policy": {
+          "kind": "tax",
+          "value": "16"
+        },
+        "quantities": [
+          "16",
+          "16"
+        ],
+        "total_output": "32",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "68",
+        "retained_price_after_tax": "52",
+        "gross_benefit": "2688",
+        "private_costs": [
+          "448",
+          "448"
+        ],
+        "consumer_surplus": "512",
+        "firm_profits": [
+          "384",
+          "384"
+        ],
+        "tax_receipts": "512",
+        "real_administration": "20",
+        "government_net_cash": "492",
+        "external_damage": "512",
+        "gross_welfare_before_administration": "1280",
+        "net_welfare": "1260"
+      },
+      {
+        "regime": "cournot",
+        "policy": {
+          "kind": "tax",
+          "value": "32"
+        },
+        "quantities": [
+          "12",
+          "12"
+        ],
+        "total_output": "24",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "76",
+        "retained_price_after_tax": "44",
+        "gross_benefit": "2112",
+        "private_costs": [
+          "312",
+          "312"
+        ],
+        "consumer_surplus": "288",
+        "firm_profits": [
+          "216",
+          "216"
+        ],
+        "tax_receipts": "768",
+        "real_administration": "20",
+        "government_net_cash": "748",
+        "external_damage": "288",
+        "gross_welfare_before_administration": "1200",
+        "net_welfare": "1180"
+      },
+      {
+        "regime": "cournot",
+        "policy": {
+          "kind": "tax",
+          "value": "40"
+        },
+        "quantities": [
+          "10",
+          "10"
+        ],
+        "total_output": "20",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "80",
+        "retained_price_after_tax": "40",
+        "gross_benefit": "1800",
+        "private_costs": [
+          "250",
+          "250"
+        ],
+        "consumer_surplus": "200",
+        "firm_profits": [
+          "150",
+          "150"
+        ],
+        "tax_receipts": "800",
+        "real_administration": "20",
+        "government_net_cash": "780",
+        "external_damage": "200",
+        "gross_welfare_before_administration": "1100",
+        "net_welfare": "1080"
+      },
+      {
+        "regime": "cournot",
+        "policy": {
+          "kind": "standard",
+          "value": "16"
+        },
+        "quantities": [
+          "16",
+          "16"
+        ],
+        "total_output": "32",
+        "effective_output_bounds": [
+          "16",
+          "16"
+        ],
+        "active_bounds": [
+          "upper",
+          "upper"
+        ],
+        "buyer_price": "68",
+        "retained_price_after_tax": "68",
+        "gross_benefit": "2688",
+        "private_costs": [
+          "448",
+          "448"
+        ],
+        "consumer_surplus": "512",
+        "firm_profits": [
+          "640",
+          "640"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "35",
+        "government_net_cash": "-35",
+        "external_damage": "512",
+        "gross_welfare_before_administration": "1280",
+        "net_welfare": "1245"
+      }
+    ]
+  },
+  "fixed_baseline_policy_stress": [
+    {
+      "scenario_id": "baseline",
+      "unchanged_baseline_tax": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "tax",
+          "value": "16"
+        },
+        "quantities": [
+          "16",
+          "16"
+        ],
+        "total_output": "32",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "68",
+        "retained_price_after_tax": "52",
+        "gross_benefit": "2688",
+        "private_costs": [
+          "448",
+          "448"
+        ],
+        "consumer_surplus": "512",
+        "firm_profits": [
+          "384",
+          "384"
+        ],
+        "tax_receipts": "512",
+        "real_administration": "20",
+        "government_net_cash": "492",
+        "external_damage": "512",
+        "gross_welfare_before_administration": "1280",
+        "net_welfare": "1260"
+      },
+      "unchanged_baseline_standard": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "standard",
+          "value": "16"
+        },
+        "quantities": [
+          "16",
+          "16"
+        ],
+        "total_output": "32",
+        "effective_output_bounds": [
+          "16",
+          "16"
+        ],
+        "active_bounds": [
+          "upper",
+          "upper"
+        ],
+        "buyer_price": "68",
+        "retained_price_after_tax": "68",
+        "gross_benefit": "2688",
+        "private_costs": [
+          "448",
+          "448"
+        ],
+        "consumer_surplus": "512",
+        "firm_profits": [
+          "640",
+          "640"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "35",
+        "government_net_cash": "-35",
+        "external_damage": "512",
+        "gross_welfare_before_administration": "1280",
+        "net_welfare": "1245"
+      }
+    },
+    {
+      "scenario_id": "low_damage",
+      "unchanged_baseline_tax": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "tax",
+          "value": "16"
+        },
+        "quantities": [
+          "16",
+          "16"
+        ],
+        "total_output": "32",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "68",
+        "retained_price_after_tax": "52",
+        "gross_benefit": "2688",
+        "private_costs": [
+          "448",
+          "448"
+        ],
+        "consumer_surplus": "512",
+        "firm_profits": [
+          "384",
+          "384"
+        ],
+        "tax_receipts": "512",
+        "real_administration": "20",
+        "government_net_cash": "492",
+        "external_damage": "128",
+        "gross_welfare_before_administration": "1664",
+        "net_welfare": "1644"
+      },
+      "unchanged_baseline_standard": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "standard",
+          "value": "16"
+        },
+        "quantities": [
+          "16",
+          "16"
+        ],
+        "total_output": "32",
+        "effective_output_bounds": [
+          "16",
+          "16"
+        ],
+        "active_bounds": [
+          "upper",
+          "upper"
+        ],
+        "buyer_price": "68",
+        "retained_price_after_tax": "68",
+        "gross_benefit": "2688",
+        "private_costs": [
+          "448",
+          "448"
+        ],
+        "consumer_surplus": "512",
+        "firm_profits": [
+          "640",
+          "640"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "35",
+        "government_net_cash": "-35",
+        "external_damage": "128",
+        "gross_welfare_before_administration": "1664",
+        "net_welfare": "1629"
+      }
+    },
+    {
+      "scenario_id": "high_damage",
+      "unchanged_baseline_tax": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "tax",
+          "value": "16"
+        },
+        "quantities": [
+          "16",
+          "16"
+        ],
+        "total_output": "32",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "68",
+        "retained_price_after_tax": "52",
+        "gross_benefit": "2688",
+        "private_costs": [
+          "448",
+          "448"
+        ],
+        "consumer_surplus": "512",
+        "firm_profits": [
+          "384",
+          "384"
+        ],
+        "tax_receipts": "512",
+        "real_administration": "20",
+        "government_net_cash": "492",
+        "external_damage": "2048",
+        "gross_welfare_before_administration": "-256",
+        "net_welfare": "-276"
+      },
+      "unchanged_baseline_standard": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "standard",
+          "value": "16"
+        },
+        "quantities": [
+          "16",
+          "16"
+        ],
+        "total_output": "32",
+        "effective_output_bounds": [
+          "16",
+          "16"
+        ],
+        "active_bounds": [
+          "upper",
+          "upper"
+        ],
+        "buyer_price": "68",
+        "retained_price_after_tax": "68",
+        "gross_benefit": "2688",
+        "private_costs": [
+          "448",
+          "448"
+        ],
+        "consumer_surplus": "512",
+        "firm_profits": [
+          "640",
+          "640"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "35",
+        "government_net_cash": "-35",
+        "external_damage": "2048",
+        "gross_welfare_before_administration": "-256",
+        "net_welfare": "-291"
+      }
+    },
+    {
+      "scenario_id": "tight_capacity",
+      "unchanged_baseline_tax": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "tax",
+          "value": "16"
+        },
+        "quantities": [
+          "12",
+          "12"
+        ],
+        "total_output": "24",
+        "effective_output_bounds": [
+          "12",
+          "12"
+        ],
+        "active_bounds": [
+          "upper",
+          "upper"
+        ],
+        "buyer_price": "76",
+        "retained_price_after_tax": "60",
+        "gross_benefit": "2112",
+        "private_costs": [
+          "312",
+          "312"
+        ],
+        "consumer_surplus": "288",
+        "firm_profits": [
+          "408",
+          "408"
+        ],
+        "tax_receipts": "384",
+        "real_administration": "20",
+        "government_net_cash": "364",
+        "external_damage": "288",
+        "gross_welfare_before_administration": "1200",
+        "net_welfare": "1180"
+      },
+      "unchanged_baseline_standard": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "standard",
+          "value": "16"
+        },
+        "quantities": [
+          "12",
+          "12"
+        ],
+        "total_output": "24",
+        "effective_output_bounds": [
+          "12",
+          "12"
+        ],
+        "active_bounds": [
+          "upper",
+          "upper"
+        ],
+        "buyer_price": "76",
+        "retained_price_after_tax": "76",
+        "gross_benefit": "2112",
+        "private_costs": [
+          "312",
+          "312"
+        ],
+        "consumer_surplus": "288",
+        "firm_profits": [
+          "600",
+          "600"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "35",
+        "government_net_cash": "-35",
+        "external_damage": "288",
+        "gross_welfare_before_administration": "1200",
+        "net_welfare": "1165"
+      }
+    },
+    {
+      "scenario_id": "costly_administration",
+      "unchanged_baseline_tax": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "tax",
+          "value": "16"
+        },
+        "quantities": [
+          "16",
+          "16"
+        ],
+        "total_output": "32",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "68",
+        "retained_price_after_tax": "52",
+        "gross_benefit": "2688",
+        "private_costs": [
+          "448",
+          "448"
+        ],
+        "consumer_surplus": "512",
+        "firm_profits": [
+          "384",
+          "384"
+        ],
+        "tax_receipts": "512",
+        "real_administration": "100",
+        "government_net_cash": "412",
+        "external_damage": "512",
+        "gross_welfare_before_administration": "1280",
+        "net_welfare": "1180"
+      },
+      "unchanged_baseline_standard": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "standard",
+          "value": "16"
+        },
+        "quantities": [
+          "16",
+          "16"
+        ],
+        "total_output": "32",
+        "effective_output_bounds": [
+          "16",
+          "16"
+        ],
+        "active_bounds": [
+          "upper",
+          "upper"
+        ],
+        "buyer_price": "68",
+        "retained_price_after_tax": "68",
+        "gross_benefit": "2688",
+        "private_costs": [
+          "448",
+          "448"
+        ],
+        "consumer_surplus": "512",
+        "firm_profits": [
+          "640",
+          "640"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "115",
+        "government_net_cash": "-115",
+        "external_damage": "512",
+        "gross_welfare_before_administration": "1280",
+        "net_welfare": "1165"
+      }
+    },
+    {
+      "scenario_id": "asymmetric_cost",
+      "unchanged_baseline_tax": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "tax",
+          "value": "16"
+        },
+        "quantities": [
+          "19",
+          "7"
+        ],
+        "total_output": "26",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "74",
+        "retained_price_after_tax": "58",
+        "gross_benefit": "2262",
+        "private_costs": [
+          "1121/2",
+          "665/2"
+        ],
+        "consumer_surplus": "338",
+        "firm_profits": [
+          "1083/2",
+          "147/2"
+        ],
+        "tax_receipts": "416",
+        "real_administration": "20",
+        "government_net_cash": "396",
+        "external_damage": "338",
+        "gross_welfare_before_administration": "1031",
+        "net_welfare": "1011"
+      },
+      "unchanged_baseline_standard": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "standard",
+          "value": "16"
+        },
+        "quantities": [
+          "16",
+          "40/3"
+        ],
+        "total_output": "88/3",
+        "effective_output_bounds": [
+          "16",
+          "16"
+        ],
+        "active_bounds": [
+          "upper",
+          "interior"
+        ],
+        "buyer_price": "212/3",
+        "retained_price_after_tax": "212/3",
+        "gross_benefit": "22528/9",
+        "private_costs": [
+          "448",
+          "6080/9"
+        ],
+        "consumer_surplus": "3872/9",
+        "firm_profits": [
+          "2048/3",
+          "800/3"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "35",
+        "government_net_cash": "-35",
+        "external_damage": "3872/9",
+        "gross_welfare_before_administration": "2848/3",
+        "net_welfare": "2743/3"
+      }
+    },
+    {
+      "scenario_id": "inactive_firm",
+      "unchanged_baseline_tax": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "tax",
+          "value": "16"
+        },
+        "quantities": [
+          "64/3",
+          "0"
+        ],
+        "total_output": "64/3",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "zero"
+        ],
+        "buyer_price": "236/3",
+        "retained_price_after_tax": "188/3",
+        "gross_benefit": "17152/9",
+        "private_costs": [
+          "5888/9",
+          "0"
+        ],
+        "consumer_surplus": "2048/9",
+        "firm_profits": [
+          "2048/3",
+          "0"
+        ],
+        "tax_receipts": "1024/3",
+        "real_administration": "20",
+        "government_net_cash": "964/3",
+        "external_damage": "2048/9",
+        "gross_welfare_before_administration": "1024",
+        "net_welfare": "1004"
+      },
+      "unchanged_baseline_standard": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "standard",
+          "value": "16"
+        },
+        "quantities": [
+          "16",
+          "0"
+        ],
+        "total_output": "16",
+        "effective_output_bounds": [
+          "16",
+          "16"
+        ],
+        "active_bounds": [
+          "upper",
+          "zero"
+        ],
+        "buyer_price": "84",
+        "retained_price_after_tax": "84",
+        "gross_benefit": "1472",
+        "private_costs": [
+          "448",
+          "0"
+        ],
+        "consumer_surplus": "128",
+        "firm_profits": [
+          "896",
+          "0"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "35",
+        "government_net_cash": "-35",
+        "external_damage": "128",
+        "gross_welfare_before_administration": "896",
+        "net_welfare": "861"
+      }
+    }
+  ],
+  "damage_uncertainty": {
+    "mean_damage_slope": "25/16",
+    "cournot_fixed_policy_search": {
+      "no_policy": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "none",
+          "value": "0"
+        },
+        "quantities": [
+          "20",
+          "20"
+        ],
+        "total_output": "40",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "60",
+        "retained_price_after_tax": "60",
+        "gross_benefit": "3200",
+        "private_costs": [
+          "600",
+          "600"
+        ],
+        "consumer_surplus": "800",
+        "firm_profits": [
+          "600",
+          "600"
+        ],
+        "tax_receipts": "0",
+        "real_administration": "0",
+        "government_net_cash": "0",
+        "external_damage": "1250",
+        "gross_welfare_before_administration": "750",
+        "net_welfare": "750"
+      },
+      "policy_search": {
+        "tax": {
+          "optimum_deployed_instrument": {
+            "regime": "cournot",
+            "policy": {
+              "kind": "tax",
+              "value": "1360/49"
+            },
+            "quantities": [
+              "640/49",
+              "640/49"
+            ],
+            "total_output": "1280/49",
+            "effective_output_bounds": [
+              "40",
+              "40"
+            ],
+            "active_bounds": [
+              "interior",
+              "interior"
+            ],
+            "buyer_price": "3620/49",
+            "retained_price_after_tax": "2260/49",
+            "gross_benefit": "5452800/2401",
+            "private_costs": [
+              "832000/2401",
+              "832000/2401"
+            ],
+            "consumer_surplus": "819200/2401",
+            "firm_profits": [
+              "614400/2401",
+              "614400/2401"
+            ],
+            "tax_receipts": "1740800/2401",
+            "real_administration": "20",
+            "government_net_cash": "1692780/2401",
+            "external_damage": "1280000/2401",
+            "gross_welfare_before_administration": "51200/49",
+            "net_welfare": "50220/49"
+          },
+          "candidate_audit": [
+            {
+              "value": "0",
+              "quantities": [
+                "20",
+                "20"
+              ],
+              "net_welfare": "730"
+            },
+            {
+              "value": "1360/49",
+              "quantities": [
+                "640/49",
+                "640/49"
+              ],
+              "net_welfare": "50220/49"
+            },
+            {
+              "value": "40",
+              "quantities": [
+                "10",
+                "10"
+              ],
+              "net_welfare": "1935/2"
+            }
+          ],
+          "affine_regions": [
+            {
+              "lower": "0",
+              "upper": "40",
+              "q_affine": [
+                [
+                  "20",
+                  "-1/4"
+                ],
+                [
+                  "20",
+                  "-1/4"
+                ]
+              ],
+              "states": [
+                "interior",
+                "interior"
+              ]
+            }
+          ]
+        },
+        "standard": {
+          "optimum_deployed_instrument": {
+            "regime": "cournot",
+            "policy": {
+              "kind": "standard",
+              "value": "640/49"
+            },
+            "quantities": [
+              "640/49",
+              "640/49"
+            ],
+            "total_output": "1280/49",
+            "effective_output_bounds": [
+              "640/49",
+              "640/49"
+            ],
+            "active_bounds": [
+              "upper",
+              "upper"
+            ],
+            "buyer_price": "3620/49",
+            "retained_price_after_tax": "3620/49",
+            "gross_benefit": "5452800/2401",
+            "private_costs": [
+              "832000/2401",
+              "832000/2401"
+            ],
+            "consumer_surplus": "819200/2401",
+            "firm_profits": [
+              "1484800/2401",
+              "1484800/2401"
+            ],
+            "tax_receipts": "0",
+            "real_administration": "35",
+            "government_net_cash": "-35",
+            "external_damage": "1280000/2401",
+            "gross_welfare_before_administration": "51200/49",
+            "net_welfare": "49485/49"
+          },
+          "candidate_audit": [
+            {
+              "value": "0",
+              "quantities": [
+                "0",
+                "0"
+              ],
+              "net_welfare": "-35"
+            },
+            {
+              "value": "640/49",
+              "quantities": [
+                "640/49",
+                "640/49"
+              ],
+              "net_welfare": "49485/49"
+            },
+            {
+              "value": "20",
+              "quantities": [
+                "20",
+                "20"
+              ],
+              "net_welfare": "715"
+            },
+            {
+              "value": "40",
+              "quantities": [
+                "20",
+                "20"
+              ],
+              "net_welfare": "715"
+            }
+          ],
+          "affine_regions": [
+            {
+              "lower": "20",
+              "upper": "40",
+              "q_affine": [
+                [
+                  "20",
+                  "0"
+                ],
+                [
+                  "20",
+                  "0"
+                ]
+              ],
+              "states": [
+                "interior",
+                "interior"
+              ]
+            },
+            {
+              "lower": "20",
+              "upper": "20",
+              "q_affine": [
+                [
+                  "80/3",
+                  "-1/3"
+                ],
+                [
+                  "0",
+                  "1"
+                ]
+              ],
+              "states": [
+                "interior",
+                "upper"
+              ]
+            },
+            {
+              "lower": "20",
+              "upper": "20",
+              "q_affine": [
+                [
+                  "0",
+                  "1"
+                ],
+                [
+                  "80/3",
+                  "-1/3"
+                ]
+              ],
+              "states": [
+                "upper",
+                "interior"
+              ]
+            },
+            {
+              "lower": "0",
+              "upper": "20",
+              "q_affine": [
+                [
+                  "0",
+                  "1"
+                ],
+                [
+                  "0",
+                  "1"
+                ]
+              ],
+              "states": [
+                "upper",
+                "upper"
+              ]
+            }
+          ]
+        }
+      },
+      "recommended_feasible_policy": {
+        "regime": "cournot",
+        "policy": {
+          "kind": "tax",
+          "value": "1360/49"
+        },
+        "quantities": [
+          "640/49",
+          "640/49"
+        ],
+        "total_output": "1280/49",
+        "effective_output_bounds": [
+          "40",
+          "40"
+        ],
+        "active_bounds": [
+          "interior",
+          "interior"
+        ],
+        "buyer_price": "3620/49",
+        "retained_price_after_tax": "2260/49",
+        "gross_benefit": "5452800/2401",
+        "private_costs": [
+          "832000/2401",
+          "832000/2401"
+        ],
+        "consumer_surplus": "819200/2401",
+        "firm_profits": [
+          "614400/2401",
+          "614400/2401"
+        ],
+        "tax_receipts": "1740800/2401",
+        "real_administration": "20",
+        "government_net_cash": "1692780/2401",
+        "external_damage": "1280000/2401",
+        "gross_welfare_before_administration": "51200/49",
+        "net_welfare": "50220/49"
+      }
+    },
+    "state_results_at_fixed_chosen_policy": [
+      {
+        "scenario_id": "low_damage",
+        "probability": "1/4",
+        "ledger": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "tax",
+            "value": "1360/49"
+          },
+          "quantities": [
+            "640/49",
+            "640/49"
+          ],
+          "total_output": "1280/49",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "3620/49",
+          "retained_price_after_tax": "2260/49",
+          "gross_benefit": "5452800/2401",
+          "private_costs": [
+            "832000/2401",
+            "832000/2401"
+          ],
+          "consumer_surplus": "819200/2401",
+          "firm_profits": [
+            "614400/2401",
+            "614400/2401"
+          ],
+          "tax_receipts": "1740800/2401",
+          "real_administration": "20",
+          "government_net_cash": "1692780/2401",
+          "external_damage": "204800/2401",
+          "gross_welfare_before_administration": "512000/343",
+          "net_welfare": "505140/343"
+        }
+      },
+      {
+        "scenario_id": "baseline",
+        "probability": "1/2",
+        "ledger": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "tax",
+            "value": "1360/49"
+          },
+          "quantities": [
+            "640/49",
+            "640/49"
+          ],
+          "total_output": "1280/49",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "3620/49",
+          "retained_price_after_tax": "2260/49",
+          "gross_benefit": "5452800/2401",
+          "private_costs": [
+            "832000/2401",
+            "832000/2401"
+          ],
+          "consumer_surplus": "819200/2401",
+          "firm_profits": [
+            "614400/2401",
+            "614400/2401"
+          ],
+          "tax_receipts": "1740800/2401",
+          "real_administration": "20",
+          "government_net_cash": "1692780/2401",
+          "external_damage": "819200/2401",
+          "gross_welfare_before_administration": "2969600/2401",
+          "net_welfare": "2921580/2401"
+        }
+      },
+      {
+        "scenario_id": "high_damage",
+        "probability": "1/4",
+        "ledger": {
+          "regime": "cournot",
+          "policy": {
+            "kind": "tax",
+            "value": "1360/49"
+          },
+          "quantities": [
+            "640/49",
+            "640/49"
+          ],
+          "total_output": "1280/49",
+          "effective_output_bounds": [
+            "40",
+            "40"
+          ],
+          "active_bounds": [
+            "interior",
+            "interior"
+          ],
+          "buyer_price": "3620/49",
+          "retained_price_after_tax": "2260/49",
+          "gross_benefit": "5452800/2401",
+          "private_costs": [
+            "832000/2401",
+            "832000/2401"
+          ],
+          "consumer_surplus": "819200/2401",
+          "firm_profits": [
+            "614400/2401",
+            "614400/2401"
+          ],
+          "tax_receipts": "1740800/2401",
+          "real_administration": "20",
+          "government_net_cash": "1692780/2401",
+          "external_damage": "3276800/2401",
+          "gross_welfare_before_administration": "512000/2401",
+          "net_welfare": "463980/2401"
+        }
+      }
+    ],
+    "expected_net_welfare": "50220/49"
+  },
+  "chart_values": [
+    {
+      "tax": "0",
+      "output": "40",
+      "net_welfare": "1180"
+    },
+    {
+      "tax": "1",
+      "output": "79/2",
+      "net_welfare": "19035/16"
+    },
+    {
+      "tax": "2",
+      "output": "39",
+      "net_welfare": "4795/4"
+    },
+    {
+      "tax": "3",
+      "output": "77/2",
+      "net_welfare": "19315/16"
+    },
+    {
+      "tax": "4",
+      "output": "38",
+      "net_welfare": "1215"
+    },
+    {
+      "tax": "5",
+      "output": "75/2",
+      "net_welfare": "19555/16"
+    },
+    {
+      "tax": "6",
+      "output": "37",
+      "net_welfare": "4915/4"
+    },
+    {
+      "tax": "7",
+      "output": "73/2",
+      "net_welfare": "19755/16"
+    },
+    {
+      "tax": "8",
+      "output": "36",
+      "net_welfare": "1240"
+    },
+    {
+      "tax": "9",
+      "output": "71/2",
+      "net_welfare": "19915/16"
+    },
+    {
+      "tax": "10",
+      "output": "35",
+      "net_welfare": "4995/4"
+    },
+    {
+      "tax": "11",
+      "output": "69/2",
+      "net_welfare": "20035/16"
+    },
+    {
+      "tax": "12",
+      "output": "34",
+      "net_welfare": "1255"
+    },
+    {
+      "tax": "13",
+      "output": "67/2",
+      "net_welfare": "20115/16"
+    },
+    {
+      "tax": "14",
+      "output": "33",
+      "net_welfare": "5035/4"
+    },
+    {
+      "tax": "15",
+      "output": "65/2",
+      "net_welfare": "20155/16"
+    },
+    {
+      "tax": "16",
+      "output": "32",
+      "net_welfare": "1260"
+    },
+    {
+      "tax": "17",
+      "output": "63/2",
+      "net_welfare": "20155/16"
+    },
+    {
+      "tax": "18",
+      "output": "31",
+      "net_welfare": "5035/4"
+    },
+    {
+      "tax": "19",
+      "output": "61/2",
+      "net_welfare": "20115/16"
+    },
+    {
+      "tax": "20",
+      "output": "30",
+      "net_welfare": "1255"
+    },
+    {
+      "tax": "21",
+      "output": "59/2",
+      "net_welfare": "20035/16"
+    },
+    {
+      "tax": "22",
+      "output": "29",
+      "net_welfare": "4995/4"
+    },
+    {
+      "tax": "23",
+      "output": "57/2",
+      "net_welfare": "19915/16"
+    },
+    {
+      "tax": "24",
+      "output": "28",
+      "net_welfare": "1240"
+    },
+    {
+      "tax": "25",
+      "output": "55/2",
+      "net_welfare": "19755/16"
+    },
+    {
+      "tax": "26",
+      "output": "27",
+      "net_welfare": "4915/4"
+    },
+    {
+      "tax": "27",
+      "output": "53/2",
+      "net_welfare": "19555/16"
+    },
+    {
+      "tax": "28",
+      "output": "26",
+      "net_welfare": "1215"
+    },
+    {
+      "tax": "29",
+      "output": "51/2",
+      "net_welfare": "19315/16"
+    },
+    {
+      "tax": "30",
+      "output": "25",
+      "net_welfare": "4795/4"
+    },
+    {
+      "tax": "31",
+      "output": "49/2",
+      "net_welfare": "19035/16"
+    },
+    {
+      "tax": "32",
+      "output": "24",
+      "net_welfare": "1180"
+    },
+    {
+      "tax": "33",
+      "output": "47/2",
+      "net_welfare": "18715/16"
+    },
+    {
+      "tax": "34",
+      "output": "23",
+      "net_welfare": "4635/4"
+    },
+    {
+      "tax": "35",
+      "output": "45/2",
+      "net_welfare": "18355/16"
+    },
+    {
+      "tax": "36",
+      "output": "22",
+      "net_welfare": "1135"
+    },
+    {
+      "tax": "37",
+      "output": "43/2",
+      "net_welfare": "17955/16"
+    },
+    {
+      "tax": "38",
+      "output": "21",
+      "net_welfare": "4435/4"
+    },
+    {
+      "tax": "39",
+      "output": "41/2",
+      "net_welfare": "17515/16"
+    },
+    {
+      "tax": "40",
+      "output": "20",
+      "net_welfare": "1080"
+    }
+  ],
+  "chart_no_policy_reference": "1200",
+  "limitations": [
+    "All primitives, probabilities and administration costs are supplied synthetic assumptions, not estimates.",
+    "Two price-taking technologies are a comparison benchmark, not evidence that two firms behave competitively.",
+    "Equal standards are nontradable firm bounds, not a competitive permit market.",
+    "Negative taxes, discriminatory instruments, entry, evasion and endogenous emission intensity are outside the feasible model.",
+    "Efficiency uses quasilinear unweighted surplus; no causal estimate, universal policy ranking or Pareto compensation is established."
+  ]
+}
