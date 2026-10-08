@@ -1,0 +1,63 @@
+{
+  "schema": "v06-c11-external-v1",
+  "synthetic": true,
+  "metadata": {
+    "title": "Original external-account and parity cases",
+    "edition_boundary": "2026-10-06",
+    "created": "2026-10-08",
+    "provenance": "Author-created synthetic inputs, not observations or estimates.",
+    "units": "Ledger and position totals: million H. Currency, parity and regime cases: H and F, as specified in chapter. Prices H/home basket and F/foreign basket. All numeric inputs are exact rational strings.",
+    "quote": "e and forward = H per F; rising e means home depreciation.",
+    "timing": "Ledger flows use event-date valuations. Currency cases revalue unchanged principal first, then accrue and capitalize interest at the end-date quote. Parity loans/deposits and forwards share one maturity. Regime comparisons are instantaneous, before interest accrues.",
+    "accounting": "March 2025 white-cover BPM7: FA = net acquisition of external assets minus net incurrence of external liabilities; statistical discrepancy = FA - CA - KA. Income labels earned/transfer correspond to older primary/secondary.",
+    "regime_scope": "No commercial banks. H is directly held zero-return, freely storable currency/base. Domestic asset price fixed during adjustment. R in F, D/H/equity in H. Supplied future-spot mean and zero expected foreign excess return; no reserve borrowing; i_H >= 0. No empirical forecast or welfare optimum."
+  },
+  "ledger": {
+    "rows": [
+      {"id":"exports","CA":"100","KA":"0","private_assets":"100","reserves":"0","liabilities":"0"},
+      {"id":"imports","CA":"-120","KA":"0","private_assets":"-117","reserves":"-3","liabilities":"0"},
+      {"id":"earned_receipts","CA":"8","KA":"0","private_assets":"8","reserves":"0","liabilities":"0"},
+      {"id":"earned_payments","CA":"-5","KA":"0","private_assets":"-5","reserves":"0","liabilities":"0"},
+      {"id":"current_transfers_received","CA":"7","KA":"0","private_assets":"7","reserves":"0","liabilities":"0"},
+      {"id":"current_transfers_paid","CA":"-2","KA":"0","private_assets":"-2","reserves":"0","liabilities":"0"},
+      {"id":"capital_transfer","CA":"0","KA":"2","private_assets":"2","reserves":"0","liabilities":"0"},
+      {"id":"external_loan","CA":"0","KA":"0","private_assets":"12","reserves":"0","liabilities":"12"}
+    ],
+    "opening_assets":"150","opening_liabilities":"200",
+    "asset_valuation":"19","liability_valuation":"4",
+    "asset_other_volume":"-1","liability_other_volume":"0",
+    "other_volume_explanation":"Resident emigrates with an external financial asset worth 1; no other affected positions. Residence reclassification, not a payment.",
+    "GDP":"200","C":"150","G_consumption":"30","I_all":"40",
+    "net_exports":"-20","net_earned_income":"3","net_transfer_income":"5"
+  },
+  "currency_cases": [
+    {"id":"unhedged_mismatch","e0":"2","e1":"5/2","asset_F":"40","liability_F":"70","asset_interest_F":"0","liability_interest_F":"0"},
+    {"id":"interest_after_revaluation","e0":"2","e1":"3","asset_F":"0","liability_F":"100","asset_interest_F":"0","liability_interest_F":"5"}
+  ],
+  "ppp_cases": [
+    {"id":"worked_fixed_quote","e0":"2","e1":"2","P0":"100","P1":"110","PF0":"50","PF1":"52"},
+    {"id":"exercise_baskets","e0":"2","e1":"11/5","P0":"120","P1":"132","PF0":"60","PF1":"63"}
+  ],
+  "parity_cases": [
+    {"id":"worked_high_forward","e":"2","RH":"21/20","RF":"51/50","forward":"21/10","home_principal":"200","foreign_principal":"100"},
+    {"id":"exercise_high_forward","e":"3/2","RH":"27/25","RF":"51/50","forward":"81/50","home_principal":"150","foreign_principal":"100"},
+    {"id":"exercise_low_forward","e":"3/2","RH":"27/25","RF":"51/50","forward":"39/25","home_principal":"150","foreign_principal":"100"}
+  ],
+  "uncovered": {
+    "e":"2","RH":"21/20","RF":"51/50",
+    "states":[{"probability":"1/2","e_next":"9/5"},{"probability":"1/2","e_next":"12/5"}]
+  },
+  "bid_ask": {"spot_bid":"199/100","spot_ask":"201/100","forward_bid":"101/50","forward_ask":"103/50","RH_lend":"26/25","RH_borrow":"53/50","RF_lend":"101/100","RF_borrow":"103/100"},
+  "regime_primitives": {"P":"1","a":"100","chi":"100","e_initial":"2","reserve_initial":"20","equity_initial":"0","future_spot_mean":"2"},
+  "regime_cases": [
+    {"id":"initial_peg","regime":"peg","D":"55","RF":"21/20"},
+    {"id":"purchase_peg","regime":"peg","D":"57","RF":"21/20"},
+    {"id":"purchase_float","regime":"float","D":"57","RF":"21/20"},
+    {"id":"reserve_boundary","regime":"peg","D":"95","RF":"21/20"},
+    {"id":"reserve_failure","regime":"peg","D":"96","RF":"21/20"},
+    {"id":"currency_lower_bound","regime":"float","D":"60","RF":"21/20"},
+    {"id":"currency_bound_failure","regime":"float","D":"61","RF":"21/20"},
+    {"id":"foreign_rate_peg","regime":"peg","D":"55","RF":"27/25"},
+    {"id":"foreign_rate_float","regime":"float","D":"55","RF":"27/25"}
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "provenance": "Original synthetic teaching cases; no observed country data or scenario probabilities.",
+  "cases": [
+    {
+      "name": "fixed_primary",
+      "alpha": "21/20",
+      "rows": [
+        {
+          "period": 1,
+          "opening_debt": "90",
+          "gdp": "102",
+          "interest_bill": "639/100",
+          "requested_primary_ratio": "1/25",
+          "primary_ratio": "1/25",
+          "surplus": "102/25",
+          "adjustment": "0",
+          "maturing": "45",
+          "issuance": "4731/100",
+          "debt": "9231/100",
+          "ratio": "181/200",
+          "cap_limited": false
+        },
+        {
+          "period": 2,
+          "opening_debt": "9231/100",
+          "gdp": "2601/25",
+          "interest_bill": "655401/100000",
+          "requested_primary_ratio": "1/25",
+          "primary_ratio": "1/25",
+          "surplus": "2601/625",
+          "adjustment": "0",
+          "maturing": "9231/200",
+          "issuance": "4854741/100000",
+          "debt": "9470241/100000",
+          "ratio": "3641/4000",
+          "cap_limited": false
+        },
+        {
+          "period": 3,
+          "opening_debt": "9470241/100000",
+          "gdp": "132651/1250",
+          "interest_bill": "672387111/100000000",
+          "requested_primary_ratio": "1/25",
+          "primary_ratio": "1/25",
+          "surplus": "132651/31250",
+          "adjustment": "0",
+          "maturing": "9470241/200000",
+          "issuance": "4983024411/100000000",
+          "debt": "9718144911/100000000",
+          "ratio": "73261/80000",
+          "cap_limited": false
+        }
+      ],
+      "discounted_net_cash": "100880/9261",
+      "discounted_terminal_debt": "732610/9261",
+      "finite_identity_residual": "0",
+      "terminal_repayment_satisfied": false
+    },
+    {
+      "name": "feedback",
+      "alpha": "21/20",
+      "rows": [
+        {
+          "period": 1,
+          "opening_debt": "90",
+          "gdp": "102",
+          "interest_bill": "639/100",
+          "requested_primary_ratio": "13/200",
+          "primary_ratio": "13/200",
+          "surplus": "663/100",
+          "adjustment": "0",
+          "maturing": "45",
+          "issuance": "1119/25",
+          "debt": "2244/25",
+          "ratio": "22/25",
+          "cap_limited": false
+        },
+        {
+          "period": 2,
+          "opening_debt": "2244/25",
+          "gdp": "2601/25",
+          "interest_bill": "39831/6250",
+          "requested_primary_ratio": "3/50",
+          "primary_ratio": "3/50",
+          "surplus": "7803/1250",
+          "adjustment": "0",
+          "maturing": "1122/25",
+          "issuance": "140658/3125",
+          "debt": "280908/3125",
+          "ratio": "108/125",
+          "cap_limited": false
+        },
+        {
+          "period": 3,
+          "opening_debt": "280908/3125",
+          "gdp": "132651/1250",
+          "interest_bill": "4986117/781250",
+          "requested_primary_ratio": "7/125",
+          "primary_ratio": "7/125",
+          "surplus": "928557/156250",
+          "adjustment": "0",
+          "maturing": "140454/3125",
+          "issuance": "17728416/390625",
+          "debt": "35285166/390625",
+          "ratio": "532/625",
+          "cap_limited": false
+        }
+      ],
+      "discounted_net_cash": "21790/1323",
+      "discounted_terminal_debt": "97280/1323",
+      "finite_identity_residual": "0",
+      "terminal_repayment_satisfied": false
+    },
+    {
+      "name": "capped_feedback",
+      "alpha": "21/20",
+      "rows": [
+        {
+          "period": 1,
+          "opening_debt": "90",
+          "gdp": "102",
+          "interest_bill": "639/100",
+          "requested_primary_ratio": "13/200",
+          "primary_ratio": "1/20",
+          "surplus": "51/10",
+          "adjustment": "0",
+          "maturing": "45",
+          "issuance": "4629/100",
+          "debt": "9129/100",
+          "ratio": "179/200",
+          "cap_limited": true
+        },
+        {
+          "period": 2,
+          "opening_debt": "9129/100",
+          "gdp": "2601/25",
+          "interest_bill": "648159/100000",
+          "requested_primary_ratio": "51/800",
+          "primary_ratio": "1/20",
+          "surplus": "2601/500",
+          "adjustment": "0",
+          "maturing": "9129/200",
+          "issuance": "4692459/100000",
+          "debt": "9256959/100000",
+          "ratio": "3559/4000",
+          "cap_limited": true
+        },
+        {
+          "period": 3,
+          "opening_debt": "9256959/100000",
+          "gdp": "132651/1250",
+          "interest_bill": "657244089/100000000",
+          "requested_primary_ratio": "999/16000",
+          "primary_ratio": "1/20",
+          "surplus": "132651/25000",
+          "adjustment": "0",
+          "maturing": "9256959/200000",
+          "issuance": "4755119589/100000000",
+          "debt": "9383599089/100000000",
+          "ratio": "70739/80000",
+          "cap_limited": true
+        }
+      ],
+      "discounted_net_cash": "126100/9261",
+      "discounted_terminal_debt": "707390/9261",
+      "finite_identity_residual": "0",
+      "terminal_repayment_satisfied": false
+    },
+    {
+      "name": "path_a",
+      "alpha": "103/105",
+      "rows": [
+        {
+          "period": 1,
+          "opening_debt": "100",
+          "gdp": "105",
+          "interest_bill": "3",
+          "requested_primary_ratio": "1/100",
+          "primary_ratio": "1/100",
+          "surplus": "21/20",
+          "adjustment": "0",
+          "maturing": "50",
+          "issuance": "1039/20",
+          "debt": "2039/20",
+          "ratio": "2039/2100",
+          "cap_limited": false
+        },
+        {
+          "period": 2,
+          "opening_debt": "2039/20",
+          "gdp": "441/4",
+          "interest_bill": "6117/2000",
+          "requested_primary_ratio": "1/100",
+          "primary_ratio": "1/100",
+          "surplus": "441/400",
+          "adjustment": "0",
+          "maturing": "2039/40",
+          "issuance": "52931/1000",
+          "debt": "51953/500",
+          "ratio": "51953/55125",
+          "cap_limited": false
+        },
+        {
+          "period": 3,
+          "opening_debt": "51953/500",
+          "gdp": "9261/80",
+          "interest_bill": "155859/50000",
+          "requested_primary_ratio": "1/100",
+          "primary_ratio": "1/100",
+          "surplus": "9261/8000",
+          "adjustment": "0",
+          "maturing": "51953/1000",
+          "issuance": "10782511/200000",
+          "debt": "21173111/200000",
+          "ratio": "21173111/23152500",
+          "cap_limited": false
+        }
+      ],
+      "discounted_net_cash": "3407145/1092727",
+      "discounted_terminal_debt": "105865555/1092727",
+      "finite_identity_residual": "0",
+      "terminal_repayment_satisfied": false
+    },
+    {
+      "name": "path_b",
+      "alpha": "107/100",
+      "rows": [
+        {
+          "period": 1,
+          "opening_debt": "100",
+          "gdp": "100",
+          "interest_bill": "7",
+          "requested_primary_ratio": "-1/50",
+          "primary_ratio": "-1/50",
+          "surplus": "-2",
+          "adjustment": "10",
+          "maturing": "50",
+          "issuance": "69",
+          "debt": "119",
+          "ratio": "119/100",
+          "cap_limited": false
+        },
+        {
+          "period": 2,
+          "opening_debt": "119",
+          "gdp": "100",
+          "interest_bill": "833/100",
+          "requested_primary_ratio": "-1/50",
+          "primary_ratio": "-1/50",
+          "surplus": "-2",
+          "adjustment": "0",
+          "maturing": "119/2",
+          "issuance": "6983/100",
+          "debt": "12933/100",
+          "ratio": "12933/10000",
+          "cap_limited": false
+        },
+        {
+          "period": 3,
+          "opening_debt": "12933/100",
+          "gdp": "100",
+          "interest_bill": "90531/10000",
+          "requested_primary_ratio": "-1/50",
+          "primary_ratio": "-1/50",
+          "surplus": "-2",
+          "adjustment": "0",
+          "maturing": "12933/200",
+          "issuance": "757181/10000",
+          "debt": "1403831/10000",
+          "ratio": "1403831/1000000",
+          "cap_limited": false
+        }
+      ],
+      "discounted_net_cash": "-17878800/1225043",
+      "discounted_terminal_debt": "140383100/1225043",
+      "finite_identity_residual": "0",
+      "terminal_repayment_satisfied": false
+    },
+    {
+      "name": "asset_acquisition",
+      "alpha": "104/105",
+      "rows": [
+        {
+          "period": 1,
+          "opening_debt": "120",
+          "gdp": "210",
+          "interest_bill": "24/5",
+          "requested_primary_ratio": "1/50",
+          "primary_ratio": "1/50",
+          "surplus": "21/5",
+          "adjustment": "6",
+          "maturing": "60",
+          "issuance": "333/5",
+          "debt": "633/5",
+          "ratio": "211/350",
+          "cap_limited": false
+        }
+      ],
+      "discounted_net_cash": "-45/26",
+      "discounted_terminal_debt": "3165/26",
+      "finite_identity_residual": "0",
+      "terminal_repayment_satisfied": false
+    }
+  ]
+}

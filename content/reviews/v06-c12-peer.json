@@ -1,0 +1,107 @@
+{
+  "chapter": "v06-c12",
+  "date": "2026-10-08",
+  "reviewer": "causal_identification specialist; independent of c12 author",
+  "status": "passed",
+  "acceptance_authority": "Root coordinator; this peer review does not accept or publish the chapter.",
+  "reviewed_scope": [
+    "Entire manuscript, all four worked examples, eight prompts and complete solutions, teach-back and answered retention",
+    "Complete benchmark, input, README, checker, author and source records",
+    "Independent exact arithmetic and explicit economic domains, especially external transactions/valuation and fiscal claim/transfer treatment",
+    "Actual primary-source body spot inspection for the historical and fiscal claims"
+  ],
+  "findings": [
+    {
+      "id": "v06-c12-peer-01",
+      "severity": "minor mathematical wording",
+      "status": "resolved",
+      "location": "content/chapters/v06-c12.html:25",
+      "original_finding": "The displayed block could read as equating both B′ >= 0 and the collateral inequality with B <= H(x). The latter alone does not rule out overpaying debt at an arbitrary sale, although the following first-crossing proof correctly retained the separate constraint.",
+      "counterexample": "For original debt B = 0 and any positive permitted sale, B <= H(x) can hold while B′ = -p(x)x is negative.",
+      "correction_verified": "Final display explicitly defines B′ and separately requires B′ >= 0; it states equivalence only for the collateral inequality. Read the revised display and the unchanged first-crossing proof; author record preserves the finding."
+    }
+  ],
+  "unresolved_findings": [],
+  "independent_review": {
+    "bank": "Recomputed the withdrawal source/use identity, sale face amount and equity, bridge-funded equity, senior bridge/depositor waterfall, asset-loss allocation, cancelled-share non-effect and public residual. Bad-recovery state does not reuse the full-repayment sale price. A larger bridge with retained extra cash does not create net worth.",
+    "collateral": "Independently expanded H(x), completed squares and checked global endpoint/vertex maxima and the first-crossing argument under strict positive prices, 0 < theta < 1, uniform-price receipts and nonnegative debt. Verified 400/9 partial sale, complete liquidation and impossible branches; exercise maximum 225/4 and minimum concession 31/4. Root brackets do not silently authorize negative debt.",
+    "external": "Separately reconstructed foreign currency receipts, principal and interest uses, private/official borrowing and reserve floor. Independently confirmed CA = FA = 51/2 H, opening NFA -36, valuation -18 and closing NFA -57/2. All current transactions occur after opening revaluation. National cash availability is a maintained consolidation assumption; financing availability is conditional. A quote change does not supply missing foreign currency.",
+    "fiscal": "Independently reconciled both dates, gross issuance versus stock change and the finite present-value test with opening cash available at date 1. Support of 15 acquires certain date-2 recovery 5 with date-1 value 50/11 and transfer 115/11; post-transfer surplus -71/11 plus stock-flow adjustment -16/11 produces B1 = 93. The full cash need is not reduced by classification, and the convention is explicitly not a universal bailout rule.",
+    "uncertainty": "Independently checked statewise minima, worst losses and worst regrets, then enumerated 401 exact severe-state probabilities. Expected-loss lower envelope has the stated 1/4 and 1/2 switches and ties; the A/B crossing at 3/8 is not optimal. Probability, social weights and feasible action set are supplied rather than inferred.",
+    "solutions_and_instruction": "Solved all numerical exercise components independently with Fractions and read every prompt against its solution. Exercise 7 supplies four distinct inference failures, concrete observations/design choices and evaluative criteria. Exercise 8 separates net currency exposure from maturity access. Retention answers and linked stress task agree.",
+    "executable": "Read all validation/calculation/CLI code and checker paths. Ran quiet check() with stdout/stderr capture and strict JSON serialization. Independently changed private FX borrowing to 8, bank recovery to 65 and terminal surplus to 100, obtaining official need 11/2, public recovery 0 and fiscal terminal -23/10. Separate new-quote 5/2 mutation leaves official F need unchanged and gives CA 85/4, valuation -9 and closing NFA -95/4."
+  },
+  "independent_primary_inspection": [
+    {
+      "source_id": "v06-c12-korea-case",
+      "url": "https://ieo.imf.org/-/media/ieo/files/evaluations/completed/07-28-2003-imf-and-recent-capital-account-crises-indonesia-korea-brazil/capital-account-crises-chapter-2.pdf",
+      "scope": "Read actual Korea background and program/usable-reserve/rollover discussion, printed pp. 17–20. Relevant dated claims are supported; evaluator interpretation remains attributed."
+    },
+    {
+      "source_id": "v06-c12-korea-evaluation",
+      "url": "https://ieo.imf.org/-/media/ieo/files/evaluations/completed/07-28-2003-imf-and-recent-capital-account-crises-indonesia-korea-brazil/capital-account-crises-annex-2.pdf",
+      "scope": "Read actual monetary-policy tradeoff, rollover narrative and financing/conclusions passages, including the explicit earlier-rollover uncertainty on printed p. 117. The prose does not turn chronology into an identified effect."
+    },
+    {
+      "source_id": "v06-c12-us-crisis",
+      "url": "https://www.federalreserve.gov/newsevents/testimony/bernanke20100902a.htm",
+      "scope": "Read actual dated introduction/own-view qualification, unstable funding, currency mismatch, leverage/haircuts and crisis-management passages. Historical institutions and views are not presented as current law or experimental evidence."
+    },
+    {
+      "source_id": "v06-c12-fiscal-classification",
+      "url": "https://www.imf.org/-/media/files/publications/cr/2018/cr18261.pdf",
+      "scope": "Read actual paragraphs 6–9, printed pp. 8–10, including effective claims, transfers and mixed financial-acquisition/transfer treatment. The report supports the distinction, while the chapter owns its numerical discount convention."
+    }
+  ],
+  "checker_result": {
+    "status": "passed",
+    "checks": [
+      "Four worked examples: exact independent bank, global collateral, FX and fiscal targets",
+      "Independent cash transfers, loss allocation, valuation split and finite present-value bridge",
+      "48 collateral parameter cases: endpoint/vertex global certificate, no-sale/no-repair/full-sale and bounded root branches",
+      "12 external funding/quote cases and linked adverse bank/fiscal scenarios",
+      "All eight exercise solutions recomputed or logic-scoped; delayed answers and expected-loss boundary ties checked",
+      "41 malformed input contracts rejected with explicit exceptions",
+      "Three injected errors caught: erased bank deficit, official loan as income, double-counted support",
+      "Quiet strict JSON, portable normal/-O CLI, optimized validation, duplicate/nonfinite JSON rejection",
+      "Fragment structure, four worked cases/eight matching solutions, flat artifacts and scoped source/chapter routes"
+    ],
+    "details": {
+      "collateral_cases": 48,
+      "external_cases": 12,
+      "invalid_contracts": 41,
+      "caught_report_mutations": 3,
+      "worked_examples": 4,
+      "exercises": 8,
+      "source_records": 4
+    },
+    "limitations": [
+      "Synthetic conditional accounts, not empirical crisis forecasts, legal advice or identified policy effects.",
+      "Historical body inspection and proof/teaching review documented separately; source truth is not established by arithmetic checks.",
+      "Public claim valuation uses a supplied deterministic payoff and discount convention; actual instruments require separate classification.",
+      "Visual/mobile/print browser QA remains pending; no browser workaround used."
+    ]
+  },
+  "peer_additional_counts": {
+    "expected_loss_probability_grid": 401,
+    "independently_computed_numerical_exercises": 7,
+    "open_solution_logic_reviews": 1,
+    "changed_input_cases": 2
+  },
+  "author_hashes_verified": true,
+  "reviewed_sha256": {
+    "content/chapters/v06-c12.html": "712ab3ecd316f60065b54df78ad68ab6e6752749df102beb9548f69cbd8a6966",
+    "content/projects/v06-c12-analysis.py": "d8adf9ea831214fd2ab1a6545e90dc320bd63deb65a3b9a6ff96b530d6d134ed",
+    "content/projects/v06-c12-inputs.json": "e279c98d050fa217d81352f27b13ff9bab3d7df67a7ef935b13537f6ff290184",
+    "content/projects/v06-c12-README.txt": "0253ad25d58dcac3be029b383e73e0625e2f7b1f99113a0378be08e8b176e9d6",
+    "scripts/check_v06_c12.py": "251477548e667e8b74e65b2a6040c82fec6866c64581fff7a854956a6bc1f527",
+    "content/reviews/v06-c12-sources.json": "def23f1a39e6429c2bc4e4365f51116a484c043cd123560485ce844626f4c39a",
+    "content/reviews/v06-c12-author.json": "39fe3b5c0a1a49350f8bcdf87fae9c98714f2005f3bee73b8f493ff5f77ff1f6"
+  },
+  "limitations": [
+    "Independent specialist audit is not external human certification or a guarantee of error-free material.",
+    "The numerical cases are maintained synthetic accounts; no empirical crisis probability, policy causal effect or jurisdiction-specific legal authority was independently established.",
+    "Source inspection is scoped to the relevant primary passages, not all pages or every claim in the referenced reports.",
+    "Visual/mobile/print UI QA was not performed. Only this peer artifact was written; manuscript, code, shared status and publishing remain with their owners."
+  ]
+}

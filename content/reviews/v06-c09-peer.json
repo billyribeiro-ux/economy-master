@@ -1,0 +1,222 @@
+{
+  "chapter": "v06-c09",
+  "title": "Fiscal policy and public debt",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "review_type": "Independent internal mathematical, numerical, source and instructional peer review",
+  "reviewer": "regression specialist; not the chapter author",
+  "assignment": "Bounded root dispatch for v06 closing batch",
+  "status": "passed",
+  "recommendation": "All findings resolved and reinspected. No unresolved material content issue at these hashes; ready for root integration and dependency-ordered acceptance.",
+  "owned_write": "content/reviews/v06-c09-peer.json only; no root manuscripts, code, source records or shared state edited.",
+  "inspected_scope": [
+    "Complete manuscript, all four worked cases and all eight prompt/solution pairs, teach-back and answered retention.",
+    "Complete lab program, all six synthetic input cases, README, exact stored benchmark and full final checker.",
+    "Complete final source proposal and author review. Independently inspected actual scoped primary content for all three references.",
+    "Read shared build asset-copy behavior only to verify the flat-link finding; no shared edits."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v06-c09.html",
+      "bytes": 40399,
+      "sha256": "f0fe86beac45730d5e2abc0aa065b1955d585ac53b0acddba5e8f49a95cd9b8a"
+    },
+    {
+      "path": "scripts/check_v06_c09.py",
+      "bytes": 8698,
+      "sha256": "515a19cf6f44db919954649451155a093ccc3beabeb9fcc262c6b83e436c59f4"
+    },
+    {
+      "path": "content/reviews/v06-c09-sources.json",
+      "bytes": 2882,
+      "sha256": "d1d94b398b716fecb5192c7d8143faee83db45230e306ee570be7f62be4b5758"
+    },
+    {
+      "path": "content/projects/v06-c09-fiscal-README.txt",
+      "bytes": 3396,
+      "sha256": "676ea00779f42bb0426317fd526d18431b51654c4f500548de8edbd83137ca3c"
+    },
+    {
+      "path": "content/projects/v06-c09-fiscal-benchmark.json",
+      "bytes": 9040,
+      "sha256": "39958556e8201e6a8952c40fe5b6737d3dbac1ca27bcae7b13289d2b6b8b110d"
+    },
+    {
+      "path": "content/projects/v06-c09-fiscal-inputs.json",
+      "bytes": 2580,
+      "sha256": "66fb12601ae61102bb8c3bdab1dcec5fe9f5b0f325cf62854aff437909c85414"
+    },
+    {
+      "path": "content/projects/v06-c09-fiscal.py",
+      "bytes": 5226,
+      "sha256": "208ff8dcc07ee57ba8f200431d948b6e75c8af57d7ab5fb4cc17c0d5a4dc2894"
+    },
+    {
+      "path": "content/reviews/v06-c09-author.json",
+      "bytes": 3181,
+      "sha256": "8e33e11f62c53a2ddd0320b0e003f15ad4e971a2c3dceeabaeb9815a450c237f"
+    }
+  ],
+  "findings": [
+    {
+      "id": "v06-c09-peer-1",
+      "severity": "moderate integration",
+      "location": "Reproducible fiscal-path laboratory: four asset href attributes",
+      "finding": "Directory-prefixed projects/v06-c09-... links did not match the build rule copying each project file to DIST/path.name. All four links would fail in the flat edition.",
+      "proposed_fix": "Use filename-only href values.",
+      "status": "resolved",
+      "verification": "Author corrected all four. Final text and independent file-existence/flat-path checks confirm valid local targets."
+    },
+    {
+      "id": "v06-c09-peer-2",
+      "severity": "minor numerical presentation",
+      "location": "Exercise8 solution, Path A final ratio",
+      "finding": "The exact ratio21173111/23152500 is0.914506467984019; the original six-decimal display0.914507 rounded one last-place unit too high.",
+      "proposed_fix": "Display0.914506 at six decimal places.",
+      "status": "resolved",
+      "verification": "Final manuscript uses0.914506; exact debt/GDP calculation was independently repeated."
+    },
+    {
+      "id": "v06-c09-peer-3",
+      "severity": "minor theorem precision",
+      "location": "Section6, general Ricardian-equivalence statement before Worked example4",
+      "finding": "Unchanged preferences and the same feasible lifetime set preserve the set of optimal paths; an unchanged selected path requires uniqueness or a fixed selection rule. The original generic statement did not specify that condition.",
+      "proposed_fix": "State optimal-set invariance, and path invariance when the optimum is unique.",
+      "status": "resolved",
+      "verification": "Final paragraph states both qualifications. The subsequent log examples separately prove strict concavity and uniqueness."
+    }
+  ],
+  "unresolved_material_findings": [],
+  "reasoning_audit": [
+    {
+      "area": "Perimeter, timing and cash accounts",
+      "status": "pass",
+      "detail": "Interest applies to opening principal with the payment-period subscript; primary spending includes transfers/investment without confusing expenditure GDP G. Financial acquisition or cash draw is separate from primary expenditure. Par issuance includes maturing principal, with noncash valuation explicitly excluded from the cash equation. Gross/net and liquidity/solvency distinctions are maintained."
+    },
+    {
+      "area": "Exact real and GDP debt dynamics",
+      "status": "pass",
+      "detail": "Current-period GDP denominates primary flows and adjustments. The carrying factor is(1+i)/[(1+pi)(1+g)], with positive gross factors. The real-rate relation is exact before approximation. The example in which the first-order shortcut reverses the sign is arithmetically correct."
+    },
+    {
+      "area": "Fixed-point stability and feasible response",
+      "status": "pass",
+      "detail": "The alpha<1, alpha=1 and alpha>1 branches, fixed-surplus solution and alpha-phi feedback coefficient are correctly derived. Gross debt stops or changes regime at zero. A binding fiscal cap invalidates the uncapped closed form. The debt-capacity threshold is explicitly conditional on constant rates/growth, zero adjustments and a feasible permanent surplus bound."
+    },
+    {
+      "area": "Present values and terminal conditions",
+      "status": "pass",
+      "detail": "Finite telescoping retains discounted terminal debt. Infinite equality requires an explicit vanishing terminal term, not just period budget balance or a bounded GDP ratio. Constant nominal S and a constant GDP share are kept distinct. The R<Gamma stationary-ratio counterexample violates the stated terminal condition without asserting a universal impossibility theorem for other debt/liquidity/overlapping-generation models."
+    },
+    {
+      "area": "Fiscal multiplier closure and domains",
+      "status": "pass",
+      "detail": "The fixed-price slack-capacity consumption/investment/rate system is complete, with D=1-c(1-tau)+b*psi>0 for algebraic uniqueness and separate nonnegative-output/rate/capacity checks. Automatic-stabilizer comparisons preserve the initial tax burden. Equal discretionary tax/purchase changes need not preserve the realized balance. The debt-denominator effect is limited to a one-period experiment."
+    },
+    {
+      "area": "Household optimality and distribution",
+      "status": "pass",
+      "detail": "General financing neutrality now preserves the optimal set and requires uniqueness for a unique path. Same-household future taxes, borrowing access, rate, purchases and counterparties are explicit. The log cases have a strictly concave objective, positive consumption and checked constraint derivative signs. Aggregate transfer impact and welfare judgments are correctly separated."
+    },
+    {
+      "area": "Evidence and pedagogy",
+      "status": "pass",
+      "detail": "Definitions precede equations; worked cases lead to transfer, boundary and critique exercises. Scenario paths carry no invented probabilities or causal multiplier interpretation. Actual primary-source claims are scoped; source projections are not inserted into synthetic examples. Every requested exercise component has an answer, including open-memo evaluation criteria."
+    }
+  ],
+  "independent_numerical_checks": [
+    {
+      "name": "Separate ratio-first laboratory reference",
+      "status": "pass",
+      "detail": "Implemented the fiscal rule and cap independently, advanced the debt ratio first using current GDP, reconstructed nominal debt and issuance, and independently discounted net cash. Every date in all six lab paths matched; the complete encoded benchmark matched the lab output exactly."
+    },
+    {
+      "name": "Exercise and worked anchors",
+      "status": "pass",
+      "detail": "Independently recomputed interest/cash/maturity and net-debt ledgers; exact and approximate ratio changes; fixed and feedback paths; cap step/threshold and alpha1 zero-debt date; two-period repayment and terminal residual; both automatic-stabilizer cases, equal instrument and rate-feedback changes; debt-denominator effects; household budget/global derivative reasoning; both final stress paths and delayed-check multipliers."
+    },
+    {
+      "name": "Additional lab boundary behavior",
+      "status": "pass",
+      "detail": "Four new cases verify exact terminal repayment with zero issuance, debt creation from zero opening debt, rejection of negative issuance while gross debt remains positive, and rejection of negative gross debt. These enforce the README distinction between buyback and asset regimes."
+    },
+    {
+      "name": "Final checker execution",
+      "status": "pass",
+      "detail": "Normal and optimized CLI passed; final quiet API captured zero stdout/stderr and directly serialized with json.dumps(...,allow_nan=False). Checker reports81 exact ledger cases,6 lab cases and12 rejected invalid cases. Complete code read confirmed meaningful independent convolution, algebra and domain checks; checker pass was not substituted for prose review."
+    },
+    {
+      "name": "Artifact and HTML checks",
+      "status": "pass",
+      "detail": "Independent complete HTML-tag stack balanced. Four corrected flat asset paths exist. Reinspected final corrected paragraphs and compared every payload SHA256 with the updated author record; final author record itself also hashed."
+    }
+  ],
+  "exercise_review": [
+    {
+      "exercise": 1,
+      "status": "pass",
+      "result": "GDP254.8; overall deficit14; cash adjustment−3; issuance41; debt161; gross ratio805/1274; cash7; net debt154 and ratio385/637. Cash draw correctly excluded from revenue."
+    },
+    {
+      "exercise": 2,
+      "status": "pass",
+      "result": "Exact change117/104500 versus approximate−3/2000, or approximately+0.111962 versus−0.15 percentage points. Exact real rate−1/55 reproduces7/209 carrying difference."
+    },
+    {
+      "exercise": 3,
+      "status": "pass",
+      "result": "Stability interval0.05<phi<2.05; requested surplus0.065 exceeds0.05 cap; capped first ratio0.895. Capacity threshold1 is conditional. Alpha1,p0.02,d0.8 reaches zero at date40."
+    },
+    {
+      "exercise": 4,
+      "status": "pass",
+      "result": "Debt after first period90; full terminal repayment requires second surplus99. Alternative second surplus88 leaves debt11, discounted terminal100/11. Constant ratio4/5 under alpha34/35 requires p−4/175 and fails the imposed vanishing terminal condition."
+    },
+    {
+      "exercise": 5,
+      "status": "pass",
+      "result": "Baseline(Y,N,C,I,S)=(150,37.5,100,20,7.5); shock=(135,33.75,91,14,3.75). No-stabilizer matched baseline has fixed tax37.5 and shock output120,C76,I14,S7.5."
+    },
+    {
+      "exercise": 6,
+      "status": "pass",
+      "result": "Equal instrument increases4 produce output152 and surplus8. Rate feedback product0.2 yields output increase10, investment−2,consumption+6 for purchases+6. Separate purchases cut4 gives GDP140,debt118.5,ratio237/280."
+    },
+    {
+      "exercise": 7,
+      "status": "pass",
+      "result": "Unrestricted consumption remains48 each date, borrowing24 to12; no-borrowing allocations(24,72) to(36,60). Taxing someone else later raises recipient lifetime wealth12; aggregate balance alone is not neutrality."
+    },
+    {
+      "exercise": 8,
+      "status": "pass",
+      "result": "Path A final debt105.865555,GDP115.7625,ratio21173111/23152500; Path B debt140.3831,GDP100,ratio1.403831. Missing financing/distribution evidence and the concrete forecast-driven policy identification threat are explicitly addressed."
+    }
+  ],
+  "primary_source_inspection": [
+    {
+      "id": "v06-c09-debt",
+      "url": "https://www.imf.org/external/pubs/ft/tnm/2010/tnm1002.pdf",
+      "status": "scoped actual text inspected",
+      "scope": "The web fetch returned403. Reused the already downloaded official PDF extraction at /private/tmp/mastery-v06-c09-debt.txt supplied by root; read printed pp1–5 and7–8, including scope exclusions, time notation, exact factors, stationary versus stable ratios and explicit discounted terminal restriction. Inspected cover/disclaimer. Source is an author technical note; no endorsement, historical empirical validation or visual chart review inferred."
+    },
+    {
+      "id": "v06-c09-stabilizers",
+      "url": "https://www.cbo.gov/publication/62741",
+      "status": "independent official body retrieval and inspection",
+      "scope": "Read actual August2026 HTML methods/vintage paragraphs: baseline is February2026 with November20/December3 2025 cutoffs; automatic revenue/outlay responses, output/unemployment gaps and limitations of removing cyclical effects. The chapter uses the method, not projection amounts."
+    },
+    {
+      "id": "v06-c09-ricardian",
+      "url": "https://sites.nd.edu/esims/files/2026/02/slides_11_sp26.pdf",
+      "status": "independent actual PDF text retrieval and inspection",
+      "scope": "Read Spring2026 lecture pages4–13 and16–20 in extracted PDF text: period/terminal budgets, household taxes/credit assumptions, and the contrast between fixed-rate desired-demand calculations and fixed-endowment equilibrium. The chapter correctly separates its own partial-equilibrium household and short-run multiplier models."
+    }
+  ],
+  "limitations": [
+    "Internal specialist peer review is not independent human academic certification or a claim that synthetic parameters describe an actual sovereign.",
+    "Finite arithmetic tests supplement the inspected analytic proofs and cannot establish empirical causal multipliers, market access, fiscal capacity or social welfare weights.",
+    "Primary-source verification is limited to the stated passages. The IMF body was read from the existing author-downloaded extraction after a403 on independent web fetch; no visual-PDF certification or whole-document verification is claimed.",
+    "No browser/mobile/print visual QA, central source registration, whole-library build or publication performed by this peer. Root owns those integration gates."
+  ]
+}

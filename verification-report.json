@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "chapter_packages_available": 68,
-  "html_pages_checked": 79,
+  "chapter_packages_available": 72,
+  "html_pages_checked": 83,
   "curriculum_chapters": 216,
   "cross_volume_packages_available": 1,
   "checks": [
@@ -3512,6 +3512,159 @@
         "Source inspection supports scoped methods; original numerical results are independently checked here.",
         "Browser/mobile/print visual QA is pending; no restricted-preview workaround performed.",
         "Root integration, dependency acceptance and publication are separate from this author check."
+      ]
+    }
+  },
+  "volume_6_closing_checks": {
+    "v06-c09": {
+      "status": "passed",
+      "worked_examples": 4,
+      "solved_exercises": 8,
+      "exact_ledger_cases": 81,
+      "lab_cases": 6,
+      "invalid_cases": 12,
+      "checks": [
+        "nominal/ratio/cash identities",
+        "stability and caps",
+        "terminal values",
+        "multipliers and distribution",
+        "all exercise anchors",
+        "benchmark and portable CLI"
+      ]
+    },
+    "v06-c10": {
+      "chapter": "v06-c10",
+      "status": "pass",
+      "checks": [
+        {
+          "name": "Ricardian feasible equilibrium and endpoint",
+          "cases": 2,
+          "status": "pass",
+          "prices": [
+            "2/3",
+            "1"
+          ]
+        },
+        {
+          "name": "Factor resources, ownership and global branch",
+          "diversified_cases": 18,
+          "status": "pass",
+          "outside_cone": {
+            "X": 100,
+            "Y": 0,
+            "unused_labor": 3,
+            "w": 0,
+            "r": 1
+          }
+        },
+        {
+          "name": "Explicit compensation and individual welfare",
+          "status": "pass",
+          "transfer": 15,
+          "each_squared_utility_gain": "575/108",
+          "transfer_bounds": [
+            14.779189099135479,
+            15.497156796380388
+          ]
+        },
+        {
+          "name": "Independent tariff market balance, corner and benefit-cost ledgers",
+          "status": "pass",
+          "parameter_cases": 284,
+          "fixture_cases": 10
+        },
+        {
+          "name": "Global tariff optimum and real-cost counterexample",
+          "status": "pass",
+          "t_star": "50/7",
+          "home_gain": "600/7",
+          "foreign_change": "-7200/49",
+          "world_change": "-3000/49",
+          "shipping_world_change": -270
+        },
+        {
+          "name": "Independent global export choice, ties, scale and margins",
+          "status": "pass",
+          "cases": 335
+        },
+        {
+          "name": "Input/schema/domain/unit rejection",
+          "status": "pass",
+          "invalid_cases": 33
+        },
+        {
+          "name": "Damaged-result checks",
+          "status": "pass",
+          "mutants_caught": 3
+        },
+        {
+          "name": "Manuscript/snippet/source structure",
+          "status": "pass",
+          "worked_examples": 5,
+          "exercises": 8,
+          "solutions": 8,
+          "source_records": 6
+        },
+        {
+          "name": "Portable normal/optimized CLI and quiet API",
+          "status": "pass"
+        }
+      ],
+      "limitations": [
+        "Exact synthetic equations, not empirical trade-policy identification or calibration.",
+        "Finite numerical checks supplement the chapter's analytic global arguments.",
+        "Source inspection scope is recorded separately; numerical checks do not certify sources.",
+        "No browser, mobile or print visual QA."
+      ]
+    },
+    "v06-c11": {
+      "chapter": "v06-c11",
+      "status": "passed",
+      "checks": [
+        "Three worked examples, eight full solutions, answered retention, five scoped primary sources and four flat downloads",
+        "Exact transaction rows, GDP/saving bridge, discrepancy signs, gross position and NFA reconciliations",
+        "Principal revaluation before interest, exact PPP growth and quote inversion, independent exercise anchors",
+        "Two funded covered strategies, exact expected uncovered returns, reciprocal expectation and executable bid/ask bounds",
+        "Original money-demand, central-bank balance-sheet, equity, parity and regime-feasibility residuals",
+        "Preserved output, quiet import/run, strict JSON, arbitrary-CWD CLI, valid gross-position/expectation mutations and invalid API/CLI rejection"
+      ],
+      "covered_parameter_cases": 81,
+      "regime_parameter_cases": 56,
+      "invalid_cases": 21,
+      "input_sha256": "8b11b422c1b57bbb61734d87ad2a591bd206120d7adaefdeda01e09939898ddc",
+      "limitations": [
+        "Checks concern original maintained synthetic models, not empirical identification, executable current market opportunities or a forecast.",
+        "The full prose and economic assumptions require editorial audit; the two spread inequalities are not a universal market completeness test.",
+        "No visual/mobile/print QA, external human certification, shared acceptance or publication is claimed."
+      ]
+    },
+    "v06-c12": {
+      "status": "passed",
+      "checks": [
+        "Four worked examples: exact independent bank, global collateral, FX and fiscal targets",
+        "Independent cash transfers, loss allocation, valuation split and finite present-value bridge",
+        "48 collateral parameter cases: endpoint/vertex global certificate, no-sale/no-repair/full-sale and bounded root branches",
+        "12 external funding/quote cases and linked adverse bank/fiscal scenarios",
+        "All eight exercise solutions recomputed or logic-scoped; delayed answers and expected-loss boundary ties checked",
+        "41 malformed input contracts rejected with explicit exceptions",
+        "Three injected errors caught: erased bank deficit, official loan as income, double-counted support",
+        "Quiet strict JSON, portable normal/-O CLI, optimized validation, duplicate/nonfinite JSON rejection",
+        "Fragment structure, four worked cases/eight matching solutions, flat artifacts and scoped source/chapter routes"
+      ],
+      "details": {
+        "collateral_cases": 48,
+        "external_cases": 12,
+        "invalid_contracts": 41,
+        "caught_report_mutations": 3,
+        "worked_examples": 4,
+        "exercises": 8,
+        "source_records": 4
+      },
+      "limitations": [
+        "Synthetic conditional accounts, not empirical crisis forecasts, legal advice or identified policy effects.",
+        "Historical body inspection and proof/teaching review documented separately; source truth is not established by arithmetic checks.",
+        "Public claim valuation uses a supplied deterministic payoff and discount convention; actual instruments require separate classification.",
+        "Visual/mobile/print browser QA remains pending; no browser workaround used."
       ]
     }
   },

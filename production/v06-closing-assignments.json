@@ -1,7 +1,7 @@
 {
   "batch": "v06-closing",
   "date": "2026-10-08",
-  "state": "prepared-awaiting-middle-batch-publication",
+  "state": "accepted-verified-pending-private-publication",
   "authorization": "User explicitly authorized parallel specialist authors; coordinator plus3specialists. Complete216chapter library remains active.",
   "coordinator_owns": [
     "content/curriculum.json",
@@ -14,29 +14,29 @@
     "Sites hosting/publishing"
   ],
   "workflow": [
-    "Nochildagents. Noedits outsideownedpaths. Nohosting byspecialists. Reuseverifiedreferences andexistingstaticHTML architecture.",
-    "Read MASTER_PLAN,STATUS, canonicalspec andacceptedprerequisites; draft adjacentchapters againstfixedinterfaces, acceptonlydependencyorder.",
-    "Send early model/units/timing outline and originalnumericanchors before fullmanuscript.",
-    "Complete originalprose,2+workedexamples,8fullsolutions,explicitassumptions/boundaries/globalconditions,teach-back andansweredretention.",
-    "Inspect actualprimarysources andrecordscope inownedsourceproposals; snippet/resource-page alone isnotbodyinspection.",
-    "Provide quiet JSON-serializable check() with independent meaningful equation/solution checks. Use standard-libraryPython,noinstallation/network inlab.",
-    "Fullauthorreview andSHA256 records. Reportlimitations andfindings honestly; noaccreditation,currentdataguess oruniversalexamclaim.",
-    "Root independentlyreviews andintegrates; do notchangesharedcanonicalstatus or sourcecatalogue."
+    "No child agents, edits outside owned paths, or hosting by specialists. Reuse verified references and the existing static HTML architecture.",
+    "Read MASTER_PLAN, STATUS, the canonical specification and accepted prerequisites. Draft adjacent chapters against fixed interfaces; acceptance follows dependency order.",
+    "Send an early model, units and timing outline with original numerical anchors before completing the manuscript.",
+    "Provide original prose, at least two worked examples, eight full solutions, explicit assumptions and boundaries, global conditions, teach-back and answered retention.",
+    "Inspect actual primary sources and record their scope in owned source proposals. A snippet or resource page alone is not body inspection.",
+    "Provide quiet, JSON-serializable check() with independent meaningful equation and solution checks. Use standard-library Python; no installations or network in the lab.",
+    "Provide a complete author review and SHA256 records. Report limitations and findings honestly; do not claim accreditation, invented current data or universal exam success.",
+    "Root independently reviews and integrates. Do not change shared canonical status or the source catalogue."
   ],
   "shared_interface": [
-    "Earlier chapters use exactgrossfactors before first-order/lograte approximations; defineeachreal/nominalquantity,exchangequote,unitandperiod.",
-    "Saving usesGgovernmentconsumptiononly andIallgrossinvestment; ifusing expenditureGincludingpublicinvestment,splitGcandIg explicitly.",
-    "Fiscal interest/debt timing and externalvaluation mustnot doublecount interestrates,currency conversion orcapitalgains.",
-    "c07 uses target2total loginflation/referenceoutput; c08finiteNK useszero target,nominalsteadylograte2 andshock-specificnaturaloutput. Newmodels stateownnormalization.",
-    "Syntheticcalibrations remain synthetic; actualhistorical/currentinstitutionalfacts needdate,jurisdiction andscopedprimarysource.",
-    "Link unwritten successors tocurriculum untilmanuscript exists; retainparatext thatseparates writtenmaterial fromplannedcoverage."
+    "Earlier chapters use exact gross factors before first-order or log-rate approximations. Define every real/nominal quantity, exchange quote, unit and period.",
+    "Saving uses G for government consumption only and I for all gross investment. If expenditure G includes public investment, split Gc and Ig explicitly.",
+    "Fiscal interest/debt timing and external valuation must not double-count interest, currency conversion or capital gains.",
+    "C07 uses total log inflation with target 2 and reference output; c08 finite NK uses zero target, nominal steady log rate 2 and shock-specific natural output. New models state their own normalization.",
+    "Synthetic calibrations remain synthetic. Actual historical or current institutional facts need date, jurisdiction and scoped primary sources.",
+    "Link unwritten successors to the curriculum until a manuscript exists. Distinguish written material from planned coverage."
   ],
   "assignments": [
     {
       "owner": "root",
       "chapter": "v06-c09",
       "task": "Fiscal policy and public debt",
-      "state": "prepared-not-dispatched",
+      "state": "accepted-by-coordinator",
       "canonical_specification": {
         "title": "Fiscal policy and public debt",
         "outcome": "Derive debt dynamics and evaluate fiscal trade-offs with explicit assumptions.",
@@ -67,7 +67,7 @@
       "owner": "regression",
       "chapter": "v06-c10",
       "task": "Trade and comparative advantage",
-      "state": "prepared-not-dispatched",
+      "state": "accepted-by-coordinator",
       "canonical_specification": {
         "title": "Trade and comparative advantage",
         "outcome": "Derive gains and distributional effects from trade models.",
@@ -98,7 +98,7 @@
       "owner": "causal_identification",
       "chapter": "v06-c11",
       "task": "Exchange rates and external balances",
-      "state": "prepared-not-dispatched",
+      "state": "accepted-by-coordinator",
       "canonical_specification": {
         "title": "Exchange rates and external balances",
         "outcome": "Connect international accounts, exchange-rate mechanisms and policy regimes.",
@@ -129,7 +129,7 @@
       "owner": "monte_carlo",
       "chapter": "v06-c12",
       "task": "Crises, policy regimes and macroeconomic judgment",
-      "state": "prepared-not-dispatched",
+      "state": "accepted-by-coordinator",
       "canonical_specification": {
         "title": "Crises, policy regimes and macroeconomic judgment",
         "outcome": "Compare crisis mechanisms and evaluate a country case without claiming certainty from one model.",
@@ -154,6 +154,36 @@
         "content/reviews/v06-c12-sources.json"
       ],
       "fixed_scope": "Teach distinct bank liquidity, bank solvency, collateral/leverage feedback, foreign-currency/sudden-stop and sovereign distress mechanisms with explicit timing/balance sheets/constraints. Construct a bounded original crisis scenario and policy tradeoff with complete resource/loss accounting; demonstrate uncertainty and regime-dependence rather than guaranteeing a rescue or forecasting a crisis. Compare at least two historical crisis episodes using actual dated primary official/author evidence, separating evidence from model analogy and avoiding unsupported causal certainty. Provide reproducible scenario inputs/benchmark with stated parameter assumptions and a country-case decision protocol,8fully solved exercises with open-question criteria, teaching/retention. Coordinate c09 debt and c11 external-account conventions; historical amounts remain dated, no inventedOctober2026 observations."
+    }
+  ],
+  "opening_prerequisites": "v06-c01 through v06-c08 accepted and privately published at e61de8ecd8a69801e20c03613e69a66d31549a8a",
+  "peer_reviews": [
+    {
+      "chapter": "v06-c09",
+      "owner": "regression",
+      "state": "passed",
+      "owned_paths": [
+        "content/reviews/v06-c09-peer.json"
+      ],
+      "scope": "Read complete manuscript, all worked examples and8solutions, sources/lab/checker; report substantive findings and exact reviewed hashes. No root/shared writes, children or publishing."
+    },
+    {
+      "chapter": "v06-c10",
+      "owner": "monte_carlo",
+      "state": "passed",
+      "owned_paths": [
+        "content/reviews/v06-c10-peer.json"
+      ],
+      "scope": "Independent manuscript/solutions/lab/checker review; report findings and reviewed hashes; no root/shared writes, children or publishing."
+    },
+    {
+      "chapter": "v06-c12",
+      "owner": "causal_identification",
+      "state": "passed",
+      "owned_paths": [
+        "content/reviews/v06-c12-peer.json"
+      ],
+      "scope": "Independent manuscript/solutions/lab/checker review, especially foreign accounts and fiscal classifications; findings/hashes; no root/shared writes, children or publishing."
     }
   ]
 }

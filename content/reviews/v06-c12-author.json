@@ -1,0 +1,144 @@
+{
+  "chapter": "v06-c12",
+  "title": "Crises, policy regimes and macroeconomic judgment",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "reviewer": "monte_carlo specialist author",
+  "status": "ready_for_root_review",
+  "acceptance_authority": "Root coordinator only; this record is an author audit, not acceptance or independent academic certification.",
+  "scope": {
+    "worked_examples": 4,
+    "exercises": 8,
+    "solutions": 8,
+    "word_count": 6390,
+    "word_count_method": "HTMLParser text nodes, Unicode word regex; not raw HTML tags",
+    "assets": "Original synthetic exact stdlib lab plus JSON inputs and plain-text README; no empirical dataset."
+  },
+  "content_review": {
+    "definitions_and_timing": "Liquidity, solvency, rollover, collateral haircuts versus creditor haircuts, leverage, sudden stop, resolution and decision criteria defined before use. H and F currencies distinguished; all FX flows occur after revaluation. Bank amounts are undiscounted terminal residuals, while fiscal claim value explicitly uses a date-1 discount.",
+    "bank": "Read and independently reconciled initial book, withdrawal cash, full-pay sale and bridge, bad recovery, seniority, creditor loss, cancelled old ownership and public injection. Negative net worth is retained; cancellation alone never erases liabilities. Numerical sale price restricted to full-pay state. Lab restricts bad-state pre-support net worth to at most zero.",
+    "collateral": "Derived H globally and proved minimum crossing satisfies nonnegative remaining debt; verified endpoint/vertex maximum and all three main branches, including full liquidation and no repair. Uniform-price receipts stated; no integral-of-demand confusion. Lab separately flags upper-bracket nonnegative debt.",
+    "external": "Cash calendar and CA/FA/NFA bridge independently checked by c11 author and root outline review. Gross maturing principal separated from interest/earned income and new lending. Quote H/F and revaluation-before-flows prevent double conversion and transaction/valuation overlap. National cash pooling explicitly assumed, not inferred.",
+    "sovereign": "Both dates, gross issuance versus net stock change and finite present-value equivalence checked. Pre-support primary cash surplus explicitly different from post-transfer statistical illustration. Claim acquisition and transfer sum to cash outlay; positive terminal payoff is discounted once at date 1. No unproved infinite-horizon or universal safe-debt claim.",
+    "historical": "Actual official primary bodies inspected for Korea 1997 and United States 2007–09, with publication/testimony dates and participant/evaluator attribution. No numerical country calibration, chronology-as-identification or current legal claim. Source record scopes distinguish accessible technical-assistance application from unavailable full GFSM retrieval.",
+    "solutions": "All eight prompts read against complete solutions. Exact exercises1–5 and8 independently recomputed; all expected-loss crossings and ties, minimax loss and regret checked for6. Open7 gives explicit reasoning failures and affirmative evaluation criteria. Teach-back checklist and retention answers supplied.",
+    "instruction": "Prerequisite links, explicit assumptions/units/domain boundaries, global certificates, worked cases, linked lab stress, decision protocol, critique, teach-back and delayed answers inspected. Forward Volume6/7 routes use curriculum anchors; no unwritten successor represented as complete."
+  },
+  "resolved_findings": [
+    {
+      "origin": "root outline review",
+      "finding": "Cancelling old bank shares must not reset the negative net-worth residual.",
+      "resolution": "Explicit −10 residual before injection; 15 cash injection produces residual5 and old cancellation makes no liability adjustment."
+    },
+    {
+      "origin": "root outline review",
+      "finding": "A cash injection for an impaired claim cannot automatically all be classified as financial acquisition.",
+      "resolution": "S1^0 marks pre-support primary cash; fair-value illustration a=50/11, transfer115/11, post-transfer S1=−71/11 and A1=−16/11 jointly give debt93. Source scope and instrument/valuation limits explicit."
+    },
+    {
+      "origin": "root outline review",
+      "finding": "Uniform sale receipts and nonnegative remaining debt must be part of collateral model.",
+      "resolution": "Both constraints explicit; first-crossing proof establishes feasibility; numerical brackets expose separate debt-domain check."
+    },
+    {
+      "origin": "author checker review",
+      "finding": "Initial checker description said96 collateral cases though grid contains48.",
+      "resolution": "Count corrected to48; returned count and prose now agree."
+    },
+    {
+      "origin": "causal_identification independent peer review",
+      "finding": "Displayed collateral equivalence could read as also implying nonnegative debt for arbitrary sales.",
+      "resolution": "Display now states B′ >= 0 separately and restricts the equivalence to the collateral inequality. The first-crossing proof still verifies both constraints."
+    }
+  ],
+  "validation": {
+    "checker_result": {
+      "status": "passed",
+      "checks": [
+        "Four worked examples: exact independent bank, global collateral, FX and fiscal targets",
+        "Independent cash transfers, loss allocation, valuation split and finite present-value bridge",
+        "48 collateral parameter cases: endpoint/vertex global certificate, no-sale/no-repair/full-sale and bounded root branches",
+        "12 external funding/quote cases and linked adverse bank/fiscal scenarios",
+        "All eight exercise solutions recomputed or logic-scoped; delayed answers and expected-loss boundary ties checked",
+        "41 malformed input contracts rejected with explicit exceptions",
+        "Three injected errors caught: erased bank deficit, official loan as income, double-counted support",
+        "Quiet strict JSON, portable normal/-O CLI, optimized validation, duplicate/nonfinite JSON rejection",
+        "Fragment structure, four worked cases/eight matching solutions, flat artifacts and scoped source/chapter routes"
+      ],
+      "details": {
+        "collateral_cases": 48,
+        "external_cases": 12,
+        "invalid_contracts": 41,
+        "caught_report_mutations": 3,
+        "worked_examples": 4,
+        "exercises": 8,
+        "source_records": 4
+      },
+      "limitations": [
+        "Synthetic conditional accounts, not empirical crisis forecasts, legal advice or identified policy effects.",
+        "Historical body inspection and proof/teaching review documented separately; source truth is not established by arithmetic checks.",
+        "Public claim valuation uses a supplied deterministic payoff and discount convention; actual instruments require separate classification.",
+        "Visual/mobile/print browser QA remains pending; no browser workaround used."
+      ]
+    },
+    "normal_and_optimized_cli": "Passed; exact default JSON identical from a temporary foreign working directory, including -O. Optimized malformed input exits2 with JSON error.",
+    "quiet_API": {
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "strict_JSON_serializable": true
+    },
+    "exact_main_outputs": {
+      "bank_bridge": 30,
+      "bank_bad_equity": -10,
+      "public_residual": 5,
+      "collateral_minimum_sales": [
+        "400/9",
+        "100",
+        null
+      ],
+      "third_global_maximum": "289/4",
+      "official_F": "27/2",
+      "CA_FA_H": "51/2",
+      "valuation_H": "-18",
+      "closing_NFA_H": "-57/2",
+      "baseline_issuance": "78",
+      "rescue_issuance": "93",
+      "rescue_terminal_gap": "73/10",
+      "linked_stress_terminal_gap": "23/10"
+    }
+  },
+  "hashes": {
+    "content/chapters/v06-c12.html": {
+      "sha256": "712ab3ecd316f60065b54df78ad68ab6e6752749df102beb9548f69cbd8a6966",
+      "bytes": 42200
+    },
+    "content/projects/v06-c12-analysis.py": {
+      "sha256": "d8adf9ea831214fd2ab1a6545e90dc320bd63deb65a3b9a6ff96b530d6d134ed",
+      "bytes": 10306
+    },
+    "content/projects/v06-c12-inputs.json": {
+      "sha256": "e279c98d050fa217d81352f27b13ff9bab3d7df67a7ef935b13537f6ff290184",
+      "bytes": 808
+    },
+    "content/projects/v06-c12-README.txt": {
+      "sha256": "0253ad25d58dcac3be029b383e73e0625e2f7b1f99113a0378be08e8b176e9d6",
+      "bytes": 5740
+    },
+    "scripts/check_v06_c12.py": {
+      "sha256": "251477548e667e8b74e65b2a6040c82fec6866c64581fff7a854956a6bc1f527",
+      "bytes": 18434
+    },
+    "content/reviews/v06-c12-sources.json": {
+      "sha256": "def23f1a39e6429c2bc4e4365f51116a484c043cd123560485ce844626f4c39a",
+      "bytes": 4029
+    }
+  },
+  "open_findings": [],
+  "limitations": [
+    "Root and separate peer review pending at author handoff; shared acceptance/build/publication remain root-owned.",
+    "Numerical checks certify supplied conditional accounts and bounded code behavior, not real-country forecasts or empirical causal claims.",
+    "Price-impact and pooled external-cash assumptions are reduced forms; no complete market/production/strategic equilibrium is asserted.",
+    "Actual fiscal classification needs the instrument, valuation and jurisdiction-specific statistical facts.",
+    "Visual/mobile/print UI QA remains pending; no restricted-browser workaround or visual verification claim."
+  ]
+}

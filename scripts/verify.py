@@ -56,6 +56,10 @@ from check_v06_c05 import check as check_v06_c05
 from check_v06_c06 import check as check_v06_c06
 from check_v06_c07 import check as check_v06_c07
 from check_v06_c08 import check as check_v06_c08
+from check_v06_c09 import check as check_v06_c09
+from check_v06_c10 import check as check_v06_c10
+from check_v06_c11 import check as check_v06_c11
+from check_v06_c12 import check as check_v06_c12
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -435,6 +439,9 @@ def main():
     v06_middle_check = {name: checker() for name, checker in (
         ('v06-c05', check_v06_c05), ('v06-c06', check_v06_c06),
         ('v06-c07', check_v06_c07), ('v06-c08', check_v06_c08))}
+    v06_closing_check = {chapter: checker() for chapter, checker in (
+        ('v06-c09', check_v06_c09), ('v06-c10', check_v06_c10),
+        ('v06-c11', check_v06_c11), ('v06-c12', check_v06_c12))}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -465,6 +472,7 @@ def main():
               'volume_5_assessment_check': v05_assessment_check,
               'volume_6_opening_checks': v06_opening_check,
               'volume_6_middle_checks': v06_middle_check,
+              'volume_6_closing_checks': v06_closing_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     report['checks'].extend(['Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package',
         'Volume 6 chapters 5–8: labor transition and matching domains, bargaining/entry and effort values, bounded hysteresis; exact bank ledgers and reserve-market branches; nominal rigidity, expectation paths and shock-mixture regression; finite stabilization systems and independently enumerated rate-floor equilibria',

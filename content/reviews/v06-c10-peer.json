@@ -1,0 +1,434 @@
+{
+  "chapter": "v06-c10",
+  "title": "Trade and comparative advantage",
+  "date": "2026-10-08",
+  "reviewer": "monte_carlo, independent specialist peer",
+  "assignment": "production/v06-closing-assignments.json peer_reviews",
+  "status": "passed",
+  "scope": "Read complete manuscript, all five worked examples, all eight prompts/solutions, teach-back and retention, full benchmark/inputs/README/checker, six proposed source scopes and full author review. No manuscript/shared files changed.",
+  "findings": [],
+  "mathematical_review": [
+    "Ricardian choice is a global linear production optimum with equality-price correspondences. Both original and Exercise1 equilibrium clear labor, ownership income, consumer budgets, goods and balanced bilateral payments. The complete-specialization candidate p=2 fails Exercise1; the actual p=1 endpoint lets Foreign diversify. Weak gains proof does not claim universal strict or individual gains.",
+    "Fixed-coefficient factor equations are restricted to the strict diversification cone and positive supporting rewards. The primal-dual bound is correct and global. Comparative statics and purchasing power in both goods have the displayed signs. Outside-cone Exercise2 uses the correct feasible unique corner and zero wage on unused labor.",
+    "Compensation uses actual lump-sum income transfer and common prices, rather than treating a representative utility gain as automatic redistribution. Exact squared utility gains and independent high-precision interval confirm that transfer15 strictly benefits both ownership groups.",
+    "Conditional destination choice covers zero exports, the strictly concave positive-price interval and the dominated zero-price tail. Negative margins are excluded before squaring; positive setup cost makes the cutoff numerator condition necessary. Exact indifference retains both choices. Sunk80 versus avoidable80 changes shutdown profit, not the operating first-order condition.",
+    "Scale and selection are explicitly distinguished from a causal learning effect and from a full general-equilibrium industry result. Delivered versus produced quantities and real setup costs have consistent units. Changes in residual demand can overturn a held-fixed trade-cost comparison.",
+    "Small and large tariff models use supported quasilinear surplus measures, domestic ownership and one count of revenue. Complementarity and no-trade plateaus replace invalid extrapolated negative imports. Foreign offer price is distinguished from a nonexistent border transaction.",
+    "Large-country national objective is strictly concave over positive trade, and the whole no-trade plateau is compared with the interior optimum. Foreign cost and welfare are explicitly supplied; the terms-of-trade gain is a transfer, not a world resource gain. Retaliation and other response changes invalidate the stated unilateral optimum.",
+    "Shipping Exercise8 replaces a fiscal transfer with real numeraire consumption. Identical observed price wedges and quantities therefore coexist with different welfare accounts. Recipient/input evidence is correctly required before attributing the wedge."
+  ],
+  "independent_calculations": {
+    "method": "Separate inline Python Fraction/50-digit Decimal calculations from primitive resource and benefit/cost accounts; no production or author-checker reference routine used for these targets. Analytic proofs and every prompt/solution were also read.",
+    "worked_1": {
+      "p": "2/3",
+      "wages": [
+        "1/3",
+        "1/3"
+      ],
+      "national_incomes": [
+        40,
+        40
+      ],
+      "consumption_each": [
+        30,
+        20
+      ],
+      "utility_squared": [
+        600,
+        600
+      ]
+    },
+    "worked_2": {
+      "outputs": [
+        [
+          40,
+          30
+        ],
+        [
+          30,
+          40
+        ]
+      ],
+      "home_autarky_rewards": [
+        "1/6",
+        "5/12"
+      ],
+      "foreign_autarky_rewards": [
+        "5/9",
+        "2/9"
+      ],
+      "trade_price": 1,
+      "trade_consumption_each": [
+        35,
+        35
+      ],
+      "utility_squared_before_after": [
+        1200,
+        1225
+      ]
+    },
+    "worked_3": {
+      "initial_positive_candidates": [
+        16,
+        10,
+        4
+      ],
+      "initial_contributions": [
+        256,
+        100,
+        16
+      ],
+      "initial_chosen_exports": [
+        16,
+        10,
+        0
+      ],
+      "postchange_quantities": [
+        19,
+        15,
+        11
+      ],
+      "postchange_net_profits": [
+        297,
+        161,
+        57
+      ]
+    },
+    "worked_4": {
+      "pd": 25,
+      "D": 70,
+      "S": 30,
+      "M": 40,
+      "CS": 1225,
+      "PS": 225,
+      "revenue": 200,
+      "home_welfare": 1650,
+      "home_change": -50
+    },
+    "worked_5": {
+      "pf": 18,
+      "pd": 23,
+      "M": 48,
+      "D": 74,
+      "S": 26,
+      "CS": 1369,
+      "PS": 169,
+      "revenue": 240,
+      "home_welfare": 1778,
+      "home_change": 78,
+      "foreign_change": -108,
+      "world_change": -30
+    },
+    "exercise_1": {
+      "invalid_candidate_p": 2,
+      "actual_p": 1,
+      "production": [
+        [
+          60,
+          0
+        ],
+        [
+          30,
+          90
+        ]
+      ],
+      "consumption": [
+        [
+          30,
+          30
+        ],
+        [
+          60,
+          60
+        ]
+      ],
+      "wages": [
+        "1/2",
+        "1"
+      ],
+      "utility_squared": [
+        900,
+        3600
+      ],
+      "foreign_utility_gain": 0
+    },
+    "exercise_2": {
+      "inside_output": [
+        42,
+        29
+      ],
+      "inside_rewards": [
+        "1/3",
+        "1/3"
+      ],
+      "outside_output": [
+        100,
+        0
+      ],
+      "unused_labor": 3,
+      "outside_rewards": [
+        0,
+        1
+      ]
+    },
+    "exercise_3": {
+      "old_group_incomes": [
+        "55/3",
+        "125/3"
+      ],
+      "new_group_incomes": [
+        "65/3",
+        "145/3"
+      ],
+      "each_squared_utility_gain": "575/108",
+      "transfer_bounds": [
+        "14.779189099135480375762398375163121303966812605844",
+        "15.497156796380388634664544714928226626254602453429"
+      ]
+    },
+    "exercise_4": {
+      "q_candidate": 8,
+      "price": 42,
+      "contribution": 64,
+      "avoidable_64_choices": [
+        0,
+        8
+      ],
+      "avoidable_80_choice": 0,
+      "sunk_80_choice": 8,
+      "sunk_operation_profit": -16,
+      "sunk_shutdown_profit": -80
+    },
+    "exercise_5": {
+      "b_1_to_half_quantities": [
+        10,
+        20
+      ],
+      "prices": [
+        40,
+        40
+      ],
+      "contributions": [
+        100,
+        200
+      ],
+      "net_profits": [
+        36,
+        136
+      ],
+      "average_costs": [
+        "182/5",
+        "166/5"
+      ],
+      "changed_demand_contribution": 25,
+      "changed_demand_operation_profit": -39,
+      "chosen_exports": 0
+    },
+    "exercise_6": {
+      "t10": {
+        "pd": 30,
+        "D": 60,
+        "S": 40,
+        "M": 20,
+        "CS": 900,
+        "PS": 400,
+        "R": 200,
+        "W": 1500,
+        "change": -200
+      },
+      "t20": {
+        "pd": 35,
+        "D": 50,
+        "S": 50,
+        "M": 0,
+        "CS": 625,
+        "PS": 625,
+        "R": 0,
+        "W": 1250,
+        "change": -450
+      },
+      "rebate_consumer_change": -500
+    },
+    "exercise_7": {
+      "method": "Reconstructed home welfare directly at t0,1,2 to recover exact affine/quadratic coefficients, then completed-square certificate plus full no-trade plateau.",
+      "quadratic_coefficients": [
+        "0",
+        "24",
+        "-42/25"
+      ],
+      "global_t": "50/7",
+      "M": "300/7",
+      "pf": "120/7",
+      "pd": "170/7",
+      "home_gain": "600/7",
+      "foreign_change": "-7200/49",
+      "world_change": "-3000/49",
+      "no_trade_home_change": -450
+    },
+    "exercise_8": {
+      "shipping_resources": 240,
+      "home_welfare": 1538,
+      "home_change": -162,
+      "foreign_change": -108,
+      "world_change": -270,
+      "tariff_minus_shipping_home_welfare": 240
+    },
+    "retention": "Small t5 national change−50; large t5 home+78, foreign−108, world−30; firm A40,c16,tau1,F144 has both q0 andq12 optimal at zero profit."
+  },
+  "program_review": {
+    "checker_cli": "python3 book/scripts/check_v06_c10.py: pass, all10 groups.",
+    "quiet_api": {
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "strict_json_serializable": true
+    },
+    "checker_result": {
+      "chapter": "v06-c10",
+      "status": "pass",
+      "checks": [
+        {
+          "name": "Ricardian feasible equilibrium and endpoint",
+          "cases": 2,
+          "status": "pass",
+          "prices": [
+            "2/3",
+            "1"
+          ]
+        },
+        {
+          "name": "Factor resources, ownership and global branch",
+          "diversified_cases": 18,
+          "status": "pass",
+          "outside_cone": {
+            "X": 100,
+            "Y": 0,
+            "unused_labor": 3,
+            "w": 0,
+            "r": 1
+          }
+        },
+        {
+          "name": "Explicit compensation and individual welfare",
+          "status": "pass",
+          "transfer": 15,
+          "each_squared_utility_gain": "575/108",
+          "transfer_bounds": [
+            14.779189099135479,
+            15.497156796380388
+          ]
+        },
+        {
+          "name": "Independent tariff market balance, corner and benefit-cost ledgers",
+          "status": "pass",
+          "parameter_cases": 284,
+          "fixture_cases": 10
+        },
+        {
+          "name": "Global tariff optimum and real-cost counterexample",
+          "status": "pass",
+          "t_star": "50/7",
+          "home_gain": "600/7",
+          "foreign_change": "-7200/49",
+          "world_change": "-3000/49",
+          "shipping_world_change": -270
+        },
+        {
+          "name": "Independent global export choice, ties, scale and margins",
+          "status": "pass",
+          "cases": 335
+        },
+        {
+          "name": "Input/schema/domain/unit rejection",
+          "status": "pass",
+          "invalid_cases": 33
+        },
+        {
+          "name": "Damaged-result checks",
+          "status": "pass",
+          "mutants_caught": 3
+        },
+        {
+          "name": "Manuscript/snippet/source structure",
+          "status": "pass",
+          "worked_examples": 5,
+          "exercises": 8,
+          "solutions": 8,
+          "source_records": 6
+        },
+        {
+          "name": "Portable normal/optimized CLI and quiet API",
+          "status": "pass"
+        }
+      ],
+      "limitations": [
+        "Exact synthetic equations, not empirical trade-policy identification or calibration.",
+        "Finite numerical checks supplement the chapter's analytic global arguments.",
+        "Source inspection scope is recorded separately; numerical checks do not certify sources.",
+        "No browser, mobile or print visual QA."
+      ]
+    },
+    "logic": "Read full checker: independent small row elimination, primitive welfare accounts, candidate enumeration and analytic branch certificates are meaningful; all-domain constraints addressed beyond sample points. Portable normal/-O CLI and optimized invalid unit contract run inside the checker. Input parser rejects floats/bools/nonfinite/rational overflow and validates exact unit/schema/domain fields.",
+    "author_hashes": "All six author-record hashes matched current bytes at peer completion."
+  },
+  "source_scope": {
+    "proposal_records_read": 6,
+    "new_primary_body_spot_checks": [
+      {
+        "id": "v06-c10-tariffs",
+        "url": "https://ocw.mit.edu/courses/14-54-international-trade-fall-2016/827530e787786fd656a98a585e58c86e_MIT14_54F16_Lecture_20.pdf",
+        "scope": "Actual18-page MIT PDF extracted text, especially pp.4,8–17: partial equilibrium/no income effects, small/large incidence and welfare channels."
+      },
+      {
+        "id": "v06-c10-selection",
+        "url": "https://ocw.mit.edu/courses/14-54-international-trade-fall-2016/86bb7cf1a6820b35200daffd497d5403_MIT14_54F16_Lecture_18.pdf",
+        "scope": "Actual22-page MIT PDF extracted text, especially pp.14,17–20: heterogeneous costs and variable/fixed export costs; full-industry and empirical claims correctly excluded from chapter."
+      }
+    ],
+    "limit": "Other four sources were checked for proposal/use alignment against the complete original derivations; this peer did not repeat their author-recorded body retrieval. No source graphics or browser visual QA claimed."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v06-c10.html",
+      "sha256": "a26cebddce0735283fd248eb73ad3dd94430aef966263245c67812931d710d1e",
+      "bytes": 43027
+    },
+    {
+      "path": "content/projects/v06-c10-analysis.py",
+      "sha256": "5c643f765c91ee004f4aaf8ed3ac9aeeffd56f10671a524c1c738a45859d992e",
+      "bytes": 6548
+    },
+    {
+      "path": "content/projects/v06-c10-inputs.json",
+      "sha256": "ac7e133b9cec72d2b85cc4ebf868bc307ef22908247115b05f343828181ff853",
+      "bytes": 1661
+    },
+    {
+      "path": "content/projects/v06-c10-README.txt",
+      "sha256": "f0d72910c8cf73da9484225f5a4ec1360b39b9c09aa8e86be46e726ae0b5a033",
+      "bytes": 4605
+    },
+    {
+      "path": "scripts/check_v06_c10.py",
+      "sha256": "94fa9366064e65a0acab83f273e40dc1d97590d12ef87137bec85c774573c423",
+      "bytes": 17660
+    },
+    {
+      "path": "content/reviews/v06-c10-sources.json",
+      "sha256": "889ba3ad03a9a1a46e790ffc7746b9bd666f8a7592380e79d5af516b13a25db3",
+      "bytes": 6600
+    },
+    {
+      "path": "content/reviews/v06-c10-author.json",
+      "sha256": "27243026f3f4d4d53608fc9ee270ab5d6d56d4ee475db6d23e5c619b84eefd5c",
+      "bytes": 13949
+    }
+  ],
+  "limitations": [
+    "Bounded independent technical peer review is not external academic certification or empirical validation.",
+    "Theory and lab are synthetic conditional models; actual trade-policy law, elasticities and causal effects are outside this audit.",
+    "Current curriculum routes remain valid even before coordinator switches navigation to the adjacent written chapter.",
+    "Root accepts/integrates; no central state, manuscript, code or source proposal edits were made.",
+    "Visual/mobile/print browser QA remains pending."
+  ],
+  "recommendation": "No correction required at the reviewed hashes; ready for root integration in dependency order."
+}

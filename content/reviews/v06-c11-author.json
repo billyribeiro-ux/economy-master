@@ -1,0 +1,87 @@
+{
+  "chapter": "v06-c11",
+  "title": "Exchange rates and external balances",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "review_type": "Author audit and independent computation, submitted for root acceptance",
+  "owned_files": [
+    "content/chapters/v06-c11.html",
+    "content/projects/v06-c11-cases.json",
+    "content/projects/v06-c11-external.py",
+    "content/projects/v06-c11-output.json",
+    "content/projects/v06-c11-README.txt",
+    "scripts/check_v06_c11.py",
+    "content/reviews/v06-c11-sources.json",
+    "content/reviews/v06-c11-author.json"
+  ],
+  "checks": {
+    "chapter": "v06-c11",
+    "status": "passed",
+    "checks": [
+      "Three worked examples, eight full solutions, answered retention, five scoped primary sources and four flat downloads",
+      "Exact transaction rows, GDP/saving bridge, discrepancy signs, gross position and NFA reconciliations",
+      "Principal revaluation before interest, exact PPP growth and quote inversion, independent exercise anchors",
+      "Two funded covered strategies, exact expected uncovered returns, reciprocal expectation and executable bid/ask bounds",
+      "Original money-demand, central-bank balance-sheet, equity, parity and regime-feasibility residuals",
+      "Preserved output, quiet import/run, strict JSON, arbitrary-CWD CLI, valid gross-position/expectation mutations and invalid API/CLI rejection"
+    ],
+    "covered_parameter_cases": 81,
+    "regime_parameter_cases": 56,
+    "invalid_cases": 21,
+    "input_sha256": "8b11b422c1b57bbb61734d87ad2a591bd206120d7adaefdeda01e09939898ddc",
+    "limitations": [
+      "Checks concern original maintained synthetic models, not empirical identification, executable current market opportunities or a forecast.",
+      "The full prose and economic assumptions require editorial audit; the two spread inequalities are not a universal market completeness test.",
+      "No visual/mobile/print QA, external human certification, shared acceptance or publication is claimed."
+    ]
+  },
+  "quiet_json_serializable_check": true,
+  "prose_and_proof_audit": [
+    "Resident versus nonresident scope and current/capital/financial distinctions are explicit. Every original transaction row balances. Acquisition and liability-incurrence columns have separately defined positive signs; SD = FA - CA - KA is checked against both complete and inconsistent observed records.",
+    "Saving-current-account bridge is derived with G government consumption and I all gross investment, including public investment. Capital transfers enter net lending separately. Principal repayment and earned interest are separated; no identity is asserted to identify a causal mechanism or welfare ranking.",
+    "Separate asset/liability stock reconciliations prove the NFA bridge. Event-date transaction conversion, unchanged-principal valuation, end-date accrued interest and residence reclassification have distinct entries. Currency and gross/maturity exposures are not inferred from the aggregate NFA alone.",
+    "Home-currency-per-foreign quote is fixed before use. Law of one price and common-basket aggregation provide explicit sufficient conditions for absolute PPP. Real-rate changes, relative PPP, exact finite depreciation, inverse quotes and independently rebased CPI levels are separated.",
+    "Covered parity is derived from two financed, maturity-matched, fully hedged paths under stated default/access/cost assumptions. Both arbitrage directions and bid/ask funding inequalities are independently recomputed. Positive gross factors permit negative net deposit rates in the generic parity exercise; this does not import the later freely storable currency assumption.",
+    "Uncovered returns use an explicit two-state conditional distribution. Expected excess return is a definition; UIP is an additional restriction, not an implication of CIP or capital mobility alone. Reciprocal expectations and downside loss are checked. Risk-neutral home-currency payoffs are distinguished from real consumption payoffs under uncertain prices; the full asset-pricing derivation is deferred.",
+    "Original instantaneous regime model closes money demand, central-bank balance sheet, reserve valuation in equity and parity. Commercial banks are absent. Float expectation is supplied, not inferred from the current purchase. Unique conditional solutions and global nonnegative-reserve and positive-money/nonnegative-rate domains are explicit; policy failure is not silently clipped into an equilibrium.",
+    "Three complete worked examples, all eight exercise/solution pairs and retention answers are independently recomputed. Open empirical-design solution names the estimand, timing, identifying comparison, anticipation/concurrent-policy/spillover threats and imperfect diagnostics. Grading criteria assess reasoning rather than a preferred policy.",
+    "Five scoped primary sources were actually inspected. BPM7 means the specifically inspected March 2025 white-cover/pre-edited text; the official release and recommended country implementation dates are distinguished. Exact inspection locations are preserved in the source proposals. Historical numerical findings and current exchange-rate observations are not imported.",
+    "Canonical predecessor c10 and now-written successor c12 are directly linked. Download links are flat filenames, code is standard-library-only and offline, default paths resolve independently of the current working directory, and supplied output is exact and reproducible."
+  ],
+  "resolved_authoring_issues": [
+    {
+      "severity": "scope clarification",
+      "issue": "Root requested that the money aggregate and expectation closure be explicit.",
+      "resolution": "The model uses directly held currency/base with no commercial banks, a supplied terminal conditional mean and no automatic implication from current monetary expansion."
+    },
+    {
+      "severity": "scope clarification",
+      "issue": "Global extrapolation could incorrectly permit negative reserves or negative nominal rates with freely storable currency.",
+      "resolution": "Both manuscript and executable distinguish admissible boundaries from infeasible candidates; peg D = 95 and float D = 60 are checked alongside violations."
+    },
+    {
+      "severity": "source precision",
+      "issue": "The exact IMF edition and old-to-new terminology require actual manual inspection rather than a generic BPM6 reference.",
+      "resolution": "Inspected BPM7 title, accounting/valuation/interest passages and terminology tables; retained explicitly dated white-cover scope, implementation distinction, and precise printed-page references."
+    }
+  ],
+  "unresolved_findings": [],
+  "sha256": {
+    "content/chapters/v06-c11.html": "4df225b002e660725f54695744af4d94e89aae616dceb4768fbdc96de6e86480",
+    "content/projects/v06-c11-cases.json": "8b11b422c1b57bbb61734d87ad2a591bd206120d7adaefdeda01e09939898ddc",
+    "content/projects/v06-c11-external.py": "e0d3591f7876e8c8861d04b58671706d591b538ea56f7cfec691fdbe9f874bb7",
+    "content/projects/v06-c11-output.json": "98382a6b9dbf6752319eeb8f1f2c0d4a06c0bfe81a6b04d8122019b814768e8e",
+    "content/projects/v06-c11-README.txt": "09c4439c1a383d6c6a1a5f24179153ffdfb71da745f4c47a59c961942af5ec0c",
+    "scripts/check_v06_c11.py": "d6e8d92f311444b11c459f3a9cbbcc468aa05bdfa51916566945deb6739e2152",
+    "content/reviews/v06-c11-sources.json": "b90242bdcf9111649288b83b0cdd5d61531cfa245ec0b04fc60344b740dcf615"
+  },
+  "limitations": [
+    "Checks concern original maintained synthetic models, not empirical identification, executable current market opportunities or a forecast.",
+    "The full prose and economic assumptions require editorial audit; the two spread inequalities are not a universal market completeness test.",
+    "No visual/mobile/print QA, external human certification, shared acceptance or publication is claimed.",
+    "Source inspection is scoped to the listed passages, not verification of the entire IMF manual, every author slide, every national dataset or actual country adoption.",
+    "The monetary regime model fixes contemporaneous prices/output, treats domestic securities at a fixed price and supplies the future conditional mean. It proves no infinite-horizon equilibrium, credibility, optimal currency regime or identified policy effect.",
+    "No full stochastic-discount-factor theorem, empirical parity estimate, actual trading opportunity or current country forecast is claimed."
+  ],
+  "acceptance": "Complete authored package submitted for review. Root retains dependency-order acceptance, central integration and publication."
+}

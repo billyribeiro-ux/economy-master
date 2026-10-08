@@ -1,0 +1,213 @@
+{
+  "schema": "v06-c11-external-v1",
+  "synthetic": true,
+  "numeric_encoding": "exact rational strings",
+  "ledger": {
+    "totals": {
+      "CA": "-12",
+      "KA": "2",
+      "private_assets": "5",
+      "reserves": "-3",
+      "liabilities": "12"
+    },
+    "asset_transactions": "2",
+    "FA": "-10",
+    "statistical_discrepancy": "0",
+    "assets_close": "170",
+    "liabilities_close": "216",
+    "NFA_open": "-50",
+    "NFA_close": "-46",
+    "net_valuation": "15",
+    "net_other_volume": "-1",
+    "GNDI": "208",
+    "saving": "28",
+    "saving_minus_investment": "-12"
+  },
+  "currency_cases": {
+    "unhedged_mismatch": {
+      "assets_open": "80",
+      "liabilities_open": "140",
+      "assets_close": "100",
+      "liabilities_close": "175",
+      "asset_transactions": "0",
+      "liability_transactions": "0",
+      "CA": "0",
+      "FA": "0",
+      "net_valuation": "-15",
+      "NFA_open": "-60",
+      "NFA_close": "-75"
+    },
+    "interest_after_revaluation": {
+      "assets_open": "0",
+      "liabilities_open": "200",
+      "assets_close": "0",
+      "liabilities_close": "315",
+      "asset_transactions": "0",
+      "liability_transactions": "15",
+      "CA": "-15",
+      "FA": "-15",
+      "net_valuation": "-100",
+      "NFA_open": "-200",
+      "NFA_close": "-315"
+    }
+  },
+  "ppp_cases": {
+    "worked_fixed_quote": {
+      "q0": "1",
+      "q1": "52/55",
+      "real_depreciation": "-3/55",
+      "nominal_depreciation": "0",
+      "inverse_quote_change": "0",
+      "relative_PPP_quote": "55/26",
+      "relative_PPP_depreciation": "3/52",
+      "inflation_difference": "3/50"
+    },
+    "exercise_baskets": {
+      "q0": "1",
+      "q1": "21/20",
+      "real_depreciation": "1/20",
+      "nominal_depreciation": "1/10",
+      "inverse_quote_change": "-1/11",
+      "relative_PPP_quote": "44/21",
+      "relative_PPP_depreciation": "1/21",
+      "inflation_difference": "1/20"
+    }
+  },
+  "parity_cases": {
+    "worked_high_forward": {
+      "parity_forward": "35/17",
+      "borrow_H_foreign_maturity": "102",
+      "borrow_H_forward_receipt": "1071/5",
+      "borrow_H_repayment": "210",
+      "borrow_H_profit": "21/5",
+      "borrow_F_home_maturity": "210",
+      "borrow_F_foreign_repayment": "102",
+      "borrow_F_forward_cost": "1071/5",
+      "borrow_F_profit": "-21/5"
+    },
+    "exercise_high_forward": {
+      "parity_forward": "27/17",
+      "borrow_H_foreign_maturity": "102",
+      "borrow_H_forward_receipt": "4131/25",
+      "borrow_H_repayment": "162",
+      "borrow_H_profit": "81/25",
+      "borrow_F_home_maturity": "162",
+      "borrow_F_foreign_repayment": "102",
+      "borrow_F_forward_cost": "4131/25",
+      "borrow_F_profit": "-81/25"
+    },
+    "exercise_low_forward": {
+      "parity_forward": "27/17",
+      "borrow_H_foreign_maturity": "102",
+      "borrow_H_forward_receipt": "3978/25",
+      "borrow_H_repayment": "162",
+      "borrow_H_profit": "-72/25",
+      "borrow_F_home_maturity": "162",
+      "borrow_F_foreign_repayment": "102",
+      "borrow_F_forward_cost": "3978/25",
+      "borrow_F_profit": "72/25"
+    }
+  },
+  "uncovered": {
+    "mean_spot": "21/10",
+    "expected_depreciation": "1/20",
+    "UIP_depreciation": "1/34",
+    "parity_forward": "35/17",
+    "state_gross_home_returns": [
+      "459/500",
+      "153/125"
+    ],
+    "expected_gross_home_return": "1071/1000",
+    "expected_excess_foreign_return": "21/1000",
+    "expected_reciprocal": "35/72",
+    "reciprocal_expectation": "10/21"
+  },
+  "bid_ask": {
+    "profit_per_H_borrowed": "-226/5025",
+    "profit_per_F_borrowed_in_H": "-261/5000",
+    "no_arbitrage_in_these_two_strategies": true
+  },
+  "regime_cases": {
+    "initial_peg": {
+      "feasible": true,
+      "reason": null,
+      "H": "95",
+      "i_H": "1/20",
+      "R": "20",
+      "e": "2",
+      "K": "0"
+    },
+    "purchase_peg": {
+      "feasible": true,
+      "reason": null,
+      "H": "95",
+      "i_H": "1/20",
+      "R": "19",
+      "e": "2",
+      "K": "0"
+    },
+    "purchase_float": {
+      "feasible": true,
+      "reason": null,
+      "H": "97",
+      "i_H": "3/100",
+      "R": "20",
+      "e": "210/103",
+      "K": "80/103"
+    },
+    "reserve_boundary": {
+      "feasible": true,
+      "reason": null,
+      "H": "95",
+      "i_H": "1/20",
+      "R": "0",
+      "e": "2",
+      "K": "0"
+    },
+    "reserve_failure": {
+      "feasible": false,
+      "reason": "negative required reserves",
+      "H": "95",
+      "i_H": "1/20",
+      "R": "-1/2",
+      "e": "2",
+      "K": "0"
+    },
+    "currency_lower_bound": {
+      "feasible": true,
+      "reason": null,
+      "H": "100",
+      "i_H": "0",
+      "R": "20",
+      "e": "21/10",
+      "K": "2"
+    },
+    "currency_bound_failure": {
+      "feasible": false,
+      "reason": "money/currency-rate domain",
+      "H": "101",
+      "i_H": "-1/100",
+      "R": "20",
+      "e": null,
+      "K": null
+    },
+    "foreign_rate_peg": {
+      "feasible": true,
+      "reason": null,
+      "H": "92",
+      "i_H": "2/25",
+      "R": "37/2",
+      "e": "2",
+      "K": "0"
+    },
+    "foreign_rate_float": {
+      "feasible": true,
+      "reason": null,
+      "H": "95",
+      "i_H": "1/20",
+      "R": "20",
+      "e": "72/35",
+      "K": "8/7"
+    }
+  }
+}

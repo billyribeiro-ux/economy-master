@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "bank": {"cash": 10, "loan_face": 100, "deposits": 90, "withdrawal": 40, "sale_price": "0.75", "bad_recovery": 70, "injection": 15},
+  "collateral": [
+    {"id": "no_impact", "units": 100, "debt": 80, "ltv": "0.8", "price_intercept": "0.9", "price_impact": 0},
+    {"id": "full_liquidation", "units": 100, "debt": 80, "ltv": "0.8", "price_intercept": "0.9", "price_impact": "0.001"},
+    {"id": "no_repair", "units": 100, "debt": 80, "ltv": "0.8", "price_intercept": "0.9", "price_impact": "0.002"}
+  ],
+  "fx": {"reserves": 12, "exports": 30, "imports": 20, "old_debt": 30, "interest": "0.05", "private_new": 0, "reserve_floor": 4, "old_quote": 2, "new_quote": 3},
+  "fiscal": {"old_debt": 80, "gross_rate": "1.1", "cash": 6, "primary_1": 4, "primary_2": 90, "private_cap": 70}
+}

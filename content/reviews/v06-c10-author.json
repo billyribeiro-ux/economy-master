@@ -1,0 +1,169 @@
+{
+  "chapter": "v06-c10",
+  "title": "Trade and comparative advantage",
+  "author": "regression specialist",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "review_type": "Author instructional, mathematical, numerical, source and reproducibility audit",
+  "state": "author-review-complete",
+  "status": "passed author checks; pending root acceptance in dependency order",
+  "assignment": "production/v06-closing-assignments.json",
+  "scope": {
+    "canonical_coverage": [
+      "Ricardian",
+      "factor endowments",
+      "scale",
+      "firms",
+      "tariffs",
+      "terms of trade"
+    ],
+    "outcome": "Derive gains and distributional effects from trade models.",
+    "chapter_words": 6178,
+    "worked_examples": 5,
+    "exercises": 8,
+    "complete_solutions": 8,
+    "teach_back": "Answered guide with mechanisms, equations and assumptions",
+    "retention": "Answered tariff comparison and exact exporter indifference case",
+    "lab": "Offline exact rational tariff and conditional destination-choice benchmark; original inputs and README",
+    "ownership": "Only c10 manuscript, c10-prefixed project files, c10 checker and c10 author/source review files written. No central state, shared build, commits or hosting."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v06-c10.html",
+      "bytes": 43027,
+      "sha256": "a26cebddce0735283fd248eb73ad3dd94430aef966263245c67812931d710d1e"
+    },
+    {
+      "path": "content/projects/v06-c10-analysis.py",
+      "bytes": 6548,
+      "sha256": "5c643f765c91ee004f4aaf8ed3ac9aeeffd56f10671a524c1c738a45859d992e"
+    },
+    {
+      "path": "content/projects/v06-c10-inputs.json",
+      "bytes": 1661,
+      "sha256": "ac7e133b9cec72d2b85cc4ebf868bc307ef22908247115b05f343828181ff853"
+    },
+    {
+      "path": "content/projects/v06-c10-README.txt",
+      "bytes": 4605,
+      "sha256": "f0d72910c8cf73da9484225f5a4ec1360b39b9c09aa8e86be46e726ae0b5a033"
+    },
+    {
+      "path": "scripts/check_v06_c10.py",
+      "bytes": 17660,
+      "sha256": "94fa9366064e65a0acab83f273e40dc1d97590d12ef87137bec85c774573c423"
+    },
+    {
+      "path": "content/reviews/v06-c10-sources.json",
+      "bytes": 6600,
+      "sha256": "889ba3ad03a9a1a46e790ffc7746b9bd666f8a7592380e79d5af516b13a25db3"
+    }
+  ],
+  "reasoning_checks": [
+    "Ricardian resource constraints use strictly positive labor requirements and finite labor. Linear production-value choice is proved globally, with specialization intervals and endpoint correspondences; demand and both world markets close the synthetic equilibrium.",
+    "Absolute advantage and comparative opportunity cost are distinct. The feasible-gains proof compares affordable bundles under correct ownership income and guarantees weak representative welfare, not a universal strict gain or automatic individual compensation.",
+    "The factor model states fixed coefficients, service-flow capital, internal factor mobility, common technology, the strict endowment diversification cone and positive factor-price interval before comparative statics. The primal resource solution and dual supporting-value bound establish global optimality under these conditions.",
+    "Relative abundance and trade directions are derived for the original two-country preference/technology case. Both real factor rewards are checked in both goods, and the losing capital-owning group receives no fictional automatic compensation. Exercise3 constructs a real feasible lump-sum transfer and verifies both utilities.",
+    "The outside-cone exercise rejects negative output and solves the actual resource corner with zero reward to excess labor. No general global factor-price equalization or unrestricted Stolper–Samuelson proof is claimed.",
+    "The heterogeneous-firm block is a conditional destination problem with known costs and fixed residual demand. Iceberg production requirements are distinct from delivered quantities; setup is avoidable unless explicitly changed in an exercise. Positive and zero-price branches, stay-out, and exact indifference are all compared globally.",
+    "Scale economies, exporter selection and learning are distinct. Holding demand and input costs fixed proves a conditional cost response; the manuscript expressly does not claim to solve full industry entry, domestic exit, economy-wide productivity growth or causal learning.",
+    "Both tariff models derive market-clearing prices and check the positive-import domain. At or above the prohibitive tariff, quantities and domestic price are re-solved; revenue is zero, the foreign reservation offer is distinguished from a nonexistent border transaction and negative imports are never used.",
+    "Tariff welfare is exact only under the stated quasilinear numeraire, efficient allocation, domestic ownership and no-other-wedge assumptions. Consumer, producer, government and foreign accounts reconcile with primitive benefit/cost resource ledgers. A terms-of-trade transfer is distinguished from a world gain.",
+    "The large-country optimum follows a completed-square/strict-concavity certificate plus the full no-trade plateau comparison. The inverse foreign export supply, no retaliation, government commitment and unweighted domestic objective are fixed throughout.",
+    "The shipping counterexample holds prices/quantities fixed but replaces a domestic tariff transfer with an explicitly real numeraire-good resource requirement. Identical wedges alone therefore do not identify the welfare mechanism. No current tariff rule, country observation or actual foreign elasticity is invented.",
+    "Terms of trade is an export/import goods-price ratio. The c11 interface uses home currency per foreign currency for its exchange quote; the chapter does not conflate them or attempt full external-account valuation."
+  ],
+  "worked_example_checks": [
+    {
+      "example": 1,
+      "result": "Home/Foreign autarky (30,15)/(10,20), complete-specialization trade price2/3, production(60,0)/(0,40), consumption(30,20) each. Both world markets and Home exports30 cloth/imports20 wheat at value20 reconcile. Utility squares450/200 rise to600."
+    },
+    {
+      "example": 2,
+      "result": "Endowments(110,100)/(100,110) give production(40,30)/(30,40), autarky prices3/4 and4/3, trade price1 and consumption(35,35) each. Home wage in Y rises1/6 to1/3, in X2/9 to1/3; rental in Y falls5/12 to1/3, in X5/9 to1/3. National utility squares1200 to1225."
+    },
+    {
+      "example": 3,
+      "result": "At tau3/2, c12/20/28 have candidate contributions256/100/16 and export choices16/10/0, net profits192/36/0. At tau1 all export19/15/11, net297/161/57. Cutoff68/3, iceberg production/delivery and price responses checked."
+    },
+    {
+      "example": 4,
+      "result": "Small-country t5: price25,D70,S30,M40,CS1225,PS225,R200,W1650. Changes−375,+125,+200 sum−50; independent B2975−C525−foreign800 matches1650. Prohibitive tariff15, maximum loss plateau450."
+    },
+    {
+      "example": 5,
+      "result": "Large-country t5: foreign18,domestic23,M48,D74,S26,CS1369,PS169,R240,W1778. National gain78 equals terms-of-trade96 less domestic distortions18; foreign loses108 and world30. Global t50/7 gives domestic gain600/7."
+    }
+  ],
+  "exercise_checks": [
+    {
+      "exercise": 1,
+      "status": "pass",
+      "result": "Foreign absolute advantage in both does not erase Home comparative advantage in cloth. Full-specialization candidate p2 fails; actual p1 has Home production60cloth, Foreign30cloth/90wheat. Consumption(30,30)/(60,60), wages1/2 and1, balanced trade30. Home strictly gains; Foreign indifferent to autarky."
+    },
+    {
+      "exercise": 2,
+      "status": "pass",
+      "result": "L113,K100,p1 givesX42,Y29,w=r1/3. L203 gives invalid diversified(102,−1); global cornerX100,Y0,unused labor3,w0,r1 follows X+Y<=X+2Y<=100."
+    },
+    {
+      "exercise": 3,
+      "status": "pass",
+      "result": "Autarky ownership incomes55/3 and125/3; utilities55/(3sqrt3),125/(3sqrt3). Transfer15 after trade yields incomes65/3,145/3 and utilities65/6,145/6. Each squared-utility gain is575/108. Weak compensation interval[14.779189099135479,15.497156796380388] contains15."
+    },
+    {
+      "exercise": 4,
+      "status": "pass",
+      "result": "At delivered cost34, q8 contribution64. AvoidableF64 permits both0 and8; avoidableF80 implies stay out; sunkF80 implies q8 and loss16 versus shutdown loss80. Nonpositive margins cannot be squared into an admissible positive quantity."
+    },
+    {
+      "exercise": 5,
+      "status": "pass",
+      "result": "At c20,tau3/2, b1 to1/2 raises q10 to20, price remains40, contribution100 to200, net36 to136, average cost182/5 to166/5. Simultaneous tau1,A30 gives contribution25<F64 and no export; no learning inference."
+    },
+    {
+      "exercise": 6,
+      "status": "pass",
+      "result": "Small t10 gives price30,D60,S40,M20,CS900,PS400,R200,W1500,change−200. t20 is prohibitive: price35,D=S50,CS=PS625,R0,W1250,change−450. Consumer revenue rebate redistributes the loss but cannot remove it."
+    },
+    {
+      "exercise": 7,
+      "status": "pass",
+      "result": "Direct CS/PS/R derivation gives24t−42t²/25 on[0,25], completed square600/7−42(t−50/7)²/25. At global optimum M300/7,foreign price120/7,domestic170/7,home gain600/7,foreign change−7200/49,world change−3000/49. No-trade plateau and maintained assumptions are included."
+    },
+    {
+      "exercise": 8,
+      "status": "pass",
+      "result": "Real shipping wedge5 gives the same foreign18/domestic23/M48 but consumes240 numeraire-good units. Home welfare1538/change−162, foreign change−108, world change−270: lost trade30 plus real shipping240. Instrument/recipient/resource evidence is required to distinguish the welfare accounts."
+    }
+  ],
+  "validation": {
+    "normal_cli": "python3 book/scripts/check_v06_c10.py passed all10 groups.",
+    "optimized_cli": "python3 -O book/scripts/check_v06_c10.py passed all10 groups.",
+    "quiet_api": "Compiled/imported checker in a fresh ModuleType, captured stdout and stderr around import and check(): zero bytes on both. status pass,10 groups; direct json.dumps(report,allow_nan=False) succeeded without a serializer fallback.",
+    "tariffs": "284 exact parameter cases across both markets, plus all10 fixture cases, checked against independent linear elimination of original balances and primitive B,C,foreign-cost ledgers; complements/no-trade boundaries and objective polynomial checked.",
+    "firms": "335 exact parameter/fixture cases independently enumerate the positive-branch stationary point, demand choke and stay-out candidates, comparing profits globally under the proved quadratic branches. Additional off-optimum quantities and produced/delivered accounting checked.",
+    "other_models": "Both Ricardian equilibria check primitive labor/wage/consumer/global goods budgets.18 diversified factor cases check independent primal/dual solutions; outside-cone corner bound checked. Compensation uses exact squared utilities and independently calculated interval bounds.",
+    "invalid_inputs": "33 schema/domain/type/unit/magnitude cases rejected, including wrong units, nonfinite values, floats/bools, malformed rational strings, missing/unknown fields, duplicate names and invalid setup/iceberg domains. Explicit validation remains effective under -O.",
+    "damaged_results": "Three deliberately wrong computations are rejected: double-counting tariff revenue, extrapolating a positive-import price beyond prohibition, and squaring a negative exporter margin.",
+    "portable_lab": "Only the program and input file copied to a temporary directory; normal and -O CLI from its parent match the quiet API. Wrong-unit input under -O yields code1, no stdout and one JSON error on stderr.",
+    "structure": "Both Python programs parse; full HTML-tag stack balances; no h1; five worked examples and exactly eight exercises/eight aligned solutions; unique IDs; answered teach-back/retention; three existing flat downloads; six valid prefixed source IDs.",
+    "source_scope": "Six actual official MIT lecture PDFs retrieved and scoped body text inspected; exact page scopes and exclusions recorded in source proposals. No visual-PDF-chart inspection or whole-source certification claim."
+  },
+  "findings_resolved": [
+    "Early root design audit confirmed the numerical anchors and requested explicit factor-cone/positive-price bounds, dominated export branches and fixed foreign-response assumptions; these are present before the corresponding claims.",
+    "Author editorial pass clarifies that the shipping counterexample consumes the real numeraire good valued in dollars, rather than destroying currency or misclassifying a freight transfer."
+  ],
+  "pending_issues": [
+    "Root independent subject-matter review, c09 prerequisite acceptance, source registration and whole-library integration.",
+    "Browser/mobile/print visual QA remains pending under the standing restriction; no workaround or visual claim."
+  ],
+  "limitations": [
+    "These are original synthetic maintained models, not current trade rules, empirical calibration or a causal estimate of trade-policy effects.",
+    "The fixed-coefficient factor case and held-fixed residual-demand exporter problem are intentionally narrower than full general-equilibrium trade and heterogeneous-firm theory.",
+    "Feasible lump-sum compensation assumes an implementable transfer and does not establish its political or administrative feasibility.",
+    "The unilateral tariff optimum assumes the stated foreign export response and no retaliation; it is not a recommendation for actual policy.",
+    "Finite checks support the separate analytic proofs, not empirical identification or external academic certification."
+  ],
+  "recommendation": "Complete owned author package ready for root review; no unresolved author-level mathematical or numerical issue at these hashes."
+}
