@@ -35,6 +35,10 @@ from check_v04_c11 import check as check_v04_c11
 from check_v04_c12 import check as check_v04_c12
 from check_v04_assessment import check as check_v04_assessment
 from check_foundation import check as check_foundation
+from check_v05_c01 import check as check_v05_c01
+from check_v05_c02 import check as check_v05_c02
+from check_v05_c03 import check as check_v05_c03
+from check_v05_c04 import check as check_v05_c04
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -398,6 +402,9 @@ def main():
         ('v04-c11', check_v04_c11), ('v04-c12', check_v04_c12))}
     v04_assessment_check = check_v04_assessment()
     foundation_check = check_foundation()
+    v05_opening_check = {name: checker() for name, checker in (
+        ('v05-c01', check_v05_c01), ('v05-c02', check_v05_c02),
+        ('v05-c03', check_v05_c03), ('v05-c04', check_v05_c04))}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -422,8 +429,10 @@ def main():
               'volume_4_closing_checks': v04_closing_check,
               'volume_4_assessment_check': v04_assessment_check,
               'foundation_assessment_check': foundation_check,
+              'volume_5_opening_checks': v05_opening_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     report['checks'].extend(['Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package',
+        'Volume 5 chapters 1–4: consumer interiors/corners/ties and revealed-preference cycles; exact duality/Slutsky and compensated welfare with numeraire boundaries; conditional production costs, global supply/shutdown and existence limits; market tax ledgers, entry and rationing allocation',
         'Volume 4 diagnostic, distinct exam forms, delayed transfer and historical empirical project: exact arithmetic, code contracts under optimization, source-vintage reconstruction, rounding envelopes, projection identities and forecast-selection isolation',
         'Volume 4 chapters 9–12: temporal forecast/release selection and leakage mutations; calendar panel keys, aggregation and exact dependent shock laws; independent numerical error bounds and fault detection; frozen official BLS reconstruction, rounding grid, provenance and integrity contracts',
         'Volume 4 chapters 5–8: histogram density/ECDF/index/correlation/contrast calculations and delivered SVG coordinates; exact versus seeded Monte Carlo, replication and variance reduction; rational projection versus elimination, fit and holdout boundaries; causal standardization, assignment lotteries, mediator/collider and observational equivalence',

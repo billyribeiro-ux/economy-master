@@ -1,0 +1,53 @@
+{
+  "chapter": "v05-c03",
+  "title": "Production, costs and firm choice",
+  "status": "review",
+  "reviewer": "Specialist author; root owns independent review, prerequisite-order acceptance and integration",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "scope": "Full original chapter matching the canonical production-set, marginal-product, cost-minimization, fixed/sunk-cost and supply outcomes. Three worked examples, eight complete original exercise solutions, teach-back, delayed check with answers, three inspected primary teaching-source routes and independent standard-library checker. No additional downloadable lab is necessary for these bounded mathematical examples.",
+  "review": {
+    "prerequisites_and_scope": "Read the persisted opening assignment, canonical c03 specification, production plan/checkpoint, and accepted optimization, duality and opportunity-cost methods. Consumer c01/c02 are concurrent fixed prerequisite contracts; c03 explicitly defines its own firm notation and envelope conditions. The manuscript does not assume regression identifies technology. Individual output choice is completed here, while aggregate market clearing, tax incidence, surplus and free-entry market equilibrium are handed to c04 without claiming that future chapter is accepted.",
+    "technology": "One-day output and labor/machine service flows are explicit, with USD per input-hour and per output-unit prices. Production plans use negative input quantities and positive prices; production sets, free disposal, technical boundary and concavity/convexity are distinguished. Marginal products hold other inputs fixed; returns to scale vary all inputs. The original L^(3/4)K^(3/4) counterexample has diminishing own marginal products and increasing returns. Continuous quantities and known technologies are stipulated simplifications.",
+    "cost_existence_and_duality": "Nonempty closed input requirement sets with strictly positive prices admit a compact cost sublevel, proving attainment at feasible finite q. The zero-priced input example LK>=1,w=1,r=0 has infimum zero without a minimizer. Conditional demands are correspondences. Tangency uses interior differentiability, binding output and regularity, while global optimality needs an additional certificate. The AM-GM bound supplies it in the smooth example. Cost-price homogeneity, price concavity and output convexity under concave technology are separated. Shephard's derivative follows from a two-sided price perturbation at an attained optimum; the output multiplier/envelope statement is restricted to regular differentiable binding branches.",
+    "smooth_worked_example": "For q=2sqrt(LK), w=9,r=4, exact conditional demands L=q/3 and K=3q/4 yield C_LR=6q. At q12, inputs4/9 cost72 and marginal products3/2 and2/3, ratio9/4. Fixed K9 gives L=q^2/36, V=q^2/4, total36+q^2/4; the pointwise long-run gap is (q-12)^2/4. At p4, q8, L16/9, revenue32, V16, total52 and profit-20 dominate shutdown-36. Average cost reaches6 atq12; positive-output AVC has infimum zero without an attained positive minimum.",
+    "kinks_and_corners": "For min(3L,2K), a positive target forces both lower input bounds. At q12,w9,r4, inputs4/6 cost60. For substitutes3L+2K at the same target/prices, the capital corner0/6 costs24. When w6,r4, every point3L+2K=12 minimizes at24; cost is nondifferentiable in wage at the tie. Exercise3 independently changes prices/quantity: fixed-proportions cost85, labor-corner cost40, and a full tie segment at r16/3.",
+    "short_long_run_and_cost_timing": "Short run fixes a specific service commitment; long run expands feasible input choices at the same prices. Fixed positive-output costs, sunk historical costs and unavoidable future contractual payments are not conflated. Owned capital can have rental/resale opportunity cost. Average and marginal units differ from total daily USD. The derivative of average cost is proved but an MC=AC stationary point is not asserted to be a global minimum without additional reasoning. Exercise8 distinguishes today's incremental result from a cumulative display including the historical bill.",
+    "supply_shutdown_exit": "Supply is a global argmax, obtained after conditional minimization. Interior p=MC is necessary locally and sufficient under convex cost, with boundaries and operating fees treated separately. Compact/lower-semicontinuous or coercive conditions supply existence; neither smoothness nor strict convexity alone does. Constant-return C6q yields zero output below6, all quantities at6 and unbounded profit above6. With S30,F9,V=2q+q^2, average avoidable cost has minimum8 atq3; supply is zero below8, {0,3} at8 and (p-2)/2 above8. Unavoidable S cancels; making F genuinely sunk changes the alternatives. Shutdown threshold equality requires attained average avoidable cost. Exit is bounded to changed commitments, with dynamic extensions explicitly deferred.",
+    "proof_and_boundary_review": "Reviewed both optimality inequalities in the law of supply and the conditional own-wage comparison, including the unchanged feasible-set/other-price premise. Reviewed the cost-concavity inequality direction, AM-GM equality conditions, average-cost derivative, fee threshold and every tie. Exercise7 adds a smooth strictly convex increasing nonnegative cost q-1+exp(-q) with finite profit supremum1 at p1 and no finite maximizer; its tail does not satisfy coercivity. This distinguishes unbounded value, unattained value and a nonunique attained optimum.",
+    "solutions_and_instruction": "All eight solutions were solved against the exact prompts. Exercise1 derivatives and scaling; exercise2 general factor demands and price changes; exercise3 kink/corner/tie; exercise4 full stock-flow-compatible daily amounts and cost averages; exercise5 all output/profit ties and changed sunk status; exercise6 two complete proofs; exercise7 capped and uncapped/nonattained regimes; exercise8 timing, opportunity cost and causal critique with open-answer criteria. Delayed targets are L3,K12,C96 and shutdown atp7.5 with best positive gain-23/16. Every requested technique is introduced before the exercises.",
+    "sources": "Inspected MIT14.01 F23 full-summary sections3.1-3.3, Condie's author-hosted supply notes section3.2 and Wolitzky MIT14.121 producer slides4-8/32. Following root's provenance correction, retrieved MIT's lecture-summary listing and corrected prose/source title to identify student-created summaries based on Gruber's notes, separating instructor from summary author. Source proposal records state the inspected scope and qualifications; source routes are not claims that whole courses were audited. Original numerical cases and wording are not source exam copies. Stable method discussion uses edition-boundary-compatible material; there are no real or invented empirical observations.",
+    "implementation": "Checker uses exact Fraction arithmetic, original-constraint numerical minimization, direct two-input/output enumeration and finite differences instead of importing a chapter implementation. It verifies all determinate amounts, price/fee regimes, ties and changed timing, plus fragment/source structure. Its tests are diagnostics of finite cases; written proofs carry continuous/global claims. Check uses explicit exceptions and is safe to import. No framework, package installation, network runtime, extra project asset or shared file mutation."
+  },
+  "artifacts": [
+    "content/chapters/v05-c03.html",
+    "scripts/check_v05_c03.py",
+    "content/reviews/v05-c03-sources.json"
+  ],
+  "validation": {
+    "command": "python3 book/scripts/check_v05_c03.py",
+    "result": "passed; final complete run includes the now-present c02 prerequisite and both direct c04 successor routes",
+    "independence": "Primal minimization in log labor and exact feasible expenditures versus analytical demand formulas; direct fixed-proportion/substitute grid and exact tie segment; output-profit enumeration versus derivative selection; two-sided finite differences versus marginal/envelope formulas.",
+    "checks": [
+      "Both marginal products, ratio and constant/increasing returns counterexample",
+      "Four independently minimized smooth input targets and 2400 exact feasible boundary comparisons",
+      "Fixed-proportion and substitute corners, 122 tie-segment points and price-value derivatives",
+      "Every short-run output/cost/profit quantity, average-cost minimum and long-run envelope gap",
+      "49 output prices across three unavoidable-cost levels, exact shutdown tie, fee timing transfer and avoidable renewal",
+      "Law of supply with nonconvex costs/ties, capped constant-return choices and nonattainment diagnostic sequences",
+      "Three worked examples, eight matching solutions, delayed answers and three fully scoped source records"
+    ]
+  },
+  "limitations": [
+    "Root must review/accept the concurrently produced c01 then c02 then c03 in dependency order. The manuscript existence/link gate now passes; file presence alone does not imply acceptance.",
+    "Finite grids and floating finite differences cannot prove all continuous cases or asymptotic nonattainment; analytic arguments are separately reviewed.",
+    "Technologies/prices/contracts are hypothetical. No empirical production estimation, causal identification, legal accounting claim or firm-specific recommendation is made.",
+    "Graduate multi-output duality and dynamic investment/exit are extension routes, not claimed coverage.",
+    "No visual/mobile/print UI QA or external human certification; root owns integrated link/build verification and acceptance."
+  ],
+  "root_review_corrections": [
+    "Corrected MIT14.01 summary attribution after direct verification of the official listing: the summaries were created by a student from Gruber's lecture notes.",
+    "Linked both successor references directly to the now-written v05-c04.html manuscript; root retains dependency-order acceptance."
+  ],
+  "acceptance": "Complete authored package with passing checker in review, submitted for root's independent editorial acceptance."
+}

@@ -1,0 +1,54 @@
+{
+  "chapter": "v05-c01",
+  "title": "Preferences and consumer choice",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "state": "review",
+  "review_type": "Specialist author mathematical, instructional, computational and scoped primary-source review; root independently audits and alone accepts",
+  "reviewed": {
+    "reasoning": "Defined complete/transitive preferences, strict preference, indifference and ordinal utility before choice. The finite-set representation construction and lexicographic continuity counterexample do not claim a universal infinite-domain representation theorem. Distinguished continuity, convexity, strict convexity, quasiconcavity, concavity and local nonsatiation. Proved positive-price compact-budget existence, LNS budget exhaustion, degree-zero homogeneity, convex demand sets and strict-convexity uniqueness, with explicit convex-feasibility and attainment assumptions. Explained positive-price, zero-income, negative-income, free-good, satiation and integer-feasibility boundaries. Stated MRS units and derivative-zero transformation limits. Derived the maximizing KKT signs and constraint qualification, then proved global sufficiency under concavity rather than treating every tangency as sufficient.",
+    "worked_examples": "Three original complete cases: smooth x1^2*x2 demand via interiority and the strictly concave log representation; shifted-log demand via a strictly concave one-dimensional objective with both genuine corners and endpoint equalities; substitute demand correspondences versus fixed-proportion kink uniqueness. Smooth utility is not equated with interior choice, and unique choice is not equated with globally strictly convex preferences. Exact demands (15,5), (12,5), shifted-log (2,12)/(1,0)/(0,18), substitute budget segment and recipe (6,3) were independently recomputed.",
+    "revealed_preference": "Separated WARP for a fully observed maximizing correspondence, its distinct-choice unique-demand budget implication and the tie-permitting pairwise inequality under LNS. Proved each necessary implication using optimality/transitivity or the strict-budget-slack argument. The tied same-budget example passes the weaker condition, while the strict two-budget example fails it. A three-good, three-budget cycle passes all pairwise unique-demand tests but contradicts stable LNS maximization through a longer strict cycle. No finite-data rationalization sufficiency theorem is asserted. Empirical interpretation explicitly concerns the joint commodity, budget, stability, nonsatiation and optimization assumptions.",
+    "solutions": "Read all eight matched solutions and recomputed all determinate results: ordinal and expected-utility transformation counterexamples; the bliss-point demand with 5 USD slack; new exponents and shares; three shifted-log regimes and a ration; full continuous and integer substitute choices and a nonconvex feasibility counterexample; changed-price fixed recipe; strict two-budget contradiction versus equal-cost ties; and the pairwise-consistent three-cycle. Explanatory questions have explicit reasoning or evaluation criteria. The delayed check has exact interior and corner answers and the nominal-rescaling implication.",
+    "instruction": "The chapter states its capability, full prerequisite route, units, commodity period and original synthetic scope. It teaches every exercise method before use, integrates definition/proof/counterexample and economic interpretation, and ends with Teach-back and Delayed check. D(p,m) denotes the Marshallian correspondence and x(p,m) only a singleton-valued demand. It hands compensated choice, duality, Slutsky and welfare to c02 without assuming those methods here. No separate laboratory assets are needed for this mathematical chapter.",
+    "sources": "Retrieved actual scoped contents of two official Wolitzky MIT course PDFs and Bergstrom's author-hosted UCSB revealed-preference notes. Inspected preference/continuity/convexity/WARP sections, budget/existence/LNS/homogeneity/KKT sections, and tie/strict-affordability/chain distinctions. Source proposals record exact titles, URLs, uses, check date and inspection boundaries. Original examples, exercises, proofs and wording were composed for this chapter; no source exam or workbook exercise was copied. The Bergstrom record states a subsequent screenshot cache miss honestly; successful full-text retrieval underlies its inspection.",
+    "structure": "Balanced static HTML fragment, no h1, three aside.worked cases, eight ol.exercises items and eight corresponding main solution items in one details.solutions block, unique IDs, three matching cited source IDs, foundation assessment and successor routes. No shared manuscript, central acceptance, publishing or visual-QA action performed. Root independently read the full chapter and all eight solutions and requested no mathematical content correction."
+  },
+  "artifacts": [
+    "content/chapters/v05-c01.html",
+    "scripts/check_v05_c01.py",
+    "content/reviews/v05-c01-sources.json",
+    "content/reviews/v05-c01-author.json"
+  ],
+  "validation": {
+    "commands": [
+      "python3 book/scripts/check_v05_c01.py",
+      "python3 -O book/scripts/check_v05_c01.py",
+      "runpy.run_path('book/scripts/check_v05_c01.py')['check'](); json.dumps(report) with no fallback serializer"
+    ],
+    "result": "passed",
+    "integration_api": "check() directly returns a JSON-serializable dict with chapter/status/checks/results/limitations; standalone execution prints ordinary JSON. All arithmetic internals retain exact Fractions where applicable, while report values use integers or explicit rational strings.",
+    "checks": [
+      "625 deterministic bundle ranking comparisons, nonconcavity counterexample, and exact expected-utility reversal from 6/5 versus 1 to 216/125 versus 4",
+      "Independent budget-membership scaling, zero-income singleton, satiation value/slack and free-good improvement sequence checks",
+      "27 smooth-demand parameter combinations with an exact factorized global objective-gap certificate on budget grids, independent of the manuscript's log-Hessian derivation; three exponent-transfer price/income cases with direct exact objective comparisons",
+      "200 shifted-log parameter combinations against separate derivative bisection, direct objective comparisons and exact corner KKT inequalities, including zero income; separate worked, exercise, ration and delayed cases",
+      "Substitute-segment upper bounds, exhaustive finite integer maximizers, continuous versus integer square-root choice, and three exact recipe utility-bound cases",
+      "Exact own/cross-expenditure matrices for strict reversal, tied selections and a three-cycle; pairwise and transitive graph checks; twelve generated optimizing budgets pass revealed consistency",
+      "Balanced fragment, matched exercise/solution counts, instructional terms, prior routes and exact source proposal/citation alignment"
+    ]
+  },
+  "corrections": [
+    "Root's checker integration review identified Fraction objects in the returned revealed-preference matrices. Converted only those report entries to integers, preserved exact internal arithmetic, removed the fallback JSON serializer and explicitly confirmed direct json.dumps(check()) under the integration contract."
+  ],
+  "limitations": [
+    "Internal author and root review do not establish independent human academic certification or learner mastery.",
+    "Finite arithmetic checks support, but do not replace, the separately reviewed analytic proofs. No general infinite-domain utility representation or finite-data rationalization theorem is proved here.",
+    "All numerical preferences and observations are synthetic; they establish no real consumer preferences, causal demand response, cross-person utility comparison or empirical welfare claim.",
+    "Floating-point bisection/logarithms supply independent numerical checks only; exact budget identities and KKT inequalities use rational arithmetic.",
+    "Primary-source verification covers only the explicitly inspected method passages, not every statement in the source works.",
+    "Root retains whole-library source/link/dependency checks, acceptance, build and publication responsibilities.",
+    "Browser visual/mobile/print QA remains pending under the existing recorded policy restriction; no workaround or UI-quality claim was made."
+  ],
+  "acceptance": "Complete specialist package ready for root acceptance and dependency-ordered integration; no central state changed."
+}

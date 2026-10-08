@@ -1,0 +1,78 @@
+{
+  "volume": "v05",
+  "date": "2026-10-07",
+  "chapter_scope": [
+    "v05-c01",
+    "v05-c02",
+    "v05-c03",
+    "v05-c04"
+  ],
+  "status": "accepted-by-author",
+  "review_type": "Three bounded specialist authors plus coordinating author; root read all four manuscripts and all 32 solved exercise pairs, inspected each checker and audited primary-method scope. Separate specialist peer audit of the root-authored c04. Internal review, not independent human academic certification.",
+  "ownership_record": "production/v05-opening-assignments.json",
+  "reviewed": {
+    "reasoning": "C01: ordinal versus Bernoulli utility, finite versus continuous representation, compact-budget existence, local-nonsatiation exhaustion, convex demand sets/uniqueness, KKT sign and constraint qualification, global interior/corner/kink certificates, complete-correspondence versus selected-choice WARP and strict affordability cycle. C02: attainable-target/no-excess-utility conditions, set-valued duality, unique Hicksian demand differentiability, positive income derivative for Roy, Slutsky chain rule and price-concavity Hessian restrictions, CV/EV positive-loss convention and full compensated-path numeraire constraints. C03: service-flow technology units, input compact-sublevel attainment, price concavity versus output convexity, AM-GM conditional-cost certificates, fixed versus sunk/avoidable costs, output correspondence/global shutdown comparison, law of supply and nonattainment. C04: conditional single-market existence/uniqueness and no trade, quasilinear benefit/cost surplus with allocation and fixed-cost qualifications, derivative incidence versus finite linear taxes, entry at global minimum AC and finite-integer limitation, specified rationing and compensation criteria.",
+    "arithmetic": "Root independently traced every stated numerical example and determinate solution, including consumer spending/MRS and strict-affordability matrices, both Slutsky matrices and signed CV/EV/expenditure targets, quasilinear EV 39/64 versus CV 3/4, producer input/cost/profit/fee thresholds, tax ledgers and price shares, entry counts/profits and lottery expected benefit. Separate checkers use exact fractions and global polynomial/square/AM-GM certificates, independent derivative bisection and constrained minimization, finite differences/quadrature, explicit ties/branch boundaries and expenditure-graph reachability. Shared full-library numerical/structural run passed after the report serialization correction.",
+    "solutions": "All 32 new prompts compared with their complete answers, with explicit criteria for identification, distribution and manager-choice critiques. Delayed checks have numerical answers and assumptions. Peer review requested second-regime surplus values in c04 Exercise 1; root supplied CS 50/9, PS 25/9 and total 25/3, with exact checks.",
+    "sources": "Twelve scoped primary records integrated. Root independently retrieved and read MIT consumer-theory budget/multiplier/expenditure/envelope passages, welfare sign and area setup, the full Bergstrom revealed-preference note, Condie production/cost propositions, MIT market-surplus handout labels and full Levy tax note, MIT quasilinear setup, and OpenStax entry section. The separate MIT preference-PDF root fetch returned an error; the specialist successfully inspected it and records exact scope. C03 explicitly attributes student-created course summaries to their actual provenance rather than to the instructor as author. No whole-course verification or empirical October 2026 observations claimed.",
+    "instruction": "Four full chapter packages supply definitions, prerequisites, assumptions, units, 11 worked examples total, eight original solved exercises each and retention checks. D(p,m) is consistent across the consumer chapters, with x reserved for unique demand. No separate software lab is needed for these mathematical cases. Foundation synthesis now routes to available v05-c01 and still labels the remaining Volume 5 chapters planned.",
+    "structure": "Final acceptance-state build and verification passed: 52 accepted chapters and 62 HTML pages; all local links/anchors, source IDs, accepted prerequisites and review records, canonical curriculum, all prior volume and foundation packages, all numerical checkers. Generated search JavaScript syntax and diff whitespace checks pass. Offline ZIP contains 129 files and 2,090,062 bytes; ZIP integrity check passed. Visual/mobile/print UI QA remains pending."
+  },
+  "individual_author_records": [
+    "reviews/v05-c01-author.json",
+    "reviews/v05-c02-author.json",
+    "reviews/v05-c03-author.json",
+    "reviews/v05-c04-author.json"
+  ],
+  "peer_reviews": [
+    "reviews/v05-c04-peer.json"
+  ],
+  "corrections": [
+    "C02 Marshallian correspondence standardized to D(p,m), matching c01.",
+    "C03 primary-summary attribution corrected to student-created summaries based on Gruber lecture notes after official listing inspection.",
+    "C03 successor routes now link the written c04 chapter.",
+    "C04 Exercise 1 second-supply regime now supplies CS=50/9, PS=25/9 and total=25/3 as well as the equilibrium, resolving peer solution-completeness finding.",
+    "C01 checker returned Fraction values in its report; root requested direct JSON serializability while preserving exact arithmetic."
+  ],
+  "unresolved_material_content_findings": [],
+  "pending": [],
+  "limitations": [
+    "Internal agent/author/peer checks are not external academic review or assessment of learner competence.",
+    "All new examples are hypothetical models, not empirical parameter estimates or evidence that maintained assumptions hold.",
+    "General equilibrium, strategic interaction, empirical market studies and the rest of Volume 5 remain unfinished.",
+    "Visual/mobile/print UI QA remains pending; the browser security restriction has not been circumvented.",
+    "The full 216-chapter library remains in production."
+  ],
+  "acceptance": "Accepted by root in c01→c02→c03→c04 prerequisite order after full manuscript, solution, source, numerical and structural review; all author deliveries and peer findings resolved. Volume 5 remains unfinished.",
+  "peer_issue_resolution": {
+    "v05-c04-peer-01": "Resolved and rechecked by peer: changed-supply regime now gives all requested surplus values and exact checker assertions."
+  },
+  "serialization_correction": "Root integrated run initially could not serialize c01 Fraction report matrices; author converted report values only and direct json.dumps(check()) plus the rerun shared verifier passed.",
+  "validation": {
+    "commands": [
+      "python3 scripts/build.py",
+      "python3 scripts/verify.py",
+      "node --check dist/search-index.js",
+      "git diff --check",
+      "python3 scripts/package_offline.py"
+    ],
+    "status": "passed",
+    "chapters_accepted": 52,
+    "html_pages_checked": 62,
+    "chapter_words": 195785,
+    "chapter_exercises": 416,
+    "volume_packages": 4,
+    "cross_volume_packages": 1,
+    "offline_archive": {
+      "files": 129,
+      "bytes": 2090062,
+      "integrity": "passed"
+    }
+  },
+  "reviewed_sha256": {
+    "content/chapters/v05-c01.html": "0a4eed483888e56eb40a8bd294dda237d6d067600264dbd221bb72de5c8923fa",
+    "content/chapters/v05-c02.html": "856d15657eb883cb93af0a8906062c8ddbb58194f5988d0b0dc079fa995699f3",
+    "content/chapters/v05-c03.html": "8632cedacaf448d47f804385c6f7fb295b4ab84f02b97fd9c1efa5af42bb51bf",
+    "content/chapters/v05-c04.html": "0c9a8812796ffc3063dcbcd532e62c41705501c7a3eb063b75fa9cd0eaebd3b7"
+  }
+}

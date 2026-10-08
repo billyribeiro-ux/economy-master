@@ -1,0 +1,75 @@
+{
+  "chapter": "v05-c04",
+  "reviewer": "Independent specialist peer within the authoring agent team",
+  "date": "2026-10-07",
+  "status": "passed-with-resolved-finding",
+  "scope": "Read the complete manuscript, both worked examples, all eight exercise prompts and complete solutions, delayed-check answer, all source-proposal records and the full numerical checker. Independently recomputed the tax, entry, surplus, lottery and transfer targets without importing the root checker. Read-only review; only this peer file was written.",
+  "conclusion": "No substantive mathematical or economic-assumption error identified within this scope. The one low-severity ambiguity in Exercise 1's second solution was corrected by root and independently verified below; no open findings remain. Root retains acceptance and integration authority.",
+  "findings": [
+    {
+      "id": "v05-c04-peer-01",
+      "severity": "low",
+      "location": "Exercise 1, changed-supply prompt and second solution paragraph",
+      "finding": "The first instruction requests equilibrium and CS/PS, followed by 'replace supply ... Solve again'. The changed-supply solution reports the correct price 80/3 and quantity 10/3 but omits its CS/PS. The wording can reasonably be read as asking to repeat the full equilibrium-and-surplus calculation.",
+      "suggested_correction": "Append changed-supply CS = 50/9, PS = 25/9 and total surplus = 25/3, or explicitly restrict the second prompt to equilibrium. Adding the small determinate calculations is preferable.",
+      "independent_basis": "Only buyer group 2 trades. Its inverse demand is 30-Q, while changed inverse supply is 25+Q/2. At Q=10/3, the net-benefit integrals give CS=(30-80/3)(10/3)/2=50/9 and PS=(80/3-25)(10/3)/2=25/9.",
+      "status": "resolved by root; verified by reviewer",
+      "resolution": "Root appended changed-supply CS=50/9, PS=25/9 and total surplus=25/3 to Exercise1's solution and added all three exact checker assertions. The reviewer inspected the added manuscript/checker lines, confirmed agreement with the independent integrals and reran the full normal checker successfully. The original finding is retained for traceability; the reviewer did not edit the manuscript or checker."
+    }
+  ],
+  "assumptions_and_reasoning": {
+    "aggregation_existence": "Horizontal aggregation is performed at common prices with truncation and correspondence choices retained. Continuity plus opposite excess-demand signs supports existence; strict decrease gives uniqueness. Zero trade can have an interval of supporting prices. The implicit comparative-static derivative has the correct sign under strict downward demand/upward supply, and is distinguished from dynamic convergence or identification.",
+    "welfare": "Quasilinear preferences, unit numeraire and a nonbinding numeraire constraint/unrestricted transfer premise are stated before exact money surplus. Concave benefits, convex variable costs and efficient buyer/producer allocation support the inverse curves. CS/PS are not revenue, and committed fixed cost separates PS from profit. Startup-fee integration is explicitly qualified. Transaction payments and tax revenue cancel exactly once. The chapter distinguishes unweighted gains, actual Pareto improvements, feasible compensation, weighted social objectives and omitted externalities.",
+    "tax_domains": "Differentiating D(ps+t)=S(ps) gives dpb/dt=S'/(S'-D'), dps/dt=D'/(S'-D') and dQ/dt=D'S'/(S'-D'). The common price/quantity normalization for elasticity shares is restricted to an initially untaxed equilibrium. Nonlinear finite taxes and preexisting wedges are correctly separated from that local rule. The finite triangle holds for the stated linear inverse curves only within the positive-trade domain; at or above the 24-unit choke wedge in the example, output is truncated at zero. Legal remittance invariance is tied to the same incentives, compliance/base and transaction/enforcement conditions. Limiting perfectly elastic/inelastic cases are handled with feasibility qualifications.",
+    "entry": "Global minimum average cost, smooth interior p=MC and zero profit are distinguished from a stationary-point test. Identical technologies, constant industry input prices, avoidable long-run cost and divisible entry support the ideal horizontal relation. The chapter correctly distinguishes this industry result from constant returns of a single firm at all outputs. The 15.5-firm calculation is not rounded into a claimed long-run equilibrium; the 15/16-firm conditional configurations demonstrate the different price/profit incentives and explicitly require a separate finite entry model.",
+    "rationing": "A ceiling specifies intended demands/supplies but not the buyer allocation. Highest-value allocation supports the ordinary area to actual Q. The exercise explicitly changes to a continuum of one-unit buyers and an equal-service-probability lottery; that additional specification identifies expected benefit. Quantity loss and misallocation loss are kept distinct, with no fabricated queueing or administrative cost.",
+    "instruction_scope": "Every required method is introduced before the exercises, and both determinate and open-ended solution criteria are supplied. Units are per-week quantity and dollar totals versus per-unit prices/tax. Price-taking is stated as an assumption. The identification critique requires actual relevance/exogeneity/exclusion or a scoped randomized design rather than naming an instrument. The general-equilibrium successor remains explicitly planned."
+  },
+  "independent_calculations": {
+    "method": "Used a fresh ephemeral standard-library Fraction calculation, with two-equation determinant solutions for buyer/seller prices and price/per-firm quantity. Integrated individual buyer groups' marginal benefits and producer groups' marginal costs, rather than copying the checker’s aggregate triangle ledger. Integrated the lottery over reservation-value density instead of quantity rank. No new program or data file was written.",
+    "worked_1": "Untaxed pb=ps=22,Q48, buyer quantities32/16, producer quantities16/32, CS192,PS384,total576; subtracting committed60 gives profit324 and net total516. Tax6 yields pb24,ps18,Q36,CS108,PS216,revenue216,total540,DWL36 and profit156. Tax12 gives Q24,revenue288, the revenue maximum. Tax24 yields Q0 and loss576.",
+    "worked_2": "Minimum AC is12 atq4. Initial demand120-5p gives15 firms,Q60. Changed demand144-5p at n15 gives p348/25,q124/25,Q372/5 and per-firm profit5376/625; n21 restores p12,Q84. Demand122-5p would require15.5 efficient firms: n15 gives p304/25,q102/25,profit404/625; n16 gives p154/13,q51/13,profit-103/169.",
+    "exercise_1": "Piecewise demands join at20 and30. Initial clearing p16,Q22, demands8/14,CS114,PS121,total235. Changed supply yields p80/3,Q10/3; extension CS50/9,PS25/9,total25/3 supports the minor finding.",
+    "exercise_2": "All and only nonnegative prices in [12,15] clear at zero quantity. Strict decrease is absent on that interval, so no conflict with the uniqueness proof.",
+    "exercise_3": "Tax9 gives pb25,ps16,Q30,CS75,PS150,R270,total495,DWL81. Buyer and producer losses117+234=351 exceed retained revenue270 by81. Tax27 cannot support positive trade; supporting zero-trade seller quotes can lie in[3,6] with buyer quote seller+27. CS/PS/revenue are zero and loss576.",
+    "exercise_4": "Reconstructed D'=-5/2 and S'=15/2 from the two stated point elasticities, then independently solved the matched quantity-change/wedge system: delta pb3/2,delta ps-1/2,delta Q-15/4,Qapproximately385/4. These are first-order changes unless the schedules remain linear.",
+    "exercise_5": "Fixed cost25 gives q5,p12,Q50,n10; fixed cost36 gives q6,p14,Q30,n5, with per-firm revenue/cost84. The unchanged MC2+2q does not fix the minimum of total average cost.",
+    "exercise_6": "At ceiling18, willing buyers72, output36 and shortage36. Integrating reservation density6 on values[24,30] gives efficient gross benefit972. A one-half service chance applied to density6 on[18,30] gives expected gross benefit864. Direct producer-group cost integrals give432. Efficient total540 versus lottery432 implies total loss144=quantity loss36+allocation loss108. Efficient CS324, lottery CS216 and PS216 are correct.",
+    "exercise_7": "S=3p and D0=max(0,100-2p),D1=max(0,110-2p) clear at(20,60) and(22,66). Both true schedule slopes are-2, while the observed percentage-change ratio is+1. The data do not identify demand elasticity.",
+    "exercise_8": "Transfers T in[60,90] give both groups nonnegative net gains and total30, with at least one strict gain. Before transfers the weighted objective changes by90-120=-30; the separate omitted external loss40 makes unweighted net gain-10.",
+    "delayed_check": "Direct price-equation solutions give no-tax p22,Q16 and tax3 prices23/20,Q14. Direct benefit-minus-cost integration gives loss3. Initial CS64+PS128=192; later CS49+PS98+R42=189."
+  },
+  "source_scope_audit": [
+    {
+      "id": "v05-c04-mit-market-surplus",
+      "url": "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2023/mit14_01_f23_handout9.pdf",
+      "review": "Independently retrieved the official13-page PDF and inspected its extracted figure labels9-1 through9-12. Clearing/shifts and CS/PS/output-restriction topics match the modest graphical method citation. No claim of a theorem proof or visual rendering audit is inferred."
+    },
+    {
+      "id": "v05-c04-mit-quasilinear",
+      "url": "https://ocw.mit.edu/courses/14-581-international-economics-i-spring-2013/450bb86a68d0feddac6a94ddd5151ebc_MIT14_581S13_Lecslides24.pdf",
+      "review": "Independently retrieved the PDF and read slides10-12: unit numeraire, quasilinear preferences, income plus government transfer plus surplus, and the transfer definition. Manuscript citation remains limited to this setup; no political-economy equilibrium claim is imported."
+    },
+    {
+      "id": "v05-c04-mit-tax",
+      "url": "https://ocw.mit.edu/courses/11-203-microeconomics-fall-2010/d1d0f7dca8a84925604a37b7165dfb0f_MIT11_203F10_tax.pdf",
+      "review": "Read all three substantive pages of Levy's note. The wedge and matched demand/supply changes support the stated citation. The manuscript appropriately derives differential incidence and adds the local-versus-finite qualification, rather than assuming arbitrary finite changes equal initial point elasticities."
+    },
+    {
+      "id": "v05-c04-openstax-entry",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/8-3-entry-and-exit-decisions-in-the-long-run",
+      "review": "Independently retrieved and inspected the zero-profit-entry and industry-type discussion. The manuscript states its own assumptions and correctly distinguishes industry constant costs from a firm's returns to scale. No source historical firm-count claim is copied or used as evidence."
+    }
+  ],
+  "checker": {
+    "command": "python3 book/scripts/check_v05_c04.py",
+    "result": "passed",
+    "review": "Read the full checker and ran its normal standalone invocation. Its exact inverse schedules, cost-square certificates and finite-domain checks agree with the independently computed results. This was supplementary evidence, not the basis for accepting the mathematical arguments."
+  },
+  "limitations": [
+    "Internal independent agent review is not external human or academic certification.",
+    "Finite exact calculations do not prove all model classes; the stated analytic assumptions and arguments were separately reviewed.",
+    "No empirical validation, general-equilibrium proof, learner timing/calibration or visual/mobile/print UI QA was performed.",
+    "Only the assigned peer record was written. Root retains manuscript corrections, source merging, acceptance, integrated build and publication."
+  ]
+}

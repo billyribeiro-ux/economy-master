@@ -1,0 +1,73 @@
+{
+  "chapter": "v05-c02",
+  "title": "Demand, duality and welfare",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "state": "review",
+  "review_type": "Specialist author mathematical, instructional, arithmetic and source review; root independently reviews and alone accepts after v05-c01",
+  "reviewed": {
+    "canonical_scope": "Addresses Hicksian demand, expenditure, indirect utility, Slutsky and compensating variation, with equivalent variation and quasilinear consumer surplus to distinguish income concepts. Drafted against the frozen v05-c01 prerequisite and subsequently inspected its actual D(p,m)/x(p,m) notation. Root-requested notation cleanup changed the correspondence from X(p,m) to D(p,m) throughout, preserving x for a unique choice.",
+    "reasoning": "Proved utility/expenditure attainment under stated compactness/continuity/positive-price conditions; no excess utility for attainable targets u >= U(0); both value identities and both correspondence identities under continuity and local nonsatiation. Explained scaling and ordinal invariance. Derived Shephard from the supporting cost inequality and supplied the local boundedness/uniqueness argument establishing differentiability. Derived Roy from the composed value identity, separately explained the smooth optimal-branch envelope, and explicitly required positive income and v_m > 0 rather than inferring that derivative from strict monotonicity. Derived Slutsky by chain rule, price concavity directly from minimization, Hessian symmetry/negative semidefiniteness, the price null vector and the finite compensated demand inequality. Distinguished own-price, income and cross-price restrictions with fixed arguments and units.",
+    "welfare": "Defined both CV and EV as signed losses, with positive loss/negative gain and explicit income-adjustment indifference equations. Derived exact expenditure differences and compensated integrals, identified the source's opposite signed-gain convention, and limited consumer-surplus ordering to a single price change and normality/inferiority over the full relevant range. Derived the entire two-branch quasilinear budget and expenditure functions, including continuity and failure of second-price differentiability at the join. The boundary exercise shows that an income-independent observed quantity path can coexist with a corner on the EV compensation path. Kept fixed nominal income, endogenous income, household compensation, financing and social evaluation distinct.",
+    "worked_examples": "Three original complete examples: Cobb–Douglas global AM-GM optimizer certificates and full Slutsky matrix; exact price-change welfare and old-basket upper bound; quasilinear interior/corner derivation with an exact equal-area interior case. Independently checked all numerical inputs and outputs through rational certificates, value identities and numerical integrals. No synthetic calculation is presented as an observed demand estimate.",
+    "exercises": "Solved all eight original exercises in order: matching targets/scaling and a zero-derivative ordinal transformation; attainment and two distinct failed duality assumptions; complete Slutsky/Roy calculation; Giffen versus inferior and invalid compensated matrix; weighted perfect-substitute kink; price-decrease signs and basket comparison; quasilinear compensation-path corner; and recipient-level versus total compensation. Each has a complete determinate solution and interpretation; the policy critique supplies required considerations and an illustrative feasible grant allocation. Delayed check includes answer closure. Methods are taught before use.",
+    "sources": "Retrieved actual official Alexander Wolitzky MIT 14.121 consumer-theory and applications PDFs. Inspected substantive consumer-theory pages 13–41 with budget/existence context and applications pages 3–11. Source records scope inspection and explicitly note imperfect PDF integral extraction; welfare signs and endpoints were independently derived from expenditure definitions. Did not import historical inflation estimates, source problems, or broad aggregation claims. Source IDs have v05-c02 prefixes and match the HTML's two data-source attributes.",
+    "structure": "Static HTML fragment has no h1, three aside.worked examples, one ol.exercises with eight entries, eight corresponding ordered solutions, capability/prerequisites, definitions before substantive use, assumptions/units/boundaries, teach-back, delayed check with closure, method-specific source routes and adjacent chapter links. No new lab/assets are needed for these analytic consumer cases. No framework, installation, network-dependent learning activity or visual QA claim is introduced. Root owns whole-library build and acceptance."
+  },
+  "artifacts": [
+    "content/chapters/v05-c02.html",
+    "scripts/check_v05_c02.py",
+    "content/reviews/v05-c02-sources.json",
+    "content/reviews/v05-c02-author.json"
+  ],
+  "validation": {
+    "command": "python3 book/scripts/check_v05_c02.py",
+    "result": "passed",
+    "integration_api": "Quiet import; check() returns a JSON-serializable dict with status, checks, reference_values and limitations; standalone CLI prints JSON. No network or file writes.",
+    "additional_modes": [
+      "python3 -O book/scripts/check_v05_c02.py",
+      "Imported by absolute path with cwd=/private/tmp; quiet import, check() status passed and strict finite JSON serialization verified"
+    ],
+    "checks": [
+      "Exact rational Cobb–Douglas budget/target certificates; independent expenditure Hessian and Marshallian Slutsky expressions, Roy, symmetry, price null vectors and 98 negative-square evaluations",
+      "Twenty central finite differences at five price/income cases, tolerance 2e-9, as an independent local response cross-check",
+      "Matched targets and scale changes; transformed-target label and zero derivative; satiation and below-origin target counterexamples",
+      "Exact inferior/Giffen threshold, compensated curvature violation, kink slopes, five minimizing-segment points and 25 supporting inequalities",
+      "Three signed price-change cases with exact CV/EV and restored utility, old-basket bounds and nine independent Simpson quadratures",
+      "56 rational quasilinear target cases checked by independently minimizing a finite set of endpoint/stationary candidates; branch matching, certified budget optima and exact/numerical corner integrals",
+      "Grant allocations and utility outcomes checked household by household",
+      "Fragment example/exercise/solution counts, unique anchors, adjacent routes, source schema and source/citation equality"
+    ],
+    "reference_values": {
+      "worked_1_demand": [24, 6],
+      "worked_1_utility": 12,
+      "worked_1_slutsky": [["-6", "3/2"], ["3/2", "-3/8"]],
+      "worked_2_CV": 96,
+      "worked_2_EV": 48,
+      "worked_2_CS_loss": 66.54212933375474,
+      "worked_2_old_basket_compensation": 144,
+      "worked_3_CV_EV_CS": "1/2",
+      "exercise_6_CV": -20,
+      "exercise_6_EV": -30,
+      "exercise_6_CS_loss": -24.327906486489862,
+      "exercise_7_CV_CS": "3/4",
+      "exercise_7_EV": "39/64",
+      "exercise_7_compensated_branch_crossing": "8/5",
+      "exercise_8_household_CV": [40, 120],
+      "exercise_8_post_grant_utilities": ["65/4", "105/4"],
+      "delayed_CV_EV": [24, 12],
+      "delayed_CS_loss": 16.635532333438686
+    }
+  },
+  "limitations": [
+    "Author and internal root review do not constitute independent human academic certification.",
+    "The general mathematical arguments require reading; finite exact cases, differences and quadratures cannot prove all consumer-theory theorems or certify arbitrary demand systems.",
+    "Smooth derivative identities are confined to their positive-price/positive-income and differentiability conditions; kinks, zero prices, infeasible targets and satiation require separate analysis.",
+    "All examples are original synthetic divisible-good consumer models. No empirical identification of preferences, causal policy effect, current observation or interpersonal welfare measure is asserted.",
+    "General nonsmooth envelopes, demand integrability and welfare aggregation are explicitly deferred to the planned graduate extension, not represented as already supplied here.",
+    "Source verification covers the specified methods and inspected pages, not every statement in either full source document.",
+    "No visual, mobile or print UI QA was performed; the existing browser-policy restriction was respected.",
+    "Root retains shared-file integration, dependency-order acceptance, build checks and publishing responsibilities."
+  ],
+  "acceptance": "Complete specialist package ready for independent root acceptance after v05-c01. Only the four assigned c02 files were written; no shared curriculum, catalogue, checkpoint, build, hosting, commits, deployment or child agents."
+}

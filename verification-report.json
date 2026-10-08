@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "chapter_packages_available": 48,
-  "html_pages_checked": 58,
+  "chapter_packages_available": 52,
+  "html_pages_checked": 62,
   "curriculum_chapters": 216,
   "cross_volume_packages_available": 1,
   "checks": [
@@ -28,6 +28,7 @@
     "Volume 3 chapters 11\u201312 proper losses, calibration/resolution, weighted-report and random-skill distortions, joint-state information values/garbling, information projections, dyadic/spike integrals, stopped martingale histories, heavy-tail truncation and maximal/Kronecker diagnostics",
     "Volume 3 diagnostic, distinct exams, retention, posterior/predictive/information project, independent integration/coverage and seeded paired-score checks",
     "Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package",
+    "Volume 5 chapters 1\u20134: consumer interiors/corners/ties and revealed-preference cycles; exact duality/Slutsky and compensated welfare with numeraire boundaries; conditional production costs, global supply/shutdown and existence limits; market tax ledgers, entry and rationing allocation",
     "Volume 4 diagnostic, distinct exam forms, delayed transfer and historical empirical project: exact arithmetic, code contracts under optimization, source-vintage reconstruction, rounding envelopes, projection identities and forecast-selection isolation",
     "Volume 4 chapters 9\u201312: temporal forecast/release selection and leakage mutations; calendar panel keys, aggregation and exact dependent shock laws; independent numerical error bounds and fault detection; frozen official BLS reconstruction, rounding grid, provenance and integrity contracts",
     "Volume 4 chapters 5\u20138: histogram density/ECDF/index/correlation/contrast calculations and delivered SVG coordinates; exact versus seeded Monte Carlo, replication and variance reduction; rational projection versus elimination, fit and holdout boundaries; causal standardization, assignment lotteries, mediator/collider and observational equivalence",
@@ -851,6 +852,342 @@
       "Written solution/proof/program review recorded separately.",
       "Numerical/structural checks do not establish external learner competence or visual/mobile/print usability."
     ]
+  },
+  "volume_5_opening_checks": {
+    "v05-c01": {
+      "chapter": "v05-c01",
+      "status": "passed",
+      "checks": [
+        "Balanced static fragment with three worked examples, eight matched exercise/solution items, teaching checks, foundation/successor links and three scoped source proposals.",
+        "Ordinal rankings checked on625 bundle pairs; concavity and expected-utility transformation counterexamples verified separately.",
+        "Budget scaling, zero-income singleton, bliss-point slack and unbounded free-good improvement sequence checked independently of tangency.",
+        "Smooth demand:27 exact polynomial global-optimum certificates across budget grids, separate exponent-transfer objective checks, prices/income scaling and MRS.",
+        "Shifted-log demand:200 zero-income/interior/corner cases versus independent derivative bisection, exact KKT ratios and direct objective comparisons; ration and delayed answers.",
+        "Substitute demand segment and changed-price corner, all integer maximizers, nonconvex integer-feasibility counterexample, and exact recipe utility bounds.",
+        "Revealed preference: exact own/cross expenditures distinguish strict contradiction, arbitrary tied selections and a pairwise-consistent three-cycle; twelve generated optimizing budgets pass pair and chain checks."
+      ],
+      "results": {
+        "ordinal": {
+          "ranking_pair": [
+            "3",
+            "4"
+          ],
+          "squared_shift_pair": [
+            "4",
+            "1"
+          ],
+          "original_certain_vs_lottery": [
+            "6/5",
+            "1"
+          ],
+          "cubed_certain_vs_lottery": [
+            "216/125",
+            "4"
+          ]
+        },
+        "budget": {
+          "bliss_demand": [
+            "1",
+            "2"
+          ],
+          "expenditure": "7",
+          "slack": "5"
+        },
+        "smooth_demand": {
+          "worked": [
+            "15",
+            "5"
+          ],
+          "exercise": [
+            "15",
+            "4"
+          ],
+          "exercise_MRS": "2/5",
+          "exact_global_cases": 27
+        },
+        "corners": {
+          "worked": [
+            [
+              "2",
+              "12"
+            ],
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "18"
+            ]
+          ],
+          "exercise": [
+            [
+              "3/2",
+              "0"
+            ],
+            [
+              "2",
+              "6"
+            ],
+            [
+              "0",
+              "10"
+            ]
+          ],
+          "ration": [
+            "1",
+            "8"
+          ],
+          "independent_regime_cases": 200
+        },
+        "ties_and_kinks": {
+          "integer_substitute_maximizers": [
+            [
+              0,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              9,
+              0
+            ]
+          ],
+          "worked_recipe": [
+            "6",
+            "3"
+          ],
+          "exercise_recipe": [
+            "16/3",
+            "8"
+          ],
+          "changed_price_recipe": [
+            "16/5",
+            "24/5"
+          ]
+        },
+        "revealed_preference": {
+          "contradiction_matrix": [
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "tie_matrix": [
+            [
+              5,
+              5
+            ],
+            [
+              5,
+              5
+            ]
+          ],
+          "cycle_matrix": [
+            [
+              3,
+              2,
+              4
+            ],
+            [
+              4,
+              3,
+              2
+            ],
+            [
+              2,
+              4,
+              3
+            ]
+          ],
+          "cycle_pair_violations": 0,
+          "cycle_chain_violations": 3,
+          "generated_optimizing_budgets": 12
+        }
+      },
+      "limitations": [
+        "Finite calculations supplement the separately reviewed analytic preference, existence, KKT and revealed-preference arguments; they do not prove a general utility-representation or rationalization theorem.",
+        "The numerical cases are synthetic and do not establish actual preferences, causal demand responses or interpersonal welfare comparisons.",
+        "Bisection and floating logarithms are checked only as independent numerical references; exact corner inequalities and budget identities retain rational arithmetic.",
+        "The checker distinguishes unique full choice from possibly tied observed selections; applying either test to real records requires the corresponding assumptions.",
+        "No browser visual/mobile/print QA or learner testing was performed."
+      ]
+    },
+    "v05-c02": {
+      "chapter": "v05-c02",
+      "status": "passed",
+      "checks": [
+        "Worked 1 and exercise 3: exact global AM-GM certificates, both Slutsky routes, Roy, symmetry, homogeneity and 98 negative-square evaluations",
+        "Twenty central-difference responses cross-check compensated Hessian entries at five distinct price/income cases",
+        "Exercises 1\u20132: exact matched targets, nominal scaling, ordinal zero-derivative Roy caveat and separate satiation/below-origin-target counterexamples",
+        "Exercise 4: Giffen threshold and a matrix with negative diagonals but positive quadratic form",
+        "Exercise 5: exact one-sided kink slopes, five points on the minimizing segment, compensated-law sign and 25 support checks",
+        "Worked 2, exercise 6 and delayed check: exact utility targets, signed CV/EV, both indifference equations, old-basket bounds and nine independent quadratures",
+        "Worked 3 and exercise 7: 56 exact expenditure candidate checks, boundary continuity, certified budget optima, corner crossing and exact/numerical area comparison",
+        "Exercise 8: total versus individual compensation and feasible alternative grant allocation",
+        "Static fragment: three worked examples, eight complete matched solution items, retention closure, source schema and citations, unique anchors and adjacent routes"
+      ],
+      "reference_values": {
+        "cobb_douglas_welfare_cases": [
+          {
+            "p0": [
+              2,
+              8
+            ],
+            "p1": [
+              8,
+              8
+            ],
+            "income": 96,
+            "CV": "96",
+            "EV": "48",
+            "CS_loss": 66.54212933375474,
+            "old_basket_change": "144",
+            "initial_bundle": [
+              "24",
+              "6"
+            ],
+            "final_bundle": [
+              "6",
+              "6"
+            ]
+          },
+          {
+            "p0": [
+              9,
+              1
+            ],
+            "p1": [
+              4,
+              1
+            ],
+            "income": 60,
+            "CV": "-20",
+            "EV": "-30",
+            "CS_loss": -24.327906486489862,
+            "old_basket_change": "-50/3",
+            "initial_bundle": [
+              "10/3",
+              "30"
+            ],
+            "final_bundle": [
+              "15/2",
+              "30"
+            ]
+          },
+          {
+            "p0": [
+              1,
+              4
+            ],
+            "p1": [
+              4,
+              4
+            ],
+            "income": 24,
+            "CV": "24",
+            "EV": "12",
+            "CS_loss": 16.635532333438686,
+            "old_basket_change": "36",
+            "initial_bundle": [
+              "12",
+              "3"
+            ],
+            "final_bundle": [
+              "3",
+              "3"
+            ]
+          }
+        ],
+        "quasilinear_interior_CV_EV_CS": "1/2",
+        "quasilinear_boundary_CV_CS": "3/4",
+        "quasilinear_boundary_EV": "39/64",
+        "quasilinear_boundary_crossing_price": "8/5",
+        "grant_initial_utilities": [
+          "10",
+          "30"
+        ],
+        "grant_actual_utilities": [
+          "65/4",
+          "105/4"
+        ]
+      },
+      "limitations": [
+        "General existence, duality, envelope and curvature claims require mathematical review; finite arithmetic checks do not prove the theorems.",
+        "Quadrature and finite differences are bounded cross-checks with stated tolerances, independent of the exact rational case certificates.",
+        "Examples are synthetic consumer models, not empirical demand estimates or current observations.",
+        "Source inspection is recorded separately; this checker neither retrieves sources nor certifies whole documents.",
+        "No visual, mobile, print, external-human or whole-library integration review is claimed; root owns acceptance and shared integration."
+      ]
+    },
+    "v05-c03": {
+      "status": "passed",
+      "checks": [
+        "Finite differences and exact ratios verify both marginal products, the isoquant ratio, scale changes and the increasing-returns/diminishing-product counterexample.",
+        "Original-constraint minimization and 2,400 exact feasible comparisons independently recover smooth conditional costs/demands; price finite differences verify Shephard values, including the delayed target.",
+        "Direct two-input enumeration checks fixed-proportions and corner optima; 122 exact segment points verify the substitute tie values and full-segment formula.",
+        "Direct labor expenditures and exact output enumeration confirm short-run choices, negative-profit operation, all exercise-4 amounts and the pointwise long-run cost bound.",
+        "Exact enumeration across 49 prices and three unavoidable-cost levels verifies the discontinuous supply correspondence, shutdown tie, already-paid fee change and all current/renewal comparisons.",
+        "Exact price comparisons include ties and nonconvex operating costs; capped constant-returns cases and sequences diagnose unbounded profit, finite nonattainment and zero-price cost nonattainment.",
+        "Static fragment has three worked cases, eight matching complete solutions, retention answers, scoped source records and available prerequisite routes."
+      ],
+      "limitations": [
+        "Finite grids/finite differences are independent diagnostics; written proofs establish continuous optima, global properties and nonattainment.",
+        "Hypothetical technologies and contracts are not empirical estimates, legal accounting rules or causal evidence.",
+        "Root retains cross-chapter acceptance and integration; no visual/mobile/print QA or external human certification was performed."
+      ]
+    },
+    "v05-c04": {
+      "status": "passed",
+      "checks": [
+        "Exact inverse-schedule solutions and independent welfare ledgers for four taxes",
+        "Truncated no-trade boundary and kinked aggregation",
+        "Conditional firm profit square certificate and long-run AC global minima",
+        "Short-run, free-entry and finite-integer firm configurations",
+        "Local incidence reconstructed from elasticities, not assumed finite nonlinear effects",
+        "Rationing benefit integration and allocation-versus-quantity loss",
+        "Observational-equivalence construction, compensation criteria and distinct delayed check"
+      ],
+      "tax_cases": {
+        "6": {
+          "quantity": "36",
+          "buyer_price": "24",
+          "seller_price": "18",
+          "loss": "36"
+        },
+        "9": {
+          "quantity": "30",
+          "buyer_price": "25",
+          "seller_price": "16",
+          "loss": "81"
+        },
+        "12": {
+          "quantity": "24",
+          "buyer_price": "26",
+          "seller_price": "14",
+          "loss": "144"
+        },
+        "24": {
+          "quantity": "0",
+          "buyer_price": "30",
+          "seller_price": "6",
+          "loss": "576"
+        }
+      },
+      "limitations": [
+        "Finite checks supplement written proofs and assumptions; no empirical, general-equilibrium or external academic certification."
+      ]
+    }
   },
   "errors": [],
   "limitations": [

@@ -1,0 +1,156 @@
+{
+  "batch": "v05-opening",
+  "state": "assigned",
+  "authorization": "Standing explicit user authorization for parallel economics/finance specialists",
+  "previous_turn_classification": "progress: complete foundation cumulative package accepted,58-page checks passed and same private Site published",
+  "integration_owner": "root",
+  "fixed_contract": {
+    "ownership": "Only listed owned paths. Root alone edits curriculum, sources, STATUS, shared build/verify, canonical manuscript acceptance and hosting. No child agents, commits or publishing.",
+    "format": "Static original HTML chapter fragment: no h1; at least two aside.worked examples; one ol.exercises with eight original problems and details.solutions containing corresponding ol answers; teach-back heading/text includes Teach-back and Delayed check. Standard-library Python check() returns status/checks/limitations.",
+    "requirements": "Use canonical outcomes/coverage/prerequisites verbatim as scope. Teach all methods needed for exercises; full determinate solutions, explicit assumptions/units/boundaries and criteria for open questions. Two examples is a minimum, not a reason to omit necessary coverage. Concise substantive textbook prose, not outline or repeated boilerplate.",
+    "sources": "Retrieve scoped primary sources for these new microeconomic methods (official course notes/open texts/author papers). Record id,title,url,use,checked,verification in owned source-proposal JSON array. IDs prefix own chapter. No wholesale source paraphrase/exam reuse; original derivations/examples. Describe actually inspected content, not merely a link response. Root merges catalogue.",
+    "dependency_contract": "Parallel drafting against frozen prerequisites allowed; acceptance c01 then c02 then c03 then c04. Coordinate assumptions through root and link finalized adjacent chapter routes; no claim future content already exists. x,p,m for consumer demand; v/e/h for duality; p output and w,r input prices in production; state sign conventions locally.",
+    "review": "Independent numerical checker plus author proof/solution/instruction/source review. Root reads all content/programs and independently audits. Internal agent review does not equal human certification. No visual/mobile/print QA claim or browser-policy workaround.",
+    "efficiency": "No new labs or assets unless they materially teach/verify the chapter; no frameworks, installations, paid services or decorative images. Chapter-specific standard-library checker suffices for mathematical cases."
+  },
+  "assignments": [
+    {
+      "owner": "regression",
+      "chapter": "v05-c01",
+      "title": "Preferences and consumer choice",
+      "canonical_specification": {
+        "outcome": "Derive demands and identify corner solutions under a budget constraint.",
+        "coverage": [
+          "Preferences",
+          "utility",
+          "indifference curves",
+          "budget sets",
+          "Marshallian demand",
+          "revealed preference"
+        ],
+        "prerequisites": [
+          "v02",
+          "v03",
+          "v04"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v05-c01.html",
+        "scripts/check_v05_c01.py",
+        "content/reviews/v05-c01-author.json",
+        "content/reviews/v05-c01-sources.json",
+        "content/projects/v05-c01-* (only if pedagogically necessary)"
+      ],
+      "content": "Define complete/transitive preferences and ordinal utility with strictly increasing transformations; explain continuity/convexity/strict convexity/local nonsatiation without claiming universal utility representation. Positive-price budget sets and existence; Marshallian demand as correspondence versus unique function, homogeneity/budget exhaustion under stated assumptions; derive interior and corner cases with full economic interpretation; indifference curves/MRS conventions and revealed preference with precise WARP logic and falsification limits. At least two full worked examples (one smooth interior, one genuine corner/kink) and eight fully solved exercises including transfer/proof/critique. Link the foundation assessment and earlier mathematical prerequisites; successor c02. Use n-good notation p,x,m then transparent two-good calculations. Do not preempt full compensated demand/Slutsky/welfare derivation in c02.",
+      "state": "accepted by root in prerequisite order"
+    },
+    {
+      "owner": "monte_carlo",
+      "chapter": "v05-c02",
+      "title": "Demand, duality and welfare",
+      "canonical_specification": {
+        "outcome": "Decompose price responses and measure welfare with correct income concepts.",
+        "coverage": [
+          "Hicksian demand",
+          "expenditure function",
+          "Slutsky",
+          "indirect utility",
+          "compensating variation"
+        ],
+        "prerequisites": [
+          "v05-c01"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v05-c02.html",
+        "scripts/check_v05_c02.py",
+        "content/reviews/v05-c02-author.json",
+        "content/reviews/v05-c02-sources.json",
+        "content/projects/v05-c02-* (only if pedagogically necessary)"
+      ],
+      "content": "Assume c01 teaches ordinal preferences, budget choice and Marshallian demand. Define indirect utility v(p,m), expenditure e(p,u), Hicksian correspondence h(p,u), and conditions for dual identities, attainment and differentiability. Derive Shephard and Roy with stated regularity; derive Slutsky by differentiating x(p,e(p,u))=h(p,u), substitution negative semidefinite/symmetry from concavity, normal/inferior/Giffen distinctions. Define CV/EV with explicit sign and baseline/target utility conventions, derive exact numerical price-change welfare and compare consumer-surplus approximation/quasilinear case. At least two fully worked original examples and eight complete exercise solutions including a boundary/nondifferentiability case, proof/derivation, transfer and welfare critique. All notation and methods taught before exercises; leave graduate general proofs/extensions to Volume13 without falsely claiming them supplied.",
+      "state": "accepted by root in prerequisite order"
+    },
+    {
+      "owner": "causal_identification",
+      "chapter": "v05-c03",
+      "title": "Production, costs and firm choice",
+      "canonical_specification": {
+        "outcome": "Derive cost functions and output/input choices from technology.",
+        "coverage": [
+          "Production sets",
+          "marginal products",
+          "cost minimization",
+          "fixed and sunk cost",
+          "supply"
+        ],
+        "prerequisites": [
+          "v05-c02"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v05-c03.html",
+        "scripts/check_v05_c03.py",
+        "content/reviews/v05-c03-author.json",
+        "content/reviews/v05-c03-sources.json",
+        "content/projects/v05-c03-* (only if pedagogically necessary)"
+      ],
+      "content": "Assume c01/c02 basic constrained choice and expenditure duality. Define technology/production sets, inputs/output/time units, free disposal and feasible boundary; distinguish marginal products, diminishing returns and returns to scale. Derive conditional factor demand/cost with an original smooth technology and a corner or fixed-proportions alternative; short-run versus long-run inputs/costs, MC/AC/AVC and envelope conditions; profit-maximizing competitive supply, shutdown/exit, sunk versus avoidable fixed costs and possible correspondences/existence failures. At least two full worked examples and eight fully solved original exercises with all derivations/assumptions, transfer/proof/critique. Explicitly hand off aggregate market clearing, tax incidence and free-entry market equilibrium to c04. Use p output price, w/r input prices, q output, L/K inputs, avoid confusing fixed cost with marginal cost.",
+      "state": "accepted by root in prerequisite order"
+    },
+    {
+      "owner": "root",
+      "chapter": "v05-c04",
+      "title": "Competitive equilibrium and surplus",
+      "canonical_specification": {
+        "outcome": "Solve partial equilibrium and distinguish efficiency from distribution.",
+        "coverage": [
+          "Market clearing",
+          "consumer and producer surplus",
+          "elasticity",
+          "entry",
+          "tax incidence"
+        ],
+        "prerequisites": [
+          "v05-c03"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8
+      },
+      "owned_paths": [
+        "content/chapters/v05-c04.html",
+        "scripts/check_v05_c04.py",
+        "content/reviews/v05-c04-author.json",
+        "content/reviews/v05-c04-sources.json",
+        "content/projects/v05-c04-* (only if pedagogically necessary)"
+      ],
+      "content": "Build partial-equilibrium market demand/supply from horizontal aggregation, existence/uniqueness/nontrade boundary conditions, comparative statics and the price-taker premise. Define consumer/producer surplus and exact welfare under quasilinearity/no externalities/efficient rationing; distinguish surplus from profit and distribution/Pareto improvement. Derive tax wedge, local elasticity incidence and finite linear-tax revenue/DWL; explain statutory remittance invariance under assumptions and limitations. Connect entry/exit/minimum long-run average cost to market supply under homogeneous-firm/constant-input-price/free-entry assumptions; show a finite-number caveat and price-control allocation issue. Two full worked examples, eight solved exercises, original exact checks; method-specific sources. Root owns this chapter and all shared integration.",
+      "state": "accepted by root in prerequisite order"
+    }
+  ],
+  "additional_review_assignment": {
+    "owner": "causal_identification after completing c03",
+    "scope": "Read-only independent review of the complete root-authored v05-c04 manuscript, all worked examples and eight solutions, tax domains, welfare assumptions, rationing and integer-firm case. Independently recompute key arithmetic. No edits to chapter/shared files; report findings in one owned peer file.",
+    "owned_paths": [
+      "content/reviews/v05-c04-peer.json"
+    ],
+    "deliverable": "Specific material errors or clean scoped review, with limitations; no acceptance or publishing authority.",
+    "state": "complete; one low finding resolved and verified",
+    "review": "content/reviews/v05-c04-peer.json"
+  },
+  "batch_state": "accepted, rebuilt, verified and archived; private publishing underway",
+  "validation": {
+    "chapter_review": "content/reviews/v05-c01-c04.json",
+    "status": "passed",
+    "chapters_accepted_library": 52,
+    "html_pages": 62,
+    "offline_files": 129,
+    "offline_bytes": 2090062
+  }
+}
