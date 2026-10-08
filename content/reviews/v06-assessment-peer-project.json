@@ -1,0 +1,176 @@
+{
+  "package": "v06-assessment",
+  "reviewer": "causal_identification",
+  "date": "2026-10-08",
+  "status": "passed",
+  "review_type": "Independent fixed-scope peer review of project and assessment tail, following separately recorded Form A review.",
+  "scope": [
+    "All project instructions, twelve historical input records, three five-row numeric guide tables and full instructor reasoning",
+    "Four actual BEA/BLS archived releases; linked GDP and international-transactions PDFs with scoped table/header inspection",
+    "Domestic-interest consumption closure, public/external financing constraints and concrete re-solved repair",
+    "Five-component 100-point rubric, four oral-transfer prompts and all six retention prompts/answers",
+    "Remediation, notation/concept indices and volume synthesis"
+  ],
+  "findings": [
+    {
+      "id": "v06-project-peer-01",
+      "severity": "minor",
+      "location": "oral-transfer, bank rescue prompt",
+      "finding": "The original request to double a liquidity loan referred to B3(a), which contained an outright central-bank securities purchase and impairment, not a loan.",
+      "requested_correction": "Introduce a concrete new loan after impairment.",
+      "status": "resolved",
+      "verification": "Final prompt now adds a new liquidity loan of 10 H. Independently recomputed assets 84 to 94, total liabilities 85 to 95 and unchanged equity -1; reserves 22 to 32."
+    },
+    {
+      "id": "v06-project-peer-02",
+      "severity": "notation precision",
+      "location": "notation-index, Pi/x/j/n/kappa row",
+      "finding": "The index labeled Pi an inflation deviation across both pricing and NK models, although c07 and the static assessment model define total log inflation.",
+      "requested_correction": "Distinguish log inflation from its locally defined deviation.",
+      "status": "resolved",
+      "verification": "Final index now says log inflation (or its explicitly defined deviation), preserving each local model and units."
+    }
+  ],
+  "unresolved_findings": [],
+  "primary_sources": [
+    {
+      "id": "v06-assessment-bea-gdp",
+      "title": "BEA — Gross Domestic Product, 4th Quarter and Year 2024 (Advance Estimate), 30 January 2025",
+      "url": "https://www.bea.gov/news/2025/gross-domestic-product-4th-quarter-and-year-2024-advance-estimate",
+      "use": "Frozen advance-estimate GDP growth, annualization, annual-average comparison and release timing.",
+      "checked": "2026-10-08",
+      "verification": "Independently opened the actual release body and linked 17-page PDF https://www.bea.gov/sites/default/files/2025-01/gdp4q24-adv.pdf. Inspected PDF pages 1, 3 and 4: 8:30 a.m. EST January 30 release header; Q4 real GDP growth 2.3% and current-dollar growth 4.5%; annual real growth 2.8% compares annual levels. The quarterly seasonal-adjustment/annual-rate footnote is explicit. The teaching deflator ratio is derived from rounded headlines, not asserted to be an exact published index. Page is marked superseded; no current estimate or source-wide causal claim is imported."
+    },
+    {
+      "id": "v06-assessment-bls-employment",
+      "title": "BLS — The Employment Situation, December 2024, archived 10 January 2025 release",
+      "url": "https://www.bls.gov/news.release/archives/empsit_01102025.htm",
+      "use": "Frozen payroll change and household labor rates, units, survey distinctions, revision timing and evidence limits.",
+      "checked": "2026-10-08",
+      "verification": "Independently read the actual archive release header and household/establishment narrative, Table A-1 complete column header and TOTAL block, and Technical Note sections on coverage, reference periods, seasonal adjustment and reliability. Confirmed December payroll change +256000 jobs and seasonally adjusted December household rates 4.1% unemployment, 62.5% participation and 60.0% employment-population. Header is 8:30 a.m. ET January 10. Table A-1 distinguishes NSA from SA columns; the current December SA column is used. Technical text distinguishes counted jobs from people and household age-16-plus civilian noninstitutional population. Seasonal revision and preliminary-survey warnings support preserving this vintage. No actual unrounded population is inferred from the guide's hypothetical rounding example."
+    },
+    {
+      "id": "v06-assessment-bls-cpi",
+      "title": "BLS — Consumer Price Index, December 2024, archived 15 January 2025 release",
+      "url": "https://www.bls.gov/news.release/archives/cpi_01152025.htm",
+      "use": "Frozen CPI-U monthly versus 12-month inflation, adjustment labels and release timing.",
+      "checked": "2026-10-08",
+      "verification": "Independently read the archive header, opening release text and Table A with the full SA monthly versus NSA 12-month column header and All items row. Confirmed release at 8:30 a.m. ET January 15, monthly December increase 0.4% seasonally adjusted and 12-month increase 2.9% before seasonal adjustment. The guide's 1.004^12 transformation is explicitly a constant-rate hypothetical, not a BLS annual forecast or the measured 12-month series. No component-price causal conclusion is imported."
+    },
+    {
+      "id": "v06-assessment-bea-external",
+      "title": "BEA — U.S. International Transactions, 3rd Quarter 2024, 18 December 2024 release",
+      "url": "https://www.bea.gov/news/2024/us-international-transactions-3rd-quarter-2024",
+      "use": "Frozen quarterly current-account headline, Q2 revision, current-dollar units and release-vintage comparison.",
+      "checked": "2026-10-08",
+      "verification": "Independently read the release body and actual 22-page PDF https://www.bea.gov/sites/default/files/2024-12/trans324.pdf. Inspected Table A on printed page 4 (billion dollars, SA; Q2 preliminary -266.8 and revised -275.0), Table 1 headers across pages 7–8 (million dollars, SA quarters, revised/preliminary flags), and row 109: Q2 -275031 and Q3 -310948 million, rounding to supplied -275.0/-310.9 billion. Read page 6 update-cycle text that SA quarters sum to annual totals, supporting quarterly amounts rather than annual rates. Release header is December 18 at 8:30 a.m. EST. The older Q2 figure is explicitly restated in this December document; it is not assigned a fabricated original release date."
+    }
+  ],
+  "independent_checks": [
+    "Independently derived and parsed all 95 numeric cells in the three five-row project guide tables. All match exact Fraction calculations from primitive equations; this checks literal manuscript tables as well as the previously reviewed program outputs.",
+    "Domestic public interest 4 H is included once through composite consumption intercept 55/4 = 43/4 + (3/4)*4. Foreign interest is 5 H. Hence C=10+(3/5)Y; private saving Y-T-5+4-C and public saving T-G-4 sum to national saving Y-5-C-G. Private saving minus investment equals Delta domestic public debt plus CA.",
+    "Goods-market denominator 1/2+100 psi is positive for psi>=0; unique linear-system candidate has nonnegative activity in all five cases. Multipliers 2 and 10/7 were independently checked with exact 1/3 H purchases perturbations. Candidate existence does not imply funding approval or a welfare optimum.",
+    "The public cash bridge retains 4 interest and 50 maturities at their fixed contracts; the real investment-financing rate is a separate behavioral rate. The purchases-offset candidate requires issuance 54 exceeding capacity 50 by 4. Negative real feedback rate -3/350 does not violate a nominal-rate floor or reprice the old contracts.",
+    "For fixed-rate investment-shock scenarios, Y=120+2G, primary surplus=24-(3/5)G, issuance=30+(3/5)G. Thus the nonnegative-G domestic feasibility interval ends at 100/3. Seven exact probes include both sides of the G=25 external-loan kink and the G=100/3 public-cap boundary.",
+    "The G=100/3 repair gives Y=560/3, C=122, I=20, M=56/3, T=112/3, primary surplus 4, debt 100, issuance 50, debt/Y=15/28, CA=19/3 and needed official loan 5/6 F. It satisfies the domestic cap but still requires prospective foreign funding and fails to restore output 200. The manuscript states these limits.",
+    "External cash payments include old principal 20 F and interest 5/2 F once each. Only interest enters CA. Reserves and external private debt are explicitly consolidated with unrestricted within-account transfer; home public debt stays resident-to-resident. At unchanged e=2, asset and liability transaction differences equal CA and Delta NFA in every case.",
+    "Historical transformations preserve rounding and horizons: quarter real growth approximately 0.570106%; annualized implied deflator 200/93%; constant-month CPI hypothetical approximately 4.907021%; rounded household-ratio estimate 4.0%; Q2 revision -8.2, same-release Q3 change -35.9 and mixed-vintage change -44.1 billion USD. Hypothetical participation 0.625 and employment-population 0.5996 imply unemployment 127/3125, correctly rounding to the three reported one-decimal percentages without inventing actual counts.",
+    "All four oral prompts were reviewed. Fixed-weight versus Fisher requires aggregation weights, not a welfare inference. Removing the A2(a) borrowing cap restores (50,50) before/after the equal-PV tax shift with saving -20 and -16. Corrected bank borrowing leaves equity -1. Closing-only FX revaluation uses the final net foreign position -19/2 F, giving valuation -19/10 H and NFA -209/10 H while transaction CA remains 5.",
+    "All six retention solutions were independently recomputed, including log-utility positivity/boundary derivatives, one-transition geometric duration, balance-sheet loss/borrowing separation, asset-versus-primary-spending classification and tariff surplus assumptions.",
+    "Project component weights 25+30+15+15+15 and all nested allocations sum to 100. The 85 overall/75% per-component thresholds are explicit authored choices. Retention 51/60 is 85%, with 7.5/10 in each item; fractional marks are consistent with stated scoring. Oral satisfaction requires the changed assumption, implication and limitation. Critical errors require repair regardless of total.",
+    "Read all remediation/index/synthesis text. Coverage maps actual chapter domains and separately reviewed Form A/B item locations; B1(c,d) routes support diffusion, residuals and instrument identification. Planned later finance and graduate coverage is not represented as already supplied by this assessment."
+  ],
+  "calculation_targets": {
+    "guide_numeric_cells_checked": 95,
+    "public_and_external_boundary_probes": 7,
+    "multipliers": {
+      "fixed": "2",
+      "feedback": "10/7"
+    },
+    "funding_repair": {
+      "G": "100/3",
+      "Y": "560/3",
+      "C": "122",
+      "I": "20",
+      "M": "56/3",
+      "T": "112/3",
+      "primary_surplus": "4",
+      "debt": "100",
+      "issuance": "50",
+      "debt_ratio": "15/28",
+      "CA": "19/3",
+      "official_loan_F": "5/6"
+    },
+    "oral_FX": {
+      "closing_position_F": "-19/2",
+      "valuation_H": "-19/10",
+      "CA_H": "5",
+      "closing_NFA_H": "-209/10"
+    },
+    "retention_1": {
+      "FA": "2",
+      "closing_NFA": "-9"
+    },
+    "retention_2": {
+      "wealth": "30",
+      "unconstrained": [
+        "15",
+        "33/2"
+      ],
+      "constrained": [
+        "10",
+        "22"
+      ],
+      "shifted_constrained": [
+        "12",
+        "99/5"
+      ],
+      "derivatives_at_s0": [
+        "-1/20",
+        "-1/36"
+      ]
+    },
+    "retention_3": {
+      "steady_unemployment": "1/10",
+      "u2": "41/250",
+      "mean_duration_months": "50/9"
+    },
+    "retention_4": {
+      "post_loss_assets": "44",
+      "post_loss_equity": "-2",
+      "post_loan_assets": "54",
+      "post_loan_debt_plus_deposits": "56",
+      "post_loan_equity": "-2"
+    },
+    "retention_5": {
+      "gross_debt": "65",
+      "net_debt_after_asset": "63",
+      "gross_issuance": "25",
+      "gross_debt_ratio": "13/20"
+    },
+    "retention_6": {
+      "imports_before": "30",
+      "imports_after": "20",
+      "tariff_revenue": "100",
+      "deadweight_loss": "25"
+    }
+  },
+  "section_hash_method": "SHA256 of UTF-8 manuscript text starting at <h2 id=\"project\"> and extending to the end of the file, including whitespace. Earlier diagnostic/Form A/Form B sections are outside this hash.",
+  "reviewed_tail": {
+    "file": "content/assessments/v06.html",
+    "start": "<h2 id=\"project\">",
+    "end_exclusive": "EOF",
+    "sha256": "142a2ef557e1ccaea6fd54d16df97acae8ec8fc4a0c156bb053a3f26d599c53e"
+  },
+  "sha256": {
+    "content/projects/v06-assessment-data.json": "198a99e5c8731f3740e6dcd619df3fb223773d4d06a2170bd3a00cc7f41fbbe9",
+    "content/projects/v06-assessment-analysis.py": "d3b0f39342d2d1dc766bf1da0f60960f5f704feb9ad184940c17370bc7fcbffd"
+  },
+  "limitations": [
+    "Source verification is scoped to the actual release headers, cited body paragraphs, selected table headers/rows and technical conventions listed above; it is not a statistical re-estimation or complete audit of each government release.",
+    "PDF table inspection used actual extracted PDF content. Screenshot requests returned only textual references, so no visual PDF-layout inspection is claimed. No website UI/mobile/print QA was performed.",
+    "Historical observations and synthetic models remain separate. No identified U.S. multiplier, current policy forecast, terminal solvency theorem or social optimum follows from the exercise.",
+    "The new permanent assessment checker was being authored by root; this peer record relies on independent calculations and the separately reviewed program, not a claim to have audited that checker.",
+    "Only this review artifact was written; no manuscript, project data/program, canonical state, shared checker or publication file was edited. Root retains overall volume acceptance."
+  ]
+}

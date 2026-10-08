@@ -1,0 +1,321 @@
+{
+  "chapter": "v07-c02",
+  "title": "Balance sheet, income statement and cash flow",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "reviewer": "causal_identification specialist; independent of the c02 author",
+  "status": "passed",
+  "acceptance_authority": "Coordinator retains acceptance, integration and publishing authority. This peer audit is not an external accounting assurance opinion.",
+  "scope": {
+    "assignment": "v07-c02-peer-review in production/v06-assessment-v07-opening-assignments.json",
+    "read_in_full": [
+      "Chapter manuscript, all three worked examples, all eight exercise prompts and complete solutions, teach-back and answered delayed check",
+      "Complete JSON input ledger, standard-library benchmark, README, independent checker, source proposals and author record"
+    ],
+    "independent_recomputation": "A separate Fraction-based calculation transcribed all 23 economic events independently of the benchmark helpers, compared those postings with the input, reconstructed all 24 cash prefixes and final ledger/closures, and separately calculated all eight exercise groups. The author checker was also run through its CLI and quiet strict-JSON API.",
+    "source_spot_check": "Actual public IFRS IAS 7 overview, April 2024 IFRS 18 issuance announcement and April 2024 Effects Analysis PDF, especially printed page 27, read through primary-source retrieval.",
+    "excluded": [
+      "No manuscript, benchmark, shared-file or acceptance edits by this reviewer",
+      "No visual, mobile or print UI claim",
+      "No access to or claim of review of subscription-only normative IFRS standards; no current jurisdictional compliance certification"
+    ]
+  },
+  "findings": [
+    {
+      "id": "v07-c02-peer-01",
+      "severity": "low",
+      "location": "Chapter: Teach-back and delayed check, both answer details",
+      "finding": "Several adjacent words and amounts had no separating space, including CFO21, contribution20, becomes76 and debt21→26. The amounts were correct, but the answers were unnecessarily hard to read.",
+      "status": "resolved",
+      "resolution": "Coordinator added spaces around the amounts and debt arrows. Reviewer inspected the final two answer paragraphs and confirmed unchanged arithmetic.",
+      "verified": "2026-10-08"
+    }
+  ],
+  "open_findings": [],
+  "reasoning_review": {
+    "measurement_and_timing": "Quarter dates, kCU displays, integer CU minor units, normal display balances and debit-positive posting convention are explicit. Opening temporary accounts are closed. Supplied accrual recognition, collectibility, depreciation timing, historical cost, no tax/FX/OCI/overdraft and ordered payment assumptions are sufficient for the numerical tasks.",
+    "statement_derivation": "Profit, retained earnings, contributed capital, distributions and borrowing are distinguished. Direct cash lines are derived from the appropriate revenue, expense and working-capital roll-forwards; indirect signs use normal balances. The chapter states the absence of other changes required by those derivations.",
+    "equipment": "The disposal removes gross cost and its associated accumulated depreciation, measures gain against carrying amount, puts full cash proceeds in investing and reverses gain in indirect CFO. Depreciation is an allocation rather than cash funding. The direct seller note increases equipment and debt without invented gross cash flows.",
+    "classification": "Cash interest operating and dividends financing are explicitly maintained teaching conventions. The alternative interest exercise consistently removes interest payable from operating working capital and adds back the entire interest expense; its total cash remains invariant. Current/noncurrent maturity classification is supplied separately and does not select a cash-flow category.",
+    "liquidity": "Delayed collection changes cash and receivables, not profit, under certain collectibility. With collection 10, the cash path remains nonnegative through principal repayment and reaches 2 immediately before the dividend; the planned dividend 8 needs 6 additional funding. Both proposed repairs act before declaration/payment and have distinct liability/equity consequences. No claim is made that zero ending cash certifies future solvency or lawful distribution.",
+    "error_detection": "The balanced wrong-revenue receipt correctly demonstrates cancellation between excess profit and excess receivables in an indirect bridge. Balanced journals, equity identities and matching cash totals cannot establish recognition or completeness. A wrong borrowing cash tag can preserve ending cash while overstating CFO and understating CFF; separate evidence and a correctly defined indirect bridge can expose it.",
+    "value_and_scope": "Book equity, liquidation residual, current assets and dated payment capacity are distinguished. The hypothetical sale-value example is not a market valuation estimate. The accounting arithmetic does not silently assert that simplified subtotals are IFRS-defined operating profit."
+  },
+  "independent_numerical_results_kcu": {
+    "opening": {
+      "assets": 216,
+      "liabilities": 110,
+      "equity": 106
+    },
+    "closing": {
+      "cash": 69,
+      "receivables": 45,
+      "inventory": 45,
+      "prepaid_insurance": 8,
+      "equipment_cost": 152,
+      "accumulated_depreciation": 33,
+      "net_equipment": 119,
+      "current_assets": 167,
+      "trade_payables": 30,
+      "wages_payable": 6,
+      "interest_payable": 2,
+      "customer_advances": 12,
+      "debt": 93,
+      "current_debt": 21,
+      "noncurrent_debt": 72,
+      "current_liabilities": 71,
+      "assets": 286,
+      "liabilities": 143,
+      "share_capital": 100,
+      "retained_earnings": 43,
+      "equity": 143
+    },
+    "income": {
+      "revenue": 190,
+      "COGS": 95,
+      "gross_profit": 95,
+      "wages": 40,
+      "insurance": 4,
+      "rent": 12,
+      "depreciation": 9,
+      "trading_before_disposal_interest": 30,
+      "disposal_gain": 1,
+      "interest_expense": 6,
+      "profit": 25
+    },
+    "cash": {
+      "customer_receipts": 177,
+      "supplier_payments": -95,
+      "wage_payments": -38,
+      "insurance_payments": -6,
+      "rent_payments": -12,
+      "interest_payments": -5,
+      "CFO": 21,
+      "CFI": -19,
+      "CFF": 27,
+      "change": 29,
+      "noncash_equipment_note": 18,
+      "opening_operating_nwc": 36,
+      "closing_operating_nwc": 48
+    },
+    "all_cash_prefixes": [
+      40,
+      60,
+      90,
+      65,
+      145,
+      145,
+      145,
+      230,
+      160,
+      172,
+      172,
+      172,
+      134,
+      128,
+      128,
+      116,
+      116,
+      111,
+      111,
+      116,
+      92,
+      92,
+      77,
+      69
+    ],
+    "collection20": {
+      "cash": 4,
+      "receivables": 110,
+      "profit": 25,
+      "CFO": -44,
+      "assets": 286
+    },
+    "collection10_before_repair": {
+      "cash_before_dividend": 2,
+      "unfunded_final_cash": -6,
+      "receivables": 120,
+      "profit": 25,
+      "CFO": -54
+    },
+    "borrow6_repair": {
+      "cash": 0,
+      "assets": 292,
+      "liabilities": 149,
+      "equity": 143,
+      "retained_earnings": 43,
+      "debt": 99,
+      "CFO": -54,
+      "CFI": -19,
+      "CFF": 33
+    },
+    "dividend2_repair": {
+      "cash": 0,
+      "assets": 292,
+      "liabilities": 143,
+      "equity": 149,
+      "retained_earnings": 49,
+      "debt": 93,
+      "CFO": -54,
+      "CFI": -19,
+      "CFF": 33
+    },
+    "alternative_interest": {
+      "CFO": 26,
+      "CFI": -19,
+      "CFF": 22,
+      "cash_change": 29,
+      "opening_nwc_excluding_interest_payable": 37,
+      "closing_nwc_excluding_interest_payable": 50,
+      "indirect_bridge": "25 + 9 - 1 + 6 - (50 - 37) = 26"
+    },
+    "delayed_check": {
+      "cash": 76,
+      "receivables": 38,
+      "profit": 25,
+      "CFO": 28,
+      "cash_change": 36,
+      "assets": 286,
+      "retained_earnings": 43,
+      "current_debt_after_reclassification": 26,
+      "noncurrent_debt_after_reclassification": 67
+    }
+  },
+  "exercise_audit": [
+    {
+      "exercise": 1,
+      "result": "All eight independent transaction vectors preserve change in assets = change in liabilities + change in equity; owner cash and debt enter CFF, delivered cash service and receivable collections enter CFO, note acquisition has no cash, depreciation is noncash and dividends reduce equity without reducing profit."
+    },
+    {
+      "exercise": 2,
+      "result": "Profit 9; retained earnings 23; cash 20; receivables 13; inventory 14; net equipment 27; assets 74 = liabilities 31 + equity 43. Direct and indirect CFO 7, CFI 0, CFF -7 and zero cash change."
+    },
+    {
+      "exercise": 3,
+      "result": "Receipts 60; purchases 47; supplier cash 41; wages 10; insurance 3; interest 3; profit 8; operating NWC increase 9; direct and indirect CFO 3."
+    },
+    {
+      "exercise": 4,
+      "result": "Disposed carrying amount 12, gain 2; gross equipment 115, accumulated depreciation 29, net equipment 86; CFI -6; note 25 noncash; 26 net increase + 7 depreciation + 12 disposed carrying amount - 25 noncash = cash capex 20. Income effect -5 plus indirect adjustments 7 - 2 gives zero CFO."
+    },
+    {
+      "exercise": 5,
+      "result": "CFO 26, CFI -19, CFF 22; total cash change 29. The alternative NWC increase is 13, and profit 25 + depreciation 9 - gain 1 + interest expense 6 - 13 = 26. Adding interest payable again would double-count the adjustment."
+    },
+    {
+      "exercise": 6,
+      "result": "Unfunded cash -6 and CFO -54; independent prefix check confirms 2 cash before the final dividend. Borrowing 6 and choosing dividend 2 both give cash 0, assets 292 and CFF 33; liabilities/equity are respectively 149/143 and 143/149."
+    },
+    {
+      "exercise": 7,
+      "result": "Wrong recognition leaves cash unchanged but overstates AR, profit, assets and retained equity by 5; (P + 5) - (change AR + 5) = P - change AR, including loss/decreasing-AR test values. A loan tagged as CFO overstates CFO and understates CFF by the same 10 without altering their sum."
+    },
+    {
+      "exercise": 8,
+      "result": "Tomorrow funding gaps 0 or 3 depending on collection timing; immediate-sale residual 9 + 15 + 4 + 10 - 20 = 18, compared with book equity 30 under a different scenario."
+    }
+  ],
+  "executable_review": {
+    "independent_postings": 23,
+    "cash_prefixes_including_opening": 24,
+    "temporary_account_closures": 9,
+    "exercise_groups": 8,
+    "CLI": "Ran python3 -B book/scripts/check_v07_c02.py successfully. Its probes cover unrelated working-directory execution, optimized Python, structured input failures and report mutations.",
+    "API": {
+      "status": "passed",
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "strict_JSON_serializable": true
+    },
+    "final_checker_result": {
+      "status": "passed",
+      "checks": [
+        "All baseline statement lines, 18 noncash note, schedules and 17 zero bridge residuals checked against independent references",
+        "Independent rational posting of all 23 events, every cash prefix and all nine temporary-account closures",
+        "Seven collection cases including one exact minor unit, two fully reconciled funding repairs and answered delayed check",
+        "Disposal loss, zero gain and positive gain: entire proceeds remain investing and operating cash stays 21",
+        "All eight exercise solutions, stock-flow signs, alternative interest classification and counterexample arithmetic independently recomputed",
+        "Balanced wrong-revenue receipt demonstrably passes all numeric bridges; separate supplied transaction reference detects the error",
+        "37 malformed/unsupported input cases rejected, including wrong cash categories, unfunded final cash and too-late funding",
+        "Portable normal and optimized CLI equal quiet API; structured failure exit, duplicate fields, nonfinite JSON and oversize file rejected",
+        "Four report mutations caught; HTML fragment has three worked examples, eight matched solutions, answered prompts and flat artifact routes"
+      ],
+      "counts": {
+        "events": 23,
+        "collection_cases": 7,
+        "disposal_cases": 3,
+        "invalid_contracts": 37,
+        "invalid_file_encodings_or_size": 4,
+        "report_mutations_caught": 4,
+        "worked_examples": 3,
+        "exercises": 8,
+        "source_proposals": 5
+      },
+      "limitations": [
+        "This is a bounded numerical/structural author check, not external accounting certification or documentary audit.",
+        "Cash classification, recognition, units and maturities are supplied case conventions; current jurisdictional compliance is not inferred.",
+        "Balanced wrong-account entries can pass all statement identities; the counterexample is intentionally preserved.",
+        "Visual, mobile and print UI QA remains pending; this checker makes no visual claim."
+      ]
+    },
+    "code_scope": "Inspected full benchmark/checker. Bounded schema, exact decimal-to-integer conversion, cash-direction and schedule consistency, no-overdraft prefixes and non-removable validation paths are appropriate for the stated fixed model. The separate input-reference check correctly detects the deliberately balanced wrong-account entry which all arithmetic residuals permit."
+  },
+  "primary_source_inspections": [
+    {
+      "id": "v07-c02-ias7-overview",
+      "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/",
+      "checked": "2026-10-08",
+      "actual_scope": "Read public About and Standard history sections: three cash-flow activities, direct/indirect distinction, separate disclosure of noncash investing/financing, reconciliation to balance-sheet cash, and the April 2024 IFRS 18-related amendments. Public overview only; full normative standard not inspected."
+    },
+    {
+      "id": "v07-c02-ifrs18-date",
+      "url": "https://www.ifrs.org/news-and-events/news/2024/04/new-ifrs-accounting-standard-will-aid-investor-analysis-of-companies-financial-performance/",
+      "checked": "2026-10-08",
+      "actual_scope": "Read April 2024 official issuance announcement, including effective annual reporting periods beginning on or after 1 January 2027, permitted earlier application, replacement of IAS 1 and subscriber access statement. Supports the manuscript date without asserting universal jurisdictional adoption."
+    },
+    {
+      "id": "v07-c02-ifrs18-cash",
+      "url": "https://www.ifrs.org/content/dam/ifrs/publications/amendments/english/2024/effect-analysis-ifrs18-april2024.pdf",
+      "checked": "2026-10-08",
+      "actual_scope": "Read document identity/scope on printed page 2 and section 2.5/Table 4 on printed page 27 (PDF index 26): change in the indirect starting subtotal and interest/dividend classifications, with specified-main-business distinctions. Table explicitly distinguishes the before/after categories. This is explanatory material accompanying, not comprising, the Standard. Text/table extraction inspected; no visual-layout review claimed."
+    }
+  ],
+  "source_record_review": "All five proposed records and their chapter citation uses were inspected. Fresh primary retrieval in this peer pass covered the three IFRS records above. SEC overview and staff-statement records retain their limited, dated author-inspection scope; this peer pass does not claim a second full retrieval of those SEC bodies.",
+  "hashes": {
+    "content/chapters/v07-c02.html": {
+      "sha256": "eb566c09d23bb100b66998127d3526f8178a82b2017313a30f3660520776a5c7",
+      "bytes": 44809
+    },
+    "content/projects/v07-c02-inputs.json": {
+      "sha256": "e1e1e1592d7dcd624cb4e4f76f00b75ea3715e5b2ce10e198e69fed8b78a7695",
+      "bytes": 9480
+    },
+    "content/projects/v07-c02-analysis.py": {
+      "sha256": "8853ec6dd8f21b8ef7e6def310c6c7188cff131b355b9310903bc8b97cc9399e",
+      "bytes": 16113
+    },
+    "content/projects/v07-c02-README.txt": {
+      "sha256": "c7e50579d27f0fe3198fda621aed55bc7bfcf28b92ba0a3d6975553be868bf4b",
+      "bytes": 8227
+    },
+    "scripts/check_v07_c02.py": {
+      "sha256": "4cdaf83a99bbfbed3415186a94485dfce94fdf675103c77b366c1038b1296eff",
+      "bytes": 19436
+    },
+    "content/reviews/v07-c02-sources.json": {
+      "sha256": "344e454c4f2d870a6743284b5a6a0f4a435a1353a9c5c67c3c86d994b22015bd",
+      "bytes": 4971
+    },
+    "content/reviews/v07-c02-author.json": {
+      "sha256": "380c16cf81184acb997127b3ea1e649dad1df7d2a6e2e950c5f34e436d7301ee",
+      "bytes": 9469
+    }
+  },
+  "hash_note": "The author record contains the pre-copyedit chapter hash 53797a3969e1518d60f995b7e7d81b402fe597ae963911dd0a8279c31f99d1d7. The coordinator applied only the reviewed answer-spacing correction and will record that edit in the combined acceptance review. This peer record covers the final chapter hash shown above; the older author hash is not represented as covering the new bytes. All other author payload hashes remain unchanged.",
+  "limitations": [
+    "This is an independent specialist numerical and conceptual review, not documentary audit, legal advice, standards compliance certification or external academic accreditation.",
+    "Synthetic ledger facts, collectibility, measurement, tax exclusions, maturities and payment order are maintained case inputs. Future liquidity and genuine recognition require evidence beyond statement identities.",
+    "Full subscription-only IFRS normative provisions were not inspected; actual source checks are limited to the identified public primary material.",
+    "Shared build, library-wide checks, acceptance and publication remain coordinator-owned. Visual/mobile/print QA remains pending."
+  ]
+}

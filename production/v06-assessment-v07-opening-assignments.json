@@ -1,7 +1,7 @@
 {
   "batch": "v06-assessment-v07-opening",
   "date": "2026-10-08",
-  "state": "queued-until-closing-batch-published",
+  "state": "authoring",
   "authorization": "Explicit user authorization for coordinator plus three specialist agents; full216chapter goal remains active.",
   "workflow": [
     "No child agents, shared-file edits or publishing; coordinator alone owns canonical state, source catalogue, shared verifier and hosting.",
@@ -23,19 +23,20 @@
     {
       "owner": "root",
       "task": "v06-assessment",
-      "state": "queued",
+      "state": "accepted-awaiting-publication",
       "owned_paths": [
         "content/assessments/v06.html",
         "content/projects/v06-assessment-*",
         "scripts/check_v06_assessment.py",
         "content/reviews/v06-assessment.json"
       ],
-      "fixed_scope": "Complete Volume6 package after its12accepted chapters: prerequisite diagnostic with answers/remediation, two distinct original100point written exams with explicit closed/open-resource rules and full solutions/scoring, meaningful integrative synthetic macro/fiscal/external project with documented inputs and complete benchmark/instructor guide, criterion rubric, delayed retention/oral transfer with answers, notation-index, concept-index and volume-synthesis IDs. Reconcile national accounts, at least one behavioral stabilization/growth mechanism, debt and external financing under declared compatible conventions. Include all12chapter capability domains across diagnostic/forms/project/retention and a coverage matrix. State authored timing/thresholds are not institutional standards. Independent arithmetic/derivation review and full structural gates before volume acceptance."
+      "fixed_scope": "Complete Volume6 package after its12accepted chapters: prerequisite diagnostic with answers/remediation, two distinct original100point written exams with explicit closed/open-resource rules and full solutions/scoring, meaningful integrative synthetic macro/fiscal/external project with documented inputs and complete benchmark/instructor guide, criterion rubric, delayed retention/oral transfer with answers, notation-index, concept-index and volume-synthesis IDs. Reconcile national accounts, at least one behavioral stabilization/growth mechanism, debt and external financing under declared compatible conventions. Include all12chapter capability domains across diagnostic/forms/project/retention and a coverage matrix. State authored timing/thresholds are not institutional standards. Independent arithmetic/derivation review and full structural gates before volume acceptance. The project MUST also contain a documented actual U.S. historical data packet available by30January2025 (official archived BEA/BLS releases), with reference/release dates, units, frequency, adjustment, vintage, provenance and rounding/revision limits. Learners produce a bounded country diagnostic and separate conditional synthetic scenarios; no calibration or identification claim follows from descriptive observations. This preserves the canonical dated-data requirement.",
+      "canonical_project_requirement": "Produce a country diagnostic using dated macro data, competing models, scenarios and a policy memo that distinguishes identification from forecasting."
     },
     {
       "owner": "regression",
       "task": "economics-core",
-      "state": "queued",
+      "state": "accepted-awaiting-publication",
       "canonical_specification": {
         "id": "economics-core",
         "title": "Economics core examination",
@@ -66,7 +67,7 @@
     {
       "owner": "causal_identification",
       "task": "v07-c01",
-      "state": "queued",
+      "state": "accepted-awaiting-publication",
       "canonical_specification": {
         "title": "Transactions and double-entry accounting",
         "outcome": "Record transactions and preserve the accounting equation.",
@@ -96,7 +97,7 @@
     {
       "owner": "monte_carlo",
       "task": "v07-c02",
-      "state": "queued",
+      "state": "accepted-awaiting-publication",
       "canonical_specification": {
         "title": "Balance sheet, income statement and cash flow",
         "outcome": "Explain and reconcile the three principal statements.",
@@ -122,6 +123,261 @@
         "content/reviews/v07-c02-sources.json"
       ],
       "fixed_scope": "Teach and fully reconcile balance sheet, income statement and cash flow statement across opening/current/closing periods using a coherent original business case. Explain assets/liabilities/equity, revenue/expense versus owner cash movements, retained earnings, operating/investing/financing cash classification under a stated convention, and direct/indirect operating-cash reconciliation including working capital and noncash expense taught before use. At least2substantiveworked examples and8completeoriginalsolutions plus a stdlib three-statement benchmark with all stocks/flows checked. Distinguish book from market values and profit from liquidity; actual dated primary sources for jurisdictional/classification claims. Coordinate prerequisite chart/timing with c01; defer sophisticated recognition, leases and tax cases to their planned chapters."
+    },
+    {
+      "owner": "monte_carlo",
+      "task": "v07-c03",
+      "state": "accepted-awaiting-publication",
+      "canonical_specification": {
+        "id": "v07-c03",
+        "number": 3,
+        "title": "Revenue, working capital and operating cycles",
+        "outcome": "Model operating cash needs and distinguish reported sales from cash collection.",
+        "coverage": [
+          "Receivables",
+          "inventory",
+          "payables",
+          "revenue timing",
+          "cash conversion cycle",
+          "allowances"
+        ],
+        "prerequisites": [
+          "v07-c02"
+        ],
+        "level": "Undergraduate",
+        "status": "planned",
+        "manuscript": "chapters/v07-c03.html",
+        "sources": [
+          "mit-finance",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "owned_paths": [
+        "content/chapters/v07-c03.html",
+        "content/projects/v07-c03-*",
+        "scripts/check_v07_c03.py",
+        "content/reviews/v07-c03-author.json",
+        "content/reviews/v07-c03-sources.json"
+      ],
+      "fixed_scope": "Complete revenue, working capital and operating cycles chapter with original coherent business case, at least2substantialworked examples and8fully solved exercises, answered teach-back/retention, source scope and exact numerical review. Teach receivables/inventory/payables rollforwards, cash conversion cycle and denominators, revenue versus collection and advances, inventory purchase/COGS versus supplier cash, bad-debt allowance/writeoff/recovery and net receivables under explicitly scoped conventions. Include a reproducible stdlib operating cash/working-capital benchmark with opening/current/closing balance reconciliation, seasonal/growth/negative-cycle interpretation, accrual profit versus cash and customer/supplier financing trade-offs. Use actual primary accounting/teaching sources for dated recognition claims; do not imply all fictional conventions satisfy all current GAAP/IFRS rules. Prerequisite c02 authored but not accepted: draft against saved c01/c02, acceptance follows root review. No shared edits/hosting/child agents. Send early original model ledger and checkable anchors before full drafting; own only listed prefixed paths."
+    },
+    {
+      "owner": "regression",
+      "task": "v07-c04",
+      "state": "assigned",
+      "canonical_specification": {
+        "id": "v07-c04",
+        "number": 4,
+        "title": "Long-lived assets and investment accounting",
+        "outcome": "Track asset investment and distinguish accounting expense from economic depreciation.",
+        "coverage": [
+          "Capitalization",
+          "depreciation",
+          "amortization",
+          "impairment",
+          "disposals",
+          "investment assets"
+        ],
+        "prerequisites": [
+          "v07-c03"
+        ],
+        "level": "Undergraduate",
+        "status": "planned",
+        "manuscript": "chapters/v07-c04.html",
+        "sources": [
+          "mit-finance",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "owned_paths": [
+        "content/chapters/v07-c04.html",
+        "content/projects/v07-c04-*",
+        "scripts/check_v07_c04.py",
+        "content/reviews/v07-c04-author.json",
+        "content/reviews/v07-c04-sources.json"
+      ],
+      "fixed_scope": "Complete Long-lived assets and investment accounting. Teach capitalization versus period expense under explicit recognition criteria and dated source scope, gross cost/accumulated depreciation/carrying amount rollforwards, straight-line and usage-based depreciation with residual/useful-life changes prospectively under a stipulated convention, amortization/intangible boundaries, impairment versus depreciation/disposal and accounting versus economic depreciation. Include investment-asset classification/measurement distinctions (operating property, investment property and financial claims) without implying one rule fits all frameworks. Original coherent asset lifecycle and exact standard-library schedules; >=2substantiveworked examples, >=8fullysolvedexercises including capitalization/cashflow contrast, change estimate, disposal gain/loss and impairment limits; answered teachback/retention, actual primary-source records and numerical/logic review. Do not reproduce source examples, make jurisdiction-free GAAP/IFRS claims, or require advanced valuation untaught yet; supplied future values/discounts use accepted foundation tools. Read c01/c02 and c03draft prerequisites. Send early model/units/timing/numerical anchors. Author-only files, no shared edits/hosting/children; acceptance follows c03."
+    },
+    {
+      "owner": "monte_carlo",
+      "task": "v07-c05",
+      "state": "assigned",
+      "canonical_specification": {
+        "id": "v07-c05",
+        "number": 5,
+        "title": "Debt, leases and financing obligations",
+        "outcome": "Analyze financing obligations and their effects on performance and cash flow.",
+        "coverage": [
+          "Borrowing",
+          "interest",
+          "leases",
+          "covenants",
+          "commitments",
+          "effective interest",
+          "disclosure"
+        ],
+        "prerequisites": [
+          "v07-c04"
+        ],
+        "level": "Undergraduate",
+        "status": "planned",
+        "manuscript": "chapters/v07-c05.html",
+        "sources": [
+          "mit-finance",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "owned_paths": [
+        "content/chapters/v07-c05.html",
+        "content/projects/v07-c05-*",
+        "scripts/check_v07_c05.py",
+        "content/reviews/v07-c05-author.json",
+        "content/reviews/v07-c05-sources.json"
+      ],
+      "fixed_scope": "Complete Debt, leases and financing obligations chapter. Teach borrowing recognition and loan/bond amortized carrying-value rollforwards, cash coupon versus effective interest and principal, discount/premium and upfront transaction-cost assumptions, lease payment present value and right-of-use/liability schedules under a clearly stipulated lessee convention, cash versus expense, covenants/commitments/disclosure and refinancing/liquidity implications. Define dates, units, borrower, contractual versus effective rates, cash-flow classification and amortization conventions explicitly; distinguish IFRS and US GAAP only within actually inspected dated primary evidence and do not generalize fictional covenants or lease mechanics into current jurisdictional advice. At least two substantive original worked cases (three useful here), eight complete original prompt/solution pairs, answered teach-back and retention, pedagogically meaningful boundary cases, source-scope notes and small standard-library benchmark with documented inputs and complete liability/cash/interest reconciliations. Reuse accepted c01/c02/c03 accounting interfaces and draft c04 against its fixed capital/depreciation contract; acceptance awaits c04. Send early numerical outline before writing. Keep checker proportional to financial logic and a few meaningful failure modes. Save manuscript when linked project assets/source proposals are also ready, notify root so canonical draft can be set. No shared edits, hosting or child agents; final author record includes hashes."
+    },
+    {
+      "owner": "causal_identification",
+      "task": "v07-c06",
+      "state": "assigned",
+      "canonical_specification": {
+        "id": "v07-c06",
+        "number": 6,
+        "title": "Equity, consolidation and ownership",
+        "outcome": "Trace equity claims and distinguish ownership, control and reported group results.",
+        "coverage": [
+          "Share capital",
+          "retained earnings",
+          "dilution",
+          "minority interests",
+          "consolidation concepts",
+          "buybacks"
+        ],
+        "prerequisites": [
+          "v07-c05"
+        ],
+        "level": "Undergraduate",
+        "status": "planned",
+        "manuscript": "chapters/v07-c06.html",
+        "sources": [
+          "mit-finance",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "owned_paths": [
+        "content/chapters/v07-c06.html",
+        "content/projects/v07-c06-*",
+        "scripts/check_v07_c06.py",
+        "content/reviews/v07-c06-author.json",
+        "content/reviews/v07-c06-sources.json"
+      ],
+      "fixed_scope": "Complete Equity, consolidation and ownership chapter. Teach owner contributions/distributions, share capital/additional paid-in capital/retained earnings and treasury-share conventions, dilution versus transfers of value and book versus market values. Distinguish percentage ownership, voting/control and economic claims within dated inspected primary-source scope. Build a fully reconciled original simple parent/subsidiary group case: acquisition-date investment elimination, identifiable net assets, explicitly stipulated goodwill and noncontrolling-interest measurement, post-acquisition profit attribution, dividends and intragroup balances/transactions with actual elimination reasoning. Avoid untaught complex consolidation/tax/fair-value assertions; introduce every required concept and clearly state exclusions. Include at least three substantial original worked cases, eight complete original exercises/solutions, answered teach-back and retention, sources and proportionate exact standard-library benchmark/input/README. Check company and group equity/cash equations separately; show why subsidiary revenue cannot simply be multiplied by ownership percentage when consolidated. No claim that all ownership stakes require full consolidation; control conditions are substantive. Draft against saved c01-c03 and fixed c04/c05 contracts; acceptance follows c05. Send original early share/acquisition numerical outline before writing. Only listed paths; no shared edits, hosting or children. Save chapter with its referenced assets/source proposals ready, notify root and deliver complete author review plus final hashes."
+    }
+  ],
+  "opening_prerequisites": "All v06chapters accepted/published at f88bdbf2ae239bd23e6abdf94b02d4c1293e4817; Volume6assessment pending. v07-c01 canonical prerequisite v01 accepted; c02acceptance requires c01.",
+  "peer_reviews": [
+    {
+      "owner": "causal_identification",
+      "task": "v06-assessment-form-a-review",
+      "state": "passed",
+      "owned_paths": [
+        "content/reviews/v06-assessment-peer-a.json"
+      ],
+      "fixed_scope": "Read the saved Volume6 diagnostic, all20FormA parts and solutions, project JSON and benchmark source. Independently recompute every determinate FormA result and inspect assumptions/globality/units/timing/causal distinctions. Review model reconciliation including domestic public interest and external funding, and historical metadata as documented; no primary factual verification claim beyond sources actually inspected. Do not edit manuscript/data/code/shared files. Report concrete errors immediately; save scoped review with calculations and hashes of reviewed files. FormB/project prose are still being authored by root and outside this pass."
+    },
+    {
+      "owner": "monte_carlo",
+      "task": "v07-c01-peer-review",
+      "state": "passed",
+      "owned_paths": [
+        "content/reviews/v07-c01-peer.json"
+      ],
+      "fixed_scope": "Independently audit entire completed c01 chapter, all worked cases/eight solutions/retention, journal and benchmark/checker/source-scope records. Recompute key accounts and conceptual definitions, recognition versus balanced posting, reversal and closing. Do not edit author files/shared files; report concrete errors immediately and save scoped review with exact final reviewed hashes. User-interface visual checks are outside scope."
+    },
+    {
+      "owner": "monte_carlo",
+      "task": "v06-assessment-form-b-review",
+      "state": "passed",
+      "owned_paths": [
+        "content/reviews/v06-assessment-peer-b.json"
+      ],
+      "fixed_scope": "Independently audit all20FormB questions/solutions in root assessment. Recompute every determinate result, globality/branches, units/timing, cross-references and causal distinctions. Root will continue project prose; review only FormB. No edits to manuscript/shared/code; report concrete corrections and record exact section hash. May reuse accepted chapter instruction but record inspected scope honestly."
+    },
+    {
+      "owner": "causal_identification",
+      "task": "v06-assessment-project-review",
+      "state": "passed",
+      "owned_paths": [
+        "content/reviews/v06-assessment-peer-project.json"
+      ],
+      "fixed_scope": "Independently audit the now-complete project prompt/instructor guide, source metadata and dated transformations, rubrics, four oral prompts, six retention questions/answers, indices/synthesis. Read actual four archived BEA/BLS primary releases where source facts are claimed. Recompute all guide tables, concrete G=100/3 funding repair, changed closingFX oral and six retention answers; check domain/accounting/behavioral closure and criterion coherence. Own review only; do not edit root/shared files. Record exact reviewed section hash and any unresolved issue, excluding UI QA."
+    },
+    {
+      "owner": "causal_identification",
+      "task": "v07-c02-peer-review",
+      "state": "passed",
+      "owned_paths": [
+        "content/reviews/v07-c02-peer.json"
+      ],
+      "fixed_scope": "Audit full completed c02 manuscript/all3worked/eight solvedexercises/retention, inputledger, benchmark/checker and sourcescope. Independently recompute all statement and cashflow bridges, alternate interest classification, disposals/noncash notes and financing repairs; inspect whether every transaction and definition is taught and coherent. Actual current IFRS18date claims require official source spot check; source fullnormative access limitation preserved. Own review only; do not edit author/sharedfiles. Report concrete findings immediately, record final exact reviewedhashes and scope. UIQA excluded."
+    },
+    {
+      "owner": "causal_identification",
+      "task": "economics-core-exams-peer",
+      "state": "passed",
+      "owned_paths": [
+        "content/reviews/economics-core-peer-exams.json"
+      ],
+      "fixed_scope": "Read and independently solve all40written FormA/FormB parts and full solutions/rubrics in economics-core, plus diagnostic/remediation/oral/retention where final. Verify global choices, equilibrium/payoff feasibility, dated accounts, finite NK branches, exact randomization and causal distinctions. Root audits practical/terminal ledger/code separately. Author is finalizing only practical terminal settlement and full hashes; coordinate any final prompt edits directly. Review only, no author/shared edits. Report concrete corrections promptly, record final reviewed section hashes and unreviewed scope. No external human certification or UIQA claim."
+    },
+    {
+      "owner": "causal_identification",
+      "task": "v07-c03-peer-review",
+      "state": "assigned",
+      "owned_paths": [
+        "content/reviews/v07-c03-peer.json"
+      ],
+      "fixed_scope": "Independently read and recompute all3worked/eight exercise solutions/retention in c03, especially gross/net receivable allowance-writeoff-recovery bridges, advance revenue timing, inventory/AP supplier cash, cycle denominators versus actualcalendarfunding, supplierdiscount/credit decisions and changedallowance ratio counterexample. Read actual linked lab/inputs/README/source scope; use independent primitiveledgers and boundary checks. Author finishing targeted checker and prose spacing; coordinate final reviewedhashes after authorfreeze. Own reviewonly; no author/shared edits. Cite actual primary-body inspection only for bodies actually opened. UIQA and realdocumentverification excluded."
     }
   ]
 }

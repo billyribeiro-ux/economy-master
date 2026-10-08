@@ -1,0 +1,112 @@
+{
+  "chapter": "v07-c01",
+  "title": "Transactions and double-entry accounting",
+  "status": "author-review-passed",
+  "review_type": "Author mathematical, instructional and executable audit; coordinator acceptance remains separate.",
+  "coverage": {
+    "worked_examples": 3,
+    "exercises": 8,
+    "solutions": 8,
+    "answered_teach_back": true,
+    "answered_delayed_check": true,
+    "parsed_words": 5752
+  },
+  "checks": {
+    "chapter": "v07-c01",
+    "status": "passed",
+    "checks": [
+      "Three worked examples, eight complete solutions, answered teach-back/retention, three scoped sources and four flat downloads",
+      "All 20 posting prefixes independently recomputed; full unadjusted, adjusted, post-closing and wage-followup vectors checked",
+      "Trial balance, total assets, liabilities, profit, closing equity and contra-asset totals independently reconciled",
+      "All numerical exercise/retention anchors, cash funding timing and depreciation residual bound recalculated",
+      "Balanced classification/omission limits, correcting entry, loss/deficit and infeasible cash-plan demonstrations",
+      "Independent wage-route aggregation, monetary-scale cases and deliberately wrong report detection",
+      "Quiet strict-JSON API, exact preserved output, portable normal/optimized CLI and malformed-input rejection"
+    ],
+    "posting_prefixes": 20,
+    "wage_settlement_cases": 31,
+    "monetary_scale_cases": 8,
+    "invalid_api_cases": 33,
+    "invalid_cli_cases": 36,
+    "rejected_report_mutations": 4,
+    "parsed_words": 5752,
+    "input_sha256": "194830cac3a04d7836d37b1239c94fae7a75b7d9d5322955ca3a976abd8ded40",
+    "limitations": [
+      "Synthetic arithmetic under supplied historical-cost/accrual conventions; no empirical, tax or jurisdictional reporting conclusion.",
+      "Balance checks cannot establish recognition, completeness, authorization, current value or actual funding; prose/evidence judgments require editorial review.",
+      "No visual/mobile/print QA, external human certification, shared acceptance or publication is claimed."
+    ]
+  },
+  "review_notes": [
+    "The reporting entity, January 2025 period, USD/cents conversion, synthetic provenance and explicit accrual/historical-cost conventions precede the ledger. Every numerical amount is supplied by original facts; no actual company observation or current jurisdictional compliance assertion is made.",
+    "Debit/credit are ledger sides tied to account classes. The expanded accounting equation and zero-sum invariant are derived. Contra assets are distinct from liabilities, dividends from expense, and retained earnings from cash. Total assets after depreciation are distinguished from net assets meaning assets minus liabilities.",
+    "Three fully worked cases develop 11 transactions, six adjustments, full adjusted trial balance, three closing entries and direct versus reversed wage settlement. Independent column aggregation verifies every posting prefix and the full balance vectors. Cash 5300, adjusted profit 2176, assets 11600, liabilities 3824, equity 7776 and retained earnings 1776 reconcile.",
+    "Book-effective dates and preparation/recording dates are separate. The January close prepared February 2 and the February 1 effective reversal do not claim knowledge on February 1. An optional reversal never discharges the actual payable; interim reporting must restore the obligation as appropriate.",
+    "Original exercises 1–7 have been solved independently against their exact prompts. Entries, changes in balances, closing arithmetic, corrected errors, mixed reversal failure, capped straight-line depreciation and funding timing agree. Exercise 8 supplies a full induction/invariance argument, a quantified unperformed-service counterexample and explicit evidence-based evaluation criteria. Teach-back and delayed check are answered.",
+    "The executable is a posting/reconciliation benchmark, not recognition software. Tests deliberately retain balanced capital/revenue misclassification and a whole omitted dividend, then show their economic errors. A correcting entry restores full snapshots. Retained deficits are allowed; negative Cash is flagged and the proposed plan requires actual financing under the no-overdraft convention.",
+    "The checker uses independent dollar anchors, per-account column aggregation, 31 separately verified wage settlements, eight monetary scaling cases, 33 invalid API cases, 36 invalid CLI cases and four intentionally wrong report mutations. Quiet strict-JSON check(), preserved output and default-path CLI from a different directory pass, including normal and optimized Python for the benchmark.",
+    "Inspected actual primary teaching and publisher sources: Kothari Part I June 2004, Part II June 2003 hosted in Summer 2004, and the public March 2018 IFRS Framework project summary. Inspection locations and limits are preserved in the three source records; an inaccessible full Framework is not represented as read. No source worked business or copyrighted exercise is reproduced.",
+    "Volume 1 prerequisite status is accepted. The manuscript links to v01-c04 and now-written v07-c02. Four project downloads use flat names. The c02 author confirmed compatible debit-positive sign, contra-asset and closing conventions while using a separate original trading-company case."
+  ],
+  "resolved_authoring_issues": [
+    {
+      "severity": "terminology",
+      "issue": "Initial prose used net assets for the total asset carrying amount after accumulated depreciation, risking confusion with assets minus liabilities.",
+      "resolution": "Replaced those instances with total assets after depreciation; explicitly reserved net assets for assets minus liabilities = equity. Adjusted exercise 2, README and checker labels; no amounts changed."
+    },
+    {
+      "severity": "timing precision",
+      "issue": "The optional February 1 reversal can be prepared only when the January close is prepared on February 2.",
+      "resolution": "Preserved separate effective and recorded dates, and generated followup recorded dates no earlier than close preparation; both routes still give expense 350 and cash 4700."
+    },
+    {
+      "severity": "instruction precision",
+      "issue": "Exercise 7 funding request could be read as covering only wages rather than the full stated payment plan.",
+      "resolution": "Prompt now explicitly asks for funding before wages to carry out all planned payments, yielding 150 USD."
+    },
+    {
+      "severity": "source precision",
+      "issue": "The adjustment PDF is dated 2003 although hosted in a Summer 2004 course; a summary is not the full IFRS Framework.",
+      "resolution": "Source title and verification identify both date/host and the exact public summary actually inspected. No modern reporting-standard claim is inferred."
+    }
+  ],
+  "unresolved_findings": [],
+  "sha256": {
+    "content/chapters/v07-c01.html": "87ddd8a6ceb5fba51fc3a533d64ff9f59520db315984c3fb132d347ec809b886",
+    "content/projects/v07-c01-transactions.json": "194830cac3a04d7836d37b1239c94fae7a75b7d9d5322955ca3a976abd8ded40",
+    "content/projects/v07-c01-ledger.py": "3fab0232da397a337945c1b3754e4793de1c29308c66cf7304bcb1980102177c",
+    "content/projects/v07-c01-output.json": "83961d96573a92613c866427fdd1a88051bda5a5b5ce8572b329d30902ed90bd",
+    "content/projects/v07-c01-README.txt": "9147ce71520e323a08269f2692347b2f634f6bd8788d45252b101fc685e3428e",
+    "scripts/check_v07_c01.py": "7cfa18f90e8981ae80731bdacdf96af1b1e322caec78e7618cc73fdc5d24af8b",
+    "content/reviews/v07-c01-sources.json": "e4338fa1a518a7a8be3f2021c3b6b98656f47e4a93a26ddcde292cbb5336067d"
+  },
+  "limitations": [
+    "Synthetic arithmetic under supplied historical-cost/accrual conventions; no empirical, tax or jurisdictional reporting conclusion.",
+    "Balance checks cannot establish recognition, completeness, authorization, current value or actual funding; prose/evidence judgments require editorial review.",
+    "No visual/mobile/print QA, external human certification, shared acceptance or publication is claimed.",
+    "Recognition, measurement, source evidence and legal authority are maintained facts in this introductory fictional case. The program does not infer them from account names, nor does it verify real documents.",
+    "The wage helper covers full settlement of one nonnegative prior accrual; partial payments, taxes and a complete February close are outside its contract.",
+    "Author review is not independent professional accounting assurance or external human academic certification; root retains full manuscript acceptance, shared integration and publication."
+  ],
+  "acceptance": "Complete authored package submitted for coordinator review; no canonical acceptance, shared build or publication changed by this agent.",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "owned_files": [
+    "content/chapters/v07-c01.html",
+    "content/projects/v07-c01-transactions.json",
+    "content/projects/v07-c01-ledger.py",
+    "content/projects/v07-c01-output.json",
+    "content/projects/v07-c01-README.txt",
+    "scripts/check_v07_c01.py",
+    "content/reviews/v07-c01-sources.json",
+    "content/reviews/v07-c01-author.json"
+  ],
+  "review_gates": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  }
+}

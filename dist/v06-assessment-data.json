@@ -1,0 +1,30 @@
+{
+  "schema": "v06-assessment-1",
+  "information_cutoff": "2025-01-30T08:30:00-05:00",
+  "provenance": "Original teaching compilation of selected rounded facts in the cited public BEA and BLS releases. Historical release vintages are frozen; these are not October 2026 estimates. No complete release is reproduced. Network access is unnecessary for the supplied exercises.",
+  "observations": [
+    {"id":"real_gdp_q4", "value":"2.3", "unit":"percent annualized quarter-on-quarter", "period":"2024-Q4", "frequency":"quarterly", "adjustment":"seasonally adjusted", "release":"2025-01-30", "vintage":"advance estimate", "source":"https://www.bea.gov/news/2025/gross-domestic-product-4th-quarter-and-year-2024-advance-estimate"},
+    {"id":"nominal_gdp_q4", "value":"4.5", "unit":"percent annualized quarter-on-quarter", "period":"2024-Q4", "frequency":"quarterly", "adjustment":"seasonally adjusted", "release":"2025-01-30", "vintage":"advance estimate", "source":"https://www.bea.gov/news/2025/gross-domestic-product-4th-quarter-and-year-2024-advance-estimate"},
+    {"id":"real_gdp_year", "value":"2.8", "unit":"percent annual-average level change", "period":"2024", "frequency":"annual", "adjustment":"annual aggregate", "release":"2025-01-30", "vintage":"advance annual estimate", "source":"https://www.bea.gov/news/2025/gross-domestic-product-4th-quarter-and-year-2024-advance-estimate"},
+    {"id":"payroll_change", "value":"256000", "unit":"jobs, change from previous month", "period":"2024-12", "frequency":"monthly", "adjustment":"seasonally adjusted", "release":"2025-01-10", "vintage":"December initial establishment survey estimate in January release", "source":"https://www.bls.gov/news.release/archives/empsit_01102025.htm"},
+    {"id":"unemployment", "value":"4.1", "unit":"percent of civilian labor force", "period":"2024-12", "frequency":"monthly", "adjustment":"seasonally adjusted", "release":"2025-01-10", "vintage":"household survey, January release", "source":"https://www.bls.gov/news.release/archives/empsit_01102025.htm"},
+    {"id":"participation", "value":"62.5", "unit":"percent of civilian noninstitutional population age 16 and over", "period":"2024-12", "frequency":"monthly", "adjustment":"seasonally adjusted", "release":"2025-01-10", "vintage":"household survey, January release", "source":"https://www.bls.gov/news.release/archives/empsit_01102025.htm"},
+    {"id":"employment_population", "value":"60.0", "unit":"percent of civilian noninstitutional population age 16 and over", "period":"2024-12", "frequency":"monthly", "adjustment":"seasonally adjusted", "release":"2025-01-10", "vintage":"household survey, January release", "source":"https://www.bls.gov/news.release/archives/empsit_01102025.htm"},
+    {"id":"cpi_month", "value":"0.4", "unit":"percent month-on-month CPI-U change", "period":"2024-12", "frequency":"monthly", "adjustment":"seasonally adjusted", "release":"2025-01-15", "vintage":"January release", "source":"https://www.bls.gov/news.release/archives/cpi_01152025.htm"},
+    {"id":"cpi_year", "value":"2.9", "unit":"percent 12-month CPI-U change", "period":"2024-12", "frequency":"monthly observation of annual change", "adjustment":"not seasonally adjusted", "release":"2025-01-15", "vintage":"January release", "source":"https://www.bls.gov/news.release/archives/cpi_01152025.htm"},
+    {"id":"current_account_q3", "value":"-310.9", "unit":"billion current USD for the quarter, not annualized", "period":"2024-Q3", "frequency":"quarterly", "adjustment":"seasonally adjusted", "release":"2024-12-18", "vintage":"preliminary Q3 headline", "source":"https://www.bea.gov/news/2024/us-international-transactions-3rd-quarter-2024"},
+    {"id":"current_account_q2_revised", "value":"-275.0", "unit":"billion current USD for the quarter, not annualized", "period":"2024-Q2", "frequency":"quarterly", "adjustment":"seasonally adjusted", "release":"2024-12-18", "vintage":"revised Q2, Table A", "source":"https://www.bea.gov/sites/default/files/2024-12/trans324.pdf"},
+    {"id":"current_account_q2_previous", "value":"-266.8", "unit":"billion current USD for the quarter, not annualized", "period":"2024-Q2", "frequency":"quarterly", "adjustment":"seasonally adjusted", "release":"2024-12-18", "vintage":"previously published Q2 value as restated in December Table A; release field is source document date", "source":"https://www.bea.gov/sites/default/files/2024-12/trans324.pdf"}
+  ],
+  "synthetic": {
+    "scope":"Separate fictional one-period fixed-price open economy; not estimated or calibrated to the U.S. observations. All home flows in H, external settlement in F. Price level 1, e=H/F fixed across opening and closing dates. Public debt is domestically held; external debt belongs to the consolidated private/reserve settlement account. All foreign exchange is transferable within that account without restrictions. No welfare optimum or terminal solvency is supplied.",
+    "parameters": {"c0":"55/4","c":"3/4","tax_rate":"1/5","import_share":"1/10","exports":"30","e":"2","external_debt_open":"20","external_interest_rate":"1/8","reserves_open":"8","reserve_floor":"2","private_foreign_loan":"10","public_debt_open":"100","public_gross_return":"26/25","public_maturity":"50","public_issuance_capacity":"50","investment_sensitivity":"100","reference_output":"200","reference_real_rate":"1/50"},
+    "scenarios": [
+      {"id":"baseline","investment_intercept":"30","government_consumption":"30","rate_feedback":"0"},
+      {"id":"investment_shock","investment_intercept":"20","government_consumption":"30","rate_feedback":"0"},
+      {"id":"purchases_offset","investment_intercept":"20","government_consumption":"40","rate_feedback":"0"},
+      {"id":"consolidation","investment_intercept":"20","government_consumption":"25","rate_feedback":"0"},
+      {"id":"rate_feedback","investment_intercept":"20","government_consumption":"30","rate_feedback":"1/500"}
+    ]
+  }
+}

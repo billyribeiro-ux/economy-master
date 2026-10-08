@@ -1,0 +1,323 @@
+{
+  "assessment": "economics-core",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "reviewer": "causal_identification specialist, independently of assessment author regression",
+  "status": "passed",
+  "assignment": "economics-core-exams-peer in production/v06-assessment-v07-opening-assignments.json",
+  "acceptance_authority": "Root coordinator retains final acceptance and practical/code audit. This record does not certify the full changing assessment package or external learner mastery.",
+  "scope": {
+    "fully_read": [
+      "Introduction, administration and scoring",
+      "All six diagnostic questions and answers/remediation",
+      "Form A: all five domain prompts, 20 parts, complete solutions and per-part scoring",
+      "Form B: all five domain prompts, 20 parts, complete solutions and per-part scoring",
+      "All five oral questions, benchmarks and followups",
+      "All six delayed-retention questions and answers",
+      "Coverage, remediation, notation, synthesis and source-scope footer",
+      "All ten source-proposal records, as records of reused prior inspections"
+    ],
+    "context_only": "Read the practical model/transaction assumptions and learner deliverable rubric to verify the retention questions and overall scoring links. The practical instructor guide, terminal settlement implementation, input files, output and checker are outside this independent pass and are assigned to root.",
+    "fresh_primary_source_retrieval": false,
+    "UI_review": false,
+    "owned_path": "content/reviews/economics-core-peer-exams.json"
+  },
+  "findings": [
+    {
+      "id": "economics-core-exams-peer-01",
+      "severity": "low",
+      "location": "Oral transfer task 4 benchmark",
+      "finding": "The prompt requested a link from the static innovation problem to level versus sustained growth in a stated accumulation model, but the original benchmark only noted that the static objective lacked such a law.",
+      "status": "resolved",
+      "resolution": "Author added the explicit A3 capital/production/efficiency laws and Y/L = A sqrt(k*) on the balanced-growth path; saving or a one-time efficiency change alters levels while sustained per-worker growth remains the supplied g. Reviewer inspected the complete added passage."
+    },
+    {
+      "id": "economics-core-exams-peer-02",
+      "severity": "low",
+      "location": "Oral and delayed-retention answer prose",
+      "finding": "Joined word/amount tokens, such as value11 and Permit price8, reduced readability.",
+      "status": "resolved",
+      "resolution": "Author inserted word/number spacing in both support sections. Reviewer inspected the final answer text; calculations are unchanged."
+    }
+  ],
+  "open_findings": [],
+  "coordination_note": "The final B2(d) prompt was explicitly checked for lender seniority, proportional sharing among unpaid deposit claims, nonnegative owner residual and no guarantee. This resolved an earlier coordinator/author concern before this reviewer reported any additional finding; it is not presented as this reviewer's original correction.",
+  "independent_method": {
+    "calculation": "Standalone Python using Fraction for fractional financial/allocation values, with no import or call to the author benchmark or checker. Each of all 40 written parts had independent arithmetic, distribution or branch targets. Log decomposition received a separate numerical identity check; proof validity was read algebraically rather than inferred from a grid.",
+    "globality": "Reviewed exact sum-of-squares certificates, concavity and boundary arguments, both policy-floor branches, endowment-demand corner cases, IC/participation/escrow lower bounds, equilibrium best responses and invariant dynamic intervals. Finite probes supplement these arguments; they do not prove globality.",
+    "counts": {
+      "written_parts": 40,
+      "A1_exact_certificate_probes": 1089,
+      "A2_feasible_wage_grid_points": 703,
+      "A5_exact_loss_identity_probes": 89,
+      "A5_randomization_assignments": 6,
+      "B3_exact_rational_certificate_probes": 321,
+      "B5_and_retention_fixed_saturation_assignments": 14,
+      "diagnostic_items": 6,
+      "oral_items": 5,
+      "retention_items": 6
+    },
+    "execution_status": "All independent numerical assertions passed."
+  },
+  "written_part_results": [
+    {
+      "part": "A1a",
+      "checked_result_and_scope": "p = q = 8, x = 7, y = 1; CS 49/2 and 1/2, profit 32, damage 16; household increments 113/2 and -31/2, total 41."
+    },
+    {
+      "part": "A1b",
+      "checked_result_and_scope": "Unique global (x,y,q) = (6,0,6), resource surplus 45. Verified exact sum-of-squares certificate 45-F = (x-6)^2/2 + y^2/2 + 3(x+y-6)^2/4, including the nonnegative boundary."
+    },
+    {
+      "part": "A1c",
+      "checked_result_and_scope": "Tax 3, consumer price 9, producer receipt 6, revenue 18, profit 18, damage 9, household increments 36 and 9. Changes -41/2 and +49/2 sum to the resource gain 4."
+    },
+    {
+      "part": "A1d",
+      "checked_result_and_scope": "Compensation interval [41/2,49/2]; transfer 22 gives gains 3/2 and 5/2. Numeraire budgets move from (76,92) to (86,96); resource consumption rises 14 as production cost falls 14."
+    },
+    {
+      "part": "A2a",
+      "checked_result_and_scope": "IC requires wage spread at least 12; limited liability gives expected wage at least 9, attained at failure/success wages (0,12). Participation utility 3 exceeds outside utility 2 by rent 1; the stated high-effort tie rule is used."
+    },
+    {
+      "part": "A2b",
+      "checked_result_and_scope": "Unmonitored high, unmonitored low and monitored high expected profits are 31, 8 and 29. Constant monitored wage 8 attains participation and minimizes both expected funding cost and the needed maximum wage."
+    },
+    {
+      "part": "A2c",
+      "checked_result_and_scope": "Minimum opening funding requirements 17, 7 and 16. Cash 16 makes monitored high optimal among feasible technologies; all unmonitored high-effort wage pairs have success wage at least 12 and cannot fit the remaining 11."
+    },
+    {
+      "part": "A2d",
+      "checked_result_and_scope": "Borrowed principal 1 supplies escrow; final success cash 117/2, failure cash 21/2, expected final cash 93/2; profit net of initial cash is 61/2. The 1/2 financing expense reduces profit 31, while principal is repaid without being counted as revenue or an additional expense."
+    },
+    {
+      "part": "A3a",
+      "checked_result_and_scope": "Y0 = 8, I0 = C0 = 4, K1 = 16, effective labor 4 to 6, k1 = 8/3. Gamma = (5/4)(6/5) = 3/2 and effective break-even coefficient d = 3/4."
+    },
+    {
+      "part": "A3b",
+      "checked_result_and_scope": "Positive steady k = 4/9 and consumption per effective worker 1/3. Drift, monotone transition, no overshoot and continuity imply convergence from every positive start; zero is absorbing and is separately stated."
+    },
+    {
+      "part": "A3c",
+      "checked_result_and_scope": "Golden-rule saving 1/2. At saving 3/4, steady k = 1 and consumption 1/4; date-0 consumption 2 and K1 = 18. Sustained balanced-path per-worker growth remains the supplied efficiency growth 1/5."
+    },
+    {
+      "part": "A3d",
+      "checked_result_and_scope": "Y1/Y0 = sqrt(3/2). Exact log decomposition is 0 + log(5/4)/2 + log(6/5)/2 = log(3/2)/2. This is conditional production accounting, not empirical identification of a technology shock."
+    },
+    {
+      "part": "A4a",
+      "checked_result_and_scope": "GDP 210, GNI 206, gross national disposable income 207, saving 47 and CA 7 = saving minus investment. Exact nominal growth factor (51/50)(35/34) = 21/20 matches 210/200."
+    },
+    {
+      "part": "A4b",
+      "checked_result_and_scope": "Ending debt 83; maturing principal 32 and gross issuance 35 leave old debt 48 plus new 35. Debt/GDP 83/210. Acquired financial asset 2 means net debt rises only 1, equivalently government net financial position deteriorates 1."
+    },
+    {
+      "part": "A4c",
+      "checked_result_and_scope": "FA = 11-5 = 6 = CA 7 + KA -1. Opening NFA -30, opening net FU exposure -10 and depreciation valuation -10; closing NFA -34. End-period HC transactions are not revalued twice."
+    },
+    {
+      "part": "A4d",
+      "checked_result_and_scope": "CIP forward 35/17 HC/FU. Borrow 2 HC, buy and invest 1 FU, sell 1.02 FU forward at 2.1; locked net payoff 21/500 HC. Realized spot 3 does not replace the enforceable forward settlement."
+    },
+    {
+      "part": "A5a",
+      "checked_result_and_scope": "Date 1 (j,x,Pi) = (1,-3,1/2); date 0 = (-1,-3/2,-1/2). Both free/floor candidates checked at each date; the date-0 boundary is one point shared by both branch descriptions, not a second equilibrium."
+    },
+    {
+      "part": "A5b",
+      "checked_result_and_scope": "The alternative date-0 information history gives j = x = Pi = 0; date 1 is unchanged after news arrives. A different earlier expectation is not an internally inconsistent revision of the announced history."
+    },
+    {
+      "part": "A5c",
+      "checked_result_and_scope": "At date 1, x = -2-j <= -1; loss equals (x+2)^2/2 + 2. Unique global feasible optimum x = -2, Pi = 1, j = 0, loss 2 versus rule loss 5/2. No two-date commitment optimum is claimed."
+    },
+    {
+      "part": "A5d",
+      "checked_result_and_scope": "Observed difference 3. Exhaustive six equally likely treated pairs yield [3,2,0,0,-2,-3]; inclusive two-sided p = 1/3. Sharp no-interference offer null, structural coefficients and national policy welfare remain distinct."
+    },
+    {
+      "part": "B1a",
+      "checked_result_and_scope": "Closed relative price uniquely 1, A = (4,2), B = (2,4), utilities (4,6). For p<1 Y is in excess supply; for p>1 B alone demands all six Y and A wants more. B's demand correspondence at equality is respected."
+    },
+    {
+      "part": "B1b",
+      "checked_result_and_scope": "External p = 1/2: A = (3,3/2), B = (12,0), utilities (3,12), X imports 9 and Y exports 9/2. Trade value balances while A loses relative to the closed equilibrium."
+    },
+    {
+      "part": "B1c",
+      "checked_result_and_scope": "Transfer interval [1,3] follows utilities 3+T and 12-2T. At T = 2, bundles (5,5/2) and (8,0), utilities (5,8), X imports 7 and Y exports 7/2; both wealth constraints are feasible."
+    },
+    {
+      "part": "B1d",
+      "checked_result_and_scope": "At p = 2 A's endowed wealth is 12: bundle (24/5,12/5); B chooses (0,6). X exports 6/5 finance Y imports 12/5. Fixed nominal income would remove the endogenous endowment valuation."
+    },
+    {
+      "part": "B2a",
+      "checked_result_and_scope": "Without funding, WW pays (6/5,6/5), RW (1,1/5), WR (1/5,1), RR (3/5,3/5). Total resources 12/5 if held and 6/5 if liquidated; the original cash 2/5 is preserved."
+    },
+    {
+      "part": "B2b",
+      "checked_result_and_scope": "Pure equilibria WW and RR; symmetric run probability 1/3 and expected payoff 13/15. Complete best responses rule out asymmetric pure profiles."
+    },
+    {
+      "part": "B2c",
+      "checked_result_and_scope": "Healthy-asset lender draws for zero/one/two withdrawals are 0,3/5,8/5; all repaid in full. Owner residuals 0,1/5,2/5. A waiter always receives 6/5 and runner 1, so waiting strictly dominates and WW is unique."
+    },
+    {
+      "part": "B2d",
+      "checked_result_and_scope": "Verified final explicit senior-first/proportional unpaid-claim rule. Stressed WW has shortfall 1/2 and pays each depositor 19/20; one withdrawal repays lender 3/5 and leaves waiter 9/10; two withdrawals create lender loss 1/10 and zero owner residual. These payoffs invalidate the earlier waiting-dominance conclusion."
+    },
+    {
+      "part": "B3a",
+      "checked_result_and_scope": "Free entry V = 60, filling probability 1/4, finding probability 3/4, matches 15; E next 87 and U next 13. Only opening employment separates and only opening unemployment matches."
+    },
+    {
+      "part": "B3b",
+      "checked_result_and_scope": "One-step planner V = 20, matches 10, net resource value 10 versus entry value 0, employment next 82. Derivative/strict concavity and boundary proof agree with independent certificate 10-W(V) = (V-20)^2/[2(20+V)] for V>=0."
+    },
+    {
+      "part": "B3c",
+      "checked_result_and_scope": "Per-vacancy tax 1/2 implements V = U = 20: match value 20, real cost 10, rebated receipts 10, net social value 10. The tax transfer is not destroyed resources."
+    },
+    {
+      "part": "B3d",
+      "checked_result_and_scope": "u next = s+(1-s-f)u. Entry steady u = 2/17 with slope 3/20; taxed rule steady u = 1/6 with slope 2/5. Both maps preserve [0,1], with the U=0 no-match convention. The supplied match value and one-step objective do not solve dynamic bargaining/planning."
+    },
+    {
+      "part": "B4a",
+      "checked_result_and_scope": "Loan loss gives assets 92 = deposits 90 + equity 2. Required capital 8 leaves shortfall 6, although equity remains positive."
+    },
+    {
+      "part": "B4b",
+      "checked_result_and_scope": "CB loan gives reserves 27 plus loans 80 = deposits 90 + CB claim 15 + equity 2; ratio 2/80 = 1/40 remains below the requirement."
+    },
+    {
+      "part": "B4c",
+      "checked_result_and_scope": "Fair-value equity issue 6 gives bank assets 113 = liabilities 105 + equity 8. Government debt 108, debt net of acquired asset 102, GDP ratios 1 and 17/18. Asset acquisition is separated from an immediate fiscal transfer or loss."
+    },
+    {
+      "part": "B4d",
+      "checked_result_and_scope": "Uncapped fixed ratio 1 has slope 23/25. Cap activates above 11/10; next ratios from 1.4 and 1.6 are 699/500 and 801/500. Capped drift changes sign at 3/2, so local stability near 1 does not imply global recovery."
+    },
+    {
+      "part": "B5a",
+      "checked_result_and_scope": "Inflation deviation obeys (Pi next-2) = (Pi previous-2)/3 + 2u/3. Current coefficient 3/2 gives uniqueness; lag 1/3 gives global convergence for constant u. Permanent u=3 yields Pi=5 and gap -3."
+    },
+    {
+      "part": "B5b",
+      "checked_result_and_scope": "Temporary shock gives Pi1=4, Pi2=8/3, gaps -2 and -2/3. P2 = 100 exp(1/15); nominal gross exp(0.03) divided by realized price growth exp(0.04) gives real gross exp(-0.01)."
+    },
+    {
+      "part": "B5c",
+      "checked_result_and_scope": "Both (M,V,Y)=(110,1.8,180) and (100,1.98,180) imply P=1.1. The identity does not specify how V and Y respond to an intervention in M."
+    },
+    {
+      "part": "B5d",
+      "checked_result_and_scope": "Fixed two-treated contrast tau-lambda/3 differs from universal effect tau+lambda. Parameters (3,6) give 1 and 9; (1,0) also gives contrast 1 but universal effect 1. The nonidentification claim is correctly limited to this contrast, not every potentially observed outcome level."
+    }
+  ],
+  "support_review": {
+    "diagnostic": "Numerical answers 4 total surplus, wage spread 12, effective-labor factor 121/100, debt 56 and FA -5 independently agree. The sixth response correctly distinguishes randomized assignment under interference from the universal-adoption estimand. All six repair routes point to the applicable methods.",
+    "oral1": "Monopoly q=4,p=8, CS=8, profit=16, total=24; efficient q=8,total=32. Verified square certificates. Second-price allocation goes to value 11 at payment 7 and utility 4, with a correct weak-dominance argument and fixed-versus-endogenous-supply distinction.",
+    "oral2": "Pooling at 14 excludes high sellers; low-only at 8 is coherent. High signal payoff 18 exceeds outside 15/no-signal 8; low no-signal 8 exceeds mimicking 7/outside 6. On-path Bayes beliefs, expected resource signal cost 1 per arrival and low-cost deviation payoff 11 all agree.",
+    "oral3": "Date-0 early and delayed values 27/10 and 81/25; date-1 early 6 exceeds delayed 18/5. A sophisticated self pays at most 27/50 for the stated enforceable date-0 resource-cost device. Fee timing and transfer/resource distinction are explicit.",
+    "oral4": "Private r=4 and social r=6 are unique global optima, supported by square completions. Subsidy 2 entails receipts needed 12 and real research cost 18, with funding assumptions stated. The final benchmark now supplies the requested A3 level-versus-growth link.",
+    "oral5": "Impairment gives 104=100+4; funding gives 112=100+8+4. Borrowing does not restore equity. Selection and treatment effects can generate the same observed association; proposed randomized-offer/cutoff designs name timing, support and spillover threats without claiming their validity is established.",
+    "retention1": "Cap 16/3 has permit price 8/3, receipts 128/9, household energy demands 12 and 4, imports 32/3 and resource welfare 304/3. Tradable free permits keep marginal opportunity cost and allocation but shift scarcity revenue from B to A.",
+    "retention2": "Funded-high profit 32 minus loan repayment; repayment 4 gives 28 versus monitoring 29, threshold 3. The failure-state escrow can repay the stated loans.",
+    "retention3": "With n=g=0 and depreciation 1/4, d=1/4, positive steady k=4, consumption=1 and golden-rule saving 1/2. The previous monotone convergence argument remains valid because d>0.",
+    "retention4": "Opening NFA -40, net FU exposure 5, changed valuation -1, baseline transaction FA -45 and closing NFA -86. Existing HC public debt and end-period flows are not exchange-revalued.",
+    "retention5": "For each of the four one-treated assignments, treated-control contrast is still tau-lambda/3. The earlier two-treated contrast adds the same equation, not independent identification of both parameters. The contrast-only limit and alternative saturation-mean information are correctly stated.",
+    "retention6": "Later-only revised data cannot fill a missing historical-cutoff record without changing the information set. Dropping a community changes the target population and potentially the randomization distribution; the answer requires an explicit alternative missing-data/estimand argument."
+  },
+  "scoring_review": {
+    "written": "HTMLParser independently found 20 five-point parts and 20 matching five-point solution rubrics on each form. Parsed component scores sum to five in every rubric and 100 per form; five domains total 20 each. Written 85/100 and 15/20 per domain are correctly labeled authored thresholds.",
+    "practical_scoring_only": "Five separately identified 20-point domains and their four five-point criteria total 100. The separate practical uses the stated 85/100 and 15/20 domain threshold; substantive practical audit remains root-owned.",
+    "oral": "Five ten-point tasks; criterion weights 2+3+3+2=10. Gate 43/50 and at least 8/10 each is coherent with authored mastery criteria.",
+    "retention": "Six five-point items, criterion weights 2+2+1=5, gate 26/30 and at least 4 each. Diagnostic is formative; critical-error repair and reassessment-resource rules are explicit.",
+    "administration": "Written 180 minutes permits 32 minutes for each of five domains plus 20 review minutes. Open-resource practical is separated from closed-note forms. The visible answer page explicitly requires supervisor extraction for closed-note administration and does not claim to be a secure exam system."
+  },
+  "source_scope": {
+    "records_read": [
+      "economics-core-contracts",
+      "economics-core-externalities",
+      "economics-core-growth",
+      "economics-core-banking",
+      "economics-core-stabilization",
+      "economics-core-debt",
+      "economics-core-trade",
+      "economics-core-external",
+      "economics-core-randomization",
+      "economics-core-commitment"
+    ],
+    "finding": "Accepted-chapter source reuse is declared; synthetic parameters and original examination problems are not attributed as empirical source findings. No new institutional facts, source-body inspections or universal standards claims are introduced in this peer record.",
+    "record_hash": {
+      "path": "content/reviews/economics-core-sources.json",
+      "sha256": "85990f3bc572e17b6dafeda62e020affef221f12e8902643f0f6c1fbe475db96",
+      "bytes": 12365
+    }
+  },
+  "reviewed_section_hashes": {
+    "intro": {
+      "start_marker": "start of file",
+      "end_exclusive_marker": "<h2 id=\"administration\">",
+      "bytes": 1029,
+      "sha256": "65c6939fd7f1580781b8dffdc903b7adbc79daad458488988dbb45e79db02988"
+    },
+    "administration": {
+      "start_marker": "<h2 id=\"administration\">",
+      "end_exclusive_marker": "<h2 id=\"diagnostic\">",
+      "bytes": 2757,
+      "sha256": "f0b5aaa698dcb57add070092d855a9bc086b049faf1e1e214bd0f40a124c4d9d"
+    },
+    "diagnostic": {
+      "start_marker": "<h2 id=\"diagnostic\">",
+      "end_exclusive_marker": "<h2 id=\"form-a\">",
+      "bytes": 2601,
+      "sha256": "9520fae7ece8aadb786926a696cf44cdb360c6530dc5f5a233f288f9d20ab3d2"
+    },
+    "form-a": {
+      "start_marker": "<h2 id=\"form-a\">",
+      "end_exclusive_marker": "<h2 id=\"form-b\">",
+      "bytes": 19690,
+      "sha256": "f06662bc397df5287d75955c75e2f6d75e40f82d8f2f37ae31f7be36c6482156"
+    },
+    "form-b": {
+      "start_marker": "<h2 id=\"form-b\">",
+      "end_exclusive_marker": "<h2 id=\"practical\">",
+      "bytes": 19243,
+      "sha256": "4ccf9472e332d07f32235f25dc514b66566cd3547cad8fba8676c3d579415c4f"
+    },
+    "oral-transfer": {
+      "start_marker": "<h2 id=\"oral-transfer\">",
+      "end_exclusive_marker": "<h2 id=\"retention\">",
+      "bytes": 7322,
+      "sha256": "891a391323ab0c2057b542197bdb6c7e09d4224cfd3cd96c7e489ff831393da9"
+    },
+    "retention": {
+      "start_marker": "<h2 id=\"retention\">",
+      "end_exclusive_marker": "<h2 id=\"coverage\">",
+      "bytes": 3927,
+      "sha256": "699cf331678f09c002154fcf19f27a59b0a381af28b1c68b02b1b8bd35113594"
+    },
+    "coverage-and-source-scope": {
+      "start_marker": "<h2 id=\"coverage\">",
+      "end_exclusive_marker": "end of file",
+      "bytes": 9934,
+      "sha256": "e1de969f4192259b3357c603f466b9291cc26cabb6ba686a64777caa2e28f318"
+    }
+  },
+  "hash_method": "SHA256 of exact UTF-8 manuscript bytes from the included marker through just before the end-exclusive marker. Coverage includes its source footer through EOF. The practical section between its heading and oral-transfer is deliberately excluded from full review/hash coverage; no full-manuscript hash is used to imply a complete practical audit.",
+  "limitations": [
+    "Independent specialist review is not external academic grading, observed learner competence or accounting assurance.",
+    "All economies and observations here are synthetic; maintained coefficients, information sets, guarantees and ownership laws are not empirical identification claims.",
+    "No new primary-body retrieval was conducted in this pass; source-scope checks concern the supplied accepted-chapter reuse records.",
+    "The practical implementation, full terminal ledger, data validation, preserved output and author checker are reviewed separately by root.",
+    "No acceptance/shared-file/publishing changes were made; visual/mobile/print UI QA remains outside this audit."
+  ]
+}

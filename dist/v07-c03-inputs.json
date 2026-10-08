@@ -1,0 +1,30 @@
+{
+  "schema": "v07-c03-operating-ledger-1",
+  "entity": "Mesa Component Supply (synthetic)",
+  "unit": "kCU; 1 CU = 100 minor units",
+  "start": "2025-01-01",
+  "end": "2025-03-31",
+  "days": 90,
+  "opening_kcu": {
+    "cash": "30", "gross_receivables": "60", "allowance": "8",
+    "inventory": "80", "payables": "50", "advances": "10",
+    "capital": "80", "retained_earnings": "22"
+  },
+  "flows_kcu": {
+    "cash_sales": "40", "credit_sales": "180", "ordinary_collections": "150",
+    "advances_received": "12", "advances_earned": "10",
+    "cash_purchases": "40", "credit_purchases": "120", "cost_of_sales": "144",
+    "payables_paid": "130", "other_expense_paid": "32",
+    "writeoffs": "8", "recoveries": "2"
+  },
+  "aging": [
+    {"label": "Not past due", "gross_kcu": "60", "loss_fraction": "0.05"},
+    {"label": "1-60 days past due", "gross_kcu": "20", "loss_fraction": "0.20"},
+    {"label": "Over 60 days; separately assessed", "gross_kcu": "2", "loss_fraction": "1"}
+  ],
+  "alternative_calendar": [
+    {"date": "2025-01-31", "receipts_kcu": "70", "suppliers_kcu": "80", "other_kcu": "12"},
+    {"date": "2025-02-28", "receipts_kcu": "54", "suppliers_kcu": "60", "other_kcu": "10"},
+    {"date": "2025-03-31", "receipts_kcu": "80", "suppliers_kcu": "30", "other_kcu": "10"}
+  ]
+}

@@ -1,0 +1,432 @@
+{
+  "schema": "v07-c02-1",
+  "entity": "Harbor Instruments (fictional teaching entity)",
+  "unit": "kCU",
+  "opening_date": "2024-12-31",
+  "period_start": "2025-01-01",
+  "period_end": "2025-03-31",
+  "opening_debit_balances_kcu": {
+    "cash": "40",
+    "receivables": "30",
+    "inventory": "50",
+    "prepaid_insurance": "6",
+    "equipment": "120",
+    "accumulated_depreciation": "-30",
+    "trade_payables": "-35",
+    "wages_payable": "-4",
+    "interest_payable": "-1",
+    "customer_advances": "-10",
+    "borrowings": "-60",
+    "share_capital": "-80",
+    "retained_earnings": "-26"
+  },
+  "current_borrowings_kcu": "21",
+  "events": [
+    {
+      "id": "e01",
+      "description": "Issue shares for cash",
+      "cash_line": "share_issue",
+      "postings": [
+        {
+          "account": "cash",
+          "side": "Dr",
+          "amount_kcu": "20"
+        },
+        {
+          "account": "share_capital",
+          "side": "Cr",
+          "amount_kcu": "20"
+        }
+      ]
+    },
+    {
+      "id": "e02",
+      "description": "Obtain cash loan",
+      "cash_line": "borrowing",
+      "postings": [
+        {
+          "account": "cash",
+          "side": "Dr",
+          "amount_kcu": "30"
+        },
+        {
+          "account": "borrowings",
+          "side": "Cr",
+          "amount_kcu": "30"
+        }
+      ]
+    },
+    {
+      "id": "e03",
+      "description": "Purchase inventory for cash and credit",
+      "cash_line": "supplier_payments",
+      "postings": [
+        {
+          "account": "inventory",
+          "side": "Dr",
+          "amount_kcu": "90"
+        },
+        {
+          "account": "cash",
+          "side": "Cr",
+          "amount_kcu": "25"
+        },
+        {
+          "account": "trade_payables",
+          "side": "Cr",
+          "amount_kcu": "65"
+        }
+      ]
+    },
+    {
+      "id": "e04",
+      "description": "Delivered cash sales",
+      "cash_line": "customer_receipts",
+      "postings": [
+        {
+          "account": "cash",
+          "side": "Dr",
+          "amount_kcu": "80"
+        },
+        {
+          "account": "revenue",
+          "side": "Cr",
+          "amount_kcu": "80"
+        }
+      ]
+    },
+    {
+      "id": "e05",
+      "description": "Delivered credit sales",
+      "cash_line": null,
+      "postings": [
+        {
+          "account": "receivables",
+          "side": "Dr",
+          "amount_kcu": "100"
+        },
+        {
+          "account": "revenue",
+          "side": "Cr",
+          "amount_kcu": "100"
+        }
+      ]
+    },
+    {
+      "id": "e06",
+      "description": "Cost of goods sold for the cash and credit deliveries",
+      "cash_line": null,
+      "postings": [
+        {
+          "account": "cost_of_goods_sold",
+          "side": "Dr",
+          "amount_kcu": "95"
+        },
+        {
+          "account": "inventory",
+          "side": "Cr",
+          "amount_kcu": "95"
+        }
+      ]
+    },
+    {
+      "id": "e07",
+      "description": "Collect existing customer receivables",
+      "cash_line": "customer_receipts",
+      "postings": [
+        {
+          "account": "cash",
+          "side": "Dr",
+          "amount_kcu": "85"
+        },
+        {
+          "account": "receivables",
+          "side": "Cr",
+          "amount_kcu": "85"
+        }
+      ]
+    },
+    {
+      "id": "e08",
+      "description": "Settle inventory trade payables",
+      "cash_line": "supplier_payments",
+      "postings": [
+        {
+          "account": "trade_payables",
+          "side": "Dr",
+          "amount_kcu": "70"
+        },
+        {
+          "account": "cash",
+          "side": "Cr",
+          "amount_kcu": "70"
+        }
+      ]
+    },
+    {
+      "id": "e09",
+      "description": "Receive advance for future customer performance",
+      "cash_line": "customer_receipts",
+      "postings": [
+        {
+          "account": "cash",
+          "side": "Dr",
+          "amount_kcu": "12"
+        },
+        {
+          "account": "customer_advances",
+          "side": "Cr",
+          "amount_kcu": "12"
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "description": "Perform services for opening customer advances",
+      "cash_line": null,
+      "postings": [
+        {
+          "account": "customer_advances",
+          "side": "Dr",
+          "amount_kcu": "10"
+        },
+        {
+          "account": "revenue",
+          "side": "Cr",
+          "amount_kcu": "10"
+        }
+      ]
+    },
+    {
+      "id": "e11",
+      "description": "Accrue quarter wages",
+      "cash_line": null,
+      "postings": [
+        {
+          "account": "wage_expense",
+          "side": "Dr",
+          "amount_kcu": "40"
+        },
+        {
+          "account": "wages_payable",
+          "side": "Cr",
+          "amount_kcu": "40"
+        }
+      ]
+    },
+    {
+      "id": "e12",
+      "description": "Pay wages including opening payable",
+      "cash_line": "wage_payments",
+      "postings": [
+        {
+          "account": "wages_payable",
+          "side": "Dr",
+          "amount_kcu": "38"
+        },
+        {
+          "account": "cash",
+          "side": "Cr",
+          "amount_kcu": "38"
+        }
+      ]
+    },
+    {
+      "id": "e13",
+      "description": "Pay additional insurance in advance",
+      "cash_line": "insurance_payments",
+      "postings": [
+        {
+          "account": "prepaid_insurance",
+          "side": "Dr",
+          "amount_kcu": "6"
+        },
+        {
+          "account": "cash",
+          "side": "Cr",
+          "amount_kcu": "6"
+        }
+      ]
+    },
+    {
+      "id": "e14",
+      "description": "Recognize consumed insurance coverage",
+      "cash_line": null,
+      "postings": [
+        {
+          "account": "insurance_expense",
+          "side": "Dr",
+          "amount_kcu": "4"
+        },
+        {
+          "account": "prepaid_insurance",
+          "side": "Cr",
+          "amount_kcu": "4"
+        }
+      ]
+    },
+    {
+      "id": "e15",
+      "description": "Pay for quarter rental service",
+      "cash_line": "rent_payments",
+      "postings": [
+        {
+          "account": "rent_expense",
+          "side": "Dr",
+          "amount_kcu": "12"
+        },
+        {
+          "account": "cash",
+          "side": "Cr",
+          "amount_kcu": "12"
+        }
+      ]
+    },
+    {
+      "id": "e16",
+      "description": "Accrue quarter interest",
+      "cash_line": null,
+      "postings": [
+        {
+          "account": "interest_expense",
+          "side": "Dr",
+          "amount_kcu": "6"
+        },
+        {
+          "account": "interest_payable",
+          "side": "Cr",
+          "amount_kcu": "6"
+        }
+      ]
+    },
+    {
+      "id": "e17",
+      "description": "Pay interest",
+      "cash_line": "interest_payments",
+      "postings": [
+        {
+          "account": "interest_payable",
+          "side": "Dr",
+          "amount_kcu": "5"
+        },
+        {
+          "account": "cash",
+          "side": "Cr",
+          "amount_kcu": "5"
+        }
+      ]
+    },
+    {
+      "id": "e18",
+      "description": "Recognize depreciation including allocation before disposal",
+      "cash_line": null,
+      "postings": [
+        {
+          "account": "depreciation_expense",
+          "side": "Dr",
+          "amount_kcu": "9"
+        },
+        {
+          "account": "accumulated_depreciation",
+          "side": "Cr",
+          "amount_kcu": "9"
+        }
+      ]
+    },
+    {
+      "id": "e19",
+      "description": "Sell equipment with cost 10 and accumulated depreciation 6",
+      "cash_line": "equipment_sale",
+      "postings": [
+        {
+          "account": "cash",
+          "side": "Dr",
+          "amount_kcu": "5"
+        },
+        {
+          "account": "accumulated_depreciation",
+          "side": "Dr",
+          "amount_kcu": "6"
+        },
+        {
+          "account": "equipment",
+          "side": "Cr",
+          "amount_kcu": "10"
+        },
+        {
+          "account": "disposal_gain",
+          "side": "Cr",
+          "amount_kcu": "1"
+        }
+      ]
+    },
+    {
+      "id": "e20",
+      "description": "Acquire equipment for cash",
+      "cash_line": "equipment_purchase",
+      "postings": [
+        {
+          "account": "equipment",
+          "side": "Dr",
+          "amount_kcu": "24"
+        },
+        {
+          "account": "cash",
+          "side": "Cr",
+          "amount_kcu": "24"
+        }
+      ]
+    },
+    {
+      "id": "e21",
+      "description": "Acquire equipment directly for seller note; no cash",
+      "cash_line": null,
+      "postings": [
+        {
+          "account": "equipment",
+          "side": "Dr",
+          "amount_kcu": "18"
+        },
+        {
+          "account": "borrowings",
+          "side": "Cr",
+          "amount_kcu": "18"
+        }
+      ]
+    },
+    {
+      "id": "e22",
+      "description": "Repay debt principal",
+      "cash_line": "principal_repayment",
+      "postings": [
+        {
+          "account": "borrowings",
+          "side": "Dr",
+          "amount_kcu": "15"
+        },
+        {
+          "account": "cash",
+          "side": "Cr",
+          "amount_kcu": "15"
+        }
+      ]
+    },
+    {
+      "id": "e23",
+      "description": "Declare and pay dividend at final event",
+      "cash_line": "dividends",
+      "postings": [
+        {
+          "account": "dividends",
+          "side": "Dr",
+          "amount_kcu": "8"
+        },
+        {
+          "account": "cash",
+          "side": "Cr",
+          "amount_kcu": "8"
+        }
+      ]
+    }
+  ]
+}

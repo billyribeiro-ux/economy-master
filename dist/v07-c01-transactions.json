@@ -1,0 +1,461 @@
+{
+  "schema": "v07-c01-ledger-v1",
+  "synthetic": true,
+  "metadata": {
+    "entity": "Harbor Calibration Services, fictional single corporation",
+    "currency": "USD",
+    "amount_unit": "cent",
+    "period_start": "2025-01-01",
+    "period_end": "2025-01-31",
+    "created": "2026-10-08",
+    "edition_boundary": "2026-10-06",
+    "provenance": "All entities, events, documents, dates and amounts are invented for instruction. No real financial records.",
+    "policy": "Simplified accrual/historical-cost teaching convention; no tax, FX, OCI, impairment, inventory sales or consolidations. Certain service collectibility. No overdraft. Owner dividend authorized. This is not a GAAP/IFRS compliance conclusion.",
+    "timing": "January book-effective dates are distinct from February 2 preparation dates for adjustments. February followup is a selected wage-payment illustration, not full monthly reporting.",
+    "normal_balance": "Signed ledger amount = debit minus credit. Normal debit assets/expenses/distributions; normal credit liabilities/capital/retained/revenue/contra assets. Opposite-normal balances flag investigation; retained earnings may be a deficit."
+  },
+  "accounts": {
+    "cash": {
+      "label": "Cash",
+      "type": "asset"
+    },
+    "receivables": {
+      "label": "Trade receivables",
+      "type": "asset"
+    },
+    "supplies": {
+      "label": "Supplies on hand",
+      "type": "asset"
+    },
+    "prepaid_insurance": {
+      "label": "Prepaid insurance",
+      "type": "asset"
+    },
+    "equipment": {
+      "label": "Equipment at cost",
+      "type": "asset"
+    },
+    "accumulated_depreciation": {
+      "label": "Accumulated depreciation",
+      "type": "contra_asset"
+    },
+    "payables": {
+      "label": "Trade payables",
+      "type": "liability"
+    },
+    "customer_advances": {
+      "label": "Customer advances",
+      "type": "liability"
+    },
+    "wages_payable": {
+      "label": "Wages payable",
+      "type": "liability"
+    },
+    "interest_payable": {
+      "label": "Interest payable",
+      "type": "liability"
+    },
+    "loan": {
+      "label": "Loan principal",
+      "type": "liability"
+    },
+    "contributed_capital": {
+      "label": "Contributed capital",
+      "type": "capital"
+    },
+    "retained_earnings": {
+      "label": "Retained earnings",
+      "type": "retained"
+    },
+    "service_revenue": {
+      "label": "Service revenue",
+      "type": "revenue"
+    },
+    "wages_expense": {
+      "label": "Wages expense",
+      "type": "expense"
+    },
+    "supplies_expense": {
+      "label": "Supplies expense",
+      "type": "expense"
+    },
+    "insurance_expense": {
+      "label": "Insurance expense",
+      "type": "expense"
+    },
+    "depreciation_expense": {
+      "label": "Depreciation expense",
+      "type": "expense"
+    },
+    "interest_expense": {
+      "label": "Interest expense",
+      "type": "expense"
+    },
+    "dividends": {
+      "label": "Dividends",
+      "type": "distribution"
+    }
+  },
+  "opening_debit_balances": {
+    "cash": 0,
+    "receivables": 0,
+    "supplies": 0,
+    "prepaid_insurance": 0,
+    "equipment": 0,
+    "accumulated_depreciation": 0,
+    "payables": 0,
+    "customer_advances": 0,
+    "wages_payable": 0,
+    "interest_payable": 0,
+    "loan": 0,
+    "contributed_capital": 0,
+    "retained_earnings": 0,
+    "service_revenue": 0,
+    "wages_expense": 0,
+    "supplies_expense": 0,
+    "insurance_expense": 0,
+    "depreciation_expense": 0,
+    "interest_expense": 0,
+    "dividends": 0
+  },
+  "transactions": [
+    {
+      "id": "J01",
+      "effective_date": "2025-01-01",
+      "recorded_date": "2025-01-01",
+      "source": "CAP-01 subscription and bank receipt",
+      "explanation": "Owners contribute cash for equity; no service supplied.",
+      "lines": [
+        {
+          "account": "cash",
+          "side": "Dr",
+          "cents": 600000
+        },
+        {
+          "account": "contributed_capital",
+          "side": "Cr",
+          "cents": 600000
+        }
+      ]
+    },
+    {
+      "id": "J02",
+      "effective_date": "2025-01-01",
+      "recorded_date": "2025-01-01",
+      "source": "LOAN-01 executed loan and bank receipt",
+      "explanation": "Borrow principal for January; interest 1% for the full month, unpaid at month end.",
+      "lines": [
+        {
+          "account": "cash",
+          "side": "Dr",
+          "cents": 240000
+        },
+        {
+          "account": "loan",
+          "side": "Cr",
+          "cents": 240000
+        }
+      ]
+    },
+    {
+      "id": "J03",
+      "effective_date": "2025-01-01",
+      "recorded_date": "2025-01-01",
+      "source": "EQ-01 supplier invoice and delivery receipt",
+      "explanation": "Equipment bought and available for use immediately; cost 3600, zero residual, 36 equal monthly allocations.",
+      "lines": [
+        {
+          "account": "equipment",
+          "side": "Dr",
+          "cents": 360000
+        },
+        {
+          "account": "cash",
+          "side": "Cr",
+          "cents": 360000
+        }
+      ]
+    },
+    {
+      "id": "J04",
+      "effective_date": "2025-01-01",
+      "recorded_date": "2025-01-01",
+      "source": "INS-01 policy and bank payment",
+      "explanation": "Pay six months of equal insurance coverage from January 1 through June 30.",
+      "lines": [
+        {
+          "account": "prepaid_insurance",
+          "side": "Dr",
+          "cents": 120000
+        },
+        {
+          "account": "cash",
+          "side": "Cr",
+          "cents": 120000
+        }
+      ]
+    },
+    {
+      "id": "J05",
+      "effective_date": "2025-01-05",
+      "recorded_date": "2025-01-05",
+      "source": "SUP-01 received supplies and invoice",
+      "explanation": "Receive supplies costing 900 on credit.",
+      "lines": [
+        {
+          "account": "supplies",
+          "side": "Dr",
+          "cents": 90000
+        },
+        {
+          "account": "payables",
+          "side": "Cr",
+          "cents": 90000
+        }
+      ]
+    },
+    {
+      "id": "J06",
+      "effective_date": "2025-01-15",
+      "recorded_date": "2025-01-15",
+      "source": "SERV-15 completed-order register and invoices",
+      "explanation": "Two completed service orders total 4200; 1800 paid immediately, 2400 unconditionally collectible later.",
+      "lines": [
+        {
+          "account": "cash",
+          "side": "Dr",
+          "cents": 180000
+        },
+        {
+          "account": "receivables",
+          "side": "Dr",
+          "cents": 240000
+        },
+        {
+          "account": "service_revenue",
+          "side": "Cr",
+          "cents": 420000
+        }
+      ]
+    },
+    {
+      "id": "J07",
+      "effective_date": "2025-01-18",
+      "recorded_date": "2025-01-18",
+      "source": "ADV-01 four-session contract and bank receipt",
+      "explanation": "Receive 1000 before four separately priced 250 service sessions; no session performed yet.",
+      "lines": [
+        {
+          "account": "cash",
+          "side": "Dr",
+          "cents": 100000
+        },
+        {
+          "account": "customer_advances",
+          "side": "Cr",
+          "cents": 100000
+        }
+      ]
+    },
+    {
+      "id": "J08",
+      "effective_date": "2025-01-22",
+      "recorded_date": "2025-01-22",
+      "source": "AR-01 customer remittance",
+      "explanation": "Collect 900 against the receivable already recorded in J06.",
+      "lines": [
+        {
+          "account": "cash",
+          "side": "Dr",
+          "cents": 90000
+        },
+        {
+          "account": "receivables",
+          "side": "Cr",
+          "cents": 90000
+        }
+      ]
+    },
+    {
+      "id": "J09",
+      "effective_date": "2025-01-24",
+      "recorded_date": "2025-01-24",
+      "source": "AP-01 supplier payment",
+      "explanation": "Pay 500 of the supplies payable in J05.",
+      "lines": [
+        {
+          "account": "payables",
+          "side": "Dr",
+          "cents": 50000
+        },
+        {
+          "account": "cash",
+          "side": "Cr",
+          "cents": 50000
+        }
+      ]
+    },
+    {
+      "id": "J10",
+      "effective_date": "2025-01-28",
+      "recorded_date": "2025-01-28",
+      "source": "PAY-28 approved payroll and payment",
+      "explanation": "Pay 1100 for wages already earned in January.",
+      "lines": [
+        {
+          "account": "wages_expense",
+          "side": "Dr",
+          "cents": 110000
+        },
+        {
+          "account": "cash",
+          "side": "Cr",
+          "cents": 110000
+        }
+      ]
+    },
+    {
+      "id": "J11",
+      "effective_date": "2025-01-29",
+      "recorded_date": "2025-01-29",
+      "source": "DIV-01 declaration/payment authorization",
+      "explanation": "Owners receive a permitted dividend declared and paid the same day; no opening payable.",
+      "lines": [
+        {
+          "account": "dividends",
+          "side": "Dr",
+          "cents": 40000
+        },
+        {
+          "account": "cash",
+          "side": "Cr",
+          "cents": 40000
+        }
+      ]
+    }
+  ],
+  "adjustments": [
+    {
+      "id": "A01",
+      "effective_date": "2025-01-31",
+      "recorded_date": "2025-02-02",
+      "source": "COUNT-31 inventory count at original costs",
+      "explanation": "Count finds supplies costing 300; consume 900 - 300 = 600.",
+      "lines": [
+        {
+          "account": "supplies_expense",
+          "side": "Dr",
+          "cents": 60000
+        },
+        {
+          "account": "supplies",
+          "side": "Cr",
+          "cents": 60000
+        }
+      ]
+    },
+    {
+      "id": "A02",
+      "effective_date": "2025-01-31",
+      "recorded_date": "2025-02-02",
+      "source": "INS-01 coverage schedule at January close",
+      "explanation": "One of six equal coverage months expired: 1200/6 = 200.",
+      "lines": [
+        {
+          "account": "insurance_expense",
+          "side": "Dr",
+          "cents": 20000
+        },
+        {
+          "account": "prepaid_insurance",
+          "side": "Cr",
+          "cents": 20000
+        }
+      ]
+    },
+    {
+      "id": "A03",
+      "effective_date": "2025-01-31",
+      "recorded_date": "2025-02-02",
+      "source": "EQ-01 monthly allocation schedule",
+      "explanation": "One full month of straight-line depreciation: 3600/36 = 100.",
+      "lines": [
+        {
+          "account": "depreciation_expense",
+          "side": "Dr",
+          "cents": 10000
+        },
+        {
+          "account": "accumulated_depreciation",
+          "side": "Cr",
+          "cents": 10000
+        }
+      ]
+    },
+    {
+      "id": "A04",
+      "effective_date": "2025-01-31",
+      "recorded_date": "2025-02-02",
+      "source": "TIME-31 approved wage time sheet",
+      "explanation": "Employees earned 250 not yet paid; settlement follows in February.",
+      "lines": [
+        {
+          "account": "wages_expense",
+          "side": "Dr",
+          "cents": 25000
+        },
+        {
+          "account": "wages_payable",
+          "side": "Cr",
+          "cents": 25000
+        }
+      ]
+    },
+    {
+      "id": "A05",
+      "effective_date": "2025-01-31",
+      "recorded_date": "2025-02-02",
+      "source": "LOAN-01 January interest workpaper",
+      "explanation": "One full month accrues at 1% of unchanged principal 2400: 24.",
+      "lines": [
+        {
+          "account": "interest_expense",
+          "side": "Dr",
+          "cents": 2400
+        },
+        {
+          "account": "interest_payable",
+          "side": "Cr",
+          "cents": 2400
+        }
+      ]
+    },
+    {
+      "id": "A06",
+      "effective_date": "2025-01-31",
+      "recorded_date": "2025-02-02",
+      "source": "ADV-01 session completion signed January 30",
+      "explanation": "Exactly one of four equal 250 sessions completed by January close.",
+      "lines": [
+        {
+          "account": "customer_advances",
+          "side": "Dr",
+          "cents": 25000
+        },
+        {
+          "account": "service_revenue",
+          "side": "Cr",
+          "cents": 25000
+        }
+      ]
+    }
+  ],
+  "wage_followup": {
+    "cash_account": "cash",
+    "payable_account": "wages_payable",
+    "expense_account": "wages_expense",
+    "reversal_date": "2025-02-01",
+    "payment_date": "2025-02-05",
+    "payment_cents": 60000
+  }
+}

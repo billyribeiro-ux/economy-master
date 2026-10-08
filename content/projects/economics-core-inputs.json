@@ -1,0 +1,158 @@
+{
+  "schema": "economics-core-1",
+  "provenance": "Original synthetic teaching economy and hypothetical release history; no observed country data",
+  "units": {
+    "currency": "HC",
+    "energy": "energy units per period",
+    "numeraire": "goods per period at 1 HC each",
+    "exchange": "HC per FU",
+    "pilot": "energy units per community per month"
+  },
+  "model": {
+    "benefit_A": "20",
+    "benefit_B": "12",
+    "cost_coefficient": "1/2",
+    "damage_coefficient": "1/4",
+    "foreign_energy_price": "8",
+    "numeraire_output": "200",
+    "government_consumption": "20",
+    "private_investment": "10",
+    "numeraire_exports": "20",
+    "opening_public_debt": "50",
+    "public_interest": "2",
+    "lump_tax_each": "8",
+    "foreign_secondary_transfer_B": "1",
+    "opening_foreign_assets_FU": "20",
+    "opening_private_foreign_liabilities_FU": "15",
+    "exchange_open": "2",
+    "exchange_close": "11/5",
+    "terminal_endowment_each": "100",
+    "terminal_investment_payoff_A": "10",
+    "terminal_claim_gross_return": "1"
+  },
+  "policies": [
+    {
+      "id": "baseline",
+      "kind": "tax",
+      "tariff": "0",
+      "carbon": "0"
+    },
+    {
+      "id": "carbon",
+      "kind": "tax",
+      "tariff": "0",
+      "carbon": "8/3"
+    },
+    {
+      "id": "tariff_carbon",
+      "kind": "tax",
+      "tariff": "2",
+      "carbon": "10/3"
+    },
+    {
+      "id": "quota",
+      "kind": "quota",
+      "cap": "4"
+    }
+  ],
+  "pilot": {
+    "cutoff": "2024-06-15",
+    "baseline_period": "2024-04",
+    "followup_period": "2024-05",
+    "communities": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "treated": [
+      "A",
+      "B",
+      "C"
+    ],
+    "assignment": "uniform-exactly-3-of-6",
+    "records": [
+      {
+        "community": "A",
+        "period": "2024-04",
+        "released": "2024-05-10",
+        "usage": "10"
+      },
+      {
+        "community": "A",
+        "period": "2024-05",
+        "released": "2024-06-10",
+        "usage": "8"
+      },
+      {
+        "community": "B",
+        "period": "2024-04",
+        "released": "2024-05-10",
+        "usage": "12"
+      },
+      {
+        "community": "B",
+        "period": "2024-05",
+        "released": "2024-06-10",
+        "usage": "10"
+      },
+      {
+        "community": "C",
+        "period": "2024-04",
+        "released": "2024-05-10",
+        "usage": "8"
+      },
+      {
+        "community": "C",
+        "period": "2024-05",
+        "released": "2024-06-10",
+        "usage": "8"
+      },
+      {
+        "community": "D",
+        "period": "2024-04",
+        "released": "2024-05-10",
+        "usage": "11"
+      },
+      {
+        "community": "D",
+        "period": "2024-05",
+        "released": "2024-06-10",
+        "usage": "11"
+      },
+      {
+        "community": "E",
+        "period": "2024-04",
+        "released": "2024-05-10",
+        "usage": "9"
+      },
+      {
+        "community": "E",
+        "period": "2024-05",
+        "released": "2024-06-10",
+        "usage": "10"
+      },
+      {
+        "community": "F",
+        "period": "2024-04",
+        "released": "2024-05-10",
+        "usage": "10"
+      },
+      {
+        "community": "F",
+        "period": "2024-05",
+        "released": "2024-06-10",
+        "usage": "11"
+      },
+      {
+        "community": "A",
+        "period": "2024-05",
+        "released": "2024-07-01",
+        "usage": "9"
+      }
+    ],
+    "assignment_date": "2024-05-01"
+  }
+}

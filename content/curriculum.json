@@ -2338,7 +2338,7 @@
       ],
       "assessment": "Reconcile aggregate accounts, derive basic growth and stabilization models, and evaluate open-economy mechanisms.",
       "project": "Produce a country diagnostic using dated macro data, competing models, scenarios and a policy memo that distinguishes identification from forecasting.",
-      "status": "assessment",
+      "status": "accepted",
       "chapters": [
         {
           "id": "v06-c01",
@@ -2790,7 +2790,11 @@
           },
           "review_record": "reviews/v06-c09-c12.json"
         }
-      ]
+      ],
+      "assessment_status": "accepted-by-author",
+      "review_record": "reviews/v06-assessment.json",
+      "project_inputs": "projects/v06-assessment-data.json",
+      "project_benchmark": "projects/v06-assessment-analysis.py"
     },
     {
       "id": "v07",
@@ -2806,7 +2810,7 @@
       ],
       "assessment": "Build and reconcile financial statements, assess earnings quality and translate accounting into economic cash flows.",
       "project": "Construct a fully reconciled three-statement model from a supplied original business case and write a financial-quality assessment.",
-      "status": "planned",
+      "status": "writing",
       "chapters": [
         {
           "id": "v07-c01",
@@ -2825,22 +2829,26 @@
             "v01"
           ],
           "level": "Undergraduate",
-          "status": "planned",
+          "status": "accepted",
           "manuscript": "chapters/v07-c01.html",
           "sources": [
-            "mit-finance",
-            "hbs-finance-curriculum"
+            "v07-c01-mit-process",
+            "v07-c01-mit-adjustments",
+            "v07-c01-framework"
           ],
           "required_worked_examples": 2,
           "required_exercises": 8,
           "review": {
-            "arithmetic": false,
-            "reasoning": false,
-            "solutions": false,
-            "sources": false,
-            "instruction": false,
-            "structure": false
-          }
+            "arithmetic": true,
+            "reasoning": true,
+            "solutions": true,
+            "sources": true,
+            "instruction": true,
+            "structure": true
+          },
+          "review_record": "reviews/v07-c01-c02.json",
+          "project_inputs": "projects/v07-c01-transactions.json",
+          "benchmark": "projects/v07-c01-ledger.py"
         },
         {
           "id": "v07-c02",
@@ -2859,22 +2867,28 @@
             "v07-c01"
           ],
           "level": "Undergraduate",
-          "status": "planned",
+          "status": "accepted",
           "manuscript": "chapters/v07-c02.html",
           "sources": [
-            "mit-finance",
-            "hbs-finance-curriculum"
+            "v07-c02-sec-guide",
+            "v07-c02-ias7-overview",
+            "v07-c02-sec-cash-quality",
+            "v07-c02-ifrs18-date",
+            "v07-c02-ifrs18-cash"
           ],
           "required_worked_examples": 2,
           "required_exercises": 8,
           "review": {
-            "arithmetic": false,
-            "reasoning": false,
-            "solutions": false,
-            "sources": false,
-            "instruction": false,
-            "structure": false
-          }
+            "arithmetic": true,
+            "reasoning": true,
+            "solutions": true,
+            "sources": true,
+            "instruction": true,
+            "structure": true
+          },
+          "review_record": "reviews/v07-c01-c02.json",
+          "project_inputs": "projects/v07-c02-inputs.json",
+          "benchmark": "projects/v07-c02-analysis.py"
         },
         {
           "id": "v07-c03",
@@ -2893,22 +2907,28 @@
             "v07-c02"
           ],
           "level": "Undergraduate",
-          "status": "planned",
+          "status": "accepted",
           "manuscript": "chapters/v07-c03.html",
           "sources": [
-            "mit-finance",
-            "hbs-finance-curriculum"
+            "v07-c03-ifrs15",
+            "v07-c03-ifrs9-impairment",
+            "v07-c03-mit-receivables",
+            "v07-c03-stern-ratios",
+            "v07-c03-damodaran-wc"
           ],
           "required_worked_examples": 2,
           "required_exercises": 8,
           "review": {
-            "arithmetic": false,
-            "reasoning": false,
-            "solutions": false,
-            "sources": false,
-            "instruction": false,
-            "structure": false
-          }
+            "arithmetic": true,
+            "reasoning": true,
+            "solutions": true,
+            "sources": true,
+            "instruction": true,
+            "structure": true
+          },
+          "review_record": "reviews/v07-c03.json",
+          "project_inputs": "projects/v07-c03-inputs.json",
+          "benchmark": "projects/v07-c03-analysis.py"
         },
         {
           "id": "v07-c04",
@@ -8099,9 +8119,25 @@
       "after_volume": 6,
       "outcome": "Connect microeconomic choices and strategic interaction to macroeconomic and international mechanisms.",
       "deliverables": "Cumulative theoretical and applied problems, complete solutions/rubrics and reassessment.",
-      "status": "planned",
+      "status": "accepted",
       "manuscript": "cross-assessments/economics-core.html",
-      "page": "economics-core-assessment.html"
+      "page": "economics-core-assessment.html",
+      "assessment_status": "accepted-by-author",
+      "review_record": "reviews/economics-core.json",
+      "required_artifacts": [
+        "projects/economics-core-inputs.json",
+        "projects/economics-core-analysis.py",
+        "projects/economics-core-benchmark.json",
+        "projects/economics-core-README.txt"
+      ],
+      "project_inputs": "projects/economics-core-inputs.json",
+      "project_benchmark": "projects/economics-core-analysis.py",
+      "review_limitations": [
+        "Agent review is not independent human grading or institutional certification.",
+        "Authored timing and scoring thresholds are not empirically calibrated.",
+        "The practical is an original conditional synthetic model, not an estimated policy forecast.",
+        "Visual/mobile/print UI QA remains pending under the recorded browser restriction."
+      ]
     },
     {
       "id": "finance-core",

@@ -1,0 +1,308 @@
+{
+  "chapter": "v07-c03",
+  "title": "Revenue, working capital and operating cycles",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "reviewer": "causal_identification specialist, independently of author monte_carlo",
+  "status": "passed",
+  "acceptance_authority": "Root coordinator owns final acceptance, shared integration and publication; this numerical/conceptual peer audit is not external accounting assurance.",
+  "scope": {
+    "assignment": "v07-c03-peer-review in production/v06-assessment-v07-opening-assignments.json",
+    "fully_read": [
+      "Full manuscript: all substantive prose, three worked examples, all eight exercise prompts and solutions, teach-back guide and delayed answer",
+      "Complete 275-line operating benchmark and JSON inputs",
+      "Complete README, focused checker, five proposed source records and final author record"
+    ],
+    "independent_work": "Manually transcribed all 13 journal changes in debit-positive kCU, reconstructed all 14 cash prefixes and four income-account closures using Fraction, then compared with the benchmark. A separate primitive account/flow oracle checked the baseline and financially meaningful changed-input cases. Independently solved all exercises and retention.",
+    "primary_body_spot_checks": [
+      "Official public IFRS 15 overview, actual About and standard-history text",
+      "IASB May 2023 IFRS 9 impairment Request for Information, actual version/scope and printed page 23 section 5",
+      "Actual MIT 15.515 October 11, 2003 Midterm Review PDF, cover and printed page 5 receivables/allowance section; inventory rollforward and cash-flow overview also visible in the inspected extracted text"
+    ],
+    "excluded": [
+      "No manuscript, program, shared-file, acceptance or publishing edits",
+      "No invoice-level documentary or standards-compliance audit",
+      "No full normative subscription IFRS standards inspection",
+      "No visual/mobile/print UI verification"
+    ]
+  },
+  "findings": [
+    {
+      "id": "v07-c03-peer-01",
+      "severity": "low",
+      "location": "content/reviews/v07-c03-sources.json, v07-c03-mit-receivables verification",
+      "finding": "The source location initially called the receivables sheet physical page 3 even though the actual PDF places printed page 5 at zero-based index 3, physical page 4.",
+      "status": "resolved",
+      "resolution": "Author changed the source verification to printed page 5 (PDF index 3; physical page 4). Reviewer inspected both the actual primary body and final corrected record. Method scope and chapter arithmetic were unaffected."
+    }
+  ],
+  "open_findings": [],
+  "reasoning_audit": {
+    "recognition": "The chapter supplies valid delivered/accepted goods, fixed prices and unconditional receivables before using the sales ledger. It distinguishes advances, pro forma billing without an enforceable right, later credit losses and contractual price changes. No blanket invoice-date or doubtful-collection recognition rule is inferred.",
+    "allowance_and_recovery": "G-Z is the asset carrying amount; the allowance is not cash or a liability. Writeoff reduces both gross and allowance without immediate net-asset change. Reinstatement has the same net-neutral property; subsequent collection moves an asset to cash. Final re-estimation may affect profit. The target stock and expense adjustment are distinguished, including negative expense and a debit pre-adjustment allowance. The lab transparently restricts recoveries to claims written off in the same period.",
+    "cash_identities": "Derived customer cash S-dG+dU-W+H and supplier cash COGS+dI-dAP directly. The gross bridge includes both the expense addback and -W+H; the raw net bridge already incorporates allowance movements and requires no second expense addback. The higher-target counterexample correctly leaves cash invariant while reducing both profit and net N.",
+    "ratios": "Stock/flow units are days with a common 90-day interval. Gross credit-sale DSO, net DSO, total-revenue DSO, credit-purchase DPO, total-purchase DPO and COGS-based DPO are distinctly labeled. Undefined zero-flow ratios propagate to dependent CCC. Mixed cash/credit activity, margins, endpoint averaging, growth, writeoffs and seasonality preclude an exact physical-delay claim.",
+    "pipeline": "Under the supplied steady all-credit/no-loss deterministic-lag model, N=s*dR+c*(dI-dP), so N-c*CCC=(s-c)*dR. This proves that negative CCC can coexist with positive dollar financing needs. Changed steady stocks are not silently used as a full transition cash calendar.",
+    "calendar": "Main journals are explicitly grouped quarter postings, with purchase-before-related-delivery stipulated and detailed dates/cost allocations unspecified. The separate cash-only calendar assumes receipts precede payments inside each bucket; it reports an infeasible unfinanced path and a conditional available zero-cost facility, not observed or guaranteed funding. Peak shortfall supplies a necessity bound and the exhibited draw/repayment path establishes sufficiency within those assumptions.",
+    "financing_choice": "The supplier discount is compared at the same day-30 date against a feasible day-10-to-day-30 loan. Rate d/(1-d) uses the actual early amount financed; 360-day simple annualization is not called an effective compound return. Availability, repayment capacity and no additional fees/terms are stated.",
+    "code": "Read all benchmark and checker lines. Integer minor-unit money and rational loss/day calculations avoid hidden rounding. Generated journal and nonnegative asset/liability bounds, full aging coverage, same-period recovery constraint and the separate calendar-total reconciliation are consistent with the documented bounded model. Validation uses explicit exceptions and remains active under optimization. Arithmetic consistency does not establish source-document completeness."
+  },
+  "independent_results": {
+    "baseline_kcu": {
+      "opening_assets": 162,
+      "opening_liabilities": 60,
+      "opening_equity": 102,
+      "gross_receivables": 82,
+      "allowance_before_adjustment": 2,
+      "allowance_target": 9,
+      "loss_expense": 7,
+      "net_receivables": 73,
+      "inventory": 96,
+      "payables": 40,
+      "advances": 12,
+      "revenue": 230,
+      "profit": 47,
+      "retained_earnings": 69,
+      "cash": 32,
+      "assets": 201,
+      "liabilities": 52,
+      "equity": 149,
+      "customer_cash": 204,
+      "supplier_cash": 170,
+      "other_cash": 32,
+      "CFO_direct_gross_net": 2,
+      "gross_N_opening": 80,
+      "gross_N_closing": 126,
+      "net_N_opening": 72,
+      "net_N_closing": 117
+    },
+    "days": {
+      "gross_credit_DSO": "71/2",
+      "DIO": "55",
+      "credit_purchase_DPO": "135/4",
+      "credit_purchase_CCC": "227/4",
+      "total_purchase_DPO": "405/16",
+      "total_purchase_CCC": "1043/16",
+      "COGS_DPO": "225/8",
+      "COGS_CCC": "499/8",
+      "gross_total_revenue_DSO": "639/23",
+      "net_credit_DSO": "125/4"
+    },
+    "cash_calendar_kcu": {
+      "unfinanced_month_ends": [
+        8,
+        -8,
+        32
+      ],
+      "minimum_committed_facility": 8,
+      "funded_month_ends_before_final_repayment": [
+        8,
+        0,
+        40
+      ],
+      "final_repayment": 8,
+      "final_cash": 32,
+      "closing_bridge_debt": 0
+    },
+    "higher_target_15": {
+      "expense": 13,
+      "profit": 41,
+      "net_receivables": 67,
+      "assets": 195,
+      "equity": 143,
+      "net_N": 111,
+      "CFO": 2,
+      "gross_DSO": "71/2",
+      "net_DSO": "119/4"
+    },
+    "delayed_extra_writeoff_2": {
+      "total_writeoffs": 10,
+      "gross_receivables": 80,
+      "pre_adjustment_allowance": 0,
+      "target": 9,
+      "expense": 9,
+      "profit": 45,
+      "net_receivables": 71,
+      "assets": 199,
+      "equity": 147,
+      "net_N": 115,
+      "CFO": 2,
+      "cash": 32,
+      "gross_DSO": 35
+    }
+  },
+  "exercise_review": [
+    {
+      "exercise": 1,
+      "result": "June cash +14, revenue 7, COGS 9/2, profit/equity +5/2, gross AR -1, inventory -9/2, advances +6; assets +17/2 = liabilities +6 plus equity +5/2. Pro forma invoice creates no entry under the supplied no-right condition."
+    },
+    {
+      "exercise": 2,
+      "result": "Gross AR 55; target/expense 9/2; net AR 101/2; inventory 35, AP 30, advances 8; revenue 126, profit 83/2. Customer cash 119 and supplier cash 60 yield CFO 44 and cash 54. Closing assets 279/2 = liabilities 38 + equity 203/2. Gross N 54 to 52 and net N 50 to 95/2 each reconcile CFO 44."
+    },
+    {
+      "exercise": 3,
+      "result": "Gross/allowance/net stages are (40,5,35), (37,2,35), (38,3,35), (37,3,34); the collection adds cash 1. Final target 4 requires expense 1 and leaves net AR 33. Without recovery, expense would be 2 at the same target; re-estimation carries the profit difference."
+    },
+    {
+      "exercise": 4,
+      "result": "DSO 30, DIO 25, matched DPO 20, CCC 35 days. COGS DPO gives 15 and CCC 40; total-sales DSO gives 20 and CCC 25. Supplier settlement 160 plus cash purchases 80 equals total cash 240. No individual payment dates are identified."
+    },
+    {
+      "exercise": 5,
+      "result": "Raw event cash [-60,40,-30,100,80], CFO 60, closing cash 80. Facility 60 is necessary at day 10 and sufficient via funded path [0,100,30,160,140], then repayment 60. Limit 40 leaves shortage 20. Accrual profit is not identified by this cash calendar."
+    },
+    {
+      "exercise": 6,
+      "result": "Stocks AR 50, inventory 40, AP 70 imply N 20 and CCC -5. Scaling both daily flows by 3/2 yields 75,60,105 and N 30, requiring 10 more N. The margin identity gives 20-2*(-5)=30=(5-2)*10."
+    },
+    {
+      "exercise": 7,
+      "result": "Loan interest 49/75, day-30 repayment 7399/75, saving versus face amount 101/75. Supplier credit costs 1/49 over 20 days; simple annual equivalent 18/49, greater than the stated 12% loan rate. Funding/contractual conditions are part of the comparison."
+    },
+    {
+      "exercise": 8,
+      "result": "Allowance target 15 gives expense 13, profit 41, net AR 67, assets 195, equity 143, net N 111 and unchanged CFO 2. Net DSO falls from 125/4 to 119/4 while gross DSO stays 71/2. Algebraic cancellation of a feasible target increase in profit and net N is correct."
+    }
+  ],
+  "independent_boundary_probes": {
+    "status": "passed",
+    "generated_journals": 13,
+    "cash_prefixes_including_opening": 14,
+    "temporary_closures": 4,
+    "allowance_targets": [
+      0,
+      2,
+      9,
+      15,
+      82
+    ],
+    "writeoff_recovery_scenarios": 16,
+    "writeoff_values": [
+      0,
+      2,
+      8,
+      10,
+      20,
+      80
+    ],
+    "recovery_values_rule": "For each writeoff w, tested distinct values 0, min(1,w) and w; aging and calendar receipts were coherently updated.",
+    "cash_purchase_values_holding_total_purchases_and_supplier_cash_fixed": [
+      0,
+      40,
+      80,
+      160
+    ],
+    "all_zero_flow_denominators": "All ten day/CCC values correctly null while opening stocks and the allowance reversal still reconcile.",
+    "calendar_permutations": 6,
+    "facility_values_by_permutation": [
+      8,
+      0,
+      8,
+      0,
+      0,
+      0
+    ],
+    "exercise_groups": 8,
+    "retention": "passed"
+  },
+  "checker_execution": {
+    "final_result": {
+      "status": "passed",
+      "checks": [
+        "Independent baseline statements, allowance, both CFO bridges, ten day ratios and 14 exact zero residuals",
+        "Separate rational posting reference checks all 13 journals, every cash prefix and four income-account closures",
+        "Five allowance targets including expense reversal, four writeoff/recovery cases including retention, and three cash-credit mixes including zero denominator",
+        "All six calendar-bucket permutations preserve quarter totals/ratios but vary conditional facility between zero and eight",
+        "All eight exercise solutions, cutoff identity, supplier-discount comparison and steady-flow counterexample independently recomputed",
+        "Sixteen meaningful unsupported/invalid ledger, precision and calendar contracts rejected; portable normal/optimized CLI equals quiet API",
+        "Four economically consequential report mutations caught; chapter has three worked cases, eight matching solutions, answered prompts and flat source/artifact routes"
+      ],
+      "counts": {
+        "generated_journals": 13,
+        "zero_residuals": 14,
+        "allowance_cases": 5,
+        "writeoff_recovery_cases": 4,
+        "purchase_mix_cases": 3,
+        "calendar_permutations": 6,
+        "invalid_contracts": 16,
+        "report_mutations_caught": 4,
+        "exercises": 8,
+        "worked_examples": 3
+      },
+      "limitations": [
+        "Bounded author numerical/structural audit; source scope and prompt interpretation require accompanying manuscript review.",
+        "Recognition and loss fractions are supplied assumptions, not documentary evidence or current standards-compliance certification.",
+        "Monthly conditional cash plans do not certify detailed subledger chronology or available credit.",
+        "Visual, mobile and print UI QA remains pending; no visual claim."
+      ]
+    },
+    "quiet_API": {
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "strict_JSON_serializable": true
+    },
+    "inspection": "The full focused checker was read and executed. Its own independent baseline/posting references, financially meaningful invalid contracts, four corrupted-report checks and portable normal/-O benchmark runs passed. Generic exhaustive input fuzzing is neither performed nor claimed."
+  },
+  "source_review": [
+    {
+      "id": "v07-c03-ifrs15",
+      "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-15-revenue-from-contracts-with-customers/",
+      "checked": "2026-10-08",
+      "actual_inspection": "Read the official public About and history sections. They support the five-step control-transfer framework, point-in-time/over-time distinction and annual periods beginning on or after 1 January 2018 with earlier application permitted. Full normative requirements and local adoption are not inferred."
+    },
+    {
+      "id": "v07-c03-ifrs9-impairment",
+      "url": "https://www.ifrs.org/content/dam/ifrs/project/pir-9-impairment/rfi-iasb-2023-1-ifrs9-impairment.pdf",
+      "checked": "2026-10-08",
+      "actual_inspection": "Opened actual 34-page May 2023 RFI. Read title/comment-document scope and printed page 23 section 5: specified lifetime-loss requirement versus policy-choice cases and provision-matrix inputs involving history, current conditions, supportable forecasts and time value. The chapter accurately treats this as a dated explanation, not an enacted new rule or validation of synthetic fractions."
+    },
+    {
+      "id": "v07-c03-mit-receivables",
+      "url": "https://ocw.mit.edu/courses/15-515-financial-accounting-fall-2003/3649947a5c2d86775d6beb76c885c7b8_rec5midterm_review.pdf",
+      "checked": "2026-10-08",
+      "actual_inspection": "Opened actual 14-page PDF. Its October 11, 2003 cover and receivables section at printed page 5 / PDF index 3 / physical page 4 were inspected in extracted text, along with inventory and cash-flow rollforwards. Supports the dated allowance/end-balance mechanics. The chapter separately defines reinstatement and collection and does not import the source's old recognition checklist or blanket inventory-policy assertions."
+    },
+    {
+      "id": "v07-c03-stern-ratios and v07-c03-damodaran-wc",
+      "actual_inspection": "Read the two complete proposed source records and their manuscript uses. No fresh retrieval of these two bodies in this peer pass. The chapter declares its own credit-purchases refinement rather than attributing it to a source that specifies purchases generally."
+    }
+  ],
+  "hashes": {
+    "content/chapters/v07-c03.html": {
+      "sha256": "f2fd2ec7fb450e9c7e0b8c3dc401e424cf153d8ec6f2fc0cd57ec580f928f1fb",
+      "bytes": 43169
+    },
+    "content/projects/v07-c03-inputs.json": {
+      "sha256": "03c0a3d11e22f771059435c5f786ecf1addaf53422ae3deb4b938a642064baac",
+      "bytes": 1294
+    },
+    "content/projects/v07-c03-analysis.py": {
+      "sha256": "8b42a18b4924c78ad39f6e2b06a4f2481ba86b007c8282436bb1cd5ed407a7a8",
+      "bytes": 16963
+    },
+    "content/projects/v07-c03-README.txt": {
+      "sha256": "4e533e631881f9aabbc33420c669c37e2906efe8d28daf17776022155e571940",
+      "bytes": 9453
+    },
+    "scripts/check_v07_c03.py": {
+      "sha256": "256a87c411b0e813926ce95f6f27341d86fdbea0b08c41284c65f4b504c90222",
+      "bytes": 18051
+    },
+    "content/reviews/v07-c03-sources.json": {
+      "sha256": "609c9af478bf6ca92e2eafaf6f67ac756102ac78eeedfded673c2be49fd15bd1",
+      "bytes": 4739
+    },
+    "content/reviews/v07-c03-author.json": {
+      "sha256": "f061bacba36acb7a71f625e9bd65d14bbea8d7bc093dbaa2975abdfad988f80d",
+      "bytes": 11424
+    }
+  },
+  "hash_verification": "All six payload hashes and byte lengths in the final author record match the actual files; the author record itself is separately hashed here.",
+  "limitations": [
+    "This is a bounded independent specialist audit, not a real-company documentary audit, a standards-compliance opinion or certification of learner competence.",
+    "Reported fractions and dates are supplied synthetic assumptions. The grouped ledger and separate conditional cash calendar do not establish invoice/cohort chronology or credit availability.",
+    "Full subscription IFRS standards were not inspected. Fresh primary-body checks are limited to the three identified sources; the other source checks concern author scope records.",
+    "Root retains structural integration, acceptance and publication. No visual/mobile/print UI QA is claimed."
+  ]
+}

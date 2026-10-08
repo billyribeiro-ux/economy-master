@@ -1,0 +1,78 @@
+{
+  "chapter": "v07-c03",
+  "date": "2026-10-08",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating author after separate author and independent specialist reviews",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Complete working-capital chapter: three worked cases, eight complete exercise solutions, answered teach-back/retention, original exact ledger and dated cash calendar.",
+  "author_review": "reviews/v07-c03-author.json",
+  "independent_review": "reviews/v07-c03-peer.json",
+  "root_review": {
+    "manuscript": "Read the full chapter, three worked examples and all eight prompt/solution pairs. Independently followed revenue 230, gross claims 82, allowance 9, profit 47, inventory 96, payables 40, advance liability 12, cash 32 and closing 201=52+149. Reviewed both cash-bridge derivations, all exercise calculations, delayed writeoff, cutoff entries and recognition limitations.",
+    "funding_and_ratios": "Gross N rises 46 and net N rises 45; both reconcile CFO 2. Endpoint DSO 35.5, DIO 55 and credit-purchase DPO 33.75 give 56.75 days under explicitly disclosed mixed-flow approximation. The steady-pipeline margin wedge and negative-CCC/positive-funding example are correct. The separate calendar needs an available bridge of 8 despite positive closing cash. Supplier-discount financing comparison correctly uses simple 360-day rates.",
+    "code": "Read the ledger/validation/cash-bridge core and independent checker core. Separate peer read the full program and all numerical boundaries; seven focused groups are now integrated in the shared verifier. Integer minor units and exact rational ratios avoid hidden rounding.",
+    "sources": "Five scoped primary-source records match the final proposals. Actual body inspections are recorded separately by author and peer. Source classification, dated material and public-overview access limitations are explicit.",
+    "integration": "Acceptance-state build and whole-library verifier pass: 75 accepted chapters, six accepted volume packages, two accepted cumulative packages and 88 HTML pages. Browser search-index syntax and git diff whitespace checks pass. Offline archive has 215 files and passes ZIP integrity; deployment follows."
+  },
+  "resolved_findings": [
+    "Qualified mixed-flow CCC as an aggregate proxy rather than exact observed elapsed time.",
+    "Distinguished grouped quarter postings from an invoice-level chronological feasibility proof.",
+    "Corrected word/number spacing.",
+    "Corrected the MIT source physical page number while retaining its printed page reference."
+  ],
+  "reviewed_peer_payload_hashes_verified": 7,
+  "reviewed_author_payload_hashes_verified": 6,
+  "hashes": {
+    "content/chapters/v07-c03.html": {
+      "sha256": "f2fd2ec7fb450e9c7e0b8c3dc401e424cf153d8ec6f2fc0cd57ec580f928f1fb",
+      "bytes": 43169
+    },
+    "content/projects/v07-c03-inputs.json": {
+      "sha256": "03c0a3d11e22f771059435c5f786ecf1addaf53422ae3deb4b938a642064baac",
+      "bytes": 1294
+    },
+    "content/projects/v07-c03-analysis.py": {
+      "sha256": "8b42a18b4924c78ad39f6e2b06a4f2481ba86b007c8282436bb1cd5ed407a7a8",
+      "bytes": 16963
+    },
+    "content/projects/v07-c03-README.txt": {
+      "sha256": "4e533e631881f9aabbc33420c669c37e2906efe8d28daf17776022155e571940",
+      "bytes": 9453
+    },
+    "scripts/check_v07_c03.py": {
+      "sha256": "256a87c411b0e813926ce95f6f27341d86fdbea0b08c41284c65f4b504c90222",
+      "bytes": 18051
+    },
+    "content/reviews/v07-c03-sources.json": {
+      "sha256": "609c9af478bf6ca92e2eafaf6f67ac756102ac78eeedfded673c2be49fd15bd1",
+      "bytes": 4739
+    },
+    "content/reviews/v07-c03-author.json": {
+      "sha256": "f061bacba36acb7a71f625e9bd65d14bbea8d7bc093dbaa2975abdfad988f80d",
+      "bytes": 11424
+    }
+  },
+  "open_content_findings": [],
+  "limitations": [
+    "Agent review is not independent human accounting certification.",
+    "Supplied recognition rules, loss rates and funding facilities do not establish documentary evidence or jurisdictional compliance.",
+    "Monthly cash aggregation and grouped ledger entries do not certify detailed invoice/cohort timing.",
+    "Visual/mobile/print UI QA remains pending."
+  ],
+  "batch_validation": {
+    "status": "passed",
+    "html_pages_checked": 88,
+    "chapter_packages_available": 75,
+    "chapters_accepted": 75,
+    "volume_packages_accepted": 6,
+    "cumulative_packages_accepted": 2,
+    "log": "/private/tmp/economy-75-accepted-verify.log"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "chapter": "v07-c03",
+  "title": "Revenue, working capital and operating cycles",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "reviewer": "monte_carlo specialist author",
+  "status": "ready_for_root_review",
+  "acceptance_authority": "Root coordinator only; this author review is not chapter acceptance or external accounting certification.",
+  "scope": {
+    "worked_examples": 3,
+    "exercises": 8,
+    "solutions": 8,
+    "word_count": 6158,
+    "word_count_method": "HTMLParser text nodes and Unicode word regex, excluding HTML tags",
+    "assets": "Original exact operating ledger with 13 generated journal entries, four temporary closures, supplied JSON aging and separate cash calendar; standard-library Python and README."
+  },
+  "content_review": {
+    "prerequisites": "Read current master plan, production plan, STATUS, frozen ownership contract, exact canonical c03 spec and authored/accepted c01/c02 account, closing and cash-flow interfaces. Mesa Component Supply is a distinct fictional trader with kCU units and a 90-day 2025 quarter.",
+    "recognition": "Explicitly distinguishes delivery/performance, unconditional receivable, ordinary collection, advance and earned advance. Unperformed pro forma billing with no payment right creates no entry. Later credit deterioration is separated from price concessions or an invalid original revenue claim. Detailed inventory measurement and complex contracts are deferred.",
+    "allowance": "Defined credit-normal contra asset before use. Derived Z1=Z0+B-W+H and the ending-target adjustment; immediate writeoff, two-step same-period recovery and later re-estimation distinguished. Loss fractions are supplied expected amounts, not unexplained default probabilities. Negative adjustment and debit pre-adjustment balance boundaries are stated. The program explicitly limits recovery to current-period written-off claims.",
+    "account_reconciliation": "Independently recomputed opening 162=60+102, G82/Z9/net73, inventory96/AP40/advances12, revenue230/profit47, cash32 and closing 201=52+149. Generated journal signs, every cash prefix and four closures checked independently. Closing retained earnings69 follows opening22 plus profit47.",
+    "cash_derivations": "Derived customer cash S-dG+dU-W+H and supplier cash COGS+dI-dAP. Gross N increases46: CFO=47+7-46-8+2=2. Net N increases45: CFO=47-45=2. Explained why adding expense to the raw net-N change duplicates the allowance effect, while an adjusted published working-capital line can support a separate addback.",
+    "ratios_and_growth": "All ten baseline ratio results checked exactly. Credit sales, total revenue, net versus gross AR, credit purchases, total purchases and COGS denominators are separately named; zero flows produce undefined ratios. Endpoint averages, mixed payment shares, growing cohorts and seasonal paths prevent a physical-duration inference. Derived N-c*CCC=(s-c)*dR under steady all-credit assumptions; proved negative CCC can coexist with positive dollar N.",
+    "timing_and_financing": "Main rows are grouped quarter entries, not invoice-level chronology. Inventory purchase-before-delivery feasibility is stipulated, while detailed dates and cost allocations are not supplied. Alternative cash calendar is explicitly separate and conditional: raw cash8/-8/32, bridge draw8 before shortfall, cash8/0/40 before final repayment, cash32/debt0 after. Gross draw and repayment are additional financial flows. Finer timing, availability, fees and uncertain receipts remain limitations.",
+    "solutions": "Read all eight prompts against complete solutions and independently solved every determinate target, including cutoff identity, second full ledger, staged recovery, denominator alternatives, dated facility necessity/sufficiency, negative-cycle growth, supplier discount and allowance-induced net DSO. Teach-back and delayed additional-writeoff answers are supplied. All exercise units and no-unlisted-transaction assumptions are explicit.",
+    "sources": "Five actual primary bodies inspected: IFRS15 public overview; May2023 IASB impairment RFI section5; MIT11October2003 receivables notes; Stern ratio notes; Damodaran faculty working-capital page. Their scope is recorded in separate proposals. Dated teaching recovery convention is not a universal current standard. No full subscription standard or real invoices inspected; no compliance or observed-data claim.",
+    "code": "Bounded explicit validation, integer minor-unit money, exact rational rates/days, no hidden rounding, no floats/randomness/network/installations. Default input path relative to script. All reports strict-JSON serializable; quiet imports/APIs. Benchmark validation remains active under optimization. Checker compares independent references, relevant changed economic inputs and four consequential output mutations."
+  },
+  "resolved_findings": [
+    {
+      "origin": "root outline review",
+      "finding": "A mixed-flow historical CCC must not be called an exact elapsed physical cash cycle.",
+      "resolution": "Explicitly qualified the credit-purchase ratio, alternative denominators, margins, endpoint averaging and cash-credit composition; retained exact cash calendar separately."
+    },
+    {
+      "origin": "root readability review",
+      "finding": "Joined prose-number tokens made solutions and self-study answers unnecessarily difficult to read.",
+      "resolution": "Inserted ordinary spaces while preserving mathematical variables, code and artifact paths; also refreshed README prose spacing."
+    },
+    {
+      "origin": "author chronology audit",
+      "finding": "Grouped period postings could be mistaken for a complete invoice-level chronological feasibility proof.",
+      "resolution": "Clarified grouped-entry scope, assumed purchase-before-delivery condition and missing detailed dates/cost allocations; cash calendar remains a separate conditional cash-only proposal."
+    },
+    {
+      "origin": "independent peer source-location check",
+      "finding": "MIT physical-page wording could confuse zero-based PDF index with physical page number.",
+      "resolution": "Final source record identifies printed page 5 (PDF index 3; physical page 4). The inspected mathematical scope was unaffected."
+    }
+  ],
+  "validation": {
+    "checker_result": {
+      "status": "passed",
+      "checks": [
+        "Independent baseline statements, allowance, both CFO bridges, ten day ratios and 14 exact zero residuals",
+        "Separate rational posting reference checks all 13 journals, every cash prefix and four income-account closures",
+        "Five allowance targets including expense reversal, four writeoff/recovery cases including retention, and three cash-credit mixes including zero denominator",
+        "All six calendar-bucket permutations preserve quarter totals/ratios but vary conditional facility between zero and eight",
+        "All eight exercise solutions, cutoff identity, supplier-discount comparison and steady-flow counterexample independently recomputed",
+        "Sixteen meaningful unsupported/invalid ledger, precision and calendar contracts rejected; portable normal/optimized CLI equals quiet API",
+        "Four economically consequential report mutations caught; chapter has three worked cases, eight matching solutions, answered prompts and flat source/artifact routes"
+      ],
+      "counts": {
+        "generated_journals": 13,
+        "zero_residuals": 14,
+        "allowance_cases": 5,
+        "writeoff_recovery_cases": 4,
+        "purchase_mix_cases": 3,
+        "calendar_permutations": 6,
+        "invalid_contracts": 16,
+        "report_mutations_caught": 4,
+        "exercises": 8,
+        "worked_examples": 3
+      },
+      "limitations": [
+        "Bounded author numerical/structural audit; source scope and prompt interpretation require accompanying manuscript review.",
+        "Recognition and loss fractions are supplied assumptions, not documentary evidence or current standards-compliance certification.",
+        "Monthly conditional cash plans do not certify detailed subledger chronology or available credit.",
+        "Visual, mobile and print UI QA remains pending; no visual claim."
+      ]
+    },
+    "quiet_API": {
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "strict_JSON_serializable": true
+    },
+    "normal_optimized_portable_CLI": "Both CLI modes from an unrelated temporary working directory match the complete API report; a deliberately unfunded ledger is rejected with JSON status invalid_input and exit2 under -O.",
+    "exact_main_outputs_kcu": {
+      "opening_assets": "162",
+      "opening_liabilities": "60",
+      "opening_equity": "102",
+      "gross_receivables": "82",
+      "allowance_target": "9",
+      "allowance_expense": "7",
+      "net_receivables": "73",
+      "inventory": "96",
+      "payables": "40",
+      "advances": "12",
+      "revenue": "230",
+      "profit": "47",
+      "retained_earnings": "69",
+      "closing_cash": "32",
+      "closing_assets": "201",
+      "closing_liabilities": "52",
+      "closing_equity": "149",
+      "customer_cash": "204",
+      "supplier_cash": "170",
+      "operating_cash": "2",
+      "gross_N_change": "46",
+      "net_N_change": "45",
+      "conditional_minimum_facility": "8"
+    },
+    "exact_ratio_days": {
+      "gross_credit_DSO": "71/2",
+      "DIO": "55",
+      "credit_purchase_DPO": "135/4",
+      "credit_purchase_CCC": "227/4",
+      "total_purchase_CCC": "1043/16",
+      "COGS_CCC": "499/8",
+      "gross_total_revenue_DSO": "639/23",
+      "net_credit_DSO": "125/4"
+    },
+    "retention": "Additional writeoff2 with unchanged target9 gives G80/net71/expense9/profit45/assets199/equity147/CFO2 and gross DSO35."
+  },
+  "hashes": {
+    "content/chapters/v07-c03.html": {
+      "sha256": "f2fd2ec7fb450e9c7e0b8c3dc401e424cf153d8ec6f2fc0cd57ec580f928f1fb",
+      "bytes": 43169
+    },
+    "content/projects/v07-c03-analysis.py": {
+      "sha256": "8b42a18b4924c78ad39f6e2b06a4f2481ba86b007c8282436bb1cd5ed407a7a8",
+      "bytes": 16963
+    },
+    "content/projects/v07-c03-inputs.json": {
+      "sha256": "03c0a3d11e22f771059435c5f786ecf1addaf53422ae3deb4b938a642064baac",
+      "bytes": 1294
+    },
+    "content/projects/v07-c03-README.txt": {
+      "sha256": "4e533e631881f9aabbc33420c669c37e2906efe8d28daf17776022155e571940",
+      "bytes": 9453
+    },
+    "scripts/check_v07_c03.py": {
+      "sha256": "256a87c411b0e813926ce95f6f27341d86fdbea0b08c41284c65f4b504c90222",
+      "bytes": 18051
+    },
+    "content/reviews/v07-c03-sources.json": {
+      "sha256": "609c9af478bf6ca92e2eafaf6f67ac756102ac78eeedfded673c2be49fd15bd1",
+      "bytes": 4739
+    }
+  },
+  "open_findings": [],
+  "limitations": [
+    "Root owns shared build/source integration, acceptance and publishing; this record does not change canonical state.",
+    "Exact synthetic accounting does not verify documentary recognition, collectibility, actual facilities or jurisdictional reporting compliance.",
+    "The code is intentionally bounded; its grouped ledger and separate cash-only calendar do not establish all detailed operational dates or cohort feasibility.",
+    "Source scope is limited to inspected public material; current full IFRS/GAAP comparison and formal credit-loss estimation are not claimed.",
+    "Visual/mobile/print UI QA remains pending; no browser workaround or visual verification claim."
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "chapter": "v07-c01",
+  "title": "Transactions and double-entry accounting",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "reviewer": "monte_carlo independent specialist peer",
+  "status": "passed",
+  "review_scope": "Read-only review of the full chapter, three worked examples, all eight prompts and complete solutions, teach-back/retention, transaction data, complete benchmark/checker, preserved output, README and author/source records. Only this peer record written; coordinator retains acceptance.",
+  "findings": [],
+  "checks": [
+    {
+      "area": "Definitions, recognition and invariant",
+      "result": "pass",
+      "detail": "Entity/period/USD-cent convention precedes entries. Recognition, measurement and classification separated; debit/credit are sides. Expanded equation and signed-sum induction are valid for the stated chart. Total assets after contra-asset deduction are distinct from net assets=equity. Opposite-normal balances are investigative flags; retained deficits are allowed. Balanced entry, duplicated/omitted transaction and substantive recognition errors are correctly distinguished."
+    },
+    {
+      "area": "Independent posting and all worked examples",
+      "result": "pass",
+      "detail": "Independently transcribed all 11 transactions, six adjustments and three closing entries from the manuscript into a separate dollar ledger. All 20 complete prefix vectors matched benchmark cents output. Cash sources12100 less uses6800 give5300; unadjusted trial total14000, adjusted14374 and post-closing11700 each side. Adjusted assets11600, liabilities3824, equity7776, revenue4450, expenses2274, profit2176 and retained earnings1776 reconcile. Contra asset100 explains why post-closing trial total11700 differs from total assets11600."
+    },
+    {
+      "area": "Timing, settlement, reversal and correction",
+      "result": "pass",
+      "detail": "January31 effective close and February2 recorded date retained. February1 effective reversal is recorded no earlier than preparation. Wage250 plus new350 settles in cash600, giving cash4700 and zero wage payable by both routes. Reversal does not discharge the economic obligation; interim reporting caveat is explicit. Dr Revenue/Cr Receivables900 corrects the erroneous credit without a cash change. Prior-issued-statement error treatment is expressly deferred."
+    },
+    {
+      "area": "Exercise and retention recomputation",
+      "result": "pass",
+      "detail": "Independently solved all eight exact prompts; ledger signs, adjustments, missing balance completeness premise, correction effects, mixed reversal, depreciation life/residual bound, funding calendar and invariant counterexample agree. Teach-back supplies valid entry checklist; March retention yields cash+600=liabilities+290+equity+310 and April settlement creates no second wage expense."
+    },
+    {
+      "area": "Benchmark, checker and reproducibility",
+      "result": "pass",
+      "detail": "Read full code. Exact integer cents, bounded amounts/lists, duplicate JSON handling, explicit validation and quiet API are coherent with README. Program is a posting engine, not a document verifier; negative Cash is flagged and expressly not valid funding. Ran standalone checker successfully and separately imported/check() under stdout/stderr capture: both zero bytes, strict JSON serializable. Preserved JSON equals baseline program output. Checker covers 20 prefixes,31 wage settlements,8 scaling cases,33 invalid API cases,36 invalid CLI cases and4 rejected report mutations, with portable normal/-O commands."
+    },
+    {
+      "area": "Sources and instruction",
+      "result": "pass",
+      "detail": "Read all three proposed source records and independently opened the actual primary bodies listed below. Chapter appropriately limits historical teaching mechanics and public conceptual summary; it does not import their broad cash-adjustment/matching shortcuts as universal rules. Three worked/eight solution structure, clear assumptions, proof/critique, answered prompts and flat downloads inspected. Prerequisite v01-c04 and existing c02 route are coherent."
+    }
+  ],
+  "independent_results_USD": {
+    "worked": {
+      "cash": 5300,
+      "unadjusted_profit": 3100,
+      "profit_adjustment": -924,
+      "adjusted_profit": 2176,
+      "assets": 11600,
+      "liabilities": 3824,
+      "equity": 7776,
+      "closing_retained_earnings": 1776,
+      "wage_followup_cash": 4700,
+      "wage_followup_expense": 350
+    },
+    "exercise1": {
+      "cash": 1420,
+      "receivables": 450,
+      "profit": 750,
+      "assets": 2270,
+      "liabilities": 600,
+      "equity": 1670,
+      "trial_each": 2350
+    },
+    "exercise2": {
+      "revenue_change": 520,
+      "expense_change": 797,
+      "profit_equity_change": -277,
+      "total_asset_change": -425,
+      "liability_change": -148,
+      "cash_change": 0
+    },
+    "exercise3": {
+      "missing_revenue": 490,
+      "profit": 230,
+      "retained_earnings": 190,
+      "assets": 2700,
+      "liabilities": 1010,
+      "equity": 1690
+    },
+    "exercise4": {
+      "cash_change": 0,
+      "receivable_change": -70,
+      "prepaid_change": 200,
+      "profit_equity_change": 130
+    },
+    "exercise5": {
+      "proper_expense_both_routes": 320,
+      "mixed_expense": 140,
+      "mixed_payable_debit": 180
+    },
+    "exercise6": {
+      "monthly_36": 60,
+      "quarter_36": 180,
+      "carrying_36": 2220,
+      "quarter_24": 270,
+      "carrying_24": 2130,
+      "carrying_after40_original": 240
+    },
+    "exercise7": {
+      "unfunded_cash": -150,
+      "receivables": 1300,
+      "profit": 650,
+      "unfunded_algebraic_assets": 1450,
+      "equity": 1250,
+      "cash_before_wages": 40,
+      "full_plan_extra_loan": 150,
+      "funded_assets": 1600,
+      "funded_liabilities": 350
+    },
+    "exercise8": {
+      "illustrative_advance_error_in_profit_equity_liabilities": 700,
+      "proof_and_evaluation": "Zero-sum preservation by induction is correct; a wrongly recognized advance refutes substantive correctness. Occurrence, completeness, cutoff and measurement checks each have a distinct evidence target and stated limits."
+    },
+    "retention": {
+      "cash_change": 600,
+      "recognized_revenue": 400,
+      "wage_expense": 90,
+      "profit_equity_change": 310,
+      "liability_change": 290
+    }
+  },
+  "primary_body_spot_checks": [
+    {
+      "id": "v07-c01-mit-process",
+      "url": "https://www.ocw.mit.edu/courses/15-511-financial-accounting-summer-2004/07dfd16560e0d35cb2df104a99930813_lec4.pdf",
+      "scope": "Actual33-page PDF: title June11 2004; account-side/temporary-account/retained-earnings slides and journal/trial-balance limitations inspected. Dated teaching source supports the scoped mechanics; no current-standard claim."
+    },
+    {
+      "id": "v07-c01-mit-adjustments",
+      "url": "https://ocw.mit.edu/courses/15-511-financial-accounting-summer-2004/5149d78ff98121ce3801f0b4f3f312c1_lec5.pdf",
+      "scope": "Actual52-page PDF: title Summer2003/June14 2003 despite Summer2004 hosting. Read periodic adjustment, wage/interest, supplies, prepaid insurance/customer advance and depreciation/contra-asset passages. Chapter qualifies the source broad no-Cash adjustment phrasing and does not claim those historical rules establish present compliance."
+    },
+    {
+      "id": "v07-c01-framework",
+      "url": "https://www.ifrs.org/content/dam/ifrs/project/conceptual-framework/fact-sheet-project-summary-and-feedback-statement/conceptual-framework-project-summary.pdf",
+      "scope": "Actual20-page public March2018 summary: p2 purpose/status; pp6–10 useful information, entity, element definitions and recognition; measurement context. Supports distinction between conceptual guidance and Standards. Full issued Framework was not retrieved or reviewed in this peer pass."
+    }
+  ],
+  "author_hashes_verified": true,
+  "reviewed_hashes": {
+    "content/chapters/v07-c01.html": {
+      "sha256": "87ddd8a6ceb5fba51fc3a533d64ff9f59520db315984c3fb132d347ec809b886",
+      "bytes": 42425
+    },
+    "content/projects/v07-c01-transactions.json": {
+      "sha256": "194830cac3a04d7836d37b1239c94fae7a75b7d9d5322955ca3a976abd8ded40",
+      "bytes": 12273
+    },
+    "content/projects/v07-c01-ledger.py": {
+      "sha256": "3fab0232da397a337945c1b3754e4793de1c29308c66cf7304bcb1980102177c",
+      "bytes": 12178
+    },
+    "content/projects/v07-c01-output.json": {
+      "sha256": "83961d96573a92613c866427fdd1a88051bda5a5b5ce8572b329d30902ed90bd",
+      "bytes": 28317
+    },
+    "content/projects/v07-c01-README.txt": {
+      "sha256": "9147ce71520e323a08269f2692347b2f634f6bd8788d45252b101fc685e3428e",
+      "bytes": 8818
+    },
+    "scripts/check_v07_c01.py": {
+      "sha256": "7cfa18f90e8981ae80731bdacdf96af1b1e322caec78e7618cc73fdc5d24af8b",
+      "bytes": 19523
+    },
+    "content/reviews/v07-c01-sources.json": {
+      "sha256": "e4338fa1a518a7a8be3f2021c3b6b98656f47e4a93a26ddcde292cbb5336067d",
+      "bytes": 3288
+    },
+    "content/reviews/v07-c01-author.json": {
+      "sha256": "85d991441785d448df046fcd90cb671eba03dcb3368bb5749fccf64f45b34d68",
+      "bytes": 9424
+    }
+  },
+  "limitations": [
+    "Independent agent peer audit is not external human accounting assurance or legal-compliance certification.",
+    "Original fictional evidence is maintained as supplied; actual source-document authenticity, collectibility, authorization and cash funding are not established by arithmetic.",
+    "Source verification is scoped to the accessible primary bodies and passages recorded above; no comprehensive current IFRS/GAAP comparison or full issued Framework review claimed.",
+    "No visual/mobile/print UI QA, shared integration, canonical acceptance, commit or publication performed."
+  ]
+}

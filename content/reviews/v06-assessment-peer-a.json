@@ -1,0 +1,460 @@
+{
+  "package": "v06-assessment",
+  "reviewer": "causal_identification",
+  "date": "2026-10-08",
+  "status": "passed",
+  "review_type": "Independent specialist peer audit of a fixed partial scope; root remains author and acceptance owner.",
+  "scope": {
+    "manuscript": "content/assessments/v06.html",
+    "included": [
+      "Eight-item prerequisite diagnostic and all answers/remediation",
+      "Examination rules and scoring/domain coverage",
+      "All twenty Form A parts and complete solutions",
+      "Complete saved project data JSON and benchmark Python source"
+    ],
+    "excluded": [
+      "Form B questions and solutions",
+      "Project prose, rubric, README and preserved output still being authored",
+      "Final assessment checker, volume acceptance and library-wide integration",
+      "Visual/mobile/print UI checks"
+    ]
+  },
+  "findings": [
+    {
+      "id": "v06-a-peer-01",
+      "severity": "minor",
+      "location": "diagnostic, item 5 prompt",
+      "finding": "The prompt called 1.1 a gross annual discount factor, while the solution correctly treated it as a gross return and used its reciprocal for discounting.",
+      "requested_correction": "Use gross annual return of 1.1.",
+      "status": "resolved",
+      "verification": "Final prompt inspected and now uses gross annual return; PV 50 and discount factor 10/11 are unchanged."
+    },
+    {
+      "id": "v06-a-peer-02",
+      "severity": "minor",
+      "location": "diagnostic, answer 2 remediation link",
+      "finding": "The stocks-and-flows route pointed to v01-c03, the algebra/functions chapter.",
+      "requested_correction": "Point to v01-c04.",
+      "status": "resolved",
+      "verification": "Read canonical titles and inspected the corrected href to v01-c04.html."
+    },
+    {
+      "id": "v06-a-peer-03",
+      "severity": "minor",
+      "location": "diagnostic, answer 8 remediation link",
+      "finding": "The forecasting route pointed to v04-c10 rather than the specified prediction/model-validation chapter.",
+      "requested_correction": "Point to v04-c09.",
+      "status": "resolved",
+      "verification": "Read canonical titles and inspected corrected href to v04-c09.html."
+    },
+    {
+      "id": "v06-a-peer-04",
+      "severity": "precision clarification",
+      "location": "Form A, v06-a-q3d",
+      "finding": "The population covariance/variance derivation benefits from explicitly finite second moments, not only a nonzero-variance phrase.",
+      "requested_correction": "State finite positive variance for the cost shock.",
+      "status": "resolved",
+      "verification": "Prompt now explicitly states finite positive variance; reduced-form slope remains -1/2."
+    },
+    {
+      "id": "v06-a-peer-05",
+      "severity": "precision clarification",
+      "location": "Form A, v06-a-q4c",
+      "finding": "Government instead injects could be read as replacing the bridge, although the solution correctly retains the completed bridge and withdrawal transaction.",
+      "requested_correction": "Make the injection explicitly follow the bridge transaction.",
+      "status": "resolved",
+      "verification": "Final prompt now starts the rescue branch Following the bridge transaction, so debt 20 and deposits 33 remain the correct creditor base."
+    }
+  ],
+  "unresolved_findings": [],
+  "independent_calculations": {
+    "diagnostic_1": {
+      "inflation_percent": "5",
+      "real_expenditure_growth_percent": "100/21"
+    },
+    "diagnostic_2": {
+      "closing_stock": "42",
+      "scope": "Transactions -3 and holding gain +5 are separate; income inclusion requires a definition."
+    },
+    "diagnostic_3": {
+      "x_bound2": "2",
+      "value_bound2": "8",
+      "x_bound4": "3",
+      "value_bound4": "9",
+      "proof": "Complete the square 9-(x-3)^2 and compare the feasible nearest point."
+    },
+    "diagnostic_4": {
+      "fixed_point": "4",
+      "z2": "17/4",
+      "path": "4+2^(-t)"
+    },
+    "diagnostic_5": {
+      "present_value": "50",
+      "net_rate": "1/10",
+      "gross_return": "11/10",
+      "discount_factor": "10/11"
+    },
+    "diagnostic_6": {
+      "expected_consumption": "5",
+      "expected_log": "log(3)",
+      "log_of_expectation": "log(5)",
+      "certainty_equivalent": "3"
+    },
+    "diagnostic_7": {
+      "output": "50",
+      "conditional_multiplier": "5/2"
+    },
+    "diagnostic_8": {
+      "review": "Open design answer supplies an alternative common shock/selection story, a randomized-offer estimand, spillover/missingness threats and the distinction from a predictive target. Equivalent justified designs receive credit."
+    },
+    "A1a": {
+      "three_GDP_measures": "170",
+      "GNDI": "168",
+      "saving": "48",
+      "CA": "8"
+    },
+    "A1b": {
+      "transition": "0.9k+0.3sqrt(k)",
+      "k1": "63/125",
+      "positive_steady_k": "9",
+      "steady_consumption": "21/10"
+    },
+    "A1c": {
+      "new_steady_k": "25",
+      "steady_consumption": "5/2",
+      "old_current_consumption": "21/50",
+      "new_current_consumption": "3/10",
+      "proof": "Increasing map preserves each side of 25, with monotone bounded positive paths and continuity. Steady-consumption derivative gives golden-rule 25, not transition-utility optimality; no exogenous A growth means asymptotic per-worker growth zero."
+    },
+    "A1d": {
+      "social_r": "1",
+      "social_objective": "180",
+      "private_r": "1/2",
+      "private_case_social_objective": "170",
+      "private_incremental_payoff": "15",
+      "proof": "Both objectives strictly concave on [0,1]; social derivative reaches zero only at the upper endpoint, private derivative at 1/2. Zero current output is admissible under the stated linear objective."
+    },
+    "A2a": {
+      "unconstrained_c0_c1": [
+        "50",
+        "50"
+      ],
+      "unconstrained_s": "-20",
+      "constrained_c0_c1": [
+        "34",
+        "70"
+      ],
+      "shifted_constrained_c0_c1": [
+        "38",
+        "65"
+      ],
+      "proof": "Feasible saving has lower bound -4 and upper log-consumption domain 30 (34 after tax shift); strictly concave objective has a negative derivative at the borrowing boundary in both cases. PV wealth remains 90."
+    },
+    "A2b": {
+      "best_positive_I": "3/2",
+      "gain_before_setup": "9/4",
+      "gain_after_setup": "-1/4",
+      "chosen_I": "0",
+      "tie_setup": "9/4",
+      "proof": "Complete the square on [0,4] and compare the best strictly positive option with no-entry value zero; do not omit the discontinuous setup margin."
+    },
+    "A2c": {
+      "closing_stocks": [
+        "79",
+        "11",
+        "10"
+      ],
+      "participation": "9/10",
+      "unemployment": "11/90",
+      "employment_population": "79/100"
+    },
+    "A2d": {
+      "transition": "0.04+0.8u",
+      "steady_u": "1/5",
+      "u1": "7/25",
+      "u3": "157/625",
+      "duration_months": "25/4",
+      "scope": "One month-end transition, closed labor force and constant probability; no repeated within-month exit/re-entry or inactive state."
+    },
+    "A3a": {
+      "minimum_CB_borrowing": "10",
+      "originating_assets": [
+        "3",
+        "92"
+      ],
+      "originating_liabilities": [
+        "75",
+        "10"
+      ],
+      "equity": "10",
+      "recipient_changes": {
+        "reserves": "15",
+        "deposits": "15"
+      },
+      "CB_changes": {
+        "loan_asset": "10",
+        "reserve_liability": "10"
+      }
+    },
+    "A3b": {
+      "kappa": "3/4",
+      "u": "3/10",
+      "x": "-16/25",
+      "Pi": "91/50",
+      "scope": "Predetermined e=2 and positive joint-system denominator 5/2; log-inflation convention is not ordinary inflation."
+    },
+    "A3c": {
+      "unrestricted_x": "-20/9",
+      "unrestricted_j": "-25/9",
+      "floor_x": "-3",
+      "floor_Pi": "-3/2",
+      "floor_j": "-2",
+      "rule_request_at_floor": "-15/4",
+      "proof": "Unrestricted candidate violates j>=-2; floor solution satisfies original max rule. The piecewise monotone rule and IS equation select one consistent regime."
+    },
+    "A3d": {
+      "Pi_minus2": "(2/5)u",
+      "x": "-(4/5)u",
+      "population_slope": "-1/2",
+      "scope": "Finite positive cost-shock variance ensures a finite nonzero regressor variance. Movement along demand is not identification of positive pricing slope."
+    },
+    "A4a": {
+      "gross_debt": "193/2",
+      "net_debt_after_asset": "183/2",
+      "gross_issuance": "103/2",
+      "current_GDP": "153",
+      "gross_debt_ratio": "193/306",
+      "net_ratio": "61/102",
+      "identity": "d1=(R/Gamma)d0-S/Z1+A/Z1"
+    },
+    "A4b": {
+      "uncapped_deviation_multiplier": "9/10",
+      "requested_p1": "27/1000",
+      "uncapped_d1": "21/25",
+      "capped_p1": "1/50",
+      "capped_d1": "847/1000",
+      "scope": "Global affine stability applies without cap; capped dynamics are not the same law."
+    },
+    "A4c": {
+      "book_equity": "7",
+      "bridge": "20",
+      "remaining_deposits": "33",
+      "deposit_recovery": "28",
+      "deposit_loss": "5",
+      "government_residual": "3",
+      "government_net_loss": "5",
+      "scope": "Known asset loss 12 is absorbed by old equity 7 and deposits 5; post-bridge public injection 8 protects all 53 remaining claims and acquires residual 3."
+    },
+    "A4d": {
+      "date1_need": "58",
+      "capacity_gap": "4",
+      "date2_debt": "319/5",
+      "date2_resources": "63",
+      "terminal_shortfall": "4/5",
+      "fair_asset": "30/11",
+      "transfer": "58/11",
+      "post_transfer_surplus": "-36/11",
+      "net_asset_acquisition_with_cash_rundown": "-3/11"
+    },
+    "A5a": {
+      "opportunity_costs": [
+        "1/2",
+        "3"
+      ],
+      "price": "1",
+      "production": [
+        "60 cloth",
+        "60 wine"
+      ],
+      "consumption_each": [
+        "30",
+        "30"
+      ],
+      "trade_each_direction": "30",
+      "autarky_utility_squared": [
+        "450",
+        "300"
+      ],
+      "trade_utility_squared_each": "900",
+      "scope": "Price 1 lies strictly inside specialization interval (1/2,3); Cobb-Douglas half expenditure and market clearing support quantities."
+    },
+    "A5b": {
+      "free_trade_D_S_M": [
+        "60",
+        "10",
+        "50"
+      ],
+      "free_trade_CS_PS_total": [
+        "900",
+        "50",
+        "950"
+      ],
+      "tariff_D_S_M": [
+        "48",
+        "16",
+        "32"
+      ],
+      "tariff_CS_PS_revenue_total": [
+        "576",
+        "128",
+        "192",
+        "896"
+      ],
+      "DWL": "54",
+      "consumer_loss_allocation": [
+        "78 producers",
+        "192 government",
+        "54 distortion"
+      ]
+    },
+    "A5c": {
+      "FA": "-6",
+      "SD": "0",
+      "closing_NFA": "-23",
+      "FX_valuation": "-2",
+      "other_valuation": "6",
+      "scope": "KA is nonzero; financial transactions rather than CA alone enter the stock bridge. Total valuation already includes FX."
+    },
+    "A5d": {
+      "covered_quote": "156/125 H/F",
+      "foreign_investment": "250/3 F",
+      "forward_receipt": "105 H",
+      "home_repayment": "104 H",
+      "arbitrage_gain": "1 H",
+      "scope": "All funded and delivered legs are matched; an expected spot value supplies no certain enforceable payoff."
+    }
+  },
+  "project_scenario_targets": {
+    "baseline": {
+      "Y": "200",
+      "C": "130",
+      "I": "30",
+      "private_saving": "29",
+      "public_saving": "6",
+      "CA": "5",
+      "public_debt": "94",
+      "issuance": "44",
+      "funding_gap": "0",
+      "official_loan_F": "3/2",
+      "closing_reserves_F": "2",
+      "external_debt_F": "23/2",
+      "closing_NFA_H": "-19"
+    },
+    "investment_shock": {
+      "Y": "180",
+      "C": "118",
+      "I": "20",
+      "private_saving": "25",
+      "public_saving": "2",
+      "CA": "7",
+      "public_debt": "98",
+      "issuance": "48",
+      "funding_gap": "0",
+      "official_loan_F": "1/2",
+      "closing_reserves_F": "2",
+      "external_debt_F": "21/2",
+      "closing_NFA_H": "-17"
+    },
+    "purchases_offset": {
+      "Y": "200",
+      "C": "130",
+      "I": "20",
+      "private_saving": "29",
+      "public_saving": "-4",
+      "CA": "5",
+      "public_debt": "104",
+      "issuance": "54",
+      "funding_gap": "4",
+      "official_loan_F": "3/2",
+      "closing_reserves_F": "2",
+      "external_debt_F": "23/2",
+      "closing_NFA_H": "-19"
+    },
+    "consolidation": {
+      "Y": "170",
+      "C": "112",
+      "I": "20",
+      "private_saving": "23",
+      "public_saving": "5",
+      "CA": "8",
+      "public_debt": "95",
+      "issuance": "45",
+      "funding_gap": "0",
+      "official_loan_F": "0",
+      "closing_reserves_F": "2",
+      "external_debt_F": "10",
+      "closing_NFA_H": "-16"
+    },
+    "rate_feedback": {
+      "Y": "1300/7",
+      "C": "850/7",
+      "I": "160/7",
+      "real_rate": "-3/350",
+      "private_saving": "183/7",
+      "public_saving": "22/7",
+      "CA": "45/7",
+      "public_debt": "678/7",
+      "issuance": "328/7",
+      "funding_gap": "0",
+      "official_loan_F": "11/14",
+      "closing_reserves_F": "2",
+      "external_debt_F": "151/14",
+      "closing_NFA_H": "-123/7"
+    }
+  },
+  "project_review": [
+    "Derived the goods closure independently as Y=(10+I0+G+30+20000 psi)/(1/2+100 psi). In the fixed baseline c0=55/4 is the composite of autonomous 43/4 plus c times domestic public interest 4, while external interest is 5 H. Hence C=10+(3/5)Y. Public interest is an internal transfer, included once in household receipts and subtracted once in public saving; it is not added to GDP or foreign income.",
+    "The denominator is strictly positive on the supplied domains c<1, tax/import shares nonnegative and feedback nonnegative. The affine goods-market solution is unique; the code separately rejects negative consumption/investment, zero GDP and negative debt/issuance requiring a new asset policy. None of the five solutions is silently clipped into a positive-activity solution.",
+    "Compared all 24 named numeric scenario outputs with an independent exact Fraction oracle, rather than calling the benchmark helper to derive expected values. All eight accounting residuals are zero for each of five scenarios. The public purchases offset candidate has a domestic funding gap of 4 and is explicitly conditional/infeasible under the fixed issuance cap unless financing changes.",
+    "Foreign amounts are F and home flows H at e=2 H/F throughout the opening-to-closing bridge. The full opening external principal 20 F is repaid; its interest 5/2 F enters CA, principal does not. New private 10 F and required official lending replace debt. Reserves are the sole external asset. With unchanged e, no valuation is inserted and Delta NFA=CA. Official lending is a needed amount, not a promised approval.",
+    "Independently checked historical transformations of supplied rounded inputs: quarterly real growth about 0.57010612897%; implied annualized deflator growth 200/93 percent; constant 0.4% monthly CPI compounded gives about 4.90702075348% annually, not a forecast; rounded employment ratios give naive unemployment 4% versus separately reported 4.1%; revision -8.2 billion USD, same-vintage change -35.9 and mixed-vintage change -44.1.",
+    "Inspected all twelve observation records: each supplies period, release date, vintage, units, frequency, adjustment and official source URL. All source-document release dates are no later than the declared January 30 2025 cutoff. The previous Q2 CA value is explicitly a restatement in the December source rather than falsely assigning its original vintage release date. Historical values are separate from uncalibrated synthetic coefficients.",
+    "Read the complete benchmark source; quiet import, strict JSON serialization through its documented Fraction encoder and normal/-O CLI from /private/tmp were successful. Eight independently changed invalid domains/IDs/future release-date inputs raised ValueError. No claim of exhaustive adversarial validation is made."
+  ],
+  "checks": {
+    "diagnostic_items_reviewed": 8,
+    "determinate_diagnostic_groups_recomputed": 7,
+    "form_a_parts_independently_recomputed": 20,
+    "form_a_points": 100,
+    "project_scenarios_compared": 5,
+    "numeric_outputs_compared_per_scenario": 24,
+    "identity_residuals_per_scenario": 8,
+    "invalid_domain_cases": 8,
+    "normal_and_optimized_cli": true,
+    "quiet_import": true
+  },
+  "section_hash_method": "SHA256 of UTF-8 text beginning with the listed h2 marker and ending immediately before the next listed h2 marker, including intervening whitespace. The full manuscript is intentionally not hashed because Form B and project prose are outside this pass and still changing.",
+  "reviewed_sections": {
+    "diagnostic": {
+      "start": "<h2 id=\"diagnostic\">",
+      "end_exclusive": "<h2 id=\"exam-rules\">",
+      "sha256": "7e0e200e8b4d89431d052ca729ae4114a436993518946b5a475640f4ce9d5dcd"
+    },
+    "examination_rules": {
+      "start": "<h2 id=\"exam-rules\">",
+      "end_exclusive": "<h2 id=\"form-a\">",
+      "sha256": "0852289ce327ceb2969457d6eb3ee85624011a93037a8b680a36504161fc632c"
+    },
+    "form_a_questions": {
+      "start": "<h2 id=\"form-a\">",
+      "end_exclusive": "<h2 id=\"form-a-solutions\">",
+      "sha256": "127061589bda008f168dab9936d00af60bd4581c9f7ce896ad429ab438131cdb"
+    },
+    "form_a_solutions": {
+      "start": "<h2 id=\"form-a-solutions\">",
+      "end_exclusive": "<h2 id=\"form-b\">",
+      "sha256": "50766b5c8c73345251ca17d281002246b3eda529ad85a541521fc3d9ee4085d0"
+    }
+  },
+  "sha256": {
+    "content/projects/v06-assessment-data.json": "198a99e5c8731f3740e6dcd619df3fb223773d4d06a2170bd3a00cc7f41fbbe9",
+    "content/projects/v06-assessment-analysis.py": "d3b0f39342d2d1dc766bf1da0f60960f5f704feb9ad184940c17370bc7fcbffd"
+  },
+  "limitations": [
+    "This peer pass inspected the historical extract metadata and recomputed transformations but did not reopen the BEA/BLS source bodies. Primary verification of those archive facts is not claimed here; root separately owns source inspection.",
+    "The benchmark checks release dates at calendar-date resolution; the exact same-day 08:30 cutoff relies on the supplied source provenance rather than an intraday timestamp validator.",
+    "Model coefficients and scenario closures are maintained assumptions, not causal estimates or calibrated U.S. forecasts. Globality claims are limited to the stated domains and regimes.",
+    "Root is still writing Form B and the project narrative. This record does not accept those unreviewed sections, the complete volume assessment, or the library.",
+    "No manuscript, project data/program, shared state or publishing file was changed by this peer audit; only this review artifact was authored."
+  ]
+}

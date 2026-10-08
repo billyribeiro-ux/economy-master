@@ -1,0 +1,350 @@
+{
+  "assessment": "v06",
+  "section": "Form B questions and complete solutions",
+  "date": "2026-10-08",
+  "reviewer": "monte_carlo independent specialist peer",
+  "status": "passed",
+  "scope": "Read-only review of all20 Form B parts and their complete solutions/rubrics in content/assessments/v06.html, shared exam rules and chapter coverage routes. Only this peer record written. Project, historical data, diagnostic, Form A, retention and overall assessment checker are outside this pass.",
+  "findings": [
+    {
+      "id": "v06-b-peer-01",
+      "severity": "low",
+      "status": "resolved",
+      "location": "Form B D5(d) solution",
+      "finding": "Original sentence incorrectly denied equality between CA and the financial transaction total in this specific case, although CA=FA=5 because KA=-1 and SD=1 cancel.",
+      "proposed_fix": "State the coincidental equality and distinguish it from the full NFA increase of12, which also contains valuation+9 and other changes-2.",
+      "resolution": "Root changed the sentence to: CA happens to equal FA = 5 here because KA + SD = 0, but it does not explain the whole NFA increase of 12: valuation +9 and other changes −2 also matter. Exact corrected solution reinspected before final section hashing; calculations/scoring unchanged."
+    }
+  ],
+  "open_findings": [],
+  "checks": [
+    {
+      "area": "Independent numerical recomputation",
+      "result": "passed",
+      "detail": "Recomputed every determinate part without calling root's assessment checker. Used exact Fraction arithmetic for rational values, 50-digit Decimal for the savings root, exact arithmetic in Q(sqrt7) for collateral proceeds/debt/assets, and coefficient/completed-square arguments. All20 parts agree with the final solutions."
+    },
+    {
+      "area": "Optimization, branches and globality",
+      "result": "passed",
+      "detail": "Positive Solow steady state distinguished from zero; golden steady-consumption derivative certifies global maximum but not transition welfare. Log saving domain/endpoints reject the second root. Dated output/salvage and adjustment costs give a concave investment objective. Both labor basins are invariant contractions. Both inferred monetary rules exceed their floor. Quadratic policy loss proves the constrained boundary. Collateral H is strictly increasing on its interval, and the first crossing also satisfies nonnegative remaining debt. Factor prices reject the false full-employment autarky branch; nonnegative supporting prices and a production bound certify the valid corner. Avoidable export setup compared with staying out."
+    },
+    {
+      "area": "Stocks, flows, expectations and welfare",
+      "result": "passed",
+      "detail": "Central-bank/nonbank/bank purchase entries conserve claims and do not inject equity; impairment leaves equity-1. Mean real return differs from ratio of means. Sovereign current versus new-coupon cohorts and finite/infinite present-value cases reconcile. Uniform sale proceeds and remaining marks use one price. Minimax and regret ties preserved. Home tax/subsidy cancels while foreign consumer surplus changes world welfare. H/F quote, covered payoff, expected uncovered risk and NFA transaction/valuation signs are consistent."
+    },
+    {
+      "area": "Interpretation and identification",
+      "result": "passed after one wording correction",
+      "detail": "Institutional effects do not follow from production residuals; relevance and exclusion/independence are needed for a proposed instrument. Conditional inversion of known finite monetary equations is not model-free identification. Unemployment stocks do not recover separate hazards. Model persistence is not evidence that a particular historical recession had that mechanism. A liability market-price decline need not reduce promised payments or default risk. D5(d)'s coincidental CA=FA equality is now stated correctly."
+    },
+    {
+      "area": "Scoring and feasible examination scope",
+      "result": "passed",
+      "detail": "20 uniquely identified question parts at5 points give100; each solution's explicit component allocation sums to5, giving five20-point domains. Shared rules specify180minutes, closed notes/solutions and basic nonprogrammable calculator, with exact radicals/fractions allowed. Equations and model inputs are supplied or taught by the accepted prerequisite routes. Carry-through and alternate valid methods are explicitly allowed."
+    },
+    {
+      "area": "Teaching prerequisites and links",
+      "result": "passed",
+      "detail": "Read shared D1–D5 coverage routes and relevant accepted chapter passages on Fisher indexes/factor reversal, golden rule, frontier diffusion and production-worker residuals, hazard durations/basins, fixed-coefficient factor prices/free disposal, export fixed costs, H/F quotes and NFA accounting. Reused prior author/peer work on accepted consumption/investment, banking, finite stabilization, fiscal and crisis chapters. FormB asks bounded transfer, including the autarky corner and inverse finite model; no unproved infinite-horizon determinacy claim is required."
+    }
+  ],
+  "independent_calculations": {
+    "D1a": {
+      "cross_values": [
+        40,
+        40,
+        45,
+        48
+      ],
+      "QL": "1",
+      "QP": "16/15",
+      "QF_squared": "16/15",
+      "PL": "9/8",
+      "PP": "6/5",
+      "PF_squared": "27/20",
+      "nominal_factor": "6/5"
+    },
+    "D1b": {
+      "positive_k": "2sqrt(2)",
+      "y": "sqrt(2)",
+      "c": "(4/5)sqrt(2)",
+      "golden_k": "(10/3)^(3/2)",
+      "golden_s": "1/3",
+      "golden_c": "(2/3)sqrt(10/3)",
+      "global": "steady-consumption derivative 1/(3 k^(2/3))−1/10 decreases from positive infinity to−1/10; unique global interior maximum, separate from discounted transition welfare"
+    },
+    "D1c": [
+      {
+        "factor": "8/11",
+        "intercept": "2/11",
+        "limit": "2/3",
+        "first_from_one_half": "6/11"
+      },
+      {
+        "factor": "6/11",
+        "intercept": "4/11",
+        "limit": "4/5",
+        "first_from_one_half": "7/11"
+      }
+    ],
+    "D1d": {
+      "A_factor": "8/5",
+      "ignored_share_factor": "36/25",
+      "causal": "conditional residual, not institutional treatment effect; IV relevance and justified exclusion/independence needed"
+    },
+    "D2a": {
+      "saving": "1.1231056256176605498214098559740770251471992253736",
+      "other_root": "-7.1231056256176605498214098559740770251471992253736",
+      "feasible_interval": "(-2,6)",
+      "mean_income_saving": 0,
+      "global": "strictly negative second derivative throughout; objective tends to−infinity at both endpoints"
+    },
+    "D2b": {
+      "incremental_linear_coefficient": "14/3",
+      "incremental_quadratic_coefficient": "-7/12",
+      "free_I": 4,
+      "bound2_I": 2,
+      "value_at2": "7",
+      "capacity_shadow": "7/3",
+      "value_at3": "35/4",
+      "finite_improvement": "7/4",
+      "global": "28/3−(7/12)(I−4)^2; derivative positive throughout[0,3]"
+    },
+    "D2c": {
+      "low_slope": "1/2",
+      "high_slope": "3/4",
+      "low_fixed": "1/5",
+      "high_fixed": "2/5",
+      "low_image": "[1/10,1/4)",
+      "high_image": "[13/40,17/20]",
+      "threshold_next": "13/40",
+      "limit_from_025": "1/5",
+      "limit_from_035": "2/5"
+    },
+    "D2d": [
+      {
+        "u": "1/5",
+        "mean_completed_duration": "5/2",
+        "monthly_UE_flow": "2/25"
+      },
+      {
+        "u": "1/5",
+        "mean_completed_duration": "5",
+        "monthly_UE_flow": "1/25"
+      }
+    ],
+    "D3a": {
+      "CB_securities_and_reserve_liability_delta": 12,
+      "bank_reserve_and_deposit_delta": 12,
+      "customer_securities_delta": -12,
+      "customer_deposit_delta": 12,
+      "postpurchase_assets": 92,
+      "postpurchase_deposits": 85,
+      "postpurchase_equity": 7,
+      "postloss_assets": 84,
+      "postloss_deposits": 85,
+      "postloss_equity": -1
+    },
+    "D3b": {
+      "P_factor": "1",
+      "mean_real_gross": "2809/2800",
+      "ratio_of_means": "1"
+    },
+    "D3c": {
+      "j0": "4/9",
+      "Pi1": "4/3",
+      "x1": "-4/3",
+      "j1": "4/3",
+      "n1": "0",
+      "u1": "2",
+      "branches": "Both raw policy rules exceed−2; floor alternatives contradict the given max rule. Four structural equations rechecked."
+    },
+    "D3d": {
+      "free_x": "-2/5",
+      "feasible_x": -1,
+      "j": -2,
+      "Pi": "1/2",
+      "loss": "5/4",
+      "inflation_target_x": -2,
+      "inflation_target_j": -1,
+      "inflation_target_loss": "4",
+      "gap_target_j": -3,
+      "global": "L=(5/4)(x+2/5)^2+4/5, x≤−1; boundary nearest to free optimum"
+    },
+    "D4a": {
+      "current_interest": "4",
+      "gross_issuance": 20,
+      "closing_principal": 80,
+      "next_interest": "7"
+    },
+    "D4b": {
+      "B1": "40",
+      "B2": "40",
+      "S3": "44",
+      "finite_PV": "40",
+      "infinite_PV": "40",
+      "terminal": "40/(11/10)^T→0"
+    },
+    "D4c": {
+      "x": "60−20sqrt7",
+      "x_decimal": "7.0849737787081881899676849272147914857948164",
+      "price": "1/2+(1/10)sqrt7",
+      "receipts": "16−4sqrt7",
+      "debt": "2+4sqrt7",
+      "retained_assets": "4+8sqrt7",
+      "equity": "2+4sqrt7",
+      "global": "H=16+3x/10−x²/400, H′≥1/10>0 on[0,40], H(0)=16<18<H(40)=24; first crossing has positive debt. Full feasible interval ends at debt-zero x=80−20sqrt7."
+    },
+    "D4d": {
+      "max_losses": [
+        20,
+        10,
+        14
+      ],
+      "regrets": [
+        [
+          0,
+          2,
+          10
+        ],
+        [
+          4,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          4
+        ]
+      ],
+      "max_regrets": [
+        10,
+        4,
+        4
+      ],
+      "expected": [
+        "13/2",
+        "13/2",
+        "35/6"
+      ],
+      "minimax": "B",
+      "minimax_regret": [
+        "B",
+        "C"
+      ],
+      "expected_choice": "C"
+    },
+    "D5a": {
+      "bad_w": "-1/15",
+      "bad_r": "8/15",
+      "autarky_p": "1/2",
+      "autarky_w": 0,
+      "autarky_r": "1/2",
+      "autarky_X": 45,
+      "autarky_Y": "45/2",
+      "idle_L": "15/2",
+      "world_output": [
+        50,
+        20
+      ],
+      "world_consumption": [
+        35,
+        35
+      ],
+      "exports_X": 15,
+      "imports_Y": 15,
+      "utility_squared": [
+        "2025/2",
+        1225
+      ],
+      "global": "Autarky XY≤X(90−X)/2=2025/2−(X−45)^2/2; maximizer also satisfies labor. At trade p=1 the factor dual bound is70 and full-use output attains it."
+    },
+    "D5b": {
+      "conditional_q": "8",
+      "contribution": "64",
+      "no_subsidy_entry_profit": "-17",
+      "no_subsidy_entry": false,
+      "subsidized_entry": true,
+      "price": "16",
+      "private_profit": "3",
+      "home_welfare": "-17",
+      "foreign_CS": "32",
+      "world_welfare": "15",
+      "global": "variable profit64−(q−8)^2; compare avoidable setup and zero outside option; lump-sum subsidy cancels nationally"
+    },
+    "D5c": {
+      "real_q_factor": "51/55",
+      "nominal_e_factor": "55/51",
+      "nominal_depreciation": "4/51",
+      "covered_F": "27/17",
+      "foreign_expected_H_return": "136/125",
+      "uncovered_difference": "1/125"
+    },
+    "D5d": {
+      "FA": 5,
+      "SD": 1,
+      "closing_NFA": -18,
+      "NFA_increase": 12,
+      "CA_equals_FA_in_this_case": true
+    }
+  },
+  "scoring_audit": {
+    "question_parts": 20,
+    "solution_parts": 20,
+    "points_per_part": 5,
+    "total_points": 100,
+    "domain_points": [
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "solution_rubric_totals": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  "hashes": {
+    "path": "content/assessments/v06.html",
+    "selection": "UTF-8 literal substring from <h2 id=\"form-b\"> through the first </ol></details> after <h2 id=\"form-b-solutions\">, inclusive. Questions stop immediately before solution h2. Following project/retention and trailing whitespace excluded.",
+    "questions": {
+      "sha256": "ef9a3d66b2eac3135cdc825423245e40ccec573f87deb342264d837ac15cd5f4",
+      "bytes": 9982
+    },
+    "solutions": {
+      "sha256": "9381af4d7e6e518874614f7a5c7f537d65fe05aecb0263a87a2e4efef8aedd66",
+      "bytes": 12654
+    },
+    "combined": {
+      "sha256": "bf89128b68c07c65634ccac9dbdacafdbc7d17d24de434501b6fcff60fa409e3",
+      "bytes": 22636
+    }
+  },
+  "limitations": [
+    "Section hash deliberately excludes root's concurrently authored project/retention and does not certify the entire assessment page.",
+    "No current country observations or external primary-source bodies were checked in this scoped FormB pass; stable methods were checked against accepted chapter instruction.",
+    "Root's overall assessment numerical checker was still being authored and was not run for this review; independent computations and scoring checks above were executed separately.",
+    "Review is an independent agent peer audit, not external human certification. No visual/mobile/print UI checks, shared edits, canonical acceptance, commits or publication performed."
+  ]
+}

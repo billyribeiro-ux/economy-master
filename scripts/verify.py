@@ -60,6 +60,11 @@ from check_v06_c09 import check as check_v06_c09
 from check_v06_c10 import check as check_v06_c10
 from check_v06_c11 import check as check_v06_c11
 from check_v06_c12 import check as check_v06_c12
+from check_v06_assessment import check as check_v06_assessment
+from check_v07_c01 import check as check_v07_c01
+from check_v07_c02 import check as check_v07_c02
+from check_v07_c03 import check as check_v07_c03
+from check_economics_core import check as check_economics_core
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -442,6 +447,10 @@ def main():
     v06_closing_check = {chapter: checker() for chapter, checker in (
         ('v06-c09', check_v06_c09), ('v06-c10', check_v06_c10),
         ('v06-c11', check_v06_c11), ('v06-c12', check_v06_c12))}
+    v06_assessment_check = check_v06_assessment()
+    economics_core_check = check_economics_core()
+    v07_opening_check = {'v07-c01': check_v07_c01(), 'v07-c02': check_v07_c02(),
+                         'v07-c03': check_v07_c03()}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -466,6 +475,7 @@ def main():
               'volume_4_closing_checks': v04_closing_check,
               'volume_4_assessment_check': v04_assessment_check,
               'foundation_assessment_check': foundation_check,
+              'economics_core_assessment_check': economics_core_check,
               'volume_5_opening_checks': v05_opening_check,
               'volume_5_middle_checks': v05_middle_check,
               'volume_5_closing_checks': v05_closing_check,
@@ -473,6 +483,8 @@ def main():
               'volume_6_opening_checks': v06_opening_check,
               'volume_6_middle_checks': v06_middle_check,
               'volume_6_closing_checks': v06_closing_check,
+              'volume_6_assessment_check': v06_assessment_check,
+              'volume_7_opening_checks': v07_opening_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     report['checks'].extend(['Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package',
         'Volume 6 chapters 5–8: labor transition and matching domains, bargaining/entry and effort values, bounded hysteresis; exact bank ledgers and reserve-market branches; nominal rigidity, expectation paths and shock-mixture regression; finite stabilization systems and independently enumerated rate-floor equilibria',

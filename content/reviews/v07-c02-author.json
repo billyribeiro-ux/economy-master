@@ -1,0 +1,129 @@
+{
+  "chapter": "v07-c02",
+  "title": "Balance sheet, income statement and cash flow",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "reviewer": "monte_carlo specialist author",
+  "status": "ready_for_root_review",
+  "acceptance_authority": "Root coordinator only; this is an author audit, not chapter acceptance or external accounting certification.",
+  "scope": {
+    "worked_examples": 3,
+    "exercises": 8,
+    "solutions": 8,
+    "word_count": 5932,
+    "word_count_method": "HTMLParser text nodes and Unicode word regex, excluding HTML tags",
+    "assets": "Original synthetic 23-event journal, exact integer CU minor-unit stdlib benchmark, JSON inputs and README. All monetary report values are exact decimal strings in kCU."
+  },
+  "content_review": {
+    "prerequisite_and_entity": "Read fixed assignment and canonical c01/c02 prerequisites. Coordinated debit-positive ledger, contra asset, normal balances, accrual/closing and owner-transaction interface with c01 author. Harbor Instruments is explicitly a distinct trading corporation with quarter dates and kCU units; not the preceding service-company case.",
+    "statements": "Read full chapter and independently reconciled opening 216=110+106, closing 286=143+143, profit25, retained earnings43, contribution20, dividend8 and equity increase37. Book values, market values, liquidation proceeds and payment calendars distinguished. Temporary closures move no cash.",
+    "cash_derivation": "Derived each direct operating line from its account roll-forward before summing CFO. Indirect formula explicitly uses normal balances and excludes cash/debt from the stated NWC definition. Conditions excluding writeoffs, acquired balances, FX and cross-account transfers are stated. Interest class changes require removing interest payable and adding the whole expense consistently; Exercise5 gives complete alternate bridge.",
+    "schedules_and_boundaries": "Gross/accumulated/net equipment and debt schedules distinguish cash acquisition, disposal cost/book amount/gain, depreciation and noncash seller note18. Current/noncurrent debt21/72 is a supplied schedule, not inferred from names. Loss/zero-gain/positive-gain branches independently checked. No imaginary gross cash flows attributed to the seller note.",
+    "liquidity": "Collection20 changes cash to4 and CFO to-44 without changing accrual profit/equity. Collection10 implies unfunded cash-6; explicit negative-prefix validation rejects it, including a case with later funding. Borrow6 or choose dividend2 before declaration gives zero cash with distinct debt/equity claims and no improvement in profit/CFO. No lawful-distribution or future-solvency certification implied.",
+    "recognition_and_control": "Balanced wrong-account receipt is a deliberate complete counterexample: profit and AR both overstated5, all numeric bridges still pass. Independent supplied-transaction reference detects it. Loan misclassification can preserve total cash while misallocating CFO/CFF; documentary evidence and correctly scoped indirect bridge are needed.",
+    "solutions": "All eight prompts and complete solutions read against each other and recomputed. Exercise1 effects, compact company, reverse working-capital schedules, disposal/noncash note, alternative interest class, financing repairs, cancellation counterexamples and calendar/liquidation comparison verified. Teach-back checklist and delayed collection/reclassification answers supplied.",
+    "sources": "Actual accessible primary bodies inspected: 2007 SEC orientation, IAS7 public overview, December2023 SEC staff statement including legal-status footnote, April2024 IFRS18 issuance/effective-date announcement and Effects Analysis p27. Dated scope and standard-versus-teaching convention clear. Full subscription IAS7 body not inspected and not claimed; no source workaround.",
+    "code": "Strict bounded schema, exact decimal strings converted to integers, no floats/network/install/randomness, portable default input, 17 explicit residual checks and error paths independent of removable assertions. Report exposes ledger, closures, statements, schedules, cash path and limits. General recognition/measurement questions are intentionally outside the fixed model."
+  },
+  "resolved_findings": [
+    {
+      "origin": "c01/c02 terminology coordination and author review",
+      "finding": "The compact company solution called total assets after accumulated depreciation net assets, which could conflict with net assets meaning equity.",
+      "resolution": "Changed to opening total assets70; depreciation effect also uses total assets. Full entity name Harbor Instruments distinguishes the separate c01/c02 companies."
+    }
+  ],
+  "validation": {
+    "checker_result": {
+      "status": "passed",
+      "checks": [
+        "All baseline statement lines, 18 noncash note, schedules and 17 zero bridge residuals checked against independent references",
+        "Independent rational posting of all 23 events, every cash prefix and all nine temporary-account closures",
+        "Seven collection cases including one exact minor unit, two fully reconciled funding repairs and answered delayed check",
+        "Disposal loss, zero gain and positive gain: entire proceeds remain investing and operating cash stays 21",
+        "All eight exercise solutions, stock-flow signs, alternative interest classification and counterexample arithmetic independently recomputed",
+        "Balanced wrong-revenue receipt demonstrably passes all numeric bridges; separate supplied transaction reference detects the error",
+        "37 malformed/unsupported input cases rejected, including wrong cash categories, unfunded final cash and too-late funding",
+        "Portable normal and optimized CLI equal quiet API; structured failure exit, duplicate fields, nonfinite JSON and oversize file rejected",
+        "Four report mutations caught; HTML fragment has three worked examples, eight matched solutions, answered prompts and flat artifact routes"
+      ],
+      "counts": {
+        "events": 23,
+        "collection_cases": 7,
+        "disposal_cases": 3,
+        "invalid_contracts": 37,
+        "invalid_file_encodings_or_size": 4,
+        "report_mutations_caught": 4,
+        "worked_examples": 3,
+        "exercises": 8,
+        "source_proposals": 5
+      },
+      "limitations": [
+        "This is a bounded numerical/structural author check, not external accounting certification or documentary audit.",
+        "Cash classification, recognition, units and maturities are supplied case conventions; current jurisdictional compliance is not inferred.",
+        "Balanced wrong-account entries can pass all statement identities; the counterexample is intentionally preserved.",
+        "Visual, mobile and print UI QA remains pending; this checker makes no visual claim."
+      ]
+    },
+    "quiet_API": {
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "strict_JSON_serializable": true
+    },
+    "normal_and_optimized_CLI": "Identical complete baseline JSON from unrelated temporary working directory; structured error with exit2 for unfunded plan. No removable assert used for benchmark validation.",
+    "exact_main_outputs_kcu": {
+      "opening_assets": "216",
+      "opening_liabilities": "110",
+      "opening_equity": "106",
+      "profit": "25",
+      "closing_retained_earnings": "43",
+      "closing_assets": "286",
+      "closing_liabilities": "143",
+      "closing_equity": "143",
+      "CFO_direct_and_indirect": "21",
+      "CFI": "-19",
+      "CFF": "27",
+      "cash_change": "29",
+      "closing_cash": "69",
+      "noncash_equipment_note": "18",
+      "collection20_CFO": "-44",
+      "collection20_cash": "4",
+      "collection10_unfunded_cash": "-6",
+      "repair_assets": "292",
+      "borrow_repair_liabilities": "149",
+      "dividend_repair_equity": "149"
+    }
+  },
+  "hashes": {
+    "content/chapters/v07-c02.html": {
+      "sha256": "53797a3969e1518d60f995b7e7d81b402fe597ae963911dd0a8279c31f99d1d7",
+      "bytes": 44788
+    },
+    "content/projects/v07-c02-analysis.py": {
+      "sha256": "8853ec6dd8f21b8ef7e6def310c6c7188cff131b355b9310903bc8b97cc9399e",
+      "bytes": 16113
+    },
+    "content/projects/v07-c02-inputs.json": {
+      "sha256": "e1e1e1592d7dcd624cb4e4f76f00b75ea3715e5b2ce10e198e69fed8b78a7695",
+      "bytes": 9480
+    },
+    "content/projects/v07-c02-README.txt": {
+      "sha256": "c7e50579d27f0fe3198fda621aed55bc7bfcf28b92ba0a3d6975553be868bf4b",
+      "bytes": 8227
+    },
+    "scripts/check_v07_c02.py": {
+      "sha256": "4cdaf83a99bbfbed3415186a94485dfce94fdf675103c77b366c1038b1296eff",
+      "bytes": 19436
+    },
+    "content/reviews/v07-c02-sources.json": {
+      "sha256": "344e454c4f2d870a6743284b5a6a0f4a435a1353a9c5c67c3c86d994b22015bd",
+      "bytes": 4971
+    }
+  },
+  "open_findings": [],
+  "limitations": [
+    "Root full review, shared build/verification and acceptance remain coordinator-owned; author completion does not change canonical state.",
+    "Exact amounts and arithmetic are supplied synthetic case results, not observed company data, documentary verification or an assurance opinion.",
+    "Recognition, cash classification, maturity and no-tax assumptions are explicit teaching conventions; this chapter is not a comprehensive current GAAP/IFRS comparison or legal-compliance guide.",
+    "Visual/mobile/print UI QA remains pending; no browser workaround or visual verification claim."
+  ]
+}
