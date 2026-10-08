@@ -1,0 +1,53 @@
+{
+  "chapter": "v08-c12",
+  "date": "2026-10-08",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating author plus separate equity and valuation specialist",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Full original three-case/eight-solution integration chapter and four-file lab independently audited by a distinct equity/valuation specialist. Reconstructed 324 ledger fields and 375 rational serialization fields; operating and financing cash, usable tax, APV/terminal claims, fair equity issue, dated covenants, scenario boundaries and all exercise solutions agree. Root verified all final peer payload hashes.",
+  "author_review": "reviews/v08-c12-author.json",
+  "verified_payload_hashes": 8,
+  "source_review": "Actual scoped primary-source bodies inspected and matched to citations. Original examples and solutions independently checked; no whole-source certification or current market/law claim.",
+  "resolved_findings": [
+    {
+      "id": "c12-peer-01",
+      "severity": "material input-domain error outside supplied baseline",
+      "location": "content/projects/v08-c12-analysis.py, equity_post/equity_old and fair issuance calculation",
+      "finding": "A fee of 200 combined with gross equity 205 preserved cash 15 and all modeled cash/debt covenants but returned feasible_baseline=true, old-owner equity -637451/18522, new-owner fraction 3797010/3159559 greater than one, and negative shares/issue price. Such financing cannot be sold at fair value under the supplied equal-rights contract.",
+      "author_repair": "Reject equity_post <= 0 or equity_old <= 0 before ownership or share-count divisions; document the required positive residual and impossible-financing example in chapter/README; add focused invalid-input check.",
+      "independent_verification": "Reproduced the original defect before reporting. After repair independently confirmed ValueError for fee200/gross205 and for the exact zero-old-equity boundary obtained by setting gross contribution equal to total postclosing equity. Baseline exact reference output unchanged.",
+      "status": "resolved"
+    },
+    {
+      "id": "c12-peer-02",
+      "severity": "instructional wording",
+      "location": "Chapter retention prompt and answer",
+      "finding": "The prompt asked for an operating-value threshold but the answer supplied a financing issue-fee threshold.",
+      "author_repair": "Prompt now asks for one value threshold.",
+      "independent_verification": "Read the final prompt and solution; labels now agree without suggesting issue fees change operating FCFF.",
+      "status": "resolved"
+    },
+    {
+      "id": "c12-peer-03",
+      "severity": "cross-reference clarity",
+      "location": "Chapter Sources and next steps",
+      "finding": "State pricing was attributed to the preceding chapter, which is c11 rather than the intended c08 finite-state foundation.",
+      "author_repair": "Explicit linked reference to Chapter 8.",
+      "independent_verification": "Final HTML href v08-c08.html and Chapter 8 text inspected.",
+      "status": "resolved"
+    }
+  ],
+  "open_content_findings": [],
+  "limitations": [
+    "Agent review is not external human certification or validation of a real investment.",
+    "Visual/mobile/keyboard/print UI QA remains pending."
+  ],
+  "peer_review": "reviews/v08-c12-peer.json"
+}

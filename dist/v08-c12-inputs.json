@@ -1,0 +1,50 @@
+{
+  "provenance": "Original fictional Ridgeway Calibration Partners teaching case; kCU = thousand currency units; shares in thousands; no observed market or tax data.",
+  "dates": ["1 January 2027", "1 January 2028", "1 January 2029", "1 January 2030"],
+  "state_information": "Operating path revealed immediately before date-1 payments; all later cash conditional on that path is certain.",
+  "risk_free_rate": "0.05",
+  "after_tax_cash_rate": "0.05",
+  "operating_tax_rate": "0.25",
+  "physical_probabilities": {"normal": "0.75", "downside": "0.25"},
+  "pricing_weights": {"normal": "0.6", "downside": "0.4"},
+  "pricing_basis": "Supplied positive state-price benchmark, spanning both states; not an estimate from physical frequencies.",
+  "opening_cash": "30",
+  "opening_debt": "40",
+  "existing_principal": ["20", "20", "0"],
+  "old_shares": "10",
+  "minimum_cash": "15",
+  "initial_debt_cap": "70",
+  "year1_debt_ebitda_cap": "1",
+  "base": {
+    "opening_ppe": "60", "annual_depreciation": "20", "opening_nwc": "20",
+    "variable_cost_fraction": "0.6", "annual_fixed_cost": "20", "nwc_revenue_fraction": "0.1",
+    "revenue": {"normal": ["220", "230", "240"], "downside": ["170", "175", "180"]},
+    "gross_terminal_salvage": {"normal": "15", "downside": "10"}
+  },
+  "policies": {
+    "none": {
+      "name": "Existing business only", "equipment_now": "0", "nwc_now": "0", "annual_depreciation": "0",
+      "revenue": {"normal": "0", "downside": "0"}, "variable_cost_fraction": "0", "annual_fixed_cost": "0",
+      "gross_terminal_salvage": {"normal": "0", "downside": "0"}, "new_debt": "0",
+      "new_principal": ["0", "0", "0"], "equity_gross": "0", "equity_issue_fee": "0"
+    },
+    "A": {
+      "name": "Owned automation line", "equipment_now": "45", "nwc_now": "5", "annual_depreciation": "15",
+      "revenue": {"normal": "48", "downside": "32"}, "variable_cost_fraction": "0.5", "annual_fixed_cost": "2",
+      "gross_terminal_salvage": {"normal": "6", "downside": "3"}, "new_debt": "30",
+      "new_principal": ["10", "10", "10"], "equity_gross": "6", "equity_issue_fee": "1"
+    },
+    "B": {
+      "name": "Modular service extension", "equipment_now": "18", "nwc_now": "2", "annual_depreciation": "6",
+      "revenue": {"normal": "32", "downside": "20"}, "variable_cost_fraction": "0.5", "annual_fixed_cost": "4",
+      "gross_terminal_salvage": {"normal": "0", "downside": "0"}, "new_debt": "5",
+      "new_principal": ["5", "0", "0"], "equity_gross": "0", "equity_issue_fee": "0"
+    }
+  },
+  "diagnostic_receivable_shock": "35",
+  "peer_inputs": [
+    {"name": "Peer L", "unlevered_operations": "144", "physical_forward_ebitda": "60"},
+    {"name": "Peer M", "unlevered_operations": "160", "physical_forward_ebitda": "64"},
+    {"name": "Peer N", "unlevered_operations": "189", "physical_forward_ebitda": "70"}
+  ]
+}

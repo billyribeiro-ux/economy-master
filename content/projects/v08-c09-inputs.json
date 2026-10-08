@@ -1,0 +1,33 @@
+{
+  "chapter": "v08-c09",
+  "provenance": "Original fictional teaching cases; no observed market prices, transaction records or empirical probabilities.",
+  "units": "Values and cash in kCU; share counts in thousands; price in CU per share; rates as fractions of one.",
+  "timing": "T0 is immediately before simultaneous closing uses; annual rows occur at T1, T2, T3. No incremental cash or residual value after T3.",
+  "pricing_contract": "Supplied compatible standalone values and 10% incremental cash discount rate. Market-value principal raised or retired at fair value. Old remaining claims unchanged. No incremental financing side effects or additional capital/interest tax shield. Both excess cash balances fully accessible at closing.",
+  "buyer": {"name": "Alder Process Supply", "operating_value": "630", "excess_cash": "70", "debt": "100", "preferred": "0", "shares": "30"},
+  "target": {"name": "Bracken Service Systems", "operating_value": "240", "excess_cash": "20", "debt": "60", "preferred": "10", "shares": "10"},
+  "incremental": {
+    "discount_rate": "0.10",
+    "investment_at_close": "30",
+    "integration_at_close": "12",
+    "fee_at_close": "6.5",
+    "annual": [
+      {"year": 1, "control_gross": "11", "control_tax": "2.75", "cost_saving": "28", "customer_contribution": "16", "combination_tax": "11", "integration": "4.4"},
+      {"year": 2, "control_gross": "12.1", "control_tax": "3.025", "cost_saving": "30.8", "customer_contribution": "17.6", "combination_tax": "12.1", "integration": "0"},
+      {"year": 3, "control_gross": "13.31", "control_tax": "3.3275", "cost_saving": "33.88", "customer_contribution": "19.36", "combination_tax": "13.31", "integration": "0"}
+    ]
+  },
+  "consideration": {"cash_offer": "230", "stock_ratio": "1.2", "new_debt_commitment": "250"},
+  "realization_fractions": ["1", "0.75", "0.5"],
+  "eps_case": {
+    "buyer": "Fenwick Instruments", "target": "Lowbank Components",
+    "buyer_equity": "400", "target_equity": "100", "buyer_shares": "20", "target_shares": "10",
+    "buyer_income": "20", "target_income": "10", "new_shares": "6",
+    "contract": "Start-of-year closing; one full year of supplied common earnings. No financing, fee or acquisition-accounting earnings adjustments; zero net incremental value."
+  },
+  "signing_case": {
+    "success_probability": "0.75", "discount_rate": "0.05", "buyer_immediate_cost": "3",
+    "success_buyer_gain": "20", "success_target_gain": "40", "failure_buyer_cost": "4", "failure_target_cost": "2",
+    "contract": "Separate owner planning criterion, not an identified market price: physical probability weights and 5% discount. Conditional gains and failure costs occur one year after signing. Failure costs go to outsiders, not the other party."
+  }
+}

@@ -82,6 +82,10 @@ from check_v08_c05 import check as check_v08_c05
 from check_v08_c06 import check as check_v08_c06
 from check_v08_c07 import check as check_v08_c07
 from check_v08_c08 import check as check_v08_c08
+from check_v08_c09 import check as check_v08_c09
+from check_v08_c10 import check as check_v08_c10
+from check_v08_c11 import check as check_v08_c11
+from check_v08_c12 import check as check_v08_c12
 from check_economics_core import check as check_economics_core
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -478,6 +482,8 @@ def main():
                          'v08-c03': check_v08_c03(), 'v08-c04': check_v08_c04()}
     v08_middle_check = {'v08-c05': check_v08_c05(), 'v08-c06': check_v08_c06(),
                         'v08-c07': check_v08_c07(), 'v08-c08': check_v08_c08()}
+    v08_closing_check = {'v08-c09': check_v08_c09(), 'v08-c10': check_v08_c10(),
+                         'v08-c11': check_v08_c11(), 'v08-c12': check_v08_c12()}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -515,6 +521,7 @@ def main():
               'volume_7_chapter_checks': v07_chapter_check,
               'volume_8_opening_checks': v08_opening_check,
               'volume_8_middle_checks': v08_middle_check,
+              'volume_8_closing_checks': v08_closing_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     report['checks'].extend(['Volume 8 chapters 1–4: incremental capital budgeting and IRR domains; FCFF/FCFE and dated claim pricing; coherent capital/return fade and terminal sensitivity; covariance, policy-specific leverage, WACC and finite APV with independent pricing checks',
         'Volume 7 full accounting chapter set, two distinct 100-point exams, diagnostic/retention, exact historical correction and constrained forecast project',

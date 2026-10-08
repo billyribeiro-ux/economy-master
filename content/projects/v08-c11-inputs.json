@@ -1,0 +1,67 @@
+{
+  "case": "Brindle Ceramics and Rillstone Services: original finite restructuring cases",
+  "units": "money kCU; conversion shares thousands; per-share values CU; stated annual or quarterly rates",
+  "provenance": "All firms, values, prices, dates, probabilities, taxes and enforceable contracts are fictional teaching assumptions. No market dataset or current legal regime is represented.",
+  "brindle": {
+    "dates": [
+      "2027-01-01",
+      "2028-01-01"
+    ],
+    "cash": 10,
+    "liquidation": {
+      "collateral_gross": 70,
+      "collateral_sale_cost": 10,
+      "other_gross": 45,
+      "other_sale_cost": 5
+    },
+    "claims": {
+      "secured": 90,
+      "bonds": 45,
+      "trade": 30
+    },
+    "bond_historical_cost": 18,
+    "continuation": {
+      "restart_cost": 24,
+      "workout_cost": 6,
+      "rate": "1/20",
+      "final_cash": [
+        154
+      ],
+      "weights": [
+        1
+      ]
+    },
+    "conversion_shares": {
+      "secured": 65,
+      "bonds": 21,
+      "trade": 14
+    },
+    "risky_revision": {
+      "final_cash": [
+        18,
+        174
+      ],
+      "weights": [
+        "1/4",
+        "3/4"
+      ]
+    },
+    "contract": "Liquidation occurs immediately at date 0: collateral sale costs are charged only to collateral; net collateral pays the secured face, any deficiency shares equally per face unit with bonds and trade in the general pool, and excess collateral enters that pool. General sale costs reduce only other assets. All old faces include everything contractually due; no unlisted taxes, employees, leases, guarantees, accrued interest or other claims exist. Continuation uses all opening cash plus new external proceeds to pay the restart and workout costs immediately; final cash is net of every subsequent operating, tax, investment and disposal payment and contains no additional debt cash. A unanimous signed agreement must replace collateral rights by first priority for new money, then the secured old face, then equal-ranking bonds/trade, then old equity; unpaid claims are discharged at the final date. There are no further assets, cash flows or obligations. Base final cash is certain; the risky revision explicitly assumes risk-neutral investors and the stated physical probabilities also serve as valuation weights at the same 5% annual rate. Proposed class-value participation is not proof of actual consent. The alternative conversion cancels old debt and common claims for the stated new common shares after the same new-money loan; its acceptance also requires actual agreement."
+  },
+  "rillstone": {
+    "dates": [
+      "2027-04-01",
+      "2027-07-01"
+    ],
+    "cash": 18,
+    "required_reserve": 8,
+    "old_due_now": 50,
+    "new_loan_proceeds": 32,
+    "issue_fee": 2,
+    "quarter_rate": "1/50",
+    "final_net_operating_cash": 56,
+    "creditors": 5,
+    "holdout_premium_at_one": 1,
+    "contract": "One stated quarter; all future net operating cash is certain and all taxes and other operating obligations are already included. Opening cash and new loan proceeds are available for the synchronized date-0 batch; a cash reserve remains until date 1, earns zero and is then released. The fee is paid to an independent arranger, not the new lender; the lender advances the full stated proceeds. The new lender commits only the stated proceeds and requires the signed intercreditor agreement; no extra borrowing or automatic rollover exists. Five identical old creditors each own one fifth of the note. The original pro-rata extension requires all five signatures; the no-consent branch has no closing funded plan. With consent, current available cash pays part of the old note; the remainder is extended at the same 2% quarterly rate. The new lender is paid first at date 1, then extended old debt, then old common owners; all cash and claims end at zero after the equity distribution. The separate holdout scenario stipulates that one creditor demands the stated extra date-1 payment as a condition of signing. That payment is a claimant transfer, not an additional operating resource cost. No costless right to force agreement is assumed."
+  }
+}

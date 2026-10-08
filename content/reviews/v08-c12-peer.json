@@ -1,0 +1,240 @@
+{
+  "chapter": "v08-c12",
+  "title": "Corporate finance integration",
+  "date": "2026-10-08",
+  "reviewer": "Independent equity and valuation specialist; distinct from coordinating author",
+  "assignment": "production/v08-c12-peer-assignment.json",
+  "status": "passed_independent_peer_review_after_repairs",
+  "independence": "Reviewer authored neither this manuscript nor its lab. Read the full three worked cases, all eight exact prompts and solutions, teaching/retention, four lab assets, focused checker, source proposals and final author record. Only this peer record was edited; no shared files, publishing or child agents.",
+  "recommendation": "Ready for coordinator acceptance after canonical prerequisites. No open material content finding on the final payloads identified by the exact hashes below. This is a specialist AI peer review, not external human certification.",
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v08-c12.html",
+      "sha256": "04283fac2bcfd913c6b9a5a25334bf7a15dff60bbfa9831829470d7cf6d99b8d",
+      "bytes": 41939
+    },
+    {
+      "path": "scripts/check_v08_c12.py",
+      "sha256": "4b74c9eb26c35d12858a2f306632d7685a5e5bf0b58dbfb785f525af2bcf522d",
+      "bytes": 11383
+    },
+    {
+      "path": "content/reviews/v08-c12-sources.json",
+      "sha256": "b3ec60bbf9c6120e33cc3ecfce690daef4d535207eb7753626a2aa7a59349bf4",
+      "bytes": 2676
+    },
+    {
+      "path": "content/projects/v08-c12-analysis.py",
+      "sha256": "33af1ff70c3c94e1893d5e377f7527b3591d1b7abeb8caa770fd90ed4e8634f3",
+      "bytes": 10626
+    },
+    {
+      "path": "content/projects/v08-c12-inputs.json",
+      "sha256": "5afc54e8bb3f9d74f2b10b24c7c9084ca8bc21ba12508b5ba1e7165497dc08b3",
+      "bytes": 2841
+    },
+    {
+      "path": "content/projects/v08-c12-output.json",
+      "sha256": "510dbf97071b13709449a7125acb20fcbe2778605e9f5747ca6631af6608d7ea",
+      "bytes": 41820
+    },
+    {
+      "path": "content/projects/v08-c12-readme.html",
+      "sha256": "1639c6b535f64fc288290c7acb11e3fb21e5c1062b470e9218fe641012db2cf4",
+      "bytes": 4823
+    },
+    {
+      "path": "content/reviews/v08-c12-author.json",
+      "sha256": "36ab3fa81e8f875188959ad25a090fe339e0982fbb41216f35ece4c73ec41fa5",
+      "bytes": 3704
+    }
+  ],
+  "author_hash_record": "All seven final author payload hashes and byte sizes independently matched disk before this record; final author record itself is the eighth reviewed payload.",
+  "coverage": {
+    "worked_examples": 3,
+    "exercise_solution_pairs": 8,
+    "answered_teachback_and_retention": true,
+    "chapter_words": 5677,
+    "substantive": [
+      "Positive date-1 state prices and stated spanning benchmark, physical probabilities separated from pricing weights.",
+      "Original finite operating cash, actual cash-tax capacity, NWC investment/recovery, depreciated equipment sale and no invented continuation.",
+      "Three mutually exclusive financing policies, project-specific loans, full closing sources/uses, all dated cash/debt/interest and covenant tests.",
+      "Fair debt at par, fair new equity and old-owner residual, APV versus terminal-distribution valuation and issue-price wealth transfer.",
+      "Cost/fee/state-price-weight value thresholds versus receivable liquidity thresholds; scope of mechanical stress and unavailable rescues.",
+      "Consistent unlevered comparable numerator, physical forward EBITDA denominator, separate financing bridge and limits of a three-peer range.",
+      "Conditional board decision, evidence owners, tax/pricing assumptions, sunk study fee and current rental opportunity."
+    ]
+  },
+  "resolved_findings": [
+    {
+      "id": "c12-peer-01",
+      "severity": "material input-domain error outside supplied baseline",
+      "location": "content/projects/v08-c12-analysis.py, equity_post/equity_old and fair issuance calculation",
+      "finding": "A fee of 200 combined with gross equity 205 preserved cash 15 and all modeled cash/debt covenants but returned feasible_baseline=true, old-owner equity -637451/18522, new-owner fraction 3797010/3159559 greater than one, and negative shares/issue price. Such financing cannot be sold at fair value under the supplied equal-rights contract.",
+      "author_repair": "Reject equity_post <= 0 or equity_old <= 0 before ownership or share-count divisions; document the required positive residual and impossible-financing example in chapter/README; add focused invalid-input check.",
+      "independent_verification": "Reproduced the original defect before reporting. After repair independently confirmed ValueError for fee200/gross205 and for the exact zero-old-equity boundary obtained by setting gross contribution equal to total postclosing equity. Baseline exact reference output unchanged.",
+      "status": "resolved"
+    },
+    {
+      "id": "c12-peer-02",
+      "severity": "instructional wording",
+      "location": "Chapter retention prompt and answer",
+      "finding": "The prompt asked for an operating-value threshold but the answer supplied a financing issue-fee threshold.",
+      "author_repair": "Prompt now asks for one value threshold.",
+      "independent_verification": "Read the final prompt and solution; labels now agree without suggesting issue fees change operating FCFF.",
+      "status": "resolved"
+    },
+    {
+      "id": "c12-peer-03",
+      "severity": "cross-reference clarity",
+      "location": "Chapter Sources and next steps",
+      "finding": "State pricing was attributed to the preceding chapter, which is c11 rather than the intended c08 finite-state foundation.",
+      "author_repair": "Explicit linked reference to Chapter 8.",
+      "independent_verification": "Final HTML href v08-c08.html and Chapter 8 text inspected.",
+      "status": "resolved"
+    }
+  ],
+  "open_findings": [],
+  "independent_numerical_review": {
+    "method": "Inline standard-library Fraction audit constructed cash from EBITDA minus actual consolidated tax, interest and principal, plus NWC movement/release, after-tax disposal and cash interest; this did not call the lab FCFF-plus-tax-shield recursion to construct the expected results. All reference amounts were parsed and compared to independently reconstructed ledger fields and aggregate claim identities.",
+    "base_statement_fields_recomputed": 54,
+    "financing_schedule_fields_recomputed": 270,
+    "financing_rows": 18,
+    "serialized_rational_fields_checked_for_exact_decimal_agreement": 375,
+    "groups": [
+      "Positive two-state pricing and complete finite operating asset ledger.",
+      "Each debt loan independently valued at par; direct actual-tax cash schedules and all baseline reserve/debt/EBITDA constraints.",
+      "APV matched state-priced final equity, then allocated new/old owner payoffs at fair prices.",
+      "All eight exercise calculations, finite continuation and deliberate old-share-quote error.",
+      "Fee, annual operating-cost and q indifference; current rental opportunity; cash stress versus conditional timing-only PV.",
+      "Repaired impossible-fair-issuance boundaries, complete current/reference equality, portable CLI, final metadata and source/hash scope."
+    ],
+    "exact_anchors": {
+      "date1_state_prices": [
+        "4/7",
+        "8/21"
+      ],
+      "base_unlevered_value": "519080/3087",
+      "baseline_equity": "163460/1029",
+      "existing_debt_shield_pv": "310/441",
+      "A_added_shield_pv": "12815/18522",
+      "B_added_shield_pv": "5/84",
+      "A_postclosing_equity": "3159559/18522",
+      "A_old_owner_equity": "3048427/18522",
+      "A_incremental_old_owner_gain": "106147/18522",
+      "B_incremental_old_owner_gain": "202981/37044",
+      "A_new_share_count_thousands": "1111320/3048427",
+      "A_new_owner_fraction": "111132/3159559",
+      "old_quote_transfer_to_new_owners": "106147/508902",
+      "A_downside_date1_cash": "331/8",
+      "A_downside_leverage": "20/31",
+      "B_downside_leverage": "10/27",
+      "issue_fee_indifference": "46357/37044",
+      "annual_pretax_cost_indifference": "9313/75660",
+      "normal_pricing_weight_indifference": "124679/223320",
+      "physical_probability_value_shortcut": "180370/1029",
+      "peer_median_equity_indication": "130715/882",
+      "A_stress_cash_and_gap": [
+        "51/8",
+        "69/8"
+      ],
+      "B_stress_cash_and_gap": [
+        "65/16",
+        "175/16"
+      ],
+      "existing_stress_cash": "19",
+      "pure_operating_delay_loss": "40/63"
+    },
+    "claim_timing": "Path is learned before T1 payments and future path-specific cash is thereafter certain. Conditional continuations at T2 include exactly T3 operating/NWC/disposal cash, no second terminal value. Final cash earns the same certain after-tax rate as the supplied safe pricing benchmark.",
+    "tax_capacity": "All baseline consolidated taxable operating incomes after interest are positive, including A downside T1 at 23.5; project A standalone negative EBIT is a usable incremental reduction of consolidated tax under the explicitly fictional rule.",
+    "scope_of_infeasibility": "Covenant-failing variants are continuation diagnostics, not market values of breached contracts. Stress does not assume a waiver, default-cost-free rescue or additional loan not in the menu."
+  },
+  "exercise_audit": [
+    {
+      "exercise": 1,
+      "result": "Downside FCFF 44 and 69, normal final 96.25; U 519080/3087, shield310/441, equity163460/1029; omitted normal final NWC change overstates cash1 and PV1600/3087.",
+      "status": "pass"
+    },
+    {
+      "exercise": 2,
+      "result": "State prices4/7 and8/21 sum20/21; physical shortcut180370/1029 differs from market benchmark; T2 continuation discounted and counted once.",
+      "status": "pass"
+    },
+    {
+      "exercise": 3,
+      "result": "A downside cash14.25/14.25/21.5; complete 66 closing; five net equity shortfall repaired by six gross and one fee; date1 cash41.375, taxable income23.5, leverage20/31. A gain exceeds B by9313/37044.",
+      "status": "pass"
+    },
+    {
+      "exercise": 4,
+      "result": "Fair new contribution6 receives fraction111132/3159559; old-share quote produces3087/8173 new shares and transfer106147/508902 to new investors; total equity unchanged.",
+      "status": "pass"
+    },
+    {
+      "exercise": 5,
+      "result": "Matched peer medianU157.5/equity130715/882; scope-overlap critique correctly avoids claiming an identified overstatement without missing multiple and accounting inputs.",
+      "status": "pass"
+    },
+    {
+      "exercise": 6,
+      "result": "Fee limit46357/37044; fee1.5 needs gross6.5 and reduces gain by0.5; q threshold124679/223320 separates price sensitivity from physical probabilities.",
+      "status": "pass"
+    },
+    {
+      "exercise": 7,
+      "result": "Stress cash and gaps verified for all three policies. Existing-only remains feasible; delayed operating PV loss40/63 is conditional and does not price a covenant breach.",
+      "status": "pass"
+    },
+    {
+      "exercise": 8,
+      "result": "Six-sentence memo has explicit evaluation requirements for value, financing, covenant, value and liquidity triggers, and assumptions. Foregone net rent2 reduces A gain to3.730861 and favors B; common sunk study fee3 cancels.",
+      "status": "pass"
+    }
+  ],
+  "source_scope_review": [
+    {
+      "id": "v08-c01-mit-budgeting",
+      "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/06b2ce70ad26ae3d3be8d94145495be6_MIT15_401F08_lec18.pdf",
+      "inspection": "Reopened official actual37-page PDF; title/attribution and slides3-10,18 and34-35 inspected for incremental after-tax cash, NWC, opportunity/sunk costs, mutually exclusive comparison and timing/risk. Garbled equation glyphs were not treated as independently visible proofs. Original case equations were independently checked."
+    },
+    {
+      "id": "v08-c04-mit-capital",
+      "url": "https://ocw.mit.edu/courses/15-402-finance-theory-ii-spring-2003/e443d44f154134f976fda9c95889f6b6_lec14bcostcapital.pdf",
+      "inspection": "Reopened actual53-page Lewellen PDF, attribution April9,2003; introductory component valuation and APV slides33-40 plus financing-policy distinctions inspected. No historical market observations, blanket shield-rate heuristic or usage claim adopted."
+    },
+    {
+      "id": "v08-c07-anatomy",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/lectures/multintr.htm",
+      "inspection": "Reopened actual69-line author-hosted body, including claimholder/accounting consistency and fundamentals/comparable-universe questions. Fictional peer prices remain clearly supplied case inputs."
+    }
+  ],
+  "verification_results": [
+    {
+      "action": "Independent Fraction ledger and claim audit executed inline",
+      "result": "Passed all324 reconstructed base/financing fields,375 rational serialization checks, all exercise anchors and corrected issue-domain boundaries."
+    },
+    {
+      "action": "python3 -B book/scripts/check_v08_c12.py",
+      "result": "All six focused root checker groups passed, including new impossible-equity-issue rejection. Root checker uses assert statements; validation was run in ordinary Python, not under disabled assertions."
+    },
+    {
+      "action": "Lab compute import/API captured; current serial output compared with complete reference",
+      "result": "Quiet import and compute; exact full reference agreement."
+    },
+    {
+      "action": "Input and analysis copied to a temporary folder; CLI run there",
+      "result": "Portable standard-library CLI returned exact supplied output without stderr or network."
+    },
+    {
+      "action": "Final author hash catalogue and final repaired manuscript/source/README checked",
+      "result": "Seven author payload hashes and sizes match; eighth hash records reviewed author JSON. All three peer findings are resolved."
+    }
+  ],
+  "limitations": [
+    "Supplied positive state prices, operating forecasts, financing commitments, tax rule and contractual covenants are fictional assumptions, not independently verified real-world facts.",
+    "Source review is confined to cited methods; it does not certify complete courses, all historical examples or current jurisdictional laws.",
+    "The small lab has a documented domain and is not a general distress, contingent-financing or transaction-pricing engine.",
+    "No visual/mobile/keyboard/print QA, shared integration or publication was performed by this reviewer.",
+    "A passed specialist AI peer review reduces error risk but is not independent human academic certification or proof of learner mastery."
+  ]
+}
