@@ -1,0 +1,221 @@
+{
+  "chapter": "v06-c06",
+  "title": "Money, banking and monetary transmission",
+  "review_type": "Independent bounded internal peer audit",
+  "reviewer": "monte_carlo specialist; not the chapter author",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "status": "passed content and computational review; root retains acceptance",
+  "assignment": "production/v06-middle-assignments.json peer_assignments",
+  "scope": {
+    "read": "Full final manuscript, four worked examples, all eight complete solutions, teach-back, retention, ledger program, README, numerical checker, author and source records.",
+    "ownership": "Wrote only this peer-review JSON. No manuscript/shared edits, child agents, commits, hosting, publication or browser workaround.",
+    "counts": {
+      "worked_examples": 4,
+      "exercises": 8,
+      "complete_solutions": 8,
+      "current_parser_words": 7148
+    },
+    "prerequisites": "Compared fixed c05/c06 contract and canonical outcome with accepted dated budgets, nominal/real conventions and basic algebra/optimization. All exercise methods are introduced in the chapter or linked prerequisites."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v06-c06.html",
+      "bytes": 48572,
+      "sha256": "724ea6242f76df205203ea4b81983103eb55efb903c8ecdf68dd4bb5d7a56b01"
+    },
+    {
+      "path": "content/projects/v06-c06-ledger.py",
+      "bytes": 7480,
+      "sha256": "dc2719e448da436917a63ca044f94685e5d3b712fdbd27066ce7a20805f75db5"
+    },
+    {
+      "path": "content/projects/v06-c06-README.txt",
+      "bytes": 3168,
+      "sha256": "60feaebfcefc066d02b9db225be5d1bfb34765c23c8266d535570d5cde436108"
+    },
+    {
+      "path": "scripts/check_v06_c06.py",
+      "bytes": 24542,
+      "sha256": "0ea2f698b52230256120ba6b72c4c941b32c1475bd521d832f037019eb854b26"
+    },
+    {
+      "path": "content/reviews/v06-c06-sources.json",
+      "bytes": 4440,
+      "sha256": "fc10c18b6456b1e57aeec4b80755dcd446be6f90f53f50884ef306f7403b9026"
+    },
+    {
+      "path": "content/reviews/v06-c06-author.json",
+      "bytes": 14185,
+      "sha256": "4850a4571fc2f40e9b3777759f9cea3109aea99f97123c278fd9d6de1947a8ea"
+    }
+  ],
+  "findings": [
+    {
+      "id": "v06-c06-peer-01",
+      "severity": "low",
+      "location": "scripts/check_v06_c06.py successor-route gate",
+      "finding": "During root integration, the manuscript successor changed from the planned curriculum route to the now-written v06-c07.html while the checker still required curriculum.html#v06. The otherwise valid final manuscript therefore triggered a ValueError at the structural route gate.",
+      "proposed_fix": "Require the written v06-c07.html successor and update the diagnostic and author checker hash.",
+      "resolution": "Root changed the expected route and diagnostic to prerequisite and written successor routes. Independently reread lines158-159 and reran the final checker under optimized Python from /private/tmp. All six groups pass with zero stdout/stderr from import/check(), strict JSON serialization and portable lab agreement.",
+      "status": "resolved"
+    },
+    {
+      "id": "v06-c06-peer-02",
+      "severity": "informational",
+      "location": "author record word-count metadata",
+      "finding": "Removing planned from the successor sentence reduces the current parser count from7149 to7148; an earlier author count remained7149 at inspection. Final numerical and content hashes match the actual files.",
+      "proposed_fix": "Refresh the author count if retaining a current final-word-count claim.",
+      "status": "resolved",
+      "resolution": "Root refreshed the author prose and validation count to7148. Independently reread validation.counts.text_words and refreshed the final author-record hash."
+    }
+  ],
+  "method_and_proof_review": [
+    "Money aggregates explicitly specify instruments and holders; reserves are bank assets/central-bank liabilities, while customer deposits are bank liabilities and nonbank assets. Existing-asset transactions, financial claims and production are kept distinct.",
+    "The real opportunity cost is independently recovered by subtracting two final purchasing-power factors: q=(i_bill-i_deposit)/(1+inflation). The objective values future wealth linearly and expresses convenience in matching future-good units. Strict quadratic curvature and projection onto [0,w] establish the complete interior, zero, wealth-cap and zero-wealth cases. The inferred corner spread is a set, not point identification.",
+    "Every loan, interbank funding, payment, central advance and repayment has an explicit counterpart. Pledged collateral remains the commercial bank asset. Consolidation cancels precisely the internal interbank, reserve and advance positions; outside government and nonbank claims and book equity remain. Loan write-down is not represented as automatic legal forgiveness.",
+    "Capital, accounting equity, economic solvency and payment liquidity have distinct meanings. The fixed risk-weight-one capital inequality and full-outflow reserve/funding bound define a feasible interval rather than an optimal lending choice. Existing negative capital headroom is a violation, not adequate capitalization with zero new lending.",
+    "The reserve-demand model distinguishes base supply from total reserves after facility use, enforces comparable eligible outside options, and explicitly selects minimum necessary lending. The piecewise solution is continuous/nonincreasing across active ceiling, slope, floor, inactive ceiling and collapsed corridor. The chapter states why equal administered rates alone do not select facility quantity. Limited collateral access changes assumptions and can break the ceiling; ineligibility/frictions can weaken the floor.",
+    "The lending quote solves a strictly increasing expected-receipt inequality for p<1. The equivalent net-cost identity is (1-p)*i_loan=i_funding+c+p*(1-recovery); the p=1 case is handled separately. A quote is neither proof of willing demand nor of feasible loan quantity, and default probabilities are explicitly held fixed rather than silently assumed invariant under a general lending policy.",
+    "Exact realized and expected real gross returns are separated from a ratio of mean gross factors and the small-rate subtraction. The risky Euler qualification retains marginal utility covariance. Bond price sensitivity fixes the payoff and required yield rather than treating every yield as the policy rate.",
+    "All open interpretation tasks specify causal mechanisms, counterfactuals, timing and concrete threats. No current rate/regulation, jurisdiction-wide hard reserve floor, complete regulatory framework or measured transmission coefficient is fabricated."
+  ],
+  "independent_computations": {
+    "ledger_method": "Built a separate directed-position representation keyed by debtor, creditor and instrument at stated carrying values. Reconstructed the five sequential operations and seven branches from economic events, then independently obtained each bank/CB account and consolidated positions by retaining only edges crossing each group boundary. This used neither the lab post/snapshot functions nor the author checker balance_reference/verify_snapshot methods.",
+    "ledger_results": {
+      "sequential_snapshots": 6,
+      "alternative_branches": 7,
+      "individual_balance_sheets": 39,
+      "boundary_consolidations": 26,
+      "main_M_H": [
+        [
+          "380",
+          "70"
+        ],
+        [
+          "420",
+          "70"
+        ],
+        [
+          "420",
+          "85"
+        ]
+      ],
+      "final_bank_consolidation": "455=400+15+40",
+      "final_banks_CB_consolidation": "470=400+20+50",
+      "principal_branch_M_H": [
+        "408",
+        "85"
+      ],
+      "loss_branch_M_H": [
+        "420",
+        "85"
+      ],
+      "bank_purchase_M_H": [
+        "420",
+        "105"
+      ],
+      "nonbank_purchase_M_H": [
+        "440",
+        "105"
+      ],
+      "currency_conversion_M_H": [
+        "420",
+        "85"
+      ]
+    },
+    "execution_note": "The independent position, boundary, rate, credit and return comparisons all completed successfully before a subsequent quiet author-checker call encountered the concurrent stale successor gate. After root corrected that gate, only the affected final API/CLI validation was rerun; completed independent calculations were not redundantly repeated.",
+    "edge_rates": "Independent minimum-facility calculation recovered main (z,R,i)=(10,20,1/20),(0,40,3/100),(0,80,1/100); limited access=(5,15,21/400); a collapsed negative corridor gives (15,20,-1/100); an inactive high ceiling with zero reserves gives (0,0,1/5).",
+    "credit_quotes": [
+      "6/95",
+      "1/19",
+      "4/45"
+    ],
+    "expected_real_gross": "441/440",
+    "ratio_of_mean_gross_factors": "1",
+    "recapitalization_minima": [
+      "49/5",
+      "59/5"
+    ]
+  },
+  "exercise_audit": [
+    {
+      "exercise": 1,
+      "result": "Interior q=1/20 implies nominal spread11/200 and bill rate3/40; nominal balances30. Wealth12 clips choice to12 and nominal24. Complete nonnegative-q corner interval is [0,7/125], with global square certificate."
+    },
+    {
+      "exercise": 2,
+      "result": "Final A assets220=(R20,S20,L180), deposits200/equity20; B assets210=(R30,S40,L140), deposits190/equity20. Consolidated banks430=390+40; M410,H70. Payment capacity15 differs from capital loan headroom20."
+    },
+    {
+      "exercise": 3,
+      "result": "Repayment transfers12 reserves B-to-A and reduces B deposits/A loans; A equity20, M408,H85. Separate loss reduces A loans/equity12, leaving equity8, deposits400, M420,H85. CB reserve ownership changes only for repayment; total reserves65 in both."
+    },
+    {
+      "exercise": 4,
+      "result": "Bank seller swaps securities20 for reserves20, M420,H105, combined external assets470. Nonbank seller creates deposit20 and transfers securities into the consolidation boundary, M440,H105, external assets490. Existing seller asset value is exchanged at stated price; no new customer loan or equity gain."
+    },
+    {
+      "exercise": 5,
+      "result": "Minimum paid-in equity49/5 restores existing178 loans;59/5 supports198 on capital grounds. Reserves at A become74/5 or84/5; B reserves251/5 or241/5 and deposits1051/5 or1041/5. Subscriptions are alternatives, not cumulative. A fresh equity issue differs from secondary trading or reserve borrowing and does not alone meet an extra full20 payment outflow."
+    },
+    {
+      "exercise": 6,
+      "result": "Rc20. For base10,40,100: facility10,0,0; total20,40,100; rates1/20,1/25,1/50. Parallel administered rise gives3% at base100. Capped facility5 with base10 gives total15 and rate21/400, above the original ceiling under changed access."
+    },
+    {
+      "exercise": 7,
+      "result": "Real gross states21/20 and21/22 give mean441/440, real net1/440, whereas gross ratio using mean inflation is1. Bond prices100 and2200/21. Credit quote4/45 exactly covers funding1%, operating1%, default10%, recovery2/5. Conditional-input caveats answer every interpretive part."
+    },
+    {
+      "exercise": 8,
+      "result": "Solution gives reserve-producing advances and outright purchases with correct counterparty distinctions, rejects interbank lending as an aggregate reserve source, distinguishes demand/supply/net-versus-gross credit explanations, and supplies an employment counterfactual plus timing/anticipation/spillover confounds. Rubric-like criteria are explicit; neither policy success nor failure is inferred from the three observations."
+    }
+  ],
+  "retention_audit": "Accounts after origination: reserves8,loans84,deposits82,equity10. After payment: reserves1,loans84,deposits75,equity10. Advance5 adds reserves/debt5 without altering equity or capital headroom16. Certain real net return2/51. Teach-back answer preserves the three transaction distinctions.",
+  "checker_and_lab_execution": {
+    "initial_standalone": "python3 -B book/scripts/check_v06_c06.py: passed six groups before root successor integration.",
+    "final_optimized_quiet_API": "python3 -B -O from /private/tmp; runpy load plus check() emitted zero stdout and stderr bytes, status passed, six groups; json.dumps(...,allow_nan=False) succeeded.",
+    "final_portable_lab": "python3 -B -O absolute/path/v06-c06-ledger.py from /private/tmp: exit0, no stderr, JSON identical to quiet benchmark().",
+    "logic_read": "Read the complete checker and lab; explicit exceptions survive -O. The lab is correctly scoped as a fixed exact fixture, not an arbitrary external-data validator. Failed journals operate on a copy. Author numerical grids supplement analytic proofs, not replace them.",
+    "author_grid_results": {
+      "liquidity_cases": 108,
+      "liquidity_point_comparisons": 3564,
+      "reserve_domain_comparisons": 1350,
+      "loan_parameter_cases": 72,
+      "invalid_journals": 4,
+      "invalid_rate_domains": 5
+    }
+  },
+  "primary_source_reinspection": [
+    {
+      "id": "v06-c06-boe-creation",
+      "url": "https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2014/money-creation-in-the-modern-economy.pdf",
+      "scope": "Retrieved actual14-page official PDF. Read origination/reserve/repayment passages and printed17-19 funding, liquidity, credit and capital discussion; printed24 nonbank-purchase counterpart. These support the scoped method claims, not a present regulation or empirical multiplier."
+    },
+    {
+      "id": "v06-c06-fed-2019",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20190130c.htm",
+      "scope": "Read complete dated January30,2019 implementation statement. The manuscript correctly attributes the intended ample-reserves/administered-rate example to that statement, without claiming current settings."
+    },
+    {
+      "id": "v06-c06-fed-ample",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/implementing-monetary-policy-in-an-ample-reserves-regime-the-basics-note-1-of-3-20200701.html",
+      "scope": "Read date/authors, reserve-demand regions and administered-rate/eligibility passages. Source supports a qualitative near-flat region and ineligible-lender caveat; exact piecewise curve and parameters are correctly labeled original assumptions."
+    },
+    {
+      "id": "v06-c06-ecb-transmission",
+      "url": "https://www.ecb.europa.eu/mopo/intro/transmission/html/index.en.html",
+      "scope": "Read actual mechanism sections on uncertain lags, market/bank rates, expectations, asset/collateral values, spending and credit. The chapter uses stable qualitative channels, without claiming an observed current effect or quoting a numerical coefficient."
+    }
+  ],
+  "limitations": [
+    "Internal agent peer review is not independent human academic certification.",
+    "No visual/mobile/print QA or restricted-preview workaround; structural inspection alone does not establish rendered usability.",
+    "The ledger excludes complete government/nonbank books, vault cash, cross-border positions and unlisted accruals; carrying values do not prove legal debt forgiveness or economic solvency.",
+    "The source audit is scoped to passages actually retrieved, not every statement or cited study in the documents.",
+    "Analytic and exact numerical agreement does not validate the assumed benefit function, capital rule, reserve-demand schedule, default probabilities or causal transmission in an actual economy.",
+    "Root alone integrates sources/checkpoint/build, accepts in prerequisite order and publishes."
+  ],
+  "recommendation": "No unresolved mathematical, accounting, instructional, computational, source-scope or metadata finding. Complete content and executable package are ready for root acceptance."
+}

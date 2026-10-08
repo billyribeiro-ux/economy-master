@@ -2,21 +2,21 @@
   "batch": "v06-middle",
   "date": "2026-10-08",
   "authorization": "Standing explicit user authorization for three bounded specialists alongside root",
-  "state": "queued-after-v06-opening-acceptance-publication",
+  "state": "accepted-pending-final-check-and-private-publication",
   "integration_owner": "root",
-  "acceptance_dependency": "Opening chapters c01–c04 must be accepted before c05; then accept c05,c06,c07,c08 in canonical order. Drafting may run in parallel against this interface after dispatch.",
+  "acceptance_dependency": "Opening chapters c01\u2013c04 must be accepted before c05; then accept c05,c06,c07,c08 in canonical order. Drafting may run in parallel against this interface after dispatch.",
   "fixed_contract": {
     "ownership": "Edit only assigned chapter/prefixed assets/checker/author review/source proposal. No children, shared files, commits or hosting. Root owns canonical curriculum, source catalogue, checkpoint, shared checks and publication.",
     "format": "Static HTML fragments and local assets; standard-library Python; no frameworks, installations or paid services.",
     "gates": "Complete canonical coverage and outcomes, explicit domains/units/timing/prerequisites, at least two fully worked original examples and eight complete aligned solutions, boundary/global checks, teach-back and answered retention, primary method sources actually inspected, quiet JSON-compatible independent checker and hashed author review. Root audits and accepts; no certification or current-data fabrication.",
-    "shared_interface": "Prior v06 c01–c04 distinguish nominal/current-price accounts from physical model quantities, discrete dated capital, household Euler/borrowing constraints and finite investment. When using S=Y−C−G, G must mean government consumption alone and I all domestic gross investment; U.S. expenditure G including government investment needs a separate split. Price level P, inflation pi, nominal net rate i and real net rate r are locally defined with exact gross-factor relations before approximation. c07/c08 any equations linking inflation and activity must state expected dates, shock units and equilibrium conditions; do not treat an accounting identity as an estimated causal equation. Planned successors link to curriculum until written."
+    "shared_interface": "Prior v06 c01\u2013c04 distinguish nominal/current-price accounts from physical model quantities, discrete dated capital, household Euler/borrowing constraints and finite investment. When using S=Y\u2212C\u2212G, G must mean government consumption alone and I all domestic gross investment; U.S. expenditure G including government investment needs a separate split. Price level P, inflation pi, nominal net rate i and real net rate r are locally defined with exact gross-factor relations before approximation. c07/c08 any equations linking inflation and activity must state expected dates, shock units and equilibrium conditions; do not treat an accounting identity as an estimated causal equation. Planned successors link to curriculum until written."
   },
   "assignments": [
     {
       "owner": "root",
       "chapter": "v06-c05",
       "task": "Labor markets and unemployment",
-      "state": "queued",
+      "state": "accepted-by-root",
       "canonical_specification": {
         "title": "Labor markets and unemployment",
         "outcome": "Explain employment dynamics using search, incentives and institutional mechanisms.",
@@ -47,7 +47,7 @@
       "owner": "regression",
       "chapter": "v06-c06",
       "task": "Money, banking and monetary transmission",
-      "state": "queued",
+      "state": "accepted-by-root",
       "canonical_specification": {
         "title": "Money, banking and monetary transmission",
         "outcome": "Trace monetary-policy mechanisms without relying on a mechanical deposit multiplier.",
@@ -78,7 +78,7 @@
       "owner": "causal_identification",
       "chapter": "v06-c07",
       "task": "Inflation, expectations and nominal rigidity",
-      "state": "queued",
+      "state": "accepted-by-root",
       "canonical_specification": {
         "title": "Inflation, expectations and nominal rigidity",
         "outcome": "Explain inflation dynamics and distinguish supply from demand disturbances.",
@@ -108,7 +108,7 @@
       "owner": "monte_carlo",
       "chapter": "v06-c08",
       "task": "Business cycles and stabilization models",
-      "state": "queued",
+      "state": "accepted-by-root",
       "canonical_specification": {
         "title": "Business cycles and stabilization models",
         "outcome": "Compare short-run models and identify their assumptions and predictions.",
@@ -134,5 +134,58 @@
       ],
       "fixed_scope": "Build and compare internally complete short-run stabilization models: derive a bounded linear IS-LM system with goods/money markets, solve comparative statics and feasible domains, distinguish a money-supply instrument from an interest-rate rule. Connect aggregate-demand/supply and inflation/output mechanisms with explicit price versus inflation and timing conventions. Supply an introductory real-business-cycle resource/productivity/intertemporal channel and a fully specified small New Keynesian expectations/rate/Phillips system under a stated finite-horizon or equilibrium-selection condition; solve original shocks without importing infinite-horizon determinacy claims not proved. Compare demand/supply/financial or policy shocks, stabilization tradeoffs and model/evidence limits. At least two fully solved model comparisons/eight fully solved exercises; all prerequisites taught or derived and primary method sources actually inspected. No universal claim that one model explains every crisis."
     }
-  ]
+  ],
+  "opening_prerequisites": "v06-c01 throughc04 accepted and privatelypublished ataf7bb6f776c34c6526737d1b3a7552965508c763",
+  "root_design_checkpoint": {
+    "date": "2026-10-08",
+    "chapter": "v06-c05",
+    "state": "primary-inspection-complete-manuscript-underway",
+    "models": [
+      "Three-state population ledger and feasible two-state transition dynamics with completed versus ongoing duration",
+      "Discrete-time stationary search/matching with probability bounds, discounted job values, Nash bargaining and free-entry vacancy condition; all timing derived together",
+      "Separate discrete-time effort incentive model, Bellman certificate and explicit aggregate labor-demand closure",
+      "Bounded threshold feedback illustrating strict hysteresis versus geometric persistence"
+    ],
+    "primary_inspection": [
+      "BLS CPS definitions: population, states, search, participation and ongoing duration",
+      "MIT 14.661 matching PDF slides34\u201356: matching, flow balance, vacancy/job values, bargaining and free entry; our model uses separately derived discrete timing",
+      "MIT 14.661 efficiency-wage PDF slides2\u201318: moral hazard, values, incentive and equilibrium; continuous-time source distinguished from original discrete model",
+      "Blanchard\u2013Summers NBER2035 actual PDF introduction and section4/conclusion: strict versus loose hysteresis, membership and duration mechanisms, empirical limits"
+    ],
+    "integration_findings_resolved": [
+      "c06 reserve/liquidity/equity transaction anchors reconciled; opportunity-cost timing clarified",
+      "c07 price logpoint units, firm price-taking and endpoint conditions clarified",
+      "c08 total zero-target log inflation, steady nominal lograte2, natural-rate disturbance and flexible-price output normalization explicit; distinct c07 target/reference convention retained"
+    ]
+  },
+  "peer_assignments": [
+    {
+      "owner": "causal_identification",
+      "task": "Independent c05 manuscript audit",
+      "owned_paths": [
+        "content/reviews/v06-c05-peer.json"
+      ],
+      "state": "passed",
+      "fixed_scope": "Read complete c05 manuscript and eight solutions; independently rederive matching timing, Nash bargaining/free entry, probability domain, effort Bellman/incentive conditions and labor-demand closure, both threshold maps, measurement ledger and all numeric anchors. Read source proposals and source passages as necessary. Do not edit chapter or shared files. Send concrete findings promptly. Root is writing checker/author record; wait for root notice before final checker/hash review. Record exact final manuscript/checker/source hashes in peer record after corrections and checker completion. No children or publishing."
+    },
+    {
+      "owner": "regression",
+      "chapter": "v06-c08",
+      "state": "passed",
+      "owned_paths": [
+        "content/reviews/v06-c08-peer.json"
+      ],
+      "fixed_scope": "Independently read c08 complete manuscript, all8solutions, lab/checker and sources; audit IS-LM domains/instruments, AD-AS roots, finite RBC globality, finite NK branch uniqueness/timing/normalization and policy loss. Read only other owned artifacts. Report concrete issues to root; no content/shared edits, children or hosting. Record final artifact hashes after any corrections; await author final record before finishing."
+    },
+    {
+      "owner": "monte_carlo",
+      "chapter": "v06-c06",
+      "state": "passed",
+      "owned_paths": [
+        "content/reviews/v06-c06-peer.json"
+      ],
+      "fixed_scope": "Independently audit full c06 chapter/all8solutions/lab/checker and source scopes, including exact bank ledgers/consolidations, monetary demand opportunity costs, capital/liquidity/default distinction, reserve-market all-domain branches and credit pricing. Report concrete issues to root; no content/shared edits, children or hosting. Record final artifact hashes after corrections."
+    }
+  ],
+  "root_review": "content/reviews/v06-c05-c08.json"
 }

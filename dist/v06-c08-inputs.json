@@ -1,0 +1,16 @@
+{
+  "description": "Original synthetic finite paths. Every listed disturbance is announced at date 0. Target inflation is zero; nominal baseline is 2 log points; j floor is -2. No estimated or observed macroeconomic data.",
+  "parameters": {"sigma": 1, "beta": 0.5, "kappa": 0.5, "phi_pi": 2, "phi_x": 0},
+  "cases": [
+    {"name": "baseline", "n": [0, 0], "u": [0, 0], "v": [0, 0], "terminal_x": 0, "terminal_pi": 0},
+    {"name": "one_date_demand", "n": [-2], "u": [0], "v": [0], "terminal_x": 0, "terminal_pi": 0},
+    {"name": "one_date_cost", "n": [0], "u": [1], "v": [0], "terminal_x": 0, "terminal_pi": 0},
+    {"name": "deep_demand", "n": [-6], "u": [0], "v": [0], "terminal_x": 0, "terminal_pi": 0},
+    {"name": "future_demand", "n": [0, -2], "u": [0, 0], "v": [0, 0], "terminal_x": 0, "terminal_pi": 0},
+    {"name": "future_cost", "n": [0, 0], "u": [0, 1], "v": [0, 0], "terminal_x": 0, "terminal_pi": 0},
+    {"name": "persistent_floor", "n": [-6, -6], "u": [0, 0], "v": [0, 0], "terminal_x": 0, "terminal_pi": 0},
+    {"name": "floor_equality", "n": [-4], "u": [0], "v": [0], "terminal_x": 0, "terminal_pi": 0},
+    {"name": "future_tightening", "n": [0, 0], "u": [0, 0], "v": [0, 2], "terminal_x": 0, "terminal_pi": 0},
+    {"name": "nonzero_terminal", "n": [0, 0], "u": [0, 0], "v": [0, 0], "terminal_x": 1, "terminal_pi": 2}
+  ]
+}

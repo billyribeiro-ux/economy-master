@@ -1,0 +1,108 @@
+{
+  "chapter": "v06-c05",
+  "date": "2026-10-08",
+  "reviewer": "Independent causal-identification specialist agent",
+  "status": "passed",
+  "scope": "Read the complete manuscript, all four worked examples, all eight exercise prompts and solutions, teach-back checklist, answered delayed check, complete chapter checker, author record and four scoped source proposals. Independently recomputed the principal numerical cases and audited assumptions, timing, domains, proofs, measurement and identification. Only this peer record was written by the reviewer.",
+  "findings": [
+    {
+      "id": "v06-c05-peer-01",
+      "severity": "medium",
+      "location": "content/chapters/v06-c05.html, Exercise 1, fourth classification",
+      "original_finding": "The benefit recipient was not explicitly jobless. Absence of search and temporary layoff does not rule out qualifying employment, so the original prompt did not determine the solution's outside-labor-force classification.",
+      "resolution": "Author added 'a jobless person receiving benefits'. Inspected corrected prompt against the unchanged classification solution and the official CPS definitions.",
+      "status": "resolved"
+    },
+    {
+      "id": "v06-c05-peer-02",
+      "severity": "minor",
+      "location": "content/chapters/v06-c05.html, Incidence, duration and the observation window",
+      "original_finding": "Competing-exit mean 1/(f + g) and eventual employment-exit probability f/(f + g) require positive total exit probability; the zero-exit boundary was omitted.",
+      "resolution": "Author now conditions the formulas on f + g > 0 and explicitly states infinite duration and undefined destination ratio when f = g = 0. Inspected correction.",
+      "status": "resolved"
+    },
+    {
+      "id": "v06-c05-peer-03",
+      "severity": "minor",
+      "location": "content/chapters/v06-c05.html, final successor paragraph",
+      "original_finding": "The written successor c06 was still described as planned and linked to the curriculum rather than its manuscript.",
+      "resolution": "Final paragraph now says next chapter and links v06-c06.html. Inspected final text before hashing.",
+      "status": "resolved"
+    }
+  ],
+  "unresolved_material_findings": [],
+  "mathematical_audit": [
+    "Endpoint transition rows use opening-state denominators and columns reconcile closing stocks. Fixed-population assumptions and within-period event-count limitations are explicit. The employment-population identity does not infer hiring or welfare.",
+    "The two-state map preserves the unit interval for s,f in [0,1]. Its exact affine solution, monotone versus alternating convergence, zero-flow continuum and s = f = 1 two-cycle are correct. Completed geometric spells are distinguished from ongoing survey durations and competing exits.",
+    "For positive matching pools, M <= min(U,V) is equivalent to mu <= 1 and mu^2 <= theta <= 1/mu^2. The Beveridge relation is stationary and restricted to feasible probabilities. Zero pools are handled without undefined ratios.",
+    "Worker and firm values use current flows and next-period transitions consistently. Pair-level Nash differentiation holds the market outside value fixed. Positive surplus, interior bargaining weights, concavity and expiring-vacancy free entry support the derived wage and quadratic. Unique positive algebraic root does not imply probability-domain feasibility.",
+    "Conditional detection produces extra dismissal probability (1-s)q and total shirk separation s+(1-s)q. The value difference and nonshirking wage are correct. The stated Bellman inequality iteration, bounded payoffs and vanishing discounted terminal remainder justify optimality against repeated deviations. Job acceptance and effort tie-breaking are explicit.",
+    "The effort model's competitive marginal-product schedule is explicitly a separate maintained aggregate closure, not an additional condition imposed on the bargaining model. Flow balance restricts u >= 1/5 in the examples. Increasing labor-demand wage and decreasing incentive wage establish uniqueness of each feasible intersection.",
+    "Both threshold examples preserve their designated regions globally by affine endpoint bounds, with contraction within each region. Threshold equality belongs to the upper branch. A temporary state displacement can change the limit under the restored law; slow convergence to a unique limit alone cannot establish strict hysteresis.",
+    "Synthetic comparative statics, statistical classification and empirical causal identification remain distinct. The training-design answer specifies assignment, follow-up, estimand, missingness and displacement limits rather than inferring aggregate job creation from participant outcomes."
+  ],
+  "independent_computations": {
+    "method": "Ephemeral standard-library Python calculations, independent of the chapter checker for numerical derivation. Fractions used for rational cases; direct inversion of both worker Bellman equations used for values. Radical cases evaluated separately and substituted into original equations.",
+    "worked_example_1": "Closing (E,U,N) = (610,95,295), u = 19/141, participation = 141/200; hiring 70 and departures 60.",
+    "worked_example_2": "Baseline x = 1, theta = 1, f = h = 1/2, J = S = 20/3, w = 28/3, VE = 40, VU = 100/3, u = v = 1/3. With mu = 1/4, x = sqrt(7)-2, f = 0.16143782776614768, h = 0.3871459425887158, u = 0.607625218510765, v = 0.2533765295753557 and w = 8.555993007655516.",
+    "worked_example_3": "At the incentive wage w = 5, VE = 50/3, VU = 40/3 and gain from shirking once is zero. Aggregate closure has unique feasible u = 1/2, f = 1/4, w = 5.",
+    "worked_example_4": "Invariant regions split at 1/5; fixed points 1/9 and 1/3; branch slopes 11/20 and 17/20. The threshold maps to 11/50 and the shocked state 1/4 follows the stated upper-branch path.",
+    "effort_policy_grid": "81 exact rational parameter combinations. Directly solved the full two-state value system separately for always-work and always-shirk policies, including each policy's unemployment value. Their values coincide at the binding wage. A wage increase of 1/100 makes the one-period shirk deviation strictly worse; a decrease of 1/100 makes it strictly better. Employment is preferable to immediate unemployment at the binding wage.",
+    "exercise_checks": [
+      "1: Classifications E,U,N,N after prompt correction; stocks (515,111,374), L = 626, u = 111/626, participation 313/500, net U change 11, net E change 15, hiring 65, departures 50.",
+      "2: Both steady rates 1/5. First two states 7/20 and 5/16 versus 39/100 and 761/2000. Incidence 1/25 versus 1/125; completed means 5 versus 25; three-period survival 64/125 versus 13824/15625. Both degenerate endpoint cases correctly explained.",
+      "3: M = 20, theta = 1/4, f = 1/4, h = 1 initially. With five vacancies the formal M = 10 requires impossible h = 2. Stationary v = 16/125, theta = 16/25, f = 2/5, h = 5/8 and both flows 2/25. Derivative sign follows from 1/u - 2 + u.",
+      "4: At kappa = 1, x = 2, theta = 4, f = 1, h = 1/4, J = S = 5, w = 10, u = 1/5, v = 4/5, VU = 40, VE = 45. At kappa = 1/2 the positive root sqrt(17)-1 exceeds two and fails the job-finding probability bound.",
+      "5: With q = 1, minimum wage 4, VE = 40/3, VU = 35/3, zero one-period deviation gain. Competing-exit mean 10/3 and employment destination probability 2/3. No finite dismissal incentive at q = 0 under the stated instruments.",
+      "6: u = (sqrt(97)-1)/24 = 0.368702408408171, f = (sqrt(97)-3)/16 = 0.42805361261225666, w = (23+sqrt(97))/6 = 5.474809633632684. Original equations and probability bounds verified.",
+      "7: Lower map 1/25 + (3/5)u and upper map 1/25 + (9/10)u; fixed points 1/10 and 2/5. Lower upper-limit image 19/100; upper endpoint images 53/200 and 47/50. The shocked path is 2/5 - (1/10)(9/10)^t. Resetting exactly to 1/4 selects the upper branch.",
+      "8: Participation falls from 2/3 to 13/20. Gross flows and a causal training effect remain underidentified by the two aggregate ratios; illustrative design and alternative explanations satisfy the prompt."
+    ],
+    "retention": "u* = 1/5, rho = 3/5, next u = 13/50 and no-other-exit completed mean 25/8. Effort inequality and threshold answer agree with the derived models."
+  },
+  "executable_checks": {
+    "chapter_checker": "Read the complete implementation and ran its standalone JSON CLI successfully. Then imported it and called check() under captured stdout; import and call were quiet, and json.dumps(report, allow_nan=False) succeeded.",
+    "reported_cases": {
+      "transition_parameter_initial_cases": 144,
+      "effort_value_cases": 81,
+      "hysteresis_boundary_cases": 8,
+      "matching_equilibria": 3
+    },
+    "additional_failure_probes": "Nine ValueError rejections independently exercised: incorrect ledger row total, negative ledger flow, negative initial probability, separation above one, infeasible low vacancy cost, matching efficiency above one, zero discount factor, certain separation and zero detection.",
+    "oracle_assessment": "Matching roots are bracketed using a zero-profit residual rather than the printed quadratic closed form; original job and worker equations, Nash surplus and flow balance are then checked. Effort values use exact fractions. HTML example/solution counts and scoped source IDs are checked. The implementation is an appropriate numerical companion, while the full prose and proof audit remains manual."
+  },
+  "source_audit": [
+    {
+      "id": "v06-c05-bls",
+      "url": "https://www.bls.gov/cps/definitions.htm",
+      "inspection": "Independently opened the official page and inspected population, paid work, temporary absence, active versus passive search, benefit receipt, denominators, outside-labor-force classification and ongoing unemployment duration. These support the scoped manuscript statements; no current statistic is imported."
+    },
+    {
+      "id": "v06-c05-matching",
+      "url": "https://ocw.mit.edu/courses/14-661-labor-economics-i-fall-2017/e1fd925bb0b2ab9452147baee5c1b0b5_MIT14_661F17_lec11_13.pdf",
+      "inspection": "Independently opened the actual PDF and inspected the search-and-matching section around slides 34-56: constant returns, continuous-time arrivals, flow balance, Beveridge relation, vacancies and job values, free entry and pair-specific Nash bargaining. The manuscript and record correctly distinguish the original discrete-period example from the source's continuous-time setup and capital assumptions."
+    },
+    {
+      "id": "v06-c05-efficiency",
+      "url": "https://ocw.mit.edu/courses/14-661-labor-economics-i-fall-2017/b3e576df2a35d28219c37f7d1917415d_MIT14_661F17_lec7.pdf",
+      "inspection": "Independently opened the actual PDF and inspected the moral-hazard environment, restricted punishment, worker values, nonshirking condition, stationary labor-demand closure and timing caveat through slide 18. Source uses continuous-time intensities; the manuscript's conditional detection probabilities and separate Bellman proof are accurately presented as its own derivation."
+    },
+    {
+      "id": "v06-c05-hysteresis",
+      "url": "https://www.nber.org/system/files/working_papers/w2035/w2035.pdf",
+      "inspection": "Browser PDF extraction returned an internal error. Independently read the already retrieved local pdftotext artifact from the actual paper: title/date, abstract, introduction and strict-versus-loose footnote, duration section and conclusion. Scoped conceptual attribution is supported; the chapter does not import the historical empirical claims or portray its original threshold as an estimated mechanism."
+    }
+  ],
+  "reviewed_sha256": {
+    "content/chapters/v06-c05.html": "6c1762ad618c3d587387f05a4342bf434973d9c97aba098e27d5f5e32532a3ed",
+    "scripts/check_v06_c05.py": "373c99acd3e43ec61cbff67ad126de0384030c8ffca7f41b498b70663900813f",
+    "content/reviews/v06-c05-sources.json": "3d8483336460e0c8ef9152c6707a6b2c5a4a105d41f94e2b3f9286969a3bb5b2",
+    "content/reviews/v06-c05-author.json": "52a3643a4a232d59b0dbc9ef46029aa1b43242479fa49c364af477ae6afebfc6"
+  },
+  "limitations": [
+    "This is an independent agent review of the stated finite models and teaching package, not independent human academic certification or empirical validation of a country's labor market.",
+    "Numerical tests do not certify arbitrary manuscript wording; all eight solutions and the proofs were separately read. The checker is an internal chapter audit, not a general-purpose validated economic-model API.",
+    "Source inspection is limited to the identified supporting passages. NBER browser extraction failed; the actual previously retrieved local text was used, with its extraction imperfections.",
+    "No browser, mobile, visual or print UI QA was performed. Whole-library integration, acceptance and publication remain the coordinating author's responsibility."
+  ]
+}

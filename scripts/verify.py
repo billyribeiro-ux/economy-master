@@ -52,6 +52,10 @@ from check_v06_c01 import check as check_v06_c01
 from check_v06_c02 import check as check_v06_c02
 from check_v06_c03 import check as check_v06_c03
 from check_v06_c04 import check as check_v06_c04
+from check_v06_c05 import check as check_v06_c05
+from check_v06_c06 import check as check_v06_c06
+from check_v06_c07 import check as check_v06_c07
+from check_v06_c08 import check as check_v06_c08
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -428,6 +432,9 @@ def main():
     v06_opening_check = {name: checker() for name, checker in (
         ('v06-c01', check_v06_c01), ('v06-c02', check_v06_c02),
         ('v06-c03', check_v06_c03), ('v06-c04', check_v06_c04))}
+    v06_middle_check = {name: checker() for name, checker in (
+        ('v06-c05', check_v06_c05), ('v06-c06', check_v06_c06),
+        ('v06-c07', check_v06_c07), ('v06-c08', check_v06_c08))}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -457,8 +464,10 @@ def main():
               'volume_5_closing_checks': v05_closing_check,
               'volume_5_assessment_check': v05_assessment_check,
               'volume_6_opening_checks': v06_opening_check,
+              'volume_6_middle_checks': v06_middle_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     report['checks'].extend(['Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package',
+        'Volume 6 chapters 5–8: labor transition and matching domains, bargaining/entry and effort values, bounded hysteresis; exact bank ledgers and reserve-market branches; nominal rigidity, expectation paths and shock-mixture regression; finite stabilization systems and independently enumerated rate-floor equilibria',
         'Volume 6 chapters 1–4: national-account ledgers and Fisher chain identities; exact discrete Solow transitions and growth accounting; innovation, skill and diffusion paths and IV observational equivalence; household constraints, precautionary saving, dated investment and reproducible synthetic labs',
         'Volume 5 diagnostic, distinct exams, retention and market-intervention project: global choice/deviation/IC and welfare checks, exact assignment inference, certified policy intervals, independent scalar output oracle, fixed ex ante decisions and reproducible input contracts',
         'Volume 5 chapters 9–12: contract IC/IR and global wage comparisons, monitoring/multitask/ownership incentives; corrective tax and public-good/congestion/bargaining ledgers; auction deviation and revenue identities, matching enumeration; reference and temporal choices, exact assignment inference and welfare criteria',

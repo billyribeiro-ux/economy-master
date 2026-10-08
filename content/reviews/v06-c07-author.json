@@ -1,0 +1,85 @@
+{
+  "chapter": "v06-c07",
+  "title": "Inflation, expectations and nominal rigidity",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "review_type": "Author audit and independent computation, submitted for root acceptance",
+  "owned_files": [
+    "content/chapters/v06-c07.html",
+    "content/projects/v06-c07-models.json",
+    "content/projects/v06-c07-inflation.py",
+    "content/projects/v06-c07-output.json",
+    "content/projects/v06-c07-README.txt",
+    "scripts/check_v06_c07.py",
+    "content/reviews/v06-c07-sources.json",
+    "content/reviews/v06-c07-author.json"
+  ],
+  "checks": {
+    "status": "passed",
+    "checks": [
+      "Rates: exact quarterly/cumulative/annualized compounding, both quantity scenarios, finite-growth correction, ordinary versus log conversion and realized/expected real returns",
+      "Pricing: 11 named cases, separate exercise aggregation/global quadratic target, nominal normalization and 48 changed-parameter cases including both preset-share endpoints",
+      "Demand/cost comparative statics, expectation observational ambiguity and exact intercepts required by conflicting inflation/output targets",
+      "Five adaptive paths checked with forced/unforced closed forms, \u03bb=0 and s endpoints, finite/infinite gap sums, price-level accumulation and separate b=0 scope",
+      "Model-consistent means and realized errors, announced versus surprise timing, log/ordinary expectation difference and independent synthetic OLS covariance sums",
+      "Executable: quiet callable, preserved output, arbitrary-CWD default, meaningful shock/expectation mutations and 19 invalid inputs rejected by API and CLI",
+      "Structure: three worked examples, eight aligned full solutions, answered delayed check, four flat downloads and three actually inspected primary-method records"
+    ],
+    "invalid_cases": 19,
+    "changed_parameter_cases": 48,
+    "input_sha256": "24da980ffe4962c96b8e1d0dfcc3994d1ff07508f623ac983bdb8e42461adaf2",
+    "limitations": [
+      "Checks verify maintained synthetic equations, units and implementation; they estimate no empirical slope or identified policy effect.",
+      "Exact rational calculations are separate from tolerance-checked exponential/log conversions.",
+      "Analytic stability, pricing and identification scope also require editorial reading; executable checks do not prove the economic assumptions.",
+      "Full RBC/NK equilibrium comparison and graduate microfoundations are outside this chapter.",
+      "Root owns dependency acceptance and integration. No visual/mobile/print QA or external human validation is claimed."
+    ]
+  },
+  "quiet_json_serializable_check": true,
+  "prose_and_proof_audit": [
+    "Price level, ordinary inflation, log inflation and annualization are separated; exact nominal/real dated gross factors precede first-order approximations. Expected reciprocal real returns are distinct from using expected inflation in a denominator.",
+    "Income velocity is defined for a matching final-output price/quantity pair, with stock/flow units and average money convention. Exact finite/log growth identities are separate from quantity-theory causal closure, money definition, endogenous velocity and one-time versus continuing changes.",
+    "Original pricing mechanism gives small firms an explicit global quadratic target; firms take aggregate p as given. Every log price uses100lnP. The geometric index and aggregate fixed-point algebra are explicit. The preset rule is assumed, not a silently optimized Calvo contract.",
+    "Only0<s<1 uses divided kappa/u formulas. Fully preset and fully resetting endpoints are derived from the undivided restriction, then closed by positive-b demand. The supplied reference output is not automatically the shock-specific natural level or a welfare benchmark.",
+    "Demand slope and nominal-expenditure implementation are maintained policy/spending restrictions. Unique simultaneous solution and all four shock derivatives are derived; model regimes and local extrapolation limits are explicit.",
+    "Adaptive prior-date forecasts update after realization; zero-shock and persistently forced affine recursions have exact contraction proofs and explicit lambda0, kappa0 and b0 scope boundaries. Finite log-gap sums are not confused with infinite sums, lost goods or welfare.",
+    "Model-consistent forecasts use finite conditional distributions and known model/regime, with nonzero realized forecast errors. Known versus surprise demand is a timing experiment, not a universal policy-ineffectiveness theorem. Prior-date current inflation differs from next-period expected inflation in c08.",
+    "Identification examples distinguish inflation-only ambiguity, expectation ambiguity even with output, mixed-shock descriptive OLS and an identified policy disturbance. No synthetic slope or shock is presented as an empirical estimate.",
+    "Three complete worked examples and eight full solutions independently recomputed, including exact compounding, matrix pricing, aggregation endpoints, disinflation paths, forecast distributions, slope reversal and policy critique. Teach-back and delayed check have explicit answers/criteria.",
+    "Three scoped primary methods were actually read; historical or current empirical assertions and numerical calibrations not established by those inspections are not imported. Both c08 successor mentions now link its existing manuscript."
+  ],
+  "resolved_authoring_issues": [
+    {
+      "severity": "scope clarification",
+      "issue": "Root requested uniform100lnP units, atomistic aggregate-price taking and separate preset-share endpoints.",
+      "resolution": "All are explicit before the divided Phillips equation; the executable solves the undivided system."
+    },
+    {
+      "severity": "scope clarification",
+      "issue": "C08 uses a shock-specific flexible-price output benchmark and forward forecast, whereas c07 uses a baseline reference path and prior-period forecast.",
+      "resolution": "Definitions and successor bridge distinguish these objects; no unchanged-potential inference is made from cost disturbances."
+    }
+  ],
+  "sha256": {
+    "content/chapters/v06-c07.html": "e495c87dfa7bd707058fafcde6db7c2d2169fd1a8f457787fcbbc3ec4013aaeb",
+    "content/projects/v06-c07-models.json": "24da980ffe4962c96b8e1d0dfcc3994d1ff07508f623ac983bdb8e42461adaf2",
+    "content/projects/v06-c07-inflation.py": "6306aa86848907498d927997049a82b2843089a0ee608fa91f024d858c799b91",
+    "content/projects/v06-c07-output.json": "fcc9bb35f9110fccced4db1018fe5cf3e88195302553cebbe2dd3cb2bc22418d",
+    "content/projects/v06-c07-README.txt": "6fa4f88ba5a4b834a2424a69f14e2567b9a97618ec62a4e8afd9c3a46ee487fb",
+    "scripts/check_v06_c07.py": "f4445b3fa6d5e574e855ebc2d7a3c5661c04314f8e7bb55d926c0fc2e99d9fcb",
+    "content/reviews/v06-c07-sources.json": "c00401f4bc574e1b43ac84c90c581211320c280adc5ef5110b583d56197f0b5f"
+  },
+  "limitations": [
+    "Checks verify maintained synthetic equations, units and implementation; they estimate no empirical slope or identified policy effect.",
+    "Exact rational calculations are separate from tolerance-checked exponential/log conversions.",
+    "Analytic stability, pricing and identification scope also require editorial reading; executable checks do not prove the economic assumptions.",
+    "Full RBC/NK equilibrium comparison and graduate microfoundations are outside this chapter.",
+    "Root owns dependency acceptance and integration. No visual/mobile/print QA or external human validation is claimed.",
+    "No historical data, observed inflation result or estimated price-stickiness parameter is reproduced. The input is original synthetic teaching data."
+  ],
+  "acceptance": "Complete authored package in review; root retains dependency-order acceptance, shared integration, publication and whole-volume assessment.",
+  "root_integration_edits": [
+    "Root clarified that the chosen monetary aggregate is a nominal money stock measured in currency units, avoiding ambiguity with notes/coins alone; no equation changed."
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "chapter": "v06-c08",
+  "title": "Business cycles and stabilization models",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "review_type": "Independent internal mathematical, numerical and instructional peer review",
+  "reviewer": "regression specialist; not the chapter author",
+  "assignment": "production/v06-middle-assignments.json",
+  "status": "passed",
+  "recommendation": "No substantive correction identified at the reviewed hashes; ready for root dependency-ordered acceptance and integration gates.",
+  "ownership": "Only content/reviews/v06-c08-peer.json written; no chapter, lab, checker, source, author or shared-file edits.",
+  "inspected_scope": [
+    "Complete chapter, all four worked examples, all eight exercise prompts and complete solutions, teach-back answers and delayed check.",
+    "Complete standalone Python lab, all synthetic JSON inputs and README, including units, timing, domain validation and finite-horizon limitations.",
+    "Complete chapter checker, all four source-proposal records and final author record. All six author payload hashes independently matched.",
+    "Canonical c08 specification and production ownership/review contract."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v06-c08.html",
+      "bytes": 41806,
+      "sha256": "beecfadb573f145b0eade2da061f382ba3db606c63a0e5c4cda3d0754d8cd366"
+    },
+    {
+      "path": "content/projects/v06-c08-analysis.py",
+      "bytes": 5300,
+      "sha256": "4501e24d73b3f7d9ac32eb45e307b5d497ba449834dbc7c0e0f4f980ab7f3797"
+    },
+    {
+      "path": "content/projects/v06-c08-inputs.json",
+      "bytes": 1348,
+      "sha256": "88449b880f0c8b1818de359743253dad7cb51b1ad65432169f0a41ab13079927"
+    },
+    {
+      "path": "content/projects/v06-c08-README.txt",
+      "bytes": 3781,
+      "sha256": "451c7115491e8e7c8ad4c8a0e32546776fe077dadd994fe1ee95d6783197382d"
+    },
+    {
+      "path": "scripts/check_v06_c08.py",
+      "bytes": 20543,
+      "sha256": "9f58392a21794f42987f6adcdf76e0c8cf0752847fa3747877cb6e738ddd878b"
+    },
+    {
+      "path": "content/reviews/v06-c08-sources.json",
+      "bytes": 4402,
+      "sha256": "61b3b4cd56e29733a22933f525d3882e5afe9284fe2c886048a2ee55ea3daf01"
+    },
+    {
+      "path": "content/reviews/v06-c08-author.json",
+      "bytes": 14514,
+      "sha256": "ef480db844f82483458cebc13c47b1fec888d696e8a0bf92ceedb94cf762d4fd"
+    }
+  ],
+  "findings": [],
+  "reasoning_audit": [
+    {
+      "area": "Units, accounting and timing",
+      "result": "Pass",
+      "detail": "Ordinary inflation, price levels and rates are distinguished from log-point variables. Realized log return and its conditional expectation use the next inflation date; no expected ordinary-return ratio identity is asserted. G means government consumption and I all domestic investment. The finite real-model utility weight and reduced NK forward coefficient are explicitly separate."
+    },
+    {
+      "area": "IS-LM and instruments",
+      "result": "Pass",
+      "detail": "Derived D=(1-c)+bk/h>0, every comparative-static sign, fixed-money equilibrium and rate-peg accommodation. Algebraic uniqueness is separated from feasible C,I,Y,rate and money domains. The negative-rate example correctly fails the stipulated domain, and clipping without re-solving fails both original market equations. Fiscal comparisons are scoped to a short-run closure, not lifetime solvency or welfare."
+    },
+    {
+      "area": "AD-AS",
+      "result": "Pass",
+      "detail": "Real balances are M/P with fixed nominal M. Both original disturbance cases yield 15P^2-23P-20=0, exactly one positive root; the other root is inadmissible. Decreasing AD and increasing inverse AS justify uniqueness. Outputs differ by exactly ten at the common price. Current price movement and subsequent inflation at an unchanged price are kept distinct."
+    },
+    {
+      "area": "Finite real benchmark",
+      "result": "Pass",
+      "detail": "The two-date resource constraints, full depreciation, positive consumption and terminal exhaustion are explicit. FOC gives I=beta_R*Y0/(2+beta_R); strict negative curvature and minus-infinity endpoint limits establish the global interior optimum. Future A1 cancellation follows from the stated log/multiplicative specification and is not claimed generally."
+    },
+    {
+      "area": "Finite NK normalization and information",
+      "result": "Pass",
+      "detail": "Total log inflation has zero target; nominal log rate is 2+j and natural real log rate 2+n. The floor j=-2 therefore means a zero ordinary nominal rate. Output is a shock-specific natural gap. Announced paths use supplied terminal values and a stated information history; an unforeseen revision does not silently preserve the earlier forecast or assert a probability-zero rational forecast under an unchanged stochastic model."
+    },
+    {
+      "area": "Finite NK existence, uniqueness and floor",
+      "result": "Pass",
+      "detail": "Independently reduce to j=max(jmin,K-sigma*A*j), A=phi_pi*kappa+phi_x>=0. A strictly increasing left side and nonincreasing right side give a unique finite one-date solution; backward induction uses the supplied terminal conditions. Equality branches coincide. Binding-floor output/inflation are recomputed and the requested-rate inequality is checked. No infinite-horizon Taylor-principle or horizon-uniform approximation claim is imported."
+    },
+    {
+      "area": "Policy loss and identification",
+      "result": "Pass",
+      "detail": "The one-date quadratic criterion is stated rather than treated as measured welfare. Completing the square establishes globality on x<=n+2; feedback-rule predictions are separated from optimized choices. Observational equivalence, natural versus fixed-reference gaps and the distinction between a natural allocation and social efficiency are correctly limited."
+    }
+  ],
+  "independent_checks": [
+    {
+      "name": "Independent scalar-rate-first NK reference",
+      "result": "pass",
+      "detail": "A separate exact-Fraction scalar reference solved j first, then x and inflation, rather than copying the lab free-output formula or the author checker joint Gaussian system. It matched all ten supplied paths including requested rates and original-equation residuals."
+    },
+    {
+      "name": "Additional parameter-transfer and boundary checks",
+      "result": "pass",
+      "detail": "Matched the lab on 32 six-date cases spanning sigma in {0.1,10}, beta in {0,1}, kappa in {0.1,10}, phi_pi and phi_x in {0,10}, alternating shocks at the allowed magnitude bounds, and nonzero terminal values. This tests finite exact algebra, not large-gap empirical approximation accuracy."
+    },
+    {
+      "name": "IS-LM direct elimination",
+      "result": "pass",
+      "detail": "Independently solved rate first and reconciled goods/money ledgers for nine baseline, premium, fiscal, money, peg and retention cases; the formal money80 case was explicitly flagged outside its rate domain."
+    },
+    {
+      "name": "AD-AS roots and original ledgers",
+      "result": "pass",
+      "detail": "Exact polynomial signs bracketed the unique positive root between 2.152708 and 2.152709. Both original market systems, consumption/investment and stipulated domains reconciled. Demand output137.6354096209726 and supply output127.6354096209726 differ by10."
+    },
+    {
+      "name": "Real benchmark globality",
+      "result": "pass",
+      "detail": "Five parameter cases independently checked the exact derivative numerator beta_R*Y0-(2+beta_R)*I, its root and signs. The analytic curvature and endpoint proof, rather than a finite grid, certifies globality."
+    },
+    {
+      "name": "Policy objective and floor",
+      "result": "pass",
+      "detail": "Five exact policy targets checked with the completed-square identity and a feasible quarter-point comparison grid. Globality follows from the analytic convex objective and interval constraint, not the grid."
+    },
+    {
+      "name": "Checker API and optimized CLI",
+      "result": "pass",
+      "detail": "Final check() returned status pass with eleven groups, no stdout or stderr, and serialized directly with json.dumps(...,allow_nan=False). Optimized python3 -O CLI also passed with empty stderr. The checker was read independently; its pass was not substituted for prose review."
+    },
+    {
+      "name": "Checker and lab coverage audit",
+      "result": "pass",
+      "detail": "Inspected author checker coverage: joint exact Gaussian floor-regime reference for10cases;24transfercases;28invalid inputs;3damaged-path residual mutants; temporary standalone CLI execution normal/-O and invalid-input failure. Validation uses explicit exceptions, not removable assertions."
+    },
+    {
+      "name": "HTML and artifact integrity",
+      "result": "pass",
+      "detail": "Independent full-tag parser found a balanced fragment without h1. Four worked examples, eight aligned solutions, answered teach-back/retention and three flat downloads are present. Recomputed all six author payload hashes and included final author record hash."
+    }
+  ],
+  "worked_example_checks": [
+    {
+      "example": 1,
+      "result": "Fixed-money baseline (Y,rate,C,I)=(130,3,86,24); G26 gives(140,4,92,22); peg3 gives(145,3,95,24), required m=115/2."
+    },
+    {
+      "example": 2,
+      "result": "P=(23+sqrt(1729))/30; output difference10; current log inflation100ln(P/2)=7.357949329954312, next unchanged-price inflation0."
+    },
+    {
+      "example": 3,
+      "result": "Y0=12,A1=6,beta1 gives(I,C0,C1)=(4,8,12); Y0=15 gives(5,10,6sqrt(5)); A1=9 alone gives(4,8,18)."
+    },
+    {
+      "example": 4,
+      "result": "One-date demand(x,Pi,j)=(-1,-1/2,-1), cost=(-1,1/2,1), deep demand=(-4,-2,-2) with request-4; announced future demand gives current(-1/2,-1/2,-1)."
+    }
+  ],
+  "exercise_review": [
+    {
+      "exercise": 1,
+      "status": "pass",
+      "result": "Premium3: Y120,rate2,C80,I20. Fiscal compensationG26: Y130,rate3,C86,I18. Peg3 withG20: Y115,C77,I18,m85/2. Prompt and all solution parts align."
+    },
+    {
+      "exercise": 2,
+      "status": "pass",
+      "result": "Formal m80 givesY150,rate-1. Clippingrate0 yields expenditure148 and money demand75, failing both equations. Separate zero-rate peg givesY145,m145/2. Domain interpretation aligns."
+    },
+    {
+      "exercise": 3,
+      "status": "pass",
+      "result": "Both positive-price cases solve15P^2-23P-20=0; outputs differ10, current inflation7.357949329954312logpoints, subsequent inflation0. Root/domain and timing requests answered."
+    },
+    {
+      "exercise": 4,
+      "status": "pass",
+      "result": "Y0=15,beta1/2,A1=4 givesI3,C0=12,C1=4sqrt(3). DoublingA1 doublesC1 andMP but leaves investment unchanged; marginal-utility Euler term1/12. Strict concavity/endpoints supply the requested global explanation."
+    },
+    {
+      "exercise": 5,
+      "status": "pass",
+      "result": "Announced futureu1=1 gives date1(-1,1/2,1), date0(-1/2,0,0). The different earlier information history is explicitly distinguished and all original equations reconcile."
+    },
+    {
+      "exercise": 6,
+      "status": "pass",
+      "result": "Persistent n=-6: date1(-4,-2,-2),request-4; date0(-10,-6,-2),request-12. Expected real lograte2 exceeds natural rate-4. Both dates satisfy demand, inflation and policy equations."
+    },
+    {
+      "exercise": 7,
+      "status": "pass",
+      "result": "u2,n-1: x-2,Pi1,j1,L2; full inflation or gap stabilization each hasL4. u1,n-5: constrainedx-3,Pi-1/2,j-2,L5/2. Unconstrained target infeasibility and global bound solution are explicit."
+    },
+    {
+      "exercise": 8,
+      "status": "pass",
+      "result": "Observedx-1,Pi-1/2 permits(n,u,v,j)=(-2,0,0,-1) or(0,0,2,1). Y=Ynatural=90 gives natural gap0 versus100ln(.9)=-10.536051565782628 relative to100. Identification and welfare qualifications answer the critique."
+    }
+  ],
+  "source_scope_review": {
+    "status": "passed scoped proposal/method audit",
+    "detail": "All four primary-source records have chapter-prefixed IDs, official-course/original-author URLs, dates and explicit inspected physical-page scopes. Their claimed method roles match the manuscript and distinguish original finite synthetic calculations from source results. The peer read the proposals and author inspection record, not fresh copies of all four PDFs.",
+    "no_external_retrieval_claim": true
+  },
+  "limitations": [
+    "Independent internal review is not external academic certification or evidence that synthetic parameters describe an actual economy.",
+    "Finite numerical tests supplement the inspected analytic proofs; they do not prove empirical identification, optimal social welfare weights, infinite-horizon determinacy or uniform approximation accuracy.",
+    "Source verification in this peer task is a scoped audit of the complete proposals and author inspection record; actual primary retrieval and page inspection are attributed to the author, not independently repeated here.",
+    "No browser, mobile or print visual QA was performed. Whole-library integration and dependency-ordered acceptance remain root responsibilities."
+  ]
+}

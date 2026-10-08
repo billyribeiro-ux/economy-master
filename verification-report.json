@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "chapter_packages_available": 64,
-  "html_pages_checked": 75,
+  "chapter_packages_available": 68,
+  "html_pages_checked": 79,
   "curriculum_chapters": 216,
   "cross_volume_packages_available": 1,
   "checks": [
@@ -28,6 +28,7 @@
     "Volume 3 chapters 11\u201312 proper losses, calibration/resolution, weighted-report and random-skill distortions, joint-state information values/garbling, information projections, dyadic/spike integrals, stopped martingale histories, heavy-tail truncation and maximal/Kronecker diagnostics",
     "Volume 3 diagnostic, distinct exams, retention, posterior/predictive/information project, independent integration/coverage and seeded paired-score checks",
     "Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package",
+    "Volume 6 chapters 5\u20138: labor transition and matching domains, bargaining/entry and effort values, bounded hysteresis; exact bank ledgers and reserve-market branches; nominal rigidity, expectation paths and shock-mixture regression; finite stabilization systems and independently enumerated rate-floor equilibria",
     "Volume 6 chapters 1\u20134: national-account ledgers and Fisher chain identities; exact discrete Solow transitions and growth accounting; innovation, skill and diffusion paths and IV observational equivalence; household constraints, precautionary saving, dated investment and reproducible synthetic labs",
     "Volume 5 diagnostic, distinct exams, retention and market-intervention project: global choice/deviation/IC and welfare checks, exact assignment inference, certified policy intervals, independent scalar output oracle, fixed ex ante decisions and reproducible input contracts",
     "Volume 5 chapters 9\u201312: contract IC/IR and global wage comparisons, monitoring/multitask/ownership incentives; corrective tax and public-good/congestion/bargaining ledgers; auction deviation and revenue identities, matching enumeration; reference and temporal choices, exact assignment inference and welfare criteria",
@@ -3119,6 +3120,398 @@
         "The lab deliberately covers certain-income log households and finite quadratic investment only; no empirical beliefs, causal effects or general stochastic lifecycle solution is claimed.",
         "Source content was inspected within the recorded scopes; this is author review rather than external human certification.",
         "Visual/mobile/print UI QA remains pending; no browser workaround, shared integration, acceptance or publication is performed here."
+      ]
+    }
+  },
+  "volume_6_middle_checks": {
+    "v06-c05": {
+      "chapter": "v06-c05",
+      "worked_examples": 4,
+      "solved_exercises": 8,
+      "transition_parameter_initial_cases": 144,
+      "effort_value_cases": 81,
+      "hysteresis_boundary_cases": 8,
+      "stock_ledgers": [
+        [
+          610,
+          95,
+          295
+        ],
+        [
+          515,
+          111,
+          374
+        ]
+      ],
+      "matching_equilibria": [
+        {
+          "x": 1.0,
+          "theta": 1.0,
+          "f": 0.5,
+          "h": 0.5,
+          "j": 6.666666666666666,
+          "w": 9.333333333333334,
+          "surplus": 6.666666666666668,
+          "vu": 33.33333333333335,
+          "ve": 40.000000000000014,
+          "u": 0.3333333333333333,
+          "v": 0.3333333333333333
+        },
+        {
+          "x": 0.6457513110645909,
+          "theta": 0.4169947557416381,
+          "f": 0.16143782776614773,
+          "h": 0.38714594258871565,
+          "j": 8.610017480861211,
+          "w": 8.555993007655516,
+          "surplus": 8.610017480861208,
+          "vu": 25.559930076555176,
+          "ve": 34.169947557416386,
+          "u": 0.607625218510765,
+          "v": 0.25337652957535595
+        },
+        {
+          "x": 2.0,
+          "theta": 4.0,
+          "f": 1.0,
+          "h": 0.25,
+          "j": 5.0,
+          "w": 10.0,
+          "surplus": 5.0,
+          "vu": 40.00000000000001,
+          "ve": 45.00000000000001,
+          "u": 0.2,
+          "v": 0.8
+        }
+      ],
+      "rejected_infeasible_entry_case": true,
+      "status": "passed"
+    },
+    "v06-c06": {
+      "chapter": "v06-c06",
+      "status": "passed",
+      "checks": [
+        "static fragment, scoped IDs, 4 worked/8 solved exercises, teaching gates, source alignment and flat assets",
+        "money-demand global quadratic certificate, interior/corners/wealth zero, price units and inferred-spread interval",
+        "independent full-bank/central-bank closing references at 6 sequential and 7 alternative stages, every counterpart and both consolidations",
+        "capital/liquidity feasible interval, partial deposit retention, positive-equity violation and minimum recapitalizations",
+        "all reserve/facility branches, floor/ceiling equality and inactive ceiling, monotonicity, negative floor and limited collateral-access counterexample",
+        "global break-even cash-flow inequalities, certain-default boundary, state-dependent real-return expectation, bond arithmetic and complete delayed check"
+      ],
+      "results": {
+        "structure": {
+          "worked": 4,
+          "exercises": 8,
+          "solutions": 8,
+          "text_words": 7148,
+          "sources": 4,
+          "downloads": [
+            "v06-c06-ledger.py",
+            "v06-c06-README.txt"
+          ]
+        },
+        "money_demand": {
+          "main_q": "1/25",
+          "main_m": "20",
+          "main_M": "40",
+          "parameter_cases": 108,
+          "exact_point_comparisons": 3564,
+          "exercise_1_bill_rate": "3/40",
+          "corner_q_interval": [
+            "0",
+            "7/125"
+          ]
+        },
+        "bank_ledger": {
+          "sequential_snapshots": 6,
+          "alternative_snapshots": 7,
+          "stage_money_totals": [
+            {
+              "reserves": "50",
+              "deposits": "360",
+              "customer_loans": "290",
+              "public_currency": "20",
+              "M": "380",
+              "H": "70"
+            },
+            {
+              "reserves": "50",
+              "deposits": "400",
+              "customer_loans": "330",
+              "public_currency": "20",
+              "M": "420",
+              "H": "70"
+            },
+            {
+              "reserves": "50",
+              "deposits": "400",
+              "customer_loans": "330",
+              "public_currency": "20",
+              "M": "420",
+              "H": "70"
+            },
+            {
+              "reserves": "50",
+              "deposits": "400",
+              "customer_loans": "330",
+              "public_currency": "20",
+              "M": "420",
+              "H": "70"
+            },
+            {
+              "reserves": "65",
+              "deposits": "400",
+              "customer_loans": "330",
+              "public_currency": "20",
+              "M": "420",
+              "H": "85"
+            },
+            {
+              "reserves": "65",
+              "deposits": "400",
+              "customer_loans": "330",
+              "public_currency": "20",
+              "M": "420",
+              "H": "85"
+            }
+          ],
+          "branch_money_totals": {
+            "principal_12_from_B_to_A": {
+              "reserves": "65",
+              "deposits": "388",
+              "customer_loans": "318",
+              "public_currency": "20",
+              "M": "408",
+              "H": "85"
+            },
+            "loss_12_at_A": {
+              "reserves": "65",
+              "deposits": "400",
+              "customer_loans": "318",
+              "public_currency": "20",
+              "M": "420",
+              "H": "85"
+            },
+            "CB_buys_20_from_B": {
+              "reserves": "85",
+              "deposits": "400",
+              "customer_loans": "330",
+              "public_currency": "20",
+              "M": "420",
+              "H": "105"
+            },
+            "CB_buys_20_from_nonbank_at_B": {
+              "reserves": "85",
+              "deposits": "420",
+              "customer_loans": "330",
+              "public_currency": "20",
+              "M": "440",
+              "H": "105"
+            },
+            "public_withdraws_currency_12_at_B": {
+              "reserves": "53",
+              "deposits": "388",
+              "customer_loans": "330",
+              "public_currency": "32",
+              "M": "420",
+              "H": "85"
+            },
+            "recapitalization_49/5": {
+              "reserves": "65",
+              "deposits": "1951/5",
+              "customer_loans": "318",
+              "public_currency": "20",
+              "M": "2051/5",
+              "H": "85"
+            },
+            "recapitalization_59/5": {
+              "reserves": "65",
+              "deposits": "1941/5",
+              "customer_loans": "318",
+              "public_currency": "20",
+              "M": "2041/5",
+              "H": "85"
+            }
+          },
+          "invalid_journals_rejected": 4,
+          "consolidations_per_snapshot": 2
+        },
+        "capital_and_exercises": {
+          "opening_max_loan": "40",
+          "post_loan_headroom": "10",
+          "loss_equity": "8",
+          "loss_loan_value": "178",
+          "exercise_2_payment_capacity": "15",
+          "exercise_2_capital_headroom": "20",
+          "recapitalization_existing": "49/5",
+          "recapitalization_with_20_new_loans": "59/5"
+        },
+        "reserve_market": {
+          "worked_cases": [
+            [
+              "10",
+              "20",
+              "1/20"
+            ],
+            [
+              "0",
+              "40",
+              "3/100"
+            ],
+            [
+              "0",
+              "80",
+              "1/100"
+            ],
+            [
+              "0",
+              "100",
+              "1/100"
+            ]
+          ],
+          "domain_case_comparisons": 1350,
+          "exercise_6_cases": [
+            [
+              "10",
+              "20",
+              "1/20"
+            ],
+            [
+              "0",
+              "40",
+              "1/25"
+            ],
+            [
+              "0",
+              "100",
+              "1/50"
+            ]
+          ],
+          "limited_access_rate": "21/400",
+          "invalid_domain_cases_rejected": 5
+        },
+        "transmission": {
+          "loan_quotes": [
+            "6/95",
+            "1/19",
+            "4/45"
+          ],
+          "loan_parameter_cases": 72,
+          "real_gross_states": [
+            "21/20",
+            "21/22"
+          ],
+          "expected_real_gross": "441/440",
+          "ratio_of_gross_means": "1",
+          "bond_prices": [
+            "100",
+            "2200/21"
+          ],
+          "delayed_capital_headroom": "16",
+          "delayed_real_net": "2/51"
+        }
+      },
+      "limitations": [
+        "Exact calculations and finite grids supplement full manuscript/derivation/solution review; they do not certify all prose.",
+        "The ledger is a fixed transaction fixture, not a general bank-data parser, regulatory model or behavioral equilibrium.",
+        "The operating model assumes specified eligibility, collateral and frictionless outside options; the limited-access branch deliberately changes them.",
+        "The money-demand and loan-pricing laws are original synthetic assumptions; no parameters or causal policy effects are estimated.",
+        "Source schema checks accompany separately recorded actual primary passage inspection; historical regimes are not current-rate claims.",
+        "The open identification critique is evaluated by explicit reasoning criteria and separate prose review, not arithmetic.",
+        "No visual/mobile/print QA was performed; root retains dependency-ordered acceptance, shared checks and publication."
+      ]
+    },
+    "v06-c07": {
+      "status": "passed",
+      "checks": [
+        "Rates: exact quarterly/cumulative/annualized compounding, both quantity scenarios, finite-growth correction, ordinary versus log conversion and realized/expected real returns",
+        "Pricing: 11 named cases, separate exercise aggregation/global quadratic target, nominal normalization and 48 changed-parameter cases including both preset-share endpoints",
+        "Demand/cost comparative statics, expectation observational ambiguity and exact intercepts required by conflicting inflation/output targets",
+        "Five adaptive paths checked with forced/unforced closed forms, \u03bb=0 and s endpoints, finite/infinite gap sums, price-level accumulation and separate b=0 scope",
+        "Model-consistent means and realized errors, announced versus surprise timing, log/ordinary expectation difference and independent synthetic OLS covariance sums",
+        "Executable: quiet callable, preserved output, arbitrary-CWD default, meaningful shock/expectation mutations and 19 invalid inputs rejected by API and CLI",
+        "Structure: three worked examples, eight aligned full solutions, answered delayed check, four flat downloads and three actually inspected primary-method records"
+      ],
+      "invalid_cases": 19,
+      "changed_parameter_cases": 48,
+      "input_sha256": "24da980ffe4962c96b8e1d0dfcc3994d1ff07508f623ac983bdb8e42461adaf2",
+      "limitations": [
+        "Checks verify maintained synthetic equations, units and implementation; they estimate no empirical slope or identified policy effect.",
+        "Exact rational calculations are separate from tolerance-checked exponential/log conversions.",
+        "Analytic stability, pricing and identification scope also require editorial reading; executable checks do not prove the economic assumptions.",
+        "Full RBC/NK equilibrium comparison and graduate microfoundations are outside this chapter.",
+        "Root owns dependency acceptance and integration. No visual/mobile/print QA or external human validation is claimed."
+      ]
+    },
+    "v06-c08": {
+      "status": "pass",
+      "checks": [
+        {
+          "name": "announced NK paths and eight-exercise dynamic answers",
+          "status": "pass",
+          "cases": 10,
+          "method": "exact joint Gaussian elimination and exhaustive floor-regime inequalities"
+        },
+        {
+          "name": "finite uniqueness across coefficients and branches",
+          "status": "pass",
+          "cases": 24
+        },
+        {
+          "name": "IS-LM ledgers, instruments, derivatives, exercises 1-2 and retention",
+          "status": "pass"
+        },
+        {
+          "name": "AD-AS positive root and exercise 3",
+          "status": "pass",
+          "price": 2.1527081924194524,
+          "demand_output": 137.6354096209726,
+          "supply_output": 127.63540962097261
+        },
+        {
+          "name": "finite real resources, Euler/global certificate and exercise 4",
+          "status": "pass"
+        },
+        {
+          "name": "one-date global loss certificates and exercise 7",
+          "status": "pass"
+        },
+        {
+          "name": "observational equivalence, natural-output references and rate units",
+          "status": "pass"
+        },
+        {
+          "name": "explicit validation survives optimization",
+          "status": "pass",
+          "rejected_inputs": 28
+        },
+        {
+          "name": "independent residual mutation checks",
+          "status": "pass",
+          "caught": [
+            "clip rate without resolving quantities",
+            "ignore announced future news",
+            "reverse forward inflation sign"
+          ]
+        },
+        {
+          "name": "portable script-relative inputs, quiet import and normal/-O CLI",
+          "status": "pass"
+        },
+        {
+          "name": "fragment, complete exercise alignment, source and artifact routes",
+          "status": "pass",
+          "worked_examples": 4,
+          "exercises": 8,
+          "solutions": 8
+        }
+      ],
+      "limitations": [
+        "Synthetic maintained models; no empirical estimation or external academic validation.",
+        "Finite terminal conditions and bounded lab inputs; no infinite-horizon determinacy or approximation-accuracy proof.",
+        "Source inspection supports scoped methods; original numerical results are independently checked here.",
+        "Browser/mobile/print visual QA is pending; no restricted-preview workaround performed.",
+        "Root integration, dependency acceptance and publication are separate from this author check."
       ]
     }
   },

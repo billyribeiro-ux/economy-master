@@ -1,0 +1,173 @@
+{
+  "chapter": "v06-c08",
+  "title": "Business cycles and stabilization models",
+  "review_type": "Author mathematical, arithmetic, instructional, source and reproducibility audit",
+  "author": "monte_carlo specialist",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "state": "author-review-complete",
+  "status": "passed author checks; awaiting root dependency-ordered acceptance",
+  "assignment": "production/v06-middle-assignments.json",
+  "scope": {
+    "canonical_coverage": [
+      "IS-LM",
+      "Aggregate demand-supply",
+      "RBC introduction",
+      "New Keynesian introduction",
+      "Stabilization"
+    ],
+    "prerequisite_contract": "Drafted against fixed c06 banking and c07 inflation interfaces and accepted c01-c04. Acceptance follows c05-c07; c07 total inflation target 2 and predetermined expectation are explicitly distinguished from this chapter zero target and forward forecast.",
+    "owned_files_only": true,
+    "worked_examples": 4,
+    "exercises_with_complete_solutions": 8,
+    "teach_back": "Prompt and answered checklist",
+    "retention": "Changed-parameter balanced-budget and floor-equality cases with complete answers",
+    "supporting_lab": "Ten original synthetic announced paths; exact standard-library finite solver, JSON inputs and README with flat artifact links.",
+    "shared_actions": "No central curriculum, sources, checkpoint, build or verifier file edited; no child agent, commit, hosting, publication or restricted-preview workaround."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v06-c08.html",
+      "bytes": 41806,
+      "sha256": "beecfadb573f145b0eade2da061f382ba3db606c63a0e5c4cda3d0754d8cd366"
+    },
+    {
+      "path": "content/projects/v06-c08-analysis.py",
+      "bytes": 5300,
+      "sha256": "4501e24d73b3f7d9ac32eb45e307b5d497ba449834dbc7c0e0f4f980ab7f3797"
+    },
+    {
+      "path": "content/projects/v06-c08-inputs.json",
+      "bytes": 1348,
+      "sha256": "88449b880f0c8b1818de359743253dad7cb51b1ad65432169f0a41ab13079927"
+    },
+    {
+      "path": "content/projects/v06-c08-README.txt",
+      "bytes": 3781,
+      "sha256": "451c7115491e8e7c8ad4c8a0e32546776fe077dadd994fe1ee95d6783197382d"
+    },
+    {
+      "path": "scripts/check_v06_c08.py",
+      "bytes": 20543,
+      "sha256": "9f58392a21794f42987f6adcdf76e0c8cf0752847fa3747877cb6e738ddd878b"
+    },
+    {
+      "path": "content/reviews/v06-c08-sources.json",
+      "bytes": 4402,
+      "sha256": "61b3b4cd56e29733a22933f525d3882e5afe9284fe2c886048a2ee55ea3daf01"
+    }
+  ],
+  "resolved_review_findings": [
+    {
+      "id": "v06-c08-root-01",
+      "severity": "medium",
+      "location": "NK inflation and rate normalization",
+      "finding": "A terminal total inflation of zero and a rate deviation around nominal 2 must not silently inherit c07 target inflation 2. Natural-rate normalization and output-gap reference must match demand.",
+      "resolution": "Declare total log inflation with target zero, steady nominal and real log rate 2, j=nominal log rate minus 2, n=natural real log rate minus 2 and x=100 ln(Y/Ynatural) under the same real shocks. Distinguish forward Et forecasts from c07 prior-date forecasts, and shock-specific natural output from a fixed reference.",
+      "status": "resolved; explicit in manuscript, lab and README"
+    },
+    {
+      "id": "v06-c08-author-01",
+      "severity": "low",
+      "location": "Prerequisite routes",
+      "finding": "Initial labels attached linear systems and conditional expectation to adjacent but different chapters.",
+      "resolution": "Corrected to v02-c05 and v03-c05 after reading canonical chapter titles.",
+      "status": "resolved"
+    },
+    {
+      "id": "v06-c08-author-02",
+      "severity": "low",
+      "location": "Surprise versus announced path comparison",
+      "finding": "The original zero-probability surprise shorthand could be mistaken for a fully specified common stochastic rational-expectations model.",
+      "resolution": "State that the comparison changes specified information histories and that ordinary uncertain forecasts require their earlier conditional probabilities. Do not claim a probability-zero event is an internally model-consistent stochastic outcome.",
+      "status": "resolved"
+    }
+  ],
+  "mathematical_review": [
+    "All nominal and real rates share a period length. Exact gross-factor Fisher accounting is separated from log-rate identities, expected log returns and approximate or maintained linear behavioral equations. Ordinary percentage changes are not silently identified with log points.",
+    "IS is derived by substituting consumption and investment into the closed-economy goods condition; LM is a portfolio-demand condition. Positive determinant gives algebraic uniqueness, while nonnegative quantities, capacity and rate restrictions are checked separately. Fixed money and an accommodated rate peg give different multipliers. The borrowing-premium and expected-inflation channels enter real investment costs with opposite signs.",
+    "Current government consumption and capital formation use explicit accounting categories. Debt-financed short-run spending comparisons do not claim to solve later taxes, debt service, lifetime welfare or fiscal solvency. There is no mechanical reserve/deposit multiplier.",
+    "AD is derived at fixed nominal M with real balances M/P, not by silently holding both money and the policy rate fixed. The supply relation concerns the current price level and predetermined reference price. Positive-root and monotonicity arguments establish the unique admissible intersection, and dated price ratios distinguish a one-time increase from persistent inflation.",
+    "The finite real benchmark includes current consumption/investment resources, full depreciation, positive consumption and terminal exhaustion. Its strictly concave log objective has a unique global interior optimum. Future productivity cancellation is derived as a special log/multiplicative result and is not generalized to arbitrary preferences, labor or financing.",
+    "The finite NK system is maintained directly as a reduced three-equation model, with forward coefficient separate from the real-model utility weight or a common DSGE calibration. Shock-specific natural output/rate definitions, a zero total inflation target, forward information dates and finite terminal conditions are supplied before solving.",
+    "At each date a positive denominator gives the free-rate candidate. At a floor, quantities are recomputed and the requested-rate inequality is checked. Monotone intersection proves existence/uniqueness for the finite input and each branch, including equality; backward induction uses the explicit terminal values. No infinite-horizon determinacy, horizon-uniform bound or quantitative large-gap approximation claim is made.",
+    "Announced future demand, supply and policy changes affect current forecasts and equilibrium. An unanticipated revision uses a different information history; a stochastic extension would need a conditional distribution at each node. The chapter does not use perfect foresight as a synonym for rational expectations.",
+    "One-date policy loss is a stated quadratic criterion in squared log points, not a claimed measured welfare function. Completing the square proves globality with the rate-implied upper bound on output. A feedback rule and the separately optimized choice are distinguished, as are one-date discretion and a multi-date commitment problem.",
+    "Observational equivalence is constructed under identical demand/inflation coefficients. Rates, forecasts, natural benchmarks, policy operating rules and external identification are needed to distinguish mechanisms. A zero natural gap neither means unchanged output nor guarantees an efficient natural allocation."
+  ],
+  "worked_example_checks": [
+    {
+      "example": 1,
+      "result": "Fixed m baseline (Y,rate,C,I)=(130,3,86,24). G+6 gives (140,4,92,22). Peg rate3 gives Y145,C95,I24 and required m115/2."
+    },
+    {
+      "example": 2,
+      "result": "Both disturbances give positive price (23+sqrt(1729))/30 = 2.1527081924194524. Demand output 137.6354096209726 versus supply output 127.6354096209726, exactly ten apart; negative quadratic root excluded. Current log inflation 7.357949329954312 and subsequent unchanged-price inflation zero."
+    },
+    {
+      "example": 3,
+      "result": "Y0=12,A1=6,betaR1 gives I4,C0=8,C1=12; Y0=15 gives I5,C0=10,C1=6sqrt(5). A1 alone to9 gives unchanged I4,C0=8 and C1=18."
+    },
+    {
+      "example": 4,
+      "result": "One-date demand (x,Pi,j)=(-1,-1/2,-1); cost=(-1,1/2,1); deep demand=(-4,-2,-2) with requested -4. Announced future demand gives current (-1/2,-1/2,-1) and future (-1,-1/2,-1)."
+    }
+  ],
+  "exercise_checks": [
+    {
+      "exercise": 1,
+      "result": "Premium3 gives (Y,rate,C,I)=(120,2,80,20). G+6 restores Y130 with rate3,C86,I18. Peg rate3 with G20 gives Y115,C77,I18,m85/2."
+    },
+    {
+      "exercise": 2,
+      "result": "Fixed m80 has formal Y150,rate-1. Clipping rate to0 gives expenditure148 and money demand75, failing both equations. A separate zero-rate peg gives Y145,m145/2."
+    },
+    {
+      "exercise": 3,
+      "result": "Both equations reduce to 15P^2-23P-20=0 with one positive root. Output differs by10 exactly. Dated current log inflation is 7.357949329954312; next constant-price inflation is zero."
+    },
+    {
+      "exercise": 4,
+      "result": "Y0=15,betaR1/2 gives I3,C0=12,C1=4sqrt(3); doubling A1 gives C1=8sqrt(3) and unchanged I/C0. Exact Euler numerator, curvature and endpoint logic certify globality."
+    },
+    {
+      "exercise": 5,
+      "result": "Announced future u1=1 gives date1 (-1,1/2,1), date0 (-1/2,0,0); all original equations independently reconcile. Different earlier information produces a different current solution."
+    },
+    {
+      "exercise": 6,
+      "result": "n=-6 both dates gives date1 (-4,-2,-2), requested-4; date0 (-10,-6,-2), requested-12. Expected deflation makes current expected real log rate2 while the natural real rate is-4. Floor and both forward equations reconcile exactly."
+    },
+    {
+      "exercise": 7,
+      "result": "u2,n-1 gives x-2,Pi1,j1,loss2; complete inflation or gap stabilization each gives loss4. u1,n-5 with floor gives x-3,Pi-1/2,j-2,loss5/2; completed-square and upper-bound certificate prove globality."
+    },
+    {
+      "exercise": 8,
+      "result": "Observed x-1,Pi-1/2 is compatible with (n,u,v,j)=(-2,0,0,-1) or (0,0,2,1). Actual and natural output90 give gap0 versus 100ln(.9)=-10.536051565782628 against fixed100. Additional rate/information/benchmark evidence and identifying assumptions are stated."
+    }
+  ],
+  "validation": {
+    "normal_cli": "python3 book/scripts/check_v06_c08.py — pass, eleven check groups.",
+    "optimized_cli": "python3 -O book/scripts/check_v06_c08.py — pass, eleven check groups.",
+    "quiet_api": "Loaded final checker with a ModuleType and compiled source, captured stdout/stderr around import and check(), observed zero bytes on both, returned status pass with11groups and json.dumps(...,allow_nan=False) succeeded.",
+    "independence": "Ten input paths are checked against exact Gaussian elimination of all dates jointly under every floor/free regime; inadmissible inequalities are filtered and coincident equality solutions deduplicated. Twenty-four transfer cases vary beta, policy inflation/output slopes, shocks and terminal forecasts. The reference does not use the lab backward formula.",
+    "other_arithmetic": "IS-LM targets and comparative statics use direct linear-system elimination; AD-AS uses original demand/supply and money residuals, positive-root/domain checks; real investment uses exact marginal-utility and derivative-sign certificates; policy uses a completed-square identity and boundary KKT; ordinary/log rate conversion is independently reconciled.",
+    "input_validation": "Twenty-eight malformed/domain/nonfinite cases rejected, including bool/text, NaN/infinity, invalid parameter signs/bounds, empty/unequal/oversized paths, duplicate/empty names, unknown/missing fields and excessive case count. Validation uses explicit exceptions, not removable assertions.",
+    "mutations": "Caught all three deliberately damaged calculations: clipping the rate without resolving quantities, ignoring announced future news, and reversing the forward-inflation sign. Direct original-equation residuals catch the errors even when claimed residual fields remain zero.",
+    "portable_lab": "Copied only program and inputs to a temporary directory; normal and -O execution from its parent both matched the quiet API JSON exactly. Default input is relative to the program, with no network or dependencies. Invalid input under -O yielded exit1, no stdout and one JSON stderr error.",
+    "syntax_structure": "Both Python files pass ast.parse. Independent full-tag HTML stack reports balanced fragment, no h1, four worked examples, eight exercises and eight aligned solutions, plus answered teach-back and delayed check. Three flat artifacts exist; four scoped source routes supplied; planned c09 points to curriculum.",
+    "sources": "Actual primary content inspected: Caballero MIT2023 transcript PDF2-7; Wolf MIT2025 RBC PDF4-14; Gali April2025 slides PDF3,8; Wolf MIT2025 optimal-policy PDF5-12. Exact URLs and excluded claims recorded in source proposal."
+  },
+  "pending_issues": [
+    "Root subject-matter review, c05-c07 dependency acceptance, central source registration and whole-library integration.",
+    "Browser/mobile/print visual QA remains pending under the standing restriction; no workaround or visual claim."
+  ],
+  "limitations": [
+    "Original synthetic maintained models and exact computations are not empirical calibration or external academic certification.",
+    "Finite reduced NK equations do not establish a full common-household DSGE, infinite-horizon equilibrium selection or approximation accuracy for large gaps.",
+    "The fixed-labor real benchmark does not model endogenous employment, heterogeneous risk, financial frictions or complete business-cycle facts.",
+    "Computational checks supplement analytic arguments; they cannot establish empirical identification, appropriate welfare weights or policy effectiveness in an actual economy."
+  ],
+  "recommendation": "Complete author package ready for root review and integration gates; no unresolved author-level mathematical or numerical issue at these hashes."
+}

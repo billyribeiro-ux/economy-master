@@ -1,0 +1,46 @@
+{
+  "schema": "v06-c07-synthetic-v1",
+  "provenance": {
+    "kind": "original synthetic teaching models; no observed data or fitted slopes",
+    "created": "2026-10-08",
+    "units": "All price logs p and inflation Pi are 100 times natural logs. x is 100 ln(Y/Ybar) against the stated baseline reference path. e forecasts current Pi using prior-period information. z is the unscaled desired-price disturbance. Ordinary inflation and nominal returns are fractions, not log points.",
+    "timing": "Preset prices use p_previous+e. Reset firms take aggregate p,x,z as given; the aggregate fixed point and demand are solved simultaneously. Adaptive forecasts update only after current inflation is realized. All cases are independent experiments.",
+    "scope": "The geometric price index, quadratic desired-price target and demand closure are maintained assumptions; no complete NK microfoundation or real-country shock identification."
+  },
+  "quantity": {
+    "initial": {"M": "100", "V": "2", "Y": "200"},
+    "next": [
+      {"id": "constant_velocity", "M": "108", "V": "2", "Y": "204"},
+      {"id": "falling_velocity", "M": "108", "V": "17/9", "Y": "204"}
+    ],
+    "loan_nominal_net": "2/25"
+  },
+  "uncertain_return": {
+    "nominal_net": "1/10",
+    "states": [{"probability": "1/2", "ordinary_inflation": "0"}, {"probability": "1/2", "ordinary_inflation": "1/5"}]
+  },
+  "pricing_cases": [
+    {"id": "baseline", "s": "2/3", "a": "1", "b": "1", "anchor": "2", "e": "2", "d": "0", "z": "0"},
+    {"id": "demand_positive", "s": "2/3", "a": "1", "b": "1", "anchor": "2", "e": "2", "d": "3", "z": "0"},
+    {"id": "demand_negative", "s": "2/3", "a": "1", "b": "1", "anchor": "2", "e": "2", "d": "-3", "z": "0"},
+    {"id": "pricing_positive", "s": "2/3", "a": "1", "b": "1", "anchor": "2", "e": "2", "d": "0", "z": "6"},
+    {"id": "pricing_negative", "s": "2/3", "a": "1", "b": "1", "anchor": "2", "e": "2", "d": "0", "z": "-6"},
+    {"id": "same_inflation", "s": "2/3", "a": "1", "b": "1", "anchor": "2", "e": "2", "d": "0", "z": "3"},
+    {"id": "same_pair_other_expectation", "s": "2/3", "a": "1", "b": "1", "anchor": "2", "e": "1", "d": "3", "z": "2"},
+    {"id": "exercise_four", "s": "2/3", "a": "1", "b": "2", "anchor": "2", "e": "2", "d": "4", "z": "2"},
+    {"id": "all_preset", "s": "1", "a": "1", "b": "1", "anchor": "2", "e": "2", "d": "3", "z": "6"},
+    {"id": "all_reset", "s": "0", "a": "1", "b": "1", "anchor": "2", "e": "2", "d": "3", "z": "0"},
+    {"id": "all_reset_cost", "s": "0", "a": "1", "b": "1", "anchor": "2", "e": "2", "d": "0", "z": "6"}
+  ],
+  "adaptive": [
+    {"id": "worked", "s": "2/3", "a": "1", "b": "1", "anchor": "2", "e": "4", "d": "0", "z": "0", "learning": "1/2", "periods": 6},
+    {"id": "exercise", "s": "2/3", "a": "1", "b": "1", "anchor": "2", "e": "5", "d": "0", "z": "0", "learning": "1", "periods": 6},
+    {"id": "persistent_demand", "s": "2/3", "a": "1", "b": "1", "anchor": "2", "e": "2", "d": "3", "z": "0", "learning": "1/2", "periods": 6},
+    {"id": "no_learning", "s": "2/3", "a": "1", "b": "1", "anchor": "2", "e": "5", "d": "0", "z": "0", "learning": "0", "periods": 3},
+    {"id": "retention", "s": "1/2", "a": "1", "b": "1", "anchor": "2", "e": "4", "d": "0", "z": "0", "learning": "1/2", "periods": 3}
+  ],
+  "consistent_forecasts": [
+    {"id": "surprise", "s": "2/3", "a": "1", "b": "1", "anchor": "2", "states": [{"probability": "1/2", "d": "-3", "z": "0"}, {"probability": "1/2", "d": "3", "z": "0"}]},
+    {"id": "known_demand", "s": "2/3", "a": "1", "b": "1", "anchor": "2", "states": [{"probability": "1", "d": "3", "z": "0"}]}
+  ]
+}

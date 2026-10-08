@@ -1,0 +1,388 @@
+{
+  "pricing_cases": [
+    {
+      "id": "baseline",
+      "Pi": "2",
+      "x": "0",
+      "preset_log_price": "2",
+      "reset_log_price": "2",
+      "kappa": "1/2",
+      "u": "0"
+    },
+    {
+      "id": "demand_positive",
+      "Pi": "3",
+      "x": "2",
+      "preset_log_price": "2",
+      "reset_log_price": "5",
+      "kappa": "1/2",
+      "u": "0"
+    },
+    {
+      "id": "demand_negative",
+      "Pi": "1",
+      "x": "-2",
+      "preset_log_price": "2",
+      "reset_log_price": "-1",
+      "kappa": "1/2",
+      "u": "0"
+    },
+    {
+      "id": "pricing_positive",
+      "Pi": "4",
+      "x": "-2",
+      "preset_log_price": "2",
+      "reset_log_price": "8",
+      "kappa": "1/2",
+      "u": "3"
+    },
+    {
+      "id": "pricing_negative",
+      "Pi": "0",
+      "x": "2",
+      "preset_log_price": "2",
+      "reset_log_price": "-4",
+      "kappa": "1/2",
+      "u": "-3"
+    },
+    {
+      "id": "same_inflation",
+      "Pi": "3",
+      "x": "-1",
+      "preset_log_price": "2",
+      "reset_log_price": "5",
+      "kappa": "1/2",
+      "u": "3/2"
+    },
+    {
+      "id": "same_pair_other_expectation",
+      "Pi": "3",
+      "x": "2",
+      "preset_log_price": "1",
+      "reset_log_price": "7",
+      "kappa": "1/2",
+      "u": "1"
+    },
+    {
+      "id": "exercise_four",
+      "Pi": "7/2",
+      "x": "1",
+      "preset_log_price": "2",
+      "reset_log_price": "13/2",
+      "kappa": "1/2",
+      "u": "1"
+    },
+    {
+      "id": "all_preset",
+      "Pi": "2",
+      "x": "3",
+      "preset_log_price": "2",
+      "reset_log_price": "11",
+      "kappa": "0",
+      "u": "0"
+    },
+    {
+      "id": "all_reset",
+      "Pi": "5",
+      "x": "0",
+      "preset_log_price": "2",
+      "reset_log_price": "5",
+      "kappa": null,
+      "u": null
+    },
+    {
+      "id": "all_reset_cost",
+      "Pi": "8",
+      "x": "-6",
+      "preset_log_price": "2",
+      "reset_log_price": "8",
+      "kappa": null,
+      "u": null
+    }
+  ],
+  "adaptive": [
+    {
+      "id": "worked",
+      "rho": "5/6",
+      "unique_forecast_fixed_point": "2",
+      "path": [
+        {
+          "t": 0,
+          "e": "4",
+          "Pi": "10/3",
+          "x": "-4/3",
+          "log_price_from_initial": "10/3"
+        },
+        {
+          "t": 1,
+          "e": "11/3",
+          "Pi": "28/9",
+          "x": "-10/9",
+          "log_price_from_initial": "58/9"
+        },
+        {
+          "t": 2,
+          "e": "61/18",
+          "Pi": "79/27",
+          "x": "-25/27",
+          "log_price_from_initial": "253/27"
+        },
+        {
+          "t": 3,
+          "e": "341/108",
+          "Pi": "449/162",
+          "x": "-125/162",
+          "log_price_from_initial": "1967/162"
+        },
+        {
+          "t": 4,
+          "e": "1921/648",
+          "Pi": "2569/972",
+          "x": "-625/972",
+          "log_price_from_initial": "14371/972"
+        },
+        {
+          "t": 5,
+          "e": "10901/3888",
+          "Pi": "14789/5832",
+          "x": "-3125/5832",
+          "log_price_from_initial": "101015/5832"
+        }
+      ],
+      "next_forecast": "62281/23328",
+      "finite_log_gap_sum": "-31031/5832"
+    },
+    {
+      "id": "exercise",
+      "rho": "2/3",
+      "unique_forecast_fixed_point": "2",
+      "path": [
+        {
+          "t": 0,
+          "e": "5",
+          "Pi": "4",
+          "x": "-2",
+          "log_price_from_initial": "4"
+        },
+        {
+          "t": 1,
+          "e": "4",
+          "Pi": "10/3",
+          "x": "-4/3",
+          "log_price_from_initial": "22/3"
+        },
+        {
+          "t": 2,
+          "e": "10/3",
+          "Pi": "26/9",
+          "x": "-8/9",
+          "log_price_from_initial": "92/9"
+        },
+        {
+          "t": 3,
+          "e": "26/9",
+          "Pi": "70/27",
+          "x": "-16/27",
+          "log_price_from_initial": "346/27"
+        },
+        {
+          "t": 4,
+          "e": "70/27",
+          "Pi": "194/81",
+          "x": "-32/81",
+          "log_price_from_initial": "1232/81"
+        },
+        {
+          "t": 5,
+          "e": "194/81",
+          "Pi": "550/243",
+          "x": "-64/243",
+          "log_price_from_initial": "4246/243"
+        }
+      ],
+      "next_forecast": "550/243",
+      "finite_log_gap_sum": "-1330/243"
+    },
+    {
+      "id": "persistent_demand",
+      "rho": "5/6",
+      "unique_forecast_fixed_point": "5",
+      "path": [
+        {
+          "t": 0,
+          "e": "2",
+          "Pi": "3",
+          "x": "2",
+          "log_price_from_initial": "3"
+        },
+        {
+          "t": 1,
+          "e": "5/2",
+          "Pi": "10/3",
+          "x": "5/3",
+          "log_price_from_initial": "19/3"
+        },
+        {
+          "t": 2,
+          "e": "35/12",
+          "Pi": "65/18",
+          "x": "25/18",
+          "log_price_from_initial": "179/18"
+        },
+        {
+          "t": 3,
+          "e": "235/72",
+          "Pi": "415/108",
+          "x": "125/108",
+          "log_price_from_initial": "1489/108"
+        },
+        {
+          "t": 4,
+          "e": "1535/432",
+          "Pi": "2615/648",
+          "x": "625/648",
+          "log_price_from_initial": "11549/648"
+        },
+        {
+          "t": 5,
+          "e": "9835/2592",
+          "Pi": "16315/3888",
+          "x": "3125/3888",
+          "log_price_from_initial": "85609/3888"
+        }
+      ],
+      "next_forecast": "62135/15552",
+      "finite_log_gap_sum": "31031/3888"
+    },
+    {
+      "id": "no_learning",
+      "rho": "1",
+      "unique_forecast_fixed_point": null,
+      "path": [
+        {
+          "t": 0,
+          "e": "5",
+          "Pi": "4",
+          "x": "-2",
+          "log_price_from_initial": "4"
+        },
+        {
+          "t": 1,
+          "e": "5",
+          "Pi": "4",
+          "x": "-2",
+          "log_price_from_initial": "8"
+        },
+        {
+          "t": 2,
+          "e": "5",
+          "Pi": "4",
+          "x": "-2",
+          "log_price_from_initial": "12"
+        }
+      ],
+      "next_forecast": "5",
+      "finite_log_gap_sum": "-6"
+    },
+    {
+      "id": "retention",
+      "rho": "3/4",
+      "unique_forecast_fixed_point": "2",
+      "path": [
+        {
+          "t": 0,
+          "e": "4",
+          "Pi": "3",
+          "x": "-1",
+          "log_price_from_initial": "3"
+        },
+        {
+          "t": 1,
+          "e": "7/2",
+          "Pi": "11/4",
+          "x": "-3/4",
+          "log_price_from_initial": "23/4"
+        },
+        {
+          "t": 2,
+          "e": "25/8",
+          "Pi": "41/16",
+          "x": "-9/16",
+          "log_price_from_initial": "133/16"
+        }
+      ],
+      "next_forecast": "91/32",
+      "finite_log_gap_sum": "-37/16"
+    }
+  ],
+  "consistent_forecasts": [
+    {
+      "id": "surprise",
+      "e": "2",
+      "states": [
+        {
+          "probability": "1/2",
+          "d": "-3",
+          "z": "0",
+          "Pi": "1",
+          "x": "-2",
+          "forecast_error": "-1"
+        },
+        {
+          "probability": "1/2",
+          "d": "3",
+          "z": "0",
+          "Pi": "3",
+          "x": "2",
+          "forecast_error": "1"
+        }
+      ],
+      "expected_Pi": "2"
+    },
+    {
+      "id": "known_demand",
+      "e": "5",
+      "states": [
+        {
+          "probability": "1",
+          "d": "3",
+          "z": "0",
+          "Pi": "5",
+          "x": "0",
+          "forecast_error": "0"
+        }
+      ],
+      "expected_Pi": "5"
+    }
+  ],
+  "scope": "Synthetic conditional calculations, not empirical estimates",
+  "quantity": {
+    "P0": "1",
+    "next": [
+      {
+        "id": "constant_velocity",
+        "P": "18/17",
+        "ordinary_inflation": "1/17",
+        "approximate_inflation": "3/50",
+        "loan_real_net": "1/50"
+      },
+      {
+        "id": "falling_velocity",
+        "P": "1",
+        "ordinary_inflation": "0",
+        "approximate_inflation": "1/225",
+        "loan_real_net": "2/25"
+      }
+    ]
+  },
+  "uncertain_return": {
+    "mean_ordinary_inflation": "1/10",
+    "expected_real_gross": "121/120",
+    "gross_using_mean_inflation": "1"
+  },
+  "descriptive_slopes": {
+    "demand_pair": "1/2",
+    "pricing_pair": "-1",
+    "equal_four_state_mixture": "-1/4"
+  }
+}
