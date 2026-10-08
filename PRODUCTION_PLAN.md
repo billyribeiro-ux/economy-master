@@ -109,7 +109,8 @@ Chapter states: `planned`, `draft`, `review`, `accepted`. A written summary with
 
 - Batch 0: freeze the curriculum, checkpoint/resumption rules, source catalogue and HTML architecture.
 - Batches 1–18: complete each volume in order, including its exam/project package and corrections.
-- Batch 19: complete cross-volume examinations, glossary/notation consolidation and computational appendices.
+- Cumulative assessments can be produced as soon as their prerequisite volumes are accepted; the foundation examination follows Volumes 1–4. Their canonical specifications and individual states are recorded in `content/curriculum.json` under `cross_volume_assessments`.
+- Batch 19: complete any remaining cross-volume examinations, glossary/notation consolidation and computational appendices.
 - Batch 20: audit the entire prerequisite graph, coverage, all problems/solutions, citations, offline behavior, mobile layout and print edition; repair every material issue.
 - Batch 21: publish the complete accepted edition privately; provide the finished offline archive and an honest validation report.
 

@@ -356,6 +356,10 @@ def main():
             'edition_boundary': '2026-10-06', 'planned_volumes': 18, 'planned_chapters': 216,
             'primary_research_field': 'Macro-finance', 'supporting_field': 'Financial econometrics',
             'volumes': VOLUMES}
+    # Cumulative assessments and portfolios acquire their own production state.
+    # Preserve it alongside chapter/volume acceptance during specification refresh.
+    if 'cross_volume_assessments' in previous:
+        plan['cross_volume_assessments'] = previous['cross_volume_assessments']
     destination.write_text(json.dumps(plan, indent=2, ensure_ascii=False) + '\n')
     print(f'Defined {len(VOLUMES)} volumes and {sum(len(v["chapters"]) for v in VOLUMES)} chapter packages.')
 

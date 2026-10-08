@@ -1,0 +1,307 @@
+{
+  "capital": {
+    "annuity_factor": {
+      "approx": 1.44,
+      "exact": "36/25"
+    },
+    "break_even_high_probability": {
+      "approx": 0.7361111111111112,
+      "exact": "53/72"
+    },
+    "break_even_price_usd": {
+      "approx": 518.4,
+      "exact": "2592/5"
+    },
+    "cash_price_ceiling_usd": {
+      "approx": 630.0,
+      "exact": "630"
+    },
+    "decision_from_exact_model": "buy",
+    "discount_factors": [
+      {
+        "approx": 0.8,
+        "exact": "4/5"
+      },
+      {
+        "approx": 0.64,
+        "exact": "16/25"
+      }
+    ],
+    "expected_npv_usd": {
+      "approx": 18.4,
+      "exact": "92/5"
+    },
+    "expected_regret_usd": {
+      "buy": {
+        "approx": 42.4,
+        "exact": "212/5"
+      },
+      "defer": {
+        "approx": 60.8,
+        "exact": "304/5"
+      }
+    },
+    "immediate_reserve_feasible": true,
+    "payoff_variance_usd2": {
+      "approx": 13271.04,
+      "exact": "331776/25"
+    },
+    "regret_scope": "Unconstrained comparison of the two payoff alternatives; apply the cash-reserve feasibility rule separately.",
+    "simulation": {
+      "error_against_exact_mean_usd": {
+        "approx": 5.04,
+        "exact": "126/25"
+      },
+      "estimated_mcse_usd": 5.56905305053734,
+      "mean_npv_usd": {
+        "approx": 23.44,
+        "exact": "586/25"
+      },
+      "replications": 400,
+      "seed": 40517,
+      "state_counts": {
+        "high": 327,
+        "low": 73
+      },
+      "theoretical_mcse_usd": 5.76,
+      "unit": "one iid entire two-year project state; no real observations or estimated probabilities"
+    },
+    "state_npv_usd": {
+      "high": {
+        "approx": 76.0,
+        "exact": "76"
+      },
+      "low": {
+        "approx": -212.0,
+        "exact": "-212"
+      }
+    }
+  },
+  "ledger": {
+    "balance_sheet_residual_cents": 0,
+    "cash_change_cents": 63000,
+    "closing_balances_cents": {
+      "cash": 263000,
+      "equipment": 100000,
+      "equity": 273000,
+      "loan": 105000,
+      "payables": 25000,
+      "receivables": 40000
+    },
+    "financing_cash_flow_cents": 33000,
+    "operating_cash_flow_cents": 30000,
+    "profit_cents": 35000,
+    "reported_cash_matches": true,
+    "reported_closing_cash_cents": 263000
+  },
+  "limits": [
+    "All records, probabilities and capital cash flows are synthetic assumptions.",
+    "Missing outcome remains unscored; a later revision does not enter the frozen forecast.",
+    "Simulation error is distinct from parameter uncertainty, prediction error and causal identification."
+  ],
+  "operations": {
+    "available_outcome_mse_usd2": {
+      "approx": 9.0,
+      "exact": "9"
+    },
+    "forecasts": [
+      {
+        "error_usd": {
+          "approx": 3.0,
+          "exact": "3"
+        },
+        "first_release_actual_usd": {
+          "approx": 15.0,
+          "exact": "15"
+        },
+        "forecast_usd": {
+          "approx": 12.0,
+          "exact": "12"
+        },
+        "outcome_release_at": "2025-04-10T09:00:00Z",
+        "record_id": "D5",
+        "scored": true,
+        "squared_error_usd2": {
+          "approx": 9.0,
+          "exact": "9"
+        },
+        "target_day": "2025-04-09"
+      },
+      {
+        "error_usd": null,
+        "first_release_actual_usd": null,
+        "forecast_usd": {
+          "approx": 15.0,
+          "exact": "15"
+        },
+        "outcome_release_at": null,
+        "record_id": "D6",
+        "scored": false,
+        "squared_error_usd2": null,
+        "target_day": "2025-04-10"
+      }
+    ],
+    "frozen_origin_ols": {
+      "fitted_usd": [
+        {
+          "approx": 0.0,
+          "exact": "0"
+        },
+        {
+          "approx": 3.0,
+          "exact": "3"
+        },
+        {
+          "approx": 6.0,
+          "exact": "6"
+        },
+        {
+          "approx": 9.0,
+          "exact": "9"
+        }
+      ],
+      "intercept_usd": {
+        "approx": 0.0,
+        "exact": "0"
+      },
+      "r_squared": {
+        "approx": 0.8823529411764706,
+        "exact": "15/17"
+      },
+      "residuals_usd": [
+        {
+          "approx": 0.0,
+          "exact": "0"
+        },
+        {
+          "approx": 1.0,
+          "exact": "1"
+        },
+        {
+          "approx": -2.0,
+          "exact": "-2"
+        },
+        {
+          "approx": 1.0,
+          "exact": "1"
+        }
+      ],
+      "slope_usd_per_job": {
+        "approx": 3.0,
+        "exact": "3"
+      },
+      "sse_usd2": {
+        "approx": 6.0,
+        "exact": "6"
+      },
+      "sum_jobs_residuals": "0",
+      "sum_residuals": "0",
+      "tss_usd2": {
+        "approx": 51.0,
+        "exact": "51"
+      }
+    },
+    "latest_snapshot_training_refit_for_diagnostic_only": {
+      "fitted_usd": [
+        {
+          "approx": 0.4,
+          "exact": "2/5"
+        },
+        {
+          "approx": 3.8,
+          "exact": "19/5"
+        },
+        {
+          "approx": 7.2,
+          "exact": "36/5"
+        },
+        {
+          "approx": 10.6,
+          "exact": "53/5"
+        }
+      ],
+      "intercept_usd": {
+        "approx": 0.4,
+        "exact": "2/5"
+      },
+      "r_squared": {
+        "approx": 0.9796610169491525,
+        "exact": "289/295"
+      },
+      "residuals_usd": [
+        {
+          "approx": -0.4,
+          "exact": "-2/5"
+        },
+        {
+          "approx": 0.2,
+          "exact": "1/5"
+        },
+        {
+          "approx": 0.8,
+          "exact": "4/5"
+        },
+        {
+          "approx": -0.6,
+          "exact": "-3/5"
+        }
+      ],
+      "slope_usd_per_job": {
+        "approx": 3.4,
+        "exact": "17/5"
+      },
+      "sse_usd2": {
+        "approx": 1.2,
+        "exact": "6/5"
+      },
+      "sum_jobs_residuals": "0",
+      "sum_residuals": "0",
+      "tss_usd2": {
+        "approx": 59.0,
+        "exact": "59"
+      }
+    },
+    "scored_count": 1,
+    "training_versions": [
+      {
+        "cost_cents": 0,
+        "record_id": "D1",
+        "released_at": "2025-04-02T09:00:00Z",
+        "version": 1
+      },
+      {
+        "cost_cents": 400,
+        "record_id": "D2",
+        "released_at": "2025-04-03T09:00:00Z",
+        "version": 1
+      },
+      {
+        "cost_cents": 400,
+        "record_id": "D3",
+        "released_at": "2025-04-04T09:00:00Z",
+        "version": 1
+      },
+      {
+        "cost_cents": 1000,
+        "record_id": "D4",
+        "released_at": "2025-04-05T09:00:00Z",
+        "version": 1
+      }
+    ],
+    "unscored_count": 1,
+    "warning": "Later revision refit is not an admissible origin forecast. Available-outcome MSE describes only scored records, not missing targets or population performance."
+  },
+  "reproducibility": {
+    "forecast_origin": "2025-04-08T12:00:00Z",
+    "implementation": "CPython",
+    "input_sha256": {
+      "foundation-practical-data.json": "584e5b041ccd49ca4f7536151920e9b8ab83e26a98fe038b1f55c82666a572f3",
+      "foundation-practical-source.txt": "b38e7ca0bfba43542fcfddc0366ac23a1d7e13928ee7dfdabed39fe6d0ba75ea"
+    },
+    "network_required": false,
+    "program_sha256": "6fb0adc5e1d1484bc8c2a9fa296ed7969001daab500a6e309f39f1377c4272ef",
+    "python_version": "3.14.6",
+    "source_snapshot_at": "2025-04-12T12:00:00Z"
+  },
+  "status": "passed"
+}

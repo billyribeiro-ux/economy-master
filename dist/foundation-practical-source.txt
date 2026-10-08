@@ -1,0 +1,96 @@
+FOUNDATION PRACTICAL: SYNTHETIC SOURCE SNAPSHOT AND DICTIONARY
+Original author-created teaching case, 2026-10-07, edition boundary2026-10-06.
+NO actual firm, bank statement, observation, policy experiment or market rate.
+Scenario dates in April2025 are fictional timestamps supplied to test timing.
+The authoritative record-level snapshot is foundation-practical-data.json; no external
+source, account, license or network access is needed. All case prose/code are
+original. The manifest fingerprints local JSON and this notes file, not truth.
+
+CURRENCY AND TIME
+All input monetary amounts are integer USD cents; displayed/model quantities
+are converted to USD exactly by dividing by100. Ledger covers7April2025 only.
+Opening balances precede that day; reported closing cash follows all nine
+transactions. Forecast origin is8April12:00UTC; saved source snapshot is
+12April12:00UTC. A timestamp endingZ denotes UTC. Dates are observation days,
+not release times. Source versions remain available even after a revision.
+
+LEDGER DICTIONARY
+Opening: cash2000, receivables300, equipment1000, supplier payables200,
+loan600, equity2500 USD. Assets3300=liabilities800+equity2500.
+L1 collect200 from opening receivables: cash+200, receivables-200.
+L2 invoice900 current services on credit: receivables+900, revenue/equity+900.
+L3 collect600 against L2: cash+600, receivables-600, no second revenue.
+L4 pay400 current consumed operating expenses: cash-400, expense/equity-400.
+L5 receive/consume150 supplies on credit: payables+150, expense/equity-150.
+L6 pay100 against opening supplier balance: cash-100, payables-100.
+L7 borrow500: cash+500, loan+500, no revenue.
+L8 repay50 principal: cash-50, loan-50, no expense.
+L9 owner withdrawal120: cash-120, equity-120, no operating expense.
+Reported closing cash2630USD is an independent supplied statement component.
+No tax, interest accrual, depreciation, inventory carryover, other valuation
+change or other transaction occurs in this one-day model. Equipment proposal
+is unexecuted and excluded from this historical ledger. No legal/accounting
+standard is claimed; apply these explicitly supplied economic classifications.
+
+OPERATING RECORDS
+Each record is one active day with a known scheduled job count and daily total
+variable consumables cost; it is NOT full company operating expense or revenue.
+It is a different day/scope from the7April company ledger. Do not add these
+selected sample costs to that ledger. Scheduled counts are known at
+feature_available_at. They describe committed jobs for these teaching records.
+All records are active, including D1's observed zero jobs and zero cost.
+A null missing_reason accompanies released data. D6 has no cost releases;
+its missing_reason is not_reported_by_snapshot, NOT zero or inactivity.
+Each cost_releases entry has a positive consecutive version, an availability
+instant and nonnegative integer cost_cents. Releases follow the observation
+period. The latest release no later than a cutoff is the eligible version.
+D1:1April, jobs0, first cost0 USD released2April09:00UTC.
+D2:2April, jobs1, first cost4 USD released3April09:00UTC.
+D3:3April, jobs2, first cost4 USD released4April09:00UTC; revised cost8 USD
+    released11April09:00UTC, after the8April forecast origin.
+D4:4April, jobs3, first cost10 USD released5April09:00UTC.
+D5:9April, jobs4 known8April09:00UTC; first cost15 USD released10April09:00UTC.
+D6:10April, jobs5 known8April09:00UTC; cost still unreported at snapshot.
+The forecast protocol fits D1-D4 using latest origin-eligible costs and freezes
+that model for D5/D6. Evaluation uses each target's first release available by
+snapshot; no label produces null error/loss. Revision-aware re-fitting after
+origin is a separate later descriptive analysis, never a past forecast input.
+
+CAPITAL DECISION ASSUMPTIONS
+At time0, after the observed ledger and before any new transactions, consider
+an indivisible machine for500USD cash. Keep at least2000USD cash immediately
+after purchase. No new borrowing for this proposal; operating cash later is
+not part of that immediate constraint. No taxes, resale, extra capital charges
+or other consequences beyond the explicit inputs. Time1/time2 are one/two
+full years after purchase. Effective annual NOMINAL discount rate25% is an
+assumed toy opportunity rate, not a quoted product, APR or measured market rate.
+All savings and foregone rent are nominal USD paid at those year ends.
+One high-demand state, probability4/5, gives gross savings450USD each year;
+one low state, probability1/5, gives250USD each year. These probabilities and
+savings are stipulated, not estimated from the operating sample or regression.
+Using the space sacrifices50USD rent each year, an incremental opportunity
+cost even though no rent-payment invoice appears in the observed ledger.
+Defer gives zero incremental payoff in either state. Preferences are risk
+neutral; compare expected time0 NPVs, subject to the immediate reserve.
+State persists for both payments: do not draw independent yearly states.
+Loss is foregone statewise best NPV (regret), in time0USD. It is not squared
+forecast error, and this loss definition is distinct from utility risk aversion.
+
+SIMULATION
+400 iid model replications using random.Random(40517). Each replication draws
+ONE state for the full two-year project with exact rational-probability integer
+tickets. Enumerate the two states first for the exact expectation and variance.
+Simulation illustrates numerical error only; it supplies no empirical sample,
+parameter estimation, causal evidence or additional real-world information.
+Record runtime because higher-level random routines can change across versions.
+Use the full fixed run, never choose a seed/stopping time to change the decision.
+
+VALIDATION AND ALLOWED CHANGES
+Keep the original package immutable. Units, schema, keys, canonical dates and
+protocol are fixed. All amounts use integer types, bounded nonnegative cents;
+probabilities are exact fraction strings summing to1. An added duplicate record,
+bool cost, zero/negative probability or cost release before its observation day
+must fail. A changed ledger amount with the reported closing cash unchanged
+must fail cash reconciliation. A separately labeled price520USD scenario is a
+valid sensitivity case: feasibility remains but the expected-NPV choice changes.
+The source snapshot's version history is not to be overwritten during any test.

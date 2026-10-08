@@ -42,6 +42,9 @@ def main():
                    for _, c in chapters if (ROOT/'content'/c['manuscript']).exists()}
     packages = {v['id']: (ROOT/'content/assessments'/f'{v["id"]}.html').read_text()
                 for v in plan['volumes'] if (ROOT/'content/assessments'/f'{v["id"]}.html').exists()}
+    cross_specs = plan.get('cross_volume_assessments', [])
+    cross_packages = {a['id']: (ROOT/'content'/a['manuscript']).read_text()
+                      for a in cross_specs if (ROOT/'content'/a['manuscript']).is_file()}
     written = len(manuscripts)
     accepted = sum(c['status'] == 'accepted' for _, c in chapters)
     DIST.mkdir(exist_ok=True)
@@ -76,7 +79,14 @@ def main():
             if v['id'] in packages:
                 result += f'<li><a href="{v["id"]}-assessment.html">Diagnostic, exams &amp; project</a></li>'
             result += '</ul></details>'
-        return result + '</nav></aside>'
+        result += '</nav>'
+        if cross_packages:
+            result += '<hr><nav aria-label="Cumulative assessments">'
+            for a in cross_specs:
+                if a['id'] in cross_packages:
+                    result += f'<a href="{a["page"]}"' + (' aria-current="page"' if current == a['page'] else '') + f'>{escape(a["title"])}</a>'
+            result += '</nav>'
+        return result + '</aside>'
 
     def write_page(filename, title, content, wide=False):
         favicon = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%224%22 fill=%22%23111e31%22/%3E%3Cpath d=%22M7 8h8v17H7zm10 0h8v17h-8%22 fill=%22%23fff%22/%3E%3Cpath d=%22M15 8h2v17h-2%22 fill=%22%23ad253c%22/%3E%3C/svg%3E'
@@ -110,10 +120,20 @@ def main():
             if v['id'] in packages:
                 assessment += f'<li><a href="{v["id"]}-assessment.html">Volume {v["number"]:02d}: {escape(v["title"])}</a></li>'
         assessment += '</ul>'
+    if cross_specs:
+        assessment += '<h2>Cumulative examinations and portfolios</h2><p>Each assessment combines its prerequisite volumes. Planned entries specify future work; available links open written material.</p>'
+        for a in cross_specs:
+            title = escape(a['title'])
+            if a['id'] in cross_packages:
+                title = f'<a href="{a["page"]}">{title}</a>'
+            assessment += f'<section id="{a["id"]}"><h3>{title} <span class="status">{status_label(a["status"])}</span></h3><p>{escape(a["outcome"])}</p><p>{escape(a["deliverables"])}</p><p class="meta">Prerequisites: {escape(", ".join(a["prerequisites"]))}</p></section>'
     write_page('assessments.html','Assessment standard',assessment)
     for v in plan['volumes']:
         if v['id'] in packages:
             write_page(v['id']+'-assessment.html',v['title']+' — assessment',packages[v['id']])
+    for a in cross_specs:
+        if a['id'] in cross_packages:
+            write_page(a['page'],a['title'],f'<p class="meta">{status_label(a["status"])}</p>'+cross_packages[a['id']])
 
     catalogue = '<p class="eyebrow">Evidence and further study</p><h1>Source catalogue</h1><p class="lead">Curricular benchmarks establish scope. Method-specific sources and original papers support individual arguments.</p><p class="notice">These are sources and further-reading routes, not institutional endorsements. Checking a course page does not independently verify every topic taught in the course. Examples and exercises in this library are original.</p>'
     for s in sources:
@@ -148,13 +168,30 @@ def main():
         print_content += f'<section class="print-chapter" id="{c["id"]}">{header}<article class="prose">{print_fragment(body,c["id"])}</article>{further}</section>'
         if c['number']==len(v['chapters']) and v['id'] in packages:
             print_content += f'<section class="print-chapter">{print_fragment(packages[v["id"]],v["id"]+"-assessment")}</section>'
+        if c['number']==len(v['chapters']):
+            for a in cross_specs:
+                if a['after_volume']==v['number'] and a['id'] in cross_packages:
+                    print_content += f'<section class="print-chapter"><p class="meta">{status_label(a["status"])}</p>{print_fragment(cross_packages[a["id"]],a["id"]+"-assessment")}</section>'
+    for v in plan['volumes']:
+        if v['id'] in packages:
+            search_index.append({'title':f'Volume {v["number"]:02d} assessment · {v["title"]}',
+                'url':v['id']+'-assessment.html','written':True,'status':status_label(v['status']),
+                'text':plaintext(packages[v['id']])})
+    for a in cross_specs:
+        body = cross_packages.get(a['id'])
+        search_index.append({'title':a['title'],'url':a['page'] if body else 'assessments.html#'+a['id'],
+            'written':body is not None,'status':status_label(a['status']),
+            'text':plaintext(body) if body else a['outcome']+' '+a['deliverables']})
     write_page('print.html','Printable reading edition',print_content)
     (DIST/'search-index.js').write_text('window.MASTERY_SEARCH = '+json.dumps(search_index,ensure_ascii=False).replace('</','<\\/')+';\n')
     summary = {'volumes_planned':len(plan['volumes']),'chapters_planned':len(chapters),
                'chapters_available':written,'chapters_accepted':accepted,
                'manuscript_words':sum(len(plaintext(body).split()) for body in manuscripts.values()),
                'assessment_packages_available':len(packages),
-               'assessment_words':sum(len(plaintext(body).split()) for body in packages.values())}
+               'assessment_words':sum(len(plaintext(body).split()) for body in packages.values()),
+               'cross_volume_assessments_available':len(cross_packages),
+               'cross_volume_assessments_accepted':sum(a['status']=='accepted' for a in cross_specs),
+               'cross_volume_assessment_words':sum(len(plaintext(body).split()) for body in cross_packages.values())}
     (ROOT/'build-report.json').write_text(json.dumps(summary,indent=2)+'\n')
     print(json.dumps(summary))
 

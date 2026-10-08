@@ -1,0 +1,115 @@
+{
+  "assessment": "foundation-support",
+  "reviewer": "monte_carlo specialist, bounded independent peer review",
+  "date": "2026-10-07",
+  "status": "passed-support-scope",
+  "scope": "Read-only review of all foundation-support.html content, support_check in check_foundation.py, and the visible assembly logic. Independently recomputed all four oral solutions, scoring, prerequisite and reference routes. Only this peer-review JSON was written.",
+  "findings": [],
+  "severity_summary": {
+    "blocking": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "oral_answer_audit": [
+    {
+      "task": 1,
+      "topic": "Opportunity cost, real units and timing",
+      "independent_results": {
+        "incremental_npv": "210/11 USD",
+        "exact_real_rate": "-1/12",
+        "real_receipt": "100 current-purchasing-power USD",
+        "delayed_cost_npv": "230/11 USD",
+        "deferral_gain": "20/11 USD"
+      },
+      "reasoning": "Current forgone sale70 plus improvement20 are relevant; historical book cost120 is sunk. Independently discounted incremental dated flows, then reconstructed the identical value by deflating120 to100 and dividing by real gross11/12. The delayed payment changes timing without silently changing the machine payoff or alternate sale."
+    },
+    {
+      "task": 2,
+      "topic": "Global optimum and value derivatives",
+      "independent_results": {
+        "optimizer": "0 for b<=0; b for0<b<2;2 for b>=2",
+        "value": "0; b^2/2;2b-2 across the stated regimes",
+        "first_derivative": "0;b;2, matching at0 and2",
+        "old_value_at_b3": "4",
+        "new_capacity1_value": "5/2",
+        "exact_capacity_loss": "3/2",
+        "first_order_loss": "1"
+      },
+      "reasoning": "Verified the unique optimum by independently comparing the stationary candidate with endpoints, alongside strict concavity. One-sided difference quotients confirm C1 value behavior at0/2; second derivatives differ across regimes. At b3 the one-unit capacity reduction has a curved finite effect rather than an exact shadow-price prediction."
+    },
+    {
+      "task": 3,
+      "topic": "Labeled finite sampling and repeated search",
+      "independent_results": {
+        "mean_law": "0,2,4 with probabilities1/6,4/6,1/6",
+        "expectation": "2",
+        "variance_without_replacement": "4/3",
+        "variance_with_replacement": "2",
+        "ordered_draw_covariance": "-4/3",
+        "one_alarm_probability": "1/6",
+        "two_reset_sample_union": "11/36"
+      },
+      "reasoning": "Enumerated actual label pairs so duplicate values did not become equally likely value patterns. Independently checked the second moment and replacement variance; the alarm union equals2*(1/6)-(1/6)^2 under the explicit reset/independence condition. Selecting an alarm from a two-sample search changes the relevant event."
+    },
+    {
+      "task": 4,
+      "topic": "Composition, availability and causal scope",
+      "independent_results": {
+        "march_raw": "12%",
+        "april_raw": "28%",
+        "raw_change": "16 percentage points",
+        "both_group_rates": "A10%,B30%",
+        "april_at_march_weights": "12%",
+        "equal_group_weights": "20% each month"
+      },
+      "reasoning": "Exact conditional rates show unchanged group outcomes while composition shifts toward higher-rate B. Standardization and raw rates are correctly described as different target mixtures. The15May release is later than the1May origin; a forecast of that unavailable outcome is a different variable from the realized value. A complete operating census supplies no counterfactual policy identification."
+    }
+  ],
+  "scoring_and_prerequisite_review": [
+    "All four oral tasks use taught foundation methods: opportunity cost/nominal-real discounting, strict concavity/boundary/value sensitivity, finite-population covariance and event unions, and data composition/availability/identification. No future-volume theorem, external quantile or program execution is required.",
+    "Task allocations reconcile to10 each:4+3+3,4+3+3,5+2+3,3+3+4. Numerical results and interpretation criteria are fully worked; equivalent arguments and arithmetic follow-through are explicitly recognized.",
+    "Written and practical requirements are separately85/100 with19/25 per domain.19 correctly rounds18.75 upward; oral34/40 plus8/10 per task likewise rounds7.5 upward to a whole point. The written form duration180 minutes and practical3–5-hour planning allowance match the production contract.",
+    "The four prior accepted volume assessments remain prerequisites; a single cumulative exam is explicitly only a sample of48 chapters. Remediation demands causes, corrected reasoning and fresh transfer instead of averaging away a failed domain.",
+    "Independent observation is preferred, self-scoring is labeled honestly, and accessible/print-expanded solutions are disclosed as unsuitable for secure supervised examination delivery without extracting question sections.",
+    "Assessment standards, timing, intervals and thresholds are labeled design choices. The synthesis keeps Volume5 manuscript status planned and does not claim advanced expertise or institutional qualification."
+  ],
+  "links_and_checker_review": [
+    "--support-only passed with all five returned check groups. require() uses explicit exceptions, so those gates do not disappear under Python optimization.",
+    "Independently recomputed all oral numerical results through exact Fraction arithmetic, stationary/end-point comparison, one-sided value quotients, labeled-pair moments and direct target-mixture rates.",
+    "Validated32 chapter-route instances and4 prior-volume package links against source files. Curriculum anchor v05 exists; assessments.html is a generated assessment-standard route in build.py.",
+    "Read assembly replacement logic and parsed the available support plus both written forms in memory: one h1, unique IDs and administration/form-a/form-b/oral-transfer/coverage anchors. The practical target is an intended fragment anchor, not yet verifiable from its absent file at audit time.",
+    "The first combined peer computation reached full assembly only after all arithmetic assertions had passed, then raised FileNotFoundError for foundation-practical.html. This is an expected incomplete-production dependency, not a defect in support_check. A separate bounded arithmetic/link/available-fragment run subsequently completed successfully.",
+    "Full check() will compare canonical manuscript to all four fragments, check unique IDs and source registration, then dispatch both exam and practical checkers. That full integration gate remains root responsibility once the practical is available.",
+    "The numerical support checker contains fixed oral inputs rather than parsing every number from the prose, so manual prompt/solution comparison remains necessary; this review performed that comparison."
+  ],
+  "checks_run": [
+    {
+      "command": "python3 book/scripts/check_foundation.py --support-only",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "command": "Independent exact oral arithmetic plus attempted full assembly",
+      "status": "arithmetic assertions passed; assembly deferred",
+      "exit_code": 1,
+      "reason": "foundation-practical.html absent at audit time"
+    },
+    {
+      "command": "Separate independent Fraction oral calculations, link inventory and available support/form structure",
+      "status": "passed",
+      "exit_code": 0
+    }
+  ],
+  "reviewed_sha256": {
+    "content/assessment-parts/foundation-support.html": "7f6de2e9900b11ebb621c77acacd566b30825120f463a63bcdec260928407399",
+    "scripts/check_foundation.py": "6da427c764af2ccbf0a3b65c36dfe64b14087802aff56d48cd37deb4d6e21fda"
+  },
+  "limitations": [
+    "This is a separate agent peer audit, not independent human grading, institutional certification or empirical calibration of difficulty/completion time.",
+    "External source pages were not re-retrieved; the audit used accepted taught methods and local chapter/assessment prerequisites.",
+    "Full assembled-package verification remains pending because the practical fragment was absent during this bounded review. No claim that the complete foundation package has passed integration is made here.",
+    "No visual, mobile or print UI QA was performed. The support text appropriately discloses printing of solutions, but this audit did not visually verify print behavior.",
+    "Root owns all corrections, canonical assembly, acceptance and publishing. No manuscript, script, shared state or build output was changed by this peer reviewer."
+  ],
+  "handoff": "No support correction requested. All four oral answers and support-only gates pass; complete-package integration remains with root after practical completion."
+}

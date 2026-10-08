@@ -34,6 +34,7 @@ from check_v04_c10 import check as check_v04_c10
 from check_v04_c11 import check as check_v04_c11
 from check_v04_c12 import check as check_v04_c12
 from check_v04_assessment import check as check_v04_assessment
+from check_foundation import check as check_foundation
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -296,6 +297,36 @@ def main():
                 parsed_package=Document(); parsed_package.feed(package_text)
                 for component in ('notation-index','concept-index','volume-synthesis'):
                     require(component in parsed_package.ids,f'{v["id"]}: missing volume reference component {component}')
+    cumulative = plan.get('cross_volume_assessments', [])
+    expected_cumulative = {'foundation','economics-core','finance-core','graduate-qualifying',
+                           'integrated-case','research-portfolio','teaching-portfolio','leadership-portfolio'}
+    require({a['id'] for a in cumulative} == expected_cumulative
+            and len(cumulative) == len(expected_cumulative), 'Cross-volume scope differs from contract')
+    require(len({a['page'] for a in cumulative}) == len(cumulative), 'Duplicate cross-volume page')
+    cumulative_available = 0
+    for a in cumulative:
+        require(a['status'] in ('planned','draft','review','accepted'), a['id']+': invalid cross-volume status')
+        require(set(a['prerequisites']) <= set(volumes), a['id']+': unknown prerequisite volume')
+        require(a['after_volume'] in range(1,19), a['id']+': invalid print placement')
+        path = ROOT/'content'/a['manuscript']
+        if not path.is_file():
+            require(a['status']=='planned', a['id']+': non-planned cumulative package has no manuscript')
+            continue
+        cumulative_available += 1
+        require(a['status'] != 'planned', a['id']+': written cumulative package still planned')
+        body = path.read_text(); doc = Document(); doc.feed(body)
+        require(doc.headings.count('h1') == 1, a['id']+': cumulative title missing or duplicated')
+        require(set(doc.sources) <= source_ids, a['id']+': unknown cumulative source')
+        if a['status']=='accepted':
+            require(all(volumes[v]['status']=='accepted' for v in a['prerequisites']),
+                    a['id']+': cumulative acceptance before prerequisite volumes')
+            require(bool(a.get('review_record')) and (ROOT/'content'/a.get('review_record','')).is_file(),
+                    a['id']+': missing cumulative editorial review')
+            for key in a.get('required_artifacts', []):
+                require((ROOT/'content'/key).is_file(), a['id']+': missing required cumulative artifact '+key)
+        if a['id']=='foundation':
+            require({'administration','form-a','form-b','practical','oral-transfer','coverage','foundation-synthesis'} <= set(doc.ids),
+                    'Foundation missing required assessment component')
     pages = {}
     for path in DIST.glob('*.html'):
         doc = Document(); doc.feed(path.read_text()); pages[path.name]=doc
@@ -310,6 +341,36 @@ def main():
             require(target.is_file(),f'{name}: missing local target {href}')
             if url.fragment and target.name in pages:
                 require(unquote(url.fragment) in pages[target.name].ids,f'{name}: missing anchor {href}')
+    search_text = (DIST/'search-index.js').read_text()
+    prefix = 'window.MASTERY_SEARCH = '
+    require(search_text.startswith(prefix) and search_text.endswith(';\n'), 'Invalid offline search wrapper')
+    search_entries = json.loads(search_text[len(prefix):-2])
+    for entry in search_entries:
+        url = urlsplit(entry['url'])
+        require(not url.scheme and not url.netloc and (DIST/url.path).is_file(),
+                'Search target missing or external: '+entry['url'])
+        if url.fragment and url.path in pages:
+            require(unquote(url.fragment) in pages[url.path].ids, 'Search anchor missing: '+entry['url'])
+    for a in cumulative:
+        matches = [entry for entry in search_entries if entry['title']==a['title']]
+        require(len(matches)==1, a['id']+': missing/duplicate cumulative search record')
+        if matches:
+            present = (ROOT/'content'/a['manuscript']).is_file()
+            expected_url = a['page'] if present else 'assessments.html#'+a['id']
+            expected_state = 'Author-reviewed' if a['status']=='accepted' else a['status'].title()
+            require(matches[0]['url']==expected_url and matches[0]['written']==present
+                    and matches[0]['status']==expected_state, a['id']+': cumulative search state drift')
+        if (ROOT/'content'/a['manuscript']).is_file():
+            require(a['page'] in pages, a['id']+': missing cumulative reading page')
+            require(a['page'] in pages['index.html'].links and a['page'] in pages['assessments.html'].links,
+                    a['id']+': missing cumulative navigation')
+            source_doc = Document(); source_doc.feed((ROOT/'content'/a['manuscript']).read_text())
+            require(bool(source_doc.ids) and all(a['id']+'-assessment--'+anchor in pages['print.html'].ids
+                    for anchor in source_doc.ids), a['id']+': missing namespaced cumulative print content')
+    if (ROOT/'content/cross-assessments/foundation.html').is_file():
+        print_ids = pages['print.html'].ids
+        require(print_ids.index('foundation-assessment--administration') > print_ids.index('v04-assessment--volume-synthesis'),
+                'Foundation print assessment must follow Volume4 package')
     check_arithmetic()
     v02_check = check_v02_calculus()
     v02_linear_check = check_v02_linear()
@@ -336,8 +397,10 @@ def main():
         ('v04-c09', check_v04_c09), ('v04-c10', check_v04_c10),
         ('v04-c11', check_v04_c11), ('v04-c12', check_v04_c12))}
     v04_assessment_check = check_v04_assessment()
+    foundation_check = check_foundation()
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
+              'cross_volume_packages_available':cumulative_available,
               'checks':['curriculum scope','acyclic prerequisites including volume completion','chapter and assessment package structure','local links and anchors','source IDs','Volume 1 chapters 1–12 and exam arithmetic','Volume 1 project benchmark and reconciliations','Volume 2 chapters 1–4 numerical results, derivative cross-checks, quadrature and error bounds','Volume 2 chapters 5–6 exact systems, projection identities, eigenstructure, covariance, dynamics and QR reconstruction','Volume 2 chapters 7–8 derivative responses, nonlinear equilibrium roots, KKT residuals, value transitions and envelope calculations','Volume 2 chapter 9 dual certificates, separation, value subgradients and comparative statics','Accepted-volume notation/concept index and synthesis','Volume 2 chapter 10 uniform tails, fixed-point error certificates, counterexamples, spectral projectors and implicit roots','Volume 2 chapters 11–12 exact dynamics, independent ODE integration, roots/quadrature/error bounds and Bellman policy certificates','Volume 2 diagnostic, distinct exams, retention and constrained-allocation project with exact active-set/dual checks','Volume 3 chapters 1–2 weighted event laws, exhaustive sampling counts, conditional/odds updates, sequential/selected evidence and exact probability lab','Volume 3 chapters 3–4 count distributions, CDF endpoints, density quadrature and tail bounds, exact moments/covariance, portfolio and finite-population certificates, mixed laws and heavy-tail integrals','Volume 3 chapters 5–6 conditional forecast losses, triangular densities, random-sum/latent states, exact binomial tails, common-shock and convergence counterexamples, maximal-inequality terms and CLT smooth-transition checks','Volume 3 chapters 7–8 exhaustive sampling/bootstrap laws, likelihood/exposure boundaries, normal/t pivots, exact binomial tails/intervals and coverage diagnostics, power/sample-size calculations, Holm strong-control state checks and equivalence','Volume 3 chapters 9–10 exact Bayesian posterior/predictive laws, independent beta/gamma/normal integration, credible-coverage counterexample, losses/Bayes factors and prior sensitivity, insurance/utility/domain calculations, CARA-normal exposure and ambiguity/equal-moment counterexamples','Volume 3 chapters 11–12 proper losses, calibration/resolution, weighted-report and random-skill distortions, joint-state information values/garbling, information projections, dyadic/spike integrals, stopped martingale histories, heavy-tail truncation and maximal/Kronecker diagnostics','Volume 3 diagnostic, distinct exams, retention, posterior/predictive/information project, independent integration/coverage and seeded paired-score checks'],
               'volume_2_numerical_check': v02_check,
               'volume_2_linear_check': v02_linear_check,
@@ -358,8 +421,10 @@ def main():
               'volume_4_middle_checks': v04_middle_check,
               'volume_4_closing_checks': v04_closing_check,
               'volume_4_assessment_check': v04_assessment_check,
+              'foundation_assessment_check': foundation_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
-    report['checks'].extend(['Volume 4 diagnostic, distinct exam forms, delayed transfer and historical empirical project: exact arithmetic, code contracts under optimization, source-vintage reconstruction, rounding envelopes, projection identities and forecast-selection isolation',
+    report['checks'].extend(['Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package',
+        'Volume 4 diagnostic, distinct exam forms, delayed transfer and historical empirical project: exact arithmetic, code contracts under optimization, source-vintage reconstruction, rounding envelopes, projection identities and forecast-selection isolation',
         'Volume 4 chapters 9–12: temporal forecast/release selection and leakage mutations; calendar panel keys, aggregation and exact dependent shock laws; independent numerical error bounds and fault detection; frozen official BLS reconstruction, rounding grid, provenance and integrity contracts',
         'Volume 4 chapters 5–8: histogram density/ECDF/index/correlation/contrast calculations and delivered SVG coordinates; exact versus seeded Monte Carlo, replication and variance reduction; rational projection versus elimination, fit and holdout boundaries; causal standardization, assignment lotteries, mediator/collider and observational equivalence',
         'Accepted chapters require accepted prerequisites',

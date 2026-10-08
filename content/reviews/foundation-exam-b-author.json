@@ -1,0 +1,173 @@
+{
+  "assessment": "foundation-form-b",
+  "title": "Form B — Reconcile, certify and challenge the claim",
+  "date": "2026-10-07",
+  "author": "monte_carlo specialist",
+  "status": "ready-for-root-integration",
+  "assignment": "production/foundation-assignments.json",
+  "owned_files": [
+    "content/assessment-parts/foundation-form-b.html",
+    "scripts/check_foundation_exam_b.py",
+    "content/reviews/foundation-exam-b-author.json"
+  ],
+  "scope": "Original cross-volume foundation written reassessment with four25-point domains and twenty5-point parts, full solutions/rubrics and an independent standard-library arithmetic checker. No shared files, child agents, commits, build output or publication changed.",
+  "format": {
+    "minutes": 180,
+    "total_points": 100,
+    "domains": 4,
+    "parts_per_domain": 5,
+    "points_per_part": 5,
+    "closed_notes": true,
+    "calculator": "basic nonprogrammable",
+    "written_gate": "85/100 and19/25 each domain",
+    "words_including_solutions": 3366,
+    "heading": "h2#form-b",
+    "internal_id_prefix": "foundation-b-"
+  },
+  "mechanism_distinctness": [
+    "D1 uses a complete cash-versus-accrual journal and working-capital bridge, followed by early-invoice financing, nominal monthly compounding and internal-cash opportunity cost. It avoids FormA incremental-project/sunk-cost/nominal-real mechanism.",
+    "D2 uses a two-variable convex minimum, a matching dual lower certificate, a feasible-candidate gap, nonnegative/slack capacity boundaries and an exact stable capacity recurrence. It does not repeat FormA scalar contraction proof or local constrained-value calculation.",
+    "D3 combines a fully enumerated sampling-without-replacement design, exact discrete tail inference, square-root utility and bounded versus hindsight stopping. It avoids FormA Bayes-signal/value-of-information/normal-interval mechanism.",
+    "D4 uses target group weighting, within-group distortion from a tag join, an unequal-bin histogram, an input-conversion precision probe and two observationally equivalent models with opposite causal effects. It does not repeat FormA release-aware panel and simple regression dataset."
+  ],
+  "complete_part_review": [
+    {
+      "part": "1a",
+      "result": "Accrual profit4 USD; old receivable collection is not new revenue, principal is liability settlement and distribution changes equity rather than profit."
+    },
+    {
+      "part": "1b",
+      "result": "Closing cash140,receivables140,inventory220,net equipment480,supplier payables130,bank principal260,equity590 USD. Assets980 equal liabilities390 plus equity590."
+    },
+    {
+      "part": "1c",
+      "result": "Operating flow-6,investing0,financing-54 USD. Independent indirect bridge4+20-20-40+30=-6. Netcash-60 agrees with140-200."
+    },
+    {
+      "part": "1d",
+      "result": "Supplier financing1/9 over three months; bank2% monthly,6.1208% three-month effective,955.0872 USD repayment,26.824179456254536% effective annual. Financing denominator900 differs from invoice-discount denominator1000."
+    },
+    {
+      "part": "1e",
+      "result": "Quarter-end equivalent costs945 internal,955.0872 bank,1000 supplier; internal cheapest under explicit common goods/risk/feasibility/no-tax assumptions. Internal opportunity earnings45 USD are real despite no interest invoice."
+    },
+    {
+      "part": "2a",
+      "result": "Nonempty closed bounded feasible triangle is compact; continuity yields attainment. Hessian diag(2,4) positive definite and feasible convexity yield unique minimum by strict-convexity midpoint argument."
+    },
+    {
+      "part": "2b",
+      "result": "x2,y2,capacity multiplier4,nonnegativity multipliers0; all KKT signs/residuals/feasibility/complementarity valid. Objective6 squared activity units."
+    },
+    {
+      "part": "2c",
+      "result": "L at lambda4,b4 equals(x-2)^2+2(y-2)^2+6. Retained nonnegative-domain minimum6 matches primal6. Candidate(1,3) has9 and objective gap3; no automatic distance or economic-validity interpretation."
+    },
+    {
+      "part": "2d",
+      "result": "Fixed multiplier yields V(b)>=22-4b. Capacity0 forces(0,0),value34 versus bound22; capacity8 allows(4,3),value0 versus bound-10. Bound remains valid without exact finite-change interpretation."
+    },
+    {
+      "part": "2e",
+      "result": "Equilibrium4; b_t=4(1-2^-t), nonnegative monotone path from0 and globally contracting deviations under fixed recurrence. First error<=1/8 at t5, while t4 error1/4."
+    },
+    {
+      "part": "3a",
+      "result": "Six means1,5/2,9/2,7/2,11/2,7 USD; expectation4 and variance23/6 USD squared."
+    },
+    {
+      "part": "3b",
+      "result": "Single-draw variance23/2,ordered cross moment73/6,covariance-23/6 USD squared. Mean variance23/6 versus replacement23/4. Removal creates dependence."
+    },
+    {
+      "part": "3c",
+      "result": "Observed highest pair mean7 gives upper-tail p1/6. Reject at0.20,not0.05; actual null rejection probability1/6. Finite complete null design stated; p is not posterior probability."
+    },
+    {
+      "part": "3d",
+      "result": "Mean wealth17 USD,expected square-root utility4,CE16 USD,risk premium1 USD. Given utility indifferent to certain16; risk-neutral mean maximizer prefers lottery. Positive wealth/reference unit explicit."
+    },
+    {
+      "part": "3e",
+      "result": "Stopped gains1,1,0,-2 have expectation0; stopping event known at time1 and horizon bounded2. Hindsight maxima2,1,0,-1 have expectation1/2; choosing time1 depends on future epsilon2, so no optional-stopping contradiction."
+    },
+    {
+      "part": "4a",
+      "result": "Original mean9/2,group means2/12,proposed target weighted19/2 USD. Target use additionally requires within-group transport/representativeness, not merely correct population shares."
+    },
+    {
+      "part": "4b",
+      "result": "Tag join7rows,total42,mean6; joined group means3/2 and12; target reweighting75/8 still differs from19/2. Maintaining one analytical row per firm repairs within-group duplication."
+    },
+    {
+      "part": "4c",
+      "result": "Counts2,1,1;widths3,3,9;heights1/6,1/12,1/36 per USD;areas1/2,1/4,1/4. Equal-observation display retains sample group shares rather than target shares."
+    },
+    {
+      "part": "4d",
+      "result": "Original integer sum1 cent versus exact represented sum2 cents. Conversion error+1 cent; subsequent stored-value sum error0. fsum cannot restore discarded input information; original exact representation repairs arithmetic, not missing/duplicated/mislabeled economic records."
+    },
+    {
+      "part": "4e",
+      "result": "Both laws show(0,50),(1,46) equally often and admit perfect predictor50-4D. ModelA ATE-4 USD,ModelB ATE+6 USD. Intervening holds U law fixed and changes D; observed fit cannot identify that comparison."
+    }
+  ],
+  "instruction_and_assumption_review": [
+    "All methods are taught in accepted Volumes1–4. Relevant stock/flow and compounding, convex duality/compactness/dynamics, sampling/covariance/inference/utility/stopping and data/audit/identification chapters were read or revisited; earlier volume examination mechanisms were checked to avoid copying their full question structures.",
+    "Every part has all needed inputs and a complete solution with an explicit5-point allocation. All20 allocations sum correctly. Exact powers/fractions/square roots are accepted so a nonprogrammable calculator suffices; no external normal quantile or source lookup is needed.",
+    "The journal states simplified recognition and cash-flow classifications as exercise assumptions rather than claiming universal accounting standards. Financing uses a common comparison date and distinguishes opportunity cost from accrued expense.",
+    "The primal-dual argument retains nonnegativity in the dual domain, uses the minimization sign convention and proves a global lower bound; boundary examples do not assume interior KKT conditions continue to hold.",
+    "The finite-population design is explicit, fully enumerated and separate from the utility and stopping experiments. Bounded stopping is used only for adapted finite-horizon fair increments; hindsight is explicitly inadmissible.",
+    "Group weights do not silently assert representativeness. Histogram weights are declared. The numerical probe supplies represented values and distinguishes lost representation information from summation. Counterfactual laws are stipulated rather than inferred from perfect fit.",
+    "Claims are scoped to sampled foundational capabilities; no claim of comprehensive topic coverage, institutional qualification, empirical exam calibration or real-world evidence is made."
+  ],
+  "checks_run": [
+    {
+      "command": "python3 book/scripts/check_foundation_exam_b.py",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -O book/scripts/check_foundation_exam_b.py",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "command": "Quiet runpy import, direct check() call and subprocess CLI from /private/tmp",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "command": "Trailing-whitespace and fragment word-count scan",
+      "status": "passed",
+      "exit_code": 0
+    }
+  ],
+  "independent_evidence": [
+    "Checker reads the opening stocks, every transaction and firm/tag records from HTML tables. Nine separately posted double-entry journal events preserve balance after each event, independently recovering all closing stocks and retained earnings.",
+    "Operating flow is checked by cash receipts/payments and a separate profit/working-capital bridge. Financing comparisons are reconciled at future and discounted present dates with exact Fractions.",
+    "An edge-by-edge constrained minimizer independently reproduces the KKT solution.289 Lagrangian square identities and21 capacity cases check weak-duality bounds; recurrence values match the closed form and adjacent tolerance dates.",
+    "Enumerates all6 without-replacement pairs,12 ordered pairs,16 replacement pairs and4 stopping states. Exact finite-law covariance, p-values, rejection size, expected utility and hindsight differences agree.",
+    "An in-memory SQLite join independently reproduces tag multiplicity and EXISTS preserves original facts. Exact histogram shares/densities use parsed original fees. Binary64 input conversion is compared with exact integer and Fraction.from_float references.",
+    "Structure gates check four25-point domains,twenty5-point parts/allocations,four full solution groups,unique IDs,no h1,17 valid chapter routes,exam conditions and numeric answer anchors."
+  ],
+  "source_reuse": {
+    "new_external_sources": [],
+    "scope": "Only previously taught and verified stable chapter methods are reused. No new institutional/current factual claim or empirical dataset required browsing; chapter method links are supplied for remediation.",
+    "originality": "Original numerical records, financial journal, allocation/state path, inference/decision combination and causal counterexample. No external exam questions copied."
+  },
+  "root_preliminary_review": "Root reported reading all20 current solutions and independently recalculating ledger/financing, dual/capacity, sampling/stopping, join/bin and observational-equivalence results with no material correction identified.",
+  "reviewed_sha256": {
+    "content/assessment-parts/foundation-form-b.html": "43358ab9053ee0cea5a968d943229d3e2e2ef6cd2d36c3b9ef3982e06cd7c16f",
+    "scripts/check_foundation_exam_b.py": "998f06086f4549b91aac2dd81b99b7755d95ae910e930bb4b3697fdb9724df6c"
+  },
+  "findings": [],
+  "limitations": [
+    "Author review and independent calculation routes are not external human certification.",
+    "The180-minute time allowance and score gates have not been empirically calibrated.",
+    "The floating probe is conditional on the explicitly declared binary64 environment; the checker verifies its significand assumptions before using it.",
+    "Finite numerical checks do not establish arbitrary altered programs or economic assumptions. No visual/mobile/print UI QA was performed.",
+    "Root owns final cross-volume composition, independent acceptance and publication."
+  ],
+  "handoff": "Complete assigned Form B package ready for root integration. Only its three owned files were written."
+}

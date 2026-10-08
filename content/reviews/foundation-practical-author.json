@@ -1,0 +1,61 @@
+{
+  "assessment": "foundation-practical",
+  "title": "A repair desk's records and equipment choice",
+  "status": "review",
+  "reviewer": "Specialist author; submitted to root for independent review and integration",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "scope": "Complete original foundation basic data-analysis practical: four 25-point essential domains, five 5-point parts in each, all twenty instructor answers with per-part scoring, source snapshot/dictionary/manifest, standard-library benchmark and preserved output, README, independent checker and limitations. All records, scenario timestamps, probabilities and financial laws are explicitly synthetic.",
+  "review": {
+    "prerequisite_sufficiency_and_originality": "Uses accepted methods from stock-flow and balance-sheet reasoning, opportunity cost and present value, linear systems/projection, expectation/variance/risk-neutral decisions, provenance, chronological prediction, simulation and numerical audits. Relevant accepted chapter sections and prior volume assessment mechanisms were reviewed for sufficiency and overlap. The case is newly authored, combines a nine-event one-day ledger with revision-aware operating records and a persistent two-year state law, and does not reuse the BLS project or copy an external exam. It is a bounded basic practical, not a claim to assess every method in Volumes 1–4. No new unresolved external factual or empirical claim required source retrieval.",
+    "source_and_timing": "Record-level JSON is the authoritative original synthetic snapshot; source notes explain every field, recognition rule, unit and exclusion. All feature/release instants use explicit UTC. Origin is 8 April 2025 12:00, saved snapshot 12 April 12:00. Four training cost labels are available at origin; D3's later 11 April revision is preserved but excluded. Both future scheduled job counts are known by origin. D5's first cost arrives by scoring, while D6 remains active and unreported with no cost versions. Zero D1 cost is an observed value, not missingness. No unavailable target is imputed, scored as zero or silently dropped from a claimed complete-target mean.",
+    "economic_reconciliation": "Opening assets 3300 USD equal liabilities 800 plus equity 2500. Nine supplied events give profit 350, operating cash 300 and financing cash 330, so cash rises from 2000 to the independent supplied statement's 2630. Closing receivables 400, equipment 1000, payables 250, loan 1050 and equity 2730 give assets 4030 equal liabilities 1300 plus equity 2730. The independent profit-to-operating-cash bridge is 350 minus receivables increase 100 plus payables increase 50 = 300. Borrowing, principal and owner withdrawal are correctly distinguished from revenue/expense. The separate operating sample is not added to the 7 April ledger. The unexecuted capital proposal is not inserted into the historical cash statement.",
+    "mathematics": "Origin-eligible x=(0,1,2,3), y=(0,4,4,10) gives centered sums Sxx=5 and Sxy=15, or a normal-equation determinant of 20. OLS intercept 0 and slope 3 USD/job; residuals (0,1,-2,1), both orthogonality sums zero, SSE 6 USD-squared, TSS 51, R-squared 15/17. Fit is descriptive; forecast targets at jobs 4 and 5 extrapolate beyond training support. Later-version diagnostic fit has intercept 2/5 and slope 17/5, but cannot replace the earlier frozen fit. Expected NPV(C)=2592/5-C proves a strictly decreasing price relationship and break-even 518.4, tighter than cash ceiling 630; equality defers. High-state probability threshold is 53/72. Independent terminal-value calculations reproduce state NPVs.",
+    "decision_and_uncertainty": "Capital price 500, effective annual nominal rate 25 percent and nominal year-end net benefits 400 or 200 give state NPVs 76/-212 USD. Supplied probabilities 4/5 and 1/5 yield expected NPV 92/5, variance 331776/25 USD-squared, SD 576/5 USD and loss probability 1/5. Expected regrets buy/defer are 212/5 and 304/5 USD, comparing both payoff alternatives before cash feasibility. The benchmark separately enforces the reserve. At price 500 cash becomes 2130 and buy is feasible; at 520 cash 2110 remains feasible but expected NPV -8/5 implies defer. The state persists through both years. This is a stipulated risk-neutral law, not a probability estimate, observed machine-effect distribution or causal claim.",
+    "simulation": "One local Random(40517) instance generates 400 successive integer-ticket draws, one whole two-year project state per replication. On recorded CPython 3.14.6, counts are high 327/low 73, mean 586/25 USD, error 126/25 against the exact expectation, estimated MCSE 5.56905305053734 USD and theoretical MCSE 5.76 USD. Single-project risk SD 115.2 is kept distinct. Full-state replication preserves annual dependence. Simulation does not select the action or estimate model probabilities; exact enumeration supplies the answer. Stream portability limits for higher-level random routines are documented. HTML/README now explicitly prohibit accidental reseeding inside the loop.",
+    "prediction_and_identification": "Frozen forecasts are D5 12 USD and D6 15. D5 observed first-release cost 15 gives error 3 and squared loss 9; D6 actual/error/loss remain null. Available-subset MSE is 9 from one score, not the unknown two-target MSE or an identified population accuracy measure. Hypothetical new D6 first release 18 makes two losses of 9 and unchanged MSE with changed coverage; original coefficients and capital law remain fixed. The later D3 revision produces a retrospective D5 prediction 14 and error 1, correctly labeled inadmissible for the earlier origin. Projection identities, model savings and more simulations are not causal evidence; proposed real inference requires relevant data and an identified comparison/design.",
+    "assessment_quality": "Twenty original five-point prompts are paired with complete determinate answers, explicit 5-point suballocations and criteria for open explanations. Four essential domains match the persisted foundation scope. The practical states 85/100 and 19/25 per domain, critical-error repair and separate oral transfer. The 3–5-hour time is an author planning estimate, not a calibrated claim. Learners submit executable work and independent checks; merely running the supplied answer is insufficient. A bounded memo and changed-input tasks assess transfer. Flat downloads and accepted-method chapter routes are present. No figure or visual rendering is claimed as reviewed.",
+    "implementation": "Strict root/nested schemas, canonical dates/protocol/IDs, integer-money validation excluding bool, bounded list sizes, ordered version histories, post-observation release times, origin-available features and complete required training labels. Explicit exceptions persist under -O. Rational probabilities sum exactly to one; one state supplies both payments. Ledger posting checks every balance identity and nonnegative stocks, then independently compares reported closing cash. Required source files are fingerprinted; quiet import and script-relative default directory support offline reproduction. Input bytes remain unchanged. JSON output stores exact rational results, floating displays and runtime/file metadata. Cash discrepancies return exit3; invalid inputs exit1; usage exit2. The preserved output matches current program hash.",
+    "source_policy": "No external real data or new source record is required. Inputs and prose are original synthetic teaching material. The practical links accepted chapter methods, explicitly avoids legal-accounting-standard and market-rate claims, and distinguishes local hashes from authenticity, completeness and economic truth. Only assigned foundation paths were written; no central curriculum, source catalogue, assembly, build/checkpoint, hosting or publication mutation performed."
+  },
+  "artifacts": [
+    "content/assessment-parts/foundation-practical.html",
+    "content/projects/foundation-practical-data.json",
+    "content/projects/foundation-practical-source.txt",
+    "content/projects/foundation-practical-manifest.json",
+    "content/projects/foundation-practical-analysis.py",
+    "content/projects/foundation-practical-benchmark.json",
+    "content/projects/foundation-practical-README.txt",
+    "scripts/check_foundation_practical.py"
+  ],
+  "validation": {
+    "command": "python3 book/scripts/check_foundation_practical.py",
+    "result": "passed",
+    "runtime": "CPython 3.14.6",
+    "api": "check() returns status/checks/limitations; standalone execution prints JSON.",
+    "independence": "Independent signed-flow and profit-to-cash calculations; determinant normal-equation solution instead of centered coefficient formula; state-by-year discounting instead of the production annuity; raw-moment variance and count-weighted sample variance instead of per-draw centered accumulation.",
+    "checks": [
+      "All ledger/profit/stock identities, independent bank reconciliation and every determinate solution",
+      "OLS coefficients/fits/residuals/SSE/TSS/R-squared, late-version diagnostic and observed-zero/missing-value behavior",
+      "Late revision and future-target mutations leave frozen origin predictions intact; hypothetical D6 release changes score coverage correctly",
+      "Exact two-state expectation/variance/regret table, thresholds, terminal-value check, 520-price transfer, exact tie and binding cash-reserve case",
+      "Simulation counts and moments reconcile; estimated/theoretical MCSE and run-size scaling independently verified",
+      "18 schema/unit/key/time/version/probability invalid cases rejected in both normal and optimized CLI runs, plus duplicate/nonfinite JSON rejection",
+      "Changed loan receipt produces a 10-USD bank discrepancy despite a balanced balance sheet; hash drift and exit3 behavior verified",
+      "Quiet import, unchanged inputs, default execution from unrelated directory, usage/missing-file errors and preserved-report/program-hash equivalence",
+      "Owned fragment IDs, 20 prompts/20 answers, six flat downloads, accepted-method routes and stated mastery gates"
+    ]
+  },
+  "root_review_corrections": [
+    "Labeled expected regret as the unconstrained payoff comparison, with cash feasibility imposed separately in the decision; also exercised an infeasible changed-reserve case in the checker.",
+    "Clarified that the seeded simulator initializes one generator and then makes 400 successive calls, avoiding wording that could suggest reseeding every replication."
+  ],
+  "limitations": [
+    "All values and dates are invented scenario inputs. Exact arithmetic and successful code execution do not verify real demand, probability, savings, accounting completeness or a causal effect.",
+    "One scored future cost cannot establish general predictive quality, the missing target's loss or a reliable empirical uncertainty interval.",
+    "Monte Carlo diagnostics measure computation under a fixed supplied model, not sampling uncertainty in estimated real-world parameters; persistent project risk remains.",
+    "Finite tests and review are not proof against every modified implementation or independent human certification. Root retains assembly, editorial acceptance and publication.",
+    "No visual/mobile/print UI QA, learner timing calibration or browser-security workaround was performed."
+  ],
+  "acceptance": "Complete assigned practical package submitted in review state for root integration and acceptance."
+}

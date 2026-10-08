@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "case_id": "synthetic_repair_desk_foundation",
+  "provenance": "Original synthetic teaching records created 2026-10-07; scenario dates are fictional, with no actual firm or measured economic evidence.",
+  "currency": "USD",
+  "money_unit": "cent",
+  "snapshot_at": "2025-04-12T12:00:00Z",
+  "forecast_origin": "2025-04-08T12:00:00Z",
+  "ledger_date": "2025-04-07",
+  "opening_balances_cents": {
+    "cash": 200000,
+    "receivables": 30000,
+    "equipment": 100000,
+    "payables": 20000,
+    "loan": 60000,
+    "equity": 250000
+  },
+  "ledger": [
+    {
+      "transaction_id": "L1",
+      "kind": "collect_opening_receivable",
+      "amount_cents": 20000
+    },
+    {
+      "transaction_id": "L2",
+      "kind": "invoice_current_services",
+      "amount_cents": 90000
+    },
+    {
+      "transaction_id": "L3",
+      "kind": "collect_current_receivable",
+      "amount_cents": 60000
+    },
+    {
+      "transaction_id": "L4",
+      "kind": "pay_current_operating",
+      "amount_cents": 40000
+    },
+    {
+      "transaction_id": "L5",
+      "kind": "expense_on_credit",
+      "amount_cents": 15000
+    },
+    {
+      "transaction_id": "L6",
+      "kind": "pay_opening_supplier",
+      "amount_cents": 10000
+    },
+    {
+      "transaction_id": "L7",
+      "kind": "borrow",
+      "amount_cents": 50000
+    },
+    {
+      "transaction_id": "L8",
+      "kind": "repay_principal",
+      "amount_cents": 5000
+    },
+    {
+      "transaction_id": "L9",
+      "kind": "owner_withdrawal",
+      "amount_cents": 12000
+    }
+  ],
+  "reported_closing_cash_cents": 263000,
+  "operations": [
+    {
+      "record_id": "D1",
+      "period": "2025-04-01",
+      "active": true,
+      "scheduled_jobs": 0,
+      "feature_available_at": "2025-03-31T12:00:00Z",
+      "cost_releases": [
+        {
+          "version": 1,
+          "released_at": "2025-04-02T09:00:00Z",
+          "cost_cents": 0
+        }
+      ],
+      "missing_reason": null
+    },
+    {
+      "record_id": "D2",
+      "period": "2025-04-02",
+      "active": true,
+      "scheduled_jobs": 1,
+      "feature_available_at": "2025-04-01T12:00:00Z",
+      "cost_releases": [
+        {
+          "version": 1,
+          "released_at": "2025-04-03T09:00:00Z",
+          "cost_cents": 400
+        }
+      ],
+      "missing_reason": null
+    },
+    {
+      "record_id": "D3",
+      "period": "2025-04-03",
+      "active": true,
+      "scheduled_jobs": 2,
+      "feature_available_at": "2025-04-02T12:00:00Z",
+      "cost_releases": [
+        {
+          "version": 1,
+          "released_at": "2025-04-04T09:00:00Z",
+          "cost_cents": 400
+        },
+        {
+          "version": 2,
+          "released_at": "2025-04-11T09:00:00Z",
+          "cost_cents": 800
+        }
+      ],
+      "missing_reason": null
+    },
+    {
+      "record_id": "D4",
+      "period": "2025-04-04",
+      "active": true,
+      "scheduled_jobs": 3,
+      "feature_available_at": "2025-04-03T12:00:00Z",
+      "cost_releases": [
+        {
+          "version": 1,
+          "released_at": "2025-04-05T09:00:00Z",
+          "cost_cents": 1000
+        }
+      ],
+      "missing_reason": null
+    },
+    {
+      "record_id": "D5",
+      "period": "2025-04-09",
+      "active": true,
+      "scheduled_jobs": 4,
+      "feature_available_at": "2025-04-08T09:00:00Z",
+      "cost_releases": [
+        {
+          "version": 1,
+          "released_at": "2025-04-10T09:00:00Z",
+          "cost_cents": 1500
+        }
+      ],
+      "missing_reason": null
+    },
+    {
+      "record_id": "D6",
+      "period": "2025-04-10",
+      "active": true,
+      "scheduled_jobs": 5,
+      "feature_available_at": "2025-04-08T09:00:00Z",
+      "cost_releases": [],
+      "missing_reason": "not_reported_by_snapshot"
+    }
+  ],
+  "forecast_protocol": {
+    "training_ids": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "target_ids": [
+      "D5",
+      "D6"
+    ],
+    "fit": "intercept OLS on origin-available latest cost, in USD",
+    "forecast_mode": "one frozen fit at the declared origin",
+    "score_target": "first-release cost available by snapshot; missing stays unscored"
+  },
+  "investment": {
+    "price_cents": 50000,
+    "minimum_cash_reserve_cents": 200000,
+    "annual_effective_nominal_rate": "1/4",
+    "years": [
+      1,
+      2
+    ],
+    "annual_foregone_rent_cents": 5000,
+    "states": [
+      {
+        "state": "high",
+        "probability": "4/5",
+        "annual_gross_savings_cents": 45000
+      },
+      {
+        "state": "low",
+        "probability": "1/5",
+        "annual_gross_savings_cents": 25000
+      }
+    ],
+    "persistence": "one state determines both annual payments",
+    "preference": "risk neutral; maximize expected discounted incremental USD; tie defer"
+  },
+  "simulation": {
+    "replications": 400,
+    "seed": 40517,
+    "sampling": "one iid two-year project state per replication; exact integer tickets"
+  }
+}
