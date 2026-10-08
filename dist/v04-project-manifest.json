@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "dataset_id": "bls_a1_total_feb_jul_2024_retrospective",
+  "source_inspection_date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "capture_method": "Manual transcription from two fully inspected archived Table A-1 headers and TOTAL rows; no original webpage-byte archive.",
+  "sources": {
+    "2024-07-05": "https://www.bls.gov/news.release/archives/empsit_07052024.htm",
+    "2024-08-02": "https://www.bls.gov/news.release/archives/empsit_08022024.htm"
+  },
+  "access": "Both archived HTML sources retrieved without account/payment through the web retrieval service.",
+  "public_use_url": "https://www.bls.gov/opub/copyright-information.htm",
+  "public_use_basis": "Attributed minimal BLS numeric extract, public domain under the official publication statement; no images or emblem.",
+  "hash_scope": "Local transcription and structured data bytes only, not official authenticity.",
+  "protocol": {
+    "target": "published_unemployment_percent",
+    "train_months": [
+      "2024-02",
+      "2024-03",
+      "2024-04"
+    ],
+    "validation_month": "2024-05",
+    "test_months": [
+      "2024-06",
+      "2024-07"
+    ],
+    "selection_loss": "squared error in percentage points squared",
+    "tie_break": "naive",
+    "updating": "expanding history; one-step ahead; no test reselection",
+    "vintage_scope": "retrospective assembled series"
+  },
+  "protocol_timing": "Teaching protocol specified with historical outcomes already known, not a preregistration or real-time historical backtest.",
+  "sha256": {
+    "v04-project-data.json": "b7f421167c969806d078bb5e352d7004351b7a7636336a37f61b55730b9c158f",
+    "v04-project-source-extract.txt": "b9d1c548ecc3b57cdbb790f29db5abb304db7c407b409c5e76b11febac7952e0"
+  }
+}

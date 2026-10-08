@@ -1,0 +1,77 @@
+{
+  "assessment": "v04-form-a",
+  "title": "Form A — Audit the route from records to decisions",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "state": "review",
+  "review_type": "Specialist author numerical, computational, reasoning and assessment-design review; root independently audits and alone integrates/accepts",
+  "assignment": "production/v04-assessment-assignments.json",
+  "owned_artifacts": [
+    "content/assessment-parts/v04-form-a.html",
+    "scripts/check_v04_exam_a.py",
+    "content/reviews/v04-exam-a-author.json"
+  ],
+  "format": {
+    "minutes": 180,
+    "conditions": "Closed notes and solutions; basic nonprogrammable calculator; written code or unambiguous pseudocode permitted without execution",
+    "domains": 5,
+    "points_per_domain": 20,
+    "parts_per_domain": 4,
+    "points_per_part": 5,
+    "total_points": 100,
+    "fragment_heading": "h2#form-a",
+    "inner_id_prefix": "v04-a-"
+  },
+  "reviewed": {
+    "reasoning": "Reviewed all twenty prompts against their solutions and scoring. Preserved the distinction between inactive and unknown active records, nominal discounting and period deflation, input representation and arithmetic accumulation error, projection fit and causal/forecast evidence, paired Monte Carlo error and identification, label maturity and release, and fixed-vintage target reproduction versus accidental numerical agreement.",
+    "instruction": "Every numerical input and necessary binary64 convention is supplied. All required methods are taught in accepted Volume 4 chapters and earlier prerequisites. The exam asks for derivations, arithmetic, executable contract design, visual-scale calculations and evidence-based critiques. No unexplained inferential estimator, statistical test, proprietary application or external data retrieval is required.",
+    "originality": "Original cumulative cases rather than copied source exercises: missing branch sales become a company-change threshold; working-capital timing reconciles a zero-NPV shortcut; converting opening/closing levels changes an approval decision; two chart aspect ratios alter apparent steepness while preserving the fitted data; a model comparison is contrasted with a separate observational standardization target; an unavailable mature label reverses model selection and an incorrect denominator accidentally matches a later release. Form B's separately allocated mechanisms remain outside this form's principal tasks.",
+    "solutions": "All five questions have four matched lettered worked solutions with explicit five-point rubrics. Each domain totals twenty and the exam totals one hundred. Open responses identify concrete acceptable criteria. Follow-through credit is specified without awarding interpretation points for incorrect units, populations or information sets. D3's global-minimum argument expands the squared-error difference and establishes uniqueness from varying x, rather than merely asserting the normal equations suffice.",
+    "sources": "Reused stable, previously verified methods from accepted v04-c01 through v04-c12 and linked all twelve chapters. No new external empirical or institutional assertion was introduced; therefore no additional browsing or source proposal is needed. All numerical populations, commercial facts, simulation laws and mock release extracts are explicitly synthetic. The labor-force denominator follows the definitions already taught in c12; the example is not labeled as an actual official observation.",
+    "structure": "Static HTML fragment contains h2#form-a, five question groups, twenty five-point parts, twenty matching solutions, twenty scoring paragraphs, captioned data tables, a complete validator snippet and uniquely prefixed IDs. No h1, framework, download dependency or remote asset was introduced. Shared build, curriculum, source catalogue, status and publication are root-owned and untouched."
+  },
+  "independent_results": {
+    "D1": "January real sales 660 USD; February observed real subtotal 550; full February total 550+(10/11)m with unchanged-company threshold m=121 nominal USD. R's real growth is zero, while the company change is unidentified. Cash flows -500,220,342 at months0,1,2 give NPV -2100/121 USD; terminal-value calculation and isolated working-capital PV agree.",
+    "D2": "Exact integer net1 cent versus floating net2 cents. Representation error+1 cent and further subtraction error0. Accurate summation of converted values cannot recover the lost integer. A 0.25-cent absolute error budget rejects the faulty result and the two results fall on opposite sides of the >=2-cent decision threshold. The manuscript validator accepts four valid boundary/transfer cases and rejects46 malformed/type/unit/bound cases without mutation in both normal and optimized Python.",
+    "D3": "Normal-equation determinant yields intercept10, slope2 and residuals0,1,-2,1; both orthogonality equations vanish. SSE6, SST26, explained centered sum20, R-squared10/13. Twenty-five rational coefficient perturbations satisfy the exact objective decomposition. Chart pixel slopes1/5 and4/5; point(2,12) maps to(200,120) and(100,60) from left/bottom. Minute slope1/30 and eight-hour prediction26.",
+    "D4": "Simulation difference mean5USD, paired covariance600USD squared, marginal variances600 and650, paired variance50, independent-comparison variance1250. Four hundred paired replications give MCSE sqrt(1/8), while400 independent comparisons give sqrt(25/8);10,000 independent comparisons match paired variance. Register crude contrast500/21 USD/day and target-standardized contrast5/2 USD/day. Full finite-population overlap is acknowledged separately from exchangeability and other populations/designs.",
+    "D5": "Only January/February validation labels are available on1May; March has matured but is unreleased until31May end. Eligible MSEs A1/B0 chooseB; leaked March gives A1/B100/3 and switches choice. Final MSE B4 versus A1, fully computable after31August release. Correct archived/revised unemployment rates20%/15%; archived U/P also gives15% with the wrong denominator, demonstrating that numerical coincidence is insufficient."
+  },
+  "validation": {
+    "commands": [
+      "python3 book/scripts/check_v04_exam_a.py",
+      "python3 -O book/scripts/check_v04_exam_a.py"
+    ],
+    "result": "passed",
+    "integration_api": "check() returns status, checks, results and limitations; standalone execution emits JSON and exits unsuccessfully on an audit failure",
+    "independent_paths": [
+      "Read actual manuscript sales, OLS, causal and timing tables rather than maintaining unconnected duplicate tables",
+      "Use terminal-value accumulation as a separate path to the time-0 cash-flow result",
+      "Execute the manuscript's exact validator text under normal and -O Python; retain explicit checking exceptions under optimization",
+      "Use exact Fraction representations to separate float conversion error from subsequent arithmetic error",
+      "Solve OLS by normal-equation determinants independently of the manuscript's centered-sum derivation and obtain SST with pairwise differences",
+      "Reconstruct pixel transforms directly from declared plotting dimensions and ranges",
+      "Enumerate all nine independent policy-state combinations and all nine two-replication paired means; compute variances by pairwise identities",
+      "Compute standardized policy means separately before differencing, and derive maturity/release dates independently from calendar month indexes"
+    ]
+  },
+  "corrections": [
+    {
+      "severity": "clarity",
+      "location": "v04-a-s4d",
+      "finding": "Root's full manuscript review noted that the entire200-store target register has nonempty cells, which establishes finite-population observed overlap; a generic statement that observed cells cannot establish population support was too broad in this stated case.",
+      "resolution": "Explicitly acknowledged positive observed policy shares in every finite-target stratum and separated those shares from exchangeability, support in another deployment population and positivity under another assignment design."
+    }
+  ],
+  "unresolved_findings": [],
+  "limitations": [
+    "This is internal author/root review, not independent human academic certification or empirical learner validation of timing/difficulty.",
+    "Numerical checks do not establish unobserved causal assumptions, source authenticity, completeness of a real ledger or future predictive accuracy.",
+    "All data are synthetic and the release records are instructional mock extracts; no actual policy effect or empirical replication is claimed by the exam itself.",
+    "The code stress case assumes the supplied binary64 rounding convention. Other numerical formats can differ.",
+    "Spreadsheet formulas were checked algebraically rather than executed in a spreadsheet application.",
+    "No visual/mobile/print UI inspection was performed; the prior browser-policy restriction remains respected.",
+    "Root retains whole-volume integration, cross-form distinctness, mastery gates, structural build, final acceptance and publication responsibilities."
+  ],
+  "handoff": "Complete bounded Form A package ready for root integration and final review. No central state, other assignment, commit or publication was changed."
+}

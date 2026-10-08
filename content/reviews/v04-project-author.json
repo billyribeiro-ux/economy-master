@@ -1,0 +1,64 @@
+{
+  "project": "v04-project",
+  "title": "Six months, two archives and three kinds of claim",
+  "status": "review",
+  "reviewer": "Specialist author, submitted for root independent review and volume integration",
+  "date": "2026-10-07",
+  "edition_boundary": "2026-10-06",
+  "scope": "Full original Volume 4 integrative empirical project with actual historical source inputs, executable offline reconstruction, descriptive OLS, fixed chronological teaching forecast comparison, conditional rounding uncertainty, causal critique, concrete two-panel chart task, complete instructor benchmark and a five-domain 100-point rubric.",
+  "source_contract_correction": {
+    "finding": "The archived 2 August 2024 Table A-1 contains SA July 2023 and March–July 2024, not February–July. Its complete header was inspected before project transcription.",
+    "resolution": "Root approved and persisted February 2024 from the 5 July archived Table A-1, plus March–July from 2 August. All rows retain their actual source-release date. The project explicitly describes a retrospective assembly and period-index teaching origins, not a single release vintage or contemporaneous forecast backtest.",
+    "inspection": "Both full nine-column headers, selected TOTAL rows and footnotes inspected. February is numeric column 5 in the 5 July release; March–July are columns 5–9 in the 2 August release. Overlapping March–June selected values and rates agree, without claiming that all earlier first-release values or information sets were reconstructed. Root separately confirmed the source correction and the selected source values."
+  },
+  "review": {
+    "provenance": "Manual attributed numeric extract from two successfully retrieved primary archived BLS releases; no original HTML download or original-source-byte hash claimed. Local extract and structured JSON have a SHA-256 manifest. Access route, actual release dates, 2026 inspection date, population, geography, units, adjustment scope and official public-use basis are recorded. The source copy and analysis JSON share a transcription origin; their agreement is not independent empirical corroboration. No real observations were invented or modified to force accounting identities. The source population is not seasonally adjusted even though it appears in the selected SA block, as the source footnote specifies.",
+    "reconstruction": "All eighteen reconstructed unemployment, participation and employment/population percentages round to the official one-decimal displays. Exact fractions are preserved beside convenient decimal approximations. April has labor-force residual -1 thousand and population residual +1 thousand; June has labor-force residual -1 thousand; all other nine residuals are zero. The rate identity gap is exactly 100(E-L+U)/P, positive only in April and June. These are preserved and interpreted conditionally under half-thousand component rounding, not silently repaired or generalized to every independently adjusted subgroup.",
+    "regression": "Published one-decimal unemployment rates [3.9,3.8,3.9,4.0,4.1,4.3] percent are explicitly fixed as the modeling target, distinct from reconstructed rounded-level ratios. Intercept OLS on month indices 1 through 6 gives a=37/10, b=3/35 percentage point per month, SSE=11/350 percentage points squared, TSS=4/25, explained sum of squares=9/70 and R-squared=45/56. Fitted values and residuals are reported exactly. Residual sum and time-weighted residual sum are zero. The full-sample fit is descriptive and never enters forecast selection; no causal interpretation or unjustified standard error is supplied.",
+    "forecasting": "Fixed first-three training, May validation and June/July test split. Naive and endpoint drift both predict May3.9 percent with squared error1/100; an exact tie selects naive before test. Each test forecast uses expanding past history, so June's observation may enter July's forecast but neither target may enter its own. Naive test MSE is1/40; unselected drift diagnostic MSE is97/7200. Both rules' complete tables are retained and the lower test loss does not change selection. This is a known-historical-outcome teaching design, not preregistration, real-time evaluation or evidence of general superiority from two errors.",
+    "uncertainty": "Monotone numerator/denominator bounds under half-thousand rounding produce deterministic outer envelopes. Related inputs may make some rectangular corners unattainable; conservativeness and absence of an independence assumption are stated. February-to-July reconstructed change is0.3956040933829503 percentage point, inside the conditional interval [0.3949844487916876,0.3962237379591878]. The positive bound addresses display rounding only. Survey design, weights, covariance across months, measurement and revision uncertainty are not reproduced. Population-estimate counts are not treated as iid sample sizes, and no confidence level is attached to the rounding calculation.",
+    "causal_critique": "Distinguishes descriptive slope, forecast score and identified policy effect. Time is not treated as a randomized intervention. The illustrative future counseling-offer study explicitly changes the unit and outcome, states treatment/timing/comparison and requires justified assignment, consistency, interference scope and follow-up; observational alternatives require exchangeability and overlap. Post-offer search effort is identified as a potential mediator whose adjustment changes the total-effect question. Alternative well-specified proposals receive rubric credit; the six aggregate rows are not represented as identifying their effects.",
+    "instruction_and_assessment": "Self-contained open-resource instructions, six-record data dictionary/table, exact formulas, execution commands, required report/ledger/discrepancy/failure deliverables, independent calculation requirement and complete instructor interpretation guide. The chart task specifies two panels, time positions, published/fitted/selected-forecast series, percent units, visible3.5–4.5 vertical scale,0.25-point ticks, phase labels and source/vintage caption. Exact chart values are supplied in JSON; no decorative image or unreviewed generated chart is introduced. Rubric allocates100 points across five20-point essential domains, with four concrete5-point criteria each and explicit critical-error remediation. Root requested narrower opening wording, now corrected to drawing on this volume's methods instead of implying every chapter's technique appears in this one project.",
+    "implementation": "Standard-library Python, explicit strict schema/type/key/order/vintage/denominator validation, duplicate/nonfinite JSON rejection, source/protocol/manifest identity validation and local hash checks. Source text independently parsed and compared to structured input. Exact Fraction OLS and forecast arithmetic with persistent normal-equation gates; declared nearest-tenth display rule. Output contains all audits, rounding bounds, projection details, chart values, forecasts/scores and file/runtime metadata. Inputs unchanged; default path relative to script; optional explicit directory; no network or installation. Normal and -O execution preserve behavior. Preserved output matches the current program fingerprint.",
+    "structure": "Single project fragment begins with h2 id=project; all other IDs have v04-project prefix. Six flat download links follow the shared build convention. Two new scoped primary-source IDs support expanded archive inspection; existing v04-c12-cps-definitions and v04-c12-public-use IDs are explicitly reused. No edits to c12, other assignments, canonical assessment, shared state/build scripts or hosting."
+  },
+  "artifacts": [
+    "content/assessment-parts/v04-project.html",
+    "content/projects/v04-project-source-extract.txt",
+    "content/projects/v04-project-data.json",
+    "content/projects/v04-project-manifest.json",
+    "content/projects/v04-project-analysis.py",
+    "content/projects/v04-project-benchmark.json",
+    "content/projects/v04-project-README.txt",
+    "scripts/check_v04_project.py",
+    "content/reviews/v04-project-sources.json"
+  ],
+  "validation": {
+    "command": "python3 book/scripts/check_v04_project.py",
+    "result": "passed",
+    "runtime": "CPython 3.14.6",
+    "integration_api": "check() returns a status/checks/limitations dictionary; standalone execution emits JSON.",
+    "independence": "Checker uses a separately recorded full-header official-value table, 70-digit Decimal rate/envelope calculations, exact 2x2 normal-equation elimination rather than centered OLS coefficients, and average successive increments rather than the endpoint expression for drift. Fixtures and expected fractions are independent of the production routines under test.",
+    "checks": [
+      "Six source records,48 numerical fields and exact per-row release metadata",
+      "Eighteen rate displays,162 bounded rounding perturbations, twelve count identities, six rate identities and endpoint-change bounds",
+      "Exact normal-equation coefficients, fitted/residual/SS/R-squared identities and perfect-fit, constant and rank-deficient boundary cases",
+      "Six complete forecast rows, both MSEs, exact validation tie, fixed selection, non-tie drift selection and inadequate-history rejection",
+      "Four future-target mutations leave selection and earlier forecasts unchanged; June may affect July only through the declared updating history",
+      "A deliberately leaked target-as-forecast fails the independent validation-loss fixture",
+      "Invented June denominator error preserves displayed unemployment4.1 but produces99/-100-thousand residuals and a numerical-mismatch report",
+      "Eighteen invalid contracts rejected in normal and -O CLI runs; duplicate/nonfinite JSON rejected",
+      "Hash drift, source-copy disagreement, protocol/tie drift, numerical exit3, usage and missing-file errors, unrelated-directory execution and input nonmutation",
+      "Current preserved output/program fingerprint, fragment ownership IDs, six flat downloads, source alignment and complete rubric/instructor structure"
+    ]
+  },
+  "limitations": [
+    "Manual source inspection and local reference transcription are documented but do not provide an original webpage-byte archive or cryptographic official authenticity.",
+    "The combined two-release series does not reconstruct information available at real historical forecast dates. The protocol was designed with historical answers known.",
+    "All arithmetic concerns a small descriptive aggregate package; BLS survey estimation, seasonal factors, standard errors and causal effects are not reconstructed.",
+    "Input-rounding bounds are deterministic conditional sensitivity analyses, not survey confidence intervals. Six time observations and two dependent test errors cannot establish broad predictive superiority.",
+    "Author computations are not independent human certification or proof of every possible modified implementation. Root retains volume-level integration, editorial acceptance and publishing.",
+    "No visual/mobile/print UI QA was performed or claimed; no browser-security workaround attempted. The learner's chart is an assessed deliverable with explicit targets, not a claimed inspected rendering."
+  ],
+  "acceptance": "Complete specialist project submitted in review state for root integration and acceptance."
+}

@@ -1,0 +1,815 @@
+{
+  "all_18_rate_displays_match": true,
+  "chart_values": [
+    {
+      "month": "2024-02",
+      "ols_fitted_percent": {
+        "approx": 3.7857142857142856,
+        "exact": "53/14"
+      },
+      "published_unemployment_percent": "3.9",
+      "time_index": 1
+    },
+    {
+      "month": "2024-03",
+      "ols_fitted_percent": {
+        "approx": 3.8714285714285714,
+        "exact": "271/70"
+      },
+      "published_unemployment_percent": "3.8",
+      "time_index": 2
+    },
+    {
+      "month": "2024-04",
+      "ols_fitted_percent": {
+        "approx": 3.9571428571428573,
+        "exact": "277/70"
+      },
+      "published_unemployment_percent": "3.9",
+      "time_index": 3
+    },
+    {
+      "month": "2024-05",
+      "ols_fitted_percent": {
+        "approx": 4.042857142857143,
+        "exact": "283/70"
+      },
+      "published_unemployment_percent": "4.0",
+      "time_index": 4
+    },
+    {
+      "month": "2024-06",
+      "ols_fitted_percent": {
+        "approx": 4.128571428571429,
+        "exact": "289/70"
+      },
+      "published_unemployment_percent": "4.1",
+      "time_index": 5
+    },
+    {
+      "month": "2024-07",
+      "ols_fitted_percent": {
+        "approx": 4.214285714285714,
+        "exact": "59/14"
+      },
+      "published_unemployment_percent": "4.3",
+      "time_index": 6
+    }
+  ],
+  "chronological_pedagogical_forecasts": {
+    "scope": "Retrospective one-step updating exercise on known historical values; test outcomes never reselect the rule.",
+    "selected_rule": "naive",
+    "selected_rule_test_mse_pp2": {
+      "approx": 0.025,
+      "exact": "1/40"
+    },
+    "test": [
+      {
+        "actual_percent": {
+          "approx": 4.1,
+          "exact": "41/10"
+        },
+        "error_pp": {
+          "approx": 0.1,
+          "exact": "1/10"
+        },
+        "forecast_percent": {
+          "approx": 4.0,
+          "exact": "4"
+        },
+        "history_months": [
+          "2024-02",
+          "2024-03",
+          "2024-04",
+          "2024-05"
+        ],
+        "rule": "naive",
+        "selected_before_test": true,
+        "squared_error_pp2": {
+          "approx": 0.01,
+          "exact": "1/100"
+        },
+        "target_month": "2024-06"
+      },
+      {
+        "actual_percent": {
+          "approx": 4.1,
+          "exact": "41/10"
+        },
+        "error_pp": {
+          "approx": 0.06666666666666667,
+          "exact": "1/15"
+        },
+        "forecast_percent": {
+          "approx": 4.033333333333333,
+          "exact": "121/30"
+        },
+        "history_months": [
+          "2024-02",
+          "2024-03",
+          "2024-04",
+          "2024-05"
+        ],
+        "rule": "drift",
+        "selected_before_test": false,
+        "squared_error_pp2": {
+          "approx": 0.0044444444444444444,
+          "exact": "1/225"
+        },
+        "target_month": "2024-06"
+      },
+      {
+        "actual_percent": {
+          "approx": 4.3,
+          "exact": "43/10"
+        },
+        "error_pp": {
+          "approx": 0.2,
+          "exact": "1/5"
+        },
+        "forecast_percent": {
+          "approx": 4.1,
+          "exact": "41/10"
+        },
+        "history_months": [
+          "2024-02",
+          "2024-03",
+          "2024-04",
+          "2024-05",
+          "2024-06"
+        ],
+        "rule": "naive",
+        "selected_before_test": true,
+        "squared_error_pp2": {
+          "approx": 0.04,
+          "exact": "1/25"
+        },
+        "target_month": "2024-07"
+      },
+      {
+        "actual_percent": {
+          "approx": 4.3,
+          "exact": "43/10"
+        },
+        "error_pp": {
+          "approx": 0.15,
+          "exact": "3/20"
+        },
+        "forecast_percent": {
+          "approx": 4.15,
+          "exact": "83/20"
+        },
+        "history_months": [
+          "2024-02",
+          "2024-03",
+          "2024-04",
+          "2024-05",
+          "2024-06"
+        ],
+        "rule": "drift",
+        "selected_before_test": false,
+        "squared_error_pp2": {
+          "approx": 0.0225,
+          "exact": "9/400"
+        },
+        "target_month": "2024-07"
+      }
+    ],
+    "test_mse_pp2": {
+      "drift": {
+        "approx": 0.013472222222222222,
+        "exact": "97/7200"
+      },
+      "naive": {
+        "approx": 0.025,
+        "exact": "1/40"
+      }
+    },
+    "tie_occurred": true,
+    "validation": [
+      {
+        "actual_percent": {
+          "approx": 4.0,
+          "exact": "4"
+        },
+        "error_pp": {
+          "approx": 0.1,
+          "exact": "1/10"
+        },
+        "forecast_percent": {
+          "approx": 3.9,
+          "exact": "39/10"
+        },
+        "history_months": [
+          "2024-02",
+          "2024-03",
+          "2024-04"
+        ],
+        "rule": "naive",
+        "squared_error_pp2": {
+          "approx": 0.01,
+          "exact": "1/100"
+        },
+        "target_month": "2024-05"
+      },
+      {
+        "actual_percent": {
+          "approx": 4.0,
+          "exact": "4"
+        },
+        "error_pp": {
+          "approx": 0.1,
+          "exact": "1/10"
+        },
+        "forecast_percent": {
+          "approx": 3.9,
+          "exact": "39/10"
+        },
+        "history_months": [
+          "2024-02",
+          "2024-03",
+          "2024-04"
+        ],
+        "rule": "drift",
+        "squared_error_pp2": {
+          "approx": 0.01,
+          "exact": "1/100"
+        },
+        "target_month": "2024-05"
+      }
+    ]
+  },
+  "component_identities_compatible_with_rounding": true,
+  "descriptive_ols_on_published_rates": {
+    "explained_ss_pp2": {
+      "approx": 0.12857142857142856,
+      "exact": "9/70"
+    },
+    "fitted_percent": [
+      {
+        "approx": 3.7857142857142856,
+        "exact": "53/14"
+      },
+      {
+        "approx": 3.8714285714285714,
+        "exact": "271/70"
+      },
+      {
+        "approx": 3.9571428571428573,
+        "exact": "277/70"
+      },
+      {
+        "approx": 4.042857142857143,
+        "exact": "283/70"
+      },
+      {
+        "approx": 4.128571428571429,
+        "exact": "289/70"
+      },
+      {
+        "approx": 4.214285714285714,
+        "exact": "59/14"
+      }
+    ],
+    "intercept_percent": {
+      "approx": 3.7,
+      "exact": "37/10"
+    },
+    "r_squared": {
+      "approx": 0.8035714285714286,
+      "exact": "45/56"
+    },
+    "residuals_pp": [
+      {
+        "approx": 0.11428571428571428,
+        "exact": "4/35"
+      },
+      {
+        "approx": -0.07142857142857142,
+        "exact": "-1/14"
+      },
+      {
+        "approx": -0.05714285714285714,
+        "exact": "-2/35"
+      },
+      {
+        "approx": -0.04285714285714286,
+        "exact": "-3/70"
+      },
+      {
+        "approx": -0.02857142857142857,
+        "exact": "-1/35"
+      },
+      {
+        "approx": 0.08571428571428572,
+        "exact": "3/35"
+      }
+    ],
+    "slope_pp_per_month": {
+      "approx": 0.08571428571428572,
+      "exact": "3/35"
+    },
+    "sse_pp2": {
+      "approx": 0.03142857142857143,
+      "exact": "11/350"
+    },
+    "sum_residuals": "0",
+    "sum_time_residuals": "0",
+    "tss_pp2": {
+      "approx": 0.16,
+      "exact": "4/25"
+    }
+  },
+  "february_to_july_unemployment_change": {
+    "conditional_rounding_envelope_pp": [
+      {
+        "approx": 0.3949844487916876,
+        "exact": "44553287200/112797573009"
+      },
+      {
+        "approx": 0.39622373795918775,
+        "exact": "44693077600/112797577021"
+      }
+    ],
+    "displayed_rate_change_pp": {
+      "approx": 0.4,
+      "exact": "2/5"
+    },
+    "interpretation": "Conditional input-rounding envelope; no sampling confidence level.",
+    "reconstructed_ratio_change_pp": {
+      "approx": 0.3956040933829503,
+      "exact": "5577897800/14099696877"
+    }
+  },
+  "limits": [
+    "Historical outcomes were known when this teaching protocol was designed.",
+    "Per-row releases differ and are later than some hypothetical forecast origins; no real-time backtest is reconstructed.",
+    "Survey standard errors, seasonal-adjustment estimation, causal effects and general forecast accuracy are not established."
+  ],
+  "nonzero_component_residuals": [
+    {
+      "identity": "labor_force_identity_residual_thousands",
+      "month": "2024-04",
+      "residual_thousands": -1
+    },
+    {
+      "identity": "population_identity_residual_thousands",
+      "month": "2024-04",
+      "residual_thousands": 1
+    },
+    {
+      "identity": "labor_force_identity_residual_thousands",
+      "month": "2024-06",
+      "residual_thousands": -1
+    }
+  ],
+  "protocol": {
+    "selection_loss": "squared error in percentage points squared",
+    "target": "published_unemployment_percent",
+    "test_months": [
+      "2024-06",
+      "2024-07"
+    ],
+    "tie_break": "naive",
+    "train_months": [
+      "2024-02",
+      "2024-03",
+      "2024-04"
+    ],
+    "updating": "expanding history; one-step ahead; no test reselection",
+    "validation_month": "2024-05",
+    "vintage_scope": "retrospective assembled series"
+  },
+  "reproducibility": {
+    "hash_scope": "local files, not official authenticity",
+    "implementation": "CPython",
+    "input_sha256": {
+      "v04-project-data.json": "b7f421167c969806d078bb5e352d7004351b7a7636336a37f61b55730b9c158f",
+      "v04-project-source-extract.txt": "b9d1c548ecc3b57cdbb790f29db5abb304db7c407b409c5e76b11febac7952e0"
+    },
+    "network_required": false,
+    "program_sha256": "749a0112aabd63997cb0b86bf5e9d26c195999dce7dbbe85f9db6c5442de1098",
+    "python_version": "3.14.6",
+    "sources": {
+      "2024-07-05": "https://www.bls.gov/news.release/archives/empsit_07052024.htm",
+      "2024-08-02": "https://www.bls.gov/news.release/archives/empsit_08022024.htm"
+    }
+  },
+  "row_audits": [
+    {
+      "employment_ratio_identity_gap_pp": {
+        "approx": 0.0,
+        "exact": "0"
+      },
+      "labor_force_identity_residual_thousands": 0,
+      "metrics": {
+        "employment_population": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 60.12722651062805,
+              "exact": "32193500/535423"
+            },
+            {
+              "approx": 60.12782464639975,
+              "exact": "32193700/535421"
+            }
+          ],
+          "reconstructed_display_percent": "60.1",
+          "reconstructed_percent": {
+            "approx": 60.12752557795533,
+            "exact": "5365600/89237"
+          },
+          "source_display_percent": "60.1"
+        },
+        "participation": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 62.5395248242978,
+              "exact": "33485100/535423"
+            },
+            {
+              "approx": 62.54013197091634,
+              "exact": "33485300/535421"
+            }
+          ],
+          "reconstructed_display_percent": "62.5",
+          "reconstructed_percent": {
+            "approx": 62.53982839704009,
+            "exact": "16742600/267711"
+          },
+          "source_display_percent": "62.5"
+        },
+        "unemployment": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 3.8569163185039406,
+              "exact": "1291500/334853"
+            },
+            {
+              "approx": 3.8575366356976684,
+              "exact": "1291700/334851"
+            }
+          ],
+          "reconstructed_display_percent": "3.9",
+          "reconstructed_percent": {
+            "approx": 3.857226476174549,
+            "exact": "322900/83713"
+          },
+          "source_display_percent": "3.9"
+        }
+      },
+      "month": "2024-02",
+      "population_identity_residual_thousands": 0,
+      "source_release": "2024-07-05"
+    },
+    {
+      "employment_ratio_identity_gap_pp": {
+        "approx": 0.0,
+        "exact": "0"
+      },
+      "labor_force_identity_residual_thousands": 0,
+      "metrics": {
+        "employment_population": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 60.27429731843388,
+              "exact": "32293100/535769"
+            },
+            {
+              "approx": 60.27489561693796,
+              "exact": "32293300/535767"
+            }
+          ],
+          "reconstructed_display_percent": "60.3",
+          "reconstructed_percent": {
+            "approx": 60.274596467127566,
+            "exact": "4036650/66971"
+          },
+          "source_display_percent": "60.3"
+        },
+        "participation": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 62.67421220712658,
+              "exact": "33578900/535769"
+            },
+            {
+              "approx": 62.674819464431366,
+              "exact": "33579100/535767"
+            }
+          ],
+          "reconstructed_display_percent": "62.7",
+          "reconstructed_percent": {
+            "approx": 62.674515835212254,
+            "exact": "4197375/66971"
+          },
+          "source_display_percent": "62.7"
+        },
+        "unemployment": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 3.828869743382044,
+              "exact": "1285700/335791"
+            },
+            {
+              "approx": 3.829488160719976,
+              "exact": "1285900/335789"
+            }
+          ],
+          "reconstructed_display_percent": "3.8",
+          "reconstructed_percent": {
+            "approx": 3.829178951130171,
+            "exact": "42860/11193"
+          },
+          "source_display_percent": "3.8"
+        }
+      },
+      "month": "2024-03",
+      "population_identity_residual_thousands": 0,
+      "source_release": "2024-08-02"
+    },
+    {
+      "employment_ratio_identity_gap_pp": {
+        "approx": 0.00037304245969276223,
+        "exact": "50/134033"
+      },
+      "labor_force_identity_residual_thousands": -1,
+      "metrics": {
+        "employment_population": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 60.242700971587276,
+              "exact": "32298100/536133"
+            },
+            {
+              "approx": 60.243298746015434,
+              "exact": "32298300/536131"
+            }
+          ],
+          "reconstructed_display_percent": "60.2",
+          "reconstructed_percent": {
+            "approx": 60.24299985824386,
+            "exact": "8074550/134033"
+          },
+          "source_display_percent": "60.2"
+        },
+        "participation": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 62.66411506100165,
+              "exact": "33596300/536133"
+            },
+            {
+              "approx": 62.66472186834934,
+              "exact": "33596500/536131"
+            }
+          ],
+          "reconstructed_display_percent": "62.7",
+          "reconstructed_percent": {
+            "approx": 62.66441846410959,
+            "exact": "8399100/134033"
+          },
+          "source_display_percent": "62.7"
+        },
+        "unemployment": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 3.864390635929338,
+              "exact": "259660/67193"
+            },
+            {
+              "approx": 3.8650089444373337,
+              "exact": "1298500/335963"
+            }
+          ],
+          "reconstructed_display_percent": "3.9",
+          "reconstructed_percent": {
+            "approx": 3.864699789263135,
+            "exact": "108200/27997"
+          },
+          "source_display_percent": "3.9"
+        }
+      },
+      "month": "2024-04",
+      "population_identity_residual_thousands": 1,
+      "source_release": "2024-08-02"
+    },
+    {
+      "employment_ratio_identity_gap_pp": {
+        "approx": 0.0,
+        "exact": "0"
+      },
+      "labor_force_identity_residual_thousands": 0,
+      "metrics": {
+        "employment_population": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 60.04973000780992,
+              "exact": "32216500/536497"
+            },
+            {
+              "approx": 60.050326657284785,
+              "exact": "6443340/107299"
+            }
+          ],
+          "reconstructed_display_percent": "60.1",
+          "reconstructed_percent": {
+            "approx": 60.05002833199129,
+            "exact": "4027075/67062"
+          },
+          "source_display_percent": "60.1"
+        },
+        "participation": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 62.52840183635696,
+              "exact": "33546300/536497"
+            },
+            {
+              "approx": 62.52900772607387,
+              "exact": "6709300/107299"
+            }
+          ],
+          "reconstructed_display_percent": "62.5",
+          "reconstructed_percent": {
+            "approx": 62.52870478065074,
+            "exact": "2096650/33531"
+          },
+          "source_display_percent": "62.5"
+        },
+        "unemployment": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 3.9637518071930007,
+              "exact": "265940/67093"
+            },
+            {
+              "approx": 3.9643716296581144,
+              "exact": "443300/111821"
+            }
+          ],
+          "reconstructed_display_percent": "4.0",
+          "reconstructed_percent": {
+            "approx": 3.9640617175017288,
+            "exact": "166225/41933"
+          },
+          "source_display_percent": "4.0"
+        }
+      },
+      "month": "2024-05",
+      "population_identity_residual_thousands": 0,
+      "source_release": "2024-08-02"
+    },
+    {
+      "employment_ratio_identity_gap_pp": {
+        "approx": 0.0003725254993704319,
+        "exact": "50/134219"
+      },
+      "labor_force_identity_residual_thousands": -1,
+      "metrics": {
+        "employment_population": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 60.05043985866409,
+              "exact": "32239700/536877"
+            },
+            {
+              "approx": 60.05103608847497,
+              "exact": "1289596/21475"
+            }
+          ],
+          "reconstructed_display_percent": "60.1",
+          "reconstructed_percent": {
+            "approx": 60.05073797301425,
+            "exact": "8059950/134219"
+          },
+          "source_display_percent": "60.1"
+        },
+        "participation": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 62.58733378408835,
+              "exact": "277700/4437"
+            },
+            {
+              "approx": 62.587939464493594,
+              "exact": "1344076/21475"
+            }
+          ],
+          "reconstructed_display_percent": "62.6",
+          "reconstructed_percent": {
+            "approx": 62.587636623726894,
+            "exact": "8400450/134219"
+          },
+          "source_display_percent": "62.6"
+        },
+        "unemployment": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 4.053639823938528,
+              "exact": "1362100/336019"
+            },
+            {
+              "approx": 4.0542591595068105,
+              "exact": "1362300/336017"
+            }
+          ],
+          "reconstructed_display_percent": "4.1",
+          "reconstructed_percent": {
+            "approx": 4.053949490801088,
+            "exact": "681100/168009"
+          },
+          "source_display_percent": "4.1"
+        }
+      },
+      "month": "2024-06",
+      "population_identity_residual_thousands": 0,
+      "source_release": "2024-08-02"
+    },
+    {
+      "employment_ratio_identity_gap_pp": {
+        "approx": 0.0,
+        "exact": "0"
+      },
+      "labor_force_identity_residual_thousands": 0,
+      "metrics": {
+        "employment_population": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 60.02933244492257,
+              "exact": "32253100/537289"
+            },
+            {
+              "approx": 60.029928138964834,
+              "exact": "32253300/537287"
+            }
+          ],
+          "reconstructed_display_percent": "60.0",
+          "reconstructed_percent": {
+            "approx": 60.029630291389346,
+            "exact": "4031650/67161"
+          },
+          "source_display_percent": "60.0"
+        },
+        "participation": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 62.69568146751562,
+              "exact": "33685700/537289"
+            },
+            {
+              "approx": 62.696287086789745,
+              "exact": "33685900/537287"
+            }
+          ],
+          "reconstructed_display_percent": "62.7",
+          "reconstructed_percent": {
+            "approx": 62.695984276589094,
+            "exact": "1403575/22387"
+          },
+          "source_display_percent": "62.7"
+        },
+        "unemployment": {
+          "display_matches": true,
+          "level_rounding_envelope_percent": [
+            {
+              "approx": 4.252521084489356,
+              "exact": "1432500/336859"
+            },
+            {
+              "approx": 4.2531400564631285,
+              "exact": "1432700/336857"
+            }
+          ],
+          "reconstructed_display_percent": "4.3",
+          "reconstructed_percent": {
+            "approx": 4.252830569557499,
+            "exact": "716300/168429"
+          },
+          "source_display_percent": "4.3"
+        }
+      },
+      "month": "2024-07",
+      "population_identity_residual_thousands": 0,
+      "source_release": "2024-08-02"
+    }
+  ],
+  "status": "passed"
+}

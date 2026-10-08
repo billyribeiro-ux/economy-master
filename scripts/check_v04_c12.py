@@ -281,7 +281,7 @@ def check():
         require(set(source) == {"id","title","url","use","checked","verification"} and source["id"].startswith("v04-c12-"), "source record contract")
     downloads = [href for href in parser.links if href.startswith("v04-c12-")]
     require(len(downloads) == 6 and all("/" not in name and (PROJECTS/name).is_file() for name in downloads), "flat project downloads")
-    require("v04-c11.html" in parser.links and "curriculum.html#v04" in parser.links, "predecessor and planned volume package")
+    require("v04-c11.html" in parser.links and "v04-assessment.html" in parser.links, "predecessor and available volume package")
     for term in ("Teach-back", "Delayed check", "percentage point", "manual transcription", "not synthetic", "sampling"):
         require(term in html, "instructional scope: "+term)
     checks.append("Two worked examples, eight matching exercise/solution items, six real flat downloads, scoped sources, predecessor/planned-successor and retention structure checked.")

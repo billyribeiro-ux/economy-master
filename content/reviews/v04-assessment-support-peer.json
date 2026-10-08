@@ -1,0 +1,127 @@
+{
+  "assessment": "v04-support",
+  "reviewer": "monte_carlo specialist, bounded independent peer review",
+  "date": "2026-10-07",
+  "scope": "Read-only audit of the entire support fragment, all eight prerequisite-diagnostic questions/solutions, all six delayed-retention questions/solutions, scoring/remediation/reference/synthesis material, and support_check plus assembly logic. Only this peer-review record was written.",
+  "status": "passed-after-minor-clarification",
+  "open_findings": [],
+  "resolved_findings": [
+    {
+      "id": "v04-support-peer-01",
+      "severity": "minor",
+      "topic": "Retention task4 Monte Carlo assumptions",
+      "finding": "The initial wording specified independent complete replications but asked for an unbiased sample variance and estimated Monte Carlo standard error without explicitly stating identical law and finite variance. The numbers were correct under the intended fixed simulator law.",
+      "reported_to_root": true,
+      "resolution": "Root changed the prompt to four iid complete simulation replications from the same fixed simulator law with finite variance and mirrored those assumptions in the solution. Both changes were inspected; --support-only passed afterward."
+    }
+  ],
+  "severity_summary": {
+    "open_blocking": 0,
+    "open_major": 0,
+    "open_minor": 0,
+    "resolved_minor": 1
+  },
+  "prerequisite_and_instruction_review": [
+    "The diagnostic requires only previously taught Volume1 rates/units/compounding, Volume2 projection and Volume3 expectation/mixtures/Bayes/covariance/normal intervals/decision losses. No programming or Volume4-only technique is required before beginning the volume.",
+    "Prior chapter routes were inspected against the curriculum, and relevant compounding, covariance/shared-shock and projection prerequisites were read or confirmed. The positive gross-factor convention selects the economically intended half-year root.",
+    "Diagnostic scoring is8 times4=32, with a28 threshold and an explicit two-result/two-reasoning-or-units split. Examinations retain five20-point domains, four5-point parts each,180 minutes,85/100 overall and15/20 per domain, with critical-error remediation.",
+    "Retention scoring is six10-point tasks. Every prompt/solution allocation sums to10:3+4+3,4+3+3,4+3+2+1,6+2+2,3+2+3+2,3+3+4. The51/60 and7.5/10 rules permit half points explicitly.",
+    "Calendar gaps, unknown active reports and stock-versus-flow distinctions are preserved. Projection remains descriptive. Confidence coverage is attached to repeated-sample procedures, and mean uncertainty is distinguished from a future observation.",
+    "Frozen-versus-updating forecast evaluation, selecting after final outcomes, round-last versus display subtraction, population estimates versus respondent counts and local hash limits are correctly distinguished.",
+    "Remediation asks for changed-input evidence and cause-specific repairs. Oral transfer requires traceability, independent reconstruction, permitted-information reasoning and inference limits; self-recording is not represented as external certification.",
+    "Twelve-chapter capability and notation indexes cover the accepted scope. The index distinguishes price-index P from population P and covariance gamma(h) from roundoff gamma_k. The synthesis labels the cross-volume foundation examination as still in production."
+  ],
+  "diagnostic_audit": [
+    {
+      "number": 1,
+      "answer": "1 percentage point; relative increase1/2=50%. Percentage-point subtraction has no old-rate divisor; relative growth uses the old2% rate."
+    },
+    {
+      "number": 2,
+      "answer": "PV105/(21/20)=100 USD; the positive half-year gross factor is11/10, yielding10% and squared gross1.21."
+    },
+    {
+      "number": 3,
+      "answer": "Target mixture mean11/2=5.5 USD; sample mixture mean23/5=4.6 USD. Different weights explain the difference without changed group means."
+    },
+    {
+      "number": 4,
+      "answer": "Among100 model cases,16 true positives and8 false positives give positive probability6/25 and posterior16/24=2/3."
+    },
+    {
+      "number": 5,
+      "answer": "Mean mu; variance9+25*(2/25)^2=229/25=9.16 outcome-units squared. Shared C variance remains9 as independent idiosyncratic terms average out."
+    },
+    {
+      "number": 6,
+      "answer": "SE1 USD; interval76/25 to174/25 USD=[3.04,6.96]. Approximately95% repeated-sample coverage under iid known-variance normal model, not an individual-outcome range."
+    },
+    {
+      "number": 7,
+      "answer": "Projection coefficient3 gives(3,3); residual(-1,1); reconstruction(2,4) and dot product0."
+    },
+    {
+      "number": 8,
+      "answer": "Act loss7/5 USD; no-act loss12/5 USD; act. General threshold2/(2+8)=1/5, with equality indifference."
+    }
+  ],
+  "retention_audit": [
+    {
+      "number": 1,
+      "answer": "Select100 from release3March at origin10March; revision12March is ineligible. Fields and selection rule preserve observation/release/vintage distinction. Rehashing altered bytes does not authenticate their origin."
+    },
+    {
+      "number": 2,
+      "answer": "Real100/110 base-price USD, observed two-month increase10USD or10%; March monthly growth unavailable. Endpoint cash stocks40/50 do not identify a quarterly flow or time-average stock."
+    },
+    {
+      "number": 3,
+      "answer": "Intercept3/2,slope3/2; fitted(3/2,3,9/2),residual(1/2,-1,1/2),both residual moment equations0. SSE3/2,SST6,R2=3/4; no causal identification supplied."
+    },
+    {
+      "number": 4,
+      "answer": "Mean1/2 USD. Independently summed pairwise squared differences52; unbiased sample variance52/[4*3]=13/3 USD squared and variance estimate for the mean13/12 USD squared, giving SE1.0408329997330663 USD. Positive within-pair covariance can reduce variance; complete iid runs supply the independent units."
+    },
+    {
+      "number": 5,
+      "answer": "Fixed-origin slope1/2 yields forecasts13/2 and7; origin4 update yields35/3. MSEs113/8=14.125 and457/72=6.347222222222222 units squared. Comparing prespecified tasks is different from untouched evaluation after selecting a winner."
+    },
+    {
+      "number": 6,
+      "answer": "Rates177/50=3.54% and213/50=4.26%; nearest-tenth3.5/4.3%. Display subtraction4/5=0.8pp versus raw18/25=0.72pp, round-last0.7pp. Conditional input rounding does not supply sampling inference or survey sample size."
+    }
+  ],
+  "checker_and_assembly_review": [
+    "--support-only returned status passed before and after the root clarification. require() uses explicit exceptions rather than removable assertions.",
+    "Independently recomputed all diagnostic quantities and retention calculations using exact fractions, a100-case Bayes representation, independent-shock coefficient variances, centered regression moments, pairwise sample variance and rational nearest-tenth rounding.",
+    "The source checker uses fixed supplied quantities rather than parsing every numerical prompt, so its passing status alone cannot ensure unchanged prose. This peer review separately compared every answer with the actual prompt.",
+    "All49 support links were independently checked: chapter filenames exist and curriculum anchors refer to declared volumes. All twelve Volume4 routes are represented.",
+    "Read assembly logic and independently composed the current fragments in memory. At audit time the result matched content/assessments/v04.html exactly, had one h1 and84 unique IDs, contained form-a/form-b/project anchors, had five prompt and five solution groups per exam, and had no unresolved assembly markers.",
+    "Full check() additionally dispatches both exam checkers and the project checker and checks citation IDs against the source catalogue. That full integration execution was left to root; the peer task executed --support-only and a read-only in-memory assembly check."
+  ],
+  "checks_run": [
+    {
+      "command": "python3 book/scripts/check_v04_assessment.py --support-only",
+      "status": "passed",
+      "exit_code": 0,
+      "runs": 2
+    },
+    {
+      "command": "Independent in-memory Fraction answer recomputation, link checks and fragment assembly",
+      "status": "passed",
+      "exit_code": 0
+    }
+  ],
+  "reviewed_sha256": {
+    "content/assessment-parts/v04-support.html": "4714eb14af9217ed518509d8bceb09208f69893064c8685af6ba013160b011a4",
+    "scripts/check_v04_assessment.py": "18a243ea4ed865f58f237263714226c422a6670d0b160b29b26ad0138804beb5"
+  },
+  "limitations": [
+    "This is a separate agent peer review, not independent human academic certification or empirical calibration of exam difficulty/time.",
+    "Stable taught methods and prior-chapter source scopes were reused; external source pages were not re-retrieved during the bounded support audit.",
+    "The synthetic assessments do not establish actual learner competence, empirical forecasting performance, causal validity or survey confidence intervals.",
+    "No visual, mobile or print UI QA was performed. Structural link/assembly checks are not a substitute for it.",
+    "Root owns final assembly, corrections, prerequisite-order acceptance and publication; no manuscript, checker or central state was edited by the peer reviewer."
+  ],
+  "handoff": "No open correction request remains. The iid finite-variance clarification was made by root and verified; support is ready for root final integration."
+}
