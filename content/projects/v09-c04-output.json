@@ -1,0 +1,714 @@
+{
+  "case": "Caldera Market: investor choice and equilibrium",
+  "format": "Exact rational strings; variances are squared decimal returns, not percent units",
+  "state_returns_by_asset": {
+    "A": [
+      "-3/25",
+      "-1/50",
+      "9/50",
+      "7/25"
+    ],
+    "B": [
+      "-9/100",
+      "1/100",
+      "21/100",
+      "11/100"
+    ],
+    "C": [
+      "3/10",
+      "-1/5",
+      "0",
+      "-1/10"
+    ]
+  },
+  "candidate_economy": {
+    "means": [
+      "2/25",
+      "3/50",
+      "0"
+    ],
+    "covariance": [
+      [
+        "1/40",
+        "3/200",
+        "-3/200"
+      ],
+      [
+        "3/200",
+        "1/80",
+        "-1/100"
+      ],
+      [
+        "-3/200",
+        "-1/100",
+        "7/200"
+      ]
+    ],
+    "leading_principal_minors": [
+      "1/40",
+      "7/80000",
+      "9/4000000"
+    ],
+    "market_weights": [
+      "1/2",
+      "1/3",
+      "1/6"
+    ],
+    "inverse_covariance_excess": [
+      "2",
+      "4/3",
+      "2/3"
+    ],
+    "aggregate_risk_tolerance": "1/4",
+    "lambda_from_preferences": "4",
+    "investors": [
+      {
+        "id": "H1",
+        "wealth_share": "1/3",
+        "gamma": "2",
+        "risky_weights": [
+          "1",
+          "2/3",
+          "1/3"
+        ],
+        "cash_weight": "-1",
+        "risky_shares": [
+          "2",
+          "4/3",
+          "2/3"
+        ],
+        "cash_amount": "-200",
+        "mean_return": "1/10",
+        "return_variance": "1/25",
+        "state_returns": [
+          "-1/10",
+          "-1/10",
+          "3/10",
+          "3/10"
+        ],
+        "final_wealth": [
+          "180",
+          "180",
+          "260",
+          "260"
+        ],
+        "objective": "3/50",
+        "gradient": [
+          "0",
+          "0",
+          "0"
+        ],
+        "borrowing_multiplier": "0"
+      },
+      {
+        "id": "H2",
+        "wealth_share": "2/3",
+        "gamma": "8",
+        "risky_weights": [
+          "1/4",
+          "1/6",
+          "1/12"
+        ],
+        "cash_weight": "1/2",
+        "risky_shares": [
+          "1",
+          "2/3",
+          "1/3"
+        ],
+        "cash_amount": "200",
+        "mean_return": "1/25",
+        "return_variance": "1/400",
+        "state_returns": [
+          "-1/100",
+          "-1/100",
+          "9/100",
+          "9/100"
+        ],
+        "final_wealth": [
+          "396",
+          "396",
+          "436",
+          "436"
+        ],
+        "objective": "3/100",
+        "gradient": [
+          "0",
+          "0",
+          "0"
+        ],
+        "borrowing_multiplier": "0"
+      }
+    ],
+    "aggregate_risky_weights": [
+      "1/2",
+      "1/3",
+      "1/6"
+    ],
+    "aggregate_cash_weight": "0",
+    "risky_excess_demand_weights": [
+      "0",
+      "0",
+      "0"
+    ],
+    "market_clearing": true
+  },
+  "market": {
+    "state_returns": [
+      "-1/25",
+      "-1/25",
+      "4/25",
+      "4/25"
+    ],
+    "mean": "3/50",
+    "variance": "1/100",
+    "expected_excess_return": "1/25",
+    "covariance_price_from_market": "4"
+  },
+  "true_market_projections": {
+    "A": {
+      "beta": "3/2",
+      "alpha": "0",
+      "asset_mean": "2/25",
+      "benchmark_mean": "3/50",
+      "residuals": [
+        "-1/20",
+        "1/20",
+        "-1/20",
+        "1/20"
+      ],
+      "residual_variance": "1/400",
+      "residual_mean": "0",
+      "residual_benchmark_covariance": "0"
+    },
+    "B": {
+      "beta": "1",
+      "alpha": "0",
+      "asset_mean": "3/50",
+      "benchmark_mean": "3/50",
+      "residuals": [
+        "-1/20",
+        "1/20",
+        "1/20",
+        "-1/20"
+      ],
+      "residual_variance": "1/400",
+      "residual_mean": "0",
+      "residual_benchmark_covariance": "0"
+    },
+    "C": {
+      "beta": "-1/2",
+      "alpha": "0",
+      "asset_mean": "0",
+      "benchmark_mean": "3/50",
+      "residuals": [
+        "1/4",
+        "-1/4",
+        "1/20",
+        "-1/20"
+      ],
+      "residual_variance": "13/400",
+      "residual_mean": "0",
+      "residual_benchmark_covariance": "0"
+    }
+  },
+  "proxy_id": "B",
+  "proxy_projections": {
+    "A": {
+      "beta": "6/5",
+      "alpha": "3/250",
+      "asset_mean": "2/25",
+      "benchmark_mean": "3/50",
+      "residuals": [
+        "-1/50",
+        "-1/25",
+        "-2/25",
+        "7/50"
+      ],
+      "residual_variance": "7/1000",
+      "residual_mean": "0",
+      "residual_benchmark_covariance": "0"
+    },
+    "B": {
+      "beta": "1",
+      "alpha": "0",
+      "asset_mean": "3/50",
+      "benchmark_mean": "3/50",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "residual_variance": "0",
+      "residual_mean": "0",
+      "residual_benchmark_covariance": "0"
+    },
+    "C": {
+      "beta": "-4/5",
+      "alpha": "3/250",
+      "asset_mean": "0",
+      "benchmark_mean": "3/50",
+      "residuals": [
+        "9/50",
+        "-6/25",
+        "3/25",
+        "-3/50"
+      ],
+      "residual_variance": "27/1000",
+      "residual_mean": "0",
+      "residual_benchmark_covariance": "0"
+    }
+  },
+  "market_cash_allocations": [
+    {
+      "market_weight": "-1/2",
+      "cash_weight": "3/2",
+      "mean": "0",
+      "variance": "1/400",
+      "beta": "-1/2",
+      "on_positive_premium_cml_ray": false
+    },
+    {
+      "market_weight": "0",
+      "cash_weight": "1",
+      "mean": "1/50",
+      "variance": "0",
+      "beta": "0",
+      "on_positive_premium_cml_ray": true
+    },
+    {
+      "market_weight": "1/2",
+      "cash_weight": "1/2",
+      "mean": "1/25",
+      "variance": "1/400",
+      "beta": "1/2",
+      "on_positive_premium_cml_ray": true
+    },
+    {
+      "market_weight": "1",
+      "cash_weight": "0",
+      "mean": "3/50",
+      "variance": "1/100",
+      "beta": "1",
+      "on_positive_premium_cml_ray": true
+    },
+    {
+      "market_weight": "3/2",
+      "cash_weight": "-1/2",
+      "mean": "2/25",
+      "variance": "9/400",
+      "beta": "3/2",
+      "on_positive_premium_cml_ray": true
+    },
+    {
+      "market_weight": "2",
+      "cash_weight": "-1",
+      "mean": "1/10",
+      "variance": "1/25",
+      "beta": "2",
+      "on_positive_premium_cml_ray": true
+    }
+  ],
+  "supplied_zero_beta_portfolio": {
+    "state_returns": [
+      "39/200",
+      "-31/200",
+      "9/200",
+      "-1/200"
+    ],
+    "mean": "1/50",
+    "variance": "1/64",
+    "projection": {
+      "beta": "0",
+      "alpha": "0",
+      "asset_mean": "1/50",
+      "benchmark_mean": "3/50",
+      "residuals": [
+        "7/40",
+        "-7/40",
+        "1/40",
+        "-1/40"
+      ],
+      "residual_variance": "1/64",
+      "residual_mean": "0",
+      "residual_benchmark_covariance": "0"
+    },
+    "actually_zero_beta": true
+  },
+  "pricing_checksum": {
+    "candidate_kernel": [
+      "70/51",
+      "70/51",
+      "10/17",
+      "10/17"
+    ],
+    "candidate_normalized_weights": [
+      "7/20",
+      "7/20",
+      "3/20",
+      "3/20"
+    ],
+    "physical_probabilities": [
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4"
+    ],
+    "bond_price_residual": "0",
+    "asset_price_residuals": {
+      "A": "0",
+      "B": "0",
+      "C": "0"
+    },
+    "strictly_positive_and_prices_all_claims": true,
+    "physical_expected_payoffs_discounted_at_rf": {
+      "A": "1800/17",
+      "B": "5300/51",
+      "C": "5000/51"
+    }
+  },
+  "finite_sample": {
+    "observations": 8,
+    "state_indices": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      2,
+      3
+    ],
+    "projections": {
+      "A": {
+        "beta": "23/15",
+        "alpha": "-11/750",
+        "asset_mean": "21/200",
+        "benchmark_mean": "17/200",
+        "residuals": [
+          "-1/30",
+          "1/15",
+          "-1/25",
+          "3/50",
+          "-1/30",
+          "-1/25",
+          "-1/25",
+          "3/50"
+        ],
+        "residual_variance": "7/3000",
+        "residual_mean": "0",
+        "residual_benchmark_covariance": "0"
+      },
+      "B": {
+        "beta": "17/15",
+        "alpha": "-13/1500",
+        "asset_mean": "17/200",
+        "benchmark_mean": "17/200",
+        "residuals": [
+          "-1/30",
+          "1/15",
+          "1/25",
+          "-3/50",
+          "-1/30",
+          "1/25",
+          "1/25",
+          "-3/50"
+        ],
+        "residual_variance": "7/3000",
+        "residual_mean": "0",
+        "residual_benchmark_covariance": "0"
+      },
+      "C": {
+        "beta": "-13/15",
+        "alpha": "23/375",
+        "asset_mean": "1/40",
+        "benchmark_mean": "17/200",
+        "residuals": [
+          "1/6",
+          "-1/3",
+          "1/25",
+          "-3/50",
+          "1/6",
+          "1/25",
+          "1/25",
+          "-3/50"
+        ],
+        "residual_variance": "67/3000",
+        "residual_mean": "0",
+        "residual_benchmark_covariance": "0"
+      }
+    },
+    "scope": "Selected toy observations; coefficients are sample estimates, not population prices or inference about actual markets"
+  },
+  "fixed_price_mean_shift": {
+    "asset_id": "A",
+    "return_increment": "1/100",
+    "demand": {
+      "means": [
+        "9/100",
+        "3/50",
+        "0"
+      ],
+      "covariance": [
+        [
+          "1/40",
+          "3/200",
+          "-3/200"
+        ],
+        [
+          "3/200",
+          "1/80",
+          "-1/100"
+        ],
+        [
+          "-3/200",
+          "-1/100",
+          "7/200"
+        ]
+      ],
+      "leading_principal_minors": [
+        "1/40",
+        "7/80000",
+        "9/4000000"
+      ],
+      "market_weights": [
+        "1/2",
+        "1/3",
+        "1/6"
+      ],
+      "inverse_covariance_excess": [
+        "7/2",
+        "-1/3",
+        "5/6"
+      ],
+      "aggregate_risk_tolerance": "1/4",
+      "lambda_from_preferences": "4",
+      "investors": [
+        {
+          "id": "H1",
+          "wealth_share": "1/3",
+          "gamma": "2",
+          "risky_weights": [
+            "7/4",
+            "-1/6",
+            "5/12"
+          ],
+          "cash_weight": "-1",
+          "risky_shares": [
+            "7/2",
+            "-1/3",
+            "5/6"
+          ],
+          "cash_amount": "-200",
+          "mean_return": "51/400",
+          "return_variance": "43/800",
+          "state_returns": [
+            "-29/400",
+            "-49/400",
+            "111/400",
+            "171/400"
+          ],
+          "final_wealth": [
+            "371/2",
+            "351/2",
+            "511/2",
+            "571/2"
+          ],
+          "objective": "59/800",
+          "gradient": [
+            "0",
+            "0",
+            "0"
+          ],
+          "borrowing_multiplier": "0"
+        },
+        {
+          "id": "H2",
+          "wealth_share": "2/3",
+          "gamma": "8",
+          "risky_weights": [
+            "7/16",
+            "-1/24",
+            "5/48"
+          ],
+          "cash_weight": "1/2",
+          "risky_shares": [
+            "7/4",
+            "-1/6",
+            "5/12"
+          ],
+          "cash_amount": "200",
+          "mean_return": "3/64",
+          "return_variance": "43/12800",
+          "state_returns": [
+            "-1/320",
+            "-1/64",
+            "27/320",
+            "39/320"
+          ],
+          "final_wealth": [
+            "1595/4",
+            "1575/4",
+            "1735/4",
+            "1795/4"
+          ],
+          "objective": "107/3200",
+          "gradient": [
+            "0",
+            "0",
+            "0"
+          ],
+          "borrowing_multiplier": "0"
+        }
+      ],
+      "aggregate_risky_weights": [
+        "7/8",
+        "-1/12",
+        "5/24"
+      ],
+      "aggregate_cash_weight": "0",
+      "risky_excess_demand_weights": [
+        "3/8",
+        "-5/12",
+        "1/24"
+      ],
+      "market_clearing": false
+    },
+    "status": "Candidate prices and supplies held fixed; inspect clearing flag"
+  },
+  "borrowing_limit_experiment": {
+    "constrained_investor": "H1",
+    "demand": {
+      "means": [
+        "2/25",
+        "3/50",
+        "0"
+      ],
+      "covariance": [
+        [
+          "1/40",
+          "3/200",
+          "-3/200"
+        ],
+        [
+          "3/200",
+          "1/80",
+          "-1/100"
+        ],
+        [
+          "-3/200",
+          "-1/100",
+          "7/200"
+        ]
+      ],
+      "leading_principal_minors": [
+        "1/40",
+        "7/80000",
+        "9/4000000"
+      ],
+      "market_weights": [
+        "1/2",
+        "1/3",
+        "1/6"
+      ],
+      "inverse_covariance_excess": [
+        "2",
+        "4/3",
+        "2/3"
+      ],
+      "aggregate_risk_tolerance": "1/4",
+      "lambda_from_preferences": "4",
+      "investors": [
+        {
+          "id": "H1",
+          "wealth_share": "1/3",
+          "gamma": "2",
+          "risky_weights": [
+            "1",
+            "0",
+            "0"
+          ],
+          "cash_weight": "0",
+          "risky_shares": [
+            "2",
+            "0",
+            "0"
+          ],
+          "cash_amount": "0",
+          "mean_return": "2/25",
+          "return_variance": "1/40",
+          "state_returns": [
+            "-3/25",
+            "-1/50",
+            "9/50",
+            "7/25"
+          ],
+          "final_wealth": [
+            "176",
+            "196",
+            "236",
+            "256"
+          ],
+          "objective": "11/200",
+          "gradient": [
+            "1/100",
+            "1/100",
+            "1/100"
+          ],
+          "borrowing_multiplier": "1/100"
+        },
+        {
+          "id": "H2",
+          "wealth_share": "2/3",
+          "gamma": "8",
+          "risky_weights": [
+            "1/4",
+            "1/6",
+            "1/12"
+          ],
+          "cash_weight": "1/2",
+          "risky_shares": [
+            "1",
+            "2/3",
+            "1/3"
+          ],
+          "cash_amount": "200",
+          "mean_return": "1/25",
+          "return_variance": "1/400",
+          "state_returns": [
+            "-1/100",
+            "-1/100",
+            "9/100",
+            "9/100"
+          ],
+          "final_wealth": [
+            "396",
+            "396",
+            "436",
+            "436"
+          ],
+          "objective": "3/100",
+          "gradient": [
+            "0",
+            "0",
+            "0"
+          ],
+          "borrowing_multiplier": "0"
+        }
+      ],
+      "aggregate_risky_weights": [
+        "1/2",
+        "1/9",
+        "1/18"
+      ],
+      "aggregate_cash_weight": "1/3",
+      "risky_excess_demand_weights": [
+        "0",
+        "-2/9",
+        "-1/9"
+      ],
+      "market_clearing": false
+    },
+    "status": "Optimal constrained individual demands at old prices need not clear the economy"
+  }
+}

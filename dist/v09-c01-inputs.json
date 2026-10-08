@@ -1,0 +1,56 @@
+{
+  "case": "Serein return-measurement desk",
+  "created": "2026-10-08",
+  "provenance": "Original synthetic teaching inputs. No observed asset prices, investor performance, tax law or market probabilities.",
+  "conventions": {
+    "money": "fictional CU; the unit cancels in a return",
+    "period": "one year; dates 0, 1 and 2 are equally spaced model years",
+    "dividends": "cash paid at each end date; prices are unadjusted ex-dividend prices; immediate reinvestment has no costs or tax",
+    "cash_flow": "one nonnegative investor contribution immediately after the date-1 valuation; complete liquidation at date 2",
+    "fees": "entry and exit charges on the cash entering and leaving respectively; management fee on post-market assets at each year end",
+    "fx": "home CU per one foreign currency unit",
+    "opportunity": "one common period; fractional fully invested long-only positions in A and B; no trading costs",
+    "rebalancing": "two asset returns per annual interval, no external flows, no fees; rebalance after first-period returns"
+  },
+  "dividends": {
+    "opening_price": "80",
+    "observations": [
+      {"ex_dividend_price": "78", "cash_distribution": "6"},
+      {"ex_dividend_price": "84", "cash_distribution": "3"}
+    ]
+  },
+  "account": {
+    "dates": [0, 1, 2],
+    "opening": "100",
+    "before_contribution": "120",
+    "contribution": "180",
+    "terminal_liquidation": "270",
+    "alternative_before_contribution": "90"
+  },
+  "fees": {
+    "opening_cash": "1000",
+    "pre_fee_simple_returns": ["3/25", "-1/20"],
+    "entry_charge_fraction": "1/100",
+    "post_return_management_fraction": "1/100",
+    "exit_charge_fraction": "1/200"
+  },
+  "foreign": {
+    "foreign_simple_total_return": "2/25",
+    "opening_home_per_foreign": "5/4",
+    "closing_home_per_foreign": "19/16",
+    "home_inflation": "1/25"
+  },
+  "opportunity": {
+    "states": ["down", "middle", "up"],
+    "probabilities": ["1/4", "1/2", "1/4"],
+    "returns_a": ["-1/5", "1/10", "3/10"],
+    "returns_b": ["3/25", "1/25", "-1/25"],
+    "selected_weight_a": "3/5",
+    "minimum_state_return": "-1/20"
+  },
+  "rebalancing": {
+    "opening_wealth": "100",
+    "initial_weights": ["1/2", "1/2"],
+    "period_returns": [["2/5", "-1/10"], ["-1/4", "1/5"]]
+  }
+}

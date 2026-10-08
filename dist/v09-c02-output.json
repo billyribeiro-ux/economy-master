@@ -1,0 +1,327 @@
+{
+  "case": "Oriel portfolio laboratory",
+  "population": {
+    "mean": [
+      "2/25",
+      "3/50",
+      "7/100"
+    ],
+    "covariance": [
+      [
+        "2/125",
+        "1/625",
+        "11/1250"
+      ],
+      [
+        "1/625",
+        "1/125",
+        "3/625"
+      ],
+      [
+        "11/1250",
+        "3/625",
+        "17/2500"
+      ]
+    ],
+    "correlation": [
+      [
+        1.0,
+        0.1414213562373095,
+        0.8436614877321075
+      ],
+      [
+        0.1414213562373095,
+        1.0,
+        0.6507913734559684
+      ],
+      [
+        0.8436614877321075,
+        0.6507913734559684,
+        1.0
+      ]
+    ],
+    "centered_rank": 2
+  },
+  "portfolios": {
+    "P1": {
+      "weights": [
+        "1/4",
+        "3/4",
+        "0"
+      ],
+      "state_returns": [
+        "3/40",
+        "7/40",
+        "-9/200",
+        "11/200"
+      ],
+      "mean": "13/200",
+      "variance": "61/10000",
+      "standard_deviation": 0.07810249675906655,
+      "negative_return_probability": "1/4",
+      "minimum_return": "-9/200"
+    },
+    "P2": {
+      "weights": [
+        "1/2",
+        "1/2",
+        "0"
+      ],
+      "state_returns": [
+        "13/100",
+        "17/100",
+        "-3/100",
+        "1/100"
+      ],
+      "mean": "7/100",
+      "variance": "17/2500",
+      "standard_deviation": 0.0824621125123532,
+      "negative_return_probability": "1/4",
+      "minimum_return": "-3/100"
+    },
+    "P3": {
+      "weights": [
+        "0",
+        "0",
+        "1"
+      ],
+      "state_returns": [
+        "13/100",
+        "17/100",
+        "-3/100",
+        "1/100"
+      ],
+      "mean": "7/100",
+      "variance": "17/2500",
+      "standard_deviation": 0.0824621125123532,
+      "negative_return_probability": "1/4",
+      "minimum_return": "-3/100"
+    },
+    "P4": {
+      "weights": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "state_returns": [
+        "13/100",
+        "17/100",
+        "-3/100",
+        "1/100"
+      ],
+      "mean": "7/100",
+      "variance": "17/2500",
+      "standard_deviation": 0.0824621125123532,
+      "negative_return_probability": "1/4",
+      "minimum_return": "-3/100"
+    }
+  },
+  "common_risk": {
+    "mean": "3/50",
+    "equal_weight": [
+      {
+        "names": 1,
+        "concentration": "1",
+        "variance": "1/20",
+        "standard_deviation": 0.22360679774997896
+      },
+      {
+        "names": 4,
+        "concentration": "1/4",
+        "variance": "1/50",
+        "standard_deviation": 0.1414213562373095
+      },
+      {
+        "names": 25,
+        "concentration": "1/25",
+        "variance": "29/2500",
+        "standard_deviation": 0.10770329614269007
+      },
+      {
+        "names": 100,
+        "concentration": "1/100",
+        "variance": "13/1250",
+        "standard_deviation": 0.1019803902718557
+      }
+    ],
+    "common_variance_floor": "1/100",
+    "concentrated": {
+      "weights": [
+        "7/10",
+        "1/10",
+        "1/10",
+        "1/10"
+      ],
+      "H": "13/25",
+      "effective_names_for_residual_component": "25/13",
+      "variance": "77/2500"
+    }
+  },
+  "financing": {
+    "scaled_underlying": {
+      "risky_weights": [
+        "0",
+        "0",
+        "3/2"
+      ],
+      "cash_or_loan_weight": "-1/2",
+      "gross_risky_exposure": "3/2",
+      "net_risky_exposure": "3/2",
+      "funding_return_contribution": "-3/100",
+      "fee_per_initial_wealth": "0",
+      "mean": "3/40",
+      "variance": "153/10000",
+      "standard_deviation": 0.12369316876852982,
+      "state_returns": [
+        "33/200",
+        "9/40",
+        "-3/40",
+        "-3/200"
+      ],
+      "terminal_wealth": [
+        "233/2",
+        "245/2",
+        "185/2",
+        "197/2"
+      ],
+      "negative_equity_state_indices": []
+    },
+    "long_short": {
+      "risky_weights": [
+        "6/5",
+        "-2/5",
+        "0"
+      ],
+      "cash_or_loan_weight": "1/5",
+      "gross_risky_exposure": "8/5",
+      "net_risky_exposure": "4/5",
+      "funding_return_contribution": "3/500",
+      "fee_per_initial_wealth": "1/125",
+      "mean": "7/100",
+      "variance": "356/15625",
+      "standard_deviation": 0.15094369811290564,
+      "state_returns": [
+        "139/500",
+        "59/500",
+        "11/500",
+        "-69/500"
+      ],
+      "terminal_wealth": [
+        "639/5",
+        "559/5",
+        "511/5",
+        "431/5"
+      ],
+      "negative_equity_state_indices": []
+    }
+  },
+  "sample": {
+    "observations": 5,
+    "sample_mean": [
+      "1/50",
+      "1/50"
+    ],
+    "sample_covariance": [
+      [
+        "13/5000",
+        "3/2500"
+      ],
+      [
+        "3/2500",
+        "1/1000"
+      ]
+    ],
+    "correlation": [
+      [
+        1.0,
+        0.7442084075352507
+      ],
+      [
+        0.7442084075352507,
+        1.0
+      ]
+    ],
+    "centered_rank": 2,
+    "fixed_weight_portfolio": {
+      "weights": [
+        "2/5",
+        "3/5"
+      ],
+      "sample_mean": "1/50",
+      "sample_variance": "169/125000",
+      "sample_standard_deviation": 0.03676955262170047,
+      "iid_mean_variance_estimate": "169/625000",
+      "iid_mean_standard_error_estimate": 0.016443843832875574,
+      "empirical_equal_probability_variance": "169/156250"
+    }
+  },
+  "missing_pair_counterexample": {
+    "pairs": [
+      {
+        "assets": [
+          "U",
+          "V"
+        ],
+        "matched_rows": 2,
+        "sample_covariance": "1/50",
+        "pair_variances": [
+          "1/50",
+          "1/50"
+        ],
+        "correlation": "1"
+      },
+      {
+        "assets": [
+          "U",
+          "W"
+        ],
+        "matched_rows": 2,
+        "sample_covariance": "1/50",
+        "pair_variances": [
+          "1/50",
+          "1/50"
+        ],
+        "correlation": "1"
+      },
+      {
+        "assets": [
+          "V",
+          "W"
+        ],
+        "matched_rows": 2,
+        "sample_covariance": "-1/50",
+        "pair_variances": [
+          "1/50",
+          "1/50"
+        ],
+        "correlation": "-1"
+      }
+    ],
+    "assembled_correlation": [
+      [
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "-1"
+      ],
+      [
+        "1",
+        "-1",
+        "1"
+      ]
+    ],
+    "witness": [
+      "-1",
+      "1",
+      "1"
+    ],
+    "impossible_unit_volatility_variance": "-3",
+    "complete_rows": 0,
+    "interpretation": "Incompatible pair estimates: this is not a covariance law or a usable risk estimate."
+  },
+  "format": "Exact rational strings for arithmetic; decimal approximations only for standard deviations and general correlations. Null correlation means zero marginal variance."
+}

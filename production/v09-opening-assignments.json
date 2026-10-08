@@ -1,0 +1,185 @@
+{
+  "batch": "v09-opening",
+  "date": "2026-10-08",
+  "previous_goal_turn": "Progress: complete Volume8 assessment package accepted, independently checked, archived and privately published;96 accepted chapters and8 complete volumes.",
+  "authorization": "User explicitly authorized three specialist agents; MASTER_PLAN.md parallel production contract.",
+  "shared_rules": [
+    "Only assigned paths. No changes to canonical curriculum, source catalogue, STATUS, shared build/verify or hosting. No child agents or installs. Root owns acceptance and publication. Files are independent original chapter packages, not patches to existing chapters.",
+    "Advanced chapter requirements: substantive intuition and formal derivation/proof under stated assumptions, at least3 worked examples and8 complete original exercises with matched full solutions. Include objective/prerequisites, boundaries and counterexamples, teach-back and answered retention, accurate chapter routes, extension and source links. No filler word quota; expected depth beyond an overview.",
+    "Use existing HTML component conventions: aside class=worked, numbered original exercises ol class=exercises, details class=solutions; explicit unique anchors. Public asset hrefs are flat filenames. Existing chapter/prerequisite routes must match canonical titles; planned successor links remain clearly labeled planned.",
+    "Return notation: G_i=1+R_i, R_i is same-horizon simple total return in common currency; mu=E[R], Sigma=Cov(R). w_i are beginning-wealth exposures summing to one including cash/borrowing when present. State probabilities are supplied positive fictional physical probabilities; no assumed pricing probabilities. Time-varying weights, fee/tax assumptions, short rights and funding rates explicit. Do not average log returns cross-sectionally as portfolio log returns.",
+    "c01 teaches total simple/log return, reinvestment/compounding, cash flows/time-weighted versus money-weighted evaluation, costs/fees, currency/inflation, same-date opportunity sets and full-investment budget. c02 develops covariance/PSD/sample common-date estimates. c03 teaches GMV/frontier/tangency, constraints and shrinkage. c04 derives equilibrium; acceptance follows this dependency order even while drafting in parallel.",
+    "Reuse verified stable sources only within already inspected scope. Retrieve and inspect primary sources for uncertain or additional specialist claims. Supply exact existing source records or new scoped records as a JSON list; root alone integrates. Sources support methodology, never fictional case observations. No unsupported regulatory/current investment advice.",
+    "Original offline lab: synthetic inputs/provenance/units/timing, stdlib Python benchmark quiet import/run, exact rational output where appropriate and justified floating tolerance for irrational/log quantities, complete preserved output, manifest for four distributed files and README with limitations. A named fixed fixture must reject contradictory policy labels or explicitly support alternatives. No general-purpose engine expansion.",
+    "Quiet focused checker check() returns strict JSON and independently reconstructs material numerical results and meaningful failure/boundary cases. Review every prompt against full solution and methods taught. Final author JSON includes coverage/gates, findings, source scope and final byte sizes/SHA256 of all eight payloads (excluding its own review record; nine owned paths total); finish/freeze before handoff. Root independently audits everything; no acceptance or human certification claim."
+  ],
+  "assignments": [
+    {
+      "owner": "cost_peer",
+      "chapter_id": "v09-c02",
+      "state": "accepted-after-coordinator-review",
+      "canonical_spec": {
+        "id": "v09-c02",
+        "number": 2,
+        "title": "Portfolio mathematics and diversification",
+        "outcome": "Compute portfolio risk and explain the role of covariance and concentration.",
+        "coverage": [
+          "Mean",
+          "covariance matrix",
+          "correlations",
+          "diversification",
+          "estimation error",
+          "leverage"
+        ],
+        "prerequisites": [
+          "v09-c01"
+        ],
+        "level": "Advanced",
+        "status": "planned",
+        "manuscript": "chapters/v09-c02.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Derive portfolio mean and covariance risk from beginning-wealth weights; full covariance-matrix quadratic-form proof, two-asset correlation boundaries, diversified versus common risk, concentration and leveraged/short positions including financing. Distinguish population supplied-state calculations from common-date sample estimates (n-1), missing-data/inconsistent-matrix dangers and estimation uncertainty. Coherent original state/return lab with independent numerical checks; optimization is developed in c03, not silently required here.",
+      "owned_paths": [
+        "content/chapters/v09-c02.html",
+        "content/projects/v09-c02-inputs.json",
+        "content/projects/v09-c02-analysis.py",
+        "content/projects/v09-c02-output.json",
+        "content/projects/v09-c02-manifest.json",
+        "content/projects/v09-c02-README.txt",
+        "scripts/check_v09_c02.py",
+        "content/reviews/v09-c02-author.json",
+        "content/reviews/v09-c02-sources.json"
+      ],
+      "final_author_review": "content/reviews/v09-c02-author.json"
+    },
+    {
+      "owner": "equity_peer",
+      "chapter_id": "v09-c03",
+      "state": "accepted-after-coordinator-review",
+      "canonical_spec": {
+        "id": "v09-c03",
+        "number": 3,
+        "title": "Mean-variance optimization and allocation",
+        "outcome": "Derive efficient portfolios and assess sensitivity to estimated inputs.",
+        "coverage": [
+          "Efficient frontier",
+          "minimum variance",
+          "tangency",
+          "constraints",
+          "optimization",
+          "shrinkage"
+        ],
+        "prerequisites": [
+          "v09-c02"
+        ],
+        "level": "Advanced",
+        "status": "planned",
+        "manuscript": "chapters/v09-c03.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Derive efficient mean-variance portfolios, unconstrained GMV and target-return frontier with explicit SPD/feasibility/nondegeneracy assumptions; tangency/risk-free allocation and valid sign/normalization conditions; constrained feasible portfolios with justified solution/optimality (small active-set or exact cases suitable for stdlib). Explain limitations of mean-variance preferences and sensitivity to means/covariances. Teach shrinkage with a transparent synthetic perturbation/regularization example and no implied universal optimal estimator. Complete proofs and unfamiliar transfer exercises, not formula survey.",
+      "owned_paths": [
+        "content/chapters/v09-c03.html",
+        "content/projects/v09-c03-inputs.json",
+        "content/projects/v09-c03-analysis.py",
+        "content/projects/v09-c03-output.json",
+        "content/projects/v09-c03-manifest.json",
+        "content/projects/v09-c03-README.txt",
+        "scripts/check_v09_c03.py",
+        "content/reviews/v09-c03-author.json",
+        "content/reviews/v09-c03-sources.json"
+      ],
+      "final_author_review": "content/reviews/v09-c03-author.json"
+    },
+    {
+      "owner": "financial_diagnosis",
+      "chapter_id": "v09-c04",
+      "state": "accepted-after-coordinator-review",
+      "canonical_spec": {
+        "id": "v09-c04",
+        "number": 4,
+        "title": "CAPM and equilibrium risk pricing",
+        "outcome": "Derive the CAPM mechanism and distinguish its theoretical assumptions from empirical evidence.",
+        "coverage": [
+          "Market portfolio",
+          "beta",
+          "security market line",
+          "alpha",
+          "equilibrium",
+          "testing limitations"
+        ],
+        "prerequisites": [
+          "v09-c03"
+        ],
+        "level": "Advanced",
+        "status": "planned",
+        "manuscript": "chapters/v09-c04.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Derive CAPM from investor optimality plus market clearing under explicit common beliefs, horizon, funding and mean-variance assumptions; economic covariance pricing, market portfolio, security versus capital market lines, beta/alpha and portfolio relations. Distinguish ex-ante relation, realized regression and empirical hypothesis; market-proxy/joint-hypothesis and implementation/nontraded-wealth limitations using accurately scoped inspected primary sources. Original coherent pricing/state/return case with reproducible benchmark; no fabricated current empirical findings.",
+      "owned_paths": [
+        "content/chapters/v09-c04.html",
+        "content/projects/v09-c04-inputs.json",
+        "content/projects/v09-c04-analysis.py",
+        "content/projects/v09-c04-output.json",
+        "content/projects/v09-c04-manifest.json",
+        "content/projects/v09-c04-README.txt",
+        "scripts/check_v09_c04.py",
+        "content/reviews/v09-c04-author.json",
+        "content/reviews/v09-c04-sources.json"
+      ],
+      "final_author_review": "content/reviews/v09-c04-author.json"
+    }
+  ],
+  "root_owned": [
+    "content/chapters/v09-c01.html",
+    "content/projects/v09-c01-*",
+    "scripts/check_v09_c01.py",
+    "content/reviews/v09-c01-author.json",
+    "content/reviews/v09-c01-sources.json",
+    "production/v09-opening-*",
+    "shared canonical, checkpoint, sources, build, verify, acceptance and hosting"
+  ],
+  "root_scope": "Author c01 full return-measurement chapter and reproducible lab; independently audit specialist packages; arrange separate peer review of c01 when a specialist is ready; accept in dependency order, build/check/archive and privately publish coherent batch.",
+  "root_state": "Four chapters accepted; whole-library checks and offline archive passed; publishing"
+}

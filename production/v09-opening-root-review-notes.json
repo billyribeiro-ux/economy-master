@@ -1,0 +1,125 @@
+{
+  "batch": "v09-opening",
+  "date": "2026-10-08",
+  "status": "All four chapter packages accepted; whole-library checks and offline archive passed; private publication pending",
+  "reviewer": "Coordinating author",
+  "chapters": {
+    "v09-c01": {
+      "author_status": "Frozen author package and separate specialist peer review complete",
+      "scope": "Entire original return-measurement chapter, all4 worked cases, all8 solutions and retention answers independently recomputed during authorship; source method sections inspected; quiet/portable exact lab and meaningful domain guards pass. Separate specialist peer record read, all nine reviewed hashes verified, no open findings.",
+      "checker_groups": 8,
+      "checker_comparisons": 518,
+      "count_limit": "518 includes complete reference and metadata comparisons, not518 separate economic derivations.",
+      "anchors": [
+        "Reinvested89/520 versus cash13/80 return",
+        "TWR8% versus MWR(sqrt(351)-9)/10-1 and Dietz-1/19",
+        "Terminal fee receipt1027.23614532",
+        "FX/inflation real-7/520",
+        "Tightened state-floor weights[1/17,7/16] and mean177/3200",
+        "All8 exercise results, including multiple IRRs10% and40%"
+      ],
+      "resolved_peer_findings": [
+        "Convex payoff opportunity sets now normalize each asset payoff by its purchase price and the common initial budget; return-vector convexity is explicit."
+      ],
+      "peer_record": "content/reviews/v09-c01-peer.json",
+      "peer_independent_comparisons": 83,
+      "peer_reviewed_hashes_verified": 9,
+      "open_findings": []
+    },
+    "v09-c02": {
+      "scope": "Read entire manuscript, every solution, final full analysis/input/README and focused checker. Independently reconstructed covariance from factors,4 allocations,2 financing cash ledgers, common-risk/concentration and sample cross-products, incompatible pairwise correlation witness and exercise anchors. Checked final author scopes/hash schema.",
+      "root_independent_exact_comparisons": 51,
+      "anchors": [
+        "Covariance rank2 null(1,1,-2)",
+        "P1 variance.0061 and loss probability1/4",
+        "Levered mean.075 variance.0153",
+        "Long-short mean.07 variance.022784",
+        "Sample covariance[[.0026,.0012],[.0012,.001]]",
+        "Impossible pairwise correlation witness-3",
+        "All8 exercises including PSD,-112% recourse return,serial mean variance and identical moments/different tails"
+      ],
+      "source_scope": "Official MIT portfolio47-page PDF methods; R covariance manual body confirms n-1 iid and non-PSD pairwise deletion; existing MIT covariance record reused without mutation.",
+      "resolved_findings": [
+        "Successor wording neutralized for same-batch acceptance."
+      ],
+      "open_findings": []
+    },
+    "v09-c03": {
+      "scope": "Read full manuscript/proofs, all8 prompts and solutions, code/input/README/checker. Independently used stationary/KKT certificates, projected scalar state payoffs and scalar utility derivatives, separate from author solver. Checked SPD/constant means/singular redundancy distinctions, tangency normalizer signs, complete-square and Cauchy proofs, all constraint multipliers and estimation sensitivity.",
+      "root_independent_exact_comparisons": 73,
+      "anchors": [
+        "GMV(36,9,4)/49 variance17/980",
+        "Targets.08/.10 variance33/1300 and441/10400",
+        "Cash-inclusive gamma4 mean491/8500 variance321/34000",
+        "Long-only(0,.5,.5) variance17/400; clipping loses target",
+        "Capped optimum(1,13,6)/20 variance1401/40000",
+        "Shrinkage scalar weights and common-audit values including alternate-truth counterexample",
+        "All8 exercises including reflected target,nonpositive normalization,discrete expected utility anddegeneracy"
+      ],
+      "source_scope": "Read actual MIT frontier/tangency slides32–44 and University of Zurich November2003 Ledoit/Wolf manuscript sections2–3.3. Own identity target/fixed intensities distinguished from authors constant-correlation/fitted estimator; existing Stanford duality record unchanged.",
+      "resolved_findings": [
+        "Precise neutral CAPM successor route curriculum.html#v09-c04; checker updated."
+      ],
+      "open_findings": [],
+      "coordinator_portability": "Complete preserved output reproduced from isolated copied input/script using normal and optimized Python from /private/tmp."
+    },
+    "v09-c04": {
+      "scope": "Read full manuscript/eight complete solutions/analysis/input/README. Independently reconstructed all raw-payoff population moments, strict-concavity and constrained KKT certificates, individual unit and loan/state-cash clearing, state-claim pricing, both proxy projections and finite-sample OLS.",
+      "root_independent_exact_comparisons": 74,
+      "anchors": [
+        "Marketweights(1/2,1/3,1/6); mean.06 variance.01",
+        "T1/4 lambda4 betas(1.5,1,-.5)",
+        "Investor units/cash clear3/2/1 andzero; statewealth576/576/696/696",
+        "Positive normalized pricing weights(.35,.35,.15,.15)",
+        "Zero-beta portfolio variance1/64",
+        "B-proxy apparentalpha.012/.0/.012",
+        "Sample beta23/15 alpha-11/750",
+        "Stateclaim price35/102 physicalmeanreturn-19/70 beta-51/7",
+        "Constrained aggregate(1/2,1/9,1/18), cash1/3; oldprices fail clearing",
+        "All8 exercise results and proposed research-audit scoring"
+      ],
+      "source_scope": "Actual Sharpe publisher full text sectionsII–IV and Fama/French Dartmouth2004 PDF testing andmarket-proxy sections inspected; existing MIT CAPM record reused. Historical assessments dated; no current empirical claim.",
+      "open_findings": [],
+      "resolved_findings": [
+        "Exercise3 now explicitly calls the12% portfolio a conditional CAPM benchmark and explains why admitting the positive-alpha security invalidates market tangency.",
+        "CML flag now also requires zero population alpha for every available risky claim. Targeted admissible payoff edit retains positive market premium while correctly returning allCML flags false, no clearing and invalid candidate pricing checksum. Baseline output unchanged."
+      ],
+      "final_checker": {
+        "groups": 9,
+        "comparisons": 215,
+        "domain_rejections": 11,
+        "status": "passed"
+      }
+    }
+  },
+  "acceptance_remaining": [
+    "Private same-project deployment"
+  ],
+  "limitations": [
+    "AI author/peer/coordinator review is not independent human certification.",
+    "Visual/mobile/keyboard/print UI QA remains pending; prior local-file security restriction is respected.",
+    "Full plan216chapters/18volumes remains unfinished."
+  ],
+  "resolved_integration_findings": [
+    "Shared structural verifier required literal Delayed check, rejecting c01/c02 even though their reviewed delayed-retention questions and full answers were present. The gate now accepts either explicit delayed check or delayed retention labels case-insensitively, while still requiring teach-back. No reviewed manuscript or lab changed."
+  ],
+  "validation_summary": {
+    "batch": "v09-opening",
+    "status": "passed",
+    "chapters_accepted": 100,
+    "volume_packages_accepted": 8,
+    "cumulative_packages_accepted": 2,
+    "html_pages_checked": 117,
+    "chapter_words": 479073,
+    "volume_assessment_words": 102956,
+    "cross_volume_assessment_words": 26239,
+    "solved_chapter_exercises": 800,
+    "offline_archive": {
+      "files": 341,
+      "bytes": 5423347,
+      "sha256": "8d0e6df8557432a2e34e569117c864b52dc2cddf61c1197fb53ad9bbba901c0f",
+      "integrity": "CRC and exact equality with every generated dist file passed"
+    },
+    "visual_mobile_keyboard_print_ui": "pending"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "chapter": "v09-c04",
+  "date": "2026-10-08",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating author, separate from specialist manuscript author",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Read full manuscript/eight complete solutions/analysis/input/README. Independently reconstructed all raw-payoff population moments, strict-concavity and constrained KKT certificates, individual unit and loan/state-cash clearing, state-claim pricing, both proxy projections and finite-sample OLS.",
+  "detailed_review": "production/v09-opening-root-review-notes.json",
+  "author_review": "reviews/v09-c04-author.json",
+  "verified_payload_hashes": 8,
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v09-c04.html",
+      "bytes": 45423,
+      "sha256": "c26e7f5ac7067bb5e8e161d93e677ae3f92bbd7fe9c9582efe7927f9b0749d36"
+    },
+    {
+      "path": "content/projects/v09-c04-inputs.json",
+      "bytes": 2765,
+      "sha256": "8b05076b387ce1b08d5ad62c64eec44eed857febf52cc3b0547c61425b0174bb"
+    },
+    {
+      "path": "content/projects/v09-c04-analysis.py",
+      "bytes": 13682,
+      "sha256": "31f8a18852dc6afd0f84f432b0349087b0acafd96f6bbf1ab994bf72bae61f55"
+    },
+    {
+      "path": "content/projects/v09-c04-output.json",
+      "bytes": 14553,
+      "sha256": "210bb2e52b7be7556954c220ed345cdf56dc14184a800a79e43af9b95ee39901"
+    },
+    {
+      "path": "content/projects/v09-c04-manifest.json",
+      "bytes": 995,
+      "sha256": "dc101decb28ba073393e61511bfb162747da6561b4ff5eefafc91de5f3c877a2"
+    },
+    {
+      "path": "content/projects/v09-c04-README.txt",
+      "bytes": 11161,
+      "sha256": "704919f6cbc8cc076e4bb96581930c5c8ce40667a156fadda7b470e884c12f92"
+    },
+    {
+      "path": "scripts/check_v09_c04.py",
+      "bytes": 21527,
+      "sha256": "c1645a8c4b38a19346de10f76a765cb61769fe6a050d6f2bce9fa1583f81cca6"
+    },
+    {
+      "path": "content/reviews/v09-c04-sources.json",
+      "bytes": 3042,
+      "sha256": "c3518adbc6700252dcee5d1dfb4eff1c92d1b6f435e3930fb075a52b7dd8b764"
+    },
+    {
+      "path": "content/reviews/v09-c04-author.json",
+      "bytes": 17140,
+      "sha256": "f4d752df213e5ca57081b48517aa4bd8374d6fd3bb6cabb9950071c5aed3828a"
+    }
+  ],
+  "source_review": "Actual Sharpe publisher full text sectionsII–IV and Fama/French Dartmouth2004 PDF testing andmarket-proxy sections inspected; existing MIT CAPM record reused. Historical assessments dated; no current empirical claim.",
+  "resolved_findings": [
+    "Exercise3 now explicitly calls the12% portfolio a conditional CAPM benchmark and explains why admitting the positive-alpha security invalidates market tangency.",
+    "CML flag now also requires zero population alpha for every available risky claim. Targeted admissible payoff edit retains positive market premium while correctly returning allCML flags false, no clearing and invalid candidate pricing checksum. Baseline output unchanged."
+  ],
+  "open_content_findings": [],
+  "limitations": [
+    "AI author, peer and coordinator review is not external human certification.",
+    "Synthetic teaching cases do not authenticate market data or guarantee investment outcomes.",
+    "Visual/mobile/keyboard/print UI QA remains pending."
+  ],
+  "coordinator_independent_comparisons": 74
+}

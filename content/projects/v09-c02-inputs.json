@@ -1,0 +1,228 @@
+{
+  "case": "Oriel portfolio laboratory",
+  "version": "1.0",
+  "provenance": "Original synthetic teaching inputs created 2026-10-08. No observed securities, market prices, investment forecast or actual brokerage contract.",
+  "units": {
+    "returns": "same-horizon simple total returns in decimal form, common fictional currency",
+    "variance": "squared decimal return",
+    "wealth": "fictional currency units",
+    "sample": "five separate common-date monthly observations, not the supplied annual state law"
+  },
+  "population": {
+    "horizon": "one year from date 0 to date 1",
+    "assets": [
+      "A",
+      "B",
+      "C"
+    ],
+    "probabilities": [
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4"
+    ],
+    "states": [
+      "F+ E+",
+      "F+ E-",
+      "F- E+",
+      "F- E-"
+    ],
+    "returns": [
+      [
+        "6/25",
+        "1/50",
+        "13/100"
+      ],
+      [
+        "4/25",
+        "9/50",
+        "17/100"
+      ],
+      [
+        "0",
+        "-3/50",
+        "-3/100"
+      ],
+      [
+        "-2/25",
+        "1/10",
+        "1/100"
+      ]
+    ],
+    "construction": "F and E are independent equally likely signs. RA=.08+.12F+.04E; RB=.06+.04F-.08E; C=(A+B)/2. These are positive physical probabilities, not pricing probabilities.",
+    "portfolios": [
+      {
+        "id": "P1",
+        "weights": [
+          "1/4",
+          "3/4",
+          "0"
+        ]
+      },
+      {
+        "id": "P2",
+        "weights": [
+          "1/2",
+          "1/2",
+          "0"
+        ]
+      },
+      {
+        "id": "P3",
+        "weights": [
+          "0",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "id": "P4",
+        "weights": [
+          "1/4",
+          "1/4",
+          "1/2"
+        ]
+      }
+    ]
+  },
+  "common_risk": {
+    "mean": "3/50",
+    "common_loading": "1",
+    "factor_variance": "1/100",
+    "residual_variance": "1/25",
+    "equal_weight_counts": [
+      1,
+      4,
+      25,
+      100
+    ],
+    "concentrated_weights": [
+      "7/10",
+      "1/10",
+      "1/10",
+      "1/10"
+    ],
+    "assumption": "All names have the same loading on one common factor. Zero-mean residuals are pairwise uncorrelated and uncorrelated with the factor. The exact finite-state construction uses independent signs with factor amplitude .10 and residual amplitude .20."
+  },
+  "finance": {
+    "initial_wealth": "100",
+    "lending_rate": "3/100",
+    "borrowing_rate": "3/50",
+    "levered_base_weights": [
+      "0",
+      "0",
+      "1"
+    ],
+    "risky_scale": "3/2",
+    "short_risky_weights": [
+      "6/5",
+      "-2/5",
+      "0"
+    ],
+    "short_cash_weight": "1/5",
+    "stock_borrow_fee": "1/50",
+    "short_proceeds_reusable": true,
+    "interim_margin_calls": false,
+    "full_recourse": true,
+    "assumption": "All positions are fixed at date 0 and settled at date 1. Financing rates and the fee per initial short notional are deterministic; total asset returns include distributions owed by shorts. All short proceeds may be reused under this fictional contract. No taxes, other fees or interim calls. Negative terminal equity is reported as a recourse deficit, never silently floored at zero."
+  },
+  "sample": {
+    "assets": [
+      "X",
+      "Y"
+    ],
+    "period_ends": [
+      "2027-01-31",
+      "2027-02-28",
+      "2027-03-31",
+      "2027-04-30",
+      "2027-05-31"
+    ],
+    "returns": [
+      [
+        "-1/25",
+        "-1/50"
+      ],
+      [
+        "1/50",
+        "1/25"
+      ],
+      [
+        "2/25",
+        "1/50"
+      ],
+      [
+        "-1/50",
+        "0"
+      ],
+      [
+        "3/50",
+        "3/50"
+      ]
+    ],
+    "weights": [
+      "2/5",
+      "3/5"
+    ],
+    "assumption": "Separate original synthetic monthly observations. Use all five aligned rows and denominator n-1 for sample covariance. S/n is an estimator of the mean's covariance only under the explicitly hypothetical iid vector sampling model; the table itself does not establish iid behavior."
+  },
+  "missing_data": {
+    "assets": [
+      "U",
+      "V",
+      "W"
+    ],
+    "row_ids": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5",
+      "M6"
+    ],
+    "returns": [
+      [
+        "-1/10",
+        "-1/10",
+        null
+      ],
+      [
+        "1/10",
+        "1/10",
+        null
+      ],
+      [
+        "-1/10",
+        null,
+        "-1/10"
+      ],
+      [
+        "1/10",
+        null,
+        "1/10"
+      ],
+      [
+        null,
+        "-1/10",
+        "1/10"
+      ],
+      [
+        null,
+        "1/10",
+        "-1/10"
+      ]
+    ],
+    "witness_weights": [
+      "-1",
+      "1",
+      "1"
+    ],
+    "assumption": "An intentionally bounded perfect-pair correlation counterexample, not an imputation method. Each pair has two matched observations with equal positive sample variances and perfect signed correlation. No complete three-asset row exists; the assembled matrix gives negative variance for the supplied witness."
+  },
+  "limits": [
+    "No portfolio optimization, equilibrium pricing or recommended investment policy is inferred.",
+    "Population moments, sample moments and the variance of an estimated mean are distinct objects.",
+    "The formulas describe fixed exposures over a specified horizon; they do not automatically cover dynamic margin calls, changing weights or compounding across dates.",
+    "Covariance is a second-moment summary and does not determine tail losses or future parameter stability."
+  ]
+}

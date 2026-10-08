@@ -1,0 +1,325 @@
+{
+  "chapter": "v09-c01",
+  "date": "2026-10-08",
+  "reviewer": "cost_peer",
+  "review_type": "independent specialist peer review",
+  "state": "peer-review-complete; coordinator acceptance and integration remain separate",
+  "assignment": "production/v09-c01-peer-assignment.json",
+  "scope": "Read the complete manuscript, every worked case, all eight prompts and solutions, teach-back and retention, all five offline lab files, full analysis and focused checker, scoped source proposals and final author record. Reconstructed results independently from financial quantities and dated cash; no manuscript, shared-state or publishing changes by this reviewer.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "recommendation": "Ready for dependency-ordered coordinator acceptance with no open peer finding.",
+  "reasoning_and_instruction": [
+    "Return, payoff, simple growth and before/after-fee terminology are separated. Positive starting wealth, equal model-year periods and endpoint distribution assumptions are explicit.",
+    "Reinvested distributions purchase actual fractional shares; retaining distributions at zero yield is a distinct policy. End-date reinvestment changes share count without changing endpoint wealth.",
+    "Compounding and annualization reproduce realized growth rather than forecast it. Arithmetic means, geometric means, expected wealth and expected log wealth are distinguished; independence and finite expectations are stated where needed.",
+    "Logs require positive wealth. A total loss has no finite log, and financed negative equity cannot be continued as an ordinary positive-wealth index. Time additivity does not imply cross-asset log averaging; Jensen uses nonnegative weights and specifies equality.",
+    "True TWR splits at every external-flow valuation. Investor IRR uses all signed dated cash, with a monotonic positive-root proof only for the restricted contribution fixture. Missing intermediate valuations do not identify true TWR. The separate binding-capital-call exercise correctly has two roots.",
+    "Modified Dietz uses gain excluding contributions divided by time-weighted capital. Its cumulative horizon, approximation and problematic denominator are explicit; it is not relabeled as true TWR or an annual IRR.",
+    "The fee model specifies entry, post-market management and pre-redemption bases. Currency conversion follows actual quote units; real purchasing power divides by the price-level factor. Fictional terminal taxes use separate income and realized-gain bases.",
+    "The portfolio identity closes the beginning-wealth budget including signed financing. The repaired opportunity-set paragraph normalizes each per-unit payoff by price before using wealth weights. Physical probabilities are not asserted to be pricing probabilities.",
+    "All state inequalities are intersected with long-only bounds. A tighter floor activates the previously nonbinding up-state lower bound. Hindsight winner selection and end-of-period weights are not treated as feasible prior decisions.",
+    "Buy-and-hold weights drift from actual holdings; target rebalancing is self-financing and path-dependent. The exercise reverses its performance ranking, preventing a universal superiority claim.",
+    "Every required exercise method is taught before use. Eight complete solutions match their actual prompts. The open reporting critique grades timing, feasible decisions and evidence, not a preferred investment opinion. Teach-back has the worked reconstruction and explicit success criterion; three delayed-retention answers are supplied."
+  ],
+  "independent_numerical_review": {
+    "status": "passed",
+    "comparisons": 83,
+    "count_scope": "Numerical and consistency comparisons in independent read-only reconstructions; includes individual ledger fields, state bounds and supporting equalities, not 83 distinct derivations. The supplied checker is recorded separately.",
+    "methods": [
+      "Actual cash distributions used to buy additional shares, with a separate one-original-share cash ledger.",
+      "Account unit issuance at the flow-date NAV, plus a 60-digit Decimal quadratic solution checked against the investor discounted-cash equation.",
+      "Dated cash deductions for each fee, direct purchase of foreign units and endpoint purchasing-power conversion.",
+      "Quantity-priced state payoffs, objective slope and both sides of each feasible interval.",
+      "Carried asset holdings versus target-weight reset, followed by direct terminal asset values.",
+      "Separate calculations from every exercise prompt and all delayed-retention questions.",
+      "Three bounded alternate inputs: no distributions, zero fees and swapped asset labels yielding the lower-bound optimum.",
+      "Unequal-price quantity example independently confirms why a fixed-budget payoff hull requires price normalization."
+    ],
+    "worked_and_lab_anchors": {
+      "distributions": {
+        "first_reinvestment_shares": "14/13",
+        "final_reinvested_wealth": "1218/13",
+        "final_reinvestment_shares": "29/26",
+        "cumulative_growth": "609/520",
+        "retained_cash_wealth": "93"
+      },
+      "flows": {
+        "units_after_contribution": "250",
+        "final_unit_value": "27/25",
+        "twr": "2/25",
+        "annual_investor_irr": -0.02650060048048042,
+        "investor_cash_gain": "-10",
+        "cumulative_modified_dietz": "-1/19",
+        "alternative_twr": "-1/10"
+      },
+      "fees": {
+        "entry_invested": "990",
+        "first_year_close": "137214/125",
+        "second_year_close": "129049767/125000",
+        "final_receipt": "25680903633/25000000",
+        "investor_return": "680903633/25000000000"
+      },
+      "currency": {
+        "home_nominal_return": "13/500",
+        "home_real_return": "-7/520"
+      },
+      "opportunity": {
+        "selected_state_returns": [
+          "-9/125",
+          "19/250",
+          "41/250"
+        ],
+        "selected_mean": "61/1000",
+        "original_feasible_interval": [
+          "0",
+          "17/32"
+        ],
+        "original_maximum_mean": "15/256",
+        "tightened_feasible_interval": [
+          "1/17",
+          "7/16"
+        ],
+        "tightened_maximum_mean": "177/3200"
+      },
+      "rebalancing": {
+        "buy_and_hold_terminal": "213/2",
+        "reset_terminal": "897/8",
+        "buy_and_hold_second_year_weights": [
+          "14/23",
+          "9/23"
+        ]
+      },
+      "normalization_counterexample": {
+        "initial_wealth": "200",
+        "weights": [
+          "1/4",
+          "3/4"
+        ],
+        "prices": [
+          "40",
+          "100"
+        ],
+        "per_unit_payoffs": [
+          "60",
+          "110"
+        ],
+        "quantity_and_normalized_terminal_wealth": "240"
+      }
+    },
+    "exercise_audit": [
+      {
+        "exercise": 1,
+        "result": "Price 8%; reinvested wealth 182/3 and return 16/75; retained cash wealth 60 and return 20%; log ln(91/75)."
+      },
+      {
+        "exercise": 2,
+        "result": "Arithmetic mean zero; realized growth 91/100; geometric mean sqrt(91/100)-1; average log one-half ln(91/100); recovery 3/7; independent expected two-year growth one."
+      },
+      {
+        "exercise": 3,
+        "result": "Annual returns 25% and -5%; cumulative TWR 3/16; unique annual root x=(sqrt(3265)-15)/40; cash gain 18 and cumulative Dietz 6/55."
+      },
+      {
+        "exercise": 4,
+        "result": "The two positive accumulation roots are 11/10 and 7/5, hence IRRs 10% and 40%; NPV at 20% is 25/18, retaining the binding final payment."
+      },
+      {
+        "exercise": 5,
+        "result": "Local growth 1127/1000, home growth 25921/25000 and real return 171/25750 under the given fee, currency and price-level conventions."
+      },
+      {
+        "exercise": 6,
+        "result": "First-year wealth 225; hold/reset terminal wealth 210 and 855/4. Changed second-year A return gives 260 and 1035/4, reversing the strategy ranking. Logs aggregate only after wealth."
+      },
+      {
+        "exercise": 7,
+        "result": "Income tax 1 and gain tax 12/5 give wealth 563/5, return 63/500 and log ln(563/500). Total loss has simple return -1 and no finite log."
+      },
+      {
+        "exercise": 8,
+        "result": "Feasible interval [1/17,7/16]; optimal state returns [-1/50,53/800,87/800], mean 177/3200. Reporting critique correctly identifies future weights, hindsight selection, unmatched benchmarks and unsupported skill inference."
+      }
+    ],
+    "retention": "Price return 1% and total return 5%; flow-adjusted TWR 5%; active return two percentage points and relative wealth return 1/52."
+  },
+  "focused_checker": {
+    "command": "python3 -B book/scripts/check_v09_c01.py",
+    "status": "passed",
+    "groups": 8,
+    "comparisons": 518,
+    "domain_rejections": 15,
+    "count_scope": "Includes output-field, structure, manifest and isolated CLI comparisons; not 518 financial derivations. Run after the normalization correction.",
+    "checks": [
+      {
+        "name": "Distribution-share reconciliation, cash alternatives and log/annualization domains",
+        "status": "passed"
+      },
+      {
+        "name": "Flow-adjusted unit growth, discounted investor equation, root and identification counterexample",
+        "status": "passed"
+      },
+      {
+        "name": "Independent fee cash ledger and currency/purchasing-power unit conversion",
+        "status": "passed"
+      },
+      {
+        "name": "State payoffs, physical means and two-sided mandate boundaries",
+        "status": "passed"
+      },
+      {
+        "name": "Beginning-weight budget identity and distinct self-financing strategies",
+        "status": "passed"
+      },
+      {
+        "name": "Every determinate exercise and retention result; E8 independently covered by tightened-state checks",
+        "status": "passed"
+      },
+      {
+        "name": "Fifteen meaningful timing, capital, mandate, convention and numerical-domain rejections",
+        "status": "passed"
+      },
+      {
+        "name": "Complete preserved output, final manifest, chapter structure and isolated normal/optimized offline CLI",
+        "status": "passed"
+      }
+    ],
+    "portable_execution": "The focused checker successfully copies input/script and compares complete normal and optimized Python CLI output from an unrelated working directory."
+  },
+  "sources": [
+    {
+      "id": "v09-c01-zivot-returns",
+      "url": "https://bookdown.org/compfinezbook/introFinRbook/Return-Calculations.html",
+      "peer_inspection": "Actual author-attributed HTML inspected in section 1.2.2 on simple returns and compounding, the annualization/averages and log discussion in 1.2.2.7–1.2.3, and beginning-weight/rebalancing/log-portfolio discussion in 1.3.1.3–1.3.2. Cited measurement methods agree with the chapter. Historical asset examples, software and tax subsections were not used as case inputs."
+    },
+    {
+      "id": "v09-c01-gips-methods",
+      "url": "https://www.gipsstandards.org/standards/gips-standards-for-firms/gips-standards-handbook-for-firms/",
+      "peer_inspection": "Actual official HTML inspected around true TWR/geometric linking and Modified Dietz (2.A.24 discussion), investor cash and money weighting, and Net Returns (2.A.30 discussion). The November 2020 methodological scope supports timing and fee-perimeter distinctions. Image-only equations were not claimed as extracted text; the chapter formulas were independently derived. No current compliance conclusion is made."
+    }
+  ],
+  "resolved_findings": [
+    {
+      "id": "v09-c01-peer-01",
+      "area": "reasoning precision",
+      "location": "content/chapters/v09-c01.html#portfolio-payoffs",
+      "finding": "The original convex-hull sentence used raw asset payoff vectors even though earlier definitions permitted unequal purchase prices. Wealth weights require fixed-budget normalized payoffs.",
+      "resolution": "Coordinator changed the sentence to convex combinations of W0 X_i/P_i,0, equivalently asset-return vectors, and explicitly distinguished raw per-unit payoffs. Re-read final paragraph and verified independently with unequal asset prices; preceding equations and all lab cases were already correct. Final author record records the repair.",
+      "status": "resolved"
+    }
+  ],
+  "open_findings": [],
+  "integrity": {
+    "author_payload_hashes_matched": 8,
+    "peer_reviewed_files": 9,
+    "manifest": "Four asset payload byte counts and SHA-256 digests passed the final focused checker.",
+    "freeze_basis": "Reviewed final chapter and author hashes supplied by coordinator; computed all hashes from current bytes, including the author record itself.",
+    "reviewed_hashes": [
+      {
+        "path": "content/chapters/v09-c01.html",
+        "bytes": 44993,
+        "sha256": "945684dcbaee8ccf93471708667b15bbeb40c1be6bb5c446dc259f98f555511d"
+      },
+      {
+        "path": "content/projects/v09-c01-inputs.json",
+        "bytes": 2266,
+        "sha256": "3c968d7ce3b573d3efce4b53cdf0c8417265f3701105168b8d3f98d1a8031f00"
+      },
+      {
+        "path": "content/projects/v09-c01-analysis.py",
+        "bytes": 12024,
+        "sha256": "0559c9e36012625b0873cc29733f30de1b57d625c1f0175e8e847e25a08892c0"
+      },
+      {
+        "path": "content/projects/v09-c01-output.json",
+        "bytes": 4922,
+        "sha256": "ddb851b1736c81f9d32fa3b2a70780ab48923c5a5bc9e43ac16e0af2bf294cee"
+      },
+      {
+        "path": "content/projects/v09-c01-manifest.json",
+        "bytes": 816,
+        "sha256": "8e3abff7d5c7168566e85d4de24c7ae953ad03eca968499b80e63a72e4de62c5"
+      },
+      {
+        "path": "content/projects/v09-c01-README.txt",
+        "bytes": 8895,
+        "sha256": "87b329f893b6dbf7b05b72a9efb339fb6ab0c57d8514f0c96d951e69961ba7f1"
+      },
+      {
+        "path": "scripts/check_v09_c01.py",
+        "bytes": 15446,
+        "sha256": "69c31a78b4d0cc1d4eaf2944707eee35d9455eb9c908f614d1b8dbccbce9cc2d"
+      },
+      {
+        "path": "content/reviews/v09-c01-sources.json",
+        "bytes": 1957,
+        "sha256": "9e4ac2fc02831017cd5da885f83b5cb851de918f01eece772858d316e2471a5b"
+      },
+      {
+        "path": "content/reviews/v09-c01-author.json",
+        "bytes": 6634,
+        "sha256": "1075a71a9d2376edce3de1e3491954b7a5acf2185b858efb80817d56ecfecd4c"
+      }
+    ]
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v09-c01.html",
+      "bytes": 44993,
+      "sha256": "945684dcbaee8ccf93471708667b15bbeb40c1be6bb5c446dc259f98f555511d"
+    },
+    {
+      "path": "content/projects/v09-c01-inputs.json",
+      "bytes": 2266,
+      "sha256": "3c968d7ce3b573d3efce4b53cdf0c8417265f3701105168b8d3f98d1a8031f00"
+    },
+    {
+      "path": "content/projects/v09-c01-analysis.py",
+      "bytes": 12024,
+      "sha256": "0559c9e36012625b0873cc29733f30de1b57d625c1f0175e8e847e25a08892c0"
+    },
+    {
+      "path": "content/projects/v09-c01-output.json",
+      "bytes": 4922,
+      "sha256": "ddb851b1736c81f9d32fa3b2a70780ab48923c5a5bc9e43ac16e0af2bf294cee"
+    },
+    {
+      "path": "content/projects/v09-c01-manifest.json",
+      "bytes": 816,
+      "sha256": "8e3abff7d5c7168566e85d4de24c7ae953ad03eca968499b80e63a72e4de62c5"
+    },
+    {
+      "path": "content/projects/v09-c01-README.txt",
+      "bytes": 8895,
+      "sha256": "87b329f893b6dbf7b05b72a9efb339fb6ab0c57d8514f0c96d951e69961ba7f1"
+    },
+    {
+      "path": "scripts/check_v09_c01.py",
+      "bytes": 15446,
+      "sha256": "69c31a78b4d0cc1d4eaf2944707eee35d9455eb9c908f614d1b8dbccbce9cc2d"
+    },
+    {
+      "path": "content/reviews/v09-c01-sources.json",
+      "bytes": 1957,
+      "sha256": "9e4ac2fc02831017cd5da885f83b5cb851de918f01eece772858d316e2471a5b"
+    },
+    {
+      "path": "content/reviews/v09-c01-author.json",
+      "bytes": 6634,
+      "sha256": "1075a71a9d2376edce3de1e3491954b7a5acf2185b858efb80817d56ecfecd4c"
+    }
+  ],
+  "limitations": [
+    "Independent agent review is not external academic or human certification and cannot guarantee the absence of every error.",
+    "Synthetic finite cases are not authenticated market records, investment advice, tax law or a GIPS compliance assessment.",
+    "The cash-flow solver is intentionally bounded to the documented annual contribution case. The review does not validate arbitrary IRR streams, irregular-day calendars, all malformed JSON types or extreme floating-point magnitudes.",
+    "Structural/offline numerical checks do not substitute for browser visual, keyboard, mobile or print review; those shared acceptance gates remain coordinator-owned.",
+    "Coordinator dependency acceptance, whole-library integration, publication and terminal library completion are separate from this peer finding."
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "chapter": "v09-c04",
+  "title": "CAPM and equilibrium risk pricing",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "author": "financial diagnosis specialist",
+  "assignment": "production/v09-opening-assignments.json",
+  "state": "author-review-complete",
+  "status": "Passed author checks; dependency-ordered coordinator acceptance remains separate.",
+  "canonical_outcome": "Derive the CAPM mechanism and distinguish its theoretical assumptions from empirical evidence.",
+  "counts": {
+    "chapter_words": 6138,
+    "worked_examples": 4,
+    "exercises": 8,
+    "complete_solutions": 8,
+    "source_records": 3,
+    "owned_paths": 9,
+    "hashed_payloads": 8
+  },
+  "coverage": {
+    "Market portfolio": [
+      "economy",
+      "derivation",
+      "worked-1"
+    ],
+    "beta": [
+      "derivation",
+      "lines",
+      "worked-2",
+      "exercise-2",
+      "exercise-4"
+    ],
+    "security market line": [
+      "lines",
+      "worked-2",
+      "exercise-3"
+    ],
+    "alpha": [
+      "lines",
+      "alpha-evidence",
+      "worked-4",
+      "exercise-5",
+      "exercise-6"
+    ],
+    "equilibrium": [
+      "economy",
+      "derivation",
+      "worked-1",
+      "limits",
+      "exercise-1",
+      "exercise-7"
+    ],
+    "testing limitations": [
+      "testing",
+      "limits",
+      "worked-4",
+      "exercise-8"
+    ]
+  },
+  "gates": {
+    "arithmetic": "pass",
+    "reasoning": "pass",
+    "solutions": "pass",
+    "sources": "pass",
+    "instruction": "pass",
+    "structure": "pass within owned fragment and lab; coordinator owns assembled-library checks"
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v09-c04.html",
+      "bytes": 45423,
+      "sha256": "c26e7f5ac7067bb5e8e161d93e677ae3f92bbd7fe9c9582efe7927f9b0749d36"
+    },
+    {
+      "path": "content/projects/v09-c04-inputs.json",
+      "bytes": 2765,
+      "sha256": "8b05076b387ce1b08d5ad62c64eec44eed857febf52cc3b0547c61425b0174bb"
+    },
+    {
+      "path": "content/projects/v09-c04-analysis.py",
+      "bytes": 13682,
+      "sha256": "31f8a18852dc6afd0f84f432b0349087b0acafd96f6bbf1ab994bf72bae61f55"
+    },
+    {
+      "path": "content/projects/v09-c04-output.json",
+      "bytes": 14553,
+      "sha256": "210bb2e52b7be7556954c220ed345cdf56dc14184a800a79e43af9b95ee39901"
+    },
+    {
+      "path": "content/projects/v09-c04-manifest.json",
+      "bytes": 995,
+      "sha256": "dc101decb28ba073393e61511bfb162747da6561b4ff5eefafc91de5f3c877a2"
+    },
+    {
+      "path": "content/projects/v09-c04-README.txt",
+      "bytes": 11161,
+      "sha256": "704919f6cbc8cc076e4bb96581930c5c8ce40667a156fadda7b470e884c12f92"
+    },
+    {
+      "path": "scripts/check_v09_c04.py",
+      "bytes": 21527,
+      "sha256": "c1645a8c4b38a19346de10f76a765cb61769fe6a050d6f2bce9fa1583f81cca6"
+    },
+    {
+      "path": "content/reviews/v09-c04-sources.json",
+      "bytes": 3042,
+      "sha256": "c3518adbc6700252dcee5d1dfb4eff1c92d1b6f435e3930fb075a52b7dd8b764"
+    }
+  ],
+  "derivation_review": [
+    "Same-horizon common-currency simple total returns; beginning-wealth risky exposures plus signed cash sum to one. SPD covariance, positive wealth, positive return-variance risk aversion, unrestricted common-rate funding and no costs/nontraded income are explicit.",
+    "Common beliefs describe the physical moments for empirical comparison. The directly assumed quadratic mean-variance criterion is not presented as a universal expected-utility representation.",
+    "Individual FOC e=gamma Sigma x and negative-definite Hessian establish unique global optimum; exact objective-loss identity verifies strict concavity. Risky weights need not sum to one separately from cash.",
+    "Positive wealth-share aggregation and the chosen zero-net-cash economy produce wM=T Sigma^-1 e, T=sum(a/gamma)>0 and lambda=1/T. This justifies positive tangency normalization at equilibrium rather than assuming it at arbitrary prices.",
+    "Multiplying the vector price-of-covariance equation by market weights gives the positive market premium and CAPM. The proof is conditional and does not assert general price-existence/uniqueness or a convergent adjustment mechanism.",
+    "Cauchy–Schwarz in the SPD covariance inner product proves the CML upper bound under the full zero-population-alpha restriction; equality requires a nonnegative market exposure. The negative-exposure lower ray, all-claims SML and realized-return regression are distinguished. The lab gates its positive-premium CML flag on zero alpha for every available risky claim; arbitrary market/cash combinations retain their computable means and variances without an efficiency claim.",
+    "Projection beta/intercept and residual orthogonality are identities; zero population alpha is the additional pricing restriction. Residual variance, covariance versus independence, fixed-weight beta/alpha aggregation and market beta one are explicit.",
+    "Positive pricing weights are used only after direct payoff checks; physical probabilities remain distinct. The candidate kernel is not advertised as a valid price rule for arbitrary mean-variance inputs. General SDF/completeness teaching is left to planned c05.",
+    "Borrowing constraints introduce a nonnegative multiplier and can change the risky mix. The constrained counterexample proves global optimality and reports failed old-price clearing. Different beliefs, singular covariance and zero market variance identify exact failed proof steps.",
+    "The nontraded-income extension adds a portfolio-income covariance vector to individual FOCs and its wealth-weighted aggregate; it is explicitly limited and not a general human-capital pricing theorem.",
+    "Population theory, finite-sample OLS, joint model/proxy hypotheses and implementable net investment claims are separated. The selected sample has no empirical significance claim; the research exercise discloses selection and unverified interval assumptions."
+  ],
+  "worked_example_review": [
+    {
+      "number": 1,
+      "anchor": "worked-1",
+      "finding": "Caldera physical states, full covariance/SPD, mean/market beta, investor objectives, risky shares, borrowing/lending and final state wealth all reconcile."
+    },
+    {
+      "number": 2,
+      "anchor": "worked-2",
+      "finding": "Negative beta with high total variance, zero-beta risky portfolio and same-mean lower-variance market/cash portfolio are calculated completely; no guaranteed-hedge or arbitrage claim."
+    },
+    {
+      "number": 3,
+      "anchor": "worked-3",
+      "finding": "Physical expected payoffs and incorrectly uniform risk-free discounts contrast with correct required returns and strictly positive normalized pricing weights; every claim including cash prices exactly."
+    },
+    {
+      "number": 4,
+      "anchor": "worked-4",
+      "finding": "B-only population proxy creates false alphas despite true-market CAPM; separate selected sample produces nonzero estimated alpha with known true alpha zero."
+    }
+  ],
+  "exercise_review": [
+    {
+      "number": 1,
+      "prompt": "Aggregate three investors and derive market/negative-beta return plus cash clearing.",
+      "solution": "T=3/10,lambda=10/3,market premium6%,market mean7%,claim mean-0.5%; market exposures5/3,10/9,2/3 and cash weights sum to zero under wealth weights.",
+      "status": "complete"
+    },
+    {
+      "number": 2,
+      "prompt": "Implement signed A/market/cash residual-risk portfolio.",
+      "solution": "Returns-18%,22%,-18%,22%; mean2%,variance.04,beta0; weights4,-6,3 sum to one and short permissions explicit.",
+      "status": "complete"
+    },
+    {
+      "number": 3,
+      "prompt": "Compare SML alpha, a market/cash benchmark and portfolio alpha in a separate conditional case; distinguish the benchmark from the actual efficient frontier.",
+      "solution": "Security alpha 1%; same-risk market/cash benchmark mean 12%; 60/40 mean 5.4%, beta 0.3, alpha 0.6%. The positive-alpha security violates market tangency in the expanded opportunity set, so the displayed market/cash benchmark is not the actual efficient frontier.",
+      "status": "complete"
+    },
+    {
+      "number": 4,
+      "prompt": "Price a zero-net-supply s1 contract and compare physical mean/beta/required return.",
+      "solution": "Price35/102,mean-19/70,covariance-51/700,beta-51/7,CAPM mean-19/70; physical-mean risk-free discount25/102 is incorrect.",
+      "status": "complete"
+    },
+    {
+      "number": 5,
+      "prompt": "Reconstruct finite-sample OLS and interpret uncertainty.",
+      "solution": "Means.105/.085,centered sums23/200 and3/40,beta23/15,alpha-11/750; covariance divisor cancels and no alpha standard error or significance is supplied.",
+      "status": "complete"
+    },
+    {
+      "number": 6,
+      "prompt": "Recompute all alphas with equal-weighted proxy and test self-alpha logic.",
+      "solution": "Proxy mean7/150,variance7/1200; betas10/7,1,4/7; alphas23/1050,1/75,-37/1050 average zero; market-value weights are not equal weights.",
+      "status": "complete"
+    },
+    {
+      "number": 7,
+      "prompt": "Prove constrained H1 optimum and evaluate old-price clearing.",
+      "solution": "A-only optimum,eta.01,objective.055 versus market.050; aggregate risky weights1/2,1/9,1/18 and net cash1/3 fail clearing. Strict concavity/KKT proof is explicit.",
+      "status": "complete"
+    },
+    {
+      "number": 8,
+      "prompt": "Audit selected monthly alpha report, deterministic fee and joint inference claims.",
+      "solution": "Gross nominal interval[-.18%,1.78%],net alpha.5%,nominal interval[-.48%,1.48%]; complete research-design evaluation criteria address all requested issues without claiming valid selected-sample coverage.",
+      "status": "complete"
+    }
+  ],
+  "numerical_anchors": {
+    "market_weights": [
+      "1/2",
+      "1/3",
+      "1/6"
+    ],
+    "asset_means": [
+      "2/25",
+      "3/50",
+      "0"
+    ],
+    "market_mean": "3/50",
+    "market_variance": "1/100",
+    "covariance_principal_minors": [
+      "1/40",
+      "7/80000",
+      "9/4000000"
+    ],
+    "market_betas": [
+      "3/2",
+      "1",
+      "-1/2"
+    ],
+    "aggregate_risk_tolerance": "1/4",
+    "lambda": "4",
+    "investor_risky_weights": [
+      [
+        "1",
+        "2/3",
+        "1/3"
+      ],
+      [
+        "1/4",
+        "1/6",
+        "1/12"
+      ]
+    ],
+    "investor_cash_weights": [
+      "-1",
+      "1/2"
+    ],
+    "pricing_weights": [
+      "7/20",
+      "7/20",
+      "3/20",
+      "3/20"
+    ],
+    "proxy_alphas": [
+      "3/250",
+      "0",
+      "3/250"
+    ],
+    "sample_A_beta": "23/15",
+    "sample_A_alpha": "-11/750",
+    "mean_shift_excess_demand": [
+      "3/8",
+      "-5/12",
+      "1/24"
+    ],
+    "constrained_excess_demand": [
+      "0",
+      "-2/9",
+      "-1/9"
+    ]
+  },
+  "numerical_checks": {
+    "status": "pass",
+    "groups": 9,
+    "comparisons": 215,
+    "meaningful_domain_rejections": 11,
+    "coverage": [
+      "Independent orthogonal-factor reconstruction versus benchmark payoff moments",
+      "Individual FOC,strict-concavity gaps,share budgets,loan repayment and aggregate physical cash",
+      "CML upper/lower rays,zero-beta variance and weighted residual cancellation",
+      "Independent positive valuation weights and all claim-price identities",
+      "Population proxy,finite-sample OLS and changed-selector outputs",
+      "Changed means and constrained optimum at fixed prices; honest nonclearing/pricing flags and a positive-premium edited market ray that is correctly not labeled efficient when population alphas are nonzero",
+      "All eight full exercise numerical/transfer anchors",
+      "Eleven invalid regime/probability/wealth/gamma/price/budget/selector/singular/constant-benchmark inputs",
+      "Full reference/manifest/source/HTML checks and isolated normal/-O CLI"
+    ]
+  },
+  "commands_and_contracts": [
+    {
+      "command": "python3 book/scripts/check_v09_c04.py",
+      "result": "pass; 9 groups, 215 comparisons and 11 meaningful rejection checks"
+    },
+    {
+      "command": "capture checker import/check stdout+stderr; json.dumps(check(),allow_nan=False)",
+      "result": "Quiet and strict JSON; rerun after the final market/cash efficiency flag correction"
+    },
+    {
+      "command": "isolated temporary input/script copies from another working directory; normal and -O CLI",
+      "result": "both return full preserved exact JSON with empty stderr and no dependencies/network"
+    },
+    {
+      "command": "SHA-256/byte-size validation for all four distributed manifest payloads",
+      "result": "pass; eight final owned payload hashes recorded above"
+    }
+  ],
+  "source_review": {
+    "record": "content/reviews/v09-c04-sources.json",
+    "existing_exact_records": [
+      "v08-c04-mit-capm"
+    ],
+    "new_inspected_primary_records": [
+      "v09-c04-sharpe-equilibrium",
+      "v09-c04-fama-french-tests"
+    ],
+    "scope": "Sharpe1964 publisher full text, SectionsII–IV on individual choice/common-belief/equal-rate equilibrium/systematic risk; Fama/French2004 actual22-page Dartmouth PDF, printed pp.25–26,29–34,40–42 on assumptions/regression/proxy/model ambiguity. MIT CAPM source reused within its previously inspected scope.",
+    "qualification": "Historical empirical assessments remain dated; no old dataset, case, figure, numerical finding or source quotation reproduced. Zero covariance is not treated as general independence. Sources support methods, not synthetic data or current market forecasts."
+  },
+  "resolved_findings": [
+    {
+      "origin": "coordinator architecture review",
+      "finding": "Keep the chosen zero-net-cash economy distinct from a universal CAPM requirement and check finite-state pricing consistency.",
+      "resolution": "Explicit scope statement; all claims and cash priced by a strictly positive independently checked finite-state rule without expanding to general SDF theory."
+    },
+    {
+      "origin": "author execution check",
+      "finding": "The exact-fraction helper accepts one argument; sample weights initially used a two-argument call.",
+      "resolution": "Changed to F(1)/sample length before first saved reference output. Final quiet normal/optimized execution and independent OLS checks pass."
+    },
+    {
+      "origin": "author instructional review",
+      "finding": "Common agreement could be confused with correct physical moments; README notation could overlap pricing weights.",
+      "resolution": "Empirical restriction explicitly assumes correct common physical moments; README uses e for expected excess returns and T for aggregate risk tolerance, consistent with the manuscript."
+    },
+    {
+      "origin": "coordinator full manuscript and exercise review",
+      "finding": "Exercise 3 admitted a positive-alpha security while describing the market/cash benchmark as the actual efficient frontier.",
+      "resolution": "Prompt and full solution now call the 12% same-risk combination the conditional CAPM market/cash benchmark. The solution explicitly states that the admitted positive-alpha security invalidates market tangency and that the benchmark is not the true efficient frontier. All numerical answers are preserved."
+    },
+    {
+      "origin": "coordinator code review",
+      "finding": "The market/cash positive-premium CML flag previously depended only on exposure sign and market premium, so allowed payoff edits with nonzero population alphas could incorrectly imply efficiency.",
+      "resolution": "The flag now also requires zero population alpha for every available risky claim. README documents the condition. A targeted admissible A-payoff increase preserves a positive market premium but gives false CML flags, failed clearing and failed candidate pricing consistency; the full baseline output is unchanged."
+    }
+  ],
+  "open_findings": [],
+  "limitations": [
+    "Mean-variance preferences, common correct moments, unrestricted equal-rate trading and absent outside income are conditional assumptions, not universal investor descriptions.",
+    "The code evaluates a bounded three-claim/four-state candidate-price economy; it is not a price solver, general constrained optimizer or empirical inference system.",
+    "The positive pricing checksum is verified for the fixture; arbitrary covariance-based candidate kernels can fail positivity or claim-price identities.",
+    "Selected sample coefficients and hypothetical research intervals do not establish statistical validity, market efficiency, mispricing, persistent skill or implementable performance.",
+    "Prerequisite acceptance follows c01–c03 and coordinator review. All future chapter links are labeled planned.",
+    "Agent author review is not independent human certification. Coordinator owns full-library structural/UI/print checks, acceptance, checkpoint and publication."
+  ],
+  "handoff": "Nine assigned paths complete and frozen after both coordinator precision repairs and the final quiet check. Eight non-author payload hashes identify the package; no shared files or hosting changed and no child agents used. Coordinator acceptance remains separate."
+}

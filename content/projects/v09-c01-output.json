@@ -1,0 +1,175 @@
+{
+  "case": "Serein return-measurement desk",
+  "dividends": {
+    "rows": [
+      {
+        "year": 1,
+        "simple_total_return": "1/20",
+        "log_total_return": 0.04879016416943205,
+        "gross_factor": "21/20",
+        "reinvested_shares_after_distribution": "14/13",
+        "reinvested_wealth": "84",
+        "one_share_plus_retained_cash": "84"
+      },
+      {
+        "year": 2,
+        "simple_total_return": "3/26",
+        "log_total_return": 0.109199291964992,
+        "gross_factor": "29/26",
+        "reinvested_shares_after_distribution": "29/26",
+        "reinvested_wealth": "1218/13",
+        "one_share_plus_retained_cash": "93"
+      }
+    ],
+    "price_return": "1/20",
+    "reinvested_gross": "609/520",
+    "reinvested_cumulative_return": "89/520",
+    "reinvested_annualized_return": 0.08219861677690488,
+    "reinvested_log_return": 0.15798945613442403,
+    "retained_cash_cumulative_return": "13/80"
+  },
+  "cash_flow_account": {
+    "opening": "100",
+    "before_contribution": "120",
+    "after_contribution": "300",
+    "terminal_liquidation": "270",
+    "subperiod_simple_returns": [
+      "1/5",
+      "-1/10"
+    ],
+    "twr_cumulative": "2/25",
+    "twr_annualized": 0.039230484541326494,
+    "money_weighted_annual_return": -0.02650060048048042,
+    "mwr_terminal_equation_residual": 0.0,
+    "investor_net_cash_gain": "-10",
+    "modified_dietz_cumulative": "-1/19",
+    "alternative_twr_cumulative": "-1/10",
+    "root_scope": "Unique x>0 for positive opening/final values and one nonnegative date1 contribution; not a general mixed-sign IRR solver"
+  },
+  "fees": {
+    "entry_fee": "10",
+    "rows": [
+      {
+        "year": 1,
+        "opening_invested_assets": "990",
+        "before_management_fee": "5544/5",
+        "management_fee": "1386/125",
+        "closing_assets": "137214/125",
+        "net_simple_return": "68/625"
+      },
+      {
+        "year": 2,
+        "opening_invested_assets": "137214/125",
+        "before_management_fee": "1303533/1250",
+        "management_fee": "1303533/125000",
+        "closing_assets": "129049767/125000",
+        "net_simple_return": "-119/2000"
+      }
+    ],
+    "exit_fee": "129049767/25000000",
+    "final_investor_receipt": "25680903633/25000000",
+    "investor_cumulative_return": "680903633/25000000000",
+    "pre_fee_asset_cumulative_return": "8/125",
+    "after_management_before_loads_cumulative_return": "53533/1250000"
+  },
+  "currency": {
+    "fx_simple_return": "-1/20",
+    "home_nominal_return": "13/500",
+    "home_real_return": "-7/520",
+    "home_nominal_log_return": 0.025667746748577813,
+    "home_real_log_return": -0.013552966404703456
+  },
+  "opportunity": {
+    "asset_expected_returns": [
+      "3/40",
+      "1/25"
+    ],
+    "selected_state_returns": [
+      "-9/125",
+      "19/250",
+      "41/250"
+    ],
+    "selected_expected_return": "61/1000",
+    "selected_meets_floor": false,
+    "feasible_weight_a_interval": [
+      "0",
+      "17/32"
+    ],
+    "highest_mean_feasible_weight_a": "17/32",
+    "highest_mean_feasible_state_returns": [
+      "-1/20",
+      "23/320",
+      "9/64"
+    ],
+    "highest_mean_feasible_expected_return": "15/256",
+    "scope": "Highest supplied physical mean within this one-dimensional long-only state-floor mandate; no optimal-risk or pricing claim"
+  },
+  "rebalancing": {
+    "buy_and_hold": {
+      "rows": [
+        {
+          "year": 1,
+          "beginning_weights": [
+            "1/2",
+            "1/2"
+          ],
+          "before_rebalance_asset_values": [
+            "70",
+            "45"
+          ],
+          "wealth": "115",
+          "portfolio_simple_return": "3/20",
+          "portfolio_log_return": 0.13976194237515863
+        },
+        {
+          "year": 2,
+          "beginning_weights": [
+            "14/23",
+            "9/23"
+          ],
+          "before_rebalance_asset_values": [
+            "105/2",
+            "54"
+          ],
+          "wealth": "213/2",
+          "portfolio_simple_return": "-17/230",
+          "portfolio_log_return": -0.07678714321377028
+        }
+      ],
+      "cumulative_return": "13/200"
+    },
+    "constant_weights": {
+      "rows": [
+        {
+          "year": 1,
+          "beginning_weights": [
+            "1/2",
+            "1/2"
+          ],
+          "before_rebalance_asset_values": [
+            "70",
+            "45"
+          ],
+          "wealth": "115",
+          "portfolio_simple_return": "3/20",
+          "portfolio_log_return": 0.13976194237515863
+        },
+        {
+          "year": 2,
+          "beginning_weights": [
+            "1/2",
+            "1/2"
+          ],
+          "before_rebalance_asset_values": [
+            "345/8",
+            "69"
+          ],
+          "wealth": "897/8",
+          "portfolio_simple_return": "-1/40",
+          "portfolio_log_return": -0.025317807984289897
+        }
+      ],
+      "cumulative_return": "97/800"
+    }
+  }
+}

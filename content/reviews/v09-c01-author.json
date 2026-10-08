@@ -1,0 +1,111 @@
+{
+  "chapter": "v09-c01",
+  "date": "2026-10-08",
+  "state": "author-review-complete; separate specialist peer acceptance pending",
+  "author": "coordinating author",
+  "scope": "Return contract, distributions and holdings, compounding/annualization, arithmetic/geometric/expected wealth with assumptions, log domain/Jensen, TWR/MWR identification and root limits, Modified Dietz, fee timing, currency/inflation and tax cash, payoff budgets/opportunity sets, weights/rebalancing and benchmark interpretation. Four worked cases, eight full exercises/solutions, answered retention and original offline lab.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "reasoning_checks": [
+    "Derived return identities from dated wealth and actual share holdings; reinvested versus retained distributions are separate strategies.",
+    "Log identities require positive growth; total loss has no finite log and negative financed equity is outside the log domain. Jensen statements identify nonnegative weights, equality and finite-expectation conditions.",
+    "Expected future wealth factors only with explicit independence; a realized geometric return is not a one-period expected-return estimate.",
+    "True TWR splits at known external-flow valuations. Two different intermediate valuations yield different TWRs for the same investor-flow IRR; no endpoint-only identification claim.",
+    "IRR uniqueness is proved only for the nonnegative contribution/positive liquidation fixture. Exercise4 analytically identifies both roots for the separate binding-capital-call stream.",
+    "Fees specify bases and dates; currency quote orientation, price-level division and fictional tax bases are explicit. No numerical current tax or regulatory-compliance claim.",
+    "Portfolio return follows complete beginning-wealth financing. Log asset aggregation, hindsight weights and statewise winner choice are explicitly distinguished from achievable wealth.",
+    "Every state inequality is intersected with long-only bounds. Exercise8 activates an additional lower bound when the loss floor tightens.",
+    "Every exercise solution was independently recalculated; all preceding methods taught. Alternative source/evidence critiques have explicit grading criteria."
+  ],
+  "numerical_validation": {
+    "status": "passed",
+    "groups": 8,
+    "comparisons": 518,
+    "count_scope": "Includes numerical anchors, exact output-field/reference comparisons, structural assertions and manifest/artifact checks; not518 distinct financial derivations.",
+    "domain_rejections": 15,
+    "independent_routes": [
+      "Actual dividend shares and direct retained cash",
+      "Discounted investor cash and independent bisection of terminal accumulation",
+      "Direct charged-cash ledger and currency unit conversion",
+      "Quantity-priced state payoffs and both active mandate boundaries",
+      "Holdings-based drift and self-financing rebalancing",
+      "Separate exact reconstructions of all8 exercise solutions and3 retention answers"
+    ],
+    "offline_execution": "copied script/input from unrelated working directory, normal and optimized Python; all rational values exact and float comparisons within1e-12"
+  },
+  "source_record": "content/reviews/v09-c01-sources.json",
+  "new_source_ids": [
+    "v09-c01-zivot-returns",
+    "v09-c01-gips-methods"
+  ],
+  "source_scope": "Actual primary source bodies inspected in the recorded sections; mathematical identities and fictional cases are independently derived. No historical source example copied; tax subsection and current institutional compliance not adopted.",
+  "resolved_findings": [
+    {
+      "finding": "A tighter state floor can impose a new lower weight bound.",
+      "resolution": "Complete inequalities give[1/17,7/16] for the−2% floor, including the up-state constraint. Both endpoints and small violations checked."
+    },
+    {
+      "finding": "Behavior-defining convention edits could otherwise leave code assumptions unchanged.",
+      "resolution": "run validates dates, distribution/flow timing, fee base, FX orientation, long-only mandate and rebalancing conventions; alternative numeric inputs stay within documented domains."
+    },
+    {
+      "finding": "Peer review identified missing initial-budget normalization in the convex opportunity-set description when asset prices differ.",
+      "resolution": "For fixed W0, wealth-weight convex combinations apply to W0 X_i/P_i,0 or to asset-return vectors. The manuscript now distinguishes these from raw per-unit payoffs. Preceding equations and all worked numerical cases already used correct quantities."
+    }
+  ],
+  "open_findings": [],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v09-c01.html",
+      "bytes": 44993,
+      "sha256": "945684dcbaee8ccf93471708667b15bbeb40c1be6bb5c446dc259f98f555511d"
+    },
+    {
+      "path": "content/projects/v09-c01-inputs.json",
+      "bytes": 2266,
+      "sha256": "3c968d7ce3b573d3efce4b53cdf0c8417265f3701105168b8d3f98d1a8031f00"
+    },
+    {
+      "path": "content/projects/v09-c01-analysis.py",
+      "bytes": 12024,
+      "sha256": "0559c9e36012625b0873cc29733f30de1b57d625c1f0175e8e847e25a08892c0"
+    },
+    {
+      "path": "content/projects/v09-c01-output.json",
+      "bytes": 4922,
+      "sha256": "ddb851b1736c81f9d32fa3b2a70780ab48923c5a5bc9e43ac16e0af2bf294cee"
+    },
+    {
+      "path": "content/projects/v09-c01-manifest.json",
+      "bytes": 816,
+      "sha256": "8e3abff7d5c7168566e85d4de24c7ae953ad03eca968499b80e63a72e4de62c5"
+    },
+    {
+      "path": "content/projects/v09-c01-README.txt",
+      "bytes": 8895,
+      "sha256": "87b329f893b6dbf7b05b72a9efb339fb6ab0c57d8514f0c96d951e69961ba7f1"
+    },
+    {
+      "path": "scripts/check_v09_c01.py",
+      "bytes": 15446,
+      "sha256": "69c31a78b4d0cc1d4eaf2944707eee35d9455eb9c908f614d1b8dbccbce9cc2d"
+    },
+    {
+      "path": "content/reviews/v09-c01-sources.json",
+      "bytes": 1957,
+      "sha256": "9e4ac2fc02831017cd5da885f83b5cb851de918f01eece772858d316e2471a5b"
+    }
+  ],
+  "limitations": [
+    "Author and later agent peer review are not external human certification.",
+    "Synthetic bounded model; no authenticated empirical observations, transaction execution, legal/tax advice or GIPS compliance claim.",
+    "Annualization is a comparison convention, not a forecast; prices and probabilities remain supplied assumptions.",
+    "Separate peer review, dependency-ordered coordinator acceptance, full-library integration and UI/print QA remain pending."
+  ]
+}

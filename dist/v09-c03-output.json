@@ -1,0 +1,361 @@
+{
+  "case_id": "v09-c03-allocation-1",
+  "status": "calculated",
+  "units": "one-year decimal simple returns; variance is decimal-return squared",
+  "main": {
+    "physical_states": 16,
+    "probability_per_state": "1/16",
+    "means": [
+      "1/25",
+      "2/25",
+      "3/25"
+    ],
+    "covariance": [
+      [
+        "1/50",
+        "1/100",
+        "1/100"
+      ],
+      [
+        "1/100",
+        "1/20",
+        "1/100"
+      ],
+      [
+        "1/100",
+        "1/100",
+        "1/10"
+      ]
+    ],
+    "LDL_pivots": [
+      "1/50",
+      "9/200",
+      "17/180"
+    ],
+    "frontier_constants": {
+      "A": "980/17",
+      "B": "264/85",
+      "C": "536/2125",
+      "Delta": "416/85"
+    },
+    "GMV": {
+      "weights": [
+        "36/49",
+        "9/49",
+        "4/49"
+      ],
+      "mean": "66/1225",
+      "variance": "17/980",
+      "volatility_approx": 0.13170777796132696
+    },
+    "target_frontier": [
+      {
+        "weights": [
+          "4/13",
+          "5/13",
+          "4/13"
+        ],
+        "mean": "2/25",
+        "variance": "33/1300",
+        "volatility_approx": 0.1593255013631383,
+        "target": "2/25",
+        "efficient_branch": true
+      },
+      {
+        "weights": [
+          "-1/52",
+          "7/13",
+          "25/52"
+        ],
+        "mean": "1/10",
+        "variance": "441/10400",
+        "volatility_approx": 0.20592194189509322,
+        "target": "1/10",
+        "efficient_branch": true
+      }
+    ],
+    "safe_and_risky_allocation": {
+      "risky_direction": [
+        "4/85",
+        "86/85",
+        "76/85"
+      ],
+      "normalizer": "166/85",
+      "risky_exposures": [
+        "1/85",
+        "43/170",
+        "19/85"
+      ],
+      "safe_weight": "87/170",
+      "mean": "491/8500",
+      "variance": "321/34000",
+      "volatility_approx": 0.09716571653926212,
+      "objective": "661/17000",
+      "tangency_fund": {
+        "weights": [
+          "2/83",
+          "43/83",
+          "38/83"
+        ],
+        "mean": "202/2075",
+        "variance": "5457/137780",
+        "volatility_approx": 0.1990141182129465,
+        "premium": "321/4150",
+        "sharpe_squared": "321/2125",
+        "sharpe_approx": 0.3886628661570484
+      },
+      "normalization_status": "positive_premium_risky_fund"
+    },
+    "long_only": {
+      "status": "optimal",
+      "target": "1/10",
+      "selected": {
+        "weights": [
+          "0",
+          "1/2",
+          "1/2"
+        ],
+        "mean": "1/10",
+        "variance": "17/400",
+        "volatility_approx": 0.20615528128088303,
+        "candidate_face": [
+          2,
+          3
+        ]
+      },
+      "faces_enumerated": 7,
+      "feasible_face_candidates": [
+        {
+          "weights": [
+            "1/4",
+            "0",
+            "3/4"
+          ],
+          "mean": "1/10",
+          "variance": "49/800",
+          "volatility_approx": 0.24748737341529164,
+          "candidate_face": [
+            1,
+            3
+          ]
+        },
+        {
+          "weights": [
+            "0",
+            "1/2",
+            "1/2"
+          ],
+          "mean": "1/10",
+          "variance": "17/400",
+          "volatility_approx": 0.20615528128088303,
+          "candidate_face": [
+            2,
+            3
+          ]
+        }
+      ]
+    }
+  },
+  "shrinkage": {
+    "forecast_physical_states": 32,
+    "audit_physical_states": 64,
+    "estimated_covariance": [
+      [
+        "1/25",
+        "99/2500"
+      ],
+      [
+        "99/2500",
+        "1/25"
+      ]
+    ],
+    "target_covariance": [
+      [
+        "1/25",
+        "0"
+      ],
+      [
+        "0",
+        "1/25"
+      ]
+    ],
+    "audit_means": [
+      "2/25",
+      "2/25"
+    ],
+    "audit_covariance": [
+      [
+        "1/25",
+        "1/50"
+      ],
+      [
+        "1/50",
+        "1/25"
+      ]
+    ],
+    "rules": [
+      {
+        "policy": "baseline_raw",
+        "alpha": "0",
+        "kappa": "0",
+        "used_means": [
+          "2/25",
+          "2/25"
+        ],
+        "used_covariance": [
+          [
+            "1/25",
+            "99/2500"
+          ],
+          [
+            "99/2500",
+            "1/25"
+          ]
+        ],
+        "fit_moments": {
+          "weights": [
+            "1/2",
+            "1/2"
+          ],
+          "mean": "2/25",
+          "variance": "199/5000",
+          "volatility_approx": 0.19949937343260005,
+          "objective": "1/2500"
+        },
+        "common_audit_moments": {
+          "weights": [
+            "1/2",
+            "1/2"
+          ],
+          "mean": "2/25",
+          "variance": "3/100",
+          "volatility_approx": 0.17320508075688773,
+          "objective": "1/50"
+        }
+      },
+      {
+        "policy": "perturbed_raw",
+        "alpha": "0",
+        "kappa": "0",
+        "used_means": [
+          "2/25",
+          "41/500"
+        ],
+        "used_covariance": [
+          [
+            "1/25",
+            "99/2500"
+          ],
+          [
+            "99/2500",
+            "1/25"
+          ]
+        ],
+        "fit_moments": {
+          "weights": [
+            "-1/8",
+            "9/8"
+          ],
+          "mean": "329/4000",
+          "variance": "3209/80000",
+          "volatility_approx": 0.20028105252369732,
+          "objective": "81/40000"
+        },
+        "common_audit_moments": {
+          "weights": [
+            "-1/8",
+            "9/8"
+          ],
+          "mean": "2/25",
+          "variance": "73/1600",
+          "volatility_approx": 0.21360009363293828,
+          "objective": "-9/800"
+        }
+      },
+      {
+        "policy": "covariance_shrunk",
+        "alpha": "1/2",
+        "kappa": "0",
+        "used_means": [
+          "2/25",
+          "41/500"
+        ],
+        "used_covariance": [
+          [
+            "1/25",
+            "99/5000"
+          ],
+          [
+            "99/5000",
+            "1/25"
+          ]
+        ],
+        "fit_moments": {
+          "weights": [
+            "197/404",
+            "207/404"
+          ],
+          "mean": "16367/202000",
+          "variance": "120821/4040000",
+          "volatility_approx": 0.17293405713974294,
+          "objective": "42849/2020000"
+        },
+        "common_audit_moments": {
+          "weights": [
+            "197/404",
+            "207/404"
+          ],
+          "mean": "2/25",
+          "variance": "122437/4080400",
+          "volatility_approx": 0.17322276654732424,
+          "objective": "40779/2040200"
+        }
+      },
+      {
+        "policy": "covariance_and_mean_shrunk",
+        "alpha": "1/2",
+        "kappa": "1/2",
+        "used_means": [
+          "161/2000",
+          "163/2000"
+        ],
+        "used_covariance": [
+          [
+            "1/25",
+            "99/5000"
+          ],
+          [
+            "99/5000",
+            "1/25"
+          ]
+        ],
+        "fit_moments": {
+          "weights": [
+            "399/808",
+            "409/808"
+          ],
+          "mean": "65453/808000",
+          "variance": "483209/16160000",
+          "volatility_approx": 0.1729206379519315,
+          "objective": "171321/8080000"
+        },
+        "common_audit_moments": {
+          "weights": [
+            "399/808",
+            "409/808"
+          ],
+          "mean": "2/25",
+          "variance": "489673/16321600",
+          "volatility_approx": 0.17320950237379357,
+          "objective": "163191/8160800"
+        }
+      }
+    ]
+  },
+  "limits": [
+    "Population scenarios and parameter perturbations are invented, not observed samples.",
+    "Fixed shrinkage intensities are not estimated optimal coefficients or universal prescriptions.",
+    "No empirical backtest, costs, taxes, unequal funding rates or dynamic strategy is modeled.",
+    "Exact rational moments/weights; only explicitly named approximate square roots use floats."
+  ]
+}

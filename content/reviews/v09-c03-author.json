@@ -1,0 +1,225 @@
+{
+  "chapter": "v09-c03",
+  "title": "Mean-variance optimization and allocation",
+  "author": "equity and allocation specialist",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "assignment": "production/v09-opening-assignments.json",
+  "state": "author-review-complete",
+  "status": "passed_author_review",
+  "acceptance": "Pending independent coordinator acceptance in c01-c04 dependency order. No shared canonical or hosting state changed by this author.",
+  "review_type": "Full original manuscript, four worked cases, all eight exact prompts and complete solutions, answered teaching/retention, five supporting project files, full focused checker and scoped primary-source review. Author review is not independent human certification.",
+  "coverage": {
+    "outcome": "Derive efficient portfolios and assess sensitivity to estimated inputs.",
+    "canonical": {
+      "Efficient frontier": "Derives target weights, multipliers, variance parabola, unique global optimum, efficient upper branch, reflected dominated branch and two-fund affinity under explicit nonconstant means and SPD.",
+      "minimum variance": "Full-budget GMV formula and feasible-direction proof; independent two-asset scalar exercise; distinguishes covariance semidefiniteness, sample rank and genuine redundancy.",
+      "tangency": "Complete-square cash/risky allocation and signed Cauchy bound; positive normalizer condition, zero-net and negative-normalizer counterexamples, zero premium and funding-right limitations.",
+      "constraints": "Long-only equality target with exact scalar and KKT certificates; failed clipping; infeasible mean range; minimum-return inequality plus holding cap and positive multipliers; small complete face enumeration.",
+      "optimization": "Stated units/criterion/rights; normal-exponential equivalence with limits, quadratic utility qualification, equal-moment tail/utility counterexample; unique solutions by strict curvature rather than solver status.",
+      "shrinkage": "Exact mean sensitivity, covariance differential and inverse identity, PSD-to-SPD identity shrinkage conditions, separate mean shrinkage, original perturbation/audit law and alternate-truth counterexample; no universal optimal estimator claim."
+    },
+    "prerequisites": "Canonical v09-c02 contract and sibling moment/PSD conventions read and coordinated; v09-c01 return budget and c04 positive equilibrium normalizer contract checked. Previously accepted linear algebra and convexity tools reused.",
+    "chapter_words": 5845,
+    "worked_examples": 4,
+    "exercises": 8,
+    "complete_solutions": 8,
+    "teaching": "Answered explanation of efficiency, short restrictions, failed clipping and risky direction versus fully invested fund; rubric requires numerical budget/mean and input-risk reasoning.",
+    "retention": "Answered full covariance shrinkage reconstruction and 13% infeasible target, with common-audit variance/objective.",
+    "lab": "Original bounded independent-sign population laws; exact Fraction linear systems and seven-face comparison; separate two-asset forecast perturbations and common audit; four distributed files plus integrity manifest.",
+    "ownership": "Only nine explicit c03 paths; eight non-author payloads hashed below. No shared edits, publishing, installs or child agents."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v09-c03.html",
+      "bytes": 39679,
+      "sha256": "07ecfff0225991a589493bdf6f0f68a61e939b655c94c49dafa6f0398dfc3549"
+    },
+    {
+      "path": "content/projects/v09-c03-inputs.json",
+      "bytes": 1853,
+      "sha256": "4feb8edb1f465e7dc58fb2e46107e8984abe7e90d4ab4ee9fa13e5a940580655"
+    },
+    {
+      "path": "content/projects/v09-c03-analysis.py",
+      "bytes": 14397,
+      "sha256": "8b1ce92dc3b630739f4b7b369adcd16e73400077e9602adf935249a13a54178a"
+    },
+    {
+      "path": "content/projects/v09-c03-output.json",
+      "bytes": 7814,
+      "sha256": "91402728f4a2b53cf25e1ed29199105d953c3477ea2438673c59e284e6727743"
+    },
+    {
+      "path": "content/projects/v09-c03-manifest.json",
+      "bytes": 923,
+      "sha256": "5af9419a399d63afd162eae2d6a33fc0c7d80f464ba3b4fb690ebe2cd2248b61"
+    },
+    {
+      "path": "content/projects/v09-c03-README.txt",
+      "bytes": 7984,
+      "sha256": "351ee8f6fade20200d9c27e59dcafa4eebe780c293f6318f32415612c7550df0"
+    },
+    {
+      "path": "scripts/check_v09_c03.py",
+      "bytes": 23134,
+      "sha256": "e31c61caa9867463f4eb4d5440b72141a1bcdd3d913a53c01e85a3ca70878a0d"
+    },
+    {
+      "path": "content/reviews/v09-c03-sources.json",
+      "bytes": 2629,
+      "sha256": "19b36965a3d14b90f065e5b8785b0bfca2f68ffbed9b6ad58e523467043d8ac2"
+    }
+  ],
+  "reasoning_checks": [
+    "Same-horizon decimal simple total returns and beginning-wealth budget; no interim trading, fees, taxes or observed market data. Physical sign probabilities are not pricing probabilities.",
+    "Main law has sixteen equiprobable states and SPD covariance .01*11T + diag(.01,.04,.09); independent loading-Gram and projected-state moments agree.",
+    "GMV sufficiency follows orthogonal budget perturbations; target sufficiency follows both equality constraints. Delta positivity requires nonconstant means, whereas SPD alone suffices for GMV.",
+    "Upper/lower branch distinction is proved using reflected means; unrestricted target portfolios remain feasible because shorting is expressly allowed.",
+    "Safe weight is 1-sum(x), not silently excluded. Total portfolio moments differ from fully invested risky fund moments. Positive, zero, negative and all-zero-premium cases are separately checked.",
+    "Sharpe maximization uses its signed ratio. A negative risky-direction normalizer cannot be called the same positive-premium fully invested fund, even though the unrestricted cash/risky optimum exists.",
+    "Long-only scalar curve and KKT signs independently verify the endpoint optimum. Clipping does not preserve the target. Capped inequality solution has correct multiplier signs and a global feasible-direction certificate.",
+    "Mean-variance is stipulated for bounded state laws. Normal/exponential equivalence is conditional and quadratic utility is not silently replaced by a constant-gamma mean-variance ranking. Equal moments do not determine the discrete exponential utility comparison.",
+    "Shrinkage rules are computed from forecast inputs only. All audit values use one separately specified synthetic population and are not optimized fitted values from different models.",
+    "The alternate population has the raw forecast moments as truth; completing the square gives loss gamma*(.04-.0396)*(d-dstar)^2, proving that the shrinkage improvement in the disclosed audit law is not universal.",
+    "Identity shrinkage can create estimated curvature but cannot discover genuine risk in a duplicate-asset zero-risk direction. Redundancy and short-sample singularity require different modeling judgments.",
+    "Every exercise has sufficient data and previously taught methods. The empirical-design response provides evaluation criteria rather than claiming a unique opinion or real forecasting result."
+  ],
+  "exercise_audit": [
+    {
+      "exercise": 1,
+      "status": "pass",
+      "result": "Direct scalar GMV (8/11,3/11), mean39/550, variance7/220; completed-square uniqueness."
+    },
+    {
+      "exercise": 2,
+      "status": "pass",
+      "result": "8% weights(4,5,4)/13; reflected target34/1225 and weights(740,-11,-92)/637; both variance33/1300; cross-term proof."
+    },
+    {
+      "exercise": 3,
+      "status": "pass",
+      "result": "gamma2: risky(2,43,38)/85, safe2/85, mean203/2125, variance321/8500. gamma1: cash-81/85, mean727/4250, variance321/2125; contractual limits explained."
+    },
+    {
+      "exercise": 4,
+      "status": "pass",
+      "result": "Negative normalizer gives x(-1/4,-1/4), safe3/2; zero normalizer gives x(1/4,-1/4), safe1. Both total mean.04 variance.005; positive signed optimal direction retained."
+    },
+    {
+      "exercise": 5,
+      "status": "pass",
+      "result": "Cap optimum(1/20,13/20,3/10), variance1401/40000; lambda-3/200 eta51/80 xi49/2000; max mean23/250."
+    },
+    {
+      "exercise": 6,
+      "status": "pass",
+      "result": "Both mean.1 variance.01; loss probabilities0 and1/8; expected utilities approximately-.567667642 and-.621918193, with exact hyperbolic-cosine comparison."
+    },
+    {
+      "exercise": 7,
+      "status": "pass",
+      "result": "Quarter covariance and half mean shrinkage weights(201,211)/412; eigenvalues.0697/.0103; common-audit variance127333/4243600 and objective42411/2121800; alternate-truth loss proof and information-boundary criteria."
+    },
+    {
+      "exercise": 8,
+      "status": "pass",
+      "result": "SPD constant means imply Delta0, one feasible target and unique GMV; identical-return singular pair admits infinitely many equivalent weights with mean.06 variance.04."
+    }
+  ],
+  "numerical_checks": {
+    "status": "passed",
+    "groups": 8,
+    "methods": [
+      "Independent loading Gram, principal minors and scalar projected-state probability sums.",
+      "Primal-dual and feasible-direction stationarity identities, plus direct scalar constrained quadratic and caps.",
+      "Independent signed safe allocation and complete-square perturbations for gamma changes and all normalization domains.",
+      "Two-asset scalar shrinkage reconstruction, common-audit population and alternate-truth objective difference.",
+      "Exact remaining exercise moments/proofs and strict source-fragment HTML plus manifest checks.",
+      "Twelve meaningful domain/policy rejection tests; checker require() logic survives Python -O."
+    ],
+    "anchors": {
+      "GMV_weights": [
+        "36/49",
+        "9/49",
+        "4/49"
+      ],
+      "GMV_variance": "17/980",
+      "target_8_variance": "33/1300",
+      "target_10_unrestricted_variance": "441/10400",
+      "target_10_long_only_variance": "17/400",
+      "gamma4_total_mean": "491/8500",
+      "gamma4_total_variance": "321/34000",
+      "capped_variance": "1401/40000",
+      "raw_audit_objective": "-9/800",
+      "half_covariance_audit_objective": "40779/2040200",
+      "half_both_audit_objective": "163191/8160800"
+    },
+    "domain_rejections": [
+      "log-return label",
+      "unmodeled fees",
+      "contradictory short right",
+      "changed physical sign probability",
+      "zero gamma",
+      "zero safe gross return",
+      "duplicated covariance exposure",
+      "individual state return below minus one",
+      "binary float numeric input",
+      "raw rule with shrinkage",
+      "intensity outside [0,1]",
+      "covariance-only rule with mean shrinkage"
+    ]
+  },
+  "commands_and_contracts": [
+    {
+      "command": "python3 -B book/scripts/check_v09_c03.py",
+      "result": "Eight groups passed, including exact reference agreement and four-file manifest."
+    },
+    {
+      "command": "Captured module import and check(), json.dumps(..., allow_nan=False)",
+      "result": "No stdout/stderr; complete strict JSON returned."
+    },
+    {
+      "command": "python3 -B -O /absolute/path/book/scripts/check_v09_c03.py from /private/tmp",
+      "result": "Identical eight-group JSON with no stderr; no working-directory or assert dependence."
+    },
+    {
+      "command": "Four distributed files copied to a temporary directory; analysis CLI --output regenerated.json from /private/tmp",
+      "result": "No stdout/stderr and regenerated output byte-for-byte identical to complete reference."
+    },
+    {
+      "command": "Inherited Stanford source record compared to canonical source catalogue",
+      "result": "Exact record equality; no broader inspection claimed."
+    }
+  ],
+  "source_checks": {
+    "record": "content/reviews/v09-c03-sources.json",
+    "new_sources": 2,
+    "reused_sources": 1,
+    "actual_content_inspected": [
+      "Actual official MIT47-page portfolio lecture PDF: slides9-12,32-33,40-44 and context; garbled/image-only equations not treated as exact extracted formulas.",
+      "Actual University of Zurich22-page Ledoit/Wolf November2003 manuscript, title/date, introduction, sections2 and3.1-3.3, note5; reached via author publications page."
+    ],
+    "scope": "MIT supports the teaching route; source historical stock cases, unconditional fund claims and alpha aside excluded. Shrinkage manuscript motivates structured-target mixing; own identity target, fixed intensities and finite cases are not the paper's optimized estimator. Stanford KKT source reused only in its previously inspected scope.",
+    "not_claimed": "No observed October2026 returns, empirical dominance, fitted shrinkage intensity, current funding rights or source-wide authentication."
+  },
+  "resolved_findings": [
+    {
+      "id": "c03-author-square-coefficient",
+      "finding": "During drafting, the alternate-truth completion-of-square discussion briefly displayed an extra factor of two before its correction.",
+      "resolution": "Final solution states only gamma*(v-c)*(d-dstar)^2. Independent checker reconstructs the scalar objective and verifies that exact coefficient."
+    },
+    {
+      "id": "c03-coordinator-CAPM-route",
+      "finding": "Coordinator requested an exact CAPM specification route and wording that remains correct after same-batch acceptance.",
+      "resolution": "Chapter now uses neutral the CAPM chapter linked to curriculum.html#v09-c04; focused checker checks that exact route."
+    }
+  ],
+  "open_findings": [],
+  "limitations": [
+    "Author review and automated tests are not independent human certification; coordinator acceptance is pending.",
+    "Conditional synthetic laws do not estimate expected returns, predict empirical performance or authenticate borrowing, shorting, margin or tax assumptions.",
+    "Static SPD and small convex constraints do not solve dynamic trading, nonlinear costs, liabilities, robust optimization or general large-universe allocation.",
+    "No whole-library acceptance, visual/mobile/keyboard/print QA or publication is claimed by this specialist."
+  ]
+}

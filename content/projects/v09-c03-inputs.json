@@ -1,0 +1,51 @@
+{
+  "case_id": "v09-c03-allocation-1",
+  "provenance": "Original synthetic teaching laws and forecast perturbations; no observed returns, empirical estimates or fitted shrinkage intensity.",
+  "conventions": {
+    "horizon": "one_year",
+    "return": "simple_total_decimal",
+    "currency": "CU",
+    "trading": "date_0_buy_and_hold",
+    "taxes": "none",
+    "fees": "none",
+    "analytic_rights": "shorting_and_equal_rate_borrowing_allowed",
+    "constrained_rights": "three_risky_assets_long_only_no_cash",
+    "sign_probability": "1/2"
+  },
+  "main": {
+    "asset_labels": ["A", "B", "C"],
+    "means": ["1/25", "2/25", "3/25"],
+    "factor_loadings": [
+      ["1/10", "1/10", "0", "0"],
+      ["1/10", "0", "1/5", "0"],
+      ["1/10", "0", "0", "3/10"]
+    ],
+    "risk_free": "1/50",
+    "gamma": "4",
+    "targets": ["2/25", "1/10"],
+    "long_only_target": "1/10"
+  },
+  "shrinkage": {
+    "asset_labels": ["D", "E"],
+    "base_means": ["2/25", "2/25"],
+    "perturbed_means": ["2/25", "41/500"],
+    "estimated_factor_loadings": [
+      ["1/5", "0", "0", "0", "0"],
+      ["99/500", "13/500", "1/100", "1/250", "1/500"]
+    ],
+    "audit_means": ["2/25", "2/25"],
+    "audit_factor_loadings": [
+      ["1/10", "1/10", "1/10", "1/10", "0", "0"],
+      ["1/10", "1/10", "0", "0", "1/10", "1/10"]
+    ],
+    "covariance_target": "trace_mean_times_identity",
+    "mean_target": "cross_section_mean",
+    "evaluation": "disclosed_synthetic_population_no_fit_selection",
+    "rules": [
+      {"id": "baseline_raw", "mean_set": "base", "alpha": "0", "kappa": "0"},
+      {"id": "perturbed_raw", "mean_set": "perturbed", "alpha": "0", "kappa": "0"},
+      {"id": "covariance_shrunk", "mean_set": "perturbed", "alpha": "1/2", "kappa": "0"},
+      {"id": "covariance_and_mean_shrunk", "mean_set": "perturbed", "alpha": "1/2", "kappa": "1/2"}
+    ]
+  }
+}
