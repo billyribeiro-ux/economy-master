@@ -1,0 +1,184 @@
+{
+  "chapter": "v08-c08",
+  "title": "Real options and investment timing",
+  "reviewer": "Independent equity and valuation specialist agent",
+  "date": "2026-10-08",
+  "assignment": "production/v08-c08-peer-assignment.json",
+  "status": "passed_independent_peer_review",
+  "scope": "Full manuscript, four worked examples, all eight exact exercise prompts and solutions, answered teaching/retention, four lab assets, complete author checker, source proposals and author review. Reviewer changed no author or shared payload.",
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v08-c08.html",
+      "bytes": 36163,
+      "sha256": "c4a8617f190355d30c9f8c16c776fb1379c75b3decf287b4ad5e78054e320528"
+    },
+    {
+      "path": "scripts/check_v08_c08.py",
+      "bytes": 9115,
+      "sha256": "c791292159e6bab7abbc43cfc94ee330ef19771949e303379dac40fd6dc4f644"
+    },
+    {
+      "path": "content/reviews/v08-c08-sources.json",
+      "bytes": 2158,
+      "sha256": "4fb9dbac5319b72aa61c5b0330383ddc411f84172b2cd3f384762ed66a7d4437"
+    },
+    {
+      "path": "content/projects/v08-c08-analysis.py",
+      "bytes": 7910,
+      "sha256": "0d331dd879e75a9ee5b51ba83d2b1f8c9501e8ea895f1bb7c2dd107e493b7088"
+    },
+    {
+      "path": "content/projects/v08-c08-inputs.json",
+      "bytes": 1269,
+      "sha256": "440a162b6e89af8322aa17106264dfd2e53b287c75ded47c5cc521bbf6282358"
+    },
+    {
+      "path": "content/projects/v08-c08-output.json",
+      "bytes": 5766,
+      "sha256": "4f9254a24c633de5ebfa1e2c18498ec799a15adcc9fcd766c062de7b34947047"
+    },
+    {
+      "path": "content/projects/v08-c08-readme.html",
+      "bytes": 3681,
+      "sha256": "b2cb0bac6b178fca3744d6702b8231cdb96b5447c2ebfd2a006b255ce5ebb504"
+    },
+    {
+      "path": "content/reviews/v08-c08-author.json",
+      "bytes": 3477,
+      "sha256": "c69022398f34d54ffb2e3b604f98c19fc6a06eeb9931f3b53b44e5479f039ae2"
+    }
+  ],
+  "independent_check": {
+    "path": "production/v08-c08-peer-check.py",
+    "bytes": 8351,
+    "sha256": "9b4ee2659341296a59a5c5f4bd0007af9f0fe124167ac70f571cecf7616ddb8a"
+  },
+  "conceptual_audit": [
+    "Real options are feasible dated rights and policies, with expiry, costs, financing and information specified. A fixed-policy NPV is not confused with a DCF that already incorporates contingent actions; the option premium is not added twice.",
+    "The market-price case explicitly supplies a traded operating clone, borrowing/lending, fractional/short trading, absence of intervening distributions and perfect terminal spanning. The solved state prices are positive, sum to the discount factor and reproduce the underlying price. Physical forecasts and the nonlinear option's expected return are kept separate from pricing weights.",
+    "Immediate construction with extra interim cash changes the package acquired immediately, while delayed construction misses that cash. Comparing the changed immediate package with the unchanged waiting claim correctly produces the switch threshold rather than granting free waiting.",
+    "The owner cases state a linear expected-money criterion and a time-preference discount rate. Their physical-probability values are not presented as identified market prices for unspanned private risks. Exercise 7 constructs two positive pricing measures consistent with the bond but no observed clone, demonstrating non-identification.",
+    "Operating decisions occur after observed demand. Expansion and abandonment are a mutually exclusive menu, and the low-demand sale is compared with the current continuation value rather than sunk initial cost. A binding cash limit removes infeasible expansion instead of assuming continuation value is pledgeable cash.",
+    "The pilot's cost is paid on every initial path. Successful and failed scale-up decisions occur after technical validation; forced completion is a controlled comparison with the same required pilot, probabilities and terminal receipts. Stop value is the discounted avoided failure-state outlay.",
+    "Information is compared with the best feasible no-report action at the same launch date. Bayes posteriors, likelihoods and signal probabilities are distinguished. Joint signal/state policy enumeration confirms that the imperfect report never grants true-state foresight. Information fees enter at date 0 and utility units are not treated as money under nonlinear preferences.",
+    "Nonnegative gross information value and the perfect-information bound require unchanged action set, dates, opportunity and free information that may be ignored. The manuscript explicitly states these qualifications and does not assert that all uncertainty raises firm value.",
+    "All exercise methods are introduced locally or referenced to accepted prerequisites. Open information-timing and business-evidence questions have evaluation criteria rather than fabricated determinate answers. All cases use original fictional amounts and separate proposals; they are not added into a company valuation."
+  ],
+  "worked_example_audit": [
+    {
+      "example": 1,
+      "status": "pass",
+      "result": "Independent state prices 4/9 and 32/63 price the clone at 100 and the waiting claim at 220/9. Delta 11/15 and borrowing 440/9 reproduce both payoffs. Physical expected returns 15%/35%, interim switch 91/6 and receipt-20 immediate NPV 610/21 checked."
+    },
+    {
+      "example": 2,
+      "status": "pass",
+      "result": "All nine feasible state-contingent menus enumerated: expand/high and abandon/low yield NPV 470/21 versus fixed base minus 10/7. Separate rights add only because their improvements occur in different states."
+    },
+    {
+      "example": 3,
+      "status": "pass",
+      "result": "Independent success/failure dated cash paths give staged 1368/121, mandatory completion 48/121, stop gain 120/11 and initiation threshold 363/1175."
+    },
+    {
+      "example": 4,
+      "status": "pass",
+      "result": "Joint signal/state paths give best report policy launch after positive only, gross 2430/121, baseline 200/11, EVSI 230/121, perfect value 3760/121 and EVPI 1560/121. Both fee decisions and posterior threshold 13/60 checked."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "exercise": 1,
+      "status": "pass",
+      "result": "Pricing q = 2/5, waiting value 80/7, delta 1/2, bond minus 200/7, immediate NPV minus 10; physical clone return 1/8 and option return 5/16."
+    },
+    {
+      "exercise": 2,
+      "status": "pass",
+      "result": "Immediate package 2300/21, immediate NPV 410/21, preferred waiting 220/9 and net acquired-right value 184/9; irrevocable fee correctly cancels in subsequent exercise comparison."
+    },
+    {
+      "exercise": 3,
+      "status": "pass",
+      "result": "Recomputed fixed/flexible values, both realized actions, isolated premiums 200/21 and 100/7, and sunk-cost explanation."
+    },
+    {
+      "exercise": 4,
+      "status": "pass",
+      "result": "Low-state expansion gives 70; adding both separate premiums produces unattainable 95. Current-value overstatement 100/7; modified policy NPV 530/21. Earlier commitment is correctly treated as an underspecified information-set change, not silently solved with foresight."
+    },
+    {
+      "exercise": 5,
+      "status": "pass",
+      "result": "Full dated paths give staged 485/121, forced minus 1715/121, stopping gain 200/11 and threshold 363/920."
+    },
+    {
+      "exercise": 6,
+      "status": "pass",
+      "result": "Posterior cutoff 13/60, posteriors 2/3 and 2/11, exact date-0 fee threshold 230/121, and equal-likelihood posterior 2/5 with zero EVSI."
+    },
+    {
+      "exercise": 7,
+      "status": "pass",
+      "result": "Positive hypothetical pricing weights 0.3/0.7 imply 110/7 and 110/3, while physical-weight owner value is 220/7 only under an additional criterion. No unique market price is inferred from the risk-free rate alone."
+    },
+    {
+      "exercise": 8,
+      "status": "pass",
+      "result": "Correct net rights-fee NPV 407/21; removing unfundable expansion gives 69/7. Prior costs are not subtracted from the independently supplied date-1 cash capacity again. Required factual checks are linked to their valuation consequences."
+    }
+  ],
+  "source_review": [
+    {
+      "id": "v08-c08-mit-options",
+      "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/c40ecc0cc0dce0fbf2d229bc4027c43b_MIT15_401F08_lec10.pdf",
+      "actual_inspection": "Official 31-page PDF title/attribution and slides 16–21, especially stock/bond payoff matching, no-arbitrage price and absence of physical p in the price formula. Source uses a gross-rate notation while the chapter explicitly writes 1+r; the conversion is coherent.",
+      "limit": "Scoped text/math inspection, not an audit of the entire MIT course or reproduction of its examples."
+    },
+    {
+      "id": "v08-c08-damodaran-real-options",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/realopt.pdf",
+      "actual_inspection": "Actual 75-page author-hosted PDF title, introduction, printed pages 21–22 on untraded underlyings and implementation delay, and printed page 32 on uncertain exclusivity/rights. These passages support the manuscript's scoped cautions.",
+      "limit": "No continuous-time formula, historical application number, universal time/variance monotonicity or source company valuation is adopted as independently validated."
+    },
+    {
+      "id": "duke-value-information",
+      "url": "https://www2.stat.duke.edu/~scs/Courses/Stat340/LectureSlides/Lec9_ValueInfo_Handouts.pdf",
+      "actual_inspection": "Actual four-page Fall 2016 handout, including best no-information baseline, perfect-information formula, fee inside nonlinear utility, Bayes imperfect-information policy and nonnegative-value inequality. The catalogue source retains its earlier 2026-10-07 check; this peer reinspection occurred 2026-10-08.",
+      "limit": "The source's investment example and unrelated advice statements are not used as current facts or copied chapter problems."
+    }
+  ],
+  "validation": [
+    {
+      "command": "python3 -B book/scripts/check_v08_c08.py",
+      "result": "Author's six focused groups passed before the boundary correction; coordinator subsequently reported the same groups passed with the new endpoint guards."
+    },
+    {
+      "command": "python3 -B book/production/v08-c08-peer-check.py",
+      "result": "Six independent peer groups passed using standalone state prices, complete action enumeration, dated paths and joint signal paths before comparison with the author implementation."
+    },
+    {
+      "command": "python3 -B -O: quiet peer-check import/check(), strict JSON, corrected endpoint and owner-boundary cases",
+      "result": "Final six groups passed; exact default output unchanged, both impossible physical-state endpoints rejected, legitimate owner certainty and unreachable signal accepted."
+    },
+    {
+      "command": "SHA256 comparison against refreshed author record",
+      "result": "All seven author-record payload hashes matched before final independent eight-payload record including the author review itself."
+    }
+  ],
+  "resolved_findings": [
+    {
+      "severity": "minor input-domain consistency",
+      "finding": "The initial traded-clone lab accepted physical_up equal to zero or one despite its both-states-possible contract and strictly positive market state prices.",
+      "author_resolution": "Added 0 < physical_up < 1 only to the traded market case, documented it in the guide and added both endpoint rejection checks. Owner probabilities and signal likelihoods retain their valid closed-unit-interval boundaries.",
+      "peer_verification": "Read the final code/guide/checker/author changes and independently tested both endpoint rejections plus valid owner certainty and unreachable signals. Original manuscript and reference numerical output are unchanged."
+    }
+  ],
+  "open_findings": [],
+  "limits": [
+    "This is an independent agent review, not external human academic certification or a guarantee of error-free work.",
+    "The audit establishes internal consistency of stipulated fictional rights, payoffs, market completeness and owner criteria. It does not establish actual legal rights, liquidity, funding access or a real project's spanning relation.",
+    "Primary-source inspection is limited to the stated method passages; no full-source factual endorsement or current market claim is made.",
+    "No browser, mobile or print visual QA is claimed. Coordinator retains shared build, sequential acceptance and publication responsibility."
+  ]
+}

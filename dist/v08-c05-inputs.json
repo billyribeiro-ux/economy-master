@@ -1,0 +1,46 @@
+{
+  "title": "Oriole Components: financing contracts and incentives",
+  "units": "kCU",
+  "timing": "All financing and investment at date 0; all final cash at date 1. No continuation.",
+  "pricing_case": {
+    "physical_probabilities": ["1/2", "1/2"],
+    "valuation_weights": ["3/5", "2/5"],
+    "risk_free_rate": "0.05",
+    "operating_cash": ["84", "168"],
+    "mm_faces": ["63", "105"],
+    "tax_rate": "1/4",
+    "distress_cost": "15",
+    "tax_rule": "Refund on full promised interest only after full repayment; none in default; no bridge or carryforward.",
+    "policies": [
+      {"name": "no_debt", "face": "0", "issue_fee": "0"},
+      {"name": "moderate", "face": "63", "issue_fee": "1/4"},
+      {"name": "high", "face": "132.75", "issue_fee": "1"}
+    ]
+  },
+  "agency_pricing": {
+    "probabilities": ["1/2", "1/2"],
+    "risk_free_rate": "0",
+    "risk_neutral": true
+  },
+  "risk_shifting": {
+    "prudent_cash": ["100", "100"],
+    "gamble_cash": ["40", "150"],
+    "old_face": "80",
+    "new_funding": "80",
+    "covenant_fee": "2"
+  },
+  "overhang": {
+    "existing_cash": ["40", "120"],
+    "old_face": "90",
+    "investment": "10",
+    "incremental_cash": ["16", "16"],
+    "creditor_contribution": "4"
+  },
+  "information": {
+    "low_asset_payoff": "80",
+    "high_asset_payoff": "160",
+    "high_type_prior": "1/2",
+    "investment": "20",
+    "project_payoff": "24"
+  }
+}

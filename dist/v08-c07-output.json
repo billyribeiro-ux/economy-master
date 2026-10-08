@@ -1,0 +1,199 @@
+{
+  "case": "Morrow Process Components: original synthetic comparable-pricing register",
+  "amount_unit": "kCU",
+  "target": {
+    "id": "Morrow",
+    "operating_EV": "385",
+    "net_excluded_claims": "85",
+    "reported_subtotal": "80",
+    "recurring_common_basis_Y0": "70",
+    "normalized_forward_EBITDA_Y1": "50",
+    "normalized_forward_EBIT_Y1": "40",
+    "raw_EV_to_reported_subtotal": "77/16",
+    "EV_to_normalized_forward_EBITDA": "77/10",
+    "EV_to_normalized_forward_EBIT": "77/8",
+    "included": true,
+    "exclusion_reasons": []
+  },
+  "candidates": [
+    {
+      "id": "P1",
+      "operating_EV": "360",
+      "net_excluded_claims": "120",
+      "reported_subtotal": "45",
+      "recurring_common_basis_Y0": "60",
+      "normalized_forward_EBITDA_Y1": "60",
+      "normalized_forward_EBIT_Y1": "48",
+      "raw_EV_to_reported_subtotal": "8",
+      "EV_to_normalized_forward_EBITDA": "6",
+      "EV_to_normalized_forward_EBIT": "15/2",
+      "included": true,
+      "exclusion_reasons": []
+    },
+    {
+      "id": "P2",
+      "operating_EV": "480",
+      "net_excluded_claims": "90",
+      "reported_subtotal": "96",
+      "recurring_common_basis_Y0": "90",
+      "normalized_forward_EBITDA_Y1": "60",
+      "normalized_forward_EBIT_Y1": "36",
+      "raw_EV_to_reported_subtotal": "5",
+      "EV_to_normalized_forward_EBITDA": "8",
+      "EV_to_normalized_forward_EBIT": "40/3",
+      "included": true,
+      "exclusion_reasons": []
+    },
+    {
+      "id": "P3",
+      "operating_EV": "300",
+      "net_excluded_claims": "80",
+      "reported_subtotal": "30",
+      "recurring_common_basis_Y0": "40",
+      "normalized_forward_EBITDA_Y1": "50",
+      "normalized_forward_EBIT_Y1": "45",
+      "raw_EV_to_reported_subtotal": "10",
+      "EV_to_normalized_forward_EBITDA": "6",
+      "EV_to_normalized_forward_EBIT": "20/3",
+      "included": true,
+      "exclusion_reasons": []
+    },
+    {
+      "id": "P4",
+      "operating_EV": "720",
+      "net_excluded_claims": "120",
+      "reported_subtotal": "70",
+      "recurring_common_basis_Y0": "70",
+      "normalized_forward_EBITDA_Y1": "80",
+      "normalized_forward_EBIT_Y1": "60",
+      "raw_EV_to_reported_subtotal": "72/7",
+      "EV_to_normalized_forward_EBITDA": "9",
+      "EV_to_normalized_forward_EBIT": "12",
+      "included": true,
+      "exclusion_reasons": []
+    },
+    {
+      "id": "P5",
+      "operating_EV": "400",
+      "net_excluded_claims": "-100",
+      "reported_subtotal": "100",
+      "recurring_common_basis_Y0": "100",
+      "normalized_forward_EBITDA_Y1": "100",
+      "normalized_forward_EBIT_Y1": "95",
+      "raw_EV_to_reported_subtotal": "4",
+      "EV_to_normalized_forward_EBITDA": "4",
+      "EV_to_normalized_forward_EBIT": "80/19",
+      "included": false,
+      "exclusion_reasons": [
+        "different operating/capital model"
+      ]
+    },
+    {
+      "id": "P6",
+      "operating_EV": "90",
+      "net_excluded_claims": "70",
+      "reported_subtotal": "-5",
+      "recurring_common_basis_Y0": "-5",
+      "normalized_forward_EBITDA_Y1": "-5",
+      "normalized_forward_EBIT_Y1": "-13",
+      "raw_EV_to_reported_subtotal": null,
+      "EV_to_normalized_forward_EBITDA": null,
+      "EV_to_normalized_forward_EBIT": null,
+      "included": false,
+      "exclusion_reasons": [
+        "unsupported normalization",
+        "outside the stated positive-profit comparator group"
+      ]
+    }
+  ],
+  "selection": [
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ],
+  "summary": {
+    "median": "7",
+    "arithmetic_mean": "29/4",
+    "pooled_EV_over_EBITDA": "186/25",
+    "range": [
+      "6",
+      "9"
+    ],
+    "EBIT_median": "39/4",
+    "leave_one_out_medians": [
+      {
+        "removed": "P1",
+        "median": "8"
+      },
+      {
+        "removed": "P2",
+        "median": "6"
+      },
+      {
+        "removed": "P3",
+        "median": "8"
+      },
+      {
+        "removed": "P4",
+        "median": "6"
+      }
+    ]
+  },
+  "relative_estimates": {
+    "median": {
+      "operating_value": "350",
+      "common_equity_value": "265",
+      "CU_per_share": "53/2"
+    },
+    "arithmetic_mean": {
+      "operating_value": "725/2",
+      "common_equity_value": "555/2",
+      "CU_per_share": "111/4"
+    },
+    "pooled": {
+      "operating_value": "372",
+      "common_equity_value": "287",
+      "CU_per_share": "287/10"
+    },
+    "minimum": {
+      "operating_value": "300",
+      "common_equity_value": "215",
+      "CU_per_share": "43/2"
+    },
+    "maximum": {
+      "operating_value": "450",
+      "common_equity_value": "365",
+      "CU_per_share": "73/2"
+    },
+    "EBIT_median": {
+      "operating_value": "390",
+      "common_equity_value": "305",
+      "CU_per_share": "61/2"
+    }
+  },
+  "conditional_DCF": {
+    "NOPAT1": "30",
+    "net_reinvestment1": "6",
+    "FCFF1": "24",
+    "opening_productive_capital": "200",
+    "closing_year1_capital": "206",
+    "justified_forward_EV_EBITDA": "8",
+    "justified_forward_EV_EBIT": "10",
+    "justified_forward_EV_sales": "8/5",
+    "peer_median_implied_r": "69/700",
+    "market_EV_implied_r": "711/7700",
+    "operating_value": "400",
+    "common_equity_value": "315",
+    "CU_per_share": "63/2"
+  },
+  "incorrect_reported_denominator_application": {
+    "estimate": {
+      "operating_value": "560",
+      "common_equity_value": "475",
+      "CU_per_share": "95/2"
+    },
+    "operating_value_overstatement": "210"
+  },
+  "interpretation": "Conditional fictional pricing evidence. Candidate selection and normalization are explicit assumptions; no confidence interval, arbitrage profit or investment recommendation follows."
+}

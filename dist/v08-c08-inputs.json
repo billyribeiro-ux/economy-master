@@ -1,0 +1,27 @@
+{
+  "provenance": "Original fictional Tern Thermal Systems proposals; no observations or imported company data. Money kCU; dates 0,1,2 are one-year steps.",
+  "delay": {
+    "valuation": "traded_clone_replication",
+    "spot": "100", "up": "145", "down": "70", "risk_free": "0.05",
+    "exercise_cost": "90", "physical_up": "0.6", "interim_receipt_if_immediate": "20"
+  },
+  "operations": {
+    "valuation": "linear_owner_expected_money",
+    "rate": "0.05", "initial_cost": "70", "expansion_cash_available": "35",
+    "states": [
+      {"name": "high", "probability": "0.4", "base": "120", "expansion_gross": "60", "expansion_cost": "35", "salvage": "65"},
+      {"name": "low", "probability": "0.6", "base": "40", "expansion_gross": "12", "expansion_cost": "35", "salvage": "65"}
+    ]
+  },
+  "stage": {
+    "valuation": "linear_owner_expected_money",
+    "rate": "0.10", "pilot_cost": "12", "validation_probability": "0.6",
+    "scale_cost": "30", "validated_receipt": "80", "failed_receipt": "0"
+  },
+  "information": {
+    "valuation": "linear_owner_expected_money",
+    "rate": "0.10", "good_prior": "0.4", "launch_cost": "60",
+    "good_receipt": "160", "bad_receipt": "40",
+    "positive_if_good": "0.75", "positive_if_bad": "0.25", "report_fee_now": "1"
+  }
+}

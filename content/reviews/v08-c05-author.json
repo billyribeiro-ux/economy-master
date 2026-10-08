@@ -1,0 +1,188 @@
+{
+  "chapter": "v08-c05",
+  "author": "cost_peer specialist",
+  "date": "2026-10-08",
+  "assignment": "production/v08-middle-assignments.json",
+  "status": "ready-for-coordinator-review",
+  "scope": {
+    "canonical_title": "Capital structure and financing frictions",
+    "visible_word_count": 6609,
+    "worked_examples": 5,
+    "exercises_with_complete_solutions": 8,
+    "answered_teachback_and_retention": true,
+    "owned_paths": [
+      "content/chapters/v08-c05.html",
+      "content/projects/v08-c05-*",
+      "scripts/check_v08_c05.py",
+      "content/reviews/v08-c05-sources.json",
+      "content/reviews/v08-c05-author.json"
+    ],
+    "shared_edits": false
+  },
+  "coverage": {
+    "modigliani_miller": "Proved the state payoff decomposition and law-of-one-price claim-bundle result under fixed operations, no financing taxes/resource/issue costs, common information and feasible replication. Explicit recapitalization proceeds preserve owner-wealth accounting. Replicating linear pricing is derived from two traded primitive claims rather than inferred from physical means.",
+    "required_returns": "Derived the no-tax weighted expected return and leverage identity from dated expected receipts. Distinguished promised defaultable yield from expected debt return and qualified leverage monotonicity to fixed operating/debt returns.",
+    "tradeoff": "Original finite one-year tax/refund/default contract prices new debt first, values state tax and incremental distress cash consistently, nets real issue costs and compares only its stipulated menu. Perpetual shield formulas are explicitly inapplicable. Default shortfalls, claimant distributions, resource costs and government transfers are separated.",
+    "agency": "Manager/shareholder and shareholder/creditor conflicts are distinct. Fully priced original risk-shifting case separates old-claim changes from prospective loan proceeds; the new-loan face and subsequent shareholder action are jointly checked.",
+    "debt_overhang": "Derived equity-funded NPV = project NPV minus gain to old debt. Original case closes all old claims, demonstrates why junior financing alone does not cure it, and values both a conditional creditor-contribution agreement and a consented senior loan.",
+    "information": "Original equity-only private-type case rejects an incentive-incompatible pooling candidate and verifies issuing types, conditional investor beliefs, low-type participation and high-type deviation at a separating outcome. Safe debt/internal cash contrasts retain all funding opportunity costs.",
+    "policy": "Pecking order, static trade-off and debt discipline are conditional mechanisms; no universal hierarchy, optimal ratio or announcement inference. Covenants, lost opportunities, consent, fees and financing flexibility retain concrete cash/incentive comparisons."
+  },
+  "worked_case_anchors": [
+    {
+      "case": 1,
+      "result": "Operating cash (84,168), physical probabilities (1/2,1/2), risk-free rate 5%, and traded operating value 112 imply replicating state prices (4/7,8/21). Faces 63/105 give debt values 60/88 and equity 52/24. Required operating return 12.5%; debt expected returns 5%/7.386364%; equity expected returns 21.153846%/31.25%. The second promised debt yield is 19.318182%, not its expected return."
+    },
+    {
+      "case": 2,
+      "result": "Faces 0,63,132.75 produce rational debt prices 0,60,90 under the specified default/refund sequence. Moderate shield PV 5/7; high shield PV 57/14 and distress PV 60/7. Original owner wealth after fees is 112,3149/28,213/2. Zero tax changes the winner to no debt. Zero default resource cost reprices high debt to 690/7, reduces its promised interest to 957/28, and makes high owner wealth 11197/98; debt price is not held fixed during that change."
+    },
+    {
+      "case": 3,
+      "result": "Separate zero-rate risk-neutral scenario: old face 80 yields prudent debt/equity 80/20 and gamble debt/equity 60/35. Old claim changes -20/+15 sum to total loss -5. New funding 80 requires face 120 under the gamble; equity chooses gamble value 15 over prudent zero at those same terms. A covenant supporting prudent operations costs 2 and gives owner wealth 98 versus unrestricted 95."
+    },
+    {
+      "case": 4,
+      "result": "Existing cash (40,120), old face 90, new investment 10 adding (16,16): old D/E moves 65/15 to 73/23. Project NPV 6, shareholder-funded NPV -2; creditor contribution interval [2,8] and contribution 4 give gains 4/2. Junior face 20 raises 10 and leaves equity 13. Consented senior face 10 is safe and leaves old debt 68/equity 18, giving both old parties gains 3."
+    },
+    {
+      "case": 5,
+      "result": "Private asset types 80/160, equal prior, investment 20, project payoff 24. Pooling fraction 5/36 gives old-owner gains 86/9 and -14/9, so pooling fails. Low-only fraction 5/26 gives low owners 84 and high deviation 1932/13 below 160. New investors break even conditionally; expected project NPV forgone is 2. A permitted safe loan allows owner values 84/164."
+    }
+  ],
+  "exercise_review": [
+    {
+      "item": 1,
+      "result": "Arbitrage receipt 3 with zero future residual in both states; general proof requires equal state payoffs and actual replication/trading access, with meaningful counter-assumptions."
+    },
+    {
+      "item": 2,
+      "result": "Operating/debt/equity values 92/68/24; expected returns 13/92,11/136,5/16; promised debt yield 4/17. Exact leverage identity closes using expected receipts."
+    },
+    {
+      "item": 3,
+      "result": "New finite tax/distress packet: debt 1300/21, promised interest 800/21, shield PV 320/147, distress PV 20/3, unlevered value 80, financed value 3700/49 and net owner wealth 7351/98. Repayments are not subtracted twice."
+    },
+    {
+      "item": 4,
+      "result": "Three-state prudent total 120, debt 87.5/equity 32.5 versus gamble total 110, debt 72.5/equity 37.5. New funding 87.5 implies gamble face 130; equity 22.5 exceeds prudent equity 7.5 at those terms. Anticipation alone prices but does not remove the commitment problem."
+    },
+    {
+      "item": 5,
+      "result": "Project NPV 9, old debt 60 to 72, equity 25 to 37, shareholder funding NPV -3. Contribution interval [3,12], b = 6 gives creditor/equity gains 6/3. Fair junior face 30 raises 15 and leaves equity 22, below 25."
+    },
+    {
+      "item": 6,
+      "result": "Types 100/200, high prior 0.4: pool fraction 15/88 gives high owners 195.772727 < 200. Low-only fraction 15/68 gives low owners 106 and high deviation 3127/17 < 200. Expected project NPV lost 2.4; safe borrowing gives values 106/206."
+    },
+    {
+      "item": 7,
+      "result": "Covenant value 98 versus unrestricted 95+8p; gains +1 at p = 1/4 and -1 at p = 1/2, equal at 3/8. The added payoff is already date-0 incremental value and must preserve the stated independence/incentive assumptions."
+    },
+    {
+      "item": 8,
+      "result": "Flex total 206/equity 128, High total 203/equity 129, initial debt 80/equity 120. Creditor losses 2/6 contrast with equity gains 8/9. Shareholder side payments 2/6 preserve creditor value and leave net gains 6/3. Open memo criteria require feasibility, consent/funding and evidence; the total-surplus comparison is conditional, not automatic implementation authority."
+    }
+  ],
+  "teaching_and_retention_review": [
+    "Definitions, timing, units and original hypothetical status precede case calculations. Every exercise method is derived or worked beforehand; general information/contract theory is honestly deferred.",
+    "The teaching benchmark reconciles required returns, finite shields and old versus newly priced creditor claims. The distinct delayed project gives total NPV 6, equity-funded NPV -3 and contribution interval [3,9].",
+    "Delayed belief check requires repricing after high-type withdrawal; no-refund check preserves moderate debt price 60 while lowering owner wealth to 111.75.",
+    "Open decision criteria permit changed assumptions and coherent alternatives; no unsupported current tax, insolvency, empirical calibration or institutional authority claim."
+  ],
+  "validation": [
+    {
+      "check": "Fresh quiet checker import/check and strict JSON",
+      "result": "Passed eight focused groups. Captured stdout and stderr are empty during import/check; report serializes with allow_nan=False."
+    },
+    {
+      "check": "Independent exact financial anchors",
+      "result": "Checker reconstructs primitive state-price replication, claim payoff tables, expected-return identities, tax/default sequence, old/new debt incentives, overhang participation and private-type issue beliefs without using the model's pricing helpers for its reference anchors."
+    },
+    {
+      "check": "Meaningful variations",
+      "result": "Zero tax and zero default resource cost change the menu ranking with debt repricing; a larger covenant fee reverses its benefit; contributions 1/9 violate one existing party's participation despite preserved total NPV 6."
+    },
+    {
+      "check": "All eight exercises and answered delayed transfer",
+      "result": "Numerical determinate results independently recomputed in the focused checker; proof, assumptions, economic interpretations and open-answer criteria manually audited against each full prompt."
+    },
+    {
+      "check": "Eleven domain failures",
+      "result": "Incorrect units/laws, negative rate, tax outside domain, infeasible loss, changed refund sequence, non-risk-neutral agency assumptions, excessive funding/contribution and degenerate private-type prior rejected."
+    },
+    {
+      "check": "Portable CLI and artifact agreement",
+      "result": "Copied script and inputs alone to a fresh temporary directory and ran from a different working directory; strict JSON matches stored output with no stderr. The code performs no network access or file writes."
+    },
+    {
+      "check": "HTML and sources",
+      "result": "Balanced fragment, unique anchors, five worked cases, eight exercises/eight solution entries, answered teaching/retention, source-ID equality and all local lab assets verified. No trailing whitespace in chapter."
+    }
+  ],
+  "source_inspection": {
+    "inspected_primary_sources": 3,
+    "record": "content/reviews/v08-c05-sources.json",
+    "scope": "Opened actual official MIT PDFs for Capital Structure I, Capital Structure II and Informational and Agency Considerations; read scoped proof, claim pricing, taxes/distress, debt-overhang, creditor anticipation and information-choice sections. Figures/extracted garbled equations are not claimed visually audited; original algebra and all numerical cases were independently derived.",
+    "exclusions": "No historical return, industry leverage, tax-law, default-cost or announcement-return tables are used as current data. The original 1958 article and a complete original Myers research paper are not claimed inspected; an inaccessible repository download was not included as a verified source."
+  },
+  "findings": [
+    {
+      "id": "v08-c05-author-01",
+      "reported_by": "coordinator",
+      "severity": "medium",
+      "status": "resolved",
+      "location": "Section 2, interpretation of leverage-return identity",
+      "finding": "The initial wording suggested the identity alone establishes increasing equity required return whenever debt return is lower, without holding the debt return fixed as leverage changes.",
+      "resolution": "Qualified the monotonic comparison to unchanged operating required return and fixed lower debt return, gave the risk-free-debt range as example, and expressly stated that a varying debt return prevents an unconditional monotonic conclusion from the identity alone."
+    },
+    {
+      "id": "v08-c05-author-02",
+      "reported_by": "author",
+      "severity": "low",
+      "status": "resolved",
+      "location": "Exercise 8 funding and creditor-consent comparison",
+      "finding": "The prospective policy comparison needed explicit claim/funding boundaries and a quantified route to creditor consent rather than assuming a loss-making waiver.",
+      "resolution": "Specified no initial new securities/distributions/contributions, fees paid by the firm, and shareholder side payments 2/6 to preserve creditor value. Net shareholder gains 6/3 now close to total gains and recommendation requires actual consent/funding."
+    }
+  ],
+  "open_findings": [],
+  "hashes": {
+    "content/chapters/v08-c05.html": {
+      "sha256": "1936bdaddb51283d1955371572f42c6d77e8e24f9db4b83edbd2017ef603fb30",
+      "bytes": 45964
+    },
+    "content/projects/v08-c05-inputs.json": {
+      "sha256": "5b25f521031d36866bee53641b4ef4e8750474f057c1dfc1c2862a9dd14438b4",
+      "bytes": 1397
+    },
+    "content/projects/v08-c05-analysis.py": {
+      "sha256": "9c188717cfec0a59479647369f3f22c78e8fb1976c76f27f64e85edd46dd85c1",
+      "bytes": 12691
+    },
+    "content/projects/v08-c05-output.json": {
+      "sha256": "9a6a6e5fb5fb2d2ba7393c59825bbb4332f253afde51263320907c9c13981795",
+      "bytes": 5588
+    },
+    "content/projects/v08-c05-README.txt": {
+      "sha256": "86607ba442484ed4f6c0d8d96b592ead479b0c190013d7935d6619592a014d87",
+      "bytes": 6826
+    },
+    "scripts/check_v08_c05.py": {
+      "sha256": "c2cff546162d580e33a9bb403c19ef66028d359ac7845d7011cbc120aa49ac31",
+      "bytes": 14593
+    },
+    "content/reviews/v08-c05-sources.json": {
+      "sha256": "86048db16b8a4de171a78c7bcf50c4f48f26218687cb0c08a17d69f83c31dccc",
+      "bytes": 3110
+    }
+  },
+  "limitations": [
+    "Author review is not a separate independent human academic assessment. Coordinator acceptance, shared-source integration and whole-library checks remain pending.",
+    "The cases are finite hypothetical contracts; positive valuation weights and internal identities do not establish real financing access, empirical optimal leverage or actual tax/insolvency rules.",
+    "The lab checks its stated three-contract menu, two operating policies and explicit private-information candidates; it does not enumerate all financing policies or all possible signaling equilibria.",
+    "Real bargaining, enforcement, monitoring and asymmetric information can alter the displayed repairs; consent and implementation are not implied by a positive aggregate NPV.",
+    "Visual/mobile/keyboard/print UI QA was not performed."
+  ],
+  "handoff": "Complete bounded author package, with exact final payload hashes and no open author findings. Coordinator alone decides canonical acceptance and publication."
+}

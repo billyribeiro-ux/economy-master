@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-08",
+  "batch": "v08-middle",
+  "reviewer": "Coordinating author",
+  "state": "accepted, built, numerically/structurally verified and offline archived; private publication pending",
+  "chapters": {
+    "v08-c05": {
+      "subject_review": "passed",
+      "scope": "Full five-case manuscript and eight solutions read and independently recomputed. Positive state pricing closes MM claims/returns; finite tax-refund sequence and distress loss/fees reconcile; old/new risk-shifting prices, consented overhang repairs and low-only equity issuance incentives checked.",
+      "resolved_findings": [
+        "Qualified equity-return/leverage monotonicity to fixed operating and debt returns; identity alone does not prove monotonicity with changing debt return."
+      ],
+      "hashes_verified": 7,
+      "checker_groups": 8,
+      "integration_check": "passed in whole-library acceptance-state run"
+    },
+    "v08-c06": {
+      "subject_review": "passed",
+      "scope": "Full three-case manuscript, all eight solutions, answered teaching/retention read and independently recomputed. Dividend/repurchase wealth, EPS/transfers, explicit fictional liquidation tax basis, retained-cash PV and complete dated Dunlin funding/project/repayment paths close. Feasibility separated from optimal choice and statutory permission.",
+      "hashes_verified": 6,
+      "checker_groups": 6,
+      "resolved_findings": [
+        "Clarified undrawn committed revolver versus nonexistent borrowing; corrected README spacing."
+      ],
+      "integration_check": "passed in whole-library acceptance-state run"
+    },
+    "v08-c07": {
+      "subject_review": "passed",
+      "scope": "Full three-case manuscript, eight solutions and retention audited. Claim/lease/NCI perimeter, reinvestment-supported multiples and growth derivative, six-peer normalization/selection, aggregation and EBIT comparison, share bases, date-1 terminal transition and conditional transaction decomposition independently reconcile. Full lab/checker read; source scope records inspected and primary SEC non-GAAP text rechecked.",
+      "hashes_verified": 7,
+      "checker_groups": 8,
+      "integration_check": "passed in whole-library acceptance-state run"
+    },
+    "v08-c08": {
+      "subject_review": "passed",
+      "peer_assignment": "production/v08-c08-peer-assignment.json",
+      "scope": "Four original worked cases/eight solved exercises with exact lab/checker. Positive market state-price replication, separate physical owner criterion, funded operating menu, staged gate and joint-signal information decisions tested.",
+      "hashes_verified": 8,
+      "checker_groups": 6,
+      "peer_review": "content/reviews/v08-c08-peer.json",
+      "resolved_findings": [
+        {
+          "severity": "minor input-domain consistency",
+          "finding": "The initial traded-clone lab accepted physical_up equal to zero or one despite its both-states-possible contract and strictly positive market state prices.",
+          "author_resolution": "Added 0 < physical_up < 1 only to the traded market case, documented it in the guide and added both endpoint rejection checks. Owner probabilities and signal likelihoods retain their valid closed-unit-interval boundaries.",
+          "peer_verification": "Read the final code/guide/checker/author changes and independently tested both endpoint rejections plus valid owner certainty and unreachable signals. Original manuscript and reference numerical output are unchanged."
+        }
+      ],
+      "integration_check": "passed in whole-library acceptance-state run"
+    }
+  },
+  "open_integration_tasks": [
+    "Confirm successful same-project private deployment and record native result."
+  ],
+  "unchanged_limitations": [
+    "Visual/mobile/keyboard/print UI QA pending after local-file preview security denial; do not circumvent.",
+    "Agent reviews are not independent human certification of learner performance."
+  ],
+  "previous_goal_turn": "Progress: four complete new manuscripts and labs authored, full reviews completed, two conceptual/input findings fixed, frozen payloads verified. Concrete next step is integrated verification and publication.",
+  "validation": {
+    "batch": "v08-middle",
+    "status": "passed",
+    "chapters_accepted": 92,
+    "volume_packages_accepted": 7,
+    "cumulative_packages_accepted": 2,
+    "html_pages_checked": 107,
+    "chapter_words": 430332,
+    "solved_chapter_exercises": 736,
+    "offline_archive": {
+      "files": 292,
+      "bytes": 4725917,
+      "sha256": "6a830dc2986be89b609399bc17b661dce73dc9ff3c592749603b2dcdf00e6df4",
+      "integrity": "CRC and exact equality with every generated dist file passed"
+    },
+    "visual_mobile_print_ui": "pending"
+  }
+}

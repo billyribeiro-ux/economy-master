@@ -1,0 +1,259 @@
+{
+  "title": "Oriole Components: financing contracts and incentives",
+  "units": "kCU",
+  "unlevered_value": 112.0,
+  "unlevered_expected_return": 0.125,
+  "mm": [
+    {
+      "debt_cash": [
+        63.0,
+        63.0
+      ],
+      "equity_cash": [
+        21.0,
+        105.0
+      ],
+      "debt_value": 60.0,
+      "equity_value": 52.0,
+      "total_value": 112.0,
+      "face": 63.0,
+      "debt_expected_return": 0.05,
+      "equity_expected_return": 0.21153846153846154,
+      "debt_promised_yield": 0.05,
+      "weighted_return": 0.125,
+      "equity_return_from_leverage": 0.21153846153846154
+    },
+    {
+      "debt_cash": [
+        84.0,
+        105.0
+      ],
+      "equity_cash": [
+        0.0,
+        63.0
+      ],
+      "debt_value": 88.0,
+      "equity_value": 24.0,
+      "total_value": 112.0,
+      "face": 105.0,
+      "debt_expected_return": 0.07386363636363637,
+      "equity_expected_return": 0.3125,
+      "debt_promised_yield": 0.19318181818181818,
+      "weighted_return": 0.125,
+      "equity_return_from_leverage": 0.3125
+    }
+  ],
+  "financing_policies": [
+    {
+      "name": "no_debt",
+      "face": 0.0,
+      "debt_value": 0.0,
+      "promised_interest": 0.0,
+      "default_states": [
+        false,
+        false
+      ],
+      "debt_cash": [
+        0.0,
+        0.0
+      ],
+      "equity_cash": [
+        84.0,
+        168.0
+      ],
+      "shield_cash": [
+        0.0,
+        0.0
+      ],
+      "distress_cash": [
+        0.0,
+        0.0
+      ],
+      "equity_value": 112.0,
+      "shield_value": 0.0,
+      "distress_value": 0.0,
+      "total_value": 112.0,
+      "issue_fee": 0.0,
+      "owner_wealth": 112.0
+    },
+    {
+      "name": "moderate",
+      "face": 63.0,
+      "debt_value": 60.0,
+      "promised_interest": 3.0,
+      "default_states": [
+        false,
+        false
+      ],
+      "debt_cash": [
+        63.0,
+        63.0
+      ],
+      "equity_cash": [
+        21.75,
+        105.75
+      ],
+      "shield_cash": [
+        0.75,
+        0.75
+      ],
+      "distress_cash": [
+        0.0,
+        0.0
+      ],
+      "equity_value": 52.714285714285715,
+      "shield_value": 0.7142857142857143,
+      "distress_value": 0.0,
+      "total_value": 112.71428571428571,
+      "issue_fee": 0.25,
+      "owner_wealth": 112.46428571428571
+    },
+    {
+      "name": "high",
+      "face": 132.75,
+      "debt_value": 90.0,
+      "promised_interest": 42.75,
+      "default_states": [
+        true,
+        false
+      ],
+      "debt_cash": [
+        69.0,
+        132.75
+      ],
+      "equity_cash": [
+        0.0,
+        45.9375
+      ],
+      "shield_cash": [
+        0.0,
+        10.6875
+      ],
+      "distress_cash": [
+        15.0,
+        0.0
+      ],
+      "equity_value": 17.5,
+      "shield_value": 4.071428571428571,
+      "distress_value": 8.571428571428571,
+      "total_value": 107.5,
+      "issue_fee": 1.0,
+      "owner_wealth": 106.5
+    }
+  ],
+  "best_menu_policies": [
+    "moderate"
+  ],
+  "risk_shifting": {
+    "old_claims": {
+      "prudent": {
+        "debt_cash": [
+          80.0,
+          80.0
+        ],
+        "equity_cash": [
+          20.0,
+          20.0
+        ],
+        "debt_value": 80.0,
+        "equity_value": 20.0,
+        "total_value": 100.0
+      },
+      "gamble": {
+        "debt_cash": [
+          40.0,
+          80.0
+        ],
+        "equity_cash": [
+          0.0,
+          70.0
+        ],
+        "debt_value": 60.0,
+        "equity_value": 35.0,
+        "total_value": 95.0
+      }
+    },
+    "equity_value_change": 15.0,
+    "debt_value_change": -20.0,
+    "net_value_change": -5.0,
+    "new_debt_equilibria": [
+      {
+        "policy": "gamble",
+        "face": 120.0,
+        "debt_value": 80.0,
+        "equity_value": 15.0,
+        "all_choice_equity_values": {
+          "prudent": 0.0,
+          "gamble": 15.0
+        },
+        "owner_wealth": 95.0
+      }
+    ],
+    "covenant_face": 80.0,
+    "covenant_owner_wealth": 98.0
+  },
+  "overhang": {
+    "before": {
+      "debt_cash": [
+        40.0,
+        90.0
+      ],
+      "equity_cash": [
+        0.0,
+        30.0
+      ],
+      "debt_value": 65.0,
+      "equity_value": 15.0,
+      "total_value": 80.0
+    },
+    "after": {
+      "debt_cash": [
+        56.0,
+        90.0
+      ],
+      "equity_cash": [
+        0.0,
+        46.0
+      ],
+      "debt_value": 73.0,
+      "equity_value": 23.0,
+      "total_value": 96.0
+    },
+    "project_npv": 6.0,
+    "creditor_gain_before_contribution": 8.0,
+    "equity_gain_before_funding": 8.0,
+    "equity_funded_npv": -2.0,
+    "creditor_contribution": 4.0,
+    "repaired_equity_gain": 2.0,
+    "repaired_creditor_gain": 4.0,
+    "repair_individually_acceptable": true,
+    "mutually_acceptable_contribution_min": 2.0,
+    "mutually_acceptable_contribution_max": 8.0,
+    "junior_face": 20.0,
+    "junior_price": 10.0,
+    "equity_after_junior": 13.0,
+    "consented_senior_price": 10.0,
+    "old_debt_after_senior": 68.0,
+    "equity_after_senior": 18.0
+  },
+  "information": {
+    "pooling_fraction": 0.1388888888888889,
+    "pooling_old_owner_gains": {
+      "low": 9.555555555555555,
+      "high": -1.5555555555555556
+    },
+    "pooling_incentive_compatible": false,
+    "low_only_fraction": 0.19230769230769232,
+    "low_old_owner_value": 84.0,
+    "high_old_owner_value_without_issue": 160.0,
+    "high_deviation_value": 148.6153846153846,
+    "low_only_equilibrium_valid": true,
+    "expected_project_npv_lost": 2.0,
+    "safe_debt_price": 20.0,
+    "safe_debt_face": 20.0,
+    "safe_debt_old_owner_values": {
+      "low": 84.0,
+      "high": 164.0
+    }
+  }
+}

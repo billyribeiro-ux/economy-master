@@ -1,0 +1,275 @@
+{
+  "delay": {
+    "pricing_up": {
+      "exact": "7/15",
+      "decimal": 0.466666667
+    },
+    "up_payoff": {
+      "exact": "55",
+      "decimal": 55.0
+    },
+    "down_payoff": {
+      "exact": "0",
+      "decimal": 0.0
+    },
+    "delta": {
+      "exact": "11/15",
+      "decimal": 0.733333333
+    },
+    "bond_now": {
+      "exact": "-440/9",
+      "decimal": -48.888888889
+    },
+    "value": {
+      "exact": "220/9",
+      "decimal": 24.444444444
+    },
+    "immediate_npv": {
+      "exact": "10",
+      "decimal": 10.0
+    },
+    "preferred_base_value": {
+      "exact": "220/9",
+      "decimal": 24.444444444
+    },
+    "physical_expected_payoff": {
+      "exact": "33",
+      "decimal": 33.0
+    },
+    "underlying_expected_return": {
+      "exact": "3/20",
+      "decimal": 0.15
+    },
+    "option_expected_return": {
+      "exact": "7/20",
+      "decimal": 0.35
+    },
+    "wrong_physical_risk_free_pv": {
+      "exact": "220/7",
+      "decimal": 31.428571429
+    },
+    "wrong_underlying_return_pv": {
+      "exact": "660/23",
+      "decimal": 28.695652174
+    },
+    "immediate_package_with_receipt": {
+      "exact": "2500/21",
+      "decimal": 119.047619048
+    },
+    "immediate_npv_with_receipt": {
+      "exact": "610/21",
+      "decimal": 29.047619048
+    },
+    "interim_receipt_switch": {
+      "exact": "91/6",
+      "decimal": 15.166666667
+    }
+  },
+  "operations": {
+    "states": [
+      {
+        "name": "high",
+        "probability": {
+          "exact": "2/5",
+          "decimal": 0.4
+        },
+        "base": {
+          "exact": "120",
+          "decimal": 120.0
+        },
+        "choices": {
+          "continue": {
+            "exact": "120",
+            "decimal": 120.0
+          },
+          "abandon": {
+            "exact": "65",
+            "decimal": 65.0
+          },
+          "expand": {
+            "exact": "145",
+            "decimal": 145.0
+          }
+        },
+        "action": "expand",
+        "optimal": {
+          "exact": "145",
+          "decimal": 145.0
+        },
+        "expansion_only": {
+          "exact": "145",
+          "decimal": 145.0
+        },
+        "abandonment_only": {
+          "exact": "120",
+          "decimal": 120.0
+        }
+      },
+      {
+        "name": "low",
+        "probability": {
+          "exact": "3/5",
+          "decimal": 0.6
+        },
+        "base": {
+          "exact": "40",
+          "decimal": 40.0
+        },
+        "choices": {
+          "continue": {
+            "exact": "40",
+            "decimal": 40.0
+          },
+          "abandon": {
+            "exact": "65",
+            "decimal": 65.0
+          },
+          "expand": {
+            "exact": "17",
+            "decimal": 17.0
+          }
+        },
+        "action": "abandon",
+        "optimal": {
+          "exact": "65",
+          "decimal": 65.0
+        },
+        "expansion_only": {
+          "exact": "40",
+          "decimal": 40.0
+        },
+        "abandonment_only": {
+          "exact": "65",
+          "decimal": 65.0
+        }
+      }
+    ],
+    "base_value": {
+      "exact": "480/7",
+      "decimal": 68.571428571
+    },
+    "flexible_value": {
+      "exact": "1940/21",
+      "decimal": 92.380952381
+    },
+    "base_npv": {
+      "exact": "-10/7",
+      "decimal": -1.428571429
+    },
+    "flexible_npv": {
+      "exact": "470/21",
+      "decimal": 22.380952381
+    },
+    "flexibility_gain": {
+      "exact": "500/21",
+      "decimal": 23.80952381
+    },
+    "expansion_only_gain": {
+      "exact": "200/21",
+      "decimal": 9.523809524
+    },
+    "abandonment_only_gain": {
+      "exact": "100/7",
+      "decimal": 14.285714286
+    }
+  },
+  "stage": {
+    "validated_continuation": {
+      "exact": "470/11",
+      "decimal": 42.727272727
+    },
+    "failed_continuation": {
+      "exact": "-30",
+      "decimal": -30.0
+    },
+    "staged_npv": {
+      "exact": "1368/121",
+      "decimal": 11.305785124
+    },
+    "forced_npv": {
+      "exact": "48/121",
+      "decimal": 0.396694215
+    },
+    "stopping_gain": {
+      "exact": "120/11",
+      "decimal": 10.909090909
+    },
+    "minimum_validation_probability": {
+      "exact": "363/1175",
+      "decimal": 0.30893617
+    }
+  },
+  "information": {
+    "signals": [
+      {
+        "signal": "positive",
+        "probability": {
+          "exact": "9/20",
+          "decimal": 0.45
+        },
+        "posterior_good": {
+          "exact": "2/3",
+          "decimal": 0.666666667
+        },
+        "launch_npv": {
+          "exact": "540/11",
+          "decimal": 49.090909091
+        },
+        "action": "launch",
+        "optimal": {
+          "exact": "540/11",
+          "decimal": 49.090909091
+        }
+      },
+      {
+        "signal": "negative",
+        "probability": {
+          "exact": "11/20",
+          "decimal": 0.55
+        },
+        "posterior_good": {
+          "exact": "2/11",
+          "decimal": 0.181818182
+        },
+        "launch_npv": {
+          "exact": "-460/121",
+          "decimal": -3.801652893
+        },
+        "action": "reject",
+        "optimal": {
+          "exact": "0",
+          "decimal": 0.0
+        }
+      }
+    ],
+    "posterior_threshold": {
+      "exact": "13/60",
+      "decimal": 0.216666667
+    },
+    "no_report_value": {
+      "exact": "200/11",
+      "decimal": 18.181818182
+    },
+    "gross_report_value": {
+      "exact": "2430/121",
+      "decimal": 20.082644628
+    },
+    "net_report_value": {
+      "exact": "2309/121",
+      "decimal": 19.082644628
+    },
+    "evsi": {
+      "exact": "230/121",
+      "decimal": 1.900826446
+    },
+    "perfect_information_value": {
+      "exact": "3760/121",
+      "decimal": 31.074380165
+    },
+    "evpi": {
+      "exact": "1560/121",
+      "decimal": 12.892561983
+    },
+    "buy_report": true
+  }
+}

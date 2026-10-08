@@ -1,0 +1,81 @@
+{
+  "case": "Portico Instruments and Dunlin Packaging: original payout and liquidity cases",
+  "units": "money kCU; shares thousands; share prices CU; stated period rates",
+  "provenance": "All businesses, values, dated cash, rates, personal taxes and contracts are original fictional teaching assumptions, not market observations or legal advice.",
+  "payout": {
+    "equity_value": 1000,
+    "available_excess_cash": 200,
+    "shares": 100,
+    "distribution": 200,
+    "forecast_income_before": 100,
+    "cash_income_rate": "1/20",
+    "holder_shares": 10,
+    "repurchase_prices": [
+      10,
+      8,
+      "25/2"
+    ],
+    "contract": "Fixed operating/investment policy; cash worth par; no debt, corporate/personal taxes, fees, new information or ownership frictions. Repurchased shares cease to be outstanding immediately. Income is the next full year's forecast; distribution occurs before that year. Off-fair-price executions are conditional hypothetical trades, not promised feasible trades."
+  },
+  "personal_tax_exercise": {
+    "basis_per_share": 6,
+    "dividend_tax": "3/10",
+    "capital_gain_tax": "1/5",
+    "contract": "Separate hypothetical taxpayer. Cash dividends do not reduce basis. Repurchase sales realize proceeds less basis; other shares retain their per-share basis. All remaining shares are sold immediately at the post-transaction fair price. No exemptions, transaction costs, corporate repurchase tax or negative gains."
+  },
+  "retained_cash": {
+    "cash": 40,
+    "inside_rate": "1/100",
+    "outside_rate": "1/20",
+    "periods": 1,
+    "contract": "Irrevocably retained one year, then paid; no investment/liquidity benefit or tax, and both cash claims are certain. This is a restricted low-return retention example, not a generic discount of freely accessible cash."
+  },
+  "liquidity": {
+    "dates": [
+      "2027-01-01",
+      "2027-04-01",
+      "2027-07-01"
+    ],
+    "opening_cash": 60,
+    "minimum_cash": 20,
+    "term_debt": 50,
+    "term_repayment_at_two": 10,
+    "quarter_rate": "1/25",
+    "line_limit": 40,
+    "total_debt_cap": 80,
+    "date_zero_payout_cap": 25,
+    "base_receipts": [
+      100,
+      120
+    ],
+    "base_operating_payments": [
+      95,
+      105
+    ],
+    "project_cost_at_one": 30,
+    "project_receipt_at_two": 36,
+    "project_discount_rate": "1/25",
+    "candidate_payouts": [
+      0,
+      8,
+      10,
+      18,
+      25
+    ],
+    "scenarios": {
+      "normal": {
+        "delayed_collection": 0,
+        "supplier_prepayment": 0
+      },
+      "slow_collection": {
+        "delayed_collection": 25,
+        "supplier_prepayment": 0
+      },
+      "combined": {
+        "delayed_collection": 25,
+        "supplier_prepayment": 8
+      }
+    },
+    "contract": "Scenarios are revealed at date 1 after irreversible date 0 payout. No probabilities are supplied. The delay moves receipts from date 1 to date 2; supplier prepayment moves payments from date 2 to date 1. Project receipts are additional to base receipts and certain once the indivisible project is funded at date 1. Corporate tax and cash yield are zero. Both loans charge 4% per quarter on opening principal. Term principal 50 remains through interest at date 2, then 10 is repaid. No revolver is drawn at date 0, and the line may not finance the initial payout. The revolver can fund operating/project needs at date 1, is committed subject only to the stated line/debt limits, has no fees, and must be fully repaid at date 2 with no rollover. Debt cap and minimum cash are tested after each synchronized payment batch. No unlisted cash or equity contribution is allowed. Future term principal 40 remains after the planning horizon."
+  }
+}

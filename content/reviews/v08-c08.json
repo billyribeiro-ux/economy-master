@@ -1,0 +1,32 @@
+{
+  "chapter": "v08-c08",
+  "date": "2026-10-08",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating author plus separate equity and valuation specialist",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Four original worked cases/eight solved exercises with exact lab/checker. Positive market state-price replication, separate physical owner criterion, funded operating menu, staged gate and joint-signal information decisions tested.",
+  "author_review": "reviews/v08-c08-author.json",
+  "verified_payload_hashes": 8,
+  "source_review": "Root and independent peer inspected actual scoped MIT, NYU and Duke source bodies; original derivations and cases independently recomputed. No whole-source endorsement or current-market observation claimed.",
+  "resolved_findings": [
+    {
+      "severity": "minor input-domain consistency",
+      "finding": "The initial traded-clone lab accepted physical_up equal to zero or one despite its both-states-possible contract and strictly positive market state prices.",
+      "author_resolution": "Added 0 < physical_up < 1 only to the traded market case, documented it in the guide and added both endpoint rejection checks. Owner probabilities and signal likelihoods retain their valid closed-unit-interval boundaries.",
+      "peer_verification": "Read the final code/guide/checker/author changes and independently tested both endpoint rejections plus valid owner certainty and unreachable signals. Original manuscript and reference numerical output are unchanged."
+    }
+  ],
+  "open_content_findings": [],
+  "limitations": [
+    "Agent review is not external human certification or validation of a real investment.",
+    "Visual/mobile/keyboard/print UI QA remains pending."
+  ],
+  "peer_review": "reviews/v08-c08-peer.json"
+}

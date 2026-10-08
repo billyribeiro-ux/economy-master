@@ -1,0 +1,29 @@
+{
+  "batch": "v08-middle",
+  "chapter": "v08-c08",
+  "owner": "equity_peer",
+  "stage": "after c07 own package is frozen and handed off",
+  "owned_paths": [
+    "content/reviews/v08-c08-peer.json",
+    "production/v08-c08-peer-check.py"
+  ],
+  "read_scope": [
+    "content/chapters/v08-c08.html",
+    "scripts/check_v08_c08.py",
+    "content/reviews/v08-c08-sources.json",
+    "content/projects/v08-c08-analysis.py",
+    "content/projects/v08-c08-inputs.json",
+    "content/projects/v08-c08-output.json",
+    "content/projects/v08-c08-readme.html",
+    "content/reviews/v08-c08-author.json",
+    "production/v08-middle-assignments.json"
+  ],
+  "task": "Independently audit full c08 manuscript, every worked example and eight exercise solutions, model assumptions, sources scope, lab and checker; recompute critical results independently rather than only rerunning author checker. Do not edit author files or shared state; report findings and exact reviewed SHA256 hashes. Optional focused independent standard-library checker in owned production path. Verify no funding/information look-ahead, positive state prices and separation of physical forecast from market pricing.",
+  "gates": [
+    "All eight solutions answer exact prompts and methods taught locally.",
+    "Full real-options coverage, compatible dates, feasible choices, no double-counting rights, appropriate comparison baseline.",
+    "Author fixes material findings before final re-review and exact hashes.",
+    "Independent agent review is not external human certification."
+  ],
+  "date": "2026-10-08"
+}

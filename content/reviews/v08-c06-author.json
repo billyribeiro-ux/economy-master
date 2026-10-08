@@ -1,0 +1,209 @@
+{
+  "chapter": "v08-c06",
+  "title": "Payout, liquidity and financial policy",
+  "author": "financial diagnosis specialist",
+  "date": "2026-10-08",
+  "edition_boundary": "2026-10-06",
+  "assignment": "production/v08-middle-assignments.json",
+  "state": "author-review-complete",
+  "status": "passed author checks; pending independent coordinator acceptance after v08-c05",
+  "review_type": "Full shareholder-claim, dated cash, financing-constraint, mathematical, numerical, prompt/solution, instructional, source and reproducibility audit",
+  "coverage": {
+    "canonical": [
+      "Dividends",
+      "buybacks",
+      "retained cash",
+      "signaling",
+      "working capital",
+      "financial flexibility"
+    ],
+    "outcome": "Choose payout and liquidity policies consistent with investment and constraints.",
+    "prerequisites": "Accepted v08-c01 through c04 and agreed v08-c05 financing-neutral benchmark/frictions contract; acceptance remains sequential.",
+    "chapter_words": 5527,
+    "worked_examples": 3,
+    "exercises": 8,
+    "complete_solutions": 8,
+    "teach_back": "Answered distinction between Portico fixed-investment payout equivalence and Dunlin financing feedback into investment.",
+    "delayed_check": "Answered supplier prepayment 9 reduces maximum payout to 9; payout 10 needs draw 31 versus capacity 30; payout 9 ends with cash 61.80.",
+    "cases": "Original Portico Instruments distribution/price-transfer cases and Dunlin Packaging dated funding case; separate fictional tax and restricted-retention examples.",
+    "payout": "Derives dividend, proportional fair repurchase and nonseller cash-plus-share wealth. Derives EPS accretion threshold and zero-sum mispricing transfers; distinguishes actual executions, authorization, dilution and forward share timing.",
+    "liquidity": "Gross operating receipts/payments, working-capital timing transfers, indivisible positive-NPV investment, cash minimum, payout permission, committed line and total-debt cap; full principal repayment at maturity and no hidden funding.",
+    "policy": "Largest scenario-feasible payout is 10, while an illustrative 8 leaves 2 more usable debt capacity. No probabilities or unique optimal-payout claim are invented.",
+    "frictions": "Explicit fictional personal tax basis and full liquidation; restricted cash opportunity cost; conditional agency/signaling mechanisms; dated survey evidence separated from causal claims.",
+    "extension": "Relative price evidence and contingent investment rights link to canonical c07/c08 curriculum anchors.",
+    "ownership": "Only c06 manuscript, three c06-prefixed lab assets, c06 checker and c06 source/author records edited; no shared canonical/checkpoint/build/hosting changes or child agents."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v08-c06.html",
+      "bytes": 39576,
+      "sha256": "7387e8a1051ce90b07a5665f9f3961c26b6a81f87a8d0ab33766ed89e58021d0"
+    },
+    {
+      "path": "content/projects/v08-c06-inputs.json",
+      "bytes": 3686,
+      "sha256": "77cadd0628a9bb65767d0c9f0cb7c5ea2e34e02a04a9c03c4fa838a8afccbd7f"
+    },
+    {
+      "path": "content/projects/v08-c06-analysis.py",
+      "bytes": 9955,
+      "sha256": "c9014d3db5dd004642f2dd9309b100d15d47a7d2b9553ef27d0fa1dbc3a30d9d"
+    },
+    {
+      "path": "content/projects/v08-c06-README.txt",
+      "bytes": 7750,
+      "sha256": "d0c61a2a7cd36fb34a0b82a9b2466281d62758bd62b139a873975ecbb296acca"
+    },
+    {
+      "path": "scripts/check_v08_c06.py",
+      "bytes": 21663,
+      "sha256": "c90593461d3e0f86b9d34e7b885ec77c42baebbfbc14c7cb0c9f00b98fe7af48"
+    },
+    {
+      "path": "content/reviews/v08-c06-sources.json",
+      "bytes": 2885,
+      "sha256": "798c8bea0c4280650fac8804eaa7e10261882cc784576f2900ee832af2d7afbb"
+    }
+  ],
+  "reasoning_checks": [
+    "Fixed operations/investment and genuinely excess cash are explicit in the wealth theorem. Cash leaves equity exactly once; dividends and fair repurchases preserve each proportional owner’s cash-plus-share claim, with nonseller ownership increases applied to a smaller equity value.",
+    "The payout and valuation comparison occurs at one instant; next-year EPS uses a full year after immediate retirement. Actual announcement, entitlement, payment and weighted-average-share dates are not silently identified.",
+    "Cash-funded EPS formula deducts foregone cash income before changing shares. The accretion condition Y/N > y*p requires positive Q and remaining shares and is not a value test. The overpriced Portico case raises EPS to 15/14 while continuing owners lose 40.",
+    "Mispricing transfers separately value sold and continuing claims using supplied intrinsic value. Gains sum to zero under fixed aggregate value. Proportional participants share both sides; informed unconstrained sellers are not presumed compelled to tender below known fair value.",
+    "Personal-tax exercise tracks dividend tax and the basis of sold and remaining shares under invented rules. Immediate liquidation removes hidden terminal tax positions: totals are 90 versus 92, not the event-cash difference 4.4.",
+    "Restricted retention is irrevocable, low-return and without liquidity/investment benefits. Its loss uses a compatible certain alternative return, not a risky operating WACC or an unsupported discount on freely withdrawable cash.",
+    "Dunlin operating cash is independently reconstructed from gross receipts and payments. Delayed collection and supplier prepayment shift dates while preserving cumulative operating cash of 20. Project receipts are additional and only occur if its indivisible date-1 investment is funded.",
+    "Term debt 50 earns interest 2 at each quarter before final principal repayment 10. New date-1 revolver draws earn one quarter of interest at date 2, then all principal is repaid. No facility rollover, unidentified equity or future receipt is invented to cure an earlier shortfall.",
+    "Date-1 effective capacity is min(40, 80−50) = 30. The initial payout permission 25, initial cash floor, first-date borrowing limit and second-date debt maturity are separate constraints. Working-capital states imply first-date bounds 43, 18 and 10.",
+    "The maximum 10 is a feasibility ceiling, not an optimum. Payout 8 retains 2 additional usable capacity in the combined state. Undrawn headline line and usable covenant headroom differ, and final term principal 40 survives beyond the planning horizon.",
+    "The lab’s date-2 payout ceiling solves its continuous monotone piecewise cash equation after full maturity. An independently changed later receipt makes this date bind at payout 5, and payout 6 fails at maturity by 26/25 despite surviving the earlier draw constraint.",
+    "Failed investment plans return no compliant closing balance. Canceling the project removes both the cost 30 and later receipt 36; outside equity repair has an explicit gross contribution and fee, while its investor claim prevents treating extra company cash as old-owner value.",
+    "Signaling needs incentives and beliefs that make imitation unattractive. Historical executive views are not a causal estimate or a universal present rule. Credit-line monitoring is cited as one mechanism; the Dunlin commitment uses only its supplied fictional terms.",
+    "All three worked cases, eight prompts and complete answers, teach-back and delayed check manually matched for assumptions, units, timing, numerical results and interpretation. Open policy answers have explicit criteria and permit other evidence-backed feasible amounts."
+  ],
+  "exercise_audit": [
+    {
+      "exercise": 1,
+      "status": "pass",
+      "coverage": "Symbolic cash-plus-share proof; independent 720/60/120 example, prices 12 and 10, retire 10 and owner wealth 72; four substantive assumptions required."
+    },
+    {
+      "exercise": 2,
+      "status": "pass",
+      "coverage": "Foregone income 3.6, post-income 68.4, EPS 0.8 to 0.95 (+18.75%); price remains 10 and old-P/E extrapolation 11.875 violates conserved claims."
+    },
+    {
+      "exercise": 3,
+      "status": "pass",
+      "coverage": "New 600/60/120 intrinsic claims; executions 8/12 produce continuing transfers +30/−20 and opposite seller transfers; executable-trade caveat explicit."
+    },
+    {
+      "exercise": 4,
+      "status": "pass",
+      "coverage": "Fictional basis 6 with 30% dividend/20% gain tax; full liquidation nets 90 versus 92, with distinct remaining bases 60/48."
+    },
+    {
+      "exercise": 5,
+      "status": "pass",
+      "coverage": "Two-year certain retained value 2312/49 and cost 138/49; omitted reserve benefit would invalidate the stipulated zero-benefit restriction."
+    },
+    {
+      "exercise": 6,
+      "status": "pass",
+      "coverage": "Prepayment 4 raises robust maximum to 14; draw 30, cash 20, no headroom and terminal cash 56.80; using headline capacity wrongly permits 24 and violates debt cap by 10."
+    },
+    {
+      "exercise": 7,
+      "status": "pass",
+      "coverage": "Debt cap 75 implies capacity 25 and maximum payout 5. Payout 10 shortfall 5 repaired by gross equity 7 less fixed fee 2; full repayment closes cash 66 while new investor claims remain."
+    },
+    {
+      "exercise": 8,
+      "status": "pass",
+      "coverage": "Evidence-based response separates wealth/EPS, signaling and constrained-line claims; illustrative payout 8, at least four decision-linked evidence checks, and criteria for alternatives."
+    }
+  ],
+  "numerical_checks": [
+    {
+      "name": "Independent sold/retained shareholder claims, conserved wealth, forward EPS and mispricing transfers",
+      "status": "pass"
+    },
+    {
+      "name": "Fifteen state/payout paths independently reconstructed from gross cash and debt events",
+      "status": "pass",
+      "cash_events": 171
+    },
+    {
+      "name": "Exact feasible payout boundary, working-capital/covenant transfers, binding maturity and no-feasible-payout case",
+      "status": "pass"
+    },
+    {
+      "name": "All numerical exercises, fictional tax-basis liquidation, restricted retention and explicit emergency-equity repair",
+      "status": "pass"
+    },
+    {
+      "name": "Nine input-domain failures, rejected payout permission and detection of fabricated EPS price/omitted principal",
+      "status": "pass"
+    },
+    {
+      "name": "Three worked cases/eight full pairs, answered checks, assets/sources, strict quiet JSON and portable CLI",
+      "status": "pass"
+    }
+  ],
+  "commands_and_contracts": [
+    {
+      "command": "python3 book/scripts/check_v08_c06.py",
+      "result": "pass; six groups, including 15 treasury paths and 171 independent gross cash events"
+    },
+    {
+      "command": "python3 -O: capture checker import/check output; json.dumps(check(), allow_nan=False)",
+      "result": "quiet strict JSON; six groups pass without Python assert dependence"
+    },
+    {
+      "command": "temporary input/script copies; normal and optimized lab CLI from another working directory",
+      "result": "identical exact JSON, no stderr and no persistent output files"
+    },
+    {
+      "command": "invalid-units CLI",
+      "result": "exit 2, clear stderr and no result payload"
+    },
+    {
+      "command": "final quiet check after source-contract prose and exact-fraction expression edits",
+      "result": "pass; final six-payload SHA256 values computed only after these changes"
+    }
+  ],
+  "source_checks": {
+    "proposals": 3,
+    "record": "content/reviews/v08-c06-sources.json",
+    "inspection": "Actual official MIT 2003 payout PDF, author-hosted published 2005 Brav et al. article and author-hosted April 2013 monitored-credit-line manuscript inspected at the recorded relevant passages.",
+    "scope_limits": "Historical tax/legal/market details are not adopted as current rules. Source scope distinguishes benchmark theory, conditional financing mechanisms and reported executive views. NBER full-text fetches returned 403; no inaccessible-body inspection claimed.",
+    "originality": "All prose, business names, numerical inputs, problems, solutions, cash ledger and program are original; no source case, survey table or exercise copied."
+  },
+  "resolved_findings": [
+    {
+      "origin": "author implementation audit",
+      "finding": "The public exact-input parser intentionally rejects Fraction objects, including a computed maximum passed internally.",
+      "resolution": "The internal boundary validation now passes the computed Fraction as its exact rational string, preserving the public integer/string input contract."
+    },
+    {
+      "origin": "author input-domain audit",
+      "finding": "An empty execution-price list would provide no repurchase comparison.",
+      "resolution": "The supported payout contract requires at least one execution price; the checker exercises this failure."
+    },
+    {
+      "origin": "coordinator README review",
+      "finding": "The phrase that no revolver exists initially could contradict the committed facility, and a term-principal sentence lacked spacing.",
+      "resolution": "README and input contract clarify that no revolver is drawn initially and the line cannot fund the initial payout; prose spacing corrected without changing cash inputs."
+    }
+  ],
+  "open_findings": [],
+  "limitations": [
+    "Portico fair/intrinsic values are supplied teaching inputs, not estimated market opportunities. Off-fair execution is hypothetical and does not establish that informed sellers will transact.",
+    "All taxes, dates, credit commitments, covenant rules and cash buffers are invented for the cases; no current jurisdictional treatment, legal payout permission or financing approval is asserted.",
+    "The small two-quarter treasury model covers three supplied timing scenarios, synchronized payment batches, an indivisible project, one debt cap and a maturing revolver. It is not a general treasury, liquidity-risk or bankruptcy engine.",
+    "A scenario-feasible maximum does not estimate probabilities, an optimal risk policy, whole-firm value or intraperiod liquidity. Additional evidence can change the constraints and decision.",
+    "Emergency equity in exercise 7 establishes minimum cash funding only. Valuing ownership dilution and total owner welfare requires separately priced new claims; higher closing cash alone is insufficient.",
+    "Author/agent review is not independent human certification or a guarantee of error-free work. Coordinator owns sequential acceptance, integration and publication; browser/mobile/print QA remains separate."
+  ],
+  "handoff": "Seven owned artifacts saved and frozen; six-payload hashes identify the reviewed package. Ready for final independent coordinator code/checker/hash audit and prerequisite-ordered integration."
+}
