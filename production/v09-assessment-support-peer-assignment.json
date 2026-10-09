@@ -1,0 +1,44 @@
+{
+  "batch": "v09-assessment-support-peer",
+  "date": "2026-10-09",
+  "agent": "cost_peer",
+  "dispatch_condition": "After completing owned Form B; root will dispatch separately.",
+  "scope": "Independently review all root-authored diagnostic, oral, retention, administration, index and synthesis. Recompute every numerical case without calling root support_check. Check exact prompts, answer-credit sums, units, domain and information boundaries, prerequisite teaching, links and chapter coverage. Report concrete material findings and precise repair requests. No changes to support or shared files.",
+  "owned_paths": [
+    "content/reviews/v09-support-peer.json",
+    "scripts/check_v09_support_peer.py"
+  ],
+  "reviewed_paths": [
+    "content/assessments/parts/v09-support-opening.html",
+    "content/assessments/parts/v09-support-closing.html",
+    "scripts/check_v09_assessment.py"
+  ],
+  "artifact_hashes": {
+    "content/assessments/parts/v09-support-opening.html": {
+      "bytes": 13948,
+      "sha256": "cc51f53df527d82a548d0674ca8c9803119ee6bca5ab54270b7b60d30fd96518"
+    },
+    "content/assessments/parts/v09-support-closing.html": {
+      "bytes": 28565,
+      "sha256": "7be3a7f70a404a4cb5e089c180fb1daeba978b60695132d584542aa157f1fb11"
+    },
+    "scripts/check_v09_assessment.py": {
+      "bytes": 13079,
+      "sha256": "c4ed776563943249359e6f552d43c3cb373cf3295fe854c6eb4f23f054bb0e9d"
+    }
+  },
+  "constraints": [
+    "No child agents, publishing, installations or external communication. Reuse verified chapter methods; no redundant source browsing.",
+    "Peer check must expose a quiet check() returning strict JSON. Review source fragment answers against independently computed cases; numerical checks are not external human certification or UI QA.",
+    "Hash both reviewed fragments in final peer record; record any coordinator checker changes separately from manuscript review."
+  ],
+  "coordinator_pre_dispatch_refinement": "Retention1 answer now explicitly annualizes TWR when comparing it with annual IRR, separating horizon from cash-flow timing.",
+  "coordinator_checker_refinement": "Exact scored-prompt map only registers li elements; separately checked project rubric rows legitimately carry data-points without prompt IDs.",
+  "peer_refinements": "Oral4 and retention5 name grant payments as cash outflows. Retention3 describes a fitted two-factor identity and exposure with nonzero sample mean; no four-observation replication/pricing claim.",
+  "completion": {
+    "status": "passed",
+    "review_record": "content/reviews/v09-support-peer.json",
+    "open_findings": [],
+    "final_payloads_verified_by_coordinator": true
+  }
+}

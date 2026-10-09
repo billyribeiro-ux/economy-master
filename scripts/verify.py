@@ -99,6 +99,7 @@ from check_v09_c09 import check as check_v09_c09
 from check_v09_c10 import check as check_v09_c10
 from check_v09_c11 import check as check_v09_c11
 from check_v09_c12 import check as check_v09_c12
+from check_v09_assessment import check as check_v09_assessment
 from check_economics_core import check as check_economics_core
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -506,6 +507,7 @@ def main():
                         'v09-c07': check_v09_c07(), 'v09-c08': check_v09_c08()}
     v09_closing_check = {'v09-c09': check_v09_c09(), 'v09-c10': check_v09_c10(),
                          'v09-c11': check_v09_c11(), 'v09-c12': check_v09_c12()}
+    v09_assessment_check = check_v09_assessment()
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -548,11 +550,13 @@ def main():
               'volume_9_opening_checks': v09_opening_check,
               'volume_9_middle_checks': v09_middle_check,
               'volume_9_closing_checks': v09_closing_check,
+              'volume_9_assessment_check': v09_assessment_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     report['checks'].extend(['Volume 8 chapters 1–4: incremental capital budgeting and IRR domains; FCFF/FCFE and dated claim pricing; coherent capital/return fade and terminal sensitivity; covariance, policy-specific leverage, WACC and finite APV with independent pricing checks',
         'Volume 9 chapters 1–4: dated total/simple/log and flow-adjusted returns; finite-state and sample covariance, financing and concentration; exact frontier, allocation and constraint certificates with shrinkage sensitivity; investor demand, market clearing, pricing/proxy/sample distinctions and conditional CAPM limits',
         'Volume 9 chapters 5–8: finite-state replication, positive state prices and complete/incomplete pricing; exact versus residual factor pricing, OLS and funded construction; conditional information, search, belief equilibrium and margin contracts; benchmark/factor/fee/flow performance, attribution and complete entry/exit cohorts',
         'Volume 9 chapters 9–12: surplus/endowment and dynamic allocation, funded rebalancing and robust no-trade policies; property/private/futures cash, appraisal smoothing and dated liquidity; execution rights, signed costs, whole-target shortfall and constrained capacity; implementable investment policy, complete finite risk/constraint ranking, reverse-stress funding and exception reporting',
+        'Volume 9 diagnostic, two distinct 100-point exams, oral and delayed transfer, and integrated portfolio project: return timing, constrained allocation, equilibrium and no-arbitrage pricing, factor/selection evidence, dated illiquidity, signed execution, prospective benchmarks and investment governance',
         'Volume 8 diagnostic, two distinct 100-point exams, oral/delayed transfer and investment-committee project: exact cash/claim pricing, terminal capital, dated funding and participation boundaries, matched peers and conditional board decisions',
         'Volume 7 full accounting chapter set, two distinct 100-point exams, diagnostic/retention, exact historical correction and constrained forecast project',
         'Cross-volume assessment scope, prerequisite acceptance, artifact/review records and first complete foundation written/practical/oral package',

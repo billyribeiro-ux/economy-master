@@ -1,0 +1,166 @@
+{
+  "status": "passed",
+  "comparisons": 155,
+  "candidate_count": 2499,
+  "feasible_count": 670,
+  "research": {
+    "selected": "K",
+    "training_active_means": {
+      "K": "3/500",
+      "M": "1/500"
+    },
+    "late_revision_winner": "M",
+    "backfill_winner": "N"
+  },
+  "factor_covariance": [
+    [
+      "44/1875",
+      "2/1875"
+    ],
+    [
+      "2/1875",
+      "2/375"
+    ]
+  ],
+  "joint_claim_covariance": [
+    [
+      "44/1875",
+      "2/1875",
+      "94/9375",
+      "416/125"
+    ],
+    [
+      "2/1875",
+      "2/375",
+      "34/9375",
+      "136/375"
+    ],
+    [
+      "94/9375",
+      "34/9375",
+      "73/9375",
+      "968/625"
+    ],
+    [
+      "416/125",
+      "136/375",
+      "968/625",
+      "66032/75"
+    ]
+  ],
+  "robust": {
+    "E": "325",
+    "B": "250",
+    "manager": "0",
+    "fee": "23/40",
+    "cash": "8977/40",
+    "variance": "465772/75",
+    "active_variance": "412/3",
+    "robust_score": "923572103/960000"
+  },
+  "nominal": {
+    "E": "325",
+    "B": "225",
+    "manager": "25",
+    "nominal_score": "4618215793/4800000"
+  },
+  "implementation": {
+    "actual": {
+      "E": "300",
+      "B": "275",
+      "manager": "0",
+      "fee": "2/5",
+      "cash": "1123/5"
+    },
+    "realized_reserves": {
+      "target": "7533804661/8000000",
+      "actual": "235127917/250000",
+      "benchmark": "75053423/80000",
+      "nominal_counterfactual": "7525505663/8000000"
+    },
+    "outside_required_sale": "275623/7664",
+    "outside_terminal": "84232137/153280"
+  },
+  "interventions": {
+    "rejected": [
+      "uniform-period-8-boundary-shift",
+      "uniform-period-6-boundary-shift",
+      "nonpositive-net-contingency-sale-price",
+      "singular-prior-covariance",
+      "release-before-observation-end",
+      "boolean-financial-amount"
+    ],
+    "valid": [
+      "earlier-revision-information-set",
+      "held-out-return-isolation",
+      "full-entry-fill",
+      "exact-buffer-sale-capacity",
+      "capacity-just-below-buffer",
+      "twenty-unit-capacity",
+      "zero-unit-capacity"
+    ]
+  },
+  "guide_interventions": {
+    "gamma6": {
+      "robust": [
+        "250",
+        "325",
+        "0"
+      ],
+      "nominal": [
+        "250",
+        "300",
+        "25"
+      ]
+    },
+    "early_revision_nominal_reserve": "7543884431/8000000",
+    "heldout_intervention_nominal_reserve": "7545697583/8000000"
+  },
+  "structure": {
+    "deliverables": 6,
+    "instructor_items": 8,
+    "rubric_points": 100,
+    "source_records": 5,
+    "words_including_guide": 7250
+  },
+  "task": "v09-project-peer",
+  "reviewed_payloads": {
+    "content/assessments/parts/v09-project.html": {
+      "sha256": "b163b7e05cbec8d6f809e3d46a4d296b90700e910d5764a94a4bafc1fc8a62f4",
+      "bytes": 54886
+    },
+    "content/projects/v09-assessment-inputs.json": {
+      "sha256": "7eff5a441d05fca845547ca8e343951754f87fef314d5c74a27eb9c0befef469",
+      "bytes": 15546
+    },
+    "content/projects/v09-assessment-analysis.py": {
+      "sha256": "22e1486360905c0316d6eca41537f990c310e8a7c4e3eb50ba29a42a60627d1c",
+      "bytes": 31994
+    },
+    "content/projects/v09-assessment-output.json": {
+      "sha256": "67631e32bda3c9bab2c1d4ef07500a9a2ce81264e85f23216c64ee7f38133704",
+      "bytes": 300515
+    },
+    "content/projects/v09-assessment-manifest.json": {
+      "sha256": "e7ddc12299414e1917aa3b911e1269bdbae96bf3dd731c533f05f2cc63979021",
+      "bytes": 1096
+    },
+    "content/projects/v09-assessment-README.txt": {
+      "sha256": "6aeb57d7ab879d0d8c0b4c3953ecdfb9fdb8c1f8696cf2671acb4d0a406ab0de",
+      "bytes": 20058
+    },
+    "scripts/check_v09_project.py": {
+      "sha256": "6d734d5ce4465291bab6a0f60ab7897a025f2a060ca8642bc38017a02f674922",
+      "bytes": 30332
+    },
+    "content/reviews/v09-project-author.json": {
+      "sha256": "effe1b7d3b578667ccc0c5478a350226d2da1dfd033e7013e3415b1b898a664a",
+      "bytes": 13456
+    },
+    "content/reviews/v09-project-sources.json": {
+      "sha256": "869705d0093944cd303c5ecab9ab9647f6197105a2527afa6a6ac256ae532cd3",
+      "bytes": 4725
+    }
+  },
+  "limits": "Independent conditional numerical/domain review; the accompanying peer record documents full prose, source-scope and author-checker reading. No human certification or UI QA."
+}

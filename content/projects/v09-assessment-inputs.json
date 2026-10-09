@@ -1,0 +1,579 @@
+{
+  "schema": "v09-assessment-tern-1",
+  "case": "Tern Scholarship Pool",
+  "provenance": "All data, identifiers, vintages, prices, private claims and policy choices are original synthetic teaching inputs; no observations or current legal facts.",
+  "conventions": {
+    "unit": "CU",
+    "dates": [
+      "2025-01-03",
+      "2025-07-03",
+      "2026-01-03"
+    ],
+    "research": "four training periods; four untouched evaluation periods; latest version available at cutoff only",
+    "selection": "highest training arithmetic net active mean among admitted open managers with complete training record; ties by asset ID",
+    "manager_benchmark": "quarterly 40% E and 60% B comparison, stipulated zero benchmark fees",
+    "closure": "CX liquidation is included in period3 net return; proceeds park at zero return with no further fees",
+    "stub": "net return zero for every research holding between training end and decision date",
+    "risk": "half of four-times quarterly sample covariance plus half supplied annual prior; additive planning proxy, not exact compounded annual variance",
+    "private": "existing stake cannot be sold or pledged; capital call is an internal portfolio investment; final proceeds include all capital and exit costs",
+    "trading": "initial liquid holdings in 25-CU units at unit reference price; entry costs on actual turnover paid from cash; sell bonds before equity purchases",
+    "stress_sale": "outside-design bond sale only under prior board authority; continuous original units at supplied mark less spread and fee; no borrowing",
+    "scenario": "planning means, dated conditional stresses and held-out observations are distinct inputs; no scenario probabilities or empirical alpha claim"
+  },
+  "research": {
+    "decision_cutoff": "2025-01-03",
+    "evaluation_cutoff": "2026-01-05",
+    "training_periods": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "holdout_periods": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "initial_cohort": [
+      "K",
+      "M",
+      "CX"
+    ],
+    "manager_ids": [
+      "K",
+      "M",
+      "CX",
+      "N"
+    ],
+    "admitted_on": {
+      "K": "2023-12-31",
+      "M": "2023-12-31",
+      "CX": "2023-12-31",
+      "N": "2025-04-08"
+    },
+    "closures": {
+      "CX": {
+        "last_period": 3,
+        "announced_on": "2024-10-02"
+      }
+    },
+    "selection_rule_frozen_on": "2025-01-03",
+    "search_log": [
+      "mean_net_active",
+      "compound_relative",
+      "last_net_active",
+      "sample_information_ratio"
+    ],
+    "series_records": [
+      {
+        "asset": "E",
+        "period": 1,
+        "version": 1,
+        "observation_end": "2024-03-31",
+        "released_on": "2024-04-02",
+        "gross_return": "1/50",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "E",
+        "period": 2,
+        "version": 1,
+        "observation_end": "2024-06-30",
+        "released_on": "2024-07-02",
+        "gross_return": "-1/25",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "E",
+        "period": 3,
+        "version": 1,
+        "observation_end": "2024-09-30",
+        "released_on": "2024-10-02",
+        "gross_return": "3/50",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "E",
+        "period": 4,
+        "version": 1,
+        "observation_end": "2024-12-31",
+        "released_on": "2025-01-02",
+        "gross_return": "0",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "E",
+        "period": 5,
+        "version": 1,
+        "observation_end": "2025-04-03",
+        "released_on": "2025-04-04",
+        "gross_return": "1/25",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "E",
+        "period": 6,
+        "version": 1,
+        "observation_end": "2025-07-03",
+        "released_on": "2025-07-04",
+        "gross_return": "-1/50",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "E",
+        "period": 7,
+        "version": 1,
+        "observation_end": "2025-10-03",
+        "released_on": "2025-10-04",
+        "gross_return": "3/100",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "E",
+        "period": 8,
+        "version": 1,
+        "observation_end": "2026-01-03",
+        "released_on": "2026-01-04",
+        "gross_return": "1/100",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "B",
+        "period": 1,
+        "version": 1,
+        "observation_end": "2024-03-31",
+        "released_on": "2024-04-02",
+        "gross_return": "1/100",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "B",
+        "period": 2,
+        "version": 1,
+        "observation_end": "2024-06-30",
+        "released_on": "2024-07-02",
+        "gross_return": "1/50",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "B",
+        "period": 3,
+        "version": 1,
+        "observation_end": "2024-09-30",
+        "released_on": "2024-10-02",
+        "gross_return": "-1/100",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "B",
+        "period": 4,
+        "version": 1,
+        "observation_end": "2024-12-31",
+        "released_on": "2025-01-02",
+        "gross_return": "0",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "B",
+        "period": 5,
+        "version": 1,
+        "observation_end": "2025-04-03",
+        "released_on": "2025-04-04",
+        "gross_return": "1/100",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "B",
+        "period": 6,
+        "version": 1,
+        "observation_end": "2025-07-03",
+        "released_on": "2025-07-04",
+        "gross_return": "0",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "B",
+        "period": 7,
+        "version": 1,
+        "observation_end": "2025-10-03",
+        "released_on": "2025-10-04",
+        "gross_return": "-1/50",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "B",
+        "period": 8,
+        "version": 1,
+        "observation_end": "2026-01-03",
+        "released_on": "2026-01-04",
+        "gross_return": "3/200",
+        "fee_on_beginning_nav": "0"
+      },
+      {
+        "asset": "K",
+        "period": 1,
+        "version": 1,
+        "observation_end": "2024-03-31",
+        "released_on": "2024-04-02",
+        "gross_return": "11/500",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "K",
+        "period": 2,
+        "version": 1,
+        "observation_end": "2024-06-30",
+        "released_on": "2024-07-02",
+        "gross_return": "1/250",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "K",
+        "period": 3,
+        "version": 1,
+        "observation_end": "2024-09-30",
+        "released_on": "2024-10-02",
+        "gross_return": "13/500",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "K",
+        "period": 4,
+        "version": 1,
+        "observation_end": "2024-12-31",
+        "released_on": "2025-01-02",
+        "gross_return": "1/125",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "K",
+        "period": 5,
+        "version": 1,
+        "observation_end": "2025-04-03",
+        "released_on": "2025-04-04",
+        "gross_return": "-19/500",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "K",
+        "period": 6,
+        "version": 1,
+        "observation_end": "2025-07-03",
+        "released_on": "2025-07-04",
+        "gross_return": "11/500",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "K",
+        "period": 7,
+        "version": 1,
+        "observation_end": "2025-10-03",
+        "released_on": "2025-10-04",
+        "gross_return": "3/250",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "K",
+        "period": 8,
+        "version": 1,
+        "observation_end": "2026-01-03",
+        "released_on": "2026-01-04",
+        "gross_return": "-9/500",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "M",
+        "period": 1,
+        "version": 1,
+        "observation_end": "2024-03-31",
+        "released_on": "2024-04-02",
+        "gross_return": "1/50",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "M",
+        "period": 2,
+        "version": 1,
+        "observation_end": "2024-06-30",
+        "released_on": "2024-07-02",
+        "gross_return": "-1/500",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "M",
+        "period": 3,
+        "version": 1,
+        "observation_end": "2024-09-30",
+        "released_on": "2024-10-02",
+        "gross_return": "11/500",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "M",
+        "period": 4,
+        "version": 1,
+        "observation_end": "2024-12-31",
+        "released_on": "2025-01-02",
+        "gross_return": "1/250",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "M",
+        "period": 5,
+        "version": 1,
+        "observation_end": "2025-04-03",
+        "released_on": "2025-04-04",
+        "gross_return": "4/125",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "M",
+        "period": 6,
+        "version": 1,
+        "observation_end": "2025-07-03",
+        "released_on": "2025-07-04",
+        "gross_return": "3/250",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "M",
+        "period": 7,
+        "version": 1,
+        "observation_end": "2025-10-03",
+        "released_on": "2025-10-04",
+        "gross_return": "11/500",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "M",
+        "period": 8,
+        "version": 1,
+        "observation_end": "2026-01-03",
+        "released_on": "2026-01-04",
+        "gross_return": "1/500",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "CX",
+        "period": 1,
+        "version": 1,
+        "observation_end": "2024-03-31",
+        "released_on": "2024-04-02",
+        "gross_return": "13/250",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "CX",
+        "period": 2,
+        "version": 1,
+        "observation_end": "2024-06-30",
+        "released_on": "2024-07-02",
+        "gross_return": "21/500",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "CX",
+        "period": 3,
+        "version": 1,
+        "observation_end": "2024-09-30",
+        "released_on": "2024-10-02",
+        "gross_return": "-149/500",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "N",
+        "period": 1,
+        "version": 1,
+        "observation_end": "2024-03-31",
+        "released_on": "2025-04-08",
+        "gross_return": "1/5",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "N",
+        "period": 2,
+        "version": 1,
+        "observation_end": "2024-06-30",
+        "released_on": "2025-04-08",
+        "gross_return": "1/5",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "N",
+        "period": 3,
+        "version": 1,
+        "observation_end": "2024-09-30",
+        "released_on": "2025-04-08",
+        "gross_return": "1/5",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "N",
+        "period": 4,
+        "version": 1,
+        "observation_end": "2024-12-31",
+        "released_on": "2025-04-08",
+        "gross_return": "1/5",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "N",
+        "period": 5,
+        "version": 1,
+        "observation_end": "2025-04-03",
+        "released_on": "2025-04-08",
+        "gross_return": "-49/500",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "N",
+        "period": 6,
+        "version": 1,
+        "observation_end": "2025-07-03",
+        "released_on": "2025-07-04",
+        "gross_return": "-6/125",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "N",
+        "period": 7,
+        "version": 1,
+        "observation_end": "2025-10-03",
+        "released_on": "2025-10-04",
+        "gross_return": "11/500",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "N",
+        "period": 8,
+        "version": 1,
+        "observation_end": "2026-01-03",
+        "released_on": "2026-01-04",
+        "gross_return": "1/500",
+        "fee_on_beginning_nav": "1/500"
+      },
+      {
+        "asset": "M",
+        "period": 4,
+        "version": 2,
+        "observation_end": "2024-12-31",
+        "released_on": "2025-07-10",
+        "gross_return": ".028",
+        "fee_on_beginning_nav": ".002"
+      }
+    ]
+  },
+  "portfolio": {
+    "initial_wealth": "1000",
+    "private_initial_value": "200",
+    "initial_liquid": {
+      "E": "250",
+      "B": "350",
+      "manager": "0"
+    },
+    "lot": "25",
+    "caps": {
+      "E": "400",
+      "B": "500",
+      "manager": "150"
+    },
+    "entry_cost_rates": {
+      "E": ".005",
+      "B": ".002",
+      "manager": ".004"
+    },
+    "cash_half_year_factor": "1.005",
+    "benchmark": {
+      "E": "250",
+      "B": "300",
+      "manager": "0"
+    },
+    "policy": {
+      "gamma": "4",
+      "total_variance_limit": "6400",
+      "active_variance_limit": "400",
+      "cash_buffer": "20",
+      "terminal_floor": "700"
+    },
+    "forecast": {
+      "equity_mean": ".08",
+      "bond_mean": ".03",
+      "manager_equity_loading": ".4",
+      "manager_bond_loading": ".6",
+      "manager_annual_fee": ".008",
+      "manager_overlay_lower": "0",
+      "manager_overlay_upper": ".012",
+      "manager_residual_variance": ".0016",
+      "prior_covariance": [
+        [
+          ".04",
+          ".004"
+        ],
+        [
+          ".004",
+          ".01"
+        ]
+      ],
+      "sample_weight": ".5",
+      "additive_periods_per_year": "4",
+      "private_distribution_mean": "320",
+      "private_equity_loading": "140",
+      "private_bond_loading": "40",
+      "private_residual_variance": "400"
+    },
+    "planning_flows": {
+      "call_t1": "80",
+      "grant_t1": "60",
+      "grant_t2": "40"
+    },
+    "design_stresses": [
+      {
+        "name": "equity_drawdown",
+        "equity_return": "-.25",
+        "bond_return": ".04",
+        "manager_return": "-.114",
+        "private_distribution": "220",
+        "call_t1": "80",
+        "grant_t1": "60",
+        "grant_t2": "40"
+      },
+      {
+        "name": "joint_call_inflation",
+        "equity_return": "-.15",
+        "bond_return": "-.10",
+        "manager_return": "-.148",
+        "private_distribution": "240",
+        "call_t1": "120",
+        "grant_t1": "80",
+        "grant_t2": "60"
+      }
+    ],
+    "outside_stress": {
+      "name": "call_and_exit_stress",
+      "equity_return": "-.30",
+      "bond_return": "-.15",
+      "manager_return": "-.25",
+      "private_distribution": "180",
+      "call_t1": "160",
+      "grant_t1": "80",
+      "grant_t2": "60",
+      "bond_t1_mark": ".98",
+      "bond_spread_per_original_unit": ".020",
+      "bond_fee_per_original_unit": ".002",
+      "bond_sale_capacity": "100"
+    },
+    "execution": {
+      "available_bond_sale_units": "75",
+      "mode": "bond_sale_first_then_choose_best_feasible_portfolio_with_that_exact_sale",
+      "equity_buy_unit_price": "1",
+      "bond_sale_unit_price": "1"
+    },
+    "realized_private": {
+      "call_t1": "80",
+      "grant_t1": "60",
+      "grant_t2": "40",
+      "private_distribution": "300"
+    }
+  }
+}

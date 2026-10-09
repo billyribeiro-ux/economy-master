@@ -1,0 +1,553 @@
+{
+  "assessment": "v09-exam-b",
+  "author": "cost_peer specialist",
+  "date": "2026-10-09",
+  "assignment": "production/v09-assessment-assignments.json",
+  "status": "ready-for-coordinator-review",
+  "scope": {
+    "form": "B",
+    "points": 100,
+    "minutes": 240,
+    "closed_book": true,
+    "calculator": "nonprogrammable",
+    "questions": 5,
+    "parts_per_question": 4,
+    "points_per_part": 5,
+    "complete_scored_solutions": 20,
+    "visible_words": 6278,
+    "payload_state": "frozen",
+    "shared_edits": false,
+    "child_agents": false,
+    "publishing": false
+  },
+  "advancement": {
+    "total_floor": 85,
+    "domain_floor": 15,
+    "domain_maximum": 20,
+    "additional_gate": "separate transfer and teach-back; unresolved critical errors require remediation",
+    "calibration": "original instructional criterion, not institutional accreditation or empirically calibrated exam equivalence"
+  },
+  "chapter_coverage": {
+    "v09-c01": [
+      "v09-b-q1a"
+    ],
+    "v09-c02": [
+      "v09-b-q1b"
+    ],
+    "v09-c03": [
+      "v09-b-q1c",
+      "v09-b-q1d"
+    ],
+    "v09-c04": [
+      "v09-b-q2d"
+    ],
+    "v09-c05": [
+      "v09-b-q2a",
+      "v09-b-q2b",
+      "v09-b-q2c"
+    ],
+    "v09-c06": [
+      "v09-b-q3a",
+      "v09-b-q3c"
+    ],
+    "v09-c07": [
+      "v09-b-q3c",
+      "v09-b-q3d"
+    ],
+    "v09-c08": [
+      "v09-b-q3b",
+      "v09-b-q3d"
+    ],
+    "v09-c09": [
+      "v09-b-q4a",
+      "v09-b-q4b",
+      "v09-b-q4c"
+    ],
+    "v09-c10": [
+      "v09-b-q4c",
+      "v09-b-q4d"
+    ],
+    "v09-c11": [
+      "v09-b-q5a",
+      "v09-b-q5b"
+    ],
+    "v09-c12": [
+      "v09-b-q5c",
+      "v09-b-q5d"
+    ]
+  },
+  "domain_coverage": [
+    {
+      "domain": "D1",
+      "question": 1,
+      "points": 20,
+      "chapters": [
+        "v09-c01",
+        "v09-c02",
+        "v09-c03"
+      ],
+      "mechanism": "withdrawal timing, finite sample covariance, capped variance minimization and predeclared covariance shrinkage"
+    },
+    {
+      "domain": "D2",
+      "question": 2,
+      "points": 20,
+      "chapters": [
+        "v09-c04",
+        "v09-c05"
+      ],
+      "mechanism": "incomplete contingent market, strict bounds and funded arbitrage; conditional equilibrium relation versus proxy alpha"
+    },
+    {
+      "domain": "D3",
+      "question": 3,
+      "points": 20,
+      "chapters": [
+        "v09-c06",
+        "v09-c07",
+        "v09-c08"
+      ],
+      "mechanism": "omitted correlated factor, matched net performance, actual public-release clock, collateral costs, survivor removal and retuned holdout"
+    },
+    {
+      "domain": "D4",
+      "question": 4,
+      "points": 20,
+      "chapters": [
+        "v09-c09",
+        "v09-c10"
+      ],
+      "mechanism": "nontradable endowment hedge, proportional trading fee, binding interim call and joint collateral stress"
+    },
+    {
+      "domain": "D5",
+      "question": 5,
+      "points": 20,
+      "chapters": [
+        "v09-c11",
+        "v09-c12"
+      ],
+      "mechanism": "conditional passive buy fills, whole-target benchmark, prospective incompatible liquidity/risk constraints and authorized funding or waiver"
+    }
+  ],
+  "distinctness_from_form_a": [
+    "D1 uses withdrawal and money-weighted versus horizon-correct linked returns, sample rather than population covariance, and capped GMV with shrinkage. A uses a contribution/ending fee and mean-variance utility with mean uncertainty.",
+    "D2 uses two securities in three states, a continuum of positive pricing extensions and a superhedge arbitrage; A uses complete-market replication and risk-tolerance aggregation.",
+    "D3 uses omitted-factor projection, net matched benchmark, vintage contamination, actual collateral costs, survivorship and reuse of a holdout. A uses exact factor/residual SDF pricing and selecting a sign rule or its negative.",
+    "D4 uses a gated nontradable payoff, transaction-cost displacement, a binding cash deadline and futures variation sharing the private-call reserve. A uses a liability hedge, conditional versus terminal variance and a private distribution following a gross call.",
+    "D5 uses passive BUY selection and a newly prospective IPS with no joint integer repair without external funding or cap waiver. A uses a signed SELL target and a feasible temporary integer repair."
+  ],
+  "part_review": [
+    {
+      "part": "v09-b-q1a",
+      "chapters": [
+        "v09-c01"
+      ],
+      "result": "Flow-adjusted returns 20% and -1/12; total TWR 10%, annualized 4.880884817%; dated investor IRR 10% with only gross root 1.1 admissible.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q1b",
+      "chapters": [
+        "v09-c02"
+      ],
+      "result": "Means .03/.04; unbiased common-date sample S=[[13,11],[11,17]]/7500; Gram PSD proof and positive determinant 100/7500^2.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q1c",
+      "chapters": [
+        "v09-c03"
+      ],
+      "result": "Variance (8w^2-12w+17)/7500; unconstrained .75, capped A=2/3,B=1/3; 113/67500; positive curvature and decreasing boundary derivative.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q1d",
+      "chapters": [
+        "v09-c03"
+      ],
+      "result": "Predeclared diagonal shrinkage yields (19w^2-23w+17)/7500; A=23/38,B=15/38, cap slack; 763/570000. Distinguishes changed estimate from true-risk dominance.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q2a",
+      "chapters": [
+        "v09-c05"
+      ],
+      "result": "q=(2t-3/20,11/10-3t,t), 3/40<t<11/30; positive witness and rank-two incompleteness.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q2b",
+      "chapters": [
+        "v09-c05"
+      ],
+      "result": "Insurance price 7t-3/10 spans strict (9/40,34/15); full-rank extension, explicit sub/superhedges and endpoint free nonnegative payoffs.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q2c",
+      "chapters": [
+        "v09-c05"
+      ],
+      "result": "At price 12/5, signed holdings (-1 X,+1/3 S,+103/57 bonds) have zero initial cost and payoff (8/57,47/19,8/57); every shorting/funding right supplied.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q2d",
+      "chapters": [
+        "v09-c04"
+      ],
+      "result": "Derives beta relation from given true-market clearing and aggregation; proxy beta 1.5 and alpha .01; proxy incompleteness and absence of an arbitrage construction kept distinct.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q3a",
+      "chapters": [
+        "v09-c06"
+      ],
+      "result": "Omitted factor changes slope .6 to .9 and gross intercept .001 to .0022; covariance and mean contributions both derived without causal-skill identification.",
+      "credit_allocation": [
+        2,
+        2,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q3b",
+      "chapters": [
+        "v09-c08"
+      ],
+      "result": "Net full alpha -.001, net market-only alpha .0002; exact matched active mean -.001, monthly TE .01, IR -.1, fixed beginning-NAV fee and denominator explicit.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q3c",
+      "chapters": [
+        "v09-c06",
+        "v09-c07"
+      ],
+      "result": "Accounts dated Dec31 but released Mar20 cannot support Jan2 public-information trade. Executable separate spread .004 produces .40 gross CU, -.10 net CU, -.5% on collateral 20, not on zero leg cost.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q3d",
+      "chapters": [
+        "v09-c07",
+        "v09-c08"
+      ],
+      "result": "Full frozen cohort return -17/60 versus survivor-only .075. Subsequent U choice consumes holdout; next evaluation must restore an honest information boundary.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q4a",
+      "chapters": [
+        "v09-c09"
+      ],
+      "result": "Two-state total terminal wealth preserves private call 22; endowment covariance .8 gives J=67.6+.06x-.001x^2 and unique relaxed x30 versus x50 ignoring covariance.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q4b",
+      "chapters": [
+        "v09-c09"
+      ],
+      "result": "Certain fee .02|x-45| shifts sale derivative to .08-.002x; relaxed global x40, sale 5, fee .10, cash 19.90, score 68.30.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q4c",
+      "chapters": [
+        "v09-c09",
+        "v09-c10"
+      ],
+      "result": "Cash deadline restores constraint 59.1-.98x>=22: x=265/7,sale50/7,fee1/7,cash22; relaxed solution short 2.10. Gated NAV is unavailable.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q4d",
+      "chapters": [
+        "v09-c10"
+      ],
+      "result": "Two futures create -20 variation cash, leave2 from22; call 22 plus retained margin5 needs27, so additional funding25. No early close/right or double-use of cash.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q5a",
+      "chapters": [
+        "v09-c11"
+      ],
+      "result": "Uniform target share fill probability .5, Up given fill .2, marked value18.8, net conditional profit-1.12; information-selection mechanism stated.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q5b",
+      "chapters": [
+        "v09-c11"
+      ],
+      "result": "Whole-target Up/Down wealth 3041.6/2846.4 versus3200/2800, shortfalls158.4/-46.4, expected56; exact signed filled/missed/fee components.",
+      "credit_allocation": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q5c",
+      "chapters": [
+        "v09-c12"
+      ],
+      "result": "New prospective cash floor requires integer n>=3 while active SD 40 cap requires n<=2. Minimum cash remedy leaves 77 shares, cash 1460.34, active SD 41.4; full intersection empty.",
+      "credit_allocation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    },
+    {
+      "part": "v09-b-q5d",
+      "chapters": [
+        "v09-c12"
+      ],
+      "result": "Minimum approved contribution 7.64 with 2 sales gives 78 shares, cash 1450, SD 39.6, wealth 2854; no contribution requires 3 sales and smallest cap waiver 41.4. Sponsor cash and fees reconcile, board authority precedes deadline, history preserved.",
+      "credit_allocation": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "points": 5,
+      "prompt_solution_match": "reviewed complete; all necessary contract data supplied"
+    }
+  ],
+  "scoring_review": {
+    "all_part_rubrics_total_five": true,
+    "total": 100,
+    "domain_totals": [
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "error_carry_forward": "No repeated arithmetic penalty for coherent later methods; grant independently corrected reasoning. Do not certify an impossible pricing/funding or contaminated evidence claim merely because a mistaken prior premise was carried forward.",
+    "fairness": "All required methods appear in accepted prerequisites. Full contract rights, fee bases, dates, information states and units supplied. Each domain permits about 48 minutes; no simulation, optimization software, empirical download, numerical root search or graduate-only tool is required.",
+    "critical_errors": [
+      "treating a negative gross IRR root as an investment return",
+      "using physical expectation as unique incomplete-market price without pricing assumptions",
+      "certifying an unfunded or state-negative trade as arbitrage",
+      "validating future-information or post-selection performance as untouched evidence",
+      "spending gated NAV or the same margin cash twice",
+      "declaring cash-only repair compliant while ignoring active-risk cap",
+      "treating sponsor cash as investment gain or rewriting a historical benchmark"
+    ]
+  },
+  "validation": [
+    {
+      "check": "Focused independent reconstruction",
+      "result": "Passed 8 groups / 356 comparisons, including structural, rubric and source comparisons; 7 economic-domain rejection cases. These are not 356 distinct financial derivations."
+    },
+    {
+      "check": "Independent arithmetic paths",
+      "result": "Raw-product sample covariance versus centered Gram sums; matrix versus variance polynomials; exact elimination versus state-price family and hedge payoffs;12-state original population versus omitted-factor normal equations; direct two-state wealth versus endowment quadratic; whole-target cash ledgers versus shortfall components; exhaustive 81 allowed sale choices versus opposing inequalities."
+    },
+    {
+      "check": "Boundary cases",
+      "result": "Rejects sample n<2 and incomplete common rows, indefinite minimization matrix and infeasible negative cap, both zero-state-price endpoints and overpriced insurance extension. Tests call boundary perturbation, no double-spending of margin, zero-cost security legs versus real collateral, and empty cash/risk integer intersection."
+    },
+    {
+      "check": "Quiet API and optimized execution",
+      "result": "Fresh import plus check() produced empty stdout and stderr; allow_nan=False serialization passed. Python -B -O execution from /tmp produced identical strict JSON; checks do not rely on assert statements."
+    },
+    {
+      "check": "Markup, scoring and sources",
+      "result": "Balanced fragment; unique anchors; 20 ordered five-point prompts and 20 unique semantic ordered solutions; all 20 explicit credit allocations total 5. All 12 chapter routes and 11 source links match exact accepted canonical records. Three payload files have no trailing whitespace."
+    },
+    {
+      "check": "Instructional and economic self-review",
+      "result": "Read every prompt, full solution, rubric, derivative/global certificate, source scope and checker. No unresolved material author finding. Coordinator separately reported its full read and independent reconstruction found no numerical/economic issue; acceptance remains its responsibility."
+    }
+  ],
+  "resolved_findings": [
+    {
+      "origin": "author final prompt/solution audit",
+      "finding": "Futures stress solution relied on keeping the position open through the cash deadline.",
+      "resolution": "Prompt now explicitly forbids early futures closure in the proposal and requires it to remain open; this preserves the stated settlement/call/retained-margin chronology.",
+      "numerical_change": false
+    },
+    {
+      "origin": "author final scoring audit",
+      "finding": "Some credit paragraphs used abbreviated trailing score labels after their first explicit point label.",
+      "resolution": "Every score now says point or points explicitly; parser verifies each analytic allocation sums to 5.",
+      "numerical_change": false
+    }
+  ],
+  "open_findings": [],
+  "source_reuse": {
+    "file": "content/reviews/v09-exam-b-sources.json",
+    "existing_records": 11,
+    "new_sources": 0,
+    "note": "Exact canonical source objects reused within accepted chapter scopes; preserve actual prior inspection metadata and dates. No new browsing claim, copied case, empirical market observation or current legal/product assertion."
+  },
+  "limits": [
+    "Author verification is not independent human academic certification or empirical validation.",
+    "Coordinator owns final acceptance, assembled assessment review, whole-library checks and publishing.",
+    "Browser visual, mobile, keyboard and print QA remains a separate pending library gate; these structural and numerical checks do not substitute for it.",
+    "Synthetic moments, conditional stresses, transaction rights and governance rules are stipulated for the problems; no general premium, market forecast, product term or institutional guarantee follows."
+  ],
+  "payload_hashes": [
+    {
+      "path": "content/assessments/parts/v09-exam-b.html",
+      "sha256": "c069e5413e18611ae6c8224746d16c6fe9a19abc849bc815d8d3b2530554dd7e",
+      "bytes": 44077
+    },
+    {
+      "path": "scripts/check_v09_exam_b.py",
+      "sha256": "962c559438141fd28f0807737a675175033e63f5bdeb118630b9f269df4489ed",
+      "bytes": 27694
+    },
+    {
+      "path": "content/reviews/v09-exam-b-sources.json",
+      "sha256": "edc76448fd246c50f323781cf529f9947d4228c11f6b492b7796728e1f311cb6",
+      "bytes": 11355
+    }
+  ]
+}
