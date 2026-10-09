@@ -1,0 +1,217 @@
+{
+  "chapter": "v10-c03",
+  "title": "Term-structure models and rate risk",
+  "author": "equity and allocation specialist",
+  "date": "2026-10-09",
+  "edition_boundary": "2026-10-06",
+  "assignment": "production/v10-opening-assignments.json",
+  "state": "author-review-complete",
+  "status": "passed_author_review",
+  "acceptance": "Pending independent coordinator audit and acceptance in dependency order after c01/c02. No shared curriculum, status, build, source-catalogue or hosting changes were made by this specialist.",
+  "review_type": "Full original manuscript, four worked cases, ten exact graduate prompts and complete solutions, explicit finite proofs and research critique, answered teaching/retention, all lab and focused checker code, complete preserved output, scoped actual primary sources and final exact hashes. Author review is not external academic certification.",
+  "coverage": {
+    "outcome": "Compare curve models and distinguish physical from risk-neutral dynamics.",
+    "canonical": {
+      "Expectations": "Distinct conditional physical and pricing laws with full support; local and path physical SDF; actual physical holding returns; forward versus expected short rate through nonlinear averaging and different measures.",
+      "term premiums": "Derives excess=-Cov_P(m,G)/E_P[m]; negative root premium and opposite conditional date1 premiums; forward-gap convention separated from pure holding-return compensation; dated estimation/identification critique.",
+      "short-rate models": "Original positive finite discount-shape tree, deterministic comparison, finite additive mean reversion with full n-step mean/variance derivation, log-rate sign restriction, square-root finite-step counterexample and clamping change. No untaught Ito formula.",
+      "no-arbitrage": "Dated positive bank account, backward coupon-inclusive valuation, full-path pricing, predictable finite self-financing martingale proof, equivalence of positive support, model-market boundary and external storage counterexample.",
+      "calibration": "Forward Arrow recursion and conditional unique level formula; exact three-point curve fits; same curve with three distinct claim prices proves nonidentification; rates can recombine while bank histories do not.",
+      "curve scenarios": "Named discount-point changes with complete sequential recalibration; exact fixed/contingent repricing and a payoff kink; separates date0 curve-coordinate sensitivities from future-node replication and physical forecasts."
+    },
+    "prerequisites": "Read production/checkpoint/canonical assignment and accepted finite-pricing prerequisite. Coordinated directly with c01/c02/c04 on discount, sensitivity and P/Q contracts. c01/c02 reading routes are direct as requested; later unwritten extensions retain curriculum anchors. Locally derives all finite multi-date tools and two-equation replication.",
+    "chapter_words": 6828,
+    "worked_examples": 4,
+    "exercises": 10,
+    "complete_solutions": 10,
+    "graduate_derivations": [
+      "Finite bank-numeraire no-arbitrage proof",
+      "Conditional curve-calibration existence/uniqueness",
+      "Physical expected-excess-return covariance identity",
+      "Forward nonlinear-averaging inequality",
+      "Finite n-step mean-reversion moments",
+      "Two-state exact hedge and rank condition"
+    ],
+    "teaching": "Answered committee explanation with constructive same-curve/different-claim example and evidence/trading boundaries.",
+    "retention": "P-root=.5 leaves forward/expected-short convexity gap but zero expected holding premium; D3=.90 recalibration lowers coupon to104.15 without changing date1 claim1.41.",
+    "ownership": "Nine assigned paths only, eight non-self payload hashes. No children, external installs, shared edits or publication."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c03.html",
+      "bytes": 49284,
+      "sha256": "5e126585813108e97a322dd7a728d1e21a623beddb2df2d211de7c84d7cce1da"
+    },
+    {
+      "path": "content/projects/v10-c03-inputs.json",
+      "bytes": 1055,
+      "sha256": "2dab39f819bfe6c3ac2976600b3d5f84d34a7847f81c87fe08894505d9ee1ce6"
+    },
+    {
+      "path": "content/projects/v10-c03-analysis.py",
+      "bytes": 14854,
+      "sha256": "8c039bd7da548716e61f336d20e267cdc844b6a7b0f5e77beadae344952cdf68"
+    },
+    {
+      "path": "content/projects/v10-c03-output.json",
+      "bytes": 27039,
+      "sha256": "f4a0317fca73a1590fb620d0c7bb3034e44459a542a2425d00f3793ad10effda"
+    },
+    {
+      "path": "content/projects/v10-c03-manifest.json",
+      "bytes": 749,
+      "sha256": "3da945f8a249335c36ce38c4eb5a49f095906e42713b69f8c9339ebe7f72fa85"
+    },
+    {
+      "path": "content/projects/v10-c03-README.txt",
+      "bytes": 11707,
+      "sha256": "27fcede1ee470e6efdca8023ee5b4e9fc2ee00f7e174aa94afd96fb1c52a7b9f"
+    },
+    {
+      "path": "scripts/check_v10_c03.py",
+      "bytes": 27850,
+      "sha256": "9eaaabe6645b9960f019fd2535014f78e4ae19bd601ea3613322200e536b7850"
+    },
+    {
+      "path": "content/reviews/v10-c03-sources.json",
+      "bytes": 3207,
+      "sha256": "d4cc9d3e9c33a2bd46742d9d36d94c7c2c315ec9d82aa4308d72e9d1b6408ea3"
+    }
+  ],
+  "reasoning_checks": [
+    "Node short rate is known before the next interval; coupons are added once at their actual next payment date and final continuation is zero after the final payment. Unit-face bond prices, 100-face claim multiplier and CU funding are distinguished.",
+    "Full-path bank account uses actual prior rate history. LH and HL reach the same date2 rate node but have bank wealth1000/969 and1000/931; Arrow aggregation retains their different prices. Normalized Arrow weights are not silently equated with bank-account Q probabilities.",
+    "Positive d and strictly positive conditional P/Q support yield an equivalent pricing representation. Predictable finite self-financing discounted wealth is a Q martingale by linearity and conditional expectation; nonnegative positive-somewhere terminal wealth contradicts zero initial expectation.",
+    "The selected positive pricing law does not prove that all terminal state indicators are attainable or uniquely priced. The proof concerns stipulated consistently priced assets and trading rights; arbitrary unspanned terminal claims are explicitly excluded from a uniqueness claim.",
+    "Each calibration level has a strictly positive denominator and is unique only after shape and Q choices. The imposed s<1/2 bound is specific to t=0,1,2. Earlier discount prices do not depend on later fitted levels. Nonmonotone positive curves remain allowed when external costless storage is absent.",
+    "P changes alter forecasts, SDF and expected holding returns while leaving a fixed Q pricing model unchanged. Returns use actual purchase/sale dates and include no maturity payment at an earlier sale. Local expected-excess/covariance identities are exact at all displayed nodes.",
+    "The forward is a harmonic aggregation of gross next short rates. Jensen gives its gap from the Q arithmetic mean; that averaging gap is separated from a P/Q change. The chapter does not label every forward-minus-forecast difference a pure holding-return premium.",
+    "Finite additive mean-reversion moments follow an explicitly iterated recursion and independent unit-variance innovations. Phi1 is discussed through the finite sum, not a zero denominator. The physical AR case is separate from curve calibration and can fail to recombine.",
+    "Exponentiating the rate imposes positive rates and declining D. Finite square-root-scaled updates need their own state-domain check; clamping changes the mean from.008 to.0115 in the original counterexample. No continuous-time positivity result is assumed.",
+    "The nonlinear contract pays cash only at date1. Its hedge liquidates the date2 zero then repays its date0 bank borrowing. Distinct successor bond prices make the two-equation system full rank. At zero dispersion equal claim payments are replicated with a bank-only choice instead of dividing by zero.",
+    "All three tree families fit the supplied curve but value the original contract at.92,1.41 and2.36. Frozen base hedge errors in the wide model have priced loss-.95 equal to the initial price gap, so this is model mismatch rather than an alleged arbitrage within a single unchanged model.",
+    "Discount-coordinate scenarios recalibrate every affected level. The conditional derivative51 in D2 is distinct from the future-date bond hedge coefficient1410/19. At D2=.92 both payment branches are zero; extrapolating the interior derivative to-.12 is explicitly rejected.",
+    "The wide negative short rate still has a positive gross bank return. Adding costless storage changes rights and creates the explicit conditional borrowing/storage arbitrage; this is not smuggled into the original model.",
+    "Research critique separates calibration residuals, expectations estimation, conventions and holdout hedge evaluation. Original synthetic fixtures are never represented as October2026 observations; dated source discussion does not authenticate current rates or fitted coefficients."
+  ],
+  "exercise_audit": [
+    {
+      "exercise": 1,
+      "status": "passed",
+      "result": "a2=(969/4000,19/40,931/4000), shape denominator47519/50000, c2=45500/47519; new3/3/103 bond99.52; conditional uniqueness stated."
+    },
+    {
+      "exercise": 2,
+      "status": "passed",
+      "result": "LH/HL bank1000/969 and1000/931; state prices969/4000 and931/4000; middle price shares.51/.49 versus Q.5/.5; lowest normalized Arrow.255 versus Q.25."
+    },
+    {
+      "exercise": 3,
+      "status": "passed",
+      "result": "p_high=.3 gives expected r1=23/969, bond expected return1/35 and excess2/245; prices unchanged. Equal P/Q leaves forward gap-2/4845 and zero bond premium."
+    },
+    {
+      "exercise": 4,
+      "status": "passed_editorial_proof",
+      "result": "Full predictable-holdings/distributions/self-financing conditional-expectation proof; same strict support and positive bank account located; traded zero-price positive-state indicator supplies endpoint counterexample."
+    },
+    {
+      "exercise": 5,
+      "status": "passed",
+      "result": "Strike97 gives payoffs92/49,0; value.92; beta920/19; bank-45.08 grows to repayment46; full-rank and both equations verified."
+    },
+    {
+      "exercise": 6,
+      "status": "passed_derivation_and_counterexample",
+      "result": "Positive shape calibration level derived; nonidentification constructive via deterministic.92 and wide2.36 claims under same D; pricing versus physical evidence distinguished."
+    },
+    {
+      "exercise": 7,
+      "status": "passed",
+      "result": "Only low pays for392/425<D2<=.96; differentiable formula interior. At D2=.92 local extrapolation-.12 versus exact0; coupon105.05."
+    },
+    {
+      "exercise": 8,
+      "status": "passed_derivation_and_arithmetic",
+      "result": "Iterated finite innovation formula supplies all moments; two-step support(.02,.04,.03,.05), mean.035 and variance1/8000; phi1 and naming-law limits explicit."
+    },
+    {
+      "exercise": 9,
+      "status": "passed",
+      "result": "Wide negative rate-2/247 remains above-1; new storage right generates gain2/247. Square-root outputs-.007/.023 and clamped mean.0115, change.0035; state domain versus gross return distinguished."
+    },
+    {
+      "exercise": 10,
+      "status": "passed_editorial_critique",
+      "result": "All five fictional memo claims answered; three distinct evaluation questions, source date/scope, specific uncertainties and open-answer criteria supplied."
+    }
+  ],
+  "validation": {
+    "focused_command": "python3 book/scripts/check_v10_c03.py",
+    "quiet_optimized_verification": "Imported check_v10_c03.py and called check() under python3 -O from /private/tmp while capturing stdout/stderr; both empty. Its isolated subprocess tests exercise normal default-input and optimized explicit changed-input/output runs.",
+    "status": "passed",
+    "groups": [
+      {
+        "name": "Quiet API, complete saved output and independent path enumeration",
+        "comparisons": 1557,
+        "status": "passed"
+      },
+      {
+        "name": "All determinate worked/exercise anchors, path pricing identities and proof assumptions",
+        "comparisons": 143,
+        "status": "passed"
+      },
+      {
+        "name": "Ten meaningful probability, payoff, curve and physical-dynamics interventions",
+        "comparisons": 7586,
+        "status": "passed"
+      },
+      {
+        "name": "36 actual time, probability, numerical and economic domain rejections",
+        "comparisons": 36,
+        "status": "passed"
+      },
+      {
+        "name": "Chapter structure, scoped source records, exact routes and payload integrity",
+        "comparisons": 48,
+        "status": "passed"
+      },
+      {
+        "name": "Isolated default and optimized explicit CLI; strict JSON parser",
+        "comparisons": 1509,
+        "status": "passed"
+      }
+    ],
+    "comparisons": 10879,
+    "valid_interventions": 10,
+    "domain_rejections": 38,
+    "independence": "The checker calibrates from full prefix path weights rather than the author forward Arrow recursion, prices by explicit suffix path sums rather than backward valuation, derives AR paths by finite sums and solves hedge cash from initial cost. It compares the complete preserved output and all material reported fields, plus hardcoded exact exercise/worked anchors.",
+    "domain_scope": "36 API rejections cover real probability, timing, payoff, curve, shape and physical process domains;2 isolated CLI rejections cover duplicate fields and nonfinite JSON. Ten valid interventions change physical/pricing probabilities, strikes, a payoff kink, increasing discounts, physical mean reversion and the dated retention scenario.",
+    "integrity": "Four-file manifest exact bytes/SHA256 passed; source reuse matches canonical record exactly; structure has4 worked cases and10 ordered solutions with exact reading/extension/download routes."
+  },
+  "sources_review": {
+    "reused_unchanged": [
+      "v09-c05-princeton-pricing"
+    ],
+    "new_actual_body_inspections": [
+      "v10-c03-haugh-lattice",
+      "v10-c03-fed-premium"
+    ],
+    "scope": "Haugh finite lattice pages only, excluding imported continuous SDE results and source numerical examples; explicit rank caveat strengthens the informal source hedge wording. Federal Reserve Q&A is dated5 November2019 and used only for methodological conventions/identification. All source claims are scoped in the proposals; no entire-source or current-data verification claimed."
+  },
+  "resolved_findings": [
+    {
+      "origin": "coordinator integration request",
+      "issue": "Opening prerequisite links pointed to specification anchors although c01/c02 now exist in the coherent batch.",
+      "resolution": "Changed to direct v10-c01.html and v10-c02.html; checker verifies both routes. Dependency-order acceptance remains coordinator-only."
+    }
+  ],
+  "open_findings": [],
+  "limits": [
+    "Finite synthetic single-curve frictionless model with signed borrowing/trading. No empirical P/Q estimation, real market quotes, collateral/default/bid-ask effects or proof of universal replicability.",
+    "Short-rate family comparisons and mean-reversion proofs are finite. Brownian motion, Ito calculus and continuous-time valuation remain subsequent prerequisite-dependent work.",
+    "Independent path arithmetic and author editorial review reduce error risk but are not independent human certification. Coordinator subject-matter acceptance, shared build/verification and hosting remain separate.",
+    "Shared browser visual/mobile/keyboard/print QA remains an unresolved library-level gate; this specialist does not claim to have performed it."
+  ],
+  "frozen": "All nine owned files frozen together after the final source/route edits and focused checks. Notify coordinator before any subsequent owned-file edit."
+}

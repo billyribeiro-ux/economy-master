@@ -1,0 +1,254 @@
+{
+  "chapter": "v10-c04",
+  "title": "Credit risk and recovery",
+  "reviewer": "equity_peer",
+  "date": "2026-10-09",
+  "assignment": "production/v10-opening-c04-peer-assignment.json",
+  "status": "passed_independent_peer_review",
+  "recommendation": "Ready for coordinator acceptance after prerequisite c03. Both identified implementation findings are repaired, independently retested and reflected in the final author hashes. The peer does not change canonical state or publish.",
+  "independence": "Reviewer read the complete final chapter, all five worked cases, all ten exact exercise prompts and solutions, teach-back/retention, all lab inputs/implementation/reference/README/manifest, author checker/review and proposed sources. Independently opened each actual primary source. Separate expected calculations use only the supplied input contract and reviewer derivations. No author-checker import, function call or answer-output oracle is used; the implementation is the system under test, and preserved output equality is a separate regression check.",
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c04.html",
+      "bytes": 50263,
+      "sha256": "5ef3f8c6211272191b7f388433eef1322e97cd39e334b4671d24522dcb29c14f"
+    },
+    {
+      "path": "content/projects/v10-c04-inputs.json",
+      "bytes": 3566,
+      "sha256": "ac20ce3d73fdca658bc1ef38622f0f852bdf725a1d6bff2de1fcaa8694f18423"
+    },
+    {
+      "path": "content/projects/v10-c04-analysis.py",
+      "bytes": 17552,
+      "sha256": "35da33ed969735d22998814fcc764c385e1852fa02ca06fb3c066a1646a55b5c"
+    },
+    {
+      "path": "content/projects/v10-c04-output.json",
+      "bytes": 13368,
+      "sha256": "99a6fb46765bf94810d6d4c13c8f87a75d6b29d480c5796420e27a256d499efb"
+    },
+    {
+      "path": "content/projects/v10-c04-manifest.json",
+      "bytes": 958,
+      "sha256": "12e2e03a79cc11066e2e9a6c1b29fbf68701edfc2c2044a51fa2296935e5d644"
+    },
+    {
+      "path": "content/projects/v10-c04-README.txt",
+      "bytes": 14244,
+      "sha256": "ab174fd748e0af38e4f093473cb546998e14be88946a6eda4752e43576d2d662"
+    },
+    {
+      "path": "scripts/check_v10_c04.py",
+      "bytes": 28244,
+      "sha256": "26d03f06e4c4e4438bf47e1257d5a531e18faef5adb8b8bfad7a7b22635bfd6f"
+    },
+    {
+      "path": "content/reviews/v10-c04-author.json",
+      "bytes": 16459,
+      "sha256": "f0cd0286b394ae98f3840c9ab867bff756edbb249b377a376d2b4105af6cdbab"
+    },
+    {
+      "path": "content/reviews/v10-c04-sources.json",
+      "bytes": 3133,
+      "sha256": "1c670b3dbc0c7bd8519b2ba19edd8ea2ca6337b52f4f2da9c204081b87b81c8d"
+    }
+  ],
+  "freeze_history": {
+    "initial_assignment_hashes": "All nine matched the persisted initial assignment at peer-review entry.",
+    "authorized_repairs": "Author changed its own payload only after reviewer findings and announced two explicit revised freezes. Coordinator and author were informed of each finding.",
+    "final_author_sha256": "f0cd0286b394ae98f3840c9ab867bff756edbb249b377a376d2b4105af6cdbab",
+    "changed_since_initial": [
+      "content/projects/v10-c04-analysis.py",
+      "content/projects/v10-c04-manifest.json",
+      "scripts/check_v10_c04.py",
+      "content/reviews/v10-c04-author.json"
+    ],
+    "final_binding": "These nine exact current bytes are the reviewed package; the original assignment hash map predates the documented repairs. Final author record hashes all eight non-self payloads and was independently rechecked."
+  },
+  "content_audit": {
+    "coverage": "Credit spreads, structural claims, discrete and deterministic continuous hazards, recovery, absorbing transition matrices, default dependence and conditional calibration all substantively taught.",
+    "worked_cases": [
+      {
+        "case": 1,
+        "status": "passed",
+        "independent_result": "Debt90.24, equity22.08 and asset112.32 close; physical expected receipt97; P default.1 versus Q.2. Simple promised/expected/safe yields and continuous spread use distinct stated conventions."
+      },
+      {
+        "case": 2,
+        "status": "passed",
+        "independent_result": "First-default events and all-survival event reconstruct scheduled prices3519809/35152 and3516299/35152; timing value135/1352. Coupons stop before the default-date payment; recovery occurs once."
+      },
+      {
+        "case": 3,
+        "status": "passed",
+        "independent_result": "Independent65-digit series integration gives immediate-par73.4260644522634; delayed72.6860081543087; market-value71.8923733431926. Different recovery bases/dates explain the difference. P/Q survival remains separate."
+      },
+      {
+        "case": 4,
+        "status": "passed",
+        "independent_result": "Enumerated full rating histories give Q cumulative defaults(.03,.0675,.109335), P final.039385 and first-default price23399455/281216. P-weighted discounted cash is not mislabeled as Q price."
+      },
+      {
+        "case": 5,
+        "status": "passed",
+        "independent_result": "Full four-state receipts reconcile. Mean pool loss12 in both laws; variance648 versus936; junior losses11.4/9, senior.6/3; price totals180.48. Extra Q=P condition is explicit and case-specific."
+      }
+    ],
+    "proofs_and_methods": [
+      "Terminal debt/equity allocation is proved by cases under the stated nonrecourse, no-other-claim, no-interim-distribution, no-workout-cost baseline. Cost intervention explicitly accounts for destroyed assets rather than paying them twice.",
+      "Conditional debt concavity and equity convexity proof is valid for a finite nonnegative Q-distributed asset, with strictness when positive mass crosses face. Preserving only a P mean does not establish price preservation.",
+      "Survival recursion conditions on the remaining population; first-default masses telescope. The exponential derivation requires deterministic regular hazard, positive survival and no initial default atom. It is not asserted as a general stochastic-intensity factorization.",
+      "Recovery-at-default integration discounts recovery against first-default density and survival principal separately. The removable r+lambda singularity, zero intensity/recovery and negative-rate timing cases follow without an untaught stochastic-calculus theorem.",
+      "Market-value recovery uses its own short-step pricing relation, differentiable pre-default value and terminal condition. Its adjusted rate r+lambda(1-rho) is not substituted for a fractional-par contract.",
+      "Matrix powers assume homogeneous Markov transitions and an initially live claim. Absorbing default encodes history, and only first entry earns recovery. Common P/Q support is enforced; exhausted future survivor hazards are null.",
+      "Two-name Frechet bounds follow from four nonnegative cells. Covariance and tranche formulas preserve marginals and resources. Correlation needs nonzero marginal variances and is not claimed to determine arbitrary larger-portfolio tails.",
+      "Liquidity multiplier is a stipulated nonreplicable/frictional benchmark premise. The chapter never posits two unrestricted executable prices for identical dated claims, and one quote does not identify hazard/recovery/liquidity or a physical default law."
+    ],
+    "instruction": "Every method needed by the exact prompts is supplied or routed to accepted finite-pricing/probability/integration prerequisites. Five substantial worked cases exceed the three-case graduate minimum; ten complete solutions include proofs and a substantive primary-method critique. Units, payment dates, default trigger, exercise target and conditional pricing assumptions are sufficient.",
+    "teaching_retention": "Answers address both recovery contract and probability measure; delayed checks recover conditional.1 versus marginal.09, reject repeated recovery, derive junior L(2p-j)/senior Lj and identify the missing premises behind spread/expected-loss shortcuts.",
+    "scope": "No empirical calibration, observed2026 credit quote, universal bankruptcy priority rule or diffusion/Black-Scholes formula is smuggled into the finite models. Future stochastic-calculus routes remain visibly planned."
+  },
+  "exercise_audit": [
+    {
+      "exercise": 1,
+      "status": "passed",
+      "result": "Raised face120 gives debt100.8/equity11.52, physical receipt109, expected return41/504, promised4/21, continuous spread-log(7/8); both default masses.7 are coincidentally equal."
+    },
+    {
+      "exercise": 2,
+      "status": "passed",
+      "result": "Split middle state keeps priced assets112.32; debt85.44/equity26.88; transfer4.8 and Q default.45. Complete elementary conditional concavity/strictness proof independently reviewed."
+    },
+    {
+      "exercise": 3,
+      "status": "passed",
+      "result": "Survival(.95,.855), first-default(.05,.095), row cash5.3/91.77, immediate87.628 versus delayed87.553; difference.075."
+    },
+    {
+      "exercise": 4,
+      "status": "passed",
+      "result": "Hazards(.04,.0625,.10), marginal(.04,.06,.09), annual intensities-log(.96),-log(.9375),-log(.9); sumhazard.2025 differs from cumulative.19. Both conditioning and ODE derivations and zero/impossible-survival boundaries correct."
+    },
+    {
+      "exercise": 5,
+      "status": "passed",
+      "result": "Independent integral yields82.555981533 versus delayed82.271678343; k=0 limit108 and lambda=0 safe zero derived. expm1 prevents small-difference cancellation."
+    },
+    {
+      "exercise": 6,
+      "status": "passed",
+      "result": "Full par93.022392613 versus market-value92.311634639; par spread approximately-.003835029. Backward ODE has correct sign and terminal condition; accelerated cash is not an identical-payoff arbitrage."
+    },
+    {
+      "exercise": 7,
+      "status": "passed",
+      "result": "Starting B gives first-default(.10,.083), price8575/104; independent one-year-state backward calculation agrees; downgrade loss105/26. Default occupancy cannot repay recovery repeatedly."
+    },
+    {
+      "exercise": 8,
+      "status": "passed",
+      "result": "Unequal marginal joint range[0,.1], correlation[-1/6,2/3]; mean18, variances900/1044, junior16.8/15.6 and senior1.2/2.4; stipulated-Q=P prices42.18/130.72."
+    },
+    {
+      "exercise": 9,
+      "status": "passed",
+      "result": "Same81 price supports q1/6 and1/4 under alternate recovery and q1/12 under multiplier18/19. Every row reprices exactly. Recovery1 boundary is incompatible or unidentified, not a solved physical hazard."
+    },
+    {
+      "exercise": 10,
+      "status": "passed_editorial_critique",
+      "result": "All analyst assertions answered with model/quantity/measure distinctions, numerical counterexamples, scoped comparisons to at least two actual primary bodies, concrete frozen-data validation protocol and explicit evaluation criteria."
+    }
+  ],
+  "source_audit": [
+    {
+      "id": "v10-c04-merton",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.1974.tb03058.x",
+      "status": "independently_inspected",
+      "scope": "Actual publisher HTML: May1974 publication and pages449–470, introduction, assumptionsA.1–A.8 and sectionIII indenture/terminal equations9c and11. The chapter uses terminal allocation and explicit assumptions, not the continuous diffusion valuation or universal legal claims."
+    },
+    {
+      "id": "v10-c04-recovery-par",
+      "url": "https://www.darrellduffie.com/uploads/1/4/8/0/148007615/duffiedefaultabletermmodels1998.pdf",
+      "status": "independently_inspected",
+      "scope": "Actual25-page author-hosted preliminary18August1998 PDF: cover and printed pages3–9, sections1.1 and2.1–2.4. Recovery bases, interval-end versus continual dates and Q/independence qualifications match the limited use. General stochastic-process propositions are not claimed proved or imported."
+    },
+    {
+      "id": "v10-c04-liquidity",
+      "url": "https://www.federalreserve.gov/pubs/feds/2008/200840/index.html",
+      "status": "independently_inspected",
+      "scope": "Actual Fed full screen-reader manuscript: cover dates, introduction, B.1–B.3 sample/benchmark definitions and C.1 matched-cash-flow/CDS construction. Supports the dated method-sensitivity critique; no historical coefficient, modern market convention or universal causal residual interpretation is imported."
+    }
+  ],
+  "findings": [
+    {
+      "id": "c04-peer-01",
+      "severity": "material_input_domain",
+      "status": "resolved_and_independently_retested",
+      "finding": "A valid calibrated default probability q=1-1/(3*10^18) was converted to float before log1p; rounding to1 caused a ValueError despite finite intensity.",
+      "reproducer": "Baseline calibration amended to face1000000, discount3, observed_price1/1000000000000, recoveries[0], multiplier[1], maturity2. Initial validate() succeeded while run() failed.",
+      "repair": "For q<=1/2 use log1p(-float(q)); otherwise subtract from1 in exact rational arithmetic and then log the positive survival. The independently checked intensity is(log3+18log10)/2 and the repriced quote remains exact.",
+      "counter_boundary": "Also tested q=1/999999999999^2, generated from individually permitted rational D/price inputs; the repaired small-q branch retains its tiny positive intensity."
+    },
+    {
+      "id": "c04-peer-02",
+      "severity": "minor_output_contract",
+      "status": "resolved_and_independently_retested",
+      "finding": "Empty structural default-probability sums and the zero-LGD strict-tail sum returned integer0 rather than the documented exact rational string. The mathematical values were correct.",
+      "repair": "All three sums now start at F(0). Full joint recovery and an all-solvent structural face50 case return exact string zeros; baseline reference output remains unchanged."
+    }
+  ],
+  "validation": {
+    "checker": "scripts/check_v10_c04_peer.py",
+    "api": "run() is quiet and returns strict JSON; import is quiet.",
+    "status": "passed",
+    "groups": [
+      {
+        "name": "Complete reproduction and independent structural/event/integration/migration calculations",
+        "comparisons": 104,
+        "status": "passed"
+      },
+      {
+        "name": "Joint loss allocation, feasible dependence and complete calibration grid",
+        "comparisons": 90,
+        "status": "passed"
+      },
+      {
+        "name": "Nine determinate exercises and retention; proof/critique audit recorded separately",
+        "comparisons": 206,
+        "status": "passed"
+      },
+      {
+        "name": "Repaired calibration tails and economic boundary interventions",
+        "comparisons": 171,
+        "status": "passed"
+      },
+      {
+        "name": "Nine independent probability, timing and contract rejection probes",
+        "comparisons": 9,
+        "status": "passed"
+      },
+      {
+        "name": "Final manifest/author hashes and independent isolated optimized CLI",
+        "comparisons": 27,
+        "status": "passed"
+      }
+    ],
+    "comparisons": 607,
+    "domain_rejections": 9,
+    "findings_retested": 2,
+    "methods": "Exact independent payoff allocation, exclusive first-default event sums, full migration path enumeration, analytical covariance/tranche identities,65-digit power-series recovery integration, exact survival-log calibration and independent reconstructions of all determinate exercises. Source/proof reviews are editorial and documented separately.",
+    "execution": "Final direct peer checker passed. Repeated final run() under python3 -O from /private/tmp with captured stdout/stderr both empty, after the final exact-zero repair. Its isolated optimized model CLI also reproduced the complete reference output.",
+    "integrity": "Four distributed manifest payload hashes and all eight author-record hashes match. Nine final peer-reviewed payload hashes include the author record itself.",
+    "checker_bytes": 21794,
+    "checker_sha256": "2a4d7bfcf89e6aa1b82dc9fd76594e57b0b1f7771c7b2103e6b28072b97e523c"
+  },
+  "open_findings": [],
+  "limits": [
+    "Review reduces error risk but is not external human certification, a proof of empirical validity or approval to trade.",
+    "Finite/deterministic supplied laws, fictional recovery contracts and conditional liquidity benchmark remain the declared scope; no broader stochastic-intensity, legal, default forecast or real-market implementation validation is claimed.",
+    "Coordinator retains shared dependency-order acceptance, full-library build/verification, archive and publishing. Visual/mobile/keyboard/print QA remains a separate library-level gate.",
+    "Reviewer modified only the two assigned peer artifacts, never the author payload or shared files, and spawned no agents."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "chapter": "v10-c04",
+  "reviewer": "equity_peer",
+  "scope": "Independent review of entire chapter, every exercise/solution, substantive proofs, actual source scope, model and input domains. Do not edit submitted payload or shared files. Send findings to root/author; acceptance remains root-owned.",
+  "owned_paths": [
+    "content/reviews/v10-c04-peer.json",
+    "scripts/check_v10_c04_peer.py"
+  ],
+  "payload_paths": [
+    "content/chapters/v10-c04.html",
+    "content/projects/v10-c04-inputs.json",
+    "content/projects/v10-c04-analysis.py",
+    "content/projects/v10-c04-output.json",
+    "content/projects/v10-c04-manifest.json",
+    "content/projects/v10-c04-README.txt",
+    "scripts/check_v10_c04.py",
+    "content/reviews/v10-c04-author.json",
+    "content/reviews/v10-c04-sources.json"
+  ],
+  "reviewed_hashes": {
+    "content/chapters/v10-c04.html": "5ef3f8c6211272191b7f388433eef1322e97cd39e334b4671d24522dcb29c14f",
+    "content/projects/v10-c04-inputs.json": "ac20ce3d73fdca658bc1ef38622f0f852bdf725a1d6bff2de1fcaa8694f18423",
+    "content/projects/v10-c04-analysis.py": "35da33ed969735d22998814fcc764c385e1852fa02ca06fb3c066a1646a55b5c",
+    "content/projects/v10-c04-output.json": "99a6fb46765bf94810d6d4c13c8f87a75d6b29d480c5796420e27a256d499efb",
+    "content/projects/v10-c04-manifest.json": "12e2e03a79cc11066e2e9a6c1b29fbf68701edfc2c2044a51fa2296935e5d644",
+    "content/projects/v10-c04-README.txt": "ab174fd748e0af38e4f093473cb546998e14be88946a6eda4752e43576d2d662",
+    "scripts/check_v10_c04.py": "26d03f06e4c4e4438bf47e1257d5a531e18faef5adb8b8bfad7a7b22635bfd6f",
+    "content/reviews/v10-c04-author.json": "f0cd0286b394ae98f3840c9ab867bff756edbb249b377a376d2b4105af6cdbab",
+    "content/reviews/v10-c04-sources.json": "1c670b3dbc0c7bd8519b2ba19edd8ea2ca6337b52f4f2da9c204081b87b81c8d"
+  },
+  "freeze_requirement": "Wait for author freeze. Verify all nine payloads are present and bind peer review to all nine final hashes. Report any hash change during review.",
+  "independence": "Compute examples and exercise answers independently; never import author checker as oracle. May use model as system under test after constructing separate expected results. Write quiet standard-library run() checker returning a JSON-safe check record.",
+  "gates": [
+    "all worked cases",
+    "each of ten exercises and solutions",
+    "proof assumptions and counterexamples",
+    "units and timing",
+    "P/Q and trading rights",
+    "sources within inspected actual-body scope",
+    "lab reproduction and meaningful intervention",
+    "prompt sufficiency and prerequisites"
+  ],
+  "status": "final repaired nine-payload freeze independently accepted by peer"
+}

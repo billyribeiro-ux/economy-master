@@ -1,0 +1,146 @@
+{
+  "batch": "v10-opening",
+  "date": "2026-10-09",
+  "state": "all four accepted; full regression and offline archive passed; publication pending",
+  "scope": "Full reading of all four manuscripts, all exercise prompts and solutions, mathematical assumptions and model code; scoped source records reviewed; chapter-specific numerical checks and author hash bindings verified. Three independent cross-author peers provide additional reviews. No external human certification claimed.",
+  "chapters": {
+    "v10-c01": {
+      "worked_cases": [
+        "Actual/actual illustrative coupon allocation: 91/181 accrued, dirty 99.76, clean 98.251713; invoice/funding ledger closes.",
+        "Three triangular instruments identify positive D=(.96,.90,.84); signed traded-instrument replica for target cash reconstructs its 97.5 cost and .5 quote discrepancy.",
+        "Positive-cash-flow YTM exists uniquely on y>-1; 8/108 example separates IRR from reinvested terminal CAGR and earlier sale return.",
+        "A financed forward lending trade delivers -60 at date1 and +64 at date2 at zero initial cost, versus offered 64.2; profit financed consistently."
+      ],
+      "exercise_review": [
+        "E1 declining principal/interest ledger, fee and incorrect fixed interest comparison.",
+        "E2 leap-year accrual 90/182 versus wrong actual/365 allocation; full-face invoice.",
+        "E3 changed middle-instrument price bootstraps revised D2 and D3 and target sensitivity.",
+        "E4 negative implied D3 yields explicit signed arbitrage; clipping is invalid.",
+        "E5 continuous strictly decreasing price limits establish unique YTM with positive future times; signed cash breaks hypotheses.",
+        "E6 two-year forward factor, cheaper financing, terminal and PV profit.",
+        "E7 positive monotone interpolation perturbation fits endpoints without identifying midpoint.",
+        "E8 face-discount bill quote, holding gain, investment/annual/continuous yield conversions.",
+        "E9 early sale quote and received coupon determine actual return.",
+        "E10 research critique requires rank, cash comparability, perturbation, independent evidence and justified holdout constraints."
+      ],
+      "proof_review": [
+        "Triangular rank/positive state-price reasoning and explicit arbitrage funding verified.",
+        "YTM continuity, strict monotonicity and endpoint limits use finite nonnegative future payments.",
+        "Forward relation proved with dated zero holdings, not forecast claims.",
+        "Interpolation integral identity now assumes positive C1 D on [0,T] with D(0)=1; piecewise-knot qualification remains."
+      ],
+      "numerical_evidence": "scripts/check_v10_c01.py and production/v10-opening-focused-checks.json; separate cost_peer audit pending",
+      "source_review": "Actual MIT, TreasuryDirect and BoE bodies inspected by root; scope restricted to stable methods and illustrative accrual. Apparent MIT convexity sign and universal immunization claim expressly excluded.",
+      "peer_review": "content/reviews/v10-c01-peer.json"
+    },
+    "v10-c02": {
+      "worked_cases": [
+        "Cash-flow polynomial derivatives, 4/4/4/104 repricing for -100/+100/+1000bp, Taylor signs and third-derivative remainder.",
+        "Value/dollar-duration system funds a 125 liability using years1/5 zeros, distinguishes faces/PVs and proves horizon bridge under a single constant post-shift rate.",
+        "Continuous-zero key basis gradient/Hessian and signed surplus vector expose a -2.090509 twist loss.",
+        "Positive local surplus curvature and exact factored S(d) show failure at a large negative-yield shift, without claiming a full interim funding plan."
+      ],
+      "exercise_review": [
+        "E1 semiannual versus annual yield coordinate, price, duration, convexity and DV01 independently recomputed.",
+        "E2 nonnegative PV shares prove maturity bounds and variance decomposition; signed surplus qualification correct.",
+        "E3 dirty-dollar and clean-normalized sensitivities, 25bp loss and accrual-clock distinction correct.",
+        "E4 10-year zero large-shock tangent, quadratic price and valid loose remainder bound reconstructed.",
+        "E5 overfunded budget matches dollar exposure with duration2.5, surplus90 and curvature-360.",
+        "E6 off-key price, key gradient, rank-one Hessian and exact offsetting bump independently recomputed.",
+        "E7 convex-hull impossibility under long-only rights; formal signed weights(-1,2) require changed authority.",
+        "E8 equal value/first/second derivatives leave a cubic with different signs around baseline.",
+        "E9 fee-budget scale and separate claim reduction close independent ledgers.",
+        "E10 complete research rubric: coordinate, executable financing, information cutoff, feasible comparison and falsifiable failure evidence."
+      ],
+      "proof_review": [
+        "All derivatives use annual nominal quote y, including 1/m conversion terms.",
+        "Taylor bounds use smallest positive gross factor along the entire segment.",
+        "Basis partition of unity supplies continuous-zero parallel exposure; chain-rule conversion includes the first-derivative contribution to annual convexity.",
+        "Local theorem requires same C2 scalar family, equal PV/first derivative and strictly positive surplus curvature. The barbell special case separately proves global constant-rate protection via x+1/x>=2.",
+        "Horizon proof uses reinvestment and sale rights; later-path, cost and changed-claim examples correctly break different assumptions."
+      ],
+      "numerical_evidence": "production/v10-opening-root-numerical-audit.py/json: 89 independent rational/exponential/ledger comparisons, plus author checker and full saved-output/portable CLI checks.",
+      "source_review": "MIT exact source record reused; inspected Redington sections3–4 and CFA2017 summary used only for historical framework and key-rate terminology. All displayed derivations and cases original."
+    },
+    "v10-c03": {
+      "worked_cases": [
+        "Sequential positive discount-shape/Arrow calibration fits D1=.98,D2=.95,D3=.91; priced weights distinguished from probabilities and path-dependent bank wealth.",
+        "P/Q SDF covariance relation and forward/Q/P expectation decomposition distinguish pricing from forecasts and nonlinear averaging.",
+        "Equal fitted curves at s=0,.02,.04 give contingent prices .92,1.41,2.36 and coherent funded replicas; frozen hedge has explicit branch shortfalls.",
+        "D2/D3 curve interventions rerun calibration; local derivative region and zero-payoff boundary explicit."
+      ],
+      "exercise_review": [
+        "E1 final level and alternative coupon bond99.52 conditional on shapes/law.",
+        "E2 LH/HL bank wealth and Arrow/probability shares distinguish recombination from histories.",
+        "E3 belief-only intervention changes expected return and forecasts but leaves chosen Q prices fixed.",
+        "E4 finite martingale argument uses predictable finite positions, self-financing, positive bank account and equivalent support; zero-price traded indicator is an explicit counterexample.",
+        "E5 strike97 produces .92 price and exact funded branch equations.",
+        "E6 recursive level existence/uniqueness is conditional; two fitted models disprove identified dynamics.",
+        "E7 interval392/425<D2<=.96; large bump gives zero actual claim versus negative invalid tangent.",
+        "E8 finite AR mean/variance proof and explicit path table; phi1 limit supplied and P law named.",
+        "E9 negative-rate/storage opportunity-set distinction and square-root Euler/clamp bias shown.",
+        "E10 five research claims assessed separately with fitting, forecasting and hedge validation, uncertainty and date/source limitations."
+      ],
+      "proof_review": [
+        "No continuous-time pricing theorem assumed before Ito chapters.",
+        "Positive finite pricing law supplies consistency but not unique spanning of arbitrary terminal claims.",
+        "Calibration denominator positive, induction preserves earlier maturities.",
+        "Conditional holding-return covariance identity and exact two-asset replication rank conditions correct.",
+        "Physical AR process is explicitly separate from pricing calibration."
+      ],
+      "numerical_evidence": "scripts/check_v10_c03.py complete output/path checks, intervention and domain checks; financial_diagnosis independent peer reconstruction pending.",
+      "source_review": "Princeton record exactly reused; actual Columbia lattice PDF and Fed2019 Q&A scopes recorded, preserving finite timing, model-identification and persistence limits. No source example or current yield observation adopted.",
+      "peer_review": "content/reviews/v10-c03-peer.json"
+    },
+    "v10-c04": {
+      "worked_cases": [
+        "Finite structural min/residual allocation closes 90.24 debt+22.08 equity=112.32 asset value and separates physical expected receipt from promised yield.",
+        "First-default event cash and distinct recovery dates give 100.131116295 versus100.031264224.",
+        "Deterministic hazard density/ODE values immediate par, delayed par and market-value recovery as distinct contracts.",
+        "Absorbing migration probabilities and first-entry recovery close the three-year value83.208121160; P-weighted comparison explicitly not Q price.",
+        "Two-name full state laws preserve pool expected loss while reallocating junior/senior expected losses and prices."
+      ],
+      "exercise_review": [
+        "E1 leverage transfer with unchanged assets, P/Q default masses and promised/expected return conventions.",
+        "E2 explicit mean-preserving split and complete conditional concavity proof, strictness and measure conditions.",
+        "E3 87.628 versus87.553 cash timing; no default-date coupon.",
+        "E4 conditional/marginal hazard inversion and finite-integrable-hazard survival proof; exhausted survival handled.",
+        "E5 immediate density integral, delayed value, exact r+lambda=0 limit and lambda0 boundary.",
+        "E6 full-par early recovery versus full market-value recovery, backward ODE and negative promised spread without identical-cash arbitrage.",
+        "E7 forward first-default pricing equals live-state backward valuation; downgrade and duplicate-recovery error quantified.",
+        "E8 unequal Fréchet/correlation bounds, complete states, pool variance, tranche losses and explicitly stipulated Q=P prices.",
+        "E9 multiple recovery/liquidity conditional calibrations reprice quote81; recovery1 boundary and additional identification evidence.",
+        "E10 quantity/measure, recovery basis, dependence and residual-liquidity critique with numerical counterexample, scoped primary comparisons and feasible validation protocol."
+      ],
+      "proof_review": [
+        "Deterministic survival factoring is not generalized to arbitrary correlated rates/intensities.",
+        "Recovery-of-market-value ODE is derived by elementary short-step expansion with a specified contract.",
+        "Migration matrix powers require time-homogeneous Markov state and recovery only on first entry.",
+        "Two-event Fréchet bounds derive from four nonnegative probabilities; tranche claims exhaust actual receipts.",
+        "Liquidity wedge is a nonreplicable/frictional benchmark, not inconsistent simultaneous executable prices."
+      ],
+      "numerical_evidence": "scripts/check_v10_c04.py independent event/path/integration checks and domain tests; equity_peer independent reconstruction pending. Peer-discovered valid q-near1 rounding issue repaired with exact survival complement.",
+      "source_review": "Actual Merton publisher body, Duffie preliminary1998 author manuscript and Han–Zhou dated fullpaper inspected within recorded sections. No diffusion theorem, current bankruptcy law, empirical numerical result or current credit quote imported.",
+      "peer_review": "content/reviews/v10-c04-peer.json"
+    }
+  },
+  "resolved_findings": [
+    "c03 prerequisite routes changed from curriculum placeholders to existing c01/c02 manuscripts before author freeze.",
+    "c01 peer required stronger C1 assumption for the displayed integral identity; root repaired and rebound author hashes.",
+    "c04 peer found valid near-unit exact default probability rounded to float1; author repaired finite-intensity calculation using exact positive survival and added regression evidence.",
+    "c04 exact-zero serialization for empty event sums repaired with Fraction-zero initializers; independent peer confirmed values and promised JSON types.",
+    "Applied existing screen/print equation style to the formula class used by nine c03 displays. No design change."
+  ],
+  "open_content_findings": [],
+  "remaining_gates": [
+    "same-Site private publication"
+  ],
+  "limitations": [
+    "Machine-assisted peer/coordinator review is not external human certification.",
+    "All numerical inputs are original synthetic contracts; no market forecasting adequacy or investment outcome is asserted.",
+    "Visual/mobile/keyboard/print UI review remains pending; denied local-file browser preview was not circumvented."
+  ],
+  "peer_validation": "production/v10-opening-peer-validation.json",
+  "full_regression": "production/v10-opening-full-verification.json",
+  "offline_validation": "production/v10-opening-offline-validation.json"
+}

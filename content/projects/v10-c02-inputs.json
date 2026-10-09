@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "contract": "deterministic fixed cash flows; fixed settlement; no tax, credit loss, option or fee except named interventions",
+  "note": {
+    "times_years": [1, 2, 3, 4],
+    "cash_flows": [4, 4, 4, 104],
+    "frequency": 1,
+    "nominal_annual_yield": 0.05,
+    "accrued_interest": 0,
+    "yield_shifts": [-0.01, 0.01, 0.10],
+    "finite_difference_step": 0.0001
+  },
+  "immunization": {
+    "liability_time": 3,
+    "liability_amount": 125,
+    "asset_times": [1, 5],
+    "base_annual_yield": 0.05,
+    "parallel_yield_shifts": [-0.01, 0.01, 0.10],
+    "later_short_reinvestment_yield": 0,
+    "later_long_sale_yield": 0.10,
+    "entry_fee_rate": 0.002,
+    "changed_long_payoff_fraction": 0.9
+  },
+  "key_rate_curve": {
+    "convention": "piecewise-linear continuous zero rates; no extrapolation; baseline flat at log(1+base_annual_yield)",
+    "key_times": [1, 3, 5],
+    "scenarios": [
+      {"name": "parallel_continuous_100bp", "bumps": [0.01, 0.01, 0.01]},
+      {"name": "adverse_twist", "bumps": [-0.01, 0, 0.01]},
+      {"name": "middle_only_100bp", "bumps": [0, 0.01, 0]}
+    ]
+  },
+  "local_counterexample": {
+    "contract": "S(d)=scale*d*(d-1)^2*(cutoff-d), d=1/(1+y); baseline annual yield is zero",
+    "scale": 100,
+    "discount_cutoff": 1.2,
+    "stress_yield": -0.2
+  }
+}

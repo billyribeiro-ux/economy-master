@@ -1,0 +1,1293 @@
+{
+  "schema": "v10-c03-finite-tree-v1",
+  "contract": {
+    "dates_years": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "currency": "CU",
+    "payment_timing": "end-period",
+    "trading": "frictionless signed positions; equal node borrowing and lending rates",
+    "outside_storage": "no external costless cash storage"
+  },
+  "models": {
+    "base": {
+      "dispersion": "1/50",
+      "levels": [
+        "49/50",
+        "95/98",
+        "45500/47519"
+      ],
+      "node_discounts": [
+        [
+          "49/50"
+        ],
+        [
+          "969/980",
+          "19/20"
+        ],
+        [
+          "47320/47519",
+          "45500/47519",
+          "43680/47519"
+        ]
+      ],
+      "short_rates": [
+        [
+          "1/49"
+        ],
+        [
+          "11/969",
+          "1/19"
+        ],
+        [
+          "199/47320",
+          "2019/45500",
+          "3839/43680"
+        ]
+      ],
+      "arrow_weights": [
+        [
+          "1"
+        ],
+        [
+          "49/100",
+          "49/100"
+        ],
+        [
+          "969/4000",
+          "19/40",
+          "931/4000"
+        ],
+        [
+          "60333/500200",
+          "174083/500200",
+          "83629/250100",
+          "13377/125050"
+        ]
+      ],
+      "discount_sums": [
+        "1",
+        "49/50",
+        "19/20",
+        "91/100"
+      ],
+      "Q_node_probabilities": [
+        [
+          "1"
+        ],
+        [
+          "1/2",
+          "1/2"
+        ],
+        [
+          "1/4",
+          "1/2",
+          "1/4"
+        ],
+        [
+          "1/8",
+          "3/8",
+          "3/8",
+          "1/8"
+        ]
+      ],
+      "P_node_probabilities": [
+        [
+          "1"
+        ],
+        [
+          "3/10",
+          "7/10"
+        ],
+        [
+          "9/50",
+          "13/50",
+          "14/25"
+        ],
+        [
+          "9/100",
+          "11/50",
+          "41/100",
+          "7/25"
+        ]
+      ],
+      "zero_prices": {
+        "1": [
+          [
+            "49/50"
+          ],
+          [
+            "1",
+            "1"
+          ]
+        ],
+        "2": [
+          [
+            "19/20"
+          ],
+          [
+            "969/980",
+            "19/20"
+          ],
+          [
+            "1",
+            "1",
+            "1"
+          ]
+        ],
+        "3": [
+          [
+            "91/100"
+          ],
+          [
+            "33813/35014",
+            "4459/5002"
+          ],
+          [
+            "47320/47519",
+            "45500/47519",
+            "43680/47519"
+          ],
+          [
+            "1",
+            "1",
+            "1",
+            "1"
+          ]
+        ]
+      },
+      "coupon_ex_payment_values": [
+        [
+          "526/5"
+        ],
+        [
+          "52128579/490196",
+          "983909/10004"
+        ],
+        [
+          "4968600/47519",
+          "4777500/47519",
+          "4586400/47519"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "coupon_curve_price": "526/5",
+      "claim": {
+        "branch_payoffs": [
+          "141/49",
+          "0"
+        ],
+        "price": "141/100",
+        "hedge_units_face1_zero2": "1410/19",
+        "hedge_cash_at0": "-6909/100",
+        "hedge_initial_cost": "141/100",
+        "hedge_branch_payoffs": [
+          "141/49",
+          "0"
+        ],
+        "hedge_rank": "two distinct successor bond values"
+      },
+      "forward_vs_expectations": {
+        "forward_1_2": "3/95",
+        "Q_expected_short1": "31/969",
+        "P_expected_short1": "13/323",
+        "forward_minus_Q": "-2/4845",
+        "Q_minus_P": "-8/969",
+        "forward_minus_P": "-14/1615"
+      },
+      "holding_premiums": [
+        {
+          "time": 0,
+          "node": 0,
+          "bond_maturity": 2,
+          "bond_price": "19/20",
+          "branch_gross_returns": [
+            "51/49",
+            "1"
+          ],
+          "physical_expected_simple_return": "3/245",
+          "risk_free_simple_rate": "1/49",
+          "expected_excess_return": "-2/245",
+          "local_P_sdf": [
+            "49/30",
+            "7/10"
+          ],
+          "sdf_return_covariance": "1/125"
+        },
+        {
+          "time": 1,
+          "node": 0,
+          "bond_maturity": 3,
+          "bond_price": "33813/35014",
+          "branch_gross_returns": [
+            "50960/49419",
+            "49000/49419"
+          ],
+          "physical_expected_simple_return": "757/49419",
+          "risk_free_simple_rate": "11/969",
+          "expected_excess_return": "196/49419",
+          "local_P_sdf": [
+            "323/392",
+            "969/784"
+          ],
+          "sdf_return_covariance": "-1/255"
+        },
+        {
+          "time": 1,
+          "node": 1,
+          "bond_maturity": 3,
+          "bond_price": "4459/5002",
+          "branch_gross_returns": [
+            "1000/931",
+            "960/931"
+          ],
+          "physical_expected_simple_return": "37/931",
+          "risk_free_simple_rate": "1/19",
+          "expected_excess_return": "-12/931",
+          "local_P_sdf": [
+            "19/8",
+            "19/32"
+          ],
+          "sdf_return_covariance": "3/245"
+        }
+      ],
+      "terminal_paths": [
+        {
+          "path": "LLL",
+          "terminal_node": 0,
+          "Q_probability": "1/8",
+          "P_probability": "9/100",
+          "discount_product": "60333/62525",
+          "bank_history": [
+            "1",
+            "50/49",
+            "1000/969",
+            "62525/60333"
+          ],
+          "state_price": "60333/500200",
+          "P_sdf": "20111/15006"
+        },
+        {
+          "path": "LLH",
+          "terminal_node": 1,
+          "Q_probability": "1/8",
+          "P_probability": "9/100",
+          "discount_product": "60333/62525",
+          "bank_history": [
+            "1",
+            "50/49",
+            "1000/969",
+            "62525/60333"
+          ],
+          "state_price": "60333/500200",
+          "P_sdf": "20111/15006"
+        },
+        {
+          "path": "LHL",
+          "terminal_node": 1,
+          "Q_probability": "1/8",
+          "P_probability": "3/50",
+          "discount_product": "4641/5002",
+          "bank_history": [
+            "1",
+            "50/49",
+            "1000/969",
+            "5002/4641"
+          ],
+          "state_price": "4641/40016",
+          "P_sdf": "38675/20008"
+        },
+        {
+          "path": "LHH",
+          "terminal_node": 2,
+          "Q_probability": "1/8",
+          "P_probability": "3/50",
+          "discount_product": "4641/5002",
+          "bank_history": [
+            "1",
+            "50/49",
+            "1000/969",
+            "5002/4641"
+          ],
+          "state_price": "4641/40016",
+          "P_sdf": "38675/20008"
+        },
+        {
+          "path": "HLL",
+          "terminal_node": 1,
+          "Q_probability": "1/8",
+          "P_probability": "7/100",
+          "discount_product": "4459/5002",
+          "bank_history": [
+            "1",
+            "50/49",
+            "1000/931",
+            "5002/4459"
+          ],
+          "state_price": "4459/40016",
+          "P_sdf": "15925/10004"
+        },
+        {
+          "path": "HLH",
+          "terminal_node": 2,
+          "Q_probability": "1/8",
+          "P_probability": "7/100",
+          "discount_product": "4459/5002",
+          "bank_history": [
+            "1",
+            "50/49",
+            "1000/931",
+            "5002/4459"
+          ],
+          "state_price": "4459/40016",
+          "P_sdf": "15925/10004"
+        },
+        {
+          "path": "HHL",
+          "terminal_node": 2,
+          "Q_probability": "1/8",
+          "P_probability": "7/25",
+          "discount_product": "53508/62525",
+          "bank_history": [
+            "1",
+            "50/49",
+            "1000/931",
+            "62525/53508"
+          ],
+          "state_price": "13377/125050",
+          "P_sdf": "1911/5002"
+        },
+        {
+          "path": "HHH",
+          "terminal_node": 3,
+          "Q_probability": "1/8",
+          "P_probability": "7/25",
+          "discount_product": "53508/62525",
+          "bank_history": [
+            "1",
+            "50/49",
+            "1000/931",
+            "62525/53508"
+          ],
+          "state_price": "13377/125050",
+          "P_sdf": "1911/5002"
+        }
+      ]
+    },
+    "deterministic": {
+      "dispersion": "0",
+      "levels": [
+        "49/50",
+        "95/98",
+        "91/95"
+      ],
+      "node_discounts": [
+        [
+          "49/50"
+        ],
+        [
+          "95/98",
+          "95/98"
+        ],
+        [
+          "91/95",
+          "91/95",
+          "91/95"
+        ]
+      ],
+      "short_rates": [
+        [
+          "1/49"
+        ],
+        [
+          "3/95",
+          "3/95"
+        ],
+        [
+          "4/91",
+          "4/91",
+          "4/91"
+        ]
+      ],
+      "arrow_weights": [
+        [
+          "1"
+        ],
+        [
+          "49/100",
+          "49/100"
+        ],
+        [
+          "19/80",
+          "19/40",
+          "19/80"
+        ],
+        [
+          "91/800",
+          "273/800",
+          "273/800",
+          "91/800"
+        ]
+      ],
+      "discount_sums": [
+        "1",
+        "49/50",
+        "19/20",
+        "91/100"
+      ],
+      "Q_node_probabilities": [
+        [
+          "1"
+        ],
+        [
+          "1/2",
+          "1/2"
+        ],
+        [
+          "1/4",
+          "1/2",
+          "1/4"
+        ],
+        [
+          "1/8",
+          "3/8",
+          "3/8",
+          "1/8"
+        ]
+      ],
+      "P_node_probabilities": [
+        [
+          "1"
+        ],
+        [
+          "3/10",
+          "7/10"
+        ],
+        [
+          "9/50",
+          "13/50",
+          "14/25"
+        ],
+        [
+          "9/100",
+          "11/50",
+          "41/100",
+          "7/25"
+        ]
+      ],
+      "zero_prices": {
+        "1": [
+          [
+            "49/50"
+          ],
+          [
+            "1",
+            "1"
+          ]
+        ],
+        "2": [
+          [
+            "19/20"
+          ],
+          [
+            "95/98",
+            "95/98"
+          ],
+          [
+            "1",
+            "1",
+            "1"
+          ]
+        ],
+        "3": [
+          [
+            "91/100"
+          ],
+          [
+            "13/14",
+            "13/14"
+          ],
+          [
+            "91/95",
+            "91/95",
+            "91/95"
+          ],
+          [
+            "1",
+            "1",
+            "1",
+            "1"
+          ]
+        ]
+      },
+      "coupon_ex_payment_values": [
+        [
+          "526/5"
+        ],
+        [
+          "5015/49",
+          "5015/49"
+        ],
+        [
+          "1911/19",
+          "1911/19",
+          "1911/19"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "coupon_curve_price": "526/5",
+      "claim": {
+        "branch_payoffs": [
+          "46/49",
+          "46/49"
+        ],
+        "price": "23/25",
+        "hedge_units_face1_zero2": "0",
+        "hedge_cash_at0": "23/25",
+        "hedge_initial_cost": "23/25",
+        "hedge_branch_payoffs": [
+          "46/49",
+          "46/49"
+        ],
+        "hedge_rank": "redundant bond; bank-only replica chosen"
+      },
+      "forward_vs_expectations": {
+        "forward_1_2": "3/95",
+        "Q_expected_short1": "3/95",
+        "P_expected_short1": "3/95",
+        "forward_minus_Q": "0",
+        "Q_minus_P": "0",
+        "forward_minus_P": "0"
+      },
+      "holding_premiums": [
+        {
+          "time": 0,
+          "node": 0,
+          "bond_maturity": 2,
+          "bond_price": "19/20",
+          "branch_gross_returns": [
+            "50/49",
+            "50/49"
+          ],
+          "physical_expected_simple_return": "1/49",
+          "risk_free_simple_rate": "1/49",
+          "expected_excess_return": "0",
+          "local_P_sdf": [
+            "49/30",
+            "7/10"
+          ],
+          "sdf_return_covariance": "0"
+        },
+        {
+          "time": 1,
+          "node": 0,
+          "bond_maturity": 3,
+          "bond_price": "13/14",
+          "branch_gross_returns": [
+            "98/95",
+            "98/95"
+          ],
+          "physical_expected_simple_return": "3/95",
+          "risk_free_simple_rate": "3/95",
+          "expected_excess_return": "0",
+          "local_P_sdf": [
+            "475/588",
+            "475/392"
+          ],
+          "sdf_return_covariance": "0"
+        },
+        {
+          "time": 1,
+          "node": 1,
+          "bond_maturity": 3,
+          "bond_price": "13/14",
+          "branch_gross_returns": [
+            "98/95",
+            "98/95"
+          ],
+          "physical_expected_simple_return": "3/95",
+          "risk_free_simple_rate": "3/95",
+          "expected_excess_return": "0",
+          "local_P_sdf": [
+            "475/196",
+            "475/784"
+          ],
+          "sdf_return_covariance": "0"
+        }
+      ],
+      "terminal_paths": [
+        {
+          "path": "LLL",
+          "terminal_node": 0,
+          "Q_probability": "1/8",
+          "P_probability": "9/100",
+          "discount_product": "91/100",
+          "bank_history": [
+            "1",
+            "50/49",
+            "20/19",
+            "100/91"
+          ],
+          "state_price": "91/800",
+          "P_sdf": "91/72"
+        },
+        {
+          "path": "LLH",
+          "terminal_node": 1,
+          "Q_probability": "1/8",
+          "P_probability": "9/100",
+          "discount_product": "91/100",
+          "bank_history": [
+            "1",
+            "50/49",
+            "20/19",
+            "100/91"
+          ],
+          "state_price": "91/800",
+          "P_sdf": "91/72"
+        },
+        {
+          "path": "LHL",
+          "terminal_node": 1,
+          "Q_probability": "1/8",
+          "P_probability": "3/50",
+          "discount_product": "91/100",
+          "bank_history": [
+            "1",
+            "50/49",
+            "20/19",
+            "100/91"
+          ],
+          "state_price": "91/800",
+          "P_sdf": "91/48"
+        },
+        {
+          "path": "LHH",
+          "terminal_node": 2,
+          "Q_probability": "1/8",
+          "P_probability": "3/50",
+          "discount_product": "91/100",
+          "bank_history": [
+            "1",
+            "50/49",
+            "20/19",
+            "100/91"
+          ],
+          "state_price": "91/800",
+          "P_sdf": "91/48"
+        },
+        {
+          "path": "HLL",
+          "terminal_node": 1,
+          "Q_probability": "1/8",
+          "P_probability": "7/100",
+          "discount_product": "91/100",
+          "bank_history": [
+            "1",
+            "50/49",
+            "20/19",
+            "100/91"
+          ],
+          "state_price": "91/800",
+          "P_sdf": "13/8"
+        },
+        {
+          "path": "HLH",
+          "terminal_node": 2,
+          "Q_probability": "1/8",
+          "P_probability": "7/100",
+          "discount_product": "91/100",
+          "bank_history": [
+            "1",
+            "50/49",
+            "20/19",
+            "100/91"
+          ],
+          "state_price": "91/800",
+          "P_sdf": "13/8"
+        },
+        {
+          "path": "HHL",
+          "terminal_node": 2,
+          "Q_probability": "1/8",
+          "P_probability": "7/25",
+          "discount_product": "91/100",
+          "bank_history": [
+            "1",
+            "50/49",
+            "20/19",
+            "100/91"
+          ],
+          "state_price": "91/800",
+          "P_sdf": "13/32"
+        },
+        {
+          "path": "HHH",
+          "terminal_node": 3,
+          "Q_probability": "1/8",
+          "P_probability": "7/25",
+          "discount_product": "91/100",
+          "bank_history": [
+            "1",
+            "50/49",
+            "20/19",
+            "100/91"
+          ],
+          "state_price": "91/800",
+          "P_sdf": "13/32"
+        }
+      ]
+    },
+    "wide": {
+      "dispersion": "1/25",
+      "levels": [
+        "49/50",
+        "95/98",
+        "11375/11894"
+      ],
+      "node_discounts": [
+        [
+          "49/50"
+        ],
+        [
+          "247/245",
+          "228/245"
+        ],
+        [
+          "12285/11894",
+          "11375/11894",
+          "10465/11894"
+        ]
+      ],
+      "short_rates": [
+        [
+          "1/49"
+        ],
+        [
+          "-2/247",
+          "17/228"
+        ],
+        [
+          "-391/12285",
+          "519/11375",
+          "1429/10465"
+        ]
+      ],
+      "arrow_weights": [
+        [
+          "1"
+        ],
+        [
+          "49/100",
+          "49/100"
+        ],
+        [
+          "247/1000",
+          "19/40",
+          "57/250"
+        ],
+        [
+          "31941/250400",
+          "5551/15650",
+          "81991/250400",
+          "6279/62600"
+        ]
+      ],
+      "discount_sums": [
+        "1",
+        "49/50",
+        "19/20",
+        "91/100"
+      ],
+      "Q_node_probabilities": [
+        [
+          "1"
+        ],
+        [
+          "1/2",
+          "1/2"
+        ],
+        [
+          "1/4",
+          "1/2",
+          "1/4"
+        ],
+        [
+          "1/8",
+          "3/8",
+          "3/8",
+          "1/8"
+        ]
+      ],
+      "P_node_probabilities": [
+        [
+          "1"
+        ],
+        [
+          "3/10",
+          "7/10"
+        ],
+        [
+          "9/50",
+          "13/50",
+          "14/25"
+        ],
+        [
+          "9/100",
+          "11/50",
+          "41/100",
+          "7/25"
+        ]
+      ],
+      "zero_prices": {
+        "1": [
+          [
+            "49/50"
+          ],
+          [
+            "1",
+            "1"
+          ]
+        ],
+        "2": [
+          [
+            "19/20"
+          ],
+          [
+            "247/245",
+            "228/245"
+          ],
+          [
+            "1",
+            "1",
+            "1"
+          ]
+        ],
+        "3": [
+          [
+            "91/100"
+          ],
+          [
+            "2197/2191",
+            "1872/2191"
+          ],
+          [
+            "12285/11894",
+            "11375/11894",
+            "10465/11894"
+          ],
+          [
+            "1",
+            "1",
+            "1",
+            "1"
+          ]
+        ]
+      },
+      "coupon_ex_payment_values": [
+        [
+          "526/5"
+        ],
+        [
+          "1692106/15337",
+          "1447284/15337"
+        ],
+        [
+          "1289925/11894",
+          "1194375/11894",
+          "1098825/11894"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "coupon_curve_price": "526/5",
+      "claim": {
+        "branch_payoffs": [
+          "236/49",
+          "0"
+        ],
+        "price": "59/25",
+        "hedge_units_face1_zero2": "1180/19",
+        "hedge_cash_at0": "-1416/25",
+        "hedge_initial_cost": "59/25",
+        "hedge_branch_payoffs": [
+          "236/49",
+          "0"
+        ],
+        "hedge_rank": "two distinct successor bond values"
+      },
+      "forward_vs_expectations": {
+        "forward_1_2": "3/95",
+        "Q_expected_short1": "197/5928",
+        "P_expected_short1": "295/5928",
+        "forward_minus_Q": "-49/29640",
+        "Q_minus_P": "-49/2964",
+        "forward_minus_P": "-539/29640"
+      },
+      "holding_premiums": [
+        {
+          "time": 0,
+          "node": 0,
+          "bond_maturity": 2,
+          "bond_price": "19/20",
+          "branch_gross_returns": [
+            "52/49",
+            "48/49"
+          ],
+          "physical_expected_simple_return": "1/245",
+          "risk_free_simple_rate": "1/49",
+          "expected_excess_return": "-4/245",
+          "local_P_sdf": [
+            "49/30",
+            "7/10"
+          ],
+          "sdf_return_covariance": "2/125"
+        },
+        {
+          "time": 1,
+          "node": 0,
+          "bond_maturity": 3,
+          "bond_price": "2197/2191",
+          "branch_gross_returns": [
+            "6615/6422",
+            "6125/6422"
+          ],
+          "physical_expected_simple_return": "-3/6422",
+          "risk_free_simple_rate": "-2/247",
+          "expected_excess_return": "49/6422",
+          "local_P_sdf": [
+            "247/294",
+            "247/196"
+          ],
+          "sdf_return_covariance": "-1/130"
+        },
+        {
+          "time": 1,
+          "node": 1,
+          "bond_maturity": 3,
+          "bond_price": "1872/2191",
+          "branch_gross_returns": [
+            "6125/5472",
+            "5635/5472"
+          ],
+          "physical_expected_simple_return": "29/608",
+          "risk_free_simple_rate": "17/228",
+          "expected_excess_return": "-49/1824",
+          "local_P_sdf": [
+            "114/49",
+            "57/98"
+          ],
+          "sdf_return_covariance": "1/40"
+        }
+      ],
+      "terminal_paths": [
+        {
+          "path": "LLL",
+          "terminal_node": 0,
+          "Q_probability": "1/8",
+          "P_probability": "9/100",
+          "discount_product": "31941/31300",
+          "bank_history": [
+            "1",
+            "50/49",
+            "250/247",
+            "31300/31941"
+          ],
+          "state_price": "31941/250400",
+          "P_sdf": "3549/2504"
+        },
+        {
+          "path": "LLH",
+          "terminal_node": 1,
+          "Q_probability": "1/8",
+          "P_probability": "9/100",
+          "discount_product": "31941/31300",
+          "bank_history": [
+            "1",
+            "50/49",
+            "250/247",
+            "31300/31941"
+          ],
+          "state_price": "31941/250400",
+          "P_sdf": "3549/2504"
+        },
+        {
+          "path": "LHL",
+          "terminal_node": 1,
+          "Q_probability": "1/8",
+          "P_probability": "3/50",
+          "discount_product": "1183/1252",
+          "bank_history": [
+            "1",
+            "50/49",
+            "250/247",
+            "1252/1183"
+          ],
+          "state_price": "1183/10016",
+          "P_sdf": "29575/15024"
+        },
+        {
+          "path": "LHH",
+          "terminal_node": 2,
+          "Q_probability": "1/8",
+          "P_probability": "3/50",
+          "discount_product": "1183/1252",
+          "bank_history": [
+            "1",
+            "50/49",
+            "250/247",
+            "1252/1183"
+          ],
+          "state_price": "1183/10016",
+          "P_sdf": "29575/15024"
+        },
+        {
+          "path": "HLL",
+          "terminal_node": 1,
+          "Q_probability": "1/8",
+          "P_probability": "7/100",
+          "discount_product": "273/313",
+          "bank_history": [
+            "1",
+            "50/49",
+            "125/114",
+            "313/273"
+          ],
+          "state_price": "273/2504",
+          "P_sdf": "975/626"
+        },
+        {
+          "path": "HLH",
+          "terminal_node": 2,
+          "Q_probability": "1/8",
+          "P_probability": "7/100",
+          "discount_product": "273/313",
+          "bank_history": [
+            "1",
+            "50/49",
+            "125/114",
+            "313/273"
+          ],
+          "state_price": "273/2504",
+          "P_sdf": "975/626"
+        },
+        {
+          "path": "HHL",
+          "terminal_node": 2,
+          "Q_probability": "1/8",
+          "P_probability": "7/25",
+          "discount_product": "6279/7825",
+          "bank_history": [
+            "1",
+            "50/49",
+            "125/114",
+            "7825/6279"
+          ],
+          "state_price": "6279/62600",
+          "P_sdf": "897/2504"
+        },
+        {
+          "path": "HHH",
+          "terminal_node": 3,
+          "Q_probability": "1/8",
+          "P_probability": "7/25",
+          "discount_product": "6279/7825",
+          "bank_history": [
+            "1",
+            "50/49",
+            "125/114",
+            "7825/6279"
+          ],
+          "state_price": "6279/62600",
+          "P_sdf": "897/2504"
+        }
+      ]
+    }
+  },
+  "frozen_base_hedge_model_risk": {
+    "base": {
+      "frozen_base_hedge_payoffs": [
+        "141/49",
+        "0"
+      ],
+      "claim_payoffs": [
+        "141/49",
+        "0"
+      ],
+      "branch_errors": [
+        "0",
+        "0"
+      ],
+      "priced_error": "0",
+      "base_price_minus_model_price": "0"
+    },
+    "deterministic": {
+      "frozen_base_hedge_payoffs": [
+        "141/98",
+        "141/98"
+      ],
+      "claim_payoffs": [
+        "46/49",
+        "46/49"
+      ],
+      "branch_errors": [
+        "1/2",
+        "1/2"
+      ],
+      "priced_error": "49/100",
+      "base_price_minus_model_price": "49/100"
+    },
+    "wide": {
+      "frozen_base_hedge_payoffs": [
+        "423/98",
+        "-141/98"
+      ],
+      "claim_payoffs": [
+        "236/49",
+        "0"
+      ],
+      "branch_errors": [
+        "-1/2",
+        "-141/98"
+      ],
+      "priced_error": "-19/20",
+      "base_price_minus_model_price": "-19/20"
+    }
+  },
+  "curve_scenarios": {
+    "lower_D2": {
+      "discount_curve": [
+        "1",
+        "49/50",
+        "47/50",
+        "91/100"
+      ],
+      "node_discounts": [
+        [
+          "49/50"
+        ],
+        [
+          "2397/2450",
+          "47/50"
+        ],
+        [
+          "118300/117547",
+          "113750/117547",
+          "109200/117547"
+        ]
+      ],
+      "discount_sums": [
+        "1",
+        "49/50",
+        "47/50",
+        "91/100"
+      ],
+      "coupon_price": "2103/20",
+      "coupon_change": "-1/20",
+      "claim_price": "9/10",
+      "claim_change": "-51/100"
+    },
+    "lower_D3": {
+      "discount_curve": [
+        "1",
+        "49/50",
+        "19/20",
+        "181/200"
+      ],
+      "node_discounts": [
+        [
+          "49/50"
+        ],
+        [
+          "969/980",
+          "19/20"
+        ],
+        [
+          "47060/47519",
+          "45250/47519",
+          "43440/47519"
+        ]
+      ],
+      "discount_sums": [
+        "1",
+        "49/50",
+        "19/20",
+        "181/200"
+      ],
+      "coupon_price": "4187/40",
+      "coupon_change": "-21/40",
+      "claim_price": "141/100",
+      "claim_change": "0"
+    }
+  },
+  "mean_reversion": {
+    "contract": "separate physical model; independent equiprobable +/- innovations; not curve calibrated",
+    "terminal_mean": "7/200",
+    "terminal_variance": "1/8000",
+    "analytic_mean": "7/200",
+    "analytic_variance": "1/8000",
+    "paths": [
+      {
+        "shocks": [
+          -1,
+          -1
+        ],
+        "rates": [
+          "2/25",
+          "1/25",
+          "1/50"
+        ]
+      },
+      {
+        "shocks": [
+          -1,
+          1
+        ],
+        "rates": [
+          "2/25",
+          "1/25",
+          "1/25"
+        ]
+      },
+      {
+        "shocks": [
+          1,
+          -1
+        ],
+        "rates": [
+          "2/25",
+          "3/50",
+          "3/100"
+        ]
+      },
+      {
+        "shocks": [
+          1,
+          1
+        ],
+        "rates": [
+          "2/25",
+          "3/50",
+          "1/20"
+        ]
+      }
+    ]
+  }
+}

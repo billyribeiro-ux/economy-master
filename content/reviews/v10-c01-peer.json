@@ -1,0 +1,231 @@
+{
+  "chapter": "v10-c01",
+  "title": "Bond cash flows and yield curves",
+  "reviewer": "cost_peer",
+  "date": "2026-10-09",
+  "assignment": "production/v10-opening-c01-peer-assignment.json",
+  "state": "complete independent peer review; all owned artifacts frozen",
+  "recommendation": "Ready for coordinator acceptance: the single proof-regularity finding is resolved and independently verified; no open substantive findings.",
+  "scope": "Full manuscript, all four worked cases and ten exercise/solution pairs, complete proofs and teaching/retention, actual prerequisite interfaces, entire analysis/input/output/README/manifest, author numerical checker, author review and scoped source bodies. No reviewed payload or shared state was edited; only two persisted peer-owned paths are used.",
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c01.html",
+      "bytes": 42939,
+      "sha256": "498d326512c0ac336c1a2cfd84700583b402fde5b0ef23efba109bf0b650368f"
+    },
+    {
+      "path": "content/projects/v10-c01-inputs.json",
+      "bytes": 1094,
+      "sha256": "bbbfb12315284006afc127ee2fd2626199a497ae796347adff4f645e980f8524"
+    },
+    {
+      "path": "content/projects/v10-c01-analysis.py",
+      "bytes": 10718,
+      "sha256": "12ad4eee764f61d6458e15c5bc3aee26882f38f383e64a00b783ab389ba2c104"
+    },
+    {
+      "path": "content/projects/v10-c01-output.json",
+      "bytes": 2733,
+      "sha256": "6fe1abfe2f1a1055fa4b47fe621fe90c53057dbc1c012a83fd41f451c36c0d61"
+    },
+    {
+      "path": "content/projects/v10-c01-manifest.json",
+      "bytes": 771,
+      "sha256": "b564c17fe5644fe3be8e322b6709e1f485465ee4ca6b833e456c038f9539f4ba"
+    },
+    {
+      "path": "content/projects/v10-c01-README.txt",
+      "bytes": 11152,
+      "sha256": "9cfc01a0ba237736b2d9b516c3f854b2f670fbf574182df39bbaed7466aaac86"
+    },
+    {
+      "path": "scripts/check_v10_c01.py",
+      "bytes": 17503,
+      "sha256": "1a888f51c1cb8c6c6aada90c5bf895f3f49db38a364a19b3599d7f911c59b1a2"
+    },
+    {
+      "path": "content/reviews/v10-c01-sources.json",
+      "bytes": 3020,
+      "sha256": "8835a2316b2437d020972ba28e83f172f17b19f28897413644dd762a03e9ee0f"
+    },
+    {
+      "path": "content/reviews/v10-c01-author.json",
+      "bytes": 6749,
+      "sha256": "75b02c12b6f768354dc1fa5c66a0880d1ba83345a46bb017fd0adbe7e13b953d"
+    }
+  ],
+  "independence": {
+    "author_checker": "Read the entire coordinator checker as reviewed code; never imported or called it as the numerical oracle.",
+    "numeric_methods": [
+      "Independent exact 3x3 determinant/Cramer solutions of the full pricing and transposed replication systems, distinct from author triangular algorithms.",
+      "Actual month-length sums independently reconstruct ordinary and leap-year intervals.",
+      "70-digit Decimal quadratic solution verifies the coupon yield against the model log-gross bisection.",
+      "Separate signed current and future ledgers verify target arbitrage, lending-forward funding and two-year borrowing comparison.",
+      "Independent interpolation log derivative and exact bill-denominator/annualization calculations."
+    ],
+    "system_under_test": "The author model run(data) and copied CLI are used only as the system whose answers are compared with independent calculations."
+  },
+  "worked_cases": [
+    {
+      "case": 1,
+      "review": "Contract supplies unadjusted dates and full next-coupon entitlement. Calendar spans 91/181/90/274, payments 3 and 103, dirty 99.76, accrued 273/181 and clean 444589/4525 reconcile. Face 250000 scales to invoice 249400; the 248000 treasury budget is short 1400. Accrual is neither an extra issuer payment nor a second addition to an already dirty price."
+    },
+    {
+      "case": 2,
+      "review": "Independent determinant systems yield D=(24/25,9/10,21/25), annual/continuous quotations and target PV 195/2. Actual A/B/C holdings (-25/2756,-25/2756,105/106) meet all three target cash dates. Quote 98 gives initial receipt 1/2 only under the stated executable signed-trading rights."
+    },
+    {
+      "case": 3,
+      "review": "The two-year coupon claim costs 2622/25; a separate high-precision quadratic gives YTM 0.05362041242951435. Cash accumulation 116 gives CAGR 0.05167767609720634, while coupon reinvestment at YTM gives 116.4289632994361. The dated IRR identity and accumulated wealth are correctly distinguished. The zero uses its own cash-flow-specific root."
+    },
+    {
+      "case": 4,
+      "review": "The fair forward entails (-60,+64), with opposite zero positions funding each date. The offered 7% lender contract pays 64.2, giving dated arbitrage gain 0.2 and PV 0.18. Zero initial value alone does not provide its later 60 cash obligation."
+    }
+  ],
+  "exercise_review": [
+    {
+      "exercise": 1,
+      "review": "Correct principal clock gives payments 120,165,157.5, PV 396 and fee-inclusive cash 398; fixed 20 interest instead overstates PV by 15."
+    },
+    {
+      "exercise": 2,
+      "review": "Leap-year intervals 90 and 182; exact accrued 225/182, dirty 91397/910 and invoice 9139700/91; inappropriate Actual/365 expression differs by 45/13286. Prompt and answer use the same full entitlement."
+    },
+    {
+      "exercise": 3,
+      "review": "Changed full system gives D2=2329/2600, D3=23157/27560 and target 268721/2756. Exact determinant sensitivity column is (0,1/104,-6/(106*104)); opposite signs correctly preserve the other quote."
+    },
+    {
+      "exercise": 4,
+      "review": "C at 10 yields D3=-29/2650. Positions (-3/52,-3/52,1) cancel both earlier cash dates, cost -29/25 and pay 106 at the final date. Clipping cannot fit or repair this contradiction."
+    },
+    {
+      "exercise": 5,
+      "review": "For nonnegative finite payments at strictly positive dates and positive finite price, continuity, strict negative derivative and endpoint limits prove existence/uniqueness on y>-1. Termwise spot-extreme comparison gives the bound. Negative future obligations can remove monotonicity. Coupon and zero yield differences are correctly attributed to payment timing."
+    },
+    {
+      "exercise": 6,
+      "review": "Fair two-year loan 70→80 has effective annual rate sqrt(8/7)-1. Borrowing 70 at 5% effective for two years owes 77.175; offsetting dated zero positions produce 113/40 at year 3, PV 2373/1000, and no earlier net deficit under authorized rights."
+    },
+    {
+      "exercise": 7,
+      "review": "Three midpoint prices 93, 92.951600308978 and 93.41752214444145 retain identical endpoints. Perturbed instantaneous forward ln(16/15)-0.02(3-2u) has positive minimum ln(16/15)-0.02, proving monotone positive alternatives remain observationally indistinguishable at quoted endpoints."
+    },
+    {
+      "exercise": 8,
+      "review": "Bill price 97; holding gain 3/97; simple 360 yield 6/97, simple 365 yield 73/1164, effective annual 591/9409 and continuous 2ln(100/97). Misusing face discount as investment yield gives 10000/103. All supplied clocks and denominators agree."
+    },
+    {
+      "exercise": 9,
+      "review": "Early ex-coupon sale 1080/11 plus coupon 8 yields 179/14421 one-year return. Changed resale price and coupon reinvestment explain distinct performance channels; omitted defaults/fees are not invented."
+    },
+    {
+      "exercise": 10,
+      "review": "Full-credit criteria properly distinguish rank at observed dates, interpolation restrictions, pricing forward from physical forecast, informative holdout design, quote sensitivity and information cutoff. It explicitly recognizes that dropping an identifying instrument can leave an underidentified system without extra observations/restrictions. Alternative defensible designs are allowed."
+    },
+    {
+      "exercise": "teach-back and delayed retention",
+      "review": "Mechanistic teaching benchmark is supplied. Retention dirty 100.82/clean 99.62; fair forward 95→99 has matched current zero costs 94.05 but a year 1 funding obligation; one-year price 101 implies yield -1/101 and becomes an arbitrage only with the stated extra storage/shorting permissions."
+    }
+  ],
+  "proof_and_teaching_review": {
+    "replication": "Cash-flow identity is separated from the ability to implement it. Compatible rights, simultaneous quotes, signed trading and costs are explicit.",
+    "positivity_and_negative_rates": "Positive zeros are necessary for freely tradable positive claims. Neither D<=1 nor monotonicity is inferred without the relevant storage/perimeter assumptions.",
+    "bootstrap": "Triangular uniqueness follows from nonzero diagonal; positive residual discounts are checked separately. Non-square/rank/inconsistency limits are taught.",
+    "yield": "Root domain, positive cash and strict future dates are explicit; the theorem does not assume coupon reinvestment, while a terminal wealth claim does.",
+    "curve_integral": "After repair, positive C1 D on [0,T] with D(0)=1 and formulas for 0<t<=T justify the ordinary Fundamental Theorem step and avoid zero-rate division at t=0. Piecewise log-linear forward jumps are separately described.",
+    "prerequisites": "No Ito or future option-pricing formula is used. Linear systems, ordinary calculus/integration, previous dated IRR and investment-return/positive-pricing chapters supply the actual methods. Every exercise has its necessary method locally explained or explicitly linked.",
+    "originality_and_fairness": "Original coherent fictional claims, four substantial calculations and ten graduate exercises include theorem proof and substantive research critique; the open answer has clear evaluation criteria rather than a single mandated opinion."
+  },
+  "lab_review": {
+    "bounded_contract": "Exact fixed semiannual date schedule and fixed A/B/C claims are guarded. Edited settlements, prices, target, face, rate and forward term are clearly bounded; no general holiday, irregular-date, credit or option engine is implied.",
+    "numbers": "Bounded financial strings become exact Fractions; root/log/interpolation output is finite floating point. Domain checks use explicit exceptions rather than optimization-removable assertions.",
+    "meaningful_interventions": [
+      "Settlement at initial coupon date and the last admitted day before next coupon.",
+      "Face doubled while total acquired face stays fixed: underlying values double but total invoice stays fixed.",
+      "Two-year forward borrowing comparison checks effective compounding and lender/borrower signs.",
+      "Single B-price change compared to independent determinant solution.",
+      "Above-one positive discounts produce admitted negative yield.",
+      "Zero coupon removes reinvestment cash without changing the root theorem."
+    ],
+    "coverage_limit": "Finite supported contracts and supplied quotes; no current market authentication or general-calendar/instrument claims. Complete output agreement and finite JSON are checked independently of the source author checker."
+  },
+  "sources": [
+    {
+      "id": "v10-c01-mit-fixed-income",
+      "inspection": "Actual official 29-page MIT PDF body reviewed, especially PDF indices 2–4 and 15–20: spot/forward relations, coupon YTM versus dated spots, executable matching and duration terminology. Rechecked during this peer task.",
+      "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/7437599950b0d45bfa3a4c4a3af00a3f_MIT15_401F08_rec02.pdf",
+      "limits": "Imperfect formula extraction and apparent negative convexity sign are disclosed/excluded. No universal perfect-immunization statement is adopted."
+    },
+    {
+      "id": "v10-c01-treasury-accrual",
+      "inspection": "Actual official HTML body reviewed at the accrued-interest description and the purchase-payment/first-coupon explanation. This supports only the stated institutional illustration.",
+      "url": "https://www.treasurydirect.gov/marketable-securities/buying-a-marketable-security/",
+      "limits": "No current auction, eligibility, tax, hold-period or settlement rule is imported into the fictional schedule."
+    },
+    {
+      "id": "v10-c01-boe-curve-estimation",
+      "inspection": "Actual 41-page official paper body read at printed pages 7–11/PDF indices 3–7: discount-factor cash-flow relation, missing-maturity identification, fit/smoothness/flexibility/stability purposes.",
+      "url": "https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2001/new-estimates-of-the-uk-real-and-nominal-yield-curves.pdf?hash=FB18E964049E0F2D8C3555BE5B5A54D6D3CB0483&la=en",
+      "limits": "The historical policy-purpose estimator preference and UK empirical estimates are not generalized into current or universal claims."
+    }
+  ],
+  "findings": [
+    {
+      "id": "v10-c01-peer-01",
+      "severity": "minor formal proof precision",
+      "location": "chapter section 8, integral discount/instantaneous-forward relation",
+      "original_issue": "Differentiability alone is insufficient regularity for the unqualified ordinary integral/Fundamental Theorem identity as written.",
+      "requested_repair": "State positive continuous differentiability on the interval with D(0)=1, or sufficient absolute continuity, and exclude t=0 from the average-zero-rate ratio.",
+      "coordinator_repair": "Positive C1 D on [0,T], D(0)=1 and 0<t<=T now explicitly stated; piecewise-knot qualification retained.",
+      "verification": "Read the repaired paragraph and following identity; explicit peer checker clause binds final wording. Current chapter hash 498d326512c0ac336c1a2cfd84700583b402fde5b0ef23efba109bf0b650368f.",
+      "state": "resolved and independently verified"
+    }
+  ],
+  "open_findings": [],
+  "limits": [
+    "Specialist AI review is independent of author numerical implementation but is not external human academic certification.",
+    "Primary sources are inspected only in recorded scopes; this is not authentication of a real security contract or contemporary quote.",
+    "No browser visual/mobile/keyboard/print validation is claimed.",
+    "Canonical acceptance, whole-library integration and publication remain coordinator responsibilities."
+  ],
+  "runtime_validation": {
+    "chapter": "v10-c01",
+    "reviewer": "cost_peer",
+    "passed": true,
+    "group_count": 10,
+    "groups": [
+      "quiet nonmutating model and complete reference JSON",
+      "month-length date reconstruction and actual settlement funding",
+      "independent determinant systems, every claim date and spot conversions",
+      "high-precision root, coupon strategy and early-sale ledger",
+      "forward funding and endpoint-preserving curve alternatives",
+      "all determinate exercise solutions and three delayed cases",
+      "independent date, face, multi-year, price and zero-coupon interventions",
+      "14 financial, calendar and contract-domain rejections",
+      "final repaired proof clause, HTML, sources and exact nine reviewed payloads",
+      "isolated normal and optimized model execution"
+    ],
+    "comparisons": 196,
+    "domain_rejections": 14,
+    "worked_cases": 4,
+    "exercises": 10,
+    "oracle_independence": "Never calls the author checker; determinant ratios, actual month lengths, 70-digit algebraic root and separate dated ledgers reconstruct the model.",
+    "limits": "Proofs, source scopes and open-answer adequacy also reviewed editorially. No real-market authentication, browser UI checks or independent human certification.",
+    "quiet_check": true,
+    "optimized_checker": true,
+    "commands": [
+      "python3 -O with runpy import and check() under redirected stdout/stderr; zero captured output and strict JSON verified",
+      "Checker executes isolated copied model with both normal and optimized Python, comparing complete output"
+    ],
+    "author_checker_execution": "not executed or used as oracle"
+  },
+  "owned_checker": "scripts/check_v10_c01_peer.py",
+  "owned_checker_hash": {
+    "path": "scripts/check_v10_c01_peer.py",
+    "bytes": 21658,
+    "sha256": "dbf819abef076b257b3c13b92ecc41b4e05ab1db1df9d72eb7451dccc82eac54"
+  },
+  "freeze_note": "The coordinator refreshed the persisted assignment to the repaired chapter and author hashes before the final gate. All nine reviewed payload hashes, their author/manifest records and independent peer runtime checks agree. No further peer edits planned."
+}

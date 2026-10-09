@@ -1,0 +1,25 @@
+{
+  "schema": "v10-c03-finite-tree-v1",
+  "contract": {
+    "dates_years": [0, 1, 2, 3],
+    "currency": "CU",
+    "payment_timing": "end-period",
+    "trading": "frictionless signed positions; equal node borrowing and lending rates",
+    "outside_storage": "no external costless cash storage"
+  },
+  "discount_curve": ["1", "49/50", "19/20", "91/100"],
+  "pricing_up": [["1/2"], ["1/2", "1/2"], ["1/2", "1/2", "1/2"]],
+  "physical_up": [["7/10"], ["2/5", "4/5"], ["1/2", "1/2", "1/2"]],
+  "models": [
+    {"name": "base", "dispersion": "1/50"},
+    {"name": "deterministic", "dispersion": "0"},
+    {"name": "wide", "dispersion": "1/25"}
+  ],
+  "cashflows": ["5", "5", "105"],
+  "claim": {"payment_time": 1, "bond_maturity": 2, "face": "100", "strike": "96"},
+  "curve_scenarios": [
+    {"name": "lower_D2", "discount_curve": ["1", "49/50", "47/50", "91/100"]},
+    {"name": "lower_D3", "discount_curve": ["1", "49/50", "19/20", "181/200"]}
+  ],
+  "mean_reversion": {"initial": "2/25", "level": "1/50", "phi": "1/2", "innovation": "1/100", "steps": 2}
+}

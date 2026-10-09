@@ -1,0 +1,199 @@
+{
+  "chapter": "v10-c03",
+  "title": "Term-structure models and rate risk",
+  "reviewer": "financial_diagnosis",
+  "date": "2026-10-09",
+  "assignment": "production/v10-opening-c03-peer-assignment.json",
+  "status": "passed_independent_peer_review",
+  "acceptance": "Recommendation to coordinator only; canonical acceptance, shared integration and publication remain root-owned.",
+  "independence": "Read the entire frozen chapter, README, inputs, analysis, reference output, manifest, author checker/review and source proposals. The separate peer checker never imports or executes the author checker and derives expectations from the original inputs before comparing the model as system under test. No submitted or shared file was modified.",
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c03.html",
+      "bytes": 49284,
+      "sha256": "5e126585813108e97a322dd7a728d1e21a623beddb2df2d211de7c84d7cce1da"
+    },
+    {
+      "path": "content/projects/v10-c03-inputs.json",
+      "bytes": 1055,
+      "sha256": "2dab39f819bfe6c3ac2976600b3d5f84d34a7847f81c87fe08894505d9ee1ce6"
+    },
+    {
+      "path": "content/projects/v10-c03-analysis.py",
+      "bytes": 14854,
+      "sha256": "8c039bd7da548716e61f336d20e267cdc844b6a7b0f5e77beadae344952cdf68"
+    },
+    {
+      "path": "content/projects/v10-c03-output.json",
+      "bytes": 27039,
+      "sha256": "f4a0317fca73a1590fb620d0c7bb3034e44459a542a2425d00f3793ad10effda"
+    },
+    {
+      "path": "content/projects/v10-c03-manifest.json",
+      "bytes": 749,
+      "sha256": "3da945f8a249335c36ce38c4eb5a49f095906e42713b69f8c9339ebe7f72fa85"
+    },
+    {
+      "path": "content/projects/v10-c03-README.txt",
+      "bytes": 11707,
+      "sha256": "27fcede1ee470e6efdca8023ee5b4e9fc2ee00f7e174aa94afd96fb1c52a7b9f"
+    },
+    {
+      "path": "scripts/check_v10_c03.py",
+      "bytes": 27850,
+      "sha256": "9eaaabe6645b9960f019fd2535014f78e4ae19bd601ea3613322200e536b7850"
+    },
+    {
+      "path": "content/reviews/v10-c03-author.json",
+      "bytes": 16011,
+      "sha256": "0b0b7a0cf0cdfad437c62177e35e58fe4c4ba738b1324ac3f81fbb28df602cf5"
+    },
+    {
+      "path": "content/reviews/v10-c03-sources.json",
+      "bytes": 3207,
+      "sha256": "d4cc9d3e9c33a2bd46742d9d36d94c7c2c315ec9d82aa4308d72e9d1b6408ea3"
+    }
+  ],
+  "freeze_changes": [],
+  "scope": {
+    "worked_examples": 4,
+    "complete_exercises_and_solutions": 10,
+    "proofs": "Finite self-financing bank-numeraire martingale/no-arbitrage; positive shape calibration existence and conditional uniqueness; local P-SDF covariance identity; forward harmonic-mean inequality; finite AR moments; two-state replication and rank.",
+    "instruction": "All required methods are taught locally or rely on explicit accepted finite-state prerequisites. Four worked cases, ten ordered prompt/solution pairs, research critique criteria, answered committee teach-back and delayed retention are complete. No Brownian/Ito or continuous-time option result is assumed."
+  },
+  "proof_and_model_audit": [
+    "At each node d is known before the next interval; the coupon and continuation are discounted together once. Ex-payment conventions and date-1 sale of a date-2 zero are consistent with the stated claim.",
+    "A predictable signed strategy in consistently priced assets, including distributions, has discounted self-financing wealth with constant conditional Q expectation. Finite states/finite positions ensure integrability; strict common P/Q support and strictly positive bank wealth exclude the stated arbitrage. This does not prove completeness.",
+    "Bank accumulation is history dependent even at a recombining rate node. LH and HL Arrow contributions remain separate before aggregation; normalized Arrow weights need not equal the bank-numeraire Q probabilities.",
+    "The fitted level is positive and unique conditional on chosen positive shape and conditional Q, with all earlier prices unchanged. The s bound is tied to the three-period fixture. Fitting initial discount points does not identify dispersion, physical beliefs or unique contingent-claim prices.",
+    "The physical return identity uses a positive local m=dq/p and the actual purchase price; the covariance relation was recomputed using the independent two-state difference formula. The forward combines next gross rates harmonically and need not equal even the Q mean.",
+    "The additive mean-reversion iteration and variance use independent centered unit-variance shocks. The phi=1 boundary is discussed through the finite sum; the physical example is not represented as fitted Q dynamics. A finite square-root step can leave its state domain, and clamping changes its mean.",
+    "The contingent hedge uses the distinct successor-price determinant and explicitly funds date-1 bank repayment. Equal successor prices at zero dispersion admit the stated bank-only replica for this equal-payoff claim. The manuscript does not infer universal replication from two arbitrarily chosen assets.",
+    "Negative rates above minus one are admissible only within the stated opportunity set. Adding outside costless storage supplies a new conditional arbitrage; it is not assumed in the original model.",
+    "Curve-coordinate recalibration derivatives are distinct from future-node hedge holdings. Both payoff boundaries and the invalid negative linear extrapolation are correct. Pricing scenarios carry no unstated physical occurrence law.",
+    "Source-based research critique correctly separates calibration residuals, physical forecasts, premium conventions and held-out hedge evidence. All five memo claims have substantive answers and the rubric permits defensible alternative validation designs."
+  ],
+  "worked_audit": [
+    {
+      "case": 1,
+      "independent_result": "c = (49/50,95/98,45500/47519); a2 = (969/4000,19/40,931/4000); all maturity prices match; the 5/5/105 bond is 105.20 CU."
+    },
+    {
+      "case": 2,
+      "independent_result": "E_Q r1 = 31/969, E_P r1 = 13/323, f = 3/95; forward minus P mean = -14/1615; root holding premium = -2/245; subsequent conditional premiums = 196/49419 and -12/931; covariance = 1/125."
+    },
+    {
+      "case": 3,
+      "independent_result": "Deterministic/base/wide claim prices are 0.92/1.41/2.36 CU. Base beta = 1410/19, cash = -69.09; wide beta = 1180/19, cash = -56.64. Frozen wide errors are -1/2 and -141/98, with price -0.95."
+    },
+    {
+      "case": 4,
+      "independent_result": "D2 = 0.94 yields coupon price 105.15 and claim price 0.90; D3 = 0.905 yields coupon price 104.675 and claim price 1.41. The D2 interior derivative 51 is conditional on the original strike region."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "number": 1,
+      "status": "passed",
+      "result": "Derived second shape moment 47519/50000 and level 45500/47519; the alternative fixed bond is 99.52 CU. The conditional fitted-level claim is precise."
+    },
+    {
+      "number": 2,
+      "status": "passed",
+      "result": "Bank LH = 1000/969 and HL = 1000/931; path prices are 969/4000 and 931/4000. Middle price shares are 0.51/0.49 versus Q shares 0.5/0.5; the normalized lowest Arrow weight is 0.255 versus Q probability 0.25."
+    },
+    {
+      "number": 3,
+      "status": "passed",
+      "result": "Physical high probability 0.3 gives mean rate 23/969, expected bond return 1/35 and excess 2/245. Prices and hedges stay fixed. P = Q removes holding excess but leaves forward gap -2/4845."
+    },
+    {
+      "number": 4,
+      "status": "passed",
+      "result": "Proof audited with predictable finite holdings and coupon-inclusive self-financing. A separate numerical strategy with zero initial wealth has exact zero discounted expectation after rebalancing. A traded (0,1) claim at zero price under Q = (1,0) is the correct support counterexample."
+    },
+    {
+      "number": 5,
+      "status": "passed",
+      "result": "Strike 97 pays (92/49,0) and costs 0.92 CU; beta = 920/19 and bank cash -45.08 grows to repayment 46. Both branch and initial-funding equations reconcile."
+    },
+    {
+      "number": 6,
+      "status": "passed",
+      "result": "Derived the positive-denominator level formula. The same observed curve with s = 0 versus s = 0.04 produces claim prices 0.92 versus 2.36, constructively proving nonidentification. Additional pricing instruments and physical evidence serve distinct roles."
+    },
+    {
+      "number": 7,
+      "status": "passed",
+      "result": "One positive branch for 392/425 < D2 <= 0.96; kink derivatives are confined to the interior. At D2 = 0.92, local extrapolation is -0.12, the exact claim is zero and the bond is 105.05 CU."
+    },
+    {
+      "number": 8,
+      "status": "passed",
+      "result": "The finite innovation sum gives support (0.02,0.04,0.03,0.05), mean 0.035 and variance 1/8000. Phi = 1 has mean r0 and variance n*sigma^2; the law and calibration boundary are explicit."
+    },
+    {
+      "number": 9,
+      "status": "passed",
+      "result": "Wide rate = -2/247; new storage yields conditional gain 2/247. Square-root outcomes are -0.007 and 0.023, with unclamped mean 0.008, clamped mean 0.0115 and change 0.0035."
+    },
+    {
+      "number": 10,
+      "status": "passed",
+      "result": "All five false memo claims are answered using model counterexamples or correctly scoped dated methodology; separate fit, forecast and hedge validation plus at least two uncertainties are required."
+    }
+  ],
+  "source_audit": [
+    {
+      "id": "v09-c05-princeton-pricing",
+      "route": "https://markus.scholar.princeton.edu/document/195",
+      "inspection": "Exact accepted canonical record reused; finite positive-price, spanning and physical-SDF scope retained. No claim of fresh whole-source review."
+    },
+    {
+      "id": "v10-c03-haugh-lattice",
+      "route": "https://www.columbia.edu/~mh2078/FoundationsFE/lattice_models.pdf",
+      "inspection": "Independently opened the actual 11-page PDF body: finite timing and backward pricing pages 1-3, forward state prices and hedging page 7, finite additive/log-rate forms and conditional calibration pages 9-10. The manuscript adds the required distinct-successor rank condition and does not import the displayed continuous SDEs or copy its numerical cases."
+    },
+    {
+      "id": "v10-c03-fed-premium",
+      "route": "https://www.federalreserve.gov/data/three-factor-nominal-term-structure-model.htm",
+      "inspection": "Independently read actual Q&A body and last-update date 5 November 2019. Premium convention includes convexity; close yield fit does not guarantee forecast validity; persistent time-series estimation and noisy surveys are qualified. No current yield or policy claim is imported."
+    }
+  ],
+  "validation": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 book/scripts/check_v10_c03_peer.py",
+    "status": "passed",
+    "groups": 6,
+    "comparisons": 16489,
+    "valid_interventions": 11,
+    "domain_rejections": 14,
+    "independent_methods": "Direct three-period shape moments solve levels; full history ledgers produce zeros, coupon prices, Arrow weights, P/Q probabilities and path SDFs; determinant hedge system funds date-1 cash; two-state covariance formula and explicitly rebalanced wealth ledger; finite innovation sums derive AR moments.",
+    "interventions": [
+      "P-only belief change",
+      "Complete P=Q law",
+      "Nonconstant Q with full recalibration",
+      "Strike97",
+      "Exact upper payoff boundary",
+      "Exact lower payoff boundary",
+      "Below payoff boundary",
+      "Zero strike",
+      "Increasing positive discount curve",
+      "Six-step zero-persistence/noise boundary",
+      "D3 retention scenario"
+    ],
+    "portability": "Isolated downloaded four-file package works in normal and optimized Python from another directory. Explicit --input/--output mode is quiet; complete saved JSON agrees. Separate optimized import and run() from /private/tmp produce no stdout/stderr. Duplicate-key and nonfinite CLI JSON are rejected.",
+    "payload_integrity": "All eight author-listed hashes and bytes match; all four downloadable manifest entries match; nine final peer-bound payload hashes unchanged from assignment/freeze.",
+    "peer_checker": {
+      "path": "scripts/check_v10_c03_peer.py",
+      "bytes": 19419,
+      "sha256": "a6b7d963e0aba06f5e393871e6bc0245c83b0e35d16360014e8e055d9db0487b"
+    }
+  },
+  "findings": [],
+  "open_findings": [],
+  "limits": [
+    "This is an independent specialist computational/editorial review, not external human certification.",
+    "Synthetic finite models are conditionally coherent; the review does not establish real-world P/Q estimates, empirical performance or universal hedge implementability.",
+    "Shared full-library build, dependency-order acceptance and visual/mobile/keyboard/print QA remain coordinator/library gates."
+  ]
+}

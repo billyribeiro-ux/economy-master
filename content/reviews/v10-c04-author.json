@@ -1,0 +1,293 @@
+{
+  "chapter": "v10-c04",
+  "title": "Credit risk and recovery",
+  "level": "Graduate",
+  "author": "financial diagnosis specialist",
+  "date": "2026-10-09",
+  "edition_boundary": "2026-10-06",
+  "assignment": "production/v10-opening-assignments.json",
+  "state": "author-review-complete",
+  "status": "Passed author review; coordinator acceptance remains separate and follows c01–c03.",
+  "review_type": "Full contract/cash/probability derivation, mathematical and arithmetic audit, all worked cases and prompt/solution pairs, implementation, source scope and cross-reference review.",
+  "scope": {
+    "objective": "Value defaultable claims and separate hazard, recovery and liquidity assumptions.",
+    "coverage": [
+      "Credit spread and expected-return conventions; matched claim perimeter and P/Q distinction.",
+      "Finite structural debt/equity allocation, priced resource closure, mean-preserving risk transfers and explicit workout costs.",
+      "Discrete conditional hazard/survival/first-default cash, recovery dates and absorbing claim termination.",
+      "Deterministic continuous hazard derivation, immediate-par and maturity recovery by ordinary integration, market-value recovery by backward ODE, zero/negative-rate boundaries.",
+      "Physical and pricing migration matrices, horizon compounding, absorbing default and first-entry recovery.",
+      "Consistent two-name joint laws, Frechet bounds/correlation, whole-pool loss and nonlinear junior/senior allocations.",
+      "Conditional hazard/recovery/liquidity calibration, nonidentification, primary research/model critique."
+    ],
+    "case": "Fenwick Credit Desk: original synthetic one-year structural, three-year scheduled and migration, five-year constant-intensity and separate one-year two-note contracts; all CU, dates measured after 1 January 2027.",
+    "format": "7,040 HTML text words by HTMLParser whitespace count; five substantive worked examples; ten full graduate exercises and ordered solutions, including proofs/derivations and substantive research/model critique; answered teach-back and delayed retention.",
+    "lab": "Bounded stdlib offline run(data), exact finite-state and cash fractions, labeled exponential/logarithmic approximations, complete reference output, four-file manifest, README and independent quiet checker.",
+    "ownership": "Only nine assigned c04 paths authored; no shared-state, acceptance, publishing, installation or child agents."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c04.html",
+      "bytes": 50263,
+      "sha256": "5ef3f8c6211272191b7f388433eef1322e97cd39e334b4671d24522dcb29c14f"
+    },
+    {
+      "path": "content/projects/v10-c04-inputs.json",
+      "bytes": 3566,
+      "sha256": "ac20ce3d73fdca658bc1ef38622f0f852bdf725a1d6bff2de1fcaa8694f18423"
+    },
+    {
+      "path": "content/projects/v10-c04-analysis.py",
+      "bytes": 17552,
+      "sha256": "35da33ed969735d22998814fcc764c385e1852fa02ca06fb3c066a1646a55b5c"
+    },
+    {
+      "path": "content/projects/v10-c04-output.json",
+      "bytes": 13368,
+      "sha256": "99a6fb46765bf94810d6d4c13c8f87a75d6b29d480c5796420e27a256d499efb"
+    },
+    {
+      "path": "content/projects/v10-c04-manifest.json",
+      "bytes": 958,
+      "sha256": "12e2e03a79cc11066e2e9a6c1b29fbf68701edfc2c2044a51fa2296935e5d644"
+    },
+    {
+      "path": "content/projects/v10-c04-README.txt",
+      "bytes": 14244,
+      "sha256": "ab174fd748e0af38e4f093473cb546998e14be88946a6eda4752e43576d2d662"
+    },
+    {
+      "path": "scripts/check_v10_c04.py",
+      "bytes": 28244,
+      "sha256": "26d03f06e4c4e4438bf47e1257d5a531e18faef5adb8b8bfad7a7b22635bfd6f"
+    },
+    {
+      "path": "content/reviews/v10-c04-sources.json",
+      "bytes": 3133,
+      "sha256": "1c670b3dbc0c7bd8519b2ba19edd8ea2ca6337b52f4f2da9c204081b87b81c8d"
+    }
+  ],
+  "prerequisite_review": {
+    "accepted_methods": [
+      "v09-c05 finite positive state prices and P/Q distinction",
+      "v02-c04 ordinary integration",
+      "v03-c02 conditional probability",
+      "v03-c04 expectation/covariance",
+      "v02 matrix multiplication and induction"
+    ],
+    "adjacent_contract": "v10-c01 positive dated discount factors and promised yield conventions; c02 sensitivity versus forecast distinction; c03 positive conditional Q and state-price recursion, same physical support and unidentifiable dynamics.",
+    "local_derivations": [
+      "Debt/equity payoff identity by cases",
+      "Concavity/convexity transfer proved without importing an option formula",
+      "Survival product and deterministic hazard differential equation",
+      "Immediate-par recovery integral with removable r+lambda singularity",
+      "Recovery-of-market-value backward ordinary differential equation",
+      "Absorbing migration and first-default increments",
+      "Frechet bounds and two-tranche state closure",
+      "One-price identification product and explicit illiquidity-premise alternatives"
+    ],
+    "deferred": "No reliance on Ito calculus, Brownian diffusion, Black–Scholes, stochastic-intensity martingale theorem or untaught CDS pricing. Later stochastic-calculus/option routes are visibly marked planned."
+  },
+  "worked_case_review": [
+    {
+      "anchor": "worked-1",
+      "status": "Complete state receipts, positive state prices, all-claim asset reconciliation, physical versus pricing default, promised/expected yields and convention-matched loss/risk-premium decomposition checked."
+    },
+    {
+      "anchor": "worked-2",
+      "status": "Three mutually exclusive first-default dates, coupons only on survival, immediate versus maturity recovery, exact timing PV difference and distinct physical hazards checked."
+    },
+    {
+      "anchor": "worked-3",
+      "status": "Ordinary first-default-density integration and three different recovery contracts evaluated, with explicit P/Q survival and nonuniversal hazard-times-loss shortcut."
+    },
+    {
+      "anchor": "worked-4",
+      "status": "Annual P/Q row multiplication, cumulative/incremental/conditional default, correct absorbing closure and first-entry recovery price checked independently by complete paths."
+    },
+    {
+      "anchor": "worked-5",
+      "status": "Both valid joint laws and marginal probabilities, loss mean/variance, junior/senior allocation, all receipts and conditional Q=P pricing reconciled."
+    }
+  ],
+  "exercise_review": [
+    {
+      "exercise": 1,
+      "anchor": "solution-1",
+      "status": "All changed-face state payoffs, prices, physical receipt/default and return, promised yield/spread and no-created-assets interpretation verified."
+    },
+    {
+      "exercise": 2,
+      "anchor": "solution-2",
+      "status": "Independent split-state prices and default, conditional payoff concavity proof, strictness and required Q-mean qualification complete."
+    },
+    {
+      "exercise": 3,
+      "anchor": "solution-3",
+      "status": "Complete two-year first-default/coupon/principal ledger and changed recovery date solved without duplicate coupon or recovery."
+    },
+    {
+      "exercise": 4,
+      "anchor": "solution-4",
+      "status": "All hazards/marginal masses/intensities and nonadditivity checked; conditioning proof, deterministic differential limit, zero-survival and impossible-curve boundary explained."
+    },
+    {
+      "exercise": 5,
+      "anchor": "solution-5",
+      "status": "Independent quadrature agrees with the exact analytical immediate-par expression; delayed recovery, negative-rate singularity and zero-intensity limits derived."
+    },
+    {
+      "exercise": 6,
+      "anchor": "solution-6",
+      "status": "Backward ODE derived locally; full-par acceleration versus market-value recovery and negative promised spread explained with all values checked."
+    },
+    {
+      "exercise": 7,
+      "anchor": "solution-7",
+      "status": "Two independent migration-price routes, both remaining live-state values, downgrade difference and double-recovery error checked."
+    },
+    {
+      "exercise": 8,
+      "anchor": "solution-8",
+      "status": "Unequal-marginal Frechet/correlation bounds, complete joint tables, all loss moments and tranche prices checked with explicit additional pricing assumption."
+    },
+    {
+      "exercise": 9,
+      "anchor": "solution-9",
+      "status": "Three observationally equivalent recovery/liquidity/default calibrations independently recomputed; each reprices exactly, full-recovery boundary and evidence needs explained."
+    },
+    {
+      "exercise": 10,
+      "anchor": "solution-10",
+      "status": "Every quoted analyst assertion assessed; numerical counterexamples, scoped primary-source comparison, feasible validation protocol and six substantive open-answer criteria supplied."
+    }
+  ],
+  "proof_review": [
+    "Structural total-value identity requires no workout cost/other claims; the lab cost intervention explicitly reconciles claims plus destroyed resources to gross asset value.",
+    "Convexity transfer assumes the conditional mean is preserved under Q, and strictness requires positive mass across the face threshold.",
+    "Exponential survival proof is for differentiable deterministic hazard, no initial atom and positive survival; it is not stated as a stochastic-intensity factorization.",
+    "Discrete and continuous recovery use mutually exclusive first-default events and exact settlement contracts; all remaining claims terminate.",
+    "Recovery-market-value adjusted discount rate is derived only under its own constant-coefficient contract, not asserted for recovery of par.",
+    "Migration powers require time-homogeneous Markov specification; different P/Q supports are rejected and exhausted survivor conditionals are undefined.",
+    "Frechet inequalities are necessary and sufficient for the four two-name cells; indicator correlation needs nonzero marginal variances; pairwise correlation does not determine a general large-portfolio law.",
+    "A nonreplicable/frictional liquidity premise is explicit, avoiding two executable unrestricted prices for the same dated payoff.",
+    "Full recovery of par at default accelerates cash and can create a negative promised spread relative to a maturity-only zero; no equality-of-payoffs arbitrage is alleged."
+  ],
+  "validation": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 book/scripts/check_v10_c04.py",
+    "status": "passed",
+    "groups": 11,
+    "comparisons": 387,
+    "domain_rejections": 27,
+    "worked_examples": 5,
+    "complete_exercises": 10,
+    "independent_methods": [
+      "Structural raw-state resource allocation and positive-state-price sums.",
+      "Exclusive first-default-year versus all-survival event enumeration.",
+      "Independent Simpson integration of discounted first-default density.",
+      "Complete finite migration-path enumeration rather than matrix-recursion reuse.",
+      "Complete four-state marginal/tranche resource reconstruction.",
+      "Exact conditional calibration repricing and independent solutions to all determinate exercises."
+    ],
+    "interventions": [
+      "10% structural workout cost and physical-only law change",
+      "Zero scheduled hazard; zero continuous intensity/recovery; r+lambda zero",
+      "Full-par versus full-market-value recovery",
+      "Certain first-year migration default and undefined later survivor conditionals",
+      "Both Frechet boundaries and degenerate marginals",
+      "Full-recovery incompatible versus unidentified calibration",
+      "Exact survival 1/(3*10^18) remains a valid finite-intensity calibration even though floating default probability would round to one; exact probability, intensity and repricing checked.",
+      "Full joint recovery and an all-solvent structural case retain exact rational-string zero probabilities, including empty event sets."
+    ],
+    "domain_checks": [
+      "Finite numeric types/probabilities, positive state support and no hidden guarantees",
+      "Hazard support, increasing aligned dates and finite within-interval intensity",
+      "Nonnegative bounded continuous intensity, positive maturity and valid recovery",
+      "Absorbing row-stochastic migration, shared P/Q support and initially live claim",
+      "Joint marginal consistency, positive tranche principal and explicit Q=P scope",
+      "Correct calibration recovery timing and nonzero liquidity multiplier"
+    ],
+    "artifact_checks": [
+      "Quiet nonmutating run and complete strict JSON regression",
+      "All four manifest byte sizes/SHA256",
+      "Isolated standard and optimized offline CLI from a different working directory",
+      "Quiet --input/--output mode with full-output equality",
+      "Unique HTML anchors, no h1 fragment, five worked asides, ten exercise and solution entries",
+      "All flat public assets and three fully formed linked primary-source proposals"
+    ],
+    "quiet_check_contract": "check() returns strict JSON without printing; explicit condition failures remain active under Python -O. CLI alone prints the report."
+  },
+  "source_review": {
+    "records": [
+      "v10-c04-merton",
+      "v10-c04-recovery-par",
+      "v10-c04-liquidity"
+    ],
+    "verification": "Actual publisher Merton full HTML, author-hosted Duffie1998 PDF and official Fed Han–Zhou full screen-reader manuscript were inspected. Precise sections/dates and omitted scope are in the owned source proposals.",
+    "boundary": "References support structural terminal restrictions, recovery-base/date distinctions and dated empirical identification critique. They do not provide this chapter's original states/numbers, current laws, real credit observations or a general diffusion derivation.",
+    "originality": "All prose, numerical contracts, exercises, code and input/output assets are original; no source case, dataset, table, figure or extensive quotation is reproduced."
+  },
+  "numerical_anchors": {
+    "structural": {
+      "debt": "90.24",
+      "equity": "22.08",
+      "gross_asset": "112.32",
+      "P_default": ".1",
+      "Q_default": ".2",
+      "P_receipt": "97"
+    },
+    "scheduled": {
+      "immediate": "3519809/35152",
+      "maturity_recovery": "3516299/35152",
+      "timing_difference": "135/1352"
+    },
+    "constant_intensity": {
+      "immediate_par": 73.42606445226339,
+      "maturity_recovery": 72.68600815430871,
+      "market_value_recovery": 71.89237334319262
+    },
+    "migration": {
+      "Q_default_3": ".109335",
+      "P_default_3": ".039385",
+      "Q_price": "23399455/281216"
+    },
+    "joint": {
+      "pool_loss_both": "12",
+      "junior_losses": [
+        "11.4",
+        "9"
+      ],
+      "senior_losses": [
+        ".6",
+        "3"
+      ],
+      "pool_price_both": "180.48"
+    },
+    "calibration": "All six (recovery, liquidity multiplier) pairs reprice the same 85.5; no physical frequency identified."
+  },
+  "resolved_findings": [
+    {
+      "origin": "author cross-reference audit",
+      "finding": "Initial conditional-probability link pointed to the random-variable chapter.",
+      "resolution": "Corrected to accepted v03-c02; method title and dependency now match."
+    },
+    {
+      "origin": "independent equity_peer review",
+      "issue": "A valid exact default probability extremely close to one rounded to float one before log1p and caused a domain error.",
+      "resolution": "Use log1p for probabilities at most one half and log of exact positive survival otherwise; preserves tiny-hazard accuracy and baseline output. Added an independently calculated finite-intensity/repricing boundary check.",
+      "status": "resolved"
+    },
+    {
+      "origin": "independent equity_peer review",
+      "issue": "Three conditional empty probability sums returned integer zero rather than the documented exact rational string.",
+      "resolution": "Initialize the two structural default sums and joint loss-tail sum with Fraction(0); add three explicit output-type checks. Baseline output unchanged.",
+      "status": "resolved"
+    }
+  ],
+  "open_findings": [],
+  "limits": [
+    "Author verification is not external human certification or empirical validation.",
+    "Finite and deterministic laws are supplied assumptions; stochastic rates/default dependence, legal recoveries and observed credit modeling require additional evidence.",
+    "Coordinator retains final mathematics/source/structural audit, acceptance in dependency order, full-library verification, archive, UI QA and publication."
+  ]
+}

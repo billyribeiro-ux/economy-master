@@ -1,0 +1,92 @@
+{
+  "chapter": "v10-c04",
+  "date": "2026-10-09",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating reviewer and separately scoped economics/finance specialists; no external human certification",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Full graduate chapter, five worked cases, ten complete exercise solutions, answered teach-back/retention, explicit proof/contract limits and portable standard-library lab.",
+  "detailed_review": "production/v10-opening-root-review-notes.json",
+  "author_review": "reviews/v10-c04-author.json",
+  "verified_payload_hashes": 8,
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c04.html",
+      "bytes": 50263,
+      "sha256": "5ef3f8c6211272191b7f388433eef1322e97cd39e334b4671d24522dcb29c14f"
+    },
+    {
+      "path": "content/projects/v10-c04-inputs.json",
+      "bytes": 3566,
+      "sha256": "ac20ce3d73fdca658bc1ef38622f0f852bdf725a1d6bff2de1fcaa8694f18423"
+    },
+    {
+      "path": "content/projects/v10-c04-analysis.py",
+      "bytes": 17552,
+      "sha256": "35da33ed969735d22998814fcc764c385e1852fa02ca06fb3c066a1646a55b5c"
+    },
+    {
+      "path": "content/projects/v10-c04-output.json",
+      "bytes": 13368,
+      "sha256": "99a6fb46765bf94810d6d4c13c8f87a75d6b29d480c5796420e27a256d499efb"
+    },
+    {
+      "path": "content/projects/v10-c04-manifest.json",
+      "bytes": 958,
+      "sha256": "12e2e03a79cc11066e2e9a6c1b29fbf68701edfc2c2044a51fa2296935e5d644"
+    },
+    {
+      "path": "content/projects/v10-c04-README.txt",
+      "bytes": 14244,
+      "sha256": "ab174fd748e0af38e4f093473cb546998e14be88946a6eda4752e43576d2d662"
+    },
+    {
+      "path": "scripts/check_v10_c04.py",
+      "bytes": 28244,
+      "sha256": "26d03f06e4c4e4438bf47e1257d5a531e18faef5adb8b8bfad7a7b22635bfd6f"
+    },
+    {
+      "path": "content/reviews/v10-c04-sources.json",
+      "bytes": 3133,
+      "sha256": "1c670b3dbc0c7bd8519b2ba19edd8ea2ca6337b52f4f2da9c204081b87b81c8d"
+    },
+    {
+      "path": "content/reviews/v10-c04-author.json",
+      "bytes": 16459,
+      "sha256": "f0cd0286b394ae98f3840c9ab867bff756edbb249b377a376d2b4105af6cdbab"
+    }
+  ],
+  "focused_check": "production/v10-opening-focused-checks.json",
+  "open_content_findings": [],
+  "limitations": [
+    "Finite synthetic contracts do not establish empirical model adequacy or real-world execution.",
+    "Machine-assisted peer/coordinator review is not independent human academic certification.",
+    "Whole-edition visual/mobile/keyboard/print UI QA remains pending; denied local-file preview was not circumvented."
+  ],
+  "peer_review": "reviews/v10-c04-peer.json",
+  "peer_numerical_evidence": "production/v10-opening-peer-validation.json",
+  "resolved_peer_findings": [
+    {
+      "id": "c04-peer-01",
+      "severity": "material_input_domain",
+      "status": "resolved_and_independently_retested",
+      "finding": "A valid calibrated default probability q=1-1/(3*10^18) was converted to float before log1p; rounding to1 caused a ValueError despite finite intensity.",
+      "reproducer": "Baseline calibration amended to face1000000, discount3, observed_price1/1000000000000, recoveries[0], multiplier[1], maturity2. Initial validate() succeeded while run() failed.",
+      "repair": "For q<=1/2 use log1p(-float(q)); otherwise subtract from1 in exact rational arithmetic and then log the positive survival. The independently checked intensity is(log3+18log10)/2 and the repriced quote remains exact.",
+      "counter_boundary": "Also tested q=1/999999999999^2, generated from individually permitted rational D/price inputs; the repaired small-q branch retains its tiny positive intensity."
+    },
+    {
+      "id": "c04-peer-02",
+      "severity": "minor_output_contract",
+      "status": "resolved_and_independently_retested",
+      "finding": "Empty structural default-probability sums and the zero-LGD strict-tail sum returned integer0 rather than the documented exact rational string. The mathematical values were correct.",
+      "repair": "All three sums now start at F(0). Full joint recovery and an all-solvent structural face50 case return exact string zeros; baseline reference output remains unchanged."
+    }
+  ]
+}

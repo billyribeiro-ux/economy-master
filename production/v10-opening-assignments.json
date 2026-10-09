@@ -1,0 +1,240 @@
+{
+  "batch": "v10-opening",
+  "date": "2026-10-09",
+  "previous_goal_turn": "progress: Volume 9 full assessment accepted, independently reviewed, verified, archived and privately published; 108 chapters, nine volume packages and two cumulative packages.",
+  "authorization": "User explicitly authorized autonomous work with three economics/finance specialist agents.",
+  "prerequisite_contract": {
+    "c01": "Supplies P=sum CF*D, positive dated discount factors, dirty/clean cash, accrual and annual/periodic/continuous spot and forward identities; YTM is one cash-flow-specific root, not the whole curve.",
+    "c02": "Supplies yield derivatives, dollar duration/convexity, key-rate curve bump basis and conditional local immunization; no distributional forecast from sensitivities.",
+    "c03": "Supplies finite dynamically consistent short-rate pricing tree, positive conditional Q, state prices and initial-curve calibration; distinguishes physical P and unidentifiable pricing dynamics.",
+    "accepted_before_batch": [
+      "v02",
+      "v03",
+      "v09"
+    ],
+    "later_tools": "Brownian motion and Ito calculus are taught in v10-c07; option replication in c06 and Black-Scholes in c08. Opening chapters cannot assume those unwritten derivations."
+  },
+  "shared_rules": [
+    "Read AGENTS.md, PRODUCTION_PLAN.md, STATUS.json, this assignment and your canonical specification. Preserve accepted work. User explicitly authorizes the three specialists; do not spawn other agents.",
+    "Own only your nine exact paths. Coordinator alone edits curriculum, shared source catalogue, checkpoint, shared build/verify, final acceptance reviews and hosting. Do not publish, install packages, add frameworks or change other assignments.",
+    "Adjacent manuscripts may be drafted concurrently against the prerequisite contract; acceptance follows c01 then c02 then c03 then c04. Every used method must be already taught or derived locally. Three worked examples and ten complete graduate exercises are minimum gates, including proof/derivation and substantive research/model critique; avoid filler and arbitrary word quotas.",
+    "Complete objective, prerequisite routes, motivating decision, definitions/units, intuition and formal derivations with assumptions/boundaries, all worked arithmetic, original exercises, complete determinate solutions and open-answer criteria, answered teach-back/delayed retention, scoped primary sources and extension.",
+    "HTML fragment uses h2/h3, no h1; existing worked/exercises/solutions conventions and flat generated links. Read relevant accepted chapters and actual primary source bodies for specialist methods. Reuse exactly matching verified stable source records, otherwise proposed source additions with id/title/url/use/checked/verification under own sources JSON. Never treat curriculum benchmark links as specialist evidence. Original synthetic cases; no fabricated current facts.",
+    "Compact standard-library Python lab is offline and quiet on import/run(data), supports --input and optional --output, retains complete strict finite JSON reference output, and four-file manifest for inputs/analysis/output/README. Validate actual financial/time/probability domains, no silent fallback or contradictory edited contract. Do not overengineer a general finance library.",
+    "Quiet check() returns strict JSON. Independently reconstruct material numbers and every determinate exercise; check proof assumptions editorially. Cover meaningful boundaries/interventions/rejections, complete preserved output, hashes and isolated normal/optimized CLI. Passing code is not proof of all prose or external certification.",
+    "Author record includes review of all prompts/solutions/proofs/prerequisites/sources, exact bytes/SHA256 of eight non-self files, findings and limits. Send a compact blueprint and numerical anchors early, then freeze all nine artifacts together when complete. Inform root before any post-freeze change."
+  ],
+  "assignments": [
+    {
+      "owner": "root",
+      "chapter_id": "v10-c01",
+      "state": "assigned",
+      "canonical_spec": {
+        "id": "v10-c01",
+        "number": 1,
+        "title": "Bond cash flows and yield curves",
+        "outcome": "Price cash flows with spot discount factors and distinguish yield conventions.",
+        "coverage": [
+          "Coupon schedules",
+          "clean-dirty price",
+          "discount curves",
+          "YTM",
+          "spot-forward rates",
+          "day-count assumptions"
+        ],
+        "prerequisites": [
+          "v02",
+          "v03",
+          "v09"
+        ],
+        "level": "Graduate",
+        "status": "planned",
+        "manuscript": "chapters/v10-c01.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses",
+          "quantecon-python"
+        ],
+        "required_worked_examples": 3,
+        "required_exercises": 10,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Full dated bond-cash-flow valuation. Define coupons, principal/amortization, entitlement and settlement; clean/dirty and explicitly chosen accrual/day counts; positive spot discount factors and linear replication; triangular bootstrap with rejection of inconsistent prices; YTM convention/domain/uniqueness and lack of guaranteed holding return; annual/periodic/continuous spot and forward identities with executable forward loan replication. Distinguish negative rates from arbitrage, interpolated curves from identified discount points, and discount curves from forecasts. At least three fully worked cases and ten solved graduate exercises including a proof and a substantive source/model critique.",
+      "owned_paths": [
+        "content/chapters/v10-c01.html",
+        "content/projects/v10-c01-inputs.json",
+        "content/projects/v10-c01-analysis.py",
+        "content/projects/v10-c01-output.json",
+        "content/projects/v10-c01-manifest.json",
+        "content/projects/v10-c01-README.txt",
+        "scripts/check_v10_c01.py",
+        "content/reviews/v10-c01-author.json",
+        "content/reviews/v10-c01-sources.json"
+      ]
+    },
+    {
+      "owner": "cost_peer",
+      "chapter_id": "v10-c02",
+      "state": "assigned",
+      "canonical_spec": {
+        "id": "v10-c02",
+        "number": 2,
+        "title": "Duration, convexity and immunization",
+        "outcome": "Derive rate sensitivity and construct hedges with explicit residual risks.",
+        "coverage": [
+          "Macaulay-modified duration",
+          "convexity",
+          "key rates",
+          "immunization",
+          "nonparallel shifts"
+        ],
+        "prerequisites": [
+          "v10-c01"
+        ],
+        "level": "Graduate",
+        "status": "planned",
+        "manuscript": "chapters/v10-c02.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses",
+          "quantecon-python"
+        ],
+        "required_worked_examples": 3,
+        "required_exercises": 10,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Derive Macaulay and modified duration and convexity from precisely stated annual/periodic price functions, with clean/dirty and units/horizon conventions. Develop portfolio dollar sensitivities, parallel first/second-order error and exact repricing; define key-rate interpolation/bump basis and show nonparallel residual risk. Derive asset-liability immunization conditions and a clearly conditional local result, with actual budgets/holdings and cash/reinvestment assumptions. Include failure examples under curve twist, large shifts, changed cash flows or rebalancing/financing costs. Three substantial worked examples minimum; ten graduate exercises with full proofs/solutions and research/model critique. A compact reproducible lab must price and test hedges independently, not present duration as universal loss protection.",
+      "owned_paths": [
+        "content/chapters/v10-c02.html",
+        "content/projects/v10-c02-inputs.json",
+        "content/projects/v10-c02-analysis.py",
+        "content/projects/v10-c02-output.json",
+        "content/projects/v10-c02-manifest.json",
+        "content/projects/v10-c02-README.txt",
+        "scripts/check_v10_c02.py",
+        "content/reviews/v10-c02-author.json",
+        "content/reviews/v10-c02-sources.json"
+      ]
+    },
+    {
+      "owner": "equity_peer",
+      "chapter_id": "v10-c03",
+      "state": "assigned",
+      "canonical_spec": {
+        "id": "v10-c03",
+        "number": 3,
+        "title": "Term-structure models and rate risk",
+        "outcome": "Compare curve models and distinguish physical from risk-neutral dynamics.",
+        "coverage": [
+          "Expectations",
+          "term premiums",
+          "short-rate models",
+          "no-arbitrage",
+          "calibration",
+          "curve scenarios"
+        ],
+        "prerequisites": [
+          "v10-c02"
+        ],
+        "level": "Graduate",
+        "status": "planned",
+        "manuscript": "chapters/v10-c03.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses",
+          "quantecon-python"
+        ],
+        "required_worked_examples": 3,
+        "required_exercises": 10,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Term-structure economic expectations and time-varying risk premiums; distinguish physical conditional forecasts from risk-neutral pricing and today's implied forward rates. Derive an original finite short-rate tree with dated bank-account numeraire, backward bond valuation, positive conditional pricing probabilities/state prices, and a consistent initial curve fit. Show exactly what curve calibration identifies and what volatility/dynamics it leaves open; repricing across altered tree/curve scenarios and a hedge/model-risk example. Compare short-rate model families with assumptions and negative-rate/mean-reversion boundaries, but no reliance on Ito calculus or a continuous-time formula not yet taught. If continuous Vasicek/CIR are introduced, explain their formal scope and defer stochastic-calculus valuation to c07/c08; finite discrete models must substantively accomplish the outcome now. At least three fully worked examples and ten fully solved graduate exercises including proof/derivation and source/model critique; complete offline tree/calibration lab.",
+      "owned_paths": [
+        "content/chapters/v10-c03.html",
+        "content/projects/v10-c03-inputs.json",
+        "content/projects/v10-c03-analysis.py",
+        "content/projects/v10-c03-output.json",
+        "content/projects/v10-c03-manifest.json",
+        "content/projects/v10-c03-README.txt",
+        "scripts/check_v10_c03.py",
+        "content/reviews/v10-c03-author.json",
+        "content/reviews/v10-c03-sources.json"
+      ]
+    },
+    {
+      "owner": "financial_diagnosis",
+      "chapter_id": "v10-c04",
+      "state": "assigned",
+      "canonical_spec": {
+        "id": "v10-c04",
+        "number": 4,
+        "title": "Credit risk and recovery",
+        "outcome": "Value defaultable claims and separate hazard, recovery and liquidity assumptions.",
+        "coverage": [
+          "Credit spreads",
+          "structural models",
+          "intensity",
+          "recovery",
+          "transition",
+          "correlation"
+        ],
+        "prerequisites": [
+          "v10-c03"
+        ],
+        "level": "Graduate",
+        "status": "planned",
+        "manuscript": "chapters/v10-c04.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses",
+          "quantecon-python"
+        ],
+        "required_worked_examples": 3,
+        "required_exercises": 10,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Credit spreads versus default, recovery, risk premium and liquidity under explicit currency/collateral contracts. Derive finite-state structural debt=min(asset value, face) and equity residual using positive pricing state weights, with physical versus pricing default probabilities; no reliance on untaught Black-Scholes. Develop survival and hazard/intensity from conditional default probabilities, exponential survival and explicitly timed recovery-of-par or other named recovery conventions; derive applicable constant-rate valuation by integration already taught. Include default absorbing transition matrices and horizon compounding, joint-default correlation/dependence with consistent marginal probabilities and tranche/portfolio loss consequences. Show nonidentification of hazard/recovery/liquidity from one spread and assumption-sensitive calibration. Three substantial worked examples minimum; ten solved graduate exercises with proof/derivation and research/model critique; original bounded reproducible credit lab. Current legal rules and real credit quotes are out of scope unless actually sourced and dated.",
+      "owned_paths": [
+        "content/chapters/v10-c04.html",
+        "content/projects/v10-c04-inputs.json",
+        "content/projects/v10-c04-analysis.py",
+        "content/projects/v10-c04-output.json",
+        "content/projects/v10-c04-manifest.json",
+        "content/projects/v10-c04-README.txt",
+        "scripts/check_v10_c04.py",
+        "content/reviews/v10-c04-author.json",
+        "content/reviews/v10-c04-sources.json"
+      ]
+    }
+  ],
+  "batch_state": "assigned; no new chapter accepted",
+  "integration_state": "all four author packages and required independent reviews accepted; shared build/publication pending"
+}

@@ -1,0 +1,244 @@
+{
+  "chapter": "v10-c02",
+  "title": "Duration, convexity and immunization",
+  "author": "cost_peer",
+  "date": "2026-10-09",
+  "assignment": "production/v10-opening-assignments.json",
+  "state": "complete author package; frozen for independent coordinator review",
+  "status": "author-reviewed; not accepted or published by this specialist",
+  "canonical_outcome": "Derive rate sensitivity and construct hedges with explicit residual risks.",
+  "scope": "All nine exact owned artifacts; complete original graduate chapter, four substantial worked cases, ten complete exercises including proofs and research/model critique, answered teaching/retention, bounded reproducible lab, focused checker and scoped source proposals. No shared production file, other manuscript or hosting state was edited.",
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c02.html",
+      "bytes": 44314,
+      "sha256": "43166bad090ca52bf43200ba25c17727ce599af732a20bf62d136f79613a3e8d"
+    },
+    {
+      "path": "content/projects/v10-c02-inputs.json",
+      "bytes": 1321,
+      "sha256": "81e224c232a27773deae1f11526f9299cb58714373a1066d94e3b2774fcee058"
+    },
+    {
+      "path": "content/projects/v10-c02-analysis.py",
+      "bytes": 19505,
+      "sha256": "1143022b77e3e58bb38c635ebb7d525083253fc5afda1e47c38c090705f65430"
+    },
+    {
+      "path": "content/projects/v10-c02-output.json",
+      "bytes": 11166,
+      "sha256": "faf2c72d1a2065496e1482c3b82ff33e9b71059cd392d6eb35677628aeed5dad"
+    },
+    {
+      "path": "content/projects/v10-c02-manifest.json",
+      "bytes": 1044,
+      "sha256": "7aab5ecbc28252f56aa8ce7e6d5a4afdc440a213930b8d62bd52618fb2031ed9"
+    },
+    {
+      "path": "content/projects/v10-c02-README.txt",
+      "bytes": 9850,
+      "sha256": "e078466452ceead582a95ffb052cf7613b1f8c7bfa063c8aa5312374b122dff8"
+    },
+    {
+      "path": "scripts/check_v10_c02.py",
+      "bytes": 27917,
+      "sha256": "57f058616ce06cacf96ed6d67c3d6de992788d27cc6acffa45a52ccf6db30c88"
+    },
+    {
+      "path": "content/reviews/v10-c02-sources.json",
+      "bytes": 3078,
+      "sha256": "52413a84d4a024d1298bc3f630419fa7e22fcc2ceb1c3b81374446f7fce09286"
+    }
+  ],
+  "coverage": {
+    "plain_text_word_count": 5923,
+    "worked_examples": 4,
+    "exercises": 10,
+    "main_complete_solutions": 10,
+    "answered_solution_containers": 3,
+    "prerequisites": [
+      "v10-c01 dated discounting, dirty/clean and explicit yield coordinates",
+      "v02-c07 ordinary derivatives and Taylor theorem",
+      "v02-c05 linear systems",
+      "v09-c02 portfolio dollar exposures"
+    ],
+    "locally_derived": [
+      "Periodic annual-quote first, second and third derivatives; Macaulay/modified conversion and PV-variance convexity identity",
+      "Dirty/clean dollar versus normalized exposures and rate-unit conversions",
+      "Taylor approximation with a third-derivative segment bound and signed error",
+      "Signed portfolio and asset-liability dollar exposures",
+      "Explicit continuous-zero interpolation basis, key gradient, mixed Hessian and PSD proof for positive payments",
+      "Annual-to-continuous parallel chain-rule conversions",
+      "Strict conditional C2 local immunization theorem, limitations of equal curvature and the separate overfunded case",
+      "Actual purchased faces, initial budget and conditional horizon reinvestment/sale ledger",
+      "Scalar duration failure under a twist, a large shift, later cash quotes, a changed claim or an unfunded fee",
+      "Model-based finite differences and smoothness/cash-flow boundaries"
+    ],
+    "successor_interface": "c03 may use local sensitivity concepts; explicit curve dynamics/pricing probabilities and stochastic calculus are not assumed here."
+  },
+  "worked_case_review": [
+    {
+      "case": 1,
+      "method": "Independent exact rational polynomial in d=1/(1+y), differentiated before applying d prime and d double-prime; not the lab pricing helper. All three exact prices and Taylor remainders reconstructed.",
+      "anchors": {
+        "price": 96.45404949583762,
+        "dollar_duration": 346.3581336504655,
+        "dollar_convexity": 1616.3928411779282,
+        "plus_100bp_quadratic_error": 0.0014990267911940691,
+        "plus_1000bp_quadratic_error": 1.3049623265249153
+      }
+    },
+    {
+      "case": 2,
+      "method": "Solved value-and-dollar-duration equations for actual zero faces; independently closed constant-rate early reinvestment and late sale ledgers and proved the special global x+1/x inequality.",
+      "anchors": {
+        "budget": 107.9796998164345,
+        "short_face": 56.68934240362812,
+        "long_face": 68.90625,
+        "later_path_horizon_wealth": 113.6366564532149,
+        "fee_same_budget_horizon_wealth": 124.750499001996
+      }
+    },
+    {
+      "case": 3,
+      "method": "Manual basis rows, dollar key vector and full Hessian; independent exponential repricing for all three curve shocks, mixed finite-difference check and annual/continuous chain-rule comparison.",
+      "anchors": {
+        "surplus_key_vector": [
+          53.98984990821725,
+          -323.9390994493035,
+          269.9492495410863
+        ],
+        "adverse_twist_exact_surplus": -2.090509038717073,
+        "adverse_twist_quadratic_surplus": -2.089407191447994
+      }
+    },
+    {
+      "case": 4,
+      "method": "Expanded and factored finite discount polynomial; verified initial value/first-derivative match, strict second derivative and exact failure interval with positive cash claims. Date-0 valuation is kept separate from interim liquidity.",
+      "anchors": {
+        "initial_asset_and_liability_value": 440,
+        "initial_surplus_second_derivative": 40,
+        "stress_yield": -0.2,
+        "stress_surplus": -0.390625,
+        "failure_interval": "-1 < y < -1/6"
+      }
+    }
+  ],
+  "exercise_review": [
+    {
+      "exercise": 1,
+      "verified": "Semiannual nominal quotation, price 100/1.03^6, modified duration 3/1.03, convexity 10.5/1.03^2, dollar duration and DV01; annual effective 6.09% and coordinate-chain conversion. Printed values corrected in author review."
+    },
+    {
+      "exercise": 2,
+      "verified": "Positive PV shares prove maturity bounds; endpoint equality requires all positive weight there; variance identity follows from the second moment; negative admitted yield preserves positive curvature; signed surplus need not."
+    },
+    {
+      "exercise": 3,
+      "verified": "Actual dirty budget gives K=412, clean normalization 4.12, loss 1.03 at 25 bp and 0.03 understatement from clean weighting. Elapsed-time accrual is a different calculation."
+    },
+    {
+      "exercise": 4,
+      "verified": "Ten-year zero derivatives -1000 and 11000; linear -100, quadratic 120, exact 16.15055829; valid loose absolute third-order bound 176 and interpretation."
+    },
+    {
+      "exercise": 5,
+      "verified": "Nonnegative asset values 120/120 solve budget and dollar match; asset duration 2.5, initial surplus 90, surplus G=-360 and second-order change -0.018."
+    },
+    {
+      "exercise": 6,
+      "verified": "Off-key price 100 exp(-0.06), gradient (P,P), Hessian P times all-ones, rank-one PSD; equal opposite bumps cancel exactly under the stipulated basis, with no empirical validation implied."
+    },
+    {
+      "exercise": 7,
+      "verified": "Long-only maturity convex hull proves infeasibility; formal signed weights -1 and 2 satisfy algebra but violate permissions; generalization to all asset maturities earlier than liability is proved."
+    },
+    {
+      "exercise": 8,
+      "verified": "P=400, first derivatives -1000, second derivatives 3800; surplus 100d(d-1)^3 gives two-sided sign change, so equal convexity cannot replace the strict theorem hypothesis."
+    },
+    {
+      "exercise": 9,
+      "verified": "Independent fee experiment wealth 12500/101, gap 125/101, extra initial contribution V/100; separate 80% long-claim experiment wealth 112.5 and gap 12.5. Cash intervention distinctions explicitly taught."
+    },
+    {
+      "exercise": 10,
+      "verified": "Open-answer criteria require liability/loss objective, dirty budget, curve/quote model, cash-flow response, dated cash and fees, decision cutoff/holdout, feasible comparator, exact scenario benchmarks and uncertainty. Original twist/path failure is calculated without inventing frequency evidence."
+    },
+    {
+      "exercise": "teach-back and retention",
+      "verified": "Complete explanatory benchmark; retention D=25/13, C=3750/676, asset duration 2.4, signed twist +0.10, and strict local theorem with a separate cash-clock limitation."
+    }
+  ],
+  "lab_review": {
+    "design": "Original offline stdlib program with no market inputs, network, stochastic draws or side effects on import/run; exact named input schemas with financial domains and strict JSON duplicate/nonfinite checks.",
+    "cash_clock": "Purchase uses dirty initial budget. Under constant-rate scenarios short maturity receipts are reinvested to the liability horizon; the long zero is then sold for its remaining maturity; pay the liability. Later-path, fee and changed-claim interventions are independent and explicitly named.",
+    "curve_basis": "Piecewise-linear continuous zero rates at positive keys, no extrapolation; all cash dates covered. Curve baseline is tied to immunization base annual yield, separately from the note nominal-yield quotation; README explains edited-input behavior.",
+    "edits": "Selected liability scaling, no fee/full claim restoration, reverse twist, actual semiannual quotation with accrual and negative admitted yield independently checked. Schema rejects unknown assumptions and contract-string changes.",
+    "portability": "Isolated copied input/script default resolution, explicit edited input/output, normal and -O CLI; duplicate-key rejection persists under optimization.",
+    "manifest": "Four-file SHA256 manifest includes input, analysis, complete reference output and README; eight nonauthor payloads are hashed in this review."
+  },
+  "numerical_checks": {
+    "passed": true,
+    "focused_group_count": 10,
+    "comparisons": 3647,
+    "domain_and_schema_rejections": 27,
+    "comparison_count_scope": "Includes repeated full-output/CLI fields and structural comparisons; not 3647 independent mathematical derivations.",
+    "quiet_check": true,
+    "optimized_checker": true,
+    "complete_preserved_output": true,
+    "independent_reconstructions": "Exact Fraction arithmetic, separate discount polynomial, manual curve basis/Hessian and direct exponential/cash ledger calculations; the lab helpers are not the numerical oracle."
+  },
+  "commands": [
+    "python3 book/scripts/check_v10_c02.py",
+    "python3 -O book/scripts/check_v10_c02.py",
+    "runpy import and check() inside redirected stdout/stderr; strict JSON encoding and quiet result confirmed"
+  ],
+  "source_review": {
+    "proposals": "content/reviews/v10-c02-sources.json",
+    "records": 3,
+    "reused_exact": "v10-c01-mit-fixed-income: copied exactly from the coordinator proposal; actual official PDF body was also inspected. Duration terminology is supported, apparent negative-convexity sign and universal immunization claims excluded.",
+    "new_inspected": [
+      "v10-c02-redington: actual original paper body in official SOA-hosted reprint, sections 3–4; local Taylor argument and practical limitations.",
+      "v10-c02-cfa-keyrates: actual official CFA Institute 2017 summary, printed pages 49–51, key-rate segment/dollar sensitivity terminology only."
+    ],
+    "limits": "Scoped retrieval and claim checking, not verification of every source statement or current market/regulatory practice. All teaching examples, proof exposition and exercises are original. Source integration belongs to root."
+  },
+  "resolved_findings": [
+    {
+      "finding": "Initial E1 draft had small numerical errors in convexity, dollar duration and DV01.",
+      "resolution": "Exact independent semiannual calculation changed printed results to 9.89725705, 243.92745340 and 0.02439275 before handoff; checker binds those rounded strings to exact values.",
+      "status": "resolved"
+    },
+    {
+      "finding": "E10 solution initially had a missing opening/closing paragraph pair.",
+      "resolution": "Repaired both paragraphs inside the solution li; explicit-stack HTML parser passes.",
+      "status": "resolved"
+    },
+    {
+      "finding": "MIT source extraction contains an apparent negative sign on convexity.",
+      "resolution": "Independently derived positive second derivative and recorded the excluded source claim in both citation scope and manuscript.",
+      "status": "resolved source limitation"
+    }
+  ],
+  "open_findings": [],
+  "gates": {
+    "author_arithmetic": true,
+    "author_reasoning": true,
+    "author_solutions": true,
+    "author_sources": true,
+    "author_instruction": true,
+    "author_structure": true,
+    "independent_coordinator_review": "pending",
+    "canonical_acceptance": "coordinator only; pending",
+    "shared_build": "coordinator only; pending",
+    "publication": "coordinator only; pending"
+  },
+  "limitations": [
+    "Finite deterministic teaching contracts and conditional rate families; no probability forecasts, optional-payment model, credit-pricing model or guarantee against arbitrary future rates.",
+    "Local proof gives some neighborhood; exact special barbell protection needs the much stronger constant post-shift rate and trading assumptions.",
+    "Numerical and source-body checks are not browser visual/mobile/keyboard/print QA or independent human certification.",
+    "Floating-point numerical range and finite-difference cancellation limits are documented; internal helpers are not a general finance API."
+  ],
+  "handoff": "All nine assigned files frozen together after focused checks. Root may independently audit and accept in prerequisite order. Notify root before any subsequent byte changes; then proceed to separately persisted c01 peer-review scope."
+}

@@ -1,0 +1,135 @@
+{
+  "chapter": "v10-c01",
+  "date": "2026-10-09",
+  "status": "complete author draft; ready for independent peer and coordinator acceptance",
+  "assignment": "production/v10-opening-assignments.json",
+  "author": "coordinating author",
+  "scope": {
+    "worked_examples": 4,
+    "graduate_exercises": 10,
+    "visible_words": 5922,
+    "proofs": [
+      "dated replication and its executable assumptions",
+      "triangular bootstrap existence/uniqueness versus positivity",
+      "YTM existence/uniqueness for positive dated payment vectors",
+      "spot-rate bounds on a cash-flow-specific yield",
+      "forward loan replication and funding",
+      "positive endpoint-preserving interpolation nonidentification"
+    ],
+    "case": "Original synthetic Aster bond laboratory; exact calendar and annual-model perimeters stated."
+  },
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "prompt_solution_review": [
+    "E1 amortizing outstanding principal, exact valuation and fee funding reconcile; E2 independent leap-year calendar count and two distinct accrual conventions reconcile.",
+    "E3 independent full-matrix repricing and analytical quote sensitivity agree; E4 actual coupon-bond trading vector cancels both intermediate obligations and leaves positive final cash.",
+    "E5 proves the stated monotone price theorem and both endpoint limits, then its spot bound; negative future cash is explicitly outside the theorem.",
+    "E6 loan pricing and the actual funding/short positions reconcile at all dates, including a two-year effective-rate quote.",
+    "E7 constructs distinct positive discount curves with identical data and derives the nonnegative instantaneous-forward boundary explicitly.",
+    "E8 preserves quote numerator/denominator and actual days, with separate face-discount, investment-simple, effective and continuous quantities.",
+    "E9 compares an early-sale cash stream with the originally promised stream without adding fictitious costs.",
+    "E10 supplies substantive research/model critique and evaluation criteria: exact-fit rank versus interpolation and forecast identification, extra observations/restrictions, sensitivity, evidence timing and unknown true performance.",
+    "Teach-back has explicit economic mechanisms and all three delayed cases are answered."
+  ],
+  "source_review": {
+    "records": 3,
+    "record_file": "reviews/v10-c01-sources.json",
+    "scope": "Actual primary bodies read; source-specific sections recorded. MIT extracted convexity-sign anomaly is not adopted. Fictional data, proofs, original examples and exercises are not copied from sources."
+  },
+  "numerical_validation": {
+    "chapter": "v10-c01",
+    "status": "passed",
+    "groups": 9,
+    "comparisons": 119,
+    "domain_rejections": 20,
+    "group_names": [
+      "quiet nonmutating API and complete strict reference output",
+      "dated settlement, exact accrual and full invoice",
+      "independent full linear solves, repricing and replica cash",
+      "quadratic yield, dated IRR versus wealth and early sale",
+      "forward replication, funding and offered-price inconsistency",
+      "all nine determinate exercises and delayed retention; proof/critique separately reviewed",
+      "five independent contract-consistent interventions",
+      "economic, date, quotation and finite-input rejection boundaries",
+      "manifest, isolated normal/optimized CLI, chapter structure and source routes"
+    ],
+    "worked_examples": 4,
+    "solved_exercises": 10,
+    "limits": "Finite conditional arithmetic, file integrity and structure. Editorial proof/source/critique review is separate; no market authentication, human certification or visual UI QA."
+  },
+  "runtime_validation": {
+    "quiet_api": true,
+    "strict_json": true,
+    "optimized_arbitrary_cwd_matches": true,
+    "offline_portable_model_normal_and_optimized": true
+  },
+  "resolved_findings": [
+    {
+      "scope": "lab numerical domain",
+      "repair": "Widened log-yield bracket for admissible very small positive discounts and constrained the bounded helper to one to three annual cash flows; no general irregular-date engine claimed."
+    },
+    {
+      "scope": "README negative-rate intervention",
+      "repair": "Recomputed instrument prices from the stated above-one discount vector: [101,110.12,128.78]. The intervention now independently recovers [1.01,1.02,1.10]."
+    },
+    {
+      "scope": "separate peer review: curve integral regularity",
+      "repair": "Strengthened positivity and differentiability to positivity and continuous differentiability on [0,T], with D(0)=1, before invoking the integral identity. The piecewise log-linear knot qualification remains explicit."
+    }
+  ],
+  "open_findings": [],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c01.html",
+      "bytes": 42939,
+      "sha256": "498d326512c0ac336c1a2cfd84700583b402fde5b0ef23efba109bf0b650368f"
+    },
+    {
+      "path": "content/projects/v10-c01-inputs.json",
+      "bytes": 1094,
+      "sha256": "bbbfb12315284006afc127ee2fd2626199a497ae796347adff4f645e980f8524"
+    },
+    {
+      "path": "content/projects/v10-c01-analysis.py",
+      "bytes": 10718,
+      "sha256": "12ad4eee764f61d6458e15c5bc3aee26882f38f383e64a00b783ab389ba2c104"
+    },
+    {
+      "path": "content/projects/v10-c01-output.json",
+      "bytes": 2733,
+      "sha256": "6fe1abfe2f1a1055fa4b47fe621fe90c53057dbc1c012a83fd41f451c36c0d61"
+    },
+    {
+      "path": "content/projects/v10-c01-manifest.json",
+      "bytes": 771,
+      "sha256": "b564c17fe5644fe3be8e322b6709e1f485465ee4ca6b833e456c038f9539f4ba"
+    },
+    {
+      "path": "content/projects/v10-c01-README.txt",
+      "bytes": 11152,
+      "sha256": "9cfc01a0ba237736b2d9b516c3f854b2f670fbf574182df39bbaed7466aaac86"
+    },
+    {
+      "path": "scripts/check_v10_c01.py",
+      "bytes": 17503,
+      "sha256": "1a888f51c1cb8c6c6aada90c5bf895f3f49db38a364a19b3599d7f911c59b1a2"
+    },
+    {
+      "path": "content/reviews/v10-c01-sources.json",
+      "bytes": 3020,
+      "sha256": "8835a2316b2437d020972ba28e83f172f17b19f28897413644dd762a03e9ee0f"
+    }
+  ],
+  "limits": [
+    "Author and specialist AI review are not independent human certification.",
+    "No real quotes, security rights, current legal conventions or forward-rate forecasts are authenticated.",
+    "Calendar example uses fixed regular dates and full coupon entitlement; stub, ex-coupon and holiday systems require explicit additional contracts.",
+    "Separate peer review, coordinator acceptance, shared-library structural integration and publication remain pending. Visual/mobile/keyboard/print QA is not claimed."
+  ]
+}

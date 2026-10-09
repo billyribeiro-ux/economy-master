@@ -1,0 +1,419 @@
+{
+  "case": "Fenwick Credit Desk",
+  "structural": {
+    "states": [
+      {
+        "asset": "70",
+        "physical_probability": "1/10",
+        "pricing_probability": "1/5",
+        "state_price": "24/125",
+        "default": true,
+        "workout_cost": "0",
+        "debt_payoff": "70",
+        "equity_payoff": "0",
+        "claim_sum": "70"
+      },
+      {
+        "asset": "110",
+        "physical_probability": "3/5",
+        "pricing_probability": "1/2",
+        "state_price": "12/25",
+        "default": false,
+        "workout_cost": "0",
+        "debt_payoff": "100",
+        "equity_payoff": "10",
+        "claim_sum": "110"
+      },
+      {
+        "asset": "160",
+        "physical_probability": "3/10",
+        "pricing_probability": "3/10",
+        "state_price": "36/125",
+        "default": false,
+        "workout_cost": "0",
+        "debt_payoff": "100",
+        "equity_payoff": "60",
+        "claim_sum": "160"
+      }
+    ],
+    "gross_asset_value": "2808/25",
+    "debt_price": "2256/25",
+    "equity_price": "552/25",
+    "workout_cost_pv": "0",
+    "claim_value": "2808/25",
+    "physical_default_probability": "1/10",
+    "pricing_default_probability": "1/5",
+    "physical_expected_debt_receipt": "97",
+    "physical_expected_face_loss": "3",
+    "physical_expected_debt_return": "169/2256",
+    "promised_simple_yield": "61/564",
+    "safe_simple_return": "1/24",
+    "continuous_promised_spread_approx": 0.06187540371808753
+  },
+  "scheduled": {
+    "physical_survival": [
+      {
+        "opening_survival": "1",
+        "conditional_default": "1/100",
+        "marginal_default": "1/100",
+        "survival": "99/100"
+      },
+      {
+        "opening_survival": "99/100",
+        "conditional_default": "1/50",
+        "marginal_default": "99/5000",
+        "survival": "4851/5000"
+      },
+      {
+        "opening_survival": "4851/5000",
+        "conditional_default": "3/100",
+        "marginal_default": "14553/500000",
+        "survival": "470547/500000"
+      }
+    ],
+    "pricing_cash_rows": [
+      {
+        "opening_survival": "1",
+        "conditional_default": "1/50",
+        "marginal_default": "1/50",
+        "survival": "49/50",
+        "time": "1",
+        "discount_factor": "25/26",
+        "survival_coupon": "147/25",
+        "survival_principal": "0",
+        "recovery_at_interval_end": "4/5",
+        "present_value": "167/26",
+        "equivalent_constant_intensity_on_interval_approx": 0.02020270731751945
+      },
+      {
+        "opening_survival": "49/50",
+        "conditional_default": "3/100",
+        "marginal_default": "147/5000",
+        "survival": "4753/5000",
+        "time": "2",
+        "discount_factor": "625/676",
+        "survival_coupon": "14259/2500",
+        "survival_principal": "0",
+        "recovery_at_interval_end": "147/125",
+        "present_value": "1323/208",
+        "equivalent_constant_intensity_on_interval_approx": 0.030459207484708546
+      },
+      {
+        "opening_survival": "4753/5000",
+        "conditional_default": "1/25",
+        "marginal_default": "4753/125000",
+        "survival": "14259/15625",
+        "time": "3",
+        "discount_factor": "15625/17576",
+        "survival_coupon": "85554/15625",
+        "survival_principal": "57036/625",
+        "recovery_at_interval_end": "4753/3125",
+        "present_value": "1535219/17576",
+        "equivalent_constant_intensity_on_interval_approx": 0.04082199452025513
+      }
+    ],
+    "price_end_date_recovery": "3519809/35152",
+    "price_maturity_recovery": "3516299/35152",
+    "default_free_promised_price": "927575/8788",
+    "recovery_timing_value": "135/1352"
+  },
+  "continuous": {
+    "physical_survival_approx": 0.9048374180359595,
+    "pricing_survival_approx": 0.7408182206817179,
+    "survival_principal_pv_approx": 63.76281516217733,
+    "immediate_recovery_pv_approx": 9.663249290086044,
+    "immediate_par_price_approx": 73.42606445226338,
+    "maturity_recovery_price_approx": 72.68600815430871,
+    "market_value_recovery_price_approx": 71.89237334319262,
+    "safe_zero_price_approx": 86.07079764250578,
+    "immediate_par_continuous_spread_approx": 0.03177824237435481,
+    "maturity_recovery_continuous_spread_approx": 0.03380425600444083,
+    "market_value_recovery_continuous_spread_approx": 0.036,
+    "scope": "Three different recovery contracts under the same supplied Q intensity; no diffusion or fitted physical model."
+  },
+  "migration": {
+    "physical_rows": [
+      {
+        "year": 1,
+        "distribution": [
+          "9/10",
+          "9/100",
+          "1/100"
+        ],
+        "cumulative_default": "1/100",
+        "marginal_default": "1/100",
+        "conditional_default": "1/100",
+        "survival": "99/100",
+        "discount_factor": "25/26",
+        "first_default_recovery_cash": "2/5",
+        "principal_cash": "0",
+        "discounted_probability_weighted_cash": "5/13"
+      },
+      {
+        "year": 2,
+        "distribution": [
+          "1647/2000",
+          "153/1000",
+          "47/2000"
+        ],
+        "cumulative_default": "47/2000",
+        "marginal_default": "27/2000",
+        "conditional_default": "3/220",
+        "survival": "1953/2000",
+        "discount_factor": "625/676",
+        "first_default_recovery_cash": "27/50",
+        "principal_cash": "0",
+        "discounted_probability_weighted_cash": "675/1352"
+      },
+      {
+        "year": 3,
+        "distribution": [
+          "7641/10000",
+          "39303/200000",
+          "7877/200000"
+        ],
+        "cumulative_default": "7877/200000",
+        "marginal_default": "3177/200000",
+        "conditional_default": "353/21700",
+        "survival": "192123/200000",
+        "discount_factor": "15625/17576",
+        "first_default_recovery_cash": "3177/5000",
+        "principal_cash": "192123/2000",
+        "discounted_probability_weighted_cash": "24174225/281216"
+      }
+    ],
+    "physical_weighted_discounted_cash": "24422785/281216",
+    "pricing_rows": [
+      {
+        "year": 1,
+        "distribution": [
+          "17/20",
+          "3/25",
+          "3/100"
+        ],
+        "cumulative_default": "3/100",
+        "marginal_default": "3/100",
+        "conditional_default": "3/100",
+        "survival": "97/100",
+        "discount_factor": "25/26",
+        "first_default_recovery_cash": "6/5",
+        "principal_cash": "0",
+        "discounted_probability_weighted_cash": "15/13"
+      },
+      {
+        "year": 2,
+        "distribution": [
+          "1469/2000",
+          "99/500",
+          "27/400"
+        ],
+        "cumulative_default": "27/400",
+        "marginal_default": "3/80",
+        "conditional_default": "15/388",
+        "survival": "373/400",
+        "discount_factor": "625/676",
+        "first_default_recovery_cash": "3/2",
+        "principal_cash": "0",
+        "discounted_probability_weighted_cash": "1875/1352"
+      },
+      {
+        "year": 3,
+        "distribution": [
+          "5153/8000",
+          "12327/50000",
+          "21867/200000"
+        ],
+        "cumulative_default": "21867/200000",
+        "marginal_default": "8367/200000",
+        "conditional_default": "8367/186500",
+        "survival": "178133/200000",
+        "discount_factor": "15625/17576",
+        "first_default_recovery_cash": "8367/5000",
+        "principal_cash": "178133/2000",
+        "discounted_probability_weighted_cash": "22684975/281216"
+      }
+    ],
+    "pricing_weighted_discounted_cash": "23399455/281216",
+    "price": "23399455/281216",
+    "scope": "P-weighted discounted cash is a comparison, not a no-arbitrage price. D is absorbing; default recovery is paid once."
+  },
+  "joint": {
+    "frechet_lower": "0",
+    "frechet_upper": "1/10",
+    "loss_given_each_default": "60",
+    "cases": [
+      {
+        "name": "independent",
+        "joint_probability": "1/100",
+        "rows": [
+          {
+            "state": "neither",
+            "probability": "81/100",
+            "pool_loss": "0",
+            "junior_loss": "0",
+            "senior_loss": "0",
+            "junior_receipt": "60",
+            "senior_receipt": "140"
+          },
+          {
+            "state": "A_only",
+            "probability": "9/100",
+            "pool_loss": "60",
+            "junior_loss": "60",
+            "senior_loss": "0",
+            "junior_receipt": "0",
+            "senior_receipt": "140"
+          },
+          {
+            "state": "B_only",
+            "probability": "9/100",
+            "pool_loss": "60",
+            "junior_loss": "60",
+            "senior_loss": "0",
+            "junior_receipt": "0",
+            "senior_receipt": "140"
+          },
+          {
+            "state": "both",
+            "probability": "1/100",
+            "pool_loss": "120",
+            "junior_loss": "60",
+            "senior_loss": "60",
+            "junior_receipt": "0",
+            "senior_receipt": "80"
+          }
+        ],
+        "default_covariance": "0",
+        "default_correlation_approx": 0.0,
+        "expected_pool_loss": "12",
+        "pool_loss_variance": "648",
+        "expected_junior_loss": "57/5",
+        "expected_senior_loss": "3/5",
+        "junior_price": "5832/125",
+        "senior_price": "16728/125",
+        "pool_price": "4512/25",
+        "probability_loss_above_one_name_loss": "1/100"
+      },
+      {
+        "name": "clustered",
+        "joint_probability": "1/20",
+        "rows": [
+          {
+            "state": "neither",
+            "probability": "17/20",
+            "pool_loss": "0",
+            "junior_loss": "0",
+            "senior_loss": "0",
+            "junior_receipt": "60",
+            "senior_receipt": "140"
+          },
+          {
+            "state": "A_only",
+            "probability": "1/20",
+            "pool_loss": "60",
+            "junior_loss": "60",
+            "senior_loss": "0",
+            "junior_receipt": "0",
+            "senior_receipt": "140"
+          },
+          {
+            "state": "B_only",
+            "probability": "1/20",
+            "pool_loss": "60",
+            "junior_loss": "60",
+            "senior_loss": "0",
+            "junior_receipt": "0",
+            "senior_receipt": "140"
+          },
+          {
+            "state": "both",
+            "probability": "1/20",
+            "pool_loss": "120",
+            "junior_loss": "60",
+            "senior_loss": "60",
+            "junior_receipt": "0",
+            "senior_receipt": "80"
+          }
+        ],
+        "default_covariance": "1/25",
+        "default_correlation_approx": 0.4444444444444445,
+        "expected_pool_loss": "12",
+        "pool_loss_variance": "936",
+        "expected_junior_loss": "9",
+        "expected_senior_loss": "3",
+        "junior_price": "1224/25",
+        "senior_price": "3288/25",
+        "pool_price": "4512/25",
+        "probability_loss_above_one_name_loss": "1/20"
+      }
+    ],
+    "scope": "Q=P is explicitly stipulated here only; these are conditional loss and tranche-price comparisons."
+  },
+  "calibration": {
+    "observed_continuous_spread_approx": 0.02564664719377529,
+    "conditional_calibrations": [
+      {
+        "recovery_fraction": "0",
+        "liquidity_price_multiplier": "1",
+        "credit_price_ratio": "19/20",
+        "liquidity_yield_wedge_approx": -0.0,
+        "status": "compatible",
+        "default_probability": "1/20",
+        "intensity_approx": 0.025646647193775268,
+        "repriced": "171/2"
+      },
+      {
+        "recovery_fraction": "0",
+        "liquidity_price_multiplier": "95/97",
+        "credit_price_ratio": "97/100",
+        "liquidity_yield_wedge_approx": 0.010417043451421013,
+        "status": "compatible",
+        "default_probability": "3/100",
+        "intensity_approx": 0.015229603742354273,
+        "repriced": "171/2"
+      },
+      {
+        "recovery_fraction": "1/2",
+        "liquidity_price_multiplier": "1",
+        "credit_price_ratio": "19/20",
+        "liquidity_yield_wedge_approx": -0.0,
+        "status": "compatible",
+        "default_probability": "1/10",
+        "intensity_approx": 0.052680257828913155,
+        "repriced": "171/2"
+      },
+      {
+        "recovery_fraction": "1/2",
+        "liquidity_price_multiplier": "95/97",
+        "credit_price_ratio": "97/100",
+        "liquidity_yield_wedge_approx": 0.010417043451421013,
+        "status": "compatible",
+        "default_probability": "3/50",
+        "intensity_approx": 0.030937701859043733,
+        "repriced": "171/2"
+      },
+      {
+        "recovery_fraction": "3/4",
+        "liquidity_price_multiplier": "1",
+        "credit_price_ratio": "19/20",
+        "liquidity_yield_wedge_approx": -0.0,
+        "status": "compatible",
+        "default_probability": "1/5",
+        "intensity_approx": 0.11157177565710488,
+        "repriced": "171/2"
+      },
+      {
+        "recovery_fraction": "3/4",
+        "liquidity_price_multiplier": "95/97",
+        "credit_price_ratio": "97/100",
+        "liquidity_yield_wedge_approx": 0.010417043451421013,
+        "status": "compatible",
+        "default_probability": "3/25",
+        "intensity_approx": 0.06391668575494244,
+        "repriced": "171/2"
+      }
+    ],
+    "scope": "One maturity-paid-recovery price identifies no unique hazard/recovery/liquidity triple or physical default law."
+  },
+  "limits": "Supplied synthetic contracts and P/Q laws, not estimated defaults, guaranteed returns or legal advice."
+}

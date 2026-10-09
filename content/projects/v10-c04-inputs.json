@@ -1,0 +1,154 @@
+{
+  "schema": "v10-c04-credit-1",
+  "case": "Fenwick Credit Desk",
+  "provenance": "Original synthetic teaching contracts and probabilities; no observed prices, estimated defaults or current legal claims.",
+  "conventions": {
+    "unit": "CU",
+    "time": "years after 1 January 2027; date zero is before all payouts",
+    "structural": "one nonrecourse zero-coupon debt; default is asset value strictly below face; no other claims or interim payout",
+    "scheduled": "first default occurs at an interval end before that date coupon; recovery of par replaces all remaining rights; delayed comparison pays the same recovery only at final maturity",
+    "continuous": "constant deterministic short rate and measure-labeled intensities; immediate recovery of par, maturity-paid recovery and recovery of pre-default market value are different contracts",
+    "transition": "annual row-stochastic P and Q on A,B,D; D is absorbing; recovery paid once on first entry into D before any maturity principal",
+    "joint": "two nonrecourse notes settle at one year; stipulated risk-neutral investors make physical and pricing probabilities equal in this separate example only",
+    "liquidity": "a supplied nonreplicable frictional valuation wedge relative to a credit benchmark; not a second executable price for identical freely replicable cash flows"
+  },
+  "structural": {
+    "face": "100",
+    "discount": "0.96",
+    "asset_values": [
+      "70",
+      "110",
+      "160"
+    ],
+    "physical_probabilities": [
+      ".1",
+      ".6",
+      ".3"
+    ],
+    "pricing_probabilities": [
+      ".2",
+      ".5",
+      ".3"
+    ],
+    "workout_asset_fraction": "0"
+  },
+  "scheduled": {
+    "face": "100",
+    "coupon_amount": "6",
+    "recovery_fraction": ".4",
+    "times": [
+      "1",
+      "2",
+      "3"
+    ],
+    "discount_factors": [
+      "25/26",
+      "625/676",
+      "15625/17576"
+    ],
+    "physical_hazards": [
+      ".01",
+      ".02",
+      ".03"
+    ],
+    "pricing_hazards": [
+      ".02",
+      ".03",
+      ".04"
+    ]
+  },
+  "continuous": {
+    "face": "100",
+    "maturity": "5",
+    "short_rate": ".03",
+    "physical_intensity": ".02",
+    "pricing_intensity": ".06",
+    "recovery_fraction": ".4"
+  },
+  "migration": {
+    "face": "100",
+    "recovery_fraction": ".4",
+    "states": [
+      "A",
+      "B",
+      "D"
+    ],
+    "initial_state": "A",
+    "discount_factors": [
+      "25/26",
+      "625/676",
+      "15625/17576"
+    ],
+    "physical_matrix": [
+      [
+        ".90",
+        ".09",
+        ".01"
+      ],
+      [
+        ".15",
+        ".80",
+        ".05"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "pricing_matrix": [
+      [
+        ".85",
+        ".12",
+        ".03"
+      ],
+      [
+        ".10",
+        ".80",
+        ".10"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ]
+    ]
+  },
+  "joint": {
+    "face_each": "100",
+    "recovery_fraction": ".4",
+    "discount": ".96",
+    "marginal_defaults": [
+      ".1",
+      ".1"
+    ],
+    "joint_default_cases": [
+      {
+        "name": "independent",
+        "probability": ".01"
+      },
+      {
+        "name": "clustered",
+        "probability": ".05"
+      }
+    ],
+    "junior_width": "60",
+    "physical_equals_pricing": true
+  },
+  "calibration": {
+    "face": "100",
+    "maturity": "2",
+    "discount": ".9",
+    "observed_price": "85.5",
+    "recovery_fractions": [
+      "0",
+      ".5",
+      ".75"
+    ],
+    "liquidity_price_multipliers": [
+      "1",
+      "95/97"
+    ],
+    "recovery_timing": "maturity"
+  }
+}

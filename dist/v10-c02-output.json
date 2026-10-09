@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "chapter": "v10-c02",
+  "note": {
+    "coordinate": "decimal nominal annual yield, holding settlement and cash flows fixed",
+    "frequency": 1,
+    "base_yield": 0.05,
+    "dirty": {
+      "price": 96.45404949583762,
+      "cash_flow_pvs": [
+        3.8095238095238093,
+        3.6281179138321993,
+        3.455350394125904,
+        85.56105737835571
+      ],
+      "macaulay_years": 3.7704590137367204,
+      "modified_duration": 3.5909133464159244,
+      "convexity": 16.75816463514766,
+      "dollar_duration": 346.3581336504655,
+      "dollar_convexity": 1616.3928411779282,
+      "dv01_positive_loss_for_upward_bp": 0.03463581336504655
+    },
+    "accrued_interest_fixed": 0.0,
+    "clean_price": 96.45404949583762,
+    "clean_fractional_sensitivity": 3.5909133464159244,
+    "finite_difference": {
+      "step": 0.0001,
+      "duration": 3.5909135044057416,
+      "convexity": 16.75816516091143
+    },
+    "scenarios": [
+      {
+        "yield_shift": -0.01,
+        "exact_dirty_price": 99.99999999999999,
+        "linear_dirty_price": 99.91763083234228,
+        "quadratic_dirty_price": 99.99845047440118,
+        "linear_error_estimate_minus_exact": -0.08236916765770275,
+        "quadratic_error_estimate_minus_exact": -0.00154952559880428,
+        "absolute_quadratic_remainder_bound": 0.001628811682961766
+      },
+      {
+        "yield_shift": 0.01,
+        "exact_dirty_price": 93.06978877460067,
+        "linear_dirty_price": 92.99046815933296,
+        "quadratic_dirty_price": 93.07128780139186,
+        "linear_error_estimate_minus_exact": -0.0793206152677044,
+        "quadratic_error_estimate_minus_exact": 0.0014990267911940691,
+        "absolute_quadratic_remainder_bound": 0.0015238930110987807
+      },
+      {
+        "yield_shift": 0.1,
+        "exact_dirty_price": 68.5952380101558,
+        "linear_dirty_price": 61.81823613079107,
+        "quadratic_dirty_price": 69.90020033668071,
+        "linear_error_estimate_minus_exact": -6.777001879364725,
+        "quadratic_error_estimate_minus_exact": 1.3049623265249153,
+        "absolute_quadratic_remainder_bound": 1.5238930110987807
+      }
+    ]
+  },
+  "immunization": {
+    "initial_budget": 107.9796998164345,
+    "asset_pv_weights": [
+      0.5,
+      0.5
+    ],
+    "asset_market_values": [
+      53.98984990821725,
+      53.98984990821725
+    ],
+    "asset_zero_faces": [
+      56.68934240362812,
+      68.90625000000001
+    ],
+    "asset_metrics": {
+      "price": 107.9796998164345,
+      "cash_flow_pvs": [
+        53.98984990821725,
+        53.98984990821725
+      ],
+      "macaulay_years": 3.0,
+      "modified_duration": 2.857142857142857,
+      "convexity": 14.512471655328797,
+      "dollar_duration": 308.5134280469557,
+      "dollar_convexity": 1567.0523329369178,
+      "dv01_positive_loss_for_upward_bp": 0.03085134280469557
+    },
+    "liability_metrics": {
+      "price": 107.9796998164345,
+      "cash_flow_pvs": [
+        107.9796998164345
+      ],
+      "macaulay_years": 3.0,
+      "modified_duration": 2.857142857142857,
+      "convexity": 10.884353741496598,
+      "dollar_duration": 308.5134280469557,
+      "dollar_convexity": 1175.2892497026885,
+      "dv01_positive_loss_for_upward_bp": 0.03085134280469557
+    },
+    "initial_surplus": 0.0,
+    "surplus_first_yield_derivative": 0.0,
+    "surplus_second_yield_derivative": 391.76308323422927,
+    "single_shift_then_constant_rate_scenarios": [
+      {
+        "annual_yield_shift": -0.01,
+        "asset_pv": 111.14489778054823,
+        "liability_pv": 111.12454483386435,
+        "valuation_surplus": 0.020352946683885875,
+        "early_cash_reinvested_to_horizon": 61.31519274376418,
+        "long_zero_sold_at_horizon": 63.707701553254445,
+        "horizon_wealth": 125.02289429701862,
+        "horizon_surplus": 0.022894297018623888
+      },
+      {
+        "annual_yield_shift": 0.01,
+        "asset_pv": 104.9712701755877,
+        "liability_pv": 104.95241037903773,
+        "valuation_surplus": 0.018859796549975272,
+        "early_cash_reinvested_to_horizon": 63.69614512471656,
+        "long_zero_sold_at_horizon": 61.326317194731224,
+        "horizon_wealth": 125.02246231944778,
+        "horizon_surplus": 0.022462319447782875
+      },
+      {
+        "annual_yield_shift": 0.1,
+        "asset_pv": 83.55366476762873,
+        "liability_pv": 82.1895290539985,
+        "valuation_surplus": 1.3641357136302332,
+        "early_cash_reinvested_to_horizon": 74.97165532879819,
+        "long_zero_sold_at_horizon": 52.10302457466919,
+        "horizon_wealth": 127.07467990346738,
+        "horizon_surplus": 2.074679903467384
+      }
+    ],
+    "later_path_intervention": {
+      "early_reinvestment_yield": 0.0,
+      "long_sale_yield": 0.1,
+      "early_cash_at_horizon": 56.68934240362812,
+      "long_sale_receipt": 56.94731404958678,
+      "horizon_wealth": 113.6366564532149,
+      "horizon_surplus": -11.363343546785103
+    },
+    "entry_fee_intervention": {
+      "fee_rate": 0.002,
+      "extra_initial_cash_for_original_holdings": 0.215959399632869,
+      "holdings_scale_on_unchanged_budget": 0.998003992015968,
+      "post_trade_security_value": 107.76417147348752,
+      "cash_fee_paid": 0.21552834294697504,
+      "base_horizon_wealth": 124.750499001996,
+      "base_horizon_funding_gap": 0.24950099800399528
+    },
+    "changed_cash_flow_intervention": {
+      "long_payoff_fraction": 0.9,
+      "base_horizon_wealth": 118.75000000000001,
+      "base_horizon_surplus": -6.249999999999986
+    }
+  },
+  "key_rate_curve": {
+    "key_times": [
+      1.0,
+      3.0,
+      5.0
+    ],
+    "baseline_continuous_zeros": [
+      0.04879016416943201,
+      0.04879016416943201,
+      0.04879016416943201
+    ],
+    "note": {
+      "price": 96.45404949583764,
+      "basis_rows": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.5,
+          0.5
+        ]
+      ],
+      "cash_flow_pvs": [
+        3.8095238095238093,
+        3.6281179138321997,
+        3.455350394125904,
+        85.56105737835573
+      ],
+      "dollar_key_durations": [
+        7.437641723356009,
+        185.11628385292136,
+        171.12211475671145
+      ],
+      "key_durations": [
+        0.07711072538926395,
+        1.9192173353064854,
+        1.7741309530409715
+      ],
+      "dollar_hessian": [
+        [
+          7.437641723356009,
+          3.6281179138321997,
+          0.0
+        ],
+        [
+          3.6281179138321997,
+          376.97050097438824,
+          342.2442295134229
+        ],
+        [
+          0.0,
+          342.2442295134229,
+          342.2442295134229
+        ]
+      ],
+      "continuous_parallel_dollar_duration": 363.6760403329888,
+      "continuous_parallel_dollar_convexity": 1418.3970670656774
+    },
+    "assets": {
+      "price": 107.97969981643452,
+      "basis_rows": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "cash_flow_pvs": [
+        53.98984990821725,
+        53.989849908217266
+      ],
+      "dollar_key_durations": [
+        53.98984990821725,
+        0.0,
+        269.9492495410863
+      ],
+      "key_durations": [
+        0.49999999999999994,
+        0.0,
+        2.5
+      ],
+      "dollar_hessian": [
+        [
+          53.98984990821725,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1349.7462477054316
+        ]
+      ],
+      "continuous_parallel_dollar_duration": 323.93909944930357,
+      "continuous_parallel_dollar_convexity": 1403.7360976136488
+    },
+    "liability": {
+      "price": 107.9796998164345,
+      "basis_rows": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "cash_flow_pvs": [
+        107.9796998164345
+      ],
+      "dollar_key_durations": [
+        0.0,
+        323.9390994493035,
+        0.0
+      ],
+      "key_durations": [
+        0.0,
+        3.0,
+        0.0
+      ],
+      "dollar_hessian": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          971.8172983479105,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "continuous_parallel_dollar_duration": 323.9390994493035,
+      "continuous_parallel_dollar_convexity": 971.8172983479105
+    },
+    "surplus_dollar_key_durations": [
+      53.98984990821725,
+      -323.9390994493035,
+      269.9492495410863
+    ],
+    "surplus_dollar_hessian": [
+      [
+        53.98984990821725,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -971.8172983479105,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1349.7462477054316
+      ]
+    ],
+    "scenarios": [
+      {
+        "name": "parallel_continuous_100bp",
+        "continuous_zero_bumps": [
+          0.01,
+          0.01,
+          0.01
+        ],
+        "asset_price": 104.80937578284647,
+        "liability_price": 104.78841740076754,
+        "exact_surplus": 0.020958382078930526,
+        "linear_surplus": 1.3655743202889425e-14,
+        "quadratic_surplus": 0.02159593996330058,
+        "exact_note_price": 92.88728446867604
+      },
+      {
+        "name": "adverse_twist",
+        "continuous_zero_bumps": [
+          -0.01,
+          0.0,
+          0.01
+        ],
+        "asset_price": 105.88919077771743,
+        "liability_price": 107.9796998164345,
+        "exact_surplus": -2.090509038717073,
+        "linear_surplus": -2.1595939963286765,
+        "quadratic_surplus": -2.089407191447994,
+        "exact_note_price": 94.83457658850126
+      },
+      {
+        "name": "middle_only_100bp",
+        "continuous_zero_bumps": [
+          0.0,
+          0.01,
+          0.0
+        ],
+        "asset_price": 107.97969981643452,
+        "liability_price": 104.78841740076754,
+        "exact_surplus": 3.1912824156669757,
+        "linear_surplus": 3.2393909944930495,
+        "quadratic_surplus": 3.190800129575654,
+        "exact_note_price": 94.62160563274776
+      }
+    ]
+  },
+  "local_counterexample": {
+    "asset_times": [
+      1,
+      3
+    ],
+    "asset_cash": [
+      120.0,
+      320.0
+    ],
+    "liability_times": [
+      2,
+      4
+    ],
+    "liability_cash": [
+      340.0,
+      100.0
+    ],
+    "initial_asset_pv": 440.0,
+    "initial_liability_pv": 440.0,
+    "initial_surplus_first_derivative": 0.0,
+    "initial_surplus_second_derivative": 40.0,
+    "stress_yield": -0.2,
+    "stress_discount_factor": 1.25,
+    "stress_asset_pv": 774.9999999999999,
+    "stress_liability_pv": 775.3906249999998,
+    "stress_surplus_direct": -0.3906249999998863,
+    "stress_surplus_factored": -0.39062500000000033,
+    "negative_surplus_region": {
+      "annual_yield_lower_exclusive": -1,
+      "annual_yield_upper_exclusive": -0.16666666666666663
+    }
+  },
+  "scope": "Deterministic fixed-settlement sensitivities and explicitly conditional cash ledgers; no rate probabilities, option model or guarantee against later shocks."
+}

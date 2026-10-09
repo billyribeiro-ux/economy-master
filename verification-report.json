@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "chapter_packages_available": 108,
-  "html_pages_checked": 126,
+  "chapter_packages_available": 112,
+  "html_pages_checked": 130,
   "curriculum_chapters": 216,
   "cross_volume_packages_available": 2,
   "checks": [
@@ -28,6 +28,7 @@
     "Volume 3 chapters 11\u201312 proper losses, calibration/resolution, weighted-report and random-skill distortions, joint-state information values/garbling, information projections, dyadic/spike integrals, stopped martingale histories, heavy-tail truncation and maximal/Kronecker diagnostics",
     "Volume 3 diagnostic, distinct exams, retention, posterior/predictive/information project, independent integration/coverage and seeded paired-score checks",
     "Volume 8 chapters 1\u20134: incremental capital budgeting and IRR domains; FCFF/FCFE and dated claim pricing; coherent capital/return fade and terminal sensitivity; covariance, policy-specific leverage, WACC and finite APV with independent pricing checks",
+    "Volume 10 chapters 1\u20134: dated bond cash, settlement accrual, bootstrapping, YTM/forward conventions and curve identification; yield/key sensitivities, funded immunization and failure cases; finite pricing versus physical rate dynamics, calibrated Arrow trees and hedge errors; structural/default-time credit, recovery timing, absorption, dependence and conditional spread calibration",
     "Volume 9 chapters 1\u20134: dated total/simple/log and flow-adjusted returns; finite-state and sample covariance, financing and concentration; exact frontier, allocation and constraint certificates with shrinkage sensitivity; investor demand, market clearing, pricing/proxy/sample distinctions and conditional CAPM limits",
     "Volume 9 chapters 5\u20138: finite-state replication, positive state prices and complete/incomplete pricing; exact versus residual factor pricing, OLS and funded construction; conditional information, search, belief equilibrium and margin contracts; benchmark/factor/fee/flow performance, attribution and complete entry/exit cohorts",
     "Volume 9 chapters 9\u201312: surplus/endowment and dynamic allocation, funded rebalancing and robust no-trade policies; property/private/futures cash, appraisal smoothing and dated liquidity; execution rights, signed costs, whole-target shortfall and constrained capacity; implementable investment policy, complete finite risk/constraint ranking, reverse-stress funding and exception reporting",
@@ -6478,6 +6479,116 @@
         "portable normal and optimized execution, hashes, structure and sources"
       ],
       "limits": "Exact synthetic-case verification and scoped input checks; no external human certification, empirical validation or UI QA."
+    }
+  },
+  "volume_10_opening_checks": {
+    "v10-c01": {
+      "chapter": "v10-c01",
+      "status": "passed",
+      "groups": 9,
+      "comparisons": 119,
+      "domain_rejections": 20,
+      "group_names": [
+        "quiet nonmutating API and complete strict reference output",
+        "dated settlement, exact accrual and full invoice",
+        "independent full linear solves, repricing and replica cash",
+        "quadratic yield, dated IRR versus wealth and early sale",
+        "forward replication, funding and offered-price inconsistency",
+        "all nine determinate exercises and delayed retention; proof/critique separately reviewed",
+        "five independent contract-consistent interventions",
+        "economic, date, quotation and finite-input rejection boundaries",
+        "manifest, isolated normal/optimized CLI, chapter structure and source routes"
+      ],
+      "worked_examples": 4,
+      "solved_exercises": 10,
+      "limits": "Finite conditional arithmetic, file integrity and structure. Editorial proof/source/critique review is separate; no market authentication, human certification or visual UI QA."
+    },
+    "v10-c02": {
+      "chapter": "v10-c02",
+      "passed": true,
+      "groups": [
+        "quiet strict JSON and every preserved field",
+        "exact note polynomial, Taylor bounds, units and finite differences",
+        "funded hedge and constant-rate, later-path, fee and claim ledgers",
+        "explicit key basis, Hessian, chain rule and exact twists",
+        "strict local theorem counterexample and exact failure boundary",
+        "ten exercise solutions and answered retention, with proof-scope clauses",
+        "bounded scale, funding, payoff, reverse-twist and quote interventions",
+        "financial domain and exact schema rejection",
+        "balanced HTML, full solutions, flat links, sources and manifest",
+        "isolated normal and optimized default/edited CLI"
+      ],
+      "group_count": 10,
+      "comparisons": 3647,
+      "rejections": 27,
+      "worked_examples": 4,
+      "exercises": 10,
+      "limits": "Comparisons include structural checks and complete repeated-output fields, not that many independent derivations. Proofs and open-answer adequacy also require manuscript review; no UI or real-market validation is claimed."
+    },
+    "v10-c03": {
+      "chapter": "v10-c03",
+      "status": "passed",
+      "groups": [
+        {
+          "name": "Quiet API, complete saved output and independent path enumeration",
+          "status": "passed",
+          "comparisons": 1557
+        },
+        {
+          "name": "All determinate worked/exercise anchors, path pricing identities and proof assumptions",
+          "status": "passed",
+          "comparisons": 143
+        },
+        {
+          "name": "Ten meaningful probability, payoff, curve and physical-dynamics interventions",
+          "status": "passed",
+          "comparisons": 7586
+        },
+        {
+          "name": "36 actual time, probability, numerical and economic domain rejections",
+          "status": "passed",
+          "comparisons": 36
+        },
+        {
+          "name": "Chapter structure, scoped source records, exact routes and payload integrity",
+          "status": "passed",
+          "comparisons": 48
+        },
+        {
+          "name": "Isolated default and optimized explicit CLI; strict JSON parser",
+          "status": "passed",
+          "comparisons": 1509
+        }
+      ],
+      "comparisons": 10879,
+      "valid_interventions": 10,
+      "domain_rejections": 38,
+      "worked_examples": 4,
+      "solved_exercises": 10,
+      "limits": "Finite arithmetic/domain/structure checks plus recorded editorial proof review; not empirical calibration validation or external certification."
+    },
+    "v10-c04": {
+      "chapter": "v10-c04",
+      "status": "passed",
+      "groups": 11,
+      "comparisons": 387,
+      "domain_rejections": 27,
+      "worked_examples": 5,
+      "complete_exercises": 10,
+      "group_names": [
+        "quiet API and complete preserved output",
+        "state-priced claims, resources and physical versus promised return",
+        "first-default event enumeration and complete dated recovery ledger",
+        "continuous recovery integration and three contractual values",
+        "full migration paths, absorption and first-entry cash",
+        "complete joint law, feasible dependence and tranche resource closure",
+        "all hazard/recovery/liquidity calibrations and repricing",
+        "financial interventions and meaningful degenerate boundaries",
+        "independent reconstructions for all nine determinate exercises",
+        "financial, measure, timing and probability-domain rejections",
+        "manifest, isolated normal/optimized CLI and teaching structure"
+      ],
+      "limits": "Synthetic-case numerical and domain checks; proof/source audits are separate, and external certification and UI QA are not claimed."
     }
   },
   "errors": [],

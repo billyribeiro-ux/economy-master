@@ -1,0 +1,86 @@
+{
+  "chapter": "v10-c01",
+  "date": "2026-10-09",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating reviewer and separately scoped economics/finance specialists; no external human certification",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Full graduate chapter, four worked cases, ten complete exercise solutions, answered teach-back/retention, explicit proof/contract limits and portable standard-library lab.",
+  "detailed_review": "production/v10-opening-root-review-notes.json",
+  "author_review": "reviews/v10-c01-author.json",
+  "verified_payload_hashes": 8,
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c01.html",
+      "bytes": 42939,
+      "sha256": "498d326512c0ac336c1a2cfd84700583b402fde5b0ef23efba109bf0b650368f"
+    },
+    {
+      "path": "content/projects/v10-c01-inputs.json",
+      "bytes": 1094,
+      "sha256": "bbbfb12315284006afc127ee2fd2626199a497ae796347adff4f645e980f8524"
+    },
+    {
+      "path": "content/projects/v10-c01-analysis.py",
+      "bytes": 10718,
+      "sha256": "12ad4eee764f61d6458e15c5bc3aee26882f38f383e64a00b783ab389ba2c104"
+    },
+    {
+      "path": "content/projects/v10-c01-output.json",
+      "bytes": 2733,
+      "sha256": "6fe1abfe2f1a1055fa4b47fe621fe90c53057dbc1c012a83fd41f451c36c0d61"
+    },
+    {
+      "path": "content/projects/v10-c01-manifest.json",
+      "bytes": 771,
+      "sha256": "b564c17fe5644fe3be8e322b6709e1f485465ee4ca6b833e456c038f9539f4ba"
+    },
+    {
+      "path": "content/projects/v10-c01-README.txt",
+      "bytes": 11152,
+      "sha256": "9cfc01a0ba237736b2d9b516c3f854b2f670fbf574182df39bbaed7466aaac86"
+    },
+    {
+      "path": "scripts/check_v10_c01.py",
+      "bytes": 17503,
+      "sha256": "1a888f51c1cb8c6c6aada90c5bf895f3f49db38a364a19b3599d7f911c59b1a2"
+    },
+    {
+      "path": "content/reviews/v10-c01-sources.json",
+      "bytes": 3020,
+      "sha256": "8835a2316b2437d020972ba28e83f172f17b19f28897413644dd762a03e9ee0f"
+    },
+    {
+      "path": "content/reviews/v10-c01-author.json",
+      "bytes": 6749,
+      "sha256": "75b02c12b6f768354dc1fa5c66a0880d1ba83345a46bb017fd0adbe7e13b953d"
+    }
+  ],
+  "focused_check": "production/v10-opening-focused-checks.json",
+  "open_content_findings": [],
+  "limitations": [
+    "Finite synthetic contracts do not establish empirical model adequacy or real-world execution.",
+    "Machine-assisted peer/coordinator review is not independent human academic certification.",
+    "Whole-edition visual/mobile/keyboard/print UI QA remains pending; denied local-file preview was not circumvented."
+  ],
+  "peer_review": "reviews/v10-c01-peer.json",
+  "peer_numerical_evidence": "production/v10-opening-peer-validation.json",
+  "resolved_peer_findings": [
+    {
+      "id": "v10-c01-peer-01",
+      "severity": "minor formal proof precision",
+      "location": "chapter section 8, integral discount/instantaneous-forward relation",
+      "original_issue": "Differentiability alone is insufficient regularity for the unqualified ordinary integral/Fundamental Theorem identity as written.",
+      "requested_repair": "State positive continuous differentiability on the interval with D(0)=1, or sufficient absolute continuity, and exclude t=0 from the average-zero-rate ratio.",
+      "coordinator_repair": "Positive C1 D on [0,T], D(0)=1 and 0<t<=T now explicitly stated; piecewise-knot qualification retained.",
+      "verification": "Read the repaired paragraph and following identity; explicit peer checker clause binds final wording. Current chapter hash 498d326512c0ac336c1a2cfd84700583b402fde5b0ef23efba109bf0b650368f.",
+      "state": "resolved and independently verified"
+    }
+  ]
+}
