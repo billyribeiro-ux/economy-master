@@ -1,0 +1,703 @@
+{
+  "volume": "v13",
+  "form": "B",
+  "author": "bs_author",
+  "date": "2026-10-09",
+  "status": "Design proposal frozen for independent root audit; no examination manuscript or checker authorized yet.",
+  "contract": "production/v13-assessment-exam-b-blueprint-assignment.json",
+  "architecture": "production/v13-assessment-architecture.json",
+  "organizing_question": "Which conclusions survive when the relevant domain, ownership chain, information law or optimization target is changed?",
+  "administration": {
+    "points": 100,
+    "essential_domains": 5,
+    "points_per_domain": 20,
+    "exact_subparts": 20,
+    "proposed_minutes": 300,
+    "format": "Closed book, exact hand derivations and proofs; a basic calculator is optional. No code, notes, network or external data. Fractions and expressions in sqrt(3) are exact answers.",
+    "timing_limit": "An uncalibrated design allowance, not timing evidence or statistical equivalence to Form A.",
+    "advancement": "Library design thresholds: at least 85/100 and 15/20 in every domain, followed by transfer and teach-back. A critical feasibility, incentive, funding, proof-quantifier or integrity error requires correction regardless of the aggregate score.",
+    "marking": "Credit any complete equivalent proof and consistent method credit for propagated arithmetic errors. Every subpart below supplies its own scoring; a stronger theorem than proved is not treated as a rounding error."
+  },
+  "cases": [
+    {
+      "id": "B1",
+      "domain": "choice_duality_information",
+      "points": 20,
+      "chapters": [
+        "v13-c01",
+        "v13-c02",
+        "v13-c03"
+      ],
+      "title": "A corner demand system, a revealed-choice certificate and wealth risk",
+      "primitives": {
+        "consumption_domain": "(x,y) in the nonnegative orthant; p_x,p_y>0 and wealth m>=0.",
+        "selected_observations": [
+          {
+            "prices": [
+              1,
+              4
+            ],
+            "wealth": 1,
+            "bundle": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "prices": [
+              1,
+              4
+            ],
+            "wealth": 4,
+            "bundle": [
+              "4",
+              "0"
+            ]
+          },
+          {
+            "prices": [
+              4,
+              4
+            ],
+            "wealth": 5,
+            "bundle": [
+              "1/4",
+              "1"
+            ]
+          }
+        ],
+        "observation_scope": "Each record reports one selected maximizing bundle, not the complete choice correspondence or unique demand. No lottery preferences are observed.",
+        "Afriat_candidate": {
+          "levels": [
+            "1",
+            "2",
+            "3/2"
+          ],
+          "positive_multipliers": [
+            "1/2",
+            "1/4",
+            "1/4"
+          ]
+        },
+        "maintained_index_for_parts_b_to_d": "u(x,y)=sqrt(x)+y. For the lottery questions only, expected u of final consumption is additionally assumed; the consumer sees wealth before choosing consumption.",
+        "wealth_laws_at_prices_1_4": {
+          "low_branch": [
+            "1",
+            "4"
+          ],
+          "high_branch": [
+            "4",
+            "12"
+          ],
+          "probability_each": "1/2"
+        },
+        "funding": "A separate provider already holds 12 currency units, pays the announced realized wealth before consumption and retains the remainder. Comparing a certain mean or certainty-equivalent payment means replacing that contract, not adding a second receipt. Consumer spending never exceeds the actual wealth received; prices are exogenous to this demand exercise."
+      },
+      "parts": [
+        {
+          "id": "v13-exam-b-1a",
+          "points": 5,
+          "prompt": "Check all Afriat inequalities for the supplied levels and multipliers. Construct the minimum-of-affine-functions rationalizer and prove selected-bundle optimality, concavity, continuity and strict monotonicity. Does this certificate establish unique choice? Evaluate the alternative bundle (3/4,1/16) on the first budget.",
+          "solution": "For row t and column s, the slack U_t+lambda_t p_t·(x_s−x_t)−U_s is the matrix ((0,1/2,9/8),(1/4,0,9/16),(1/4,9/4,0)); hence every inequality holds with strictly positive multipliers. Set A(z)=min_t{U_t+lambda_t p_t·(z−x_t)}. At z=x_s, every plane is at least U_s and plane s equals it. On budget s, plane s is at most U_s, so A(z)<=A(x_s). A finite minimum of affine functions is concave and continuous. If one coordinate increases strictly and none decreases, every plane increases by at least the positive minimum of its slope in that direction, so A strictly increases. The alternative first-budget bundle costs one; its three plane values are (1,5/4,17/16), so it also attains A=1. Thus the certificate rationalizes the selected data and positively monotone preferences but does not prove a singleton maximizing correspondence. It also does not identify the maintained index or any lottery order.",
+          "scoring": {
+            "complete_slack_certificate": 2,
+            "construction_and_global_properties": 2,
+            "exact_tie_and_observation_limit": 1
+          }
+        },
+        {
+          "id": "v13-exam-b-1b",
+          "points": 7,
+          "prompt": "Conditional on the maintained index, derive complete Marshallian demand and indirect utility for every positive price and nonnegative wealth. Derive expenditure and Hicksian demand for every nonnegative utility target. Include both corners and the equality boundary, and verify the three selected observations.",
+          "solution": "Write a=p_y/(2p_x). With budget exhaustion, put s=sqrt(x) in [0,sqrt(m/p_x)]; the objective is s+m/p_y−(p_x/p_y)s^2, a strictly concave quadratic. Thus s*=min(a,sqrt(m/p_x)), x*=s*^2 and y*=(m−p_x s*^2)/p_y. Equivalently the wealth threshold is M=p_y^2/(4p_x): for m<=M, demand is (m/p_x,0) and v(p,m)=sqrt(m/p_x); for m>=M, demand is (p_y^2/(4p_x^2),m/p_y−p_y/(4p_x)) and v=m/p_y+p_y/(4p_x). The formulas coincide at M; m=0 gives the sole affordable origin. To attain target ubar, a cost minimizer has y=max(0,ubar−s). A choice s>ubar is dominated in cost by s=ubar, so minimize p_x s^2+p_y(ubar−s) on [0,ubar]. The unique solution s_h=min(ubar,a) gives h=(s_h^2,ubar−s_h) and e=p_x s_h^2+p_y(ubar−s_h). Therefore e=p_x ubar^2 below ubar=a and e=p_y ubar−p_y^2/(4p_x) above it. Both expressions and their first target derivatives agree at a; ubar=0 gives h=0 and e=0. Substitution reproduces every observed bundle. These global quadratic arguments establish the boundary, without applying an interior first-order condition to an axis point.",
+          "scoring": {
+            "complete_Marshallian_and_value": 3,
+            "complete_expenditure_and_Hicksian": 3,
+            "boundary_and_observation_checks": 1
+          }
+        },
+        {
+          "id": "v13-exam-b-1c",
+          "points": 4,
+          "prompt": "At the stated lottery prices compute expected indirect utility, certain equivalent wealth, mean wealth and risk premium for both wealth laws. Explain why certainty-equivalent wealth must be found using the correct branch of the inverse indirect utility.",
+          "solution": "At (1,4), v(w)=sqrt(w) for w<=4 and v(w)=1+w/4 for w>=4. The low-branch lottery has expected utility 3/2, certain equivalent 9/4, mean 5/2 and risk premium 1/4. The high-branch lottery has expected utility 3, certain equivalent 8, mean 8 and premium zero. Squaring the high lottery utility would incorrectly report wealth nine: the correct inverse there is 4(v−1). Both random and replacement payments fit the provider budget. The value function is a maintained expected-utility index over wealth after optimal state-contingent consumption, not an implication of the three revealed choices.",
+          "scoring": {
+            "both_complete_lottery_accounts": 3,
+            "inverse_branch_and_maintained_risk_scope": 1
+          }
+        },
+        {
+          "id": "v13-exam-b-1d",
+          "points": 4,
+          "prompt": "Prove that this indirect utility is increasing and concave in wealth, including its kink. For any finite jointly distributed nonnegative X,Y with E[Y|X]=X, prove the expected-utility ranking. Does a nondegenerate mean-preserving spread necessarily produce a strict loss here?",
+          "solution": "Below four the slope is 1/(2sqrt(w)), decreasing to 1/4; above four it is the constant 1/4. Values and slopes match, giving an increasing concave function on the full nonnegative domain, with the zero endpoint handled by continuity. Apply conditional Jensen separately at each positive-probability value of X: v(X)=v(E[Y|X])>=E[v(Y)|X]. Average to get E v(X)>=E v(Y). This proof uses the finite common coupling and an unchanged consumption opportunity set; it is not a first-order stochastic-dominance claim. Strictness can fail because v is affine on [4,infinity): the second lottery versus its certain mean is a nondegenerate spread with equal expected utility. Strict concavity on the relevant conditional support would instead supply a strict inequality whenever that conditional spread is nondegenerate.",
+          "scoring": {
+            "full_concavity_and_conditional_Jensen_proof": 3,
+            "strictness_counterexample_and_domain": 1
+          }
+        }
+      ],
+      "distinction_from_A_and_support": "A uses rival equal-price rationalizers, homothetic AM–GM duality and Blackwell garbling. B uses a constructive positive Afriat certificate with a genuine nonunique-choice limit, nonhomothetic corners and a finite risk comparison whose strictness disappears on an affine wealth branch."
+    },
+    {
+      "id": "B2",
+      "domain": "equilibrium_welfare",
+      "points": 20,
+      "chapters": [
+        "v13-c04",
+        "v13-c05"
+      ],
+      "title": "Two production stages and the ownership of intermediate receipts",
+      "primitives": {
+        "goods_and_households": "Raw input R, intermediate input M and final consumption F. Households consume only nonnegative (R,F), with utility R*F. A initially owns four R and B one R; neither owns M or F.",
+        "technologies": "Firm 1 uses z>=0 units of R and can supply 0<=m_out<=sqrt(z) of M. Firm 2 uses m>=0 units of M and can supply 0<=f_out<=2sqrt(m) of F. Unused goods may be discarded. Both firms maximize profit at common nonnegative, nonzero prices.",
+        "ownership": "Initially A owns all of firm 1 and B all of firm 2. An ownership share receives actual net profit, never gross sales. Normalize the raw price to one after justifying its positivity; write p for M and r for F.",
+        "execution_and_authority": "This deterministic toy market explicitly permits enforceable intra-cycle trade credit. Suppliers deliver inputs in production order against invoices; a clearinghouse nets all final commodity invoices and declared profit entitlements at the final date at zero interest. Claims and physical deliveries are fully enforced, with no outside cash grant or default. These rights are primitives; price-value feasibility is not offered as a proof of feasibility under a different cash-in-advance rule. A requested transfer of raw goods is authorized before production and must come from its actual owner.",
+        "policy_target": "A consumes (3,3/2), B consumes (1,1/2). Retain original firm ownership for the decentralizing transfer.",
+        "planner_criterion": "For positive consumption, W=(3/4)log(R_A F_A)+(1/4)log(R_B F_B). Use the continuous extended value minus infinity at a zero product solely for this stated welfare criterion; individual preferences remain R_i F_i."
+      },
+      "parts": [
+        {
+          "id": "v13-exam-b-2a",
+          "points": 7,
+          "prompt": "Derive both firms’ global choices and profits, households’ demands, and every competitive equilibrium. Check all three commodity markets and exclude zero-price cases rather than invoking an unchecked general existence theorem.",
+          "solution": "For p,r>0, p sqrt(z)−z=p^2/4−(sqrt(z)−p/2)^2, so firm 1 chooses z=p^2/4, supplies p/2 and earns pi1=p^2/4. Similarly 2r sqrt(m)−p m=r^2/p−p(sqrt(m)−r/p)^2, giving m=r^2/p^2, final output 2r/p and pi2=r^2/p. Intermediate clearing requires p/2=r^2/p^2, hence r^2=p^3/2. Positive household wealth gives global Cobb–Douglas demand (income/2,income/(2r)); positivity and the concave log objective justify it. Total income is 5+p^2/4+r^2/p=5+3p^2/4. Raw clearing, half that income plus z equal to five, gives p^2=4. Thus the unique positive normalized prices are (1,2,2), inputs z=m=1, intermediate output one, final output two, and profits (1,2). Initial incomes are (5,3); allocations are A:(5/2,5/4), B:(3/2,3/4). Raw consumption four plus input one equals five; intermediate supply and use are one; final consumption is two. A free raw good with a positive intermediate price gives firm 1 unbounded profit; a free intermediate good with positive final price gives firm 2 unbounded profit. If final price is zero while any owned raw good has positive price, a wealthy household has no utility maximum because final consumption is free. These possibilities also cover the remaining nonzero-price boundary combinations. No zero-price equilibrium is omitted. Direct global maximizers and these equations establish existence and completeness here, without importing a compact-generator theorem into an unbounded individual production domain.",
+          "scoring": {
+            "both_global_firm_problems": 2,
+            "all_prices_demands_and_three_balances": 3,
+            "complete_boundary_and_existence_scope": 2
+          }
+        },
+        {
+          "id": "v13-exam-b-2b",
+          "points": 3,
+          "prompt": "Exchange the households’ ownership of the two firms while keeping raw endowments unchanged. Find all resulting prices, profits, incomes and consumption. Explain exactly why prices do not move in this example.",
+          "solution": "Aggregate profit income is unchanged and both households still spend the same one-half share on each consumption good, so the aggregate market equations just derived are unchanged. Prices, production and the two profits remain as in part a. Ownership now gives incomes (6,2), hence A:(3,3/2) and B:(1,1/2). This is not a general ownership-irrelevance theorem: the unchanged aggregate demand follows from these identical affine income slopes at fixed prices; distribution and each household’s consumption have changed.",
+          "scoring": {
+            "ownership_based_income_and_allocation": 2,
+            "precise_aggregation_condition": 1
+          }
+        },
+        {
+          "id": "v13-exam-b-2c",
+          "points": 6,
+          "prompt": "With original ownership restored, decentralize the target by a balanced pre-production transfer of raw input. Give a global certificate for the stated planner objective. Explain why the positive target wealth and a cheaper bundle upgrade its support inequalities to full household optimality.",
+          "solution": "Transfer one owned raw unit from B to A, leaving raw endowments (5,0). Original profit rights remain (pi1 to A, pi2 to B), so target incomes are (6,2), exactly the target expenditures at consumption prices (1,2). The transfer is physically feasible, balanced and completed before production; B still has positive wealth through its firm ownership. At the target each household’s weighted log gradient is (1/4,1/2). Concavity therefore bounds W(x)−W(target) by (1/4)[R_A+R_B+2(F_A+F_B)−8]. For every feasible production plan, the two firm support inequalities at prices (1,2,2), together with m<=sqrt(z), imply 2(F_A+F_B)−z<=3. Raw feasibility then gives the bracket at most zero. Strict concavity of the weighted log objective on positive consumption makes the target the unique planner allocation; zero-product alternatives have lower extended value. For the upgrade, suppose a strictly better affordable bundle costs exactly assigned wealth, as quasiequilibrium support would require. Mix it by a small positive amount with the origin, which is strictly cheaper since wealth is positive. The mixtures remain feasible and become strictly cheaper; continuity keeps them strictly better for sufficiently small mixtures, contradicting support. A price certificate without that argument would establish only its stated support property. The direct global demands here independently confirm optimality.",
+          "scoring": {
+            "owned_transfer_and_positive_wealth": 2,
+            "complete_global_welfare_certificate": 2,
+            "cheaper_bundle_upgrade": 2
+          }
+        },
+        {
+          "id": "v13-exam-b-2d",
+          "points": 4,
+          "prompt": "Reconcile the two firms’ baseline input invoices, output receipts and distributions through the settlement chain. Give the household settlement accounts. Audit the proposal to replace net profits by both firms’ gross output receipts in household income.",
+          "solution": "At the baseline, firm 1 invoices firm 2 for two, owes its raw supplier one and distributes one to A. Firm 2 receives four from final buyers, pays its intermediate invoice two and distributes two to B. The intermediate invoice cancels in consolidation: final receipts four minus raw cost one equal total net profits three. A retains raw 5/2, supplies one to firm 1 and sells another 1/2 to B; those raw invoices 3/2 plus its dividend one settle its final-goods bill 5/2. B pays 1/2 for additional raw and 3/2 for final goods, exactly its dividend two. Thus every invoice has a counterparty and all monetary obligations net to zero under the stipulated trade-credit rights. Counting gross receipts two plus four as profits would instead report total household income eleven. At the same prices that produces demands (11/2,11/4), versus available consumption (4,2), an excess value of three: input costs have been allocated a second time as spendable income. Net profits and their actual ownership repair the identity. If input invoices instead had to be paid in cash before any sale, the current netting protocol would not establish timely funding; that changed market needs an additional financed arrangement.",
+          "scoring": {
+            "both_firm_and_household_settlements": 2,
+            "exact_double_count_and_timing_repair": 2
+          }
+        }
+      ],
+      "distinction_from_A_and_support": "A is a two-good exchange transfer with heterogeneous Engel slopes. B is a three-good, two-firm production chain: intermediate invoices cancel, different profit rights finance final demand, and a globally certified target is decentralized under explicit trade-credit settlement."
+    },
+    {
+      "id": "B3",
+      "domain": "strategic_dynamics",
+      "points": 20,
+      "chapters": [
+        "v13-c06",
+        "v13-c07",
+        "v13-c08"
+      ],
+      "title": "Pessimistic entry beliefs can be consistent without surviving a stronger restriction",
+      "primitives": {
+        "types": "One entrepreneur privately observes G with probability 1/3 or B with probability 2/3. Both types have positive prior probability and the type is remembered. Nature and all subsequent actions have perfect recall.",
+        "actions_and_payoffs": "The entrepreneur chooses Enter or Out. Enter costs disutility c_G=1 or c_B=3 even if no backing follows. A risk-neutral investor may Back or Decline. If entry is backed, the investor transfers two currency units to the entrepreneur and receives a nontransferable benefit five for G and zero for B. Thus backed-entry payoffs (entrepreneur,investor) are (1,3) for G and (-1,-2) for B. Unbacked entry gives (-c_type,0); Out gives (0,0).",
+        "funding": "The investor owns two currency units before any decision. In the simultaneous protocol, Back is an authorization to pay only if entry occurs. In the sequential protocol it is a decision after observed entry. The investor retains cash without backed entry; otherwise its cash becomes zero and the entrepreneur receives two. Costs and service benefits are utility, not extra cash receipts. No other transfers or hidden actions occur.",
+        "protocols": "First the investor acts simultaneously with type-contingent entry, without seeing type or entry. Then change only timing: the investor observes Enter and chooses; no move is needed after Out. Strategies may be independently mixed or behavioral, as appropriate.",
+        "specified_additional_belief_restriction": "At an off-path entry node, call a type dominated for that deviation when its highest possible entry payoff across all receiver mixtures is strictly less than its equilibrium payoff. If this dominated set is nonempty and proper, assign it posterior probability zero. This explicitly stated finite restriction is applied after sequential equilibrium; it is not silently included in consistency or a theorem about all signaling refinements."
+      },
+      "parts": [
+        {
+          "id": "v13-exam-b-3a",
+          "points": 5,
+          "prompt": "Let g,b be type-contingent entry probabilities and q the investor’s Back probability in the simultaneous protocol. Derive the entire Bayes–Nash set, including all boundary mixing. Give actual cash and utility accounts at the trading equilibrium.",
+          "solution": "For B, entry payoff 2q−3 is strictly negative for every q in [0,1], so b=0. For G, the gain is 2q−1. The investor’s ex ante gain from Back is (1/3)g*3+(2/3)b*(-2)=g once b=0. Hence if g>0 it strictly backs, which makes G strictly enter: (g,b,q)=(1,0,1). If g=0, both types stay out and the investor is indifferent; G optimally stays out exactly for q in [0,1/2]. These are all equilibria; a partially entering G with positive g cannot coexist with investor mixing. In the trading equilibrium, G gets one and the investor three conditional on G; B stays out. Ex ante payoffs are (1/3,1), total real surplus 4/3. With probability one third the investor’s two cash units move to the entrepreneur; otherwise it retains them. Aggregate cash remains two, while the service benefit and effort disutility account for real surplus.",
+          "scoring": {
+            "all_conditional_best_replies_and_complete_set": 4,
+            "funded_ex_ante_accounts": 1
+          }
+        },
+        {
+          "id": "v13-exam-b-3b",
+          "points": 6,
+          "prompt": "In the sequential protocol, let mu be the investor’s posterior probability of G after entry and q its backing probability there. Find the complete sequentially rational, Bayes-on-path assessment set before checking consistency. Include all off-path mixing boundaries.",
+          "solution": "The investor’s conditional backing gain is 3mu−2(1−mu)=5mu−2. Thus q=0 for mu<2/5, q=1 for mu>2/5 and any mixture at equality. B still never enters. If G enters with positive probability, Bayes gives mu=1 and backing is certain, so G must enter surely: g=1,b=0,mu=1,q=1. Otherwise both stay out. G then remains out iff q<=1/2. Combining conditions gives exactly the no-entry family: either mu in [0,2/5) and q=0, or mu=2/5 and q in [0,1/2]. These assessments are sequentially rational at the investor’s off-path information set and at both privately known types. There are no partially entering equilibria. Bayes’ rule alone cannot assign the posterior at a zero-probability entry event.",
+          "scoring": {
+            "receiver_and_type_inequalities": 2,
+            "complete_on_and_off_path_families": 3,
+            "zero_probability_Bayes_limit": 1
+          }
+        },
+        {
+          "id": "v13-exam-b-3c",
+          "points": 5,
+          "prompt": "Show that every assessment just listed is consistent. Give explicit completely mixed approximating behavior for each posterior boundary and explain why consistency does not require each approximating behavior to be an equilibrium.",
+          "solution": "With prior G probability one third, entry probabilities e_G,e_B give posterior e_G/(e_G+2e_B). For any fixed 0<mu<=2/5, use e_G=2mu*epsilon and e_B=(1−mu)*epsilon. Both tend to zero and the posterior equals mu exactly. For mu=0 use e_G=epsilon^2,e_B=epsilon, making the posterior tend to zero. Choose receiver backing q_epsilon=(1−2epsilon)q+epsilon to keep both receiver actions positive and converge to the desired q. This supplies every no-entry assessment, including q=1/2 at mu=2/5. For the separating assessment use e_G=1−epsilon,e_B=epsilon and receiver backing 1−epsilon; the posterior tends to one. All type priors stay fixed and positive. For sufficiently small epsilon all actions have strictly positive probabilities. The limiting strategies and beliefs are sequentially rational by part b, while consistency requires only Bayes beliefs induced by the completely mixed approximants, not that every approximant itself be optimal. Thus these are the full sequential-equilibrium families, not merely arbitrary PBE beliefs.",
+          "scoring": {
+            "interior_and_zero_posterior_sequences": 2,
+            "separating_and_receiver_sequences": 1,
+            "correct_consistency_quantifier_and_completeness": 2
+          }
+        },
+        {
+          "id": "v13-exam-b-3d",
+          "points": 4,
+          "prompt": "Apply the additional belief restriction as stated. Which sequential equilibria survive? Explain why this is an extra refinement rather than an implication of Bayes consistency, and audit a claim that more credible beliefs alone prove an unconditional welfare gain.",
+          "solution": "In every no-entry equilibrium both types receive zero. At off-path entry B’s greatest possible payoff is -1, strictly below zero, whereas G could receive one if backed. The dominated set is exactly {B}; the additional restriction therefore forces mu=1. The investor then backs and G has a profitable entry deviation, so no-entry equilibria are excluded. Entry and Out both occur with positive ex ante probability in the separating equilibrium, so this rule adds no off-path-signal restriction there. It is retained, with the actual trading decisions and funded payoffs already computed. This proves uniqueness only within the stated game and explicit belief restriction. The pessimistic no-entry assessments were consistent, so the restriction adds behavior beyond Bayes consistency. The selected equilibrium has higher ex ante real surplus here, but that conditional comparison is not a theorem that information or refinements improve every participant’s payoff in arbitrary games, nor evidence that this particular belief restriction governs actual entry.",
+          "scoring": {
+            "exact_dominated_set_and_elimination": 2,
+            "refinement_and_welfare_scope": 2
+          }
+        }
+      ],
+      "distinction_from_A_and_support": "A compares volunteer normal-form, CE, sequential plans and strategic-form perfection. B instead derives all Bayesian entry and sequential-assessment families, constructs Bayes-consistent trembles at unused information sets, and distinguishes consistency from a separately supplied signaling restriction. It is finite and has no repeated-monitoring protocol."
+    },
+    {
+      "id": "B4",
+      "domain": "incentives_design",
+      "points": 20,
+      "chapters": [
+        "v13-c08",
+        "v13-c09",
+        "v13-c10"
+      ],
+      "title": "Two incentive arguments that use different conditional laws",
+      "primitives": {
+        "auction": "A seller owns one indivisible object, has zero value for retaining it and zero delivery cost. Two risk-neutral buyers have values independently distributed with F(v)=v^2/3 on [0,sqrt(3)], density f(v)=2v/3 on the positive interior. Each owns two cash units. Utilities are v times allocation minus payment, with outside utility zero. A committed direct mechanism is measurable, ex-post allocation-feasible, BIC and interim IR for every type, with integrable transfers and actual charges between zero and two. Use fixed buyer-1 priority for ties. The candidate auction sells to the highest report at least its reserve, charging the winner the larger of the reserve and the rival report; losers pay zero.",
+        "correlated_transfer": "For part b only, set v1=v2=V, where V retains the same marginal F. The seller and payment rule are unchanged; the joint type law is now perfectly correlated.",
+        "separate_verification_job": "Before the auction, the seller has committed sixteen owned cash units to a verifiable payroll. A worker with outside utility zero chooses hidden H or L; success probability is 2/3 under H and 1/3 under L. H costs disutility 1/2 and L zero. Utility is sqrt(wage) minus effort cost. The target is H; the question does not claim H is the principal’s globally optimal target. The object and subsequent bidder laws do not depend on this job. A contractible label Z in {0,1} is initially fair conditional on success or failure under either action. In state order (S0,S1,F0,F1), the existing wage vector is (1,16,0,1), all enforceable within the common interval [0,16].",
+        "changed_signal_laws_for_part_d": {
+          "H": [
+            "5/12",
+            "1/4",
+            "1/12",
+            "1/4"
+          ],
+          "L": [
+            "7/24",
+            "1/24",
+            "5/24",
+            "11/24"
+          ]
+        },
+        "cash_timing": "The worker is paid from the precommitted sixteen after its signals, before auction receipts can be spent. At auction settlement the winning buyer pays from its two and receives the already owned object. The seller retains unused payroll cash plus auction receipts. Across seller, worker and both buyers, cash totals twenty throughout: after wage w and auction payment P it is (16−w+P,w,4−P in the two buyers combined). Benefits and disutility are not cash. No later auction receipt is needed to finance the wage."
+      },
+      "parts": [
+        {
+          "id": "v13-exam-b-4a",
+          "points": 8,
+          "prompt": "Derive the regular virtual value and the globally revenue-optimal rule in the stated BIC/interim-IR class. Supply the allocation/payment incentive argument and revenue bound, including the zero-density endpoint. Compute sale probability, expected receipts, allocated value and total buyer rent exactly.",
+          "solution": "For interim allocation X(v), the one-dimensional pairwise IC inequalities imply monotonicity and P(v)=vX(v)−integral_0^v X(s)ds−U(0), with U(0)>=0 by IR. The proof bounds utility increments between the lower and upper Riemann sums of monotone X; conversely the resulting integral makes truth dominate every lower or higher report. Independence permits the same opponent law for every report. Integrating and interchanging the nonnegative rent term gives E P=E[phi(V)x(V)]−U(0), where phi(v)=(3/2)(v−1/v) for v>0. It is strictly increasing and crosses zero at one. On interior profiles, feasibility therefore bounds total revenue by E max(0,phi(v1),phi(v2)). Allocate to the highest value at least one and use the normalized critical payment max(1,other report). For each fixed rival report, winning above that threshold gives nonnegative true utility and losing below it avoids a loss, proving DSIC and ex-post IR, including ties. This attainable rule also has zero utility at type zero and charges at most sqrt(3)<2, so it attains the upper bound within the funded BIC class. At v=0 the density vanishes and the virtual ratio is not evaluated; allocation and payment are defined directly as zero, and the integrable revenue identity is used only almost surely on the positive interior. The maximum has density 4v^3/9. Integrating from one to sqrt(3), sale probability is 8/9, receipts are 8sqrt(3)/15+4/45, allocated value is 4sqrt(3)/5−4/45 and total buyer rent is 4sqrt(3)/15−8/45. Their last two monetary utility components sum to allocated value. This is a global virtual-surplus bound and attainment proof, not only an optimal reserve within a guessed family.",
+          "scoring": {
+            "IC_integral_and_global_revenue_bound": 3,
+            "critical_rule_funding_and_endpoint_scope": 2,
+            "four_exact_aggregates": 3
+          }
+        },
+        {
+          "id": "v13-exam-b-4b",
+          "points": 4,
+          "prompt": "Under the correlated transfer, does truth remain dominant for the candidate auction? Compare its expected receipts at reserve one with a zero reserve and locate the failed step in the original revenue argument.",
+          "solution": "The fixed-rival-report threshold comparison is unchanged, so truthful reporting remains weakly dominant and ex-post IR. Every truthful profile is now a tie; fixed priority gives buyer 1 the object when eligible and its payment is V. At reserve one, receipts are integral_1^sqrt(3) v*(2v/3)dv=2sqrt(3)/3−2/9. At zero reserve they are E V=2sqrt(3)/3, strictly higher. Thus the original reserve is not revenue optimal under this new law. Marginal F alone did not justify the original Bayesian reduction: opponents’ types conditional on a true value now depend on that value, so false reports are evaluated against that true conditional law, not a common independent distribution. This counterexample refutes the transferred optimality claim, not the statewise DSIC proof. No globally optimal correlated-type mechanism is requested or claimed.",
+          "scoring": {
+            "dominant_strategy_scope_and_ties": 1,
+            "exact_receipt_counterexample": 2,
+            "correct_conditional_law_failure": 1
+          }
+        },
+        {
+          "id": "v13-exam-b-4c",
+          "points": 3,
+          "prompt": "For the initial verification law, replace each wage by the square of its conditional mean square-root wage given success/failure. Prove that this preserves every action utility and calculate the old and new expected H wage costs and effort incentive gap.",
+          "solution": "The utility-payment vector is (1,4,0,1). Its conditional means are 5/2 after success and 1/2 after failure, so replacement wages are (25/4,25/4,1/4,1/4). Because the conditional Z law is the same under both actions, summing these utility means with either action’s success probabilities preserves both expected utility payments. Squaring a conditional mean weakly lowers the conditional mean square, strictly here in both fibers, so H wage cost falls from 35/6 to 17/4, saving 19/12. Net H utility is 4/3 and L utility 7/6, leaving strict incentive gap 1/6 and satisfied participation. These comparisons cover mixtures of the two actions by linearity. Common wage bounds and the sixteen-unit escrow remain satisfied.",
+          "scoring": {
+            "all_action_conditioning_proof": 1,
+            "replacement_cost_and_incentive_accounts": 2
+          }
+        },
+        {
+          "id": "v13-exam-b-4d",
+          "points": 5,
+          "prompt": "Use the changed joint signal laws while keeping wages, action costs and separate Y/Z marginal probabilities as stated. Check the marginals and the original contract’s incentives. Now repeat the conditioning operation using the H-conditional law in each Y fiber. Does this cheaper replacement still implement H? State the exact condition that would repair the general preservation claim.",
+          "solution": "Each changed row sums to one, success probabilities remain (2/3,1/3), and the Z=1 probability remains 1/2 under each action. But conditional Z laws differ by action. Original net H utility is 7/6 and L utility 11/12, so H is strictly preferred by 1/4. Under the H conditional law the two mean utility payments are (17/8,3/4), giving replacement wages (289/64,289/64,9/16,9/16). H utility stays 7/6, but L utility becomes 29/24; the incentive gap is -1/24, so the worker strictly chooses L. Expected cost under the hypothetical target H falls from 14/3 to 307/96, but that is not an implementable H cost because H-IC fails. The valid preservation theorem requires the conditional law within each retained statistic fiber to be identical for every feasible action, equivalently every action likelihood ratio relative to a positive reference law must be constant on each fiber. Then conditioning utility, not raw wages, preserves all action values; common wage restrictions must also allow the replacement. Identical separate marginals alone do not supply that condition.",
+          "scoring": {
+            "marginals_and_original_IC": 1,
+            "exact_conditioned_values_and_failure": 2,
+            "cost_interpretation_and_precise_repair": 2
+          }
+        }
+      ],
+      "distinction_from_A_and_support": "A optimizes a finite buyer screening menu built from hidden-action service modes. B examines a nonlinear regular auction with a singular-endpoint caveat and a changed dependent prior, then uses an explicit joint-signal counterexample to distinguish sufficient-statistic conditioning from matching marginals. The two audits share conditional-law logic, not a new unproved combined mechanism theorem."
+    },
+    {
+      "id": "B5",
+      "domain": "networks_research",
+      "points": 20,
+      "chapters": [
+        "v13-c11",
+        "v13-c12"
+      ],
+      "title": "A unique network equilibrium is not a welfare certificate",
+      "primitives": {
+        "network_and_actions": "Three agents form the complete undirected graph. Each simultaneously chooses verified effort x_i in [0,1]. Independent mixing is allowed. All utilities are in one declared transferable utility scale.",
+        "payoffs": "u_i(x)=a_i x_i−x_i^2/2+(1/4)x_i sum_{j!=i}x_j, with a=(1/4,1/2,1/4). Quadratic effort cost is disutility, not a cash expense. No baseline transfers occur. Real welfare is the sum of these baseline utilities.",
+        "policy_class": "A sponsor may commit to nonnegative per-unit rates t_i before effort and pay t_i x_i after verification. It has actual cash K, no borrowing and must cover every feasible effort profile, so sum t_i<=K. Unused cash is retained. Sponsor has no additional service benefit; its utility change is minus actual transfers. The target is x=(1,1,1). Only this linear committed policy class is considered.",
+        "reported_numerical_candidate": [
+          "3/5",
+          "3/4",
+          "3/5"
+        ],
+        "global_objective_claim": "Separately, a report says its returned exact unassisted Nash point also has a global gap at most 1/100 for an approximate welfare function W-hat uniformly within 1/100 of true W on the cube. No first-order condition is to be substituted for that global-gap premise."
+      },
+      "parts": [
+        {
+          "id": "v13-exam-b-5a",
+          "points": 5,
+          "prompt": "Derive global best responses, prove existence and uniqueness of unassisted equilibrium on the whole cube, and solve it. Explain whether independent mixed equilibria add further outcomes. A finite grid is not an existence or uniqueness proof.",
+          "solution": "Completing the own-action square gives B_i(x)=clip_[0,1](a_i+(1/4)sum_{j!=i}x_j), the unique global reply. Clipping is one-Lipschitz and each row has two weights one quarter, so B is a one-half contraction in the sup norm and maps the closed cube into itself. Successive iteration increments shrink geometrically; their summable tail makes every iteration Cauchy, with a limit in the cube. Continuity gives a fixed point, and the contraction inequality gives uniqueness. The interior equations imply (5/4)x_i=a_i+S/4 and S=2, yielding x*=(3/5,4/5,3/5); all coordinates lie in the declared cube and directly satisfy the clipped map. Utilities are (9/50,8/25,9/50), with real welfare 17/25. Against any independent distribution of opponents, expected payoff remains a strictly concave quadratic in own action with a unique pure maximizing reply determined by their means. A best-response distribution must therefore be degenerate, so no additional independent mixed equilibrium exists. This does not rule out correlated recommendations or a different graph/action domain.",
+          "scoring": {
+            "global_response_and_complete_contraction_proof": 3,
+            "exact_equilibrium_and_mixed_scope": 2
+          }
+        },
+        {
+          "id": "v13-exam-b-5b",
+          "points": 5,
+          "prompt": "Prove the unique global welfare optimum without relying on a local first-order condition. Compare it with equilibrium and exhibit an actual profitable individual deviation from the planner allocation.",
+          "solution": "Let d_i=1−x_i. Expanding the exact polynomial gives W(1,1,1)−W(x)=a·d+(1/4)sum_{i<j}(d_i−d_j)^2. Every term is nonnegative on the cube, and because all a_i>0 the difference vanishes only when d=0. Thus the unique global optimum is full effort and W=1, versus equilibrium welfare 17/25, a gap of 8/25. Baseline full-effort utilities are (1/4,1/2,1/4), each higher than its equilibrium utility. Nevertheless agent 1 can reduce effort from one to 3/4 when the others stay at one, raising utility from 1/4 to 9/32, a gain 1/32. The same holds symmetrically for agent 3. Mutual preference for the planner outcome does not make it a Nash equilibrium; the polynomial certificate concerns the social objective, not unilateral incentives.",
+          "scoring": {
+            "global_polynomial_certificate_and_uniqueness": 3,
+            "exact_welfare_and_profitable_deviation": 2
+          }
+        },
+        {
+          "id": "v13-exam-b-5c",
+          "points": 5,
+          "prompt": "Find the minimum sponsor budget in the declared policy class that uniquely implements full effort over all independent equilibria. Prove necessity, sufficiency, attainment and every-state financing. Give the target agent/sponsor accounts and the limit of a Pareto claim.",
+          "solution": "At the target the unclipped own optimum is a_i+t_i+1/2. Full effort is a best reply exactly when t_1>=1/4, t_2>=0 and t_3>=1/4. Hence any implementation requires sum t_i>=1/2. Rates (1/4,0,1/4) attain that bound; they make full effort a fixed point. The slope and clipping Lipschitz constants are unchanged, so the same contraction proves it the unique pure equilibrium, and strict own concavity again excludes additional independent mixed equilibria. Equality at the cap does not create a second best reply: the own quadratic is still strictly concave. This differs from the unattained strict threshold in a binary adoption game. Maximum possible payout is one half, exactly prefunded by K=1/2, including every off-path action profile. At the target each agent’s subsidized utility is one half, sponsor utility change is -1/2 and consolidated welfare is one. The sponsor loses relative to no payment, so this is not a Pareto gain when the sponsor is included. Optimality is only over the announced nonnegative linear rate class, not every conceivable tax or mechanism.",
+          "scoring": {
+            "necessary_bound_and_attained_rates": 2,
+            "all_equilibrium_sufficiency_and_cash": 2,
+            "consolidation_and_policy_scope": 1
+          }
+        },
+        {
+          "id": "v13-exam-b-5d",
+          "points": 5,
+          "prompt": "For the reported numerical candidate compute the true best-response residual, its certified distance to Nash and its actual distance. Derive the uniform-objective/global-solver bound and audit the separate claim about the exact unassisted Nash point. State the smallest valid replacement for each inference.",
+          "solution": "The candidate’s response vector is (47/80,4/5,47/80), so its sup-norm residual is 1/20. If e=||xhat−x*||_infinity and r=||xhat−B(xhat)||_infinity, the triangle and contraction inequalities give e<=r+e/2, hence e<=2r=1/10; the actual distance here is 1/20. This is distance to the unique Nash fixed point, not a welfare guarantee. For any true maximizer x^W, uniform error epsilon and a genuine global approximate-objective gap eta imply W(x^W)−W(xhat)<=epsilon+[sup W-hat−W-hat(xhat)]+epsilon<=2epsilon+eta by inserting W-hat at both points. The asserted values would limit welfare regret to 3/100. But the exact Nash point has regret 8/25, so the two asserted approximation premises cannot both hold for that return. Its best-response residual is exactly zero, supplying a direct counterexample to a welfare inference from that residual alone. A valid report either uses the contraction certificate for its stated equilibrium target, or establishes the true global objective-gap premises for its welfare target; it does not switch targets after seeing a small numerical residual.",
+          "scoring": {
+            "residual_and_distance_certificate": 2,
+            "global_objective_proof_and_exact_contradiction": 2,
+            "correct_target_and_minimal_repair": 1
+          }
+        }
+      ],
+      "distinction_from_A_and_support": "A audits DA under placement externalities; support treats a different connection-formation game and scalar contraction. The project’s paper dossier studies substitutes on a four-cycle, including a singular active-set continuum. B instead solves capped continuous complements on a three-node complete graph, with a full polynomial welfare certificate and attained minimum funded linear implementation, and separates equilibrium-distance from global welfare-loss certificates."
+    }
+  ],
+  "chapter_coverage": [
+    {
+      "chapter": "v13-c01",
+      "B_parts": [
+        "1a"
+      ],
+      "assessed_depth": "Positive Afriat inequalities and constructive min-affine rationalizer; global monotonicity/concavity and selected versus unique choice.",
+      "A_or_project_complement": "A1a/1d assess rival rationalizers and lottery-scale limits. Complete infinite-domain representation and rich-domain correspondence proofs remain chapter mastery requirements, not re-examined in full."
+    },
+    {
+      "chapter": "v13-c02",
+      "B_parts": [
+        "1b",
+        "2a"
+      ],
+      "assessed_depth": "Complete nonhomothetic corner Marshallian/Hicksian duality and global profit maximization along two production stages.",
+      "A_or_project_complement": "A1b supplies a compensated Hessian certificate. General integrability and complete profit-hull recovery remain explicitly outside both finite papers."
+    },
+    {
+      "chapter": "v13-c03",
+      "B_parts": [
+        "1c",
+        "1d"
+      ],
+      "assessed_depth": "Wealth-risk units, state-contingent consumption, exact risk premium and conditional-Jensen mean-preserving-spread proof with nonstrict boundary.",
+      "A_or_project_complement": "A1c/1d tests garbling and the simulation value proof. The full Blackwell converse and complete risk-order equivalences are not falsely claimed assessed here."
+    },
+    {
+      "chapter": "v13-c04",
+      "B_parts": [
+        "2a",
+        "2d",
+        "5a"
+      ],
+      "assessed_depth": "Complete three-good production equilibrium, zero-price exclusion, ownership budgets and invoice feasibility; constructive contraction existence in the network.",
+      "A_or_project_complement": "A2 covers its full exchange family and zero-wealth endpoint. The full Sperner–Brouwer–Kakutani proof chain remains an explicit chapter obligation, not reproduced by either example."
+    },
+    {
+      "chapter": "v13-c05",
+      "B_parts": [
+        "2b",
+        "2c",
+        "2d"
+      ],
+      "assessed_depth": "Ownership redistribution, precise common-slope aggregation scope, global weighted welfare support and cheaper-bundle upgrade with balanced owned transfer.",
+      "A_or_project_complement": "A2c proves the first-welfare argument. Arrow’s full coalition proof and general separation theorem remain chapter assessment depth, not an unsupported full-coverage claim for these cases."
+    },
+    {
+      "chapter": "v13-c06",
+      "B_parts": [
+        "3a",
+        "3b",
+        "5a"
+      ],
+      "assessed_depth": "Complete Bayesian boundary-mixing families with positive type marginals; distinction between independent mixed equilibria and pure replies in the network.",
+      "A_or_project_complement": "A3 supplies CE and strategic-form perfection; the project is assigned a finite protocol search and all-history incentive proof. CE versus CCE and general finite-Nash existence are retained chapter requirements."
+    },
+    {
+      "chapter": "v13-c07",
+      "B_parts": [
+        "3b",
+        "3c"
+      ],
+      "assessed_depth": "Full finite sequential assessments, Bayes on path, explicit consistency sequences including zero posterior, and all behavioral boundary cases.",
+      "A_or_project_complement": "A3 covers full plans and subgame credibility; the project is separately assigned repeated collaboration with imperfect public monitoring. This blueprint does not claim the still-unwritten project already satisfies that depth."
+    },
+    {
+      "chapter": "v13-c08",
+      "B_parts": [
+        "3d",
+        "4a"
+      ],
+      "assessed_depth": "A precisely supplied dominated-type belief restriction and its complete elimination argument; one-dimensional monotonicity/payment integral reasoning.",
+      "A_or_project_complement": "A4 has complete finite screening. Continuum nonregular bunching and the full general signaling refinement taxonomy remain outside these papers."
+    },
+    {
+      "chapter": "v13-c09",
+      "B_parts": [
+        "4c",
+        "4d"
+      ],
+      "assessed_depth": "All-action utility conditioning, common payment bounds, actual prefunding and a full joint-law counterexample where conditioning lowers cost but destroys IC.",
+      "A_or_project_complement": "A4 has global hidden-action wage/menu optimization; the assigned project adds restricted dynamic public incentives. General promise recursion, private-saving contracts and unrestricted relational optimality are not claimed covered."
+    },
+    {
+      "chapter": "v13-c10",
+      "B_parts": [
+        "4a",
+        "4b"
+      ],
+      "assessed_depth": "BIC integral, regular virtual-surplus upper bound and DSIC critical-price attainment with endpoint and hard-cash scope; correlation preserves the latter but defeats the former comparison.",
+      "A_or_project_complement": "A4 tests finite report constraints and selected implementation. Groves deficits, revenue equivalence and full bid-distribution constructions remain taught chapter obligations."
+    },
+    {
+      "chapter": "v13-c11",
+      "B_parts": [
+        "5a",
+        "5b",
+        "5c"
+      ],
+      "assessed_depth": "Capped global network responses, existence/uniqueness, independent-mixed exclusion, welfare certificate and minimal funded linear implementation.",
+      "A_or_project_complement": "A5 covers matching menus and externality scope; support oral5 and retention5 address DA proof architecture and graph formation. Full assignment-dual theorem and every graph extension are not re-examined here."
+    },
+    {
+      "chapter": "v13-c12",
+      "B_parts": [
+        "1a",
+        "3d",
+        "4b",
+        "4d",
+        "5d"
+      ],
+      "assessed_depth": "Exact claim/domain failures, sufficient repairs, proof-quantifier audits and distinct numerical targets; a uniform global-objective error bound cannot be replaced by a fixed-point residual.",
+      "A_or_project_complement": "A5 provides the longer theoretical referee assessment and observational-equivalence witness. The separately assigned research project adds an actual-paper transfer dossier; no external research quality is certified by this exam."
+    }
+  ],
+  "cross_form_and_project_review": {
+    "Form_A": "Read the entire frozen 20-part blueprint, including every complete solution and its reserved-depth map. B uses no homothetic information-garbling case, exchange-only price transfer, volunteer/CE/perfection tree, finite service-screening menu or DA placement externality.",
+    "support": "Read all eight diagnostic, five oral and five delayed-retention contracts/answers. B does not reuse their numerical primitives or problems. Taught proof methods recur at a different mechanism and boundary.",
+    "project": "Read the complete project proposal once it became available: all primitives, six proof contracts, exact benchmark tables, seven tasks/answers, rubric and actual-paper four-cycle dossier. B uses no repeated public-state protocol, restoration design or paper-replication task. Its capped three-node complementary-action network, funded linear rates and global welfare certificate differ from the project dossier’s unbounded-action substitute model, singular four-cycle active set and generic-finiteness boundary."
+  },
+  "critical_errors": [
+    "Treating a selected-choice Afriat certificate as unique demand or as evidence identifying an expected-utility index; inverting indirect utility on the wrong wealth branch.",
+    "Counting either intermediate sales or gross output receipts as distributed net profit, inventing transfer resources, omitting a commodity market, or treating net settlement as proof of cash-in-advance funding.",
+    "Omitting Bayesian or sequential boundary families, imposing arbitrary Bayes beliefs at an unused node, requiring completely mixed approximants to be equilibria, or treating an added belief restriction as consistency itself.",
+    "Applying an independent-type revenue bound under a different joint law, evaluating a virtual ratio at zero density, or removing contractible signals on equal-marginal evidence while ignoring all-action IC.",
+    "Equating equilibrium uniqueness or a small best-response residual with social optimality; forgetting the sponsor or treating a restricted linear-policy optimum as universal implementation."
+  ],
+  "independent_validation": {
+    "status": "Passed 73 exact grouped comparisons from original primitives in one transient standard-library command before proposal writing.",
+    "retained_artifacts": "Only this authorized JSON proposal. No arithmetic script, data file, manuscript or checker was created.",
+    "methods": [
+      "Constructed all nine Afriat slacks and the explicit budget-tie witness, checked observed expenditures and both exact certainty equivalents.",
+      "Reconstructed each production invoice and profit; checked original, swapped-ownership and owned-transfer incomes, both consumption demands and three physical balances, plus the planner gradients.",
+      "Enumerated all eight pure Bayesian strategy profiles and derived all mixed support boundaries analytically; checked the posterior formulas from fixed positive priors and dominated-type payoff bounds.",
+      "Integrated the nonlinear auction law symbolically using exact pairs a+b*sqrt(3); separately integrated the correlated-law revenues. Reconstructed all four signal probabilities, both action utilities, target expected wage costs and the changed negative incentive margin.",
+      "Solved the capped network equations, reconstructed all player/sponsor accounts, checked the exact polynomial welfare identity at all eight corners and the interior equilibrium, and recomputed both numerical-error certificates."
+    ],
+    "proof_boundary": "The global formulae, complete equilibrium families, consistency limits, Jensen argument, virtual upper bound, welfare certificate and contraction theorem are proved in the solution routes. Finite comparisons corroborate their inputs and arithmetic; they are not substituted for universal proofs."
+  },
+  "source_scope": {
+    "inspection_claim": "Reuse the accepted chapter methods and their accurately attributed primary inspections. I read the relevant current chapter passages and source records; no fresh external body or page-image inspection is claimed for this original design. No current institutional, market or empirical claim is introduced.",
+    "method_routes": [
+      {
+        "parts": [
+          "1a"
+        ],
+        "chapters": [
+          "v13-c01"
+        ],
+        "source_ids": [
+          "v13-c01-varian-demand1982"
+        ],
+        "scope": "Finite positive Afriat certificate and constructive rationalization; all numbers and the tie witness are original."
+      },
+      {
+        "parts": [
+          "1b",
+          "2a"
+        ],
+        "chapters": [
+          "v13-c02",
+          "v13-c04"
+        ],
+        "source_ids": [
+          "v05-c02-consumer",
+          "v05-c03-condie-supply",
+          "v13-c04-condie-existence"
+        ],
+        "scope": "Global consumer/producer choice and owned equilibrium accounts; the new two-stage existence result is proved directly, not attributed to unverified compactness hypotheses."
+      },
+      {
+        "parts": [
+          "1c",
+          "1d"
+        ],
+        "chapters": [
+          "v13-c03"
+        ],
+        "source_ids": [
+          "mit-risk-attitudes",
+          "v13-c03-mit-dominance2015"
+        ],
+        "scope": "Expected utility and conditional Jensen/mean-preserving-spread reasoning; no Blackwell converse is imported."
+      },
+      {
+        "parts": [
+          "2b",
+          "2c",
+          "2d"
+        ],
+        "chapters": [
+          "v13-c05"
+        ],
+        "source_ids": [
+          "v13-c05-border-welfare2016",
+          "v13-c05-borgers-aggregation2021"
+        ],
+        "scope": "Qualified support-to-choice upgrade and the common-slope aggregation condition; the exact production certificate is independently proved."
+      },
+      {
+        "parts": [
+          "3a",
+          "3b",
+          "3c",
+          "3d"
+        ],
+        "chapters": [
+          "v13-c06",
+          "v13-c07",
+          "v13-c08"
+        ],
+        "source_ids": [
+          "v13-c06-yildiz-games2022",
+          "v13-c06-manea-noncoop2017"
+        ],
+        "scope": "Conditional Bayesian and sequential definitions. The extra finite belief restriction is explicitly supplied and solved here; no unproved general refinement equivalence is asserted."
+      },
+      {
+        "parts": [
+          "4a",
+          "4b"
+        ],
+        "chapters": [
+          "v13-c08",
+          "v13-c10"
+        ],
+        "source_ids": [
+          "v05-c08-holmstrom-screening",
+          "v13-c10-roughgarden-revenue2013"
+        ],
+        "scope": "Pairwise IC/envelope and independent regular virtual-surplus bound, with the canonical endpoint qualification preserved."
+      },
+      {
+        "parts": [
+          "4c",
+          "4d"
+        ],
+        "chapters": [
+          "v13-c09"
+        ],
+        "source_ids": [
+          "v13-c09-stole-contracts1999"
+        ],
+        "scope": "Finite utility conditioning under action sufficiency; the changed joint-law failure is computed from every action, not inferred from the source."
+      },
+      {
+        "parts": [
+          "5a",
+          "5b",
+          "5c",
+          "5d"
+        ],
+        "chapters": [
+          "v13-c11",
+          "v13-c12"
+        ],
+        "source_ids": [
+          "v13-c11-bkd-networks2014",
+          "v13-c12-board-meyer-theory2018",
+          "v13-c12-berk-harvey-hirshleifer-referee2015"
+        ],
+        "scope": "Global network best replies and model/claim/proof distinctions. All capped-network, subsidy and approximation arguments are original derivations; methodological guidance does not certify policy realism or research quality."
+      }
+    ],
+    "limits": "No new theorem beyond the taught finite conditioning, convex/quadratic optimization, elementary integration and explicitly re-proved fixed-point/support arguments is needed. No current institutional authority, implemented experiment, empirical identification or external academic certification is claimed."
+  },
+  "design_context_bindings": [
+    {
+      "path": "production/v13-assessment-exam-a-blueprint-proposal.json",
+      "bytes": 50922,
+      "sha256": "d00f8d4cc9653a83df3047ab6764ec795eb9491dc4ee55e32ee1a2cc3155fd5c"
+    },
+    {
+      "path": "production/v13-assessment-support-blueprint.json",
+      "bytes": 15913,
+      "sha256": "4692a950d684e65881f815b34e74aca3917d8f8e85756c02a5d0bf67e500e8ed"
+    },
+    {
+      "path": "production/v13-assessment-project-blueprint-assignment.json",
+      "bytes": 3957,
+      "sha256": "d23d358c23ec334fa58918b45e25b4ca37d85cd35f009c71e986f7f548b4cb6a"
+    },
+    {
+      "path": "production/v13-assessment-project-blueprint-proposal.json",
+      "bytes": 50150,
+      "sha256": "53fec46fe2533e791644a99a4f2570d8c3479a597c329410a54235853827351d"
+    }
+  ],
+  "preservation": "Only the named Form B proposal is written. All C11/C12 author and peer payloads, Form A, support, project, canonical curriculum, shared code and hosting files are unchanged.",
+  "unresolved_design_questions": []
+}

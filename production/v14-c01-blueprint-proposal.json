@@ -1,0 +1,193 @@
+{
+  "chapter": "v14-c01",
+  "author": "ito_author",
+  "date": "2026-10-09",
+  "status": "direct_author_design_no_approval_wait",
+  "source_preparation": {
+    "path": "production/v14-c01-source-preparation.json",
+    "bytes": 9138,
+    "sha256": "c287f19bda9bec18b36e81b12fc4a41938af4941807b772f82efed9ed7ea966d"
+  },
+  "proof_contracts": [
+    "Finite S and nonempty finite A(s), bounded rewards, stochastic rows, beta in (0,1); histories and randomized policies specified. Prove contraction through finite maxima, Cauchy iteration, all-history finite-horizon/tail identification and stationary maximizing-policy attainment.",
+    "Policy value is the nonnegative geometric inverse; greedy improvement is monotone and strict at a changed state under incumbent tie retention. Finite policies imply termination. True residual bounds value error and approximate-greedy policy loss; operator error must be added explicitly.",
+    "Finite exogenous shock tree, adapted nonnegative scalar capital, increasing concave differentiable utility/technology and strictly positive candidate consumption. Local two-date perturbations yield conditional Euler equality or lower/upper inequalities. Concavity plus conditional tower cancellation and expected shadow-value tail give sufficiency against every integrable adapted feasible path; general TVC necessity is not asserted.",
+    "Log/Cobb example has unbounded-below rewards and open actions. Prove feasibility, bounded positive utility parts, explicit finite candidate value, global stage maximization, Euler and vanishing tail separately from the finite-state theorem.",
+    "Existence/attainment and approximation boundaries receive explicit nonattainment, omitted-state, overaccumulation and false-residual witnesses."
+  ],
+  "cases": [
+    {
+      "id": "w1",
+      "title": "A cash state that forgets readiness",
+      "inputs": "One final date: observed readiness h=0/1 with probability half, cash 2; setup costs 3/1 paid before production receipt 3. No borrowing; idle keeps cash.",
+      "anchors": {
+        "cold_value": 2,
+        "warm_value": 4,
+        "observed_expected_value": 3,
+        "blind_feasible_value": 2
+      },
+      "point": "Current information changes feasibility; averaging setup costs cannot finance the cold history."
+    },
+    {
+      "id": "w2",
+      "title": "A small complete control model",
+      "inputs": "State 0 actions wait:(reward1,next0), repair:(−1,next1); state1 harvest:(4,next0), maintain:(2,next1). beta=3/4. Rewards are utility, not a financing promise.",
+      "anchors": {
+        "four_policy_values": [
+          "(4,7)",
+          "(4,8)",
+          "(32/7,52/7)",
+          "(5,8)"
+        ],
+        "optimal": "repair,maintain",
+        "vi0_1_2_3": [
+          "(0,0)",
+          "(1,4)",
+          "(2,5)",
+          "(11/4,23/4)"
+        ],
+        "discount_switch": "2/3; all four policies tie at equality",
+        "stochastic_repair_success": "3/4 gives (56/13,8); switch at success 2/3"
+      },
+      "point": "Enumeration, policy improvement and residual calculations agree; no general physical-path convergence is inferred."
+    },
+    {
+      "id": "w3",
+      "title": "Unbounded log growth verified without the wrong norm",
+      "inputs": "c+k′=A k^alpha, A=2,alpha=1/2,beta=3/4,k0=16, positive c/k′.",
+      "anchors": {
+        "saving_share": "3/8",
+        "k1": 3,
+        "c0": 5,
+        "k2": "3sqrt(3)/4",
+        "c1": "5sqrt(3)/4",
+        "steady_capital": "9/16",
+        "steady_consumption": "15/16",
+        "log_coefficient": "4/5",
+        "value16_approx": 2.4202082091643895,
+        "TVC": "(3/5)(3/4)^T"
+      },
+      "point": "Constructed policy and full shadow-tail proof establish optimum; bounded-reward contraction is not applied."
+    },
+    {
+      "id": "w4",
+      "title": "A borrowing corner and a mean-income shortcut",
+      "inputs": "Two dates, log utility,beta=1/2,R=1, terminal income1/4 with equal weights; nonnegative saving a<m. Compare endowed wealth2 and4.",
+      "anchors": {
+        "wealth2_saving": 0,
+        "Euler_sides": [
+          "1/2",
+          "5/16"
+        ],
+        "corner_wealth_boundary": "16/5",
+        "wealth4_saving": "(sqrt(385)−17)/12",
+        "wealth4_saving_approx": 0.21845140586238188,
+        "mean_income_wealth4_saving": 0
+      },
+      "point": "Strict concavity proves global optimum and the expectation of marginal utility cannot be replaced by marginal utility at mean income."
+    },
+    {
+      "id": "w5",
+      "title": "Euler holds while valuable resources are abandoned",
+      "inputs": "Log utility,beta=1/2,R=2,k0=2, resource c+k′=2k.",
+      "anchors": {
+        "bad_consumption": 1,
+        "bad_capital": "1+2^t",
+        "bad_value": 0,
+        "bad_TVC_limit": 2,
+        "good_consumption": 2,
+        "good_capital": 2,
+        "good_value": "2log(2)",
+        "good_TVC": "2^(−T)"
+      },
+      "point": "All constant Euler-feasible consumption c in (0,2] can be characterized; only c=2 exhausts the intertemporal budget."
+    },
+    {
+      "id": "w6",
+      "title": "Which residual did the solver measure?",
+      "inputs": "Baseline finite Bellman T versus Ttilde=T+1/20; separately one-state true actions reward0/1 with beta3/4 but coarse action list includes only0.",
+      "anchors": {
+        "perturbed_fixed_value": "(26/5,41/5)",
+        "measured_residual": 0,
+        "true_residual": "1/20",
+        "true_value_error": "1/5",
+        "coarse_value": 0,
+        "true_one_state_value": 4,
+        "coarse_true_residual": 1
+      },
+      "point": "A solver can converge exactly to a different problem; error certification needs a true-operator or verified operator-difference bound."
+    }
+  ],
+  "exercise_routes": [
+    {
+      "id": "e1",
+      "task": "Specify the missing state and admissible actions; compute observed and blind funded values."
+    },
+    {
+      "id": "e2",
+      "task": "Prove all-history finite-horizon induction and discounted tail bound for the finite MDP."
+    },
+    {
+      "id": "e3",
+      "task": "Evaluate all four policies and perform incumbent-retaining policy iteration; change repair success to3/4 and rederive value and threshold."
+    },
+    {
+      "id": "e4",
+      "task": "Derive every optimal stationary policy on both sides of beta2/3 and at equality."
+    },
+    {
+      "id": "e5",
+      "task": "Prove the full VI formula from n2, its exact residual/error and the first n achieving value error≤1/10."
+    },
+    {
+      "id": "e6",
+      "task": "Prove the approximation residual certificate and reconstruct both false-zero-residual cases."
+    },
+    {
+      "id": "e7",
+      "task": "Derive the general log value constants/policy, then verify the original numeric path and global tail sufficiency."
+    },
+    {
+      "id": "e8",
+      "task": "Derive conditional Euler equality/inequalities by an adapted perturbation; include a terminal salvage transfer with log(1+k′)."
+    },
+    {
+      "id": "e9",
+      "task": "Derive the risky two-date saving boundary and radical interior root, then show why mean income changes the decision."
+    },
+    {
+      "id": "e10",
+      "task": "Characterize the entire constant-consumption Euler family and prove the unique optimal member with a present-value budget."
+    },
+    {
+      "id": "e11",
+      "task": "One-state actions[0,1), reward a,beta3/4: prove contraction and value4 but no policy attains; supply epsilon policies."
+    },
+    {
+      "id": "e12",
+      "task": "Referee a converged-grid/Euler/automatic-state/stationarity claim; use exact witnesses and specify the minimum valid validation evidence."
+    }
+  ],
+  "seed_evidence": {
+    "tool_chunk": "32ae21",
+    "scope": "Exact rational two-state policy/VI reconstruction; radical Euler substitution; log value and steady-policy formulas independently derived. This is prototype evidence, not a final runtime gate."
+  },
+  "limits": "No general Borel-state measurable-selection theorem, arbitrary unbounded-reward contraction, universal TVC necessity, empirical calibration or distributional equilibrium existence is claimed.",
+  "production_checkpoint": {
+    "state": "author_package_complete_pending_final_runtime_gates_and_separate_peer",
+    "manuscript": {
+      "path": "production/v14-c01-working.html",
+      "bytes": 60811,
+      "sha256": "256718534d9e61034b5ece644f8240884eb63f91e6362506494cffc76bd6a099"
+    },
+    "completed": [
+      "Full scoped theory and six original worked cases preserved; twelve complete exact exercises/solutions and rubric supplied.",
+      "Explicit VI/policy/fixed-policy algorithms and certificates, answered teach-back and retention, successor bridge.",
+      "Four-file runtime checker and author/source records; historical preparation artifact absence distinguished."
+    ],
+    "remaining": [
+      "Final unchanged-runtime gate evidence is delivered in the handoff without modifying its frozen payloads.",
+      "Separate peer and coordinator chapter acceptance remain required; coordinator reported V13 full package accepted on9October2026."
+    ]
+  }
+}

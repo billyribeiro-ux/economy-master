@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-09",
+  "status": "private_deployment_succeeded",
+  "source": {
+    "project_id": "appgprj_6ac52f5d03948191b8aaa5d45486bdf3",
+    "checkout_path": "/Users/billyribeiro/Desktop/economy-master/book",
+    "commit_sha": "57dadb0f0dbd27fe66ef19355984caa3b2c9bd67",
+    "archive": "/private/tmp/economy-v13-matching-synthesis-site.tar.gz"
+  },
+  "archive_bytes": 10154659,
+  "archive_sha256": "5ca80a00c5e85dccefff773de3f2e34bf88e2e0068380add98df4026ae77af27",
+  "archive_payload_validation": "Every reader payload and helper-embedded hosting manifest exactly match verified156 dist/manifest. Helper-produced archive also includes590 macOS AppleDouble metadata entries; retained unchanged.",
+  "archive_files": 1178,
+  "reader_and_manifest_payloads": 588,
+  "verified_reader_scope": "156 accepted chapters;12 full volume packages;3 cumulative packages",
+  "remote_reconciliation": "get_site/list_site_versions before push: latest55/152-chapter version; no154 saved version. Owner-only custom audience (one owner, no groups/external users/automations) unchanged.",
+  "attempts": [
+    {
+      "operation": "save_version_and_deploy_private",
+      "result": "failed before saved-version/deployment ID",
+      "error": "Failed to upload archive: error sending request to https://chatgpt.com/backend-api/files."
+    },
+    {
+      "operation": "save_version_and_deploy_private",
+      "date": "2026-10-09",
+      "result": "succeeded on unchanged verified archive and source commit",
+      "deployment": {
+        "id": "appgdep_6ac93c3a1fd08191b935cf4436e713c5",
+        "project_id": "appgprj_6ac52f5d03948191b8aaa5d45486bdf3",
+        "title": "Economics & Finance — Mastery Library",
+        "version_id": "appgprj_6ac52f5d03948191b8aaa5d45486bdf3~appgver_6ed49517f5a88191b228a608a57ace39",
+        "type": "publish",
+        "status": "succeeded",
+        "url": "https://economics-finance-mastery-library.willribeirodrums.chatgpt.site",
+        "has_mcp": false,
+        "screenshot_asset_pointer": null,
+        "provider_deployment_id": "site---6ac52f5d03948191b8aaa5d45486bdf3",
+        "failure_message": null,
+        "env_set_revision": 0,
+        "updated_at": "2026-10-09T19:11:06.689321+00:00"
+      }
+    }
+  ],
+  "last_confirmed_private_edition": 156,
+  "retry_rule": "Inspect remote versions before retry; reuse unchanged archive/commit if still remote HEAD. Deploy existing saved version rather than saving twice. No access or project replacement.",
+  "rendered_UI": "Not performed; prior access limitation retained.",
+  "deployment": {
+    "id": "appgdep_6ac93c3a1fd08191b935cf4436e713c5",
+    "project_id": "appgprj_6ac52f5d03948191b8aaa5d45486bdf3",
+    "title": "Economics & Finance — Mastery Library",
+    "version_id": "appgprj_6ac52f5d03948191b8aaa5d45486bdf3~appgver_6ed49517f5a88191b228a608a57ace39",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://economics-finance-mastery-library.willribeirodrums.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6ac52f5d03948191b8aaa5d45486bdf3",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-09T19:11:06.689321+00:00"
+  },
+  "version_number": 56,
+  "remote_reconciliation_after_retry": "Native list_site_versions confirms version56, matching156 source commit and successful deployment. Owner-private audience unchanged."
+}

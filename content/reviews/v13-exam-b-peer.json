@@ -1,0 +1,245 @@
+{
+  "volume": "v13",
+  "component": "exam_b",
+  "reviewer": "v13_b_peer",
+  "date": "2026-10-09",
+  "status": "passed",
+  "independence": "Separate agent read frozen manuscript, all twenty prompts/solutions/rubrics, author checker and review, and all sixteen source scopes. Own parser and recomputation; no author imports, helpers, calls or returned oracle values. Universal proofs reviewed in the written entries below.",
+  "bindings": [
+    {
+      "path": "content/assessments/parts/v13-exam-b.html",
+      "bytes": 55214,
+      "sha256": "d1bbe8777bb94b99394550345a04d03e73c0a252924b29fecc69407d1ab2661d"
+    },
+    {
+      "path": "scripts/check_v13_exam_b.py",
+      "bytes": 28258,
+      "sha256": "54278ff19636375cfbb4543a986226760ba87261334b14f27611358f76cf9e6f"
+    },
+    {
+      "path": "content/reviews/v13-exam-b-sources.json",
+      "bytes": 38912,
+      "sha256": "9321d87ffea421aae1b8a7bf4288c0523eb2d5d9870c774a85b1c5a0f95dbf1b"
+    },
+    {
+      "path": "content/reviews/v13-exam-b-author.json",
+      "bytes": 6488,
+      "sha256": "25bd582cd6632c196517e9750a58b38bf79e363ac7be16a9b646ccbc68894457"
+    },
+    {
+      "path": "scripts/check_v13_exam_b_peer.py",
+      "bytes": 17888,
+      "sha256": "4f2fc97d353d8c5151cc39c67d5b1d2be967e7155dbb3e5053b51f1cd7fd93ea"
+    }
+  ],
+  "prompt_solution_review": [
+    {
+      "id": "v13-exam-b-1a",
+      "points": 5,
+      "review": "Re-derived the nine slacks by evaluating each affine plane at each bundle. The diagonal plane attains its level, the observed budget bounds its own plane, and the minimum envelope therefore rationalizes selected demands. Finite concavity and continuity are valid globally. Strict positivity of all price-weight slopes gives strict coordinate monotonicity uniformly over finitely many planes. The first-budget alternative has cost one and envelope value one, so uniqueness is correctly denied."
+    },
+    {
+      "id": "v13-exam-b-1b",
+      "points": 7,
+      "review": "Budget exhaustion follows from positive marginal utility in y. Substitution s=sqrt(x) reduces the entire primal to a strictly concave scalar quadratic on a closed interval, so clipping the vertex handles zero wealth, the y=0 corner and the join. The dual restricts s to [0,u] because larger s costs more; its strictly convex quadratic gives the printed target threshold and both branches. Independently recovered every observed bundle and checked primal-dual inversion at zero, both sides and equality for three price vectors."
+    },
+    {
+      "id": "v13-exam-b-1c",
+      "points": 4,
+      "review": "Independently inverted the indirect utility rather than averaging demand or squaring every expected value. L has EU=3/2, CE=9/4, mean=5/2 and premium=1/4; H has EU=3, CE=mean=8, premium zero. The twelve-unit provider covers original and replacement payments separately. Cardinal lottery ranking is maintained explicitly, not identified by selected deterministic choices."
+    },
+    {
+      "id": "v13-exam-b-1d",
+      "points": 4,
+      "review": "The square-root branch has positive decreasing slope tending to 1/4 at wealth four; the affine branch shares both value and slope. Continuity at zero closes concavity on the whole domain. Conditional Jensen on each positive-probability atom of finite X yields the stated universal ranking after averaging. The high-wealth lottery provides a genuine nondegenerate equality case, so the strictness qualification is necessary and correctly stated."
+    },
+    {
+      "id": "v13-exam-b-2a",
+      "points": 7,
+      "review": "Completed-square profit bounds give actual global maximizers despite unbounded input domains. Eliminating intermediate clearing leaves z=total raw/5=1, then prices (1,2,2), net profits (1,2) and all physical balances. Household positive wealth yields unique half-share demands. Exhaustively classified zero-price patterns: positive downstream price with zero upstream price causes unbounded profit; positive raw with zero final price prevents a wealthy household maximum. The all-zero vector is excluded by the primitive. Thus normalization and unique equilibrium claims cover the whole allowed domain."
+    },
+    {
+      "id": "v13-exam-b-2b",
+      "points": 3,
+      "review": "Swapping profits produces wealth (6,2), hence the stated target. Total wealth and identical demand income slopes preserve the aggregate equations, while individual allocations change. The solution correctly avoids general ownership invariance."
+    },
+    {
+      "id": "v13-exam-b-2c",
+      "points": 6,
+      "review": "Target expenditures minus original dividends require endowments (5,0), so the authorized one-unit transfer is balanced and B still has wealth two. Both weighted log gradients are (1/4,1/2). Firm support implies 2F-z<=3 and raw feasibility implies R+z<=5, giving R+2F<=8 globally. The concave log tangent establishes optimality and its strictness establishes a unique consumption allocation. A hypothetical strictly preferred equal-cost bundle can be mixed slightly with the origin while retaining strict preference by continuity, violating weak support at positive wealth. Boundary products receive minus infinity as specified."
+    },
+    {
+      "id": "v13-exam-b-2d",
+      "points": 4,
+      "review": "Reconciled each supplier invoice, final bill and dividend separately. A sells raw value 3/2 and receives dividend one against final bill 5/2; B receives dividend two against raw 1/2 and final 3/2. Intermediate value two cancels between firms. Gross receipts wrongly create income eleven versus net eight, overcounting costs by three. Enforceable net settlement, not unexplained advance cash, is the declared funding mechanism."
+    },
+    {
+      "id": "v13-exam-b-3a",
+      "points": 5,
+      "review": "Bad entry payoff is strictly negative for every investor mixture. Positive good entry makes backing strictly profitable, which forces good entry one; otherwise all entry is zero and backing may range through [0,1/2]. This sign argument covers all mixed boundaries, beyond the checker samples. Trading ex ante utilities (1/3,1) sum to real surplus 4/3 while the owned two units only transfer when G enters."
+    },
+    {
+      "id": "v13-exam-b-3b",
+      "points": 6,
+      "review": "Receiver payoff difference is 5mu-2 and G entry difference 2q-1. On-path positive entry implies mu=1 and full separation. Off-path no-entry assessments are exactly mu<2/5,q=0 or mu=2/5,q<=1/2. The endpoints mu=0 and q=1/2 are included. No partially entering assessment survives the same inequalities."
+    },
+    {
+      "id": "v13-exam-b-3c",
+      "points": 5,
+      "review": "For interior target posterior, eG=2mu epsilon and eB=(1-mu)epsilon gives Bayes posterior mu exactly under the fixed prior. For zero, epsilon squared versus epsilon gives a vanishing ratio; for separation, 1-epsilon versus epsilon gives limit one. Receiver perturbation (1-2epsilon)q+epsilon keeps both actions positive for sufficiently small epsilon. All private-type actions are mixed, the limit is sequentially rational, and consistency correctly requires no optimality of the approximants."
+    },
+    {
+      "id": "v13-exam-b-3d",
+      "points": 4,
+      "review": "At no entry, B maximum entry payoff is minus one below its equilibrium zero, whereas G maximum is one. The supplied rule therefore eliminates exactly B, forces mu=1 and generates G profitable deviation. The separating assessment has no off-path entry signal and survives. This is an explicitly additional restriction, not a falsely inferred consequence of consistency or an unconditional welfare theorem."
+    },
+    {
+      "id": "v13-exam-b-4a",
+      "points": 8,
+      "review": "Pairwise IC bounds imply monotone interim allocation; sums over partitions squeeze utility increments to its integral, including allocation jumps. Independence is necessary for a common rival law across reports. Integrating the envelope gives virtual value (3/2)(v-1/v), increasing and zero at one. The feasible statewise maximum virtual surplus bounds every BIC/interim-IR rule. Highest-above-one critical payment attains it, is DSIC and ex-post IR by the fixed-threshold comparison, and never exceeds sqrt(3)<2. Type zero is defined directly rather than divided by zero. Independently integrated direct critical payments (one eligible plus minimum when both qualify), matching the virtual integral; allocated value, rent and sale probability all agree."
+    },
+    {
+      "id": "v13-exam-b-4b",
+      "points": 4,
+      "review": "Fixed-report threshold truthfulness survives correlation. On diagonal profiles fixed priority gives buyer one the object and charges V; integrating V over [1,sqrt(3)] gives 2sqrt(3)/3-2/9 while zero reserve gives 2sqrt(3)/3. The strict improvement refutes transferred optimality only. Conditioning opponents on true value prevents using the old independent interim envelope argument."
+    },
+    {
+      "id": "v13-exam-b-4c",
+      "points": 3,
+      "review": "Computed utility wages (1,4,0,1), conditional means (5/2,1/2), and their squared replacement. Shared conditional label probabilities preserve expected utility under H and L and hence every mixture. Conditional variance reduction lowers H cost by 19/12 while net utilities remain (4/3,7/6). Every wage stays within sixteen; the separate escrow pays before auction receipts."
+    },
+    {
+      "id": "v13-exam-b-4d",
+      "points": 5,
+      "review": "Both full changed laws preserve each declared marginal, but action-conditional label probabilities differ. Direct expectations give old utilities (7/6,11/12); conditioning on H gives means (17/8,3/4), preserves H but raises L to 29/24, reversing the gap to -1/24. Lower hypothetical H cost 307/96 is therefore not an implementing contract cost. Equality of conditional laws for every action (or fiber-constant likelihood ratios under a positive reference law), plus feasible replacement wages, is the precise general preservation hypothesis; identical marginal laws do not suffice."
+    },
+    {
+      "id": "v13-exam-b-5a",
+      "points": 5,
+      "review": "Each own-action payoff is a strictly concave quadratic so clipped affine best replies are global and unique. Each reply has two slopes one quarter; clipping is nonexpansive, giving sup contraction one half. Summable iteration tails, completeness of the closed cube and continuity establish a fixed point, then contraction gives uniqueness. Independently solved via the total sum S=2, obtaining (3/5,4/5,3/5) and welfare 17/25. Against any independent opponent laws the own expected objective still has one pure maximizer, forcing every best-response distribution to be degenerate."
+    },
+    {
+      "id": "v13-exam-b-5b",
+      "points": 5,
+      "review": "Expanded the welfare polynomial in deficits and checked every linear and quadratic coefficient: the gap is a dot d plus one quarter of pairwise squared differences. Positive a and nonnegative deficits establish global nonnegativity and equality only at full effort. This proves the universal claim without a grid argument. Agent one deviating to 3/4 gains 1/32, so the preferred planner point is not an equilibrium."
+    },
+    {
+      "id": "v13-exam-b-5c",
+      "points": 5,
+      "review": "At full effort the cap condition requires rates at least (1/4,0,1/4), so K>=1/2 is necessary in the announced class. Equality is attained and the unchanged contraction plus strict own concavity gives unique implementation over pure and independent mixed equilibria. The largest possible payout equals sum rates over the whole cube, proving every-state cash coverage. Each agent gets one half; sponsor loses one half, so consolidated welfare is one and no sponsor-inclusive Pareto claim follows."
+    },
+    {
+      "id": "v13-exam-b-5d",
+      "points": 5,
+      "review": "True clipped response at the reported candidate is (47/80,4/5,47/80); residual 1/20 implies error at most 1/10 by e<=r+e/2, with actual error 1/20. The welfare estimate inserts the approximate objective at both the true maximizer and the returned point, producing 2epsilon+eta=3/100 only when the uniform and global solver premises both hold. Exact Nash has zero response residual but regret 8/25, contradicting those simultaneous objective premises. Equilibrium distance and welfare regret are correctly kept distinct."
+    }
+  ],
+  "source_review": {
+    "method": "Read all inherited exam scope statements and checked sixteen visible canonical ID/URL links. Actually read and byte/hash-verified all twelve referenced accepted source-record files outside the six-file runtime capsule. No new primary-body retrieval or equation-image view; existing attributable scoped evidence is reused.",
+    "distinct_record_bindings_checked": 12,
+    "retained_record_bindings": [
+      {
+        "path": "content/reviews/v13-c01-sources.json",
+        "bytes": 16723,
+        "sha256": "a46ed9cb1878b2341f5731d0d6edba76ec35ce95f1b06bd69d42f3b3bb827623"
+      },
+      {
+        "path": "content/reviews/v13-c02-sources.json",
+        "bytes": 5018,
+        "sha256": "2c47c071d29f19010636ebf8a853efea867d7d3063ef4c63de2b10f91c9ca7a1"
+      },
+      {
+        "path": "content/reviews/v13-c04-sources.json",
+        "bytes": 5720,
+        "sha256": "b2b9641755908880f3cb201690e5695396d5d5352b9d212e9cbdc04978cb9ab4"
+      },
+      {
+        "path": "content/reviews/v13-c03-sources.json",
+        "bytes": 8430,
+        "sha256": "d0bd29ca63ff93ee35853dae8e99ea3b6d7ba11c733f40625dc247fc3430d6b9"
+      },
+      {
+        "path": "content/reviews/v13-c05-sources.json",
+        "bytes": 9438,
+        "sha256": "2f0de57cf8ab4448615339ca487a13f9c29864611a11696e57e6a4620da35d7d"
+      },
+      {
+        "path": "content/reviews/v13-c06-sources.json",
+        "bytes": 7211,
+        "sha256": "690df4b122a3b9ebca2a1c5873f9155f13252b772e5066dba1819627c88fda12"
+      },
+      {
+        "path": "content/reviews/v13-c07-sources.json",
+        "bytes": 6372,
+        "sha256": "6bd35a3ffabddb64c64a103d82438aac7cc7b4dd779abac60bb5d792eb97d949"
+      },
+      {
+        "path": "content/reviews/v13-c08-sources.json",
+        "bytes": 5721,
+        "sha256": "dfb88613ea4ce8a1ac3e3073e7de9098507c81c02daaad8ba7d37af32d6bd081"
+      },
+      {
+        "path": "content/reviews/v13-c10-sources.json",
+        "bytes": 6960,
+        "sha256": "20e595efa72f5b31409700aa2fb1f7d7640a2ba8303bbc2f5c9771826440cc14"
+      },
+      {
+        "path": "content/reviews/v13-c09-sources.json",
+        "bytes": 6164,
+        "sha256": "3aadf0987dc198add0bd00f57214a56ab00e34edb5baebfb7ae562fa3ad59f90"
+      },
+      {
+        "path": "content/reviews/v13-c11-sources.json",
+        "bytes": 10248,
+        "sha256": "591d5b0c7542d61839820c37a7689653cc5a2687fdda7a6a31ca2140a45b8cb0"
+      },
+      {
+        "path": "content/reviews/v13-c12-sources.json",
+        "bytes": 6576,
+        "sha256": "a504f179461cb90411c66388ab29c22ea1cfa73bbb03967edc55595dc1e2298a"
+      }
+    ],
+    "scope_findings": [
+      "Afriat source is method context, and the current affine differences are independently checked.",
+      "Consumer/producer and equilibrium references are grouped method notes; the new unbounded-technology example is solved directly, without claiming a compact-generator theorem.",
+      "Border cheaper-bundle upgrade and common-slope aggregation have direct proofs here; no unread aggregation proof is attributed to Boergers.",
+      "Sequential consistency is separate from the expressly supplied dominated-type restriction; no general equivalence of refinements claimed.",
+      "Procurement source signs are not imported into buyer payments; bounded monotone pairwise envelope proof supplies the needed BIC argument.",
+      "Stole is used for conditional-utility methodology, with every finite action checked here rather than invoking an unrestricted FOA.",
+      "BKD strategic-substitute base model is not presented as this capped-complement model. Its equilibrium, welfare, subsidy and approximation claims are original derivations.",
+      "Board/Meyer and Berk/Harvey/Hirshleifer provide writing/referee method context, without present journal-policy or research-quality certification."
+    ]
+  },
+  "checker_review": {
+    "runtime_files": 6,
+    "independent_methods": [
+      "Independent recursive rational/tuple parser and own HTML structural reader.",
+      "Dual branch inversion including zero and equality; all nine affine slacks and original selected observations.",
+      "Raw-resource elimination gives equilibrium before checking each household and firm account.",
+      "Payoff sign classification corroborated at mixed boundary points; direct Bayes posterior perturbations.",
+      "Direct payment order-statistic integration in Q(sqrt(3)), cross-checked against virtual receipts.",
+      "Every action evaluated from the full changed probability table; common marginals and changed incentives separately checked.",
+      "Network solution by total sum rather than author face enumeration; coefficient identity verifies the complete welfare polynomial."
+    ],
+    "guard_scope": "Explicit exceptions survive -O; bounded grammar rejects executable and malformed expressions. Quiet import/check API, silent CLI; five nonself bindings; six-file unchanged-byte check.",
+    "numerical_limit": "Finite checks do not establish universal concavity, optimality, equilibrium completeness or contraction; these are addressed separately in all twenty written audits."
+  },
+  "findings": [
+    {
+      "severity": "scope_note",
+      "status": "resolved_by_existing_text",
+      "detail": "The 300-minute allowance and pass thresholds are explicitly design choices, without empirical calibration or equivalence claim."
+    },
+    {
+      "severity": "scope_note",
+      "status": "resolved_by_existing_text",
+      "detail": "Changed-law payroll savings are explicitly hypothetical under H after H-IC fails; no false implementable saving is claimed."
+    }
+  ],
+  "open_findings": [],
+  "limitations": [
+    "No external human review, timing study or institutional validation.",
+    "Separate root assembly and rendered-reader checks remain outside this peer task.",
+    "Source-record bindings establish retained provenance; no fresh whole-source reading is claimed."
+  ]
+}

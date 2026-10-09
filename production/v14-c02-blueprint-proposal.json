@@ -1,0 +1,34 @@
+{
+  "chapter": "v14-c02",
+  "date": "2026-10-09",
+  "status": "Implemented proof and teaching design; working draft pending root/peer review and dependency acceptance.",
+  "canonical_scope": [
+    "Planner",
+    "competitive equilibrium",
+    "shocks",
+    "labor",
+    "perturbation",
+    "calibration",
+    "moments"
+  ],
+  "interfaces": {
+    "predecessor": "C01 author confirms finite Bellman contraction, conditional Euler and expected shadow-tail sufficiency. C02 explicitly verifies its unbounded stochastic labor model; it does not duplicate a generic contraction chapter.",
+    "successor": "C03 heterogeneous agents needs individual a versus aggregate k, common versus idiosyncratic shocks, and the warning that representative formulas do not transfer."
+  },
+  "proof_architecture": [
+    "Finite Markov positive technology; log c plus chi log leisure; full depreciation provides exact savings and hours. Finite-vector value constants by convergent series; candidate logs bounded; all feasible alternatives have summable positive utility parts; concavity/Euler telescope uses nonnegative alternative capital and candidate beta^T s/q tail. Strict utility gap gives allocation uniqueness.",
+    "Competitive decentralization is separate: concavity/CRS firm optimum and zero profits; owned initial capital and firm shares; individual household takes aggregate prices as given; linear-budget tangent and tail prove global household optimality. Gross returns/wages bounded on candidate histories bound deviations\u2019 positive log utility. Common identical households need no idiosyncratic complete-market claim.",
+    "Partial-depreciation steady state and analytic two-root first-order system; one stable branch. No global nonlinear solution or perturbation-existence theorem claimed. Finite two-state shock evaluation produces exact goods/labor/Euler residual diagnostics.",
+    "Exact stationary log moments from absolutely convergent distributed-shock series and covariance recursion. Calibration targets explicitly synthetic; utilization counterexample is a measurement identity, not an unproved alternative equilibrium."
+  ],
+  "worked_cases": [
+    "state-contingent exact policy and value constants",
+    "ownership-consistent equilibrium and labor comparison",
+    "local stable branch and approximation diagnostics",
+    "stationary population moments and held-out failures",
+    "utilization/technology residual nonidentification"
+  ],
+  "exercises": 12,
+  "planned_review_boundary": "Every exact prompt and answer, all universal claims, every visible result and explicit invalid-domain guard. Four runtime files only; provenance files are not runtime dependencies.",
+  "unresolved_design_issues": []
+}

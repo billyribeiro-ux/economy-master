@@ -1,0 +1,172 @@
+{
+  "chapter": "v14-c01",
+  "author": "ito_author",
+  "date": "2026-10-09",
+  "status": "scoped_primary_preparation_complete",
+  "sources": [
+    {
+      "id": "quantecon-discrete-dp",
+      "url": "https://tools-techniques.quantecon.org/discrete_dp.html",
+      "title": "Thomas J. Sargent and John Stachurski — Discrete State Dynamic Programming",
+      "disposition": "reuse exact accepted ID and URL with new scoped body inspection",
+      "date_scope": "Author-maintained HTML; inspected 9 October 2026. No invented original publication year or current software-version recommendation.",
+      "use": "Finite state/action definitions, value/policy iteration and tie retention. The chapter supplies its own complete finite proof and examples.",
+      "inspection": {
+        "actual_inspector": "ito_author",
+        "body_scope": "Sections 11.2–11.3.2 and appendix 11.7.1–11.7.2; web lines 117–308 and 865–905. Growth-grid lines 548–684 inspected only to delimit approximation claims.",
+        "image_scope": []
+      },
+      "limits": "Source refers out for main proofs. No copied numerical example, source code, implementation benchmark or imported discretization error theorem; no dependency installation."
+    },
+    {
+      "id": "v14-c01-lorenzoni-growth2009",
+      "url": "https://ocw.mit.edu/courses/14-451-dynamic-optimization-methods-with-applications-fall-2009/52f960cf4c44a2d713951aaf1c6fdbbf_MIT14_451F09_lec05.pdf",
+      "title": "Guido Lorenzoni — MIT 14.451 Lecture Notes 5: Optimal Growth Model (Fall 2009)",
+      "disposition": "new scoped primary proposal",
+      "date_scope": "Fall 2009 is printed on the lecture; current retrieval does not change its original date.",
+      "use": "Owned production/consumption budget and the distinction between positive consumption, envelope conditions and Euler equations.",
+      "inspection": {
+        "actual_inspector": "ito_author",
+        "body_scope": "Physical/printed pages 1–3, section 1.1 and opening steady-state equation; actual PDF text and page 3 image.",
+        "image_scope": [
+          {
+            "physical_page": 3,
+            "printed_label": "3",
+            "checked": "Envelope derivative, interior effort-free investment Euler chain and explicit zero-capital discussion."
+          }
+        ]
+      },
+      "limits": "The page 3 interior Euler chain omits beta in its last equality: U′=beta V′ requires beta U′(next) f′(next). We derive the correct relation directly. No general differentiability, stability or Inada theorem is imported."
+    },
+    {
+      "id": "v14-c01-lorenzoni-euler2009",
+      "url": "https://ocw.mit.edu/courses/14-451-dynamic-optimization-methods-with-applications-fall-2009/b10fce030ca53313ff69ce207cc1c822_MIT14_451F09_lec06.pdf",
+      "title": "Guido Lorenzoni — MIT 14.451 Lecture Notes 6: Euler Equations (Fall 2009)",
+      "disposition": "new scoped primary proposal",
+      "date_scope": "Fall 2009 lecture, not a current empirical finding.",
+      "use": "Concavity and a vanishing nonnegative-capital shadow-value tail as a sufficiency route. Our finite-shock conditional proof states all expectation and tail hypotheses.",
+      "inspection": {
+        "actual_inspector": "ito_author",
+        "body_scope": "Section 1, physical/printed page 1 through opening of page 2; both page images viewed.",
+        "image_scope": [
+          {
+            "physical_page": 1,
+            "printed_label": "1",
+            "checked": "Euler/TVC hypotheses and finite partial-sum cancellation."
+          },
+          {
+            "physical_page": 2,
+            "printed_label": "2",
+            "checked": "Completion of the limit argument before section 2; local-stability material is not relied on."
+          }
+        ]
+      },
+      "limits": "The third tail equality on page 1 prints F_y at date T+1 where the preceding Euler relation requires F_x. We retain the directly derived terminal term −beta^T u′(c_T) delta k_(T+1), avoiding that typo. No universal necessity of TVC, saddle-path or general measurable-selection claim."
+    },
+    {
+      "id": "v14-c01-lorenzoni-stochastic2009",
+      "url": "https://ocw.mit.edu/courses/14-451-dynamic-optimization-methods-with-applications-fall-2009/9d7bc3706857d2262b44fa3a7451a8dd_MIT14_451F09_lec09.pdf",
+      "title": "Guido Lorenzoni — MIT 14.451 Lecture Notes 9: Stochastic Dynamic Programming (Fall 2009)",
+      "disposition": "new scoped primary proposal",
+      "date_scope": "Fall 2009 lecture, source body and date inspected.",
+      "use": "State includes observed Markov shock; finite shock histories versus general measurable-state models.",
+      "inspection": {
+        "actual_inspector": "ito_author",
+        "body_scope": "Section 1, physical/printed pages 1–2 including the stated compact/bounded assumptions and general-state caution; both images viewed.",
+        "image_scope": [
+          {
+            "physical_page": 1,
+            "printed_label": "1",
+            "checked": "Observed state, finite transition law and bounded/compact hypotheses."
+          },
+          {
+            "physical_page": 2,
+            "printed_label": "2",
+            "checked": "Contraction/value identification scope and explicit measurable-kernel extension caution."
+          }
+        ]
+      },
+      "limits": "Our contraction theorem has finite states and finite actions; the broader compact-state theorem is not claimed proved. Source invariant-distribution/stability and continuous-shock results are not used."
+    }
+  ],
+  "retained_artifacts": [
+    {
+      "path": "/private/tmp/v14-c01/lorenzoni-2009-lecture05-page3.png",
+      "bytes": 144002,
+      "sha256": "51c1c29bb64e1612345beaa63ea57ef4e37aac2bcc8848547ef2ed267841d0eb"
+    },
+    {
+      "path": "/private/tmp/v14-c01/lorenzoni-2009-lecture05.pdf",
+      "bytes": 94979,
+      "sha256": "ee5e41146e1526b841169dafc1ceb673f01485c9396ca58cf623866a010c5f0f"
+    },
+    {
+      "path": "/private/tmp/v14-c01/lorenzoni-2009-lecture05.txt",
+      "bytes": 7593,
+      "sha256": "f10e2910462953f37feee0a5d48d28c2e8de5f914d566a48ac52fab4c60d7c1a"
+    },
+    {
+      "path": "/private/tmp/v14-c01/lorenzoni-2009-lecture06-page1.png",
+      "bytes": 98059,
+      "sha256": "adc6a3f137e0aefeec3c362aa6f0b32e26bcb68315f088361c9a02082c67c010"
+    },
+    {
+      "path": "/private/tmp/v14-c01/lorenzoni-2009-lecture06-page2.png",
+      "bytes": 129219,
+      "sha256": "58971a7706379ed7c7874254feae7ac447f825d3005902d5633e01dab2f5211a"
+    },
+    {
+      "path": "/private/tmp/v14-c01/lorenzoni-2009-lecture06.pdf",
+      "bytes": 92839,
+      "sha256": "9cc48e8377c57d6040f794f3e7b5a4bd7648e5732d31608055ded5d794a39671"
+    },
+    {
+      "path": "/private/tmp/v14-c01/lorenzoni-2009-lecture06.txt",
+      "bytes": 10208,
+      "sha256": "365849f94765625ee28603d96327bb531d25308000315c7abd1241613035df56"
+    },
+    {
+      "path": "/private/tmp/v14-c01/lorenzoni-2009-lecture09-page1.png",
+      "bytes": 93999,
+      "sha256": "7d91adc2c0e83a55895f123f0c7ed07c5ff315967a3290b6ee2c8169ba707c0c"
+    },
+    {
+      "path": "/private/tmp/v14-c01/lorenzoni-2009-lecture09-page2.png",
+      "bytes": 152574,
+      "sha256": "920e4b4985edb82e6225b52fd7949e7cee6444a4c4cb6e3dbf359d29302a5c65"
+    },
+    {
+      "path": "/private/tmp/v14-c01/lorenzoni-2009-lecture09.pdf",
+      "bytes": 104774,
+      "sha256": "375cbd8615cfe693e0282b083d5575502c2f7cae55c84759c4ffc7798faec77b"
+    },
+    {
+      "path": "/private/tmp/v14-c01/lorenzoni-2009-lecture09.txt",
+      "bytes": 11587,
+      "sha256": "9704d12e9fd8b751e28829e91ab69b26f83285022eb3ee0b191ffd127de1bcea"
+    },
+    {
+      "path": "/private/tmp/v14-c01/quantecon-discrete-dp.html",
+      "bytes": 144534,
+      "sha256": "549ea6af93173cfca7f7444e650dfcb6531cd0a8e8e5a1b240b1e249f8058469"
+    }
+  ],
+  "discovery_only": [
+    {
+      "url": "https://ocw.mit.edu/courses/14-451-dynamic-optimization-methods-with-applications-fall-2009/292d8d56e8f2a8c48288a9ffafee5ead_MIT14_451F09_lec04.pdf",
+      "actual_scope": "Web-extracted policy/value regularity text; not retained or cited."
+    },
+    {
+      "url": "https://ocw.mit.edu/courses/14-451-dynamic-optimization-methods-with-applications-fall-2009/2bb2df70bec3557087b2d38f5093a1af_MIT14_451F09_lec08.pdf",
+      "actual_scope": "Web-extracted job-search example; not retained or used as an original case."
+    }
+  ],
+  "scope_boundary": "No source exercises/code copied, no entire-course or library inspection claim, no live empirical statements. Retained whole files are distinguished from the precise relied sections/images. Original proofs correct the two specified display slips.",
+  "resumption_artifact_status": {
+    "date": "2026-10-09",
+    "current_inspector": "v14_c01",
+    "available": 0,
+    "listed": 12,
+    "scope": "Earlier actual-inspector scopes and artifact hashes are historical preparation evidence. Temporary artifacts are absent in this resumed environment; no current artifact-byte revalidation or new source read is claimed. No new macroeconomic/source assertion requiring broader inspection was added."
+  }
+}

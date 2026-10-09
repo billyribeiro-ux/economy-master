@@ -1,0 +1,40 @@
+{
+  "volume": "v13",
+  "component": "exam_b",
+  "reviewer": "v13_b_peer",
+  "date": "2026-10-09",
+  "task": "Independently review frozen Form B before volume acceptance. Read every prompt/solution/proof, all four author payloads and source scopes. Build genuinely separate recomputation, not imports or author helper reuse. Record concrete findings.",
+  "owned_paths": [
+    "scripts/check_v13_exam_b_peer.py",
+    "content/reviews/v13-exam-b-peer.json",
+    "production/v13-assessment-exam-b-peer-validation.json"
+  ],
+  "read_only_frozen_payloads": [
+    {
+      "path": "content/assessments/parts/v13-exam-b.html",
+      "bytes": 55214,
+      "sha256": "d1bbe8777bb94b99394550345a04d03e73c0a252924b29fecc69407d1ab2661d"
+    },
+    {
+      "path": "scripts/check_v13_exam_b.py",
+      "bytes": 28258,
+      "sha256": "54278ff19636375cfbb4543a986226760ba87261334b14f27611358f76cf9e6f"
+    },
+    {
+      "path": "content/reviews/v13-exam-b-sources.json",
+      "bytes": 38912,
+      "sha256": "9321d87ffea421aae1b8a7bf4288c0523eb2d5d9870c774a85b1c5a0f95dbf1b"
+    },
+    {
+      "path": "content/reviews/v13-exam-b-author.json",
+      "bytes": 6488,
+      "sha256": "25bd582cd6632c196517e9750a58b38bf79e363ac7be16a9b646ccbc68894457"
+    }
+  ],
+  "requirements": [
+    "Exactly six runtime files: four author payloads plus peer checker and peer record. Standard-library quiet check(root=None), quiet import/API and silent default CLI; explicit guards survive -O.",
+    "Bind five nonself payloads; author files immutable. Independent exact numerical coverage of every case, full written audit of all twenty prompt/solution/rubrics and universal proofs. Review source attribution and actually verify retained source record bindings outside runtime if necessary; no redundant primary retrieval.",
+    "Actual normal workspace quiet API, identical optimized exact-six quiet API from /, optimized exact-six silent CLI from /; exact membership and bytes unchanged. Persist actual outputs in owned validation record. No redundant gate matrix.",
+    "No shared files, other manuscripts, hosting or subagents. Send findings to root before proposing changes to frozen payloads. Low overhead; robust substantive proof and calculation review required."
+  ]
+}

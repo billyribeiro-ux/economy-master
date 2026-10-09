@@ -173,6 +173,7 @@ from check_v12_c11_peer import check as check_v12_c11_peer
 from check_v12_c12 import check as check_v12_c12
 from check_v12_c12_peer import check as check_v12_c12_peer
 from check_v12_assessment import check as check_v12_assessment
+from check_v13_assessment import check as check_v13_assessment
 from check_v13_c01 import check as check_v13_c01
 from check_v13_c01_peer import check as check_v13_c01_peer
 from check_v13_c02 import check as check_v13_c02
@@ -632,6 +633,7 @@ def main():
     v11_closing_peer_check = {'v11-c09': check_v11_c09_peer(), 'v11-c10': check_v11_c10_peer(), 'v11-c11': check_v11_c11_peer(), 'v11-c12': check_v11_c12_peer()}
     v11_assessment_check = check_v11_assessment()
     v12_assessment_check = check_v12_assessment()
+    v13_assessment_check = check_v13_assessment()
     v12_opening_check = {'v12-c01': check_v12_c01(), 'v12-c02': check_v12_c02(), 'v12-c03': check_v12_c03()}
     v12_opening_peer_check = {'v12-c01': check_v12_c01_peer(), 'v12-c02': check_v12_c02_peer(), 'v12-c03': check_v12_c03_peer()}
     v12_middle_check = {'v12-c04': check_v12_c04(), 'v12-c05': check_v12_c05()}
@@ -712,6 +714,7 @@ def main():
               'volume_12_closing_check': v12_closing_check,
               'volume_12_closing_peer_check': v12_closing_peer_check,
               'volume_12_assessment_check': v12_assessment_check,
+              'volume_13_assessment_check': v13_assessment_check,
               'volume_13_opening_check': v13_opening_check,
               'volume_13_opening_peer_check': v13_opening_peer_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}

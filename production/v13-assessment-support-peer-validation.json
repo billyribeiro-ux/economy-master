@@ -1,0 +1,62 @@
+{
+  "volume": "v13",
+  "component": "support",
+  "date": "2026-10-09",
+  "status": "accepted",
+  "bindings": [
+    {
+      "path": "content/assessments/parts/v13-support-opening.html",
+      "bytes": 14063,
+      "sha256": "24fea5e98be7a3ff1c15d896c73ec23714610f380059abd0538d521e23d07c44"
+    },
+    {
+      "path": "content/assessments/parts/v13-support-closing.html",
+      "bytes": 32212,
+      "sha256": "3baf7de9da7a2df1a98f06bc694f9237e9d59deb407959b0fb3ab52d61dd5e99"
+    },
+    {
+      "path": "scripts/check_v13_support.py",
+      "bytes": 14121,
+      "sha256": "eb9acff37190f6265366e24246bbd03dd94132244a7e85cd71293ba29cc6ec25"
+    },
+    {
+      "path": "content/reviews/v13-support-sources.json",
+      "bytes": 2839,
+      "sha256": "737a6cf0a634923f3b9124950ce62a888f896aad503f11821e7392ca6ccc7c99"
+    },
+    {
+      "path": "content/reviews/v13-support-author.json",
+      "bytes": 5940,
+      "sha256": "befdf4b71ec092bfd704e341386272b89586251ebd51cbea8d504b97452be804"
+    },
+    {
+      "path": "scripts/check_v13_support_peer.py",
+      "bytes": 28582,
+      "sha256": "776986b2b64d2d73a5cc5a4b1322e0d63449fae1b4bb263f0e7865df61f2f370"
+    },
+    {
+      "path": "content/reviews/v13-support-peer.json",
+      "bytes": 9797,
+      "sha256": "f0abfa05e3a69be575eaa1df1a5ccd8599381cd7f87c2718984a29017f38d3f4"
+    }
+  ],
+  "substantive_review": "Complete18 prompt/solution/proof/rubric review by author and separate peer; root read full checker and record. O4 participation tie repaired and final bytes reviewed. No unresolved material finding.",
+  "author_gates": "Actual normal quiet API, optimized exact-five API and CLI passed; production/v13-assessment-support-author-validation.json.",
+  "peer_gates": {
+    "source": "c05_review actual final three-gate tool chunk7008be; successful unchanged gate evidence reused without rerun",
+    "normal_workspace_API": "passed, quiet",
+    "optimized_exact_seven_API_from_root": "passed, identical",
+    "optimized_exact_seven_CLI_from_root": "passed, silent",
+    "bytes_and_membership": "unchanged",
+    "comparisons": 175,
+    "domain_rejections": 36
+  },
+  "root_API": {
+    "tool_chunk": "49a22d",
+    "status": "passed",
+    "quiet": true,
+    "unchanged": true
+  },
+  "source_routes": "production/v13-assessment-support-link-review.json; scoped primary reuse as recorded",
+  "limits": "Component accepted; no complete V13 assessment, learner calibration, external human certification or rendered UI claimed."
+}
