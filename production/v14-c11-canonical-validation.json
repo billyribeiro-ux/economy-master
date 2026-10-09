@@ -1,0 +1,83 @@
+{
+  "chapter": "v14-c11",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v14-c11.html",
+      "bytes": 49311,
+      "sha256": "37a7a3d0e0dd28274e96635850c4f37d099813950b511494505bd3cde652862c"
+    },
+    {
+      "path": "scripts/check_v14_c11.py",
+      "bytes": 15449,
+      "sha256": "a41ce569bd8f259b28428f21d598c53c394cd02f2fdbef0976f6638351b5403a"
+    },
+    {
+      "path": "content/reviews/v14-c11-sources.json",
+      "bytes": 4222,
+      "sha256": "1c3d1681638803ad2ed3cbf7ed644f7d256fa2e0d8afea627906980cbd0e21d9"
+    },
+    {
+      "path": "content/reviews/v14-c11-author.json",
+      "bytes": 7517,
+      "sha256": "87946beae60ebbd76dc1cbdcab03131ae36441ecd1e0bf9f0eb94dfc4d021f2c"
+    },
+    {
+      "path": "scripts/check_v14_c11_peer.py",
+      "bytes": 12483,
+      "sha256": "5cdab09b032bdb776a80172a81c4ed7219c11d86f7f7e461c193898f646335a6"
+    },
+    {
+      "path": "content/reviews/v14-c11-peer.json",
+      "bytes": 9932,
+      "sha256": "01b3e6371547157050798df4911d3271088e73461bfe4c5fde359fe77034eca8"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v14-c11",
+        "component": "author",
+        "status": "passed",
+        "comparisons": 154,
+        "domain_rejections": 28,
+        "worked_cases": 5,
+        "solved_exercises": 12,
+        "primitive_markers": 12,
+        "result_markers": 37,
+        "runtime_files": 4,
+        "scope": "Primitive-derived exact rational compact model/policy certificates and panel/moment calculations; local transcendental displays checked to explicit numerical tolerance; universal proofs in manuscript."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v14-c11",
+        "status": "passed",
+        "comparisons": 419,
+        "domain_rejections": 23,
+        "worked_cases": 5,
+        "solved_exercises": 12,
+        "primitive_markers": 12,
+        "result_markers": 37,
+        "runtime_files": 6,
+        "method": "Independent derivative bisection, discounted reward series, individual observation scores and finite-binomial moments; no author code execution"
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "production/v14-c11-coordinator-working-review.json",
+  "peer_validation": "production/v14-c11-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "volume": "v14",
+  "component": "exam_b",
+  "author": "v13_b_peer",
+  "date": "2026-10-09",
+  "status": "Complete author package; separate peer/coordinator acceptance pending.",
+  "payload_bindings": [
+    {
+      "path": "content/assessments/parts/v14-exam-b.html",
+      "bytes": 51143,
+      "sha256": "4bf28cb63d312692f293a8b3dc4ee1b8e9e88a9f8340c7d56975800b76e6afab"
+    },
+    {
+      "path": "scripts/check_v14_exam_b.py",
+      "bytes": 19915,
+      "sha256": "17c8265c1993fd3fd1519a5896f01ae0a87e33d7cb6d9a4361e77de10d02784d"
+    },
+    {
+      "path": "content/reviews/v14-exam-b-sources.json",
+      "bytes": 16147,
+      "sha256": "86f2d682153cc3e17c0fc5664ac7550a17bf4c62ea255aca89b0642530380d79"
+    }
+  ],
+  "exact_prompt_solution_audit": {
+    "v14-exam-b-q1": "Policy-only residual distinguished from complete maximization; exact four-policy enumeration and global Bellman/tail certificate; sharp loss bound.",
+    "v14-exam-b-q2": "All invariant distributions of reducible two-class chain and arbitrary-initial projection; capital clearing adds constraint but not incentives or global attraction.",
+    "v14-exam-b-q3": "Wrong constant saving rule tested statewise, transition probabilities cancel; corrected alpha-beta share and full conditional concavity/tail verification; no universal labor response.",
+    "v14-exam-b-q4": "Both same-mean populations fully feasible and budget balanced; necessity and sufficiency of affine policy on three-point support proved.",
+    "v14-exam-b-q5": "Continuous-time private hazard/Bellman/Nash/free-entry equations reconstructed; vacancy-cost wage term and firm financing explicit; Hosios and same-initial discounted scope correct.",
+    "v14-exam-b-q6": "Forward orientation, characteristic roots, stable eigenvector and nonzero bounded adapted deterministic paths; no invented predetermined jump condition.",
+    "v14-exam-b-q7": "Finite budget identity retains nonzero discounted terminal claim despite falling debt/output; constant-surplus repair and household tax cost explicitly funded.",
+    "v14-exam-b-q8": "Nominal deviation floor consistent with beta; unconstrained regime rejected, corrected shadow inequality and scalar monotone finite-terminal uniqueness only.",
+    "v14-exam-b-q9": "Safe and risky pricing restrictions checked jointly; HJ necessary inequality not sufficient; full-rank unique corrected positive kernel not structural preference identification.",
+    "v14-exam-b-q10": "Full positive unspanned kernel family and open domain, discriminating new claim completes span; no causal/preference implication from linear pricing alone.",
+    "v14-exam-b-q11": "Owner cash budget genuinely constrains feasible investment; strict concavity yields affordable global optimum, dated marginal q differs from fixed-rent average claim.",
+    "v14-exam-b-q12": "Entire old-debt recovery/equity surplus division and weak/strict renegotiation range; current owner resources and terminal goods explicitly balanced.",
+    "v14-exam-b-q13": "No-run contract resources, finite-zero expected queue utility, every withdrawal branch and exact attained worst reserve; guarantee changes patient incentives only if externally funded/credible.",
+    "v14-exam-b-q14": "Both constrained-bank roots satisfy positive equity/debt and buyer funding; derivative classification pertains only to specified iterative adjustment, not static selection.",
+    "v14-exam-b-q15": "Unequal state probabilities and domestic-per-foreign quotation; every kernel component/repriced safe rate/CIP replication/covariance repaired; no full monetary equilibrium.",
+    "v14-exam-b-q16": "Private fixed-price KKT before aggregate price consistency; stale-price error, unique complementary symmetric solution and both-date foreign resource closure.",
+    "v14-exam-b-q17": "Continuous-action reward bound directly proves history-policy optimum; zero coarse residual diagnosed with sharp true-operator certificate and positive policy loss.",
+    "v14-exam-b-q18": "Stationary mean and indicator variance share one restriction; explicit full parameter family and reserved autocovariance contrast; finite holdout/causal claims qualified.",
+    "v14-exam-b-q19": "Zero-sum mass-weighted taxes/transfers and covariance identity; stable elastic-supply local solution differentiated from welfare and regime changes.",
+    "v14-exam-b-q20": "Explicit equivalent nonnegative mechanism family, added independent contrast inverse and full feasible range; prospective exposure/shock/confound/reserved-target/stopping protocol scored."
+  },
+  "coverage": [
+    {
+      "domain": "dynamic_distribution",
+      "points": 20,
+      "prompts": [
+        "v14-exam-b-q1",
+        "v14-exam-b-q2",
+        "v14-exam-b-q3",
+        "v14-exam-b-q4"
+      ],
+      "chapters": [
+        "v14-c01",
+        "v14-c02",
+        "v14-c03"
+      ]
+    },
+    {
+      "domain": "labor_policy",
+      "points": 20,
+      "prompts": [
+        "v14-exam-b-q5",
+        "v14-exam-b-q6",
+        "v14-exam-b-q7",
+        "v14-exam-b-q8"
+      ],
+      "chapters": [
+        "v14-c04",
+        "v14-c05",
+        "v14-c06"
+      ]
+    },
+    {
+      "domain": "pricing_investment",
+      "points": 20,
+      "prompts": [
+        "v14-exam-b-q9",
+        "v14-exam-b-q10",
+        "v14-exam-b-q11",
+        "v14-exam-b-q12"
+      ],
+      "chapters": [
+        "v14-c07",
+        "v14-c08"
+      ]
+    },
+    {
+      "domain": "liquidity_international",
+      "points": 20,
+      "prompts": [
+        "v14-exam-b-q13",
+        "v14-exam-b-q14",
+        "v14-exam-b-q15",
+        "v14-exam-b-q16"
+      ],
+      "chapters": [
+        "v14-c09",
+        "v14-c10"
+      ]
+    },
+    {
+      "domain": "quantitative_research",
+      "points": 20,
+      "prompts": [
+        "v14-exam-b-q17",
+        "v14-exam-b-q18",
+        "v14-exam-b-q19",
+        "v14-exam-b-q20"
+      ],
+      "chapters": [
+        "v14-c11",
+        "v14-c12"
+      ]
+    }
+  ],
+  "administration": "Twenty exact5point prompts and complete additive5point rubrics; five20point domains/100points.300minute allowance explicitly uncalibrated.85overall/15perdomain plus critical-error remediation and delayed transfer/teach-back, no credential/equivalence claim.",
+  "distinction_from_a": "Map exchanged with A author before full work. A constructs finite equilibria/active NK/sovereign menus/insurance/dealer capacity/network; B diagnoses false certificates, reducible invariants, passive NK, deleted fiscal tail, kernel underidentification, fixed rents/debt overhang, off-path guarantee funding, multiple sale roots, stale collateral prices and redundant moments. Shared foundations have materially distinct configurations and reasoning demands.",
+  "full_reading": "All exact prompts, assumptions, solutions, numerical displays and rubrics reviewed; relevant accepted C01–C12 bodies and source records read. All models independent unless explicit sharing; preservation of funding/timing and admissible deviations audited.",
+  "proof_boundary": "All new claims are elementary finite/compact/linear or derivative consequences proved within solutions or verified inherited chapter interfaces. B3 conditional infinite-horizon tail reasoning supplied; B13 all piecewise off-path histories covered, not merely sampled; B14 numerical stability not mistaken for equilibrium existence/selection; B18 and B20 explicit observational equivalence, not rank-only nonidentification.",
+  "source_scope": "Thirteen exact inherited primary IDs/URLs. Each source role remains within the accepted recorded inspection. Retained local record bindings actually rechecked. No new primary retrieval, source PDF/image inspection, historical artifact availability or empirical calibration claimed. C12 local covariance/identification algebra used directly without importing current empirical literature claims.",
+  "computational_scope": "Quiet four-file standard-library check parses input/result/point/domain/solution/source markers and three nonself hashes. Rational policy evaluation/all-policy comparisons, invariant families, Euler/accounting/pricing, exact off-path reserve and sale feasibility; Decimal50 floor logarithm. Explicit malformed-domain guards survive optimization. Finite arithmetic witnesses support separately reviewed universal arguments.",
+  "resolved_findings": [],
+  "unresolved_findings": [],
+  "portable_gates": "Actual final normal quiet API, optimized isolated exact-four API and silent CLI from / are reported separately after final freeze; no runtime dependency on gate evidence.",
+  "limits": [
+    "Author review is not separate peer acceptance or human academic certification.",
+    "No empirical reliability/timing/equivalence, complete research-frontier mastery or causal effect inferred from synthetic cases.",
+    "Checker numeric tolerance on transcendental display is not a generic floating-point rigorous interval certificate.",
+    "Root handles canonical assembly/build/offline/publication and full volume acceptance."
+  ]
+}

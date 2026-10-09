@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "chapter_packages_available": 165,
-  "html_pages_checked": 189,
+  "chapter_packages_available": 168,
+  "html_pages_checked": 193,
   "curriculum_chapters": 216,
   "cross_volume_packages_available": 3,
   "checks": [
@@ -9384,6 +9384,154 @@
     },
     "limits": "Internal editorial and numerical validation; no rendered UI or external human assessment claim."
   },
+  "volume_14_assessment_check": {
+    "status": "passed",
+    "assembly_parts": [
+      "v14-support-opening.html",
+      "v14-exam-a.html",
+      "v14-exam-b.html",
+      "v14-project.html",
+      "v14-support-closing.html"
+    ],
+    "unique_ids": 108,
+    "component_checks": {
+      "support_author": {
+        "volume": "v14",
+        "component": "support",
+        "status": "passed",
+        "comparisons": 97,
+        "domain_rejections": 15,
+        "diagnostic_tasks": 8,
+        "oral_tasks": 5,
+        "retention_tasks": 5,
+        "score_totals": [
+          40,
+          20,
+          50
+        ],
+        "visible_result_markers": 35,
+        "runtime_files": 5,
+        "scope": "Original finite calculations and stated model/domain witnesses; full18solution/proof review separately recorded."
+      },
+      "exam_a_author": {
+        "volume": "v14",
+        "component": "exam_a",
+        "status": "passed",
+        "comparisons": 323,
+        "domain_rejections": 20,
+        "scored_prompts": 20,
+        "solutions": 20,
+        "total_points": 100,
+        "domains": 5,
+        "chapter_coverage": 12,
+        "primitive_markers": 22,
+        "result_markers": 38,
+        "runtime_files": 4
+      },
+      "exam_b_author": {
+        "volume": "v14",
+        "component": "exam_b",
+        "status": "passed",
+        "comparisons": 231,
+        "domain_rejections": 22,
+        "scored_prompts": 20,
+        "points": 100,
+        "domains": 5,
+        "primitive_markers": 21,
+        "result_markers": 58,
+        "sources": 13,
+        "runtime_files": 4,
+        "scope": "Exact rational model diagnostics plus 50-digit Decimal floor display; all twenty proofs/rubrics/source scopes separately reviewed."
+      },
+      "project_author": {
+        "volume": "v14",
+        "component": "project",
+        "status": "passed",
+        "tasks": 7,
+        "domains": 5,
+        "runtime_files": 9,
+        "reader_files": 5,
+        "HTML_inputs": 13,
+        "HTML_outputs": 45,
+        "comparisons": 6020,
+        "oracle_policies": 518,
+        "rejected_inputs": 14,
+        "actual_cli_alias_rejections": 32,
+        "actual_reader_cli_successes": 6,
+        "actual_malformed_cli_rejections": 2,
+        "actual_valid_failure_cli_diagnostics": 2,
+        "open_issues": []
+      },
+      "support_peer": {
+        "volume": "v14",
+        "component": "support-peer",
+        "status": "passed",
+        "comparisons": 187,
+        "rejected_inputs": 19,
+        "diagnostic_tasks": 8,
+        "oral_tasks": 5,
+        "retention_tasks": 5,
+        "score_totals": [
+          40,
+          20,
+          50
+        ],
+        "displayed_results": 35,
+        "runtime_files": 7,
+        "author_code_executed": false,
+        "open_issues": []
+      },
+      "exam_a_peer": {
+        "volume": "v14",
+        "component": "exam-a-peer",
+        "status": "passed",
+        "comparisons": 366,
+        "rejected_inputs": 22,
+        "household_policies_enumerated": 8,
+        "network_default_sets": 8,
+        "scored_prompts": 20,
+        "solutions": 20,
+        "domains": 5,
+        "total_points": 100,
+        "chapter_coverage": 12,
+        "input_markers": 22,
+        "result_markers": 38,
+        "runtime_files": 6,
+        "author_code_executed": false,
+        "open_issues": []
+      },
+      "exam_b_peer": {
+        "volume": "v14",
+        "component": "exam_b_peer",
+        "status": "passed",
+        "comparisons": 640,
+        "domain_rejections": 22,
+        "scored_prompts": 20,
+        "solutions": 20,
+        "points": 100,
+        "domains": 5,
+        "chapters": 12,
+        "primitive_markers": 21,
+        "result_markers": 58,
+        "runtime_files": 6
+      },
+      "project_peer": {
+        "status": "passed",
+        "component": "v14-project-peer",
+        "comparisons": 6003,
+        "domain_rejections": 66,
+        "solved_tasks": 7,
+        "points": 100,
+        "domains": 5,
+        "input_markers": 13,
+        "output_markers": 45,
+        "reader_cli_runs": 48,
+        "runtime_files": 11,
+        "unresolved_findings": 0
+      }
+    },
+    "limits": "Internal editorial and numerical validation; no rendered UI or external human assessment claim."
+  },
   "volume_14_opening_check": {
     "v14-c01": {
       "chapter": "v14-c01",
@@ -9448,6 +9596,87 @@
         "statewise budgets and Euler comparisons"
       ],
       "scope": "Independent calculations corroborate the complete recorded proof/source/solution review; no author executable reuse or global nonlinear numerical certificate."
+    }
+  },
+  "v14-c12_check": {
+    "author": {
+      "chapter": "v14-c12",
+      "status": "passed",
+      "comparisons": 180,
+      "domain_rejections": 19,
+      "worked_cases": 5,
+      "solved_exercises": 12,
+      "input_markers": 10,
+      "result_markers": 26,
+      "runtime_files": 4,
+      "scope": "Exact original finite transmission, sequence, network, SDF and identification cases; universal proof/source review separate. No empirical replication."
+    },
+    "peer": {
+      "chapter": "v14-c12",
+      "status": "passed",
+      "comparisons": 215,
+      "domain_rejections": 21,
+      "worked_examples": 5,
+      "solutions": 12,
+      "result_markers": 26,
+      "primitive_markers": 10,
+      "runtime_files": 6,
+      "independence": "Descending network iteration with exact certification, Neumann sums, derivative bisection and finite-support covariance; no author imports or execution"
+    }
+  },
+  "v14-c11_check": {
+    "author": {
+      "chapter": "v14-c11",
+      "component": "author",
+      "status": "passed",
+      "comparisons": 154,
+      "domain_rejections": 28,
+      "worked_cases": 5,
+      "solved_exercises": 12,
+      "primitive_markers": 12,
+      "result_markers": 37,
+      "runtime_files": 4,
+      "scope": "Primitive-derived exact rational compact model/policy certificates and panel/moment calculations; local transcendental displays checked to explicit numerical tolerance; universal proofs in manuscript."
+    },
+    "peer": {
+      "chapter": "v14-c11",
+      "status": "passed",
+      "comparisons": 419,
+      "domain_rejections": 23,
+      "worked_cases": 5,
+      "solved_exercises": 12,
+      "primitive_markers": 12,
+      "result_markers": 37,
+      "runtime_files": 6,
+      "method": "Independent derivative bisection, discounted reward series, individual observation scores and finite-binomial moments; no author code execution"
+    }
+  },
+  "v14-c10_check": {
+    "author": {
+      "chapter": "v14-c10",
+      "status": "passed",
+      "worked_cases": 4,
+      "solutions": 12,
+      "input_groups": 9,
+      "displayed_outputs": 61,
+      "comparisons": 498,
+      "rejected_inputs": 24,
+      "runtime_files": 4,
+      "open_issues": []
+    },
+    "peer": {
+      "chapter": "v14-c10",
+      "component": "peer",
+      "status": "passed",
+      "comparisons": 222,
+      "domain_rejections": 23,
+      "worked_cases": 4,
+      "solved_exercises": 12,
+      "primitive_markers": 9,
+      "result_markers": 61,
+      "runtime_files": 6,
+      "author_code_executed": false,
+      "scope": "Independent rational budgets/pricing/cap KKT/funding reconstruction and 50-digit Decimal exhaustive debt menu; universal/source judgments recorded separately."
     }
   },
   "v14-c09_check": {

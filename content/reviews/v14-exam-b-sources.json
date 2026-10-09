@@ -1,0 +1,216 @@
+{
+  "volume": "v14",
+  "component": "exam_b",
+  "date": "2026-10-09",
+  "sources": [
+    {
+      "id": "quantecon-discrete-dp",
+      "title": "Thomas J. Sargent and John Stachurski — Discrete State Dynamic Programming",
+      "url": "https://tools-techniques.quantecon.org/discrete_dp.html",
+      "use": "B1,B17: contraction, policy versus true Bellman operator.",
+      "checked": "2026-10-09",
+      "verification": "Inherited accepted scoped record actually read; no fresh primary retrieval for this assessment.",
+      "inherited_scope": {
+        "actual_inspector": "ito_author",
+        "body_scope": "Sections 11.2–11.3.2 and appendix 11.7.1–11.7.2; web lines 117–308 and 865–905. Growth-grid lines 548–684 inspected only to delimit approximation claims.",
+        "image_scope": []
+      },
+      "limits": "Source refers out for main proofs. No copied numerical example, source code, implementation benchmark or imported discretization error theorem; no dependency installation."
+    },
+    {
+      "id": "v14-c01-lorenzoni-growth2009",
+      "title": "Guido Lorenzoni — MIT 14.451 Lecture Notes 5: Optimal Growth Model (Fall 2009)",
+      "url": "https://ocw.mit.edu/courses/14-451-dynamic-optimization-methods-with-applications-fall-2009/52f960cf4c44a2d713951aaf1c6fdbbf_MIT14_451F09_lec05.pdf",
+      "use": "B3: growth timing and verified policy; stochastic conditional cancellation derived explicitly.",
+      "checked": "2026-10-09",
+      "verification": "Inherited accepted scoped record actually read; no fresh primary retrieval for this assessment.",
+      "inherited_scope": {
+        "actual_inspector": "ito_author",
+        "body_scope": "Physical/printed pages 1–3, section 1.1 and opening steady-state equation; actual PDF text and page 3 image.",
+        "image_scope": [
+          {
+            "physical_page": 3,
+            "printed_label": "3",
+            "checked": "Envelope derivative, interior effort-free investment Euler chain and explicit zero-capital discussion."
+          }
+        ]
+      },
+      "limits": "The page 3 interior Euler chain omits beta in its last equality: U′=beta V′ requires beta U′(next) f′(next). We derive the correct relation directly. No general differentiability, stability or Inada theorem is imported."
+    },
+    {
+      "id": "v14-c03-huggett1991",
+      "title": "Mark Huggett, The Risk-Free Rate in Heterogeneous-Agent, Incomplete-Insurance Economies—Revised",
+      "url": "https://drive.google.com/file/d/1cppaWycfDFD8pejtAg9UvbIzCeoPcrGm/view",
+      "use": "B2,B4: conditional household transition, stationary distributions and clearing distinct from incentives.",
+      "checked": "2026-10-09",
+      "verification": "Inherited accepted scoped record actually read; no fresh primary retrieval for this assessment.",
+      "inherited_scope": "Actual revised1991 working paper91-0155, cover plus printed1–4 visually inspected in original scanned PDF. Author-linked corrected version used.",
+      "limits": "Not the published1993 article; no historical tables, calibration or uninspected existence theorem imported. Original finite examples differ from its continuous economy."
+    },
+    {
+      "id": "v06-c05-matching",
+      "title": "Daron Acemoglu, MIT 14.661 — Lectures 11–13: Search, Matching and Unemployment (December 2017)",
+      "url": "https://ocw.mit.edu/courses/14-661-labor-economics-i-fall-2017/e1fd925bb0b2ab9452147baee5c1b0b5_MIT14_661F17_lec11_13.pdf",
+      "use": "B5: continuous-time matching Bellman equations, surplus sharing, free entry and scoped Hosios condition.",
+      "checked": "2026-10-09",
+      "verification": "Inherited accepted scoped record actually read; no fresh primary retrieval for this assessment.",
+      "inherited_scope": "Current author v13_b_peer inspected the actual official MIT PDF web-extracted body: cover physical page1; physical pages34–54 for continuous-time matching and pair-specific surplus; physical pages56–70 for equilibrium, dynamics and welfare/Hosios discussion. Read surrounding capital passages only to exclude their assumptions. Physical PDF page = printed slide label; document has105physical pages with slides labelled through104. Earlier accepted v06-c05-matching record inspected physical34–56; this is retained provenance, not confused with current reading. No current local PDF or equation-image inspection is claimed.",
+      "limits": "The source adds physical capital; our model has no capital input, reversible or irreversible. Its numerical/historical evidence, assignment-model sections and full course are not imported. The source discounted welfare discussion states a solution without our complete finite-T verification; that proof is original here. Source extracted equations have sign/index irregularities; we independently derive all value, entry and welfare expressions. No universal non-CRS inefficiency claim or real-world bargaining estimate is adopted."
+    },
+    {
+      "id": "v14-c05-gali2018",
+      "title": "Jordi Galí, The Basic New Keynesian Model, May2018",
+      "url": "https://crei.cat/wp-content/uploads/2016/07/basic_nk_may2018.pdf",
+      "use": "B6,B8: local NK equations, forward roots and finite-terminal floor regime.",
+      "checked": "2026-10-09",
+      "verification": "Inherited accepted scoped record actually read; no fresh primary retrieval for this assessment.",
+      "inherited_scope": "Web-extracted PDF body physical pages7–14 (numbered slides4–11),18–21 (numbered slides13–16), especially household discount-bond Euler, CES expenditure demand, Calvo reset objective/FOC, Phillips/IS equations and contemporaneous-rule matrix/inequality. Physical pages1–2 identity/introduction also seen. Empirical graphics and reported empirical responses not used. Actual web-extracted body, no local or page-image inspection claimed.",
+      "limits": "No full-deck empirical review, source exercise copying, global nonlinear determinacy theorem or current monetary-policy assertion. Source rule reacts to output-level deviation; chapter explicitly specifies gap feedback and derives its own forcing terms."
+    },
+    {
+      "id": "v14-c06-kumhof-nunes-yakadina2008",
+      "title": "Michael Kumhof, Ricardo Nunes and Irina Yakadina, Simple Monetary Rules Under Fiscal Dominance",
+      "url": "https://www.federalreserve.gov/pubs/ifdp/2008/937/ifdp937.htm",
+      "use": "B7: fiscal closure and terminal-value assumptions; exact counterexample original.",
+      "checked": "2026-10-09",
+      "verification": "Inherited accepted scoped record actually read; no fresh primary retrieval for this assessment.",
+      "inherited_scope": "Actual official HTML abstract and introduction lines17–51 and model/rule discussion52–169 inspected. Source is IFDP937, July2008, not current policy guidance.",
+      "limits": "No quantitative replication, figure reading or general empirical endorsement. No source code or exercises copied."
+    },
+    {
+      "id": "v14-c07-quantecon-markov",
+      "title": "Thomas J. Sargent and John Stachurski, Asset Pricing: Finite State Models",
+      "url": "https://python.quantecon.org/markov_asset.html",
+      "use": "B9,B10: finite-state pricing; direct linear algebra proofs supplied.",
+      "checked": "2026-10-09",
+      "verification": "Inherited accepted scoped record actually read; no fresh primary retrieval for this assessment.",
+      "inherited_scope": "Actual HTML sections125.2,125.3.3.1 and125.4.1, lines93–406 read.",
+      "limits": "No source code, calibration or historical data reproduced."
+    },
+    {
+      "id": "v14-c08-malmendier2007",
+      "title": "Ulrike Malmendier, Econ234C Lecture5: External Investment(I), UC Berkeley,13February2007",
+      "url": "https://eml.berkeley.edu/~webfac/malmendier/e234C_s07/class5.pdf",
+      "use": "B11,B12: dated investment/shadow-value method and financing distinction; debt split derived directly.",
+      "checked": "2026-10-09",
+      "verification": "Inherited accepted scoped record actually read; no fresh primary retrieval for this assessment.",
+      "inherited_scope": "Actual PDF text pages1 and4–18, lines0–170, read for identity, discrete budgets/FOCs and average/marginal distinction.",
+      "limits": "No visual inspection, empirical/M&A pages or source exercises used; no copied numerical examples. Finite chapter proof does not import source infinite-horizon terminal inference."
+    },
+    {
+      "id": "v14-c09-dybvig2015",
+      "title": "Douglas W. Diamond and Philip H. Dybvig, Bank Runs, Deposit Insurance, and Liquidity: teaching slides,13August2015",
+      "url": "https://dybfin.wustl.edu/teaching/topicsquantfin18-shared/papers/bankruns150813.pdf",
+      "use": "B13: finite-zero utility and withdrawal game. New all-history guarantee-reserve calculation proved here.",
+      "checked": "2026-10-09",
+      "verification": "Inherited accepted scoped record actually read; no fresh primary retrieval for this assessment.",
+      "inherited_scope": "Actual PDF text19pages read, with central model/contracts/equilibria and technical qualification pages4–13 and policy14–18.",
+      "limits": "2015author teaching slides, not an inspected1983article body. No numerical/source exercise reproduction; no rendered images claimed."
+    },
+    {
+      "id": "v14-c09-brunnermeier-pedersen2008",
+      "title": "Markus K. Brunnermeier and Lasse Heje Pedersen, Market Liquidity and Funding Liquidity, RFS Advance Access10December2008",
+      "url": "https://www.princeton.edu/~markus/research/papers/liquidity.pdf",
+      "use": "B14: funding/market liquidity motivation only; source inspected abstract/intro, not a source theorem for our two-root economy.",
+      "checked": "2026-10-09",
+      "verification": "Inherited accepted scoped record actually read; no fresh primary retrieval for this assessment.",
+      "inherited_scope": "Actual author-hosted38-pagePDF first-page abstract/intro and opening second-page text, lines0–49, inspected. Identity is advance-access2008 version, later published2009.",
+      "limits": "No model body, proofs, estimates or full-paper replication inspected/claimed; landing-page author list alone is not source verification."
+    },
+    {
+      "id": "v14-c10-verdelhan-habits",
+      "title": "Adrien Verdelhan, A Habit-Based Explanation of the Exchange Rate Risk Premium, author-posted prepublication paper",
+      "url": "https://web.mit.edu/adrienv/www/FX_Habits.pdf",
+      "use": "B15: currency kernel conversion context; covariance/replication calculation original.",
+      "checked": "2026-10-09",
+      "verification": "Inherited accepted scoped record actually read; no fresh primary retrieval for this assessment.",
+      "inherited_scope": "Actually inspected author research page and linked 40-page PDF body: cover and section I.B, physical pages 8–9 (PDF indices 7–8), lines 204–286, especially equation (3) and pricing-kernel conversion. Author page labels linked version October 2008 and publication Journal of Finance 65(1), 2010, pp.123–145; PDF cover says forthcoming.",
+      "limits": "Do not infer internal PDF revision date from the linked-page label. No habit calibration, regression, simulations or empirical results reused. Chapter gross-return covariance identity and cases are original; nominal-to-real conversion derived explicitly."
+    },
+    {
+      "id": "v14-c10-usg-frictions",
+      "title": "Uribe and Schmitt-Grohé, Open Economy Macroeconomics, chapter 12 slides: Financial Frictions and Aggregate Instability",
+      "url": "https://www.columbia.edu/~mu2166/book/overborrowing/slides_overborrowing.pdf",
+      "use": "B16: price-taking versus aggregate collateral feedback; finite equilibrium and lender funding verified here.",
+      "checked": "2026-10-09",
+      "verification": "Inherited accepted scoped record actually read; no fresh primary retrieval for this assessment.",
+      "inherited_scope": "Actually opened official chapter index and 106-page PDF text, cover and section 12.3, physical pages 23–26 (PDF indices 22–25), lines 415–533: dated household budget, flow-collateral constraint and endogenous price consistency. Surrounding stock-collateral discussion read as context.",
+      "limits": "No stock-collateral model, multiplicity theorem, estimated dynamics or source numerical calibration asserted. Chapter proves a different finite two-date log equilibrium, including R≤κν."
+    },
+    {
+      "id": "v12-c03-mit-gmm2017",
+      "title": "Structural Equations Models and GMM",
+      "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/f6b8cd36eee8df2b259c979a1fd2673e_MIT14_382S17_lec3.pdf",
+      "use": "B18,B20: moment identification versus numerical fitting; explicit equivalent families and inverse supplied.",
+      "checked": "2026-10-09",
+      "verification": "Inherited accepted scoped record actually read; no fresh primary retrieval for this assessment.",
+      "inherited_scope": {
+        "date_checked": "2026-10-09",
+        "pdf_pages": 18,
+        "bytes": 412380,
+        "sha256": "3ac400328d35e42a48024c442b59b7df66a325675a07926cda34e26a8c1c2cc0",
+        "body_scope_read": "PDF/printed pages5–13: criterion, rank, weighting and efficiency, fixed-dimensional linear theorem/proof and 2SLS special case. Earlier model setup was read for notation; later system-estimation/application material is not needed.",
+        "rendered_pages_read": [
+          5,
+          10,
+          11
+        ]
+      },
+      "limits": "The formal theorem fixes dimensions and population matrices and assumes the relevant LLN/CLT. Counting moments is not identification; nonlinear global uniqueness requires more. Efficiency is within the specified valid-moment estimator class."
+    }
+  ],
+  "retained_source_record_bindings": [
+    {
+      "path": "content/reviews/v14-c01-sources.json",
+      "bytes": 6301,
+      "sha256": "fc1474bb7bb522311fee625ed3edc064792786a4c07e32c16178e360b734554e"
+    },
+    {
+      "path": "content/reviews/v14-c03-sources.json",
+      "bytes": 2970,
+      "sha256": "8c50337dc310ce5c2a1ce2ead4c318af9e2316fbdb74a01163c6213a1c970b2e"
+    },
+    {
+      "path": "content/reviews/v14-c04-sources.json",
+      "bytes": 2474,
+      "sha256": "2edb22275fc398c669617dc670416ad178bfb426aede6765155b6625a235585f"
+    },
+    {
+      "path": "content/reviews/v14-c05-sources.json",
+      "bytes": 1753,
+      "sha256": "64ea98c8f013353a12fa3f78c119c45e51457aea212b26aaf2816d04185ae746"
+    },
+    {
+      "path": "content/reviews/v14-c06-sources.json",
+      "bytes": 1724,
+      "sha256": "49f95ab4dbf3860dd5fa8635c935449851b0db390898a5fbfee2cf2ca9810741"
+    },
+    {
+      "path": "content/reviews/v14-c07-sources.json",
+      "bytes": 2179,
+      "sha256": "c5106f95491fa1b94979653787984e30380dde7d756da242f045b6eefdb61a1c"
+    },
+    {
+      "path": "content/reviews/v14-c08-sources.json",
+      "bytes": 1685,
+      "sha256": "bb7a20d20590ba6fd4c091c17dc58ad6ae649875176e9e8946865de74eee5f0f"
+    },
+    {
+      "path": "content/reviews/v14-c09-sources.json",
+      "bytes": 1770,
+      "sha256": "66bd19178532fc81644803522d06a4c6af906274fd5ab2166bc362ced525c3bb"
+    },
+    {
+      "path": "content/reviews/v14-c10-sources.json",
+      "bytes": 2968,
+      "sha256": "6830762f248ea74feccd0ece06d39953f4bb675e2db164e3eae618579c0c24c5"
+    },
+    {
+      "path": "content/reviews/v12-c03-sources.json",
+      "bytes": 10219,
+      "sha256": "ed46fe4af4920a7c831c974942d56568bc44ce42bde9873db3d353e22218d837"
+    }
+  ],
+  "boundary": "Actual local accepted source records read and hashed. No new source artifact, image, web-body inspection or historical temporary-file availability claim. All twenty problems/solutions and numeric configurations original. B19 uses accepted C12 covariance and funded-transfer algebra, proved directly, with no external empirical magnitude imported.",
+  "form_distinction": "Diagnosis/reconstruction; proposed policies, claims, prices or algorithm outputs require explicit correction. Form A author received full mechanism map and confirmed distinct construction map."
+}

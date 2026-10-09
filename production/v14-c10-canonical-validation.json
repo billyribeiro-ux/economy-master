@@ -1,0 +1,84 @@
+{
+  "chapter": "v14-c10",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v14-c10.html",
+      "bytes": 49659,
+      "sha256": "c6a2d5d806adb73dac7fdf091ede534161be12494ce366fde6dc9feb62f09cd7"
+    },
+    {
+      "path": "scripts/check_v14_c10.py",
+      "bytes": 15463,
+      "sha256": "7d99bcee6693ec0f2a942e0c54df9f770faaa36a8d3b11bac9a494ae64f10c7b"
+    },
+    {
+      "path": "content/reviews/v14-c10-sources.json",
+      "bytes": 2968,
+      "sha256": "6830762f248ea74feccd0ece06d39953f4bb675e2db164e3eae618579c0c24c5"
+    },
+    {
+      "path": "content/reviews/v14-c10-author.json",
+      "bytes": 6008,
+      "sha256": "6b6d5b25e058a1ff48a0a2259e4c45b07710e4ad7d2c34578da879f9ab4d794c"
+    },
+    {
+      "path": "scripts/check_v14_c10_peer.py",
+      "bytes": 17787,
+      "sha256": "83ede0447718b1951586f1f00cfdb508728c5e27819fb71afb4b51d6bf777f1c"
+    },
+    {
+      "path": "content/reviews/v14-c10-peer.json",
+      "bytes": 7591,
+      "sha256": "e41d4aa673aa4ed504de549d3ae35f7b27f80b3bc93aa56d3d787f5741378a7a"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v14-c10",
+        "status": "passed",
+        "worked_cases": 4,
+        "solutions": 12,
+        "input_groups": 9,
+        "displayed_outputs": 61,
+        "comparisons": 498,
+        "rejected_inputs": 24,
+        "runtime_files": 4,
+        "open_issues": []
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v14-c10",
+        "component": "peer",
+        "status": "passed",
+        "comparisons": 222,
+        "domain_rejections": 23,
+        "worked_cases": 4,
+        "solved_exercises": 12,
+        "primitive_markers": 9,
+        "result_markers": 61,
+        "runtime_files": 6,
+        "author_code_executed": false,
+        "scope": "Independent rational budgets/pricing/cap KKT/funding reconstruction and 50-digit Decimal exhaustive debt menu; universal/source judgments recorded separately."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "production/v14-c10-coordinator-working-review.json",
+  "peer_validation": "production/v14-c10-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

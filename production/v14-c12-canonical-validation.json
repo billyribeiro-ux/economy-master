@@ -1,0 +1,82 @@
+{
+  "chapter": "v14-c12",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v14-c12.html",
+      "bytes": 44459,
+      "sha256": "d845faa1305a461ac0fb2996181cbccffcda601b6bb250debc47c60ab7885d88"
+    },
+    {
+      "path": "scripts/check_v14_c12.py",
+      "bytes": 11473,
+      "sha256": "b4b26ac13697957918edcad5e9c50a506e7d5076a746c13b08571d1443d1ce9f"
+    },
+    {
+      "path": "content/reviews/v14-c12-sources.json",
+      "bytes": 3419,
+      "sha256": "c17f70b4191ac876537f85ac3e3e0eabf4eb3962db7708843d7313d37473861b"
+    },
+    {
+      "path": "content/reviews/v14-c12-author.json",
+      "bytes": 4209,
+      "sha256": "d3659066f2e3dc0b8e80f88c0a94c141d80c2bdad4992856af9c44e1a5b2a03f"
+    },
+    {
+      "path": "scripts/check_v14_c12_peer.py",
+      "bytes": 12091,
+      "sha256": "f73eb4e32b89280ad00ace91cb6a81fe7d6e47cd5cabc5e367a063cda7424ba8"
+    },
+    {
+      "path": "content/reviews/v14-c12-peer.json",
+      "bytes": 8953,
+      "sha256": "4f323501dc20270663883e688c0a3a6c399d0b1e2ebd22d97dbbe1ae41f4baf1"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v14-c12",
+        "status": "passed",
+        "comparisons": 180,
+        "domain_rejections": 19,
+        "worked_cases": 5,
+        "solved_exercises": 12,
+        "input_markers": 10,
+        "result_markers": 26,
+        "runtime_files": 4,
+        "scope": "Exact original finite transmission, sequence, network, SDF and identification cases; universal proof/source review separate. No empirical replication."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v14-c12",
+        "status": "passed",
+        "comparisons": 215,
+        "domain_rejections": 21,
+        "worked_examples": 5,
+        "solutions": 12,
+        "result_markers": 26,
+        "primitive_markers": 10,
+        "runtime_files": 6,
+        "independence": "Descending network iteration with exact certification, Neumann sums, derivative bisection and finite-support covariance; no author imports or execution"
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "content/reviews/v14-c12-author.json",
+  "peer_validation": "production/v14-c12-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

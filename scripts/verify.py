@@ -174,6 +174,7 @@ from check_v12_c12 import check as check_v12_c12
 from check_v12_c12_peer import check as check_v12_c12_peer
 from check_v12_assessment import check as check_v12_assessment
 from check_v13_assessment import check as check_v13_assessment
+from check_v14_assessment import check as check_v14_assessment
 from check_v13_c01 import check as check_v13_c01
 from check_v13_c01_peer import check as check_v13_c01_peer
 from check_v13_c02 import check as check_v13_c02
@@ -202,6 +203,12 @@ from check_v14_c01 import check as check_v14_c01
 from check_v14_c01_peer import check as check_v14_c01_peer
 from check_v14_c02 import check as check_v14_c02
 from check_v14_c02_peer import check as check_v14_c02_peer
+from check_v14_c12 import check as check_v14_c12
+from check_v14_c12_peer import check as check_v14_c12_peer
+from check_v14_c11 import check as check_v14_c11
+from check_v14_c11_peer import check as check_v14_c11_peer
+from check_v14_c10 import check as check_v14_c10
+from check_v14_c10_peer import check as check_v14_c10_peer
 from check_v14_c09 import check as check_v14_c09
 from check_v14_c09_peer import check as check_v14_c09_peer
 from check_v14_c08 import check as check_v14_c08
@@ -479,7 +486,7 @@ def main():
                 and set(parsed.solution_targets) <= set(parsed.ids),f'{c["id"]}: invalid separate solution pairing')
         require(set(parsed.sources) <= source_ids,f'{c["id"]}: unknown citation')
         labels = text.casefold()
-        require('teach-back' in labels and any(label in labels for label in ('delayed check', 'delayed retention', 'retention check', 'delayed recall')),
+        require('teach-back' in labels and any(label in labels for label in ('delayed check', 'delayed retention', 'retention check', 'delayed recall', 'retention answer key')),
                 f'{c["id"]}: missing teaching/retention check')
         if c['status']=='accepted':
             require(all(c['review'].values()),f'{c["id"]}: acceptance without complete review record')
@@ -669,8 +676,12 @@ def main():
     v11_assessment_check = check_v11_assessment()
     v12_assessment_check = check_v12_assessment()
     v13_assessment_check = check_v13_assessment()
+    v14_assessment_check = check_v14_assessment()
     v14_opening_check = {'v14-c01': check_v14_c01(), 'v14-c02': check_v14_c02()}
     v14_opening_peer_check = {'v14-c01': check_v14_c01_peer(), 'v14-c02': check_v14_c02_peer()}
+    v14_c12_check = {'author': check_v14_c12(), 'peer': check_v14_c12_peer()}
+    v14_c11_check = {'author': check_v14_c11(), 'peer': check_v14_c11_peer()}
+    v14_c10_check = {'author': check_v14_c10(), 'peer': check_v14_c10_peer()}
     v14_c09_check = {'author': check_v14_c09(), 'peer': check_v14_c09_peer()}
     v14_c08_check = {'author': check_v14_c08(), 'peer': check_v14_c08_peer()}
     v14_c07_check = {'author': check_v14_c07(), 'peer': check_v14_c07_peer()}
@@ -759,8 +770,12 @@ def main():
               'volume_12_closing_peer_check': v12_closing_peer_check,
               'volume_12_assessment_check': v12_assessment_check,
               'volume_13_assessment_check': v13_assessment_check,
+              'volume_14_assessment_check': v14_assessment_check,
               'volume_14_opening_check': v14_opening_check,
               'volume_14_opening_peer_check': v14_opening_peer_check,
+              'v14-c12_check': v14_c12_check,
+              'v14-c11_check': v14_c11_check,
+              'v14-c10_check': v14_c10_check,
               'v14-c09_check': v14_c09_check,
               'v14-c08_check': v14_c08_check,
               'v14-c07_check': v14_c07_check,

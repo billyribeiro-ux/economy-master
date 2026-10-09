@@ -1,0 +1,1614 @@
+{
+  "comparisons": {
+    "baseline": {
+      "common_initial_welfare_change": 0.0,
+      "normalized_change": 0.0
+    },
+    "rate_stress": {
+      "common_initial_welfare_change": -0.21710825999944205,
+      "normalized_change": -0.010855412999972103
+    },
+    "redistribution": {
+      "common_initial_welfare_change": 1.512314324917772,
+      "normalized_change": 0.0756157162458886
+    },
+    "refined_grid": {
+      "common_initial_welfare_change": 0.18169065582361954,
+      "normalized_change": 0.009084532791180978
+    }
+  },
+  "estimation": {
+    "heldout_alternative_log_likelihood": -49.38081717155071,
+    "heldout_empirical_transition": [
+      [
+        "7/10",
+        "3/10"
+      ],
+      [
+        "9/40",
+        "31/40"
+      ]
+    ],
+    "heldout_log_likelihood": -46.96366568865448,
+    "heldout_row_counts": [
+      40,
+      40
+    ],
+    "training_alternative_log_likelihood": -118.3837290775247,
+    "training_log_likelihood": -100.08048470763757,
+    "training_row_counts": [
+      100,
+      100
+    ]
+  },
+  "fitted_transition": [
+    [
+      "4/5",
+      "1/5"
+    ],
+    [
+      "1/5",
+      "4/5"
+    ]
+  ],
+  "income_stationary": [
+    "1/2",
+    "1/2"
+  ],
+  "limits": [
+    "Finite asset actions; no continuous Euler equality or continuous approximation-error bound.",
+    "Exogenous foreign rate and income law; no endogenous world-rate or labor equilibrium.",
+    "Auxiliary marginal claim prices do not certify an expanded trading equilibrium.",
+    "Synthetic conditional count fit is not empirical identification of preferences or causal policy effects."
+  ],
+  "model": "finite-income-saving-v1",
+  "scenarios": {
+    "baseline": {
+      "action_gaps": [
+        [
+          {
+            "center": 0.0,
+            "lower": 0.0
+          },
+          null
+        ],
+        [
+          {
+            "center": 0.041908546757989606,
+            "lower": 0.041908546757989606
+          },
+          {
+            "center": 0.0,
+            "lower": 0.0
+          }
+        ],
+        [
+          {
+            "center": 0.0,
+            "lower": 0.0
+          },
+          {
+            "center": 0.07134071359057424,
+            "lower": 0.07134071359057424
+          }
+        ],
+        [
+          {
+            "center": 0.16219613286649018,
+            "lower": 0.16219613286649018
+          },
+          {
+            "center": 0.0,
+            "lower": 0.0
+          }
+        ]
+      ],
+      "assets": [
+        "-1/4",
+        "1/4"
+      ],
+      "coarse_actual_distance": 0.9049852205552056,
+      "coarse_residual": 0.04525691538478105,
+      "coarse_value_bound": 0.905138307695621,
+      "consumption": [
+        "99/200",
+        "199/200",
+        "201/200",
+        "301/200"
+      ],
+      "consumption_by_action": [
+        [
+          "99/200",
+          null
+        ],
+        [
+          "299/200",
+          "199/200"
+        ],
+        [
+          "201/200",
+          "101/200"
+        ],
+        [
+          "401/200",
+          "301/200"
+        ]
+      ],
+      "feasible_actions": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "funded_all_states": true,
+      "graph": {
+        "classes": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "closed_classes": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "converges_from_all_initial": true,
+        "invariant_laws": [
+          [
+            "2/5",
+            "1/10",
+            "1/10",
+            "2/5"
+          ]
+        ],
+        "periods": [
+          1
+        ],
+        "unique": true
+      },
+      "gross_return": "51/50",
+      "initial_account": {
+        "consumption": "1",
+        "foreign_consumption": "2",
+        "funding_feasible": true,
+        "income": "1",
+        "mean_assets": "0",
+        "net_transfer": "0",
+        "next_assets": "0",
+        "world_residual": "0"
+      },
+      "initial_welfare": -2.3111300036408564,
+      "iteration_converged": true,
+      "iteration_residual": 9.285550106596929e-11,
+      "iteration_value_bound": 1.8571100213193859e-09,
+      "iterations": 410,
+      "minimum_strict_gap_lower": 0.041908546757989606,
+      "policy_assets": [
+        "-1/4",
+        "1/4",
+        "-1/4",
+        "1/4"
+      ],
+      "policy_indices": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "pricing": [
+        {
+          "covariance": "-76/995",
+          "expected_payoff": "7/10",
+          "expected_return": "27860/20767",
+          "marginal_bond_price": "3401/3980",
+          "market_bond_price": "50/51",
+          "payoff_price": "20767/39800",
+          "sdf": [
+            "19/20",
+            "1881/3980"
+          ]
+        },
+        {
+          "covariance": "-15124/302505",
+          "expected_payoff": "13/10",
+          "expected_return": "15730260/10257853",
+          "marginal_bond_price": "835601/1210020",
+          "market_bond_price": "50/51",
+          "payoff_price": "10257853/12100200",
+          "sdf": [
+            "3781/4020",
+            "3781/6020"
+          ]
+        },
+        {
+          "covariance": "-5092/32835",
+          "expected_payoff": "7/10",
+          "expected_return": "919380/1391389",
+          "marginal_bond_price": "227867/131340",
+          "market_bond_price": "50/51",
+          "payoff_price": "1391389/1313400",
+          "sdf": [
+            "1273/660",
+            "3819/3980"
+          ]
+        },
+        {
+          "covariance": "-76/1005",
+          "expected_payoff": "13/10",
+          "expected_return": "52260/51547",
+          "marginal_bond_price": "4199/4020",
+          "market_bond_price": "50/51",
+          "payoff_price": "51547/40200",
+          "sdf": [
+            "5719/4020",
+            "19/20"
+          ]
+        }
+      ],
+      "reason": null,
+      "stationary_accounts": [
+        {
+          "consumption": "1",
+          "foreign_consumption": "2",
+          "funding_feasible": true,
+          "income": "1",
+          "mean_assets": "0",
+          "net_transfer": "0",
+          "next_assets": "0",
+          "world_residual": "0"
+        }
+      ],
+      "status": "certified",
+      "transfer": [
+        "0",
+        "0"
+      ],
+      "transition": [
+        [
+          "4/5",
+          "1/5",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/5",
+          "4/5"
+        ],
+        [
+          "4/5",
+          "1/5",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/5",
+          "4/5"
+        ]
+      ],
+      "transition_path": [
+        {
+          "account": {
+            "consumption": "1",
+            "foreign_consumption": "2",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "0",
+            "net_transfer": "0",
+            "next_assets": "0",
+            "world_residual": "0"
+          },
+          "date": 0,
+          "distribution": [
+            "1/4",
+            "1/4",
+            "1/4",
+            "1/4"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "1",
+            "foreign_consumption": "2",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "0",
+            "net_transfer": "0",
+            "next_assets": "0",
+            "world_residual": "0"
+          },
+          "date": 1,
+          "distribution": [
+            "2/5",
+            "1/10",
+            "1/10",
+            "2/5"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "1",
+            "foreign_consumption": "2",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "0",
+            "net_transfer": "0",
+            "next_assets": "0",
+            "world_residual": "0"
+          },
+          "date": 2,
+          "distribution": [
+            "2/5",
+            "1/10",
+            "1/10",
+            "2/5"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "1",
+            "foreign_consumption": "2",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "0",
+            "net_transfer": "0",
+            "next_assets": "0",
+            "world_residual": "0"
+          },
+          "date": 3,
+          "distribution": [
+            "2/5",
+            "1/10",
+            "1/10",
+            "2/5"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "1",
+            "foreign_consumption": "2",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "0",
+            "net_transfer": "0",
+            "next_assets": "0",
+            "world_residual": "0"
+          },
+          "date": 4,
+          "distribution": [
+            "2/5",
+            "1/10",
+            "1/10",
+            "2/5"
+          ]
+        }
+      ],
+      "value": [
+        -3.92561863977236,
+        -1.2576366164837878,
+        -3.217433581847874,
+        -0.8438311764594044
+      ],
+      "value_error_bound": 9.648128502439815e-24
+    },
+    "rate_stress": {
+      "action_gaps": [
+        [
+          {
+            "center": 0.0,
+            "lower": 0.0
+          },
+          null
+        ],
+        [
+          {
+            "center": 0.07249743875879133,
+            "lower": 0.07249743875879133
+          },
+          {
+            "center": 0.0,
+            "lower": 0.0
+          }
+        ],
+        [
+          {
+            "center": 0.002003495734127875,
+            "lower": 0.002003495734127875
+          },
+          {
+            "center": 0.0,
+            "lower": 0.0
+          }
+        ],
+        [
+          {
+            "center": 0.20289794603573683,
+            "lower": 0.20289794603573683
+          },
+          {
+            "center": 0.0,
+            "lower": 0.0
+          }
+        ]
+      ],
+      "assets": [
+        "-1/4",
+        "1/4"
+      ],
+      "coarse_actual_distance": 0.9827137387909777,
+      "coarse_residual": 0.04914737944816672,
+      "coarse_value_bound": 0.9829475889633343,
+      "consumption": [
+        "19/40",
+        "39/40",
+        "21/40",
+        "61/40"
+      ],
+      "consumption_by_action": [
+        [
+          "19/40",
+          null
+        ],
+        [
+          "59/40",
+          "39/40"
+        ],
+        [
+          "41/40",
+          "21/40"
+        ],
+        [
+          "81/40",
+          "61/40"
+        ]
+      ],
+      "feasible_actions": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "funded_all_states": true,
+      "graph": {
+        "classes": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "closed_classes": [
+          [
+            2,
+            3
+          ]
+        ],
+        "converges_from_all_initial": true,
+        "invariant_laws": [
+          [
+            "0",
+            "0",
+            "1/2",
+            "1/2"
+          ]
+        ],
+        "periods": [
+          1
+        ],
+        "unique": true
+      },
+      "gross_return": "11/10",
+      "initial_account": {
+        "consumption": "7/8",
+        "foreign_consumption": "17/8",
+        "funding_feasible": true,
+        "income": "1",
+        "mean_assets": "0",
+        "net_transfer": "0",
+        "next_assets": "1/8",
+        "world_residual": "0"
+      },
+      "initial_welfare": -2.5282382636402985,
+      "iteration_converged": true,
+      "iteration_residual": 9.099831999037633e-11,
+      "iteration_value_bound": 1.8199663998075266e-09,
+      "iterations": 412,
+      "minimum_strict_gap_lower": 0.002003495734127875,
+      "policy_assets": [
+        "-1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "policy_indices": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "pricing": [
+        {
+          "covariance": "-76/975",
+          "expected_payoff": "7/10",
+          "expected_return": "1820/1349",
+          "marginal_bond_price": "133/156",
+          "market_bond_price": "10/11",
+          "payoff_price": "1349/2600",
+          "sdf": [
+            "19/20",
+            "361/780"
+          ]
+        },
+        {
+          "covariance": "-1976/10675",
+          "expected_payoff": "13/10",
+          "expected_return": "8540/5947",
+          "marginal_bond_price": "7163/8540",
+          "market_bond_price": "10/11",
+          "payoff_price": "77311/85400",
+          "sdf": [
+            "247/140",
+            "741/1220"
+          ]
+        },
+        {
+          "covariance": "-152/1525",
+          "expected_payoff": "7/10",
+          "expected_return": "8540/5833",
+          "marginal_bond_price": "1007/1220",
+          "market_bond_price": "10/11",
+          "payoff_price": "5833/12200",
+          "sdf": [
+            "19/20",
+            "399/1220"
+          ]
+        },
+        {
+          "covariance": "-152/525",
+          "expected_payoff": "13/10",
+          "expected_return": "5460/5947",
+          "marginal_bond_price": "551/420",
+          "market_bond_price": "10/11",
+          "payoff_price": "5947/4200",
+          "sdf": [
+            "1159/420",
+            "19/20"
+          ]
+        }
+      ],
+      "reason": null,
+      "stationary_accounts": [
+        {
+          "consumption": "41/40",
+          "foreign_consumption": "79/40",
+          "funding_feasible": true,
+          "income": "1",
+          "mean_assets": "1/4",
+          "net_transfer": "0",
+          "next_assets": "1/4",
+          "world_residual": "0"
+        }
+      ],
+      "status": "certified",
+      "transfer": [
+        "0",
+        "0"
+      ],
+      "transition": [
+        [
+          "4/5",
+          "1/5",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/5",
+          "4/5"
+        ],
+        [
+          "0",
+          "0",
+          "4/5",
+          "1/5"
+        ],
+        [
+          "0",
+          "0",
+          "1/5",
+          "4/5"
+        ]
+      ],
+      "transition_path": [
+        {
+          "account": {
+            "consumption": "7/8",
+            "foreign_consumption": "17/8",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "0",
+            "net_transfer": "0",
+            "next_assets": "1/8",
+            "world_residual": "0"
+          },
+          "date": 0,
+          "distribution": [
+            "1/4",
+            "1/4",
+            "1/4",
+            "1/4"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "79/80",
+            "foreign_consumption": "161/80",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "1/8",
+            "net_transfer": "0",
+            "next_assets": "3/20",
+            "world_residual": "0"
+          },
+          "date": 1,
+          "distribution": [
+            "1/5",
+            "1/20",
+            "3/10",
+            "9/20"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "199/200",
+            "foreign_consumption": "401/200",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "3/20",
+            "net_transfer": "0",
+            "next_assets": "17/100",
+            "world_residual": "0"
+          },
+          "date": 2,
+          "distribution": [
+            "4/25",
+            "1/25",
+            "17/50",
+            "23/50"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "1001/1000",
+            "foreign_consumption": "1999/1000",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "17/100",
+            "net_transfer": "0",
+            "next_assets": "93/500",
+            "world_residual": "0"
+          },
+          "date": 3,
+          "distribution": [
+            "16/125",
+            "4/125",
+            "93/250",
+            "117/250"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "5029/5000",
+            "foreign_consumption": "9971/5000",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "93/500",
+            "net_transfer": "0",
+            "next_assets": "497/2500",
+            "world_residual": "0"
+          },
+          "date": 4,
+          "distribution": [
+            "64/625",
+            "16/625",
+            "497/1250",
+            "593/1250"
+          ]
+        }
+      ],
+      "value": [
+        -4.234706165711156,
+        -1.4309947622272714,
+        -3.4635695824391606,
+        -0.9836825441836066
+      ],
+      "value_error_bound": 7.789291768452906e-24
+    },
+    "redistribution": {
+      "action_gaps": [
+        [
+          {
+            "center": 0.0,
+            "lower": 0.0
+          },
+          {
+            "center": 0.7637992818049972,
+            "lower": 0.7637992818049972
+          }
+        ],
+        [
+          {
+            "center": 0.0,
+            "lower": 0.0
+          },
+          {
+            "center": 0.02789238972100907,
+            "lower": 0.02789238972100907
+          }
+        ],
+        [
+          {
+            "center": 0.0,
+            "lower": 0.0
+          },
+          {
+            "center": 0.028924037916438623,
+            "lower": 0.028924037916438623
+          }
+        ],
+        [
+          {
+            "center": 0.13567391874810963,
+            "lower": 0.13567391874810963
+          },
+          {
+            "center": 0.0,
+            "lower": 0.0
+          }
+        ]
+      ],
+      "assets": [
+        "-1/4",
+        "1/4"
+      ],
+      "coarse_actual_distance": 0.3776125233465025,
+      "coarse_residual": 0.018884230458211748,
+      "coarse_value_bound": 0.37768460916423496,
+      "consumption": [
+        "139/200",
+        "259/200",
+        "241/200",
+        "261/200"
+      ],
+      "consumption_by_action": [
+        [
+          "139/200",
+          "39/200"
+        ],
+        [
+          "259/200",
+          "159/200"
+        ],
+        [
+          "241/200",
+          "141/200"
+        ],
+        [
+          "361/200",
+          "261/200"
+        ]
+      ],
+      "feasible_actions": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "funded_all_states": true,
+      "graph": {
+        "classes": [
+          [
+            0,
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "closed_classes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "converges_from_all_initial": true,
+        "invariant_laws": [
+          [
+            "1/2",
+            "1/2",
+            "0",
+            "0"
+          ]
+        ],
+        "periods": [
+          1
+        ],
+        "unique": true
+      },
+      "gross_return": "51/50",
+      "initial_account": {
+        "consumption": "9/8",
+        "foreign_consumption": "15/8",
+        "funding_feasible": true,
+        "income": "1",
+        "mean_assets": "0",
+        "net_transfer": "0",
+        "next_assets": "-1/8",
+        "world_residual": "0"
+      },
+      "initial_welfare": -0.7988156787230845,
+      "iteration_converged": true,
+      "iteration_residual": 9.266387657191899e-11,
+      "iteration_value_bound": 1.8532775314383798e-09,
+      "iterations": 393,
+      "minimum_strict_gap_lower": 0.02789238972100907,
+      "policy_assets": [
+        "-1/4",
+        "-1/4",
+        "-1/4",
+        "1/4"
+      ],
+      "policy_indices": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "pricing": [
+        {
+          "covariance": "-456/6475",
+          "expected_payoff": "7/10",
+          "expected_return": "36260/27607",
+          "marginal_bond_price": "893/1036",
+          "market_bond_price": "50/51",
+          "payoff_price": "27607/51800",
+          "sdf": [
+            "19/20",
+            "2641/5180"
+          ]
+        },
+        {
+          "covariance": "-456/3475",
+          "expected_payoff": "13/10",
+          "expected_return": "36140/36613",
+          "marginal_bond_price": "3097/2780",
+          "market_bond_price": "50/51",
+          "payoff_price": "36613/27800",
+          "sdf": [
+            "4921/2780",
+            "19/20"
+          ]
+        },
+        {
+          "covariance": "-109896/900025",
+          "expected_payoff": "7/10",
+          "expected_return": "5040140/6653287",
+          "marginal_bond_price": "215213/144004",
+          "market_bond_price": "50/51",
+          "payoff_price": "6653287/7200200",
+          "sdf": [
+            "4579/2780",
+            "4579/5180"
+          ]
+        },
+        {
+          "covariance": "-76/6025",
+          "expected_payoff": "13/10",
+          "expected_return": "62660/59907",
+          "marginal_bond_price": "931/964",
+          "market_bond_price": "50/51",
+          "payoff_price": "59907/48200",
+          "sdf": [
+            "4959/4820",
+            "19/20"
+          ]
+        }
+      ],
+      "reason": null,
+      "stationary_accounts": [
+        {
+          "consumption": "199/200",
+          "foreign_consumption": "401/200",
+          "funding_feasible": true,
+          "income": "1",
+          "mean_assets": "-1/4",
+          "net_transfer": "0",
+          "next_assets": "-1/4",
+          "world_residual": "0"
+        }
+      ],
+      "status": "certified",
+      "transfer": [
+        "1/5",
+        "-1/5"
+      ],
+      "transition": [
+        [
+          "4/5",
+          "1/5",
+          "0",
+          "0"
+        ],
+        [
+          "1/5",
+          "4/5",
+          "0",
+          "0"
+        ],
+        [
+          "4/5",
+          "1/5",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/5",
+          "4/5"
+        ]
+      ],
+      "transition_path": [
+        {
+          "account": {
+            "consumption": "9/8",
+            "foreign_consumption": "15/8",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "0",
+            "net_transfer": "0",
+            "next_assets": "-1/8",
+            "world_residual": "0"
+          },
+          "date": 0,
+          "distribution": [
+            "1/4",
+            "1/4",
+            "1/4",
+            "1/4"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "409/400",
+            "foreign_consumption": "791/400",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "-1/8",
+            "net_transfer": "0",
+            "next_assets": "-3/20",
+            "world_residual": "0"
+          },
+          "date": 1,
+          "distribution": [
+            "9/20",
+            "3/10",
+            "1/20",
+            "1/5"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "1017/1000",
+            "foreign_consumption": "1983/1000",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "-3/20",
+            "net_transfer": "0",
+            "next_assets": "-17/100",
+            "world_residual": "0"
+          },
+          "date": 2,
+          "distribution": [
+            "23/50",
+            "17/50",
+            "1/25",
+            "4/25"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "5063/5000",
+            "foreign_consumption": "9937/5000",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "-17/100",
+            "net_transfer": "0",
+            "next_assets": "-93/500",
+            "world_residual": "0"
+          },
+          "date": 3,
+          "distribution": [
+            "117/250",
+            "93/250",
+            "4/125",
+            "16/125"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "25227/25000",
+            "foreign_consumption": "49773/25000",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "-93/500",
+            "net_transfer": "0",
+            "next_assets": "-497/2500",
+            "world_residual": "0"
+          },
+          "date": 4,
+          "distribution": [
+            "593/1250",
+            "497/1250",
+            "16/625",
+            "64/625"
+          ]
+        }
+      ],
+      "value": [
+        -1.7769949740175617,
+        -0.3296597912993152,
+        -1.2266719736575984,
+        0.13806402408213758
+      ],
+      "value_error_bound": 3.8377347311898524e-24
+    },
+    "refined_grid": {
+      "action_gaps": [
+        [
+          {
+            "center": 0.0,
+            "lower": 0.0
+          },
+          {
+            "center": 0.3468301100082235,
+            "lower": 0.3468301100082235
+          },
+          null
+        ],
+        [
+          {
+            "center": 0.05866807584623285,
+            "lower": 0.05866807584623285
+          },
+          {
+            "center": 0.0,
+            "lower": 0.0
+          },
+          {
+            "center": 0.01406291100683936,
+            "lower": 0.01406291100683936
+          }
+        ],
+        [
+          {
+            "center": 0.0,
+            "lower": 0.0
+          },
+          {
+            "center": 0.04899566609242457,
+            "lower": 0.04899566609242457
+          },
+          {
+            "center": 0.43090284234575993,
+            "lower": 0.43090284234575993
+          }
+        ],
+        [
+          {
+            "center": 0.11527167688437459,
+            "lower": 0.11527167688437459
+          },
+          {
+            "center": 0.027763603939421233,
+            "lower": 0.027763603939421233
+          },
+          {
+            "center": 0.0,
+            "lower": 0.0
+          }
+        ],
+        [
+          {
+            "center": 0.0704443707715884,
+            "lower": 0.0704443707715884
+          },
+          {
+            "center": 0.0,
+            "lower": 0.0
+          },
+          {
+            "center": 0.09091931566705494,
+            "lower": 0.09091931566705494
+          }
+        ],
+        [
+          {
+            "center": 0.16489275094789407,
+            "lower": 0.16489275094789407
+          },
+          {
+            "center": 0.05640920201638578,
+            "lower": 0.05640920201638578
+          },
+          {
+            "center": 0.0,
+            "lower": 0.0
+          }
+        ]
+      ],
+      "assets": [
+        "-1/4",
+        "0",
+        "1/4"
+      ],
+      "coarse_actual_distance": 0.8413490914218054,
+      "coarse_residual": 0.04207549984368564,
+      "coarse_value_bound": 0.8415099968737128,
+      "consumption": [
+        "99/200",
+        "249/200",
+        "3/4",
+        "5/4",
+        "151/200",
+        "301/200"
+      ],
+      "consumption_by_action": [
+        [
+          "99/200",
+          "49/200",
+          null
+        ],
+        [
+          "299/200",
+          "249/200",
+          "199/200"
+        ],
+        [
+          "3/4",
+          "1/2",
+          "1/4"
+        ],
+        [
+          "7/4",
+          "3/2",
+          "5/4"
+        ],
+        [
+          "201/200",
+          "151/200",
+          "101/200"
+        ],
+        [
+          "401/200",
+          "351/200",
+          "301/200"
+        ]
+      ],
+      "feasible_actions": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "funded_all_states": true,
+      "graph": {
+        "classes": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "closed_classes": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "converges_from_all_initial": true,
+        "invariant_laws": [
+          [
+            "1/3",
+            "1/12",
+            "1/12",
+            "1/12",
+            "1/12",
+            "1/3"
+          ]
+        ],
+        "periods": [
+          1
+        ],
+        "unique": true
+      },
+      "gross_return": "51/50",
+      "initial_account": {
+        "consumption": "1",
+        "foreign_consumption": "2",
+        "funding_feasible": true,
+        "income": "1",
+        "mean_assets": "0",
+        "net_transfer": "0",
+        "next_assets": "0",
+        "world_residual": "0"
+      },
+      "initial_welfare": -2.129439347817237,
+      "iteration_converged": true,
+      "iteration_residual": 9.086975616412474e-11,
+      "iteration_value_bound": 1.8173951232824948e-09,
+      "iterations": 409,
+      "minimum_strict_gap_lower": 0.01406291100683936,
+      "policy_assets": [
+        "-1/4",
+        "0",
+        "-1/4",
+        "1/4",
+        "0",
+        "1/4"
+      ],
+      "policy_indices": [
+        0,
+        1,
+        0,
+        2,
+        1,
+        2
+      ],
+      "pricing": [
+        {
+          "covariance": "-38/415",
+          "expected_payoff": "7/10",
+          "expected_return": "11620/8189",
+          "marginal_bond_price": "1387/1660",
+          "market_bond_price": "50/51",
+          "payoff_price": "8189/16600",
+          "sdf": [
+            "19/20",
+            "627/1660"
+          ]
+        },
+        {
+          "covariance": "-1577/15625",
+          "expected_payoff": "13/10",
+          "expected_return": "65000/64657",
+          "marginal_bond_price": "26809/25000",
+          "market_bond_price": "50/51",
+          "payoff_price": "64657/50000",
+          "sdf": [
+            "1577/1000",
+            "4731/5000"
+          ]
+        },
+        {
+          "covariance": "-380/2739",
+          "expected_payoff": "7/10",
+          "expected_return": "38346/40945",
+          "marginal_bond_price": "6935/5478",
+          "market_bond_price": "50/51",
+          "payoff_price": "8189/10956",
+          "sdf": [
+            "95/66",
+            "95/166"
+          ]
+        },
+        {
+          "covariance": "-5700/45451",
+          "expected_payoff": "13/10",
+          "expected_return": "1181726/1003675",
+          "marginal_bond_price": "85975/90902",
+          "market_bond_price": "50/51",
+          "payoff_price": "200735/181804",
+          "sdf": [
+            "475/302",
+            "475/602"
+          ]
+        },
+        {
+          "covariance": "-2869/46875",
+          "expected_payoff": "7/10",
+          "expected_return": "105000/83201",
+          "marginal_bond_price": "65987/75000",
+          "market_bond_price": "50/51",
+          "payoff_price": "83201/150000",
+          "sdf": [
+            "2869/3000",
+            "2869/5000"
+          ]
+        },
+        {
+          "covariance": "-114/755",
+          "expected_payoff": "13/10",
+          "expected_return": "39260/40147",
+          "marginal_bond_price": "3439/3020",
+          "market_bond_price": "50/51",
+          "payoff_price": "40147/30200",
+          "sdf": [
+            "5719/3020",
+            "19/20"
+          ]
+        }
+      ],
+      "reason": null,
+      "stationary_accounts": [
+        {
+          "consumption": "1",
+          "foreign_consumption": "2",
+          "funding_feasible": true,
+          "income": "1",
+          "mean_assets": "0",
+          "net_transfer": "0",
+          "next_assets": "0",
+          "world_residual": "0"
+        }
+      ],
+      "status": "certified",
+      "transfer": [
+        "0",
+        "0"
+      ],
+      "transition": [
+        [
+          "4/5",
+          "1/5",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/5",
+          "4/5",
+          "0",
+          "0"
+        ],
+        [
+          "4/5",
+          "1/5",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/5",
+          "4/5"
+        ],
+        [
+          "0",
+          "0",
+          "4/5",
+          "1/5",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/5",
+          "4/5"
+        ]
+      ],
+      "transition_path": [
+        {
+          "account": {
+            "consumption": "1",
+            "foreign_consumption": "2",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "0",
+            "net_transfer": "0",
+            "next_assets": "0",
+            "world_residual": "0"
+          },
+          "date": 0,
+          "distribution": [
+            "1/4",
+            "1/4",
+            "0",
+            "0",
+            "1/4",
+            "1/4"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "1",
+            "foreign_consumption": "2",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "0",
+            "net_transfer": "0",
+            "next_assets": "0",
+            "world_residual": "0"
+          },
+          "date": 1,
+          "distribution": [
+            "1/5",
+            "1/20",
+            "1/4",
+            "1/4",
+            "1/20",
+            "1/5"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "1",
+            "foreign_consumption": "2",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "0",
+            "net_transfer": "0",
+            "next_assets": "0",
+            "world_residual": "0"
+          },
+          "date": 2,
+          "distribution": [
+            "9/25",
+            "9/100",
+            "1/20",
+            "1/20",
+            "9/100",
+            "9/25"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "1",
+            "foreign_consumption": "2",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "0",
+            "net_transfer": "0",
+            "next_assets": "0",
+            "world_residual": "0"
+          },
+          "date": 3,
+          "distribution": [
+            "41/125",
+            "41/500",
+            "9/100",
+            "9/100",
+            "41/500",
+            "41/125"
+          ]
+        },
+        {
+          "account": {
+            "consumption": "1",
+            "foreign_consumption": "2",
+            "funding_feasible": true,
+            "income": "1",
+            "mean_assets": "0",
+            "net_transfer": "0",
+            "next_assets": "0",
+            "world_residual": "0"
+          },
+          "date": 4,
+          "distribution": [
+            "209/625",
+            "209/2500",
+            "41/500",
+            "41/500",
+            "209/2500",
+            "209/625"
+          ]
+        }
+      ],
+      "value": [
+        -3.7775111734111406,
+        -1.0705535010801424,
+        -3.361995729449475,
+        -0.8564603189492276,
+        -2.9988817447150664,
+        -0.6708109720625983
+      ],
+      "value_error_bound": 9.648128502439815e-24
+    }
+  },
+  "status": "certified",
+  "synthetic": true
+}
