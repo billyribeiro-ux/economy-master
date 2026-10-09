@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "provenance": "Original synthetic Alder Bank teaching ledger. All amounts are CU; rates are decimal. No observations, regulatory ratios or current market terms.",
+  "opening": {
+    "cash": 40,
+    "free_securities": 40,
+    "pledged_securities": 20,
+    "gross_loans": 240,
+    "allowance": 8,
+    "property": 6,
+    "goodwill": 2,
+    "deposits": 260,
+    "wholesale": 50,
+    "other_liabilities": 10,
+    "equity": 20
+  },
+  "journal": [
+    {
+      "id": "J1",
+      "kind": "originate_deposit",
+      "amount": 20
+    },
+    {
+      "id": "J2",
+      "kind": "external_payment",
+      "amount": 16
+    },
+    {
+      "id": "J3",
+      "kind": "principal_collection",
+      "amount": 8
+    },
+    {
+      "id": "J4",
+      "kind": "cash_interest",
+      "amount": 5
+    },
+    {
+      "id": "J5",
+      "kind": "deposit_interest",
+      "amount": 2
+    },
+    {
+      "id": "J6",
+      "kind": "cash_expense",
+      "amount": 1.5
+    },
+    {
+      "id": "J7",
+      "kind": "provision",
+      "amount": 6
+    },
+    {
+      "id": "J8",
+      "kind": "chargeoff",
+      "amount": 10
+    },
+    {
+      "id": "J9",
+      "kind": "recovery",
+      "amount": 1
+    },
+    {
+      "id": "J10",
+      "kind": "dividend",
+      "amount": 2
+    }
+  ],
+  "valuation": {
+    "free_security_value": 36,
+    "pledged_security_value": 20,
+    "loan_value": 231,
+    "severe_loan_value": 223,
+    "property_value": 6,
+    "goodwill_value": 0
+  },
+  "instructional_capital": {
+    "loan_weight": 1,
+    "security_weight": 0.2,
+    "property_weight": 1,
+    "risk_ratio_floor": 0.06,
+    "leverage_floor": 0.04
+  },
+  "liquidity": {
+    "restricted_cash": 4.5,
+    "haircut": 0.2,
+    "draw_cutoff": 1,
+    "repay_cutoff": 3,
+    "secured_gross": 1.01,
+    "events": [
+      {
+        "cutoff": 1,
+        "loan_principal_in": 10,
+        "deposits_out": 50,
+        "wholesale_out": 15,
+        "other_out": 5
+      },
+      {
+        "cutoff": 2,
+        "loan_principal_in": 12,
+        "deposits_out": 5,
+        "wholesale_out": 0,
+        "other_out": 0
+      },
+      {
+        "cutoff": 3,
+        "loan_principal_in": 25,
+        "deposits_out": 0,
+        "wholesale_out": 0,
+        "other_out": 0
+      }
+    ]
+  },
+  "repair": {
+    "kind": "none",
+    "amount": 0
+  }
+}

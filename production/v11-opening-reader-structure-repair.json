@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-09",
+  "owner": "root",
+  "state": "complete: actual reader structure passed; both affected peers refrozen/revalidated",
+  "finding": "C02 exercise list lacked the shared exercises class; C04 separate solution disclosures need explicit exercise links so shared verifier counts them correctly. All exercises and solutions were already written and fully reviewed.",
+  "owned_paths": [
+    "content/chapters/v11-c02.html",
+    "content/chapters/v11-c04.html",
+    "content/reviews/v11-c02-author.json",
+    "content/reviews/v11-c04-author.json",
+    "scripts/verify.py"
+  ],
+  "plan": "Add semantic class/IDs/data-solution-for only, preserve prose and existing per-answer disclosure UI. Extend shared parser to validate/count explicitly paired separate disclosures. Refresh final bindings and revalidate affected author/peer and actual reader.",
+  "validation": "production/v11-opening-structural-review.json"
+}

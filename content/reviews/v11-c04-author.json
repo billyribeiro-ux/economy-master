@@ -1,0 +1,187 @@
+{
+  "chapter": "v11-c04",
+  "title": "Market risk and portfolio loss",
+  "author": "Coordinating author",
+  "date": "2026-10-09",
+  "assignment": "production/v11-opening-assignments.json",
+  "status": "author-review-passed; separate peer review and dependency-ordered coordinator acceptance pending",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Complete physical funded-loss definition, full revaluation, finite VaR/ES with atoms, threshold and dual certificates, coherence and VaR counterexample, dependence stress, covariance horizon/normal limitations, heavy-tail existence and prospective count/clustering/severity distinctions. Five worked examples, ten fully solved exercises, answered teach-back/delayed check and bounded portable lab.",
+  "proof_audit": [
+    {
+      "topic": "Loss and revaluation",
+      "reason": "Dates and accumulation conventions define a funded terminal loss. Bond difference is derived exactly, including convexity remainder; economic gain cannot substitute for an earlier unavailable payment resource."
+    },
+    {
+      "topic": "Atom-tail ES",
+      "reason": "Quantile inequalities provide nonnegative boundary mass with enough capacity. Rearrangement proves the finite positive-part formula and the quantile-integral equivalence by probability-interval lengths. General integrable definition is stated with its primary source."
+    },
+    {
+      "topic": "Convex threshold minimum",
+      "reason": "Positive-part convexity, left/right derivatives and signs outside finite support prove attainment. Quantile inequalities characterize the minimizer interval; exact flat-gap example distinguishes unique ES from possibly nonunique threshold."
+    },
+    {
+      "topic": "Finite dual/coherence",
+      "reason": "A feasible weight gives a threshold upper bound; tail-filled weights attain it. Common-law monotonicity, certain-loss translation, positive homogeneity and subadditivity follow directly. This is not a forecast interpretation of stressed weights."
+    },
+    {
+      "topic": "VaR and dependence",
+      "reason": "Independent and common-mixture Bernoulli joint laws retain their marginals and are normalized. Exact tail filling proves VaR nonsubadditivity and falling VaR under more concentrated tail losses; correlation equals mixture weight only for the specified construction."
+    },
+    {
+      "topic": "Horizon and heavy tails",
+      "reason": "Full double covariance sum yields the lag-count formula; normality is separately needed for normal quantiles/ES. Integrating x phi yields the normal tail; Pareto integration explicitly distinguishes finite quantile, finite ES and finite variance."
+    },
+    {
+      "topic": "Backtesting",
+      "reason": "Counting Bernoulli sequences gives exact binomial law under fixed independent known probability. Atom exception inequality alone is insufficient. Run union bound does not require independent overlapping blocks; selection and magnitude limitations remain explicit."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "number": 1,
+      "resolution": "Signed-loss expectation3,VaR90=20,ES90=50, strict80/weak35;VaR95=20,ES95=80; boundary0.9501 changes only quantile."
+    },
+    {
+      "number": 2,
+      "resolution": "All four threshold pieces independently expanded; minimizer interval[0,10],minimum55,left quantile0."
+    },
+    {
+      "number": 3,
+      "resolution": "Both weight vectors feasible;70 versus55; subadditivity proof requires common joint law and confidence."
+    },
+    {
+      "number": 4,
+      "resolution": "Half-common joint probabilities .9408/.0192/.0192/.0208,VaR100,ES141.6,correlation.5; sensitivity rather than empirical forecast."
+    },
+    {
+      "number": 5,
+      "resolution": "Positive affine risk27/147; shorted loss VaR/ES0 after reordering; cash receipt reverses certain-loss sign."
+    },
+    {
+      "number": 6,
+      "resolution": "Full funded bond loss-1000/357,linear-400/147,difference-200/2499; earlier payment needs actual timely resource."
+    },
+    {
+      "number": 7,
+      "resolution": "Mean3,variance22,normalVaR12.19305,ES13.96527 using supplied rounded values; initial rounding typo corrected before freeze."
+    },
+    {
+      "number": 8,
+      "resolution": "Pareto2 quantile sqrt20 andES2sqrt20; Pareto.8 finite quantile and divergent mean; finite sample statistic does not refute infinite population mean."
+    },
+    {
+      "number": 9,
+      "resolution": "No-exception probability .99^100; pair/run counts differ at identicalK;244*.01^7 union bound and selection caveat derived."
+    },
+    {
+      "number": 10,
+      "resolution": "Open rubric requires computed diversification counterexample, actual joint-law/data evidence, dated liquidity and authority; permits multiple defensible decisions."
+    }
+  ],
+  "worked_examples": 5,
+  "solved_exercises": 10,
+  "calculation_independence": "Independent checker enumerates capped-simplex vertices instead of tail sorting, compares piecewise-threshold minima and pair-difference variances, expands full covariance matrices, bisects erf rather than using model normal inversion, and convolves Bernoulli laws instead of model binomial coefficients. Dated cash and manuscript anchors are independently recomputed.",
+  "source_audit": "One original author-hosted primary paper was actually scoped-read as recorded in v11-c04-sources.json and production/v11-opening-source-leads.json. No contemporary legal/market claim or unseen portfolio section is adopted.",
+  "findings": [
+    {
+      "status": "resolved-before-freeze",
+      "issue": "Exercise7 normal ES transcription rounded incorrectly to13.96519.",
+      "repair": "Recomputed using independent CDF inversion/tail identity and supplied rounded density; corrected to13.96527."
+    },
+    {
+      "status": "resolved-before-peer-dispatch",
+      "issue": "Path equality guard did not cover a distinct hard-link alias of a protected file.",
+      "repair": "Add samefile identity check; normal/optimized portable checks reject both input and implementation aliases with original bytes preserved."
+    }
+  ],
+  "necessary_repairs": [],
+  "limitations": [
+    "Author verification is not separate review or external human certification.",
+    "Finite supplied-law certificates do not establish empirical loss probabilities, tail completeness, actual cash availability or regulatory capital.",
+    "Floating approximations have platform/underflow limits; bounded finite tests do not exhaust the accepted domain.",
+    "Prerequisites c01\u2013c03 and whole-edition UI/mobile/keyboard/print checks remain separate."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c04.html",
+      "bytes": 39898,
+      "sha256": "2dfb7898c4e6343286fb92a656ca10a3197570f309968f33ab81b128f14cbe4d"
+    },
+    {
+      "path": "content/projects/v11-c04-inputs.json",
+      "bytes": 1914,
+      "sha256": "4b5cbd9f5913ef94611e729d0fe7ebee96074fa831afcae15807e9ab493a3715"
+    },
+    {
+      "path": "content/projects/v11-c04-analysis.py",
+      "bytes": 11951,
+      "sha256": "ed8e8dea6d268152bd60e9e25c195a60f826eb0f13b7605c9072d785c46ff657"
+    },
+    {
+      "path": "content/projects/v11-c04-output.json",
+      "bytes": 16469,
+      "sha256": "9abcd12b75688784f1063fe3bc6627cdde155e9e80958548eee8e5b5215a818c"
+    },
+    {
+      "path": "content/projects/v11-c04-manifest.json",
+      "bytes": 925,
+      "sha256": "0cba6df0c7a89bbaab4c785b5697ab2cf30122f78a705bb0fd4e010c8e42e65c"
+    },
+    {
+      "path": "content/projects/v11-c04-README.txt",
+      "bytes": 7387,
+      "sha256": "3835313308f8495b5922b056fc5723877cc905f9084dd79c83bced309b5ba0bd"
+    },
+    {
+      "path": "scripts/check_v11_c04.py",
+      "bytes": 19732,
+      "sha256": "6547b4fe15ce390a6822883622e4064caeb90faf5d8d9c973e2b900da02d62ae"
+    },
+    {
+      "path": "content/reviews/v11-c04-sources.json",
+      "bytes": 1372,
+      "sha256": "f32b010ad1c636f02441377400b14e5a1dd883b2c92310d952b6ddf3a00117e3"
+    }
+  ],
+  "validation": {
+    "date": "2026-10-09",
+    "status": "passed",
+    "quiet_normal_optimized_identical": true,
+    "different_cwd": "/",
+    "summary": {
+      "author_payload_hashes_verified": 8,
+      "chapter": "v11-c04",
+      "comparisons": 1112,
+      "financial_interventions": 20,
+      "independent_methods": [
+        "capped-simplex vertex maximization",
+        "piecewise convex threshold minimum",
+        "pair-difference variance",
+        "full serial covariance matrix and erf-bisection normal quantile",
+        "exact Bernoulli polynomial convolution",
+        "dated bond cash and finite proof/exercise anchors"
+      ],
+      "invalid_api_inputs_rejected": 34,
+      "limits": "Author independent calculation and finite domain checks; separate peer/coordinator acceptance, empirical law adequacy and whole-edition UI checks are distinct.",
+      "solved_exercises": 10,
+      "status": "passed",
+      "worked_examples": 5
+    }
+  },
+  "coordinator_post_freeze_findings": [
+    {
+      "status": "resolved-semantic-markup-repair",
+      "finding": "Actual shared reader structure required explicit exercise/solution semantic markers.",
+      "repair": "C02 exercises class; C04 ten exercise IDs and ten paired data-solution-for disclosure attributes. No prose/math or financial model change; full reader and affected checkers revalidate.",
+      "evidence": "production/v11-opening-reader-structure-repair.json"
+    }
+  ]
+}

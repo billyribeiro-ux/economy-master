@@ -1,0 +1,28 @@
+{
+  "chapter": "v11-c08",
+  "state": "Original case design notes only, not yet manuscript or accepted lab; recompute all anchors before use.",
+  "source_leads": "production/v11-middle-source-leads.json",
+  "cases": [
+    {
+      "topic": "Insurance pooling and selection",
+      "design": "Wealth100,loss64,sqrt utility. Pooledp.25 gives EU9,CE81,max premium19;fair16. Low/high p.1/.4 equal shares: no-insurance EU9.6/8.4,max premium7.84/29.44;full pooled premium16 drives low exit, high expectedclaim25.6. Fixed menu lowindemnity8,premium.8 versus full64,premium25.6 is candidate strictIC/IR with actuarial break-even by assigned type; check directly, no competitive equilibrium claim. High would prefer low contract if indemnity raised far enough; derive monotone IC boundary."
+    },
+    {
+      "topic": "Common risk survives pooling",
+      "design": "n100,benefit64,premium18 plus configurable capital. IID p.25 versus common latent severity probabilityTheta=.1/.4 with equal weights; same marginalp.25. Var(avg claim)=64\u00b2[.165/n+.0225] under mixture versus64\u00b2*.1875/n underIID. Conditional-binomial exact recurrence/mixture for actual resource shortfall; expected premium margin not solvency guarantee."
+    },
+    {
+      "topic": "Survival and pension liability",
+      "design": "Original temporary3year life annuity20,N100, survival(.9,.75,.6),discount(.96,.92,.88). Four disjoint death/survival states(.1,.15,.15,.6),PVpayoffs0/19.2/37.6/55.2;mean41.64. Derive nested covariance s_max-si sj and exact portfolio dispersion. Longevity sensitivity(.95,.85,.75) gives47.08 each. Two common regimes(.85,.65,.45)/(.95,.85,.75) share baseline marginal but conditional means36.2/47.08; system risk survives. Sources support method only, no imported life table."
+    },
+    {
+      "topic": "Funding, guarantees and risk bearers",
+      "design": "Pension assets money account200 plus zero faces1000/1500/2000 at dates1/2/3 ->PV4300 versus baseline expectedliability4164,surplus136. Under deterministic stated discount evolution,cash200 grows to200/.96 bydate1; path90/75/60survivors requires selling some later zero before first payout. Sale quotes D3/D1=11/12,D3/D2=22/23 explicitly stipulated executable; include money-account accrual, no invented use of long assets as current cash. Longevity path95/85/75 yields benchmark deficit408PV; verify terminal deficit408/.88. Separate terminal guarantee: assets60/120 atp.25/.75,benefit100;equal mean105 vs deterministic105, sponsor full expectedtopup10. With sponsorcap5,participantgets65/100 and shortfall35/0; third-party guarantee only pays from explicitly modeled resources. No statutory guarantee asserted."
+    },
+    {
+      "topic": "Household debt, retirement lock and dated budget",
+      "design": "Initial liquid6,locked pension30, incomes38/34/36,necessaryconsumption24/25/26,contributions3atyearend. Loan24,rate.1,equalprincipal8 ->services10.4/9.6/8.8,cash6.6/3/1.2;floor2 needs.8upfront. Pension grossreturns1.04/.9/1.1 ->accounts34.2/33.78/40.158,locked pastyear3. Alternate rate.08 bullet24 ->services1.92/1.92/25.92,cash15.08/19.16/.24;lower earlypayment/coupon does not eliminate maturity cash requirement. Compare obligations/timing/full cost within hypothetical terms, not personal advice."
+    }
+  ],
+  "limits": "No actuarial PV equals a traded price without extra pricing assumptions; no expected survivor count guarantees actual cohort cash. No current tax/benefit/regulatory claims. Independent solve/proof/source/code/peer review required."
+}

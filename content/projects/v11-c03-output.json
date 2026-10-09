@@ -1,0 +1,333 @@
+{
+  "schema": "v11-c03-morrow-1-output",
+  "provenance": "Original synthetic Morrow Components underwriting case; no observed borrower, market data or real lending approval.",
+  "operating_cfads": {
+    "base": [
+      "40",
+      "42",
+      "44"
+    ],
+    "downturn": [
+      "30",
+      "34",
+      "38"
+    ]
+  },
+  "illustrative_unlevered_valuation": {
+    "initial_uses": "140",
+    "pv": "228600/1331",
+    "npv": "42260/1331",
+    "scope": "Base forecasts distributed annually, minimum cash released with assumed terminal business value; chosen hurdle, not a traded price or a dated debt-service guarantee."
+  },
+  "collateral_waterfall": {
+    "asset_realizations": [
+      {
+        "id": "equipment",
+        "eligible_value": "90",
+        "sale_cash": "54"
+      },
+      {
+        "id": "receivables",
+        "eligible_value": "30",
+        "sale_cash": "24"
+      }
+    ],
+    "gross_sale_cash": "78",
+    "workout_cost_paid": "8",
+    "unpaid_workout_cost": "0",
+    "prior_claim_paid": "15",
+    "unpaid_prior_claim": "0",
+    "available_to_this_lender_and_juniors": "55"
+  },
+  "proposals": [
+    {
+      "id": "requested",
+      "advance": "120",
+      "sponsor_cash": "20",
+      "opening_cash_if_sources_received": "10",
+      "initial_funding_gap_to_cash_floor": "0",
+      "initial_debt_ebitda": "2",
+      "contract_schedule": [
+        {
+          "year": 1,
+          "opening_principal": "120",
+          "interest": "12",
+          "principal": "40",
+          "service": "52",
+          "closing_principal": "80"
+        },
+        {
+          "year": 2,
+          "opening_principal": "80",
+          "interest": "8",
+          "principal": "40",
+          "service": "48",
+          "closing_principal": "40"
+        },
+        {
+          "year": 3,
+          "opening_principal": "40",
+          "interest": "4",
+          "principal": "40",
+          "service": "44",
+          "closing_principal": "0"
+        }
+      ],
+      "scenarios": [
+        {
+          "id": "base",
+          "rows": [
+            {
+              "year": 1,
+              "cfads": "40",
+              "income_if_tax_expense_equals_cash_tax": "27",
+              "dscr": "10/13",
+              "dscr_headroom_cash": "-112/5",
+              "cash_before_service_on_contract_projection": "50",
+              "cash_after_service_on_contract_projection": "-2"
+            },
+            {
+              "year": 2,
+              "cfads": "42",
+              "income_if_tax_expense_equals_cash_tax": "32",
+              "dscr": "7/8",
+              "dscr_headroom_cash": "-78/5",
+              "cash_before_service_on_contract_projection": "40",
+              "cash_after_service_on_contract_projection": "-8"
+            },
+            {
+              "year": 3,
+              "cfads": "44",
+              "income_if_tax_expense_equals_cash_tax": "37",
+              "dscr": "1",
+              "dscr_headroom_cash": "-44/5",
+              "cash_before_service_on_contract_projection": "36",
+              "cash_after_service_on_contract_projection": "-8"
+            }
+          ],
+          "minimum_projected_cash": "-8",
+          "first_cash_floor_breach_year": 1,
+          "first_payment_shortfall_year": 1,
+          "minimum_initial_injection_for_cash_floor": "18",
+          "dscr_breach_years": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "downturn",
+          "rows": [
+            {
+              "year": 1,
+              "cfads": "30",
+              "income_if_tax_expense_equals_cash_tax": "17",
+              "dscr": "15/26",
+              "dscr_headroom_cash": "-162/5",
+              "cash_before_service_on_contract_projection": "40",
+              "cash_after_service_on_contract_projection": "-12"
+            },
+            {
+              "year": 2,
+              "cfads": "34",
+              "income_if_tax_expense_equals_cash_tax": "24",
+              "dscr": "17/24",
+              "dscr_headroom_cash": "-118/5",
+              "cash_before_service_on_contract_projection": "22",
+              "cash_after_service_on_contract_projection": "-26"
+            },
+            {
+              "year": 3,
+              "cfads": "38",
+              "income_if_tax_expense_equals_cash_tax": "31",
+              "dscr": "19/22",
+              "dscr_headroom_cash": "-74/5",
+              "cash_before_service_on_contract_projection": "12",
+              "cash_after_service_on_contract_projection": "-32"
+            }
+          ],
+          "minimum_projected_cash": "-32",
+          "first_cash_floor_breach_year": 1,
+          "first_payment_shortfall_year": 1,
+          "minimum_initial_injection_for_cash_floor": "42",
+          "dscr_breach_years": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "collateral_branch": {
+        "claim_at_default": "88",
+        "recovery_year": 3,
+        "lender_recovery": "55",
+        "junior_residual": "0",
+        "nominal_claim_loss": "33",
+        "recovery_fraction_of_claim": "5/8",
+        "recovery_discounted_to_default": "2750/53",
+        "discounted_claim_shortfall_at_default": "1914/53",
+        "promised_receipts_pv": "19163400/148877",
+        "default_branch_receipts_pv": "14178400/148877",
+        "physical_scenario_weighted_receipts_pv": "18565200/148877",
+        "physical_scenario_margin_over_advance": "699960/148877",
+        "weighted_shortfall_from_promised_pv": "598200/148877"
+      },
+      "gates": {
+        "initial_sources_cover_purchase_and_cash_floor": true,
+        "base_dscr_meets_defined_floor": false,
+        "initial_debt_ebitda_within_limit": false,
+        "all_scenario_payment_dates_preserve_cash_floor": false,
+        "physical_scenario_margin_meets_assumed_hurdle": true,
+        "required_evidence_recorded": true
+      },
+      "failed_gates": [
+        "base_dscr_meets_defined_floor",
+        "initial_debt_ebitda_within_limit",
+        "all_scenario_payment_dates_preserve_cash_floor"
+      ],
+      "recommendation": "restructure_or_refuse"
+    },
+    {
+      "id": "revised",
+      "advance": "80",
+      "sponsor_cash": "60",
+      "opening_cash_if_sources_received": "10",
+      "initial_funding_gap_to_cash_floor": "0",
+      "initial_debt_ebitda": "4/3",
+      "contract_schedule": [
+        {
+          "year": 1,
+          "opening_principal": "80",
+          "interest": "32/5",
+          "principal": "20",
+          "service": "132/5",
+          "closing_principal": "60"
+        },
+        {
+          "year": 2,
+          "opening_principal": "60",
+          "interest": "24/5",
+          "principal": "30",
+          "service": "174/5",
+          "closing_principal": "30"
+        },
+        {
+          "year": 3,
+          "opening_principal": "30",
+          "interest": "12/5",
+          "principal": "30",
+          "service": "162/5",
+          "closing_principal": "0"
+        }
+      ],
+      "scenarios": [
+        {
+          "id": "base",
+          "rows": [
+            {
+              "year": 1,
+              "cfads": "40",
+              "income_if_tax_expense_equals_cash_tax": "163/5",
+              "dscr": "50/33",
+              "dscr_headroom_cash": "208/25",
+              "cash_before_service_on_contract_projection": "50",
+              "cash_after_service_on_contract_projection": "118/5"
+            },
+            {
+              "year": 2,
+              "cfads": "42",
+              "income_if_tax_expense_equals_cash_tax": "176/5",
+              "dscr": "35/29",
+              "dscr_headroom_cash": "6/25",
+              "cash_before_service_on_contract_projection": "328/5",
+              "cash_after_service_on_contract_projection": "154/5"
+            },
+            {
+              "year": 3,
+              "cfads": "44",
+              "income_if_tax_expense_equals_cash_tax": "193/5",
+              "dscr": "110/81",
+              "dscr_headroom_cash": "128/25",
+              "cash_before_service_on_contract_projection": "374/5",
+              "cash_after_service_on_contract_projection": "212/5"
+            }
+          ],
+          "minimum_projected_cash": "10",
+          "first_cash_floor_breach_year": null,
+          "first_payment_shortfall_year": null,
+          "minimum_initial_injection_for_cash_floor": "0",
+          "dscr_breach_years": []
+        },
+        {
+          "id": "downturn",
+          "rows": [
+            {
+              "year": 1,
+              "cfads": "30",
+              "income_if_tax_expense_equals_cash_tax": "113/5",
+              "dscr": "25/22",
+              "dscr_headroom_cash": "-42/25",
+              "cash_before_service_on_contract_projection": "40",
+              "cash_after_service_on_contract_projection": "68/5"
+            },
+            {
+              "year": 2,
+              "cfads": "34",
+              "income_if_tax_expense_equals_cash_tax": "136/5",
+              "dscr": "85/87",
+              "dscr_headroom_cash": "-194/25",
+              "cash_before_service_on_contract_projection": "238/5",
+              "cash_after_service_on_contract_projection": "64/5"
+            },
+            {
+              "year": 3,
+              "cfads": "38",
+              "income_if_tax_expense_equals_cash_tax": "163/5",
+              "dscr": "95/81",
+              "dscr_headroom_cash": "-22/25",
+              "cash_before_service_on_contract_projection": "254/5",
+              "cash_after_service_on_contract_projection": "92/5"
+            }
+          ],
+          "minimum_projected_cash": "10",
+          "first_cash_floor_breach_year": null,
+          "first_payment_shortfall_year": null,
+          "minimum_initial_injection_for_cash_floor": "0",
+          "dscr_breach_years": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "collateral_branch": {
+        "claim_at_default": "324/5",
+        "recovery_year": 3,
+        "lender_recovery": "55",
+        "junior_residual": "0",
+        "nominal_claim_loss": "49/5",
+        "recovery_fraction_of_claim": "275/324",
+        "recovery_discounted_to_default": "2750/53",
+        "discounted_claim_shortfall_at_default": "3422/265",
+        "promised_receipts_pv": "12368880/148877",
+        "default_branch_receipts_pv": "10582880/148877",
+        "physical_scenario_weighted_receipts_pv": "12154560/148877",
+        "physical_scenario_margin_over_advance": "244400/148877",
+        "weighted_shortfall_from_promised_pv": "214320/148877"
+      },
+      "gates": {
+        "initial_sources_cover_purchase_and_cash_floor": true,
+        "base_dscr_meets_defined_floor": true,
+        "initial_debt_ebitda_within_limit": true,
+        "all_scenario_payment_dates_preserve_cash_floor": true,
+        "physical_scenario_margin_meets_assumed_hurdle": true,
+        "required_evidence_recorded": false
+      },
+      "failed_gates": [
+        "required_evidence_recorded"
+      ],
+      "recommendation": "hold_for_evidence"
+    }
+  ],
+  "scope": "Three annual end-date projections with no cash interest, distributions or automatic new borrowing. Negative projected balances expose missing finance; they are not completed payments after default. The separate default branch assumes prior instalments paid, no other estate cash and no later operating cash. Scenario weights and assessment rate are stipulated physical-analysis inputs, not a Q law or fair-value proof. Evidence flags record assumptions; no real lending approval."
+}

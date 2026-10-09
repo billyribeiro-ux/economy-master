@@ -1,0 +1,213 @@
+{
+  "chapter": "v11-c03",
+  "status": "author-review-passed; separate peer and coordinator acceptance pending",
+  "date": "2026-10-09",
+  "author": "ito_author specialist",
+  "scope": "Exact nine-path assignment for Credit analysis and lending decisions. Original Morrow borrower case, four complete worked examples, eight fully solved exercises, answered teaching/retention, source scope and bounded portable exact-rational lab. Adjacent chapters are drafted against the agreed prerequisite contract; acceptance remains in dependency order.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "originality": "All cases, cash schedules, financial assumptions, thresholds, physical scenario weights, incentive payoffs, proofs, problems and implementation are original. No observed credit data or current legal rules are invented.",
+  "proof_and_scope_audit": [
+    {
+      "topic": "Repayment, accounting and valuation",
+      "verdict": "passed",
+      "reason": "CFADS precedes financing and subtracts declared cash taxes, maintenance and working-capital investment. Earnings assume tax expense equals cash tax; cash-tax vectors are fixed scenario inputs. Positive enterprise NPV and lender physical-scenario margin do not fund an earlier payment. Enterprise terminal value and cash-release convention are separated from retained operating cash and liquidation."
+    },
+    {
+      "topic": "Debt schedule and fully funded initial uses",
+      "verdict": "passed",
+      "reason": "Opening principal equals advance less prior amortization; annual interest uses that opening balance. Principal sums to advance; all annual services are positive within the supported domain. Opening cash is recomputed from actual proposal sources minus130 capital purchase; the reduced-loan/unraised-equity counterexample exposes40 missing finance rather than copying the original10."
+    },
+    {
+      "topic": "Cumulative cash feasibility and minimum initial injection",
+      "verdict": "passed",
+      "reason": "Finite recursion telescopes to opening cash plus cumulative CFADS less all dated service. Nonnegative required-floor inequalities are necessary and sufficient for the fixed annual plan. An initial addition shifts every balance equally, proving max(0,floor-minimum projected balance) is both necessary and attained. Zero cash interest, no new spending/borrowing and end-date limitations are explicit."
+    },
+    {
+      "topic": "Coverage, leverage and covenant scope",
+      "verdict": "passed",
+      "reason": "DSCR numerator/denominator/date are defined. Base underwriting uses1.2; all downside warning dates are reported. Year2 DSCR85/87 can coexist with cash12.8. Loan/base EBITDA uses positive earnings; nonpositive values do not create a misleading low ratio. Covenant warnings do not silently cause waiver, acceleration or completed payments after default; changed rights need a new cash plan."
+    },
+    {
+      "topic": "Collateral conservation, seniority and timing",
+      "verdict": "passed",
+      "reason": "Original eligibility/realization assumptions give gross78. Higher-priority capped allocations and lender claim cap partition gross cash with a junior residual and explicit unpaid higher claims. Default occurs before the selected annual payment; current accrued coupon and outstanding principal enter the claim, unearned future coupons do not. Recovery may fall beyond maturity. No other estate cash or postdefault operating/going-concern value is double-counted."
+    },
+    {
+      "topic": "Physical branch cash versus prices",
+      "verdict": "passed",
+      "reason": "The separate two-state default experiment assumes prior instalments paid and uses an exogenous physical weight and chosen annual assessment rate. Dated streams are discounted before a scenario comparison. No Q measure, traded price, default estimation or comprehensive compensation for costs/risk is asserted. Affine dependence on default weight is derived only with both branch payoffs and hurdle fixed."
+    },
+    {
+      "topic": "Borrower and officer incentive deviations",
+      "verdict": "passed",
+      "reason": "For debt faceF in[0,120], two explicit asset-payoff actions yield gamble-minus-prudent equity F/2-20; all thresholds and lender losses follow by statewise limited-liability allocation. Officer effort changes default probability by.10 at cost1, so a collectible outcome penaltyk gives net benefit.10k-1. Equality gives indifference, not guaranteed effort; observability, limited liability and concealment caveats are stated."
+    },
+    {
+      "topic": "Decision and evidence",
+      "verdict": "passed",
+      "reason": "All six gates are conjunctive and intervention-specific, including actual initial financing and advance-based margin. Requested terms fail three financial gates. Revised terms pass numeric checks but lack sponsor/priority evidence; its hold is conditional, not approval. Recorded evidence allows only credit-committee review, with remaining assumption, covenant and intra-year risks explicit."
+    }
+  ],
+  "worked_example_audit": [
+    {
+      "example": 1,
+      "verdict": "passed",
+      "evidence": "Base CFADS40/42/44; request service52/48/44 and DSCR10/13,7/8,1. Initial sources120+20=130+10; year1 earnings27 coexist with2 payment shortage. Separate enterprise PV228600/1331 and NPV42260/1331 under stated terminal cash/hurdle."
+    },
+    {
+      "example": 2,
+      "verdict": "passed",
+      "evidence": "Revised80+60 sources leave10; interest6.4/4.8/2.4, service26.4/34.8/32.4, base ratios50/33,35/29,110/81 and cash23.6/30.8/42.4. Downturn cash13.6/12.8/18.4 funds the85/87 coverage year. Original downside needs42 cash; unchanged sponsor20 after reducing loan leaves40 closing gap."
+    },
+    {
+      "example": 3,
+      "verdict": "passed",
+      "evidence": "Revised year2 claim64.8; gross collateral54+24=78; cost8 and prior15 leave55 atyear3. Nominal loss9.8; default-date discounted recovery2750/53 and shortfall3422/265. At chosen6% and physicalp.12, weighted receipts12154560/148877 exceed advance80 by244400/148877; explicit limitations retained."
+    },
+    {
+      "example": 4,
+      "verdict": "passed",
+      "evidence": "At debt100, prudent lender/equity100/20 versus gamble expectations50/50 despite lower total asset expectation. Equity thresholdF40 derived. Lender gross credit-loss reduction4 less the officer effort cost1 gives combined surplus gain3 before compensation/penalty transfers, not automatically lender net income; private penalty thresholdk10, strict effort at12."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "exercise": 1,
+      "verdict": "passed",
+      "evidence": "Both CFADS40; request/revision net incomes27/32.6, service52/26.4 and cash-2/23.6. Depreciation, capex and principal distinctions answered against exact prompt."
+    },
+    {
+      "exercise": 2,
+      "verdict": "passed",
+      "evidence": "Downturn balances13.6,12.8-x,18.4-x yield exact x<=2.8. Eight-decimal2.80000001 breaches; finite minimum-injection proof includes assumptions and attainment."
+    },
+    {
+      "exercise": 3,
+      "verdict": "passed",
+      "evidence": "Unraised equity gives opening-30 and40 gap; improved ratios do not create funds. Original base/downside additions18/42, with ratio/leverage still failing, explicitly solved."
+    },
+    {
+      "exercise": 4,
+      "verdict": "passed",
+      "evidence": "Bullet service6.4/6.4/86.4; base DSCR25/4,105/16,55/108; cash43.6/79.2/36.8. Annual cash feasibility and failed year3 ratio distinguished; cash-retention/intra-year assumptions challenged."
+    },
+    {
+      "exercise": 5,
+      "verdict": "passed",
+      "evidence": "Prior25 leaves45 after gross78/cost8; claim loss19.8. Two-year delay gives recovery atyear4, default-date amount112500/2809 and shortfall347616/14045. Prior100 pays70 after cost8 and leaves this lender0; conservation shown."
+    },
+    {
+      "exercise": 6,
+      "verdict": "passed",
+      "evidence": "Fixed branch PVs imply p<=122/475. Atp.30 margin-77080/148877; at8% assessment andp.12 weightedPV515515/6561 and margin-9365/6561. Probability/hurdle not identified from operating stresses or coupon."
+    },
+    {
+      "exercise": 7,
+      "verdict": "passed",
+      "evidence": "Full lender/equity safe/gamble splits at debt20/40/100; exactF40 threshold; officer net gains-1,0,.2 at penalties0/10/12. Two-action scope and enforceability/information failures covered."
+    },
+    {
+      "exercise": 8,
+      "verdict": "passed",
+      "evidence": "Complete illustrative memo refuses request, conditions revision on actual sponsor/priority evidence, addresses covenant and intra-year rights, separates recovery and subjective margin, and predicts extra year2 working-capital use3 lowers downside cash to9.8. Explicit10-point rubric accepts defensible alternatives and names critical errors."
+    }
+  ],
+  "teaching_and_retention": {
+    "status": "passed",
+    "evidence": "Answered teach-back reconciles request cash50/service52, revised downside cash47.6/service34.8 and later recovery55. Fresh delayed two-year cash9/5 and recovery15, discounted shortfall110/7 are fully solved."
+  },
+  "source_audit": {
+    "status": "passed",
+    "proposal": "v11-c03-occ-commercial",
+    "evidence": "Actual official primary body inspected within recorded historical pages and dates. No contemporary rule, observed default rate or insolvency priority conclusion imported; original mathematics and examples do not depend on unseen source theorems."
+  },
+  "numerical_validation": {
+    "status": "passed",
+    "normal_optimized_quiet_portable": "Passed with identical normal/optimized quiet check() summaries; isolated explicit/default CLI and quiet nonmutating API under both interpreters.",
+    "independent_oracles": [
+      "Exact cumulative interest/principal cash rather than the implementation cash loop",
+      "Cumulative-priority interval payouts and gross-cash conservation",
+      "Physical statewise dated cash mixed before discounting",
+      "Exact funding and eight-decimal liquidity thresholds; changed rate/principal/default/recovery dates",
+      "Independent finite limited-liability payoffs and officer effort deviations"
+    ],
+    "comparisons": 3257,
+    "invalid_inputs_rejected": 61,
+    "financial_interventions": 21,
+    "count_definition": "Each executed exact comparison counts once. Forty-nine malformed/domain API cases and twelve malformed/invalid CLI cases give61 rejections. Twenty-one valid interventions target initial funding, evidence, exact liquidity boundary, collateral claims/caps, coupon/amortization/default/recovery dates, probability/hurdle and nonpositive earnings. Manual proof readings are not counted as numerical tests.",
+    "protected_output_attempts": 12
+  },
+  "findings": [
+    {
+      "status": "resolved-before-peer",
+      "origin": "Coordinator wording review; production/v11-c03-effort-wording-repair-assignment.json",
+      "issue": "Worked example4 ambiguously attributed the combined net gain3 to the lender even though the officer bears effort cost1.",
+      "repair": "Clarified lender gross credit-loss reduction4 and combined surplus improvement3 before compensation or penalty transfers. Officer private benefit.10k-1 and every number/model result are unchanged."
+    },
+    {
+      "status": "resolved-during-separate-peer-review",
+      "origin": "Separate peer c05_review; production/v11-c03-alias-repair.json",
+      "issue": "Existing hard-link output alias could overwrite protected input or model despite resolved-path check.",
+      "repair": "Coordinator added samefile guard and normal/-O direct, symbolic and hard-link byte-preservation checks; final financial output unchanged."
+    }
+  ],
+  "necessary_repairs": [],
+  "limitations": [
+    "Original synthetic assumptions are not empirical validation or a real lending recommendation.",
+    "Annual endpoint cash feasibility does not establish intra-year liquidity or legal cash availability.",
+    "The collateral branch stipulates priority, available estate and timing; actual rights and costs require evidence.",
+    "Unweighted operating stresses do not estimate the separate physical default weight; the assessment hurdle and omitted extra costs are assumptions.",
+    "Cash projections after a negative balance are conditional missing-finance diagnostics, not completed payments or an automatic workout.",
+    "Recorded documentary booleans are not document authentication; actual commitment remains outside scope.",
+    "Separate peer/coordinator review, dependency acceptance and whole-edition reader/UI checks remain independent gates."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c03.html",
+      "bytes": 37731,
+      "sha256": "2d3810cb16b4c3aa2f6df49de13b93ccd5d232f8dcca2d1e9720b903bf8fbd81"
+    },
+    {
+      "path": "content/projects/v11-c03-inputs.json",
+      "bytes": 1725,
+      "sha256": "b63cd5b9b39e0b5d5c11fb73cdf28027aff513153d8804ca191b724f64dd7bc4"
+    },
+    {
+      "path": "content/projects/v11-c03-analysis.py",
+      "bytes": 15227,
+      "sha256": "dcb95be9e928e3a212cfac95b35ec3fb6e4e1e5d2c118f469b843b190b470879"
+    },
+    {
+      "path": "content/projects/v11-c03-output.json",
+      "bytes": 11429,
+      "sha256": "dfdd4e18fca93481d0bdb70e7c5bcc14422b8114ec945d8ee44f1e81881ec53b"
+    },
+    {
+      "path": "content/projects/v11-c03-manifest.json",
+      "bytes": 696,
+      "sha256": "04e6950577da7282005a4d1fb24ba15256e7b9fd5927c8a90f96813342c1a72e"
+    },
+    {
+      "path": "content/projects/v11-c03-README.txt",
+      "bytes": 13411,
+      "sha256": "2b5c4fb42d2facd5c598b1a56419aa013c593fd8941ad62a6cc3ba46a78e541f"
+    },
+    {
+      "path": "scripts/check_v11_c03.py",
+      "bytes": 23102,
+      "sha256": "9dc3d67d86513d717b3b61af2c2e6875e1e6b093d5bb4c702af9cef7657c4cd5"
+    },
+    {
+      "path": "content/reviews/v11-c03-sources.json",
+      "bytes": 1744,
+      "sha256": "462056d1cd867deb9e4b020533dac7e0a11ad07033c9228ef2b24198bd5bebdf"
+    }
+  ]
+}

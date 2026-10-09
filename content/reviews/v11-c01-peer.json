@@ -1,0 +1,216 @@
+{
+  "chapter": "v11-c01",
+  "date": "2026-10-09",
+  "status": "peer-review-passed",
+  "reviewer": "ito_author, separate specialist",
+  "author": "bs_author",
+  "scope": "Read the complete chapter, all four worked cases, all eight exact prompts and their complete solutions, answered teach-back and six delayed-retention questions; audited the full input/model/output/README/manifest, scoped source record, author review and author checker. This review owns only its checker and this record. No author, shared, canonical or hosting file was edited.",
+  "independence": "Candidate code is used only through public run(data) and the CLI. No author helper or checker is called as an oracle, and the author checker was read but not executed. The peer independently enumerates every signal-contingent lending policy over quality/signal/repayment states, ranks borrower actions and checks all unilateral deviations in all 64 six-claimant action profiles, posts independent asset/liability/equity journal vectors, integrates a uniform queue-rank lottery and its utility, and verifies an exact finite-difference identity for the waiting-consumption threshold.",
+  "proof_audit": [
+    {
+      "topic": "Screening threshold and finite value of information",
+      "verdict": "passed",
+      "reason": "With risk neutrality, zero safe opportunity cost, no other constraints and fixed payoff law, lending has expected surplus H+(F-H)p-L. H<F justifies the threshold division, and the refusal tie is explicit. Conditional independence of the test and repayment outcome given quality is stated before the posterior calculation. Gross signal value is the maximum over contingent funding policies, which contains both constant policies; equivalently each positive part dominates zero and its argument. Total expectation proves the stated inequality, while a null signal requires no conditional posterior. Test cost is paid for every tested applicant and net value is compared with the best untested loan/refusal choice. No no-arbitrage or social-welfare result is inferred."
+    },
+    {
+      "topic": "Monitoring actions and funding decisions",
+      "verdict": "passed",
+      "reason": "The borrower receives only its residual project cash and its private benefit. Removing that benefit before action selection changes the chosen success probability; merely observing diversion would not do so. Individual claimants capture only their repayment share and bear their own enforcement cost, so the stated post-funding Nash inequality is valid. Anticipated receipt72 for principal100 is separately recognized as unattractive ex ante. Pooled funding includes principal, enforcement and completion-check costs, with credible conditional payment and verifiable completion assumed explicitly. The six-claimant one-enforcer result, integer N>=8 no-audit threshold, delegation cap3 and private-benefit6 prudence tie all follow from direct best replies."
+    },
+    {
+      "topic": "Double entry, system boundary and dated cash",
+      "verdict": "passed",
+      "reason": "Loan origination adds equal loans and deposits without changing equity or reserves. External settlement relocates reserves and deposits, so the initial two-bank totals preserve reserves40 and equity26 while deposits rise204 to240. The immediate5 request occurs with zero cash and positive equity18, is reported as unexecuted, and precedes every income flow. Later cash7 cannot meet the earlier deadline. The subsequent ledger is explicitly A-only with external counterparties. A direct uncovered loss reduces loans and equity without cash; an already allowed loss would not be expensed twice. External equity and borrowing provide cash only when actually settled, whereas deposit conversion reclassifies funding without cash."
+    },
+    {
+      "topic": "Bank income and capital ratios",
+      "verdict": "passed",
+      "reason": "The one-year period and arithmetic opening/closing denominator choices are explicit. NIM uses net interest over average loans; ROA and ROE use profit over average assets and equity. Gross loan yield minus a funding rate with a different denominator is not NIM. Null output for a nonpositive denominator is preferable to a misleading ratio. Closing insolvency is an allowed model outcome, while unsupported execution requiring negative cash is outside its domain. No regulatory capital standard is asserted."
+    },
+    {
+      "topic": "Private types, feasible insurance and no-run best replies",
+      "verdict": "passed",
+      "reason": "The separate mutual has a divisible certain long asset, known aggregate early mass, privately learned types, full withdrawal or waiting, storage of date1 receipts, mutual residual sharing and no outside funding or insurance. The population is nonatomic, not100 discrete accounts. Shifted reciprocal utility is increasing and strictly concave, including finite utility at zero. Early-only liquidation pays1.1 and leaves1.45 per late type, so both type-specific deviations are checked. At liquidation return1, direct all-long investment weakly dominates a date0 storage allocation under the stated no-trade alternatives; the utility gain proves a feasible improvement only. At lower liquidation return the manuscript explicitly withdraws the optimal-autarky claim pending portfolio optimization."
+    },
+    {
+      "topic": "Random service and full-run equilibrium",
+      "verdict": "passed",
+      "reason": "Queue positions are type-blind and assigned after requests, so a requester integrates a uniform rank over the served interval. At a full run the served probability10/11 produces utility-5/3, not u(expected cash)=-10/11. An atomless late deviation cannot change aggregate exhaustion and yields utility-10; an early type likewise prefers a positive chance of useful consumption. There is no actual waiter at w=1, so its average payment is null and the hypothetical deviation is separately justified as zero. The result concerns deposits already committed, not initial participation, equilibrium selection, large atomic depositors, known priority, partial withdrawals or insurance."
+    },
+    {
+      "topic": "Withdrawal threshold and resource limits",
+      "verdict": "passed",
+      "reason": "Liquidation requires wc1/ell units per initial unit until the available asset is exhausted, giving R max(1-wc1/ell,0)/(1-w) for w<1. Capacity ell/c1 and the affine late-resource-surplus root w*=(R-c1)/(c1(R/ell-1)) are well defined under0<ell<c1<R. Positivity and w*<ell/c1 follow without additional restrictions. The quotient derivative is negative before exhaustion; the peer verifies its exact two-point secant identity separately. At lambda4/5 early service is feasible but waiting pays.9, below1.1, so feasibility alone cannot establish equilibrium. Above capacity waiting is zero while the queue offers a positive utility improvement."
+    }
+  ],
+  "worked_cases": [
+    {
+      "number": 1,
+      "independent_result": "The eight latent states sum to one. Pooled receipt95 has margin-5. Pass mass14/25 gives good posterior6/7, repayment success123/140, receipt755/7 and margin55/7. Fail mass11/25 gives posterior3/11, success129/220, receipt865/11 and margin-235/11. Enumeration of all four contingent policies selects pass-only lending with gross22/5 and net7/5 after every-applicant testing cost3. Funded-loan cost75/14 reconciles exactly."
+    },
+    {
+      "number": 2,
+      "independent_result": "Borrower payoffs18 and20 select diversion; enforcement changes diversion payoff to12, selecting prudence. Debt receipts72 and108 differ by36. A claimant among12 gains3 and pays5, so all-abstain is strict Nash given the loan. Initial pooled outlay106 leaves expected surplus2; all12 duplicate audits give-52 and no audit gives-28 before any initial lending refusal."
+    },
+    {
+      "number": 3,
+      "independent_result": "All nine bank/consolidation snapshots and all six A-income snapshots reconcile. A ends settlement at(R,L,D,E)=(0,162,144,18), B at(40,64,96,8), and the system at reserves40/assets266/deposits240/equity26. The probe shortfall is5. Later cash7, loans157 and equity20 give profit2, NIM17/319, ROA2/163 and ROE2/19 under the specified means."
+    },
+    {
+      "number": 4,
+      "independent_result": "Paying25 early claimants costs55/2, leaves145/2 long units and435/4 terminal cash for75 late units, or29/20 each. No-run utility-515/744 exceeds direct utility-245/352 by125/32736. Indifference8/11 is strictly below capacity10/11. Full-run service mass1000/11 gives join utility-5/3 versus waiting utility-10."
+    }
+  ],
+  "exact_prompt_solution_audit": [
+    {
+      "number": 1,
+      "prompt": "Change the good prior to1/2; derive both signals, posteriors, success probabilities and lending decisions; compare testing with no test and find maximum test cost; critique reuse of the old posterior.",
+      "independent_solution": "Pass and fail each have mass1/2. Good posteriors4/5 and1/5 imply success17/20 and11/20, receipts105 and75, and margins5 and-25. Only pass lending has positive conditional margin. The untested pool has success7/10, receipt90 and margin-10, so refusal is worth0. Test-and-pass-lend gives5/2-3=-1/2; refusal without testing wins. Test cost5/2 is the break-even cap. Holding likelihoods fixed does not hold the posterior fixed when the prior changes.",
+      "verdict": "passed; every requested object answered"
+    },
+    {
+      "number": 2,
+      "prompt": "Prove finite-signal gross information value including null branches; reconcile test costs; identify optimal policies at cost4.4; distinguish welfare.",
+      "independent_solution": "The set of signal-contingent policies contains unconditional lending and unconditional refusal, giving weakly greater gross value; the text's positive-part/total-expectation proof is the same complete argument. Null branches have zero weight and no required posterior. (14/25)(75/14)=3 and(14/25)(55/7-75/14)=7/5. At cost22/5, test-and-pass-lend and no-test refusal both give0, as do mixtures; untested lending and fail lending lose. Borrower utility, real costs and external effects are missing for a social-welfare conclusion.",
+      "verdict": "passed; null events, costs, ties and scope all covered"
+    },
+    {
+      "number": 3,
+      "prompt": "Analyze the six-claimant monitoring game, exactly one enforcer, the delegation cap, benefit6 tie, and the difference between reporting and enforcement.",
+      "independent_solution": "At no audit a claimant gains36/6-5=1 by enforcing, so no audit is not Nash. Enumerating all64 profiles gives precisely six pure equilibria, each with one enforcer: its removal loses1 and each duplicate would lose5. Pooled surplus3-d permits d<=3. At b6 prudence is selected at the tie, so unmonitored receipt108 gives surplus8 versus pooled surplus2. A report without an enforceable payoff change does not establish prudence.",
+      "verdict": "passed; all deviations and changed borrower action checked"
+    },
+    {
+      "number": 4,
+      "prompt": "Originate18 and pay18 to B; reconcile both banks/system and A's ratio; evaluate the immediate5 probe without posting it; repeat for an A-based seller.",
+      "independent_solution": "External settlement gives A=(6,144,132,18), assets150 and equity/assets3/25; B=(34,64,90,8), assets98. System reserves40, loans208, deposits222 and equity26 reconcile. Cash6 can meet5, leaving1 only if actually posted. An internal payment simply reallocates A deposits, leaving A=(24,144,150,18), assets168 and ratio3/28; B is unchanged. Origination adds18 system deposits in both cases.",
+      "verdict": "passed; both payment boundaries and unposted probe distinguished"
+    },
+    {
+      "number": 5,
+      "prompt": "Recompute the three ratios; replace direct loss by22 and26 and find zero-equity loss; compare external equity, borrowing and deposit conversion at the earlier cutoff including executed withdrawals.",
+      "independent_solution": "The ratios are17/319,2/163,2/19. For loss x, cash7, loans162-x, profit7-x and equity25-x yield(7,140,-15,3) at22 and(7,136,-19,-1) at26; equity is zero at25. Cash equity5 gives(R,L,D,E)=(5,162,144,23), then(0,162,139,23) after withdrawal. Borrowing5 gives(5,162,144,18) plus separate debt5, then cash0/deposits139/debt5. Deposit conversion gives(0,162,139,23) with no cash for the requested withdrawal. Financing must arrive before the cutoff.",
+      "verdict": "passed; cash, equity, profit and additional borrowing liability all reconciled"
+    },
+    {
+      "number": 6,
+      "prompt": "Derive waiting consumption, capacity and indifference; prove threshold ordering and monotonicity; calculate baseline quantities and test early fraction4/5.",
+      "independent_solution": "The resource formula is R max(1-wc1/ell,0)/(1-w), capacity ell/c1 and indifference(R-c1)/(c1(R/ell-1)). The root is positive and below capacity because R-c1<R-ell. The derivative R(1-c1/ell)/(1-w)^2 is negative. Baseline capacity10/11, root8/11, and pre-exhaustion c2=(3/2)(1-11w/10)/(1-w). At4/5 cash.88 is available but waiting.9 is below withdrawing/storing1.1, so early-only behavior is not Nash.",
+      "verdict": "passed; proof hypotheses, boundary and incentive failure explicit"
+    },
+    {
+      "number": 7,
+      "prompt": "Reproduce utility comparisons and run deviations; explain expected utility versus utility of mean cash, atomless deviations, earlier participation and the lower-liquidation outside option.",
+      "independent_solution": "Direct EU=-245/352; no-run EU=-515/744; gain125/32736. Queue join EU=(10/11)(-5/6)+(1/11)(-10)=-5/3 exceeds waiting-10. Mean cash1 gives u(1)=-10/11, strictly above lottery utility by concavity; it is not the choice criterion. A measure-zero deviation cannot reduce others' total claims below capacity. Certain-run date0 participation fails against the better direct option. At ell<1 the autarky storage/long-asset allocation requires optimization before calling all-long holding the best outside option.",
+      "verdict": "passed; the scope limits answer the exact prompt"
+    },
+    {
+      "number": 8,
+      "prompt": "Correct six managerial claims; propose screening, monitoring and funding validation with limitations; respond to the immediate5 request without inventing a facility.",
+      "independent_solution": "Positive expected lending margin does not remove default; reports need a credible payoff-changing response; NIM/equity do not establish cash by a deadline; origination creates a loan and deposit before settlement; a feasible utility gain does not prove optimality; no insurance-cost conclusion is available without modeling its rights and resources. Valid actions address rejected-applicant selection, enforceable and causally effective monitoring, and time-stamped executable funding with delay/correlation limits. Record the unfilled5 request and require actual timely cash from a verified source before treating a remedy as funded. The12-point rubric allocates6 corrected claims,3 actions with limits,2 deadline/remedy points and1 model-versus-evidence point, and its stated critical errors are appropriate.",
+      "verdict": "passed; open answer has a coherent exemplar, complete scoring and critical-error rules"
+    }
+  ],
+  "teaching_retention_and_structure": {
+    "teach_back": "The three-minute prompt requests deposit creation plus one screening calculation and depositor best reply. The supplied answer includes loan36/deposit36 with unchanged reserves24/equity18, external settlement24, earlier cash gap5, net screening7/5 and the late depositor's contingent choice. It answers every component.",
+    "delayed_retention": [
+      "Maximum test cost22/5, with indifference.",
+      "A loan/deposit credit10 raises both by10 and adds no equity.",
+      "An uncovered direct loss4 reduces loans and equity4 with no current cash change.",
+      "Capacity10/11 exactly exhausts resources; extra requests create queue risk.",
+      "Feasibility need not imply late IC: at.8, waiting.9 loses to1.1.",
+      "Deposit-to-equity conversion changes liability classification but creates no settlement reserves."
+    ],
+    "instruction": "Every exercised method appears before the problems: conditional probability and cost denominators, finite positive-part proof, borrower/creditor best replies, dated double-entry entries and ratio bases, utility curvature, resource constraint and queue service probabilities. Explicit section-level remediation accompanies delayed retention.",
+    "structure": "Four complete worked cases, eight prompts and eight matched solutions, unique section IDs, flat downloadable payload links and exactly three scoped primary citation IDs verified. Reader build, full dependency acceptance and live/offline presentation remain coordinator-owned gates."
+  },
+  "source_audit": {
+    "method": "Reviewed all source proposals, the accepted-source reuse record and each associated manuscript claim. Reused the persisted actual-body inspections; this peer did not claim a fresh HTTP retrieval or inspection of additional paper pages.",
+    "diamond_1996": "Official Richmond16-page paper, scoped author reading of printed51-54 and the opening discussion on59, supports monitoring duplication and delegation-cost motivation. The finite enforcement game and completion technology are original, and no optimal-debt or diversification theorem is imported.",
+    "diamond_dybvig_1983": "UChicago repository identifies the June1983 paper and DOI10.1086/261155. The record distinguishes successful retrieval of the actual19-page PDF and printed404-410 reading from failed intermediary routes/parser attempts. Private types, asset technology, sequential random service, mutual residual sharing and participation caveats match the uses. Later optimal suspension, aggregate-risk and insurance results are neither claimed audited nor used as proved results.",
+    "bank_of_england_2014": "Accepted primary source is reused, with author reopening of PDF pages1-6/printed14-19 for origination, reserve/deposit distinction, settlement and funding limits. The chapter dates the source, supplies original ledger amounts, and does not convert historical UK facts into universal current rules.",
+    "provenance": "All numerical inputs, payoff choices, utility, questions and code are original synthetic instructional constructions, not current observations, legal guarantees or regulatory/accounting-standard certification. No unsupported new empirical or legal premise was found."
+  },
+  "code_and_domain_audit": {
+    "full_code_read": "Read the model, README, supplied exact output, four-payload manifest, author checker and author review. Strict validation uses explicit exceptions, not removable asserts. The implementation uses only the standard library, bounded exact Fraction arithmetic, fixed bank/monitoring calculations and at most16 withdrawal scenarios.",
+    "economic_domains": "Validated probabilities and nonnegative bounded rationals; strictly positive lending principal and ordered repayment amounts; positive borrower residual and ordered action probabilities; integer claimants; initially positive bank equity; funded executed external settlement and later cash expenses; capped loss and probe; strictly ordered liquidity returns/claim and withdrawal fractions. Financial failure remains a legitimate output where modeled. Null signal posteriors, undefined ratios and absent full-run waiter mean have appropriate explicit treatment.",
+    "independent_interventions": "Thirty bounded changes cover a prior shift, exact/just-above test-cost threshold, uninformative/reversed/zero-mass signals, always/never fundable loans and an exactly zero conditional margin; six/eight claimants, marginal audit cost, prudent borrower tie, zero pooled surplus and zero debt; external/internal18 payments, losses22/25/26/43 and zero loan denominator; exact and two-sided late-IC/capacity boundaries, feasible-but-not-IC and exhausted early-only candidates, liquidation haircut, population scaling and utility curvature change.",
+    "strict_api": "Fifty-four invalid public-API inputs are rejected quietly and without input mutation. They cover wrong objects/schema/keys, numeric token and rational syntax/complexity, claimants, probabilities and supported financial constraints. Successful run output is JSON serializable with nonfinite values forbidden.",
+    "portable": "Copied only the five downloadable payloads into an isolated directory and executed from another working directory. Public API and default/explicit CLI passed in both normal and optimized Python, totaling six successful isolated runs. CLI output was quiet and byte-identical. Twenty CLI rejections cover duplicate keys, nonfinite tokens, boolean numerics, oversized input, and direct/symbolic/hard-link aliases to both input and implementation. Rejected calls preserved prior output and protected file bytes.",
+    "binding_scope": "This record binds all nine final author files and the separate peer checker, without hashing itself. The peer checker also verifies all four manifest payloads and all eight nonself author bindings. No canonical acceptance or publication is performed here."
+  },
+  "expected_checker_summary": {
+    "chapter": "v11-c01",
+    "status": "passed",
+    "comparisons": 548,
+    "economic_interventions": 30,
+    "rejected_api_inputs": 54,
+    "screening_policies": 44,
+    "monitoring_action_profiles": 64,
+    "integrated_queue_rows": 48,
+    "portable_runs": 6,
+    "cli_rejections": 20,
+    "bound_author_files": 9,
+    "bound_peer_checker": true
+  },
+  "findings": [],
+  "remaining_limits": [
+    "Passing exact finite calculations does not establish observed screening validity, causal enforcement, contract enforceability or a measured run probability.",
+    "The utility/queue proof covers the specified post-deposit nonatomic game and gives no optimal-contract, participation, selection, insurance or systemic-stability theorem.",
+    "No fresh primary-source pages or current legal/accounting facts were verified by this separate peer; precisely scoped persisted primary inspections were reused.",
+    "Coordinator acceptance in dependency order and shared build, offline, UI and publication gates are separate. This machine-assisted specialist review is not external academic certification."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c01.html",
+      "bytes": 45045,
+      "sha256": "fb5a88fd7e98c077ad2c934f9dbe5baa543c0b7f3af593e4165cccc5924f7110"
+    },
+    {
+      "path": "content/projects/v11-c01-inputs.json",
+      "bytes": 1196,
+      "sha256": "78e765f106e9d40ae8a70bb4400f21d0aea1da01435fbc352e1a5f50988888e7"
+    },
+    {
+      "path": "content/projects/v11-c01-analysis.py",
+      "bytes": 16042,
+      "sha256": "283265e168a8700c4699fbbb984443c4d0841dad13a164d2eb662d6bad3196f4"
+    },
+    {
+      "path": "content/projects/v11-c01-output.json",
+      "bytes": 8965,
+      "sha256": "ea361c824261d83d42fa5a9fa24d338181e288c5c0d9d2ce1e6aefa6d015930d"
+    },
+    {
+      "path": "content/projects/v11-c01-manifest.json",
+      "bytes": 671,
+      "sha256": "439fee1d8fc63b63c5bee271484e66a5ec05265d30b1ea6b73b0eef33c775cfa"
+    },
+    {
+      "path": "content/projects/v11-c01-README.txt",
+      "bytes": 15312,
+      "sha256": "87b994b77b418e9a7ff07b324524550b315e4a7f2748f2cc49d295929c97e3fa"
+    },
+    {
+      "path": "scripts/check_v11_c01.py",
+      "bytes": 28363,
+      "sha256": "f796a5133a5f36b0557d18a830624bd447f956dc902da1dc43457c4ed0caada0"
+    },
+    {
+      "path": "content/reviews/v11-c01-author.json",
+      "bytes": 18526,
+      "sha256": "add49e4eecef0404959b0640af8d5cf9685eb5029b6761e12184e5b61231088d"
+    },
+    {
+      "path": "content/reviews/v11-c01-sources.json",
+      "bytes": 4387,
+      "sha256": "f52066162cec188bbb648bef6a65060e3700963cc3c6f09bb10e93f812596754"
+    }
+  ],
+  "checker_binding": {
+    "path": "scripts/check_v11_c01_peer.py",
+    "bytes": 28038,
+    "sha256": "1544945d125f72997aaabf4a2bb6cddd1eaca0dd4d07e9d3946bd01534ac991c"
+  },
+  "open_findings": []
+}

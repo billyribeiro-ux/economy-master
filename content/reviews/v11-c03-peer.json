@@ -1,0 +1,224 @@
+{
+  "chapter": "v11-c03",
+  "title": "Credit analysis and lending decisions",
+  "reviewer": "c05_review; separate scoped specialist from ito_author",
+  "date": "2026-10-09",
+  "assignment": "production/v11-c03-peer-assignment.json",
+  "status": "separate-peer-review-passed; coordinator acceptance pending",
+  "acceptance_boundary": "Separate internal machine-assisted peer review; coordinator acceptance and external human certification are distinct.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope_read": {
+    "manuscript": "Entire chapter, all four worked cases, every one of the eight exact exercise prompts and complete solutions, both incentive arguments, finite cash-floor proof, all six policy gates, teaching and retention answers.",
+    "lab": "Full final model, original input, all output rows, README, manifest, author checker and author record. Read final five-file alias repair and refreshed frozen contract after reporting the finding.",
+    "source": "Full source proposal record; independently reopened official OCC PDF and inspected cover dates/removal notice plus the cited financial, repayment, collateral and covenant paragraphs. Other historical supervisory/legal sections are not adopted."
+  },
+  "proof_audit": [
+    {
+      "topic": "Cash bridge and loan tranches",
+      "verdict": "passed",
+      "reason": "CFADS is before financing and treats a working-capital increase as cash use. Earnings deduct stipulated depreciation and interest while principal repays a liability. Independently generating each scheduled principal tranche with coupons through its maturity reconstructs opening principal and all service dates; loan plus sponsor proceeds fund the initial purchase and cash anew."
+    },
+    {
+      "topic": "Finite dated cash feasibility",
+      "verdict": "passed",
+      "reason": "The recursion telescopes to cutoff source/use sums. Including t=0 is necessary to catch an unfunded purchase. Under fixed timing, no cash interest and no new cash uses, every floor inequality is necessary and sufficient; max(0,c-min C) shifts all dates enough and any smaller amount fails at a minimizing date. A floor breach is explicitly separated from a negative balance/payment shortage, and annual endpoints do not resolve intrayear needs."
+    },
+    {
+      "topic": "Covenant versus payment versus decision",
+      "verdict": "passed",
+      "reason": "Downturn DSCR below one is financed from retained cash in the revision, while all three downside ratios breach 1.2. Base-only coverage gating and separate all-scenario cash gating are clearly defined. No waiver, acceleration, overdraft or postdefault completion is silently implemented. Six conjunctive gates allow evidence hold or committee review only after the relevant quantitative tests pass."
+    },
+    {
+      "topic": "Priority and funded default claim",
+      "verdict": "passed",
+      "reason": "At default immediately before the selected payment, current principal and earned coupon enter the claim, while future coupons do not. Nonnegative payments, claim caps, conservation and the rule that an unpaid earlier claim blocks every later claimant uniquely specify the waterfall. Prior payments, recovery at d+lag and excluded postdefault operating/going-concern cash are explicit."
+    },
+    {
+      "topic": "Physical branch valuation and probability boundary",
+      "verdict": "passed",
+      "reason": "Backward discounting of actual dated receipt streams independently gives promised and default PVs. A chosen physical mixture is not inferred from the two unweighted operating stresses and is not a Q price. With fixed ordered branch PVs, expected margin decreases affinely in p; the largest weight follows from one inequality. Changing discount rate or recovery timing requires recomputation."
+    },
+    {
+      "topic": "Limited liability and monitoring incentives",
+      "verdict": "passed",
+      "reason": "For the two stipulated actions and face in [0,120], statewise lender/equity splits conserve asset value and give gamble-minus-prudent equity F/2-20. The officer comparison is .10k-1; equality gives indifference. The repaired wording correctly distinguishes lender gross benefit4 from combined surplus3 before compensation/penalty transfers. Enforceability and information assumptions bound the result."
+    }
+  ],
+  "worked_example_audit": [
+    {
+      "number": 1,
+      "resolution": "CFADS40/42/44; requested interest12/8/4 and service52/48/44. Year1 earnings27 coexist with cash50 before service52. Project NPV42260/1331 derives from its separately distributed CFADS/terminal-cash convention and supplies no early payment."
+    },
+    {
+      "number": 2,
+      "resolution": "Revised tranche service132/5,174/5,162/5; base cash118/5,154/5,212/5 and downside68/5,64/5,92/5. Downside year2 ratio85/87 and closing12.8 are consistent; failing to increase sponsor cash leaves opening-30 and funding gap40."
+    },
+    {
+      "number": 3,
+      "resolution": "Gross realizations54+24=78 partition into8 costs,15 prior and55 lender; revised claim324/5, nominal loss49/5 and default-date discounted shortfall3422/265. Recovery at year3 yields separate default PV10582880/148877 and weighted margin244400/148877 at the chosen physical p and hurdle."
+    },
+    {
+      "number": 4,
+      "resolution": "At debt100, prudent lender/equity100/20 versus gamble means50/50 despite lower total expectation; threshold40 and officer threshold10 follow from finite payoff differences. Lender benefit4 and combined surplus3 are now correctly assigned."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "number": 1,
+      "verdict": "passed",
+      "resolution": "Both CFADS40; requested/revised income27 and163/5, DSCR10/13 and50/33, closing cash-2 and118/5. Depreciation/current capex and principal/expense differences fully answered."
+    },
+    {
+      "number": 2,
+      "verdict": "passed",
+      "resolution": "Downside cash13.6,12.8-x,18.4-x with initial10 gives largest x14/5. Exact equality passes while x2.80000001 fails. Minimum-injection proof includes necessity, attainment, t=0 and fixed-schedule/no-interest conditions."
+    },
+    {
+      "number": 3,
+      "verdict": "passed",
+      "resolution": "Loan80 plus unchanged sponsor20 minus130 gives-30 and gap40. Original request needs18 extra base or42 downside. Extra funding does not repair original DSCR or leverage definitions."
+    },
+    {
+      "number": 4,
+      "verdict": "passed",
+      "resolution": "Bullet tranche service6.4/6.4/86.4; ratios25/4,105/16,55/108; retained cash43.6/79.2/36.8 funds dates but fails final base DSCR gate. Distribution, restricted cash or earlier spending can invalidate this endpoint result."
+    },
+    {
+      "number": 5,
+      "verdict": "passed",
+      "resolution": "Prior25 leaves lender45, claim loss19.8, receipt at4, default-date value112500/2809 and timing gap347616/14045. Prior100 receives70 after8 costs;30 remains unpaid and lender/junior zero, conserving gross78."
+    },
+    {
+      "number": 6,
+      "verdict": "passed",
+      "resolution": "Independent backward streams yield threshold122/475. At p.30 margin-77080/148877. At assessment.08 and p.12 promised PV80 and weighted PV515515/6561. Exact boundary pass and adjacent greater p rejection are tested; no identification or pricing claim follows."
+    },
+    {
+      "number": 7,
+      "verdict": "passed",
+      "resolution": "At faces20/40/100, prudent lender/equity20/100,40/80,100/20; gamble10/90,20/80,50/50. Equity preference switches at40. Officer private differences-1,0,1/5 at penalties0,10,12 and stated practical caveats match the prompt."
+    },
+    {
+      "number": 8,
+      "verdict": "passed",
+      "resolution": "Illustrative memo and explicit10-point rubric distinguish refusal/hold, sponsor and priority verification, covenant process, annual timing limits, delayed recovery and assumed physical margin. Increasing year2 working-capital use3 gives downside cash9.8. Forecast changes need evidence or an actual economic change; alternative defensible policies are permitted."
+    }
+  ],
+  "teaching_audit": "Prerequisites and quantities are defined before use. All exercise methods are taught. Answered teach-back correctly compares request service52/cash50 with revised downside service34.8/cash47.6 and delayed recovery55. Fresh retention results9/5 cash and110/7 discounted shortfall were recomputed.",
+  "source_audit": {
+    "source_id": "v11-c03-occ-commercial",
+    "url": "https://www.occ.treas.gov/publications-and-resources/publications/comptrollers-handbook/files/commercial-loans/pub-ch-commercial-loans.pdf",
+    "date_checked": "2026-10-09",
+    "inspection": "Independent official30-page PDF reopening: cover narrative March1990/procedures March1998 and reputation-risk-reference removal March20,2025; printed pp14–16 financial commitments, cash service, primary repayment and realizability; printed p20 covenants, timely information and collateral controls. The chapter uses narrow method context and excludes current law, historical quantitative thresholds and universal legal-priority claims.",
+    "result": "Scope supports the limited attribution. Original math/cases do not require an unseen source theorem. No additional unresolved specialist source fact."
+  },
+  "independent_computation": "Separate checker generates annual service as a matrix of principal tranches with coupons through each maturity, certifies cutoff source/use sums and minimum injections, verifies waterfall uniqueness using caps/conservation/strict-priority conditions, and values physical dated cash backward. It never imports the author checker or candidate arithmetic helpers. Exact exercise/policy thresholds and financial/evidence interventions go beyond saved-output reproduction.",
+  "findings": [
+    {
+      "id": "c03-peer-001",
+      "severity": "implementation integrity",
+      "status": "resolved-by-coordinator-before-peer-freeze",
+      "observed": "Original CLI resolve-only protection accepted an existing hard-link alias of the input as --output. A disposable copy exited0 and overwrote input bytes from1725 to11429. The same inode mechanism also affected the implementation path.",
+      "repair": "Coordinator added samefile checks and direct/symbolic/hard-link preservation tests, updated README, manifest, author record and frozen peer assignment in production/v11-c03-alias-repair.json. Final peer tests independently repeat both protected paths and both optimization modes.",
+      "financial_effect": "None; manuscript/input/saved financial output unchanged."
+    }
+  ],
+  "necessary_repairs": [],
+  "limitations": [
+    "Internal machine-assisted peer work is not independent human academic certification or coordinator acceptance.",
+    "Synthetic forecasts, probabilities, collateral rights, priorities, officer incentives and policy gates are stipulated; calculations cannot authenticate documents or estimate real default risk.",
+    "Annual cash dates omit intrayear timing. Conditional projections after a shortfall are not funded payments; covenant acceleration or waiver requires a changed model.",
+    "The assessment rate and omitted additional costs limit the scenario margin; no state-price law or actual market fair value is identified.",
+    "Bounded exact checks do not exhaust all valid inputs. Full-edition dependency, browser, mobile, keyboard and print checks remain coordinated separately."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c03.html",
+      "bytes": 37731,
+      "sha256": "2d3810cb16b4c3aa2f6df49de13b93ccd5d232f8dcca2d1e9720b903bf8fbd81"
+    },
+    {
+      "path": "content/projects/v11-c03-inputs.json",
+      "bytes": 1725,
+      "sha256": "b63cd5b9b39e0b5d5c11fb73cdf28027aff513153d8804ca191b724f64dd7bc4"
+    },
+    {
+      "path": "content/projects/v11-c03-analysis.py",
+      "bytes": 15227,
+      "sha256": "dcb95be9e928e3a212cfac95b35ec3fb6e4e1e5d2c118f469b843b190b470879"
+    },
+    {
+      "path": "content/projects/v11-c03-output.json",
+      "bytes": 11429,
+      "sha256": "dfdd4e18fca93481d0bdb70e7c5bcc14422b8114ec945d8ee44f1e81881ec53b"
+    },
+    {
+      "path": "content/projects/v11-c03-manifest.json",
+      "bytes": 696,
+      "sha256": "04e6950577da7282005a4d1fb24ba15256e7b9fd5927c8a90f96813342c1a72e"
+    },
+    {
+      "path": "content/projects/v11-c03-README.txt",
+      "bytes": 13411,
+      "sha256": "2b5c4fb42d2facd5c598b1a56419aa013c593fd8941ad62a6cc3ba46a78e541f"
+    },
+    {
+      "path": "scripts/check_v11_c03.py",
+      "bytes": 23102,
+      "sha256": "9dc3d67d86513d717b3b61af2c2e6875e1e6b093d5bb4c702af9cef7657c4cd5"
+    },
+    {
+      "path": "content/reviews/v11-c03-author.json",
+      "bytes": 14137,
+      "sha256": "b324194e541c01098f87760b33bcdb38ac375e4a0baf55c30b429ddd0581ff65"
+    },
+    {
+      "path": "content/reviews/v11-c03-sources.json",
+      "bytes": 1744,
+      "sha256": "462056d1cd867deb9e4b020533dac7e0a11ad07033c9228ef2b24198bd5bebdf"
+    }
+  ],
+  "checker_binding": {
+    "path": "scripts/check_v11_c03_peer.py",
+    "bytes": 25948,
+    "sha256": "3a99e9e1b78943d3b9aa660218139d9e38fe9bc7adef781ea8648f4d581ebff8"
+  },
+  "validation": {
+    "date": "2026-10-09",
+    "status": "passed",
+    "quiet_normal_optimized_identical": true,
+    "different_cwd": "/",
+    "isolated_eleven_file_peer_package": true,
+    "isolated_two_file_model_cli_normal_optimized": true,
+    "direct_symbolic_hard_link_protected_output_attempts": 12,
+    "invalid_count_definition": "Sixteen malformed/domain API cases and six strict CLI cases across normal/optimized runs; protected-output attempts are reported separately.",
+    "author_and_own_checker_binding_mutations_rejected": true,
+    "summary": {
+      "chapter": "v11-c03",
+      "comparisons": 1561,
+      "exact_prompts_solved": 8,
+      "financial_interventions": 18,
+      "frozen_author_payloads_verified": 9,
+      "independent_methods": [
+        "principal-maturity tranche cash matrix",
+        "cutoff source/use sums and minimal-injection certificate",
+        "priority conservation/cap/complementarity certificate",
+        "backward valuation of dated physical cash streams",
+        "exact policy and incentive boundaries"
+      ],
+      "invalid_inputs_rejected": 22,
+      "limits": "Separate machine-assisted peer review; original assumptions, current legal rights, real borrower evidence and external human certification remain outside scope.",
+      "own_checker_bound": true,
+      "review": "separate internal peer",
+      "status": "passed",
+      "worked_examples_reviewed": 4
+    }
+  }
+}

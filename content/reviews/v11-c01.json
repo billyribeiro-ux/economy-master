@@ -1,0 +1,91 @@
+{
+  "chapter": "v11-c01",
+  "date": "2026-10-09",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating author, scoped author and separate specialist peer; no independent human certification",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Complete advanced chapter: 4 original worked examples,8 fully solved exercises, answered teaching/retention, explicit proof/source limits and portable standard-library laboratory.",
+  "author_review": "reviews/v11-c01-author.json",
+  "peer_review": "reviews/v11-c01-peer.json",
+  "detailed_review": "production/v11-opening-root-review-notes.json",
+  "root_numerical_evidence": "production/v11-opening-root-numerical-audit.json",
+  "structural_evidence": "production/v11-opening-structural-review.json",
+  "verified_payload_hashes": 11,
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c01.html",
+      "bytes": 45045,
+      "sha256": "fb5a88fd7e98c077ad2c934f9dbe5baa543c0b7f3af593e4165cccc5924f7110"
+    },
+    {
+      "path": "content/projects/v11-c01-inputs.json",
+      "bytes": 1196,
+      "sha256": "78e765f106e9d40ae8a70bb4400f21d0aea1da01435fbc352e1a5f50988888e7"
+    },
+    {
+      "path": "content/projects/v11-c01-analysis.py",
+      "bytes": 16042,
+      "sha256": "283265e168a8700c4699fbbb984443c4d0841dad13a164d2eb662d6bad3196f4"
+    },
+    {
+      "path": "content/projects/v11-c01-output.json",
+      "bytes": 8965,
+      "sha256": "ea361c824261d83d42fa5a9fa24d338181e288c5c0d9d2ce1e6aefa6d015930d"
+    },
+    {
+      "path": "content/projects/v11-c01-manifest.json",
+      "bytes": 671,
+      "sha256": "439fee1d8fc63b63c5bee271484e66a5ec05265d30b1ea6b73b0eef33c775cfa"
+    },
+    {
+      "path": "content/projects/v11-c01-README.txt",
+      "bytes": 15312,
+      "sha256": "87b994b77b418e9a7ff07b324524550b315e4a7f2748f2cc49d295929c97e3fa"
+    },
+    {
+      "path": "scripts/check_v11_c01.py",
+      "bytes": 28363,
+      "sha256": "f796a5133a5f36b0557d18a830624bd447f956dc902da1dc43457c4ed0caada0"
+    },
+    {
+      "path": "content/reviews/v11-c01-author.json",
+      "bytes": 18526,
+      "sha256": "add49e4eecef0404959b0640af8d5cf9685eb5029b6761e12184e5b61231088d"
+    },
+    {
+      "path": "content/reviews/v11-c01-sources.json",
+      "bytes": 4387,
+      "sha256": "f52066162cec188bbb648bef6a65060e3700963cc3c6f09bb10e93f812596754"
+    },
+    {
+      "path": "scripts/check_v11_c01_peer.py",
+      "bytes": 28038,
+      "sha256": "1544945d125f72997aaabf4a2bb6cddd1eaca0dd4d07e9d3946bd01534ac991c"
+    },
+    {
+      "path": "content/reviews/v11-c01-peer.json",
+      "bytes": 24111,
+      "sha256": "0a60783763c7510c8ac81ae4b3068cd62639f2715c173981b52a77fa99bd885a"
+    }
+  ],
+  "resolved_findings": [
+    {
+      "status": "resolved-before-author-freeze-and-rechecked",
+      "issue": "Protect CLI input/model through output aliases.",
+      "resolution": "Final samefile/resolved guard and byte-preservation tests cover direct/relative/symbolic/hard-link targets."
+    }
+  ],
+  "open_content_findings": [],
+  "limitations": [
+    "Synthetic calculations and scoped sources do not establish empirical validity, real enforceability or actual institutional authorization.",
+    "Machine-assisted review is not external human certification.",
+    "Whole-edition browser/mobile/keyboard/print visual QA remains pending under the recorded access limitation."
+  ]
+}

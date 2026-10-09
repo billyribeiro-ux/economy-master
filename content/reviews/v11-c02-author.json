@@ -1,0 +1,181 @@
+{
+  "chapter": "v11-c02",
+  "title": "Bank balance sheets, capital and liquidity",
+  "author": "Scoped specialist c05_review",
+  "date": "2026-10-09",
+  "assignment": "production/v11-opening-assignments.json",
+  "status": "author-review-passed; separate peer review and dependency-ordered coordinator acceptance pending",
+  "scope": "Complete original ten-entry bank ledger, provision/covered charge-off/recovery/release distinctions, common-date book-to-economic bridge, precisely defined toy capital inequalities, encumbrance/haircut and dated fixed-plan cash feasibility. Three worked examples and eight exact fully solved exercises, answered teaching/retention and bounded portable lab.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "worked_examples": 3,
+  "solved_exercises": 8,
+  "proof_audit": [
+    {
+      "topic": "Double-entry conservation and equity roll-forward",
+      "reason": "Every transaction has explicit counter-accounts and a zero accounting-identity increment. Current income excludes distributions and the stipulated recovery credit. Cash is reconciled independently. A loan-created deposit and subsequent external settlement are separate transactions."
+    },
+    {
+      "topic": "Allowance use and recovery",
+      "reason": "Covered charge-off neutrality follows from (G-c)-(A-c)=G-A and requires enough prior allowance. The model rejects uncovered charges unless provision was posted first. Cash recovery credits allowance and is followed by a separately justified reassessment, so receipt and release cannot silently be counted twice. The lab excludes negative allowances without asserting they are universally prohibited."
+    },
+    {
+      "topic": "Economic residual and ratio inequalities",
+      "reason": "A complete portfolio present value replaces the net book amount; no second allowance deduction occurs. Liability values and common date are stipulated. Positive ratio denominators and leverage floor below one justify cross multiplication. Cash issuance changes both numerator and exposure; deposit conversion does not add cash; borrowing adds debt and exposure."
+    },
+    {
+      "topic": "Prefix cash certificate and timing",
+      "reason": "For this deterministic fixed plan, receipts settle before each cutoff, with no unlisted restriction. Conservation gives necessity and induction gives sufficiency of every nonnegative unrestricted remainder. Up-front cash shifts every prefix equally, hence maximum prefix deficit is the minimum. A later positive projection is explicitly not execution following an earlier failure."
+    },
+    {
+      "topic": "Funding and collateral",
+      "reason": "Only free collateral supports the new committed advance. Newly pledged securities remain assets with a corresponding debt, are unavailable for a simultaneous sale and are released only at repayment. Principal repayment is separated from financing interest; the old pledged pool remains unavailable. The alternative sale exercise starts from separate book and economic valuation bases."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "id": "v11-c02-e1",
+      "resolution": "Origination12 followed by external5 and internal7 gives cash29.5, gross254, deposits273, assets346.5, liabilities333 and equity13.5. Internal ownership transfer changes no aggregate amount; allowance is stipulated unchanged."
+    },
+    {
+      "id": "v11-c02-e2",
+      "resolution": "Allowance roll-forward requires provision6. Posting it before charge-off8 avoids an uncovered charge; recovery1 gives gross62, allowance5 and net57. Cash+1 and netloans-7 reconcile asset/equity loss6. No double expense."
+    },
+    {
+      "id": "v11-c02-e3",
+      "resolution": "Complete loan value L produces economic equity L-229.5; threshold229.5, base1.5 and severe-6.5. A duplicated allowance gives wrong -3.5/-11.5. An incomplete gross amount would need its own justified credit adjustment."
+    },
+    {
+      "id": "v11-c02-e4",
+      "resolution": "Loan weight.7 gives R183.9 and ratio6.2534%, while leverage remains3.4074%. Only the risk gate changes; cash, contracts and economic values do not. Real classification needs a dated applicable rule and exposure evidence."
+    },
+    {
+      "id": "v11-c02-e5",
+      "resolution": "First cutoff requires h<=1/6. Base headrooms -1.2/5.8/1.712 include secured repayment29.088. Moving12 into cutoff1 gives10.8/5.8/1.712 and feasibility; a changed haircut also changes future repayment."
+    },
+    {
+      "id": "v11-c02-e6",
+      "resolution": "Joint cash issue minimum max(3.8,25/12,1.2)=3.8. Cash issue passes toy ratios/cutoffs, conversion passes ratios without funding payments, borrowing funds payments without passing ratios. Severe economic equity after issue remains-2.7; no unconditional safety conclusion."
+    },
+    {
+      "id": "v11-c02-e7",
+      "resolution": "Sale40 book for34 cash loses6 book equity, leaving7.5; relative to mark36 it loses2 economic value, leaving-0.5. Headrooms4/11/36 exclude both new secured advance and repayment. Sold pool cannot also secure a28.8 advance."
+    },
+    {
+      "id": "v11-c02-e8",
+      "resolution": "Restricted4.5, allowance5 and old-pledged advance16 overstate cash by25.5: reported24.3 becomes-1.2. Open rubric requires accountable finance/treasury/credit work, exact evidence, independent prefix/identity checks and at least one unverified real-world claim; alternative roles allowed if responsibility is clear."
+    }
+  ],
+  "teaching_audit": "Definitions precede equations. Each exercise uses methods taught in the chapter. Three answered retention items check covered charge-off neutrality, late-receipt timing and maximum cash deficit. The teach-back answer explicitly distinguishes allowance, cash and deposit-to-equity conversion.",
+  "calculation_independence": "The author checker reconstructs double entries with independent account-change vectors and an accounting-conservation linear functional, uses Decimal arithmetic against the model Fraction arithmetic, calculates each cash prefix and full projected state from cumulative totals rather than mutable forecast posting, and directly derives capital/valuation identities. Original exercise anchors and financial interventions are separate from saved-output reproduction.",
+  "source_audit": "Three actual primary bodies were retrieved and scoped-read: BoE2013 conceptual primer, United States2020 interagency allowance statement and BCBS2008 liquidity principles. Each exact inspected passage, redirect/fallback and exclusion is in v11-c02-sources.json. No historical capital threshold, current national-law assertion or unseen source section is imported. Synthetic numbers and exercises are original.",
+  "findings": [
+    {
+      "status": "resolved-before-freeze",
+      "issue": "An early liquidity design conflated a management floor with an actual payment obligation.",
+      "repair": "The final ledger explicitly includes other liabilities10 from opening;5 of those existing liabilities is actually due at cutoff1. The70 total due and1.2 shortfall use no invented floor or additional liability."
+    },
+    {
+      "status": "resolved-before-freeze",
+      "issue": "Coordinator audit identified output overwrite and absent-asset mark consistency gaps.",
+      "repair": "CLI rejects input/model overwrite including resolved and hard-link aliases. Positive marks for absent gross loan/property/goodwill stocks are rejected, while fully allowed surviving gross claims may retain positive economic value. Checker covers both directions and preserves temporary protected bytes."
+    },
+    {
+      "status": "resolved-after-author-freeze-before-peer-freeze",
+      "issue": "Five lab links used projects/ despite flat reader asset copying; identified by separate peer.",
+      "repair": "Coordinator removed the five prefixes only; chapter numeric content unchanged. Manuscript binding refreshed; shared link checker will verify actual reader."
+    }
+  ],
+  "necessary_repairs": [],
+  "limitations": [
+    "Author and machine-assisted calculations are not independent human academic certification; separate scoped peer and coordinator acceptance remain pending.",
+    "All amounts, policy gates, timing and funding rights are stipulated; passed code does not establish actual recoverability, lender performance, capital compliance or legal solvency.",
+    "The model uses a positive-allowance bounded asset inventory, complete supplied marks and one fixed funding plan. It omits taxes, OCI, further facilities, collateral reuse, margin calls and unmodeled intraday timing.",
+    "Every later forecast after the first failed cutoff assumes all payments solely for diagnosis; it is not an executable unfinanced history. New unsecured repair obligations lie beyond this horizon.",
+    "Output rounds to twelve decimal places; finite test cases do not exhaust all inputs. Whole-edition accessibility/mobile/print checks are separately coordinated."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c02.html",
+      "bytes": 37271,
+      "sha256": "13122f739a193bb4ef5cbbed291bfa5041961f1a8d7804ef9ff4dfc424db0e18"
+    },
+    {
+      "path": "content/projects/v11-c02-inputs.json",
+      "bytes": 2300,
+      "sha256": "66fa1b0530378f5a79e4d0945e50a01d76912abb3d939cecf69fb5d228290bd3"
+    },
+    {
+      "path": "content/projects/v11-c02-analysis.py",
+      "bytes": 16332,
+      "sha256": "a3e49fbf249f674b77c205d1f277601fb709474405cc2fd367722946075f211f"
+    },
+    {
+      "path": "content/projects/v11-c02-output.json",
+      "bytes": 10936,
+      "sha256": "2db3c86961f422b2d2a2a619c2cb22f52e06f4df67d8c3a38baa13a84009111c"
+    },
+    {
+      "path": "content/projects/v11-c02-README.txt",
+      "bytes": 12623,
+      "sha256": "cadccba06f0b82b4f6abd3a7de234fd68ac00ca1274868014f830b83b3518c6a"
+    },
+    {
+      "path": "content/projects/v11-c02-manifest.json",
+      "bytes": 1005,
+      "sha256": "eae2a5a61065f1b052bca163e8af8ff21d78bcf4650a815ae094b9807febc05e"
+    },
+    {
+      "path": "scripts/check_v11_c02.py",
+      "bytes": 30006,
+      "sha256": "0b2289039aa413da0cf5bf1e09eea8d912155a35b2fcdcf9e33d6d4753b0c671"
+    },
+    {
+      "path": "content/reviews/v11-c02-sources.json",
+      "bytes": 3349,
+      "sha256": "72a4e83c405ba065233fb86d35d0b706d63aeb8672353c00ae64ab403774cf22"
+    }
+  ],
+  "validation": {
+    "date": "2026-10-09",
+    "status": "passed",
+    "quiet_normal_optimized_identical": true,
+    "different_cwd": "/",
+    "isolated_exact_nine_file_package": true,
+    "normal_optimized_model_cli": true,
+    "direct_symlink_hardlink_overwrites_rejected_with_bytes_preserved": true,
+    "manifest_and_author_binding_mutations_rejected": true,
+    "summary": {
+      "author_payload_hashes_verified": 8,
+      "chapter": "v11-c02",
+      "comparisons": 1504,
+      "financial_interventions": 24,
+      "invalid_api_inputs_rejected": 44,
+      "limits": "Author calculation and bounded implementation checks; separate peer, coordinator acceptance and real-world evidence remain distinct.",
+      "methods": [
+        "independent account-change vectors and identity conservation",
+        "complete-value bridge and cross-multiplied capital inequalities",
+        "cumulative cash prefixes and closed-form projected accounts",
+        "financial timing/valuation/repair/allowance interventions",
+        "strict API and normal/optimized isolated CLI with byte-preserving path guards"
+      ],
+      "solved_exercises": 8,
+      "status": "passed",
+      "worked_examples": 3
+    }
+  },
+  "coordinator_post_freeze_findings": [
+    {
+      "status": "resolved-semantic-markup-repair",
+      "finding": "Actual shared reader structure required explicit exercise/solution semantic markers.",
+      "repair": "C02 exercises class; C04 ten exercise IDs and ten paired data-solution-for disclosure attributes. No prose/math or financial model change; full reader and affected checkers revalidate.",
+      "evidence": "production/v11-opening-reader-structure-repair.json"
+    }
+  ]
+}

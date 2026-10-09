@@ -1,0 +1,230 @@
+{
+  "batch": "v11-middle",
+  "date": "2026-10-09",
+  "state": "queued, source preparation only; no middle chapter manuscript yet",
+  "authorization": "MASTER_PLAN explicit three-specialist authorization; reuse current agents, no new agents or children.",
+  "dispatch_condition": "Root activates only after opening coherent acceptance/publication; exact file ownership begins at dispatch. No unfinished opening review may be abandoned.",
+  "prerequisite_contract": "V11c01\u201304 accepted beforec05; adjacentc05\u201308 drafts may be written against frozen specifications, actual acceptance followsc05\u2192c06\u2192c07\u2192c08.",
+  "assignments": [
+    {
+      "owner": "bs_author",
+      "chapter": "v11-c05",
+      "state": "queued until opening acceptance/publication and own current peer freeze",
+      "canonical_spec": {
+        "id": "v11-c05",
+        "number": 5,
+        "title": "Liquidity, funding and asset-liability management",
+        "outcome": "Analyze funding gaps and contingent cash needs across scenarios.",
+        "coverage": [
+          "Liquidity ladders",
+          "ALM",
+          "rollover",
+          "collateral",
+          "margin",
+          "maturity mismatch"
+        ],
+        "prerequisites": [
+          "v11-c04"
+        ],
+        "level": "Advanced",
+        "status": "planned",
+        "manuscript": "chapters/v11-c05.html",
+        "sources": [
+          "wharton-finance-courses",
+          "imf-data",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Develop a dated liquidity ladder and ALM beyond c02: contractual versus behavioral cash, available/encumbered collateral, rollover failure, callable commitments and derivative margin, operational cutoffs and currency/location limits. Supply a coherent complete funding ledger with collateral inventory, actual interest/principal, maturity mismatch and chosen policies. Distinguish economic-value rate risk from earnings/repricing and payment liquidity, deriving an original counterexample. Prove fixed-plan feasibility and any proposed liquidity minimum under stated policy/timing. No automatic central-bank/facility access or false reuse of collateral. At least3complete worked cases and8full exercises.",
+      "owned_paths": [
+        "content/chapters/v11-c05.html",
+        "content/projects/v11-c05-inputs.json",
+        "content/projects/v11-c05-analysis.py",
+        "content/projects/v11-c05-output.json",
+        "content/projects/v11-c05-manifest.json",
+        "content/projects/v11-c05-README.txt",
+        "scripts/check_v11_c05.py",
+        "content/reviews/v11-c05-author.json",
+        "content/reviews/v11-c05-sources.json"
+      ]
+    },
+    {
+      "owner": "c05_review",
+      "chapter": "v11-c06",
+      "state": "queued until opening acceptance/publication and own current peer freeze",
+      "canonical_spec": {
+        "id": "v11-c06",
+        "number": 6,
+        "title": "Operational, legal and model risk",
+        "outcome": "Design controls around human, operational and modeling failure mechanisms.",
+        "coverage": [
+          "Process controls",
+          "cyber concepts",
+          "fraud",
+          "legal uncertainty",
+          "model validation",
+          "incident learning"
+        ],
+        "prerequisites": [
+          "v11-c05"
+        ],
+        "level": "Advanced",
+        "status": "planned",
+        "manuscript": "chapters/v11-c06.html",
+        "sources": [
+          "wharton-finance-courses",
+          "imf-data",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Operational, legal and model risk through an original critical-payment process. Teach causal failure/control mapping, separation of duties/authorization, reconciliation, fraud/control evidence, capacity/backlog/deadline arithmetic, common third-party dependencies, cyber protection/detection/response/recovery without exploit instructions, contractual/jurisdiction uncertainty and accountable incident learning. Show how control correlations/coverage alter residual risk and how passing a model fit can miss a material process or deployment fault. Quantified cases with full cash/queue or decision conservation and independent closure tests, not lists alone. Reuse scoped17April2026 US model guidance from c12, not superseded SR11-7. No actual-law conclusion or unverifiable control-effect estimate. At least3worked/8full exercises.",
+      "owned_paths": [
+        "content/chapters/v11-c06.html",
+        "content/projects/v11-c06-inputs.json",
+        "content/projects/v11-c06-analysis.py",
+        "content/projects/v11-c06-output.json",
+        "content/projects/v11-c06-manifest.json",
+        "content/projects/v11-c06-README.txt",
+        "scripts/check_v11_c06.py",
+        "content/reviews/v11-c06-author.json",
+        "content/reviews/v11-c06-sources.json"
+      ]
+    },
+    {
+      "owner": "ito_author",
+      "chapter": "v11-c07",
+      "state": "queued until opening acceptance/publication and own current peer freeze",
+      "canonical_spec": {
+        "id": "v11-c07",
+        "number": 7,
+        "title": "Stress testing and risk aggregation",
+        "outcome": "Build internally consistent stress scenarios without double counting exposures.",
+        "coverage": [
+          "Scenario design",
+          "nonlinear losses",
+          "contagion",
+          "concentration",
+          "reverse stress",
+          "aggregation"
+        ],
+        "prerequisites": [
+          "v11-c06"
+        ],
+        "level": "Advanced",
+        "status": "planned",
+        "manuscript": "chapters/v11-c07.html",
+        "sources": [
+          "wharton-finance-courses",
+          "imf-data",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Build internally consistent multi-risk stress/reverse stress with an original integrated institution case, common exposures/dates and explicit nonprobabilistic scenarios. Revalue nonlinear claims, trace losses through income/equity and dated funding/collateral, identify concentration and avoid double counting mark loss/default/realization or cash outflow as automatic expense. Include an explicit small contagion mechanism with full resource/obligation assumptions and derive/solve it; no unspecified simultaneous contagion algorithm. Prove reverse-stress boundary on stated compact/finite or monotone domain and show failure of add-up of independent standalone maxima or inconsistent aggregation. Explain second-round/policy endogeneity and limits without pretending calibrated stress probabilities. At least3worked/8full exercises.",
+      "owned_paths": [
+        "content/chapters/v11-c07.html",
+        "content/projects/v11-c07-inputs.json",
+        "content/projects/v11-c07-analysis.py",
+        "content/projects/v11-c07-output.json",
+        "content/projects/v11-c07-manifest.json",
+        "content/projects/v11-c07-README.txt",
+        "scripts/check_v11_c07.py",
+        "content/reviews/v11-c07-author.json",
+        "content/reviews/v11-c07-sources.json"
+      ]
+    },
+    {
+      "owner": "root",
+      "chapter": "v11-c08",
+      "state": "queued until opening acceptance/publication and own current peer freeze",
+      "canonical_spec": {
+        "id": "v11-c08",
+        "number": 8,
+        "title": "Insurance, pensions and household finance",
+        "outcome": "Evaluate long-horizon liabilities and intermediary incentives.",
+        "coverage": [
+          "Insurance pooling",
+          "adverse selection",
+          "pensions",
+          "longevity",
+          "guarantees",
+          "household credit"
+        ],
+        "prerequisites": [
+          "v11-c07"
+        ],
+        "level": "Advanced",
+        "status": "planned",
+        "manuscript": "chapters/v11-c08.html",
+        "sources": [
+          "wharton-finance-courses",
+          "imf-data",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Insurance pooling, adverse selection and incentive compatibility; pension/annuity longevity, funded DB versus DC risk allocation, guarantee/asset-liability and household credit integration. Derive original finite insurance-choice/cost and common-shock pooling results, survival-contingent present value with nested survival covariance, pension funding/interest/longevity sensitivities and a dated household borrowing/retirement decision. Distinguish actuarial expectation from traded price or solvency guarantee, finite idiosyncratic diversification from common survival shifts, contract benefit from sponsor/guarantor performance and household wealth from timely spendable cash. At least4worked/8full exercises; complete solutions and independent standard-library lab. No current tax/benefit-rate or personal investment prescription.",
+      "owned_paths": [
+        "content/chapters/v11-c08.html",
+        "content/projects/v11-c08-inputs.json",
+        "content/projects/v11-c08-analysis.py",
+        "content/projects/v11-c08-output.json",
+        "content/projects/v11-c08-manifest.json",
+        "content/projects/v11-c08-README.txt",
+        "scripts/check_v11_c08.py",
+        "content/reviews/v11-c08-author.json",
+        "content/reviews/v11-c08-sources.json"
+      ]
+    }
+  ],
+  "shared_gates": [
+    "Complete canonical outcomes with definitions before use, assumptions and units, at least stated2worked examples and8original exercises with full solutions/open rubrics, teach-back and delayed check, accurate source routes. Original cases; no current invented market data.",
+    "Keep depth proportional to the concept. Supply essential proofs and financial timing; do not pad or import a general theorem without teaching its assumptions.",
+    "One coherent bounded portable standard-library lab per chapter, synthetic provenance and inputs, saved output, README and manifest; quiet run(data) and CLI, nonmutating input, explicit domain errors active under-O.",
+    "Independent calculations and meaningful interventions should target actual failure modes. Avoid redundant broad fuzzing or giant enumerations when exact algebra or a small statewise certificate resolves the claim.",
+    "Author record binds eight nonself owned files, audits every exact exercise/proof/source, clearly lists pending separate review. No self-acceptance. Root alone canonical/source/status/shared scripts/hosting; report freeze before peer.",
+    "No external messages, new services, installs, framework, images, child agents or deployment. Preserve the offline edition.",
+    "Every reader asset link is a flat basename; builder does not keep a projects/ directory. CLI output cannot overwrite input/model through direct/resolved/symbolic/hard-link aliases. Manifest binds4portable payloads; author binds8nonself owned files.",
+    "Keep checks bounded and meaningful: algebra/certificates plus targeted financial changes and invalid contract cases, no unnecessary brute force or broad fuzzing.",
+    "No shared/canonical/source-catalogue/checkpoint/hosting edits by specialists. Original cases; no current data invented. Preserve physical probabilities versus risk-neutral pricing."
+  ],
+  "source_preparation": "production/v11-middle-source-leads.json"
+}

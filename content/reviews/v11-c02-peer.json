@@ -1,0 +1,229 @@
+{
+  "chapter": "v11-c02",
+  "status": "peer-review-passed",
+  "date": "2026-10-09",
+  "reviewer": "bs_author, separate specialist peer",
+  "author": "c05_review",
+  "assignment": "production/v11-c02-peer-assignment.json",
+  "scope": "Read the full final manuscript, all three worked cases, all eight exact prompts and solutions, proofs, teaching/retention answers, complete model, inputs, saved output, README, manifest, source proposals, author review and author checker. Independently reconstructed accounting and dated cash, examined strict and portable behavior, and verified the repaired reader links. Only the two assigned peer files were written.",
+  "independence": "The peer checker calls only the candidate public run(data) and CLI. It does not import or execute the author's arithmetic helpers or checker as an oracle. Independent rational calculations accumulate journal amounts by transaction kind to reconstruct every stock, derive economic values from the common-date marks and liability boundary, solve capital inequalities and cash prefixes directly, and compare several exact exercise calculations outside the model. Reading the author's checker audits its claimed scope; it does not supply expected peer results.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "worked_example_audit": [
+    {
+      "number": 1,
+      "verdict": "passed",
+      "evidence": "Independently accumulated all ten journal prefixes. Closing cash34.5, gross loans242, allowance5, deposits266 and equity13.5 reconcile total assets339.5 to liabilities326 plus equity. Income is-4.5, dividend2 and cash change-5.5. Deposit interest raises deposits and lowers income without a settlement outflow; provision is noncash; the covered charge-off does not repeat the loss; the recovery credits the allowance rather than creating immediate income."
+    },
+    {
+      "number": 2,
+      "verdict": "passed",
+      "evidence": "Complete economic assets327.5 less liabilities326 give equity1.5, with severe equity-6.5. The book-to-economic difference is-12 from securities4, loans6 and goodwill2, without deducting the allowance again. Toy K11.5, U337.5 and R255 imply the stated ratios. Cash equity minimum3.8 includes its own exposure denominator; it leaves severe economic equity-2.7 despite meeting the toy gates."
+    },
+    {
+      "number": 3,
+      "verdict": "passed",
+      "evidence": "Usable initial cash30 excludes restricted4.5. Free collateral36 at20% haircut advances28.8; first due cash70 includes5 of the existing other liabilities. The gap is1.2. Future principal receipts, all liability payments, new secured principal and interest are included: headrooms-1.2/5.8/1.712 with repayment29.088. The later rows are conditional projections after the first failure. A3.8 cash equity issue gives2.6/9.6/5.512 and final equity17.012; stable-deposit conversion and new unsecured borrowing have the distinct stated capital/cash effects."
+    }
+  ],
+  "proof_audit": [
+    {
+      "claim": "Double-entry and income/allowance conservation",
+      "verdict": "passed",
+      "reason": "Every journal kind has a financially specified counter-entry. The accounting identity and equity roll-forward are separate from the cash budget. Covered charge-off neutrality is conditional on enough prior allowance and follows exactly from cancelling the same charge against G and A. Recovery and any supported release are distinct events. The simple positive-allowance convention is expressly limited and is not imposed as universal accounting law."
+    },
+    {
+      "claim": "Complete economic value and ratio repairs",
+      "verdict": "passed",
+      "reason": "The valuation bridge uses a common date and explicitly fixed liability values; a complete loan PV replaces its net carrying amount. Positive denominators permit the capital inequalities to be multiplied through. Because cash enters exposure, the leverage issue condition is x>=(ell U-K)/(1-ell), with ell<1. Stable-deposit conversion holds assets fixed and requires a different denominator calculation; actual conversion is limited to deposits outside scheduled outflows. Ratio requirements alone are not asserted to supply cash, severe-scenario solvency or regulatory compliance."
+    },
+    {
+      "claim": "Cash-prefix feasibility and minimum injection",
+      "verdict": "passed",
+      "reason": "For the fixed deterministic plan, receipts are assumed available before each cutoff, restricted cash is unavailable throughout and no unlisted constraint is permitted. Cash conservation supplies necessity; carrying each nonnegative remainder forward supplies sufficiency. An up-front external cash injection that changes no other modeled flow shifts every prefix equally, so the largest negative prefix is the exact minimum. This proof does not optimize future facilities or eliminate the need to fund a prior missed cutoff."
+    },
+    {
+      "claim": "Collateral and payment rights",
+      "verdict": "passed",
+      "reason": "The old pledged pool is excluded from new capacity. The new advance adds cash and wholesale principal while encumbering the free pool. Repayment removes principal, charges only financing interest to equity and releases only that newly pledged pool. The sale problem correctly replaces both the secured advance and repayment rather than adding an incompatible second source. New unsecured repair obligations are explicitly outside the three-cutoff horizon."
+    }
+  ],
+  "exact_prompt_solution_audit": [
+    {
+      "exercise": 1,
+      "verdict": "passed",
+      "resolution": "Loan12 and external payment5 give aggregate cash-5, gross loans+12, deposits+7 and assets/liabilities+7. Internal transfer7 only reallocates deposit ownership. Final cash29.5, gross254, deposits273, assets346.5, liabilities333 and equity13.5 satisfy the exact prompt. Keeping allowance5 is explicitly a stipulated exercise condition, not an underwriting conclusion."
+    },
+    {
+      "exercise": 2,
+      "verdict": "passed",
+      "resolution": "Provision5-6+8-1=6. Posting it before charge-off8 supplies enough allowance; recovery1 then gives gross62 and allowance5. Net loans fall64->57 while cash rises1, so assets/equity decline6. The complete solution identifies why an uncovered charge-off sequence or duplicate income expense is invalid in this class."
+    },
+    {
+      "exercise": 3,
+      "verdict": "passed",
+      "resolution": "Economic equity L-229.5 gives zero at229.5,1.5 at231 and-6.5 at223. A further allowance deduction duplicates a credit effect already inside the supplied complete value. An incomplete gross amount would require a separately supported adjustment. Neither a mark nor its residual is presented as a legal insolvency determination."
+    },
+    {
+      "exercise": 4,
+      "verdict": "passed",
+      "resolution": "R=.7(237)+.2(60)+6=183.9. Risk ratio11.5/183.9 passes6%, while11.5/337.5 still fails4%. The change supplies no cash or economic value, and a real classification needs the applicable dated rule and exposure evidence."
+    },
+    {
+      "exercise": 5,
+      "verdict": "passed",
+      "resolution": "30+10+36(1-h)>=70 gives h<=1/6. Base cash prefixes include the29.088 secured repayment. Moving12 to the first cutoff yields10.8/5.8/1.712, changing timing but not total principal. The solution warns correctly that a changed haircut changes the repayment principal as well as the initial draw."
+    },
+    {
+      "exercise": 6,
+      "verdict": "passed",
+      "resolution": "The joint injection is max(0,3.8,25/12,1.2)=3.8. The three repair types are compared from the same book ledger under the stable-deposit and maturity conditions. Cash equity and borrowing cure the shown cash deficit; conversion does not. Equity and conversion pass toy capital gates; borrowing does not. Severe economic equity remains-2.7 after the cash issue. The decision is properly limited to the stipulated tests."
+    },
+    {
+      "exercise": 7,
+      "verdict": "passed",
+      "resolution": "Selling book40 for34 lowers book equity by6 to7.5; selling below economic mark36 lowers economic equity by2 to-.5. Sale cash headrooms4/11/36 contain no new secured loan or repayment. The solution uses separate book and economic bases and forbids also pledging the sold pool. The bounded model intentionally does not implement a sale optimizer."
+    },
+    {
+      "exercise": 8,
+      "verdict": "passed",
+      "resolution": "The incorrect24.3 includes restricted4.5, allowance5 as cash and16 of borrowing against unavailable old collateral. Subtracting25.5 gives-1.2. The illustrative response names finance, treasury, valuation and independent-review responsibilities, exact evidence and closure tests, and the historical scope of the2013 source. Its rubric permits other accountable assignments without pretending passing code establishes actual recoverability or legal rights."
+    }
+  ],
+  "teaching_retention": {
+    "verdict": "passed",
+    "evidence": "All required methods precede the problems. Teach-back explicitly supplies the allowance and deposit-conversion counter-entries and dated cash implication. Three delayed answers correctly preserve covered charge-off net assets, quantify a1 current gap despite tomorrow's receipt and derive a3 maximum-prefix injection. Definitions consistently distinguish A as allowance from TA as total assets."
+  },
+  "source_scope": {
+    "verdict": "passed",
+    "inspection_basis": "Reused the assignment's recorded actual-body inspections and reviewed the full source proposal records; this peer did not newly retrieve or claim a fresh full-body source audit.",
+    "sources": [
+      {
+        "id": "v11-c02-boe-capital",
+        "scope": "2013 UK conceptual capital/liquidity and valuation material; historical incurred-loss timing, deposit-protection levels and capital thresholds are excluded from current assertions."
+      },
+      {
+        "id": "v11-c02-us-acl2020",
+        "scope": "Dated US interagency allowance context, including explicit qualifications for recoveries/negative allowances. The model's positive-allowance convention is declared narrower and no current complete CECL or GAAP certification is claimed."
+      },
+      {
+        "id": "v11-c02-bcbs-liquidity2008",
+        "scope": "Historical international principles for dated flows, transfer restrictions and encumbered collateral; no national-law requirement or unconditional lending facility is inferred."
+      }
+    ],
+    "limits": "All numerical cases and marks are synthetic. Correct source routing and scoped review do not establish real counterparty performance, prices, eligible collateral or legal enforceability."
+  },
+  "numerical_review": {
+    "methods": "Exact rational cumulative journal reconstruction, independent liability and complete-value aggregation, cross-multiplied capital conditions, cumulative dated cash and collateral states, and explicit exercise certificates.",
+    "interventions": "15 focused valid groups: three3.8 repair types; cash issues3.7999999999999,1.2 and1.1999999999999 to distinguish exact gates from rounded displays; a later secured-repayment failure with a previously sufficient repair; earlier receipt12; separate allowance release/recovery/covered charge-off; changed loan weight; negative financing-rate boundary; zero economic-equity loan mark; surviving gross claims with zero net book loans.",
+    "boundary_evidence": "At a displayed rounded capital amount near3.8 or cash headroom near zero, exact unrounded booleans still reject insufficient inputs. A sufficiently expensive secured repayment can move the first failure to cutoff3 even after the first two cutoffs pass. Fully allowed but surviving gross claims may have positive stipulated value; absent assets may not.",
+    "invalid_inputs": "23 independent API rejection cases cover strict numeric types/nonfinite/bounds, schema, balanced opening, insufficient allowance, unsupported release, unknown fields, ratio denominators, restricted cash, draw timing, loan/liability budgets, stable-deposit conversion and all five absent-inventory valuation categories. Rejections are nonmutating.",
+    "portable_contract": "Only candidate model/input files are needed by normal and-O CLI tests from a different directory. Default output is strict JSON; --output is quiet. Direct, symbolic-link and hard-link output targets for the input/model reject and preserve bytes. Duplicate keys, nonfinite constants and oversized serialized input reject before overwriting an existing output. Import/run/check APIs are quiet and JSON-safe.",
+    "author_checker_read": "Read the entire author checker, including independent Decimal journal vectors, cash-prefix oracle, exact exercise tests,24 interventions,44 API rejections, output-path guards and manifest/author bindings. No author checker function or stored author expected answer was used as the peer oracle."
+  },
+  "findings": [
+    {
+      "id": "c02-peer-reader-links",
+      "status": "resolved-and-reverified",
+      "severity": "material reader integration issue",
+      "finding": "Five Section7 lab hrefs used projects/v11-c02-* even though scripts/build.py copies project assets flat into dist and does not rewrite that prefix. The source arithmetic and files were correct, but reader/offline download links would not resolve.",
+      "repair_owner": "root",
+      "repair": "Root removed exactly five projects/ prefixes, updated the manuscript hash in the author review, logged the finding and refreshed the active peer freeze. The peer made no author edits. Root repair evidence is production/v11-c02-reader-link-repair.json.",
+      "reverification": "Peer parser requires each flat download basename and rejects the old prefixed route. All nine current author payloads and the author manuscript binding pass hash checks. No numerical, proof, source or model change accompanied that repair; current bindings below also include the subsequent exercise-list class repair."
+    },
+    {
+      "id": "c02-peer-exercise-class",
+      "status": "resolved-and-reverified",
+      "severity": "reader integration counting issue",
+      "finding": "Actual generated-reader verification counted zero prompts because the existing exercise ol lacked class=\"exercises\", although all eight prompts and solutions were present and substantively reviewed.",
+      "repair_owner": "root",
+      "repair": "Root added only class=\"exercises\" to the exercise ol, refreshed the author manuscript binding and appended its coordinator repair note; evidence production/v11-opening-reader-structure-repair.json.",
+      "reverification": "Removing that one 18-byte attribute addition from the final manuscript reproduces the previously bound chapter SHA256 exactly. Removing the author coordinator note and restoring its prior chapter binding reproduces the prior author-record SHA256 exactly. The other seven author payloads and the peer checker are byte-identical. The marked list contains all eight existing prompt IDs; normal/-O, quiet API and isolated package checks were rerun against the refreshed nine-file freeze."
+    }
+  ],
+  "necessary_repairs": [],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c02.html",
+      "bytes": 37271,
+      "sha256": "13122f739a193bb4ef5cbbed291bfa5041961f1a8d7804ef9ff4dfc424db0e18"
+    },
+    {
+      "path": "content/projects/v11-c02-inputs.json",
+      "bytes": 2300,
+      "sha256": "66fa1b0530378f5a79e4d0945e50a01d76912abb3d939cecf69fb5d228290bd3"
+    },
+    {
+      "path": "content/projects/v11-c02-analysis.py",
+      "bytes": 16332,
+      "sha256": "a3e49fbf249f674b77c205d1f277601fb709474405cc2fd367722946075f211f"
+    },
+    {
+      "path": "content/projects/v11-c02-output.json",
+      "bytes": 10936,
+      "sha256": "2db3c86961f422b2d2a2a619c2cb22f52e06f4df67d8c3a38baa13a84009111c"
+    },
+    {
+      "path": "content/projects/v11-c02-manifest.json",
+      "bytes": 1005,
+      "sha256": "eae2a5a61065f1b052bca163e8af8ff21d78bcf4650a815ae094b9807febc05e"
+    },
+    {
+      "path": "content/projects/v11-c02-README.txt",
+      "bytes": 12623,
+      "sha256": "cadccba06f0b82b4f6abd3a7de234fd68ac00ca1274868014f830b83b3518c6a"
+    },
+    {
+      "path": "scripts/check_v11_c02.py",
+      "bytes": 30006,
+      "sha256": "0b2289039aa413da0cf5bf1e09eea8d912155a35b2fcdcf9e33d6d4753b0c671"
+    },
+    {
+      "path": "content/reviews/v11-c02-author.json",
+      "bytes": 12132,
+      "sha256": "03576d70ccd4c6a51ab548d302608e88d28b058c125b80d65b8a07c9fec159f4"
+    },
+    {
+      "path": "content/reviews/v11-c02-sources.json",
+      "bytes": 3349,
+      "sha256": "72a4e83c405ba065233fb86d35d0b706d63aeb8672353c00ae64ab403774cf22"
+    }
+  ],
+  "peer_checker": {
+    "path": "scripts/check_v11_c02_peer.py",
+    "bytes": 21714,
+    "sha256": "f4ca747d6621088eb2151a49d9179c5431baa5facfe5f54678913e75d56de5e3"
+  },
+  "validation": {
+    "status": "passed",
+    "quiet_API": true,
+    "normal_optimized_same_summary": true,
+    "isolated_nine_author_plus_two_peer_files": true,
+    "expected_summary": {
+      "chapter": "v11-c02",
+      "status": "passed",
+      "comparisons": 2509,
+      "financial_interventions": 15,
+      "invalid_api_rejections": 23,
+      "cli_valid_runs": 4,
+      "cli_rejections": 18,
+      "journal_rows_reconstructed": 11,
+      "cash_rows_reconstructed": 48,
+      "bound_author_files": 9
+    },
+    "narrow_revalidation": "Reader exercise class addition independently reversed to the previous manuscript hash; author-record-only binding/note change independently reversed to its previous hash. Final quiet normal/-O and isolated package summaries remain unchanged."
+  },
+  "remaining_limits": [
+    "A fixed deterministic cash plan with stated pre-cutoff receipts does not model unlisted intra-cutoff sequencing, margin calls, collateral reuse, taxes or new facilities.",
+    "Twelve-place output rounding can hide small differences; gate flags use exact internal values, and the peer explicitly tested near-boundary discrepancies.",
+    "Positive toy ratios or executable cash prefixes do not imply legal capital compliance, future funding beyond the horizon or positive economic equity under every mark.",
+    "Separate machine-assisted peer review is not external human certification or empirical verification of the fictional contracts."
+  ],
+  "acceptance_boundary": "This peer verdict covers the final bound C02 package. Dependency-ordered chapter acceptance, canonical/source integration, shared reader/offline/UI checks and publication remain coordinator-owned. No accepted-chapter or publication claim is made here."
+}

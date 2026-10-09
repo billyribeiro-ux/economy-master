@@ -1,0 +1,493 @@
+{
+  "schema": 1,
+  "units": "CU of loss at the stated common horizon; positive means loss, negative means gain",
+  "cases": [
+    {
+      "id": "atom",
+      "confidence": "37/40",
+      "portfolio": {
+        "var": "10",
+        "es": "70",
+        "mean": "11/2",
+        "variance": "1899/4",
+        "strict_exceedance_probability": "1/20",
+        "strict_tail_mean": "100",
+        "weak_tail_mean": "55",
+        "positive_part_objective_at_var": "70",
+        "tail_allocation": [
+          {
+            "state": "ordinary",
+            "loss": "0",
+            "available_probability": "9/10",
+            "selected_probability": "0",
+            "dual_weight": "0",
+            "es_contribution": "0"
+          },
+          {
+            "state": "moderate",
+            "loss": "10",
+            "available_probability": "1/20",
+            "selected_probability": "1/40",
+            "dual_weight": "1/3",
+            "es_contribution": "10/3"
+          },
+          {
+            "state": "severe",
+            "loss": "100",
+            "available_probability": "1/20",
+            "selected_probability": "1/20",
+            "dual_weight": "2/3",
+            "es_contribution": "200/3"
+          }
+        ],
+        "tie_rule": "One exact optimizer; equal-loss states are filled in reverse input order. ES and VaR are invariant to that choice."
+      },
+      "held_components": {
+        "desk": {
+          "var": "10",
+          "es": "70",
+          "mean": "11/2",
+          "variance": "1899/4",
+          "strict_exceedance_probability": "1/20",
+          "strict_tail_mean": "100",
+          "weak_tail_mean": "55",
+          "positive_part_objective_at_var": "70",
+          "tail_allocation": [
+            {
+              "state": "ordinary",
+              "loss": "0",
+              "available_probability": "9/10",
+              "selected_probability": "0",
+              "dual_weight": "0",
+              "es_contribution": "0"
+            },
+            {
+              "state": "moderate",
+              "loss": "10",
+              "available_probability": "1/20",
+              "selected_probability": "1/40",
+              "dual_weight": "1/3",
+              "es_contribution": "10/3"
+            },
+            {
+              "state": "severe",
+              "loss": "100",
+              "available_probability": "1/20",
+              "selected_probability": "1/20",
+              "dual_weight": "2/3",
+              "es_contribution": "200/3"
+            }
+          ],
+          "tie_rule": "One exact optimizer; equal-loss states are filled in reverse input order. ES and VaR are invariant to that choice."
+        }
+      },
+      "sum_component_var": "10",
+      "sum_component_es": "70"
+    },
+    {
+      "id": "independent",
+      "confidence": "19/20",
+      "portfolio": {
+        "var": "100",
+        "es": "516/5",
+        "mean": "8",
+        "variance": "768",
+        "strict_exceedance_probability": "1/625",
+        "strict_tail_mean": "200",
+        "weak_tail_mean": "5000/49",
+        "positive_part_objective_at_var": "516/5",
+        "tail_allocation": [
+          {
+            "state": "neither",
+            "loss": "0",
+            "available_probability": "576/625",
+            "selected_probability": "0",
+            "dual_weight": "0",
+            "es_contribution": "0"
+          },
+          {
+            "state": "A_only",
+            "loss": "100",
+            "available_probability": "24/625",
+            "selected_probability": "1/100",
+            "dual_weight": "1/5",
+            "es_contribution": "20"
+          },
+          {
+            "state": "B_only",
+            "loss": "100",
+            "available_probability": "24/625",
+            "selected_probability": "24/625",
+            "dual_weight": "96/125",
+            "es_contribution": "384/5"
+          },
+          {
+            "state": "both",
+            "loss": "200",
+            "available_probability": "1/625",
+            "selected_probability": "1/625",
+            "dual_weight": "4/125",
+            "es_contribution": "32/5"
+          }
+        ],
+        "tie_rule": "One exact optimizer; equal-loss states are filled in reverse input order. ES and VaR are invariant to that choice."
+      },
+      "held_components": {
+        "A": {
+          "var": "0",
+          "es": "80",
+          "mean": "4",
+          "variance": "384",
+          "strict_exceedance_probability": "1/25",
+          "strict_tail_mean": "100",
+          "weak_tail_mean": "4",
+          "positive_part_objective_at_var": "80",
+          "tail_allocation": [
+            {
+              "state": "neither",
+              "loss": "0",
+              "available_probability": "576/625",
+              "selected_probability": "0",
+              "dual_weight": "0",
+              "es_contribution": "0"
+            },
+            {
+              "state": "A_only",
+              "loss": "100",
+              "available_probability": "24/625",
+              "selected_probability": "24/625",
+              "dual_weight": "96/125",
+              "es_contribution": "384/5"
+            },
+            {
+              "state": "B_only",
+              "loss": "0",
+              "available_probability": "24/625",
+              "selected_probability": "1/100",
+              "dual_weight": "1/5",
+              "es_contribution": "0"
+            },
+            {
+              "state": "both",
+              "loss": "100",
+              "available_probability": "1/625",
+              "selected_probability": "1/625",
+              "dual_weight": "4/125",
+              "es_contribution": "16/5"
+            }
+          ],
+          "tie_rule": "One exact optimizer; equal-loss states are filled in reverse input order. ES and VaR are invariant to that choice."
+        },
+        "B": {
+          "var": "0",
+          "es": "80",
+          "mean": "4",
+          "variance": "384",
+          "strict_exceedance_probability": "1/25",
+          "strict_tail_mean": "100",
+          "weak_tail_mean": "4",
+          "positive_part_objective_at_var": "80",
+          "tail_allocation": [
+            {
+              "state": "neither",
+              "loss": "0",
+              "available_probability": "576/625",
+              "selected_probability": "0",
+              "dual_weight": "0",
+              "es_contribution": "0"
+            },
+            {
+              "state": "A_only",
+              "loss": "0",
+              "available_probability": "24/625",
+              "selected_probability": "1/100",
+              "dual_weight": "1/5",
+              "es_contribution": "0"
+            },
+            {
+              "state": "B_only",
+              "loss": "100",
+              "available_probability": "24/625",
+              "selected_probability": "24/625",
+              "dual_weight": "96/125",
+              "es_contribution": "384/5"
+            },
+            {
+              "state": "both",
+              "loss": "100",
+              "available_probability": "1/625",
+              "selected_probability": "1/625",
+              "dual_weight": "4/125",
+              "es_contribution": "16/5"
+            }
+          ],
+          "tie_rule": "One exact optimizer; equal-loss states are filled in reverse input order. ES and VaR are invariant to that choice."
+        }
+      },
+      "sum_component_var": "0",
+      "sum_component_es": "160"
+    },
+    {
+      "id": "common_mixture",
+      "confidence": "19/20",
+      "portfolio": {
+        "var": "100",
+        "es": "612/5",
+        "mean": "8",
+        "variance": "960",
+        "strict_exceedance_probability": "7/625",
+        "strict_tail_mean": "200",
+        "weak_tail_mean": "5000/43",
+        "positive_part_objective_at_var": "612/5",
+        "tail_allocation": [
+          {
+            "state": "neither",
+            "loss": "0",
+            "available_probability": "582/625",
+            "selected_probability": "0",
+            "dual_weight": "0",
+            "es_contribution": "0"
+          },
+          {
+            "state": "A_only",
+            "loss": "100",
+            "available_probability": "18/625",
+            "selected_probability": "1/100",
+            "dual_weight": "1/5",
+            "es_contribution": "20"
+          },
+          {
+            "state": "B_only",
+            "loss": "100",
+            "available_probability": "18/625",
+            "selected_probability": "18/625",
+            "dual_weight": "72/125",
+            "es_contribution": "288/5"
+          },
+          {
+            "state": "both",
+            "loss": "200",
+            "available_probability": "7/625",
+            "selected_probability": "7/625",
+            "dual_weight": "28/125",
+            "es_contribution": "224/5"
+          }
+        ],
+        "tie_rule": "One exact optimizer; equal-loss states are filled in reverse input order. ES and VaR are invariant to that choice."
+      },
+      "held_components": {
+        "A": {
+          "var": "0",
+          "es": "80",
+          "mean": "4",
+          "variance": "384",
+          "strict_exceedance_probability": "1/25",
+          "strict_tail_mean": "100",
+          "weak_tail_mean": "4",
+          "positive_part_objective_at_var": "80",
+          "tail_allocation": [
+            {
+              "state": "neither",
+              "loss": "0",
+              "available_probability": "582/625",
+              "selected_probability": "0",
+              "dual_weight": "0",
+              "es_contribution": "0"
+            },
+            {
+              "state": "A_only",
+              "loss": "100",
+              "available_probability": "18/625",
+              "selected_probability": "18/625",
+              "dual_weight": "72/125",
+              "es_contribution": "288/5"
+            },
+            {
+              "state": "B_only",
+              "loss": "0",
+              "available_probability": "18/625",
+              "selected_probability": "1/100",
+              "dual_weight": "1/5",
+              "es_contribution": "0"
+            },
+            {
+              "state": "both",
+              "loss": "100",
+              "available_probability": "7/625",
+              "selected_probability": "7/625",
+              "dual_weight": "28/125",
+              "es_contribution": "112/5"
+            }
+          ],
+          "tie_rule": "One exact optimizer; equal-loss states are filled in reverse input order. ES and VaR are invariant to that choice."
+        },
+        "B": {
+          "var": "0",
+          "es": "80",
+          "mean": "4",
+          "variance": "384",
+          "strict_exceedance_probability": "1/25",
+          "strict_tail_mean": "100",
+          "weak_tail_mean": "4",
+          "positive_part_objective_at_var": "80",
+          "tail_allocation": [
+            {
+              "state": "neither",
+              "loss": "0",
+              "available_probability": "582/625",
+              "selected_probability": "0",
+              "dual_weight": "0",
+              "es_contribution": "0"
+            },
+            {
+              "state": "A_only",
+              "loss": "0",
+              "available_probability": "18/625",
+              "selected_probability": "1/100",
+              "dual_weight": "1/5",
+              "es_contribution": "0"
+            },
+            {
+              "state": "B_only",
+              "loss": "100",
+              "available_probability": "18/625",
+              "selected_probability": "18/625",
+              "dual_weight": "72/125",
+              "es_contribution": "288/5"
+            },
+            {
+              "state": "both",
+              "loss": "100",
+              "available_probability": "7/625",
+              "selected_probability": "7/625",
+              "dual_weight": "28/125",
+              "es_contribution": "112/5"
+            }
+          ],
+          "tie_rule": "One exact optimizer; equal-loss states are filled in reverse input order. ES and VaR are invariant to that choice."
+        }
+      },
+      "sum_component_var": "0",
+      "sum_component_es": "160"
+    },
+    {
+      "id": "comonotone",
+      "confidence": "19/20",
+      "portfolio": {
+        "var": "0",
+        "es": "160",
+        "mean": "8",
+        "variance": "1536",
+        "strict_exceedance_probability": "1/25",
+        "strict_tail_mean": "200",
+        "weak_tail_mean": "8",
+        "positive_part_objective_at_var": "160",
+        "tail_allocation": [
+          {
+            "state": "neither",
+            "loss": "0",
+            "available_probability": "24/25",
+            "selected_probability": "1/100",
+            "dual_weight": "1/5",
+            "es_contribution": "0"
+          },
+          {
+            "state": "both",
+            "loss": "200",
+            "available_probability": "1/25",
+            "selected_probability": "1/25",
+            "dual_weight": "4/5",
+            "es_contribution": "160"
+          }
+        ],
+        "tie_rule": "One exact optimizer; equal-loss states are filled in reverse input order. ES and VaR are invariant to that choice."
+      },
+      "held_components": {
+        "A": {
+          "var": "0",
+          "es": "80",
+          "mean": "4",
+          "variance": "384",
+          "strict_exceedance_probability": "1/25",
+          "strict_tail_mean": "100",
+          "weak_tail_mean": "4",
+          "positive_part_objective_at_var": "80",
+          "tail_allocation": [
+            {
+              "state": "neither",
+              "loss": "0",
+              "available_probability": "24/25",
+              "selected_probability": "1/100",
+              "dual_weight": "1/5",
+              "es_contribution": "0"
+            },
+            {
+              "state": "both",
+              "loss": "100",
+              "available_probability": "1/25",
+              "selected_probability": "1/25",
+              "dual_weight": "4/5",
+              "es_contribution": "80"
+            }
+          ],
+          "tie_rule": "One exact optimizer; equal-loss states are filled in reverse input order. ES and VaR are invariant to that choice."
+        },
+        "B": {
+          "var": "0",
+          "es": "80",
+          "mean": "4",
+          "variance": "384",
+          "strict_exceedance_probability": "1/25",
+          "strict_tail_mean": "100",
+          "weak_tail_mean": "4",
+          "positive_part_objective_at_var": "80",
+          "tail_allocation": [
+            {
+              "state": "neither",
+              "loss": "0",
+              "available_probability": "24/25",
+              "selected_probability": "1/100",
+              "dual_weight": "1/5",
+              "es_contribution": "0"
+            },
+            {
+              "state": "both",
+              "loss": "100",
+              "available_probability": "1/25",
+              "selected_probability": "1/25",
+              "dual_weight": "4/5",
+              "es_contribution": "80"
+            }
+          ],
+          "tie_rule": "One exact optimizer; equal-loss states are filled in reverse input order. ES and VaR are invariant to that choice."
+        }
+      },
+      "sum_component_var": "0",
+      "sum_component_es": "160"
+    }
+  ],
+  "horizon": {
+    "mean": "0",
+    "variance": "8673473003/125000000",
+    "variance_factor": "8673473003/500000000",
+    "sd_approx": 8.329933014376525,
+    "iid_variance": "40",
+    "normal_var_approx": 19.37832195889744,
+    "normal_es_approx": 22.20105592444432,
+    "scope": "Additive stationary daily losses with covariances SD^2*rho^lag; normal VaR/ES additionally assume joint normality. No fitted law or nonlinear revaluation is supplied."
+  },
+  "backtest": {
+    "trials": 250,
+    "exceptions": 7,
+    "expected_exceptions": "5/2",
+    "one_sided_count_probability_approx": 0.013701447855203648,
+    "longest_exception_run": 7,
+    "adjacent_exception_pairs": 6,
+    "scope": "Exact binomial null tail converted to float: fixed independent Bernoulli trials with the stated probability. Run/pair counts are descriptive; no independence or severity test is claimed."
+  },
+  "limits": [
+    "Finite supplied physical scenarios only; no claim of complete support, empirical calibration, market prices or worst-case protection.",
+    "Finite risk strings are exact fractions. Normal and binomial diagnostics are explicitly labeled floating approximations.",
+    "An ES tail is a worst-case reweighting within a specified envelope, not a new physical forecast or evidence that omitted states cannot occur."
+  ]
+}

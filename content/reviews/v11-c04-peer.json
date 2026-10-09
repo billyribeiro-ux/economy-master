@@ -1,0 +1,244 @@
+{
+  "chapter": "v11-c04",
+  "status": "peer-review-passed",
+  "date": "2026-10-09",
+  "reviewer": "ito_author, separate specialist",
+  "author": "Coordinating author",
+  "scope": "Exact separate two-path peer assignment. Read every line of the chapter, all five worked examples, all ten exact prompts/solutions, answered teaching/retention, full inputs/model/output/README/manifest, primary-source proposal, author review and author checker. No author or shared file edited in this review.",
+  "independence": "Candidate execution uses only public run(data) and CLI. No candidate helper or author-checker function is called or imported as an oracle. The author checker was read to audit package scope, not executed. Peer oracles independently integrate inverse-CDF probability intervals, compute second moments, verify weak-duality slack, expand stationary-AR1 independent innovation loadings, invert the Gaussian upper tail by Newton/erfc, and sum positive Decimal binomial terms by recurrence.",
+  "proof_audit": [
+    {
+      "topic": "Funded loss and nonlinear revaluation",
+      "verdict": "passed",
+      "reason": "Loss subtracts terminal value and accumulated receipts from accumulated initial value under a common dated convention. Exact bond sale-horizon difference uses one remaining year; expansion gives a negative quadratic remainder when1.05+d>0. Future sale gains do not establish earlier cash or borrowing availability. The model correctly accepts externally constructed loss rows instead of pretending to perform that pricing."
+    },
+    {
+      "topic": "Left quantile and atom-adjusted expected shortfall",
+      "verdict": "passed",
+      "reason": "For positive finite state masses the first cumulative level reaching alpha has P(L>q)<=1-alpha<=P(L>=q). The residual boundary mass therefore lies in[0,P(L=q)]. Integrating inverse-CDF intervals gives precisely full upper losses plus the needed boundary mass; rearrangement yields q+E[(L-q)+]/(1-alpha). Negative losses and confidence equal to a CDF jump cause no exception. The general integrable extension is stated as source-supported rather than falsely proved in full here."
+    },
+    {
+      "topic": "Threshold function, convexity and attainment",
+      "verdict": "passed",
+      "reason": "Each positive part is convex; slopes outside finite support have opposite signs. Left derivative includes atoms at theta and is1-P(L>=theta)/tau; right derivative is1-P(L>theta)/tau. The minimum criterion is left<=0<=right. The left quantile satisfies it, and a CDF equality can produce a whole flat gap of minimizing thresholds. Exercise2 correctly identifies[0,10], rather than assuming a unique minimizer."
+    },
+    {
+      "topic": "Finite dual and coherent-risk properties",
+      "verdict": "passed",
+      "reason": "For every feasible w>=0, sumw=1,w<=p/tau, expand its objective around theta. Terms below theta cannot improve the bound and upper terms are capped, proving dual<=f(theta). Boundary capacities permit an attaining tail allocation at q. The peer independently verifies the exact nonnegative slack identity and equality with the quantile integral. Common-law monotonicity, translation, nonnegative homogeneity and subadditivity then follow by maxima over the same feasible weights. The envelope is not reinterpreted as a fitted physical law or support-completeness guarantee."
+    },
+    {
+      "topic": "Dependence and signs",
+      "verdict": "passed",
+      "reason": "Independent/common Bernoulli mixtures preserve both marginals. E[IA IB]-p^2=lambda p(1-p), so correlation equals lambda only within this construction. VaR nonsubadditivity and the falling comonotone VaR are genuine finite counterexamples. Negative holdings require a new loss ordering; neither VaR nor ES obeys negative homogeneity."
+    },
+    {
+      "topic": "Horizon covariance, normal tail and Pareto existence",
+      "verdict": "passed",
+      "reason": "Expanding Var(sumX) counts h-k pairs at lagk. Zero nonzero-lag covariance supports square-root dispersion but not distributional quantile scaling. Joint normality plus additive loss/stationary covariance is stated separately; the normal first-tail moment follows from phi derivative and zero variance is handled as deterministic. The peer independently reconstructs variance using AR1 innovation loadings. Pareto integration gives finite quantiles for every positive exponent, finite ES exactly above1 and finite variance only above2; extended infinite ES is explicitly outside the earlier integrability hypothesis."
+    },
+    {
+      "topic": "Count, conditional calibration, runs and severity",
+      "verdict": "passed",
+      "reason": "Fixed independent Bernoulli indicators yield the binomial count by sequence counting. Conditional probabilityp against all past information implies the needed joint indicator law by iterated conditioning; atom quantile inequalities alone do not. One-sided count tails are not posterior model probabilities or severity tests. A seven-run alarm is a union of244 events each probability.01^7; overlap does not invalidate the bound. It must be predeclared, and selection/overlapping horizons can invalidate an unadjusted interpretation."
+    }
+  ],
+  "worked_example_audit": [
+    {
+      "number": 1,
+      "verdict": "passed",
+      "evidence": "Funded bond loss1000/231 at sale yield10%, gain-100/21 at0%; linear value2000/441 for+.05. Exact remainder derived for either shock sign; tomorrow payment6 cannot be funded by an inaccessible future mark."
+    },
+    {
+      "number": 2,
+      "verdict": "passed",
+      "evidence": "Atalpha.925, tail.075 uses.05 at100 and.025 at10: VaR10,ES70; strict100,weak55. At.9 VaR0/ES55; at.95 leftVaR10/ES100; immediately above.95 VaR100/ES100."
+    },
+    {
+      "number": 3,
+      "verdict": "passed",
+      "evidence": "Independent joint masses.9216/.0384/.0384/.0016 give individualVaR0/ES80 and aggregateVaR100/ES103.2. One-quarter mixture masses.9312/.0288/.0288/.0112 giveES122.4. Common-only case givesVaR0/ES160; all marginals remain.04."
+    },
+    {
+      "number": 4,
+      "verdict": "passed",
+      "evidence": "Independent innovation-loading variance agrees with exact69.387784024 for10days,sd2,rho.3; normalVaR19.378321959/ES22.201055924 follow only under the separately stated normal law. Independence comparator variance40 is distinct."
+    },
+    {
+      "number": 5,
+      "verdict": "passed",
+      "evidence": "250trials,p.01,k7 has count upper tail.0137014478552; clustered/dispersed timing changes run/pair counts7/6 versus1/0 without changing that tail. Predeclared run union bound2.44e-12 and zero-count event.99^100 are correct; no missing severity evidence is invented."
+    }
+  ],
+  "exact_prompt_solution_audit": [
+    {
+      "exercise": 1,
+      "verdict": "passed",
+      "resolution": "Mean3; at.9 quantile20/ES50,strict80/weak35; at.95 quantile20/ES80; at.9501 quantile80/ES80. Signed ordinary gain is handled correctly."
+    },
+    {
+      "exercise": 2,
+      "verdict": "passed",
+      "resolution": "All four exact objective pieces55-9theta,55,50+theta/2,theta agree at endpoints; full minimizing set[0,10] and value55. A threshold optimizer need not be the declared left quantile0."
+    },
+    {
+      "exercise": 3,
+      "verdict": "passed",
+      "resolution": "Capacities12,2/3,2/3; both supplied weight vectors are feasible and yield70 and55. Statewise sum objective bounded by separate maxima proves subadditivity; without a joint law the sum distribution is unspecified."
+    },
+    {
+      "exercise": 4,
+      "verdict": "passed",
+      "resolution": "Half-common probabilities.9408/.0192/.0192/.0208 normalize and retain.04 marginals; VaR100,ES141.6,correlation.5. The changed law is explicitly a sensitivity, not measured forecast evidence."
+    },
+    {
+      "exercise": 5,
+      "verdict": "passed",
+      "resolution": "For2L+7,VaR27/ES147. For-L, reordering yieldsVaR0/ES0. A certain receipt7 changes risk to3/63 under matched cash units. Negative homogeneity is not invoked."
+    },
+    {
+      "exercise": 6,
+      "verdict": "passed",
+      "resolution": "Exact funded loss-1000/357,linear-400/147,difference-200/2499. A concrete timely facility/cash/collateral resource must be independently available; inaccessible sale gains do not meet the6 payment."
+    },
+    {
+      "exercise": 7,
+      "verdict": "passed",
+      "resolution": "Three-day mean3,variance22; supplied rounded Gaussian values giveVaR12.19305/ES13.96527. Final repaired ES transcription is correct. Nonlinear aggregation, changing positions/covariances or nonnormality are valid failures of the stipulated calculation."
+    },
+    {
+      "exercise": 8,
+      "verdict": "passed",
+      "resolution": "Pareto2 has q=sqrt20,ES2sqrt20 and infinite variance at the boundary. Pareto.8 has finite20^1.25 quantile but divergent upper mean, because the antiderivative grows as cutoff^(1/5). A finite sample maximum/empirical ES is compatible with this law."
+    },
+    {
+      "exercise": 9,
+      "verdict": "passed",
+      "resolution": "Exact event probability.99^100; counts discard location/magnitude. Dispersed and clustered adjacent counts0/6, longest runs1/7;244*.01^7 bounds a predeclared run alarm despite overlap. A selected alarm requires the actual search process, not its isolated nominal probability."
+    },
+    {
+      "exercise": 10,
+      "verdict": "passed",
+      "resolution": "Open solution supplies the required computed VaR counterexample, empirical-maximum limitation, distinction between terminal expectation and committed liquidity, and evidence for physical joint law, position/cash reconciliation, data scope, facility timing and authority. Evaluation criteria permit multiple defensible decisions; no forced commercial approval."
+    }
+  ],
+  "teaching_retention": {
+    "verdict": "passed",
+    "evidence": "Teach-back explicitly allocates.075 tail mass rather than substituting conditional means, and separates a risk average from dated cash. Delayed answer reconstructs four joint states, individual/sum tails, common dual constraints, subadditivity and clustering limitations."
+  },
+  "source_scope": {
+    "verdict": "passed",
+    "source_id": "v11-c04-rockafellar-uryasev",
+    "inspection": "Read the source proposal and existing recorded scoped-read primary evidence in production/v11-opening-source-leads.json; no new PDF retrieval was needed or claimed during this peer turn. Recorded scope covers definitions/integrability, atoms, finite formula, minimization and coherence; unread portfolio applications are explicitly excluded. No current law, market observation or regulatory capital inference is adopted."
+  },
+  "implementation_audit": {
+    "verdict": "passed",
+    "evidence": "Finite quantities use exact Fraction arithmetic with positive normalized masses and bounded signed holdings/losses. Sorting and greedy tail filling agree with the independently checked mathematical target, including ties. Metadata and dimensions are explicit. Normal/backtest sections use separately declared assumptions; underflow is documented as floating rather than impossibility. CLI samefile repair protects both path-equal and hard-link aliases; peer verified final bytes under normal and optimized execution, including isolated quiet API/CLI and protected hard-link aliases."
+  },
+  "findings": [],
+  "necessary_repairs": [],
+  "resolved_author_findings_rechecked": [
+    "Exercise7 final ES13.96527 is consistent with its exact prompt and supplied rounded density.",
+    "The final CLI samefile identity guard was read and is covered by both peer portable interpreter modes."
+  ],
+  "validation": {
+    "status": "passed",
+    "normal_optimized_quiet_summaries_identical": true,
+    "comparisons": 958,
+    "financial_interventions": 20,
+    "invalid_inputs_rejected": 33,
+    "author_payloads_bound": 9,
+    "own_checker_bound": true,
+    "worked_examples_reviewed": 5,
+    "exact_exercises_reviewed": 10,
+    "portable": "Copied only model/input to an isolated temporary directory; explicit/default CLI, strict-JSON quiet nonmutating API, malformed JSON and protected path/hard-link behavior checked under normal and optimized Python. Explicit/default CLI exercised from a different working directory.",
+    "count_definition": "Twenty valid financial interventions: eleven finite-law/sign/atom/dependence cases, five covariance/normal cases and four count/run/underflow cases. Twenty-three invalid API inputs plus ten malformed/invalid CLI cases are33 rejections. Each comparison counts once; manual proof/prompt readings are not numerical test counts.",
+    "underflow": "At500 exceptions with nullp=0.0000000001, the independently reconstructed Decimal event probability remains strictly positive while the candidate approximate float is0, as documented. No impossibility claim is inferred.",
+    "paired_exercise_disclosures": 10,
+    "separate_retention_disclosures": 1
+  },
+  "limitations": [
+    "Finite supplied-law mathematical correctness does not establish empirical probabilities, missing-tail completeness, real cash availability or risk-taking authority.",
+    "The Gaussian covariance law and binomial null are assumptions, not fits inferred from scenario rows or exception positions.",
+    "No exact full-domain enumeration is claimed; meaningful boundary/intervention checks complement the complete proof and code reading.",
+    "Separate peer review does not perform canonical/dependency acceptance or whole-edition visual/mobile/keyboard/print QA."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c04.html",
+      "bytes": 39898,
+      "sha256": "2dfb7898c4e6343286fb92a656ca10a3197570f309968f33ab81b128f14cbe4d"
+    },
+    {
+      "path": "content/projects/v11-c04-inputs.json",
+      "bytes": 1914,
+      "sha256": "4b5cbd9f5913ef94611e729d0fe7ebee96074fa831afcae15807e9ab493a3715"
+    },
+    {
+      "path": "content/projects/v11-c04-analysis.py",
+      "bytes": 11951,
+      "sha256": "ed8e8dea6d268152bd60e9e25c195a60f826eb0f13b7605c9072d785c46ff657"
+    },
+    {
+      "path": "content/projects/v11-c04-output.json",
+      "bytes": 16469,
+      "sha256": "9abcd12b75688784f1063fe3bc6627cdde155e9e80958548eee8e5b5215a818c"
+    },
+    {
+      "path": "content/projects/v11-c04-manifest.json",
+      "bytes": 925,
+      "sha256": "0cba6df0c7a89bbaab4c785b5697ab2cf30122f78a705bb0fd4e010c8e42e65c"
+    },
+    {
+      "path": "content/projects/v11-c04-README.txt",
+      "bytes": 7387,
+      "sha256": "3835313308f8495b5922b056fc5723877cc905f9084dd79c83bced309b5ba0bd"
+    },
+    {
+      "path": "scripts/check_v11_c04.py",
+      "bytes": 19732,
+      "sha256": "6547b4fe15ce390a6822883622e4064caeb90faf5d8d9c973e2b900da02d62ae"
+    },
+    {
+      "path": "content/reviews/v11-c04-author.json",
+      "bytes": 9547,
+      "sha256": "4f543d790ce3fbeb2b902654b1d2efabd419f2acd7ae76aad84537f5e9171216"
+    },
+    {
+      "path": "content/reviews/v11-c04-sources.json",
+      "bytes": 1372,
+      "sha256": "f32b010ad1c636f02441377400b14e5a1dd883b2c92310d952b6ddf3a00117e3"
+    }
+  ],
+  "checker": {
+    "path": "scripts/check_v11_c04_peer.py",
+    "bytes": 22594,
+    "sha256": "bc9221356d53ae8cc4995fdf6541475377c3065e8e31068030e7f80667a0d13c"
+  },
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "acceptance_boundary": "Supports separate peer acceptance only; canonical acceptance, actual prerequisite acceptance and whole-edition checks remain with the coordinator.",
+  "resolved_integration_finding": {
+    "origin": "Coordinator actual shared-reader structural validation",
+    "evidence": "production/v11-opening-reader-structure-repair.json",
+    "finding": "The existing ten separate answer disclosures were not counted by the grouped-solutions reader convention; this was an integration marker gap, not missing or unreviewed answers.",
+    "repair": "Coordinator added IDs v11-c04-e1 through v11-c04-e10 to the exact prompts and matching data-solution-for attributes to the ten existing answer disclosures. The separate delayed-retention answer remains unpaired and is not counted among chapter exercises.",
+    "peer_verification": "Independently parsed all ten prompt IDs and ten disclosure targets, checked ordered one-to-one pairing and matching numbered summaries, unique IDs, and the separately preserved retention answer. Removing exactly the20 added semantic attributes byte-for-byte reproduces the previously reviewed manuscript hash. All seven other author payloads are byte-identical. Restoring the prior manuscript binding and removing the coordinator repair note also exactly reproduces the prior author-record hash under its original UTF-8 serialization.",
+    "previous_manuscript": {
+      "bytes": 39426,
+      "sha256": "0e1fd86bd7a4212e07944c47fc86ab87eecc7a135d3beae314028ae729bda20e"
+    },
+    "previous_author_record": {
+      "bytes": 9055,
+      "sha256": "893877b9a6b1f650e261589a2bf0143abc988fee87eef18114004ea73bd5e6e3"
+    },
+    "scope": "Revalidated only peer-owned files and read-only author evidence; no author/shared/canonical/hosting edits. The shared parser itself remains coordinator-owned.",
+    "status": "resolved; exact markup pairing and normal/-O peer revalidation passed"
+  }
+}

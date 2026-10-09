@@ -1,0 +1,97 @@
+{
+  "chapter": "v11-c03",
+  "date": "2026-10-09",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating author, scoped author and separate specialist peer; no independent human certification",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Complete advanced chapter: 4 original worked examples,8 fully solved exercises, answered teaching/retention, explicit proof/source limits and portable standard-library laboratory.",
+  "author_review": "reviews/v11-c03-author.json",
+  "peer_review": "reviews/v11-c03-peer.json",
+  "detailed_review": "production/v11-opening-root-review-notes.json",
+  "root_numerical_evidence": "production/v11-opening-root-numerical-audit.json",
+  "structural_evidence": "production/v11-opening-structural-review.json",
+  "verified_payload_hashes": 11,
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c03.html",
+      "bytes": 37731,
+      "sha256": "2d3810cb16b4c3aa2f6df49de13b93ccd5d232f8dcca2d1e9720b903bf8fbd81"
+    },
+    {
+      "path": "content/projects/v11-c03-inputs.json",
+      "bytes": 1725,
+      "sha256": "b63cd5b9b39e0b5d5c11fb73cdf28027aff513153d8804ca191b724f64dd7bc4"
+    },
+    {
+      "path": "content/projects/v11-c03-analysis.py",
+      "bytes": 15227,
+      "sha256": "dcb95be9e928e3a212cfac95b35ec3fb6e4e1e5d2c118f469b843b190b470879"
+    },
+    {
+      "path": "content/projects/v11-c03-output.json",
+      "bytes": 11429,
+      "sha256": "dfdd4e18fca93481d0bdb70e7c5bcc14422b8114ec945d8ee44f1e81881ec53b"
+    },
+    {
+      "path": "content/projects/v11-c03-manifest.json",
+      "bytes": 696,
+      "sha256": "04e6950577da7282005a4d1fb24ba15256e7b9fd5927c8a90f96813342c1a72e"
+    },
+    {
+      "path": "content/projects/v11-c03-README.txt",
+      "bytes": 13411,
+      "sha256": "2b5c4fb42d2facd5c598b1a56419aa013c593fd8941ad62a6cc3ba46a78e541f"
+    },
+    {
+      "path": "scripts/check_v11_c03.py",
+      "bytes": 23102,
+      "sha256": "9dc3d67d86513d717b3b61af2c2e6875e1e6b093d5bb4c702af9cef7657c4cd5"
+    },
+    {
+      "path": "content/reviews/v11-c03-author.json",
+      "bytes": 14137,
+      "sha256": "b324194e541c01098f87760b33bcdb38ac375e4a0baf55c30b429ddd0581ff65"
+    },
+    {
+      "path": "content/reviews/v11-c03-sources.json",
+      "bytes": 1744,
+      "sha256": "462056d1cd867deb9e4b020533dac7e0a11ad07033c9228ef2b24198bd5bebdf"
+    },
+    {
+      "path": "scripts/check_v11_c03_peer.py",
+      "bytes": 25948,
+      "sha256": "3a99e9e1b78943d3b9aa660218139d9e38fe9bc7adef781ea8648f4d581ebff8"
+    },
+    {
+      "path": "content/reviews/v11-c03-peer.json",
+      "bytes": 14715,
+      "sha256": "eac9c999ddb5b5b1c6b8eac1430e531cc6900b6faf2b4e4b3c03dfd03726019b"
+    }
+  ],
+  "resolved_findings": [
+    {
+      "status": "resolved before separate peer; combined versus lender surplus clarified without numerical change",
+      "issue": "Monitoring example must distinguish lender gross4 from combined3 surplus after officer effort1;3 is not automatically lender net profit without transfers.",
+      "contract": "production/v11-c03-effort-wording-repair-assignment.json"
+    },
+    {
+      "status": "resolved-during-separate-peer-review",
+      "issue": "Resolved-path-only guard missed hard-link aliases.",
+      "resolution": "samefile guard and twelve protected-output checks added, final manifest/author/peer contract bound.",
+      "evidence": "production/v11-c03-alias-repair.json"
+    }
+  ],
+  "open_content_findings": [],
+  "limitations": [
+    "Synthetic calculations and scoped sources do not establish empirical validity, real enforceability or actual institutional authorization.",
+    "Machine-assisted review is not external human certification.",
+    "Whole-edition browser/mobile/keyboard/print visual QA remains pending under the recorded access limitation."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "v11-c03-morrow-1",
+  "provenance": "Original synthetic Morrow Components underwriting case; no observed borrower, market data or real lending approval.",
+  "business": {
+    "capital_purchase": "130",
+    "depreciation": ["15", "15", "15"],
+    "valuation_hurdle": "0.1",
+    "terminal_operating_value": "80"
+  },
+  "scenarios": [
+    {"id": "base", "ebitda": ["60", "62", "64"], "cash_taxes": ["6", "7", "8"], "maintenance_capex": ["8", "8", "8"], "working_capital_increase": ["6", "5", "4"]},
+    {"id": "downturn", "ebitda": ["50", "54", "58"], "cash_taxes": ["6", "7", "8"], "maintenance_capex": ["8", "8", "8"], "working_capital_increase": ["6", "5", "4"]}
+  ],
+  "proposals": [
+    {"id": "requested", "advance": "120", "sponsor_cash": "20", "rate": "0.1", "principal": ["40", "40", "40"], "evidence": {"sponsor_cash_verified": true, "cash_forecast_verified": true, "priority_verified": true}},
+    {"id": "revised", "advance": "80", "sponsor_cash": "60", "rate": "0.08", "principal": ["20", "30", "30"], "evidence": {"sponsor_cash_verified": false, "cash_forecast_verified": true, "priority_verified": false}}
+  ],
+  "collateral": {
+    "default_year": 2,
+    "recovery_delay_years": 1,
+    "assets": [
+      {"id": "equipment", "gross_value": "90", "eligible_fraction": "1", "realization_fraction": "0.6"},
+      {"id": "receivables", "gross_value": "40", "eligible_fraction": "0.75", "realization_fraction": "0.8"}
+    ],
+    "workout_cost": "8",
+    "prior_claim": "15",
+    "assessment_rate": "0.06",
+    "physical_default_weight": "0.12"
+  },
+  "policy": {
+    "minimum_cash": "10",
+    "minimum_base_dscr": "1.2",
+    "maximum_initial_debt_ebitda": "1.5",
+    "minimum_scenario_margin": "0"
+  }
+}

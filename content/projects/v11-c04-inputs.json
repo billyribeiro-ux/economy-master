@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "provenance": "Original synthetic Merrow Risk Office teaching cases; probabilities and losses are stipulated physical scenarios, not observed market data or regulatory standards.",
+  "units": "CU of loss at the stated common horizon; positive means loss, negative means gain",
+  "cases": [
+    {"id": "atom", "confidence": "0.925", "assets": ["desk"], "holdings": ["1"], "states": [
+      {"id": "ordinary", "probability": "0.9", "losses": ["0"]},
+      {"id": "moderate", "probability": "0.05", "losses": ["10"]},
+      {"id": "severe", "probability": "0.05", "losses": ["100"]}
+    ]},
+    {"id": "independent", "confidence": "0.95", "assets": ["A", "B"], "holdings": ["1", "1"], "states": [
+      {"id": "neither", "probability": "0.9216", "losses": ["0", "0"]},
+      {"id": "A_only", "probability": "0.0384", "losses": ["100", "0"]},
+      {"id": "B_only", "probability": "0.0384", "losses": ["0", "100"]},
+      {"id": "both", "probability": "0.0016", "losses": ["100", "100"]}
+    ]},
+    {"id": "common_mixture", "confidence": "0.95", "assets": ["A", "B"], "holdings": ["1", "1"], "states": [
+      {"id": "neither", "probability": "0.9312", "losses": ["0", "0"]},
+      {"id": "A_only", "probability": "0.0288", "losses": ["100", "0"]},
+      {"id": "B_only", "probability": "0.0288", "losses": ["0", "100"]},
+      {"id": "both", "probability": "0.0112", "losses": ["100", "100"]}
+    ]},
+    {"id": "comonotone", "confidence": "0.95", "assets": ["A", "B"], "holdings": ["1", "1"], "states": [
+      {"id": "neither", "probability": "0.96", "losses": ["0", "0"]},
+      {"id": "both", "probability": "0.04", "losses": ["100", "100"]}
+    ]}
+  ],
+  "horizon": {"days": 10, "daily_mean_loss": "0", "daily_sd_loss": "2", "lag_correlation": "0.3", "confidence": "0.99"},
+  "backtest": {"trials": 250, "exception_probability": "0.01", "exception_positions": [40, 41, 42, 43, 44, 45, 46]}
+}

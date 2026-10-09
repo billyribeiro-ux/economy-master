@@ -1,0 +1,315 @@
+{
+  "schema": "v11-c01-output-1",
+  "screening": {
+    "funding_threshold_probability": "4/5",
+    "pooled_success": "3/4",
+    "pooled_receipt": "95",
+    "pooled_loan_margin": "-5",
+    "branches": [
+      {
+        "signal": "pass",
+        "mass": "14/25",
+        "good_posterior": "6/7",
+        "success_probability": "123/140",
+        "expected_receipt": "755/7",
+        "loan_margin": "55/7",
+        "fund": true
+      },
+      {
+        "signal": "fail",
+        "mass": "11/25",
+        "good_posterior": "3/11",
+        "success_probability": "129/220",
+        "expected_receipt": "865/11",
+        "loan_margin": "-235/11",
+        "fund": false
+      }
+    ],
+    "funded_mass_if_tested": "14/25",
+    "gross_test_policy_value": "22/5",
+    "no_test_policy_value": "0",
+    "gross_information_value": "22/5",
+    "net_test_policy_value": "7/5",
+    "optimal_value": "7/5",
+    "choose_test": true,
+    "maximum_test_cost_against_no_test": "22/5"
+  },
+  "monitoring": {
+    "borrower_prudent_payoff": "18",
+    "borrower_divert_payoff": "20",
+    "unmonitored_action": "divert",
+    "borrower_divert_payoff_after_enforcement": "12",
+    "unmonitored_receipt": "72",
+    "monitored_receipt": "108",
+    "aggregate_audit_gain": "36",
+    "one_claimant_audit_gain": "3",
+    "no_audit_is_nash_given_loan": true,
+    "no_audit_is_strict_given_loan": true,
+    "pooled_initial_funding": "106",
+    "pooled_expected_surplus": "2",
+    "pooled_funding_is_profitable": true,
+    "unmonitored_expected_surplus": "-28",
+    "all_duplicate_expected_surplus": "-52",
+    "largest_delegation_cost_for_nonnegative_surplus": "3",
+    "private_benefit_indifference": "6"
+  },
+  "bank": {
+    "two_bank_ledger": [
+      {
+        "event": "initial",
+        "A": {
+          "reserves": "24",
+          "loans": "126",
+          "assets": "150",
+          "deposits": "132",
+          "equity": "18",
+          "equity_assets": "3/25"
+        },
+        "B": {
+          "reserves": "16",
+          "loans": "64",
+          "assets": "80",
+          "deposits": "72",
+          "equity": "8",
+          "equity_assets": "1/10"
+        },
+        "consolidated": {
+          "reserves": "40",
+          "loans": "190",
+          "assets": "230",
+          "deposits": "204",
+          "equity": "26",
+          "equity_assets": "13/115"
+        }
+      },
+      {
+        "event": "loan_credits_A_deposit",
+        "A": {
+          "reserves": "24",
+          "loans": "162",
+          "assets": "186",
+          "deposits": "168",
+          "equity": "18",
+          "equity_assets": "3/31"
+        },
+        "B": {
+          "reserves": "16",
+          "loans": "64",
+          "assets": "80",
+          "deposits": "72",
+          "equity": "8",
+          "equity_assets": "1/10"
+        },
+        "consolidated": {
+          "reserves": "40",
+          "loans": "226",
+          "assets": "266",
+          "deposits": "240",
+          "equity": "26",
+          "equity_assets": "13/133"
+        }
+      },
+      {
+        "event": "external_settlement_to_B",
+        "A": {
+          "reserves": "0",
+          "loans": "162",
+          "assets": "162",
+          "deposits": "144",
+          "equity": "18",
+          "equity_assets": "1/9"
+        },
+        "B": {
+          "reserves": "40",
+          "loans": "64",
+          "assets": "104",
+          "deposits": "96",
+          "equity": "8",
+          "equity_assets": "1/13"
+        },
+        "consolidated": {
+          "reserves": "40",
+          "loans": "226",
+          "assets": "266",
+          "deposits": "240",
+          "equity": "26",
+          "equity_assets": "13/133"
+        }
+      }
+    ],
+    "immediate_probe_before_income": {
+      "requested": "5",
+      "cash_available": "0",
+      "cash_gap": "5",
+      "executable": false,
+      "book_equity": "18"
+    },
+    "A_later_income_ledger": [
+      {
+        "event": "opening_after_settlement",
+        "reserves": "0",
+        "loans": "162",
+        "assets": "162",
+        "deposits": "144",
+        "equity": "18",
+        "equity_assets": "1/9"
+      },
+      {
+        "event": "external_loan_interest",
+        "reserves": "10",
+        "loans": "162",
+        "assets": "172",
+        "deposits": "144",
+        "equity": "28",
+        "equity_assets": "7/43"
+      },
+      {
+        "event": "external_fee_receipt",
+        "reserves": "12",
+        "loans": "162",
+        "assets": "174",
+        "deposits": "144",
+        "equity": "30",
+        "equity_assets": "5/29"
+      },
+      {
+        "event": "external_interest_payment",
+        "reserves": "21/2",
+        "loans": "162",
+        "assets": "345/2",
+        "deposits": "144",
+        "equity": "57/2",
+        "equity_assets": "19/115"
+      },
+      {
+        "event": "external_operating_payment",
+        "reserves": "7",
+        "loans": "162",
+        "assets": "169",
+        "deposits": "144",
+        "equity": "25",
+        "equity_assets": "25/169"
+      },
+      {
+        "event": "confirmed_loss_without_prior_allowance",
+        "reserves": "7",
+        "loans": "157",
+        "assets": "164",
+        "deposits": "144",
+        "equity": "20",
+        "equity_assets": "5/41"
+      }
+    ],
+    "net_interest_income": "17/2",
+    "net_external_cash_receipts": "7",
+    "direct_loss_without_prior_allowance": "5",
+    "profit": "2",
+    "average_earning_loans": "319/2",
+    "average_assets": "163",
+    "average_equity": "19",
+    "net_interest_margin": "17/319",
+    "return_on_assets": "2/163",
+    "return_on_equity": "2/19",
+    "gross_loan_yield": "20/319",
+    "deposit_funding_rate": "1/96",
+    "closing_book_insolvent": false
+  },
+  "liquidity": {
+    "candidate_no_run": {
+      "withdrawal_fraction": "1/4",
+      "claimant_mass": "25",
+      "served_mass": "25",
+      "served_probability": "1",
+      "date1_cash_paid": "55/2",
+      "long_asset_liquidated": "55/2",
+      "long_asset_held": "145/2",
+      "date2_cash_available": "435/4",
+      "waiter_mass": "75",
+      "cash_per_waiter": "29/20",
+      "expected_cash_per_withdrawer": "11/10",
+      "expected_utility_per_withdrawer": "-5/6"
+    },
+    "full_run": {
+      "withdrawal_fraction": "1",
+      "claimant_mass": "100",
+      "served_mass": "1000/11",
+      "served_probability": "10/11",
+      "date1_cash_paid": "100",
+      "long_asset_liquidated": "100",
+      "long_asset_held": "0",
+      "date2_cash_available": "0",
+      "waiter_mass": "0",
+      "cash_per_waiter": null,
+      "expected_cash_per_withdrawer": "1",
+      "expected_utility_per_withdrawer": "-5/3"
+    },
+    "scenarios": [
+      {
+        "withdrawal_fraction": "1/4",
+        "claimant_mass": "25",
+        "served_mass": "25",
+        "served_probability": "1",
+        "date1_cash_paid": "55/2",
+        "long_asset_liquidated": "55/2",
+        "long_asset_held": "145/2",
+        "date2_cash_available": "435/4",
+        "waiter_mass": "75",
+        "cash_per_waiter": "29/20",
+        "expected_cash_per_withdrawer": "11/10",
+        "expected_utility_per_withdrawer": "-5/6"
+      },
+      {
+        "withdrawal_fraction": "1/2",
+        "claimant_mass": "50",
+        "served_mass": "50",
+        "served_probability": "1",
+        "date1_cash_paid": "55",
+        "long_asset_liquidated": "55",
+        "long_asset_held": "45",
+        "date2_cash_available": "135/2",
+        "waiter_mass": "50",
+        "cash_per_waiter": "27/20",
+        "expected_cash_per_withdrawer": "11/10",
+        "expected_utility_per_withdrawer": "-5/6"
+      },
+      {
+        "withdrawal_fraction": "4/5",
+        "claimant_mass": "80",
+        "served_mass": "80",
+        "served_probability": "1",
+        "date1_cash_paid": "88",
+        "long_asset_liquidated": "88",
+        "long_asset_held": "12",
+        "date2_cash_available": "18",
+        "waiter_mass": "20",
+        "cash_per_waiter": "9/10",
+        "expected_cash_per_withdrawer": "11/10",
+        "expected_utility_per_withdrawer": "-5/6"
+      },
+      {
+        "withdrawal_fraction": "1",
+        "claimant_mass": "100",
+        "served_mass": "1000/11",
+        "served_probability": "10/11",
+        "date1_cash_paid": "100",
+        "long_asset_liquidated": "100",
+        "long_asset_held": "0",
+        "date2_cash_available": "0",
+        "waiter_mass": "0",
+        "cash_per_waiter": null,
+        "expected_cash_per_withdrawer": "1",
+        "expected_utility_per_withdrawer": "-5/3"
+      }
+    ],
+    "withdrawal_capacity_fraction": "10/11",
+    "late_indifference_withdrawal_fraction": "8/11",
+    "candidate_no_run_fully_pays_early": true,
+    "candidate_no_run_incentive_compatible": true,
+    "candidate_no_run_expected_utility": "-515/744",
+    "direct_all_long_expected_utility": "-245/352",
+    "candidate_utility_gain_over_all_long": "125/32736",
+    "full_run_wait_deviation_consumption": "0",
+    "full_run_wait_deviation_utility": "-10",
+    "full_run_withdrawal_is_strict_best_reply": true
+  }
+}
