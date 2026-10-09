@@ -1,0 +1,83 @@
+{
+  "chapter": "v14-c06",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v14-c06.html",
+      "bytes": 38366,
+      "sha256": "8d67263f1feb12f20fc79673e04e677c5e0e1e1b7324be6e5f013d9b6d170758"
+    },
+    {
+      "path": "scripts/check_v14_c06.py",
+      "bytes": 12313,
+      "sha256": "f36fc8bd524fb834c2ffaa575f2384469921480b3d029f359d556d9536cee71f"
+    },
+    {
+      "path": "content/reviews/v14-c06-sources.json",
+      "bytes": 1724,
+      "sha256": "49f95ab4dbf3860dd5fa8635c935449851b0db390898a5fbfee2cf2ca9810741"
+    },
+    {
+      "path": "content/reviews/v14-c06-author.json",
+      "bytes": 4293,
+      "sha256": "cb8b92c5a96c187d75a97528e70ae5978d101ae42bdfcc716cb1d1f7824b7c5a"
+    },
+    {
+      "path": "scripts/check_v14_c06_peer.py",
+      "bytes": 16809,
+      "sha256": "c6f1f29c82ac1be68f5922ef20d642550a21dc1a7547402aec32b15f3042784f"
+    },
+    {
+      "path": "content/reviews/v14-c06-peer.json",
+      "bytes": 8602,
+      "sha256": "969b2d3a92d05f2ba344229a5ffab25eb179e183378700f8f7cbdca541dd7ed1"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v14-c06",
+        "status": "passed",
+        "comparisons": 229,
+        "domain_rejections": 21,
+        "worked_cases": 5,
+        "solved_exercises": 12,
+        "primitive_markers": 4,
+        "result_markers": 43,
+        "runtime_files": 4,
+        "scope": "Exact dated fiscal accounts, global reduced-form tax optimum, conditional deterministic policy classification and finite-horizon debt-menu equilibrium; not a general infinite-horizon default existence or empirical policy result."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v14-c06",
+        "status": "passed",
+        "review": "separate peer",
+        "comparisons": 2141,
+        "domain_rejections": 21,
+        "worked_cases": 5,
+        "solved_exercises": 12,
+        "input_markers": 4,
+        "result_markers": 43,
+        "runtime_files": 6,
+        "scope": "Independent exact accounting and quadratic optimization, dated Fisher cancellation, finite default all-state/menu recursion and contingent-plan comparisons; no author code execution."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "content/reviews/v14-c06-author.json",
+  "peer_validation": "production/v14-c06-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

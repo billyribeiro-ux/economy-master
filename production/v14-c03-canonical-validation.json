@@ -1,0 +1,82 @@
+{
+  "chapter": "v14-c03",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v14-c03.html",
+      "bytes": 50670,
+      "sha256": "cb6f2920123debcbaaf97738bae4a020d9ac37915309db84eb8bebee7a7785e3"
+    },
+    {
+      "path": "scripts/check_v14_c03.py",
+      "bytes": 17113,
+      "sha256": "3e82b52267d2af6e422ff20bee888fce5b79240b79cbc0daa799bd2fae8322f2"
+    },
+    {
+      "path": "content/reviews/v14-c03-sources.json",
+      "bytes": 2970,
+      "sha256": "8c50337dc310ce5c2a1ce2ead4c318af9e2316fbdb74a01163c6213a1c970b2e"
+    },
+    {
+      "path": "content/reviews/v14-c03-author.json",
+      "bytes": 5895,
+      "sha256": "31e0a5ebfdaadb6b10a178fe8209de40754455add52ee8f32a9e11b8a32d921a"
+    },
+    {
+      "path": "scripts/check_v14_c03_peer.py",
+      "bytes": 12461,
+      "sha256": "27ca1a7daaff6f80b40bf0856471b65ba9e47b7f2ef1f4e8a8253a4f948cba49"
+    },
+    {
+      "path": "content/reviews/v14-c03-peer.json",
+      "bytes": 10439,
+      "sha256": "049c96831fde4c9b65c46727a8f068499e5004aa327eb63f1af21b159c84c3e9"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v14-c03",
+        "status": "passed",
+        "comparisons": 328,
+        "domain_rejections": 36,
+        "worked_cases": 5,
+        "solved_exercises": 12,
+        "primitive_markers": 14,
+        "result_markers": 43,
+        "runtime_files": 4,
+        "scope": "Finite household global certificates, joint distributions, exact exchange/production accounts, precautionary and price-selection counterexamples; no continuous-economy or historical replication claim."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v14-c03",
+        "status": "passed",
+        "comparisons": 310,
+        "domain_rejections": 22,
+        "worked_cases": 5,
+        "solved_exercises": 12,
+        "primitive_markers": 14,
+        "result_markers": 43,
+        "runtime_files": 6,
+        "method": "Independent Bellman value iteration, discounted reward sums, derivative bisection, transition propagation and equilibrium accounting; no author execution"
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "production/v14-c03-coordinator-working-review.json",
+  "peer_validation": "production/v14-c03-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

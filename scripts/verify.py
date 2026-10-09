@@ -202,6 +202,20 @@ from check_v14_c01 import check as check_v14_c01
 from check_v14_c01_peer import check as check_v14_c01_peer
 from check_v14_c02 import check as check_v14_c02
 from check_v14_c02_peer import check as check_v14_c02_peer
+from check_v14_c09 import check as check_v14_c09
+from check_v14_c09_peer import check as check_v14_c09_peer
+from check_v14_c08 import check as check_v14_c08
+from check_v14_c08_peer import check as check_v14_c08_peer
+from check_v14_c07 import check as check_v14_c07
+from check_v14_c07_peer import check as check_v14_c07_peer
+from check_v14_c06 import check as check_v14_c06
+from check_v14_c06_peer import check as check_v14_c06_peer
+from check_v14_c05 import check as check_v14_c05
+from check_v14_c05_peer import check as check_v14_c05_peer
+from check_v14_c04 import check as check_v14_c04
+from check_v14_c04_peer import check as check_v14_c04_peer
+from check_v14_c03 import check as check_v14_c03
+from check_v14_c03_peer import check as check_v14_c03_peer
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -419,6 +433,20 @@ def main():
     errors = []
     require = lambda condition,message: errors.append(message) if not condition else None
     require(len(volumes)==18 and len(chapters)==216,'Curriculum scope differs from contract')
+    glossary = json.loads((ROOT/'content/reference/glossary.json').read_text())
+    reference_entries = glossary['entries'] + glossary['notation']
+    require(glossary['status'] in ('draft','review','accepted'), 'Invalid glossary status')
+    require(len({entry['id'] for entry in reference_entries}) == len(reference_entries),
+            'Duplicate glossary/notation anchor')
+    require(len({entry['term'].casefold() for entry in glossary['entries']}) == len(glossary['entries']),
+            'Duplicate glossary term')
+    for entry in reference_entries:
+        require(bool(entry['chapters']) and all(cid in chapters for cid in entry['chapters']),
+                entry['id']+': missing or unknown chapter reference')
+        require(bool(entry.get('definition',entry.get('meaning'))) and bool(entry['qualification']),
+                entry['id']+': missing definition or qualification')
+    if glossary['status'] == 'accepted':
+        require((ROOT/'content/reviews/glossary.json').is_file(), 'Accepted glossary lacks review')
     all_ids = set(volumes)|set(chapters)
     graph = {v['id']:v['prerequisites']+[v['chapters'][-1]['id']] for v in volumes.values()}
     graph.update({c['id']:c['prerequisites'] for c in chapters.values()})
@@ -643,6 +671,13 @@ def main():
     v13_assessment_check = check_v13_assessment()
     v14_opening_check = {'v14-c01': check_v14_c01(), 'v14-c02': check_v14_c02()}
     v14_opening_peer_check = {'v14-c01': check_v14_c01_peer(), 'v14-c02': check_v14_c02_peer()}
+    v14_c09_check = {'author': check_v14_c09(), 'peer': check_v14_c09_peer()}
+    v14_c08_check = {'author': check_v14_c08(), 'peer': check_v14_c08_peer()}
+    v14_c07_check = {'author': check_v14_c07(), 'peer': check_v14_c07_peer()}
+    v14_c06_check = {'author': check_v14_c06(), 'peer': check_v14_c06_peer()}
+    v14_c05_check = {'author': check_v14_c05(), 'peer': check_v14_c05_peer()}
+    v14_c04_check = {'author': check_v14_c04(), 'peer': check_v14_c04_peer()}
+    v14_c03_check = {'author': check_v14_c03(), 'peer': check_v14_c03_peer()}
     v12_opening_check = {'v12-c01': check_v12_c01(), 'v12-c02': check_v12_c02(), 'v12-c03': check_v12_c03()}
     v12_opening_peer_check = {'v12-c01': check_v12_c01_peer(), 'v12-c02': check_v12_c02_peer(), 'v12-c03': check_v12_c03_peer()}
     v12_middle_check = {'v12-c04': check_v12_c04(), 'v12-c05': check_v12_c05()}
@@ -726,6 +761,13 @@ def main():
               'volume_13_assessment_check': v13_assessment_check,
               'volume_14_opening_check': v14_opening_check,
               'volume_14_opening_peer_check': v14_opening_peer_check,
+              'v14-c09_check': v14_c09_check,
+              'v14-c08_check': v14_c08_check,
+              'v14-c07_check': v14_c07_check,
+              'v14-c06_check': v14_c06_check,
+              'v14-c05_check': v14_c05_check,
+              'v14-c04_check': v14_c04_check,
+              'v14-c03_check': v14_c03_check,
               'volume_13_opening_check': v13_opening_check,
               'volume_13_opening_peer_check': v13_opening_peer_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}

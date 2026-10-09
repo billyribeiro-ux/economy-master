@@ -1,0 +1,93 @@
+{
+  "chapter": "v14-c03",
+  "date": "2026-10-09",
+  "status": "Actual scoped primary-source inspection and proof design; no historical reproduction.",
+  "read_prerequisites": [
+    "MASTER_PLAN.md",
+    "book/PRODUCTION_PLAN.md",
+    "book/STATUS.json current work and issues",
+    "canonical v14-c03/c04 specifications",
+    "accepted C01 finite Bellman and continuous Euler sections",
+    "accepted C02 exact economy and ownership/distribution interface previously authored and reviewed"
+  ],
+  "sources": [
+    {
+      "id": "v14-c03-huggett1991",
+      "identity": "Mark Huggett, The Risk-Free Rate in Heterogeneous-Agent, Incomplete-Insurance Economies\u2014Revised, Faculty Working Paper91-0155, University of Illinois,1991. Actual first cover inspected; physical3=printed1. This is the revised working paper, not the1993 journal article.",
+      "retrieval": "Author research page provides working-paper Google Drive link. Downloaded actual24-page scanned PDF using its identified download URL. pdftotext produced form feeds, not body text.",
+      "actual_inspection": "Local rendered physical1 (cover) and physical3\u20136 (printed1\u20134) inspected visually in full. Used introduction\u2019s pure-exchange arrangement and actual budget, Bellman, stationary-equilibrium definitions on printed2\u20134. Physical2 was rendered but not inspected or used. No calibration or table reading claimed.",
+      "artifacts": [
+        {
+          "path": "/private/tmp/v14-c03-huggett.pdf",
+          "bytes": 1559457,
+          "sha256": "dc8bbe43ad7ce24f376127ed25a03be405ed66b6767e1a688a9ce41ace021493"
+        },
+        {
+          "path": "/private/tmp/v14-c03-huggett-01.png",
+          "bytes": 1428977,
+          "sha256": "bb8dd3e1ffecc50e741ef8e4443397a6199c7feaa37ba92db4702f89caa1dba7"
+        },
+        {
+          "path": "/private/tmp/v14-c03-huggett-03.png",
+          "bytes": 592705,
+          "sha256": "9cb76ba67932f79cdd1aafe0a36ba1fc0e4417dfa403d1ff0c9980a4291cf176"
+        },
+        {
+          "path": "/private/tmp/v14-c03-huggett-04.png",
+          "bytes": 519125,
+          "sha256": "28125b404f2a73260af5e4ab0ead4dcfb738b678b548c2ea2f6be14bf9f0c792"
+        },
+        {
+          "path": "/private/tmp/v14-c03-huggett-05.png",
+          "bytes": 493382,
+          "sha256": "599b0bb49f28463c9f6ada00beef49436111a628407e906de857c55eebc28638"
+        },
+        {
+          "path": "/private/tmp/v14-c03-huggett-06.png",
+          "bytes": 430315,
+          "sha256": "014620ae07648fedbf0c1a478f6a019d8a5d12a67ac48b51ccd5f6d650356f58"
+        }
+      ]
+    },
+    {
+      "id": "v14-c03-huggett-erratum",
+      "identity": "Mark Huggett author-maintained research page,1993 paper/working-paper entries.",
+      "url": "https://sites.google.com/georgetown.edu/mark-huggett/research",
+      "actual_inspection": "Actual web body lines120\u2013128 inspected, including warning that published tables/figures correspond to another model and link to corrected working-paper/thesis version. No current numerical finding imported.",
+      "retained_artifact": "No local HTML body retained; actual tool response provides scoped evidence."
+    },
+    {
+      "id": "v14-c03-aiyagari1994",
+      "identity": "S. Rao Aiyagari, Uninsured Idiosyncratic Risk and Aggregate Saving, Quarterly Journal of Economics109(3),August1994,pp659\u2013684. Actual mirrored journal scan includes JSTOR cover; physical8=printed665.",
+      "retrieval": "Official Fed working-paper route returned403. Downloaded mirrored original1994 journal article, a different explicitly identified version from1993 WP502.",
+      "actual_inspection": "Extracted printed664\u2013667 read, covering income-fluctuation problem, production/asset closure, household budget and borrowing limits, policy/transition discussion. Nearby printed662\u2013663 were visible during retrieval but their empirical claims are not used. Local rendered physical8/printed665 inspected in full to verify budget/timing and identity.",
+      "artifacts": [
+        {
+          "path": "/private/tmp/v14-c03-aiyagari.pdf",
+          "bytes": 548237,
+          "sha256": "01706089b5b6a87ece0a34ca40c65d11544a277ad196d50fac69aff61a5e96fa"
+        },
+        {
+          "path": "/private/tmp/v14-c03-aiyagari.txt",
+          "bytes": 79378,
+          "sha256": "314dc99196b71a99233b98cdb52598e358cdbc80cc0ad56e35005a04025247e3"
+        },
+        {
+          "path": "/private/tmp/v14-c03-aiyagari-08.png",
+          "bytes": 267221,
+          "sha256": "096ad0a6712f0fb788af98450a785eec6c69bc3000428fb7001ede41eb163244"
+        }
+      ]
+    }
+  ],
+  "proof_design": [
+    "Continuous Euler/KKT and stationary integration are conditional on finite positive expected marginal utility and no upper cap; no general continuous-household existence theorem claimed.",
+    "Finite asset/income Bellman contraction and all-history verification are proved with genuinely bounded rewards. Every action checked in original exact4-state Huggett and production economies.",
+    "Stationary existence by finite-simplex Cesaro subsequence. Explicit m-step minorization proves uniqueness/convergence and residual bounds; flip and wealth-class examples separate claims.",
+    "Two-date convex-marginal-utility comparative static has fixed prices/common feasible interval; no universal aggregate-precautionary theorem imported.",
+    "Exact finite exchange and production equilibria have Q\u00b2 uniform and all mass, ownership, goods and asset accounts. Production primitives chosen to generate verified prices.",
+    "Price discontinuity counterexamples distinguish no common deterministic rule in restricted2-date grid from failed selection in an infinite-horizon economy with an alternate equilibrium.",
+    "Same-domain contraction discretization bound and stationary-law perturbation bound have explicit premises; no mesh diagnostic represented as proof of a uniform bound."
+  ],
+  "limits": "Original proofs and problems; no copied exam, source calibration or assertion that historical article tables were reproduced. PDF skill reused for read-only rendering; no authored PDF artifact."
+}

@@ -1,0 +1,59 @@
+{
+  "chapter": "v14-c03",
+  "date": "2026-10-09",
+  "author": "v14_c02",
+  "canonical_spec": {
+    "id": "v14-c03",
+    "number": 3,
+    "title": "Incomplete markets and heterogeneous agents",
+    "outcome": "Analyze distributional state variables and precautionary decisions in incomplete markets.",
+    "coverage": [
+      "Aiyagari",
+      "Huggett",
+      "borrowing constraints",
+      "distributions",
+      "aggregation",
+      "numerical methods"
+    ],
+    "prerequisites": [
+      "v14-c02"
+    ],
+    "level": "Graduate",
+    "status": "planned",
+    "manuscript": "chapters/v14-c03.html",
+    "sources": [
+      "mit-economics-curriculum",
+      "wharton-finance-courses",
+      "quantecon-python"
+    ],
+    "required_worked_examples": 3,
+    "required_exercises": 10,
+    "review": {
+      "arithmetic": false,
+      "reasoning": false,
+      "solutions": false,
+      "sources": false,
+      "instruction": false,
+      "structure": false
+    }
+  },
+  "owned_paths": [
+    "production/v14-c03-working.html",
+    "production/check_v14_c03_working.py",
+    "production/v14-c03-sources-working.json",
+    "production/v14-c03-author-review-working.json",
+    "production/v14-c03-source-preparation.json"
+  ],
+  "task": "Deliver complete original graduate chapter, not outline. Read MASTER_PLAN/PRODUCTION_PLAN and relevant accepted prerequisite sections. Adjacent drafts authorized; promotion follows dependencies. No separate blueprint approval wait.",
+  "specific_scope": "Derive constrained household saving with uninsured Markov income and explicit timing/budgets. Distinguish continuum Aiyagari production equilibrium from Huggett pure-exchange bond clearing. Prove finite-state/grid Bellman and stationary distribution claims with irreducibility/aperiodicity or alternatives clearly stated; distinguish finite approximation from continuous economy. Include precautionary saving mechanism, borrowing-limit Euler/KKT, distribution transition and aggregation, equilibrium price search including discontinuity/nonexistence on deterministic finite grids; no invented existence theorem. At least one fully solved distribution/equilibrium example and numerical accuracy/refinement discussion. Explicit mass, goods and asset clearing. Reuse accepted C01/C02 tools.",
+  "requirements": [
+    "At least3 substantial worked cases and10 original exercises with full solutions or explicit critique rubric; derivations/proofs taught before required, answered teach-back and retention. Appropriate depth without padding.",
+    "Keep original chapter markup: class worked, prefixed IDs, ol.exercises, paired data-solution-for inside details.solutions. Flat links; planned successors link curriculum.html#ID.",
+    "Reuse verified stable sources where sufficient; actually inspect necessary new primary body portions, record precise provenance and limits. Original prose/problems. Any PDF skill instructions apply to PDF inspection.",
+    "Quiet stdlib checker check(root=None) with JSON-safe summary/silent CLI. Exactly four runtime files: manuscript/checker/sources/author; no external/network or mutable fixtures. Parse displayed inputs/results and all solution pairing, primitive-derived calculations with meaningful boundary guards surviving -O.",
+    "Compact source/author record: bind three nonself payloads, audit all exact exercises/proofs, record actual source scopes/open issues. Source schema preferably sources list{id,title,url,use,checked,verification,limits}.",
+    "Run actual normal quiet API and optimized isolated exact-four quiet API and silent CLI, verify byte/membership unchanged; report summaries/hashes once. No repeated redundant gates or sprawling review artifacts.",
+    "Only owned files and uniquely prefixed /private/tmp source artifacts. No canonical/catalogue/STATUS/shared script edits, hosting, subagents or other authors files. Coordinator handles root review and promotion."
+  ],
+  "interface": "C01/C02 accepted. C03 covers incomplete-market distributions; C04 search values/matching; C05 NK nominal rigidities. Teach any additionally needed tool within your chapter. Send concise interface or consequential finding early."
+}

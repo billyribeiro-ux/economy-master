@@ -1,0 +1,133 @@
+{
+  "chapter": "v14-c03",
+  "date": "2026-10-09",
+  "reviewer": "v14_c01",
+  "status": "Independent content, proof, source-scope and numerical review passed; final actual portable gates recorded separately.",
+  "payload_bindings": [
+    {
+      "path": "production/v14-c03-working.html",
+      "bytes": 50670,
+      "sha256": "cb6f2920123debcbaaf97738bae4a020d9ac37915309db84eb8bebee7a7785e3"
+    },
+    {
+      "path": "production/check_v14_c03_working.py",
+      "bytes": 17139,
+      "sha256": "821ef11a69db7c1a11730d36326a910eb0b05cdebb627459862ea93fad2151c3"
+    },
+    {
+      "path": "production/v14-c03-sources-working.json",
+      "bytes": 2970,
+      "sha256": "8c50337dc310ce5c2a1ce2ead4c318af9e2316fbdb74a01163c6213a1c970b2e"
+    },
+    {
+      "path": "production/v14-c03-author-review-working.json",
+      "bytes": 5594,
+      "sha256": "c312d41e5ec13122d0209df57f341d65f5385bb45057d2a58bb61c72804d6e01"
+    },
+    {
+      "path": "production/check_v14_c03_peer_working.py",
+      "bytes": 12508,
+      "sha256": "3eeafb13763753f644906d0c073c3e479164e25ea515cadbf63c9dd5ab18d70c"
+    }
+  ],
+  "full_read_scope": [
+    "Complete manuscript sections 1\u20138, five worked cases, all twelve exact prompts and solutions, teach-back and retention answers",
+    "Entire four-file author runtime code/source/review records and source preparation; author code read but never imported or executed"
+  ],
+  "proof_review": {
+    "household_timing": "Read full household section. Saving-unit a and payoff-unit b linked only at constant q. Worst-path discounted budget requires R>1 and admissible permanent low income; equality permits zero consumption. Continuous Euler perturbation and stationary marginal-utility integration retain integrability/no-upper-cap assumptions and are not asserted on the grid.",
+    "precautionary_comparison": "For common feasible interval and positive consumption, strict concavity gives decreasing derivative; convex marginal utility shifts it upward under convex order. Endpoints handled by signs, strictness conditional. Cases independently solved by bisection rather than author radicals.",
+    "finite_verification": "Finite feasible positive consumptions imply bounded reward; max contraction, Cauchy iteration, fixed-point uniqueness, and telescoped bounded terminal value establish all-history/randomized optimality. Residual and fixed-policy inverse arguments valid. Peer uses value iteration and discounted reward sum, not author linear-solve/policy enumeration.",
+    "joint_distribution": "Cesaro compactness proves existence only. Minorization decomposition, signed-row norm contraction, uniqueness of m-step law, commuting one-step invariance and remainder nonexpansion prove convergence, including epsilon=1. Residual certificate and bounded-statistic half-span bound valid. Positive income transition need not mix wealth classes.",
+    "exchange_and_production": "Every action compared and full joint distribution propagated. Exchange bonds net to zero. In production, factors come from stated CRS technology and wealth owns capital; zero profits prevent double-counted dividends. Exact finite capital/goods/labor closure does not establish continuous-asset existence.",
+    "aggregation": "Constrained two-date policy derives from concavity and lower-bound sign. Equal mean but different distribution changes next mean. Affine aggregation formula is exact without independence; nonlinear policy lacks that closure.",
+    "price_and_numerics": "Finite two-date common deterministic rule has no clearing price; explicit indifferent heterogeneous choices clear. Separate infinite-horizon linear-utility example has a valid identity-policy equilibrium although a selected tie rule has no root. Operator error requires common domain; transition perturbation uses telescoping and minorization. Mesh comparison and sign change are not existence/error proofs."
+  },
+  "exact_prompt_review": {
+    "v14-c03-e1": "Changed cash 5: bisection yields feasible saving/three consumptions; certain saving 1.5, strict derivative and boundary proof checked.",
+    "v14-c03-e2": "Income .5 and R1.1 give -5 natural saving assets, imposed -2 tighter; b=-5.5, zero consumption at worst boundary, and R<=1 limitation correctly answered.",
+    "v14-c03-e3": "Stationary integration includes finite positive marginal utility and integrable multiplier, strictness condition and distinct domain failures; numerical multiplier .4.",
+    "v14-c03-e4": "Beta 2/3 exchange problem re-solved via value iteration, all action advantages and values match, same joint law/zero assets/goods; discrete scope preserved.",
+    "v14-c03-e5": "Two initial transitions and both dated budgets checked, including inherited and next assets; initial net debt is explicitly not a valid closed zero-supply equilibrium.",
+    "v14-c03-e6": "All wealth-class invariant mixtures verified at endpoints/interior; positive income matrix does not connect classes. Flip has unique stationary law but oscillates.",
+    "v14-c03-e7": "Beta .75 production re-solved: tiny positive first gap retains policy; exact patience threshold reviewed. Beta .7 independently changes optimal actions; old aggregate accounts cannot repair incentives.",
+    "v14-c03-e8": "Both transitions, L1 .6, coarse 1.2 and sharp .6 bounds and zero mean assets verified; joint dependence cannot be certified by mean alone.",
+    "v14-c03-e9": "Third population mean 2, saving .25, consumption 2.75 re-optimized. A/B comparisons and affine aggregation identity reviewed with no independence premise.",
+    "v14-c03-e10": "Continuous feasible bond demand derived by FOC and strict concavity, q=.5 and c=(4,4); boundary utility and difference from q-star lottery explained.",
+    "v14-c03-e11": "Iteration .002, total .032, distribution .002, mean-asset .01 computed with distinct conditional bounds; sign change lacks continuity.",
+    "v14-c03-e12": "All five two-point domains answered: joint-chain convergence, held-out distributional moments, grid target errors, equilibrium selection/clearing, and funded distributional transition welfare. Benchmark supplies concrete tests rather than an unsupported verdict."
+  },
+  "source_review": {
+    "preparation": {
+      "path": "production/v14-c03-source-preparation.json",
+      "bytes": 6140,
+      "sha256": "c84b803c6d6875529372d05661e60bcf1c1d51f5bf43692d1c1b5c3648fef55c"
+    },
+    "actual_peer_inspection": "Huggett original rendered printed 2\u20134 inspected in full; Aiyagari extracted printed 664\u2013667 read. Actual current author research page lines120\u2013128 inspected via web, confirming published-table/figure erratum and corrected working-paper link. Author cover/introduction and Aiyagari image-reading claims remain attributed to author, not falsely duplicated.",
+    "artifacts": [
+      {
+        "path": "/private/tmp/v14-c03-huggett.pdf",
+        "bytes": 1559457,
+        "sha256": "dc8bbe43ad7ce24f376127ed25a03be405ed66b6767e1a688a9ce41ace021493",
+        "observed": "present; exact bytes and hash independently checked"
+      },
+      {
+        "path": "/private/tmp/v14-c03-huggett-01.png",
+        "bytes": 1428977,
+        "sha256": "bb8dd3e1ffecc50e741ef8e4443397a6199c7feaa37ba92db4702f89caa1dba7",
+        "observed": "present; exact bytes and hash independently checked"
+      },
+      {
+        "path": "/private/tmp/v14-c03-huggett-03.png",
+        "bytes": 592705,
+        "sha256": "9cb76ba67932f79cdd1aafe0a36ba1fc0e4417dfa403d1ff0c9980a4291cf176",
+        "observed": "present; exact bytes and hash independently checked"
+      },
+      {
+        "path": "/private/tmp/v14-c03-huggett-04.png",
+        "bytes": 519125,
+        "sha256": "28125b404f2a73260af5e4ab0ead4dcfb738b678b548c2ea2f6be14bf9f0c792",
+        "observed": "present; exact bytes and hash independently checked"
+      },
+      {
+        "path": "/private/tmp/v14-c03-huggett-05.png",
+        "bytes": 493382,
+        "sha256": "599b0bb49f28463c9f6ada00beef49436111a628407e906de857c55eebc28638",
+        "observed": "present; exact bytes and hash independently checked"
+      },
+      {
+        "path": "/private/tmp/v14-c03-huggett-06.png",
+        "bytes": 430315,
+        "sha256": "014620ae07648fedbf0c1a478f6a019d8a5d12a67ac48b51ccd5f6d650356f58",
+        "observed": "present; exact bytes and hash independently checked"
+      },
+      {
+        "path": "/private/tmp/v14-c03-aiyagari.pdf",
+        "bytes": 548237,
+        "sha256": "01706089b5b6a87ece0a34ca40c65d11544a277ad196d50fac69aff61a5e96fa",
+        "observed": "present; exact bytes and hash independently checked"
+      },
+      {
+        "path": "/private/tmp/v14-c03-aiyagari.txt",
+        "bytes": 79378,
+        "sha256": "314dc99196b71a99233b98cdb52598e358cdbc80cc0ad56e35005a04025247e3",
+        "observed": "present; exact bytes and hash independently checked"
+      },
+      {
+        "path": "/private/tmp/v14-c03-aiyagari-08.png",
+        "bytes": 267221,
+        "sha256": "096ad0a6712f0fb788af98450a785eec6c69bc3000428fb7001ede41eb163244",
+        "observed": "present; exact bytes and hash independently checked"
+      }
+    ],
+    "scope": "Sources motivate model architecture and version choice only. Original finite examples/proofs independently verified; no source calibration or continuous-equilibrium theorem claimed."
+  },
+  "instruction_review": "Continuous and finite domains distinguished before exercises; distribution tools fully proved; five complete original examples prepare all twelve problems; solutions, teach-back and retention key present. Planned C04 link is curriculum anchor.",
+  "findings": [],
+  "unresolved_findings": [],
+  "independence": "No author helper imported or executed. Independent value iteration, finite discounted-reward sums, bisection and transition accounting are the numerical methods. Programmatic witnesses support rather than replace full proof review.",
+  "limits": [
+    "Not human expert certification, historical calibration replication, continuous-equilibrium existence proof or rendered reader UI verification.",
+    "Peer validation JSON outside exact six runtime files records actually executed gates."
+  ]
+}

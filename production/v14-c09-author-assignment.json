@@ -1,0 +1,22 @@
+{
+  "chapter": "v14-c09",
+  "author": "root",
+  "date": "2026-10-09",
+  "status": "Source inspection and original proof design; no manuscript yet",
+  "owned_paths": [
+    "production/v14-c09-working.html",
+    "production/check_v14_c09_working.py",
+    "production/v14-c09-sources-working.json",
+    "production/v14-c09-author-review-working.json",
+    "production/v14-c09-source-preparation.json"
+  ],
+  "scope": "Intermediary capital, liquidity, runs, leverage, risk-bearing and price feedback. Five original cases/twelve full solutions.",
+  "design": {
+    "run": "3dates, unitmass privateearlyfraction lambda=.25 exactly; storage1, longR=1.44 liquidates1; u(c)=-1/(c+.1) finiteu0. Planner resource lambda*c1+(1-lambda)c2/R=1, strictconcavity optimum c2+.1=sqrt(R)(c1+.1), c1=95/84,c2=241/175,x=lambda*c1=95/336,long241/336. c2>c1>1. Normal patient waits; allwithdraw randomqueue receives c1 withprob1/c1=84/95 or0, strictlybetterthanwaiting0 becauseu0finite. Do not use unshiftedCRRA2 where expected runutility is-inf. Crosssectionfraction andrandomqueue explicitly primitives, no iidcontinuumLLN.",
+    "suspension": "Cap early paidmass atlambda and preserve long; w<=lambda served and remainingclaimants share R(1-x)+x-c1*w over1-w. This equals[total-c1*w]/(1-w)>c1 if total>c1, so patient strictlypreferswaiting under any withdrawals. Feasible fixedlambda policy, fails insurance if actualearlyfraction uncertain; do not generalize.",
+    "fire_sale": "Atomistic identical banks aggregateK=1,D=.805, leveragecapL5. Sellz atp, repaypz debt; remainingassets p(K-z), debtD-pz, equitypK-D. Mincompliantsales z=max(0,LD/p-(L-1)K), solvencypK>D,0<=z<=K,remainingdebtnonnegative. Outsidequasilinearutilityp0*z-alpha*z\u00b2/2+cash yieldsinversep=p0-alpha*z, p0=1,alpha=.2 andsufficientcash. Interiorfixedpoint(z+4)(1-.2z)=4.025 =>roots(1\u00b1sqrt(.5))/2=.1464466,.8535534; bothsolventandfeasible. Pricelevels .9707107,.8292893. Iterationmapderivative L D alpha/p\u00b2; lowrootstable highrootunstable forspecifiedmechanicalmap only, not universal equilibriumselection. D=.82 yieldsnegative discriminant/nofeasiblecomplyingprice; resolutionmodelneeded.",
+    "risk_bearing": "Exact normal-CARA signed-terminal-financial-wealth economy: Y~N(mu,sigma\u00b2), dealerj with a_j>0 maximizes E[-exp(-a_j(W_j+(Y-p)x_j))], 0<=x_j<=C_j/p, p>0. Equivalent strictconcave objective(mu-p)x-.5a_j*sigma\u00b2*x\u00b2; demand min(max((mu-p)/(a_j*sigma\u00b2),0),C_j/p). C_j>0; net risky supplyX>0. For0<X<sum mu/(a_j*sigma\u00b2), aggregate demand continuousstrictlydecreasing on(0,mu), limitat0 sum mu/(a_j*sigma\u00b2), atmu0; uniquepositive pricebyIVT. Capitalsupplyrestriction is mandate/cashbudget, not endogenous limitedliability; normalY permitsnegativefinancialwealth andutilitydefinedonR, do not callpositiveconsumptionGE. Case mu1.2,var.04,a1=a2=2,X2,C1=1.5,C2=3 ->p1.12,x1=x2=1. AfterC1=.54,C2=3 ->p1.08,x1=.5,x2=1.5; allKKTcapconditions andsellertransferclear. Expectedexcessgrossreturns1/14 then1/9 (safe1). Show reduced dealer capitalcapacity changespricewithunchangedpayofflaw; do not changeCARAcoefficientwithwealthsilently.",
+    "sources": "Scopedactualread recorded; no full-source replication.",
+    "gates": "Fullproof/12prompt/source audits, independent actualnumerics, threeportableauthorgates, separatepeer, dependencyorderacceptance."
+  }
+}

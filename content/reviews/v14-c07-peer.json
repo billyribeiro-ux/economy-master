@@ -1,0 +1,99 @@
+{
+  "chapter": "v14-c07",
+  "date": "2026-10-09",
+  "reviewer": "v14_c02",
+  "status": "Separate full-content review complete; recommends acceptance subject to root integration. Actual runtime gates are recorded in peer-validation after execution.",
+  "payload_bindings": [
+    {
+      "path": "content/chapters/v14-c07.html",
+      "bytes": 41419,
+      "sha256": "4320bf47ae3b8decd88539feaecca02682ca9ac783f6643881583e2eee10a6c3"
+    },
+    {
+      "path": "scripts/check_v14_c07.py",
+      "bytes": 11445,
+      "sha256": "113d511e9bad781946785a1295f711d5096ac4163ffafa3f57a969d3dfb18767"
+    },
+    {
+      "path": "content/reviews/v14-c07-sources.json",
+      "bytes": 2179,
+      "sha256": "c5106f95491fa1b94979653787984e30380dde7d756da242f045b6eefdb61a1c"
+    },
+    {
+      "path": "content/reviews/v14-c07-author.json",
+      "bytes": 4138,
+      "sha256": "3c31e019be758ccebe4b14e90e292e0368bc4c4d5d448c0f0db27763099bc7fb"
+    },
+    {
+      "path": "scripts/check_v14_c07_peer.py",
+      "bytes": 18346,
+      "sha256": "02d71e22da8d8a9be6946c1448443ac9c6e134f19043ef2e553f215bd20c9f95"
+    }
+  ],
+  "complete_reading": "Entire final manuscript, five worked cases, all twelve exact prompts/answers, teach-back/retention and full author/source records read. Final HJ boundary repair read in both exposition and E3. Author checker was neither imported nor executed; peer numerical methods are independently constructed.",
+  "proof_audit": {
+    "finite_household": "Direct positive-consumption portfolio derivatives produce correctly weighted SDF/state prices. Concavity tangent cancels budgets and proves finite global support; lower/upper directional inequalities have correct orientation. Zero-net-supply endowment construction and incomplete payoff-span identification limits explicit.",
+    "covariance_HJ": "Covariance premium and Cauchy bound correct under finite moments and positive return dispersion. Peer found missing constant-SDF degeneracy; repaired exposition/E3 now separate it from nonzero-SDF proportionality.",
+    "lognormal": "Normal exponential-moment formulas jointly determine CV and safe rate. Minimum-gamma synthetic bound calibration is explicitly not a nonexistence theorem for larger gamma; no historical target inferred.",
+    "tree": "Row-sum norm is sufficient, series and inverse consistent, residual bound derived. Terminal tail retained, bubble example not called household equilibrium; invertibility and negative algebraic solution properly separated from admissible fundamental value.",
+    "habit": "External reference fixed under individual perturbation, positive-surplus domain explicit. Internal habit differentiates current utility and future habit cost; positive current net marginal utility required for conventional positive SDF.",
+    "recursive": "Power-mean Hessian formula checked term by term, including negative exponents. Increasing concave composition on positive finite consumption tree gives global concavity. Chain derivatives and terminal normalization checked; CRRA cancellation handles negative-rho ordinal sign. Sequential marginal ratios multiply into date0 gradient prices and cancel finite complete-market budgets. No infinite-horizon theorem claimed.",
+    "research": "Persistent-growth sums are distinguished from prices; consumption-wealth return distinguished from market equity. Fitted moments, measurement, weak identification, held-out tests and uncertainty are separated."
+  },
+  "exact_prompt_solution_audit": {
+    "v14-c07-e1": "Global tangent support, lower-bound sign and payoff-rank nullspace explanation.",
+    "v14-c07-e2": "Both Arrow prices, additive safe payoff price and reciprocal return.",
+    "v14-c07-e3": "Covariance/Cauchy proof, two-state equality, repaired constant-SDF boundary and undefined constant-return Sharpe.",
+    "v14-c07-e4": "Normal MGF, zero-mean comparative static and requested CV/gamma/rate.",
+    "v14-c07-e5": "Residual bound, log-utility ratio, divergent series and negative algebraic fixed point.",
+    "v14-c07-e6": "Explicit nonnegative bubble and exact retained terminal value, no unproved equilibrium claim.",
+    "v14-c07-e7": "External derivative, two changed surplus values/SDFs/rate and strict boundary.",
+    "v14-c07-e8": "Internal-log derivative and external comparison use correct differing derivative paths.",
+    "v14-c07-e9": "All chain factors, last-step terminal-scale equality and required correction under U_T=c_T.",
+    "v14-c07-e10": "Hessian weighted-Cauchy proof, increasing-concave composition and finite positive complete-market hypotheses.",
+    "v14-c07-e11": "State-label swap preserves CE/safe rate, changes named-state Arrow price; geometric sums are not prices.",
+    "v14-c07-e12": "Implementable reserved-sample critique with identification/measurement/competing mechanism and refutation criteria."
+  },
+  "independent_numerics": "CRRA/price/covariance calculations from primitives; exact Fraction two-state tree solve and perturbation bounds; second-order forward differentiation through recursive utility instead of importing author SDF code; independent chain-expression, finite-difference, terminal-scale, concavity and global-support comparisons. Includes constant-SDF/nonconstant-return boundary and all exercise numerical values.",
+  "source_review": [
+    {
+      "id": "v14-c07-quantecon-markov",
+      "actual_peer_scope": "Actual HTML primary lecture sections125.2,125.3.3.1 and125.4.1 read, web lines93–406. Correct SDF, covariance and Markov tree equations support narrow attribution. No source code or empirical result reused."
+    },
+    {
+      "id": "v14-c07-bansal-yaron2004",
+      "actual_peer_scope": "Retained original Journal of Finance2004 PDF identity verified; independently extracted printed1481–1485 body and viewed physical5–6/printed1484–1485 images in full. Actual equations distinguish consumption wealth from equity and explicitly use approximate analytic/log-linear valuation. Narrow manuscript attribution supported; no full-paper review or empirical replication claimed."
+    },
+    {
+      "id": "v14-c07-campbell-cochrane1995",
+      "actual_peer_scope": "Direct NBER open returned internal error, then primary-domain search returned actual full landing abstract and January1995 WP4995 identity, including slow external habit and cyclical risk aversion. This corroborates only the stated abstract-level attribution; no paper-body inspection claimed."
+    }
+  ],
+  "resolved_findings": [
+    {
+      "finding": "Original HJ equality characterization omitted constant-SDF case despite permitting zero SDF variance.",
+      "repair": "Root qualified proportionality by sigma(m)>0 and explicitly treated constant m with nonconstant correctly priced return in exposition and E3. Peer independently verifies zero premium/zero bound and positive return variance."
+    }
+  ],
+  "unresolved_findings": [],
+  "limits": [
+    "Machine-assisted peer review is not human academic certification.",
+    "Finite numerical witnesses supplement universal printed proofs; no historic calibration or infinite-horizon recursive-utility theorem verified.",
+    "Root integration and rendered reader QA are separate."
+  ],
+  "expected_summary": {
+    "comparisons": 141,
+    "domain_rejections": 29,
+    "worked_cases": 5,
+    "solved_exercises": 12,
+    "input_markers": 2,
+    "result_markers": 32,
+    "runtime_files": 6
+  },
+  "canonical_promotion": {
+    "coordinator": "root",
+    "date": "2026-10-09",
+    "origin": "production/v14-c07-peer-review-working.json",
+    "changes": "Runtime path remapping and refreshed nonself hashes only. Author/peer judgments reused from unchanged manuscript. Root executes canonical gates separately."
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "chapter": "v14-c05",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v14-c05.html",
+      "bytes": 48573,
+      "sha256": "6c91da1f911a15d5b08628c55e6b5da1b2f13a00ceb9d51bbbf4487137d1fd6e"
+    },
+    {
+      "path": "scripts/check_v14_c05.py",
+      "bytes": 20153,
+      "sha256": "239928103190244c63d5bbb29bc0bd3299d5d956f4a4adf5feb5dcacf9d90380"
+    },
+    {
+      "path": "content/reviews/v14-c05-sources.json",
+      "bytes": 1753,
+      "sha256": "64ea98c8f013353a12fa3f78c119c45e51457aea212b26aaf2816d04185ae746"
+    },
+    {
+      "path": "content/reviews/v14-c05-author.json",
+      "bytes": 8656,
+      "sha256": "0d9aa9e6defc53250ea5be62ebcc437decd5861a1b1c236d1c21dc74e15e3f5a"
+    },
+    {
+      "path": "scripts/check_v14_c05_peer.py",
+      "bytes": 15001,
+      "sha256": "b0dcd3134353c6486ad309fac16cdbd2ae2c111b9859080430818d4ca2d80380"
+    },
+    {
+      "path": "content/reviews/v14-c05-peer.json",
+      "bytes": 8177,
+      "sha256": "e354cee16eb006653e16757de7cbd2d3cd89ad47932f7fca096cdc52abe1e458"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v14-c05",
+        "status": "passed",
+        "comparisons": 227,
+        "domain_rejections": 26,
+        "worked_cases": 5,
+        "solved_exercises": 12,
+        "primitive_markers": 12,
+        "result_markers": 36,
+        "runtime_files": 4,
+        "scope": "Exact funded accounts, reset sums/global derivative signs, characteristic roots and bounded-linear certificates, shock responses and monotone finite-floor regimes; universal proof/source judgments recorded separately."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v14-c05",
+        "component": "peer",
+        "status": "passed",
+        "comparisons": 128,
+        "domain_rejections": 18,
+        "worked_cases": 5,
+        "solved_exercises": 12,
+        "primitive_markers": 12,
+        "result_markers": 36,
+        "runtime_files": 6,
+        "author_code_executed": false,
+        "scope": "Independent direct coefficient/eigenbasis rational algebra and 50-digit Decimal floor branches; universal and source-scope judgments separately recorded."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "production/v14-c05-coordinator-working-review.json",
+  "peer_validation": "production/v14-c05-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

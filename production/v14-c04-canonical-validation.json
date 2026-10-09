@@ -1,0 +1,84 @@
+{
+  "chapter": "v14-c04",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v14-c04.html",
+      "bytes": 45499,
+      "sha256": "3203fde01e18f8b403645677bc5c5e58d6a1e59ae0a1f4cc5a7145b09500a605"
+    },
+    {
+      "path": "scripts/check_v14_c04.py",
+      "bytes": 15638,
+      "sha256": "53a8743c76f0a7abcccb6043e169b964cdf69749950a7ace55ca1023d6f70ef7"
+    },
+    {
+      "path": "content/reviews/v14-c04-sources.json",
+      "bytes": 2474,
+      "sha256": "2edb22275fc398c669617dc670416ad178bfb426aede6765155b6625a235585f"
+    },
+    {
+      "path": "content/reviews/v14-c04-author.json",
+      "bytes": 10718,
+      "sha256": "9e3c703e2aabb448af7b54c79177d41132fba6d651d1d6004e91339a1262d33f"
+    },
+    {
+      "path": "scripts/check_v14_c04_peer.py",
+      "bytes": 15398,
+      "sha256": "b4b52757cd0768b5b28a6430496de55e330131998f709f7095f2f345b401b43b"
+    },
+    {
+      "path": "content/reviews/v14-c04-peer.json",
+      "bytes": 9249,
+      "sha256": "52e3a6ce47549473c169db290cbc32445e796c5c1e2a145c6e4e76fa4c9c14b2"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v14-c04",
+        "status": "passed",
+        "comparisons": 134,
+        "domain_rejections": 24,
+        "worked_cases": 4,
+        "solved_exercises": 10,
+        "visible_inputs": 6,
+        "visible_results": 21,
+        "source_routes": 1,
+        "runtime_files": 4,
+        "scope": "Exact original steady values, matching flows, shock transition, financing, planner certificates and identification witnesses; universal proofs separately audited. No empirical calibration claim."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v14-c04",
+        "status": "passed",
+        "review": "separate peer",
+        "comparisons": 283,
+        "domain_rejections": 24,
+        "worked_cases": 4,
+        "solved_exercises": 10,
+        "input_markers": 6,
+        "result_markers": 21,
+        "runtime_files": 6,
+        "scope": "Independent four-value linear-system and bracketed-entry solver; direct discounted resource integrals, switched controls, entry boundaries and finite differences. No author code executed."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "production/v14-c04-coordinator-working-review.json",
+  "peer_validation": "production/v14-c04-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

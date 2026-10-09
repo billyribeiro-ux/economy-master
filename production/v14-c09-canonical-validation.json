@@ -1,0 +1,79 @@
+{
+  "chapter": "v14-c09",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v14-c09.html",
+      "bytes": 37205,
+      "sha256": "f83fedd8822ef7bd3fca17ae00647fec52916ecd12d7e95486e4eefa2bac8cfc"
+    },
+    {
+      "path": "scripts/check_v14_c09.py",
+      "bytes": 11085,
+      "sha256": "93ef439588cff43a230bba8b0a200a46f196abb2760ebd6fcf0834f3094055b3"
+    },
+    {
+      "path": "content/reviews/v14-c09-sources.json",
+      "bytes": 1770,
+      "sha256": "66bd19178532fc81644803522d06a4c6af906274fd5ab2166bc362ced525c3bb"
+    },
+    {
+      "path": "content/reviews/v14-c09-author.json",
+      "bytes": 4089,
+      "sha256": "a95209d62a275a34828b4184ee51e109a18cb9d564e9f869ad9c9c177754385c"
+    },
+    {
+      "path": "scripts/check_v14_c09_peer.py",
+      "bytes": 11513,
+      "sha256": "febab1bbc1b24536ffc769b724007a5945bcff3b86b84916c76db135fd9b98fe"
+    },
+    {
+      "path": "content/reviews/v14-c09-peer.json",
+      "bytes": 8394,
+      "sha256": "503ed2c8194d52ef07c4e3557a95f85f5f938910bfe6d73acbdbf152bf3086bc"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v14-c09",
+        "status": "passed",
+        "comparisons": 771,
+        "domain_rejections": 16,
+        "worked_examples": 5,
+        "solutions": 12,
+        "result_markers": 35,
+        "runtime_files": 4
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v14-c09",
+        "status": "passed",
+        "comparisons": 501,
+        "domain_rejections": 20,
+        "worked_examples": 5,
+        "solutions": 12,
+        "result_markers": 35,
+        "runtime_files": 6,
+        "method": "Independent planner and sale-root bisection; exhaustive dealer-cap regime equations; no author code imported or executed"
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "content/reviews/v14-c09-author.json",
+  "peer_validation": "production/v14-c09-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

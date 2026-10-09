@@ -36,6 +36,7 @@ def main():
         shutil.copyfile(original_plan, ROOT/'PRODUCTION_PLAN.md')
     plan = json.loads((ROOT/'content/curriculum.json').read_text())
     sources = json.loads((ROOT/'content/sources.json').read_text())
+    glossary = json.loads((ROOT/'content/reference/glossary.json').read_text())
     source_map = {s['id']: s for s in sources}
     chapters = [(v, c) for v in plan['volumes'] for c in v['chapters']]
     manuscripts = {c['id']: (ROOT/'content'/c['manuscript']).read_text()
@@ -85,7 +86,7 @@ def main():
 
     def sidebar(current=''):
         result = '<aside class="sidebar" id="book-navigation"><a class="brand" href="index.html"><span>Mastery Library</span>Economics<br>&amp; Finance</a><p class="edition">Working edition · 6 October 2026</p>'
-        for url, label in [('index.html','Reading guide'), ('curriculum.html','Full curriculum'), ('assessments.html','Assessment standard'), ('sources.html','Sources &amp; further study'), ('print.html','Print reading edition')]:
+        for url, label in [('index.html','Reading guide'), ('curriculum.html','Full curriculum'), ('assessments.html','Assessment standard'), ('glossary.html','Glossary &amp; notation'), ('sources.html','Sources &amp; further study'), ('print.html','Print reading edition')]:
             result += f'<a href="{url}"' + (' aria-current="page"' if current == url else '') + f'>{label}</a>'
         result += '<hr><nav aria-label="Volumes">'
         for v in plan['volumes']:
@@ -163,6 +164,41 @@ def main():
     write_page('sources.html','Sources and further study',catalogue)
 
     search_index = []
+    chapter_map = {c['id']: c for _, c in chapters}
+    def reference_routes(ids):
+        return ' · '.join(
+            f'<a href="{cid}.html">{escape(chapter_map[cid]["title"])}</a>'
+            if cid in manuscripts else
+            f'<a href="curriculum.html#{cid}">{escape(chapter_map[cid]["title"])} (planned)</a>'
+            for cid in ids)
+    glossary_body = ('<p class="eyebrow">Reference guide</p><h1>Glossary and notation</h1>'
+        f'<p class="meta">{status_label(glossary["status"])}</p>'
+        '<p class="lead">Find a definition, check a symbol, then return to its full argument.</p>'
+        '<p>Definitions here are concise. The linked chapter supplies the model, assumptions, '
+        'proofs and source context. A symbol can mean different things in different chapters; '
+        'the local definition always controls.</p>'
+        '<nav aria-label="Reference sections"><a href="#definitions">Definitions</a> · '
+        '<a href="#notation">Notation and units</a></nav><h2 id="definitions">Definitions</h2>')
+    for entry in glossary['entries']:
+        glossary_body += (f'<section id="{entry["id"]}"><h3>{escape(entry["term"])}</h3>'
+            f'<p>{escape(entry["definition"])}</p><p>{escape(entry["qualification"])}</p>'
+            f'<p class="meta">Read: {reference_routes(entry["chapters"])}</p></section>')
+        search_index.append({'title':'Definition · '+entry['term'],
+            'url':'glossary.html#'+entry['id'],'written':True,'status':status_label(glossary['status']),
+            'text':entry['definition']+' '+entry['qualification']})
+    glossary_body += ('<h2 id="notation">Notation and units</h2><p>Before calculating, write the '
+        'date, currency or physical unit, price basis, probability law and information set. '
+        'For a rate, state the interval and whether it is a gross return, net rate, continuous '
+        'intensity or per-period probability. Read a prime, hat or bar from the chapter’s '
+        'definition rather than assuming a universal meaning.</p>')
+    for entry in glossary['notation']:
+        glossary_body += (f'<section id="{entry["id"]}"><h3>{escape(entry["symbol"])}</h3>'
+            f'<p>{escape(entry["meaning"])}</p><p>{escape(entry["qualification"])}</p>'
+            f'<p class="meta">Read: {reference_routes(entry["chapters"])}</p></section>')
+        search_index.append({'title':'Notation · '+entry['symbol'],
+            'url':'glossary.html#'+entry['id'],'written':True,'status':status_label(glossary['status']),
+            'text':entry['meaning']+' '+entry['qualification']})
+    write_page('glossary.html','Glossary and notation',glossary_body)
     print_content = f'<section class="print-cover"><p class="eyebrow">Reading edition · {plan["edition"]}</p><h1>Economics &amp; Finance</h1><p class="lead">{written} available chapters from a planned 18-volume mastery library.</p><p>Edition boundary: 6 October 2026.</p><p class="notice">This print edition contains the actual manuscripts currently available. It does not include planned chapters as if they were written. Draft status remains visible. Solutions are expanded when printing.</p><button class="no-print" data-print>Print or save as PDF</button></section>'
     for position, (v,c) in enumerate(chapters):
         body = manuscripts.get(c['id'])
@@ -204,6 +240,7 @@ def main():
         search_index.append({'title':a['title'],'url':a['page'] if body else 'assessments.html#'+a['id'],
             'written':body is not None,'status':status_label(a['status']),
             'text':plaintext(body) if body else a['outcome']+' '+a['deliverables']})
+    print_content += '<section class="print-chapter">'+print_fragment(glossary_body,'glossary')+'</section>'
     write_page('print.html','Printable reading edition',print_content)
     (DIST/'search-index.js').write_text('window.MASTERY_SEARCH = '+json.dumps(search_index,ensure_ascii=False).replace('</','<\\/')+';\n')
     summary = {'volumes_planned':len(plan['volumes']),'chapters_planned':len(chapters),
@@ -214,6 +251,8 @@ def main():
                'cross_volume_assessments_available':len(cross_packages),
                'cross_volume_assessments_accepted':sum(a['status']=='accepted' for a in cross_specs),
                'cross_volume_assessment_words':sum(len(plaintext(body).split()) for body in cross_packages.values())}
+    summary['glossary_terms'] = len(glossary['entries'])
+    summary['notation_entries'] = len(glossary['notation'])
     (ROOT/'build-report.json').write_text(json.dumps(summary,indent=2)+'\n')
     print(json.dumps(summary))
 

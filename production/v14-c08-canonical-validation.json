@@ -1,0 +1,83 @@
+{
+  "chapter": "v14-c08",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v14-c08.html",
+      "bytes": 41446,
+      "sha256": "b15956783639c43a628eb52fd4fb518f41bfc42c373e3640bddbb927817e6808"
+    },
+    {
+      "path": "scripts/check_v14_c08.py",
+      "bytes": 11373,
+      "sha256": "eb1ebf3c7b09d091e34abdf5970446df028c82bf3d65be7adbbc2990a77a7f6a"
+    },
+    {
+      "path": "content/reviews/v14-c08-sources.json",
+      "bytes": 1685,
+      "sha256": "bb7a20d20590ba6fd4c091c17dc58ad6ae649875176e9e8946865de74eee5f0f"
+    },
+    {
+      "path": "content/reviews/v14-c08-author.json",
+      "bytes": 3890,
+      "sha256": "e615cf95d7495bf24453783731ccebe8d575e19a28939effe011d4defb133a23"
+    },
+    {
+      "path": "scripts/check_v14_c08_peer.py",
+      "bytes": 13995,
+      "sha256": "674b6afcb495322ad504bf3f40fffa7f673bd821d8283e1f4016f9930f30a7ec"
+    },
+    {
+      "path": "content/reviews/v14-c08-peer.json",
+      "bytes": 7987,
+      "sha256": "fbb11d0d112c7356834068e8988b6b6e44ac3c2bd63f180393eeb628c08edb13"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v14-c08",
+        "status": "passed",
+        "comparisons": 273,
+        "domain_rejections": 14,
+        "worked_examples": 5,
+        "solutions": 12,
+        "result_markers": 48,
+        "table_cells": 24,
+        "runtime_files": 4
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v14-c08",
+        "status": "passed",
+        "review": "separate peer",
+        "comparisons": 315,
+        "domain_rejections": 21,
+        "worked_cases": 5,
+        "solved_exercises": 12,
+        "result_markers": 48,
+        "table_cells": 24,
+        "shock_histories": 8,
+        "runtime_files": 6,
+        "scope": "Independent original-objective and exact-contract reconstruction; collateral bisection; finite all-history goods/funding and terminal audit. No author code executed."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "content/reviews/v14-c08-author.json",
+  "peer_validation": "production/v14-c08-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

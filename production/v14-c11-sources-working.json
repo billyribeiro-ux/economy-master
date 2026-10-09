@@ -1,0 +1,48 @@
+{
+  "chapter": "v14-c11",
+  "sources": [
+    {
+      "id": "quantecon-discrete-dp",
+      "title": "Thomas J. Sargent and John Stachurski — Discrete State Dynamic Programming",
+      "url": "https://tools-techniques.quantecon.org/discrete_dp.html",
+      "use": "Bounded finite Bellman methods and policy evaluation; our compact continuous-state proof, analytic maximization and certificates are derived in full.",
+      "checked": "2026-10-09",
+      "verification": "Reuse accepted scoped primary inspection record; no fresh download or rendered-body inspection in this assignment.",
+      "limits": "Source refers out for main proofs. No copied numerical example, source code, implementation benchmark or imported discretization error theorem; no dependency installation."
+    },
+    {
+      "id": "v14-c01-lorenzoni-growth2009",
+      "title": "Guido Lorenzoni — MIT 14.451 Lecture Notes 5: Optimal Growth Model (Fall 2009)",
+      "url": "https://ocw.mit.edu/courses/14-451-dynamic-optimization-methods-with-applications-fall-2009/52f960cf4c44a2d713951aaf1c6fdbbf_MIT14_451F09_lec05.pdf",
+      "use": "Growth timing and interior Euler/envelope method; exact policy and global verification reused from accepted C01/C02 and summarized with proof here.",
+      "checked": "2026-10-09",
+      "verification": "Reuse accepted scoped primary inspection record; no fresh download or rendered-body inspection in this assignment.",
+      "limits": "The page 3 interior Euler chain omits beta in its last equality: U′=beta V′ requires beta U′(next) f′(next). We derive the correct relation directly. No general differentiability, stability or Inada theorem is imported."
+    },
+    {
+      "id": "v12-c03-mit-gmm2017",
+      "title": "Structural Equations Models and GMM",
+      "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/f6b8cd36eee8df2b259c979a1fd2673e_MIT14_382S17_lec3.pdf",
+      "use": "Moment criterion, identification versus count and weighting. Our stationary-moment identification map is derived directly; no dependent-data CLT imported.",
+      "checked": "2026-10-09",
+      "verification": "Reuse accepted scoped primary inspection record; no fresh download or rendered-body inspection in this assignment.",
+      "limits": "The formal theorem fixes dimensions and population matrices and assumes the relevant LLN/CLT. Counting moments is not identification; nonlinear global uniqueness requires more. Efficiency is within the specified valid-moment estimator class."
+    },
+    {
+      "id": "v12-c04-mit-likelihood2016",
+      "title": "18.650 Statistics for Applications, Chapter 3: Maximum Likelihood Estimation",
+      "url": "https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/36624c2682b346b07cab3da416b752a7_MIT18_650F16_Maximum_LE.pdf",
+      "use": "Likelihood maximization, Bernoulli boundary and statistical/model distinction. Our finite panel likelihood and sampling statements have explicit independent conditional design.",
+      "checked": "2026-10-09",
+      "verification": "Reuse accepted scoped primary inspection record; no fresh download or rendered-body inspection in this assignment.",
+      "limits": [
+        "Rendered PDF page9 has the correct not-equal/non-triangle signs that text extraction drops.",
+        "The page14 strict-concavity iff negative Hessian display is not a necessary condition for all strictly concave smooth functions and must exclude the zero direction. Use negative-definite Hessian as a sufficient condition on a convex domain.",
+        "The page15 score equation requires an interior attained optimum; strict concavity alone does not establish existence. The open Bernoulli/Poisson parameter spaces on pages17–18 also have zero-count/boundary existence exceptions.",
+        "Page24 explicitly leaves additional technical conditions unspecified. The chapter must supply compact measurable selection, uniform convergence, local Hessian and moment hypotheses rather than claim the slide gives a complete proof."
+      ]
+    }
+  ],
+  "preparation": "production/v14-c11-source-preparation.json",
+  "originality": "All examples and problem solutions original; prior source scopes reused explicitly."
+}

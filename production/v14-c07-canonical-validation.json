@@ -1,0 +1,82 @@
+{
+  "chapter": "v14-c07",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v14-c07.html",
+      "bytes": 41419,
+      "sha256": "4320bf47ae3b8decd88539feaecca02682ca9ac783f6643881583e2eee10a6c3"
+    },
+    {
+      "path": "scripts/check_v14_c07.py",
+      "bytes": 11445,
+      "sha256": "113d511e9bad781946785a1295f711d5096ac4163ffafa3f57a969d3dfb18767"
+    },
+    {
+      "path": "content/reviews/v14-c07-sources.json",
+      "bytes": 2179,
+      "sha256": "c5106f95491fa1b94979653787984e30380dde7d756da242f045b6eefdb61a1c"
+    },
+    {
+      "path": "content/reviews/v14-c07-author.json",
+      "bytes": 4138,
+      "sha256": "3c31e019be758ccebe4b14e90e292e0368bc4c4d5d448c0f0db27763099bc7fb"
+    },
+    {
+      "path": "scripts/check_v14_c07_peer.py",
+      "bytes": 18346,
+      "sha256": "02d71e22da8d8a9be6946c1448443ac9c6e134f19043ef2e553f215bd20c9f95"
+    },
+    {
+      "path": "content/reviews/v14-c07-peer.json",
+      "bytes": 7726,
+      "sha256": "c6d5dc49278541078ea932199cc65fdd1171228cf874425609664c97ea00e464"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v14-c07",
+        "comparisons": 112,
+        "domain_rejections": 13,
+        "worked_examples": 5,
+        "solutions": 12,
+        "input_markers": 2,
+        "result_markers": 32,
+        "runtime_files": 4,
+        "status": "passed"
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v14-c07",
+        "status": "passed",
+        "review": "separate peer",
+        "comparisons": 141,
+        "domain_rejections": 29,
+        "worked_cases": 5,
+        "solved_exercises": 12,
+        "input_markers": 2,
+        "result_markers": 32,
+        "runtime_files": 6,
+        "scope": "Independent exact finite pricing, tree equations, second-order recursive-utility derivatives and boundary audit; no author code executed."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "content/reviews/v14-c07-author.json",
+  "peer_validation": "production/v14-c07-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}
