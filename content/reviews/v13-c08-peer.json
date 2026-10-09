@@ -1,0 +1,106 @@
+{
+  "chapter": "v13-c08",
+  "date": "2026-10-09",
+  "peer": "bs_author",
+  "author": "c05_review",
+  "status": "Substantive separate peer review complete; final gate evidence accompanies this frozen handoff. Root acceptance remains separate.",
+  "scope": "Read the full chapter, all six cases and twelve exact prompts/solutions, final author checker, source/author records and source preparation. Independently reconstructed results from the stated contracts. No author checker imported or executed as an oracle; no blueprint numeric outputs used.",
+  "bindings": [
+    {
+      "path": "content/chapters/v13-c08.html",
+      "bytes": 61370,
+      "sha256": "f876312580fb1792a758ac026f72931e5d6ee130b16cc88fcdaea4b91ada10ff"
+    },
+    {
+      "path": "scripts/check_v13_c08.py",
+      "bytes": 36628,
+      "sha256": "836c690f7efc61025d68e0fc22a1e8d2c01169d0dad9ab84cf8b648e42680391"
+    },
+    {
+      "path": "content/reviews/v13-c08-sources.json",
+      "bytes": 5721,
+      "sha256": "dfb88613ea4ce8a1ac3e3073e7de9098507c81c02daaad8ba7d37af32d6bd081"
+    },
+    {
+      "path": "content/reviews/v13-c08-author.json",
+      "bytes": 9489,
+      "sha256": "e6a21772439b030331372f98feef9f82c223ea6ad589896112b1aec5051a0d35"
+    },
+    {
+      "path": "scripts/check_v13_c08_peer.py",
+      "bytes": 33230,
+      "sha256": "0c9e4d81c7556c0efc0d94fc467f97249cbc7120d9cb794a6c9a0d8c78defd7a"
+    }
+  ],
+  "promotion_review": "Exact working-to-canonical diffs inspected. Four checker runtime paths changed; two HTML data-source attributes and one checker source literal reuse existing exact-URL v05-c08-holmstrom-screening. Source/author disposition and bindings changed. All mathematical content and prose are identical to the repaired working freeze.",
+  "proof_audit": {
+    "v13-c08-finite": "Pass. Selected maximizing contracts induce a direct IC/IR menu only in the stated one-buyer commitment class. Pairwise IC gives monotonicity and adjacent bounds; telescoping plus monotonicity proves every pair. Minimal rents are componentwise smallest and feasible. The arbitrary-rent virtual identity subtracts both bottom rent and excess rents. Positive masses and strict quadratic convexity give unique quality allocation, while the stated tie rule is necessary for selected implementation. Bunching/cap optima have full-domain tangent certificates, including positive cap multipliers; no first-order-only or arbitrary ironing claim.",
+    "v13-c08-continuum": "Pass. The pairwise inequalities bound every partition sum; monotone bounded quality makes the upper/lower gap at most Q times mesh. This proves the envelope including jumps, then integral bounds give sufficiency for all types and reports. IR reduces to bottom rent. Bounded quality and continuous positive density justify rent integration and the virtual-value expression. The uniform pointwise maximizer is monotone, hence globally optimal; strict concavity implies only almost-everywhere uniqueness. A changed top endpoint and its adjusted payment genuinely preserve IC and expected profit.",
+    "v13-c08-lotteries": "Pass after the recorded integrability repair. Linear interim report utilities are preserved by means; convex supporting-line Jensen covers arbitrary bounded quality lotteries, with endpoint means degenerate. Per-report absolute payment integrability suffices for individual comparisons and finite types. The added joint measurability and population absolute-transfer integral justify continuum profit aggregation. Participation occurs before the draw and payment remains enforceable. The square-root example compares two fixed contracts only; the later-rejection exercise changes actual receipts and utilities.",
+    "v13-c08-signaling": "Pass. Posterior-mean wage is explicitly imposed, not attributed to an unmodeled bidding game or finite sequential-existence theorem. Cross-type best responses prohibit reversed pure signals. Zero-signal and cross-signal deviations yield complete pure pooling/separating intervals, and low off-path beliefs prove sufficiency globally. Strict equilibrium-dominance excludes only a nonempty proper type set; the all-dominated exception is essential. Nonempty open intervals eliminate every pool and every excessive separating signal; full beliefs support least-cost separation. Uniqueness concerns the pure education outcome, not every belief or mixed/hybrid assessment.",
+    "v13-c08-productive": "Pass. With both net marginal costs positive, the full pure intervals, strict deviation intervals and survival proof persist with the modified slopes. At kappa=1/3 the high maximal payoff equals its equilibrium payoff, so it is never strictly dominated. H belief is required above 9/2 but creates no strict gain; the complete piecewise schedule supports every finite h>=9/2. Pooling still has a strict high deviation. For kappa>1/3 a posterior-independent payoff lower bound grows without bound, ruling out every finite high best response. Productive output, private cost, wage and welfare are kept distinct."
+  },
+  "exercise_audit": {
+    "v13-c08-e1": "Pass. Independent weighted revenue reconstruction gives virtual values (-2,0,3), optimal q=(0,0,3), zero rents and t=(0,0,9). Global quadratic certificate, IC/IR and tie selection checked. Profit 9/4, first best 23/8 and loss 5/8.",
+    "v13-c08-e2": "Pass. Pooling-adjacent-violators gives q=(2/3,2/3,1); global certificate has order multiplier 1/6 and cap multiplier 6/5. Minimal rents imply t=(4/3,4/3,8/3), profit 23/15. The exact negative quadratic remainder proves unique allocation over the full feasible set.",
+    "v13-c08-e3": "Pass. Derived all six positive reporting gaps, t=(0,3/2,13/2), profit 3/4 and excess-rent cost 1/2. Lowest participation remains weak. A common positive utility shift preserves all IC gaps, permits the stated rebate and reduces profit by exactly the shift.",
+    "v13-c08-e4": "Pass. U=2 max(theta-2,0); t=0 below the jump, t(2)=2a and t=4 above. Every a in [0,2] preserves monotonicity/global IC, including type2. One-sided utility slopes are 0 and2, so no ordinary derivative exists there. The singleton has zero mass; payment/cost/profit are (2,1,1).",
+    "v13-c08-e5": "Pass. Virtual value 2theta-4 yields exclusion at2, q=max(0,2theta-4), U=(theta-2)^2 and t=theta^2-4 on the active interval. Exact quadratic quadrature gives accounts (32/9,16/9,16/9,8/9), welfare8/3, first best7/2 and loss5/6. Endpoint/null-set uniqueness is correctly limited.",
+    "v13-c08-e6": "Pass. Committed utilities (1,5) and profit0 differ from the mean contract profit1. Both types then reject quality0 and accept quality3 under the added right. Actual resulting utilities (2,6), receipts2, cost3 and profit-1 are reconstructed from each accepted state.",
+    "v13-c08-e7": "Pass. Prior1/2 gives pooling wage7/2 and interval[0,3/2], while separation remains h in[3,9]. The strict pooling-deviation interval and excessive-signal elimination remain valid; least-cost separation survives with welfare3 versus zero-pool welfare7/2.",
+    "v13-c08-e8": "Pass. At s=4 maximal payoffs are (1,11/3). Pooling at1 and separation at6 each eliminate only L and force a profitable H deviation. At h=3 both types are dominated, so no added belief restriction applies and neither can gain. The strict all-dominated distinction is preserved.",
+    "v13-c08-e9": "Pass. Net costs (3/4,1/12), separating interval[4,36], pooling interval[0,4/3], surviving h=4. High wage6, net14/3, output10/3, education cost4/9 and welfare26/9. The identification caveat follows from distinct productive, selection and belief channels.",
+    "v13-c08-e10": "Pass. At kappa=1/3,h=6 the complete threshold belief schedule is feasible and refined. Signal5 requires H belief but yields high utility5, only a tie; signal4 permits low belief. At kappa=1/2, choosing s above max(0,6(u-2)) defeats any finite utility under even the lowest posterior wage, proving nonexistence without a grid.",
+    "v13-c08-e11": "Pass. The open rubric covers structural versus observed claims, commitment and participation timing, causal/selection and belief limits, and a feasible evidence design with compliance/spillover/external-validity cautions. Illustrative reasoning is supplied without a required policy preference or unsupported universal uniqueness.",
+    "v13-c08-e12": "Pass. Holding the complete continuous quality function fixed, the envelope permits only U=U*+delta and t=t*-delta. IR is exactly delta>=0; profit is9/8-delta, hence7/8 at delta1/4. Finite adjacent utility intervals allow nonconstant rent changes, unlike the continuum limit of refining partitions."
+  },
+  "independent_methods": [
+    "Weighted pool-adjacent-violators reconstructs four finite optimum allocations. Independently checked nonnegative bound/order multipliers, complementarity and gradient identities certify the global concave tangent bound; strictly positive probability weights certify uniqueness.",
+    "Original report payoff tables, extra-rent decomposition and direct receipt/cost/welfare sums check all finite IC/IR and conservation claims.",
+    "Exact Simpson quadrature for explicitly quadratic segments, plus a separate cubic rent integral, reconstructs both uniform laws. Explicit jump and null-endpoint transfers check equality-type behavior.",
+    "Statewise acceptance/payments/costs and the quadratic variance gap reconstruct committed and later-rejection lotteries. A dyadic lower-bound argument exposes the missing population integrability assumption.",
+    "Intersecting exact affine inequalities gives complete pure education intervals. Coincident strict-dominance roots, signed slopes and the full boundary schedule certify off-path conclusions; posterior-independent escape values test the unbounded regime.",
+    "All17 input markers and90 numerical markers are linked to independent computations. Standard worked/exercise/solution structure and scoped source URLs are parsed directly."
+  ],
+  "resolved_findings": [
+    {
+      "id": "continuum-lottery-integrability",
+      "status": "resolved",
+      "reporter": "bs_author",
+      "location": "v13-c08-lotteries",
+      "counterexample": "With theta uniform[1,3], q=0 and equiprobable transfers +/-1/|r-2| for r!=2 (zero at2), every report has finite absolute expectation and mean0, giving all interim IC/IR. However both unconditional transfer tails diverge, so population expected profit is undefined. Each right-hand dyadic annulus contributes at least1/8 to a tail; combining the two symmetric annuli gives the peer checker lower bound1/4 per scale. These are consistent conventions for the same counterexample.",
+      "repair": "Author added joint measurability and integral E|t_theta| f(theta) dtheta finite before the theorem, plus an explicit aggregation-proof justification. Finite types already satisfy this condition. I read and verified the repaired paragraph/sentence and final canonical version; every original numerical case is unchanged.",
+      "regression": "Checker retains the exact constant dyadic tail lower bounds, individual zero-mean example and a guard for the repaired aggregate-integrability wording. The argument establishing divergence is independently reviewed, not inferred from finitely many tests."
+    }
+  ],
+  "open_findings": [],
+  "source_review": {
+    "attribution": "Actual C08 primary body/page-image inspector is c05_review. Peer read complete source-preparation and final scope records; no fresh primary PDF/image inspection is claimed in this review.",
+    "manea": "2017-dated notes on the2016 course URL; actual text physical/printed54-61 and viewed images54,60,61. Strict dominance, response/belief formulation and all-dominated exception support the declared pure pricing model. Hybrid uniqueness, D1/D2 and generic nonlinear-cost extensions are excluded.",
+    "holmstrom": "2016-dated slides on the2017 course URL; actual official early-body and local cover/18-36 text inspection, images22,29,33. Procurement transfer signs are translated explicitly. Source differentiability/strict-rent/FOC qualifications are not silently inherited: chapter supplies the Riemann envelope, exclusion/bunching and global certificates.",
+    "catalogue": "Existing exact-URL IDs are reused. The ten retained PDF/text/image artifacts and source preparation remain provenance only, outside the six-file runtime. The new lottery integrability condition is independently supplied and not attributed to an uninspected source theorem.",
+    "limits": "Scoped primary inspection, original proof review and bounded numerical evidence are separate; no whole-source or human academic certification claim."
+  },
+  "validation_contract": {
+    "required_final_gates": [
+      "Normal workspace quiet API.",
+      "Optimized exact-six quiet API from /.",
+      "Optimized exact-six silent CLI from /."
+    ],
+    "integrity": "Final handoff supplies actual results. All gates must preserve exact payload bytes; isolated gates preserve exact member files/directories. Record is completed before execution so the same bytes are used throughout.",
+    "runtime_payloads": [
+      "content/chapters/v13-c08.html",
+      "scripts/check_v13_c08.py",
+      "content/reviews/v13-c08-sources.json",
+      "content/reviews/v13-c08-author.json",
+      "scripts/check_v13_c08_peer.py",
+      "content/reviews/v13-c08-peer.json"
+    ],
+    "domains": "Exact bounded scalar types, masses, ordered types, quality limits, IC/IR, interval/jump selections, actual lottery timing, signaling regimes and posterior bounds, strict JSON and HTML structure. No assertions, writes, network, external runtime files or author-code imports."
+  },
+  "limitations": [
+    "Finite witnesses support separately reviewed universal proofs; no general ironing or mixed-signaling classification is claimed.",
+    "Chapter outcomes are model implications and do not establish empirical types, causal education effects or unmodeled price competition.",
+    "Root owns acceptance, shared integration, rendered reader checks and publication."
+  ]
+}

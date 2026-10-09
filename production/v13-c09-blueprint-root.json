@@ -1,0 +1,408 @@
+{
+  "chapter": "v13-c09",
+  "date": "2026-10-09",
+  "status": "Root original six-case design and independent seed calculations; manuscript remains planned",
+  "core_proofs": [
+    "Finite hidden-action timing, observable versus verifiable outcomes, risk-neutral principal and agent utility u(w)-c(a), initial IR, every-action global IC and wage bounds. Define weak recommendation/participation tie selection and strict-implementation limits. Transform to utility payments v=u(w); inverse h is convex. Prove fixed-target feasible set convex and objective convex, strict uniqueness only when appropriate. A feasible multiplier/tangent certificate is sufficient globally; do not assume universal binding IR or unqualified KKT necessity.",
+    "Original wealth-floor risk-neutral contract with a complete global lower-bound/attainability proof and comparison across H,L,no contract. General floor -B and explicitly bounded worker liability; rent, insurance and efficiency distinctions. Do not merely reprint undergraduate example: general utility-space method and wealth-dependent selection are the graduate extension.",
+    "Finite sufficient-statistic theorem: positive action-conditional state probabilities; statistic T is sufficient when conditional state laws given T are action independent, equivalently every likelihood ratio relative to target is T-measurable. Prove both directions of factorization and replace each contract by conditional expected utility followed by u inverse. Preserve every action utility/IC/IR and weakly reduce expected wage by convexity; strict risk aversion eliminates ancillary wage variation. No blanket assertion all informative signals strictly improve every constrained model. Prove strict improvement for the original four-state example with global certificate.",
+    "Global IC versus first-order conditions: continuous binary-success model with interior stationary minimum, entire inability to induce that interior target, and a changed concave technology where a global completed-square certificate works. State sufficient concavity conditions on p,c and nonnegative wage spread; do not smuggle FOA into finite global IC results.",
+    "Full finite-horizon promised-utility recursion for finite actions/signals, positive conditional laws, history-independent primitives, continuous increasing u, bounded wages, additive preferences and no private saving/borrowing or persistent hidden state. Full principal commitment, with optional explicitly modeled worker continuation exit constraints. Define V0(0)=0 and infeasible promises, promise equality, all current action IC using u(w_y)+beta U_y, and continuation feasibility. Prove decomposition in both directions by conditioning/stitching, induction to global continuation IC, and attainment from compact finite wage trees/finite target policies. Initial IR may be slack; maximize over promises above reservation. A scalar promise is not claimed sufficient with hidden wealth/persistent types. Do not represent a principal continuation-profit inequality as enforcing every within-period payment without further proof.",
+    "Original two-date wage allocation with first-period hidden action and no second production. Explicit payments consumed on receipt/no saving; beta=delta=1 allowed in finite horizon. Prove branchwise intertemporal cost minimization and exact global IC/IR optimum, then reoptimize when worker can quit before date2 payment for utility3/4. Show aggregate initial IR does not ensure every continuation IR, and that raising the outside option can make initial IR slack. Distinguish court-enforced principal promises from worker exit rights.",
+    "Full restricted self-enforcing public-strategy contract in repeated hidden effort: public output and bonus, no persistent private state, both risk-neutral, zero fixed salary and declared success bonus class. Derive worker global effort IC and principal ex-post payment enforcement against credible low-effort/no-bonus fallback; check every public state and payment history. Do not apply perfect-monitoring theorem to hidden effort without argument: given public state, private past actions have no effect on future primitives; bounded discounted tail plus finite last-deviation/DP proves best replies against arbitrary private-history deviations. State PPE-style concept precisely. Characterize bonus interval and patience bound only for this class; no universal optimal-stationarity/minmax/renegotiation-proof/private-monitoring claim.",
+    "At least six original substantial worked cases and twelve full solved problems, including exact new transfers, global proof tasks, all IC/IR/commitment constraints, research critique/rubric, teach-back, retention and C10 mechanism/auction bridge. Monetary payments, effort utility and reservation units explicit; do not add risk-averse utility units to dollar firm profits as a cardinal social sum."
+  ],
+  "worked_cases": [
+    {
+      "id": "W1",
+      "title": "Wealth limits and effort selection",
+      "primitives": {
+        "pH": "4/5",
+        "pL": "1/5",
+        "cH": 3,
+        "cL": 0,
+        "agent": "risk neutral",
+        "outside": 0,
+        "output_success": 15,
+        "output_failure": 0,
+        "wage_floor": "-B, B>=0"
+      },
+      "derived": {
+        "spread": 5,
+        "wF": "max(-B,-1)",
+        "wS": "wF+5",
+        "expected_H_wage": "max(3,4-B)",
+        "B0_profit": 8,
+        "B0_agent_rent": 1,
+        "low_profit": 3,
+        "firstbest_output_threshold": 5,
+        "B0_H_selection_threshold": "20/3",
+        "R6": "Firstbest H net9/5 > L6/5; constrained H profit4/5 < L6/5"
+      },
+      "proof": "Exact global lower bounds plus feasible attainment; not universal wage uniqueness if IR binds. Compare low effort/no hiring and state tie convention."
+    },
+    {
+      "id": "W2",
+      "title": "Risk aversion and a global utility-space certificate",
+      "primitives": {
+        "pH": "2/3",
+        "pL": "1/3",
+        "cH_utility": "1/2",
+        "outside_utility": 1,
+        "u": "sqrt(w)",
+        "wage_floor": 0,
+        "output_success": 12,
+        "output_failure": 0
+      },
+      "derived": {
+        "utility_payments_S_F": [
+          2,
+          "1/2"
+        ],
+        "wages_S_F": [
+          4,
+          "1/4"
+        ],
+        "expected_wage": "11/4",
+        "full_information_insurance_wage": "9/4",
+        "risk_cost": "1/2",
+        "dual_IR": 3,
+        "dual_IC": 2,
+        "high_profit": "21/4",
+        "low_profit": 3,
+        "output_thresholds_hidden_verifiable": [
+          "21/4",
+          "15/4"
+        ]
+      },
+      "proof": "All global IC/IR, nonnegative payments and strictly convex tangent certificate; fullinfo known effort needs insurance. Utility and money units differ from W1."
+    },
+    {
+      "id": "W3",
+      "title": "Ancillary versus informative performance measurement",
+      "primitives": {
+        "same_agent_as_W2": true,
+        "extra_binary_Z": "independent of output conditional on effort; P(Zgood|H)=2/3, P(Zgood|L)=1/3",
+        "state_order": [
+          "Sg",
+          "Sb",
+          "Fg",
+          "Fb"
+        ],
+        "pH": [
+          "4/9",
+          "2/9",
+          "2/9",
+          "1/9"
+        ],
+        "pL": [
+          "1/9",
+          "2/9",
+          "2/9",
+          "4/9"
+        ]
+      },
+      "derived": {
+        "utility_payments": [
+          "9/5",
+          "3/2",
+          "3/2",
+          "3/10"
+        ],
+        "wages": [
+          "81/25",
+          "9/4",
+          "9/4",
+          "9/100"
+        ],
+        "cost": "49/20",
+        "improvement_over_Y_only": "3/10",
+        "dual_IR": 3,
+        "dual_IC": "4/5",
+        "likelihood_L_over_H": [
+          "1/4",
+          1,
+          1,
+          4
+        ]
+      },
+      "proof": "Sufficient statistic counts the two good observations; middle states equal likelihood ratio and equal pay utility. Ancillary Z with same conditional distribution under both efforts can be discarded with no cost loss. Original four-state convex certificate proves strict improvement here, not universally."
+    },
+    {
+      "id": "W4",
+      "title": "A stationary effort that is a minimum",
+      "primitives": {
+        "effort": "e in[0,1]",
+        "success_probability": "1/4+e^2/2",
+        "cost": "e/2",
+        "wages_F_S": [
+          0,
+          1
+        ]
+      },
+      "derived": {
+        "stationary_effort": "1/2",
+        "stationary_utility": "1/8",
+        "endpoint_utilities": [
+          "1/4",
+          "1/4"
+        ],
+        "global_identity": "1/8+(e-1/2)^2/2",
+        "changed_probability": "1/4+e-e^2/2",
+        "changed_identity": "3/8-(e-1/2)^2/2",
+        "changed_optimum": "e=1/2,value3/8"
+      },
+      "proof": "For any nonnegative spread objective convex so interior not optimal except impossible flat case given positive effort cost; negative spread strictly decreases. Entire intended interior cannot be implemented by this binary signal. Changed technology is increasing concave and global certificate validates same first-order candidate."
+    },
+    {
+      "id": "W5",
+      "title": "Promises, consumption smoothing and a later exit option",
+      "primitives": {
+        "agent_and_first_output": "W2; pH2/3,pL1/3,cH1/2,outside total utility1",
+        "two_date_utility": "sqrt(w1)+sqrt(w2)-cost; no private saving/borrowing",
+        "beta_delta": 1,
+        "second_production": "none",
+        "full_principal_commitment": true
+      },
+      "derived": {
+        "full_commitment_date1_S_F": [
+          1,
+          "1/16"
+        ],
+        "full_commitment_date2_S_F": [
+          1,
+          "1/16"
+        ],
+        "branch_total_utility_S_F": [
+          2,
+          "1/2"
+        ],
+        "cost": "11/8",
+        "known_effort_cost": "9/8",
+        "agency_cost": "1/4",
+        "continuation_utilities_S_F": [
+          1,
+          "1/4"
+        ],
+        "changed_date2_outside": "3/4",
+        "changed_total_utilities_S_F": [
+          "9/4",
+          "3/4"
+        ],
+        "changed_S_wages_both_dates": [
+          "81/64",
+          "81/64"
+        ],
+        "changed_F_wages_dates": [
+          0,
+          "9/16"
+        ],
+        "changed_expected_cost": "15/8",
+        "changed_agent_net": "5/4"
+      },
+      "proof": "Cauchy/convex split yields branch cost z^2/2 when both dates unconstrained. With later exit b, branch cost min x^2+y^2 s.t x+y=z,x>=0,y>=b is z^2/2 ifz>=2b, otherwise(z-b)^2+b^2; z>=b. IC forces zS-zF>=3/2, so changed global optimum at zF=b,zS=b+3/2; initial IR slack. Embed in full proved finite promise recursion, not only anecdotal deferral."
+    },
+    {
+      "id": "W6",
+      "title": "A bonus that must remain worth paying",
+      "primitives": {
+        "stage": "W1 risk-neutral production: pH4/5,pL1/5,cH3,Ys15,Yf0",
+        "fixed_salary": 0,
+        "promised_success_bonus": "b>=0; failure payment0",
+        "payment_enforcement": "success bonus voluntary and publicly observed; actual success payment in[0,b]",
+        "public_state": "cooperate until a success underpayment; then absorbing L/no-bonus fallback",
+        "fallback_payoffs_firm_worker": [
+          3,
+          0
+        ],
+        "discount": "0<delta<1"
+      },
+      "derived": {
+        "worker_IC": "b>=5",
+        "coop_firm_profit": "12-4b/5",
+        "coop_worker": "4b/5-3",
+        "employer_payment_IC": "b <= delta/(1-delta)*(9-4b/5)",
+        "bonus_interval": "[5,45delta/(5-delta)]",
+        "class_feasible": "delta>=1/2; equality permits only b5 weak effort",
+        "strict_example": {
+          "delta": "3/5",
+          "b": 6,
+          "upper": "135/22",
+          "worker_effort_gain": "3/5",
+          "worker_payoff": "9/5",
+          "firm_payoff": "36/5",
+          "foregone_future_profit": "63/10",
+          "payment_margin": "3/10",
+          "joint_surplus": 9
+        }
+      },
+      "limits": "Fixed zero-salary, nonnegative-bonus class with specified low-effort fallback. No claim minimum patience across all contracts or general stationary optimum. Fallback may invite mutual renegotiation; unilateral credibility is not renegotiation proof. Hidden effort requires own complete deviation argument, not direct appeal to public perfect monitoring."
+    }
+  ],
+  "root_seed_validation": {
+    "groups": 40,
+    "results": [
+      {
+        "id": "W1-required-spread",
+        "result": "5"
+      },
+      {
+        "id": "W1-wealth-cost-0",
+        "result": "4"
+      },
+      {
+        "id": "W1-IC-0",
+        "result": "3"
+      },
+      {
+        "id": "W1-wealth-cost-1/2",
+        "result": "7/2"
+      },
+      {
+        "id": "W1-IC-1/2",
+        "result": "3"
+      },
+      {
+        "id": "W1-wealth-cost-1",
+        "result": "3"
+      },
+      {
+        "id": "W1-IC-1",
+        "result": "3"
+      },
+      {
+        "id": "W1-wealth-cost-2",
+        "result": "3"
+      },
+      {
+        "id": "W1-IC-2",
+        "result": "3"
+      },
+      {
+        "id": "W1-baseline-profit-rent",
+        "result": "(Fraction(8, 1), Fraction(1, 1), Fraction(3, 1))"
+      },
+      {
+        "id": "W1-effort-selection-thresholds",
+        "result": "(Fraction(5, 1), Fraction(20, 3))"
+      },
+      {
+        "id": "W1-output6-firstbest-and-LL",
+        "result": "(Fraction(9, 5), Fraction(6, 5), Fraction(4, 5))"
+      },
+      {
+        "id": "W2-IR-IC-cost",
+        "result": "(Fraction(3, 2), Fraction(1, 2), Fraction(11, 4))"
+      },
+      {
+        "id": "W2-global-convex-certificate",
+        "result": "(Fraction(8, 3), Fraction(1, 3))"
+      },
+      {
+        "id": "W2-insurance-and-risk-cost",
+        "result": "(Fraction(9, 4), Fraction(1, 2))"
+      },
+      {
+        "id": "W2-effort-profit-comparison",
+        "result": "(Fraction(21, 4), Fraction(3, 1))"
+      },
+      {
+        "id": "W2-output-thresholds",
+        "result": "(Fraction(21, 4), Fraction(15, 4))"
+      },
+      {
+        "id": "W3-positive-joint-laws",
+        "result": "(Fraction(1, 1), Fraction(1, 1))"
+      },
+      {
+        "id": "W3-IR-and-IC",
+        "result": "(Fraction(3, 2), Fraction(1, 2))"
+      },
+      {
+        "id": "W3-cost-improvement",
+        "result": "(Fraction(49, 20), Fraction(3, 10))"
+      },
+      {
+        "id": "W3-global-convex-certificate",
+        "result": "(Fraction(8, 5), Fraction(2, 3), Fraction(2, 3), Fraction(1, 15))"
+      },
+      {
+        "id": "W3-sufficient-likelihood-ratios",
+        "result": "(Fraction(1, 4), Fraction(1, 1), Fraction(1, 1), Fraction(4, 1))"
+      },
+      {
+        "id": "W4-FOC-minimum-versus-maximum",
+        "result": "(Fraction(1, 8), Fraction(3, 8))"
+      },
+      {
+        "id": "W4-convex-global-square-0",
+        "result": "1/4"
+      },
+      {
+        "id": "W4-concave-global-square-0",
+        "result": "1/4"
+      },
+      {
+        "id": "W4-convex-global-square-1/4",
+        "result": "5/32"
+      },
+      {
+        "id": "W4-concave-global-square-1/4",
+        "result": "11/32"
+      },
+      {
+        "id": "W4-convex-global-square-1/2",
+        "result": "1/8"
+      },
+      {
+        "id": "W4-concave-global-square-1/2",
+        "result": "3/8"
+      },
+      {
+        "id": "W4-convex-global-square-1",
+        "result": "1/4"
+      },
+      {
+        "id": "W4-concave-global-square-1",
+        "result": "1/4"
+      },
+      {
+        "id": "W5-two-date-wages",
+        "result": "(Fraction(1, 1), Fraction(1, 16))"
+      },
+      {
+        "id": "W5-two-date-cost-and-insurance",
+        "result": "(Fraction(11, 8), Fraction(9, 8), Fraction(1, 4))"
+      },
+      {
+        "id": "W5-quit-wages",
+        "result": "((Fraction(81, 64), Fraction(81, 64)), (Fraction(0, 1), Fraction(9, 16)))"
+      },
+      {
+        "id": "W5-quit-cost-and-agent-net",
+        "result": "(Fraction(15, 8), Fraction(5, 4))"
+      },
+      {
+        "id": "W5-quit-IC",
+        "result": "1/2"
+      },
+      {
+        "id": "W6-minimum-patience",
+        "result": "1/2"
+      },
+      {
+        "id": "W6-chosen-bonus-upper",
+        "result": "135/22"
+      },
+      {
+        "id": "W6-effort-rent-profit-total",
+        "result": "(Fraction(3, 5), Fraction(9, 5), Fraction(36, 5), Fraction(9, 1))"
+      },
+      {
+        "id": "W6-payment-credibility",
+        "result": "(Fraction(63, 10), Fraction(3, 10))"
+      }
+    ],
+    "limits": "Independent algebraic seeds and convex certificates, not verification of unwritten manuscript or general proofs."
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "chapter": "v13-c09",
+  "date": "2026-10-09",
+  "status": "Independent confirmation and original instructional plan",
+  "root_design": "production/v13-c09-blueprint-root.json (read-only; not a checker oracle)",
+  "independent_methods": [
+    "Wealth-floor feasible-vertex intersections from four primitive halfplanes; analytic all-B lower bound.",
+    "Weighted Gram solution for two active utility constraints, then global convex tangent certificates.",
+    "Independent branchwise quadratic wage allocation and later-exit constraints.",
+    "Bellman evaluation at both public states and every payment choice; all behavioral deviations handled analytically."
+  ],
+  "confirmed_cases": {
+    "W1": {
+      "H_cost": "max(3,4-B)",
+      "B_values": [
+        "0",
+        "1/2",
+        "1",
+        "2"
+      ],
+      "costs": [
+        "4",
+        "7/2",
+        "3",
+        "3"
+      ],
+      "all_IR_binding_spreads": "[5,5(3+B)/4] for B>=1"
+    },
+    "W2": {
+      "utility": [
+        "2",
+        "1/2"
+      ],
+      "cost": "11/4",
+      "dual": [
+        "3",
+        "2"
+      ]
+    },
+    "W3": {
+      "utility": [
+        "9/5",
+        "3/2",
+        "3/2",
+        "3/10"
+      ],
+      "cost": "49/20",
+      "dual": [
+        "3",
+        "4/5"
+      ]
+    },
+    "W4": {
+      "convex_minimum": "1/8 at 1/2",
+      "concave_maximum": "3/8 at 1/2"
+    },
+    "W5": {
+      "no_exit_cost": "11/8",
+      "exit_3/4_cost": "15/8",
+      "exit_agent_net": "5/4"
+    },
+    "W6": {
+      "bonus_interval": "[5,45delta/(5-delta)]",
+      "minimum_delta": "1/2",
+      "delta_3/5_bonus_6_margin": "3/10"
+    }
+  },
+  "proof_choices": [
+    "Finite static common wage interval, every-action global IC, sufficient dual certificates without unqualified necessity.",
+    "Finite promise theorem covers deterministic wage trees and pure public recommendations; no public lotteries, private credit or persistent hidden state. Bounded-wage theorem and uncapped example solved separately; cap4 preserves the example optima.",
+    "Relational equilibrium allows arbitrary behavioral/private-history effort deviations and all feasible discretionary payments, within the explicitly fixed bonus game.",
+    "Weak IC and participation ties select the recommendation/continuation. Strict limits are stated separately."
+  ],
+  "exercise_plan": [
+    "Timeline and general certificate",
+    "Wealth transfer and all optimizers",
+    "Risk aversion and selection thresholds",
+    "Third-action global IC transfer",
+    "Sufficiency and ancillary waste",
+    "Four-state measurement and a fee",
+    "FOA and global implementability",
+    "Promise decomposition and hidden saving",
+    "Later exit and selection",
+    "Bonus interval and fixed-bonus patience",
+    "Failure-trigger transfer and hidden-history proof",
+    "Research/institutional critique with scored rubric"
+  ],
+  "originality": "All six cases use root original laws, independently verified; new third-action, ancillary, measurement-fee and failure-trigger transfers extend them. Monetary and utility units remain distinct."
+}

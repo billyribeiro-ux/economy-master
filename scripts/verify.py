@@ -185,6 +185,10 @@ from check_v13_c05 import check as check_v13_c05
 from check_v13_c05_peer import check as check_v13_c05_peer
 from check_v13_c06 import check as check_v13_c06
 from check_v13_c06_peer import check as check_v13_c06_peer
+from check_v13_c07 import check as check_v13_c07
+from check_v13_c07_peer import check as check_v13_c07_peer
+from check_v13_c08 import check as check_v13_c08
+from check_v13_c08_peer import check as check_v13_c08_peer
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -630,8 +634,8 @@ def main():
     v12_time_structural_peer_check = {'v12-c09': check_v12_c09_peer(), 'v12-c10': check_v12_c10_peer()}
     v12_closing_check = {'v12-c11': check_v12_c11(), 'v12-c12': check_v12_c12()}
     v12_closing_peer_check = {'v12-c11': check_v12_c11_peer(), 'v12-c12': check_v12_c12_peer()}
-    v13_opening_check = {'v13-c01': check_v13_c01(), 'v13-c02': check_v13_c02(), 'v13-c03': check_v13_c03(), 'v13-c04': check_v13_c04(), 'v13-c05': check_v13_c05(), 'v13-c06': check_v13_c06()}
-    v13_opening_peer_check = {'v13-c01': check_v13_c01_peer(), 'v13-c02': check_v13_c02_peer(), 'v13-c03': check_v13_c03_peer(), 'v13-c04': check_v13_c04_peer(), 'v13-c05': check_v13_c05_peer(), 'v13-c06': check_v13_c06_peer()}
+    v13_opening_check = {'v13-c01': check_v13_c01(), 'v13-c02': check_v13_c02(), 'v13-c03': check_v13_c03(), 'v13-c04': check_v13_c04(), 'v13-c05': check_v13_c05(), 'v13-c06': check_v13_c06(), 'v13-c07': check_v13_c07(), 'v13-c08': check_v13_c08()}
+    v13_opening_peer_check = {'v13-c01': check_v13_c01_peer(), 'v13-c02': check_v13_c02_peer(), 'v13-c03': check_v13_c03_peer(), 'v13-c04': check_v13_c04_peer(), 'v13-c05': check_v13_c05_peer(), 'v13-c06': check_v13_c06_peer(), 'v13-c07': check_v13_c07_peer(), 'v13-c08': check_v13_c08_peer()}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -708,6 +712,8 @@ def main():
     report['checks'].append('Volume 13 chapter4: complete finite-dimensional fixed-point and compact-generator economic existence proof chain,6 cases/12 solutions, separate author/peer mathematical witnesses and frozen scoped-source bindings checked.')
     report['checks'].append('Volume 13 chapter5: full finite separation/welfare support and upgrade, exact aggregation, weak-order Arrow/median proofs,6cases/12solutions and independent author/peer/source binding checks.')
     report['checks'].append('Volume 13 chapter6: full finite mixed-Nash existence, strategic-form perfection and finite Bayesian proofs; complete support classifications, correlated/coarse deviation rights and global welfare certificates. Six cases, twelve solutions and separate author/peer arithmetic, domains and exact source/payload bindings checked.')
+    report['checks'].append('Volume 13 chapter7: full finite perfect-recall and sequential-optimality/existence proofs, public repetition and qualified cooperation construction, all-plan reputation incentives; six cases, twelve solutions and independent author/peer arithmetic and frozen source/payload bindings checked.')
+    report['checks'].append('Volume 13 chapter8: full finite IC/minimal and excess rents, exact bunching certificates, nonsmooth continuum envelope, integrable mean-contract theorem and complete pure signaling/refinement/boundary proofs. Six cases, twelve solutions and independent author/peer calculations and frozen source/payload bindings checked.')
     report['checks'].extend(['Volume 11 chapters9–12: funded currency parity versus physical scenarios, segmented cash and sovereign claim budgets; regulatory and conduct incentives, financed resolution; finite run equilibria, auction feedback and consolidated recipient resources; finite governance choices, collateral, escalation incentives and decision evidence. Four author and four separate peer laboratories with exact final bindings, independently reviewed proofs and all36 closing exercise solutions.',
         'Volume 11 chapters5–8: dated funding and collateral, feasible liquidity support and ALM; process deadlines, identity accounting and common control failures; consistent revaluation, network contagion and certified reverse stress; insurance selection and dependence, pension cash, guarantee resources and household debt. Four author and four separate peer laboratories, all exact exercise reviews and frozen payload bindings.',
         'Volume 11 chapters1–4: screening and enforcement incentives, money creation and private-type run best replies; bank double entries, economic value, capital and dated cash; corporate debt service, evidence and recovery waterfalls; probability-atom VaR/ES, coherence, dependence, horizon and backtesting limits. Four author and four separate peer laboratories with independent oracles and final payload bindings.',
