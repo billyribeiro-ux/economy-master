@@ -1,0 +1,437 @@
+{
+  "chapter": "v12-c01",
+  "reviewer": "ito_author, separate machine-assisted specialist peer",
+  "date": "2026-10-09",
+  "assignment": "production/v12-c01-peer-assignment.json",
+  "status": "Separate peer review passed and frozen against final canonical author files; coordinator acceptance remains separate",
+  "decision": "No unresolved mathematical, statistical, source, reader or portability finding. Every general proof and all twelve exact solutions were independently reviewed. The two reported promotion findings are resolved; chapter acceptance remains the coordinator’s decision.",
+  "ownership": {
+    "owned_paths": [
+      "scripts/check_v12_c01_peer.py",
+      "content/reviews/v12-c01-peer.json"
+    ],
+    "working_inputs_read": [
+      "production/v12-c01-working.html",
+      "production/check_v12_c01_working.py",
+      "production/v12-c01-source-preparation.json",
+      "production/v12-c01-author-review-working.json"
+    ],
+    "final_inputs_expected": [
+      "content/chapters/v12-c01.html",
+      "scripts/check_v12_c01.py",
+      "content/reviews/v12-c01-sources.json",
+      "content/reviews/v12-c01-author.json"
+    ],
+    "unchanged": "No author, finance, shared, canonical, source catalogue, checkpoint or hosting file edited; no child agents or installations.",
+    "canonical_inputs_read": [
+      "content/chapters/v12-c01.html",
+      "scripts/check_v12_c01.py",
+      "content/reviews/v12-c01-sources.json",
+      "content/reviews/v12-c01-author.json"
+    ]
+  },
+  "review_method": {
+    "reading": "Read every line of all four frozen working inputs: complete chapter and all five worked cases, twelve exact prompts and complete solutions, retention and teach-back, all 254 author-checker lines, four source scopes and full author self-review. Independently reasoned through every proof hypothesis and limit transition.",
+    "numerical_independence": "No author helper, answer-producing routine or author saved result is used as a numerical oracle. Complete latent/flag and small-sample ratio supports, an explicit sharpness path, independent normal-CDF inversion and rational adjacent-binomial recurrence supply distinct finite evidence. Author execution will be separately labeled integration after promotion.",
+    "proof_limit": "Finite computation checks implementations and printed values; it does not prove the general asymptotic results. Their complete analytic review is recorded separately below.",
+    "promotion_reading": "Read the complete final canonical source/author records and every checker diff. Independently applying all declared spacing substitutions to the frozen working HTML reproduces the final HTML exactly; removing whitespace preserves its entire character sequence. All four final author hashes match the updated assignment. The original proof and exercise audits are unchanged."
+  },
+  "working_read_snapshot": [
+    {
+      "path": "production/v12-c01-working.html",
+      "bytes": 44822,
+      "sha256": "def94e45f946d8fee560392fd80481da63de2887816fb932ca09043cfa7a7094"
+    },
+    {
+      "path": "production/check_v12_c01_working.py",
+      "bytes": 12595,
+      "sha256": "ecf29482a3577bf83afc3665c71f4a03ed6a8a06508733d45abc62305fff9901"
+    },
+    {
+      "path": "production/v12-c01-source-preparation.json",
+      "bytes": 6053,
+      "sha256": "c14570d2e8f8a23bea2144812a224d5ef23761b7289a240683fa571381245e7e"
+    },
+    {
+      "path": "production/v12-c01-author-review-working.json",
+      "bytes": 8984,
+      "sha256": "b1853dd0bd0e52a23f7c715a78f0be8b29474c3d2a06b303c6f3e27ed40bdb83"
+    }
+  ],
+  "proof_audit": [
+    {
+      "claim": "Identification and impossibility of simultaneous consistency",
+      "review": "The model maps mechanisms to observable laws and targets. With unequal targets, take disjoint open balls of radius strictly less than half their distance. Identical iid sample laws cannot assign probabilities tending to one to both balls because their probabilities sum to at most one. This rules out one estimator being consistent at both mechanisms, not consistency under a separately restricted model."
+    },
+    {
+      "claim": "Stochastic order algebra and continuous transformations",
+      "review": "All scales are positive deterministic, vector bounds use norms and eventual quantifiers, and product norms are compatible. Select the O_P cutoff first, then send n to infinity for the o_P factor; the union bound requires no independence. Reciprocal and matrix inversion are confined to high-probability neighborhoods away from singularity. Continuity at the fixed probability limit suffices for plug-ins. Tightness is not a moment bound."
+    },
+    {
+      "claim": "Compact approximate extremum consistency",
+      "review": "Nonempty compact Theta and continuity yield an attained minimum on the closed complement of an epsilon ball. Uniqueness makes the separation gap strictly positive; an empty complement is handled. Measurable uniform deviation and measurable approximate selection with nonnegative o_P numerical tolerance imply Q(theta_hat)-Q(theta_0)<=2Delta+r. The bad event is included in {2Delta+r>=gap}; its probability vanishes. No continuity of sample Q_n, structural interpretation or unproved rate sharpening is smuggled into the result."
+    },
+    {
+      "claim": "Finite-net uniform LLN",
+      "review": "An integrable anchor criterion plus an integrable global Lipschitz envelope and compact finite diameter ensure integrability at every parameter and finite net point. For fixed delta the finite maximum converges in probability by weak laws and a union bound. The envelope mean converges; choose delta before n to make delta(2EL+1) small. Expected criterion is Lipschitz. Continuous sample paths on a separable compact set give a measurable supremum by a countable dense subset. Existence/measurability of a selected approximate minimizer is correctly a separate assumption."
+    },
+    {
+      "claim": "Asymptotically linear contrasts and vector normality",
+      "review": "IID centered fixed-dimensional psi with finite second norm gives finite contrast variances and zero cross-observation covariance. Each projection follows from the prerequisite scalar CLT and Slutsky; a zero variance projection is almost surely zero before its negligible remainder. Trace covariance bounds the score sum in probability. A covariance square root constructs an actual Gaussian candidate even if Sigma is singular. Cramer-Wold is explicitly invoked with a direct source rather than described as a new proof. Neither a dependent-data CLT nor convergence of finite-sample covariance is implied."
+    },
+    {
+      "claim": "Delta remainder and consistent estimated influence covariance",
+      "review": "Root-n tightness implies consistency. Differentiability at theta_0 makes the remainder-to-error norm ratio o_P(1), including its zero-error definition; multiplying by the tight root-n error proves the delta expansion. For estimated influences, average squared replacement error o_P(1), finite score second moment and Cauchy-Schwarz control the two cross-products and squared-error term. The empirical true-score outer product then converges by the integrable weak law. Dimension stays fixed."
+    },
+    {
+      "claim": "Studentization",
+      "review": "Positive scalar limiting variance and consistency of its estimate justify Slutsky without independence of mean and variance estimators. Nonpositive estimated variance events become negligible. The standard error is sqrt(Vhat/n). For the sample variance, finite second moment is enough because the weak law only needs integrability of X^2; no fourth moment is required. Degenerate population variance is outside this standard-normal conclusion."
+    },
+    {
+      "claim": "Boundary projection and nonlinear normal-square limits",
+      "review": "The boundary recording kernel is expressly defined even for the absent latent type. The unprojected estimator is consistent and has variance 9/49 at the root-n scale; its upper projection bound is inactive with probability tending to one. Positive-part continuity then gives max(0,Z), with atom 1/2 at zero. Squared means at zero use the continuous square map; exactly normal observations justify the stated finite-n local laws. These are distributional statements, not moment-convergence or uniform-normal-approximation theorems."
+    },
+    {
+      "claim": "Independent validation and ratio linearization",
+      "review": "Equal independent strata can be grouped into iid triples; unequal deterministic size ratios contribute their reciprocal precision factors. Covariances cannot be omitted for overlap, and population transport is an identification premise. The ratio centered-numerator identity plus a probability denominator bounded away from zero gives the stated influence, with the exceptional zero-user event explicitly controlled."
+    },
+    {
+      "claim": "Coverage quantifiers and weak sequences",
+      "review": "Interior fixed-law studentized convergence supplies pointwise asymptotic coverage. It supplies neither monotonic finite coverage nor coverage uniform over changing laws. Uniformity over candidate theta within one criterion is distinct from uniformity over data-generating laws. Known positive lambda point identifies each fixed model, while the explicitly changing sequence has separately calculated distribution and information rate."
+    }
+  ],
+  "worked_case_audit": [
+    {
+      "case": 1,
+      "review": "Joint probability tables, repeated observed laws, derivative signs, attained extrema and explicit connecting path all agree. Identification uncertainty is separated from sampling uncertainty."
+    },
+    {
+      "case": 2,
+      "review": "The deterministic moving dip converges at every fixed parameter but not uniformly; the wrong exact minimizer is unique and measurable. The proof identifies the correct failed premise."
+    },
+    {
+      "case": 3,
+      "review": "Known-rate and independent-validation gradients, covariance contributions, printed intervals and standard errors agree. Kernel definition at the null class and the boundary atom are correctly scoped."
+    },
+    {
+      "case": 4,
+      "review": "Raw covariance, exact ratio identity, influence support and plug-in variance agree. The conditional estimand has no causal interpretation and is undefined at a null conditioning event."
+    },
+    {
+      "case": 5,
+      "review": "Fixed nonzero mean, zero mean and local normal means have different rates/laws as stated; no fourth-moment or moment-convergence claim is made."
+    }
+  ],
+  "exercise_solution_audit": [
+    {
+      "number": 1,
+      "exact_prompt": "In the invoice model with observable p=.6, construct the two joint laws corresponding to (α,β,θ)=(.1,.2,5/7) and (.2,.1,4/7). Give all four cell probabilities in each law. Verify the identical observable law and different targets. With α∈[.05,.15], β∈[.15,.25], derive the sharp identified interval and explain why it is not a finite-sample confidence interval.",
+      "topic": "Two observational worlds and a sharp identified set",
+      "independent_solution": "The ordered cells (L=1,D=1),(1,0),(0,1),(0,0) are (4/7,1/7,1/35,9/35) and (18/35,2/35,3/35,12/35). Each sums to one; both flag marginals are 3/5, but latent prevalences are 5/7 and 4/7. Independence across invoices makes every finite observed sample law identical. On the stated error rectangle d is at least 3/5, the alpha derivative numerator is at most -3/20, and the beta derivative numerator is at least 9/20. Thus the extrema occur at (.15,.15) and (.05,.25), giving 9/14 and 11/14. Sharpness also has an explicit witness path: alpha=3/20-t/10, beta=3/20+t/10, theta=9/14+t/7 for 0<=t<=1; d stays 7/10 and the observed probability stays 3/5. Population-law identification width 1/7 is not a sampling interval.",
+      "evaluation": "All four cells, the observational-equivalence argument and the set-versus-confidence distinction are required; a point estimate alone does not answer the prompt.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 2,
+      "exact_prompt": "Let U be uniform on (0,1) and Xₙ=nI{U≤1/n}. Prove probability and almost sure convergence to zero, calculate E|Xₙ| and Var(Xₙ), and decide whether Xₙ=oP(1) and OP(1). Explain why these answers do not justify a variance-convergence claim. Then show that a fixed standard normal Z is OP(1) but not oP(1).",
+      "topic": "Rare tails and stochastic orders",
+      "independent_solution": "For n>epsilon, P(|X_n|>epsilon)=1/n. Every U>0 eventually exceeds 1/n forever, so the sequence also converges almost surely to zero. Integrating over the interval of length 1/n gives E|X_n|=1, E[X_n^2]=n and Var(X_n)=n-1. It is o_P(1), hence O_P(1), despite divergent variance. Its large-value tail mean stays one for n beyond any fixed cutoff; moment convergence is unsupported. A fixed standard normal has arbitrarily small tail probability for a sufficiently large M, but its tail at one is positive independently of n, proving O_P(1) and not o_P(1).",
+      "evaluation": "Distinguish realized eventual zero, tail probabilities and expectations; correctly using one does not establish the others.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 3,
+      "exact_prompt": "Prove OP(aₙ)OP(bₙ)=OP(aₙbₙ) without independence, and prove that Aₙ→Pa≠0 permits inversion with an arbitrary definition on Aₙ=0. Give a sequence that is OP(1) whose reciprocal is not OP(1). State a corresponding condition for inversion of a fixed-size random matrix.",
+      "topic": "Products, reciprocals and fixed-size matrix inversion",
+      "independent_solution": "Normalize by the positive deterministic scales. If each factor exceeds a selected bound with eventual probability below epsilon/2, the product exceeds the product bound only in the union of those events. No joint independence enters. On |A_n-a|<|a|/2, the denominator is nonzero and reciprocal error is at most 2|A_n-a|/a^2; the complement probability vanishes, including any zero-denominator event. The sequence 1/n is bounded in probability but has unbounded reciprocal n. A fixed-dimensional matrix converging to a nonsingular deterministic matrix has a high-probability neighborhood with nonzero determinant and continuous adjugate/determinant inverse. Entrywise O_P alone fails, as diag(1,1/n) shows.",
+      "evaluation": "Supply the tail union bound and a neighborhood away from zero; merely quoting Slutsky or boundedness misses the requested conditions.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 4,
+      "exact_prompt": "Suppose Q(θ)−Q(θ₀)≥4‖θ−θ₀‖² and an approximate minimizer has Δₙ≤.002 and rₙ≤.001 on an event Eₙ. Bound its parameter error on Eₙ. If P(Eₙ)≥.97, what finite probability statement follows? For general Δₙ=OP(n−1/2) and rₙ=OP(n−1), derive the rate supplied by this argument and explain why a root-n claim is unsupported.",
+      "topic": "Approximate minimization and its limited global rate",
+      "independent_solution": "The deterministic criterion comparison gives 4||error||^2 <= 2(.002)+.001=.005 on E_n. The radius squared is 1/800, hence radius sqrt(2)/40, about .035355339. Therefore the probability of error at most this radius is at least .97 when the stated event guarantee is justified. In the rate claim, the nonnegative total criterion error is O_P(n^-1/2), so its square root is O_P(n^-1/4). This is an upper bound, not a sharp rate theorem or a root-n proof. A fixed positive optimization tolerance leaves a nonvanishing radius. The event premise is not supplied by an optimizer success message.",
+      "evaluation": "Keep the finite probability statement conditional on its stated event premise and distinguish the available bound from a sharper local argument.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 5,
+      "exact_prompt": "Prove every assertion in the moving-dip counterexample. A reviewer checks Qₙ at θ=0,.25,.5,.75,1 for increasingly large n and sees convergence. Explain why this is insufficient and identify exactly which extremum-consistency hypothesis fails.",
+      "topic": "Pointwise convergence and the moving dip",
+      "independent_solution": "For fixed theta<1, n>1/(1-theta) puts the entire dip to its right; theta=1 is outside for every n. All fixed points therefore converge to theta^2. The dip endpoints are ordered and inside (0,1); its criterion is negative while the complement is nonnegative. Squaring strictly increases there, so the exact unique minimizer is 1-1/n, tending to one, whereas the population minimizer is zero. The uniform error is exactly two, attained throughout the dip. The five proposed grid points all miss it once n>4. Compactness, continuous population Q, measurable exact minimizer and uniqueness hold; uniform convergence is the missing theorem premise.",
+      "evaluation": "Identify the specific failed premise; discontinuity of the sample criterion is not a premise of the stated consistency theorem.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 6,
+      "exact_prompt": "For iid scalar W with EW²<∞ and Θ=[−B,B], B>0, apply the finite-net theorem to q(W,θ)=(W−θ)². Supply an integrable Lipschitz bound, derive Q(θ), identify its unique minimizer even when EW lies outside Θ, and explain why consistency alone does not show that this minimizer is an economically structural parameter.",
+      "topic": "Quadratic loss, integrable Lipschitz control and constrained target",
+      "independent_solution": "The difference in losses factors as |theta-theta_prime| |theta+theta_prime-2W|, bounded by (2B+2|W|)|theta-theta_prime|. Finite second moment gives finite first absolute moment and integrability of q(W,0)=W^2. The finite-net ULLN therefore applies. Q(theta)=Var(W)+(theta-EW)^2, uniquely minimized at the projection of EW onto [-B,B], including either endpoint if the unconstrained mean lies outside. The sample minimizer is the same continuous projection of the sample mean and is measurable. A projection target is not automatically a structural economic parameter. Independent finite checks use W=(-2,1,4) with masses (1/4,1/2,1/4), mean one and variance 9/2, under both binding and interior parameter bounds.",
+      "evaluation": "Give the integrable envelope, the anchor moment, the actual constrained minimizer and the additional structural interpretation requirement.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 7,
+      "exact_prompt": "Recompute the corrected-share standard error at n=400, p̂=.6 with known α=.1,β=.2. Then derive the gradient and the variance when the two independent validation strata each have size n. If instead their sample-size ratios are κα=1/2 and κβ=2, calculate the asymptotic variance and n=400 standard error. List two reasons those calculations could still fail to identify the true population late share.",
+      "topic": "Known and estimated measurement errors",
+      "independent_solution": "The measurement identity yields d=7/10 and theta=5/7. Known-rate root-n variance is (6/25)/(49/100)=24/49; n=400 standard error is sqrt(6)/70=.034992711 after rounding. Implicit differentiation gives gradient (10/7,-20/49,50/49). Independent main, false-positive and false-negative sample proportions have root-n variances .24,.09,.16. Contributions are 24/49,36/2401,400/2401, summing to 1612/2401. With validation sizes n/2 and 2n they become 24/49,72/2401,200/2401, summing to 1448/2401; SE=sqrt(1448)/980=.038829179. Here n is the main-sample size, not the total number of observations across three strata. Untrusted labels and failure to transport conditional recording rates are concrete identification threats; dependence or overlap changes the variance. An independent peer intervention nests false positives inside main positives, giving covariance 1/25 and total variance 1500/2401, so independence cannot be silently dropped.",
+      "evaluation": "Differentiate the inverse correctly, retain all validation uncertainty and specify concrete population/measurement evidence; a generic mention of bias is insufficient.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 8,
+      "exact_prompt": "For the complete (A,D) distribution in Worked example 4, derive the covariance matrix from raw moments and derive the ratio influence without quoting the delta formula. Calculate the correct and independence-assuming variances and explain why a zero observed denominator does not defeat consistency at this fixed law. What changes if the true usage probability is zero?",
+      "topic": "Ratio influence and dependent numerator/denominator",
+      "independent_solution": "Raw moments are EA=2, EA^2=68/5, ED=ED^2=2/5 and EAD=2. Thus Var(A)=48/5, Var(D)=6/25 and Cov(A,D)=6/5. The exact centered numerator identity divided by the consistent positive denominator gives influence (A-5D)/(.4), with conditional variance Var(Y|D=1)/P(D=1)=9/(2/5)=45/2. Dropping the covariance terms gives 195/2 instead. The observed counts 300,100,100 give estimate five, estimated influence variance 45/2, SE sqrt(.045) and the stated interval. Zero-user probability is (3/5)^n, so the arbitrary convention is asymptotically negligible at this law. A separate enumeration of all 27 three-draw outcomes gives mean 98/25 and variance 6006/625, explicitly showing that negligible asymptotic conventions can still affect small samples. If true use probability is zero, the conditional target is undefined by the observed law.",
+      "evaluation": "Derive the ratio identity, raw covariance and exceptional-event argument; a software ratio or an independence approximation does not answer the proof.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 9,
+      "exact_prompt": "For iid N(μ,4) observations, derive the limiting law of √n(X̄ₙ²−μ²) at μ=2 and the exact law of nX̄ₙ²/4 at μ=0. Along μₙ=2/√n, give the exact laws of nX̄ₙ²/4 and n(X̄ₙ²−μₙ²)/4. Explain the difference between a zero first-order asymptotic variance and a zero finite-sample estimation error.",
+      "topic": "Regular, quadratic and local normal-square laws",
+      "independent_solution": "At fixed mu=2 and sigma=2, the exact root-n scaled error equals 8Z+(4/sqrt(n))Z^2; its limit is N(0,64). At mu=0, n times the squared mean divided by four is exactly Z^2 for every n. For mu_n=2/sqrt(n), the uncentered scaled square is (Z+1)^2 and the error centered at the target is Z^2+2Z. Centering at the true squared mean does not remove the order-1/n plug-in bias, so this latter scaled law has mean one, consistently with the displayed identity. Zero derivative makes the root-n limit degenerate; the random error survives at the n scale. The general finite-variance version uses a continuous square map and does not require a fourth observation moment or convergence of moments.",
+      "evaluation": "Distinguish the exact normal-observation laws from the finite-variance limit, and the target mu^2 from E[X^2].",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 10,
+      "exact_prompt": "In the known-λ Gaussian model, compare λₙ=n−1/4, n−1/2 and n−3/4. Give the exact error variance, determine consistency or failure, and find the normalization producing a standard normal error. Explain why every fixed positive λ can identify θ even though the sequence can be statistically uninformative.",
+      "topic": "Point identification versus weak-information sequences",
+      "independent_solution": "For known positive lambda, the exact error is Z/(sqrt(n)lambda). Along n^-1/4, n^-1/2 and n^-3/4, its variance is n^-1/2, one and n^1/2. The first is consistent; the second keeps a fixed nondegenerate standard normal error; for the third, the probability of absolute error at most epsilon is P(|Z|<=epsilon/n^1/4), tending to zero. These failures use the exact distribution, not the false rule that variance divergence alone disproves probability convergence. In all cases sqrt(n)lambda times the error is standard normal, but the shrinking or fixed normalization is not consistency. Every fixed positive lambda gives distinct means for distinct theta and is point identifying; information n lambda_n^2 may nonetheless stay bounded or vanish.",
+      "evaluation": "Provide all three distributions/rates, a valid failure argument and the different quantifiers in fixed-law and uniform claims.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 11,
+      "exact_prompt": "Write the exact binomial-sum coverage event for a Wald interval at p=.6. Reproduce or independently evaluate the three supplied coverages and decide whether their pattern refutes the CLT. State what the “exact” label covers and what the numerical evaluation approximates. Explain why one law and three sample sizes cannot establish uniform coverage over all Bernoulli probabilities.",
+      "topic": "Finite Wald coverage and its scope",
+      "independent_solution": "For every count k, compare (k/n-.6)^2 with z^2(k/n)(1-k/n)/n, including equality. The peer obtains the quantile by bisection of the erf-based CDF and requires identical count classifications after perturbing it by 1e-9. Exact rational adjacent-mass recurrence, without factorials or author helpers, gives accepted counts 11..19, 51..69 and 221..258 for n=25,100,400. Their masses are .9362462771170674, .9481179791264979 and .9473923047392868. Count probabilities and sums are rational and exact; quantile evaluation, its tolerance endpoints and decimal presentation are numerical. There is no Monte Carlo uncertainty. Nonmonotonic finite coverage does not refute a pointwise CLT. A concrete separate boundary argument uses p_n=1/n^2: when K=0 the positive target is outside the zero-width interval, so coverage <=P(K>0)<=n p_n=1/n, proving why uniform extrapolation is unavailable.",
+      "evaluation": "State the finite-law event, numerical-versus-exact distinction and scope across laws; one interior law cannot certify universal coverage.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 12,
+      "exact_prompt": "A report says: “We have a million flagged invoices; the estimated true late fraction is 60%, the optimizer converged, and a 95% interval is narrow, so the payment-reminder program caused delinquency to fall.” Write a research audit distinguishing target, measurement identification, numerical convergence, sampling uncertainty and causal identification. Specify evidence that would change your assessment. An unsupported demand for more rows is not an adequate response.",
+      "topic": "Research critique with five distinct questions",
+      "independent_solution": "Define actual lateness by population, dates and units before estimating it. Validate or bound the flag kernel and its transport; a million precisely measured flags need not identify actual lateness. Check the criterion, parameter domain, uniform approximation and numerical tolerance separately from optimizer termination. Establish actual sampling units and dependence and justify the influence/variance/coverage claim rather than treating row count as independent information. Finally define the reminder intervention contrast and defend assignment/counterfactual assumptions, stable measurement and specification selection. Useful evidence includes validation and true-label records, dated sampling/assignment logs, stable definitions and a pre-specified randomized comparison or separately defended observational design. The answer correctly allows conditional conclusions and does not award credit based on a preferred policy opinion.",
+      "evaluation": "Full credit requires target, measurement identification, numerical convergence, sampling uncertainty and causal identification, with specific evidence capable of changing the assessment.",
+      "finding": "No substantive discrepancy."
+    }
+  ],
+  "teach_back_and_retention": {
+    "teach_back": "The chapter supplies the two same-observable worlds, inversion, centered scalar CLT, derivative-times-covariance variance and positive-part boundary limit requested by the explanation. Its evaluation criteria require the mechanism and scope, not recitation.",
+    "retention": "At p=11/20, alpha=1/20 and beta=3/20, d=4/5, theta=5/8, Bernoulli variance=99/400, corrected root-n variance=99/256 and standard error=sqrt(99)/400=.024874686 for n=625. The answer names compactness, continuous unique minimizer, measurable uniform error and controlled approximate selection, and distinguishes fixed lambda from lambda_n=n^-1/2.",
+    "limits": "The 7–14 day delay is an authored practice suggestion, not measured retention efficacy; no learner performance has been observed."
+  },
+  "source_review": {
+    "count": 4,
+    "ids": [
+      "v12-c01-aldous-chewi-cw",
+      "v12-c01-mit-delta",
+      "v12-c01-mit-extremum",
+      "v12-c01-mit-limit-tools"
+    ],
+    "method": "Read every provided source-preparation scope, inspected-page and limitation record and compared each citation to its actual use. Reused the four actually inspected primary scopes; this peer did not freshly retrieve or certify their entire external bodies. No unresolved specialist citation question required a fresh retrieval.",
+    "scopes": [
+      {
+        "id": "v12-c01-mit-limit-tools",
+        "assessment": "Mikusheva Fall 2018 finite-variance LLN/CLT, stochastic orders, Slutsky and delta framework. The chapter deliberately corrects the source absolute-value/centering shorthand and does not claim general dependence or Lindeberg extensions."
+      },
+      {
+        "id": "v12-c01-mit-extremum",
+        "assessment": "Chernozhukov Fall 2007 compact extremum, separation, measurability and finite-grid scopes. The original chapter actually proves its sufficient integrable-Lipschitz iid finite-net theorem; mixing, outer-probability and convexity extensions are excluded."
+      },
+      {
+        "id": "v12-c01-mit-delta",
+        "assessment": "Kempthorne Spring 2016 consistency, differentiability remainder and studentization scopes. Differentiability at the target, positive scale and the distinction between distributions and moments are retained."
+      },
+      {
+        "id": "v12-c01-aldous-chewi-cw",
+        "assessment": "Aldous/Chewi Spring 2017 Lecture 8 directly supports the invoked finite-dimensional Cramer-Wold device. Gaussian existence is separately constructed; the general characteristic-function continuity foundation is not falsely claimed proved here."
+      }
+    ],
+    "status": "Final canonical proposal schema inspected: ID, title, URL, use, retrieval verification and cautions match the four working scopes exactly. No additional source or mathematical claim was introduced."
+  },
+  "findings": [
+    {
+      "origin": "separate peer phase-one implementation reading",
+      "severity": "integration",
+      "status": "resolved and independently verified by exact-six-file execution",
+      "finding": "The working author checker tests existence of six prerequisite manuscript files outside its four-file package; an exact six-file peer tree cannot supply them.",
+      "agreed_resolution": "Final author checker will use strict flat-link syntax checks, while actual accepted prerequisite-route existence is retained as separate repository evidence. Final exact-four and exact-six portability must pass.",
+      "resolution": "The final checker replaces external manuscript is_file requirements with membership in the exact six allowed flat prerequisite filenames. The peer separately verified all six accepted canonical statuses, source files and existing reader files. The canonical checker still reports the same 118 author comparisons. The final peer ran the complete canonical author and peer APIs normal/-O in an isolated tree containing exactly four author and two peer files, confirming no hidden prerequisite-file dependency."
+    },
+    {
+      "origin": "separate peer phase-one full manuscript reading",
+      "severity": "reader editing",
+      "status": "resolved and independently verified",
+      "finding": "Some solutions join prose and numbers, including equal21/35, at(.15,.15), is0, variance45/2 and equal toone.",
+      "agreed_resolution": "Root will make a bounded ordinary spacing pass during promotion, preserve nonwhitespace mathematical text/markup and supply exact delta evidence.",
+      "resolution": "Independently applied the declared 30 inserted spaces to the working HTML and reconstructed the canonical bytes exactly. Its complete nonwhitespace sequence is unchanged. The known joined strings are repaired; all numbers, formulas, prose meaning and markup remain unchanged."
+    }
+  ],
+  "open_findings": [],
+  "phase_one_arithmetic": {
+    "status": "Passed against the frozen working manuscript only; final check() not invoked.",
+    "comparisons": 225,
+    "rounded_displays": 17,
+    "coverage_recurrence": [
+      {
+        "n": 25,
+        "accepted_counts": [
+          11,
+          19
+        ],
+        "coverage": 0.9362462771170674
+      },
+      {
+        "n": 100,
+        "accepted_counts": [
+          51,
+          69
+        ],
+        "coverage": 0.9481179791264979
+      },
+      {
+        "n": 400,
+        "accepted_counts": [
+          221,
+          258
+        ],
+        "coverage": 0.9473923047392868
+      }
+    ],
+    "additional_mechanism_evidence": [
+      "All eight length-three observed flag paths agree across the two latent mechanisms.",
+      "An explicit connected parameter path attains the entire identified interval.",
+      "Dependent validation example has variance 1500/2401 instead of 1612/2401.",
+      "All 27 three-draw ratio outcomes expose the zero-denominator convention and finite-sample bias.",
+      "Rare-probability Wald sequence has coverage bounded by 1/n."
+    ],
+    "development_note": "A draft text-anchor check initially looked for a generic word not present in solution 1; it was replaced with the actual set-versus-sampling phrase. No author content or economic calculation was changed."
+  },
+  "implementation_review": {
+    "portability_design": "portable() copies exactly six files and calls quiet public APIs normal/-O from cwd=/, checking unchanged bytes and exact membership. It never invokes a shared aggregating verifier.",
+    "execution_status": "Final canonical public APIs pass normal/-O in workspace and exact-six-file isolation. Import and check() are quiet; returned summaries are strict JSON and agree across all four runs. Author 118-comparison execution is integration evidence, separately labeled from the peer’s independent arithmetic and proof review.",
+    "checker": "Targets only four canonical author inputs plus two peer files. Standard library, explicit failures rather than assert, quiet check(), strict duplicate/nonfinite/trailing-JSON rejection, independent arithmetic and read-only author/peer hashes."
+  },
+  "validation": {
+    "status": "passed",
+    "summary": {
+      "chapter": "v12-c01",
+      "review": "separate peer",
+      "status": "passed",
+      "comparisons": 270,
+      "worked_examples": 5,
+      "exact_exercises_and_solutions": 12,
+      "rounded_displays_checked": 17,
+      "primary_scopes": 4,
+      "strict_JSON_rejections": 6,
+      "coverage_recurrence": [
+        {
+          "n": 25,
+          "accepted_counts": [
+            11,
+            19
+          ],
+          "coverage": 0.9362462771170674
+        },
+        {
+          "n": 100,
+          "accepted_counts": [
+            51,
+            69
+          ],
+          "coverage": 0.9481179791264979
+        },
+        {
+          "n": 400,
+          "accepted_counts": [
+            221,
+            258
+          ],
+          "coverage": 0.9473923047392868
+        }
+      ],
+      "author_comparisons_integration_only": 118,
+      "nonself_bindings": 5,
+      "limits": "Finite reconstruction plus separately documented proof reading; no general dependent/high-dimensional/uniform inference, rendered UI or external human certification."
+    },
+    "normal_and_optimized_workspace": "Quiet import/check() captured with cwd=/ under normal and -O; identical strict-JSON results.",
+    "normal_and_optimized_exact_six_file": "Unrelated temporary tree contains exactly four final author files and two peer files. Normal/-O from cwd=/ agree with workspace; all bytes and exact membership remain unchanged.",
+    "bindings": "Exactly four final canonical author payloads and the peer checker are bound below. No self-hash and no dependency on working production files, canonical source catalogue, prior chapters or network.",
+    "strict_JSON": "Duplicate keys, NaN, positive/negative Infinity, overflowing numeric exponent and trailing JSON are explicitly rejected.",
+    "nonmutation": "Byte snapshots bracket the final workspace and isolated runs for all six files; four author hashes match the frozen assignment.",
+    "whitespace": "git diff --check restricted to the two peer-owned paths passes.",
+    "rendered_UI_claim": false
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v12-c01.html",
+      "bytes": 44852,
+      "sha256": "e60a7d241b5a0a605db8466cdf9e95b6f7c92608f82295bf0f64d231c9211e93"
+    },
+    {
+      "path": "scripts/check_v12_c01.py",
+      "bytes": 12647,
+      "sha256": "72d9722b9114835874cdf4ed5e91a77c14bd9ac832807597912b2c0a545d2e20"
+    },
+    {
+      "path": "content/reviews/v12-c01-sources.json",
+      "bytes": 4933,
+      "sha256": "4fb41280085c70428fa1e07d8ac0cb95122f5c88ec169935158c0cd445b82158"
+    },
+    {
+      "path": "content/reviews/v12-c01-author.json",
+      "bytes": 10031,
+      "sha256": "19187f8f2ee0192686135ec0a1c2262ca6e386c027487b76c94fb1db59b1e1fe"
+    },
+    {
+      "path": "scripts/check_v12_c01_peer.py",
+      "bytes": 23761,
+      "sha256": "b9ed2f0aac9fdd89954602a751a45096e43b8c1efa687a95caca9c7e615436e3"
+    }
+  ],
+  "limitations": [
+    "Internal separate machine-assisted proof audit is not independent human academic certification.",
+    "No general dependent or high-dimensional CLT, full empirical-process theory, uniform inference, or identification under unvalidated recording assumptions is established.",
+    "Finite supports and rational arithmetic do not certify the general proofs; those were reviewed analytically.",
+    "Normal quantile evaluation uses numerical erf-based bisection with a tested classification tolerance, not formal interval arithmetic.",
+    "Source body scopes are reused honestly; no fresh full-document retrieval is claimed.",
+    "Rendered UI, canonical acceptance, whole-library regression and publication remain coordinator-owned gates."
+  ],
+  "promotion_review": {
+    "evidence": "production/v12-c01-promotion-delta.json",
+    "independent_exact_transformation": true,
+    "inserted_spaces": 30,
+    "nonwhitespace_mathematical_and_markup_sequence_unchanged": true,
+    "source_field_identity_map": {
+      "proposed_id": "id",
+      "title": "title",
+      "url": "url",
+      "scope": "use",
+      "retrieval": "verification",
+      "source_cautions": "limits"
+    },
+    "author_proof_and_solution_audits_unchanged": true,
+    "checker_delta": "Canonical manuscript path, final passed-status wording, source-anchor label and exact six prerequisite filenames instead of external file existence. No arithmetic or proof claim changed.",
+    "actual_shared_Document": {
+      "worked_examples": 5,
+      "exercises": 12,
+      "solutions": 12,
+      "unique_ids": 9,
+      "links": 10
+    },
+    "accepted_routes_independently_verified": [
+      "v03-c06",
+      "v03-c07",
+      "v03-c08",
+      "v04-c01",
+      "v04-c07",
+      "v04-c08"
+    ],
+    "scope": "Shared Document class executed read-only from its exact AST; no shared aggregation check invoked."
+  }
+}

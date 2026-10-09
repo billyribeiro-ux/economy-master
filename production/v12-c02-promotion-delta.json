@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-09",
+  "chapter": "v12-c02",
+  "working_frozen_files": [
+    {
+      "path": "production/v12-c02-working.html",
+      "bytes": 61155,
+      "sha256": "f8a6c0e87b467f99f64481129b3540e5c60327d1c4e469ad02f53736c54d1803"
+    },
+    {
+      "path": "production/check_v12_c02_working.py",
+      "bytes": 28120,
+      "sha256": "1a543d5a4953a6fd63721e826a3af243380d3dda03a74cec6b38f05f7174cb34"
+    },
+    {
+      "path": "production/v12-c02-sources-working.json",
+      "bytes": 8200,
+      "sha256": "352d0fc33cce56c11690c59a7f862505aeb8e9fd76b5a7736d8168f2fa866a33"
+    },
+    {
+      "path": "production/v12-c02-author-review-working.json",
+      "bytes": 15764,
+      "sha256": "9a355c47de23bf40e3e2f87a1ab6933c077c4afe5548b023d3e6c6e93a187161"
+    }
+  ],
+  "canonical_frozen_files": [
+    {
+      "path": "content/chapters/v12-c02.html",
+      "bytes": 61071,
+      "sha256": "a7f2894109490d5230ea439b8ead8fc88b30a971c1d459e5c5079e6fca938dfa"
+    },
+    {
+      "path": "scripts/check_v12_c02.py",
+      "bytes": 28138,
+      "sha256": "3c147ff5cc061c72145fe179e1177840e06424562f4f9d7cc1fd2e196204ab57"
+    },
+    {
+      "path": "content/reviews/v12-c02-sources.json",
+      "bytes": 8202,
+      "sha256": "cd1d69176f5377a79e056a1b9abc9e028ee6289752074b19b532a18aebbe26ff"
+    },
+    {
+      "path": "content/reviews/v12-c02-author.json",
+      "bytes": 17490,
+      "sha256": "23c14ac8e1eadbc231e99a6ca62fb5caa764af0dc657f9599a1e3953e74a93ec"
+    }
+  ],
+  "reader_replacements": [
+    [
+      "companion working checker",
+      "companion source checker"
+    ],
+    [
+      "python3 production/check_v12_c02_working.py",
+      "python3 scripts/check_v12_c02.py"
+    ],
+    [
+      "This working package remains outside the reader build.",
+      "The checker is part of the project source; the readable chapter and its solutions are included in the reader edition."
+    ],
+    [
+      "Volume 12 · Chapter 2 · Working manuscript",
+      "Volume 12 · Chapter 2"
+    ],
+    [
+      "<strong>Prerequisites and production boundary.</strong>",
+      "<strong>Prerequisites.</strong>"
+    ],
+    [
+      " Its working package and this chapter still require independent review before acceptance.",
+      ""
+    ]
+  ],
+  "checker_replacements": [
+    [
+      "V12-c02 working chapter",
+      "V12-c02 chapter"
+    ],
+    [
+      "BASE = Path(__file__).resolve().parent",
+      "BASE = Path(__file__).resolve().parents[1]"
+    ],
+    [
+      "\"v12-c02-working.html\", \"check_v12_c02_working.py\",\n         \"v12-c02-sources-working.json\"",
+      "\"content/chapters/v12-c02.html\", \"scripts/check_v12_c02.py\",\n         \"content/reviews/v12-c02-sources.json\""
+    ],
+    [
+      "working author checks passed; separate review pending",
+      "author checks passed; separate review recorded separately"
+    ],
+    [
+      "BASE/\"v12-c02-author-review-working.json\"",
+      "BASE/\"content/reviews/v12-c02-author.json\""
+    ]
+  ],
+  "complete_html_diff": [
+    "--- ",
+    "+++ ",
+    "@@ -1,9 +1,9 @@",
+    " <section class=\"chapter-intro\">",
+    "-<p class=\"eyebrow\">Volume 12 · Chapter 2 · Working manuscript</p>",
+    "+<p class=\"eyebrow\">Volume 12 · Chapter 2</p>",
+    " <h2>Linear models and robust inference</h2>",
+    " <p>A regression can be a well-defined description of a population, an unbiased estimator under a conditional model, or a basis for asymptotic inference. These are different achievements. A covariance estimator that allows unequal variances does not identify a causal effect. A thousand measurements of the same common shock do not constitute a thousand independent shocks. Changing regression weights can change the population question as well as the precision of its answer.</p>",
+    " <p><strong>Capability.</strong> Derive population and sample projections, exact OLS and known-covariance GLS results, and justified covariance estimators for three explicit sampling structures: iid observations, iid bounded-size clusters, and bounded stationary finite-range dependence. Diagnose rank, leverage, misspecified weights, dependence and finite-sample inference failures. All numerical cases and exercises are original synthetic examples; currency amounts are generic currency units (CU), not market observations.</p>",
+    "-<p><strong>Prerequisites and production boundary.</strong> <a href=\"v12-c01.html\">Chapter 1</a> supplies stochastic orders, finite-dimensional iid score limits, continuous inversion and studentization. Its working package and this chapter still require independent review before acceptance. Matrix projections and positive-definite square roots come from <a href=\"v02-c06.html\">Volume 2, Chapter 6</a> and <a href=\"v02-c10.html\">Chapter 10</a>. The smooth replacement proof of the scalar iid CLT is in <a href=\"v03-c06.html\">Volume 3, Chapter 6</a>; we extend that argument explicitly to the bounded dependent case below. No general mixing CLT, high-dimensional approximation or arbitrary estimated-covariance theorem is assumed.</p>",
+    "+<p><strong>Prerequisites.</strong> <a href=\"v12-c01.html\">Chapter 1</a> supplies stochastic orders, finite-dimensional iid score limits, continuous inversion and studentization. Matrix projections and positive-definite square roots come from <a href=\"v02-c06.html\">Volume 2, Chapter 6</a> and <a href=\"v02-c10.html\">Chapter 10</a>. The smooth replacement proof of the scalar iid CLT is in <a href=\"v03-c06.html\">Volume 3, Chapter 6</a>; we extend that argument explicitly to the bounded dependent case below. No general mixing CLT, high-dimensional approximation or arbitrary estimated-covariance theorem is assumed.</p>",
+    " </section>",
+    " ",
+    " <section id=\"projection\">",
+    "@@ -146,7 +146,7 @@",
+    " <h2>9. What a defensible regression report must identify</h2>",
+    " <p>Report the target and its units, the sampling unit, the observation or cluster count, and the assumptions making scores centered. State whether the model conditions on X, treats rows as iid, treats whole clusters as iid, or imposes a specified time-series process. Disclose the covariance formula, corrections, clustering variable, lag rule and exceptional-event convention. A design with high leverage, few independent clusters or nearly collinear regressors can be unreliable even when a large file makes matrix multiplication easy.</p>",
+    " <p>Inference after searching many outcomes, cutoffs or specifications is a further problem; the fixed pre-specified contrast theorems do not automatically cover it. Serially correlated errors can coexist with endogenous regressors; HAC addresses the covariance only after the score's mean and projection target have been justified. If economic interpretation requires a structural parameter, articulate the intervention, exclusion or assignment restrictions separately. Robust inference is robustness to a stated class of covariance variation under maintained assumptions, not immunity to misspecification, selection or unidentified causality.</p>",
+    "-<p>The companion working checker recomputes the original finite distributions, projections, exact covariance matrices and score sequences with standard-library rational arithmetic, checks bounded finite cases and validates displayed numbers. Run <code>python3 production/check_v12_c02_working.py</code> from the book directory, or invoke that file by absolute path from another directory; <code>python3 -O</code> is also supported. Success is quiet; <code>check()</code> returns a summary. Its finite checks do not prove the asymptotic theorems: the assumptions, remainder bounds and probability arguments require the separate mathematical reading recorded in the author review. This working package remains outside the reader build.</p>",
+    "+<p>The companion source checker recomputes the original finite distributions, projections, exact covariance matrices and score sequences with standard-library rational arithmetic, checks bounded finite cases and validates displayed numbers. Run <code>python3 scripts/check_v12_c02.py</code> from the book directory, or invoke that file by absolute path from another directory; <code>python3 -O</code> is also supported. Success is quiet; <code>check()</code> returns a summary. Its finite checks do not prove the asymptotic theorems: the assumptions, remainder bounds and probability arguments require the separate mathematical reading recorded in the author review. The checker is part of the project source; the readable chapter and its solutions are included in the reader edition.</p>",
+    " </section>",
+    " ",
+    " <section id=\"exercises\">"
+  ],
+  "proof_numerical_and_exercise_content_unchanged": true,
+  "source_metadata_delta": "Canonical source state and accepted c01 only; actual primary inspection scopes preserved.",
+  "author_metadata_delta": "Working author record preserved as history with three canonical bindings and explicit coordinator promotion metadata.",
+  "previous_canonical_freeze": [
+    {
+      "path": "content/chapters/v12-c02.html",
+      "bytes": 61206,
+      "sha256": "5c4adc741764f9f59742e966419ced4205921943ea0cd356bf938420000646a3"
+    },
+    {
+      "path": "scripts/check_v12_c02.py",
+      "bytes": 28138,
+      "sha256": "3c147ff5cc061c72145fe179e1177840e06424562f4f9d7cc1fd2e196204ab57"
+    },
+    {
+      "path": "content/reviews/v12-c02-sources.json",
+      "bytes": 8202,
+      "sha256": "cd1d69176f5377a79e056a1b9abc9e028ee6289752074b19b532a18aebbe26ff"
+    },
+    {
+      "path": "content/reviews/v12-c02-author.json",
+      "bytes": 16952,
+      "sha256": "b095d99db0d6292e97b8b33029de53cf5614b70180726fc83be725f20d59104e"
+    }
+  ],
+  "resolved_peer_finding": "Only obsolete workflow/working-state prose changed; final proof/solution/numerical content unchanged."
+}

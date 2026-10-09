@@ -1,0 +1,74 @@
+{
+  "chapter": "v12-c05",
+  "date": "2026-10-09",
+  "status": "compact blueprint approved for authoring; manuscript acceptance pending",
+  "independent_exact_comparisons": 12,
+  "results": [
+    {
+      "claim": "pooled finite population moments",
+      "actual": "(Fraction(4, 1), Fraction(10, 1), Fraction(5, 2))",
+      "expected": "(Fraction(4, 1), Fraction(10, 1), Fraction(5, 2))"
+    },
+    {
+      "claim": "within fixed-unit normalization",
+      "actual": "(Fraction(2, 1), Fraction(2, 1), Fraction(1, 2))",
+      "expected": "(Fraction(2, 1), Fraction(2, 1), Fraction(1, 2))"
+    },
+    {
+      "claim": "working random-effects projection",
+      "actual": "(Fraction(8, 3), Fraction(6, 1), Fraction(9, 4))",
+      "expected": "(Fraction(8, 3), Fraction(6, 1), Fraction(9, 4))"
+    },
+    {
+      "claim": "dynamic full eight-state law",
+      "actual": "(Fraction(-1, 2), Fraction(-1, 2), Fraction(-1, 4), Fraction(2, 1), Fraction(8, 1))",
+      "expected": "(Fraction(-1, 2), Fraction(-1, 2), Fraction(-1, 4), Fraction(2, 1), Fraction(8, 1))"
+    },
+    {
+      "claim": "latent atom count",
+      "actual": "6",
+      "expected": "6"
+    },
+    {
+      "claim": "observable atom count",
+      "actual": "5",
+      "expected": "5"
+    },
+    {
+      "claim": "full mean",
+      "actual": "4",
+      "expected": "4"
+    },
+    {
+      "claim": "full variance",
+      "actual": "5",
+      "expected": "5"
+    },
+    {
+      "claim": "respondent target",
+      "actual": "3",
+      "expected": "3"
+    },
+    {
+      "claim": "estimated finite-cell influence variance",
+      "actual": "6",
+      "expected": "6"
+    },
+    {
+      "claim": "known-propensity HT variance",
+      "actual": "42",
+      "expected": "42"
+    },
+    {
+      "claim": "same observed law with two non-MAR means",
+      "actual": "(Fraction(3, 1), Fraction(5, 1))",
+      "expected": "(Fraction(3, 1), Fraction(5, 1))"
+    }
+  ],
+  "analytic_review": [
+    "Balanced common-weight sample CRE identity follows mutually orthogonal within and between columns; rank and no duplicate intercept columns required. Population coefficients (2,1) use zero conditional mean of independent innovations in the stipulated law.",
+    "Common shock q_i*s_t*U survives unit and time centering because both q and s sum to zero; estimator beta+U remains inconsistent despite zero marginal score mean. No independent-unit CLT applies."
+  ],
+  "clarification": "Six latent atoms collapse to five observed atoms; use exact terminology. All examples synthetic and all proofs limited to explicit fixed-T/unit independence or counterexample contracts.",
+  "source_scope": "Reuse frozen four-source preparation, no additional source-body read asserted."
+}

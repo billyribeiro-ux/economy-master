@@ -1,0 +1,99 @@
+{
+  "chapter": "v12-c03",
+  "date": "2026-10-09",
+  "working_frozen_files": [
+    {
+      "path": "production/v12-c03-working.html",
+      "bytes": 60462,
+      "sha256": "675d5e88175f59141f0aeb4faa2fa800c2aca96d6fcb55010fa6a79edc5eb15d"
+    },
+    {
+      "path": "production/check_v12_c03_working.py",
+      "bytes": 29918,
+      "sha256": "5de21c1005ec40104650978694f0fa9202b576a8304c9715ebd58dcd0ef85133"
+    },
+    {
+      "path": "production/v12-c03-sources-working.json",
+      "bytes": 10279,
+      "sha256": "e2cc77ebe14c2305b6f835005e06f2f558293fcda63824d047cded3a02759699"
+    },
+    {
+      "path": "production/v12-c03-author-review-working.json",
+      "bytes": 18943,
+      "sha256": "cf8f35b78fa4f46b6b7a7ee07bb3afddeaae7de39a6effdd5247db7d1dd13dfd"
+    }
+  ],
+  "canonical_frozen_files": [
+    {
+      "path": "content/chapters/v12-c03.html",
+      "bytes": 60382,
+      "sha256": "99dd513f4ea3807db23aee28df6bf25f296cefaa0700f49a8ed8199efd9149d5"
+    },
+    {
+      "path": "scripts/check_v12_c03.py",
+      "bytes": 29895,
+      "sha256": "4a1564024ea314918f1ede4246fa26204575c11b6b9c828fbb8023fa0c48b950"
+    },
+    {
+      "path": "content/reviews/v12-c03-sources.json",
+      "bytes": 10219,
+      "sha256": "ed46fe4af4920a7c831c974942d56568bc44ce42bde9873db3d353e22218d837"
+    },
+    {
+      "path": "content/reviews/v12-c03-author.json",
+      "bytes": 20588,
+      "sha256": "dde10dde432de486a75fa6def1cd12845008fadfa4fe61f80b2fc3ddd00e32a9"
+    }
+  ],
+  "reader_replacements": [
+    [
+      "This working package has no independent runtime laboratory or external dataset. The chapter's acceptance and reader integration follow prerequisite and separate review gates.",
+      "All numerical inputs are specified in this chapter; the checker is part of the project source."
+    ]
+  ],
+  "checker_replacements": [
+    [
+      "four working files",
+      "four canonical files"
+    ],
+    [
+      "HTML = 'production/v12-c03-working.html'",
+      "HTML = 'content/chapters/v12-c03.html'"
+    ],
+    [
+      "SELF = 'production/check_v12_c03_working.py'",
+      "SELF = 'scripts/check_v12_c03.py'"
+    ],
+    [
+      "SOURCES = 'production/v12-c03-sources-working.json'",
+      "SOURCES = 'content/reviews/v12-c03-sources.json'"
+    ],
+    [
+      "REVIEW = 'production/v12-c03-author-review-working.json'",
+      "REVIEW = 'content/reviews/v12-c03-author.json'"
+    ],
+    [
+      "complete original working fragment",
+      "complete original chapter fragment"
+    ],
+    [
+      "working_only=True",
+      "working_only=False"
+    ]
+  ],
+  "complete_html_diff": [
+    "--- ",
+    "+++ ",
+    "@@ -143,7 +143,7 @@",
+    " <h2>8. From a method to an auditable research claim</h2>",
+    " <p>Start with a specified outcome, treatment, units, target population and assignment mechanism. State the substantive exclusion argument before computing a first stage. Record included controls and which moments they justify; check sample rank separately from population relevance. Explain whether the coefficient is a constant structural parameter, a projection, or a local effect under a potential-outcome design. A change in weighting does not repair an unidentified causal interpretation.</p>",
+    " <p>For inference, name the independent sampling units, score, covariance estimator, rank condition and approximation regime. Preserve structural residuals and every preliminary covariance choice. Report the full test-inversion set, including emptiness or no finite bound; report J as a joint specification diagnostic with its degrees of freedom and limitations. Pre-specify or disclose instrument selection and specification search. An instrument chosen because it produces a desired result raises a separate selection problem that none of the fixed-instrument calculations here solves.</p>",
+    "-<p>The companion standard-library checker independently reconstructs finite states, projection matrices, weighted normal equations, covariance identities, nonlinear bounds and the exact scalar acceptance sets. Its normal and optimized executions use explicit checks. It does not prove the probability limits or establish a real exclusion restriction; those require the arguments and evidence just stated. This working package has no independent runtime laboratory or external dataset. The chapter's acceptance and reader integration follow prerequisite and separate review gates.</p>",
+    "+<p>The companion standard-library checker independently reconstructs finite states, projection matrices, weighted normal equations, covariance identities, nonlinear bounds and the exact scalar acceptance sets. Its normal and optimized executions use explicit checks. It does not prove the probability limits or establish a real exclusion restriction; those require the arguments and evidence just stated. All numerical inputs are specified in this chapter; the checker is part of the project source.</p>",
+    " </section>",
+    " ",
+    " <section id=\"v12-c03-exercises\">"
+  ],
+  "mathematical_numerical_exercise_content_unchanged": true,
+  "metadata_delta": "Canonical status, registered source proposals, original author snapshot and new nonself three-payload bindings; all historical audits preserved."
+}

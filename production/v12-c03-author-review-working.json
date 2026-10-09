@@ -1,0 +1,279 @@
+{
+  "chapter": "v12-c03",
+  "author": "c05_review, machine-assisted author",
+  "date": "2026-10-09",
+  "assignment": "production/v12-c03-author-assignment.json",
+  "status": "Complete working author package; author gates passed and four files frozen for separate/coordinator review. Not accepted or published.",
+  "owned_paths": [
+    "production/v12-c03-working.html",
+    "production/check_v12_c03_working.py",
+    "production/v12-c03-sources-working.json",
+    "production/v12-c03-author-review-working.json"
+  ],
+  "canonical_status": "Remains planned; no canonical chapter, source catalogue, reader build or publication changed.",
+  "capability_scope": "Complete graduate IV/2SLS, exclusion/relevance, fixed-dimensional efficient/feasible GMM, overidentification, weak relevance/inversion and binary local effects; five original worked cases and twelve solved exercises.",
+  "architecture_coordination": "Root independently reconstructed numerical blueprint before prose. C02 author confirmed x∈R^p, Q projection, iid fourth-moment HC interface, separate GLS/cluster/HAC scopes. This chapter derives instrument-score replacement independently and inherits no dependent or exact t/F theorem.",
+  "root_blueprint_refinements": [
+    "Specified P(Z=1)=1/2 before calculating baseline treated effect3.",
+    "Labeled85/44 as the plug-in efficient variance using the same preliminary covariance; recomputing residual covariance at the two-step estimate is a different finite procedure.",
+    "Separated the stipulated forty-row table from the conditional-Gaussian null population and the exact known-variance candidate test from asymptotic J calibration."
+  ],
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "proof_audit": [
+    {
+      "topic": "linear_identification",
+      "author_reading": "Full-column rank is necessary and sufficient for the unrestricted linear moment model; the null direction constructs the entire competing target line. Moment count alone fails. Boundary or other structural restrictions are explicitly separate.",
+      "status": "complete author proof reading; separate review remains"
+    },
+    {
+      "topic": "projection_and_gmm",
+      "author_reading": "Xhat=P_Z X and idempotence give the exact two-stage normal equations; rank(Z′X) gives positive curvature. Structural residuals are distinguished from second-stage regression residuals. Moment rescaling includes the inverse-transpose weight change.",
+      "status": "complete author proof reading; separate review remains"
+    },
+    {
+      "topic": "iid_linear_limit",
+      "author_reading": "Exact error identity precedes consistency/rate claims. LLN gives B and weight limits, fixed positive curvature yields inverse continuity, and the iid centered-score CLT plus order algebra gives the signed sandwich expansion. The G=-B convention has the required leading minus.",
+      "status": "complete author proof reading; separate review remains"
+    },
+    {
+      "topic": "covariance_replacement",
+      "author_reading": "The added squared regressor-instrument moment controls the average squared estimated-score error. Two cross terms are bounded by Cauchy-Schwarz; entrywise score LLN completes consistency. Same-sample estimation is permitted because no independence of convergent factors is needed.",
+      "status": "complete author proof reading; separate review remains"
+    },
+    {
+      "topic": "efficient_weight",
+      "author_reading": "K_W B=K_* B=I makes the difference annihilate B. The cross covariance vanishes and the remainder D Omega D′ is positive semidefinite. Optimality is conditional on this fixed correct-moment class, not a universal statistical claim.",
+      "status": "complete author proof reading; separate review remains"
+    },
+    {
+      "topic": "overidentification",
+      "author_reading": "Signed fitted-moment expansion, positive covariance whitening and the orthogonal residual projection give rank m-k and a chi-square limit. Feasible replacement is controlled because the normalized fitted score is bounded in probability. The test is asymptotic and depends on strong rank; an aligned invalid-moment counterexample fits a wrong target.",
+      "status": "complete author proof reading; separate review remains"
+    },
+    {
+      "topic": "nonlinear_gmm",
+      "author_reading": "Compact uniform criterion convergence and unique global zero establish consistency before local expansion. Supremum/selection measurability, continuity, interiority, local uniform Jacobian convergence, full rank and score CLT are explicit. An integrated Jacobian avoids claiming one common multivariate mean-value point. Exact FOC solves the rate without assuming it. Approximate FOC requires o_P(n^-1/2) residual plus separate consistency.",
+      "status": "complete author proof reading; separate review remains"
+    },
+    {
+      "topic": "nonlinear_feasibility",
+      "author_reading": "A local square-integrable Lipschitz envelope supplies the same estimated-score covariance replacement. Positive covariance and strong rank are needed before importing the weighting/J projection conclusions. Signed-domain and zero-derivative counterexamples delimit the theorem.",
+      "status": "complete author proof reading; separate review remains"
+    },
+    {
+      "topic": "weak_sequence",
+      "author_reading": "Deterministic normalized instrument and nonsingular jointly Gaussian errors give an exact standardized random ratio at each n. Fixed relevance and c/sqrt(n) sequences have different limits. Nondegeneracy, rather than one small denominator realization, proves failure of consistency.",
+      "status": "complete author proof reading; separate review remains"
+    },
+    {
+      "topic": "candidate_inversion",
+      "author_reading": "Fixed full-rank Z, homoskedastic Gaussian structural error, known positive variance and no nuisance coefficients give exact chi-square projection at a tested coefficient even with endogenous x. Coverage equals nonrejection at the true coefficient. The quadratic Gram constraint proves interval/singleton/empty/all-real classification and excludes disjoint rays.",
+      "status": "complete author proof reading; separate review remains"
+    },
+    {
+      "topic": "binary_late",
+      "author_reading": "Consistency/no interference, joint assignment independence, exclusion, positivity, integrability, individual monotonicity and positive complier mass are stated separately. Compliance decomposition proves the Wald ratio for compliers. ATT calculations specify encouragement probability; changing an unseen counterfactual supplies an observational-equivalence proof of ATE nonidentification.",
+      "status": "complete author proof reading; separate review remains"
+    }
+  ],
+  "prompt_solution_audit": [
+    {
+      "prompt": "v12-c03-e01",
+      "solution": "Finite sign-law moments give OLS11/5, valid Z slope2 and invalid T slope7/3; prediction and moment validity are audited separately.",
+      "status": "fully solved and checked against exact prompt"
+    },
+    {
+      "prompt": "v12-c03-e02",
+      "solution": "Full sample-rank/idempotence proof derives 2SLS and identifies the structural residual. Exact score second moments2and10 diagnose ordinary second-stage covariance.",
+      "status": "fully solved and checked against exact prompt"
+    },
+    {
+      "prompt": "v12-c03-e03",
+      "solution": "Entire affine identified set(3-2t,t), new target(1,1), exact projection invariance and general transformed weight are supplied.",
+      "status": "fully solved and checked against exact prompt"
+    },
+    {
+      "prompt": "v12-c03-e04",
+      "solution": "The full fixed-dimensional iid proof supplies LLN, nonsingular neighborhood, consistency, centered score CLT, same-sample weight Slutsky and the signed influence.",
+      "status": "fully solved and checked against exact prompt"
+    },
+    {
+      "prompt": "v12-c03-e05",
+      "solution": "Squared-score replacement proof and all terms of the preliminary meat calculation are given. Fixed two-step19/11,J40/11,V85/44 are distinguished from a different post-step covariance.",
+      "status": "fully solved and checked against exact prompt"
+    },
+    {
+      "prompt": "v12-c03-e06",
+      "solution": "Correlated-score matrix inversion yields18/25 versus5/7, gap1/175 and inefficient marginal-only weighting90/121; the full PSD proof is provided.",
+      "status": "fully solved and checked against exact prompt"
+    },
+    {
+      "prompt": "v12-c03-e07",
+      "solution": "Residual projection I-11′/3 has rank2; the supplied score produces14/3. An aligned moment violation gives a zero-residual wrong target. Exact arithmetic is separated from asymptotic calibration.",
+      "status": "fully solved and checked against exact prompt"
+    },
+    {
+      "prompt": "v12-c03-e08",
+      "solution": "Two nonzero-derivative roots defeat global uniqueness; a clipped real cube root with unique target and zero derivative has n^-1/6 rate and a nonnormal transformed-Gaussian limit.",
+      "status": "fully solved and checked against exact prompt"
+    },
+    {
+      "prompt": "v12-c03-e09",
+      "solution": "Gaussian ratio is derived with the specified positive-definite disturbance covariance. Fixed errors1/8and3/49 contrast with weak error2. The exact zero denominator is undefined, with probability-zero equality distinguished from small neighborhoods.",
+      "status": "fully solved and checked against exact prompt"
+    },
+    {
+      "prompt": "v12-c03-e10",
+      "solution": "Original projection produces center3,radius squared3; all cutoff and zero-projection alternatives are solved. A nonnegative quadratic with the Gram constraint cannot have two disjoint rays.",
+      "status": "fully solved and checked against exact prompt"
+    },
+    {
+      "prompt": "v12-c03-e11",
+      "solution": "Independent assignment probability1/4 yields treatment share3/8,ATT8/3,LATE4,ATE9/2. Altering never-treated Y1 leaves the full observed law unchanged and changes ATE to7/2.",
+      "status": "fully solved and checked against exact prompt"
+    },
+    {
+      "prompt": "v12-c03-e12",
+      "solution": "Complete open audit rubric covers target, assignment/exclusion, rank, instrument selection, firm dependence/covariance and J interpretation with evidence/design changes. Alternative justified conclusions earn credit.",
+      "status": "fully solved and checked against exact prompt"
+    }
+  ],
+  "instruction": "Prerequisites and dimensions precede methods; all twelve prompts use taught arguments. Every worked case gives complete calculations and limits. Teach-back and delayed transfer have full benchmark answers and repair routes. The chapter uses standard exercise/solution reader classes and owned IDs.",
+  "computation": "Readonly stdlib checker reconstructs finite sign laws, every sample/compliance table row, actual projections and weighted normal equations, score covariance, scalar/full-matrix efficiency certificates, J geometry, nonlinear boundary/rate identities, Gaussian ratio arithmetic, full candidate-set inequalities and observable compliance-law equivalence. No author model, saved output or simulation supplies the numerical oracle. Numerical evidence does not replace the general proof reading.",
+  "source_audit": "Four actually inspected primary scopes reused, with precise PDF hashes/pages and rendered equation cautions. Three MIT lectures are scoped rather than falsely claimed fully inspected; all nine image-based Imbens-Angrist pages were visually read, with the chapter using a bounded binary proof. Source proposals remain working only.",
+  "validation": {
+    "status": "passed",
+    "summary": {
+      "chapter": "v12-c03",
+      "comparisons": 199,
+      "exact_numeric_anchors": 48,
+      "executed_domain_rejections": 16,
+      "exercises": 12,
+      "intervention_scopes": [
+        "A direct outcome channel changes IV without changing the first stage.",
+        "A more predictive instrument containing the latent disturbance remains invalid.",
+        "Recompute structural residual meat at the finite two-step estimate; it differs from the stipulated preliminary meat.",
+        "Known population versus feasible preliminary weighting changes a finite J decision, without changing the asymptotic theorem.",
+        "Change instrument units and mix instruments: transformed inverse weight preserves the result while a naive fixed weight does not.",
+        "Add one genuinely independent valid moment to a rank-deficient system; redundant row count alone fails.",
+        "Retain versus discard off-diagonal score covariance; inverse marginal variances are not efficient weights.",
+        "A two-coefficient three-moment correlated system checks the matrix, not only scalar, efficiency identity.",
+        "Moment violations parallel to the regressor span shift the fitted target without creating a J residual.",
+        "Move a nonlinear sample moment to a parameter boundary and enlarge a signed domain; global and local conditions change separately.",
+        "Scale first-stage relevance with sample size; standardized-score algebra distinguishes shrinking and nonshrinking errors.",
+        "Reduce a critical value through the quadratic minimum, and remove projected relevance: interval, singleton, empty and all-real sets are explicitly distinguished.",
+        "Introduce defiers and, separately, a direct encouragement effect; the Wald numerator changes through different causal assumptions.",
+        "Change encouragement frequency, then an unobserved never-treated potential outcome: ATT mixture and ATE identification differ from LATE."
+      ],
+      "limits": "Finite original evidence and scoped source/proof reading; no empirical validity, general dependent or uniform-weak theorem, rendered QA, human certification or acceptance implied.",
+      "nonself_author_bindings": 3,
+      "purposeful_interventions": 14,
+      "rounded_numeric_anchors": 3,
+      "solutions": 12,
+      "source_documents": 4,
+      "status": "passed",
+      "worked_cases": 5,
+      "working_only": true
+    },
+    "execution_gates": [
+      {
+        "location": "workspace",
+        "mode": "normal",
+        "cwd": "/",
+        "quiet_import_and_check": true,
+        "strict_json_summary": true,
+        "exit_code": 0
+      },
+      {
+        "location": "workspace",
+        "mode": "optimized",
+        "cwd": "/",
+        "quiet_import_and_check": true,
+        "strict_json_summary": true,
+        "exit_code": 0
+      },
+      {
+        "location": "isolated_four_files",
+        "mode": "normal",
+        "cwd": "/",
+        "quiet_import_and_check": true,
+        "strict_json_summary": true,
+        "exit_code": 0
+      },
+      {
+        "location": "isolated_four_files",
+        "mode": "optimized",
+        "cwd": "/",
+        "quiet_import_and_check": true,
+        "strict_json_summary": true,
+        "exit_code": 0
+      }
+    ],
+    "all_summaries_equal": true,
+    "payloads_unchanged_by_execution": true,
+    "isolated_exact_file_count": 4,
+    "shared_Document_actual_execution": {
+      "worked": 5,
+      "exercises": 12,
+      "solutions": 12,
+      "unique_ids": 29,
+      "h1": 0
+    },
+    "reader_repair_replay": {
+      "rejected": true,
+      "message": "v12-c03: text outside the chapter fragment sections"
+    },
+    "scope": "Four quiet API executions in fresh normal/optimized interpreters from cwd=/, workspace and exact four-file copy; shared reader parser executed directly. No library rebuild, empirical validity, rendered UI or acceptance claimed."
+  },
+  "revision_notes_for_root": [
+    "The complete manuscript sent for root reading was60,467B SHA256782339201c4ecd009f35b72f0f75b11cc4d2741d58d64c200e6602dfdbe1ee4d. It already incorporates the blueprint refinements; subsequent manuscript deltas will be listed here.",
+    "Focused numerical checker corrected the six-decimal display of 1-exp(-4) from 0.981685 to 0.981684. The exact probability formula, supplied cutoff 8 and every candidate set are unchanged.",
+    "Root complete-manuscript reading found the literal bare line HTML between the workflow and exercise sections. Removed only that stray delimiter; added a checker rejection for non-whitespace text outside the chapter fragment sections. This and the probability rounding are the only manuscript deltas after the initial complete read signal; no financial/statistical contract changed."
+  ],
+  "open_findings": [],
+  "limitations": [
+    "C01 is locally accepted; final c02 acceptance and separate c03 peer/coordinator gates remain prerequisites for c03 acceptance.",
+    "Iid/fixed-dimensional and explicit exact-Gaussian contracts only; no generic dependent, growing-instrument, uniform weak or selection-adjusted inference theorem.",
+    "Finite synthetic calculations do not establish an empirical exclusion, monotonicity, ATE interpretation or external validity.",
+    "Machine-assisted author review is not independent human academic certification.",
+    "No rendered browser/mobile/keyboard/print QA or calibrated teaching/retention outcome is claimed."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "production/v12-c03-working.html",
+      "bytes": 60462,
+      "sha256": "675d5e88175f59141f0aeb4faa2fa800c2aca96d6fcb55010fa6a79edc5eb15d"
+    },
+    {
+      "path": "production/check_v12_c03_working.py",
+      "bytes": 29918,
+      "sha256": "5de21c1005ec40104650978694f0fa9202b576a8304c9715ebd58dcd0ef85133"
+    },
+    {
+      "path": "production/v12-c03-sources-working.json",
+      "bytes": 10279,
+      "sha256": "e2cc77ebe14c2305b6f835005e06f2f558293fcda63824d047cded3a02759699"
+    }
+  ],
+  "prerequisite_interface_reading": {
+    "path": "production/v12-c02-working.html",
+    "bytes": 61155,
+    "sha256": "f8a6c0e87b467f99f64481129b3540e5c60327d1c4e469ad02f53736c54d1803",
+    "scope_read": "Final introductory notation and Sections 1–4: projection target, zero cross moments versus covariance, fixed-p iid score expansion, structural-residual covariance replacement and positive-variance studentization. No whole c02 peer review claimed.",
+    "compatibility": "C03 uses its own m×k instrument moment derivative and repeats the covariance replacement with explicit E||zx′||² and E||zu||² conditions. It inherits no cluster/HAC, exact t/F or feasible group-weight oracle theorem.",
+    "acceptance_limit": "C01 is now locally accepted; final c02 separate/coordinator acceptance remains a dependency gate."
+  },
+  "revision_delta_verification": {
+    "method": "Reverse exactly the single probability display correction and the single bare HTML-line deletion.",
+    "reconstructed_bytes": 60467,
+    "reconstructed_sha256": "782339201c4ecd009f35b72f0f75b11cc4d2741d58d64c200e6602dfdbe1ee4d",
+    "matches_initial_root_read": true
+  }
+}

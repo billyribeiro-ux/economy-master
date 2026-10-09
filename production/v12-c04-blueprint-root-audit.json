@@ -1,0 +1,123 @@
+{
+  "chapter": "v12-c04",
+  "date": "2026-10-09",
+  "state": "author compact blueprint approved by coordinator before full prose; not chapter acceptance",
+  "checks": [
+    {
+      "claim": "exponential finite MLE",
+      "exact": "4/7"
+    },
+    {
+      "claim": "mean duration",
+      "exact": "7/4"
+    },
+    {
+      "claim": "rate root-n variance",
+      "exact": "16/49"
+    },
+    {
+      "claim": "logit intercept sampling variance",
+      "exact": "2/15"
+    },
+    {
+      "claim": "logit slope sampling variance",
+      "exact": "4/15"
+    },
+    {
+      "claim": "binary discrete contrast sampling variance",
+      "exact": "3/320"
+    },
+    {
+      "claim": "APE average p(1-p)",
+      "exact": "5/24"
+    },
+    {
+      "claim": "APE covariate factor variance",
+      "exact": "1/1152"
+    },
+    {
+      "claim": "APE gradient coefficient",
+      "exact": "-1/16"
+    },
+    {
+      "claim": "population group log-mean variance",
+      "exact": "2"
+    },
+    {
+      "claim": "population group log-mean variance",
+      "exact": "2"
+    },
+    {
+      "claim": "finite count group mean",
+      "exact": "2"
+    },
+    {
+      "claim": "finite count residual mean-square",
+      "exact": "4"
+    },
+    {
+      "claim": "finite group log-mean root-n variance",
+      "exact": "2"
+    },
+    {
+      "claim": "finite count group mean",
+      "exact": "6"
+    },
+    {
+      "claim": "finite count residual mean-square",
+      "exact": "12"
+    },
+    {
+      "claim": "finite group log-mean root-n variance",
+      "exact": "2/3"
+    },
+    {
+      "claim": "pseudo APE",
+      "exact": "7/32"
+    },
+    {
+      "claim": "pseudo gradient",
+      "exact": "-3/64"
+    },
+    {
+      "claim": "pseudo score second moment",
+      "exact": "1/4"
+    },
+    {
+      "claim": "pseudo covariate term variance",
+      "exact": "1/1024"
+    },
+    {
+      "claim": "pseudo cross covariance",
+      "exact": "1/256"
+    },
+    {
+      "claim": "full pseudo influence variance",
+      "exact": "541/50176"
+    },
+    {
+      "claim": "incorrect covariance-omitted value",
+      "exact": "625/50176"
+    },
+    {
+      "claim": "Uniform maximum exact standardized tail",
+      "exact": "81/256"
+    },
+    {
+      "claim": "Uniform random interval exact coverage",
+      "exact": "15/16"
+    }
+  ],
+  "numerical": {
+    "APE": 0.22887756013918956,
+    "APE_total_root_n_variance": 0.1571095158591313,
+    "APE_n300_SE": 0.022884457306152232,
+    "selection_probability": 0.5,
+    "selected_mean": 10.797884560802865,
+    "joint_density_at_mu": 0.09973557010035818,
+    "conditional_density_at_mu": 0.19947114020071635
+  },
+  "proof_conditions": "Common-support/dominated interchange and nonsingular local Hessian required; compact/global consistency precedes local expansion. Correct conditional Bernoulli/mean-only count assumptions separate. General pseudo-target sandwich retains score covariances. Selection requires expressly conditional joint normality; moving support invalidates regular score identity.",
+  "instructional_refinement": "Derivative of a logistic response curve evaluated at discrete support is a model-dependent predictive interpolation functional; an infinitesimal population variation is not observed. Distinguish this from the binary discrete contrast and causal effect.",
+  "source_review_state": "Author reports actual scoped primary text/rendered equation reading; full source-preparation root review remains for final author gate."
+}

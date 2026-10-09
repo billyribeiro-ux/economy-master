@@ -1,0 +1,348 @@
+{
+  "chapter": "v12-c03",
+  "peer": "bs_author, separate machine-assisted peer",
+  "date": "2026-10-09",
+  "assignment": "production/v12-c03-peer-assignment.json",
+  "decision": "pass within declared scope; coordinator acceptance separate",
+  "status": "Complete independent peer review, all final substantive and execution gates passed; frozen for coordinator acceptance",
+  "owned_paths": [
+    "scripts/check_v12_c03_peer.py",
+    "content/reviews/v12-c03-peer.json"
+  ],
+  "full_reading": {
+    "author_files": [
+      "content/chapters/v12-c03.html",
+      "scripts/check_v12_c03.py",
+      "content/reviews/v12-c03-sources.json",
+      "content/reviews/v12-c03-author.json"
+    ],
+    "manuscript": "All 197 lines: eight instructional sections, five full worked cases, twelve exact prompts and complete solutions, teach-back and delayed retention, prerequisite/source boundaries.",
+    "checker": "All 518 lines, including exact matrix validation, calculations, numerical anchors, strict JSON, structural/source checks and author hashes.",
+    "source_and_author_records": "Both complete canonical records read, with historical working gates distinguished from final canonical bindings.",
+    "canonical_delta": "Applied the persisted substitutions in memory to frozen working manuscript/checker. Both exactly reproduce their final canonical bytes; no additional mathematical, numerical or problem change."
+  },
+  "independence": {
+    "oracle": "Fresh finite laws and observable joint distributions, rational Gram-Schmidt projections, Cramer determinant solves and direct state moments. No author code is imported by the peer checker or used as an expected-answer oracle.",
+    "author_integration": "The author check() is executed separately and labeled integration evidence.",
+    "scope": "Numerical checks cannot establish an empirical exclusion, CLT, efficiency theorem or causal interpretation. Each proof and every answer also received analytical review.",
+    "sampling": "The second-moment oracle uses a bounded alternate error law matching the stated Gaussian group variances; it verifies covariance arithmetic and does not equate the complete distributions."
+  },
+  "proof_audit": [
+    {
+      "topic": "Linear identification and projections",
+      "judgment": "Full-column rank is both necessary and sufficient on unrestricted R^k; the displayed null line covers every competing solution. The Gram positivity argument requires rank(Z′X)=k, while Z full column rank makes its projection defined. P_Z symmetry/idempotence gives two-stage coefficients, not ordinary second-stage residual inference. Basis invariance and inverse-transpose GMM weight changes are dimensionally correct."
+    },
+    {
+      "topic": "Signed fixed-law GMM limit",
+      "judgment": "The exact error identity precedes consistency and root-n inference. E||zx′|| finite supplies B_n convergence; rank and positive limiting weight supply an invertible neighborhood. The centered iid score has finite second moment. Same-sample weight estimation needs convergence to a fixed matrix, not independent estimation. With G=-B the negative derivative-form multiplier becomes the positive K_W; the fitted-moment projection has the corresponding I-BK sign."
+    },
+    {
+      "topic": "Structural-score covariance replacement",
+      "judgment": "A consistent preliminary coefficient plus E||zx′||² finite makes the average squared score error vanish. Cauchy-Schwarz controls the two cross terms, and E||zu||² finite supplies the remaining LLN. This proof does not silently assume fourth moments of all coordinates. The preliminary estimate must itself meet a consistency theorem; for 2SLS its weight convergence is a separate condition of that application. Recomputing the meat at the second-step estimate changes the finite algorithm."
+    },
+    {
+      "topic": "Efficient weighting",
+      "judgment": "K_W B=K_* B=I implies DB=0. The efficient cross covariance vanishes, leaving D Omega D′. This proves a PSD difference within the same correct-moment, strong-rank class; it need not be positive definite. A separate two-coefficient example checks the matrix identity rather than only scalar variances."
+    },
+    {
+      "topic": "J projection",
+      "judgment": "Positive-definite Omega allows whitening. The derivative span has rank k, so its orthogonal complement has rank m-k. A standard Gaussian projected onto that complement gives the chi-square limit; feasible inverse covariance replacement is o_P(1) because normalized fitted moments are O_P(1). Exact identification gives zero J. Aligned invalidity can fit a shifted target, and weak rank is outside the proof."
+    },
+    {
+      "topic": "Nonlinear global selection and rate",
+      "judgment": "Compactness, continuity, measurable global selection and uniform criterion convergence establish consistency under a unique zero before any local rate claim. Interiority and a differentiability ball justify the integrated Jacobian identity. Uniform derivative convergence and full rank make the nonsymmetric finite matrix invertible near its positive-definite limit. This obtains root-n without assuming it. An approximate score residual needs o_P(n^-1/2) plus separate consistency. A square-integrable local envelope justifies the feasible nonlinear score covariance."
+    },
+    {
+      "topic": "Nonlinear boundaries",
+      "judgment": "The positive square-root domain has a unique zero and correct clipping, derivative and variance. The symmetric domain has two regular roots. The cubic model is globally identified but has derivative zero; inactive clipping with probability tending to one yields n^(1/6) times the estimate converging to the real cube root of a standard normal. No optimizer success restores the missing rank."
+    },
+    {
+      "topic": "Weak Gaussian ratio",
+      "judgment": "Fixed deterministic z normalized by z′z=n and a positive-definite iid disturbance covariance make standardized scores exactly jointly Gaussian at each n. The exact ratio gives a shrinking error for fixed nonzero pi and a nondegenerate nonshrinking law for c/sqrt(n). Correlation between u and v is permitted. An exact zero denominator is probability zero; nearby values retain positive probability."
+    },
+    {
+      "topic": "Known-variance candidate inversion",
+      "judgment": "Under each true candidate, fixed full-rank Z projects the spherical Gaussian structural error; endogenous X is not conditioned on. Known positive variance and no nuisance coefficient give exact chi-square_m and coverage by test inversion. The Gram constraints A>=0, B²<=AC and A=0=>B=0 make every set interval, singleton, empty or all-real. The stated statistic cannot produce disjoint rays. Arbitrary estimated variance or dependent errors cannot inherit this calibration."
+    },
+    {
+      "topic": "Binary LATE and identification boundary",
+      "judgment": "Consistency/no interference, independent nondegenerate assignment, exclusion, integrability, individual monotonicity and positive complier mass are explicit. The signed compliance identity yields the Wald ratio for compliers; the covariance form requires its included intercept. Independent assignment probability is stated before ATT calculations. Changing a never-treated counterfactual leaves the whole observed joint law fixed while ATE changes, which is a constructive nonidentification proof."
+    }
+  ],
+  "worked_case_audit": [
+    {
+      "case": 1,
+      "result": "Eight-state law gives IV 2, OLS 5/2, correct score variance 2 and second-stage-residual variance 10. A direct 2/5 instrument channel changes IV to 12/5."
+    },
+    {
+      "case": 2,
+      "result": "All forty inputs reconstructed. Preliminary meat diag(5/8,17/8), fixed two-step 19/11, J=40/11 and plug-in root-n variance 85/44. The separate population variances are 5/2 and 8/5. Its oracle table calculation gives 17/10 and J=4. These are correctly labeled different finite and population claims."
+    },
+    {
+      "case": 3,
+      "result": "Positive-domain estimate 21/10, linearized value 841/400, remainder -1/400 and plug-in SE 2/21; the clipping and square-root units agree."
+    },
+    {
+      "case": 4,
+      "result": "Actual instrument projections give 4(b-1)^2+4. Cutoffs 8,4,3 give [0,2], {1}, empty; orthogonal X gives constants 2 or 18 and all/empty. Confidence coefficient 1-exp(-4) rounds to 0.981684."
+    },
+    {
+      "case": 5,
+      "result": "Complete observable law gives outcome means 13/4 and 21/4, LATE 4, ATE 9/2, baseline ATT 3. Defiers give 4/3; a separate direct encouragement channel gives 5."
+    }
+  ],
+  "prompt_solution_audit": [
+    {
+      "prompt": "v12-c03-e01",
+      "answer": "OLS 11/5; Z has valid score zero and relevance 2, giving IV 2; T has score 1 and relevance 3, giving 7/3. The solution separately answers prediction and validity."
+    },
+    {
+      "prompt": "v12-c03-e02",
+      "answer": "Idempotence and the rank-based positive Gram proof derive the two-stage estimator; structural versus fitted-regressor score variances are 2 and 10. The supplied solution does not claim exact finite-sample intervals."
+    },
+    {
+      "prompt": "v12-c03-e03",
+      "answer": "Identified line (3-2t,t), null direction (-2,1), added moment target (1,1), instrument-span invariance and transformed GMM weight all checked."
+    },
+    {
+      "prompt": "v12-c03-e04",
+      "answer": "Every requested proof step is supplied: exact identity, LLN, inverse neighborhood, consistency, CLT, same-sample Slutsky and signed derivative convention. Exceptional sample rank failure is not concealed."
+    },
+    {
+      "prompt": "v12-c03-e05",
+      "answer": "The squared-score and cross-term bounds match the stated moments. Missing squared regressor-instrument moments invalidate this proof, not every conceivable argument. All four requested finite two-step quantities are reconstructed from actual rows."
+    },
+    {
+      "prompt": "v12-c03-e06",
+      "answer": "Identity influence (1/5,2/5), efficient (1/7,3/7), variances 18/25 and 5/7, gap 1/175, diagonal-only variance 90/121. Full PSD proof is present and uses covariance cross terms correctly."
+    },
+    {
+      "prompt": "v12-c03-e07",
+      "answer": "Residual projection I-11′/3, rank two, projected vector (1/3,-5/3,4/3), norm 14/3. Arithmetic is separated from asymptotic calibration; E[zu]=B delta shifts the target invisibly to J."
+    },
+    {
+      "prompt": "v12-c03-e08",
+      "answer": "Two regular roots on [-3,3] defeat global uniqueness. Clipped real cube-root estimator is measurable and has n^-1/6 rate with transformed-normal limit because the target derivative is zero."
+    },
+    {
+      "prompt": "v12-c03-e09",
+      "answer": "Disturbance covariance determinant 3/4; exact Gaussian ratio gives errors 1/8,3/49 and 2 for the requested regimes. c=1/5 cancels the displayed denominator; the solution correctly distinguishes that point from a positive-probability neighborhood."
+    },
+    {
+      "prompt": "v12-c03-e10",
+      "answer": "Projection gives 2(b-3)^2+2: [3-sqrt(3),3+sqrt(3)], {3}, empty. Orthogonal X alternatives yield empty and all-real. Convex quadratic/Gram reasoning excludes disjoint rays."
+    },
+    {
+      "prompt": "v12-c03-e11",
+      "answer": "At assignment probability 1/4: treated share 3/8, LATE 4, ATE 9/2 and ATT 8/3. The counterfactual change lowers ATE to 7/2 and preserves every observable cell, not only its means."
+    },
+    {
+      "prompt": "v12-c03-e12",
+      "answer": "Open rubric addresses all six required issues: target, assignment/exclusion, rank, selection, covariance/dependence and test interpretation. Each has evidence or design repair; it neither automatically accepts nor rejects IV."
+    }
+  ],
+  "instruction_audit": {
+    "teach_back": "Complete benchmark derives the signed influence and distinguishes J from exact candidate inversion and LATE from ATE.",
+    "retention": "Independent weights (9/10,1/10) give 6/5, variance 9/10 and J=4; identity variance is 5/2. Constant candidate statistic 3 at cutoff 2 is empty. Repair routes match the taught sections.",
+    "prerequisite_fit": "All required problem methods are taught in the chapter or explicitly inherited from c01/c02. No generic dependent, many-instrument or uniform weak theorem is smuggled into a problem.",
+    "reader": "Standard worked, exercise and solutions structures are present, with flat prerequisite/source links; actual shared parser validation is recorded below."
+  },
+  "source_audit": {
+    "record_read": "All four source entries, actual author inspection ranges, byte hashes, cautions, proof boundaries and chapter-scope map read.",
+    "fresh_peer_retrieval": "Four official/author PDFs retrieved in memory; all lengths and SHA256 values match the source record. No PDF or image file written.",
+    "actual_peer_visual_pages": {
+      "v12-c03-mit-iv2017": [
+        10
+      ],
+      "v12-c03-mit-gmm2017": [
+        10,
+        11
+      ],
+      "v12-c03-mit-nonlinear2017": [
+        7,
+        12
+      ],
+      "v12-c03-imbens-angrist1994": [
+        2,
+        3,
+        4
+      ]
+    },
+    "page_mapping": "MIT physical pages equal printed pages; Imbens-Angrist physical pages 2–4 are printed 468–470.",
+    "checked_cautions": "IV page 10 omits the candidate coefficient in one intermediate sample moment; GMM page 10 misorients a matrix product while page 11 retains the correct signed expansion. The chapter rederives both rather than reproducing the errors. Nonlinear page 7 assigns the J proof, which the chapter supplies. LATE pages 468–470 support the limited binary compliance argument.",
+    "limits": "No fresh full-body inspection of any entire lecture or all nine LATE pages is claimed by this peer. Author provenance remains separately documented. No historical application is adopted as empirical validity evidence."
+  },
+  "findings": [
+    {
+      "status": "resolved before peer",
+      "origin": "author/coordinator history",
+      "issue": "Incorrect six-decimal confidence coefficient and a stray bare HTML delimiter.",
+      "peer_verification": "Exact coefficient rounds to 0.981684; current fragment is balanced and the peer parser rejects a replayed bare delimiter. No further edit requested."
+    }
+  ],
+  "open_findings": [],
+  "validation": {
+    "status": "passed",
+    "independent_summary": {
+      "chapter": "v12-c03",
+      "status": "passed",
+      "comparisons": 184,
+      "executed_domain_rejections": 17,
+      "purposeful_interventions": 11,
+      "intervention_scopes": [
+        "Change direct exclusion and instrument contamination separately from relevance.",
+        "Hold preliminary covariance fixed versus update it; compare oracle and feasible finite decisions.",
+        "Change instrument basis and moment units, carrying the inverse-transpose weight.",
+        "Add an independent valid moment instead of duplicating a rank-deficient equation.",
+        "Retain full score covariance and verify a separate two-coefficient PSD certificate.",
+        "Keep a moment violation inside the fitted span; J cannot see the wrong structural target.",
+        "Change parameter boundaries, global root multiplicity and derivative rank separately.",
+        "Compare fixed and shrinking relevance, then approach the zero denominator from both sides.",
+        "Cross quadratic cutoff equality, remove projected relevance, and retain remote finite endpoints.",
+        "Introduce defiers versus a direct encouragement channel under the same assignment law.",
+        "Change assignment frequency and an unobserved counterfactual; distinguish ATT composition from ATE identification."
+      ],
+      "exact_numeric_anchors": 48,
+      "rounded_numeric_anchors": 3,
+      "worked_cases": 5,
+      "exercises": 12,
+      "solutions": 12,
+      "author_inputs_bound": 4,
+      "peer_nonself_bindings": 5,
+      "author_code_used_as_oracle": false,
+      "limits": "Independent finite evidence and separate full proof/solution reading; no empirical validity, uniform weak or dependent-data theorem, rendered UI, human certification or coordinator acceptance implied."
+    },
+    "author_integration_summary": {
+      "comparisons": 199,
+      "executed_domain_rejections": 16,
+      "purposeful_interventions": 14
+    },
+    "execution_gates": [
+      {
+        "location": "workspace",
+        "role": "independent_peer",
+        "mode": "normal",
+        "cwd": "/",
+        "quiet_import_and_check": true,
+        "strict_json_summary": true,
+        "exit_code": 0,
+        "comparisons": 184
+      },
+      {
+        "location": "workspace",
+        "role": "independent_peer",
+        "mode": "optimized",
+        "cwd": "/",
+        "quiet_import_and_check": true,
+        "strict_json_summary": true,
+        "exit_code": 0,
+        "comparisons": 184
+      },
+      {
+        "location": "workspace",
+        "role": "author_integration_only",
+        "mode": "normal",
+        "cwd": "/",
+        "quiet_import_and_check": true,
+        "strict_json_summary": true,
+        "exit_code": 0,
+        "comparisons": 199
+      },
+      {
+        "location": "workspace",
+        "role": "author_integration_only",
+        "mode": "optimized",
+        "cwd": "/",
+        "quiet_import_and_check": true,
+        "strict_json_summary": true,
+        "exit_code": 0,
+        "comparisons": 199
+      },
+      {
+        "location": "exact_six_files",
+        "role": "independent_peer",
+        "mode": "normal",
+        "cwd": "/",
+        "quiet_import_and_check": true,
+        "strict_json_summary": true,
+        "exit_code": 0,
+        "comparisons": 184
+      },
+      {
+        "location": "exact_six_files",
+        "role": "independent_peer",
+        "mode": "optimized",
+        "cwd": "/",
+        "quiet_import_and_check": true,
+        "strict_json_summary": true,
+        "exit_code": 0,
+        "comparisons": 184
+      },
+      {
+        "location": "exact_six_files",
+        "role": "author_integration_only",
+        "mode": "normal",
+        "cwd": "/",
+        "quiet_import_and_check": true,
+        "strict_json_summary": true,
+        "exit_code": 0,
+        "comparisons": 199
+      },
+      {
+        "location": "exact_six_files",
+        "role": "author_integration_only",
+        "mode": "optimized",
+        "cwd": "/",
+        "quiet_import_and_check": true,
+        "strict_json_summary": true,
+        "exit_code": 0,
+        "comparisons": 199
+      }
+    ],
+    "all_summaries_equal_within_role": true,
+    "all_payload_bytes_unchanged_during_execution": true,
+    "isolated_exact_file_count": 6,
+    "isolated_exact_membership_unchanged": true,
+    "actual_shared_Document": {
+      "worked": 5,
+      "exercises": 12,
+      "solutions": 12,
+      "unique_ids": 29
+    },
+    "no_runtime_shared_or_network_dependency": true,
+    "oracle_imports_author_code": false
+  },
+  "limitations": [
+    "Proof review and machine arithmetic are not independent human academic certification.",
+    "Finite fixed-dimensional, iid or expressly stated exact-Gaussian scopes only; empirical instrument validity remains a research-design claim.",
+    "Acceptance follows coordinator and prerequisite gates; this record does not accept the chapter or volume.",
+    "No rendered browser, mobile, print or calibrated educational-outcome claim."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v12-c03.html",
+      "bytes": 60382,
+      "sha256": "99dd513f4ea3807db23aee28df6bf25f296cefaa0700f49a8ed8199efd9149d5"
+    },
+    {
+      "path": "scripts/check_v12_c03.py",
+      "bytes": 29895,
+      "sha256": "4a1564024ea314918f1ede4246fa26204575c11b6b9c828fbb8023fa0c48b950"
+    },
+    {
+      "path": "content/reviews/v12-c03-sources.json",
+      "bytes": 10219,
+      "sha256": "ed46fe4af4920a7c831c974942d56568bc44ce42bde9873db3d353e22218d837"
+    },
+    {
+      "path": "content/reviews/v12-c03-author.json",
+      "bytes": 20588,
+      "sha256": "dde10dde432de486a75fa6def1cd12845008fadfa4fe61f80b2fc3ddd00e32a9"
+    },
+    {
+      "path": "scripts/check_v12_c03_peer.py",
+      "bytes": 29119,
+      "sha256": "1e4315c57a024007328def3618fab325036f2582539f78194af052ceac97035e"
+    }
+  ]
+}

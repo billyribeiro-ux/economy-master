@@ -200,7 +200,7 @@ def independent_arithmetic(a, page):
     a.eq(high-low, F(1,7), "irreducible identification width")
     a.eq((p+F(1,4)-1 < 0, p-F(3,20)>0, 1-F(3,20)-F(1,4)>0),
          (True,True,True), "entire-rectangle derivative and denominator signs")
-    shown(1, "[9/14,11/14]", "not", "population")
+    shown(1, "[9/14,11/14]", "set-versus-sampling distinction", "population")
     # Both completely uninformative and negative-slope kernels are valid laws.
     for theta in (F(0),F(2,7),F(1)):
         a.eq(F(2,5)+(1-F(2,5)-F(3,5))*theta, F(2,5), "uninformative kernel")

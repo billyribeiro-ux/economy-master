@@ -1,0 +1,383 @@
+{
+  "chapter": "v12-c02",
+  "reviewer": "ito_author, separate machine-assisted specialist peer",
+  "date": "2026-10-09",
+  "assignment": "production/v12-c02-peer-assignment.json",
+  "status": "Complete separate peer review passed; two peer payloads frozen",
+  "decision": "No open mathematical, statistical, source or reader findings. The narrow reader/provenance finding was repaired by the author and independently verified. Recommend acceptance within the stated proof and finite-evidence scope; coordinator acceptance remains separate.",
+  "ownership": {
+    "owned_paths": [
+      "scripts/check_v12_c02_peer.py",
+      "content/reviews/v12-c02-peer.json"
+    ],
+    "working_inputs_read": [
+      "production/v12-c02-working.html",
+      "production/check_v12_c02_working.py",
+      "production/v12-c02-sources-working.json",
+      "production/v12-c02-author-review-working.json"
+    ],
+    "canonical_inputs_read": [
+      "content/chapters/v12-c02.html",
+      "scripts/check_v12_c02.py",
+      "content/reviews/v12-c02-sources.json",
+      "content/reviews/v12-c02-author.json"
+    ],
+    "unchanged": "No author/shared/canonical/source catalogue/checkpoint/hosting or other chapter files edited; no new agents or installations."
+  },
+  "review_method": {
+    "complete_reading": "Read the entire working manuscript and every proof, six cases, all twelve exact prompts and complete solutions, teach-back/retention, all 583 working-checker lines, complete source record and author self-review. Then inspected the exact canonical HTML/checker transformations and all changed source/author metadata, including the final reader repair.",
+    "independent_oracles": "Closed-form scalar weighted regression and small adjugate identities, a distinct FWL and correlated GLS design, coefficient-influence HC entries, six distinct team-mean states rather than duplicated sign histories, exact impulse coefficients for serial means, all-pairs triangular kernels and window intersection geometry. No author numerical helper or saved expected value is the arithmetic oracle.",
+    "integration_separation": "Calling the author checker is additional integration only. Its 536 comparisons are never labeled as independent peer arithmetic. General theorem validity comes from the analytic review below, not from a finite matrix grid."
+  },
+  "working_read_snapshot": [
+    {
+      "path": "production/v12-c02-working.html",
+      "bytes": 61155,
+      "sha256": "f8a6c0e87b467f99f64481129b3540e5c60327d1c4e469ad02f53736c54d1803"
+    },
+    {
+      "path": "production/check_v12_c02_working.py",
+      "bytes": 28120,
+      "sha256": "1a543d5a4953a6fd63721e826a3af243380d3dda03a74cec6b38f05f7174cb34"
+    },
+    {
+      "path": "production/v12-c02-sources-working.json",
+      "bytes": 8200,
+      "sha256": "352d0fc33cce56c11690c59a7f862505aeb8e9fd76b5a7736d8168f2fa866a33"
+    },
+    {
+      "path": "production/v12-c02-author-review-working.json",
+      "bytes": 15764,
+      "sha256": "9a355c47de23bf40e3e2f87a1ab6933c077c4afe5548b023d3e6c6e93a187161"
+    }
+  ],
+  "proof_audit": [
+    {
+      "claim": "Population and sample projection; cross moments versus covariance",
+      "independent_review": "Finite second moments make E[xy] finite by Cauchy–Schwarz. Positive definite Q supplies beta=Q^-1 E[xy] and the loss decomposition E[e^2]+(b-beta)′Q(b-beta), establishing existence and uniqueness. E[xe]=0 is a cross-moment restriction. Cov(x_j,e)=-E[x_j]E[e] need not vanish without an intercept; with an intercept E[e]=0, but correlation with that constant remains undefined. Neither condition yields E[e|x]=0. Sample full rank gives a unique coefficient, symmetric idempotent H and orthogonal residuals. Rank-deficient coefficients can vary while the fitted projection stays unique.",
+      "finding": "No substantive gap under the explicit hypotheses."
+    },
+    {
+      "claim": "Frisch–Waugh–Lovell partial regression",
+      "independent_review": "For fixed W coefficient, minimizing over full-rank Z leaves squared norm of M_Z(y-Wb). Symmetry and idempotence of M_Z yield W′M_ZW b=W′M_Zy. If M_ZWa=0, Wa is in span(Z); full rank of [Z,W] forces a=0. Thus the residual Gram is positive definite. This is common-sample, common-weight algebra, not a defense of post-treatment controls. The peer verifies the coefficient on a different nonorthogonal four-row design using closed-form nuisance regressions versus a full three-column adjugate solve.",
+      "finding": "No substantive gap under the explicit hypotheses."
+    },
+    {
+      "claim": "Exact conditional OLS, whitening and GLS BLUE",
+      "independent_review": "With X full rank, conditional mean zero and known positive definite Sigma, the linear error identity proves conditional unbiasedness and the exact sandwich variance. The positive definite square root whitens errors. For any linear estimator A fixed conditional on X and unbiased for every beta, AX=I; D=A-A_G obeys DX=0. D Sigma A_G′=0 makes both cross terms vanish, so the covariance difference is D Sigma D′. Its contrast quadratic form is zero exactly when D′c=0, using positive definiteness. Wrong positive definite working covariance does not imply that true-covariance cross-term identity or efficiency. The class does not include arbitrary biased/nonlinear estimators.",
+      "finding": "No substantive gap under the explicit hypotheses."
+    },
+    {
+      "claim": "Conditional Gaussian t and F",
+      "independent_review": "Spherical Gaussian density is invariant under an orthogonal change of variables with unit absolute determinant. Coordinates for span(X) and its complement are independent standard normals, proving that the fitted contrast and residual chi-square are independent. n>p, sigma^2>0 and a nonzero contrast provide positive denominator degrees of freedom and scale. For full-row-rank R, C is positive definite and B=C^-1/2 R(X′X)^-1 X′ has BB′=I_q; extending its rows gives the restriction chi-square, independent of residual SSE. The ratio gives F and its one-restriction identity equals t^2. A known covariance shape can be whitened; arbitrary estimated shape and nonnormal homoskedastic errors do not inherit exact laws.",
+      "finding": "No substantive gap under the explicit hypotheses."
+    },
+    {
+      "claim": "IID HC residual consistency and moment domination",
+      "independent_review": "Fixed p, iid rows, positive definite Q and finite fourth moment of ||x||+|y| imply all stated Gram and score moments. Since |e| is bounded by a constant times ||x||+|y|, E||x||^4, E||x||^3|e| and E||x||^2 e^2 are finite. LLN and inverse continuity give Gram convergence. The exact score identity and finite-second-moment iid CLT give delta=O_P(n^-1/2). Expanding squared residuals bounds meat replacement by 2||delta|| P_n||x||^3|e|+||delta||^2 P_n||x||^4=o_P(1); the true meat converges by the integrable LLN. Exceptional singular samples have vanishing probability. Studentization needs a positive contrast variance, not nonsingularity of every covariance direction. The coefficient covariance estimate is the root-n sandwich divided by n.",
+      "finding": "No substantive gap under the explicit hypotheses."
+    },
+    {
+      "claim": "Leverage and HC corrections",
+      "independent_review": "Projection geometry gives 0<=h_i<=1 and sum h_i=p. max h_i <= ||Q_n^-1|| sqrt(P_n||x||^4)/sqrt(n)=O_P(n^-1/2) under the explicit fourth-moment assumptions. On max h_i<1/2, HC2/HC3 multiplier differences converge uniformly to zero; multiplying their maximum by tight P_n||x||^2 ehat^2 proves equal normalized-meat limits. Their undefined samples have probability tending to zero; the chapter states a convention for the asymptotic sequence and operational flagging. Spherical E[ehat_i^2|X]=sigma^2(1-h_i) only justifies the specified expectation correction, not exact robust t. A singleton regressor has h=1 and a zero residual with unknown error variance.",
+      "finding": "No substantive gap under the explicit hypotheses."
+    },
+    {
+      "claim": "Finite-group feasible weighting",
+      "independent_review": "Fixed finite J, positive group probabilities and variances, conditional mean zero and the moment/rank assumptions make group residual-variance ratios consistent. The displayed unweighted residual replacement bound also bounds its indicator-restricted versions. Finite positive weight limits bound weighted Grams and weighted squared-score meats; absent groups/nonpositive estimated variances have negligible probability and an explicit fallback. The normalized perturbation is a finite sum of consistent weight errors times centered O_P(1) group scores. Dependence between estimated weights and those scores does not matter. Conditional centering is the essential step: with a nonzero group mean, normalized scores can grow as sqrt(n), so consistency alone is insufficient. Working-weight sandwich uses squared weights in the meat. It does not imply efficiency or invariant targets under misspecified means.",
+      "finding": "No substantive gap under the explicit hypotheses."
+    },
+    {
+      "claim": "IID bounded-size clusters",
+      "independent_review": "Whole clusters, rather than rows, are iid; bounded m_g and the fourth moment of the sum of row magnitudes dominate cluster Gram/score quantities. The target minimizes expected summed row loss per cluster, so size-dependent outcomes affect it. EU_g=0 and finite E||U_g||^2 give the sqrt(G) score CLT, with positive definite Q_c. A_g B_g and A_g^2 are dominated by constants times the stipulated cluster fourth-power envelope. Consequently 2||delta|| P_G(A_g B_g)+||delta||^2 P_G A_g^2 vanishes, proving residual covariance replacement. CR0 is Vhat_c/G. N>=G and fixed p make the common finite-sample multipliers tend to one, but neither they nor an unbiased variance expectation prove an exact t law. Fixed G/growing sizes and cross-cluster common shocks are outside the theorem.",
+      "finding": "No substantive gap under the explicit hypotheses."
+    },
+    {
+      "claim": "Bounded fixed-m CLT and deterministic block envelope",
+      "independent_review": "Strong past/future sigma-field m-dependence, strict stationarity, deterministic boundedness and fixed m imply the covariance-count bound (2m+1)B^2 times any finite index-set size. Blocks of length floor(n^(1/3)) with m skipped indices are mutually independent by successive independence from the entire previous sigma-field, not merely pairwise independence. Omitted count O(nm/ell+ell+m)=o(n) gives an L2-small normalized omission. Covariance Cauchy–Schwarz transfers the full variance limit to retained blocks. For positive limiting variance, |xi_nj|<=b_n=B ell/sqrt(n) holds almost surely with deterministic b_n tending to zero; maximum block variance is O(ell/n). Therefore total third moments of retained variables and matched normals vanish. Taylor replacement cancels means and variances because each inserted variable is independent of the remaining hybrid sum. Zero-variance contrasts instead converge in L2.",
+      "finding": "No substantive gap under the explicit hypotheses."
+    },
+    {
+      "claim": "Smooth-test-to-CDF step and vector extension",
+      "independent_review": "The polynomial q=1-35s^4+84s^5-70s^6+20s^7 has q(0)=1, q(1)=0, derivative -140s^3(1-s)^3, and first through third derivatives zero at both endpoints. Its constant extensions are bounded C3 monotone transitions. The stated lower shift is below the indicator at a, including the endpoint, and the upper shift is above it. For each fixed epsilon use smooth expectation convergence, then send epsilon down to zero using continuity of the positive-variance normal CDF. The matched normal sum converges by its variance and a bounded-derivative expectation inequality. Cramer–Wold is inherited explicitly from accepted c01 for fixed-dimensional notation; no general triangular-array or mixing CLT is smuggled into the proof.",
+      "finding": "No substantive gap under the explicit hypotheses."
+    },
+    {
+      "claim": "Bartlett positive semidefiniteness",
+      "independent_review": "With zero extension, score t belongs to windows j=t,...,t+L, exactly L+1 windows even at sample edges. Two scores separated by ell<=L share L+1-ell windows. Expanding all window outer products over j=1,...,n+L and dividing by n(L+1) gives the symmetric common-n Bartlett lag expression. Every contrast is a sum of squares, proving finite PSD without any probability model. This does not establish consistency or coverage. The peer independently forms the all-pairs triangular kernel as an intersection Gram and checks its vector quadratic form, including all edge windows.",
+      "finding": "No substantive gap under the explicit hypotheses."
+    },
+    {
+      "claim": "Conservative finite-range HAC consistency",
+      "independent_review": "For true scores the lag-ell product sequence is bounded and (m+ell)-dependent: separated product sigma-fields involve original indices at least m+1 apart. Covariance counting gives variance O((m+ell+1)/n), uniform in ell. Summed expected absolute deviations are bounded by C(L+1)sqrt((m+L+1)/n), with no independence between lag estimates assumed. Beyond m population lags vanish; finitely many remaining edge/taper biases are O(1/(L+1)+1/n). Thus L tending to infinity and L^3/n tending to zero suffice. Uniform boundedness and root-n coefficient error make fitted-score replacement O_P((L+1)/sqrt(n)), also negligible. The rule floor(n^(1/4)), capped by n-1, satisfies all requirements. These rates are sufficient, not necessary; failure of this upper bound at exponent 1/3 does not prove inconsistency.",
+      "finding": "No substantive gap under the explicit hypotheses."
+    }
+  ],
+  "worked_case_audit": [
+    {
+      "case": 1,
+      "result": "The two weighted projection targets and residuals are different; unweighted loss increases by 1/9. Cross-moment orthogonality is correctly distinguished from conditional mean and causality."
+    },
+    {
+      "case": 2,
+      "result": "All three device estimates and true variances agree; the reversed-precision estimator remains unbiased but has variance 397/98, exceeding OLS."
+    },
+    {
+      "case": 3,
+      "result": "Every HC0 entry, leverage, SSE and HC2=1102/2275 agrees; unit changes preserve fit while scaling coefficient covariances."
+    },
+    {
+      "case": 4,
+      "result": "Equal category probabilities with error variances one/nine give OLS root-n variance five and weighted variance 9/5; exceptional variance-estimation samples and misspecification limits are explicit."
+    },
+    {
+      "case": 5,
+      "result": "The complete common-shock law gives row variance ten, covariance nine and cluster score variance 38; observed HC0/CR0 differ from the true variance without contradiction."
+    },
+    {
+      "case": 6,
+      "result": "Positive MA coefficient yields long-run 9/4 and n=20 variance 11/100; fixed bandwidth attenuation and the negative untapered realized example are correctly separated from coverage."
+    }
+  ],
+  "exercise_solution_audit": [
+    {
+      "number": 1,
+      "exact_prompt": "For Worked example 1, derive both projection vectors directly from their normal equations. Calculate both losses at the unweighted and weighted minimizers under the unweighted loss. Explain why nonzero E[e|Z] does not contradict E[xe]=0 and why neither coefficient is a demonstrated causal effect.",
+      "topic": "Different projections and losses",
+      "independent_solution": "The unweighted normal equations give a=8/3,b=1, while weights (1,4,1) give a=7/3,b=1. The residual vectors are (1,-2,1)/3 and (2,-1,2)/3. Their unweighted squared losses are 2/9 and 1/3; difference 1/9 equals the Gram quadratic form of the coefficient shift. Zero mean and zero Z score do not make the three conditional residual means vanish. Neither projection supplies a treatment or assignment contrast. A separate peer no-intercept law x=(1,3),y=(2,2), equally likely, has beta=4/5, E[xe]=0 and Cov(x,e)=-4/5, independently validating the repaired distinction.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 2,
+      "exact_prompt": "Recompute all three estimates and true variances in Worked example 2. Prove that any other linear unbiased estimator has covariance exceeding known-covariance GLS by a positive-semidefinite matrix, and characterize equality for a single contrast. Would replacing the true covariance by any positive-definite matrix preserve the proof's efficiency conclusion?",
+      "topic": "GLS efficiency and wrong weights",
+      "independent_solution": "Device weights sum to one. OLS estimate 14/3 has variance 14/9; inverse-variance weights (36,9,4)/49 yield estimate 20/7 and variance 36/49; reversed precision gives 45/7 and variance 397/98. OLS loses 362/441 to GLS. For a general comparator the difference D Sigma D′ is PSD, with contrast equality iff D′c=0. The peer uses a different correlated 3-observation, 2-coefficient design and constructs a nonzero unbiased D for which contrast (2,-1) has equal variance while another contrast strictly loses precision. A wrong covariance need not annihilate the true-covariance cross terms.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 3,
+      "exact_prompt": "For Worked example 3, reconstruct X′X, β̂, residuals, SSE, leverages and every HC0 entry. Calculate the HC2 slope-variance entry. Then rescale z to z*=10z: give the new slope, HC0 slope variance and intercept–slope covariance. Explain which inferential assertions can and cannot be made from these four realized observations alone.",
+      "topic": "Complete HC0, HC2 and unit conversion",
+      "independent_solution": "The centered z vector has Gram diag(4,10) and X′y=(12,16), so coefficients are (3,8/5). Residuals (1,3,-13,9)/5 sum to zero and have zero z score; SSE=52/5. Leverages are (13,7,7,13)/20. Summing coefficient-influence outer products times squared residuals gives HC0 entries 13/20,8/25,253/1250. HC2 slope variance is 1102/2275. Rescaling z by ten gives slope 4/25, slope variance 253/125000 and cross-covariance 4/125; fitted values stay fixed. The spherical slope estimate 13/25 exceeds this realized HC0 value, refuting any samplewise robust-is-larger rule. No precision, bias or coverage assertion follows from four realized rows without a sampling law.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 4,
+      "exact_prompt": "Prove the iid HC0 residual-replacement result under the stated fourth-moment assumptions, including why its two bounding sample averages are OP(1). Show why HC2 and HC3 have the same limit under those hypotheses. For X with rows (1,0),(1,0),(1,1), calculate all leverages and explain why dividing every residual square by 1−hᵢ is not an everywhere-defined rule.",
+      "topic": "HC replacement and leverage boundary",
+      "independent_solution": "The iid CLT and nonsingular Gram yield root-n coefficient error. The exact squared-residual difference and fourth-degree moment bounds make both replacement terms vanish. The true meat has integrable entries. max h is bounded by ||Q_n^-1|| sqrt(P_n||x||^4)/sqrt(n), so on a high-probability event below one half the HC2/HC3 multipliers converge uniformly to one; tight residual meat completes equivalence. For rows (1,0),(1,0),(1,1), the inverse Gram is [[1/2,-1/2],[-1/2,3/2]], with leverages (1/2,1/2,1). The last row fits exactly; zero divided by zero is undefined, not evidence of zero error variance.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 5,
+      "exact_prompt": "Under the conditional Gaussian spherical model, derive the independent components that give exact t and F, and prove F=t² for one restriction. Then take n=2 independent observations yᵢ=μ+εᵢ with fair εᵢ∈{−1,1}. For any fixed finite positive k, find the exact coverage of [ȳ−ks/√2,ȳ+ks/√2], where s²=Σ(yᵢ−ȳ)² and a zero-width interval is used when s=0. Does homoskedasticity alone imply the Gaussian exact law?",
+      "topic": "Exact Gaussian laws and non-Gaussian coverage",
+      "independent_solution": "The fitted and residual Gaussian subspace coordinates are independent. One normalized contrast is standard normal, the residual squared norm is independent chi-square with n-p degrees, and whitening q restrictions gives an independent chi-square numerator. Their ratios give the stated t/F laws, with F=t^2 for one restriction. For two fair-sign errors, equal signs occur with probability one half and give nonzero error with zero estimated scale; opposite signs center exactly on mu and give s^2=2. Hence coverage is exactly one half for every finite positive k. Independent homoskedastic errors alone do not supply Gaussian exact inference.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 6,
+      "exact_prompt": "Modify Worked example 4 so category A occurs with probability 1/4 and has fair errors ±2, while B occurs with probability 3/4 and has fair errors ±4. Find OLS and oracle weighted root-n variances. Prove the group residual-variance estimates are consistent and that using their inverse weights changes the normalized score by oP(1). Identify exactly where conditional exogeneity enters; explain why consistency of weights alone does not prove oracle equivalence under mean misspecification.",
+      "topic": "Feasible finite-group weighting and centering",
+      "independent_solution": "With probabilities 1/4,3/4 and conditional variances 4,16, OLS root-n variance is 13. Inverse-variance Gram is 7/64 and oracle variance 64/7. Group counts converge to positive proportions; true squared-error averages converge to the corresponding variance numerators; residual replacement and ratio continuity establish consistency. Centered normalized group scores are O_P(1), so a finite sum of weight errors times scores is o_P(1) without independence. A peer finite sample (-1,1,3,3) yields estimated group variances 13/4,9/4 and feasible mean 39/22, whereas oracle mean is 3/10, illustrating that the theorem is first-order, not finite exact equivalence. Under group means zero/two and error variances one/nine, OLS, true inverse-variance and OLS-residual-limit weights target one,1/5,1/3. Consistent weights alone cannot establish unchanged target or oracle influence.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 7,
+      "exact_prompt": "In the team model, compare 40 measurements arranged as 20 independent teams of two with 10 independent teams of four, retaining common shock ±3 and individual shocks ±1. Derive both true grand-mean variances and the erroneous row-independent variance. Recompute the displayed four-team HC0 and CR0 values. Show why the equal-size intercept correction G/(G−1) is unbiased for variance here but does not by itself establish exact confidence coverage.",
+      "topic": "Team counts, cluster covariance and correction",
+      "independent_solution": "A team mean has variance 9+1/m; G independent team means have grand-mean variance (9+1/m)/G. Thus twenty pairs give 19/40 and ten teams of four give 37/40, despite the same forty rows. The false iid-row answer is 1/4. For the supplied four pairs, team score squares total 200 and row squares total 104; CR0=25/8 and HC0=13/8, while true variance is 19/8. For iid equal-size cluster means, expected centered squared sum is (G-1)V_b, so G/(G-1) times CR0 is unbiased for V_b/G. The peer reconstructs all 36 pairs of the six distinct team-mean outcomes, finding true two-team variance 19/4 and mean CR0 19/8. Unbiasedness does not produce a Gaussian numerator or independence from the variance estimate.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 8,
+      "exact_prompt": "Independent clusters are of two equally likely types: type A contains one row with y=0, and type B contains three rows all with y=4. Only an intercept is fitted. Derive the pooled-row target, the equal-cluster-mean target, and the root-G variance of each estimator. Separately, with one team and indefinitely many individual measurements in the ±3 common-shock model, prove failure of consistency for μ. Explain which condition of the bounded-size iid-cluster theorem each change tests.",
+      "topic": "Variable cluster size and a fixed common shock",
+      "independent_solution": "The pooled target is E[m ybar]/E[m]=6/2=3; the equal-cluster-mean target is two. At pooled target three, cluster scores are -3,+3, so Q_c=2 and root-G variance 9/4. Equal-cluster means are 0,4 with variance four. Both targets fit the bounded iid-cluster theorem but correspond to different losses. With one team and growing size, the mean error is a+epsilon_bar, converging to a=+-3. Since epsilon_bar lies in [-1,1], its absolute error is at least two for every size. Thus row growth does not give consistency; G is fixed and sizes grow outside the theorem.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 9,
+      "exact_prompt": "Supply the essential details of the bounded m-dependent CLT: the omitted-index count, the variance bound for omitted sums, mutual independence of retained blocks, and vanishing total third-order replacement error. Explain how smooth tests yield a CDF result. Then set et=ηt−ηt−1 with iid fair signs. Find its long-run variance and the exact sample-mean error; explain why a zero long-run variance does not mean every finite-sample estimate is error-free.",
+      "topic": "Dependent blocks, smooth replacement and zero long-run variance",
+      "independent_solution": "The omitted set has at most mn/ell+ell+m indices and normalized variance bounded by its size times a fixed constant divided by n. Successive blocks are independent of the entire earlier sigma-field. Their deterministic normalized envelope b_n=B ell/sqrt(n) and maximum variance O(ell/n) make both the block and matched-Gaussian total absolute third moments vanish. Fixed-width C3 lower/upper CDF transitions then yield convergence after taking width to zero; zero limiting variance uses L2 directly. For e_t=eta_t-eta_(t-1), gamma0=2,gamma1=-1,long-run variance zero, but the sample mean error is (eta_n-eta_0)/n. Its exact variance is 2/n^2 and it is nonzero with probability one half, so root-n degeneracy is not finite-sample perfection.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 10,
+      "exact_prompt": "Prove the zero-extension moving-sum identity for Bartlett covariance, including the edge multiplicities. For residuals (1,−2,1), compute Γ̂₀, Γ̂₁, Γ̂₂, untapered L=1 and Bartlett L=1 and L=2. In the stated consistency proof, which powers Lₙ=⌊na⌋ satisfy all sufficient bounds? Does failure of that particular bound at a=1/3 prove inconsistency?",
+      "topic": "Bartlett windows and bandwidth sufficiency",
+      "independent_solution": "Observation t belongs to exactly L+1 zero-extended windows, and each pair at lag ell belongs to L+1-ell windows. Expansion produces Bartlett exactly with common denominator n and gives a PSD sum of outer products. For (1,-2,1), lag estimates are 2,-4/3,1/3, untapered lag-one covariance is -2/3, and Bartlett L=1,L=2 give 2/3,4/9. For L=floor(n^a), the sufficient restrictions are a>0 and 3a-1<0; the residual rate then also vanishes. Hence 0<a<1/3. At the boundary the upper bound is nonvanishing, not a positive lower bound; no inconsistency theorem follows. The peer verifies all edge multiplicities and vector PSD on six purposefully chosen kernel cases, not a random grid.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 11,
+      "exact_prompt": "Change the moving-average coefficient in Worked example 6 from +1/2 to −1/2. Derive γ₀, γ₁, the long-run variance, the exact n=20 mean variance and the fixed-L=1 Bartlett probability limit. Compare the direction of the iid variance error with the original case. State which properties would need new proofs if the process were unbounded or had dependence extending through infinitely many lags.",
+      "topic": "Negative serial correlation and scope transfer",
+      "independent_solution": "For coefficient -1/2, gamma0=5/4,gamma1=-1/2,long-run variance=1/4. In the sample mean, independent innovation coefficients are rho,(1+rho) repeated n-1 times, and one, each divided by n. Their squared sum gives 1/(4n)+1/n^2, or 3/200 at n=20. The iid 1/16 answer is now too large, reversing the error direction from positive serial correlation. Fixed L=1 Bartlett tends to 3/4, not 1/4. Unbounded processes require new tail/moment replacements for the deterministic bounds; infinite-range dependence requires new CLT and lag-tail controls. Covariance summability by itself is not the proved block theorem.",
+      "finding": "No substantive discrepancy."
+    },
+    {
+      "number": 12,
+      "exact_prompt": "A report regresses outcomes on a service-adoption indicator and controls using one million customer-month rows from eight firms. It weights each firm by its inverse estimated residual variance, reports HC3 with a t critical value, chooses the model with the smallest p value among twenty specifications, and concludes that the coefficient is a causal effect with exact 95% coverage because “robust standard errors handle any dependence.” Write a methodological audit separating the target, score centering, independent units, estimated weights, finite-sample reference and specification selection. Give two feasible evidence or design changes and what each would resolve. No current institutional fact is assumed.",
+      "topic": "Methodological audit and twelve-point rubric",
+      "independent_solution": "The report confuses six questions: descriptive/intervention target, population score centering, independent sampling units, estimated weight effects, finite-sample reference law and selected-specification inference. A million customer-month rows and eight firms do not establish iid rows or the G-to-infinity argument; HC3 adjusts leverage under stated iid assumptions rather than arbitrary dependence. Conditional-mean/variance assumptions and centered group scores are needed for feasible weighting, which may otherwise change the target. Exact Gaussian t assumptions do not follow from a robust covariance label. Choosing the minimum p value among twenty models violates the single pre-specified contrast scope. Randomized rollout with a stated outcome calendar can address assignment but not all dependence; additional independently sampled firms address cluster information but not confounding. Pre-specification/holdout and a group-mean/covariance audit are additional defensible changes. The rubric correctly allocates two points per distinction, one for the issue and one for its consequence/evidence, and requires two changes tied to their limited purpose for a complete answer.",
+      "finding": "No substantive discrepancy."
+    }
+  ],
+  "teach_back_and_retention": {
+    "teach_back": "The supplied answer starts with inverse Gram times average score and distinguishes row outer products, squared cluster score sums and serial lag sums. It retains sqrt(n),sqrt(G),sqrt(n) under the different proved hypotheses and correctly separates changing a covariance estimate from changing loss weights and the target.",
+    "retention": "Two device variances one/four give OLS variance 5/4 and inverse-variance weights (4/5,1/5), yielding GLS variance 4/5. MA coefficient 1/3 gives gamma0=10/9,gamma1=1/3,long-run 16/9 and fixed-L=1 limit 13/9. Positive contrast variance and the bounded stationary fixed-m bandwidth conditions are included.",
+    "limits": "The delay is an authored practice suggestion. No observed retention, calibrated timing or learner mastery is claimed."
+  },
+  "root_origin_repairs_independently_assessed": [
+    {
+      "origin": "coordinator reading before peer assignment",
+      "finding": "Zero cross moments were originally described as zero correlations without an intercept.",
+      "assessment": "Final wording now gives E[x_j e]=0, derives Cov(x_j,e)=-E[x_j]E[e], supplies the intercept condition and excludes undefined constant correlations. The peer constructed a distinct exact no-intercept counterexample. Resolved."
+    },
+    {
+      "origin": "coordinator reading before peer assignment",
+      "finding": "A random maximum appeared outside expected block third moments.",
+      "assessment": "Final theorem and exercise use deterministic b_n=B ell_n/sqrt(n), bounding every block almost surely, so sum E|xi|^3 <= b_n sum E xi^2 is valid. The Gaussian term is separately controlled by sqrt(max variance). Resolved."
+    },
+    {
+      "origin": "author arithmetic before peer assignment",
+      "finding": "An earlier HC2 fraction was wrong.",
+      "assessment": "The final value 1102/2275 is independently recovered from four coefficient-influence squares divided by the corresponding 1-h_i. Resolved."
+    }
+  ],
+  "findings": [
+    {
+      "origin": "separate peer canonical promotion reading",
+      "severity": "reader/provenance",
+      "status": "resolved and independently verified",
+      "finding": "The first canonical promotion still labeled the chapter Working manuscript and said accepted c01/current chapter reviews were pending, creating stale reader workflow statements.",
+      "resolution": "Root removed the working suffix, changed the prerequisite heading and deleted the obsolete review-state sentence. Independently applying all six recorded HTML replacements to the frozen working file exactly reconstructs the final manuscript. No proof, exercise, solution, numerical result or substantive prerequisite text changed."
+    }
+  ],
+  "open_findings": [],
+  "source_review": {
+    "primary_scopes": 3,
+    "method": "Read the entire frozen source record and its canonical metadata delta, and checked every actual citation against the recorded inspected pages and chapter use. The peer reuses the inspected PDF body and rendered-equation evidence honestly; it did not retrieve or certify entire external bodies afresh.",
+    "records": [
+      {
+        "id": "v12-c02-mit-linear2017",
+        "use": "Chernozhukov/Fernandez-Val MIT 2017 Lecture 1, inspected pp.2–6 through equation 4.4: projection, partial regression and sandwich framework. The chapter supplies its own fixed-dimensional assumptions and proofs, and does not inherit unspecified growing-dimensional regularity. Source missing squares and the randomization wording caution are not reproduced."
+      },
+      {
+        "id": "v12-c02-cameron-miller2015",
+        "use": "Cameron–Miller 2015 scoped conditional covariance, GLS/working covariance and cluster-score sections plus few-cluster cautions. The source equation correction is a covariance multiplier, not its square on residuals. No universal safe cluster count or exact general t(G-1) result is claimed."
+      },
+      {
+        "id": "v12-c02-mit-hac2017",
+        "use": "MIT 2017 Lecture 4 p.10 and reference p.22 support common-n Bartlett weights and long-run covariance interpretation. General mixing CLT, general GMM and an original-paper consistency proof are not inherited."
+      }
+    ],
+    "unavailable_primary": "The Newey–West original-paper body remains a discovery lead whose attempted PDF retrieval failed, including observed HTTP 403. The chapter explicitly does not claim original-paper inspection or bypass access.",
+    "promotion_check": "All three detailed source entries and the unavailable-lead record are byte-equivalent as JSON values before/after promotion; only canonical/prerequisite status metadata changed."
+  },
+  "promotion_review": {
+    "evidence": "production/v12-c02-promotion-delta.json",
+    "exact_working_to_final_HTML_replacements": 6,
+    "exact_working_to_final_checker_replacements": 5,
+    "mathematical_content_unchanged": true,
+    "source_scopes_unchanged": true,
+    "author_proof_solution_teaching_audits_unchanged": true,
+    "actual_shared_Document": {
+      "worked": 6,
+      "exercises": 12,
+      "solutions": 12,
+      "unique_ids": 24,
+      "links": 9
+    },
+    "actual_parser_scope": "Executed the exact shared Document class AST read-only; did not invoke the shared aggregating verifier.",
+    "source_and_checker_scope": "Final checker only changes base/input paths and state wording; source scope remains three inspected records. No hidden production input is needed at final execution."
+  },
+  "independent_finite_evidence": {
+    "pre_binding_calculation_comparisons": 203,
+    "paired_numeric_and_scope_anchors": 78,
+    "team_mean_support": 6,
+    "complete_two_team_outcomes": 36,
+    "purposeful_vector_Bartlett_cases": 6,
+    "domain_rejections": 6,
+    "FWL_coefficient": "17/10",
+    "finite_feasible_mean": "39/22",
+    "finite_oracle_mean": "3/10",
+    "scope": "The finite feasible/oracle difference illustrates finite-sample nonidentity, not a failure of first-order equivalence under the proved model. The six kernel cases test edge multiplicities and vector PSD, not asymptotic convergence."
+  },
+  "implementation_review": {
+    "author_code": "Complete 583-line working code and every final path/status change read. Exact rational matrix and finite-law calculations, explicit non-assert domain failures, three nonself author bindings, quiet default CLI and check() are coherent with the advertised bounded fixed-contract purpose.",
+    "peer_code": "Independent arithmetic and exact paired visible results, explicit domain failures, strict duplicate/nonfinite/trailing-JSON handling, quiet public API/default CLI, four-author/own-checker hashes and read-only integration. Small adjugate matrices are limited to dimension at most three; all enumerations and fixed calendars are bounded.",
+    "proof_limit": "Neither author536 nor finite peer cases prove the general CLTs or covariance consistency. All remainder, centering, covariance and sampling assumptions were read and analyzed separately."
+  },
+  "validation": {
+    "status": "passed",
+    "workspace_normal_and_optimized_API": true,
+    "isolated_normal_and_optimized_API": true,
+    "isolated_payload_count": 6,
+    "cwd": "/",
+    "quiet_import_and_check": true,
+    "quiet_default_CLI_normal_and_optimized_workspace": true,
+    "strict_JSON_results": true,
+    "unchanged_payload_bytes_and_exact_isolated_membership": true,
+    "summary": {
+      "chapter": "v12-c02",
+      "review": "separate peer",
+      "status": "passed",
+      "comparisons": 242,
+      "worked_cases": 6,
+      "exact_prompts_and_solutions": 12,
+      "primary_scopes": 3,
+      "independent_domain_rejections": 6,
+      "strict_JSON_rejections": 6,
+      "finite_evidence": {
+        "paired_numeric_and_scope_anchors": 78,
+        "six_state_team_pairs": 36,
+        "purposeful_vector_Bartlett_cases": 6,
+        "FWL_coefficient": "17/10",
+        "finite_feasible_weight_estimate": "39/22",
+        "finite_oracle_estimate": "3/10"
+      },
+      "author_comparisons_integration_only": 536,
+      "nonself_bindings": 5,
+      "limits": "Finite exact evidence plus separate analytic proof review; no general mixing/high-dimensional/uniform or exact robust coverage, rendered UI or human certification."
+    },
+    "author_integration_scope": "536 author comparisons are integration evidence only, not independent peer arithmetic."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v12-c02.html",
+      "bytes": 61071,
+      "sha256": "a7f2894109490d5230ea439b8ead8fc88b30a971c1d459e5c5079e6fca938dfa"
+    },
+    {
+      "path": "scripts/check_v12_c02.py",
+      "bytes": 28138,
+      "sha256": "3c147ff5cc061c72145fe179e1177840e06424562f4f9d7cc1fd2e196204ab57"
+    },
+    {
+      "path": "content/reviews/v12-c02-sources.json",
+      "bytes": 8202,
+      "sha256": "cd1d69176f5377a79e056a1b9abc9e028ee6289752074b19b532a18aebbe26ff"
+    },
+    {
+      "path": "content/reviews/v12-c02-author.json",
+      "bytes": 17490,
+      "sha256": "23c14ac8e1eadbc231e99a6ca62fb5caa764af0dc657f9599a1e3953e74a93ec"
+    },
+    {
+      "path": "scripts/check_v12_c02_peer.py",
+      "bytes": 26866,
+      "sha256": "740e2b06f0aa1e187c9b7f5d61a256a66f4aae277f2a26e20f0158612cc356e1"
+    }
+  ],
+  "limitations": [
+    "Internal separate machine-assisted peer review is not independent human academic certification.",
+    "Theorems require their explicit conditional-Gaussian, iid fixed-dimensional, finite-group, bounded-size-cluster or bounded fixed-m assumptions.",
+    "No general mixing, long-memory, many-regressor, weak-rank, uniform or post-selection inference is established.",
+    "Unbiased covariance estimates and finite PSD do not imply exact confidence coverage.",
+    "Source bodies were reused only within actually inspected scopes; the original Newey–West body was not inspected.",
+    "Reader rendering, shared acceptance/build/regression and publication remain coordinator-owned; no visual UI or learner-performance claim."
+  ]
+}

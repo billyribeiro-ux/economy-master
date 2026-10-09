@@ -1,8 +1,8 @@
 {
   "chapter": "v12-c04",
   "date": "2026-10-09",
-  "owner": "root",
-  "state": "four primary PDFs retrieved; scoped full-body/equation inspection still pending; no manuscript",
+  "owner": "c05_review",
+  "state": "Four retrieved primary bodies inspected in the exact scopes below; numerical and proof blueprint independently checked and approved before manuscript authoring.",
   "topic": "Likelihood and nonlinear models: MLE, score/information, binary response, counts, selection and marginal effects",
   "retrieved": [
     {
@@ -10,31 +10,204 @@
       "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/1c38d1d141f59c69ca57c68801fb75b1_MIT14_382S17_lec6.pdf",
       "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c04-mit-nonlinear.pdf",
       "bytes": 531103,
-      "sha256": "5ef98668b0d867d83ea15909bdc7db211e82ec0ab5e8578ef1892b401c9da6fc"
+      "sha256": "5ef98668b0d867d83ea15909bdc7db211e82ec0ab5e8578ef1892b401c9da6fc",
+      "inspection": {
+        "date_checked": "2026-10-09",
+        "method": "Existing exact PDF bytes and extracted text read; selected pages rendered in memory via pdftoppm and visually inspected. No files added outside owned paths.",
+        "metadata_and_scope": {
+          "title": "Nonlinear and Binary Regression, Predictive Effects, and M-Estimation",
+          "authors": [
+            "Victor Chernozhukov",
+            "Ivan Fernandez-Val"
+          ],
+          "date": "Spring 2017, MIT 14.382 Lecture6",
+          "pages": 26,
+          "read": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "rendered": [
+            7,
+            14
+          ],
+          "scope": "Predictive/discrete and derivative effects, empirical target-distribution uncertainty, stacked moments, binary links, conditional likelihood, M-estimation and robust covariance. Empirical figures encountered are not adopted as evidence; sorted-effect/bootstrap and application results are outside chapter proof scope.",
+          "cautions": [
+            "Page14 defines score as gradient log likelihood and G as negative expected Hessian, but displays a leading negative G inverse score expansion. With these definitions use the positive A inverse score expansion; derive it from the score equation.",
+            "Page13 correctly derives the minimization-loss sign but is not the same sign convention as the page14 likelihood score.",
+            "Page14 broadly states efficiency relative to every consistent asymptotically normal GMM estimator without all regular estimator/model restrictions. The chapter does not adopt that universal claim.",
+            "Page8 refers to a quantile function as nonincreasing; increasing quantile ordering is the relevant convention. Sorted effects are excluded.",
+            "Uniqueness/concavity does not guarantee an unconstrained finite maximizer under separation. Explicit finite boundary cases are required.",
+            "The selected source provides a stacked-moment route for APE uncertainty; the chapter supplies the explicit empirical-X term and retains its cross covariance under misspecification."
+          ]
+        }
+      }
     },
     {
       "name": "v12-c04-mit-selection",
       "url": "https://ocw.mit.edu/courses/14-385-nonlinear-econometric-analysis-fall-2007/0b7c3f5ce9642cc7f603d6404a8975e5_lecture01.pdf",
       "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c04-mit-selection.pdf",
       "bytes": 154406,
-      "sha256": "562c34f1661893bfdbd354f96ae934eba2d5369524bfc59f7c9522d5c0757761"
+      "sha256": "562c34f1661893bfdbd354f96ae934eba2d5369524bfc59f7c9522d5c0757761",
+      "inspection": {
+        "date_checked": "2026-10-09",
+        "method": "Existing exact PDF bytes and extracted text read; selected pages rendered in memory via pdftoppm and visually inspected. No files added outside owned paths.",
+        "metadata_and_scope": {
+          "title": "14.385 Nonlinear Econometrics, Lecture1: Basic Overview of Some Principal Methods",
+          "authors": [
+            "Victor Chernozhukov"
+          ],
+          "date": "Fall 2007",
+          "pages": 24,
+          "read": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "rendered": [
+            11,
+            13
+          ],
+          "scope": "Conditional/marginal likelihood distinction, censored mixed likelihood and the TypeII sample-selection observed-data factorization. The explicit bivariate-normal selected density and Mills mean are derived in the chapter; page14 leaves the details to homework.",
+          "cautions": [
+            "Setting the unavailable outcome to zero is a storage convention; the unselected contribution is probability mass, not an observed outcome density at zero.",
+            "The selected-outcome conditional density must be multiplied by the selection probability in the joint observed-data likelihood.",
+            "Distributional and identification hypotheses remain essential. The chapter does not import an unconditional efficiency or generic selection identification theorem."
+          ]
+        }
+      }
     },
     {
       "name": "v12-c04-mit-likelihood",
       "url": "https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/36624c2682b346b07cab3da416b752a7_MIT18_650F16_Maximum_LE.pdf",
       "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c04-mit-likelihood.pdf",
       "bytes": 201321,
-      "sha256": "b088a9dc1d3ff98ef950d3da27e28df66dae39b94819d81af6f5949ea416cb51"
+      "sha256": "b088a9dc1d3ff98ef950d3da27e28df66dae39b94819d81af6f5949ea416cb51",
+      "inspection": {
+        "date_checked": "2026-10-09",
+        "method": "Existing exact PDF bytes and extracted text read; selected pages rendered in memory via pdftoppm and visually inspected. No files added outside owned paths.",
+        "metadata_and_scope": {
+          "title": "18.650 Statistics for Applications, Chapter 3: Maximum Likelihood Estimation",
+          "authors": [
+            "Philippe Rigollet"
+          ],
+          "date": "Fall 2016",
+          "pages": 25,
+          "read": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "rendered": [
+            9,
+            14,
+            23,
+            24
+          ],
+          "scope": "KL definition and information inequality, likelihood maximization, gradient/Hessian, examples, information and regular limit statement. PDF page numbers differ from the slide footers by one.",
+          "cautions": [
+            "Rendered PDF page9 has the correct not-equal/non-triangle signs that text extraction drops.",
+            "The page14 strict-concavity iff negative Hessian display is not a necessary condition for all strictly concave smooth functions and must exclude the zero direction. Use negative-definite Hessian as a sufficient condition on a convex domain.",
+            "The page15 score equation requires an interior attained optimum; strict concavity alone does not establish existence. The open Bernoulli/Poisson parameter spaces on pages17–18 also have zero-count/boundary existence exceptions.",
+            "Page24 explicitly leaves additional technical conditions unspecified. The chapter must supply compact measurable selection, uniform convergence, local Hessian and moment hypotheses rather than claim the slide gives a complete proof."
+          ]
+        }
+      }
     },
     {
       "name": "v12-c04-counts",
       "url": "https://cameron.econ.ucdavis.edu/research/CTE01preprint.pdf",
       "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c04-counts.pdf",
       "bytes": 237127,
-      "sha256": "28aebb8a42a0558c429cd5209f0095600d886178e50d737c05bec02a065ceb45"
+      "sha256": "28aebb8a42a0558c429cd5209f0095600d886178e50d737c05bec02a065ceb45",
+      "inspection": {
+        "date_checked": "2026-10-09",
+        "method": "Existing exact PDF bytes and extracted text read; selected pages rendered in memory via pdftoppm and visually inspected. No files added outside owned paths.",
+        "metadata_and_scope": {
+          "title": "Essentials of Count Data Regression",
+          "authors": [
+            "A. Colin Cameron",
+            "Pravin K. Trivedi"
+          ],
+          "date": "June 30, 1999, author-hosted preprint",
+          "pages": 17,
+          "read": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            9,
+            10
+          ],
+          "rendered": [
+            3,
+            4,
+            10
+          ],
+          "scope": "Poisson score/mean link and interpretation, overdispersion, selected/truncated count caution and Section4.1 correct-mean quasi-likelihood sandwich. The file name contains E01 but the document title page is dated June30,1999; no final publication year is invented.",
+          "cautions": [
+            "Page3 concavity/iterative-solution statement needs sample rank and attained finite maximum; an all-zero count group can drive its fitted log mean toward negative infinity.",
+            "Page3 labels a derivative times one unit as a one-unit change. The chapter distinguishes an infinitesimal derivative from the exact finite exp(beta_j)-1 change.",
+            "Rendered page4 equation2.9 uses 1-F(c) for the stated event Y>=c; with F(y)=P(Y<=y) the integer endpoint should be 1-F(c-1). That censored-count formula is not adopted.",
+            "Rendered page10 contains a linear residual y-x prime beta in its omega discussion; use y-exp(x prime beta) in this mean model. The actual robust plug-in formula immediately below uses the fitted mean correctly.",
+            "Correct conditional mean alone supplies score centering, not all LLN/CLT, rank, existence or covariance regularity. The chapter proves those under explicit bounded-regressor and finite second-moment sufficient conditions."
+          ]
+        }
+      }
     }
   ],
-  "priority": "Complete finance-core publication and canonical c01 promotion before continuing this preparation.",
-  "evidence_limit": "Public primary URLs and exact retrieved bytes only at this checkpoint. Search snippets and selected extracted passages are not a complete source/proof review. No new catalogue entries or chapter acceptance.",
-  "planned_scope": "At most these four primary scopes; original KL/score/information/regular M-estimation arguments, binary separation/partial effects, correct-mean Poisson quasi-likelihood and honest observed-data selection likelihood. Reuse final c01\u2013c03 proof interfaces rather than re-proving unrelated foundations. Distinguish functional form and sampling selection from causal identification."
+  "priority": "Complete the exact V12-c04 working author package; preserve frozen c03 and all published material.",
+  "evidence_limit": "Scoped body and selected rendered equation inspection, not whole-document verification or acceptance. PDF bytes reused read-only; no new retrieval or external source introduced.",
+  "planned_scope": "At most these four primary scopes; original KL/score/information/regular M-estimation arguments, binary separation/partial effects, correct-mean Poisson quasi-likelihood and honest observed-data selection likelihood. Reuse final c01–c03 proof interfaces rather than re-proving unrelated foundations. Distinguish functional form and sampling selection from causal identification.",
+  "proof_decisions": [
+    "Use likelihood score s=gradient ell, A=-E Hessian and positive A inverse score influence; retain B=Var(s) separately unless information equality is proved.",
+    "Common-support dominated normalization derivatives prove mean-zero score/information identity; a moving-support uniform model deliberately violates interchange.",
+    "Compact measurable global selection and uniform criterion convergence give consistency before an integrated local Hessian obtains root-n rate; explicit bounded logit and mean-model Poisson primitives instantiate the theorem.",
+    "Same-sample APE influence contains h(X,beta)-tau plus G prime A inverse score. Correct conditional score centering removes the cross term; unconditional pseudo-score centering does not. A known fixed target distribution has no empirical-X term.",
+    "Selected-only density equals observed joint density divided by selection probability; derive the Gaussian formula by an orthogonal normal rotation and Mills mean by integration. No full selection-model identification or regularity theorem is claimed.",
+    "A logistic derivative evaluated at a discrete law is a model-dependent interpolation functional; no infinitesimal observed covariate variation or causal effect follows from that support."
+  ],
+  "blueprint_root_evidence": "production/v12-c04-blueprint-root-audit.json: root independently verified26exact comparisons and approved six cases plus the nonzero-cross-covariance pseudo-APE transfer.",
+  "blueprint": {
+    "worked_cases": 6,
+    "exercises": 12,
+    "exponential": "Times1/2,1,3/2,2,5/2,3; n6,sum21/2,rate4/7,mean7/4,root-n rate variance16/49.",
+    "binary": "Two groups40 each,successes10/30; beta(-log3,2log3), coefficient covariance at80 [[2/15,-2/15],[-2/15,4/15]], discrete contrast1/2, variance3/320.",
+    "ape": "X=-1,0,1 equally, beta(0,log3); tau5log3/24,I=diag(5/24,1/8),G=(0,5/24-log3/16),covariate variance(log3)^2/1152, coefficient variance8G1^2.",
+    "count": "Population means2/4, variances4/16, robustV[[2,-2],[-2,4]], modelV[[1,-1],[-1,3/2]]. Separate8-row sample D0=0,0,4,4 andD1=0,8,8,8 fits means2/6; Ahat[[4,3],[3,3]],Bhat[[8,6],[6,6]],root-n robustV[[2,-2],[-2,8/3]].",
+    "selection": "a0,mu10,sigma2,rho1/2; selected probability1/2,mean10+sqrt(2/pi),joint density at10=1/(4sqrt(2pi)),conditional selected density twice that.",
+    "uniform": "n4,sample1,2,3,4,theta5;maximum4,scaled tail at1=81/256,exact[M,2M]interval has15/16 coverage.",
+    "pseudo_ape_transfer": "Known unit offset X=0,log3 equally, true conditional Bernoulli probability5/8. Working p=Lambda(beta+X),pseudo beta0. h=p(1-p),tau7/32,A7/32,G=-3/64,B1/4,Var(h)=1/1024,Cov(h,s)=1/256,fullV541/50176 versus625/50176 if cross term omitted."
+  }
 }

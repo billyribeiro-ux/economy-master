@@ -1,0 +1,225 @@
+{
+  "chapter": "v12-c06",
+  "date": "2026-10-09",
+  "owner": "root",
+  "state": "original prospective blueprint and finite numerical audit; not a manuscript or acceptance",
+  "checks": [
+    {
+      "claim": "six-unit heterogeneous average effect",
+      "value": "1"
+    },
+    {
+      "claim": "exact assignment variance",
+      "value": "44/15"
+    },
+    {
+      "claim": "expected Neyman variance estimate",
+      "value": "47/15"
+    },
+    {
+      "claim": "realized variance estimate can be below actual variance",
+      "value": "8/3"
+    },
+    {
+      "claim": "sharp null exact size with inclusive ties",
+      "value": "1/10"
+    },
+    {
+      "claim": "constant-shift inversion boundary sample -10",
+      "value": "False"
+    },
+    {
+      "claim": "constant-shift inversion boundary sample 2",
+      "value": "False"
+    },
+    {
+      "claim": "constant-shift inversion boundary sample 3",
+      "value": "True"
+    },
+    {
+      "claim": "constant-shift inversion boundary sample 4",
+      "value": "True"
+    },
+    {
+      "claim": "constant-shift inversion boundary sample 5",
+      "value": "True"
+    },
+    {
+      "claim": "constant-shift inversion boundary sample 7",
+      "value": "True"
+    },
+    {
+      "claim": "constant-shift inversion boundary sample 8",
+      "value": "False"
+    },
+    {
+      "claim": "constant-shift inversion boundary sample 100",
+      "value": "False"
+    },
+    {
+      "claim": "complete unbiased effect",
+      "value": "2"
+    },
+    {
+      "claim": "complete exact design variance",
+      "value": "15"
+    },
+    {
+      "claim": "stratified unbiased effect",
+      "value": "2"
+    },
+    {
+      "claim": "stratified exact design variance",
+      "value": "5/6"
+    },
+    {
+      "claim": "interference exposure HT mean",
+      "value": "4"
+    },
+    {
+      "claim": "sharp bounded-outcome attrition interval",
+      "value": "(Fraction(-2, 5), Fraction(18, 5))"
+    }
+  ],
+  "fisher_exact_power": [
+    {
+      "constant_effect": 0,
+      "size_or_power_at_one_tenth": "1/10",
+      "size_or_power_at_one_twentieth": "0"
+    },
+    {
+      "constant_effect": 1,
+      "size_or_power_at_one_tenth": "1/20",
+      "size_or_power_at_one_twentieth": "0"
+    },
+    {
+      "constant_effect": 2,
+      "size_or_power_at_one_tenth": "1/10",
+      "size_or_power_at_one_twentieth": "0"
+    },
+    {
+      "constant_effect": 3,
+      "size_or_power_at_one_tenth": "1/5",
+      "size_or_power_at_one_twentieth": "0"
+    },
+    {
+      "constant_effect": 4,
+      "size_or_power_at_one_tenth": "2/5",
+      "size_or_power_at_one_twentieth": "0"
+    }
+  ],
+  "normal_known_variance_power": {
+    "scope": "Independent Gaussian arm observations, known variances9/1, effect1, two-sided alpha.05; exact two-tail normal probability. Integer allocation from continuous convex minimum followed by floor/ceil comparison; no finite-population CLT claimed.",
+    "minimum_total": {
+      "n": 126,
+      "treated": 94,
+      "control": 32,
+      "power": 0.8012698751691925
+    },
+    "minimum_equal_allocation": {
+      "n": 158,
+      "treated": 79,
+      "control": 79,
+      "power": 0.8025412076610389
+    }
+  },
+  "interference": {
+    "law": "Independent fair Bernoulli assignment of3nodes in a path; e=(own treatment, any treated neighbor); y=b_i+tau_i*d+3*g; b1,2,3 andtau2,4,6.",
+    "probabilities": [
+      {
+        "unit": 0,
+        "exposure": [
+          0,
+          0
+        ],
+        "p": "1/4"
+      },
+      {
+        "unit": 0,
+        "exposure": [
+          1,
+          0
+        ],
+        "p": "1/4"
+      },
+      {
+        "unit": 1,
+        "exposure": [
+          0,
+          0
+        ],
+        "p": "1/8"
+      },
+      {
+        "unit": 1,
+        "exposure": [
+          1,
+          0
+        ],
+        "p": "1/8"
+      },
+      {
+        "unit": 2,
+        "exposure": [
+          0,
+          0
+        ],
+        "p": "1/4"
+      },
+      {
+        "unit": 2,
+        "exposure": [
+          1,
+          0
+        ],
+        "p": "1/4"
+      }
+    ],
+    "HT_values": [
+      "-32/3",
+      "32/3",
+      "16",
+      "0",
+      "0",
+      "16",
+      "0",
+      "0"
+    ],
+    "mean": "4",
+    "variance": "688/9",
+    "limits": "Known full synthetic potential-outcome table permits design variance; a single observed assignment need not identify every cross-outcome variance term."
+  },
+  "proof_plan": [
+    "Finite fixed-count assignment inclusion moments and exact difference-in-means variance; unbiased upper variance estimator in expectation is not finite confidence coverage.",
+    "Fisher sharp-null finite weighted-rank proof including ties, and inversion of constant-shift sharp hypotheses; weak average null is different. Exact power enumerated from actual alternative potential outcomes.",
+    "Independent within-stratum assignment variance and original precision comparison; unit of randomization and weighted target explicit.",
+    "Iid or known-Gaussian arm law separately stated for power/normal inference. No unproved finite-population CLT inherited from sample covariance formula.",
+    "Encouragement ITT remains assignment effect; compliance ratio requires c03 assumptions and covariance-aware ratio inference.",
+    "Known exposure mapping and positive design exposure probabilities support HT mean identification; prove by indicator expectation and derive covariance from joint probabilities.",
+    "Bounded missing outcomes yield sharp population identification bounds despite equal response rates; observed-response selection remains separate from assignment."
+  ],
+  "pending": "Full original manuscript, twelve solved exercises, four-file author package and separate review. Three scoped primary source inspections complete; no canonical change.",
+  "compliance": {
+    "types": "Never/always/complier probabilities1/2,1/8,3/8; treatment outcomes(1,7),(2,6),(3,5); independent fair assignment.",
+    "arm_treatment_means": [
+      "1/8",
+      "1/2"
+    ],
+    "arm_outcome_means": [
+      "19/8",
+      "25/8"
+    ],
+    "first_stage": "3/8",
+    "ITT": "3/4",
+    "LATE": "2",
+    "ATE": "17/4",
+    "treated_share": "5/16",
+    "ATT": "14/5",
+    "joint_delta_root_n_variance": "116/3",
+    "deltaY_variance": "235/16",
+    "deltaD_variance": "23/32",
+    "deltaY_deltaD_covariance": "97/32",
+    "wrong_variance_without_covariance": "1124/9",
+    "limits": "iid whole-unit superpopulation experiment with independent fair encouragement. The ITT is assignment effect; LATE interpretation adds exclusion/monotonicity/positive compliance. Separate from fixed finite population."
+  }
+}

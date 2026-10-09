@@ -307,6 +307,28 @@ def numerical_check():
     a.equal(sum(e*e for e in errors)/3, F(2, 9), "optimal unweighted loss")
     a.equal(sum(e*e for e in errors_w)/3, F(1, 3), "changed-target loss")
     a.equal(mean_cov([[e, t*e] for t, e in zip(z, errors)])[1], diag((F(2, 9), F(2, 27))), "score covariance despite conditional misspecification")
+    # Without an intercept, zero score cross moments need not mean covariance
+    # orthogonality. This is a targeted counterexample to the repaired prose.
+    no_intercept = mul(estimator([[1], [2]]), column((1, 1)))[0][0]
+    no_intercept_errors = [1-no_intercept*t for t in (1, 2)]
+    a.equal(no_intercept, F(3, 5), "no-intercept projection")
+    a.equal(sum(t*e for t, e in zip((1, 2), no_intercept_errors)), 0, "zero cross moment")
+    a.equal(mean_cov([[F(t), e] for t, e in zip((1, 2), no_intercept_errors)])[1][0][1],
+            F(-3, 20), "nonzero covariance without intercept")
+
+    # Partial regression with a regressor whose nonzero mean must be removed.
+    t = (-2, -1, 0, 1, 2)
+    nuisance = [[1, value] for value in t]
+    remaining = column([value*value for value in t])
+    full = [[1, value, value*value] for value in t]
+    outcome = column((1, 2, 0, 6, 11))
+    h = mul(nuisance, estimator(nuisance))
+    m = add(eye(5), h, -1)
+    a.equal(h, tr(h), "orthogonal hat symmetry")
+    a.equal(mul(h, h), h, "projection idempotence")
+    a.equal(mul(m, nuisance), [[0, 0] for _ in t], "nuisance residualization")
+    partial = mul(estimator(mul(m, remaining)), mul(m, outcome))[0][0]
+    a.equal(partial, mul(estimator(full), outcome)[2][0], "finite FWL coefficient identity")
 
     # Device estimators: realized outputs and finite sign enumeration provide
     # an independent covariance oracle, rather than reusing a variance formula.

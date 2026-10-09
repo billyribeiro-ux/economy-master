@@ -1,0 +1,213 @@
+{
+  "chapter": "v12-c02",
+  "date": "2026-10-09",
+  "owner": "bs_author",
+  "state": "author-frozen complete working manuscript; independent review and c01 acceptance pending; not canonical acceptance",
+  "assignment": "production/v12-c02-author-assignment.json",
+  "ownership": "Only the four working author paths; finance, canonical/shared files and source-preparation file preserved.",
+  "capability": "Fixed-rank linear projection and known-covariance GLS; exact Gaussian versus iid, cluster and finite-range serial robust inference.",
+  "worked_cases": 6,
+  "exercises": 12,
+  "complete_solutions": 12,
+  "prerequisite_reading": {
+    "working_c01": "Read its proof contract and manuscript identification/order/consistency/linearization/studentization scope. Acceptance remains conditional on c01 review.",
+    "v03_c06": "Actual smooth replacement and CDF squeeze proof reread before constructing the independent-block extension.",
+    "inherited_only": "Fixed-dimensional iid score CLT through scalar contrasts and explicitly invoked Cramer-Wold; iid integrable LLN, matrix inverse continuity, stochastic-order algebra, positive-variance studentization, linear algebra and spectral square roots."
+  },
+  "proof_reading": [
+    {
+      "claim": "Projection and partial regression",
+      "audit": "Finite second moments establish integrability; positive-definite Gram gives the unique loss minimizer by the cross-term identity. The sample full-rank projection is distinguished from random-design population orthogonality. Partial regression is derived by minimizing over nuisance coordinates, and its residualized Gram rank is proved. Orthogonality is explicitly zero cross moments; zero covariance additionally follows when an intercept centers residuals. Correlation with constants is undefined."
+    },
+    {
+      "claim": "Exact conditional OLS and GLS",
+      "audit": "Conditional mean zero, full column rank and known positive-definite covariance are explicit. Whitening uses the prior spectral square root. For every linear unbiased comparator AX=I, D=A-A_G has DX=0 and DΣA_G′=0; the covariance difference is DΣD′. Contrast equality uses positive definiteness. Reversed precision weights supply a concrete failure under a wrong covariance."
+    },
+    {
+      "claim": "Exact Gaussian inference",
+      "audit": "Only conditional spherical Gaussian errors with σ²>0,n>p are used. Orthogonal coordinates split fitted and residual directions; the restriction-normalizing matrix has orthonormal rows, extended to a full orthogonal basis. Density invariance supplies independence, chi-square residual degrees of freedom and exact t/F. Non-Gaussian two-sign finite coverage is only 1/2 despite homoskedasticity."
+    },
+    {
+      "claim": "IID HC proof",
+      "audit": "Fixed p, iid (x,y), positive-definite Q and E[(norm(x)+abs(y))^4]<infinity. Each needed fourth-degree mixed moment is explicitly dominated. Exact score expansion plus finite-second-moment CLT gives root-n order; residual meat replacement bounded by 2||δ|| P||x||^3|e|+||δ||² P||x||^4. Contrast studentization requires positive limiting variance; negligible singular/nonpositive-variance events are handled. Singular sample Gram estimates receive an explicit zero convention solely to define the limit sequence; operational reports flag rank failure."
+    },
+    {
+      "claim": "Leverage corrections",
+      "audit": "Projection bounds 0≤h≤1, trace p; max h bounded by ||Q_n^-1|| sqrt(sum||x||^4)/n tends to zero. Uniform multiplier differences prove the same asymptotic limit for HC2/3. HC2 conditional expectation rationale is scoped to spherical covariance. Singleton indicator example has leverage one and explicit undefined HC2/3. Undefined HC2/HC3 samples are explicitly assigned zero solely for the asymptotic sequence, with their probability shown negligible."
+    },
+    {
+      "claim": "Finite-group feasible GLS",
+      "audit": "Fixed finite categories with positive probabilities and positive finite conditional variances; conditional mean zero centers each group score. Group residual-variance estimates converge by ratio LLN and explicit residual replacement; absent/zero-variance groups use the declared asymptotically negligible fallback. Weight errors times normalized centered group scores vanish without independence of the estimates. Weighted Gram and squared-weight meat are both controlled. Mean misspecification can change the target and defeat oracle equivalence."
+    },
+    {
+      "claim": "Cluster inference",
+      "audit": "IID whole clusters, bounded sizes, whole-cluster fourth moments and positive-definite per-cluster Gram. Target is pooled loss per cluster, not equally weighted cluster means. Cluster score sums are centered, their LLN/CLT uses sqrt(G), and the residual replacement bound uses A_g,B_g and finite second products. CR0 is Vhat/G. Fixed G, growing/dominant clusters and dependence across clusters are excluded."
+    },
+    {
+      "claim": "Bounded finite-range CLT",
+      "audit": "Two-sided strictly stationary fixed-m dependence is defined by independence of separated past/future sigma-fields, not mere zero covariances. Bounded coordinates imply bounded centered scores. Covariance counting gives LLN and long-run covariance. Blocks of floor(n^(1/3)) separated by m are mutually independent; omitted count O(nm/ell+ell+m), omitted variance O(count), and normalized omission L2 vanishes. Retained variance shares the full limit by Cauchy-Schwarz. Third-order smooth Gaussian replacements sum to zero via deterministic b_n=B ell_n/sqrt(n) and max variance; explicit C3 monotone transitions establish CDF convergence. Degenerate contrasts use L2. Only inherited Cramer-Wold characterization is invoked for vector notation."
+    },
+    {
+      "claim": "Bartlett PSD and consistency",
+      "audit": "Exact zero-extension windows include all edge multiplicities L+1 and L+1-lag. Each quadratic form is a sum of squares. For consistency, true lag-product estimates have variance O((m+lag+1)/n); summed mean deviations are O((L+1)sqrt((m+L+1)/n)). Finite-range bias is O(1/(L+1)+1/n); fitted-score replacement is O_P((L+1)/sqrt(n)). L→infinity and L^3/n→0 are conservative sufficient rates. Fixed L retains attenuation and is not called consistent for nonzero lag covariance."
+    },
+    {
+      "claim": "Inference scope",
+      "audit": "Projection is distinct from structural causality, exact covariance from estimated covariance and finite laws from asymptotic approximations. Weighting can change estimands. No uniform weak-rank/high-dimensional, arbitrary dependent, general FGLS, few-cluster exact or post-selection theorem is asserted."
+    }
+  ],
+  "exact_prompt_solution_reading": [
+    {
+      "number": 1,
+      "audit": "Three-point unweighted and weighted normal equations; unweighted losses 2/9 and1/3; conditional mean versus orthogonality and causality."
+    },
+    {
+      "number": 2,
+      "audit": "All three device estimates/variances, PSD efficiency identity and exact equality condition; wrong-covariance counterexample."
+    },
+    {
+      "number": 3,
+      "audit": "Full Gram, coefficients, residuals, leverages, HC0 matrix, independently corrected HC2=1102/2275 and unit rescaling."
+    },
+    {
+      "number": 4,
+      "audit": "Moment-dominated HC residual proof, uniform leverage multiplier convergence and actual leverage-one design."
+    },
+    {
+      "number": 5,
+      "audit": "Normal-coordinate independence for t/F and q=1 identity; all four non-Gaussian two-sign outcomes give coverage 1/2."
+    },
+    {
+      "number": 6,
+      "audit": "Unequal category probabilities/variances yield 13 and 64/7; ratio variance consistency and centered finite-group score perturbation."
+    },
+    {
+      "number": 7,
+      "audit": "Fixed 40 rows with distinct independent team counts yield 19/40 and 37/40; erroneous 1/4, observed HC/CR and limited unbiased correction."
+    },
+    {
+      "number": 8,
+      "audit": "Size-correlated cluster targets 3 versus 2 with root-G variances 9/4 versus 4; fixed-one-team inconsistency demonstrated pathwise."
+    },
+    {
+      "number": 9,
+      "audit": "Omitted-block and replacement proof completed; differenced-sign long-run zero with nonzero endpoint error and finite variance 2/n²."
+    },
+    {
+      "number": 10,
+      "audit": "All zero-extension multiplicities, negative untapered example and Bartlett positives; sufficient exponent range 0<a<1/3 without false necessity claim."
+    },
+    {
+      "number": 11,
+      "audit": "Negative moving-average coefficient gives long-run 1/4, finite n=20 variance 3/200 and fixed-L limit 3/4; iid error direction reverses."
+    },
+    {
+      "number": 12,
+      "audit": "Explicit twelve-point six-part research critique; at least two feasible evidence/design changes linked to their limited purpose. No single mandated policy conclusion."
+    }
+  ],
+  "teaching_review": {
+    "methods_before_problems": "Each required proof method appears before the exercises: loss expansion, residualization, covariance difference, orthogonal Gaussian coordinates, plug-in bounds, finite-group score decomposition, cluster aggregation, separated blocks, smooth replacement, covariance counting and moving-window identity.",
+    "units": "Outcome/regressor coefficient units, covariance units, root-n/root-G variances and division by sampling-unit count stated separately; rescaling exercise checks all covariance entries.",
+    "teach_back": "Prompt answered explicitly in a separate details element; iid/cluster/serial cross-product and normalization distinctions supplied.",
+    "delayed": "7–14 day authored suggestion, complete changed-number device/MA solution and repair route; no empirical retention guarantee."
+  },
+  "independent_numerical_evidence": {
+    "method": "Exact Fractions and finite-law enumeration, matrix elimination independent of printed examples, non-diagonal GLS covariance identity, genuine partial-regression residualization, finite group/cluster influence laws and zero-extended Bartlett windows. No random simulation or author model import. The repaired orthogonality wording has an exact no-intercept covariance counterexample.",
+    "bounded_scope": "8 device sign states; 64 complete two-team samples; 32 MA innovation states for each of 4 purposeful coefficients; 96 two-dimensional Bartlett cases; 17 actual invalid-domain rejections. No undirected fuzzing.",
+    "what_it_does_not_prove": "The limiting probability statements and general algebraic proofs require the full mathematical review above and separate peer scrutiny."
+  },
+  "source_review": {
+    "scopes": 3,
+    "record": "v12-c02-sources-working.json",
+    "evidence": "Actual scoped PDF bodies and selected rendered equations were inspected in the earlier frozen source-preparation task; those exact hashes/page scopes are reused honestly.",
+    "limits": "No fresh whole-document, current-software or original Newey-West proof claim. Source transcription cautions preserved; original examples/problems only."
+  },
+  "resolved_findings": [
+    {
+      "origin": "author independent arithmetic",
+      "finding": "The initial exercise3 draft had an incorrect reduced HC2 slope fraction.",
+      "resolution": "Recomputed the weighted residual squares exactly; corrected value 1102/2275 appears in the final solution and independent checker. No other numerical anchor changed."
+    },
+    {
+      "origin": "author proof audit",
+      "finding": "Make distributional and feasible-weight limit steps explicit.",
+      "resolution": "Added orthonormal-row extension for joint Gaussian restrictions, fixed deterministic limits for finite working weights, and a Lipschitz expectation bound for the retained Gaussian sum. These sharpen the stated proof without widening scope."
+    },
+    {
+      "origin": "coordinator mathematical reading",
+      "finding": "The original Section1 described zero score cross moments as zero correlations without first requiring an intercept.",
+      "resolution": "Section1 now states E[x_j e]=0, derives Cov(x_j,e)=-E[x_j]E[e], states the intercept condition E[e]=0 and notes undefined correlation with constants or zero variance. A targeted exact no-intercept counterexample in the checker has beta 3/5, zero cross moment and covariance -3/20."
+    },
+    {
+      "origin": "coordinator mathematical reading",
+      "finding": "The blocking display and exercise9 used a random maximum as the factor outside expected cubic moments.",
+      "resolution": "Defined deterministic b_n=B ell_n/sqrt(n), with max_j|xi_nj|<=b_n almost surely. The proof display and exercise9 now use b_n times the deterministic sum of variances; the Gaussian replacement bound remains unchanged."
+    }
+  ],
+  "structure": {
+    "actual_shared_parser": "scripts.verify.Document",
+    "worked": 6,
+    "exercises": 12,
+    "solutions": 12,
+    "unique_ids": 24,
+    "links": 9,
+    "distinct_proposed_source_ids": 3,
+    "flat_link_convention": true,
+    "rendered_visual_review": "Not performed; working fragment remains outside reader build."
+  },
+  "verification": {
+    "summary": {
+      "chapter": "v12-c02",
+      "cluster_sampling_states": 64,
+      "comparisons": 536,
+      "device_sign_states": 8,
+      "domain_rejections": 17,
+      "payload_bindings": 3,
+      "proof_limit": "Finite evidence and printed arithmetic only; general proofs require independent mathematical reading.",
+      "serial_innovation_states_per_coefficient": 32,
+      "solved_exercises": 12,
+      "state": "working author checks passed; separate review pending",
+      "vector_bartlett_cases": 96,
+      "worked_examples": 6
+    },
+    "quiet_cli_runs": 4,
+    "quiet_import_and_check_api_runs": 4,
+    "modes": [
+      "normal",
+      "-O"
+    ],
+    "locations": [
+      "workspace absolute paths from cwd=/",
+      "exact four-file isolated production directory from cwd=/"
+    ],
+    "isolated_python_flags": "-I -B, with and without -O",
+    "equal_summaries": true,
+    "stdout_stderr": "CLI empty; import and check() empty, API summary captured separately by harness",
+    "payload_bytes_preserved": true,
+    "shared_structure": "Actual scripts.verify.Document read 6 worked cases, 12 prompts, 12 solutions, 24 unique IDs, 9 links and 3 scoped sources.",
+    "finite_evidence_limit": "These executions do not establish the general probability proofs or reader visual layout.",
+    "coordinator_repair_revalidation": "Both coordinator findings repaired in the final proof and paired solution; 4 quiet CLI plus 4 quiet import/API runs passed across normal/-O and workspace/exact-four-file isolation. All bytes preserved."
+  },
+  "payloads": {
+    "v12-c02-working.html": {
+      "bytes": 61155,
+      "sha256": "f8a6c0e87b467f99f64481129b3540e5c60327d1c4e469ad02f53736c54d1803"
+    },
+    "check_v12_c02_working.py": {
+      "bytes": 28120,
+      "sha256": "1a543d5a4953a6fd63721e826a3af243380d3dda03a74cec6b38f05f7174cb34"
+    },
+    "v12-c02-sources-working.json": {
+      "bytes": 8200,
+      "sha256": "352d0fc33cce56c11690c59a7f862505aeb8e9fd76b5a7736d8168f2fa866a33"
+    }
+  },
+  "open_limits": [
+    "Working author completion is not acceptance or publication. Root and separate peer review are pending, including prerequisite c01 acceptance.",
+    "General mixing/long-memory/growing-cluster/high-dimensional/weak-rank/post-selection inference lies outside the proved theorems.",
+    "Finite-group FGLS needs centered group scores; covariance correction cannot supply causal identification.",
+    "Finite-sample numerical evidence is not a proof of normal approximation quality or exact robust coverage.",
+    "No reader build, browser visual or hosting change was performed."
+  ]
+}

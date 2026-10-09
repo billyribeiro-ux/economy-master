@@ -1,0 +1,165 @@
+{
+  "chapter": "v12-c03",
+  "state": "Working source proposals only; no canonical catalogue mutation or chapter acceptance.",
+  "preparation_record": "production/v12-c03-source-preparation.json",
+  "preparation_sha256": "9023cbd325730136025e7d2f2635bdcb55f6945eb2ddbabb8d4a0adc91e95263",
+  "proposals": [
+    {
+      "id": "v12-c03-mit-iv2017",
+      "title": "Structural Equations Models and IV, Take1",
+      "authors": [
+        "Victor Chernozhukov",
+        "Ivan Fernandez-Val"
+      ],
+      "publication": "MIT OpenCourseWare, 14.382 Econometrics, Spring2017, Lecture2",
+      "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/dbf8d6d02238c7ad02d665d7202b0aff_MIT14_382S17_lec2.pdf",
+      "use": "IV ratio, instrument validity versus relevance, structural residuals and candidate-null inversion. No universal F-statistic threshold is adopted.",
+      "checked": "2026-10-09",
+      "status": "Primary body actually inspected in the stated scope; proposed for future coordinator catalogue integration.",
+      "inspection": {
+        "date_checked": "2026-10-09",
+        "pdf_pages": 14,
+        "bytes": 424458,
+        "sha256": "e880c174534ad604529b933c035feaee052d6c05498dd1ec3ff3020c7792f7b3",
+        "body_scope_read": "PDF/printed pages4–10: reduced-form ratio, sample/population partialling, iid expansion, first-stage diagnostic, candidate-null inversion and moment-based test.",
+        "rendered_pages_read": [
+          8,
+          10
+        ]
+      },
+      "proof_limits": "The partialling equivalence and variance consistency need explicit conditions. No universal F20 safety threshold, empirical instrument validity, finite-sample coverage or uniform triangular-array theorem is adopted.",
+      "transcription_or_scope_cautions": [
+        "Page10 visibly omits candidate a in the displayed population-residual sample moment below (3.1), although surrounding definitions and the variance include a. Re-derive it as the sample average of (Ytilde-a Dtilde)Ztilde. Page8's first-stage statistic is the squared coefficient/standard-error ratio."
+      ]
+    },
+    {
+      "id": "v12-c03-mit-gmm2017",
+      "title": "Structural Equations Models and GMM",
+      "authors": [
+        "Victor Chernozhukov",
+        "Ivan Fernandez-Val"
+      ],
+      "publication": "MIT OpenCourseWare, 14.382 Econometrics, Spring2017, Lecture3",
+      "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/f6b8cd36eee8df2b259c979a1fd2673e_MIT14_382S17_lec3.pdf",
+      "use": "Fixed-dimensional linear GMM, sample normal equations, covariance weighting and the 2SLS special case. Signed and dimensionally consistent formulas are independently derived.",
+      "checked": "2026-10-09",
+      "status": "Primary body actually inspected in the stated scope; proposed for future coordinator catalogue integration.",
+      "inspection": {
+        "date_checked": "2026-10-09",
+        "pdf_pages": 18,
+        "bytes": 412380,
+        "sha256": "3ac400328d35e42a48024c442b59b7df66a325675a07926cda34e26a8c1c2cc0",
+        "body_scope_read": "PDF/printed pages5–13: criterion, rank, weighting and efficiency, fixed-dimensional linear theorem/proof and 2SLS special case. Earlier model setup was read for notation; later system-estimation/application material is not needed.",
+        "rendered_pages_read": [
+          5,
+          10,
+          11
+        ]
+      },
+      "proof_limits": "The formal theorem fixes dimensions and population matrices and assumes the relevant LLN/CLT. Counting moments is not identification; nonlinear global uniqueness requires more. Efficiency is within the specified valid-moment estimator class.",
+      "transcription_or_scope_cautions": [
+        "Page5's positive Jacobian blocks conflict with differentiating its residual moment; page13 correctly gives the negative sign. Page11's signed expansion also has the necessary minus sign. A symmetric normal law does not license dropping that sign in a joint expansion.",
+        "Page10's displayed L=G Omega^-1 has incompatible dimensions under G being m-by-d and transformed moments L' g. Use L=Omega^-1 G, or derive the equivalent properly oriented expression."
+      ]
+    },
+    {
+      "id": "v12-c03-mit-nonlinear2017",
+      "title": "Euler Equations, Nonlinear GMM, and Other Adventures",
+      "authors": [
+        "Victor Chernozhukov",
+        "Ivan Fernandez-Val"
+      ],
+      "publication": "MIT OpenCourseWare, 14.382 Econometrics, Spring2017, Lecture4",
+      "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/e1aecf6a41da164603168343fcce76bd_MIT14_382S17_lec4.pdf",
+      "use": "Explicit nonlinear regularity requirements, optimized J versus candidate-null testing, and confidence-set scope. The chapter supplies its own bounded proofs.",
+      "checked": "2026-10-09",
+      "status": "Primary body actually inspected in the stated scope; proposed for future coordinator catalogue integration.",
+      "inspection": {
+        "date_checked": "2026-10-09",
+        "pdf_pages": 23,
+        "bytes": 517698,
+        "sha256": "67de66174ca8144a2dbe90b83242750e6c074ca3def85fefec85dc06b6b620f8",
+        "body_scope_read": "PDF/printed pages6–9,11–14 and the page20 J-proof hint: ConditionG, nonlinear consistency/linearization, J statistic, global versus local rank and candidate-moment inversion. Page14's empirical section was incidental, not adopted.",
+        "rendered_pages_read": [
+          6,
+          7,
+          12,
+          13,
+          14
+        ]
+      },
+      "proof_limits": "J's proof is assigned as an exercise; the chapter must supply its whitening/projection argument. Candidate-null CLT and covariance consistency are assumptions, not consequences of weak relevance. Pointwise conditions do not prove uniform coverage over drifting laws or simultaneous coverage of an entire identified set. CUE equivalence is stated without proof and is not a chapter result.",
+      "transcription_or_scope_cautions": [
+        "Keep the signed minus from the page11 linearization when combining residual and estimator limits. The symmetric marginal normal display has the same variance but is not the signed influence identity. Finite-grid inversion is only an approximation to the full set."
+      ]
+    },
+    {
+      "id": "v12-c03-imbens-angrist1994",
+      "title": "Identification and Estimation of Local Average Treatment Effects",
+      "authors": [
+        "Guido W. Imbens",
+        "Joshua D. Angrist"
+      ],
+      "publication": "Econometrica62(2), March1994, pages467–475",
+      "url": "https://www.gsb.stanford.edu/sites/default/files/publication/pdfs/article-1994-mar-identification-estimation-local-average-treatment-effects.pdf",
+      "use": "Binary heterogeneous treatment effects, compliance decomposition and LATE limits. Original finite population and violations are not attributed to the paper.",
+      "checked": "2026-10-09",
+      "status": "Primary body actually inspected in the stated scope; proposed for future coordinator catalogue integration.",
+      "inspection": {
+        "date_checked": "2026-10-09",
+        "pdf_pages": 9,
+        "bytes": 803740,
+        "sha256": "24512532d490a8ef400e30f33379cfbc15ab0291fbbd55d859215744d8d89992",
+        "body_scope_read": "Rendered PDF pages1–9, printed467–475. Main method scope: Conditions1–3, signed response decomposition, Theorem1 and proof, Theorems2–3 and appendix proofs; references inspected as bibliography only.",
+        "rendered_pages_read": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "proof_limits": "Use a separately stated binary potential-outcome contract with assignment independence, exclusion, consistency, positivity, integrability and positive complier mass. No automatic ATE, treatment-on-treated, multivalued-instrument weighting or transportability claim. The appendix's estimated-instrument covariance warns against ignoring first-stage nuisance estimation.",
+      "transcription_or_scope_cautions": [
+        "Random assignment of an encouragement does not itself exclude its direct outcome effect. Administrative-selection and historical application examples were read but are neither reproduced nor claimed to establish validity in a new case."
+      ]
+    }
+  ],
+  "fresh_retrieval_during_authoring": false,
+  "inspection_provenance": "Reuse the four actual body inspections completed for this assignment on2026-10-09. MIT equation pages were extracted and selected pages rendered; all nine image-based Imbens-Angrist pages were visually read. No full-body inspection is claimed for the three MIT lectures outside the listed pages. Ordinary public download and source-byte hashes are recorded in the preparation; temporary PDFs were removed after inspection.",
+  "chapter_scope_map": {
+    "sections1_2": [
+      "v12-c03-mit-iv2017",
+      "v12-c03-mit-gmm2017"
+    ],
+    "sections3_4": [
+      "v12-c03-mit-gmm2017",
+      "v12-c03-mit-nonlinear2017"
+    ],
+    "section5": [
+      "v12-c03-mit-nonlinear2017"
+    ],
+    "section6": [
+      "v12-c03-mit-iv2017",
+      "v12-c03-mit-nonlinear2017"
+    ],
+    "section7": [
+      "v12-c03-imbens-angrist1994"
+    ]
+  },
+  "original_work": "All finite laws, sample rows, quadratic examples, calculations, exercises, solutions, teach-back and retention cases are original. The source roles are methods and assumptions, not copied numerical cases or evidence that an empirical instrument is valid.",
+  "prerequisites": "C01 fixed-dimensional iid probability and compact-consistency interface; c02 projection and robust-score interface. Current working dependencies require final coordinator/peer acceptance before this chapter can be accepted.",
+  "excluded_claims": [
+    "Generic dependent GMM or many-instrument limits",
+    "Uniform weak-identification inference beyond the explicitly proved Gaussian known-variance experiment",
+    "CUE equivalence or likelihood-ratio optimality",
+    "Selection-adjusted inference after choosing an instrument",
+    "A universal first-stage F cutoff or J-based validity certification",
+    "ATE or transportability inferred from LATE alone",
+    "Current institutional or legal facts"
+  ]
+}

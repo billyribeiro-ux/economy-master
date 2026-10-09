@@ -148,6 +148,12 @@ from check_v11_c12_peer import check as check_v11_c12_peer
 from check_v11_assessment import check as check_v11_assessment
 from check_economics_core import check as check_economics_core
 from check_finance_core import check as check_finance_core
+from check_v12_c01 import check as check_v12_c01
+from check_v12_c01_peer import check as check_v12_c01_peer
+from check_v12_c02 import check as check_v12_c02
+from check_v12_c02_peer import check as check_v12_c02_peer
+from check_v12_c03 import check as check_v12_c03
+from check_v12_c03_peer import check as check_v12_c03_peer
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -582,6 +588,8 @@ def main():
     v11_closing_check = {'v11-c09': check_v11_c09(), 'v11-c10': check_v11_c10(), 'v11-c11': check_v11_c11(), 'v11-c12': check_v11_c12()}
     v11_closing_peer_check = {'v11-c09': check_v11_c09_peer(), 'v11-c10': check_v11_c10_peer(), 'v11-c11': check_v11_c11_peer(), 'v11-c12': check_v11_c12_peer()}
     v11_assessment_check = check_v11_assessment()
+    v12_opening_check = {'v12-c01': check_v12_c01(), 'v12-c02': check_v12_c02(), 'v12-c03': check_v12_c03()}
+    v12_opening_peer_check = {'v12-c01': check_v12_c01_peer(), 'v12-c02': check_v12_c02_peer(), 'v12-c03': check_v12_c03_peer()}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -639,6 +647,8 @@ def main():
               'volume_11_closing_check': v11_closing_check,
               'volume_11_closing_peer_check': v11_closing_peer_check,
               'volume_11_assessment_check': v11_assessment_check,
+              'volume_12_opening_check': v12_opening_check,
+              'volume_12_opening_peer_check': v12_opening_peer_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     report['checks'].extend(['Volume 11 chapters9–12: funded currency parity versus physical scenarios, segmented cash and sovereign claim budgets; regulatory and conduct incentives, financed resolution; finite run equilibria, auction feedback and consolidated recipient resources; finite governance choices, collateral, escalation incentives and decision evidence. Four author and four separate peer laboratories with exact final bindings, independently reviewed proofs and all36 closing exercise solutions.',
         'Volume 11 chapters5–8: dated funding and collateral, feasible liquidity support and ALM; process deadlines, identity accounting and common control failures; consistent revaluation, network contagion and certified reverse stress; insurance selection and dependence, pension cash, guarantee resources and household debt. Four author and four separate peer laboratories, all exact exercise reviews and frozen payload bindings.',

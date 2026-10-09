@@ -1,0 +1,65 @@
+{
+  "chapter": "v12-c02",
+  "date": "2026-10-09",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating author with complete separate machine-assisted peer evidence",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Six worked cases and twelve solved proof/calculation/transfer/critique exercises. Projection and conditional GLS BLUE; exact conditional-Gaussian t/F; iid HC residual consistency; finite-group feasible weighting; independent bounded-size clusters; bounded fixed-range dependence CLT, Bartlett PSD and sufficient HAC consistency.",
+  "author_review": "reviews/v12-c02-author.json",
+  "peer_review": "reviews/v12-c02-peer.json",
+  "root_numerical_evidence": "production/v12-c02-author-validation.json",
+  "final_execution_evidence": "production/v12-c02-peer-validation.json",
+  "promotion_evidence": "production/v12-c02-promotion-delta.json",
+  "verified_payload_hashes": 6,
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v12-c02.html",
+      "bytes": 61071,
+      "sha256": "a7f2894109490d5230ea439b8ead8fc88b30a971c1d459e5c5079e6fca938dfa"
+    },
+    {
+      "path": "scripts/check_v12_c02.py",
+      "bytes": 28138,
+      "sha256": "3c147ff5cc061c72145fe179e1177840e06424562f4f9d7cc1fd2e196204ab57"
+    },
+    {
+      "path": "content/reviews/v12-c02-sources.json",
+      "bytes": 8202,
+      "sha256": "cd1d69176f5377a79e056a1b9abc9e028ee6289752074b19b532a18aebbe26ff"
+    },
+    {
+      "path": "content/reviews/v12-c02-author.json",
+      "bytes": 17490,
+      "sha256": "23c14ac8e1eadbc231e99a6ca62fb5caa764af0dc657f9599a1e3953e74a93ec"
+    },
+    {
+      "path": "scripts/check_v12_c02_peer.py",
+      "bytes": 26866,
+      "sha256": "740e2b06f0aa1e187c9b7f5d61a256a66f4aae277f2a26e20f0158612cc356e1"
+    },
+    {
+      "path": "content/reviews/v12-c02-peer.json",
+      "bytes": 41110,
+      "sha256": "c0eec99655d2c92a0d5ea59098d7e504e599c6b5bab801d4820f5dcab4c5ba70"
+    }
+  ],
+  "resolved_findings": [
+    "Corrected cross moments versus covariance without an intercept.",
+    "Replaced random block envelope outside expectation by deterministic almost-sure bound.",
+    "Corrected HC2 fraction before freeze; removed obsolete working/review-state reader wording."
+  ],
+  "open_content_findings": [],
+  "limitations": [
+    "Explicit fixed-dimensional sampling/model assumptions are essential; no general dependent, high-dimensional, uniform or post-selection inference is established.",
+    "Source verification covers only recorded inspected method sections.",
+    "Machine-assisted review is not independent human academic certification.",
+    "Rendered reader/mobile/keyboard/print QA remains pending under recorded access limitations."
+  ]
+}

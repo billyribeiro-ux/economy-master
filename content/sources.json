@@ -3399,5 +3399,104 @@
     "jurisdiction": "International standard; domestic implementation and authority remain separate.",
     "legal_status": "FSB resolution standard with implementation guidance. The foreword distinguishes the twelve Key Attributes from their annex guidance; neither supplies a particular national statutory power.",
     "limits": "No promise that recapitalisation creates cash, every creditor is protected, public liquidity is never used, or a national authority has these powers. Annexes, CCP calibration and country implementation are not comprehensively reviewed."
+  },
+  {
+    "id": "v12-c01-mit-limit-tools",
+    "title": "Anna Mikusheva, MIT 14.381 — Lecture 2: Limit Theorems (Fall 2018)",
+    "url": "https://ocw.mit.edu/courses/14-381-statistical-method-in-economics-fall-2018/9684a62ef140ffcfb3258bce01b460bc_MIT14_381F18_lec2.pdf",
+    "use": "Finite-variance LLN, scalar/vector CLT statements, probability versus distribution convergence, stochastic orders, Slutsky and first-order delta reasoning. Original chapter proofs/examples must state their own assumptions.",
+    "checked": "2026-10-09",
+    "verification": "Actual six-page PDF retrieved and all substantive printed pages 1–5 read; pages 4–5 also rendered locally and visually inspected. Official course identifies instructor and Fall 2018.",
+    "limits": "Printed page 4 omits an absolute value in the Op tail definition and omits centering in its sample-mean order example; do not adopt those literal formulas. The source mean-value proof assumes continuous derivative. Use a norm-based stochastic bound and a differentiability remainder proof. General dependence and Lindeberg-Feller extensions are not established by the new chapter merely by citing these notes."
+  },
+  {
+    "id": "v12-c01-mit-extremum",
+    "title": "Victor Chernozhukov, MIT 14.385 — Lecture 2: Consistency for Extremum Estimators (Fall 2007)",
+    "url": "https://ocw.mit.edu/courses/14-385-nonlinear-econometric-analysis-fall-2007/065f6c53a14295dcd7e90cf281bf902f_lecture02.pdf",
+    "use": "Separation plus uniform criterion convergence as sufficient conditions for consistency. Chapter will independently prove a finite-dimensional compact approximate-minimizer result and a bounded/Lipschitz finite-net ULLN.",
+    "checked": "2026-10-09",
+    "verification": "Actual 23-page PDF retrieved. Read physical pages 10–19 covering compact extremum consistency, proof, identification warning, measurability, pointwise/uniform distinction, ULLN and finite-grid idea. Physical pages 10 and 12 rendered and visually inspected.",
+    "limits": "No claim to reproduce or verify all mixing-process, outer-probability, convexity or nonlinear-choice extensions. State measurability/separability explicitly; pointwise consistency across laws is distinct from uniform-in-parameter criterion convergence."
+  },
+  {
+    "id": "v12-c01-mit-delta",
+    "title": "Peter Kempthorne, MIT 18.655 — Lecture 16: Asymptotics, Consistency and Delta Method (Spring 2016)",
+    "url": "https://ocw.mit.edu/courses/18-655-mathematical-statistics-spring-2016/2ca793c6ea6c4a6fece39c0da3440ba2_MIT18_655S16_LecNote16.pdf",
+    "use": "Consistent plug-in functionals, first-order differentiability remainder and studentized mean. Original exact examples will distinguish weak distributional limits from convergence of moments.",
+    "checked": "2026-10-09",
+    "verification": "Actual 33-page PDF retrieved; read slides 3–11 on consistency/plug-ins and slides 22–23 on distributional delta/studentization. Slide 22 rendered and visually inspected.",
+    "limits": "Do not adopt uncentered shorthand in the sample-mean bound or claim finite-sample coverage from a limit theorem. No source examples, images or numerical problems reproduced."
+  },
+  {
+    "id": "v12-c01-aldous-chewi-cw",
+    "title": "David Aldous, Probability Theory (Berkeley C205B/C218B, Spring 2017), notes by Sinho Chewi — Lecture 8, Cramér–Wold device",
+    "url": "https://www.stat.berkeley.edu/~aldous/205B/chewi_notes.pdf",
+    "use": "Direct support for the explicitly invoked finite-dimensional Cramér–Wold characterization; scalar projections identify a joint limit when a matching vector law exists. The chapter derives its scalar-contrast limits and constructs the Gaussian candidate from a covariance square root.",
+    "checked": "2026-10-09",
+    "verification": "Actual104-page instructor-hosted PDF retrieved. Read title and printed31–33 (physical32–34): Theorems8.1,8.2,8.4 and Gaussian covariance construction. Printed31/physical32 rendered locally and visually inspected.",
+    "limits": "The source reduces the device to a multivariate characteristic-function continuity theorem which is invoked there. This does not amount to a full foundational proof in this chapter. The printed32 tightness display has an n-versus-k sum-index slip; use trace covariance independently. No later Markov/ergodic material read or certified."
+  },
+  {
+    "id": "v12-c02-mit-linear2017",
+    "title": "Victor Chernozhukov and Ivan Fernandez-Val — 14.382 Spring 2017 Lecture 1: Least Squares, Adaptive Partialling Out, Simultaneous Inference",
+    "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/c62d33e015c910b0d126bcc9344cf2c5_MIT14_382S17_lec1.pdf",
+    "use": "Population linear projection, orthogonality and rank; sample normal equations; population/sample partial regression; predictive versus causal interpretation; score-based sandwich representation. Projection framework only; Sections1 and4. The fixed-dimensional proof is supplied in the chapter, not inherited from unspecified growing-dimensional regularity.",
+    "checked": "2026-10-09",
+    "verification": "Actual primary PDF body inspection: Printed/PDF pp.2-6: Sections 2-4, through equation (4.4). Selected rendered physical pages: 2,4,6. See reviews/v12-c02-sources.json for original hash and scope.",
+    "limits": "Growing-dimension asymptotics are stated with unspecified regularity and without the full proof. They cannot certify the chapter's theorem assumptions. The p.4 argmin displays omit a square; derive the squared-loss objective independently. The p.3 randomization sentence says independence from X although X includes D: use a properly stated potential-outcome/baseline-covariate condition, not that literal sentence. No source empirical example or exercise will be reused."
+  },
+  {
+    "id": "v12-c02-cameron-miller2015",
+    "title": "A. Colin Cameron and Douglas L. Miller — A Practitioner's Guide to Cluster-Robust Inference",
+    "url": "https://cameron.econ.ucdavis.edu/research/Cameron_Miller_JHR_2015.pdf",
+    "use": "Conditional covariance and cluster-score sandwich; averaging over independent clusters; known-covariance GLS versus estimated weighting; covariance-model-dependent efficiency; robust inference with a working covariance; few-cluster bias and critical-value limitations. Known versus working covariance and cluster-score covariance framework; Sections2,5,6. Exact efficiency, finite-group score limits and bounded-size cluster proof independently supplied.",
+    "checked": "2026-10-09",
+    "verification": "Actual primary PDF body inspection: II.A printed p.320; II.C-D pp.323-325, equations (7)-(16); VI opening and VI.A pp.340-341. Selected rendered physical pages: 7,8,9,24,25. See reviews/v12-c02-sources.json for original hash and scope.",
+    "limits": "No universal adequate cluster count or exact general t(G-1) result follows. Current software behavior, multiway methods and bootstrap refinements were not audited. Rendered pp.324-325 confirm that the correction c multiplies the covariance, equivalently residuals are scaled by sqrt(c); text extraction dropped the square root. FGLS residuals and both weighting factors in equation (15) were checked visually."
+  },
+  {
+    "id": "v12-c02-mit-hac2017",
+    "title": "Victor Chernozhukov and Ivan Fernandez-Val — 14.382 Spring 2017 Lecture 4: Euler Equations, Nonlinear GMM, and Other Adventures",
+    "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/e1aecf6a41da164603168343fcce76bd_MIT14_382S17_lec4.pdf",
+    "use": "Long-run covariance as the sum of score autocovariances; Bartlett weights 1-lag/(L+1), common denominator n and symmetric lag terms; explicit dependence and moment assumptions for a stated CLT. Long-run covariance and Bartlett lag formula; Section8. The chapter supplies its own finite PSD and bounded finite-range consistency/CLT proofs.",
+    "checked": "2026-10-09",
+    "verification": "Actual primary PDF body inspection: Printed/PDF p.10, Lemma 2 and the immediately following long-run covariance and Newey-West estimator; reference [14] on p.22. Selected rendered physical pages: 10. See reviews/v12-c02-sources.json for original hash and scope.",
+    "limits": "The mixing CLT is invoked, not proved there. The page asserts positive semidefiniteness but supplies neither its proof nor bandwidth conditions proving HAC consistency. General GMM results elsewhere in the PDF are outside this inspection and this preparation scope. "
+  },
+  {
+    "id": "v12-c03-mit-iv2017",
+    "title": "Victor Chernozhukov, Ivan Fernandez-Val — Structural Equations Models and IV, Take1 (MIT OpenCourseWare, 14.382 Econometrics, Spring2017, Lecture2)",
+    "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/dbf8d6d02238c7ad02d665d7202b0aff_MIT14_382S17_lec2.pdf",
+    "use": "IV ratio, instrument validity versus relevance, structural residuals and candidate-null inversion. No universal F-statistic threshold is adopted.",
+    "checked": "2026-10-09",
+    "verification": "PDF/printed pages4–10: reduced-form ratio, sample/population partialling, iid expansion, first-stage diagnostic, candidate-null inversion and moment-based test. Rendered physical pages 8,10. Exact source-byte hash and cautions in reviews/v12-c03-sources.json.",
+    "limits": "The partialling equivalence and variance consistency need explicit conditions. No universal F20 safety threshold, empirical instrument validity, finite-sample coverage or uniform triangular-array theorem is adopted. Page10 visibly omits candidate a in the displayed population-residual sample moment below (3.1), although surrounding definitions and the variance include a. Re-derive it as the sample average of (Ytilde-a Dtilde)Ztilde. Page8's first-stage statistic is the squared coefficient/standard-error ratio."
+  },
+  {
+    "id": "v12-c03-mit-gmm2017",
+    "title": "Victor Chernozhukov, Ivan Fernandez-Val — Structural Equations Models and GMM (MIT OpenCourseWare, 14.382 Econometrics, Spring2017, Lecture3)",
+    "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/f6b8cd36eee8df2b259c979a1fd2673e_MIT14_382S17_lec3.pdf",
+    "use": "Fixed-dimensional linear GMM, sample normal equations, covariance weighting and the 2SLS special case. Signed and dimensionally consistent formulas are independently derived.",
+    "checked": "2026-10-09",
+    "verification": "PDF/printed pages5–13: criterion, rank, weighting and efficiency, fixed-dimensional linear theorem/proof and 2SLS special case. Earlier model setup was read for notation; later system-estimation/application material is not needed. Rendered physical pages 5,10,11. Exact source-byte hash and cautions in reviews/v12-c03-sources.json.",
+    "limits": "The formal theorem fixes dimensions and population matrices and assumes the relevant LLN/CLT. Counting moments is not identification; nonlinear global uniqueness requires more. Efficiency is within the specified valid-moment estimator class. Page5's positive Jacobian blocks conflict with differentiating its residual moment; page13 correctly gives the negative sign. Page11's signed expansion also has the necessary minus sign. A symmetric normal law does not license dropping that sign in a joint expansion. Page10's displayed L=G Omega^-1 has incompatible dimensions under G being m-by-d and transformed moments L' g. Use L=Omega^-1 G, or derive the equivalent properly oriented expression."
+  },
+  {
+    "id": "v12-c03-mit-nonlinear2017",
+    "title": "Victor Chernozhukov, Ivan Fernandez-Val — Euler Equations, Nonlinear GMM, and Other Adventures (MIT OpenCourseWare, 14.382 Econometrics, Spring2017, Lecture4)",
+    "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/e1aecf6a41da164603168343fcce76bd_MIT14_382S17_lec4.pdf",
+    "use": "Explicit nonlinear regularity requirements, optimized J versus candidate-null testing, and confidence-set scope. The chapter supplies its own bounded proofs.",
+    "checked": "2026-10-09",
+    "verification": "PDF/printed pages6–9,11–14 and the page20 J-proof hint: ConditionG, nonlinear consistency/linearization, J statistic, global versus local rank and candidate-moment inversion. Page14's empirical section was incidental, not adopted. Rendered physical pages 6,7,12,13,14. Exact source-byte hash and cautions in reviews/v12-c03-sources.json.",
+    "limits": "J's proof is assigned as an exercise; the chapter must supply its whitening/projection argument. Candidate-null CLT and covariance consistency are assumptions, not consequences of weak relevance. Pointwise conditions do not prove uniform coverage over drifting laws or simultaneous coverage of an entire identified set. CUE equivalence is stated without proof and is not a chapter result. Keep the signed minus from the page11 linearization when combining residual and estimator limits. The symmetric marginal normal display has the same variance but is not the signed influence identity. Finite-grid inversion is only an approximation to the full set."
+  },
+  {
+    "id": "v12-c03-imbens-angrist1994",
+    "title": "Guido W. Imbens, Joshua D. Angrist — Identification and Estimation of Local Average Treatment Effects (Econometrica62(2), March1994, pages467–475)",
+    "url": "https://www.gsb.stanford.edu/sites/default/files/publication/pdfs/article-1994-mar-identification-estimation-local-average-treatment-effects.pdf",
+    "use": "Binary heterogeneous treatment effects, compliance decomposition and LATE limits. Original finite population and violations are not attributed to the paper.",
+    "checked": "2026-10-09",
+    "verification": "Rendered PDF pages1–9, printed467–475. Main method scope: Conditions1–3, signed response decomposition, Theorem1 and proof, Theorems2–3 and appendix proofs; references inspected as bibliography only. Rendered physical pages 1,2,3,4,5,6,7,8,9. Exact source-byte hash and cautions in reviews/v12-c03-sources.json.",
+    "limits": "Use a separately stated binary potential-outcome contract with assignment independence, exclusion, consistency, positivity, integrability and positive complier mass. No automatic ATE, treatment-on-treated, multivalued-instrument weighting or transportability claim. The appendix's estimated-instrument covariance warns against ignoring first-stage nuisance estimation. Random assignment of an encouragement does not itself exclude its direct outcome effect. Administrative-selection and historical application examples were read but are neither reproduced nor claimed to establish validity in a new case."
   }
 ]

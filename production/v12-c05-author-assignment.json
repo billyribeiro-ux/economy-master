@@ -1,0 +1,33 @@
+{
+  "chapter": "v12-c05",
+  "date": "2026-10-09",
+  "author": "ito_author",
+  "state": "blueprint independently checked and approved; authoring active",
+  "owned_paths": [
+    "production/v12-c05-working.html",
+    "production/check_v12_c05_working.py",
+    "production/v12-c05-sources-working.json",
+    "production/v12-c05-author-review-working.json"
+  ],
+  "sources_readonly": "production/v12-c05-source-preparation.json (15098B SHA25604bbf6b151164a4fd242837d78121b241af61922b178c95bf9c4a9a870c6f280) is complete/frozen bs_author evidence and root fully read. Reuse four actual primary scopes and cautions without claiming a new full-document read.",
+  "scope": "Canonical Panel data and longitudinal identification: fixed/random effects, correlated heterogeneity, dynamic panels, attrition and dependence. Full original graduate proofs and cases; at least5 worked examples,12 complete exercises/solutions including proofs, transferred calculations and research critique, answered teach-back and retention.",
+  "prerequisites": "c01 accepted iid limits; c02 final canonical unit-score covariance under separate review; c03 final canonical GMM under separate review; c04 likelihood/QMLE working blueprint. Drafting ahead authorized, acceptance remains sequential.",
+  "proof_contract": [
+    "Derive within/LSDV using M_T=I-11prime/T for iid unit vectors, fixedT, appropriate fourth moments or explicit squared unit score/Gram bounds; strict full-history mean zero, within Gram rank, consistent root-N score sandwich. Distinguish contemporaneous, sequential and strict exogeneity. Time-constant regressors vanish; FE does not manufacture exogeneity.",
+    "Known compound covariance: quasi-demeaning identity with theta=1-sqrt(sigma_u^2/(sigma_u^2+T sigma_alpha^2)); distinguish random-effect mean orthogonality for consistency from covariance restrictions for efficiency. Positive sigma_u, nonnegative sigma_alpha; limit is not invertible covariance at infinity.",
+    "Balanced common-weight sample CRE regression on dated time-varying regressors and unit means: prove slope equals within coefficient via within/between orthogonality and full rank; avoid intercept/mean duplicate columns. Interpretation of mean coefficients needs explicit conditional mean restriction, not only linear projection or zero mean-correlation. No unbalanced/nonlinear/general robust Hausman promise.",
+    "Original finite fixed-T dynamic counterexample and valid lagged difference moment, explicit initial law and no serially correlated innovations. Root-N GMM uses fixed dimension and independent unit score, not independent differenced rows. No stationary Nickell formula or system-GMM claim.",
+    "Attrition finite baseline cells: H always observed, MAR response P(R=1|W,H)=p(H)>=epsilon. Prove population weighted-moment identity and finite-cell fitted response weighting influence mu_H-mu+R/p_H(Y-mu_H), including baseline-cell frequency uncertainty and empty cell convention. Oracle known-propensity HT has a different variance. No nuisance-free plug-in claim or correction of unobserved-outcome selection.",
+    "Cross-unit common shocks: strict score mean zero alone does not give independent-unit CLT/LLN. Time means remove homogeneous loadings but leave centered heterogeneous loadings; demonstrate persistent within coefficient error. No two-way-cluster or interactive-factor inference theorem."
+  ],
+  "original_cases": [
+    "FE population: T2, independent equiprobable b,d,e1,e2 signs, alpha=b, x=(b-d,b+d), y_t=alpha+2x_t+e_t. Pooled through-origin projection slope5/2; within target2, Qwithin2, unit-score variance2, root-N variance1/2. Full16state law explicit; no market data.",
+    "RE/CRE contrast on same finite law: working Omega=I+11prime (explicitly not true conditional covariance because alpha correlates with X), inverse weighting gives E Xprime W X=8/3, E Xprime W alpha1=2/3 and target9/4. CRE regress y onx andunitmean b gives slope2 and mean coefficient1. Prove sample FE identity only when complete rank holds. Choose a distinct finite panel example if needed to show actual demeaning.",
+    "Dynamic T2 transitions withy0=0,alpha0, y1=e1,y2=rho e1+e2: exact FE=rho-1+average(e1e2), rho1/2 converges-1/2. Addy3=rho y2+e3 and instrumenty1 for Delta y3 onDelta y2: B=rho-1, scorey1(e3-e2) centeredvariance2; at rho1/2 root-N IVvariance8, rank failsrho1 underthisinitiallaw. Enumerate8 innovations; do not call it a universal dynamic bias.",
+    "Attrition Hfair, Y=2+V atH0 and6+V atH1, Vfair independent sign. ResponseR1 atH0 andBernoulli1/3 atH1 independentV conditionalH. Fullmean4/variance5, respondentmean3, true finite-cell fitted-weight root-N variance6, known-propensity HT variance42. Verify these before using. Full six-atom latent/five-atom observed law supports exact calculations; populationpositivity does not rule out finite empty response cells. Construct identical observed laws with different unobserved outcomes when MAR fails.",
+    "Common shock finite balanced q=(-1,-1,1,1), s=(-1,1), x_it=q_i s_t, u_it=q_i s_t U, fair commonU independentdesign. Within slope beta+U; two-way demeaning also leaves beta+U because q ands centered. This is a separate fixed design/dependent-error law, not iid units; allN rowgrowth cannot removeU. Show homogeneous loading contrast and general residual(lambda_i-average lambda)F_t."
+  ],
+  "gates": "Send compact independently computed final blueprint before prose. Full source/method scope and all exact-prompt/proof audits. Four-file quiet standard-library check(), explicit domain errors active under -O, normal/-O cwd=/ workspace/exact4 portability, no hidden production/catalogue/network inputs. Three nonself bindings and final frozen hashes. Preserve originals and record fixes.",
+  "boundaries": "Only four owned files; no sourceprep edits, canonical/shared/catalogue/status/hosting mutations, installations, extra agents or user questions. Root chooses architecture. No rendered UI/external human certification/empirical identification claims.",
+  "root_blueprint_audit": "production/v12-c05-blueprint-root-audit.json"
+}

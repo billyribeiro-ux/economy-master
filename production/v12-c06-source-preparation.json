@@ -1,0 +1,131 @@
+{
+  "chapter": "v12-c06",
+  "date": "2026-10-09",
+  "owner": "root",
+  "state": "Three primary bodies inspected in exact text/equation scopes; ten actual equation-page images visually read. Original blueprint preparation complete; no manuscript acceptance.",
+  "sources": [
+    {
+      "id": "ding",
+      "url": "https://arxiv.org/pdf/2305.18793v2",
+      "local": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c06-ding.pdf",
+      "bytes": 6037823,
+      "sha256": "3fe2bb982b6d13500f704f1e4fbe4d2e5b44ad0726249296ecd6f96892719115",
+      "state": "scoped text and four actual equation-page renders inspected",
+      "title": "A First Course in Causal Inference",
+      "author": "Peng Ding",
+      "version": "arXiv2305.18793v2, 3October2023",
+      "pages": 490,
+      "text_inspected_physical": [
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        92,
+        156,
+        157
+      ],
+      "actual_rendered_pages_inspected": [
+        70,
+        73,
+        74,
+        92
+      ],
+      "page_mapping": "Printed pages are physical minus26 in these sections.",
+      "scope": "Finite complete-randomization assignment moments, exact difference-in-means variance and expected Neyman variance; independent stratified weighted variance; separate superpopulation versus randomization perspectives. Prior accepted v05-c12 sharp-null rank scope physical51\u201355/printed25\u201329 is reused honestly.",
+      "cautions": [
+        "The finite-population CLT is stated rather than proved in the inspected section; it is not inherited as a proved theorem. A nondegenerate normalized variance and a specified triangular-array condition would be essential.",
+        "A conservative asymptotic variance does not imply a realized estimate always exceeds true variance or exact finite-sample coverage. A limit at nominal coverage alone also does not establish eventual finite coverage above nominal.",
+        "Terminology for CRE in the later superpopulation section includes independent assignment. Our chapter distinguishes fixed treatment count from independent Bernoulli assignment."
+      ]
+    },
+    {
+      "id": "interference",
+      "url": "https://arxiv.org/pdf/1305.6156",
+      "local": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c06-interference.pdf",
+      "bytes": 1031502,
+      "sha256": "0e90860ec951314c117b018ae76acb5adb1c476aec0516315c4d6c34bc6cccbb",
+      "state": "scoped text and three actual equation-page renders inspected",
+      "title": "Estimating average causal effects under general interference, with application to a social network experiment",
+      "authors": [
+        "Peter M. Aronow",
+        "Cyrus Samii"
+      ],
+      "version": "arXiv1305.6156v4,20June2018, as identified on retrieved body/metadata; journal reference2017 is separate",
+      "pages": 40,
+      "text_inspected_physical": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "actual_rendered_pages_inspected": [
+        6,
+        8,
+        9
+      ],
+      "scope": "Known randomization distribution and exposure mapping; individual and joint exposure probabilities; positive support and correctly specified exposure-level potential outcomes; HT mean unbiasedness and finite covariance expansion.",
+      "cautions": [
+        "An exposure label must map equal labels to equal potential outcomes across assignments; merely calculating a network label does not validate it.",
+        "Positive marginal exposure probabilities identify that target mean but do not guarantee all joint probabilities are positive or all contrast variance terms are observable.",
+        "General asymptotic inference, later refinements and empirical results are outside inspected/proved scope."
+      ]
+    },
+    {
+      "id": "toolkit",
+      "url": "https://economics.mit.edu/sites/default/files/2022-08/Using%20Randomization%20in%20Development%20Economics%20Resea.pdf",
+      "local": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c06-toolkit.pdf",
+      "bytes": 465290,
+      "sha256": "90ff46a74214d1105f8f43dc694e9ec70bf8dea850ea3eaca27ff66c7f0fd0d8",
+      "state": "scoped text and three actual equation-page renders inspected",
+      "title": "Using Randomization in Development Economics Research: A Toolkit",
+      "authors": [
+        "Esther Duflo",
+        "Rachel Glennerster",
+        "Michael Kremer"
+      ],
+      "version": "CEPR Discussion Paper6059,January2007 cover on inspected92-page primary PDF; not final handbook pagination",
+      "pages": 92,
+      "text_inspected_physical": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        62,
+        63,
+        64,
+        65
+      ],
+      "actual_rendered_pages_inspected": [
+        33,
+        36,
+        63
+      ],
+      "page_mapping": "Printed page numbers are physical minus4 in inspected sections.",
+      "scope": "Design/power tradeoffs, group assignment and independent cluster information, compliance and attrition; equal response rates need not remove selection bias.",
+      "cautions": [
+        "Power quantile expressions in this source are planning approximations. Our original known-Gaussian example derives both tails exactly; no unknown-variance exact t power is inherited.",
+        "Distinguish standard-error multiplier sqrt(1+(m-1)rho) from variance multiplier1+(m-1)rho; rho is the common-component share, not the idiosyncratic variance share.",
+        "Displayed group-count formula scales as inverse square root of J with critical values held fixed; the adjacent roughly proportional wording must not be copied literally.",
+        "Increasing compliance strengthens the assignment contrast under fixed local effect; its inverse enters a detectable local effect. Do not reverse that direction.",
+        "Basic bounded-outcome attrition intervals here are original population identification bounds, not the more restrictive monotonicity/rank-based trimming bounds discussed later in the source.",
+        "No historical application, general multiarm allocation claim or source exercise is adopted as our own evidence."
+      ]
+    }
+  ],
+  "reuse": "Existing c03 ImbensAngrist1994 and prior sharp-null Ding scopes may be reused honestly; no new manuscript yet.",
+  "inspection_method": "Existing retrieved bytes/text plus pdftoppm images read by coordinating author. Ten selected pages read visually; no whole-document certification, new empirical finding or reader/browser UI QA implied.",
+  "prospective_source_ids": [
+    "v12-c06-ding-experiments",
+    "v12-c06-aronow-samii-interference",
+    "v12-c06-dgk-toolkit"
+  ]
+}

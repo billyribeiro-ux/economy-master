@@ -1,0 +1,64 @@
+{
+  "chapter": "v12-c03",
+  "date": "2026-10-09",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating author with complete separate machine-assisted peer evidence",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Five worked cases and twelve solved proof/calculation/transfer/critique exercises. Linear identification and 2SLS; fixed-dimensional strong-rank iid GMM, feasible score covariance, efficient weighting and J; nonlinear global consistency and local rate; exact known-variance Gaussian candidate inversion; weak-ratio and binary LATE identification boundaries.",
+  "author_review": "reviews/v12-c03-author.json",
+  "peer_review": "reviews/v12-c03-peer.json",
+  "root_numerical_evidence": "production/v12-c03-author-validation.json",
+  "final_execution_evidence": "production/v12-c03-peer-validation.json",
+  "promotion_evidence": "production/v12-c03-promotion-delta.json",
+  "verified_payload_hashes": 6,
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v12-c03.html",
+      "bytes": 60382,
+      "sha256": "99dd513f4ea3807db23aee28df6bf25f296cefaa0700f49a8ed8199efd9149d5"
+    },
+    {
+      "path": "scripts/check_v12_c03.py",
+      "bytes": 29895,
+      "sha256": "4a1564024ea314918f1ede4246fa26204575c11b6b9c828fbb8023fa0c48b950"
+    },
+    {
+      "path": "content/reviews/v12-c03-sources.json",
+      "bytes": 10219,
+      "sha256": "ed46fe4af4920a7c831c974942d56568bc44ce42bde9873db3d353e22218d837"
+    },
+    {
+      "path": "content/reviews/v12-c03-author.json",
+      "bytes": 20588,
+      "sha256": "dde10dde432de486a75fa6def1cd12845008fadfa4fe61f80b2fc3ddd00e32a9"
+    },
+    {
+      "path": "scripts/check_v12_c03_peer.py",
+      "bytes": 29119,
+      "sha256": "1e4315c57a024007328def3618fab325036f2582539f78194af052ceac97035e"
+    },
+    {
+      "path": "content/reviews/v12-c03-peer.json",
+      "bytes": 20245,
+      "sha256": "a0135d5210dd618b97ffb696ae3042ca0afc442820c13178d14474a8f5fcec12"
+    }
+  ],
+  "resolved_findings": [
+    "Corrected confidence coefficient rounding before final author freeze.",
+    "Removed stray HTML text; parser rejects replay."
+  ],
+  "open_content_findings": [],
+  "limitations": [
+    "Explicit fixed-dimensional sampling/model assumptions are essential; no general dependent, high-dimensional, uniform or post-selection inference is established.",
+    "Source verification covers only recorded inspected method sections.",
+    "Machine-assisted review is not independent human academic certification.",
+    "Rendered reader/mobile/keyboard/print QA remains pending under recorded access limitations."
+  ]
+}

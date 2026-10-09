@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-09",
+  "chapter": "v12-c02",
+  "status": "passed",
+  "runs": [
+    {
+      "location": "workspace",
+      "optimization": false
+    },
+    {
+      "location": "workspace",
+      "optimization": true
+    },
+    {
+      "location": "exact-six-file tree",
+      "optimization": false
+    },
+    {
+      "location": "exact-six-file tree",
+      "optimization": true
+    }
+  ],
+  "summary": {
+    "author_comparisons_integration_only": 536,
+    "chapter": "v12-c02",
+    "comparisons": 242,
+    "exact_prompts_and_solutions": 12,
+    "finite_evidence": {
+      "FWL_coefficient": "17/10",
+      "finite_feasible_weight_estimate": "39/22",
+      "finite_oracle_estimate": "3/10",
+      "paired_numeric_and_scope_anchors": 78,
+      "purposeful_vector_Bartlett_cases": 6,
+      "six_state_team_pairs": 36
+    },
+    "independent_domain_rejections": 6,
+    "limits": "Finite exact evidence plus separate analytic proof review; no general mixing/high-dimensional/uniform or exact robust coverage, rendered UI or human certification.",
+    "nonself_bindings": 5,
+    "primary_scopes": 3,
+    "review": "separate peer",
+    "status": "passed",
+    "strict_JSON_rejections": 6,
+    "worked_cases": 6
+  },
+  "quiet_import_check": true,
+  "cwd": "/",
+  "exact_membership_and_unchanged_bytes": true,
+  "payloads": [
+    {
+      "path": "content/chapters/v12-c02.html",
+      "bytes": 61071,
+      "sha256": "a7f2894109490d5230ea439b8ead8fc88b30a971c1d459e5c5079e6fca938dfa"
+    },
+    {
+      "path": "scripts/check_v12_c02.py",
+      "bytes": 28138,
+      "sha256": "3c147ff5cc061c72145fe179e1177840e06424562f4f9d7cc1fd2e196204ab57"
+    },
+    {
+      "path": "content/reviews/v12-c02-sources.json",
+      "bytes": 8202,
+      "sha256": "cd1d69176f5377a79e056a1b9abc9e028ee6289752074b19b532a18aebbe26ff"
+    },
+    {
+      "path": "content/reviews/v12-c02-author.json",
+      "bytes": 17490,
+      "sha256": "23c14ac8e1eadbc231e99a6ca62fb5caa764af0dc657f9599a1e3953e74a93ec"
+    },
+    {
+      "path": "scripts/check_v12_c02_peer.py",
+      "bytes": 26866,
+      "sha256": "740e2b06f0aa1e187c9b7f5d61a256a66f4aae277f2a26e20f0158612cc356e1"
+    },
+    {
+      "path": "content/reviews/v12-c02-peer.json",
+      "bytes": 41110,
+      "sha256": "c0eec99655d2c92a0d5ea59098d7e504e599c6b5bab801d4820f5dcab4c5ba70"
+    }
+  ],
+  "author_gate_reference": "production/v12-c02-author-validation.json",
+  "scope": "Final peer execution only; whole-edition structural verification and coordinator acceptance recorded separately.",
+  "root_reading": "Entire final peer checker and full peer record read; all author manuscript/proofs/exact prompts/solutions, source record, checker and author review previously read in full. Final canonical promotion deltas independently reviewed.",
+  "proof_decision": "No unresolved proof, arithmetic, solution, source, teaching or structural content finding within the explicitly stated scopes. Analytic review is separate from finite computations."
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-09",
+  "chapter": "v12-c04",
+  "author": "c05_review",
+  "state": "queued after c03 four-file freeze; exact ownership assigned now",
+  "owned_paths": [
+    "production/v12-c04-source-preparation.json",
+    "production/v12-c04-working.html",
+    "production/check_v12_c04_working.py",
+    "production/v12-c04-sources-working.json",
+    "production/v12-c04-author-review-working.json"
+  ],
+  "scope": "Canonical Likelihood and nonlinear models: MLE, score, information, binary response, count, selection, marginal effects. Full original graduate chapter with all stated proof conditions, at least5 worked cases,12 complete exercises including proofs/transfer/research critique, teach-back and delayed answer. No shortened survey.",
+  "prerequisites": "Accepted c01 fixed-dimensional iid LLN/CLT/delta; frozen c02 covariance proof; c03 regular signed M/GMM argument under review. Draft ahead permitted; acceptance remains in dependency order.",
+  "source_ownership_transfer": "Root transfers the existing v12-c04-source-preparation.json to this assignment. Four already-retrieved primary PDFs/text live under ../tmp/pdfs/v12-c04-*.pdf/.txt; exact metadata and URLs are in preparation. Reuse bytes read-only, inspect scoped actual bodies and important equations visually using PDF skill. Mark source inspection only after actual evidence; title/date/check equation typos. Preserve distinction retrieved versus inspected. No new other local paths without coordinator amendment; browser tools/in-memory renders permitted.",
+  "theorem_contract": [
+    "Correct likelihood versus quasi-likelihood population objective: KL identity under common support/integrability and identification, explicit equality condition. Do not claim causality from a conditional density.",
+    "Derive score mean zero and information equality with explicit differentiable common-support dominated interchange; prove regular iid MLE consistency with compact exact selection and uniform criterion convergence, then score/Hessian root-n expansion without assuming rate. Hessian nonsingularity, interiority, moment/envelope requirements and sandwich under pseudo-target misspecification must be explicit.",
+    "Bounded-regressor compact logit sufficient model: score x(y-p), Hessian -p(1-p)xx prime, identification from rank; finite separation means no unconstrained finite MLE in an explicit sample, while compact constraints only force boundary solution. Probit predictive probability/score/marginal-effect formulas must be derived if used.",
+    "Poisson criterion as a mean-model quasi likelihood: true conditional mean exp(x beta) centers score, but variance need not equal mean; prove consistency and robust A inverse B A inverse with bounded x and adequate outcome moments. Distinguish variance misspecification from wrong conditional mean target.",
+    "Derive predictive marginal/discrete effects and estimated average-effect influence including empirical X-distribution term. For a misspecified model retain cross covariance; correct conditional score mean zero justifies dropping it only under the explicit model. Fixed target distribution has a different influence.",
+    "Selection: from conditional bivariate normal disturbances derive D=1 joint observed density and D=0 probability; distinguish selected-only conditional likelihood denominator from joint observed likelihood. Derive inverse Mills mean by tail integration. Explain distributional and exclusion/selection assumptions without claiming universal identification or causal interpretation.",
+    "Moving-support Uniform[0,theta] counterexample: score expectation fails interchange, MLE max, exact tail and n-rate exponential law; no regular root-n information claim."
+  ],
+  "original_case_blueprints": [
+    "Exponential density lambda exp(-lambda y), y>=0, lambda>0; derive likelihood/score/info/closed MLE/delta and an explicit original finite sample. Define score information units.",
+    "Binary logit x=(1,D), independent sampling P(D=1)=1/2, p0=1/4,p1=3/4, beta=(-log3,2log3). Sample80 with40 per group,10/30 successes. Compute coefficient and variance, distinguish discrete probability contrast1/2 from continuous-index derivative; include explicitly separated data boundary.",
+    "APE separate population X in{-1,0,1} equiprobable, x=(1,X), beta=(0,log3). Average continuous-index derivative tau=5log3/24; information diag(5/24,1/8), average derivative gradient G=(0,5/24-log3/16); empirical covariate term variance=(log3)^2/1152 and coefficient term8G1^2. Verify every expression independently before use. This is a predictive functional with a continuous covariate response function evaluated on supplied discrete support, not automatically causal.",
+    "Count QMLE x=(1,D), D fair, conditional counts {0,4} fair atD0 and {0,8} fair atD1. Means2,4,variances4,16, beta=(log2,log2). True root-n robust covariance [[2,-2],[-2,4]], Poisson-model covariance [[1,-1],[-1,3/2]]. Choose original finite sample and recompute fitted means/robust meat explicitly if included.",
+    "Gaussian selection D=1{a+v>0}, y=mu+u, u=rho sigma v+sigma sqrt(1-rho^2)e; v,e independent standard normals. Joint D1 density phi(t)/sigma times Phi((a+rho t)/sqrt(1-rho^2)), t=(y-mu)/sigma. D0 massPhi(-a). a0,mu10,sigma2,rho1/2 gives selected mean10+sqrt(2/pi); prove selected density divides joint byPhi(a). Units/probabilities normalized, no fabricated empirical data.",
+    "Uniform boundary model as theorem counterexample: Pr(n(theta-maxY)/theta>t)=(1-t/n)^n for0<=t<=n, exponential limit. Show why finite max is measurable and support constraint determines likelihood optimum."
+  ],
+  "gates": "First inspect sources and send compact verified final model/proof blueprint before full manuscript. Then complete four-file portable working package. Checker quiet import/check and CLI, explicit exceptions active under -O, no network/random simulation/shared helper or external file dependency. Exactly four runtime files from cwd=/ normal/-O; record hashes for three nonself files. Complete analytic proof and each exact-prompt audit separate from numerical cases. Avoid stray non-markup delimiter text. Send frozen files only after all gates. Source-preparation JSON is evidence, not a runtime dependency.",
+  "boundaries": "Only five owned paths, no canonical/shared/catalogue/status/publishing edits, c03 mutation after freeze, installs or child agents. Root controls architecture/review/acceptance. Scope limits honest, no UI or human certification claims."
+}
