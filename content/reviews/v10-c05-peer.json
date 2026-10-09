@@ -1,0 +1,294 @@
+{
+  "chapter": "v10-c05",
+  "title": "Forwards, futures and swaps",
+  "date": "2026-10-09",
+  "reviewer": "c05_review; separately scoped machine-assisted peer",
+  "assignment": "production/v10-middle-resumed-assignments.json",
+  "source_assignment": "production/v10-middle-assignments.json",
+  "state": "complete independent peer review; ready for coordinator acceptance",
+  "recommendation": "No substantive repair required. All reviewed manuscript, exercise, lab, scope and integrity gates pass. Coordinator alone determines acceptance and publishing.",
+  "scope": "Full chapter, five worked examples, all ten exercise/solution pairs, each proof and its hypotheses, answered teaching and retention, complete seven-case lab/input/output/README/manifest, author checker and author review, and cited source scope against existing dated primary-source verification records.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c05.html",
+      "bytes": 51664,
+      "sha256": "c4bbe5103d47e3bc0be13e6352156d5df041515ec9940b5b10166cf21084655f"
+    },
+    {
+      "path": "content/projects/v10-c05-inputs.json",
+      "bytes": 1309,
+      "sha256": "99c21a480027121bac9aa8214023664c7df90be77005ce899f0245af610ae13c"
+    },
+    {
+      "path": "content/projects/v10-c05-analysis.py",
+      "bytes": 11850,
+      "sha256": "892f48ad618fe98016a6d15e8f5dcdfbbe2036ddd4c4f4c2e6ceaf9f15f1e5ee"
+    },
+    {
+      "path": "content/projects/v10-c05-output.json",
+      "bytes": 3103,
+      "sha256": "9d83d93f2606c0481761579975cf81d47c50883bc8b6161bb93742d76888c042"
+    },
+    {
+      "path": "content/projects/v10-c05-manifest.json",
+      "bytes": 671,
+      "sha256": "666ccf1cd68ed3f4a8d4a55ba942b6f76897048b625fc3d36b5275e717d3a126"
+    },
+    {
+      "path": "content/projects/v10-c05-README.txt",
+      "bytes": 10808,
+      "sha256": "c0aff2cca0a6db9ce37219f20d5f91ff4d646fb670daba76ba89e6959b48ebdb"
+    },
+    {
+      "path": "scripts/check_v10_c05.py",
+      "bytes": 20066,
+      "sha256": "12fa3a48e45c1649978a472872e9e5ba9132a7515dba4abbd74f6c15970e67ed"
+    },
+    {
+      "path": "content/reviews/v10-c05-sources.json",
+      "bytes": 1961,
+      "sha256": "931c75022cabb079fcb97eb22fb9231e90f636b93efbe5693923fc649878697f"
+    },
+    {
+      "path": "content/reviews/v10-c05-author.json",
+      "bytes": 7453,
+      "sha256": "99cb6ad0ea343a1f23550915bc0bac6c9afc9cd53a5183a24a269407a512d9f8"
+    }
+  ],
+  "independence": {
+    "author_checker": "Read the author checker in full as reviewed code. Executed separately as a smoke check; neither imported nor called by the peer checker and never used as a numerical oracle.",
+    "author_model": "Only run(data) and the copied CLI are invoked as the system under test. All baseline output fields are compared with independent constructions before secondary saved-output comparison.",
+    "methods": [
+      "Exact dated borrowing/deposit cash strips and terminal debt clear the carry strategy.",
+      "Foreign maturity deposit and domestic repayment give both present old value and terminal short surplus; reciprocal quotation and notional scaling test units.",
+      "Arrow-state prices first price the stock and bond, then clear terminal-forward and first-settlement portfolios. Centered covariance is computed directly rather than inferred from the price difference.",
+      "Margin balances use cumulative quote changes and cumulative deposits. Each debt is a closed-form sum of separately compounded contributions, independently of the author rolling recurrence.",
+      "Actual swap coupon cash is discounted leg by leg; discount differences recover the single-curve telescoping comparison and contractual-rate sensitivity.",
+      "Independent deposit repayment/return differences check collateral funding cost, and local basis decomposition checks physical plus short-futures cash.",
+      "Seventy-digit Decimal exponentials verify proportional payouts; a completed square proves the numerical hedge optimum and neighboring feasible contract variances."
+    ],
+    "not_proof_by_testing": "Finite numeric cases check implementation and signs. General replication, conditional-expectation, reinvestment, convexity and trading-right arguments were audited analytically in the manuscript."
+  },
+  "worked_case_review": [
+    {
+      "case": 1,
+      "review": "Present carry cost 98.04 and forward 103.20. Separate debts 1.96 and 98.04 finance 100 initially; net interim income pays 2; quoted delivery 106 leaves 2.80 terminal or 2.66 present. Old long K=101 is 2.09 initially and 9.02 after the payout under the new spot/curve."
+    },
+    {
+      "case": 2,
+      "review": "1,980,000 FU invested costs 2,376,000 CU, repaid as 2,475,000 under benchmark funding. Forward 1.2375, sell-at-1.25 surplus 25,000 terminal, and long value -24,000 present use consistent units/signs. Actual gross 1.08 changes repayment to 2,566,080 and loss to 66,080; this does not invent a universal executable fair quote."
+    },
+    {
+      "case": 3,
+      "review": "Full variation (-200,300,-50), intermediate call 200, contributed 600 and final release 650 reconcile. Independently accumulating the two contributions gives debt 634.5624 and net 15.4376. A 550 unremunerated reserve is 50 short at the first call; future gains cannot cover earlier cash."
+    },
+    {
+      "case": 4,
+      "review": "Arrow prices 5/12 and 1/2 reproduce stock 90 and bond 11/12; forward 1080/11, futures 100, covariance -5/3 and gap 20/11 are consistent. Funded futures terminal cash (24,-20) and forward cash (240/11,-200/11) each have zero initial value."
+    },
+    {
+      "case": 5,
+      "review": "Explicit coupon PVs 14,775,24,125,55,500 total 94,400; fixed leg 85,500, annuity 1.9 and payer value 8,900. Par 118/2375 and alternative telescoping 75,000 belong to different supplied projections. A one-basis-point contractual coupon increase lowers value by 190, with curves held fixed."
+    }
+  ],
+  "exercise_review": [
+    {
+      "exercise": 1,
+      "review": "Net cash 1.1 and 1.4 has PV 2.433; prepaid 69.567, forward 69567/920 and old long -0.353. Each interim strip is repaid at its own date. Selling at 76 leaves 353/920 terminal and 0.353 present."
+    },
+    {
+      "exercise": 2,
+      "review": "Long K1 plus short K2 cancels identical deliverable cash rights at T and leaves K2-K1. Matching credit, collateral, closeout, currency, quantity and maturity plus executable signed cash finance are explicit. Without borrowing the commodity, reverse carry fails; feasible fully funded cash-and-carry still supplies the upper bound."
+    },
+    {
+      "exercise": 3,
+      "review": "Benchmark 76/97 and -3,150 CU are correct. Independent actual currency-deposit ledgers give upper threshold 42453/52000 and lower 40749/53500; forward bid 0.790 and ask 0.792 create neither covered gain. Benchmark pricing is correctly separated from executable funding."
+    },
+    {
+      "exercise": 4,
+      "review": "The proportional payout buys q n dt shares and yields n prime=q n; e^(-qT) initial shares deliver one share under the stated continuous frictionless reinvestment. High-precision exponentials confirm F=113.011744030 and value=-1.948885864 when rounded. Fixed uncertain cash dividends and physical drift are not inferred from this replication."
+    },
+    {
+      "exercise": 5,
+      "review": "Independent Arrow prices give bond 904/969, spot 90640/969, forward 11330/113, futures 106 and gap 648/113. Centered covariance is -5184/969; funded futures (67.5,-34.2) has zero discounted value. Replacing both second returns by one common positive R requires coherent spot and bond adjustment."
+    },
+    {
+      "exercise": 6,
+      "review": "Short signed size -50 gives variations (-200,250,-200), call 200, contributed 500, release 350, debt 516.6453, cost 16.6453 and net -166.6453. A reserve 450 is 50 short of the first call. Full margin and debt dates are supplied."
+    },
+    {
+      "exercise": 7,
+      "review": "Annuity .96, floating 124,600, fixed 124,800 and payer -200 imply par 623/9600. Inappropriate single-curve substitution gives -4,800. Known first fixing .08 adds 19,600 to the floating PV and produces payer 19,400. The -192 per contractual basis point is correctly distinguished from market DV01."
+    },
+    {
+      "exercise": 8,
+      "review": "Reusable collateral value 5150/51 returns exactly 103 with gross 1.02. Independent segregated deposit returns 20,100 against financing 20,500; cost 400 is not a permanent principal loss. Unrelated derivative discounting does not follow from this narrow arrangement."
+    },
+    {
+      "exercise": 9,
+      "review": "Physical 9,400 and short futures 600 give nominal 10,000, basis -2 and net 9,850. Completing the variance square yields optimal 75 benchmark units/.75 short contracts with variance 270,000; unhedged 360,000, one contract280,000 and two contracts520,000. Discrete contracts, estimated covariance and liquidity limits are properly left as implementation constraints."
+    },
+    {
+      "exercise": 10,
+      "review": "All five false claims are separately repaired. Full-credit criteria require two dated quantitative counterexamples, scoped readings, timestamped executable bid/ask and contract data, funding/position rights, joint cash stress and inference limits. No source is claimed to authenticate current access or identify one cause of observed basis."
+    },
+    {
+      "exercise": "teach-back and delayed retention",
+      "review": "The teaching answer differentiates zero present contract value from financed ownership or future liquidity. Retention values F 62.5 / v 1.44, variations (-60,100), par 5% and payer1,200 are correct; covariance equality and local-basis risk are scoped to their stated contracts."
+    }
+  ],
+  "proof_and_instruction_review": {
+    "carry": "Every asset income/cost is matched by an enforceable dated cash strip. Positive terminal discount is sufficient; equality requires reversal of the entire carry strategy. The separate commodity storage/short-sale qualification prevents an invalid lower-bound claim.",
+    "fx": "Foreign deposit quantity and domestic-per-foreign quotation prove the ratio with both currency units. Different bid/ask and borrowing/lending rights lead to different feasible thresholds, not an automatic unique market price.",
+    "futures": "R_i is measurable at the current node, so it leaves the conditional expectation. Zero-value reset and G_M=S_T support backward induction. The supplied consistent Q and incomplete-market qualification are explicit; no physical probability or unproved uniqueness is assumed.",
+    "swaps": "Rolling a default-free deposit reproduces the matched floating note including final principal. Telescoping uses D0=1 at the reset origin. The general index projection is defined by payment-weighted pricing, not an unrelated forecast; stubs and known fixings are explicitly separated.",
+    "collateral": "The equal-value reusable collateral arrangement is narrowly defined with symmetric execution, no default and no other cash requirement. Its residual H-V(1+c) gives the displayed value; segregated independent margin has its own separately financed ledger.",
+    "basis_variance": "Basis identity requires identical units and matched quantity. Positive benchmark variance gives a strictly convex quadratic; zero variance makes covariance zero and cannot improve this variance. Quantity matching is not claimed to optimize funding or expected cost.",
+    "prerequisites_and_teaching": "Only previously established dated discounting, finite pricing laws, conditional expectation and ordinary calculus are used. All exercises use locally taught methods or named prerequisites; continuous diffusion pricing is not assumed.",
+    "honest_limits": "Fictional contracts and dated historical sources are labeled. No accreditation, current clearing specification, empirical adequacy, universal hedge precision, or independent human certification is claimed."
+  },
+  "source_scope_review": {
+    "method": "Reused exact existing primary body-retrieval and inspected-scope records; no new retrieval or independent source-body inspection claimed. Checked every chapter citation and source role against those records and the canonical catalogue. No unresolved specialist fact required browsing.",
+    "sources": [
+      {
+        "id": "v10-c05-haugh-carry",
+        "scope": "Sections 1–3 recorded as inspected; used only as further study for carry, forward value, swap and contract-cash reasoning. Original examples and proofs were independently audited."
+      },
+      {
+        "id": "v10-c05-cme-variation",
+        "scope": "Official 11 June 2015 document, pages 1–3 recorded as inspected; limited to signed settlement variation and rounding. Synthetic margin thresholds and exact arithmetic are expressly not current exchange rules."
+      },
+      {
+        "id": "v10-c05-bis-basis",
+        "scope": "Historical September 2016 framework/Box A/conclusion recorded as inspected; supports considering demand and constraints. No present basis observation, universal executable gain or unique causal identification is attributed."
+      }
+    ],
+    "unavailable_source": "The source proposal explicitly excludes the unsuccessfully retrieved BIS working-paper appendix; no chapter claim depends on it."
+  },
+  "lab_review": {
+    "schema": "README and code agree on exact rational inputs, strict case fields, finite numeric bounds, positive accumulation domains, integers for contract counts, all seven independent cases and typed JSON output.",
+    "timing": "Final margin deficit is settled only to zero; all previous contributions compound from their actual posting dates; future contribution debt is not charged before posting. Negative funding cost remains allowed when interval gross factors are below one.",
+    "portable": "Quiet import/run(data), no input mutation, standard-library only, explicit input/output paths, normal and -O modes, copied five-file runs from an unrelated directory, baseline and changed-contract results against independent oracles.",
+    "integrity": "Four payload manifest, author eight nonself payload bindings and separate peer nine author payload bindings are exact. The peer check uses explicit require failures that remain effective under -O."
+  },
+  "author_record_observations": [
+    "The author record documents the earlier pending separate peer gate; it is a historical author-stage record, while this separate artifact supplies the completed peer review. Canonical acceptance remains root responsibility.",
+    "The author checker currently reports 181 comparisons, eight more than the author record saved 173 because the now-present author record activates its own eight reviewed-hash checks; no financial calculation changed."
+  ],
+  "findings": [],
+  "open_findings": [],
+  "validation": {
+    "status": "passed",
+    "peer_checker": "scripts/check_v10_c05_peer.py",
+    "evidence": "production/v10-c05-peer-evidence.json",
+    "normal_and_optimized_identical": true,
+    "quiet_import_and_check_api": true,
+    "summary": {
+      "chapter": "v10-c05",
+      "status": "passed",
+      "comparisons": 1064,
+      "count_definition": "Actual equality checks: independently reconstructed output fields, unchanged cases, exercise values, API/CLI results, and structure/integrity records. Unchanged-case and record comparisons count once each; require-style qualitative gates are not included.",
+      "invalid_inputs_rejected": 118,
+      "financial_intervention_runs": 31,
+      "interventions": [
+        "carry net cost requires a dated deposit",
+        "carry zero income and negative yield",
+        "old forward strike changes without replacing contract",
+        "FX reciprocal quotation and swapped funding curves",
+        "FX notional scaling",
+        "tree reverse rate and spot association",
+        "tree deterministic discount path",
+        "tree initial gross scales prices but not quotations",
+        "tree split identical states without changing aggregate prices",
+        "tree single known state boundary",
+        "tree constant terminal price with random rates",
+        "margin equality at maintenance prevents a call",
+        "margin no interest reconciles trading cash",
+        "margin negative funding rate is permitted",
+        "margin mirrored short exposure and negative quotes",
+        "margin terminal deficit settled without restoring initial",
+        "margin 24-quote accumulation boundary",
+        "swap contractual coupon basis point",
+        "swap discount-ratio projection restores telescoping",
+        "swap negative coupons and discounts above one",
+        "collateral equal financing and remuneration",
+        "collateral zero separate margin",
+        "collateral remuneration exceeds financing",
+        "basis partial hedge leaves quantity exposure",
+        "basis no contracts and measured funding credit",
+        "exercise 1 multi-date carry",
+        "exercise 3 benchmark currency value",
+        "exercise 5 stochastic rate transfer",
+        "exercise 6 short side funded calls",
+        "exercise 7 projected swap",
+        "exercise 8 collateral and independent margin"
+      ],
+      "worked_examples_reviewed": 5,
+      "exercise_solutions_reviewed": 10,
+      "groups": [
+        "all baseline output fields versus independent dated cash and Arrow-price constructions",
+        "financial interventions with invariant neighboring cases and explicit boundary behavior",
+        "all determinate exercise and retention values; 70-digit proportional-payout calculation; proof and critique separately reviewed",
+        "explicit malformed, precision, dimensional, signed-position, probability, and positive-accumulation domain rejections",
+        "isolated five-file normal and optimized CLI with baseline and changed contracts; strict JSON failures preserve destinations",
+        "HTML package, source-record scope, four-file integrity, eight author hashes, and nine peer review bindings"
+      ],
+      "limits": "Separate machine-assisted peer review; numerical tests support implementation checks, not proofs or market authentication. Existing dated source body-verification records reused; no independent human certification or visual UI QA."
+    },
+    "author_checker_smoke": {
+      "normal": {
+        "status": "passed",
+        "independent_comparisons": 181,
+        "invalid_inputs_rejected": 25,
+        "worked_examples": 5,
+        "solved_exercises": 10,
+        "groups": [
+          "quiet nonmutating exact API and complete reference output",
+          "worked carry date-ledgers and foreign/domestic deposit funding",
+          "stochastic-rate worked example reconstructed with dated Arrow prices",
+          "complete worked variation/margin/debt ledger and terminal reconciliation",
+          "separate swap projection/discounting, collateral and basis cash",
+          "all determinate exercise calculations and retention; proof/critique reviewed separately",
+          "economic interventions, signed positions, negative yield and terminal shortfall",
+          "explicit malformed and financial-domain rejection cases",
+          "manifest, isolated normal/optimized CLI, HTML package and review hashes"
+        ],
+        "limits": "Author recomputation and editorial review; no separate-agent or human certification, market authentication, or visual UI QA."
+      },
+      "optimized": {
+        "status": "passed",
+        "independent_comparisons": 181,
+        "invalid_inputs_rejected": 25,
+        "worked_examples": 5,
+        "solved_exercises": 10,
+        "groups": [
+          "quiet nonmutating exact API and complete reference output",
+          "worked carry date-ledgers and foreign/domestic deposit funding",
+          "stochastic-rate worked example reconstructed with dated Arrow prices",
+          "complete worked variation/margin/debt ledger and terminal reconciliation",
+          "separate swap projection/discounting, collateral and basis cash",
+          "all determinate exercise calculations and retention; proof/critique reviewed separately",
+          "economic interventions, signed positions, negative yield and terminal shortfall",
+          "explicit malformed and financial-domain rejection cases",
+          "manifest, isolated normal/optimized CLI, HTML package and review hashes"
+        ],
+        "limits": "Author recomputation and editorial review; no separate-agent or human certification, market authentication, or visual UI QA."
+      }
+    }
+  },
+  "limitations": [
+    "Machine-assisted separate peer review is not independent human academic certification or a guarantee of error-free work.",
+    "Existing dated primary-source body verification was reused; this peer audit verifies claim scope and internal mathematics rather than freshly authenticating the source bodies or current market contracts.",
+    "Synthetic valuations do not establish an empirical pricing law, actual funding/short-sale access, legal enforceability or current clearing rules.",
+    "General proofs were audited analytically; finite numerical tests do not prove them. Malformed-input checks cover declared cases, not an adversarial resource-exhaustion certification.",
+    "Whole-edition visual/mobile/keyboard/print QA remains separate and was not performed by this review."
+  ]
+}

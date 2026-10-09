@@ -1,0 +1,266 @@
+{
+  "chapter": "v10-c06",
+  "title": "Options and binomial replication",
+  "date": "2026-10-09",
+  "reviewer": "c05_review; separately scoped machine-assisted peer",
+  "assignment": "production/v10-middle-resumed-assignments.json",
+  "state": "complete independent peer review; ready for coordinator acceptance",
+  "recommendation": "No substantive repair required. Manuscript, proofs, all problems and supporting lab meet the assigned review gates. Coordinator alone determines dependency-order acceptance and publication.",
+  "scope": "All manuscript sections, five worked examples, ten exact exercise/solution pairs, answered teaching and retention, full model/input/output/README/manifest, author checker and review, scoped primary-source proposal records and canonical registration.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c06.html",
+      "bytes": 48591,
+      "sha256": "16eba9ba1a4dce102f62f1596b3d5833d7c45bc2ef8c8bbef11e48769bb8375d"
+    },
+    {
+      "path": "content/projects/v10-c06-inputs.json",
+      "bytes": 867,
+      "sha256": "92bf8a65d005d755839014ff2c656d95d05ec318400e16fbc422b4a22579b012"
+    },
+    {
+      "path": "content/projects/v10-c06-analysis.py",
+      "bytes": 11167,
+      "sha256": "97a1a7bfad7cbe60334eb055b73bbf817e2f72da914fc33d158ff14fbea542bd"
+    },
+    {
+      "path": "content/projects/v10-c06-output.json",
+      "bytes": 21887,
+      "sha256": "1762770ca12893587df4957b89175910b32b89d8f6673860b9fdf03db176c88a"
+    },
+    {
+      "path": "content/projects/v10-c06-manifest.json",
+      "bytes": 671,
+      "sha256": "c5718cf34b8601c12a0ff6a0e6d63a24287fc82d9d449a41402b621f2258014b"
+    },
+    {
+      "path": "content/projects/v10-c06-README.txt",
+      "bytes": 11405,
+      "sha256": "472441322734648574cc7681a8efdd4e8087933031dcb366bc4f29f476ee1df8"
+    },
+    {
+      "path": "scripts/check_v10_c06.py",
+      "bytes": 20841,
+      "sha256": "22af417b1bd99b33e1347528adee2633525c8f0fc946fda95e95d451ac10ff35"
+    },
+    {
+      "path": "content/reviews/v10-c06-sources.json",
+      "bytes": 1573,
+      "sha256": "4d8becf7ac382ac9321e610e9d1f9103aa113b8359f960fc0c88bc70fae26366"
+    },
+    {
+      "path": "content/reviews/v10-c06-author.json",
+      "bytes": 7983,
+      "sha256": "f95d1b3e116632982c6a074b74a29cfdd9ed8d2885f60dfa63fc60c6bb01dbda"
+    }
+  ],
+  "independence": {
+    "model": "The model run(data) and copied CLI are the system under test. No author pricing, tree or stopping function is invoked as an oracle. Saved output is compared only after independent baseline verification.",
+    "author_checker": "Read fully as reviewed code and executed separately as a smoke check. The peer checker does not call or import it.",
+    "pricing": "European values at every node come from independent terminal binomial sums. Stock/cash holdings use two-equation determinant ratios.",
+    "stopping": "Explicitly enumerate all full-history adapted stopping trees through four periods: 1, 2, 5, 26 and 677 policies for horizons 0 through 4. Their stopped receipt values are evaluated before taking a maximum. This includes history-dependent choices and never conditions an earlier decision on a later path branch.",
+    "six_period_bound": "At the full domain boundary, every node dominates immediate cash and discounted continuation. The displayed adapted policy has discounted receipts summing independently to root value across all 64 paths, giving a matching feasible-policy lower bound and supermartingale upper bound. Smaller remaining subtrees are also directly enumerated.",
+    "funding": "Every ideal ledger is reconstructed from independently priced successor claims. Fee error is the sum of each actual interior stock-trade fee separately compounded to maturity, independent of the author fee-bank recurrence.",
+    "analytical_scope": "General replication, no-arbitrage, self-financing, bounded stopping, uniqueness and convexity proofs were checked analytically. Finite test cases verify signs, calculations and implementation rather than proving the theorems."
+  },
+  "worked_case_review": [
+    {
+      "case": 1,
+      "review": "Call payoff (18,0), shares 9/20, bank -180/7 and value 72/7; put payoff (0,22), shares -11/20, bank 1100/21 and value 176/21. q=3/5 and parity 40/21 are correct. Call quote 11 leaves 5/7 initial with terminal cancellation under executable matched rights."
+    },
+    {
+      "case": 2,
+      "review": "Terminal call (0,0,43), up-node price 172/7 with shares 43/50 and bank -430/7; root value 688/49, shares 43/70 and bank -1720/49. After U, stock purchase 172/7 is funded by equal extra debt; after D, share sale 258/7 retires the inherited debt. Four complete paths and put 3712/441 reconcile."
+    },
+    {
+      "case": 3,
+      "review": "Down put continuation 380/21 is below exercise 22; up continuation 8/3 exceeds zero. Grid value 208/21, European 3712/441 and premium 656/441 match exhaustive feasible policies. Root shares -29/60 and bank 340/7 cover both next values. If D does not exercise, retained cash 82/21 funds the surplus. Hindsight 139378/11025 is correctly distinguished from the adapted value."
+    },
+    {
+      "case": 4,
+      "review": "Negative-rate call with R=.98 has European 900/49 below immediate 20; q=.4 remains interior. Dividend case uses total stock gains 112/82, giving q=2/3, call 2000/153, put 500/153 and dividend-adjusted parity. Its two-date exercise clock is explicit; no unobserved pre-dividend exercise opportunity is assumed."
+    },
+    {
+      "case": 5,
+      "review": "Independent interior stock trades 172/7 after U and magnitude 258/7 after D produce fees 43/175 and 129/350. Each compounds one interval to shortfall .258 or .387. The unchanged ideal share strategy plus separate fee borrowing is properly labeled an intervention, not an optimal frictional pricing solution."
+    }
+  ],
+  "exercise_review": [
+    {
+      "exercise": 1,
+      "review": "q=181/375; call shares 8/15, bank -1000/39, price 1448/195; put shares -7/15, bank 1400/39, price 1358/195. Both state equations and parity 6/13 hold. Financing the premium yields net 3104/375 up and -2896/375 down, so nonnegative option payoff does not imply nonnegative financed return."
+    },
+    {
+      "exercise": 2,
+      "review": "The proof covers both endpoint arbitrages and strictly positive state-price sufficiency with both physical branches possible. Borrowing 70 gives cash 15.4/1.4 at R=.98 and 14/0 at R=d=1. The rank-one u=d=R case is distinct; clipped q would not repair the existing traded payoff vectors."
+    },
+    {
+      "exercise": 3,
+      "review": "Dividend PV 1.98 and prepaid stock 48.02 imply parity -1.90 versus quoted -1. The explicit write-call, maturity borrowing, long-put, long-stock and dividend borrowing portfolio receives .90 initially, repays the interim 2 from the actual dividend and repays 52 from terminal stock-plus-put-minus-call. No dated deficit remains."
+    },
+    {
+      "exercise": 4,
+      "review": "q=1/2; terminal stock 80/3,160/3,320/3 and call 0,0,137/3. Root call 137/12, shares 137/240 and bank -137/6; up-node value 137/6, shares 137/160 and bank -137/3. Every first-move rebalance and all four terminal paths agree; put 149/12 gives parity -1."
+    },
+    {
+      "exercise": 5,
+      "review": "At strike 88, terminal puts 43,13,0 yield down continuation 500/21 versus immediate 28 and up continuation 104/21. Grid 1984/147, European 5248/441 and premium 704/441 agree with independently enumerated policies. The rule uses the observed first branch, not its later completion."
+    },
+    {
+      "exercise": 6,
+      "review": "Changing only physical p to 1/4 changes the undiscounted call mean to 43/16 and discounted mean to 1075/441; replication remains 688/49 with identical Q values and holdings. A physical mean-return difference does not create a statewise nonnegative arbitrage."
+    },
+    {
+      "exercise": 7,
+      "review": "Payoff dominance gives cE >= max(0,S-K/R^m), and R>=1,K>=0 establish dominance of intrinsic. Backward induction yields equality with grid exercise, allowing ties. R=.98 reverses the strike-financing comparison: 900/49 <20. Enlarged exercise sets cannot lower value only when the underlying market/information are held fixed."
+    },
+    {
+      "exercise": 8,
+      "review": "Statewise vertical-spread and convexity inequalities pass through positive valuation. The 70/80/90 butterfly costs -2 and pays 0, S-70, 90-S, 0 on the four stated intervals. Initial receipt alone with nonnegative later cash is sufficient, even if no modeled state falls inside the triangle."
+    },
+    {
+      "exercise": 9,
+      "review": "Dated fees and terminal shortfalls match Worked example 5. The least deterministic extra bank reserve for unchanged stock holdings is max(.258,.387)/1.05^2=86/245. Terminal residual is .129 after U and zero after D. The solution correctly limits this optimization to the fixed strategy and fee schedule."
+    },
+    {
+      "exercise": 10,
+      "review": "All four report errors are repaired: historical frequencies as prices, future-informed exercise, clipped invalid weights and guaranteed costless hedging despite fees. Criteria require scoped primary reading, quantitative counterexample, explicit trading/dividend/exercise inputs, independent or out-of-sample policy evaluation and separation of consistency, convergence and empirical fit."
+    },
+    {
+      "exercise": "teach-back and retention",
+      "review": "Answered explanation includes both cash equations and financed rebalancing. Retention q=1/2, delta=.4, cash=-16 and call=4 are correct; writer surplus 1.5, dividend total-gain entitlement and common-history exercise restrictions are clearly stated."
+    }
+  ],
+  "proof_review": {
+    "parity_and_bounds": "Identical terminal cash plus attainable prepaid stock and matched funding establishes European parity. Positive prices, nonnegative terminal stock and K>=0 justify both upper/lower bounds. American exercise rights are not improperly assigned European parity.",
+    "completeness": "Nonzero S R (u-d) gives unique two-state holdings. d<R<u ensures strictly positive state prices, while either endpoint creates an explicit zero-cost arbitrage if both branches remain possible. Degenerate and zero-support cases are treated separately.",
+    "self_financing": "Inherited wealth exactly buys the next-node portfolio; stock-trade cash plus bank change is zero. Induction covers all paths. History-dependent claims require retaining history instead of assuming stock recombination alone is sufficient.",
+    "adapted_optimal_stopping": "The nodewise choices respect observed information. Bounded finite horizon and conditional iteration prove the stopped supermartingale bound; the displayed maximizing policy attains it. No unproved infinite-horizon optional-stopping result or hindsight policy is used.",
+    "price_uniqueness": "For an overpriced claim, the writer superhedge retains V-C surplus in positive cash and covers any permitted exercise. For an underpriced claim, the holder commits to an optimal stopping rule and shorts its complete-market cash replica. Stopped payments cancel, establishing both price bounds within the stated finite complete market.",
+    "early_exercise": "The call theorem requires nondividend stock, K>=0 and nonnegative funding rates. It is weak dominance with explicit tie cases. The negative-rate and known-dividend counterexamples change exactly those assumptions and preserve their own no-arbitrage pricing equations.",
+    "scope": "No unique incomplete-market price, continuous exercise limit, empirical model adequacy, or universally executable costless hedge is inferred. The fee reserve is not claimed to be an optimal strategy across frictional markets."
+  },
+  "source_scope_review": {
+    "method": "Reused the author existing exact primary-PDF retrieval and inspected-scope records. Checked every chapter citation and source role against those records and canonical source registration. No fresh source-body retrieval or independent source-body inspection is claimed; no unresolved specialist fact required browsing.",
+    "sources": [
+      {
+        "id": "v10-c06-haugh-options",
+        "scope": "Section 4.1–4.2 and multi-period material recorded as inspected. Citation role is further study for option cash rights, parity, bounds and finite replication, not authentication of original Linden numbers or current instruments."
+      },
+      {
+        "id": "v10-c06-haugh-discrete",
+        "scope": "Printed pages 10–12 and 25–27 recorded as inspected for self-financing and American pricing/stopping. Chapter proof is finite and bounded and does not import an infinite-horizon theorem."
+      }
+    ]
+  },
+  "lab_and_author_checker_review": {
+    "domain": "README exactly describes financial-string grammar, strict fields/contract strings, one-to-six periods, strict positive physical/pricing support, fee range, dividend total gains and named negative-rate condition. Grammar rejects exponent/resource blowup inputs before Fraction construction.",
+    "output": "All baseline node values and holdings, four styles, negative/dividend cases, complete path ledgers, exercise dates, pricing and physical weights and receipt expectations are checked. Exact fraction output, including zero, is consistent with documentation.",
+    "interventions": "Physical probability leaves Q prices/hedges unchanged; fees leave the ideal tree unchanged; one period has no interior fees; strike, uniform currency scale, negative rates, absent/larger dividends and grid horizons produce the specified changes.",
+    "portability": "Quiet import and nonmutating run(data), standard-library standalone package, normal/-O, unrelated working directories, explicit input/output and stdout routes, baseline and altered contracts. Malformed JSON fails without replacing an existing destination.",
+    "author_checker": "Its terminal-payoff/policy-value enumeration, cash and fee audits are independently checked and execute successfully. The saved author count 4652 becomes 4660 when its eight author-reviewed hashes are present; this is an integrity-gate count change, not an altered financial calculation.",
+    "integrity": "Four-file lab manifest and author eight nonself hashes match. This separate review binds all nine author payloads after the coordinator freeze."
+  },
+  "findings": [],
+  "open_findings": [],
+  "validation": {
+    "status": "passed",
+    "peer_checker": "scripts/check_v10_c06_peer.py",
+    "evidence": "production/v10-c06-peer-evidence.json",
+    "normal_and_optimized_identical": true,
+    "quiet_import_and_check_api": true,
+    "summary": {
+      "chapter": "v10-c06",
+      "status": "passed",
+      "author_package_ready": true,
+      "comparisons": 13714,
+      "count_definition": "Actual equality-check calls across independent prices/hedges, full paths, exercise numbers, invariant records, CLI, structure and integrity; require-style qualitative gates are additional and are not counted.",
+      "invalid_inputs_rejected": 87,
+      "financial_intervention_runs": 12,
+      "interventions": [
+        "physical probability changes frequencies only",
+        "zero fee eliminates all intervention shortfalls",
+        "one period has no interior stock-trade fee",
+        "exercise 5 strike 88 changes adapted put policy value",
+        "exercise 4 fresh two-period zero-rate market",
+        "zero strike exposes exercise ties",
+        "negative-rate multi-period call exercise",
+        "four-period full-history stopping policy enumeration",
+        "six-period domain and supermartingale policy certificate",
+        "uniform threefold monetary scale",
+        "remove payout while retaining stock total gains",
+        "larger known payout shifts total-gain probability"
+      ],
+      "full_history_stopping_policy_counts_by_horizon": {
+        "0": 1,
+        "1": 2,
+        "2": 5,
+        "3": 26,
+        "4": 677
+      },
+      "six_period_certificate": "All node values dominate exercise and discounted continuation; the reported adapted policy attains root value by an independent sum over all 64 paths.",
+      "worked_examples_reviewed": 5,
+      "exercise_solutions_reviewed": 10,
+      "groups": [
+        "all baseline nodes and hedges: direct binomial terminal sums, determinant replicas, independently enumerated adapted policies, and complete funded path ledgers",
+        "financial interventions: physical versus pricing law, fee timing, strike, scale, rate/dividend boundaries, exhaustive policies and six-period certificates",
+        "all determinate manuscript problems, funded parity trade, hindsight counterexample, butterfly cash, fixed-strategy reserve and retention; general proofs/open critique reviewed analytically",
+        "numeric grammar, bounded domain, strictly positive physical/pricing support, singular replicas, fees and dividend-right rejection cases",
+        "normal and optimized standalone CLI from unrelated directories; baseline/changed contracts, both output routes and strict-JSON destination preservation",
+        "HTML exercise/solution structure and, after author freeze, source scope, manifest and eight/nine-payload review hashes"
+      ],
+      "limitations": "Separate machine-assisted peer audit. General proofs are reviewed analytically, not proved by finite test cases. No human certification, empirical contract authentication or visual UI QA."
+    },
+    "author_checker_smoke_only": {
+      "normal": {
+        "chapter": "v10-c06",
+        "status": "passed",
+        "comparisons": 4660,
+        "count_definition": "Executed equality checks of independent values, node/path fields, exercises, interventions, portability and integrity; qualitative require gates are not counted.",
+        "invalid_inputs_rejected": 47,
+        "worked_examples": 5,
+        "solved_exercises": 10,
+        "groups": [
+          "terminal-payoff sums and exhaustive finite adapted-policy values",
+          "statewise hedge cash equations and all dated fee ledgers",
+          "negative rates, dividend entitlement, all determinate exercises and retention",
+          "ten financial interventions and six-period boundary",
+          "strict domains, quiet API, isolated normal/optimized CLI and bound artifacts"
+        ],
+        "limits": "Author recomputation and analytic review; proofs and open critique reviewed separately. Not market authentication, independent human certification or visual UI QA."
+      },
+      "optimized": {
+        "chapter": "v10-c06",
+        "status": "passed",
+        "comparisons": 4660,
+        "count_definition": "Executed equality checks of independent values, node/path fields, exercises, interventions, portability and integrity; qualitative require gates are not counted.",
+        "invalid_inputs_rejected": 47,
+        "worked_examples": 5,
+        "solved_exercises": 10,
+        "groups": [
+          "terminal-payoff sums and exhaustive finite adapted-policy values",
+          "statewise hedge cash equations and all dated fee ledgers",
+          "negative rates, dividend entitlement, all determinate exercises and retention",
+          "ten financial interventions and six-period boundary",
+          "strict domains, quiet API, isolated normal/optimized CLI and bound artifacts"
+        ],
+        "limits": "Author recomputation and analytic review; proofs and open critique reviewed separately. Not market authentication, independent human certification or visual UI QA."
+      }
+    }
+  },
+  "limitations": [
+    "Separate machine-assisted peer review is not independent human academic certification or a guarantee of error-free material.",
+    "Existing dated primary-source retrieval records were reused; this peer did not independently retrieve the PDF bodies or authenticate current market contracts.",
+    "Exact finite tests certify stated algebraic results on tested contracts, not empirical model accuracy, real exercise mechanics, actual funding access or unrestricted trade execution.",
+    "General proofs were audited analytically; numerical policy enumeration and certificate checks do not replace the proof hypotheses.",
+    "Whole-edition visual, mobile, keyboard and print QA remains separate and was not performed here."
+  ]
+}

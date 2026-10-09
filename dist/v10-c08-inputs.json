@@ -1,0 +1,15 @@
+{
+  "schema": "v10-c08-lab-1",
+  "cases": [
+    {"id": "dividend_call", "spot": "92", "strike": "100", "rate": "0.04", "dividend_yield": "0.015", "volatility": "0.25", "maturity": "1.5", "physical_drift": "0.09"},
+    {"id": "negative_rate", "spot": "103", "strike": "100", "rate": "-0.02", "dividend_yield": "0.01", "volatility": "0.3", "maturity": "0.75", "physical_drift": "0.06"},
+    {"id": "deterministic", "spot": "90", "strike": "100", "rate": "-0.01", "dividend_yield": "0.02", "volatility": "0", "maturity": "2", "physical_drift": "-0.03"},
+    {"id": "absorbing", "spot": "0", "strike": "100", "rate": "-0.01", "dividend_yield": "0.02", "volatility": "0.25", "maturity": "2", "physical_drift": "0.09"},
+    {"id": "expiry", "spot": "100", "strike": "100", "rate": "0.04", "dividend_yield": "0.015", "volatility": "0.25", "maturity": "0", "physical_drift": "0.09"},
+    {"id": "symmetric_zero_carry", "spot": "100", "strike": "100", "rate": "0", "dividend_yield": "0", "volatility": "0.2", "maturity": "1", "physical_drift": "0.08"},
+    {"id": "deterministic_kink", "spot": "100", "strike": "100", "rate": "0.02", "dividend_yield": "0.02", "volatility": "0", "maturity": "1", "physical_drift": "0"},
+    {"id": "extreme_tail", "spot": "1", "strike": "1000", "rate": "-0.1", "dividend_yield": "0.2", "volatility": "0.05", "maturity": "0.02", "physical_drift": "0.4"}
+  ],
+  "tilt": {"case_id": "dividend_call", "intervals": ["0.5", "0.5", "0.5"], "brownian_P_increments": ["0.1", "-0.2", "0.3"]},
+  "hedge": {"case_id": "dividend_call", "dates": ["0", "0.5", "1", "1.5"], "prices": ["92", "97", "88", "110"]}
+}

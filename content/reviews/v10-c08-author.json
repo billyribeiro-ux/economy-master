@@ -1,0 +1,179 @@
+{
+  "chapter": "v10-c08",
+  "date": "2026-10-09",
+  "status": "author-review-complete; independent review and prerequisite acceptance pending",
+  "reviewer": "bs_author, machine-assisted author review; not an independent peer or external human certification",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Four original worked examples, twelve complete exercise solutions including derivations/proofs and research critique, answered teach-back and delayed retention, eight synthetic lab cases, constant density tilt and funded finite-grid hedge, three scoped primary readings.",
+  "prerequisite_contract": {
+    "chapter": "v10-c07",
+    "agreement": "Confirmed directly with ito_author: localized scalar C1,2 Ito on [0,U] for U<T and positive-state domains; Brownian usual filtration; predictable-L2 integral/isometry; product rule; GBM all real moments and explicit solution; proved Doob L2 bound and finite supremum second moment. General Girsanov and martingale representation are not assumed.",
+    "acceptance": "Coordinator alone determines dependency acceptance; adjacent authoring is not prerequisite acceptance."
+  },
+  "proof_audit": [
+    "Stock is ex-dividend; physical drift mu is not expected total return mu+q. Dividend cash is explicit in self-financing gains. Product-rule S dDelta and cross variation are financed through bank-unit changes; no holding terms are discarded.",
+    "PDE coefficient comparison and converse funded hedge use localized C1,2 Ito on t<T, S>0. Vanilla analytic deltas are bounded on a finite horizon; GBM second moments verify the stated Q-L2 admissible trading class.",
+    "Constant lambda=(mu+q-r)/sigma measure is constructed on fixed finite horizon. Normal exponential moment proves normalization and conditional martingale property. Positive density gives equivalence. Product density and conditional factorization give independent shifted increments; continuity gives Brownian under Q. No general stochastic-lambda Girsanov theorem claimed.",
+    "Discounted total-gain process discounts each dividend at its receipt date. Reinvested-dividend stock wealth is distinguished from ex-price and uninvested cash. Q-L2 discounted gains prove the applicable pricing/no-arbitrage implication without unrestricted local-martingale expectations.",
+    "Upper and lower truncated lognormal integrals are derived by completing the square. Delta, Q exercise probability and physical probability are kept distinct. Formula derivatives verified via A phi(d1)=H phi(d2).",
+    "Terminal convergence uses Lipschitz payoff and GBM mean-square convergence; payoff kink needs continuity rather than terminal C1,2. Spatial limits use payoff probability domination and parity. Negative-rate upper bound is discounted strike, not strike.",
+    "Uniqueness is restricted to continuous terminal solutions, interior C1,2 and uniform at-most-linear growth. Compact state/time stopping makes the stochastic integral L2. Positive GBM paths make stopping converge to T; Doob supremum-moment bound supplies dominated convergence. No uniqueness claim for arbitrary growth classes.",
+    "Zero volatility is a distinct deterministic economy requiring mu+q=r for a positive live stock. Absorbing spot and expiry are separate branches. Delta at deterministic kink is unavailable; zero-spot reported derivatives are right-family limits rather than uniquely identified holdings.",
+    "Discrete cash dividends require price-jump/value-matching and a nonnegative-stock/payment model. A carry-equivalent yield is not asserted to preserve the terminal distribution. Coarse funded hedging has either sign of error and is not continuous replication or empirical validation."
+  ],
+  "prompt_audit": [
+    {
+      "exercise": 1,
+      "review": "Derived discounted ex-price and integrated dividend expectations, q=0 limit, total-gain sum and physical price/total-return distinction."
+    },
+    {
+      "exercise": 2,
+      "review": "Derived exact product funding identity, diffusion/drift matching, converse holdings and stated L2 expectation condition; no missing share-change term."
+    },
+    {
+      "exercise": 3,
+      "review": "Proved normal normalization, conditional martingale property, mean -0.065 and variance .25, partition/conditional independence, equivalence and constant-coefficient limitation."
+    },
+    {
+      "exercise": 4,
+      "review": "Derived both payoff integrals; symmetric call/put 7.965567455, delta .539827837 and Q event .460172163 recomputed; counterexample to universal dividend-adjusted delta ordering checked."
+    },
+    {
+      "exercise": 5,
+      "review": "Changed physical mu yields lambda .66 and physical event .693357459; prices, Q probabilities, holdings and funded cash remain unchanged in model intervention."
+    },
+    {
+      "exercise": 6,
+      "review": "Density cancellation proof and calendar-time theta signs checked; gamma/deltas/thetas independently verified with finite differences of payoff quadrature; residual interpretation limited."
+    },
+    {
+      "exercise": 7,
+      "review": "Difference-solution stopped proof explicitly supplies local L2 integrability, positive-path stopping convergence and uniform integrable growth domination."
+    },
+    {
+      "exercise": 8,
+      "review": "Deterministic put 15.549084479 and inconsistent-drift sure arbitrage 5.455089080 independently evaluated; measure equivalence cannot change sure event; sensitivity kink distinguished from zero hedge."
+    },
+    {
+      "exercise": 9,
+      "review": "Zero-stock put 102.020134003, forward asymptote, expiry kink and Jensen/payoff bounds verified without r>=0 assumption."
+    },
+    {
+      "exercise": 10,
+      "review": "Dividend jump loses 4 in mark and gains 4 cash; matching condition and q=-log(.96) checked; carry match does not prove distribution match and low-stock boundary is explicit."
+    },
+    {
+      "exercise": 11,
+      "review": "Every first-step funding term reconstructed; final40 intervention leaves earlier cash unchanged and produces error -7.902181202, versus original +2.143362474; no selected-path arbitrage inference."
+    },
+    {
+      "exercise": 12,
+      "review": "All six memo errors corrected; quantitative/analytical counterexamples, separate implementation/contract/empirical tests, reproducibility and scoped primary-source roles covered with explicit open-response rubric."
+    },
+    {
+      "exercise": "teach-back and retention",
+      "review": "Model answer and all five delayed-retention items solved; zero-stock K50 put 51.010067001, lambda .2 and density sign independently checked."
+    }
+  ],
+  "numerical_validation": {
+    "status": "passed",
+    "independent_comparisons": 401,
+    "invalid_inputs_rejected": 60,
+    "worked_examples": 4,
+    "solved_exercises": 12,
+    "author_payload_hashes_verified": 8,
+    "groups": [
+      "quiet nonmutating strict API and full reference payload",
+      "independent terminal-payoff quadrature, dated dividend integration and model bounds",
+      "finite differences of independent integrals for both option sensitivities",
+      "worked examples, determinate exercises, strict events and degenerate-boundary semantics",
+      "independent normal-density products and analytical normalization anchors",
+      "full dividend-reinvestment and signed-bank ledger reconstructed independently",
+      "economic interventions: drift, dividends, volatility, rates, deterministic/expiry branches and hedge loss",
+      "independent quadrature at short/long, high/low-volatility and deep-tail domain stresses",
+      "malformed JSON-shaped inputs and economic-domain rejection under normal or optimized Python",
+      "four-payload manifest and isolated normal/-O explicit/default input and output CLIs",
+      "balanced static HTML, complete problem/solution anchors, scoped citations and author payload bindings"
+    ],
+    "limits": "Author checks, not separate peer/human certification or empirical validation; no visual UI QA. Quadrature is a numerical oracle with documented absolute tolerances, not a stochastic proof."
+  },
+  "execution_checks": [
+    "Normal Python and python3 -O checker pass with identical counts.",
+    "check() independently imported and called under captured stdout/stderr; no output, JSON-safe summary.",
+    "Isolated portable execution checks explicit/default input, stdout/output file, normal/-O modes and rejection before output creation."
+  ],
+  "resolved_findings": [
+    {
+      "finding": "Existing partial lab had five cases and no chapter/checker/README/manifest.",
+      "repair": "Preserved those cases and original illustrative paths, added symmetric, deterministic-kink and extreme-tail cases, full original manuscript and reproducible package."
+    },
+    {
+      "finding": "A valid extreme tilt can have log density -1050, whose exponential underflows in double precision. Zero would misleadingly resemble a loss of measure equivalence.",
+      "repair": "Retained finite log density, report density_Z=null and density_Z_underflow=true if its exponential underflows; ordinary case false. Targeted maximum-domain lambda/increments check verifies factorization and explicit underflow."
+    },
+    {
+      "finding": "Informal total-gain or boundary statements can omit date discounting, proportional dividends or growth conditions.",
+      "repair": "Explicit dated-discount integral, reinvestment alternative, discounted-forward asymptote and stopped linear-growth uniqueness proof; source shortcuts not adopted."
+    }
+  ],
+  "open_findings": [],
+  "pending_gates": [
+    "Independent peer/coordinator audit of these exact frozen payloads; author review is not the independent acceptance gate.",
+    "Dependency acceptance through v10-c07, canonical source integration, shared rebuild and whole-book checks are owned by root.",
+    "Whole-edition visual/mobile/keyboard/print QA remains pending under the recorded browser restriction."
+  ],
+  "limitations": [
+    "Synthetic constant-coefficient European model with idealized trading rights; no empirical market or executable-hedge validation.",
+    "Numerical quadrature and finite-difference comparisons use documented tolerances, not formal error certification for every possible input; extremely tiny option tails can underflow.",
+    "General stochastic risk-premium measure changes, arbitrary-claim completeness, American exercise, jumps and stochastic volatility are outside the proved scope."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c08.html",
+      "bytes": 54260,
+      "sha256": "5083768f254fd6ed919289565288d26556214f94d5de2a0807cb80308a737c71"
+    },
+    {
+      "path": "content/projects/v10-c08-inputs.json",
+      "bytes": 1621,
+      "sha256": "5672a6669b9497d32deb74abc840dc64cca4b5a5b780807392d7f8b1e953b751"
+    },
+    {
+      "path": "content/projects/v10-c08-analysis.py",
+      "bytes": 13284,
+      "sha256": "30c6aa8c99407345b1edfc362549a28911286acf53799c9904bdd23d8d28a50b"
+    },
+    {
+      "path": "content/projects/v10-c08-output.json",
+      "bytes": 11362,
+      "sha256": "f90dffc5b55ec6bacd89b6cfcba53696cc335ace8fbd0b2023cc3bdd10f5fec1"
+    },
+    {
+      "path": "content/projects/v10-c08-manifest.json",
+      "bytes": 672,
+      "sha256": "087efaae234228575182bd18bf7c935490b8fca1604b4d141c2cc29c167c5e4d"
+    },
+    {
+      "path": "content/projects/v10-c08-README.txt",
+      "bytes": 13170,
+      "sha256": "ee319fce21a44c2268dd5ec5751735fe430556fd273f4fc1740bb9eaf3ce9074"
+    },
+    {
+      "path": "scripts/check_v10_c08.py",
+      "bytes": 30608,
+      "sha256": "2d8c359d08bc4dc256f56f1bb0b113c6a77ed87299f1cfea2da2ece311387c86"
+    },
+    {
+      "path": "content/reviews/v10-c08-sources.json",
+      "bytes": 3386,
+      "sha256": "3c5ecfc3ec127b7231a15878fbc110d7705d932c8fdab30d778ee4d3469f5902"
+    }
+  ]
+}

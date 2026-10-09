@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "contract": "Original Linden finite options market; unrestricted signed stock and cash trading; common borrowing/lending gross rate; no default or fees except the named rebalance intervention",
+  "tree": {
+    "spot": "80", "strike": "82", "up": "5/4", "down": "3/4",
+    "gross_rate": "21/20", "steps": 2, "physical_up": "7/10",
+    "interior_rebalance_fee": "1/100"
+  },
+  "negative_rate_call": {
+    "spot": "100", "strike": "80", "up": "11/10", "down": "9/10", "gross_rate": "49/50"
+  },
+  "dividend_call": {
+    "contract": "One period: choose exercise now or after the next dividend; stockholders receive the known cash dividend immediately before terminal ex-dividend option settlement; no intervening exercise date",
+    "spot": "100", "strike": "80", "ex_up": "100", "ex_down": "70",
+    "cash_dividend": "12", "gross_rate": "51/50"
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "batch": "v10-closing",
+  "date": "2026-10-09",
+  "authorization": "Explicit user specialist authorization recorded in MASTER_PLAN.md, carried forward through exact bounded scopes.",
+  "state": "production assignments queued only; no chapter is thereby written or accepted",
+  "integration_owner": "root alone edits canonical curriculum/sources/status/shared build/verification/hosting",
+  "common_contract": {
+    "substance": "Original graduate chapter, at least three substantive worked examples (prefer four where useful), at least ten original exercises including proof/derivation and research/model critique, complete solutions and open-response rubrics, answered teach-back and delayed retention. No summaries masquerading as chapters.",
+    "format": "Static HTML fragment with h2 sections and existing .equation/.worked/.solutions/.exercises classes; one ordered exercises list and complete ordered solutions list. Reuse flat links; sources.html#id citations. No full-document wrapper or framework.",
+    "lab": "Standard-library Python only, quiet import and run(data), deterministic strict JSON, explicit --input/--output CLI, finite bounded input domain with bool/nonfinite rejection and meaningful financial invariants. Full original inputs/output, standalone README and four-payload SHA256 manifest. Exact fractions where appropriate; numerical tolerances and randomness/analytic anchors explicit. Test normal and -O portable execution.",
+    "checker": "Quiet check() returning JSON-safe summary. Independent calculations, justified comparisons and meaningful financial/domain interventions; do not treat saved output as the sole oracle. No fabricated test counts or proof-by-simulation.",
+    "sources": "Reuse exact stable source records when useful. For unresolved specialist methods browse primary actual bodies only, record title/url/use/checked/verification and inspected scope. Source proposals only; root merges. Do not copy source examples or exercises.",
+    "review": "Read/solve every prompt; proof hypotheses and numerical cases independently checked. Author JSON binds all eight nonself payload hashes. Freeze nine files and report findings, limitations and hashes. Separate peer and coordinator review before acceptance in c05→c06→c07→c08 order.",
+    "boundaries": "Only assigned paths; no additional agents, publication, canonical/shared files, package installations or external messages. Report concrete findings before freezing payloads."
+  },
+  "assignments": [
+    {
+      "chapter": "v10-c09",
+      "owner": "c05_review",
+      "title": "Greeks, volatility and hedging",
+      "canonical_spec": {
+        "id": "v10-c09",
+        "number": 9,
+        "title": "Greeks, volatility and hedging",
+        "outcome": "Analyze hedge sensitivities and the implications of changing volatility assumptions.",
+        "coverage": [
+          "Delta",
+          "gamma",
+          "vega",
+          "theta",
+          "implied volatility",
+          "smiles",
+          "discrete hedging"
+        ],
+        "prerequisites": [
+          "v10-c08"
+        ],
+        "level": "Graduate",
+        "status": "planned",
+        "manuscript": "chapters/v10-c09.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses",
+          "quantecon-python"
+        ],
+        "required_worked_examples": 3,
+        "required_exercises": 10,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "state": "queued; not dispatched until middle-batch publication finishes",
+      "prerequisite_and_scope_contract": "Use c08 funded dividend-adjusted vanilla price/PDE and c07 Ito only within their proved scope. Derive delta, gamma, vega and calendar theta, units/scaling and portfolio signs; distinguish partial fixed-parameter Greek from total calibrated-surface response. Derive Taylor exposure with controlled local remainder and a genuinely financed discrete hedge ledger. Explain continuous volatility-mismatch P&L under stated actual diffusion assumptions and fixed pricing sigma, not a universal discrete realized-variance identity. Prove implied-volatility monotonicity with vega and identify strict price bounds/existence/uniqueness and ill-conditioning at boundaries; solve with a bounded reliable bracket. Develop smiles/skews and elementary strike monotonicity/convexity diagnostics without claiming any arbitrary volatility smile defines a no-arbitrage process. At least3 substantial cases/10 original solved exercises incl proof and model/research critique. Portable original inputs/output, independent finite differences and hedge/economic interventions; explicit small-tau/zero-vega domains. Do not preteach unproved general stochastic-volatility pricing or tree convergence.",
+      "owned_paths": [
+        "content/chapters/v10-c09.html",
+        "content/projects/v10-c09-inputs.json",
+        "content/projects/v10-c09-analysis.py",
+        "content/projects/v10-c09-output.json",
+        "content/projects/v10-c09-manifest.json",
+        "content/projects/v10-c09-README.txt",
+        "scripts/check_v10_c09.py",
+        "content/reviews/v10-c09-author.json",
+        "content/reviews/v10-c09-sources.json"
+      ]
+    },
+    {
+      "chapter": "v10-c10",
+      "owner": "ito_author",
+      "title": "Numerical pricing and Monte Carlo",
+      "canonical_spec": {
+        "id": "v10-c10",
+        "number": 10,
+        "title": "Numerical pricing and Monte Carlo",
+        "outcome": "Implement pricing methods with convergence and error diagnostics.",
+        "coverage": [
+          "Trees",
+          "finite differences",
+          "simulation",
+          "variance reduction",
+          "early exercise",
+          "numerical checks"
+        ],
+        "prerequisites": [
+          "v10-c09"
+        ],
+        "level": "Graduate",
+        "status": "planned",
+        "manuscript": "chapters/v10-c10.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses",
+          "quantecon-python"
+        ],
+        "required_worked_examples": 3,
+        "required_exercises": 10,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "state": "queued; not dispatched until middle-batch publication finishes",
+      "prerequisite_and_scope_contract": "Use c06 finite tree/optimal stopping, c07 Gaussian/GBM and numerical moment limits, c08 PDE/vanilla anchors, and agreed c09 sensitivities/implied-volatility inversion. Teach implementation and error analysis of recombining binomial trees, finite differences, Monte Carlo and variance reduction with distinct approximation/discretization, truncation, sampling and floating errors. Prove a substantive convergence/stability/error result for the declared scheme, e.g. a finite-difference maximum principle plus consistency under explicit regularity, rather than asserting convergence from a table. Distinguish exercise-grid convergence from changed market dynamics; prove finite Snell recursion already supported. MC mean/variance and CLT/Hoeffding scope; original standard-library reproducible generator/seed with analytical moments, antithetic or fixed/pilot control variate derivation and independent evaluation. For regression early exercise explain training/evaluation separation and feasible-policy lower-bound direction; no full algorithm proof unless actually supplied. Original full lab bounded runtime normal/-O, reliable numerical oracle, at least3 examples/10 solved grad prompts; no dependencies or giant simulated datasets.",
+      "owned_paths": [
+        "content/chapters/v10-c10.html",
+        "content/projects/v10-c10-inputs.json",
+        "content/projects/v10-c10-analysis.py",
+        "content/projects/v10-c10-output.json",
+        "content/projects/v10-c10-manifest.json",
+        "content/projects/v10-c10-README.txt",
+        "scripts/check_v10_c10.py",
+        "content/reviews/v10-c10-author.json",
+        "content/reviews/v10-c10-sources.json"
+      ]
+    },
+    {
+      "chapter": "v10-c11",
+      "owner": "bs_author",
+      "title": "Incomplete markets and advanced derivatives",
+      "canonical_spec": {
+        "id": "v10-c11",
+        "number": 11,
+        "title": "Incomplete markets and advanced derivatives",
+        "outcome": "Explain why some contingent claims cannot be uniquely priced by replication.",
+        "coverage": [
+          "Incompleteness",
+          "stochastic volatility",
+          "jumps",
+          "exotic payoffs",
+          "credit derivatives",
+          "bounds"
+        ],
+        "prerequisites": [
+          "v10-c10"
+        ],
+        "level": "Graduate",
+        "status": "planned",
+        "manuscript": "chapters/v10-c11.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses",
+          "quantecon-python"
+        ],
+        "required_worked_examples": 3,
+        "required_exercises": 10,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "state": "queued; not dispatched until middle-batch publication finishes",
+      "prerequisite_and_scope_contract": "Use finite positive-state prices/replication from c05–c06, c07 restricted Ito and c08 constant-density/PDE, and agreed c09/c10 sensitivities/approximation discipline. Prove why unspanned payoff leads to a price interval in a concrete finite market, with exact positive state-price family, sub/superhedges and endpoint qualification; do not equate all physical probabilities with pricing measures. Develop stochastic-volatility and jump exposures with a stated modest scope and prove any additional independent-driver/cross variation or finite-jump formula used. Explain missing hedging instruments/risk premiums and what calibration fails to identify, not an unproved universal Heston completeness theorem. Teach original path-dependent/exotic cases with explicit monitoring and payoff history; credit-derivative premium/protection/default-recovery timing and counterparty qualifications. At least3 full cases/10 solved proof/transfer/critique problems and a portable finite-state original lab that demonstrates nonunique prices, hedge bounds and contractual jumps/barriers/default states. All formulas/proofs taught before exercises; general stochastic-premium/Levy theories may be further study if honestly labeled.",
+      "owned_paths": [
+        "content/chapters/v10-c11.html",
+        "content/projects/v10-c11-inputs.json",
+        "content/projects/v10-c11-analysis.py",
+        "content/projects/v10-c11-output.json",
+        "content/projects/v10-c11-manifest.json",
+        "content/projects/v10-c11-README.txt",
+        "scripts/check_v10_c11.py",
+        "content/reviews/v10-c11-author.json",
+        "content/reviews/v10-c11-sources.json"
+      ]
+    },
+    {
+      "chapter": "v10-c12",
+      "owner": "root",
+      "title": "Quantitative model governance",
+      "canonical_spec": {
+        "id": "v10-c12",
+        "number": 12,
+        "title": "Quantitative model governance",
+        "outcome": "Validate pricing and risk models against independent benchmarks and failure scenarios.",
+        "coverage": [
+          "Calibration",
+          "model risk",
+          "implementation errors",
+          "limitations",
+          "validation",
+          "controlled use"
+        ],
+        "prerequisites": [
+          "v10-c11"
+        ],
+        "level": "Graduate",
+        "status": "planned",
+        "manuscript": "chapters/v10-c12.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses",
+          "quantecon-python"
+        ],
+        "required_worked_examples": 3,
+        "required_exercises": 10,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "state": "queued; not dispatched until middle-batch publication finishes",
+      "prerequisite_and_scope_contract": "Integrate c01–c11 pricing/hedging/computational evidence into controlled model use. Separate verification, validation, calibration, identification, outcome evidence and governance. Build original synthetic model inventory and decision gates with an independent benchmark, perturbation/holdout/failure cases, materiality/escalation/exception expiry, reproducibility and limits. Rigorous local error/conditioning or loss bounds need explicit assumptions, no arbitrary score passed as a probability. Use official dated US SR26-2 (17April2026) and its revised guidance; it supersedes SR11-7. Scope is tailored guidance, not enforceable prescriptive rules or legal-compliance certification. Source leads and actual-body observations are in production/v10-closing-source-leads.json. Full graduate package min3 cases/10 solved prompts and portable original ledger/decision lab. Add peer audit after author freeze; no terminal-volume acceptance until independent complete assessment/project package.",
+      "owned_paths": [
+        "content/chapters/v10-c12.html",
+        "content/projects/v10-c12-inputs.json",
+        "content/projects/v10-c12-analysis.py",
+        "content/projects/v10-c12-output.json",
+        "content/projects/v10-c12-manifest.json",
+        "content/projects/v10-c12-README.txt",
+        "scripts/check_v10_c12.py",
+        "content/reviews/v10-c12-author.json",
+        "content/reviews/v10-c12-sources.json"
+      ]
+    }
+  ],
+  "review_order": "c09→c10→c11→c12 after author, separate peer and coordinator gates; coordinate adjacent assumptions directly. Root assigns reviewer-owned paths before each independent audit."
+}

@@ -1,0 +1,140 @@
+{
+  "chapter": "v10-c06",
+  "date": "2026-10-09",
+  "status": "author-review-complete; separate peer gate pending",
+  "reviewer": "Coordinating chapter author with independent state-sum/policy enumeration; separate peer now auditing",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Five worked examples, ten graduate solved exercises, answered teaching/retention and a portable exact finite-options laboratory. Original partial model/input/output preserved byte-for-byte.",
+  "analytic_review": [
+    "Put-call parity is proved by terminal cash matching with an explicitly removed known-dividend strip. Bounds require nonnegative terminal stock and strike and positive attainable-claim prices. Strike monotonicity, vertical spread and convexity follow from payoff dominance.",
+    "Two-equation replication is unique because S R (u-d) is nonzero. Both directions of d<R<u are proved including endpoint arbitrage; u=d=R collinearity and impossible physical states are distinguished. Pricing q is inferred from traded receipts, not historical frequencies.",
+    "Backward hedge proof matches inherited wealth to the new portfolio cost. Every rebalance records stock trade plus cash change equals zero; history-dependent claims require the state history rather than accidental stock recombination.",
+    "Finite optimal stopping is proved by backward admissible-policy construction and independently verified through a bounded supermartingale argument. Writer continuation surplus is retained; selling the optimal stopped-payment replica proves the lower price bound in the complete finite market.",
+    "Nondividend call exercise theorem uses weak dominance with nonnegative rates and K>=0; ties are allowed. Negative rates reverse precisely the strike-financing inequality. The dividend counterexample includes total stock gains and only the explicitly permitted two exercise dates.",
+    "The fixed ideal-share strategy finances fees in a separate cash account. Its shortfall equals all fees accumulated from payment times. The minimum deterministic cash reserve holds only within that fixed strategy and schedule, with no optimal transaction-cost pricing claim.",
+    "No continuous-time limit, general incomplete-market unique price, empirical calibration or executable real-world hedge is silently assumed."
+  ],
+  "prompt_audit": [
+    {
+      "exercise": 1,
+      "review": "Independently solved call/put stock and cash, q, parity and financed payoff; all ten exact numerical anchors agree."
+    },
+    {
+      "exercise": 2,
+      "review": "Positive state-price necessity/sufficiency covers signed positions and both possible states; 15.4/1.4 and endpoint14/0 are correct, with rank-one degeneracy separate."
+    },
+    {
+      "exercise": 3,
+      "review": "Initial 0.90 receipt reconciled against dividend-date debt and terminal52 liability; no unfinanced strip remains."
+    },
+    {
+      "exercise": 4,
+      "review": "Terminal sums and new two-period portfolio independently reconstructed at all nodes. Root137/12, put149/12 and every trade/loan change agree."
+    },
+    {
+      "exercise": 5,
+      "review": "All feasible adapted policies independently enumerated; strike88 decisions and values1984/147,5248/441,premium704/441 agree. Policy uses current history."
+    },
+    {
+      "exercise": 6,
+      "review": "Physical discounted payoff1075/441 differs from unchanged688/49 replica. Model rerun confirms unchanged Q values/holdings and changed physical expected receipt43/16."
+    },
+    {
+      "exercise": 7,
+      "review": "Backward weak-dominance proof and failed negative-rate inequality supplied; exercise-set inclusion holds on the same underlying information model."
+    },
+    {
+      "exercise": 8,
+      "review": "Pointwise strike inequalities and four-interval butterfly prove nonnegative payoff with initial receipt2, even with zero mass in its interior."
+    },
+    {
+      "exercise": 9,
+      "review": "Dated fees/shortfalls and reserve86/245 recomputed; U residual129/1000, D0; minimum limited to deterministic cash for unchanged shares."
+    },
+    {
+      "exercise": 10,
+      "review": "Complete criteria repair physical/Q substitution, hindsight timing, clipping and unfinanced friction claims. Quantitative counterexamples, scoped primary reading and frozen out-of-sample policy/hedge evaluation specified."
+    },
+    {
+      "exercise": "teaching/retention",
+      "review": "Answers include q1/2,delta0.4,bank-16,value4; surplus1.5; dividend total gains; indistinguishable histories. All required methods are locally taught or cited prerequisites."
+    }
+  ],
+  "source_review": "Actual primary author PDFs retrieved and inspected for Section4 option parity/replication and discrete self-financing/American stopping scope; exact proposals merged into catalogue. Original examples and mathematical derivations are not paraphrased source examples.",
+  "numerical_validation": {
+    "chapter": "v10-c06",
+    "status": "passed",
+    "comparisons": 4652,
+    "count_definition": "Executed equality checks of independent values, node/path fields, exercises, interventions, portability and integrity; qualitative require gates are not counted.",
+    "invalid_inputs_rejected": 47,
+    "worked_examples": 5,
+    "solved_exercises": 10,
+    "groups": [
+      "terminal-payoff sums and exhaustive finite adapted-policy values",
+      "statewise hedge cash equations and all dated fee ledgers",
+      "negative rates, dividend entitlement, all determinate exercises and retention",
+      "ten financial interventions and six-period boundary",
+      "strict domains, quiet API, isolated normal/optimized CLI and bound artifacts"
+    ],
+    "limits": "Author recomputation and analytic review; proofs and open critique reviewed separately. Not market authentication, independent human certification or visual UI QA."
+  },
+  "numerical_count_note": "Saved count precedes this record. Eight hash comparisons activate when this author record exists; accepted-record hashes later add their actual comparisons.",
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c06.html",
+      "bytes": 48591,
+      "sha256": "16eba9ba1a4dce102f62f1596b3d5833d7c45bc2ef8c8bbef11e48769bb8375d"
+    },
+    {
+      "path": "content/projects/v10-c06-inputs.json",
+      "bytes": 867,
+      "sha256": "92bf8a65d005d755839014ff2c656d95d05ec318400e16fbc422b4a22579b012"
+    },
+    {
+      "path": "content/projects/v10-c06-analysis.py",
+      "bytes": 11167,
+      "sha256": "97a1a7bfad7cbe60334eb055b73bbf817e2f72da914fc33d158ff14fbea542bd"
+    },
+    {
+      "path": "content/projects/v10-c06-output.json",
+      "bytes": 21887,
+      "sha256": "1762770ca12893587df4957b89175910b32b89d8f6673860b9fdf03db176c88a"
+    },
+    {
+      "path": "content/projects/v10-c06-manifest.json",
+      "bytes": 671,
+      "sha256": "c5718cf34b8601c12a0ff6a0e6d63a24287fc82d9d449a41402b621f2258014b"
+    },
+    {
+      "path": "content/projects/v10-c06-README.txt",
+      "bytes": 11405,
+      "sha256": "472441322734648574cc7681a8efdd4e8087933031dcb366bc4f29f476ee1df8"
+    },
+    {
+      "path": "scripts/check_v10_c06.py",
+      "bytes": 20841,
+      "sha256": "22af417b1bd99b33e1347528adee2633525c8f0fc946fda95e95d451ac10ff35"
+    },
+    {
+      "path": "content/reviews/v10-c06-sources.json",
+      "bytes": 1573,
+      "sha256": "4d8becf7ac382ac9321e610e9d1f9103aa113b8359f960fc0c88bc70fae26366"
+    }
+  ],
+  "open_findings": [],
+  "pending_gates": [
+    "Separate peer audit with nine final author-file bindings and canonical dependency-order acceptance.",
+    "Whole-edition visual/mobile/keyboard/print QA."
+  ],
+  "limitations": [
+    "Finite checks support exact implementation and arithmetic, not general proofs or observed market validity.",
+    "Author and peer machine review do not provide independent human certification."
+  ]
+}

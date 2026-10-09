@@ -1,0 +1,221 @@
+{
+  "chapter": "v10-c08",
+  "date": "2026-10-09",
+  "status": "peer-review-passed; coordinator and prerequisite acceptance pending",
+  "reviewer": "ito_author, separate specialist from bs_author; independent machine-assisted peer review, not external human certification",
+  "recommendation": "Accept after coordinator integration and prerequisite acceptance; no material repair requested in this c08 package.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Read full manuscript, all twelve exact prompts and complete solutions, answered teach-back/retention, model, full output, README, manifest, author checker/review and source proposals. Independently checked primary source bodies and recomputed key quantities with methods separate from the author implementation.",
+  "proof_findings": [
+    {
+      "topic": "Funded replication and dividend cash",
+      "verdict": "passed",
+      "reason": "The ex-dividend drift is mu, total expected return mu+q. Stock and bank product terms reconcile to the dividend-funded gains identity. For generic C1,2 solutions, converse funding is proved via dv and predictable delta, without silently assuming v_s is itself C1,2; the stronger product identity is applied to smooth vanilla holdings before maturity."
+    },
+    {
+      "topic": "Finite-horizon measure construction",
+      "verdict": "passed",
+      "reason": "Positive exponential-normal density has unit mean and conditional martingale property. Finite-partition square completion gives independent means -lambda*h and variances h; conditional calculation and equivalent completed filtrations supply the Brownian information requirement. Substitution in explicit GBM avoids unsupported stochastic-integral transformations. No general stochastic-lambda Girsanov theorem is claimed."
+    },
+    {
+      "topic": "Admissibility and true martingales",
+      "verdict": "passed",
+      "reason": "Each dividend is discounted at its receipt date; alternatively reinvested-dividend wealth is explicitly distinguished. Q-square-integrable discounted stock exposure makes discounted portfolio gains true martingales and proves the restricted no-arbitrage expectation argument. Bounded vanilla deltas plus GBM second moments establish that class for the constructed hedges."
+    },
+    {
+      "topic": "Payoff integration and PDE",
+      "verdict": "passed",
+      "reason": "Upper/lower truncated lognormal integrals lead to distinct d1/d2 terms. Density cancellation proves derivatives and analytical PDE residuals; calendar-time signs, dividend-adjusted delta, P versus Q probabilities and discounted bounds all agree."
+    },
+    {
+      "topic": "Uniqueness and terminal regularity",
+      "verdict": "passed",
+      "reason": "Interior C1,2, terminal continuity and uniform linear growth are explicit. Stop on compact state/time sets; bounded integrand yields zero expected stopped integral. Strictly positive continuous GBM makes stops approach T. c07 Doob L2 plus exponential moments supplies integrable supremum domination for the limit. Terminal payoff kink is handled by continuity/Lipschitz mean-square convergence, not fictitious derivatives."
+    },
+    {
+      "topic": "Degenerate markets and dividend contracts",
+      "verdict": "passed",
+      "reason": "Zero volatility with live stock requires mu+q=r; changing probability cannot remove a sure return gap. Expiry, absorbing spot and deterministic threshold are distinct branches, with unavailable Greeks flagged. Negative rates preserve positive discount factors and can put PV above strike. Fixed cash dividends need jump matching and a boundary/payment model; matching one prepaid price is not exact option equivalence."
+    },
+    {
+      "topic": "Finite-grid hedge and numerical limits",
+      "verdict": "passed",
+      "reason": "Between resets dividends buy shares; signed bank accrues independently. All trades preserve marked wealth with no external cash. Both payoff surplus and debt shortfall are reproduced. Density underflow retains finite log and null/flag, preserving the distinction from mathematical equivalence; extreme option tail underflow has an absolute-error scope."
+    }
+  ],
+  "prompt_audit": [
+    {
+      "exercise": 1,
+      "verdict": "passed",
+      "independent_reasoning": "Integrated expected discounted dividend cash and discounted ex-price to92; q0 limit and physical price/total return distinctions explicit."
+    },
+    {
+      "exercise": 2,
+      "verdict": "passed",
+      "independent_reasoning": "Derived product rebalancing identity, matched diffusion then drift, checked converse and Q-L2 restriction; no missing holding-change cash."
+    },
+    {
+      "exercise": 3,
+      "verdict": "passed",
+      "independent_reasoning": "Recomputed normal density correction, mean -.065 at h.25, variance .25, finite partition independence and positive-density equivalence."
+    },
+    {
+      "exercise": 4,
+      "verdict": "passed",
+      "independent_reasoning": "Re-derived both truncated expectations; symmetric option price7.965567455, delta .539827837 and Q event .460172163; dividend-adjusted ordering is correctly not universal."
+    },
+    {
+      "exercise": 5,
+      "verdict": "passed",
+      "independent_reasoning": "Changed mu only, recomputed lambda .66 and P probability; exact model intervention leaves all price/Greek/Q/hedge fields unchanged."
+    },
+    {
+      "exercise": 6,
+      "verdict": "passed",
+      "independent_reasoning": "Checked normal-density identity, independent five-point delta/gamma/calendar theta and PDE residual; numerical residual limitation stated."
+    },
+    {
+      "exercise": 7,
+      "verdict": "passed",
+      "independent_reasoning": "Stopped difference solution has zero expected local integral on compact sets; linear-growth domination justifies terminal limit using proved GBM supremum bound."
+    },
+    {
+      "exercise": 8,
+      "verdict": "passed",
+      "independent_reasoning": "Deterministic discounted payoff and sure reinvested-stock/bank arbitrage recalculated; equivalent law preserves sure events and kink derivative differs from one possible zero hedge."
+    },
+    {
+      "exercise": 9,
+      "verdict": "passed",
+      "independent_reasoning": "Zero-stock negative-rate put and expiry value correct; convexity and payoff domination give bounds without nonnegative-rate premise."
+    },
+    {
+      "exercise": 10,
+      "verdict": "passed",
+      "independent_reasoning": "Stock mark loss4 plus dividend cash4 reconciles; no-payout option jump matching and q=-log(.96) correct; distribution and low-stock boundary caveats retained."
+    },
+    {
+      "exercise": 11,
+      "verdict": "passed",
+      "independent_reasoning": "Every dividend, bank and reset row rebuilt with independent high-precision deltas; final-price40 intervention preserves earlier rows and gives -7.902181202 residual versus original positive2.143362474."
+    },
+    {
+      "exercise": 12,
+      "verdict": "passed",
+      "independent_reasoning": "Solution addresses all six memo claims, supplies distinct counterexamples and separates implementation, contract/input and empirical checks; source role and reproducibility are explicit."
+    },
+    {
+      "exercise": "teach-back and delayed retention",
+      "verdict": "passed",
+      "independent_reasoning": "Answered model prompt and all five retention tasks; dividend PDE sign, symmetric formula, zero-stock put51.010067001, lambda .2/density sign and growth/terminal conditions checked."
+    }
+  ],
+  "numerical_validation": {
+    "chapter": "v10-c08",
+    "status": "passed",
+    "peer_comparisons": 595,
+    "invalid_inputs_rejected": 38,
+    "author_files_bound": 9,
+    "solved_exercises_reviewed": 12,
+    "max_price_difference_from_decimal_oracle": 1.1368683772161603e-13,
+    "max_payoff_quadrature_refinement_difference": 2.2737367544323206e-13,
+    "groups": [
+      "independent 110-digit normal integral and Gauss-Legendre payoff integration, Greeks, density moments and complete funded ledger",
+      "financial interventions: P-only forecast, dividend cash, funding rate, volatility, zero risk premium, signed hedge loss and bounded-domain extremes",
+      "underflow and maximal representable tilt, deterministic/absorbing/expiry semantics and remaining exercise/retention anchors",
+      "independent malformed, financial-invariant and bounded-domain rejection cases",
+      "portable isolated normal/optimized quiet API and explicit CLI; strict duplicate/nonfinite JSON",
+      "exact frozen author payloads, manifest/author bindings and twelve complete prompt/solution entries"
+    ],
+    "limits": "Independent machine-assisted peer review, not external human certification. Numerical checks do not prove stochastic theorems or empirical model adequacy."
+  },
+  "source_body_review": [
+    {
+      "id": "v10-c08-haugh-bs",
+      "url": "https://www.columbia.edu/~mh2078/FoundationsFE/BlackScholes.pdf",
+      "inspected": "Actual12-page2016 primary PDF; replication/PDE, formula and the option/volatility discussion inspected. Source informal large-stock boundary is not adopted; manuscript supplies discounted-forward asymptote and explicit uniqueness class."
+    },
+    {
+      "id": "v10-c08-haugh-measure",
+      "url": "https://www.columbia.edu/~mh2078/ContinuousFE/stochastic_calculus.pdf",
+      "inspected": "Actual23-page2013 primary PDF; printed pages15–19 on Girsanov/Novikov qualification, constant normal-density factorization, self-financing product terms and dividend reinvestment. Manuscript proves its constant case and does not rely on the source unqualified global martingale/FTAP wording."
+    },
+    {
+      "id": "v10-c08-mit-lecture",
+      "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/e7f5a44f61593657a8215a9b824a705b_TnS8kI_KuJc.pdf",
+      "inspected": "Actual16-page official historical transcript; pages7–12 route from replication to PDE, maturity/boundary values, risk-neutral expected payoff and constant-volatility interpretation. No current quote, empirical performance or unrestricted replication promise imported."
+    }
+  ],
+  "findings": [],
+  "necessary_repairs": [],
+  "remaining_gates": [
+    "Root coordinator acceptance in c05–c06–c07–c08 dependency order, canonical integration and shared regression.",
+    "Whole-edition visual/mobile/keyboard/print QA remains separate; this audit does not claim it."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c08.html",
+      "bytes": 54260,
+      "sha256": "5083768f254fd6ed919289565288d26556214f94d5de2a0807cb80308a737c71"
+    },
+    {
+      "path": "content/projects/v10-c08-inputs.json",
+      "bytes": 1621,
+      "sha256": "5672a6669b9497d32deb74abc840dc64cca4b5a5b780807392d7f8b1e953b751"
+    },
+    {
+      "path": "content/projects/v10-c08-analysis.py",
+      "bytes": 13284,
+      "sha256": "30c6aa8c99407345b1edfc362549a28911286acf53799c9904bdd23d8d28a50b"
+    },
+    {
+      "path": "content/projects/v10-c08-output.json",
+      "bytes": 11362,
+      "sha256": "f90dffc5b55ec6bacd89b6cfcba53696cc335ace8fbd0b2023cc3bdd10f5fec1"
+    },
+    {
+      "path": "content/projects/v10-c08-manifest.json",
+      "bytes": 672,
+      "sha256": "087efaae234228575182bd18bf7c935490b8fca1604b4d141c2cc29c167c5e4d"
+    },
+    {
+      "path": "content/projects/v10-c08-README.txt",
+      "bytes": 13170,
+      "sha256": "ee319fce21a44c2268dd5ec5751735fe430556fd273f4fc1740bb9eaf3ce9074"
+    },
+    {
+      "path": "scripts/check_v10_c08.py",
+      "bytes": 30608,
+      "sha256": "2d8c359d08bc4dc256f56f1bb0b113c6a77ed87299f1cfea2da2ece311387c86"
+    },
+    {
+      "path": "content/reviews/v10-c08-author.json",
+      "bytes": 11967,
+      "sha256": "fa37ab5b70f2f553c83d7df5b1250a5db9a6aabc37e960637e9b1591c0ee0b83"
+    },
+    {
+      "path": "content/reviews/v10-c08-sources.json",
+      "bytes": 3386,
+      "sha256": "3c5ecfc3ec127b7231a15878fbc110d7705d932c8fdab30d778ee4d3469f5902"
+    }
+  ],
+  "reviewer_artifacts": [
+    {
+      "path": "scripts/check_v10_c08_peer.py",
+      "bytes": 26035,
+      "sha256": "e4bca624727f5428adc913e5c18a68b77874a2292711e5ac2891ea5c3e8bd268"
+    },
+    {
+      "path": "production/v10-c08-peer-evidence.json",
+      "bytes": 6866,
+      "sha256": "7bcc95e56a400c7058be1dfec1784978261fdb51ec9d3d7554310cd208fb7132"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "chapter_packages_available": 113,
-  "html_pages_checked": 131,
+  "chapter_packages_available": 116,
+  "html_pages_checked": 134,
   "curriculum_chapters": 216,
   "cross_volume_packages_available": 2,
   "checks": [
@@ -28,7 +28,7 @@
     "Volume 3 chapters 11\u201312 proper losses, calibration/resolution, weighted-report and random-skill distortions, joint-state information values/garbling, information projections, dyadic/spike integrals, stopped martingale histories, heavy-tail truncation and maximal/Kronecker diagnostics",
     "Volume 3 diagnostic, distinct exams, retention, posterior/predictive/information project, independent integration/coverage and seeded paired-score checks",
     "Volume 8 chapters 1\u20134: incremental capital budgeting and IRR domains; FCFF/FCFE and dated claim pricing; coherent capital/return fade and terminal sensitivity; covariance, policy-specific leverage, WACC and finite APV with independent pricing checks",
-    "Volume 10 chapter5: dated carry and FX funding, stochastic forward/futures distinction, signed margin and debt ledgers, swap projection versus discounting, collateral and local basis with exact independent arithmetic and portable lab checks; separate review gate remains explicit",
+    "Volume 10 chapters5\u20138: dated carry, funded futures/margin and swaps; full finite option replication, adapted stopping and fees; Brownian/QV/integral and GBM numerical-error anchors; funded Black\u2013Scholes PDE, constant measure tilt, vanilla pricing and finite hedge errors. Author and independent peer checkers, bounded input contracts, portable labs and exact reviewed payloads",
     "Volume 10 chapters 1\u20134: dated bond cash, settlement accrual, bootstrapping, YTM/forward conventions and curve identification; yield/key sensitivities, funded immunization and failure cases; finite pricing versus physical rate dynamics, calibrated Arrow trees and hedge errors; structural/default-time credit, recovery timing, absorption, dependence and conditional spread calibration",
     "Volume 9 chapters 1\u20134: dated total/simple/log and flow-adjusted returns; finite-state and sample covariance, financing and concentration; exact frontier, allocation and constraint certificates with shrinkage sensitivity; investor demand, market clearing, pricing/proxy/sample distinctions and conditional CAPM limits",
     "Volume 9 chapters 5\u20138: finite-state replication, positive state prices and complete/incomplete pricing; exact versus residual factor pricing, OLS and funded construction; conditional information, search, belief equilibrium and margin contracts; benchmark/factor/fee/flow performance, attribution and complete entry/exit cohorts",
@@ -6595,7 +6595,7 @@
   "volume_10_middle_checks": {
     "v10-c05": {
       "status": "passed",
-      "independent_comparisons": 181,
+      "independent_comparisons": 190,
       "invalid_inputs_rejected": 25,
       "worked_examples": 5,
       "solved_exercises": 10,
@@ -6611,6 +6611,194 @@
         "manifest, isolated normal/optimized CLI, HTML package and review hashes"
       ],
       "limits": "Author recomputation and editorial review; no separate-agent or human certification, market authentication, or visual UI QA."
+    },
+    "v10-c06": {
+      "chapter": "v10-c06",
+      "status": "passed",
+      "comparisons": 4669,
+      "count_definition": "Executed equality checks of independent values, node/path fields, exercises, interventions, portability and integrity; qualitative require gates are not counted.",
+      "invalid_inputs_rejected": 47,
+      "worked_examples": 5,
+      "solved_exercises": 10,
+      "groups": [
+        "terminal-payoff sums and exhaustive finite adapted-policy values",
+        "statewise hedge cash equations and all dated fee ledgers",
+        "negative rates, dividend entitlement, all determinate exercises and retention",
+        "ten financial interventions and six-period boundary",
+        "strict domains, quiet API, isolated normal/optimized CLI and bound artifacts"
+      ],
+      "limits": "Author recomputation and analytic review; proofs and open critique reviewed separately. Not market authentication, independent human certification or visual UI QA."
+    },
+    "v10-c07": {
+      "status": "passed",
+      "independent_comparisons": 668,
+      "invalid_inputs_rejected": 51,
+      "worked_examples": 4,
+      "solved_exercises": 10,
+      "groups": [
+        "quiet nonmutating strict-JSON API and complete saved reference",
+        "exact path ledgers, polygon counterexample and independent Gaussian polynomial moments",
+        "adapted nonnormal fourth moment, Ito/product coefficients and coupled GBM/Euler recurrences",
+        "worked anchors and all determinate exercise/retention arithmetic; proof prompts reviewed editorially",
+        "horizon, feedback, negative shared exposure/drift, zero diffusion/decay and zero-motion interventions",
+        "bounded runtime/numeric domain, information/provenance and malformed-input rejections",
+        "four-file manifest and isolated explicit normal/optimized CLI including strict duplicate/nonfinite JSON",
+        "balanced original chapter, complete solved prompts, scoped sources and author payload binding"
+      ],
+      "limits": "Numerical/structural author audit; proofs reviewed editorially, not mechanically certified. Separate coordinator review and whole-edition visual QA remain distinct."
+    },
+    "v10-c08": {
+      "status": "passed",
+      "independent_comparisons": 401,
+      "invalid_inputs_rejected": 60,
+      "worked_examples": 4,
+      "solved_exercises": 12,
+      "author_payload_hashes_verified": 8,
+      "groups": [
+        "quiet nonmutating strict API and full reference payload",
+        "independent terminal-payoff quadrature, dated dividend integration and model bounds",
+        "finite differences of independent integrals for both option sensitivities",
+        "worked examples, determinate exercises, strict events and degenerate-boundary semantics",
+        "independent normal-density products and analytical normalization anchors",
+        "full dividend-reinvestment and signed-bank ledger reconstructed independently",
+        "economic interventions: drift, dividends, volatility, rates, deterministic/expiry branches and hedge loss",
+        "independent quadrature at short/long, high/low-volatility and deep-tail domain stresses",
+        "malformed JSON-shaped inputs and economic-domain rejection under normal or optimized Python",
+        "four-payload manifest and isolated normal/-O explicit/default input and output CLIs",
+        "balanced static HTML, complete problem/solution anchors, scoped citations and author payload bindings"
+      ],
+      "limits": "Author checks, not separate peer/human certification or empirical validation; no visual UI QA. Quadrature is a numerical oracle with documented absolute tolerances, not a stochastic proof."
+    }
+  },
+  "volume_10_middle_peer_checks": {
+    "v10-c05": {
+      "chapter": "v10-c05",
+      "status": "passed",
+      "comparisons": 1064,
+      "count_definition": "Actual equality checks: independently reconstructed output fields, unchanged cases, exercise values, API/CLI results, and structure/integrity records. Unchanged-case and record comparisons count once each; require-style qualitative gates are not included.",
+      "invalid_inputs_rejected": 118,
+      "financial_intervention_runs": 31,
+      "interventions": [
+        "carry net cost requires a dated deposit",
+        "carry zero income and negative yield",
+        "old forward strike changes without replacing contract",
+        "FX reciprocal quotation and swapped funding curves",
+        "FX notional scaling",
+        "tree reverse rate and spot association",
+        "tree deterministic discount path",
+        "tree initial gross scales prices but not quotations",
+        "tree split identical states without changing aggregate prices",
+        "tree single known state boundary",
+        "tree constant terminal price with random rates",
+        "margin equality at maintenance prevents a call",
+        "margin no interest reconciles trading cash",
+        "margin negative funding rate is permitted",
+        "margin mirrored short exposure and negative quotes",
+        "margin terminal deficit settled without restoring initial",
+        "margin 24-quote accumulation boundary",
+        "swap contractual coupon basis point",
+        "swap discount-ratio projection restores telescoping",
+        "swap negative coupons and discounts above one",
+        "collateral equal financing and remuneration",
+        "collateral zero separate margin",
+        "collateral remuneration exceeds financing",
+        "basis partial hedge leaves quantity exposure",
+        "basis no contracts and measured funding credit",
+        "exercise 1 multi-date carry",
+        "exercise 3 benchmark currency value",
+        "exercise 5 stochastic rate transfer",
+        "exercise 6 short side funded calls",
+        "exercise 7 projected swap",
+        "exercise 8 collateral and independent margin"
+      ],
+      "worked_examples_reviewed": 5,
+      "exercise_solutions_reviewed": 10,
+      "groups": [
+        "all baseline output fields versus independent dated cash and Arrow-price constructions",
+        "financial interventions with invariant neighboring cases and explicit boundary behavior",
+        "all determinate exercise and retention values; 70-digit proportional-payout calculation; proof and critique separately reviewed",
+        "explicit malformed, precision, dimensional, signed-position, probability, and positive-accumulation domain rejections",
+        "isolated five-file normal and optimized CLI with baseline and changed contracts; strict JSON failures preserve destinations",
+        "HTML package, source-record scope, four-file integrity, eight author hashes, and nine peer review bindings"
+      ],
+      "limits": "Separate machine-assisted peer review; numerical tests support implementation checks, not proofs or market authentication. Existing dated source body-verification records reused; no independent human certification or visual UI QA."
+    },
+    "v10-c06": {
+      "chapter": "v10-c06",
+      "status": "passed",
+      "author_package_ready": true,
+      "comparisons": 13714,
+      "count_definition": "Actual equality-check calls across independent prices/hedges, full paths, exercise numbers, invariant records, CLI, structure and integrity; require-style qualitative gates are additional and are not counted.",
+      "invalid_inputs_rejected": 87,
+      "financial_intervention_runs": 12,
+      "interventions": [
+        "physical probability changes frequencies only",
+        "zero fee eliminates all intervention shortfalls",
+        "one period has no interior stock-trade fee",
+        "exercise 5 strike 88 changes adapted put policy value",
+        "exercise 4 fresh two-period zero-rate market",
+        "zero strike exposes exercise ties",
+        "negative-rate multi-period call exercise",
+        "four-period full-history stopping policy enumeration",
+        "six-period domain and supermartingale policy certificate",
+        "uniform threefold monetary scale",
+        "remove payout while retaining stock total gains",
+        "larger known payout shifts total-gain probability"
+      ],
+      "full_history_stopping_policy_counts_by_horizon": {
+        "0": 1,
+        "1": 2,
+        "2": 5,
+        "3": 26,
+        "4": 677
+      },
+      "six_period_certificate": "All node values dominate exercise and discounted continuation; the reported adapted policy attains root value by an independent sum over all 64 paths.",
+      "worked_examples_reviewed": 5,
+      "exercise_solutions_reviewed": 10,
+      "groups": [
+        "all baseline nodes and hedges: direct binomial terminal sums, determinant replicas, independently enumerated adapted policies, and complete funded path ledgers",
+        "financial interventions: physical versus pricing law, fee timing, strike, scale, rate/dividend boundaries, exhaustive policies and six-period certificates",
+        "all determinate manuscript problems, funded parity trade, hindsight counterexample, butterfly cash, fixed-strategy reserve and retention; general proofs/open critique reviewed analytically",
+        "numeric grammar, bounded domain, strictly positive physical/pricing support, singular replicas, fees and dividend-right rejection cases",
+        "normal and optimized standalone CLI from unrelated directories; baseline/changed contracts, both output routes and strict-JSON destination preservation",
+        "HTML exercise/solution structure and, after author freeze, source scope, manifest and eight/nine-payload review hashes"
+      ],
+      "limitations": "Separate machine-assisted peer audit. General proofs are reviewed analytically, not proved by finite test cases. No human certification, empirical contract authentication or visual UI QA."
+    },
+    "v10-c07": {
+      "status": "passed",
+      "independent_comparisons": 739,
+      "invalid_inputs_rejected": 41,
+      "worked_examples": 4,
+      "solved_exercises": 10,
+      "groups": [
+        "independent quadratic-form path/moment calculations, compressed cubature, Gaussian quadrature, generator finite differences and norm/correlation MSE",
+        "all determinate exercise and retention arithmetic; ten proof/open solutions separately reviewed",
+        "path-sign, law invariance, maximum cubature, signed feedback/covariance, zero diffusion, tiny coefficients and n4096 interventions",
+        "independent malformed/domain/provenance rejection probes",
+        "manifest and portable explicit/default normal/-O CLI with strict JSON and no rejected output",
+        "static package, corrected flat downloads, author and peer nine-file bindings"
+      ],
+      "limits": "Separate-agent numerical/editorial review, not formal proof verification, external human certification, empirical validation or visual UI QA."
+    },
+    "v10-c08": {
+      "chapter": "v10-c08",
+      "status": "passed",
+      "peer_comparisons": 595,
+      "invalid_inputs_rejected": 38,
+      "author_files_bound": 9,
+      "solved_exercises_reviewed": 12,
+      "max_price_difference_from_decimal_oracle": 1.1368683772161603e-13,
+      "max_payoff_quadrature_refinement_difference": 2.2737367544323206e-13,
+      "groups": [
+        "independent 110-digit normal integral and Gauss-Legendre payoff integration, Greeks, density moments and complete funded ledger",
+        "financial interventions: P-only forecast, dividend cash, funding rate, volatility, zero risk premium, signed hedge loss and bounded-domain extremes",
+        "underflow and maximal representable tilt, deterministic/absorbing/expiry semantics and remaining exercise/retention anchors",
+        "independent malformed, financial-invariant and bounded-domain rejection cases",
+        "portable isolated normal/optimized quiet API and explicit CLI; strict duplicate/nonfinite JSON",
+        "exact frozen author payloads, manifest/author bindings and twelve complete prompt/solution entries"
+      ],
+      "limits": "Independent machine-assisted peer review, not external human certification. Numerical checks do not prove stochastic theorems or empirical model adequacy."
     }
   },
   "errors": [],

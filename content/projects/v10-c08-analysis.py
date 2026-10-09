@@ -2,6 +2,10 @@
 
 run(data) is quiet, validates the complete input, and returns JSON-safe numbers.
 This program illustrates stated formulae; the manuscript proves their conditions.
+Amounts are currency units per option/share; times are years. Drift/rate/yield
+are annual decimal rates, volatility is per square-root year. physical_drift
+is the ex-dividend price drift, not the total expected return. theta_call/put
+mean calendar-time derivatives with fixed maturity. No expiry Greek is reported.
 """
 from __future__ import annotations
 
@@ -162,11 +166,18 @@ def run(data):
     for ident, q in parsed.items():
         s,k,r,d,v,t,mu = (float(q[n]) for n in ("spot","strike","rate","dividend_yield","volatility","maturity","physical_drift"))
         ans = price(s,k,r,d,v,t)
+        scale = 1.0 + ans["prepaid_stock"] + ans["discounted_strike"]
+        require(ans["call_lower_bound"]-1e-12*scale <= ans["call"] <= ans["call_upper_bound"]+1e-12*scale,
+                "numerical call price violates model bounds")
+        require(ans["put_lower_bound"]-1e-12*scale <= ans["put"] <= ans["put_upper_bound"]+1e-12*scale,
+                "numerical put price violates model bounds")
+        parity = ans["call"]-ans["put"]-ans["prepaid_stock"]+ans["discounted_strike"]
+        require(abs(parity) <= 1e-12*scale, "numerical put-call parity failed")
         if t==0 or s==0 or v==0:
             pp = ans["probability_Q_itm"]
         else:
             pp = cdf((math.log(s/k)+(mu-0.5*v*v)*t)/(v*math.sqrt(t)))
-        ans.update(probability_P_itm=pp, expected_terminal_stock_P=s*math.exp(mu*t),
+        ans.update(put_call_parity_residual=parity, probability_P_itm=pp, expected_terminal_stock_P=s*math.exp(mu*t),
                    expected_terminal_stock_Q=s*math.exp((r-d)*t),
                    expected_discounted_ex_price_Q=s*math.exp(-d*t),
                    expected_discounted_dividends_Q=s*(-math.expm1(-d*t)),
@@ -180,8 +191,10 @@ def run(data):
     qincr = [float(w)+lam*float(h) for h,w in zip(intervals,increments)]
     logp = sum(-0.5*math.log(2*math.pi*float(h))-float(w)**2/(2*float(h)) for h,w in zip(intervals,increments))
     logq = sum(-0.5*math.log(2*math.pi*float(h))-(float(w)+lam*float(h))**2/(2*float(h)) for h,w in zip(intervals,increments))
+    density = math.exp(logz)
     tilt = {"case_id":data["tilt"]["case_id"], "lambda":lam, "log_density_Z":logz,
-            "density_Z":math.exp(logz), "Brownian_Q_increments_on_same_path":qincr,
+            "density_Z":density if density > 0 else None, "density_Z_underflow":density == 0,
+            "Brownian_Q_increments_on_same_path":qincr,
             "mean_WP_terminal_under_Q":-lam*t, "variance_WP_terminal_under_Q":t,
             "log_joint_P_density":logp,"log_joint_Q_density_of_WP":logq,
             "log_density_factorization_residual":logq-logp-logz,

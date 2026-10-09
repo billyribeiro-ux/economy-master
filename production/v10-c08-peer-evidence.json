@@ -1,0 +1,127 @@
+{
+  "chapter": "v10-c08",
+  "date": "2026-10-09",
+  "reviewer": "ito_author, separate specialist peer of bs_author",
+  "status": "passed",
+  "runs": [
+    {
+      "command": "python3 scripts/check_v10_c08_peer.py",
+      "returncode": 0,
+      "stderr_empty": true,
+      "summary": {
+        "chapter": "v10-c08",
+        "status": "passed",
+        "peer_comparisons": 595,
+        "invalid_inputs_rejected": 38,
+        "author_files_bound": 9,
+        "solved_exercises_reviewed": 12,
+        "max_price_difference_from_decimal_oracle": 1.1368683772161603e-13,
+        "max_payoff_quadrature_refinement_difference": 2.2737367544323206e-13,
+        "groups": [
+          "independent 110-digit normal integral and Gauss-Legendre payoff integration, Greeks, density moments and complete funded ledger",
+          "financial interventions: P-only forecast, dividend cash, funding rate, volatility, zero risk premium, signed hedge loss and bounded-domain extremes",
+          "underflow and maximal representable tilt, deterministic/absorbing/expiry semantics and remaining exercise/retention anchors",
+          "independent malformed, financial-invariant and bounded-domain rejection cases",
+          "portable isolated normal/optimized quiet API and explicit CLI; strict duplicate/nonfinite JSON",
+          "exact frozen author payloads, manifest/author bindings and twelve complete prompt/solution entries"
+        ],
+        "limits": "Independent machine-assisted peer review, not external human certification. Numerical checks do not prove stochastic theorems or empirical model adequacy."
+      }
+    },
+    {
+      "command": "python3 -O scripts/check_v10_c08_peer.py",
+      "returncode": 0,
+      "stderr_empty": true,
+      "summary": {
+        "chapter": "v10-c08",
+        "status": "passed",
+        "peer_comparisons": 595,
+        "invalid_inputs_rejected": 38,
+        "author_files_bound": 9,
+        "solved_exercises_reviewed": 12,
+        "max_price_difference_from_decimal_oracle": 1.1368683772161603e-13,
+        "max_payoff_quadrature_refinement_difference": 2.2737367544323206e-13,
+        "groups": [
+          "independent 110-digit normal integral and Gauss-Legendre payoff integration, Greeks, density moments and complete funded ledger",
+          "financial interventions: P-only forecast, dividend cash, funding rate, volatility, zero risk premium, signed hedge loss and bounded-domain extremes",
+          "underflow and maximal representable tilt, deterministic/absorbing/expiry semantics and remaining exercise/retention anchors",
+          "independent malformed, financial-invariant and bounded-domain rejection cases",
+          "portable isolated normal/optimized quiet API and explicit CLI; strict duplicate/nonfinite JSON",
+          "exact frozen author payloads, manifest/author bindings and twelve complete prompt/solution entries"
+        ],
+        "limits": "Independent machine-assisted peer review, not external human certification. Numerical checks do not prove stochastic theorems or empirical model adequacy."
+      }
+    }
+  ],
+  "quiet_check_api": {
+    "stdout": "",
+    "stderr": "",
+    "json_safe": true,
+    "summary_matches_cli": true
+  },
+  "oracle_contract": {
+    "price_oracle": "Gaussian power-series integration using 110-digit Decimal working precision, independent of model erfc; tails beyond |z|14 omitted with normal tail <8e-45, giving far sub-tolerance price error over the bounded input domain. This is not a promise of 110 correct final digits.",
+    "second_price_oracle": "24-point Gauss-Legendre rules with 8 and16 panels applied directly to positive lognormal payoff integrals, separately split at the strike; standardized-normal cutoff12 and bounded volatility-horizon width. Rule normalization/second moment and refinement comparisons checked.",
+    "greeks": "Five-point finite differences of the independent Decimal prices for spot and remaining-time derivatives; calendar theta is minus remaining-time derivative. Compared both calls and puts and reconstructed PDE with the independent derivatives.",
+    "cash": "High-precision reinvested dividend share counts and bank accrual, independently differentiated target deltas, purchase cash and final liquidation at every date.",
+    "measure": "Independent interval log density ratios and integrated tilted normal mass/first/second moments; lambda0 and log-density -1050/544.32 test underflow and representable extremes.",
+    "tolerances": "Prices:2e-9 absolute plus1e-10 relative against Decimal; direct payoff quadrature2e-8 absolute plus1e-10 relative; sensitivities2e-8 for delta/gamma and2e-7 for theta; independent PDE residual3e-7; cash4e-8. Normal/optimized same-environment output equality separately checked."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c08.html",
+      "bytes": 54260,
+      "sha256": "5083768f254fd6ed919289565288d26556214f94d5de2a0807cb80308a737c71"
+    },
+    {
+      "path": "content/projects/v10-c08-inputs.json",
+      "bytes": 1621,
+      "sha256": "5672a6669b9497d32deb74abc840dc64cca4b5a5b780807392d7f8b1e953b751"
+    },
+    {
+      "path": "content/projects/v10-c08-analysis.py",
+      "bytes": 13284,
+      "sha256": "30c6aa8c99407345b1edfc362549a28911286acf53799c9904bdd23d8d28a50b"
+    },
+    {
+      "path": "content/projects/v10-c08-output.json",
+      "bytes": 11362,
+      "sha256": "f90dffc5b55ec6bacd89b6cfcba53696cc335ace8fbd0b2023cc3bdd10f5fec1"
+    },
+    {
+      "path": "content/projects/v10-c08-manifest.json",
+      "bytes": 672,
+      "sha256": "087efaae234228575182bd18bf7c935490b8fca1604b4d141c2cc29c167c5e4d"
+    },
+    {
+      "path": "content/projects/v10-c08-README.txt",
+      "bytes": 13170,
+      "sha256": "ee319fce21a44c2268dd5ec5751735fe430556fd273f4fc1740bb9eaf3ce9074"
+    },
+    {
+      "path": "scripts/check_v10_c08.py",
+      "bytes": 30608,
+      "sha256": "2d8c359d08bc4dc256f56f1bb0b113c6a77ed87299f1cfea2da2ece311387c86"
+    },
+    {
+      "path": "content/reviews/v10-c08-author.json",
+      "bytes": 11967,
+      "sha256": "fa37ab5b70f2f553c83d7df5b1250a5db9a6aabc37e960637e9b1591c0ee0b83"
+    },
+    {
+      "path": "content/reviews/v10-c08-sources.json",
+      "bytes": 3386,
+      "sha256": "3c5ecfc3ec127b7231a15878fbc110d7705d932c8fdab30d778ee4d3469f5902"
+    }
+  ],
+  "checker": {
+    "path": "scripts/check_v10_c08_peer.py",
+    "bytes": 26035,
+    "sha256": "e4bca624727f5428adc913e5c18a68b77874a2292711e5ac2891ea5c3e8bd268"
+  },
+  "limits": [
+    "Separate machine-assisted peer audit, not external human certification.",
+    "No stochastic theorem is certified by numerical tests; proofs and all exact prompts were read and independently reasoned through.",
+    "No current market observation, executed financing or empirical-model claim is verified; whole-edition visual/mobile/print checks remain separate."
+  ]
+}

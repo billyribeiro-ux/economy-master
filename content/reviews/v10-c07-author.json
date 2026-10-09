@@ -1,0 +1,152 @@
+{
+  "chapter": "v10-c07",
+  "date": "2026-10-09",
+  "status": "author-review-complete; separate peer/coordinator gate pending",
+  "reviewer": "Ito specialist author; independent numerical formulations and an editorial proof/prompt pass, not independent external human certification",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Four worked examples, ten complete solved exercises including proof and research/numerical critique, answered teach-back/delayed retention, three scoped primary sources and a portable exact-rational/analytical-moment lab.",
+  "preserved_prior_work": "Original v10-c07-inputs.json, analysis.py and output.json remain byte-for-byte unchanged from the resumed assignment. Their finite authored paths, degree-four cubature and separate Gaussian GBM/Euler moments were independently audited and retained.",
+  "proof_audit": [
+    "Brownian increments are independent of the named filtration, with explicit normal mean/variance; Brownian existence and the usual augmentation theorem are explicitly invoked, not proven by a simulation.",
+    "Quadratic variation proved in L2 for deterministic shrinking partitions using Var Q=2 sum h_i²; almost-sure convergence established for dyadic grids with Chebyshev/Borel-Cantelli. Finite total variation contradiction uses that probability-one pathwise dyadic set. No claim for every path-dependent partition.",
+    "Elementary Ito isometry and martingale conditional timing are proved with bounded coefficients; truncation/completion extend unbounded L2 cases. Predictable-L2 density proved via generator indicators, clipping, finite maxima and finite-measure countable-union convergence. L2 equality classes and predictable versions are explicit.",
+    "Continuous integral version proved using a finite-time first-crossing proof of Doob L2 maximal inequality followed by uniform subsequence convergence; stopped integral compatibility justified by dyadic approximation and isometry. Local zero-drift processes are not silently assigned global zero expectations.",
+    "Scalar C1,2 Ito formula proved for continuous adapted coefficients: frozen diffusion remainder controlled by the isometry, squared finite variation/cross terms by Cauchy-Schwarz, weighted Brownian square errors by martingale orthogonality, and time/spatial Taylor remainders by uniform continuity and tight quadratic sums. Rational-time extension makes the identity simultaneous.",
+    "Localization explicitly allows one stopped-coefficient jump and immediate stops for unbounded initial random coefficients; zero-time coefficients can be set to zero without altering integrals. Open-state domains and t<T smoothness are stated. General predictable-coefficient/semimartingale Ito is not claimed proved.",
+    "Product/cross variation obtained by polarization with a shared Brownian driver. Portfolio value identity is distinguished from the extra self-financing gains condition.",
+    "GBM exponential directly verified before applying log; inverse integrating factor proves uniqueness for any continuous competing solution without assuming positivity. Zero initial price and zero volatility handled separately. Gaussian MGF derives real moments, conditional moments and finite-horizon supremum bound.",
+    "Euler coupled cross moment derived via the normal MGF derivative, with bias versus MSE units separated. Finite path/cubature, Gaussian analytical expectations and polygon interpolation are explicitly different objects."
+  ],
+  "prompt_audit": [
+    {
+      "exercise": 1,
+      "review": "Compared anticipated W1 and predictable Wt domains; naive expected hindsight gain exactly1 versus zero-mean legitimate integral."
+    },
+    {
+      "exercise": 2,
+      "review": "Nonuniform variance13/16 and MSE13/64; Cauchy equality condition gives unique equal-length minimum and exact convergence modes."
+    },
+    {
+      "exercise": 3,
+      "review": "Deterministic normal variance7/3 and feedback variance17/4/fourth2217/16 independently recomputed with Gaussian polynomial integration; degenerate zero included."
+    },
+    {
+      "exercise": 4,
+      "review": "Cross terms condition at later starting sigma-algebra; diagonal conditional fourth moment; future-square weight fails both timing and boundedness and has explicit nonzero mean."
+    },
+    {
+      "exercise": 5,
+      "review": "Product with deterministic time gives integration by parts; mean, variance T³/3 and covariance T²/2 from polarization under finite-H2 conditions."
+    },
+    {
+      "exercise": 6,
+      "review": "New discounted-square/product coefficients, Gaussian expected square/product and cross variation recomputed; common-shock covariance not dropped."
+    },
+    {
+      "exercise": 7,
+      "review": "New GBM log/mean/median/inverse moments computed and sign logic checked; uniqueness proof does not presuppose competitor positivity."
+    },
+    {
+      "exercise": 8,
+      "review": "Coupled moment derivation and n4 MSE independently checked by one-step moment recurrences; sigma0 gives deterministic bias square and double-zero case exact."
+    },
+    {
+      "exercise": 9,
+      "review": "Conditional exponential moment proves true L2 martingale before maximal bound; bounded exposure leads to explicit H2 norm bound, while locally bounded exposure still needs global integrability."
+    },
+    {
+      "exercise": 10,
+      "review": "All five report claims addressed; rubric totals10 and requires quantitative evidence, reproducibility and a precise theory/numerics/empirics boundary."
+    }
+  ],
+  "numerical_validation": {
+    "status": "passed",
+    "independent_comparisons": 668,
+    "invalid_inputs_rejected": 51,
+    "worked_examples": 4,
+    "solved_exercises": 10,
+    "methods": [
+      "exact rational finite ledger reconstruction",
+      "independent Gaussian polynomial expectation for cubature and feedback moments",
+      "one-step high-precision moment recurrences for coupled Euler and exact GBM",
+      "negative-exposure/drift and zero-diffusion/decay/motion interventions",
+      "strict-JSON and bounded-domain rejection",
+      "isolated explicit --input/--output normal and optimized CLI",
+      "balanced static fragment and exact source/payload binding"
+    ],
+    "limits": "Finite computational checks illustrate/check arithmetic, not Brownian existence, asymptotic proofs or empirical model adequacy."
+  },
+  "resolved_findings": [
+    {
+      "finding": "A general predictable domain should not be justified by a source regularization argument that assumes Riemann-integrable paths.",
+      "repair": "Proved full predictable-L2 density independently with measurable indicator approximation; source scope records its additional premise."
+    },
+    {
+      "finding": "Stopping a continuous random coefficient at a level can stop immediately, leaving its time-zero value outside a deterministic bound.",
+      "repair": "Specified immediate stops and the harmless zero-time coefficient modification in the localization proof."
+    },
+    {
+      "finding": "Five lab hrefs had a projects/ directory prefix while generated reader project assets are flat.",
+      "repair": "Coordinator changed exactly those five hrefs to basenames before acceptance; manuscript binding refreshed. No proof, problem, lab code or data change."
+    }
+  ],
+  "open_findings": [],
+  "pending_gates": [
+    "Separate specialist/coordinator audit and dependency-order acceptance remain root responsibilities.",
+    "Whole-edition visual/mobile/keyboard/print UI QA is not performed or claimed by this package."
+  ],
+  "limitations": [
+    "No general Girsanov, martingale representation, nonlinear SDE existence theorem or full semimartingale Ito theorem is claimed proved.",
+    "Synthetic observations and finite cubature do not authenticate Brownian market dynamics, tail behavior or continuous frictionless trading.",
+    "Author review is not external human certification."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c07.html",
+      "bytes": 52789,
+      "sha256": "84f94707f73cadf2a085d05e297fadae4c347e8abd69d2651edcd06bd946c6a3"
+    },
+    {
+      "path": "content/projects/v10-c07-inputs.json",
+      "bytes": 1362,
+      "sha256": "cb4382053785607b15fa9d57a147eb2f3bb1d10889651f3600214e8c628d6f82"
+    },
+    {
+      "path": "content/projects/v10-c07-analysis.py",
+      "bytes": 11771,
+      "sha256": "93f1f0e77dd21cc6bde4455ccb624be5a636dca28f554a816552707d5be24b04"
+    },
+    {
+      "path": "content/projects/v10-c07-output.json",
+      "bytes": 18600,
+      "sha256": "1bceb8677fe2d5c19c6ccbd2e782579957d7f7a7653fff64acce4ad635bc1987"
+    },
+    {
+      "path": "content/projects/v10-c07-manifest.json",
+      "bytes": 672,
+      "sha256": "6015c1058135ccd933f36ed7373728ee1071c0a83070bd6a980913e529280bd9"
+    },
+    {
+      "path": "content/projects/v10-c07-README.txt",
+      "bytes": 11205,
+      "sha256": "a44c10ccca4f6fb43c328aa1c28623d8fe5539d435c25688ff97584715d2f7a9"
+    },
+    {
+      "path": "scripts/check_v10_c07.py",
+      "bytes": 27587,
+      "sha256": "ac8a5605740c26bb32a6bbf6aae8d45b4175ef9b3a01d663446cafd313c27f48"
+    },
+    {
+      "path": "content/reviews/v10-c07-sources.json",
+      "bytes": 3595,
+      "sha256": "6bd328c13b00e98d11bb3537d59ed945a0a922e6602c2aa6232ef51c32dfcb91"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "batch": "v10-middle-resumed",
+  "date": "2026-10-09",
+  "previous_goal_turn": "progress: complete c05 manuscript/lab authored, audited, reviewed edition privately published, offline refreshed; no terminal completion claimed.",
+  "authorization": "MASTER_PLAN.md / PRODUCTION_PLAN.md Parallel production records the user explicit authorization and directs use of up to three specialists; the active user goal expressly continues work under that plan. Prior agent handles are absent; preserve their partial files and exact boundaries in newly bounded assignments rather than treating stale handles as an editorial blocker.",
+  "integration_owner": "root alone edits canonical curriculum/sources/checkpoint/shared build/verification/hosting; root owns c06 manuscript and lab continuation.",
+  "common_contract": {
+    "substance": "Original graduate chapter, at least three substantive worked examples (prefer four where useful), at least ten original exercises including proof/derivation and research/model critique, complete solutions and open-response rubrics, answered teach-back and delayed retention. No summaries masquerading as chapters.",
+    "format": "Static HTML fragment with h2 sections and existing .equation/.worked/.solutions/.exercises classes; one ordered exercises list and complete ordered solutions list. Reuse flat links; sources.html#id citations. No full-document wrapper or framework.",
+    "lab": "Standard-library Python only, quiet import and run(data), deterministic strict JSON, explicit --input/--output CLI, finite bounded input domain with bool/nonfinite rejection and meaningful financial invariants. Full original inputs/output, standalone README and four-payload SHA256 manifest. Exact fractions where appropriate; numerical tolerances and randomness/analytic anchors explicit. Test normal and -O portable execution.",
+    "checker": "Quiet check() returning JSON-safe summary. Independent calculations, justified comparisons and meaningful financial/domain interventions; do not treat saved output as the sole oracle. No fabricated test counts or proof-by-simulation.",
+    "sources": "Reuse exact stable source records when useful. For unresolved specialist methods browse primary actual bodies only, record title/url/use/checked/verification and inspected scope. Source proposals only; root merges. Do not copy source examples or exercises.",
+    "review": "Read/solve every prompt; proof hypotheses and numerical cases independently checked. Author JSON binds all eight nonself payload hashes. Freeze nine files and report findings, limitations and hashes. Separate peer and coordinator review before acceptance in c05→c06→c07→c08 order.",
+    "boundaries": "Only assigned paths; no additional agents, publication, canonical/shared files, package installations or external messages. Report concrete findings before freezing payloads."
+  },
+  "assignments": [
+    {
+      "owner": "c05_review",
+      "task": "Independently audit the complete c05 manuscript, every proof/exercise and portable lab. May write only the following reviewer artifacts. Do not edit c05 author files; send necessary repairs to root. After review, await further scoped assignment.",
+      "owned_paths": [
+        "content/reviews/v10-c05-peer.json",
+        "scripts/check_v10_c05_peer.py",
+        "production/v10-c05-peer-evidence.json"
+      ],
+      "source_assignment": "production/v10-middle-assignments.json",
+      "review_requirements": "Read actual manuscript/model/README and solve prompts. Independent numerical oracles plus financial interventions and input boundaries; do not use saved output as sole oracle. Bind all nine author payload hashes. Explicitly distinguish machine-assisted review from human certification."
+    },
+    {
+      "chapter": "v10-c07",
+      "owner": "ito_author",
+      "title": "Brownian motion and Ito calculus",
+      "canonical_spec": {
+        "id": "v10-c07",
+        "number": 7,
+        "title": "Brownian motion and Ito calculus",
+        "outcome": "Derive stochastic differentials and explain quadratic variation.",
+        "coverage": [
+          "Filtrations",
+          "Brownian motion",
+          "stochastic integral",
+          "Ito lemma",
+          "SDE",
+          "drift-diffusion"
+        ],
+        "prerequisites": [
+          "v10-c06"
+        ],
+        "level": "Graduate",
+        "status": "planned",
+        "manuscript": "chapters/v10-c07.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses",
+          "quantecon-python"
+        ],
+        "required_worked_examples": 3,
+        "required_exercises": 10,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "prerequisite_and_scope_contract": "Use accepted v02 ordinary calculus/ODE and v03 probability/measure/stochastic foundations plus agreed finite binomial/self-financing c06. Define filtered information, adapted/predictable integrands, Brownian independence/variance/continuity and stochastic integral construction. Prove quadratic variation with stated convergence and distinguish path variation; derive simple-process Itô isometry/martingale and completion within a clearly stated domain; prove a substantive one-dimensional Itô formula under explicit regularity, controlling remainder/cross terms rather than writing (dW)^2=dt as a proof. State any deeper foundational existence/density theorem honestly if not proved. Derive product/cross-variation, explicit GBM exponential solution and log formula, integral W dW, drift versus diffusion, and a carefully scoped SDE existence/uniqueness result or directly verify explicit cases. No general Girsanov assumption or future Black–Scholes formula. Exercises must use taught tools, including proof and research/numerical critique. Numerical Brownian checks are illustrations, not proof. Supply exact expectation/variance or analytical error comparisons plus reproducible original paths/counterexamples.",
+      "owned_paths": [
+        "content/chapters/v10-c07.html",
+        "content/projects/v10-c07-inputs.json",
+        "content/projects/v10-c07-analysis.py",
+        "content/projects/v10-c07-output.json",
+        "content/projects/v10-c07-manifest.json",
+        "content/projects/v10-c07-README.txt",
+        "scripts/check_v10_c07.py",
+        "content/reviews/v10-c07-author.json",
+        "content/reviews/v10-c07-sources.json"
+      ],
+      "state": "resume partial lab; manuscript and full supporting package required",
+      "preserved_payloads": [
+        {
+          "path": "content/projects/v10-c07-inputs.json",
+          "sha256": "cb4382053785607b15fa9d57a147eb2f3bb1d10889651f3600214e8c628d6f82"
+        },
+        {
+          "path": "content/projects/v10-c07-analysis.py",
+          "sha256": "93f1f0e77dd21cc6bde4455ccb624be5a636dca28f554a816552707d5be24b04"
+        },
+        {
+          "path": "content/projects/v10-c07-output.json",
+          "sha256": "1bceb8677fe2d5c19c6ccbd2e782579957d7f7a7653fff64acce4ad635bc1987"
+        }
+      ]
+    },
+    {
+      "chapter": "v10-c08",
+      "owner": "bs_author",
+      "title": "Black-Scholes and risk-neutral valuation",
+      "canonical_spec": {
+        "id": "v10-c08",
+        "number": 8,
+        "title": "Black-Scholes and risk-neutral valuation",
+        "outcome": "Derive the pricing equation and distinguish a model's assumptions from market conventions.",
+        "coverage": [
+          "Replication PDE",
+          "risk-neutral measure",
+          "Black-Scholes formula",
+          "dividends",
+          "boundaries"
+        ],
+        "prerequisites": [
+          "v10-c07"
+        ],
+        "level": "Graduate",
+        "status": "planned",
+        "manuscript": "chapters/v10-c08.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses",
+          "quantecon-python"
+        ],
+        "required_worked_examples": 3,
+        "required_exercises": 10,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "prerequisite_and_scope_contract": "Depend on c07 contract: Brownian definition, Itô integral/isometry, scalar C1,2 Itô formula under explicit localization/regularity, product rule, explicit dS=mu*Sdt+sigma*SdW and log/GBM solution. Coordinate these assumptions directly with c07 author. Derive self-financing replication PDE with continuous proportional dividend yield and stock total-gain accounting; avoid dropping S*dDelta terms without a financing argument. Construct the constant market-price-of-risk finite-horizon equivalent measure explicitly via exponential normal density and tilted independent increments (prove this special case if general Girsanov not available). Explain discounted total-gain martingale, P versus Q, derive normal call/put formulas from truncated lognormal expectations, verify PDE/payoff/boundaries and uniqueness within declared growth/admissibility class. Treat sigma=0,T=0,S=0 and negative rates carefully; discrete dividends are a different contract. Explain convention/calibration versus empirical truth. No claim of universally exact market hedging.",
+      "owned_paths": [
+        "content/chapters/v10-c08.html",
+        "content/projects/v10-c08-inputs.json",
+        "content/projects/v10-c08-analysis.py",
+        "content/projects/v10-c08-output.json",
+        "content/projects/v10-c08-manifest.json",
+        "content/projects/v10-c08-README.txt",
+        "scripts/check_v10_c08.py",
+        "content/reviews/v10-c08-author.json",
+        "content/reviews/v10-c08-sources.json"
+      ],
+      "state": "resume partial lab; manuscript and full supporting package required",
+      "preserved_payloads": [
+        {
+          "path": "content/projects/v10-c08-inputs.json",
+          "sha256": "91d0d5d0d20e6e5e5ed7987fbe2654d11e6ed9543f92873c67dee4cb3f882f39"
+        },
+        {
+          "path": "content/projects/v10-c08-analysis.py",
+          "sha256": "5f247f96f5c0a49b3bacc52a7f5800a8dd5d3ea8f060e7734725c6185a62e372"
+        },
+        {
+          "path": "content/projects/v10-c08-output.json",
+          "sha256": "1eb6606b456b1fae724aac57ced1ee39c6bab89ac4daa6a32ded30ab75927fe5"
+        }
+      ]
+    },
+    {
+      "owner": "c05_review",
+      "task": "After c05 freeze, independently review c06 complete manuscript and supporting package; root is completing README/checker/source/manifest and will signal final freeze. Begin with proofs/prompts/model; no writes to author files.",
+      "owned_paths": [
+        "content/reviews/v10-c06-peer.json",
+        "scripts/check_v10_c06_peer.py",
+        "production/v10-c06-peer-evidence.json"
+      ],
+      "review_requirements": "All10 prompts and proofs, funded self-financing, adapted early exercise, negative-rate/dividend counterexamples, exact portable code and meaningful independent interventions. Hash9 final author files after root freeze; machine-assisted review only. No canonical/shared/author edits or extra agents."
+    },
+    {
+      "owner": "ito_author",
+      "chapter": "v10-c08",
+      "task": "After freezing your own author package, independently review the other complete package. No edits to either author package during review; report repairs to root.",
+      "owned_paths": [
+        "content/reviews/v10-c08-peer.json",
+        "scripts/check_v10_c08_peer.py",
+        "production/v10-c08-peer-evidence.json"
+      ],
+      "review_requirements": "Read every proof and exact exercise prompt/solution; independent numerical oracles and meaningful financial/domain interventions; portable quiet normal/-O behavior; source scope and README contract. Bind final nine author files after author freeze. No canonical/shared/author edits, extra agents or publication. Separate machine-assisted review, not external human certification."
+    },
+    {
+      "owner": "bs_author",
+      "chapter": "v10-c07",
+      "task": "After freezing your own author package, independently review the other complete package. No edits to either author package during review; report repairs to root.",
+      "owned_paths": [
+        "content/reviews/v10-c07-peer.json",
+        "scripts/check_v10_c07_peer.py",
+        "production/v10-c07-peer-evidence.json"
+      ],
+      "review_requirements": "Read every proof and exact exercise prompt/solution; independent numerical oracles and meaningful financial/domain interventions; portable quiet normal/-O behavior; source scope and README contract. Bind final nine author files after author freeze. No canonical/shared/author edits, extra agents or publication. Separate machine-assisted review, not external human certification."
+    }
+  ],
+  "root": {
+    "chapter": "v10-c06",
+    "task": "Resume original partial lab and complete manuscript, source scope, all exercise solutions and checker; coordinate prerequisite contracts and independently audit all submissions."
+  }
+}

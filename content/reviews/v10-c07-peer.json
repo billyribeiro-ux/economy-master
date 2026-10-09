@@ -1,0 +1,215 @@
+{
+  "chapter": "v10-c07",
+  "date": "2026-10-09",
+  "status": "peer-review-complete; coordinator acceptance pending",
+  "reviewer": "bs_author, separate specialist from ito_author; machine-assisted peer review, not external human certification",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Read complete manuscript, all proofs and ten exact exercise prompts/solutions, teach-back/retention, model, full output, README, manifest, checker, source proposals and author review. Independently recomputed mathematical/numerical anchors; all nine final author payloads bound.",
+  "numerical_validation": {
+    "status": "passed",
+    "independent_comparisons": 739,
+    "invalid_inputs_rejected": 41,
+    "worked_examples": 4,
+    "solved_exercises": 10,
+    "groups": [
+      "independent quadratic-form path/moment calculations, compressed cubature, Gaussian quadrature, generator finite differences and norm/correlation MSE",
+      "all determinate exercise and retention arithmetic; ten proof/open solutions separately reviewed",
+      "path-sign, law invariance, maximum cubature, signed feedback/covariance, zero diffusion, tiny coefficients and n4096 interventions",
+      "independent malformed/domain/provenance rejection probes",
+      "manifest and portable explicit/default normal/-O CLI with strict JSON and no rejected output",
+      "static package, corrected flat downloads, author and peer nine-file bindings"
+    ],
+    "limits": "Separate-agent numerical/editorial review, not formal proof verification, external human certification, empirical validation or visual UI QA."
+  },
+  "proof_audit": [
+    {
+      "topic": "Brownian information and quadratic/total variation",
+      "finding": "Pass within declared domain. Independent increments are relative to the full named filtration. Gaussian second/fourth moments give L2 variance 2 sum h_i^2; deterministic shrinking meshes give L2/probability convergence. Dyadic summability plus Borel-Cantelli supplies the a.s. set used to contradict finite variation. Rational subintervals extend infinite variation to every positive interval. Brownian existence/usual augmentation are explicitly invoked, not purportedly proved by paths."
+    },
+    {
+      "topic": "Elementary integrals, isometry, completion and predictable density",
+      "finding": "Pass. Later-increment conditioning eliminates cross terms without falsely assuming holdings independent of earlier increments. Truncation handles unbounded L2 coefficients. Isometry gives a well-defined linear L2-completion and conditional expectation contraction passes martingale identities to the limit. Conditional second moments are justified by event tests. Indicator closure is a sigma-algebra: clipping and finite maxima preserve elementary predictable form on common partitions, countable unions use finite P x dt mass, and predictable simple/truncated approximations complete the identification. Pointwise subsequence limits supply predictable versions modulo P x dt null sets."
+    },
+    {
+      "topic": "Doob L2 bound and continuous version",
+      "finding": "Pass. Finite-grid first-crossing events lie in the crossing information set; conditional Jensen gives the tail inequality. Integration up to R gives the truncated squared maximum and Cauchy-Schwarz yields factor4. Monotone limits first in R then dense nested grids use continuity. Applying this to elementary integral differences gives expected uniform Cauchy control; a summable subsequence yields uniform a.s. convergence to a continuous version agreeing with each fixed-time L2 limit. No circular assumption of continuity for the newly completed integral."
+    },
+    {
+      "topic": "Stopping and local integration",
+      "finding": "Pass. Predictable stopped integrands are obtained by finite-grid stops and dyadic approximation from above. Isometry plus continuous integral paths identifies stopped gains. Accumulated-square thresholds make stopped H2 norms finite and compatible. Local zero-drift integrals are not assigned an unconditional zero mean without further integrability."
+    },
+    {
+      "topic": "Ito increment and remainder proof",
+      "finding": "Pass for the stated continuous-coefficient C1,2 class. Frozen diffusion error sums vanish in L1 by isometry and bounded dominated convergence. Squared finite-variation increments vanish and Cauchy-Schwarz controls cross terms. Bounded predictable random weights retain orthogonality of centered Brownian squares. Riemann sums identify weighted quadratic variation. Splitting time change at the next state needs only f_t continuity; second spatial Taylor remainders are modulus of continuity times tight squared-increment sums. Linear stochastic sums converge in L2. Rational-time identities plus continuity give simultaneous equality."
+    },
+    {
+      "topic": "Localization and boundary regularity",
+      "finding": "Pass. Compact state/time cutoffs bound derivatives and continuous adapted coefficients. The author explicitly handles an immediate stop caused by an unbounded initial coefficient and changes only time-zero values; stopped coefficients have at most one discontinuity, so dt-a.e. left approximation and bounded dominated convergence remain available. Evaluating the stopped-process formula at t wedge tau stops its time term too. Open-domain exits and U<T for terminal singularity are explicit. No full semimartingale or merely predictable-coefficient Ito theorem is claimed proved."
+    },
+    {
+      "topic": "Product/covariation and financing",
+      "finding": "Pass. Polarization of quadratic sums and scalar-square Ito identities yields integral b*d for common-driver covariation and the product correction. Deterministic finite-variation factors have zero correction. Portfolio marked value is distinguished from self-financing trading gains; the latter is an additional cash restriction."
+    },
+    {
+      "topic": "GBM existence, pathwise uniqueness and moments",
+      "finding": "Pass. Explicit exponential is verified with Ito before taking logs. The positive integrating factor is defined from the explicit exponential, so multiplying any competing continuous solution does not presuppose that competitor is positive. Drift and diffusion cancel including cross variation. Log formula is localized away from zero. Gaussian MGF gives real and conditional moments; the exponential drift-adjusted process is a true L2 martingale before applying Doob. Zero initial price, zero diffusion and negative initial sign are treated separately; only the explicit linear SDE receives a uniqueness claim."
+    },
+    {
+      "topic": "Euler/cubature interpretation",
+      "finding": "Pass. One-step exponential-normal MGF differentiation gives the shared exact/Euler cross moment. Its product across independent increments yields the stated MSE and bias with different units. Three-point cubature matches degree-four moments only and is separated from Gaussian exponential moments. Fixed polygon refinement is explicitly not new Brownian information. Negative Euler values are retained as a scheme failure rather than clipped."
+    }
+  ],
+  "prompt_audit": [
+    {
+      "exercise": 1,
+      "verdict": "pass",
+      "solution_check": "W_t has H2 norm squared1/2 and integral(W1^2-1)/2 of mean0. Constant hindsight W1 has finite norm squared1 but fails predictability; naive gain W1^2 has mean1. Enlarging F0 to reveal W1 breaks the stated Brownian independence."
+    },
+    {
+      "exercise": 2,
+      "verdict": "pass",
+      "solution_check": "Squared lengths1/64+9/64+16/64=13/32; Q variance13/16 and left MSE13/64. Cauchy gives unique equal-length minimum2T^2/n and T^2/(2n). L2/probability versus dyadic-a.s. distinction is correct."
+    },
+    {
+      "exercise": 3,
+      "verdict": "pass",
+      "solution_check": "Deterministic variance integral(1+t)^2=7/3. Tensor Gaussian quadrature independently gives adapted variance17/4, fourth2217/16 versus normal867/16; zero integrand is degenerate normal."
+    },
+    {
+      "exercise": 4,
+      "verdict": "pass",
+      "solution_check": "Centered square innovations have conditional mean0 and conditional second moment2h_i^2. Later-time conditioning eliminates weighted cross terms; bounded adapted weights ensure integrability. Future square weight has nonzero mean2h_i^2 and is neither bounded nor known at interval start."
+    },
+    {
+      "exercise": 5,
+      "verdict": "pass",
+      "solution_check": "Product with time has zero quadratic covariation, yielding integration by parts. Isometry gives varianceT^3/3; polarization with integral1dW gives covarianceT^2/2, under finite-horizon deterministic H2 integrands."
+    },
+    {
+      "exercise": 6,
+      "verdict": "pass",
+      "solution_check": "New f=e^-2t x^2 has drift e^-2t(-2X^2-X/2+1/4), diffusion e^-2t X. XY drift X-Y/4+1/8 and diffusion X/4+Y/2. T2 expectation3e^-4/4, product9/4 and bracket1/4 independently integrated."
+    },
+    {
+      "exercise": 7,
+      "verdict": "pass",
+      "solution_check": "Log mean-.12, variance.32, median50e^-.12, mean50e^.04, inverse expectatione^.28/50. Inverse S drift.14 and diffusion-.4. Integrating factor proof establishes competitor positivity as a conclusion rather than assumption."
+    },
+    {
+      "exercise": 8,
+      "verdict": "pass",
+      "solution_check": "Cross moment derived from one-step Gaussian integral; n4 moments and MSE8.044270660 independently reconstructed by norm/correlation identity. At sigma0 MSE is squared deterministic bias; double-zero Euler is exact. Exact GBM stays positive despite negative Euler factors."
+    },
+    {
+      "exercise": 9,
+      "verdict": "pass",
+      "solution_check": "Conditional Gaussian moment proves N=e^-mu t S is L2 martingale; Doob factor4 and deterministic exp2|mu|T bound yield integrable supS^2. Bounded predictable H then produces a true L2 gain martingale. Merely local boundedness does not justify removing expected-value stops."
+    },
+    {
+      "exercise": 10,
+      "verdict": "pass",
+      "solution_check": "All five report errors corrected: finite path versus limit; polygon refinement Q/m; cubature sixth moment9 versus normal15; local versus true martingale expectations; mu>0 versus negative mu-sigma^2/2. Rubric totals10 and requires quantitative examples and distinct theorem/numerical/model/empirical evidence."
+    },
+    {
+      "exercise": "teach-back and retention",
+      "verdict": "pass",
+      "solution_check": "Timing, conditional mean, accumulated second moment, Ito correction and H2 domain answered. Retention variance1, MSE1/4, log drift-.04, and explicit invoked-versus-proved foundations are correct."
+    }
+  ],
+  "source_audit": [
+    {
+      "id": "v10-c07-mit-ito-construction",
+      "url": "https://ocw.mit.edu/courses/15-070j-advanced-stochastic-processes-fall-2013/f538b81ec0daf9c0c374167267c6f411_MIT15_070JF13_Lec15.pdf",
+      "review": "Reopened actual official six-page PDF; inspected elementary integral/isometry/martingale and approximation pages1–5. The source has an explicit Riemann-integrability shortcut for a regularization step; this manuscript instead supplies its own predictable-sigma-algebra density proof, so it does not import that shortcut as full generality."
+    },
+    {
+      "id": "v10-c07-dembo-brownian",
+      "url": "https://adembo.su.domains/stat-310b/lnotes.pdf",
+      "review": "Reopened actual 409-page author PDF; title/date confirmed. Inspected Definition8.3.12 and Exercise8.3.13 Brownian construction route on printed page 310, and Theorem9.2.14/Corollary9.2.16 maximum bounds on printed pages 321–322. Invoked foundational results and separately supplied restricted proofs are honestly distinguished."
+    },
+    {
+      "id": "v10-c07-haugh-diffusions",
+      "url": "https://www.columbia.edu/~mh2078/ContinuousFE/stochastic_calculus.pdf",
+      "review": "Reused actual primary 23-page PDF retrieved during c08 work, with its header/early definitions/integral discussion inspected. Source explicitly adopts an engineering approach omitting technical details; this chapter states its own narrower calculus hypotheses and does not rely on general later pricing/change-of-measure claims. No source examples were copied into the audited exercises."
+    }
+  ],
+  "resolved_findings": [
+    {
+      "id": "c07-flat-download-links",
+      "severity": "medium",
+      "finding": "Five laboratory hrefs used projects/v10-c07-* although reader downloads are flat.",
+      "resolution": "Coordinator changed exactly those five hrefs to basenames and refreshed author binding before peer freeze. Peer HTML check verifies all five flat links and absence of projects/ hrefs.",
+      "chapter_sha256": "84f94707f73cadf2a085d05e297fadae4c347e8abd69d2651edcd06bd946c6a3"
+    }
+  ],
+  "open_findings": [],
+  "evidence": {
+    "path": "production/v10-c07-peer-evidence.json",
+    "sha256": "7cc780fc56cc1ee8bbf21493b8b572f94f35c3087edeab29ad5d520e55d6986c"
+  },
+  "peer_checker": {
+    "path": "scripts/check_v10_c07_peer.py",
+    "bytes": 23282,
+    "sha256": "88e16980d18e06ae2b4ab55ec7a4d536079933096c292ecb5ad3a0e821a76c68"
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c07.html",
+      "bytes": 52789,
+      "sha256": "84f94707f73cadf2a085d05e297fadae4c347e8abd69d2651edcd06bd946c6a3"
+    },
+    {
+      "path": "content/projects/v10-c07-inputs.json",
+      "bytes": 1362,
+      "sha256": "cb4382053785607b15fa9d57a147eb2f3bb1d10889651f3600214e8c628d6f82"
+    },
+    {
+      "path": "content/projects/v10-c07-analysis.py",
+      "bytes": 11771,
+      "sha256": "93f1f0e77dd21cc6bde4455ccb624be5a636dca28f554a816552707d5be24b04"
+    },
+    {
+      "path": "content/projects/v10-c07-output.json",
+      "bytes": 18600,
+      "sha256": "1bceb8677fe2d5c19c6ccbd2e782579957d7f7a7653fff64acce4ad635bc1987"
+    },
+    {
+      "path": "content/projects/v10-c07-manifest.json",
+      "bytes": 672,
+      "sha256": "6015c1058135ccd933f36ed7373728ee1071c0a83070bd6a980913e529280bd9"
+    },
+    {
+      "path": "content/projects/v10-c07-README.txt",
+      "bytes": 11205,
+      "sha256": "a44c10ccca4f6fb43c328aa1c28623d8fe5539d435c25688ff97584715d2f7a9"
+    },
+    {
+      "path": "scripts/check_v10_c07.py",
+      "bytes": 27587,
+      "sha256": "ac8a5605740c26bb32a6bbf6aae8d45b4175ef9b3a01d663446cafd313c27f48"
+    },
+    {
+      "path": "content/reviews/v10-c07-author.json",
+      "bytes": 9441,
+      "sha256": "d6cec25ed999c27235a1c6cf769dbd16d88eec8a8060fed955075c49225a661d"
+    },
+    {
+      "path": "content/reviews/v10-c07-sources.json",
+      "bytes": 3595,
+      "sha256": "6bd328c13b00e98d11bb3537d59ed945a0a922e6602c2aa6232ef51c32dfcb91"
+    }
+  ],
+  "acceptance_recommendation": "Pass the separate peer gate for these exact payloads. Final acceptance remains with root after prerequisite and whole-book integration checks.",
+  "limits": [
+    "Manual mathematical/editorial audit is not formal theorem verification or external human certification.",
+    "No simulation or finite computation validates empirical Brownian dynamics.",
+    "Whole-edition visual/mobile/print/keyboard QA remains separate; coordinator owns dependency acceptance and shared integration."
+  ]
+}
