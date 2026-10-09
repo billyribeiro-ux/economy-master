@@ -1,0 +1,120 @@
+{
+  "chapter": "v14-c01",
+  "date": "2026-10-09",
+  "reviewer": "v13_b_peer",
+  "status": "passed",
+  "payload_bindings": [
+    {
+      "path": "content/chapters/v14-c01.html",
+      "bytes": 60811,
+      "sha256": "256718534d9e61034b5ece644f8240884eb63f91e6362506494cffc76bd6a099"
+    },
+    {
+      "path": "scripts/check_v14_c01.py",
+      "bytes": 28491,
+      "sha256": "1b1253328886c154179c318f2442af46b9a0b1e1c873e6e52789994a016d0caf"
+    },
+    {
+      "path": "content/reviews/v14-c01-sources.json",
+      "bytes": 6301,
+      "sha256": "fc1474bb7bb522311fee625ed3edc064792786a4c07e32c16178e360b734554e"
+    },
+    {
+      "path": "content/reviews/v14-c01-author.json",
+      "bytes": 10493,
+      "sha256": "7120d72ccafc5d7e6805f2096d21436f92f94c9adddde895794ac11534a660ed"
+    },
+    {
+      "path": "scripts/check_v14_c01_peer.py",
+      "bytes": 18164,
+      "sha256": "7fda546d94b69209ed9e199084f6dc2a1cd6a7ce59692c2917c028b22d7b93e9"
+    }
+  ],
+  "independent_reading": "Read the complete frozen six-case manuscript, every one of twelve exact prompts/solutions, all three main algorithms and evaluation/cap qualifications, teach-back and retention, all four source scopes, full final author checker and author review. Separate recomputation does not import or execute author code.",
+  "proof_audit": {
+    "state_and_bellman": "Sufficiency of observed state preserves feasible actions, rewards and transition laws. Finite max comparison gives contraction; summable geometric increments and completeness yield existence and uniqueness. Finite-horizon induction covers all histories and randomization; uniform reward tails identify infinite value; stationary maximizer recovery uses a bounded continuation remainder. Finite actions, bounded rewards and nonempty action sets are used explicitly.",
+    "policy_improvement": "The nonnegative geometric inverse establishes evaluation and monotone improvement. Keeping an incumbent action if tied ensures every actual policy change has a strictly positive improvement component; monotonicity prevents revisiting any earlier value/policy, and the finite set ensures termination. This proof does not transfer automatically to approximate linear solves.",
+    "numerical_certificates": "Residual origin, discount amplification, actual feasible policy and true-action eta gap all remain explicit. Triangle bounds do not replace an independently established operator approximation error. Cap exhaustion is printed as uncertified. All numerical claims have the right target: value, policy or physical dynamics.",
+    "euler_and_sufficiency": "A finite-objective optimum and finite exogenous shock successor set permit a finite two-date adapted variation. Lower/upper signs follow available directions. Concavity bounds finite utility differences; conditional tower cancellation uses earlier measurability of next capital, and each constrained internal product is nonpositive. Nonnegative comparison capital bounds the remaining endpoint by the candidate shadow tail. Existing expected objective limits justify the final passage without asserting a universal necessary TVC.",
+    "unbounded_log_growth": "The open action domain and negative-unbounded log utility explicitly prohibit applying the finite sup-norm theorem. The proposed value solves a globally maximized stage problem, then competitor objective existence and candidate finite value, Euler equality and vanishing shadow tail supply infinite-horizon verification. The value identity is recovered along the candidate with a separately controlled discounted remainder.",
+    "boundary_quantifiers": "Borrowing/salvage derivative equality boundaries preserve unique corner choices by strict concavity; the linear Euler family can be feasible yet waste resources; open actions can preserve contraction without attainment; stationary optimality can coexist with a cycling physical state."
+  },
+  "exact_prompt_solution_audit": {
+    "v14-c01-e1": "Workshop cash two cannot fund cold setup three before receiving output. Warm operation yields four; observed expected closing cash is three and the only common feasible blind action yields two. An unobserved flag requires an explicit belief/admissibility and timing model, not an average setup bill. The exact prompt asks for feasibility, and the solution supplies it before valuation.",
+    "v14-c01-e2": "Finite-horizon induction bounds every randomized history-dependent continuation by the attained successor-state value; averaging initial actions cannot beat their maximum. Finite actions allow simultaneous attainment and nonempty actions allow extending finite plans. The uniform B beta^n/(1-beta) tail passes the comparison to infinite policies. A stationary greedy selector attains the fixed point through its bounded continuation remainder. Both uses of boundedness are explicitly distinguished; no inappropriate log-reward substitution occurs.",
+    "v14-c01-e3": "Independently evaluated the four baseline policies by a two-by-two determinant, obtaining (4,7),(4,8),(32/7,52/7),(5,8). Both strict improvement returns at (4,7) lead to Repair/Maintain. For risky repair, maintaining ready gives h=8 and w=(24p-4)/(1+3p); comparison to waiting yields p=2/3. At equality the two worn actions tie and Maintain alone is optimal at ready. The p=3/4 value (56/13,8) and both gaps (1/13,10/13) check.",
+    "v14-c01-e4": "For beta below 2/3, both Wait/Harvest statewise gaps equal 2-3beta; above it both Repair/Maintain gaps equal 3beta-2. At equality every action return equals its state value (3,6), so Bellman verification is equality under every feasible history policy and randomization. This stronger tie conclusion is proved rather than inferred from stationary enumeration alone.",
+    "v14-c01-e5": "The common-constant shift identity follows from stochastic row sums. Starting v2=vstar-3 gives the full formula, error and residual for all n>=2 by induction. Exact adjacent errors are above tolerance at n13 and below at n14. The algorithm forms v15 to certify and return v14: fifteen Bellman calls, with insufficient caps returning uncertified. Early policy accuracy at v2 and the independent fixed-policy residual theorem are correctly separated.",
+    "v14-c01-e6": "Triangle inequality gives true residual at most computed residual plus operator error. Separate contractions bound value error and own-policy error; combining yields the printed (2delta+eta)/(1-beta), with eta measured against true feasible action returns. The common offset changes value by 1/5 but preserves rankings; the omitted reward-one action causes true value four versus coarse zero. Both are valid counterexamples and neither permits interpreting a grid change as continuous-model policy loss.",
+    "v14-c01-e7": "Coefficient matching yields b=alpha/(1-alpha beta), the stated constant and saving share alpha beta. Strict second derivative and negative-infinite endpoint values prove the unique stage optimizer over the open interval. Global capital cap K controls every competitor positive log part, making objectives well defined, while the candidate log recurrence is bounded. Its Euler equality and explicit beta^T s/(1-s) tail invoke the separately proved sufficiency theorem. Candidate Bellman remainders vanish along its bounded log states. Independent 55-digit calculations reproduce the two splits, steady pair and value, and sum the log-state path with its analytic remaining tail.",
+    "v14-c01-e8": "Changing the one adapted next-capital choice while fixing each successor next-next choice changes only two utility dates. Exogenous finite successor shocks and positive consumption justify a common small feasible perturbation without differentiating an infinite sum. Interior directions give D=0, lower bound D<=0, upper cap D>=0. In the global proof these multiply feasible capital differences of the opposite weak signs. Salvage has a strictly concave objective, corner through M=2 and unique x=(M-2)/3 above, giving (x,c)=(1,4) and marginal 1/4 at M5.",
+    "v14-c01-e9": "The saving derivative is strictly decreasing and diverges negatively at the upper consumption boundary. Its zero-point sign gives corner exactly through m=16/5. Clearing strictly positive denominators gives 6a^2+(25-2m)a+16-5m=0; above threshold the constant is negative, so exactly one positive root exists and the derivative argument places it below m. The printed radical and m4 decimal satisfy the original marginal equation. Certain income 5/2 instead yields corner through m5 and a=(m-5)/3 thereafter. Convex reciprocal marginal utility explains this model-specific comparison.",
+    "v14-c01-e10": "Every positive constant Euler path has k_t=C+(2-C)2^t and infinite feasibility iff 0<C<=2. Its PV consumption is C, value 2log C and tail limit 2(2-C)/C. For all other paths, the finite telescoping budget bounds total PV consumption by two. The supporting log inequality and summable positive log bound make the global utility comparison legitimate even for competitors of value minus infinity. Retaining any one strictly positive tangent gap proves uniqueness at c=2 at every date, not merely within the constant family.",
+    "v14-c01-e11": "The supremum operator 1+3v/4 is a contraction with fixed point four although no action reaches one. For arbitrary randomization, the strictly positive date-zero shortfall has strictly positive expectation: one event in the countable union of shortfall-at-least-1/n events must have positive probability. Later shortfalls cannot offset it, so every policy value is strictly less than four. The stationary choice with d=min(1/2,epsilon/4) has gap 4d<=epsilon for all epsilon>0. Loss of finite/attaining actions is precisely identified.",
+    "v14-c01-e12": "All four critique witnesses are valid: biased/omitted-action operators, an Euler-satisfying suboptimal linear path together with a correct strict borrowing corner, an omitted readiness state, and the stationary optimal Repair/Harvest cycle at beta=2/3. Each repair names the necessary model, verification or error evidence. The ten-point rubric adds to ten and rewards mathematical repairs rather than a predetermined policy judgment. Teach-back and two-day/two-week answers repeat the correct constraints, remainder distinctions and terminal solution."
+  },
+  "source_review": {
+    "mode": "Prior attributed inspector scope retained, no new primary retrieval or image view.",
+    "sources": [
+      {
+        "id": "quantecon-discrete-dp",
+        "review": "Finite state/action definitions, value/policy iteration and tie retention. The chapter supplies its own complete finite proof and examples.",
+        "actual_prior_inspector": "ito_author",
+        "scope_limit": "Source refers out for main proofs. No copied numerical example, source code, implementation benchmark or imported discretization error theorem; no dependency installation."
+      },
+      {
+        "id": "v14-c01-lorenzoni-growth2009",
+        "review": "Owned production/consumption budget and the distinction between positive consumption, envelope conditions and Euler equations.",
+        "actual_prior_inspector": "ito_author",
+        "scope_limit": "The page 3 interior Euler chain omits beta in its last equality: U′=beta V′ requires beta U′(next) f′(next). We derive the correct relation directly. No general differentiability, stability or Inada theorem is imported."
+      },
+      {
+        "id": "v14-c01-lorenzoni-euler2009",
+        "review": "Concavity and a vanishing nonnegative-capital shadow-value tail as a sufficiency route. Our finite-shock conditional proof states all expectation and tail hypotheses.",
+        "actual_prior_inspector": "ito_author",
+        "scope_limit": "The third tail equality on page 1 prints F_y at date T+1 where the preceding Euler relation requires F_x. We retain the directly derived terminal term −beta^T u′(c_T) delta k_(T+1), avoiding that typo. No universal necessity of TVC, saddle-path or general measurable-selection claim."
+      },
+      {
+        "id": "v14-c01-lorenzoni-stochastic2009",
+        "review": "State includes observed Markov shock; finite shock histories versus general measurable-state models.",
+        "actual_prior_inspector": "ito_author",
+        "scope_limit": "Our contraction theorem has finite states and finite actions; the broader compact-state theorem is not claimed proved. Source invariant-distribution/stability and continuous-shock results are not used."
+      }
+    ],
+    "preparation_record_binding_actually_verified": {
+      "path": "production/v14-c01-source-preparation.json",
+      "bytes": 9138,
+      "sha256": "c287f19bda9bec18b36e81b12fc4a41938af4941807b772f82efed9ed7ea966d"
+    },
+    "historical_artifacts_listed": 12,
+    "historical_artifacts_available_now": 0,
+    "current_artifact_bytes_validated": 0,
+    "new_primary_body_reads": 0,
+    "new_primary_image_views": 0,
+    "boundary": "Peer actually checked presence of all twelve historical /private/tmp paths: none exists. Historical hashes and attributed inspection scopes are evidence records, not current artifact validation. The retained source-preparation JSON itself matches its current byte/hash binding. The original proofs independently retain beta and the correct terminal shadow term, so no typo is imported from the two reported source displays."
+  },
+  "computation_review": {
+    "method": "Independent recursive fraction parser; two-by-two determinant evaluation rather than author Gaussian elimination; direct exhaustive stationary comparisons and exact Bellman/certificate calculations; 55-digit Decimal logs/square roots and closed log-state summation with analytic tail rather than author floating path loop/bisection; explicit whole-domain proof audit separate from finite examples.",
+    "runtime": "Exactly four frozen author payloads plus peer checker and peer record. Five nonself bindings, explicit -O-safe guards, quiet check(root=None), silent CLI, read-only bytes. Final actual normal/optimized six-file gate outputs are recorded separately."
+  },
+  "resolved_findings": [
+    {
+      "scope": "peer checker implementation",
+      "finding": "The local saving radical variable shadowed the root path during the first development run.",
+      "repair": "Renamed the numerical variable before final gate executions; frozen author files untouched."
+    }
+  ],
+  "unresolved_findings": [],
+  "limitations": [
+    "No new primary-source body/image inspection; historical temporary artifacts unavailable.",
+    "No human academic certification or empirical calibration.",
+    "General Borel-state dynamic programming, universal TVC necessity and continuous approximation bounds beyond the stated hypotheses are not claimed.",
+    "Canonical promotion, build, reader rendering and hosting remain root tasks."
+  ],
+  "canonical_promotion": {
+    "coordinator": "root",
+    "date": "2026-10-09",
+    "origin": "production/v14-c01-peer-review-working.json",
+    "changes": "Runtime path remapping and refreshed nonself hashes only. Author/peer judgments reused from unchanged manuscript. Root executes canonical gates separately."
+  }
+}

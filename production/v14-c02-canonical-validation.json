@@ -1,0 +1,89 @@
+{
+  "chapter": "v14-c02",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v14-c02.html",
+      "bytes": 48675,
+      "sha256": "80a06adf05c7217e4dc5992a13140c35358de329d505ba4cbdbd18cbf1a5121e"
+    },
+    {
+      "path": "scripts/check_v14_c02.py",
+      "bytes": 16009,
+      "sha256": "32d62912c372d3f6853ecfdbf0efad2595202b8b91c6c1be1bacc4efdaae4fbb"
+    },
+    {
+      "path": "content/reviews/v14-c02-sources.json",
+      "bytes": 3060,
+      "sha256": "c8ad0f5897ba48f6ac7098ba25f5cc431e178f194c8022b03e64a97d04aab4f6"
+    },
+    {
+      "path": "content/reviews/v14-c02-author.json",
+      "bytes": 5801,
+      "sha256": "a40721c87ea577b67840494c75e536f9f66f1a2080382a32579e39a0b2a8bc20"
+    },
+    {
+      "path": "scripts/check_v14_c02_peer.py",
+      "bytes": 22453,
+      "sha256": "c182d10461bcfa1ff7110cf8e1e284f7ca0912d986c5f9609d5ca7ef212997fe"
+    },
+    {
+      "path": "content/reviews/v14-c02-peer.json",
+      "bytes": 12536,
+      "sha256": "54d25a4c2ca112102bb89f8c49f56859d3a9e76d8ee3823e7b065ae99f9c0995"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v14-c02",
+        "status": "passed",
+        "comparisons": 183,
+        "domain_rejections": 36,
+        "worked_cases": 5,
+        "solved_exercises": 12,
+        "primitive_markers": 8,
+        "result_markers": 38,
+        "runtime_files": 4,
+        "scope": "Original exact RBC proofs, equilibrium accounts, local linear system and synthetic population moments; no empirical replication or global nonlinear certificate."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v14-c02",
+        "reviewer": "v14_c01",
+        "status": "passed",
+        "comparisons": 249,
+        "domain_rejections": 30,
+        "worked_cases": 5,
+        "solved_exercises": 12,
+        "primitive_markers": 8,
+        "result_markers": 38,
+        "runtime_files": 6,
+        "independent_methods": [
+          "capital-consumption transition eigenvectors",
+          "discounted finite-vector iteration",
+          "distributed-shock covariance sums",
+          "statewise budgets and Euler comparisons"
+        ],
+        "scope": "Independent calculations corroborate the complete recorded proof/source/solution review; no author executable reuse or global nonlinear numerical certificate."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "production/v14-c02-root-working-review.json",
+  "peer_validation": "production/v14-c02-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

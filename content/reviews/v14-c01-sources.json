@@ -1,0 +1,100 @@
+{
+  "chapter": "v14-c01",
+  "author": "ito_author",
+  "date": "2026-10-09",
+  "status": "Working source proposals; canonical catalogue remains coordinator-owned",
+  "evidence": {
+    "path": "production/v14-c01-source-preparation.json",
+    "bytes": 9138,
+    "sha256": "c287f19bda9bec18b36e81b12fc4a41938af4941807b772f82efed9ed7ea966d"
+  },
+  "proposals": [
+    {
+      "id": "quantecon-discrete-dp",
+      "url": "https://tools-techniques.quantecon.org/discrete_dp.html",
+      "title": "Thomas J. Sargent and John Stachurski — Discrete State Dynamic Programming",
+      "disposition": "reuse exact accepted ID and URL with new scoped body inspection",
+      "date_scope": "Author-maintained HTML; inspected 9 October 2026. No invented original publication year or current software-version recommendation.",
+      "use": "Finite state/action definitions, value/policy iteration and tie retention. The chapter supplies its own complete finite proof and examples.",
+      "inspection": {
+        "actual_inspector": "ito_author",
+        "body_scope": "Sections 11.2–11.3.2 and appendix 11.7.1–11.7.2; web lines 117–308 and 865–905. Growth-grid lines 548–684 inspected only to delimit approximation claims.",
+        "image_scope": []
+      },
+      "limits": "Source refers out for main proofs. No copied numerical example, source code, implementation benchmark or imported discretization error theorem; no dependency installation."
+    },
+    {
+      "id": "v14-c01-lorenzoni-growth2009",
+      "url": "https://ocw.mit.edu/courses/14-451-dynamic-optimization-methods-with-applications-fall-2009/52f960cf4c44a2d713951aaf1c6fdbbf_MIT14_451F09_lec05.pdf",
+      "title": "Guido Lorenzoni — MIT 14.451 Lecture Notes 5: Optimal Growth Model (Fall 2009)",
+      "disposition": "new scoped primary proposal",
+      "date_scope": "Fall 2009 is printed on the lecture; current retrieval does not change its original date.",
+      "use": "Owned production/consumption budget and the distinction between positive consumption, envelope conditions and Euler equations.",
+      "inspection": {
+        "actual_inspector": "ito_author",
+        "body_scope": "Physical/printed pages 1–3, section 1.1 and opening steady-state equation; actual PDF text and page 3 image.",
+        "image_scope": [
+          {
+            "physical_page": 3,
+            "printed_label": "3",
+            "checked": "Envelope derivative, interior effort-free investment Euler chain and explicit zero-capital discussion."
+          }
+        ]
+      },
+      "limits": "The page 3 interior Euler chain omits beta in its last equality: U′=beta V′ requires beta U′(next) f′(next). We derive the correct relation directly. No general differentiability, stability or Inada theorem is imported."
+    },
+    {
+      "id": "v14-c01-lorenzoni-euler2009",
+      "url": "https://ocw.mit.edu/courses/14-451-dynamic-optimization-methods-with-applications-fall-2009/b10fce030ca53313ff69ce207cc1c822_MIT14_451F09_lec06.pdf",
+      "title": "Guido Lorenzoni — MIT 14.451 Lecture Notes 6: Euler Equations (Fall 2009)",
+      "disposition": "new scoped primary proposal",
+      "date_scope": "Fall 2009 lecture, not a current empirical finding.",
+      "use": "Concavity and a vanishing nonnegative-capital shadow-value tail as a sufficiency route. Our finite-shock conditional proof states all expectation and tail hypotheses.",
+      "inspection": {
+        "actual_inspector": "ito_author",
+        "body_scope": "Section 1, physical/printed page 1 through opening of page 2; both page images viewed.",
+        "image_scope": [
+          {
+            "physical_page": 1,
+            "printed_label": "1",
+            "checked": "Euler/TVC hypotheses and finite partial-sum cancellation."
+          },
+          {
+            "physical_page": 2,
+            "printed_label": "2",
+            "checked": "Completion of the limit argument before section 2; local-stability material is not relied on."
+          }
+        ]
+      },
+      "limits": "The third tail equality on page 1 prints F_y at date T+1 where the preceding Euler relation requires F_x. We retain the directly derived terminal term −beta^T u′(c_T) delta k_(T+1), avoiding that typo. No universal necessity of TVC, saddle-path or general measurable-selection claim."
+    },
+    {
+      "id": "v14-c01-lorenzoni-stochastic2009",
+      "url": "https://ocw.mit.edu/courses/14-451-dynamic-optimization-methods-with-applications-fall-2009/9d7bc3706857d2262b44fa3a7451a8dd_MIT14_451F09_lec09.pdf",
+      "title": "Guido Lorenzoni — MIT 14.451 Lecture Notes 9: Stochastic Dynamic Programming (Fall 2009)",
+      "disposition": "new scoped primary proposal",
+      "date_scope": "Fall 2009 lecture, source body and date inspected.",
+      "use": "State includes observed Markov shock; finite shock histories versus general measurable-state models.",
+      "inspection": {
+        "actual_inspector": "ito_author",
+        "body_scope": "Section 1, physical/printed pages 1–2 including the stated compact/bounded assumptions and general-state caution; both images viewed.",
+        "image_scope": [
+          {
+            "physical_page": 1,
+            "printed_label": "1",
+            "checked": "Observed state, finite transition law and bounded/compact hypotheses."
+          },
+          {
+            "physical_page": 2,
+            "printed_label": "2",
+            "checked": "Contraction/value identification scope and explicit measurable-kernel extension caution."
+          }
+        ]
+      },
+      "limits": "Our contraction theorem has finite states and finite actions; the broader compact-state theorem is not claimed proved. Source invariant-distribution/stability and continuous-shock results are not used."
+    }
+  ],
+  "originality": "Six original cases and twelve original proof/transfer exercises. Source methods are scoped; all calculations and wording are independently supplied.",
+  "runtime_boundary": "The checker reads only the four working runtime payloads; this provenance pointer and the retained artifacts are not runtime dependencies.",
+  "resumption_evidence": "Prior inspector scope reused; all twelve listed temporary preparation artifacts are currently absent. Historical hashes are not current availability claims."
+}

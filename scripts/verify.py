@@ -198,6 +198,10 @@ from check_v13_c11 import check as check_v13_c11
 from check_v13_c11_peer import check as check_v13_c11_peer
 from check_v13_c12 import check as check_v13_c12
 from check_v13_c12_peer import check as check_v13_c12_peer
+from check_v14_c01 import check as check_v14_c01
+from check_v14_c01_peer import check as check_v14_c01_peer
+from check_v14_c02 import check as check_v14_c02
+from check_v14_c02_peer import check as check_v14_c02_peer
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -231,6 +235,9 @@ class Document(HTMLParser):
             self.exercise_count += 1
         if tag == 'li' and self.solution_depth:
             self.solution_count += 1
+        if tag == 'section' and self.solution_depth and a.get('data-solution-for'):
+            self.solution_count += 1
+            self.solution_targets.append(a['data-solution-for'])
         if tag in ('h1','h2','h3','h4'): self.headings.append(tag)
     def handle_endtag(self, tag):
         if tag == 'ol':
@@ -634,6 +641,8 @@ def main():
     v11_assessment_check = check_v11_assessment()
     v12_assessment_check = check_v12_assessment()
     v13_assessment_check = check_v13_assessment()
+    v14_opening_check = {'v14-c01': check_v14_c01(), 'v14-c02': check_v14_c02()}
+    v14_opening_peer_check = {'v14-c01': check_v14_c01_peer(), 'v14-c02': check_v14_c02_peer()}
     v12_opening_check = {'v12-c01': check_v12_c01(), 'v12-c02': check_v12_c02(), 'v12-c03': check_v12_c03()}
     v12_opening_peer_check = {'v12-c01': check_v12_c01_peer(), 'v12-c02': check_v12_c02_peer(), 'v12-c03': check_v12_c03_peer()}
     v12_middle_check = {'v12-c04': check_v12_c04(), 'v12-c05': check_v12_c05()}
@@ -715,9 +724,12 @@ def main():
               'volume_12_closing_peer_check': v12_closing_peer_check,
               'volume_12_assessment_check': v12_assessment_check,
               'volume_13_assessment_check': v13_assessment_check,
+              'volume_14_opening_check': v14_opening_check,
+              'volume_14_opening_peer_check': v14_opening_peer_check,
               'volume_13_opening_check': v13_opening_check,
               'volume_13_opening_peer_check': v13_opening_peer_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
+    report['checks'].append('Volume14 chapters1–2: complete dynamic-programming/Euler/tail and stochastic-growth equilibrium proofs,11 worked cases/24 solved exercises; distinct author/peer numerical reconstructions, exact runtime payload bindings and scoped source evidence.')
     report['checks'].append('Volume 13 chapters1–2: complete finite and continuous preference representation, menu rationalization and positive Afriat proof; consumer and producer duality, qualified envelopes, Slutsky restrictions, constructive homothetic recovery and convex free-disposal hull reconstruction. Two author and two separate peer laboratories, all24 exercise solutions and exact reviewed payload bindings; conditional-cost closedness finding repaired.')
     report['checks'].append('Volume 13 chapter3: full finite expected-utility representation, risk comparison and local remainder, finite dominance and equal-mean coupling converse, Bayesian value and finite Blackwell converse. All12 solutions, separate author/peer exact arithmetic and policy witnesses, source-scope and final payload bindings checked.')
     report['checks'].append('Volume 13 chapter4: complete finite-dimensional fixed-point and compact-generator economic existence proof chain,6 cases/12 solutions, separate author/peer mathematical witnesses and frozen scoped-source bindings checked.')

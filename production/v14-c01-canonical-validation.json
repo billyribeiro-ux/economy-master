@@ -1,0 +1,89 @@
+{
+  "chapter": "v14-c01",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v14-c01.html",
+      "bytes": 60811,
+      "sha256": "256718534d9e61034b5ece644f8240884eb63f91e6362506494cffc76bd6a099"
+    },
+    {
+      "path": "scripts/check_v14_c01.py",
+      "bytes": 28491,
+      "sha256": "1b1253328886c154179c318f2442af46b9a0b1e1c873e6e52789994a016d0caf"
+    },
+    {
+      "path": "content/reviews/v14-c01-sources.json",
+      "bytes": 6301,
+      "sha256": "fc1474bb7bb522311fee625ed3edc064792786a4c07e32c16178e360b734554e"
+    },
+    {
+      "path": "content/reviews/v14-c01-author.json",
+      "bytes": 10493,
+      "sha256": "7120d72ccafc5d7e6805f2096d21436f92f94c9adddde895794ac11534a660ed"
+    },
+    {
+      "path": "scripts/check_v14_c01_peer.py",
+      "bytes": 18164,
+      "sha256": "7fda546d94b69209ed9e199084f6dc2a1cd6a7ce59692c2917c028b22d7b93e9"
+    },
+    {
+      "path": "content/reviews/v14-c01-peer.json",
+      "bytes": 15152,
+      "sha256": "aa67552ff0b5fa9f0aae9f751af67f66fc0412663e4c2b31c5baf4e895ffe294"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v14-c01",
+        "status": "passed",
+        "comparisons": 1053,
+        "domain_rejections": 40,
+        "worked_cases": 6,
+        "solved_exercises": 12,
+        "primitive_markers": 17,
+        "result_markers": 39,
+        "formula_markers": 4,
+        "runtime_files": 4,
+        "policy_count": 4,
+        "first_certified_VI_index": 14,
+        "sensitivity_groups": 9,
+        "scope": "Exact finite policy/iteration/certificate/constraint algebra and independent numerical growth/saving witnesses; universal all-history, concavity and tail arguments require the recorded manuscript proof review."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v14-c01",
+        "component": "peer",
+        "status": "passed",
+        "comparisons": 260,
+        "domain_rejections": 19,
+        "worked_cases": 6,
+        "solved_exercises": 12,
+        "primitive_markers": 17,
+        "result_markers": 39,
+        "formula_markers": 4,
+        "runtime_files": 6,
+        "author_code_executed": false,
+        "scope": "Independent exact two-state policy/certificate algebra and 55-digit Decimal witnesses; universal proof judgments separately recorded; historical source artifacts unavailable."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "production/v14-c01-root-working-review.json",
+  "peer_validation": "production/v14-c01-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-09",
+  "initial_full_run": {
+    "chapter_packages": 158,
+    "html_pages": 181,
+    "all_author_peer_numerical_checks": "passed",
+    "errors": [
+      "v14-c02: missing solutions/evaluation criteria"
+    ]
+  },
+  "diagnosis": "Shared Document parser counted list/disclosure solution forms but ignored section[data-solution-for] inside the shared solutions disclosure. C02 has12 fully authored paired sections.",
+  "repair": "Recognize labeled section solutions only inside a solutions disclosure and include targets in existing duplicate/valid-ID pairing gate. No manuscript or numerical payload changed.",
+  "targeted_checks": {
+    "C02_exercises": 12,
+    "C02_solutions": 12,
+    "exact_pairing": true,
+    "section_outside_disclosure_not_counted": true
+  },
+  "full_regression_rerun": {
+    "status": "passed",
+    "chapter_packages_available": 158,
+    "html_pages_checked": 181,
+    "errors": []
+  },
+  "UI_limit": "Recorded browser access restriction remains; no visual QA claimed."
+}
