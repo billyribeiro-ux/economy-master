@@ -1,0 +1,242 @@
+{
+  "batch": "v10-middle",
+  "date": "2026-10-09",
+  "previous_goal_turn": "progress: accepted and privately published v10-c01–c04, verified112 chapters and419-file offline edition",
+  "start_checkpoint": {
+    "accepted_chapters": 112,
+    "accepted_volume_packages": 9,
+    "accepted_cumulative_packages": 2,
+    "source_commit": "ae76e4a8d644930a03c945e4434fb08c919f383c"
+  },
+  "authorization": "User explicitly authorized three strict-scope economics/finance specialists; reuse existing agents, no spawning or scope expansion.",
+  "integration_owner": "root alone edits curriculum, canonical sources, checkpoint, shared build/verify/CSS and hosting.",
+  "common_contract": {
+    "substance": "Original graduate chapter, at least three substantive worked examples (prefer four where useful), at least ten original exercises including proof/derivation and research/model critique, complete solutions and open-response rubrics, answered teach-back and delayed retention. No summaries masquerading as chapters.",
+    "format": "Static HTML fragment with h2 sections and existing .equation/.worked/.solutions/.exercises classes; one ordered exercises list and complete ordered solutions list. Reuse flat links; sources.html#id citations. No full-document wrapper or framework.",
+    "lab": "Standard-library Python only, quiet import and run(data), deterministic strict JSON, explicit --input/--output CLI, finite bounded input domain with bool/nonfinite rejection and meaningful financial invariants. Full original inputs/output, standalone README and four-payload SHA256 manifest. Exact fractions where appropriate; numerical tolerances and randomness/analytic anchors explicit. Test normal and -O portable execution.",
+    "checker": "Quiet check() returning JSON-safe summary. Independent calculations, justified comparisons and meaningful financial/domain interventions; do not treat saved output as the sole oracle. No fabricated test counts or proof-by-simulation.",
+    "sources": "Reuse exact stable source records when useful. For unresolved specialist methods browse primary actual bodies only, record title/url/use/checked/verification and inspected scope. Source proposals only; root merges. Do not copy source examples or exercises.",
+    "review": "Read/solve every prompt; proof hypotheses and numerical cases independently checked. Author JSON binds all eight nonself payload hashes. Freeze nine files and report findings, limitations and hashes. Separate peer and coordinator review before acceptance in c05→c06→c07→c08 order.",
+    "boundaries": "Edit only nine owned paths; no other chapter, canonical file, shared code, hosting, new agents, package installation or external messages. Coordinate prerequisite details with existing assigned peers; report blockers and material findings to root."
+  },
+  "assignments": [
+    {
+      "chapter": "v10-c05",
+      "owner": "root",
+      "title": "Forwards, futures and swaps",
+      "canonical_spec": {
+        "id": "v10-c05",
+        "number": 5,
+        "title": "Forwards, futures and swaps",
+        "outcome": "Derive contract values and explain financing, collateral and basis effects.",
+        "coverage": [
+          "Cost of carry",
+          "forward-futures distinction",
+          "swaps",
+          "collateral",
+          "basis",
+          "margin"
+        ],
+        "prerequisites": [
+          "v10-c04"
+        ],
+        "level": "Graduate",
+        "status": "planned",
+        "manuscript": "chapters/v10-c05.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses",
+          "quantecon-python"
+        ],
+        "required_worked_examples": 3,
+        "required_exercises": 10,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "prerequisite_and_scope_contract": "Use accepted c01–c04: dated discounting, signed replication, funded ledgers, physical/pricing laws, default/recovery qualifications. Derive known-income/carry forwards, contract delivery price versus current value, equity/FX carry under explicit rights, settlement/reinvestment reason for forward–futures distinctions, swaps as dated cash streams, collateral remuneration/funding and basis/margin ledgers. Do not assume continuous diffusion results from c07–c08. Finite-state stochastic-rate example may use c03 tools. No current exchange rule or legal standard without dated primary evidence.",
+      "owned_paths": [
+        "content/chapters/v10-c05.html",
+        "content/projects/v10-c05-inputs.json",
+        "content/projects/v10-c05-analysis.py",
+        "content/projects/v10-c05-output.json",
+        "content/projects/v10-c05-manifest.json",
+        "content/projects/v10-c05-README.txt",
+        "scripts/check_v10_c05.py",
+        "content/reviews/v10-c05-author.json",
+        "content/reviews/v10-c05-sources.json"
+      ],
+      "state": "written; complete author/editorial/numerical review; separate peer gate pending; not accepted"
+    },
+    {
+      "chapter": "v10-c06",
+      "owner": "cost_peer",
+      "title": "Options and binomial replication",
+      "canonical_spec": {
+        "id": "v10-c06",
+        "number": 6,
+        "title": "Options and binomial replication",
+        "outcome": "Construct replicating portfolios and price options through state-contingent payoffs.",
+        "coverage": [
+          "Payoffs",
+          "put-call parity",
+          "binomial tree",
+          "risk-neutral probability",
+          "American exercise"
+        ],
+        "prerequisites": [
+          "v10-c05"
+        ],
+        "level": "Graduate",
+        "status": "planned",
+        "manuscript": "chapters/v10-c06.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses",
+          "quantecon-python"
+        ],
+        "required_worked_examples": 3,
+        "required_exercises": 10,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "prerequisite_and_scope_contract": "Depend on agreed c05 discounting, forward price/value distinction, funded cash and margin conventions; c03 already proves finite positive-state-price valuation and elementary replication. Teach payoff/rights first, European put–call parity under explicit same maturity, dividends and short-sale rights, one-step signed stock/account replication and q=(R-d)/(u-d), d<R<u and boundary failures, multi-step self-financing tree/hedge and American backward optimal exercise. Derive early-exercise claims under stated rate/dividend assumptions and counterexamples when they change. No Black–Scholes limit or stochastic calculus assumed. Distinguish European terminal payoff from early exercise and safe financing.",
+      "owned_paths": [
+        "content/chapters/v10-c06.html",
+        "content/projects/v10-c06-inputs.json",
+        "content/projects/v10-c06-analysis.py",
+        "content/projects/v10-c06-output.json",
+        "content/projects/v10-c06-manifest.json",
+        "content/projects/v10-c06-README.txt",
+        "scripts/check_v10_c06.py",
+        "content/reviews/v10-c06-author.json",
+        "content/reviews/v10-c06-sources.json"
+      ],
+      "state": "assigned; not written or accepted"
+    },
+    {
+      "chapter": "v10-c07",
+      "owner": "financial_diagnosis",
+      "title": "Brownian motion and Ito calculus",
+      "canonical_spec": {
+        "id": "v10-c07",
+        "number": 7,
+        "title": "Brownian motion and Ito calculus",
+        "outcome": "Derive stochastic differentials and explain quadratic variation.",
+        "coverage": [
+          "Filtrations",
+          "Brownian motion",
+          "stochastic integral",
+          "Ito lemma",
+          "SDE",
+          "drift-diffusion"
+        ],
+        "prerequisites": [
+          "v10-c06"
+        ],
+        "level": "Graduate",
+        "status": "planned",
+        "manuscript": "chapters/v10-c07.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses",
+          "quantecon-python"
+        ],
+        "required_worked_examples": 3,
+        "required_exercises": 10,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "prerequisite_and_scope_contract": "Use accepted v02 ordinary calculus/ODE and v03 probability/measure/stochastic foundations plus agreed finite binomial/self-financing c06. Define filtered information, adapted/predictable integrands, Brownian independence/variance/continuity and stochastic integral construction. Prove quadratic variation with stated convergence and distinguish path variation; derive simple-process Itô isometry/martingale and completion within a clearly stated domain; prove a substantive one-dimensional Itô formula under explicit regularity, controlling remainder/cross terms rather than writing (dW)^2=dt as a proof. State any deeper foundational existence/density theorem honestly if not proved. Derive product/cross-variation, explicit GBM exponential solution and log formula, integral W dW, drift versus diffusion, and a carefully scoped SDE existence/uniqueness result or directly verify explicit cases. No general Girsanov assumption or future Black–Scholes formula. Exercises must use taught tools, including proof and research/numerical critique. Numerical Brownian checks are illustrations, not proof. Supply exact expectation/variance or analytical error comparisons plus reproducible original paths/counterexamples.",
+      "owned_paths": [
+        "content/chapters/v10-c07.html",
+        "content/projects/v10-c07-inputs.json",
+        "content/projects/v10-c07-analysis.py",
+        "content/projects/v10-c07-output.json",
+        "content/projects/v10-c07-manifest.json",
+        "content/projects/v10-c07-README.txt",
+        "scripts/check_v10_c07.py",
+        "content/reviews/v10-c07-author.json",
+        "content/reviews/v10-c07-sources.json"
+      ],
+      "state": "assigned; not written or accepted"
+    },
+    {
+      "chapter": "v10-c08",
+      "owner": "equity_peer",
+      "title": "Black-Scholes and risk-neutral valuation",
+      "canonical_spec": {
+        "id": "v10-c08",
+        "number": 8,
+        "title": "Black-Scholes and risk-neutral valuation",
+        "outcome": "Derive the pricing equation and distinguish a model's assumptions from market conventions.",
+        "coverage": [
+          "Replication PDE",
+          "risk-neutral measure",
+          "Black-Scholes formula",
+          "dividends",
+          "boundaries"
+        ],
+        "prerequisites": [
+          "v10-c07"
+        ],
+        "level": "Graduate",
+        "status": "planned",
+        "manuscript": "chapters/v10-c08.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses",
+          "quantecon-python"
+        ],
+        "required_worked_examples": 3,
+        "required_exercises": 10,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "prerequisite_and_scope_contract": "Depend on c07 contract: Brownian definition, Itô integral/isometry, scalar C1,2 Itô formula under explicit localization/regularity, product rule, explicit dS=mu*Sdt+sigma*SdW and log/GBM solution. Coordinate these assumptions directly with c07 author. Derive self-financing replication PDE with continuous proportional dividend yield and stock total-gain accounting; avoid dropping S*dDelta terms without a financing argument. Construct the constant market-price-of-risk finite-horizon equivalent measure explicitly via exponential normal density and tilted independent increments (prove this special case if general Girsanov not available). Explain discounted total-gain martingale, P versus Q, derive normal call/put formulas from truncated lognormal expectations, verify PDE/payoff/boundaries and uniqueness within declared growth/admissibility class. Treat sigma=0,T=0,S=0 and negative rates carefully; discrete dividends are a different contract. Explain convention/calibration versus empirical truth. No claim of universally exact market hedging.",
+      "owned_paths": [
+        "content/chapters/v10-c08.html",
+        "content/projects/v10-c08-inputs.json",
+        "content/projects/v10-c08-analysis.py",
+        "content/projects/v10-c08-output.json",
+        "content/projects/v10-c08-manifest.json",
+        "content/projects/v10-c08-README.txt",
+        "scripts/check_v10_c08.py",
+        "content/reviews/v10-c08-author.json",
+        "content/reviews/v10-c08-sources.json"
+      ],
+      "state": "assigned; not written or accepted"
+    }
+  ],
+  "integration_state": "c05 review manuscript ready for explicit review-labeled intermediate publication; c06–c08 partial labs preserved",
+  "resumption_2026_10_09": {
+    "live_agents": [
+      "root"
+    ],
+    "execution": "Serial continuation by coordinating author; preserve existing partial c06–c08 lab files. Prior agents are not running in this thread; no claim of active peer review.",
+    "next": "Complete c05 manuscript, exact lab, author/editorial review and independent recomputation before acceptance; separate-agent review is not claimed."
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "schema": "v10-c05-1",
+  "carry": {
+    "prepaid_delivery": "2451/25",
+    "fair_forward": "516/5",
+    "long_value": "209/100",
+    "terminal_excess_of_quoted_delivery": "-11/5",
+    "replication": [
+      {
+        "time": "1/2",
+        "asset_net_receipt": "2",
+        "strip_borrowing_at_zero": "49/25",
+        "strip_repayment": "2",
+        "interim_net_cash": "0"
+      }
+    ],
+    "maturity_borrowing_at_zero": "2451/25",
+    "maturity_repayment": "516/5",
+    "initial_cash_residual": "0"
+  },
+  "fx": {
+    "fair_domestic_per_foreign": "99/80",
+    "domestic_prepaid_per_foreign": "297/250",
+    "foreign_deposit_today": "1980000",
+    "domestic_funding_today": "2376000",
+    "domestic_funding_repayment": "2475000",
+    "long_value_domestic": "-24000",
+    "short_terminal_surplus_domestic": "25000"
+  },
+  "tree": {
+    "bond_price": "11/12",
+    "spot_price": "90",
+    "node_spot": [
+      "100",
+      "80"
+    ],
+    "path_discounts": [
+      "5/6",
+      "1"
+    ],
+    "forward_quote": "1080/11",
+    "futures_quote": "100",
+    "futures_minus_forward": "20/11",
+    "covariance_spot_discount": "-5/3",
+    "date_one_variation": [
+      "20",
+      "-20"
+    ],
+    "funded_terminal_futures": [
+      "24",
+      "-20"
+    ],
+    "forward_terminal": [
+      "240/11",
+      "-200/11"
+    ],
+    "futures_discounted_value": "0",
+    "forward_discounted_value": "0"
+  },
+  "margin": {
+    "ledger": [
+      {
+        "date": 1,
+        "variation": "-200",
+        "balance_before_call": "200",
+        "call": "200",
+        "balance_after_call": "400",
+        "funding_debt": "604"
+      },
+      {
+        "date": 2,
+        "variation": "300",
+        "balance_before_call": "700",
+        "call": "0",
+        "balance_after_call": "700",
+        "funding_debt": "15402/25"
+      },
+      {
+        "date": 3,
+        "variation": "-50",
+        "balance_before_call": "650",
+        "call": "0",
+        "balance_after_call": "650",
+        "funding_debt": "793203/1250"
+      }
+    ],
+    "total_variation": "50",
+    "total_posted": "600",
+    "terminal_release": "650",
+    "terminal_funding_debt": "793203/1250",
+    "funding_cost": "43203/1250",
+    "net_after_funding": "19297/1250",
+    "cash_identity_residual": "0"
+  },
+  "swap": {
+    "annuity": "19/10",
+    "floating_pv": "94400",
+    "fixed_pv": "85500",
+    "payer_fixed_value": "8900",
+    "par_fixed": "118/2375",
+    "single_curve_rates": [
+      "6/197",
+      "8/193",
+      "8/185"
+    ],
+    "single_curve_floating_pv": "75000",
+    "single_curve_par": "3/76",
+    "pv_change_per_fixed_rate_unit": "-1900000",
+    "projected_coupon_amounts": [
+      "15000",
+      "25000",
+      "60000"
+    ]
+  },
+  "collateral": {
+    "fully_reusable_claim_value": "100",
+    "segregated_funding_repayment": "10150",
+    "segregated_margin_return": "10050",
+    "segregated_net_cost": "100"
+  },
+  "basis": {
+    "sale_receipt": "9400",
+    "nominal_futures_receipt": "600",
+    "terminal_local_basis": "-2",
+    "cash_before_funding": "10000",
+    "cash_after_funding": "9850",
+    "matched_quantity": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "v10-c07-ito-1",
+  "case": "Rill stochastic-calculus workshop",
+  "provenance": "Original authored rational observations and moment cubature; no market observations, random seed or simulated convergence proof.",
+  "contract": {
+    "time_unit": "year",
+    "brownian_unit": "square root of year",
+    "price_unit": "CU",
+    "law": "Brownian analytical statements and GBM moments use a supplied physical P law; no risk-neutral measure is inferred",
+    "path": "Authored finite observations only; linear interpolation is a different finite-variation process",
+    "cubature": "Independent three-point shocks match standard-normal moments through degree four only; not Gaussian paths"
+  },
+  "grid": {
+    "horizon": "1",
+    "increments": ["1/4", "-1/8", "1/8", "-1/4", "3/8", "-1/8", "-1/4", "1/8", "0", "1/4", "-1/8", "1/8", "-3/8", "1/4", "1/8", "-1/8"],
+    "blocks": [1, 2, 4, 8, 16],
+    "polygon_subdivisions": [1, 2, 4, 8],
+    "theory_steps": [4, 16, 64, 256],
+    "cubature_steps": 4
+  },
+  "adapted_integrand": {"first_holding": "2", "feedback": "3"},
+  "chain_product": {"x0": "2", "x_drift": "2/5", "x_diffusion": "3/5", "y0": "3", "y_drift": "-1/5", "y_diffusion": "1/2", "decay": "1"},
+  "gbm": {"initial_price": "80", "drift": "3/50", "diffusion": "3/10", "euler_steps": [4, 16, 64], "probe_time": "1/4", "probe_increment": "-4"}
+}

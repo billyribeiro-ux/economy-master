@@ -1,0 +1,11 @@
+{
+  "schema": "v10-c05-1",
+  "provenance": "Original synthetic Larch Treasury examples authored for this chapter, 9 October 2026. Not market observations. Dates are relative contractual units.",
+  "carry": {"spot": "100", "maturity": "1", "discount": "0.95", "delivery_price": "101", "events": [{"time": "0.5", "discount": "0.98", "income": "3", "cost": "1"}]},
+  "fx": {"spot_domestic_per_foreign": "1.20", "domestic_discount": "0.96", "foreign_discount": "0.99", "delivery_price": "1.25", "foreign_notional": 2000000},
+  "tree": {"first_gross": "1", "probabilities": ["0.5", "0.5"], "second_gross": ["1.2", "1"], "terminal_spot": ["120", "80"]},
+  "margin": {"contracts": 1, "multiplier": 50, "quotes": [100, 96, 102, 101], "initial": 400, "maintenance": 300, "funding_gross": ["1.01", "1.02", "1.03"]},
+  "swap": {"notional": 1000000, "accruals": ["0.5", "0.5", "1"], "discounts": ["0.985", "0.965", "0.925"], "projected_rates": ["0.03", "0.05", "0.06"], "fixed_rate": "0.045"},
+  "collateral": {"receipt": 104, "collateral_gross": "1.04", "segregated_initial": 10000, "funding_rate": "0.06", "remuneration_rate": "0.02", "year_fraction": "0.25"},
+  "basis": {"units": 200, "initial_futures": 52, "terminal_futures": 49, "terminal_local_spot": 47, "contracts": 2, "multiplier": 100, "funding_cost": 150}
+}

@@ -1,0 +1,623 @@
+{
+  "case": "Rill stochastic-calculus workshop",
+  "contract": {
+    "time_unit": "year",
+    "brownian_unit": "square root of year",
+    "price_unit": "CU",
+    "law": "Brownian analytical statements and GBM moments use a supplied physical P law; no risk-neutral measure is inferred",
+    "path": "Authored finite observations only; linear interpolation is a different finite-variation process",
+    "cubature": "Independent three-point shocks match standard-normal moments through degree four only; not Gaussian paths"
+  },
+  "finite_grids": [
+    {
+      "block": 1,
+      "ledger": {
+        "steps": 16,
+        "step": "1/16",
+        "rows": [
+          {
+            "time": "1/16",
+            "increment": "1/4",
+            "W_before": "0",
+            "W_after": "1/4",
+            "left_gain": "0",
+            "right_gain": "1/16"
+          },
+          {
+            "time": "1/8",
+            "increment": "-1/8",
+            "W_before": "1/4",
+            "W_after": "1/8",
+            "left_gain": "-1/32",
+            "right_gain": "-1/64"
+          },
+          {
+            "time": "3/16",
+            "increment": "1/8",
+            "W_before": "1/8",
+            "W_after": "1/4",
+            "left_gain": "1/64",
+            "right_gain": "1/32"
+          },
+          {
+            "time": "1/4",
+            "increment": "-1/4",
+            "W_before": "1/4",
+            "W_after": "0",
+            "left_gain": "-1/16",
+            "right_gain": "0"
+          },
+          {
+            "time": "5/16",
+            "increment": "3/8",
+            "W_before": "0",
+            "W_after": "3/8",
+            "left_gain": "0",
+            "right_gain": "9/64"
+          },
+          {
+            "time": "3/8",
+            "increment": "-1/8",
+            "W_before": "3/8",
+            "W_after": "1/4",
+            "left_gain": "-3/64",
+            "right_gain": "-1/32"
+          },
+          {
+            "time": "7/16",
+            "increment": "-1/4",
+            "W_before": "1/4",
+            "W_after": "0",
+            "left_gain": "-1/16",
+            "right_gain": "0"
+          },
+          {
+            "time": "1/2",
+            "increment": "1/8",
+            "W_before": "0",
+            "W_after": "1/8",
+            "left_gain": "0",
+            "right_gain": "1/64"
+          },
+          {
+            "time": "9/16",
+            "increment": "0",
+            "W_before": "1/8",
+            "W_after": "1/8",
+            "left_gain": "0",
+            "right_gain": "0"
+          },
+          {
+            "time": "5/8",
+            "increment": "1/4",
+            "W_before": "1/8",
+            "W_after": "3/8",
+            "left_gain": "1/32",
+            "right_gain": "3/32"
+          },
+          {
+            "time": "11/16",
+            "increment": "-1/8",
+            "W_before": "3/8",
+            "W_after": "1/4",
+            "left_gain": "-3/64",
+            "right_gain": "-1/32"
+          },
+          {
+            "time": "3/4",
+            "increment": "1/8",
+            "W_before": "1/4",
+            "W_after": "3/8",
+            "left_gain": "1/32",
+            "right_gain": "3/64"
+          },
+          {
+            "time": "13/16",
+            "increment": "-3/8",
+            "W_before": "3/8",
+            "W_after": "0",
+            "left_gain": "-9/64",
+            "right_gain": "0"
+          },
+          {
+            "time": "7/8",
+            "increment": "1/4",
+            "W_before": "0",
+            "W_after": "1/4",
+            "left_gain": "0",
+            "right_gain": "1/16"
+          },
+          {
+            "time": "15/16",
+            "increment": "1/8",
+            "W_before": "1/4",
+            "W_after": "3/8",
+            "left_gain": "1/32",
+            "right_gain": "3/64"
+          },
+          {
+            "time": "1",
+            "increment": "-1/8",
+            "W_before": "3/8",
+            "W_after": "1/4",
+            "left_gain": "-3/64",
+            "right_gain": "-1/32"
+          }
+        ],
+        "terminal_W": "1/4",
+        "squared_increment_sum": "23/32",
+        "absolute_increment_sum": "3",
+        "left_sum": "-21/64",
+        "right_sum": "25/64",
+        "symmetric_sum": "1/32",
+        "brownian_endpoint_formula": "-15/32",
+        "left_minus_brownian_endpoint_formula": "9/64",
+        "scope": "Finite authored observations; endpoint formula refers to a Brownian extension, not the ordinary integral of the polygon."
+      }
+    },
+    {
+      "block": 2,
+      "ledger": {
+        "steps": 8,
+        "step": "1/8",
+        "rows": [
+          {
+            "time": "1/8",
+            "increment": "1/8",
+            "W_before": "0",
+            "W_after": "1/8",
+            "left_gain": "0",
+            "right_gain": "1/64"
+          },
+          {
+            "time": "1/4",
+            "increment": "-1/8",
+            "W_before": "1/8",
+            "W_after": "0",
+            "left_gain": "-1/64",
+            "right_gain": "0"
+          },
+          {
+            "time": "3/8",
+            "increment": "1/4",
+            "W_before": "0",
+            "W_after": "1/4",
+            "left_gain": "0",
+            "right_gain": "1/16"
+          },
+          {
+            "time": "1/2",
+            "increment": "-1/8",
+            "W_before": "1/4",
+            "W_after": "1/8",
+            "left_gain": "-1/32",
+            "right_gain": "-1/64"
+          },
+          {
+            "time": "5/8",
+            "increment": "1/4",
+            "W_before": "1/8",
+            "W_after": "3/8",
+            "left_gain": "1/32",
+            "right_gain": "3/32"
+          },
+          {
+            "time": "3/4",
+            "increment": "0",
+            "W_before": "3/8",
+            "W_after": "3/8",
+            "left_gain": "0",
+            "right_gain": "0"
+          },
+          {
+            "time": "7/8",
+            "increment": "-1/8",
+            "W_before": "3/8",
+            "W_after": "1/4",
+            "left_gain": "-3/64",
+            "right_gain": "-1/32"
+          },
+          {
+            "time": "1",
+            "increment": "0",
+            "W_before": "1/4",
+            "W_after": "1/4",
+            "left_gain": "0",
+            "right_gain": "0"
+          }
+        ],
+        "terminal_W": "1/4",
+        "squared_increment_sum": "3/16",
+        "absolute_increment_sum": "1",
+        "left_sum": "-1/16",
+        "right_sum": "1/8",
+        "symmetric_sum": "1/32",
+        "brownian_endpoint_formula": "-15/32",
+        "left_minus_brownian_endpoint_formula": "13/32",
+        "scope": "Finite authored observations; endpoint formula refers to a Brownian extension, not the ordinary integral of the polygon."
+      }
+    },
+    {
+      "block": 4,
+      "ledger": {
+        "steps": 4,
+        "step": "1/4",
+        "rows": [
+          {
+            "time": "1/4",
+            "increment": "0",
+            "W_before": "0",
+            "W_after": "0",
+            "left_gain": "0",
+            "right_gain": "0"
+          },
+          {
+            "time": "1/2",
+            "increment": "1/8",
+            "W_before": "0",
+            "W_after": "1/8",
+            "left_gain": "0",
+            "right_gain": "1/64"
+          },
+          {
+            "time": "3/4",
+            "increment": "1/4",
+            "W_before": "1/8",
+            "W_after": "3/8",
+            "left_gain": "1/32",
+            "right_gain": "3/32"
+          },
+          {
+            "time": "1",
+            "increment": "-1/8",
+            "W_before": "3/8",
+            "W_after": "1/4",
+            "left_gain": "-3/64",
+            "right_gain": "-1/32"
+          }
+        ],
+        "terminal_W": "1/4",
+        "squared_increment_sum": "3/32",
+        "absolute_increment_sum": "1/2",
+        "left_sum": "-1/64",
+        "right_sum": "5/64",
+        "symmetric_sum": "1/32",
+        "brownian_endpoint_formula": "-15/32",
+        "left_minus_brownian_endpoint_formula": "29/64",
+        "scope": "Finite authored observations; endpoint formula refers to a Brownian extension, not the ordinary integral of the polygon."
+      }
+    },
+    {
+      "block": 8,
+      "ledger": {
+        "steps": 2,
+        "step": "1/2",
+        "rows": [
+          {
+            "time": "1/2",
+            "increment": "1/8",
+            "W_before": "0",
+            "W_after": "1/8",
+            "left_gain": "0",
+            "right_gain": "1/64"
+          },
+          {
+            "time": "1",
+            "increment": "1/8",
+            "W_before": "1/8",
+            "W_after": "1/4",
+            "left_gain": "1/64",
+            "right_gain": "1/32"
+          }
+        ],
+        "terminal_W": "1/4",
+        "squared_increment_sum": "1/32",
+        "absolute_increment_sum": "1/4",
+        "left_sum": "1/64",
+        "right_sum": "3/64",
+        "symmetric_sum": "1/32",
+        "brownian_endpoint_formula": "-15/32",
+        "left_minus_brownian_endpoint_formula": "31/64",
+        "scope": "Finite authored observations; endpoint formula refers to a Brownian extension, not the ordinary integral of the polygon."
+      }
+    },
+    {
+      "block": 16,
+      "ledger": {
+        "steps": 1,
+        "step": "1",
+        "rows": [
+          {
+            "time": "1",
+            "increment": "1/4",
+            "W_before": "0",
+            "W_after": "1/4",
+            "left_gain": "0",
+            "right_gain": "1/16"
+          }
+        ],
+        "terminal_W": "1/4",
+        "squared_increment_sum": "1/16",
+        "absolute_increment_sum": "1/4",
+        "left_sum": "0",
+        "right_sum": "1/16",
+        "symmetric_sum": "1/32",
+        "brownian_endpoint_formula": "-15/32",
+        "left_minus_brownian_endpoint_formula": "15/32",
+        "scope": "Finite authored observations; endpoint formula refers to a Brownian extension, not the ordinary integral of the polygon."
+      }
+    }
+  ],
+  "polygon_refinements": [
+    {
+      "subdivisions": 1,
+      "quadratic_sum": "23/32",
+      "ordinary_integral_W_dW": "1/32"
+    },
+    {
+      "subdivisions": 2,
+      "quadratic_sum": "23/64",
+      "ordinary_integral_W_dW": "1/32"
+    },
+    {
+      "subdivisions": 4,
+      "quadratic_sum": "23/128",
+      "ordinary_integral_W_dW": "1/32"
+    },
+    {
+      "subdivisions": 8,
+      "quadratic_sum": "23/256",
+      "ordinary_integral_W_dW": "1/32"
+    }
+  ],
+  "brownian_grid_theory": [
+    {
+      "steps": 4,
+      "step": "1/4",
+      "quadratic_sum_mean": "1",
+      "quadratic_sum_variance": "1/2",
+      "left_sum_mean": "0",
+      "left_sum_variance": "3/8",
+      "right_sum_mean": "1",
+      "right_sum_variance": "7/8",
+      "ito_W_integral_variance": "1/2",
+      "left_integral_mse": "1/8"
+    },
+    {
+      "steps": 16,
+      "step": "1/16",
+      "quadratic_sum_mean": "1",
+      "quadratic_sum_variance": "1/8",
+      "left_sum_mean": "0",
+      "left_sum_variance": "15/32",
+      "right_sum_mean": "1",
+      "right_sum_variance": "19/32",
+      "ito_W_integral_variance": "1/2",
+      "left_integral_mse": "1/32"
+    },
+    {
+      "steps": 64,
+      "step": "1/64",
+      "quadratic_sum_mean": "1",
+      "quadratic_sum_variance": "1/32",
+      "left_sum_mean": "0",
+      "left_sum_variance": "63/128",
+      "right_sum_mean": "1",
+      "right_sum_variance": "67/128",
+      "ito_W_integral_variance": "1/2",
+      "left_integral_mse": "1/128"
+    },
+    {
+      "steps": 256,
+      "step": "1/256",
+      "quadratic_sum_mean": "1",
+      "quadratic_sum_variance": "1/128",
+      "left_sum_mean": "0",
+      "left_sum_variance": "255/512",
+      "right_sum_mean": "1",
+      "right_sum_variance": "259/512",
+      "ito_W_integral_variance": "1/2",
+      "left_integral_mse": "1/512"
+    }
+  ],
+  "finite_moment_cubature": {
+    "steps": 4,
+    "states": 81,
+    "probability_sum": "1",
+    "quadratic_sum_mean": "1",
+    "quadratic_sum_variance": "1/2",
+    "left_sum_mean": "0",
+    "left_sum_variance": "3/8",
+    "right_sum_mean": "1",
+    "right_sum_variance": "7/8",
+    "left_to_endpoint_mse": "1/8",
+    "terminal_second_moment": "1",
+    "terminal_fourth_moment": "3",
+    "scope": "Degree-four moment cubature, not a Gaussian law or a Brownian existence/convergence proof."
+  },
+  "adapted_two_step_integral": {
+    "switch_time": "1/2",
+    "mean": "0",
+    "variance": "17/4",
+    "fourth_moment": "2217/16",
+    "gaussian_fourth_if_same_variance": "867/16",
+    "scope": "H=a on first half and H=b*W_(T/2) on second; true independent Brownian half-increments."
+  },
+  "chain_and_product": {
+    "terminal_X": "51/20",
+    "terminal_Y": "117/40",
+    "discounted_square_approx": 2.392136066217304,
+    "discounted_square_drift_approx": -1.5092254074058422,
+    "discounted_square_diffusion_approx": 1.1257110899846137,
+    "discounted_square_expectation_approx": 2.2514221799692273,
+    "product_drift_at_endpoint": "24/25",
+    "product_diffusion_at_endpoint": "303/100",
+    "product_expectation": "351/50",
+    "cross_variation": "3/10",
+    "X_quadratic_variation": "9/25",
+    "Y_quadratic_variation": "1/4"
+  },
+  "gbm": {
+    "rows": [
+      {
+        "time": "1/16",
+        "W": "1/4",
+        "exact_price_approx": 86.31161128829632,
+        "euler_price": "863/10",
+        "euler_positive": true
+      },
+      {
+        "time": "1/8",
+        "W": "1/8",
+        "exact_price_approx": 83.21283765596226,
+        "euler_price": "667099/8000",
+        "euler_positive": true
+      },
+      {
+        "time": "3/16",
+        "W": "1/4",
+        "exact_price_approx": 86.47359737396032,
+        "euler_price": "555693467/6400000",
+        "euler_positive": true
+      },
+      {
+        "time": "1/4",
+        "W": "0",
+        "exact_price_approx": 80.30056320378466,
+        "euler_price": "412880245981/5120000000",
+        "euler_positive": true
+      },
+      {
+        "time": "5/16",
+        "W": "3/8",
+        "exact_price_approx": 89.94641774758006,
+        "euler_price": "368702059661033/4096000000000",
+        "euler_positive": true
+      },
+      {
+        "time": "3/8",
+        "W": "1/4",
+        "exact_price_approx": 86.71714669726774,
+        "euler_price": "285006692117978509/3276800000000000",
+        "euler_positive": true
+      },
+      {
+        "time": "7/16",
+        "W": "0",
+        "exact_price_approx": 80.52672643075105,
+        "euler_price": "211759972243658032187/2621440000000000000",
+        "euler_positive": true
+      },
+      {
+        "time": "1/2",
+        "W": "1/8",
+        "exact_price_approx": 83.68222879269736,
+        "euler_price": "176396056878967140811771/2097152000000000000000",
+        "euler_positive": true
+      },
+      {
+        "time": "9/16",
+        "W": "1/8",
+        "exact_price_approx": 83.76071766810216,
+        "euler_price": "141646033673810614071852113/1677721600000000000000000",
+        "euler_positive": true
+      },
+      {
+        "time": "5/8",
+        "W": "3/8",
+        "exact_price_approx": 90.36903130747459,
+        "euler_price": "122240527060498559944008373519/1342177280000000000000000000",
+        "euler_positive": true
+      },
+      {
+        "time": "11/16",
+        "W": "1/4",
+        "exact_price_approx": 87.12458751578342,
+        "euler_price": "94491927417765386836718472730187/1073741824000000000000000000000",
+        "euler_positive": true
+      },
+      {
+        "time": "3/4",
+        "W": "3/8",
+        "exact_price_approx": 90.53863219231788,
+        "euler_price": "78711775538998567234986487784245771/858993459200000000000000000000000",
+        "euler_positive": true
+      },
+      {
+        "time": "13/16",
+        "W": "0",
+        "exact_price_approx": 80.98096561693482,
+        "euler_price": "56121495959305978438545365790167234723/687194767360000000000000000000000000",
+        "euler_positive": true
+      },
+      {
+        "time": "7/8",
+        "W": "1/4",
+        "exact_price_approx": 87.36997032599709,
+        "euler_price": "48432851012881059392464650676914323565949/549755813888000000000000000000000000000",
+        "euler_positive": true
+      },
+      {
+        "time": "15/16",
+        "W": "3/8",
+        "exact_price_approx": 90.79363051866551,
+        "euler_price": "40344564893729922473923054013869631530435517/439804651110400000000000000000000000000000",
+        "euler_positive": true
+      },
+      {
+        "time": "1",
+        "W": "1/4",
+        "exact_price_approx": 87.53394269641683,
+        "euler_price": "31186348662853230072342520752721225173026654641/351843720888320000000000000000000000000000000",
+        "euler_positive": true
+      }
+    ],
+    "log_return_mean": "3/200",
+    "log_return_variance": "9/100",
+    "mean_price_approx": 84.94692372362877,
+    "median_price_approx": 81.20904516925751,
+    "price_variance_approx": 679.5597336151526,
+    "euler_analytical_error": [
+      {
+        "steps": 4,
+        "exact_mean_approx": 84.94692372362877,
+        "euler_mean_approx": 84.90908405,
+        "weak_mean_bias_approx": -0.03783967362876978,
+        "exact_second_moment_approx": 7895.539583723157,
+        "euler_second_moment_approx": 7860.310835525075,
+        "coupled_cross_moment_approx": 7873.903074293925,
+        "coupled_strong_mse_approx": 8.04427066038283
+      },
+      {
+        "steps": 16,
+        "exact_mean_approx": 84.94692372362877,
+        "euler_mean_approx": 84.93739155389662,
+        "weak_mean_bias_approx": -0.00953216973215159,
+        "exact_second_moment_approx": 7895.539583723157,
+        "euler_second_moment_approx": 7886.511460168801,
+        "coupled_cross_moment_approx": 7890.024414617013,
+        "coupled_strong_mse_approx": 2.0022146579323414
+      },
+      {
+        "steps": 64,
+        "exact_mean_approx": 84.94692372362877,
+        "euler_mean_approx": 84.94453611711246,
+        "weak_mean_bias_approx": -0.002387606516304539,
+        "exact_second_moment_approx": 7895.539583723157,
+        "euler_second_moment_approx": 7893.268257717039,
+        "coupled_cross_moment_approx": 7894.153982270591,
+        "coupled_strong_mse_approx": 0.4998768990145091
+      }
+    ],
+    "positivity_probe": {
+      "time": "1/4",
+      "increment": "-4",
+      "euler_factor": "-37/200",
+      "euler_price": "-74/5",
+      "exact_price_approx": 24.186064850269897,
+      "euler_nonpositive": true
+    },
+    "scope": "Exact GBM formula and Gaussian coupled Euler moments are distinct from the authored finite path and finite moment cubature."
+  },
+  "limits": "Proofs are in the chapter. Finite authored observations and cubature do not establish Brownian paths, empirical diffusion validity, almost-sure convergence or universal numerical stability."
+}

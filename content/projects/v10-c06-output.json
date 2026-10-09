@@ -1,0 +1,795 @@
+{
+  "case": "Linden finite option market",
+  "single_step": {
+    "q_up": "3/5",
+    "stock": [
+      [
+        "80"
+      ],
+      [
+        "60",
+        "100"
+      ]
+    ],
+    "contracts": {
+      "call_european": [
+        [
+          {
+            "stock": "80",
+            "intrinsic": "0",
+            "continuation": "72/7",
+            "value": "72/7",
+            "action": "continue",
+            "continuation_delta": "9/20",
+            "continuation_bank": "-180/7",
+            "exercise_value_less_continuation": "-72/7",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "60",
+            "intrinsic": "0",
+            "value": "0",
+            "action": "settle"
+          },
+          {
+            "stock": "100",
+            "intrinsic": "18",
+            "value": "18",
+            "action": "settle"
+          }
+        ]
+      ],
+      "call_american_grid": [
+        [
+          {
+            "stock": "80",
+            "intrinsic": "0",
+            "continuation": "72/7",
+            "value": "72/7",
+            "action": "continue",
+            "continuation_delta": "9/20",
+            "continuation_bank": "-180/7",
+            "exercise_value_less_continuation": "-72/7",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "60",
+            "intrinsic": "0",
+            "value": "0",
+            "action": "settle"
+          },
+          {
+            "stock": "100",
+            "intrinsic": "18",
+            "value": "18",
+            "action": "settle"
+          }
+        ]
+      ],
+      "put_european": [
+        [
+          {
+            "stock": "80",
+            "intrinsic": "2",
+            "continuation": "176/21",
+            "value": "176/21",
+            "action": "continue",
+            "continuation_delta": "-11/20",
+            "continuation_bank": "1100/21",
+            "exercise_value_less_continuation": "-134/21",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "60",
+            "intrinsic": "22",
+            "value": "22",
+            "action": "settle"
+          },
+          {
+            "stock": "100",
+            "intrinsic": "0",
+            "value": "0",
+            "action": "settle"
+          }
+        ]
+      ],
+      "put_american_grid": [
+        [
+          {
+            "stock": "80",
+            "intrinsic": "2",
+            "continuation": "176/21",
+            "value": "176/21",
+            "action": "continue",
+            "continuation_delta": "-11/20",
+            "continuation_bank": "1100/21",
+            "exercise_value_less_continuation": "-134/21",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "60",
+            "intrinsic": "22",
+            "value": "22",
+            "action": "settle"
+          },
+          {
+            "stock": "100",
+            "intrinsic": "0",
+            "value": "0",
+            "action": "settle"
+          }
+        ]
+      ]
+    },
+    "european_parity_lhs": "40/21",
+    "european_parity_rhs": "40/21",
+    "american_put_premium": "0"
+  },
+  "tree": {
+    "q_up": "3/5",
+    "stock": [
+      [
+        "80"
+      ],
+      [
+        "60",
+        "100"
+      ],
+      [
+        "45",
+        "75",
+        "125"
+      ]
+    ],
+    "contracts": {
+      "call_european": [
+        [
+          {
+            "stock": "80",
+            "intrinsic": "0",
+            "continuation": "688/49",
+            "value": "688/49",
+            "action": "continue",
+            "continuation_delta": "43/70",
+            "continuation_bank": "-1720/49",
+            "exercise_value_less_continuation": "-688/49",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "60",
+            "intrinsic": "0",
+            "continuation": "0",
+            "value": "0",
+            "action": "continue",
+            "continuation_delta": "0",
+            "continuation_bank": "0",
+            "exercise_value_less_continuation": "0",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          },
+          {
+            "stock": "100",
+            "intrinsic": "18",
+            "continuation": "172/7",
+            "value": "172/7",
+            "action": "continue",
+            "continuation_delta": "43/50",
+            "continuation_bank": "-430/7",
+            "exercise_value_less_continuation": "-46/7",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "45",
+            "intrinsic": "0",
+            "value": "0",
+            "action": "settle"
+          },
+          {
+            "stock": "75",
+            "intrinsic": "0",
+            "value": "0",
+            "action": "settle"
+          },
+          {
+            "stock": "125",
+            "intrinsic": "43",
+            "value": "43",
+            "action": "settle"
+          }
+        ]
+      ],
+      "call_american_grid": [
+        [
+          {
+            "stock": "80",
+            "intrinsic": "0",
+            "continuation": "688/49",
+            "value": "688/49",
+            "action": "continue",
+            "continuation_delta": "43/70",
+            "continuation_bank": "-1720/49",
+            "exercise_value_less_continuation": "-688/49",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "60",
+            "intrinsic": "0",
+            "continuation": "0",
+            "value": "0",
+            "action": "continue",
+            "continuation_delta": "0",
+            "continuation_bank": "0",
+            "exercise_value_less_continuation": "0",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          },
+          {
+            "stock": "100",
+            "intrinsic": "18",
+            "continuation": "172/7",
+            "value": "172/7",
+            "action": "continue",
+            "continuation_delta": "43/50",
+            "continuation_bank": "-430/7",
+            "exercise_value_less_continuation": "-46/7",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "45",
+            "intrinsic": "0",
+            "value": "0",
+            "action": "settle"
+          },
+          {
+            "stock": "75",
+            "intrinsic": "0",
+            "value": "0",
+            "action": "settle"
+          },
+          {
+            "stock": "125",
+            "intrinsic": "43",
+            "value": "43",
+            "action": "settle"
+          }
+        ]
+      ],
+      "put_european": [
+        [
+          {
+            "stock": "80",
+            "intrinsic": "2",
+            "continuation": "3712/441",
+            "value": "3712/441",
+            "action": "continue",
+            "continuation_delta": "-27/70",
+            "continuation_bank": "17320/441",
+            "exercise_value_less_continuation": "-2830/441",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "60",
+            "intrinsic": "22",
+            "continuation": "380/21",
+            "value": "380/21",
+            "action": "continue",
+            "continuation_delta": "-1",
+            "continuation_bank": "1640/21",
+            "exercise_value_less_continuation": "82/21",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          },
+          {
+            "stock": "100",
+            "intrinsic": "0",
+            "continuation": "8/3",
+            "value": "8/3",
+            "action": "continue",
+            "continuation_delta": "-7/50",
+            "continuation_bank": "50/3",
+            "exercise_value_less_continuation": "-8/3",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "45",
+            "intrinsic": "37",
+            "value": "37",
+            "action": "settle"
+          },
+          {
+            "stock": "75",
+            "intrinsic": "7",
+            "value": "7",
+            "action": "settle"
+          },
+          {
+            "stock": "125",
+            "intrinsic": "0",
+            "value": "0",
+            "action": "settle"
+          }
+        ]
+      ],
+      "put_american_grid": [
+        [
+          {
+            "stock": "80",
+            "intrinsic": "2",
+            "continuation": "208/21",
+            "value": "208/21",
+            "action": "continue",
+            "continuation_delta": "-29/60",
+            "continuation_bank": "340/7",
+            "exercise_value_less_continuation": "-166/21",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "60",
+            "intrinsic": "22",
+            "continuation": "380/21",
+            "value": "22",
+            "action": "exercise",
+            "continuation_delta": "-1",
+            "continuation_bank": "1640/21",
+            "exercise_value_less_continuation": "82/21",
+            "cash_above_continuation_cost": "82/21",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          },
+          {
+            "stock": "100",
+            "intrinsic": "0",
+            "continuation": "8/3",
+            "value": "8/3",
+            "action": "continue",
+            "continuation_delta": "-7/50",
+            "continuation_bank": "50/3",
+            "exercise_value_less_continuation": "-8/3",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "45",
+            "intrinsic": "37",
+            "value": "37",
+            "action": "settle"
+          },
+          {
+            "stock": "75",
+            "intrinsic": "7",
+            "value": "7",
+            "action": "settle"
+          },
+          {
+            "stock": "125",
+            "intrinsic": "0",
+            "value": "0",
+            "action": "settle"
+          }
+        ]
+      ]
+    },
+    "european_parity_lhs": "2480/441",
+    "european_parity_rhs": "2480/441",
+    "american_put_premium": "656/441"
+  },
+  "path_reports": {
+    "paths": [
+      {
+        "path": "DD",
+        "pricing_probability": "4/25",
+        "physical_probability": "9/100",
+        "european_call_ledger": [
+          {
+            "date": 1,
+            "stock": "60",
+            "inherited_delta": "43/70",
+            "inherited_bank_after_interest": "-258/7",
+            "pre_trade_wealth": "0",
+            "call_value": "0",
+            "new_delta": "0",
+            "new_bank": "0",
+            "stock_trade_cash": "-258/7",
+            "bank_change": "258/7",
+            "external_cash_required": "0",
+            "intervention_fee": "129/350"
+          },
+          {
+            "date": 2,
+            "stock": "45",
+            "inherited_delta": "0",
+            "inherited_bank_after_interest": "0",
+            "pre_trade_wealth": "0",
+            "call_value": "0",
+            "payoff": "0",
+            "exact_hedge_error": "0",
+            "fee_intervention_hedge_error": "-387/1000"
+          }
+        ],
+        "american_grid_optimal_stopping": {
+          "call": {
+            "date": 2,
+            "stock": "45",
+            "receipt": "0",
+            "discounted_receipt": "0"
+          },
+          "put": {
+            "date": 1,
+            "stock": "60",
+            "receipt": "22",
+            "discounted_receipt": "440/21"
+          }
+        }
+      },
+      {
+        "path": "DU",
+        "pricing_probability": "6/25",
+        "physical_probability": "21/100",
+        "european_call_ledger": [
+          {
+            "date": 1,
+            "stock": "60",
+            "inherited_delta": "43/70",
+            "inherited_bank_after_interest": "-258/7",
+            "pre_trade_wealth": "0",
+            "call_value": "0",
+            "new_delta": "0",
+            "new_bank": "0",
+            "stock_trade_cash": "-258/7",
+            "bank_change": "258/7",
+            "external_cash_required": "0",
+            "intervention_fee": "129/350"
+          },
+          {
+            "date": 2,
+            "stock": "75",
+            "inherited_delta": "0",
+            "inherited_bank_after_interest": "0",
+            "pre_trade_wealth": "0",
+            "call_value": "0",
+            "payoff": "0",
+            "exact_hedge_error": "0",
+            "fee_intervention_hedge_error": "-387/1000"
+          }
+        ],
+        "american_grid_optimal_stopping": {
+          "call": {
+            "date": 2,
+            "stock": "75",
+            "receipt": "0",
+            "discounted_receipt": "0"
+          },
+          "put": {
+            "date": 1,
+            "stock": "60",
+            "receipt": "22",
+            "discounted_receipt": "440/21"
+          }
+        }
+      },
+      {
+        "path": "UD",
+        "pricing_probability": "6/25",
+        "physical_probability": "21/100",
+        "european_call_ledger": [
+          {
+            "date": 1,
+            "stock": "100",
+            "inherited_delta": "43/70",
+            "inherited_bank_after_interest": "-258/7",
+            "pre_trade_wealth": "172/7",
+            "call_value": "172/7",
+            "new_delta": "43/50",
+            "new_bank": "-430/7",
+            "stock_trade_cash": "172/7",
+            "bank_change": "-172/7",
+            "external_cash_required": "0",
+            "intervention_fee": "43/175"
+          },
+          {
+            "date": 2,
+            "stock": "75",
+            "inherited_delta": "43/50",
+            "inherited_bank_after_interest": "-129/2",
+            "pre_trade_wealth": "0",
+            "call_value": "0",
+            "payoff": "0",
+            "exact_hedge_error": "0",
+            "fee_intervention_hedge_error": "-129/500"
+          }
+        ],
+        "american_grid_optimal_stopping": {
+          "call": {
+            "date": 2,
+            "stock": "75",
+            "receipt": "0",
+            "discounted_receipt": "0"
+          },
+          "put": {
+            "date": 2,
+            "stock": "75",
+            "receipt": "7",
+            "discounted_receipt": "400/63"
+          }
+        }
+      },
+      {
+        "path": "UU",
+        "pricing_probability": "9/25",
+        "physical_probability": "49/100",
+        "european_call_ledger": [
+          {
+            "date": 1,
+            "stock": "100",
+            "inherited_delta": "43/70",
+            "inherited_bank_after_interest": "-258/7",
+            "pre_trade_wealth": "172/7",
+            "call_value": "172/7",
+            "new_delta": "43/50",
+            "new_bank": "-430/7",
+            "stock_trade_cash": "172/7",
+            "bank_change": "-172/7",
+            "external_cash_required": "0",
+            "intervention_fee": "43/175"
+          },
+          {
+            "date": 2,
+            "stock": "125",
+            "inherited_delta": "43/50",
+            "inherited_bank_after_interest": "-129/2",
+            "pre_trade_wealth": "43",
+            "call_value": "43",
+            "payoff": "43",
+            "exact_hedge_error": "0",
+            "fee_intervention_hedge_error": "-129/500"
+          }
+        ],
+        "american_grid_optimal_stopping": {
+          "call": {
+            "date": 2,
+            "stock": "125",
+            "receipt": "43",
+            "discounted_receipt": "17200/441"
+          },
+          "put": {
+            "date": 2,
+            "stock": "125",
+            "receipt": "0",
+            "discounted_receipt": "0"
+          }
+        }
+      }
+    ],
+    "optimal_stopping_discounted_pricing_expectations": {
+      "call": "688/49",
+      "put": "208/21"
+    },
+    "european_call_physical_expected_payoff": "2107/100"
+  },
+  "negative_rate_case": {
+    "q_up": "2/5",
+    "stock": [
+      [
+        "100"
+      ],
+      [
+        "90",
+        "110"
+      ]
+    ],
+    "contracts": {
+      "call_european": [
+        [
+          {
+            "stock": "100",
+            "intrinsic": "20",
+            "continuation": "900/49",
+            "value": "900/49",
+            "action": "continue",
+            "continuation_delta": "1",
+            "continuation_bank": "-4000/49",
+            "exercise_value_less_continuation": "80/49",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "90",
+            "intrinsic": "10",
+            "value": "10",
+            "action": "settle"
+          },
+          {
+            "stock": "110",
+            "intrinsic": "30",
+            "value": "30",
+            "action": "settle"
+          }
+        ]
+      ],
+      "call_american_grid": [
+        [
+          {
+            "stock": "100",
+            "intrinsic": "20",
+            "continuation": "900/49",
+            "value": "20",
+            "action": "exercise",
+            "continuation_delta": "1",
+            "continuation_bank": "-4000/49",
+            "exercise_value_less_continuation": "80/49",
+            "cash_above_continuation_cost": "80/49",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "90",
+            "intrinsic": "10",
+            "value": "10",
+            "action": "settle"
+          },
+          {
+            "stock": "110",
+            "intrinsic": "30",
+            "value": "30",
+            "action": "settle"
+          }
+        ]
+      ],
+      "put_european": [
+        [
+          {
+            "stock": "100",
+            "intrinsic": "0",
+            "continuation": "0",
+            "value": "0",
+            "action": "continue",
+            "continuation_delta": "0",
+            "continuation_bank": "0",
+            "exercise_value_less_continuation": "0",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "90",
+            "intrinsic": "0",
+            "value": "0",
+            "action": "settle"
+          },
+          {
+            "stock": "110",
+            "intrinsic": "0",
+            "value": "0",
+            "action": "settle"
+          }
+        ]
+      ],
+      "put_american_grid": [
+        [
+          {
+            "stock": "100",
+            "intrinsic": "0",
+            "continuation": "0",
+            "value": "0",
+            "action": "continue",
+            "continuation_delta": "0",
+            "continuation_bank": "0",
+            "exercise_value_less_continuation": "0",
+            "cash_above_continuation_cost": "0",
+            "down_replication_residual": "0",
+            "up_replication_residual": "0"
+          }
+        ],
+        [
+          {
+            "stock": "90",
+            "intrinsic": "0",
+            "value": "0",
+            "action": "settle"
+          },
+          {
+            "stock": "110",
+            "intrinsic": "0",
+            "value": "0",
+            "action": "settle"
+          }
+        ]
+      ]
+    },
+    "european_parity_lhs": "900/49",
+    "european_parity_rhs": "900/49",
+    "american_put_premium": "0"
+  },
+  "dividend_case": {
+    "q_up_total_gain": "2/3",
+    "dividend_pv": "200/17",
+    "prepaid_terminal_stock": "1500/17",
+    "contracts": {
+      "call": {
+        "down_payoff": "0",
+        "up_payoff": "20",
+        "delta": "2/3",
+        "bank": "-8200/153",
+        "european_value": "2000/153",
+        "immediate_exercise": "20",
+        "american_grid_value": "20",
+        "action": "exercise",
+        "down_hedge_residual": "0",
+        "up_hedge_residual": "0"
+      },
+      "put": {
+        "down_payoff": "10",
+        "up_payoff": "0",
+        "delta": "-1/3",
+        "bank": "5600/153",
+        "european_value": "500/153",
+        "immediate_exercise": "0",
+        "american_grid_value": "500/153",
+        "action": "continue",
+        "down_hedge_residual": "0",
+        "up_hedge_residual": "0"
+      }
+    },
+    "european_parity_lhs": "500/51",
+    "european_parity_rhs": "500/51",
+    "scope": "Exercise only now or after the terminal dividend; adding a pre-dividend exercise opportunity changes the contract."
+  },
+  "scope": "Exact finite exercise-grid prices conditional on stated trading rights; physical probabilities do not set replication values; no continuous-time or real-market hedge guarantee."
+}

@@ -104,6 +104,7 @@ from check_v10_c01 import check as check_v10_c01
 from check_v10_c02 import check as check_v10_c02
 from check_v10_c03 import check as check_v10_c03
 from check_v10_c04 import check as check_v10_c04
+from check_v10_c05 import check as check_v10_c05
 from check_economics_core import check as check_economics_core
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -514,6 +515,7 @@ def main():
     v09_assessment_check = check_v09_assessment()
     v10_opening_check = {'v10-c01': check_v10_c01(), 'v10-c02': check_v10_c02(),
                          'v10-c03': check_v10_c03(), 'v10-c04': check_v10_c04()}
+    v10_middle_check = {'v10-c05': check_v10_c05()}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -558,8 +560,10 @@ def main():
               'volume_9_closing_checks': v09_closing_check,
               'volume_9_assessment_check': v09_assessment_check,
               'volume_10_opening_checks': v10_opening_check,
+              'volume_10_middle_checks': v10_middle_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     report['checks'].extend(['Volume 8 chapters 1–4: incremental capital budgeting and IRR domains; FCFF/FCFE and dated claim pricing; coherent capital/return fade and terminal sensitivity; covariance, policy-specific leverage, WACC and finite APV with independent pricing checks',
+        'Volume 10 chapter5: dated carry and FX funding, stochastic forward/futures distinction, signed margin and debt ledgers, swap projection versus discounting, collateral and local basis with exact independent arithmetic and portable lab checks; separate review gate remains explicit',
         'Volume 10 chapters 1–4: dated bond cash, settlement accrual, bootstrapping, YTM/forward conventions and curve identification; yield/key sensitivities, funded immunization and failure cases; finite pricing versus physical rate dynamics, calibrated Arrow trees and hedge errors; structural/default-time credit, recovery timing, absorption, dependence and conditional spread calibration',
         'Volume 9 chapters 1–4: dated total/simple/log and flow-adjusted returns; finite-state and sample covariance, financing and concentration; exact frontier, allocation and constraint certificates with shrinkage sensitivity; investor demand, market clearing, pricing/proxy/sample distinctions and conditional CAPM limits',
         'Volume 9 chapters 5–8: finite-state replication, positive state prices and complete/incomplete pricing; exact versus residual factor pricing, OLS and funded construction; conditional information, search, belief equilibrium and margin contracts; benchmark/factor/fee/flow performance, attribution and complete entry/exit cohorts',
