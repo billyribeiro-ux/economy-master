@@ -1,0 +1,270 @@
+{
+  "state": "material finding reproduced; author/peer repair pending",
+  "variant": {
+    "schema": "v10-assessment-alder-1",
+    "provenance": "Original synthetic Alder desk case; no market observations or real trading permission.",
+    "curve": {
+      "times": [
+        "1/2",
+        "1",
+        "3/2"
+      ],
+      "instruments": [
+        {
+          "id": "six_month_zero",
+          "cash": [
+            "100",
+            "0",
+            "0"
+          ],
+          "price": "98"
+        },
+        {
+          "id": "one_year_bond",
+          "cash": [
+            "3",
+            "103",
+            "0"
+          ],
+          "price": "100.79"
+        },
+        {
+          "id": "eighteen_month_bond",
+          "cash": [
+            "2",
+            "2",
+            "102"
+          ],
+          "price": "96.68"
+        }
+      ],
+      "shocks": [
+        {
+          "id": "parallel_up",
+          "zero_shifts": [
+            ".01",
+            ".01",
+            ".01"
+          ]
+        },
+        {
+          "id": "parallel_down",
+          "zero_shifts": [
+            "-.01",
+            "-.01",
+            "-.01"
+          ]
+        },
+        {
+          "id": "twist",
+          "zero_shifts": [
+            "-.01",
+            "0",
+            ".01"
+          ]
+        },
+        {
+          "id": "middle_up",
+          "zero_shifts": [
+            "0",
+            ".01",
+            "0"
+          ]
+        }
+      ]
+    },
+    "liability": {
+      "face": "100",
+      "coupons": [
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "option": {
+      "spot": "100",
+      "strike": "105",
+      "sigma": ".25",
+      "tree_steps": [
+        4,
+        8,
+        16,
+        32
+      ],
+      "bermudan_fractions": [
+        "0",
+        "1/2"
+      ],
+      "mc_pairs": 2048,
+      "seed": 271828,
+      "control_beta": "-.5",
+      "quadrature_steps": 256
+    },
+    "hedge": {
+      "times": [
+        "0",
+        "1/8",
+        "1/4",
+        "3/8",
+        "1/2"
+      ],
+      "cost_rate": ".001",
+      "paths": [
+        {
+          "id": "steady_rise",
+          "spots": [
+            "100",
+            "102",
+            "104",
+            "106",
+            "108"
+          ]
+        },
+        {
+          "id": "steady_fall",
+          "spots": [
+            "100",
+            "96",
+            "92",
+            "88",
+            "84"
+          ]
+        },
+        {
+          "id": "round_trip",
+          "spots": [
+            "100",
+            "85",
+            "95",
+            "110",
+            "90"
+          ]
+        },
+        {
+          "id": "late_fall",
+          "spots": [
+            "100",
+            "101",
+            "102",
+            "103",
+            "80"
+          ]
+        },
+        {
+          "id": "flat",
+          "spots": [
+            "100",
+            "100",
+            "100",
+            "100",
+            "100"
+          ]
+        }
+      ]
+    },
+    "credit_reserve": {
+      "pricing_default_probability": ".1",
+      "default_index": 0,
+      "settlement_index": 0,
+      "recovery_fraction": "1"
+    },
+    "decision": {
+      "requested_exercise": "european",
+      "requested_reserve": "risky_bond",
+      "requested_quote": "110.5",
+      "max_tested_terminal_loss": "1",
+      "max_mc_standard_error": ".15",
+      "max_tree_abs_error": ".03"
+    }
+  },
+  "riskless_fixed_pv": "91",
+  "selected_risky_reserve_pv": "917/10",
+  "default_funding": [
+    {
+      "time": "1/2",
+      "liability_cash": "0",
+      "reserve_cash": "100",
+      "bank_before_payment": "0",
+      "bank_after_payment": "100"
+    },
+    {
+      "time": "1",
+      "liability_cash": "0",
+      "reserve_cash": "0",
+      "bank_before_payment": "1960/19",
+      "bank_after_payment": "1960/19"
+    },
+    {
+      "time": "3/2",
+      "liability_cash": "100",
+      "reserve_cash": "0",
+      "bank_before_payment": "1400/13",
+      "bank_after_payment": "100/13"
+    }
+  ],
+  "decision": {
+    "frictionless_model_quote": 99.68830203501753,
+    "worst_tested_terminal_hedge_error": -11.955681689165392,
+    "additional_initial_cash_for_tested_loss_budget": 10.736568055382083,
+    "quote_with_tested_buffer": 110.42487009039961,
+    "requested_quote": 110.5,
+    "gates": {
+      "exercise_matches_european_reference": true,
+      "reserve_funds_all_declared_dates": true,
+      "quote_covers_tested_loss_budget": true,
+      "controlled_mc_se_within_budget": true,
+      "finest_european_tree_difference_within_budget": true
+    },
+    "failed_gates": [],
+    "recommendation": "eligible_for_limited_demonstration",
+    "scope": "Fictional classroom controls only; tested paths are not all possible paths, sample SE is not a deterministic error bound, and no real trade is authorized."
+  },
+  "actual_selected_reserve_plus_hedge_budget": 111.1248700903996,
+  "initial_cash_shortfall_at_requested_quote": 0.6248700903995967,
+  "issue": "Valid early full-face recovery with zero coupons makes the selected reserve more expensive than the riskless liability PV. All current gates pass while the requested quote cannot purchase that selected reserve and fund the tested hedge budget. Expected reserve savings must not reduce the conservative floor, but a selected-reserve premium must still be financed.",
+  "before_author_freeze": {
+    "content/assessments/parts/v10-project.html": {
+      "bytes": 42345,
+      "sha256": "8104c5372f4daa5bdbe07b449868836abdfc19efe1f85622bc129b87746a9aaf"
+    },
+    "content/projects/v10-assessment-inputs.json": {
+      "bytes": 1862,
+      "sha256": "80a94d905e0b695a32efb5b23a70bdaa6a9c0f70d65bd985f605cc232dca57d2"
+    },
+    "content/projects/v10-assessment-analysis.py": {
+      "bytes": 22525,
+      "sha256": "fa31845763ed668b701d56e258c1bc1dbc45300ea180ec10b86eb1c5c63d7b23"
+    },
+    "content/projects/v10-assessment-output.json": {
+      "bytes": 43267,
+      "sha256": "6beda7672c89a06ae22de808503144b71b2328aed3fe1e0faccac217df49d947"
+    },
+    "content/projects/v10-assessment-manifest.json": {
+      "bytes": 727,
+      "sha256": "cbfe76209add63646860b96a9cd6140c91f20ab23e4ad0ef3042abaea2047b8f"
+    },
+    "content/projects/v10-assessment-README.txt": {
+      "bytes": 16506,
+      "sha256": "76c1a9070d38ac748c36d2161ea535f598d6536131729f9f387b7e936b5a39ce"
+    },
+    "scripts/check_v10_project.py": {
+      "bytes": 26248,
+      "sha256": "831e8aa74d3f6dfb8f612137281e8894ad40d72c866cb92a3b0b5e641086024d"
+    },
+    "content/reviews/v10-project-author.json": {
+      "bytes": 16089,
+      "sha256": "5c6718b127fddc59e7d692c33d87902c4c5c72ebd4672bc042dfeb97a35e2558"
+    },
+    "content/reviews/v10-project-sources.json": {
+      "bytes": 9600,
+      "sha256": "53733d41bf83131e06961f04fceb77074bc9c4ec95d9e083b4e1d97c2ed4a407"
+    }
+  },
+  "independent_peer_confirmation": "bs_author independently reconstructed the91/91.7 reserve prices and.7 omitted initial purchase premium; final peer acceptance held.",
+  "regression_before_repair": {
+    "script": "production/v10-assessment-selected-reserve-check.py",
+    "observed_exit_code": 1,
+    "message": "Quote budget omits actual chosen reserve purchase cost",
+    "scope": "The first premium-reserve scenario rejects the pre-repair implementation; four final scenarios will be run after repair."
+  }
+}

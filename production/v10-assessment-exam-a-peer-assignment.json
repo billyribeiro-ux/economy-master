@@ -1,0 +1,30 @@
+{
+  "batch": "v10-assessment-exam-a-peer",
+  "date": "2026-10-09",
+  "agent": "c05_review",
+  "state": "complete/frozen; coordinator read complete checker and peer audit; final integration pending",
+  "scope": "Independently read entire FormA and solve every exact prompt, verify every point allocation, all12chapter/domain coverage, derivations with hypotheses, financial timing, cash/information/measure boundaries, numerical answers and scoped source reuse. Audit authored checker without treating it as the independent numeric oracle.",
+  "owned_paths": [
+    "content/reviews/v10-exam-a-peer.json",
+    "scripts/check_v10_exam_a_peer.py"
+  ],
+  "reviewed_paths": [
+    "content/assessments/parts/v10-exam-a.html",
+    "scripts/check_v10_exam_a.py",
+    "content/reviews/v10-exam-a-author.json",
+    "content/reviews/v10-exam-a-sources.json"
+  ],
+  "review_gates": [
+    "Recompute original numerical cases independently. Quiet standard-library check() returns strict JSON; normal/-O remain equivalent.",
+    "Read every proof and exact prompt/solution, including open criteria; no unsupported general theorem or model-use conclusion.",
+    "Report concrete material findings to author/root; only author changes owned manuscript. After all repairs, bind allfour final reviewed payloads and record resolved/open findings.",
+    "Keep checks proportional: target actual arithmetic, proof/scoring/source/structure risks and meaningful scenario changes, rather than large redundant boilerplate.",
+    "No new agents, external messages, installs, publication or shared/canonical edits. Only two owned peer paths."
+  ],
+  "reviewed_sha256": {
+    "content/assessments/parts/v10-exam-a.html": "bc25789f68f79e93ea0fbd64ee488067463fa3496eb19b51d709188896628d4f",
+    "scripts/check_v10_exam_a.py": "566ea5ed9f7d2cfc53af10a26ba402e1d63cec6f18fb769120c6303932b7a05b",
+    "content/reviews/v10-exam-a-author.json": "72f777a3f7b6a3edd36f6d5758b39e002bdb879925e7d9050a5171ac5f11a4d0",
+    "content/reviews/v10-exam-a-sources.json": "41ee364f677dafbe742a22a6ff92015fb4df09af37b639799b427a46b4f80e0b"
+  }
+}

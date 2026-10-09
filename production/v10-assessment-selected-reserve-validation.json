@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "date": "2026-10-09",
+  "comparisons": 32,
+  "normal_and_optimized_identical": true,
+  "observed_commands": [
+    "python3 production/v10-assessment-selected-reserve-check.py",
+    "python3 -O production/v10-assessment-selected-reserve-check.py"
+  ],
+  "scenario_quotes": {
+    "risky_bond_rejected": [
+      "110.5",
+      "111.12"
+    ],
+    "risky_bond_passed": [
+      "111.13"
+    ],
+    "matched_zeros_passed": [
+      "110.5"
+    ]
+  },
+  "independent_expected_costs": {
+    "riskless_fixed_pv": "91",
+    "selected_risky_reserve_pv": "917/10",
+    "premium": "7/10"
+  },
+  "model_sha256": "c9d8af25a88d95b6ec65376a3ab994ba0acccc4842ef87a2c291c9537bddeb86",
+  "checker_sha256": "c866bfad6721868db6a47ef83e727dd0ea98bb8b48be17b7bb5e50747b5462f5",
+  "scope": "Coordinator independently derived dated purchase cost and previously quadrature/discounted-gain verified hedge budget; candidate run supplies actual outputs only. Final author/peer freeze pending."
+}

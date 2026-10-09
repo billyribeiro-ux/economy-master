@@ -1,0 +1,369 @@
+{
+  "assessment": "v10-exam-b",
+  "author": "c05_review specialist",
+  "date": "2026-10-09",
+  "assignment": "production/v10-assessment-assignments.json",
+  "status": "ready-for-peer-and-coordinator-review",
+  "scope": {
+    "form": "B",
+    "points": 100,
+    "minutes": 240,
+    "closed_book": true,
+    "calculator": "nonprogrammable",
+    "questions": 5,
+    "complete_scored_solutions": 16,
+    "payload_state": "frozen",
+    "shared_edits": false,
+    "child_agents": false,
+    "publishing": false,
+    "visible_words": 4638
+  },
+  "advancement": {
+    "total_floor": 85,
+    "domain_floor": 15,
+    "domain_maximum": 20,
+    "additional_gate": "Separate transfer/teach-back and remediation of critical errors as specified by the integrated volume package.",
+    "calibration": "Authored design thresholds and timing, not statistically equated forms, institutional requirements or tested learner outcomes."
+  },
+  "chapter_coverage": {
+    "v10-c01": [
+      "v10-b-q1a"
+    ],
+    "v10-c02": [
+      "v10-b-q1b"
+    ],
+    "v10-c03": [
+      "v10-b-q1c"
+    ],
+    "v10-c04": [
+      "v10-b-q2a",
+      "v10-b-q2b"
+    ],
+    "v10-c05": [
+      "v10-b-q2b",
+      "v10-b-q2c"
+    ],
+    "v10-c06": [
+      "v10-b-q3a"
+    ],
+    "v10-c07": [
+      "v10-b-q3b",
+      "v10-b-q3c"
+    ],
+    "v10-c08": [
+      "v10-b-q3b",
+      "v10-b-q3c"
+    ],
+    "v10-c09": [
+      "v10-b-q4a",
+      "v10-b-q4b",
+      "v10-b-q4c"
+    ],
+    "v10-c10": [
+      "v10-b-q4b"
+    ],
+    "v10-c11": [
+      "v10-b-q5a",
+      "v10-b-q5b",
+      "v10-b-q5c"
+    ],
+    "v10-c12": [
+      "v10-b-q5d"
+    ]
+  },
+  "domain_coverage": [
+    {
+      "domain": "D1",
+      "question": 1,
+      "points": 20,
+      "chapters": [
+        "v10-c01",
+        "v10-c02",
+        "v10-c03"
+      ],
+      "mechanism": "Amortizing cash instrument, exact two-coordinate date matching, negative forwards and different calibrated future-discount distributions."
+    },
+    {
+      "domain": "D2",
+      "question": 2,
+      "points": 20,
+      "chapters": [
+        "v10-c04",
+        "v10-c05"
+      ],
+      "mechanism": "Discrete first-default recovery delayed one year; short futures variation, nonassignable receivable, reserve deadline and dated debt."
+    },
+    {
+      "domain": "D3",
+      "question": 3,
+      "points": 20,
+      "chapters": [
+        "v10-c06",
+        "v10-c07",
+        "v10-c08"
+      ],
+      "mechanism": "Finite digital replication and inverse-stock continuous payoff with Ito correction, negative moments, funded delta and admissibility qualification."
+    },
+    {
+      "domain": "D4",
+      "question": 4,
+      "points": 20,
+      "chapters": [
+        "v10-c09",
+        "v10-c10"
+      ],
+      "mechanism": "Retained-cash discrete put hedge with signed dividends/fees; independent pair-mean error plus deterministic allowance through an asymmetric inverse bound; continuous gamma-weighted mismatch."
+    },
+    {
+      "domain": "D5",
+      "question": 5,
+      "points": 20,
+      "chapters": [
+        "v10-c11",
+        "v10-c12"
+      ],
+      "mechanism": "Asian fixing histories, additional traded European option, positive pricing-law family, sharp static bounds and independent contractual/identification release gates."
+    }
+  ],
+  "distinctness_from_form_a": [
+    "D1 changes from between-coupon bootstrap and duration-twist matching to an amortizing instrument whose two independent key-date matches exactly span every liability cash date; same initial curve supports different future-discount convex claim values.",
+    "D2 changes continuous deterministic-intensity recovery and swap/collateral to migration first-default cash, delayed recovery receivables and short futures margin funding across a binding cash deadline.",
+    "D3 changes a multistep American stopping tree to digital finite replication and an inverse-stock payoff outside the chapter-specific global growth class, requiring explicit negative moments and funded admissibility.",
+    "D4 changes call Greek rank/finite-difference/control-variate tasks to a finite reset put ledger, independent pair means, deterministic bias and nonlinear inverse conditioning, plus scoped continuous volatility mismatch.",
+    "D5 changes a terminal scheduled jump capped-upside claim to path-dependent Asian history twins with an extra traded European quote, explicit contractual code failure and two independent invented release gates."
+  ],
+  "part_review": [
+    {
+      "part": "v10-b-q1a",
+      "credit_allocation": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "result": "D1=.99,D2=1.0098 and gross forward50/51. Zero-cost forward cash is +1 at year1 and -50/51 at year2. Negative rates are consistent with positive prices under the specified rights; free currency storage was excluded.",
+      "audit": "Exact simultaneous bootstrap and dated cash identity; enlarged-rights free-storage intervention."
+    },
+    {
+      "part": "v10-b-q1b",
+      "credit_allocation": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "result": "Liability PV100.188 and key exposures(39.6,121.176). Holdings15/13 A and -23/130 Z give exact cash(40,60), so all positive replacement discount pairs preserve replication.",
+      "audit": "Exact two-equation solve, statewise cash proof and nine independent replacement curves. Two full date exposures, not scalar duration, force cash matching."
+    },
+    {
+      "part": "v10-b-q1c",
+      "credit_allocation": [
+        2,
+        2,
+        2
+      ],
+      "result": "Both dynamics fit D2=.99*1.02. Year1 rate-call prices .0297 and .0198 differ; physical substitution instead yields spurious zero price1.0296.",
+      "audit": "Exact expectations, convex payoff cash and future-discount dispersion interventions preserving the initial curve. No inference of risk-neutral probabilities from physical frequencies."
+    },
+    {
+      "part": "v10-b-q2a",
+      "credit_allocation": [
+        3,
+        2,
+        1,
+        2
+      ],
+      "result": "First-default masses .20/.145 and survival .655. Actual expected receipts73.5 at2 and5.8 at3 imply72.724. Immediate recovery73.276 is .552 higher.",
+      "audit": "Enumerate all nine rating histories and locate first default once. Recovery0/40/100, zero-discount-rate, and migration interventions. Absorbed probability cannot trigger recurring recovery."
+    },
+    {
+      "part": "v10-b-q2b",
+      "credit_allocation": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "result": "Variations -60,+90,-50; margin before top-up40,190,140; contributions100+60; return140; nominal P&L -20. Reserve55 misses required60 by5; future nonassignable40 does not cure date1.",
+      "audit": "Exact signed account recursion, contribution/release conservation and liquidity threshold. Neither receivable value nor returned margin principal is immediate trading profit."
+    },
+    {
+      "part": "v10-b-q2c",
+      "credit_allocation": [
+        2,
+        1,
+        1
+      ],
+      "result": "Debt164.536575, principal160, interest4.536575 and final funded P&L -24.536575. Same-quote forward terminal cash -20 omits this futures funding path.",
+      "audit": "Independent recursive debt and separately accumulated borrowing cohorts; reorder intermediate fixings while holding terminal price fixed; remove funding. No universal fair-quote assertion."
+    },
+    {
+      "part": "v10-b-q3a",
+      "credit_allocation": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "result": "Digital shares5/16, terminal bank -20, initial bank -1000/51, price275/51; pricing up probability .55.",
+      "audit": "Solve both state equations exactly and check probability representation; changed physical frequencies do not alter attainable payoff cash."
+    },
+    {
+      "part": "v10-b-q3b",
+      "credit_allocation": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "result": "Under P inverse stock has drift -.02 and diffusion -.20. Q stock drift .02 yields conditional inverse moment S^-1 exp(.02 tau); price10000/S exp(-.01 tau), initially99.004983375.",
+      "audit": "Scalar derivatives include the quadratic-variation term. Independent density integration checks negative and positive GBM moments; no general stochastic-risk-premium theorem imported."
+    },
+    {
+      "part": "v10-b-q3c",
+      "credit_allocation": [
+        3,
+        3,
+        2
+      ],
+      "result": "PDE derivatives and terminal cash verified. Initial delta -.990049833749 and bank198.009966750 reproduce price. Physical drift cancels correctly through the funded gains identity. E_Q[S_t^-2]=S0^-2 exp(.08t) gives finite discounted integrand L2 norm.",
+      "audit": "Coefficient proof under several rates/dividends/physical drifts, finite-difference derivative checks and direct integrand-square integration. Localized Ito, positive continuous paths, terminal convergence and specified martingale class apply. Unboundedness near zero defeats the chapter-specific global linear-growth uniqueness hypothesis; direct construction supplies price within the stated class."
+    },
+    {
+      "part": "v10-b-q4a",
+      "credit_allocation": [
+        2,
+        2,
+        3,
+        1
+      ],
+      "result": "Incoming wealth3.276084740; buyback24.373730268, fee .024373730268; bank after fee27.078428830. Ideal error -2.217114078, funded -2.241732769; fee difference equals dated fee accumulation. Costless mark reset needs external withdrawal1.208540459.",
+      "audit": "Direct Gaussian payoff/pathwise-delta integrals anchor supplied rounded marks independently of chapter formulas. Exact-fraction retained-cash ledger verifies signed dividends, zero/double fees and cash conservation. Rounded printed inputs, not unrounded hidden values, drive the ledger."
+    },
+    {
+      "part": "v10-b-q4b",
+      "credit_allocation": [
+        2,
+        1,
+        3,
+        2
+      ],
+      "result": "400 independent pair means imply SE .2, approximate interval[7.708,8.492], deterministic padding[7.7,8.5], and inverse interval[.275,.315] or[27.5%,31.5%].",
+      "audit": "Mean-value bound uses lower vega20 across the entire known root/candidate bracket. Forty-five nonlinear monotone price/root interventions check asymmetric direction and price coverage implication. Candidate frozen before independent evaluation. Pair independence, fixed sample and approximate CLT coverage remain distinct from deterministic bias, solver residual, model and quote error."
+    },
+    {
+      "part": "v10-b-q4c",
+      "credit_allocation": [
+        2,
+        1,
+        1
+      ],
+      "result": "Discounted error drift .5 exp(-rt) Gamma S^2 (sigma_bar^2-a_t^2) gives nonnegative continuous costless error for pointwise lower actual variance and zero initial error.",
+      "audit": "Direct symbolic funded/mark cancellation for changed physical drifts and actual variances. Terminal limit requires the stated localization/integrability. Discrete fee-funded strategy does not satisfy continuous-costless premises; changing cash-gamma weights invalidate an unweighted average sign argument."
+    },
+    {
+      "part": "v10-b-q5a",
+      "credit_allocation": [
+        2,
+        2,
+        1
+      ],
+      "result": "Asian payoff(0,0,10,20), European(0,0,0,20); positive state prices(.1,b,.8-b,.1),0<b<.8. Extra European quote fixes tail mass but not history twins.",
+      "audit": "Three independent trade-price equations leave the middle-state difference unspanned. Other call quotes1/2/4 preserve the missing fixing direction."
+    },
+    {
+      "part": "v10-b-q5b",
+      "credit_allocation": [
+        2,
+        3,
+        2
+      ],
+      "result": "Asian prices10-10b fill(2,10). Subhedge one European costs2; superhedge .5 stock-40 bank costs10. At endpoints zero-cost long/short combinations have nonnegative nonzero possible cash.",
+      "audit": "Exact active-constraint vertex enumeration independently obtains hedge bounds. Positive-price interior extension and limiting state-price families prove sharpness. Explicit signed X trading at the proposed quote added before freeze to support both endpoint arbitrages."
+    },
+    {
+      "part": "v10-b-q5c",
+      "credit_allocation": [
+        1,
+        1,
+        1
+      ],
+      "result": "At b=.4 correct price6, code price2 and candidate-minus-correct error -4. History C loses10 cash with weight .4.",
+      "audit": "Exact dot products and history-twin payoff comparison; terminal-only calibration or more simulation cannot restore a missing contractual observation."
+    },
+    {
+      "part": "v10-b-q5d",
+      "credit_allocation": [
+        2,
+        1,
+        2
+      ],
+      "result": "Reject Asian point release: contract gate fails in C and model-price width8 exceeds invented limit1. Correct code fixes only the first gate. Separately validated European use may be considered within its own scope.",
+      "audit": "Open-answer rubric requires both failed gates, restricted-use distinction, accountable implementation and valuation owners, independent challenge, version/input binding and concrete payoff/identification closure. Alternative reasoned roles accepted; no legal or supervisory threshold imported."
+    }
+  ],
+  "proof_audit": {
+    "cash_and_rates": "Exact dated cash matching; positive discounts and explicit storage/shorting rights; initial-curve calibration versus rate-option identification.",
+    "credit_and_funding": "First-default partition and recovery settlement distinguish observation date from receipt; separate cash-restriction and fully borrowed P&L panels.",
+    "continuous": "Scalar Ito localized on positive GBM, normal exponential moments, funded gains with dividend compensation, negative second moments and true L2 discounted martingale price within the defined class; no unsupported global uniqueness extension.",
+    "error_and_inversion": "Fixed-parameter Greeks, retained cash, fee timing, independent pair unit and fixed evaluation; conditional-on-coverage mean-value inequality over known root bracket. Approximate confidence remains approximate.",
+    "incomplete_and_control": "All histories physically possible and trades restricted to0/T; positive state-price family, statewise attainable envelopes and two-direction endpoint arbitrages; corrected contractual code does not identify missing history prices."
+  },
+  "calculation_method": "Independent standard-library checker uses exact Fraction cash and linear algebra, exhaustive rating histories, two independent funding accumulations, Gaussian payoff/pathwise-delta quadrature, GBM power moments, derivative perturbations, nonlinear monotone price inversions and finite payoff-envelope vertices. No saved-output-only or imported author-model comparison.",
+  "calculator_feasibility": "Every needed option mark, delta, half-year factor and confidence quantile is supplied. No CDF lookup, simulated sample, PDE grid or code execution is required. D4 is a compact ledger and interval calculation; all exponential/lognormal work uses the stated moment identity and a nonprogrammable calculator.",
+  "source_audit": "Seven existing primary method records reused with exact titles/URLs and inherited inspected scope. New contracts, arithmetic and policy thresholds are labeled synthetic; no new current legal, exchange or market claim.",
+  "validation": {
+    "normal_and_optimized_identical": true,
+    "quiet_check_api": true,
+    "strict_json": true,
+    "different_working_directories": [
+      "/",
+      "/tmp"
+    ],
+    "isolated_four_file_normal_and_optimized": true,
+    "isolated_manuscript_mutation_rejected": true,
+    "summary": {
+      "assessment": "v10-exam-b",
+      "status": "pass",
+      "comparisons": 410,
+      "domain_rejections": 25,
+      "scored_prompts": 16,
+      "points": 100,
+      "domains": {
+        "D1": 20,
+        "D2": 20,
+        "D3": 20,
+        "D4": 20,
+        "D5": 20
+      },
+      "independent_rating_histories": 9,
+      "nonlinear_inverse_cases": 45,
+      "interventions": [
+        "Q1 independent zero-rate coordinates and replacement curves",
+        "Q1 fixed initial curve with changed future-rate dispersion/trading rights",
+        "Q2 first-default enumeration with delayed/immediate/zero recovery",
+        "Q2 migration deterioration and zero-rate delay boundary",
+        "Q2 reordered same-terminal futures path, threshold and funding interventions",
+        "Q3 physical-frequency changes versus finite replication",
+        "Q3 density-integrated negative moments and localized derivative/PDE checks",
+        "Q3 negative rates, dividends, physical drifts and small-stock growth boundary",
+        "Q4 direct Gaussian put/delta integration independent of chapter formula",
+        "Q4 fee scaling, signed dividend compensation and retained-cash conservation",
+        "Q4 finite-vega inverse sets under nonlinear monotone prices and numerical allowance",
+        "Q4 exact continuous funded mismatch and changing cash-gamma weights",
+        "Q5 extra vanilla quotes and history-twin null direction",
+        "Q5 exact hedge-envelope vertices, endpoint arbitrages and interior extensions",
+        "Q5 corrected contract code with unresolved model-range release gate"
+      ],
+      "author_payload_hashes_checked": 3,
+      "limits": "Machine-assisted author audit, not peer acceptance or human academic certification; approximate CLT coverage is not established by deterministic checks."
+    }
+  },
+  "payload_sha256": {
+    "content/assessments/parts/v10-exam-b.html": "f57bc71409d680868efe59a1006e0554fa6446a685b38d0e5495efa7eaed490e",
+    "scripts/check_v10_exam_b.py": "d52a2b944f6bf167ba06a6804156b73eb7ce59d9904d89e0eb158fc8480c9a9c",
+    "content/reviews/v10-exam-b-sources.json": "80068eb17b594dde97c360485a9b2c27a04772d4d6e15d1ad6225cbf58338537"
+  },
+  "unresolved_issues": [],
+  "limitations": "This is machine-assisted author review, not independent peer acceptance, human academic certification, empirical timing calibration or external evaluation of learner mastery. Root and separately scoped peer retain acceptance responsibility."
+}

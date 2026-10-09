@@ -128,6 +128,8 @@ Each specialist owns its chapter, distinctly prefixed supporting files, checker,
 
 ## Continuity protocol
 
+On 9 October 2026 the user reaffirmed that the coordinating author is the chief architect and should resolve architecture, curriculum and production questions using hard evidence. Make those decisions independently, preserve the evidence and its limits, and continue authorized work without routine clarification requests. An inaccessible authenticated surface remains an observed limitation, not evidence that its checks passed.
+
 Keep an active goal until the terminal checklist passes. After every coherent batch, update `book/STATUS.json` with the exact last completed work, pending review issues and next actions. On continuation, read this plan and checkpoint, inspect the current manuscripts, and continue from the first unfinished task. Do not restart planning, silently reduce scope or repeatedly ask the user to continue. User corrections amend the contract and checkpoint while preserving completed work.
 
 If a source, credential or deployment step is temporarily unavailable, continue independent authoring and verification. Record the concrete blocker and return to it. A lost publishing credential does not justify a replacement Site. The same project ID and latest successful source state must be retained.

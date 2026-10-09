@@ -1,0 +1,231 @@
+{
+  "batch": "v11-opening",
+  "date": "2026-10-09",
+  "state": "queued only; current unfinished task is Volume10 assessment",
+  "dispatch_condition": "Dispatch only after Volume10 package author/peer acceptance and coherent publication; each specialist must first finish all current exact author/peer scopes. Root controls dispatch.",
+  "authorization": "MASTER_PLAN.md explicit7October2026 three-specialist authorization; no further agents.",
+  "prerequisite_contract": "Volumes6,7,9,10 accepted before v11-c01 acceptance; local sequencec01\u2192c02\u2192c03\u2192c04. Adjacent drafts may proceed against these agreed specs; canonical acceptance follows actual dependencies.",
+  "source_preparation": "production/v11-opening-source-leads.json; distinguishes searched/opened/scoped-read/unavailable bodies. Reuse accepted stable sources; retrieve only missing primary evidence.",
+  "assignments": [
+    {
+      "owner": "bs_author",
+      "chapter": "v11-c01",
+      "state": "queued; not dispatched",
+      "canonical_spec": {
+        "id": "v11-c01",
+        "number": 1,
+        "title": "Financial intermediation and bank economics",
+        "outcome": "Explain the economic functions and fragilities of financial intermediaries.",
+        "coverage": [
+          "Screening",
+          "monitoring",
+          "maturity transformation",
+          "deposits",
+          "bank income",
+          "capital"
+        ],
+        "prerequisites": [
+          "v06",
+          "v07",
+          "v09",
+          "v10"
+        ],
+        "level": "Advanced",
+        "status": "planned",
+        "manuscript": "chapters/v11-c01.html",
+        "sources": [
+          "wharton-finance-courses",
+          "imf-data",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Financial intermediation as a response to screening, monitoring, contracting and payment needs; explicit original incentive/cost example rather than labels. Teach deposit/loan balance-sheet creation, income/spread/cost versus capital, maturity transformation and a coherent simple liquidity-insurance/run mechanism with stated information and liquidation rights. Delimit preliminary run treatment from Chapter5 deeper liquidity. Link accepted monetary/accounting/investment/derivatives tools. Do not claim deposits mechanically fund every new loan or that profitable lending precludes cash fragility.",
+      "owned_paths": [
+        "content/chapters/v11-c01.html",
+        "content/projects/v11-c01-inputs.json",
+        "content/projects/v11-c01-analysis.py",
+        "content/projects/v11-c01-output.json",
+        "content/projects/v11-c01-manifest.json",
+        "content/projects/v11-c01-README.txt",
+        "scripts/check_v11_c01.py",
+        "content/reviews/v11-c01-author.json",
+        "content/reviews/v11-c01-sources.json"
+      ]
+    },
+    {
+      "owner": "c05_review",
+      "chapter": "v11-c02",
+      "state": "queued; not dispatched",
+      "canonical_spec": {
+        "id": "v11-c02",
+        "number": 2,
+        "title": "Bank balance sheets, capital and liquidity",
+        "outcome": "Reconcile bank accounts and distinguish liquidity shortages from insolvency.",
+        "coverage": [
+          "Assets",
+          "funding",
+          "equity",
+          "capital ratios concepts",
+          "liquidity buffers",
+          "accounting-economic value"
+        ],
+        "prerequisites": [
+          "v11-c01"
+        ],
+        "level": "Advanced",
+        "status": "planned",
+        "manuscript": "chapters/v11-c02.html",
+        "sources": [
+          "wharton-finance-courses",
+          "imf-data",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Reconcile original bank balance-sheet and income transactions, loss provisions/charge-offs/cash and capital; distinguish book and economic value, leverage versus risk-weighted capital concepts, encumbrance/haircut and dated liquidity capacity. Build one consistent bank ledger and independent stress reconciliation. Distinguish capital/accounting measures from deployable cash. Any actual regulatory definition requires dated primary source and jurisdiction; invented thresholds remain explicitly instructional; full regulatory architecture belongs in Chapter9.",
+      "owned_paths": [
+        "content/chapters/v11-c02.html",
+        "content/projects/v11-c02-inputs.json",
+        "content/projects/v11-c02-analysis.py",
+        "content/projects/v11-c02-output.json",
+        "content/projects/v11-c02-manifest.json",
+        "content/projects/v11-c02-README.txt",
+        "scripts/check_v11_c02.py",
+        "content/reviews/v11-c02-author.json",
+        "content/reviews/v11-c02-sources.json"
+      ]
+    },
+    {
+      "owner": "ito_author",
+      "chapter": "v11-c03",
+      "state": "queued; not dispatched",
+      "canonical_spec": {
+        "id": "v11-c03",
+        "number": 3,
+        "title": "Credit analysis and lending decisions",
+        "outcome": "Evaluate creditworthiness using cash flow, incentives and downside protection.",
+        "coverage": [
+          "Debt service",
+          "leverage",
+          "covenants",
+          "collateral",
+          "repayment sources",
+          "credit underwriting"
+        ],
+        "prerequisites": [
+          "v11-c02"
+        ],
+        "level": "Advanced",
+        "status": "planned",
+        "manuscript": "chapters/v11-c03.html",
+        "sources": [
+          "wharton-finance-courses",
+          "imf-data",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Evaluate an original corporate borrower using operating cash/debt service, leverage and covenant definitions, primary repayment sources, collateral recovery timing and seniority, underwriting incentives and downside stress. Distinguish borrower project value, lender debt payoff, accounting profit and cash debt service; distinguish physical repayment scenarios from Q pricing law. Teach a complete defensible approval/restructure/refusal example and evidence/monitoring/remediation, with complete determinate solutions and open rubrics.",
+      "owned_paths": [
+        "content/chapters/v11-c03.html",
+        "content/projects/v11-c03-inputs.json",
+        "content/projects/v11-c03-analysis.py",
+        "content/projects/v11-c03-output.json",
+        "content/projects/v11-c03-manifest.json",
+        "content/projects/v11-c03-README.txt",
+        "scripts/check_v11_c03.py",
+        "content/reviews/v11-c03-author.json",
+        "content/reviews/v11-c03-sources.json"
+      ]
+    },
+    {
+      "owner": "root",
+      "chapter": "v11-c04",
+      "state": "queued; not dispatched",
+      "canonical_spec": {
+        "id": "v11-c04",
+        "number": 4,
+        "title": "Market risk and portfolio loss",
+        "outcome": "Compare risk measures and state their information and distributional limitations.",
+        "coverage": [
+          "VaR",
+          "expected shortfall",
+          "scenarios",
+          "tails",
+          "dependence",
+          "horizon",
+          "backtesting"
+        ],
+        "prerequisites": [
+          "v11-c03"
+        ],
+        "level": "Advanced",
+        "status": "planned",
+        "manuscript": "chapters/v11-c04.html",
+        "sources": [
+          "wharton-finance-courses",
+          "imf-data",
+          "hbs-finance-curriculum"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Loss sign/horizon/physical information, left quantile VaR, probability atoms and tail-average expected shortfall; original finite tail/dual/minimization and coherence proof, VaR non-subadditivity, dependence stress, explicit normal/horizon limitations, heavy tails, full revaluation versus approximation, exception-count/backtesting limits and severity/coverage distinction. Use existing bounded standard-library tools; no claim risk metrics equal capital requirements or cover all losses.",
+      "owned_paths": [
+        "content/chapters/v11-c04.html",
+        "content/projects/v11-c04-inputs.json",
+        "content/projects/v11-c04-analysis.py",
+        "content/projects/v11-c04-output.json",
+        "content/projects/v11-c04-manifest.json",
+        "content/projects/v11-c04-README.txt",
+        "scripts/check_v11_c04.py",
+        "content/reviews/v11-c04-author.json",
+        "content/reviews/v11-c04-sources.json"
+      ]
+    }
+  ],
+  "shared_gates": [
+    "Complete canonical outcomes with definitions before use, assumptions and units, at least stated2worked examples and8original exercises with full solutions/open rubrics, teach-back and delayed check, accurate source routes. Original cases; no current invented market data.",
+    "Keep depth proportional to the concept. Supply essential proofs and financial timing; do not pad or import a general theorem without teaching its assumptions.",
+    "One coherent bounded portable standard-library lab per chapter, synthetic provenance and inputs, saved output, README and manifest; quiet run(data) and CLI, nonmutating input, explicit domain errors active under-O.",
+    "Independent calculations and meaningful interventions should target actual failure modes. Avoid redundant broad fuzzing or giant enumerations when exact algebra or a small statewise certificate resolves the claim.",
+    "Author record binds eight nonself owned files, audits every exact exercise/proof/source, clearly lists pending separate review. No self-acceptance. Root alone canonical/source/status/shared scripts/hosting; report freeze before peer.",
+    "No external messages, new services, installs, framework, images, child agents or deployment. Preserve the offline edition."
+  ]
+}

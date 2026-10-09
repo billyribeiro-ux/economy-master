@@ -120,6 +120,7 @@ from check_v10_c09_peer import check as check_v10_c09_peer
 from check_v10_c10_peer import check as check_v10_c10_peer
 from check_v10_c11_peer import check as check_v10_c11_peer
 from check_v10_c12_peer import check as check_v10_c12_peer
+from check_v10_assessment import check as check_v10_assessment
 from check_economics_core import check as check_economics_core
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -538,6 +539,7 @@ def main():
                          'v10-c11': check_v10_c11(), 'v10-c12': check_v10_c12()}
     v10_closing_peer_check = {'v10-c09': check_v10_c09_peer(), 'v10-c10': check_v10_c10_peer(),
                               'v10-c11': check_v10_c11_peer(), 'v10-c12': check_v10_c12_peer()}
+    v10_assessment_check = check_v10_assessment()
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -586,8 +588,10 @@ def main():
               'volume_10_middle_peer_checks': v10_middle_peer_check,
               'volume_10_closing_checks': v10_closing_check,
               'volume_10_closing_peer_checks': v10_closing_peer_check,
+              'volume_10_assessment_check': v10_assessment_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
-    report['checks'].extend(['Volume 10 chapters9–12: Greek units, inversion and funded hedge errors; proved smooth-grid stability and numerical/sampling diagnostics; finite incomplete-market bounds, explicit risk drivers and dated exotic/credit cash; identification, conditioning, aggregate error and version-bound model use. Four separate author/peer laboratories and reviewed-payload bindings.',
+    report['checks'].extend(['Volume 10 assessment: distinct 100-point examinations, complete diagnostic/oral/retention solutions and integrated pricing-and-risk project; exact curve/credit cash, finite stopping, qualified continuous proofs, funded hedges, numerical/sampling scope and controlled use. Final five-part assembly, all author checks and four separate peer checks with frozen payload bindings.',
+        'Volume 10 chapters9–12: Greek units, inversion and funded hedge errors; proved smooth-grid stability and numerical/sampling diagnostics; finite incomplete-market bounds, explicit risk drivers and dated exotic/credit cash; identification, conditioning, aggregate error and version-bound model use. Four separate author/peer laboratories and reviewed-payload bindings.',
         'Volume 8 chapters 1–4: incremental capital budgeting and IRR domains; FCFF/FCFE and dated claim pricing; coherent capital/return fade and terminal sensitivity; covariance, policy-specific leverage, WACC and finite APV with independent pricing checks',
         'Volume 10 chapters5–8: dated carry, funded futures/margin and swaps; full finite option replication, adapted stopping and fees; Brownian/QV/integral and GBM numerical-error anchors; funded Black–Scholes PDE, constant measure tilt, vanilla pricing and finite hedge errors. Author and independent peer checkers, bounded input contracts, portable labs and exact reviewed payloads',
         'Volume 10 chapters 1–4: dated bond cash, settlement accrual, bootstrapping, YTM/forward conventions and curve identification; yield/key sensitivities, funded immunization and failure cases; finite pricing versus physical rate dynamics, calibrated Arrow trees and hedge errors; structural/default-time credit, recovery timing, absorption, dependence and conditional spread calibration',

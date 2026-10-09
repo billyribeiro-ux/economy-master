@@ -1,0 +1,336 @@
+{
+  "component": "v10-exam-a",
+  "date": "2026-10-09",
+  "status": "author-reviewed; separate peer and coordinator acceptance pending",
+  "author": "bs_author specialist under production/v10-assessment-assignments.json; machine-assisted author review",
+  "scope": "Complete original cumulative Form A with100 points across five20-point domains,19 scored subparts and complete per-subpart solutions. Suggested240-minute closed-resource calculator administration; all necessary exponential approximations are supplied and no CDF lookup or code is required.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "coverage": [
+    {
+      "domain": "D1",
+      "chapters": [
+        "v10-c01",
+        "v10-c02",
+        "v10-c03"
+      ],
+      "points": 20,
+      "evidence": "Between-coupon cash/clean quote and bootstrap; parallel exposure matching and explicit middle-key shock; calibrated discount expectation versus physical rate forecast."
+    },
+    {
+      "domain": "D2",
+      "chapters": [
+        "v10-c04",
+        "v10-c05"
+      ],
+      "points": 20,
+      "evidence": "Density-derived immediate versus maturity recovery; pricing/physical identification; swap coupon telescoping and actual two-date segregated collateral funding."
+    },
+    {
+      "domain": "D3",
+      "chapters": [
+        "v10-c06",
+        "v10-c07",
+        "v10-c08"
+      ],
+      "points": 20,
+      "evidence": "Two-step adapted American stopping; funded local stock/bank replication; scalar Ito quadratic variation and continuous dividend-inclusive PDE with terminal/growth/admissibility limits."
+    },
+    {
+      "domain": "D4",
+      "chapters": [
+        "v10-c09",
+        "v10-c10"
+      ],
+      "points": 20,
+      "evidence": "Aggregate Greek rank and incremental shares; complete versus abbreviated Taylor order; contractive stencil error induction and refinement failure; fixed control variance and path sampling."
+    },
+    {
+      "domain": "D5",
+      "chapters": [
+        "v10-c11",
+        "v10-c12"
+      ],
+      "points": 20,
+      "evidence": "Positive-law capped-price interval, attaining hedges but excluded claim endpoints, finite nonlinear jump residual, and distinct implementation/uncertainty/size gates."
+    }
+  ],
+  "distinctness": "Blueprint coordinated with c05_review before drafting. A uses a coupon-date curve/barbell, continuous default density, swap and collateral release, two-step American policy, explicit PDE derivation, aggregate hedge rank, contractive stencil recurrence, fixed control estimator and capped terminal claim. B uses different information, cash, hedge, continuous payoff and path-exotic structures; common support diagnostic/oral/retention cases are not copied. Original numerical inputs and complete problem structures were developed for this form.",
+  "prompt_audit": [
+    {
+      "prompt": "v10-a-q1a",
+      "points": 5,
+      "verdict": "passed",
+      "independent_reasoning": "Solved the full triangular cash matrix: D=(0.98,0.931,0.88), accrued interest2.5 and clean99.455. Quoted dirty values equal dated coupon sums; settlement cash is not the clean quote."
+    },
+    {
+      "prompt": "v10-a-q1b",
+      "points": 5,
+      "verdict": "passed",
+      "independent_reasoning": "Matched value and derivative with respect to an explicitly common continuous zero shift, obtaining47.5 and4655/88 units. Both dollar legs46.55; equal scalar duration does not imply dated cash matching."
+    },
+    {
+      "prompt": "v10-a-q1c",
+      "points": 5,
+      "verdict": "passed",
+      "independent_reasoning": "Directly repriced only the intermediate discount. Exact positive hedge-minus-liability change1.386078423 differs from its first-order1.3965. The scenario has no implied physical probability."
+    },
+    {
+      "prompt": "v10-a-q1d",
+      "points": 5,
+      "verdict": "passed",
+      "independent_reasoning": "Fitted D1.5=.98(.99+.91)/2. Forward1/19, Q mean491/9009 and P mean97/3003; exact nonlinear/measure decomposition was recomputed. Harmonic inversion and a change of law are separately identified."
+    },
+    {
+      "prompt": "v10-a-q2a",
+      "points": 6,
+      "verdict": "passed",
+      "independent_reasoning": "Integrated the first-default density directly, separately from the closed formulas. Immediate87.311152715, maturity87.092354973 and difference.218797742 reconcile; survival pays full face and default recovery is dated correctly."
+    },
+    {
+      "prompt": "v10-a-q2b",
+      "points": 3,
+      "verdict": "passed",
+      "independent_reasoning": "Annual Q intensity.06 gives two-year Q probability1-exp(-.12), not physical frequency. Unknown recovery and pricing/liquidity wedge leave one-price identification underdetermined; solution names relevant additional evidence without inventing current data."
+    },
+    {
+      "prompt": "v10-a-q2c",
+      "points": 6,
+      "verdict": "passed",
+      "independent_reasoning": "Discount-ratio coupon identities telescope only under the stated matched reset/curve rights. Annuity1.86, par5/93, payer value.7 and dated net PVs-.8,+1.5 are independently reconstructed. No swap principal is falsely exchanged."
+    },
+    {
+      "prompt": "v10-a-q2d",
+      "points": 5,
+      "verdict": "passed",
+      "independent_reasoning": "Full collateral/loan schedule:12.12 versus12.72, release4.12, remaining loan8.60, final8.08 versus9.116, net-1.036. Terminal accumulation independently reconciles all flows; segregation and returned principal are explicit."
+    },
+    {
+      "prompt": "v10-a-q3a",
+      "points": 6,
+      "verdict": "passed",
+      "independent_reasoning": "Enumerated all four date-1 deterministic adapted exercise choices and the root stop alternative. Up waits, down exercises;575/42 American,3475/294 European and275/147 premium. Inclusion comparison holds under the same finite law, not across changed trees."
+    },
+    {
+      "prompt": "v10-a-q3b",
+      "points": 6,
+      "verdict": "passed",
+      "independent_reasoning": "Independent payoff-matching systems give root stock-5/8 and bank1600/21, then up stock-7/24 and bank40. Buying1/3 share costs40 out of incoming80; down short closure costs50 and leaves30 for exercise. Both terminal up-branch receipts match."
+    },
+    {
+      "prompt": "v10-a-q3c",
+      "points": 8,
+      "verdict": "passed",
+      "independent_reasoning": "Scalar C1,2 Ito is applied only on localized U<T intervals to the positive constant-coefficient stock. Quadratic variation contributes sigma^2S^2dt; funded gains explicitly contain dividends and bank cash. Drift matching cancels mu and gives the dividend-adjusted PDE; unequal H-v follows a linear financing ODE. Terminal kink, uniform at-most-linear growth, GBM moments and admissible/predictable gains prevent an unjustified universal uniqueness or arbitrary-strategy claim."
+    },
+    {
+      "prompt": "v10-a-q4a",
+      "points": 6,
+      "verdict": "passed",
+      "independent_reasoning": "The supplied exposures are aggregate signed vanilla packages, not inconsistent single-call Greeks. Same-maturity gamma/vega columns are rank one and cannot remove(-4,-5000). Replacing with the longer-maturity package gives100 A and40 C, plus an incremental sale of6 shares after including the10 already held. Units and funding limits are separately scored."
+    },
+    {
+      "prompt": "v10-a-q4b",
+      "points": 4,
+      "verdict": "passed",
+      "independent_reasoning": "All five omitted second-order terms are listed. A full Hessian plus bounded third derivatives on an interior compact neighborhood supports a cubic remainder; f(x,y)=xy along the joint direction disproves the abbreviated assertion by an epsilon^2 versus epsilon^3 ratio. A spot-only theorem is not extended to joint moves."
+    },
+    {
+      "prompt": "v10-a-q4c",
+      "points": 6,
+      "verdict": "passed",
+      "independent_reasoning": "Nonnegative weights sum.95, giving interior contraction and a boundary maximum. With supplied justified local value defect, induction gives.02+.02(.95)^n; n20 bound.027169718448. Halving h alone changes weights to(.70,-.25,.50), violating positivity at(0,1,0). The proof is conditional on the actual defect/boundary premises, not observed nearby numerical answers."
+    },
+    {
+      "prompt": "v10-a-q4d",
+      "points": 4,
+      "verdict": "passed",
+      "independent_reasoning": "Independent finite shocks realize the stated covariance matrix; completing the square gives beta2/3 and residual variance12. Four hundred path-level observations give SE sqrt(.03), half-width.339481958; raw half-width.392. Coefficient/rule selection on the evaluation set and unmeasured model/discretization errors are qualified."
+    },
+    {
+      "prompt": "v10-a-q5a",
+      "points": 5,
+      "verdict": "passed",
+      "independent_reasoning": "Positive calibrated laws are(a,1-3a/2,a/2),0<a<2/3. Capped prices are9.5(1-a), filling(19/6,19/2). Equal state frequencies would price stock at104.5, not95; a selected calibrated law gives consistency but not identification."
+    },
+    {
+      "prompt": "v10-a-q5b",
+      "points": 6,
+      "verdict": "passed",
+      "independent_reasoning": "Independent contact-line enumeration gives the sharp hedge envelope. Explicit lower(S-70)/9 and upper10 portfolios attain costs19/6 and19/2. Endpoint residuals(0,20/3,0) and(10,0,0) exclude both quotes under strict physical support, although hedge optima are attained."
+    },
+    {
+      "prompt": "v10-a-q5c",
+      "points": 3,
+      "verdict": "passed",
+      "independent_reasoning": "Finite square expansion gives156 claim-mark change,120 delta gain and-36 hedge-minus-mark residual. This is a separately declared smooth mark, not the capped option or an imported jump-diffusion theorem."
+    },
+    {
+      "prompt": "v10-a-q5d",
+      "points": 6,
+      "verdict": "passed",
+      "independent_reasoning": "Conditional code discrepancy.006 passes.01, while the supremum upward liability deviation is4.5 per short unit and90 for20, failing60. Count exception cannot waive that gate.13 whole units give58.5;14 give63. The proposed restricted use and independent closure record uncertainty as a date-0 valuation family, not an empirical loss bound or confidence interval."
+    }
+  ],
+  "proof_audit": [
+    {
+      "topic": "Dated-rate derivatives and probability laws",
+      "verdict": "passed",
+      "reason": "Discount-coordinate derivative is derived from exp(-t epsilon), with fixed cash rights. Two linear constraints do not imply equality under independent key moves. Forward inversion is applied to a Q-average discount; P is separately stipulated."
+    },
+    {
+      "topic": "Credit and financed cash",
+      "verdict": "passed",
+      "reason": "Only first-default density is used; each contract pays one appropriately dated recovery. Swap telescope requires the actual matched projection. Segregated margin ledger accrues/reduces outstanding debt at explicit dates and does not count returned principal as a loss."
+    },
+    {
+      "topic": "Stopping and PDE",
+      "verdict": "passed",
+      "reason": "Finite exercise is adapted under one fixed market, and exact node cash balances fund optimal-policy payments. Scalar Ito preterminal regularity is within c07, continuous total gains include qSdt, and c08 global growth/admissibility hypotheses are named rather than assuming unrestricted uniqueness."
+    },
+    {
+      "topic": "Numerical approximation and sampling",
+      "verdict": "passed",
+      "reason": "Full multivariate Taylor and stencil positivity proofs state their premises. The error theorem uses an already-justified one-step value defect and controlled boundaries. MC variance uses a coefficient fixed before evaluation and a known control mean; CLT interval is approximate and distinct from model bias."
+    },
+    {
+      "topic": "Incomplete price and permission",
+      "verdict": "passed",
+      "reason": "Strictly positive laws fill an open interval. Explicit attainable sub/superhedges and state-positive zero-cost endpoint portfolios prove sharpness/exclusion. Materiality uses a supremum despite unattained price endpoints. A count exception does not change the valuation-uncertainty requirement."
+    }
+  ],
+  "scoring_audit": {
+    "subparts": 19,
+    "total_points": 100,
+    "each_domain": 20,
+    "suggested_minutes": 240,
+    "allocation_by_question": [
+      [
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        6,
+        3,
+        6,
+        5
+      ],
+      [
+        6,
+        6,
+        8
+      ],
+      [
+        6,
+        4,
+        6,
+        4
+      ],
+      [
+        5,
+        6,
+        3,
+        6
+      ]
+    ],
+    "per_solution_credits": "All explicit credit allocations reviewed against their prompt totals. Follow-through credit, no duplicate arithmetic penalty and independent conceptual/cash errors are stated. Open D2 evidence and D5 controls are graded by defensible reasoning, not a unique prescribed workflow.",
+    "administration_limits": "Timings and thresholds are authored, not empirically trialed or institution-set. Forms are structurally distinct, not statistically equated."
+  },
+  "numerical_validation": {
+    "component": "v10-exam-a",
+    "status": "passed",
+    "comparisons": 248,
+    "scored_subparts": 19,
+    "points": 100,
+    "domain_points": {
+      "D1": 20,
+      "D2": 20,
+      "D3": 20,
+      "D4": 20,
+      "D5": 20
+    },
+    "financial_interventions": 12,
+    "interventions": [
+      "parallel shift -0.02",
+      "parallel shift 0.02",
+      "physical branch reversal with fixed pricing curve",
+      "zero-rate recovery timing",
+      "different floating projection",
+      "matched collateral and borrowing returns",
+      "inadmissible hindsight exercise as a diagnostic",
+      "spatial refinement at fixed time step",
+      "data-dependent control coefficient counterexample",
+      "short quantity 13",
+      "short quantity 14",
+      "short quantity 20"
+    ],
+    "author_nonself_hashes_verified": 3,
+    "groups": [
+      "complete 100-point/19-subpart structure, five essential domains, all12 chapter routes and scoped source reuse",
+      "D1 exact cash-matrix bootstrap, accrued/clean cash, exposure-system barbell, nonparallel repricing and independent P/Q rate means",
+      "D2 independent default-density integration, recovery delay/zero-rate comparison, swap dated coupons and two-date segregated-principal funding",
+      "D3 exact exhaustive finite stopping, independent hedge systems and actual branch cash; local Ito/PDE assumptions separately reviewed in author record",
+      "D4 exposure rank and signed trade, joint Taylor order, exact error recurrence/refinement failure, and independent finite-law control moments",
+      "D5 exact contact envelopes, positive calibrated families, endpoint arbitrages, finite jump residual and separate conditional-error/model-risk gates"
+    ],
+    "count_definition": "Each executed comparison is counted once; named financial interventions have a separate count. Full proof/solution/source inspection is recorded independently in the author audit.",
+    "limits": "Machine-assisted author verification, not a substitute for separate peer/coordinator review, empirical validation, tested timing or external certification. Numerical checks do not prove stochastic-calculus hypotheses, PDE uniqueness or sampling coverage."
+  },
+  "independent_methods": [
+    "Exact pivoted elimination for the complete cash matrix and hedge systems.",
+    "Direct finite curve repricing and independent Q/P cash-rate averages.",
+    "Composite Simpson integration of the default density, separate from the closed-form prices; exact dated cash accumulation for swap and margin.",
+    "Exhaustive enumeration of every finite adapted date-1 policy plus root exercise, separate from the backward solution.",
+    "Exact rational error recurrence and explicit signed-grid propagation; independent finite primitive shocks for control moments.",
+    "Contact-line envelope enumeration and positive-law interventions for claim bounds, followed by exact policy quantities."
+  ],
+  "source_audit": "Twelve already accepted canonical primary method records are reused within their documented inspected scopes. No new source is proposed or expanded. The author does not claim a fresh retrieval of every previously inspected body; the source payload records the actual prior scope and the exact examination use. No external examples, contemporary market claims or source-set scoring/permission thresholds are imported.",
+  "resolved_author_findings": [
+    {
+      "issue": "Clarify Greek units and feasibility of supplied risk inputs",
+      "resolution": "Specified each hedge candidate as a fixed aggregate package of signed vanilla holdings with common within-package maturity/volatility. The numbers are not falsely attributed to a single unscaled call; all constituent quantities are included."
+    }
+  ],
+  "findings": [],
+  "necessary_repairs": [],
+  "remaining_gates": [
+    "Separate peer review of all exact prompts, solutions, methods and payload hashes.",
+    "Root coordinator final audit, shared assembly/structural regression and volume acceptance; author freeze does not change canonical status."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/assessments/parts/v10-exam-a.html",
+      "bytes": 44273,
+      "sha256": "bc25789f68f79e93ea0fbd64ee488067463fa3496eb19b51d709188896628d4f"
+    },
+    {
+      "path": "scripts/check_v10_exam_a.py",
+      "bytes": 22140,
+      "sha256": "566ea5ed9f7d2cfc53af10a26ba402e1d63cec6f18fb769120c6303932b7a05b"
+    },
+    {
+      "path": "content/reviews/v10-exam-a-sources.json",
+      "bytes": 13686,
+      "sha256": "41ee364f677dafbe742a22a6ff92015fb4df09af37b639799b427a46b4f80e0b"
+    }
+  ],
+  "execution_verification": {
+    "normal": "passed",
+    "optimized": "passed; identical248-comparison summary",
+    "quiet_import_and_check": "passed normally and with -O; no stdout/stderr inside API execution",
+    "portable_four_file_copy": "passed normally and with -O in a temporary repository-shaped directory with spaces, from an unrelated working directory; no installed dependencies or external files",
+    "commands": [
+      "python3 scripts/check_v10_exam_a.py",
+      "python3 -O scripts/check_v10_exam_a.py"
+    ],
+    "saved_summary": "exactly agrees with independently executed check() results in every execution mode"
+  }
+}

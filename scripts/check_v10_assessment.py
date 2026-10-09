@@ -22,8 +22,8 @@ class SupportHTML(HTMLParser):
     def handle_starttag(self,tag,attrs):
         d=dict(attrs)
         if 'id' in d:self.ids.append(d['id'])
-        if 'data-points' in d:
-            need(tag=='li' and 'id' in d,'scored semantic prompt')
+        if 'data-points' in d and tag=='li':
+            need('id' in d,'scored semantic list prompt')
             need(d['id'] not in self.points,'unique scored prompt')
             self.points[d['id']]=int(d['data-points'])
         if 'data-solution-for' in d:self.solutions.append(d['data-solution-for'])
@@ -148,6 +148,17 @@ def check():
     for anchor in ('diagnostic','exam-rules','form-a','solutions-a','form-b','solutions-b','project','oral-transfer','retention','notation-index','concept-index','volume-synthesis'):
         need(anchor in parser.ids,'required assessment section '+anchor)
     result['assembly_parts']=list(PARTS)
+    from check_v10_exam_a import check as exam_a
+    from check_v10_exam_b import check as exam_b
+    from check_v10_project import check as project
+    from check_v10_exam_a_peer import check as peer_a
+    from check_v10_exam_b_peer import check as peer_b
+    from check_v10_project_peer import check as peer_project
+    from check_v10_support_peer import check as peer_support
+    result['component_checks']={name:checker() for name,checker in (
+        ('exam_a_author',exam_a),('exam_b_author',exam_b),('project_author',project),
+        ('exam_a_peer',peer_a),('exam_b_peer',peer_b),('project_peer',peer_project),('support_peer',peer_support))}
+    json.dumps(result,allow_nan=False)
     return result
 
 

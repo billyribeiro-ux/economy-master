@@ -1,0 +1,27 @@
+{
+  "batch": "v10-assessment-selected-reserve-repair",
+  "date": "2026-10-09",
+  "agent": "ito_author",
+  "state": "complete/frozen; selected-reserve repair independently confirmed",
+  "finding": "production/v10-assessment-selected-reserve-finding.json",
+  "owned_paths": [
+    "content/assessments/parts/v10-project.html",
+    "content/projects/v10-assessment-inputs.json",
+    "content/projects/v10-assessment-analysis.py",
+    "content/projects/v10-assessment-output.json",
+    "content/projects/v10-assessment-manifest.json",
+    "content/projects/v10-assessment-README.txt",
+    "scripts/check_v10_project.py",
+    "content/reviews/v10-project-author.json",
+    "content/reviews/v10-project-sources.json"
+  ],
+  "scope": "Repair initial funding gate for valid cases where selected risky reserve costs more than riskless fixed liability PV. Preserve the conservative no-expected-savings floor, but budget any actual selected-reserve premium. Existing baseline answers should remain unchanged. Clarify actual requested reserve cost and budget basis in output/README/guide without adding a new feature or sixth gate. Update meaningful focused regression, regenerated baseline output, manifest and all8 author bindings. Refreeze exact9 author files; support peer files remain frozen and out of this repair scope.",
+  "proposed_formula": "selected_reserve_pv = riskless PV for matched_zeros else risky reserve PV; reserve_budget=max(riskless PV,selected_reserve_pv); required_quote=reserve_budget+put+tested buffer. Explain why future/default-only reserve excess cannot fund initial purchase or survival-state hedge deficit.",
+  "review_gates": [
+    "Reproduce supplied pre-repair false pass; corrected valid variant must fail funding at110.5 and pass a fully financed quote with other gates unchanged.",
+    "Switching to matched_zeros uses riskless cost; negative/default-state premium and unchanged original baseline handled explicitly.",
+    "Root and bs_author project peer independently recompute changed scenario; all9 current author payloads must be rebound before final peer acceptance.",
+    "Only nine original author paths; no support peer/shared/canonical changes, no new agents or publication."
+  ],
+  "final_peer_record": "content/reviews/v10-project-peer.json"
+}

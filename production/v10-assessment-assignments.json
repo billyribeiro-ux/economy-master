@@ -2,7 +2,7 @@
   "batch": "v10-assessment",
   "date": "2026-10-09",
   "authorization": "Explicit specialist authorization recorded in MASTER_PLAN.md. Queue only; no assignment dispatched before existing author/peer work completes.",
-  "batch_state": "root support draft underway while closing chapters receive separate peer review; specialist assessment scopes remain queued",
+  "batch_state": "complete/accepted; whole-edition checks and offline integrity passed; private publication next",
   "canonical_spec": {
     "id": "v10",
     "title": "Fixed income, derivatives and quantitative finance",
@@ -26,20 +26,21 @@
   "shared_rules": {
     "exam_contract": "Original distinct Forms A/B: five20-point domains,100 points,240-minute suggested uncalibrated design target. Complete worked determinate solutions, explicit subpart point allocation, proof hypotheses, open-answer rubrics. Each form maps all12 chapter outcomes. Supply necessary normal-CDF values or small tables for pencil-and-paper arithmetic; no unstated software access in a closed-resource section. No copied chapter problems or number-only reassessment. Coordinate blueprints before full drafting.",
     "domains": {
-      "D1": "Cash-flow pricing, curve construction and rate exposure (c01\u2013c03)",
-      "D2": "Credit, forwards/futures/swaps and dated collateral/funding cash (c04\u2013c05)",
-      "D3": "Finite replication/stopping, Brownian/Ito and continuous valuation (c06\u2013c08)",
-      "D4": "Greeks, volatility, financed hedging and numerical/sampling error (c09\u2013c10)",
-      "D5": "Incomplete/exotic contract identification and controlled model use (c11\u2013c12)"
+      "D1": "Cash-flow pricing, curve construction and rate exposure (c01–c03)",
+      "D2": "Credit, forwards/futures/swaps and dated collateral/funding cash (c04–c05)",
+      "D3": "Finite replication/stopping, Brownian/Ito and continuous valuation (c06–c08)",
+      "D4": "Greeks, volatility, financed hedging and numerical/sampling error (c09–c10)",
+      "D5": "Incomplete/exotic contract identification and controlled model use (c11–c12)"
     },
-    "acceptance": "All payloads independently recomputed, all prompts solved, methods already taught, explicit provenance/source scope, peer/coordinator audit before acceptance. Root alone assembles final v10.html and updates canonical/shared/hosting. No subagents, new installations or external messages."
+    "acceptance": "All payloads independently recomputed, all prompts solved, methods already taught, explicit provenance/source scope, peer/coordinator audit before acceptance. Root alone assembles final v10.html and updates canonical/shared/hosting. No subagents, new installations or external messages.",
+    "files_and_checks": "HTML fragments only, no extra h1; Form A uses form-a/solutions-a and Form B form-b/solutions-b IDs, project uses project. Unique v10-a/v10-b/project-prefixed detail IDs; flat reader links. Quiet standard-library check() -> JSON-safe result, no assert-based input validation, full bounded normal/-O portable project CLI/API. Each author record binds all nonself owned payloads and records complete prompt/proof/numerical/source audit. Root owns shared canonical/build/verification/hosting. Report freeze before peer."
   },
   "assignments": [
     {
       "owner": "bs_author",
       "task": "v10-exam-a",
-      "state": "queued, not dispatched",
-      "scope": "Form A uses coherent bond/curve/hedge and option-pricing cases across D1\u2013D5, including a nonparallel or short-rate distinction, explicitly dated credit/funding, actual self-financing replication and Ito/PDE reasoning, numerical-error evidence, and a finite nonunique valuation/permission decision. Author chooses tractable original values and publishes blueprint before drafting; all12 chapters must have assessed evidence.",
+      "state": "accepted after author, separate peer and coordinator review",
+      "scope": "Form A uses coherent bond/curve/hedge and option-pricing cases across D1–D5, including a nonparallel or short-rate distinction, explicitly dated credit/funding, actual self-financing replication and Ito/PDE reasoning, numerical-error evidence, and a finite nonunique valuation/permission decision. Author chooses tractable original values and publishes blueprint before drafting; all12 chapters must have assessed evidence.",
       "owned_paths": [
         "content/assessments/parts/v10-exam-a.html",
         "scripts/check_v10_exam_a.py",
@@ -50,8 +51,8 @@
     {
       "owner": "c05_review",
       "task": "v10-exam-b",
-      "state": "queued, not dispatched",
-      "scope": "Form B is a structurally distinct reassessment across identical D1\u2013D5 coverage: different cash timing/information set, alternative hedge/credit/equivalent-measure or early-exercise cases, discrete hedge/variance/conditioning diagnosis, and different incomplete/exotic/model-control evidence. Coordinate with A to avoid number-only variants; develop complete solutions and scoring.",
+      "state": "accepted after author, separate peer and coordinator review",
+      "scope": "Form B is a structurally distinct reassessment across identical D1–D5 coverage: different cash timing/information set, alternative hedge/credit/equivalent-measure or early-exercise cases, discrete hedge/variance/conditioning diagnosis, and different incomplete/exotic/model-control evidence. Coordinate with A to avoid number-only variants; develop complete solutions and scoring.",
       "owned_paths": [
         "content/assessments/parts/v10-exam-b.html",
         "scripts/check_v10_exam_b.py",
@@ -62,7 +63,7 @@
     {
       "owner": "ito_author",
       "task": "v10-project",
-      "state": "queued, not dispatched",
+      "state": "accepted after author, separate peer and coordinator review",
       "scope": "Build an original coherent pricing-and-risk toolkit and model-use defense, beyond rerunning chapter labs. Required: dated bond cash/curve construction, rate shocks/hedge sensitivities, finite-tree options and exercise, independently anchored vanilla/Monte Carlo with declared sampling units/error, funded discrete-hedge error/transaction costs, and explicitly scoped credit/path/nonunique valuation or governance failure cases. Inputs and cash conventions must fit one fictional desk decision. Separate exact arithmetic, deterministic discretization, ideal sampling uncertainty and model/contract uncertainty; do not let code correctness approve all uses. Supply bounded standard-library model, full synthetic inputs/provenance/output/manifest/README, independent numerical/intervention checker, complete instructor guide,100-point rubric and essential-domain floors, required learner report/code/evidence/limitations, and new transfer tasks. Send architecture and numeric anchors to root before full prose.",
       "owned_paths": [
         "content/assessments/parts/v10-project.html",
@@ -86,5 +87,31 @@
     "content/assessments/v10.html",
     "content/reviews/v10-assessment.json"
   ],
-  "root_scope": "Prerequisite diagnostic and complete answers; administration, coverage/domain map, thresholds and critical-error rules; oral transfer/teach-back; distinct delayed retention with solutions and remediation; notation/concept index linked to actual chapter anchors; volume synthesis and honest limitations. Integrate all components, root independent numerical/proof/prompt audit, structural/full regression/offline checks and private publication."
+  "root_scope": "Prerequisite diagnostic and complete answers; administration, coverage/domain map, thresholds and critical-error rules; oral transfer/teach-back; distinct delayed retention with solutions and remediation; notation/concept index linked to actual chapter anchors; volume synthesis and honest limitations. Integrate all components, root independent numerical/proof/prompt audit, structural/full regression/offline checks and private publication.",
+  "published_prerequisite_source": "9cfe6084cd0210ed07f0ab28687abd0cbffc11ad",
+  "blueprints_coordinated": true,
+  "integration_conventions": "Scored examination list prompts use unique id/data-points; answers use data-solution-for; rubric-table point metadata is handled by project checker. Planned successor links use curriculum.html anchors.",
+  "root_support_state": "Author and separate peer complete/frozen",
+  "peer_rotation_queue": {
+    "support": {
+      "agent": "ito_author",
+      "contract": "production/v10-assessment-support-peer-assignment.json",
+      "state": "complete/frozen"
+    },
+    "exam-a": {
+      "agent": "c05_review",
+      "state": "complete/frozen",
+      "contract": "production/v10-assessment-exam-a-peer-assignment.json"
+    },
+    "exam-b": {
+      "agent": "bs_author",
+      "state": "complete/frozen",
+      "contract": "production/v10-assessment-exam-b-peer-assignment.json"
+    },
+    "project": {
+      "agent": "bs_author",
+      "state": "complete/frozen",
+      "contract": "production/v10-assessment-project-peer-assignment.json"
+    }
+  }
 }

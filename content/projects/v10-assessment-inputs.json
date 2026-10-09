@@ -1,0 +1,45 @@
+{
+  "schema": "v10-assessment-alder-1",
+  "provenance": "Original synthetic Alder desk case; no market observations or real trading permission.",
+  "curve": {
+    "times": ["1/2", "1", "3/2"],
+    "instruments": [
+      {"id": "six_month_zero", "cash": ["100", "0", "0"], "price": "98"},
+      {"id": "one_year_bond", "cash": ["3", "103", "0"], "price": "100.79"},
+      {"id": "eighteen_month_bond", "cash": ["2", "2", "102"], "price": "96.68"}
+    ],
+    "shocks": [
+      {"id": "parallel_up", "zero_shifts": [".01", ".01", ".01"]},
+      {"id": "parallel_down", "zero_shifts": ["-.01", "-.01", "-.01"]},
+      {"id": "twist", "zero_shifts": ["-.01", "0", ".01"]},
+      {"id": "middle_up", "zero_shifts": ["0", ".01", "0"]}
+    ]
+  },
+  "liability": {"face": "100", "coupons": ["3", "3", "3"]},
+  "option": {
+    "spot": "100", "strike": "105", "sigma": ".25",
+    "tree_steps": [4, 8, 16, 32],
+    "bermudan_fractions": ["0", "1/2"],
+    "mc_pairs": 2048, "seed": 271828, "control_beta": "-.5", "quadrature_steps": 256
+  },
+  "hedge": {
+    "times": ["0", "1/8", "1/4", "3/8", "1/2"],
+    "cost_rate": ".001",
+    "paths": [
+      {"id": "steady_rise", "spots": ["100", "102", "104", "106", "108"]},
+      {"id": "steady_fall", "spots": ["100", "96", "92", "88", "84"]},
+      {"id": "round_trip", "spots": ["100", "85", "95", "110", "90"]},
+      {"id": "late_fall", "spots": ["100", "101", "102", "103", "80"]},
+      {"id": "flat", "spots": ["100", "100", "100", "100", "100"]}
+    ]
+  },
+  "credit_reserve": {
+    "pricing_default_probability": ".1", "default_index": 1,
+    "settlement_index": 2, "recovery_fraction": ".4"
+  },
+  "decision": {
+    "requested_exercise": "european", "requested_reserve": "risky_bond",
+    "requested_quote": "108.5", "max_tested_terminal_loss": "1",
+    "max_mc_standard_error": ".15", "max_tree_abs_error": ".03"
+  }
+}

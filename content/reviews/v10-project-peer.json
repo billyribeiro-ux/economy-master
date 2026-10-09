@@ -1,0 +1,341 @@
+{
+  "project": "v10",
+  "status": "peer-review-passed; coordinator acceptance pending",
+  "date": "2026-10-09",
+  "reviewer": "bs_author, separate from ito_author; independent machine-assisted peer audit, not external human certification",
+  "assignment": "production/v10-assessment-project-peer-assignment.json",
+  "scope": "Read all nine frozen author files: full project/instructor guide, eight exact work packages, six transfer prompts and solutions, all mathematical hypotheses, full implementation and author checker, complete baseline data/output/manifest/README, author audit and all six source scopes. Only the two assigned peer files were changed.",
+  "recommendation": "Accept the repaired frozen project after coordinator integration and shared gates. The selected-reserve funding finding is resolved; no required author repair remains.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "task_audit": [
+    {
+      "task": 1,
+      "topic": "Contract information and linear valuation",
+      "verdict": "passed",
+      "independent_reasoning": "The fixed client cash remains3/3/103 if the different reserve issuer defaults; the put separately settles at.5. Quotes, selected deterministic interpolation, Q assumptions and unweighted paths are distinguished. Linear valuation of summed cash needs no independence. European, Bermudan and finite-grid all-node exercise are different rights with adapted immediate payment."
+    },
+    {
+      "task": 2,
+      "topic": "Exact curve and rate hedge",
+      "verdict": "passed",
+      "independent_reasoning": "Re-solved the triangular dated cash system to49/50,19/20,91/100 and PV99.52. Derived interval forward units, three key exposures, normalized duration and the second parallel derivative. Endpoint allocations solve the two barbell equations; finite exponential revaluation agrees with all four shocks and the stated cubic remainder. Matching one parallel derivative does not fill the missing year1 cash receipt."
+    },
+    {
+      "task": 3,
+      "topic": "Qualified continuous valuation and finite stopping",
+      "verdict": "passed",
+      "independent_reasoning": "The first curve segment alone supplies the option rate. Scalar Ito plus the finite Gaussian second moment justifies the discounted-stock martingale; the interior PDE, terminal/boundary conditions and Chapter8 growth/admissibility qualification are consistent. Independently integrated the normal payoff and differentiated that integral for Greeks. Top-down conditional values and terminal binomial sums reproduce all grids, every coarsest exercise choice and funded root successor cash. Enlarging exercise sets is compared under one law; cross-grid monotonicity is not asserted."
+    },
+    {
+      "task": 4,
+      "topic": "Simulation and independent numerical evidence",
+      "verdict": "passed",
+      "independent_reasoning": "Read the full seeded generator and estimator construction. Re-extracted the two52-bit fields from the full hash integer, reproduced every sample unit and checked moments with standard-library statistics. Closed truncated-lognormal moments independently recover put mean, variance, stock covariance, control variance and antithetic-pair variance. Plain/control4096 units and pair2048 units are correct for equal standalone payoff counts. Approximate CLT, ideal bounded Hoeffding, finite pseudo randomness and deterministic quadrature diagnostics remain distinct."
+    },
+    {
+      "task": 5,
+      "topic": "Every funded hedge trade",
+      "verdict": "passed",
+      "independent_reasoning": "Rebuilt all50 zero-cost/with-cost ledger rows from cumulative discounted stock trades and fees, independently of the implementation bank recursion. Checked entry, each reset, liquidation, stock units, cash, marked account, terminal payment and date-weighted fees for all five histories. The added initial cash10.736568055382 offsets the worst tested error to-1 under the unchanged policy; it is not an all-path hedge or an estimate from a random sample."
+    },
+    {
+      "task": 6,
+      "topic": "Credit and actual funding",
+      "verdict": "passed",
+      "independent_reasoning": "SurvivalPV99.52/defaultPV39.34 imply riskyPV93.502 and expected discount6.018 under the stated Q weights. Cumulative discounted default cash independently yields bank0,-3,-6018/91. The year1 payment fails without borrowing;12/91 bridge interest is additional to missing principal/recovery cash. No expected asset value, reserve default or future receipt is used to erase the client obligation."
+    },
+    {
+      "task": 7,
+      "topic": "Conjunctive gates and decision",
+      "verdict": "passed",
+      "independent_reasoning": "European rights, controlled sample SE and finest tree difference pass. Risky-reserve dated funding and quote108.5 versus118.944870090400 fail. Every failed gate is visible. Matched zeros and119 produce only the stated limited classroom eligibility; no code result creates a credit facility, commercial buyer, valid broader law or real trading authority. The open decision rubric permits a reasoned refusal and requires explicit evidence before reconsideration. The repaired gate also funds any premium of the selected reserve over the conservative riskless floor; its first-date full-recovery example cannot use future default-only surplus to pay its initial purchase cost."
+    },
+    {
+      "task": 8,
+      "topic": "Original reproducible submission and defense",
+      "verdict": "passed",
+      "independent_reasoning": "Inputs, model, saved full output, README and four-payload manifest form a portable original synthetic package. Read all validation code and source scopes. Peer testing checks quiet nonmutating API, strict malformed inputs, normal/optimized default and explicit CLI from another directory, output preservation and implementation overwrite protection. Complete six transfer answers, independent evidence and oral explanation are required; copied reference output is not learner mastery."
+    }
+  ],
+  "transfer_audit": [
+    {
+      "transfer": 1,
+      "topic": "Exact propagation",
+      "verdict": "passed",
+      "independent_reasoning": "Long quote+.02 gives last discount+1/5100, fixedPV+103/5100 and riskyPV+967/51000. All option output remains unchanged because its funding segment is unchanged. Rebuilding barbell positions differs from repricing the old positions."
+    },
+    {
+      "transfer": 2,
+      "topic": "Same endpoint, changed funded trades",
+      "verdict": "passed",
+      "independent_reasoning": "Calm intermediate history gives ideal1.806685410882 and paid1.677445349078 versus the round-trip losses despite the same15 terminal payoff. Entry-and-liquidation-only trading gives.237938687906/.136305514536 for both histories. Equal endpoints determine that fixed-holding experiment, not a universal ranking of rebalancing frequency."
+    },
+    {
+      "transfer": 3,
+      "topic": "Recovery settlement and borrowing spread",
+      "verdict": "passed",
+      "independent_reasoning": "Recovery atyear1 gives riskyPV93.662 and bank0,37,-5858/91. Restored delayed recovery requires the year1 bridge; a200bp continuous borrowing spread for.5years adds.031475798011 terminal CU. The spread is an explicitly manual funding extension, not a change to baseline asset cash or an unstated implementation feature."
+    },
+    {
+      "transfer": 4,
+      "topic": "Full face and retained expected saving",
+      "verdict": "passed",
+      "independent_reasoning": "100% face recovery still omits the year1 and final coupons and leaves terminal deficit558/91. Retaining baseline saving6.018 gives terminal deficit27081/455; it covers the early coupon but cannot collateralize a60.18-PV default-state loss."
+    },
+    {
+      "transfer": 5,
+      "topic": "Control sign and rights",
+      "verdict": "passed",
+      "independent_reasoning": "Closed truncated moments give beta+1 controlled variance737.405478428, above106.463456912 plain variance, while ideal expectation remains unchanged. Recomputed the exact same unselected seeded experiment for beta+1 and recorded its mean/SE in the peer checker summary. American rights remain outside the European reference even when quote119 passes the price-budget test."
+    },
+    {
+      "transfer": 6,
+      "topic": "Limited repair and boundary",
+      "verdict": "passed",
+      "independent_reasoning": "Matched zeros/European rights/quote119 pass all five baseline gates and leave only.055129909600 initial headroom. Doubling fees deducts a second copy of each original terminalized fee; round-trip error becomes-12.130884682906. That extra cost exceeds the original quote headroom, and changed paths/borrowing/execution or exercise rights require new evidence before broader use."
+    }
+  ],
+  "proof_audit": [
+    {
+      "topic": "Finite cash and rate sensitivity",
+      "verdict": "passed",
+      "reason": "Positive triangular diagonal identifies exact discounts; zero matching replicates every liability date. Differentiating each finite exponential term gives the stated key/parallel derivatives and controlled third-order remainder. Positive parallel curvature does not establish twist immunity, and the comparator barbell is not represented as a pre-funded middle-date coupon."
+    },
+    {
+      "topic": "Continuous martingale, PDE and boundary scope",
+      "verdict": "passed",
+      "reason": "The constant Q-GBM solution and finite exponential moments establish square-integrability of the discounted stock integral on the stated finite horizon. Scalar Ito and funded stock/bank gains yield the PDE. The vanilla boundary/terminal payoff and at-most-linear-growth uniqueness route are taught in Chapter8 and explicitly invoked within that class; no arbitrary local martingale, general Girsanov, stochastic-rate or nonsmooth global regularity claim is imported."
+    },
+    {
+      "topic": "Finite adapted stopping",
+      "verdict": "passed",
+      "reason": "Strict d<R<u gives positive transition probabilities. The conditional finite Snell recursion dominates every adapted stopping payment and first optimal exercise attains it, with ties permitted to continue. Added rights enlarge the feasible set only on the same tree law. Full-history counts677/17 and coarsest exercise nodes are consistent; finer output explicitly labels its exercise-node list incomplete. Root holdings are continuation hedges, not instructions after immediate exercise."
+    },
+    {
+      "topic": "Simulation means, variances and coverage",
+      "verdict": "passed",
+      "reason": "The independent-increment normal model supplies exact terminal GBM. Finite lognormal second moments justify signed fixed-control variance formulas and asymptotic fixed-n CLT reasoning. Antithetic pairs are single observations, and equal standalone payoff counts require twice pair variance in the relative mean-variance comparison. Bounded put/pair payoffs support ideal Hoeffding, while the controlled observation is unbounded. The finite deterministic hash experiment does not receive an iid coverage proof, and seed selection is explicitly rejected."
+    },
+    {
+      "topic": "Funded discrete cash and tested buffer",
+      "verdict": "passed",
+      "reason": "Discounted bank equations telescope into discounted stock gains minus every dated fee and final payoff. The delta rule is independent of bank wealth, so cost scaling and initial-cash shifts are exact under that policy. Unweighted scenarios are not a profit sample or all-path set. No continuous realized-variance formula is substituted for the finite-trade cash identity."
+    },
+    {
+      "topic": "Recovery and constrained use",
+      "verdict": "passed",
+      "reason": "Default occurs before its coupon; only earlier coupons survive, and face recovery is paid once at its declared settlement date. Pricing-law expected savings differ from conditional payment deficits. Negative bank balances expose reliance on a facility rather than establishing one. Five invented gates are conjunctive and their equality/tolerance conventions are stated; passing their restricted demo cannot approve different rights, models or real transactions. The final quote budget is max(riskless fixedPV, selected reserve purchasePV)+put+tested buffer, so a costly selected reserve cannot pass by using only a cheaper reference reserve budget."
+    }
+  ],
+  "rubric_audit": {
+    "points": 100,
+    "domain_points": [
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "internal_allocations": [
+      [
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        6,
+        4,
+        6,
+        4
+      ],
+      [
+        6,
+        5,
+        6,
+        3
+      ],
+      [
+        5,
+        5,
+        7,
+        3
+      ],
+      [
+        5,
+        5,
+        6,
+        4
+      ]
+    ],
+    "total_floor": 85,
+    "each_domain_floor": 15,
+    "verdict": "Every row and internal allocation sums correctly; eight work packages map to the five essential domains. The open decision/defense criteria reward reasoned alternatives after reproducing the stated contract. Critical cash/information/sampling/funding errors require remediation regardless of total. Timing18-24hours and thresholds are author design choices, not tested learner outcomes."
+  },
+  "source_audit": {
+    "verdict": "passed",
+    "records": 6,
+    "new_proposals": 0,
+    "scope": "Read all final primary-source reuse records and match each in-text route to its narrow use. Reuse the recorded accepted/body inspections and the project author's documented reopened sections; this peer review does not claim freshly retrieving all six PDFs. All contracts, paths and policy limits are synthetic and no current regulatory, legal, exchange or market fact is asserted.",
+    "details": [
+      "MIT fixed-income supports dated pricing terminology; the manuscript derives its own bootstrap, barbell and remainder and avoids the noted source sign/immunization issues.",
+      "Duffie preliminary1998 recovery material supports explicit recovered amount and timing; no source intensity proposition or present legal rule is imported.",
+      "Haugh finite-market material supplies context for the already taught finite self-financing/stopping methods, with no cross-grid convergence theorem.",
+      "Haugh Black-Scholes context is confined to constant-coefficient stock/bank valuation and Greek formulas; Chapter8 supplies the explicit growth/admissibility theorem.",
+      "Haugh output analysis is used only for qualified fixed-sample mean/variance and approximate CLT inference; bounded concentration and pseudo-generator scope are separately stated.",
+      "Haugh variance reduction is used for signed fixed controls, independent training if fitted, antithetic sample units and cost-aware comparison; arbitrary beta need not improve variance."
+    ]
+  },
+  "numerical_independence": {
+    "methods": [
+      "Exact dated cash algebra and direct finite exponential surplus using expm1.",
+      "Generated Gauss-Legendre put integration and integral finite differences for Greeks, independent of both model Simpson and author adaptive Simpson.",
+      "Closed truncated-lognormal moments for mean, variance, covariance and both normal-antithetic payoff products.",
+      "Top-down cached finite stopping and independent terminal binomial sums; statewise funded root checks.",
+      "Whole-hash bit extraction with standard-library sample moments for the documented deterministic experiment.",
+      "Cumulative discounted trade cash reconstructs every field of50 funded hedge rows, avoiding the implementation bank recursion.",
+      "Exact cumulative discounted credit receipts minus obligations; six separately recomputed transfer cases.",
+      "Independently priced early-full-recovery reserve, selected-instrument switch and both eight-decimal quote boundaries; exact legacy baseline preservation."
+    ],
+    "author_code_role": "Only run(data) is executed as a subject under test. No author helper or author-checker result supplies a peer expected value. The author checker is rerun only as supplemental evidence.",
+    "limits": "Quadrature/finite-difference agreement is not certified interval arithmetic. Tests cover a bounded selected domain, not every accepted input. Passing checks do not establish empirical law adequacy, ideal-normal coverage of a finite pseudo generator, external authority or learner mastery."
+  },
+  "validation": {
+    "normal_and_optimized_identical": true,
+    "quiet_check_api": true,
+    "strict_json": true,
+    "different_working_directories": [
+      "/",
+      "/tmp"
+    ],
+    "isolated_eleven_file_peer_layout": true,
+    "portable_model_requires_only_model_and_input": true,
+    "temporary_author_record_mutation_rejected_normal_and_optimized": true,
+    "summary": {
+      "author_payload_hashes_checked": 9,
+      "coarsest_positive_exercise_nodes": {
+        "american": 3,
+        "bermudan": 1,
+        "european": 0
+      },
+      "comparisons": 281,
+      "funded_hedge_rows_checked": 50,
+      "independent_ideal_moments": {
+        "controlled_variance": 29.068002397618272,
+        "covariance": -156.75397326214716,
+        "mean": 8.688302035017514,
+        "pair_variance": 16.79772022614057,
+        "plain_variance": 106.46345691200877,
+        "stock_variance": 317.4340749910267
+      },
+      "invalid_inputs_rejected": 21,
+      "limits": "Separate proof/prompt/source audit and deterministic comparisons; no empirical coverage, all-path hedge guarantee or external human certification.",
+      "project": "v10",
+      "review": "independent-peer",
+      "status": "passed",
+      "transfers_checked": 6,
+      "wrong_sign_seeded_mean": 8.246115655897903,
+      "wrong_sign_seeded_se": 0.43003691905287245
+    }
+  },
+  "author_checker_confirmation": {
+    "scope": "Supplemental rerun only; author functions did not supply peer expected values.",
+    "normal_and_optimized_identical": true,
+    "summary": {
+      "project": "v10",
+      "status": "passed",
+      "comparisons": 2992,
+      "invalid_inputs_rejected": 77,
+      "financial_interventions": 23,
+      "full_history_stopping_policies": 2082,
+      "independent_ideal_moments": {
+        "mean": 8.688302035018529,
+        "variance": 106.46345691199248,
+        "covariance": -156.75397326224856,
+        "control_variance": 29.068002397500607,
+        "pair_variance": 16.797720226128817
+      },
+      "limits": "Author verification using independent numerical oracles; separate peer/coordinator, empirical validation and whole-edition visual QA remain separate."
+    }
+  },
+  "findings": [
+    {
+      "id": "selected-reserve-purchase-cash",
+      "severity": "material",
+      "status": "resolved",
+      "reason": "Within the accepted domain, an early full-face recovery can make the selected risky reserve more expensive than the riskless fixed sleeve. The existing quote gate always budgets only the latter, so it can pass without enough initial cash to purchase its requested reserve and fund the option strategy.",
+      "counterexample": "Zero coupons, face100; first-date default and recovery_fraction1 settled immediately. RisklessPV91, selected riskyPV91.7, put8.688302035018, tested buffer10.736568055382. Requested quote110.5 passes old110.424870090400 gate but is.624870090400 short of selected purchase plus option cash.",
+      "required_repair": "Use at least max(riskless fixedPV, selected actual reserve purchasePV)+put+buffer while preserving the conservative savings floor and separately labeled frictionless model quote.",
+      "origin": "Root coordinator found the valid counterexample; peer independently reproduced it, held acceptance, then inspected the author repair.",
+      "resolution": "Final model budgets max(riskless fixedPV, actual selected reservePV)+analytic put+tested buffer and exposes exact selected_reserve_pv/reserve_budget_pv plus an explicit rule. Guide gate3, the worked boundary and README explain the initial purchase and future/default-only cash distinction. Final author record reports the old false admission and repair honestly.",
+      "independent_regression": "Peer separately computes riskless91 and risky91.7, requires111.124870090400, rejects110.5 and111.12487009, accepts111.12487010 and111.125, and verifies that matched-zero selection restores110.424870090400 and accepts110.5. The baseline93.502 selected purchase still retains99.52 conservative floor. Legacy-output serialization after removing only the three added decision fields is bound to the original baseline SHA256."
+    }
+  ],
+  "necessary_repairs": [],
+  "remaining_gates": [
+    "Coordinator shared assembly/regression and canonical acceptance remain separate.",
+    "Whole-edition visual/mobile/keyboard/print QA and external human evaluation are not claimed by this review."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/assessments/parts/v10-project.html",
+      "bytes": 43648,
+      "sha256": "e47faff1943502cfe62648151594c6a9b86b383dedb2e3d371999c28606e08fb"
+    },
+    {
+      "path": "content/projects/v10-assessment-inputs.json",
+      "bytes": 1862,
+      "sha256": "80a94d905e0b695a32efb5b23a70bdaa6a9c0f70d65bd985f605cc232dca57d2"
+    },
+    {
+      "path": "content/projects/v10-assessment-analysis.py",
+      "bytes": 22923,
+      "sha256": "c9d8af25a88d95b6ec65376a3ab994ba0acccc4842ef87a2c291c9537bddeb86"
+    },
+    {
+      "path": "content/projects/v10-assessment-output.json",
+      "bytes": 43436,
+      "sha256": "8ce82ba75bb713ee55bc8d70ca77c30281d82f1d0477ff82d56786d1907ece01"
+    },
+    {
+      "path": "content/projects/v10-assessment-manifest.json",
+      "bytes": 727,
+      "sha256": "254fcfb9c07ed7682a613c23575bd0703ec7085fc50a3cd0aa610563fcecb2b1"
+    },
+    {
+      "path": "content/projects/v10-assessment-README.txt",
+      "bytes": 17578,
+      "sha256": "d943df2ad4af837734c521c5991869c3e98b7e0f6e64f814f6470583958614bd"
+    },
+    {
+      "path": "scripts/check_v10_project.py",
+      "bytes": 28924,
+      "sha256": "1e6ed095e250bd48dadc3dd6227ba58f96f0db2d22a7f2fad02e6de11510a1db"
+    },
+    {
+      "path": "content/reviews/v10-project-author.json",
+      "bytes": 18651,
+      "sha256": "de6f4c783b2337d0944f9d882e5c800280eb895e3f6212a9f41238995bb23502"
+    },
+    {
+      "path": "content/reviews/v10-project-sources.json",
+      "bytes": 9600,
+      "sha256": "53733d41bf83131e06961f04fceb77074bc9c4ec95d9e083b4e1d97c2ed4a407"
+    }
+  ],
+  "reviewer_artifacts": [
+    {
+      "path": "scripts/check_v10_project_peer.py",
+      "bytes": 29830,
+      "sha256": "857392fe86f0e91d5d1e5ed4a0aa01bc975b5ab9e31a230903647025d4d2a726"
+    }
+  ],
+  "baseline_legacy_output_sha256": "6beda7672c89a06ae22de808503144b71b2328aed3fe1e0faccac217df49d947"
+}
