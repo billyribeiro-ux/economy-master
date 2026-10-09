@@ -1,0 +1,163 @@
+{
+  "chapter": "v13-c03",
+  "date": "2026-10-09",
+  "author": "ito_author",
+  "status": "canonical_author_reviewed_pending_separate_peer_and_root_acceptance",
+  "package": "Four canonical runtime files; original six-file production submission and its provenance retained unchanged. Canonical chapter acceptance is recorded separately.",
+  "bindings": [
+    {
+      "path": "content/chapters/v13-c03.html",
+      "bytes": 55826,
+      "sha256": "723203e1bdba0bebd55ca5e3e6bc5aa8eb0feb0cfc3b238a02c0bbf7bcdc91b9"
+    },
+    {
+      "path": "scripts/check_v13_c03.py",
+      "bytes": 23994,
+      "sha256": "9d7c4e6a4ae861cb347bada83b0b3441d46c1c27d400416f9675e162637a2666"
+    },
+    {
+      "path": "content/reviews/v13-c03-sources.json",
+      "bytes": 8430,
+      "sha256": "d0bd29ca63ff93ee35853dae8e99ea3b6d7ba11c733f40625dc247fc3430d6b9"
+    }
+  ],
+  "provenance_only": [
+    {
+      "path": "production/v13-c03-source-preparation.json",
+      "bytes": 8173,
+      "sha256": "88bbabb6d5a589c88a477a76b0062d0cfda87a2326f73e32f793bbf596482ac3",
+      "runtime_dependency": false
+    },
+    {
+      "path": "production/v13-c03-blueprint-proposal.json",
+      "bytes": 5243,
+      "sha256": "89756968e0f1a6d9bcb6195957eb8e13c752c6ebec3bbaabf72ea48045e88f81",
+      "runtime_dependency": false
+    }
+  ],
+  "proof_audit": [
+    {
+      "id": "v13-c03-eu",
+      "judgment": "Complete proof: best/worst bounds, all-indifferent case, strict calibration order, closed-cut existence/uniqueness, indifference substitution, affinity, converse and positive affine uniqueness. Interval utility is separately assumed later."
+    },
+    {
+      "id": "v13-c03-risk",
+      "judgment": "CE domain/uniqueness and Jensen equivalence; C2 common-interval positive-derivative Arrow\u2013Pratt equivalence in both directions; C3 bounded-shock Taylor remainder and inverse mean-value bound. Strictness and approximation limits explicit."
+    },
+    {
+      "id": "v13-c03-dominance",
+      "judgment": "Full finite FSD summation and indicator converse; increasing-concave SSD hinge characterization, endpoint atoms, all real thresholds and finite knots. Unequal means distinguished from spreads."
+    },
+    {
+      "id": "v13-c03-separation",
+      "judgment": "Nearest-point finite separation proved. Equal-mean spread converse constructs compact conditional-row marginal set, bounded-slope concave H envelope and contradiction after affine monotonicity correction; constant Y and support endpoints handled."
+    },
+    {
+      "id": "v13-c03-bayes",
+      "judgment": "Finite Bayes with zero-signal convention, value bounds, deterministic optimality, common-optimal-action iff zero value, additive-fee hypothesis and unchanged-action scope."
+    },
+    {
+      "id": "v13-c03-blackwell",
+      "judgment": "Row-stochastic simulation sufficiency for all priors/payoffs; full finite converse via nearest-point separator converted into a payoff table. Fixed full-support prior sufficient for all payoffs; explicit zero-prior failure and noncomparable experiments."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "id": "v13-c03-ex1",
+      "judgment": "Calibration proof and degenerate/affine uniqueness plus all three lottery rankings reconstructed."
+    },
+    {
+      "id": "v13-c03-ex2",
+      "judgment": "All four means/variances/values recomputed; only independence fails among the listed axioms."
+    },
+    {
+      "id": "v13-c03-ex3",
+      "judgment": "Exact log/harmonic certainty equivalents, premiums and both Arrow\u2013Pratt comparison directions with domains."
+    },
+    {
+      "id": "v13-c03-ex4",
+      "judgment": "General uniform remainder and explicit half-risk rationalized positive error bound; no large-risk generalization."
+    },
+    {
+      "id": "v13-c03-ex5",
+      "judgment": "Both FSD directions, all union-support values, strictness and unequal-mean obstruction to a spread."
+    },
+    {
+      "id": "v13-c03-ex6",
+      "judgment": "Complete SSD hinge and conditional-Jensen proofs plus finite coupling converse and sure-3 spread example."
+    },
+    {
+      "id": "v13-c03-ex7",
+      "judgment": "Every CDF/lower-moment knot and both capped-utility witnesses; strictly increasing adjustment preserves ranking."
+    },
+    {
+      "id": "v13-c03-ex8",
+      "judgment": "Bayes/posterior actions/perfect bound, fee boundary and zero-value iff common action with changed payoff case."
+    },
+    {
+      "id": "v13-c03-ex9",
+      "judgment": "Matrix product, complete policy value, reverse inverse with negative entries and exact acquisition boundary."
+    },
+    {
+      "id": "v13-c03-ex10",
+      "judgment": "Full finite converse, separator-to-payoff construction, fixed full-support scope and degenerate-prior witness."
+    },
+    {
+      "id": "v13-c03-ex11",
+      "judgment": "Both binary tasks, classification, posterior energy and repeated-row impossibility in both directions."
+    },
+    {
+      "id": "v13-c03-ex12",
+      "judgment": "Six-dimension 12-point referee rubric: scoped order, actions/prior, utility, costs, empirical limits and a concrete evidence/witness design."
+    }
+  ],
+  "instruction_audit": {
+    "coverage": "All five canonical topics; six complete original cases; twelve prompt/answer pairs; worked definitions before proofs; answered teach-back and delayed retention.",
+    "markup": "Flat prerequisite and v13-c04 successor filenames, namespace v13-c03, six article.worked, ol.exercises and grouped details.solutions with exact data-solution-for pairing.",
+    "source_scope": "Four inspected primary scopes, three retained PDFs and eight viewed equation images. B\u00f6rgers text-only access limits and extracted sign inconsistency are explicit; no original Blackwell-paper inspection claim.",
+    "reproduction": "Finite learner-facing procedures remain in the manuscript; production numerical checking is described as editorial evidence, without implying an absent reader download. The quiet standard-library checker uses only four runtime files."
+  },
+  "numerical_audit": "Independent direct/centered moments, log-exp versus squared CE, exact error rationalization, step-CDF integrals, FSD summation, hinge representation, full deterministic decision policies, Bayes plausibility/common-action criterion, reverse kernel, repeated rows and explicit separating payoff witness. Printed calculation anchors bound to reconstructed results.",
+  "domain_audit": "Bounded vectors/matrices and rational values; booleans/nonfinite/string/complex/oversized numbers, invalid probability rows, mismatched dimensions, unordered or duplicate support and strict-JSON duplicates/constants rejected. No random grid.",
+  "validation": {
+    "development_api": {
+      "status": "passed",
+      "comparisons": 277,
+      "rejections": 29,
+      "enumerated_rules": 64,
+      "numeric_anchors": 25,
+      "quiet": true
+    },
+    "final_gate_contract": [
+      "normal workspace quiet API",
+      "optimized exact-four isolated quiet API from unrelated cwd",
+      "optimized exact-four isolated quiet CLI from unrelated cwd"
+    ],
+    "final_evidence_delivery": "Exact final payload hashes and the three byte-bound execution results accompany the author freeze. This record supplies the audit and runtime contract; it is not a self-referential execution log.",
+    "invariance": "The final gate harness checks strict JSON API results, empty stdout/stderr, and unchanged exact members and bytes. Source-preparation and blueprint files are excluded from the portable runtime."
+  },
+  "open_findings": [],
+  "limits": [
+    "Finite universal proofs are audited mathematically; bounded numerical witnesses are not proofs over arbitrary inputs.",
+    "No arbitrary measurable experiments, ambiguity/strategic information model or empirical source dataset is included.",
+    "Risk-neutral monetary fee subtraction and free randomized garbling require the stated opportunity contract.",
+    "Primary PDFs and provenance-only records are not distributed or read by the four-file runtime."
+  ],
+  "resolved_findings": [
+    {
+      "origin": "root full manuscript review",
+      "scope": "Reader delivery only",
+      "repair": "Added a substantive flat link to v13-c04 general equilibrium/existence. Replaced the unsupported implication of a supplied working-checker download with editorial-check wording. Updated only the checker allowed-route name/set and error description to match.",
+      "mathematical_delta": "None: all proofs, cases, prompts, solutions, probabilities and numeric anchors unchanged."
+    }
+  ],
+  "promotion": {
+    "working_record": "production/v13-c03-author-review-working.json",
+    "root_full_review": "production/v13-c03-root-working-review.json",
+    "mathematical_delta": "None; manuscript changes only two data-source IDs to reuse existing exact-URL canonical identities. Checker changes runtime paths, same source IDs and first-line package description only.",
+    "source_id_mapping": {
+      "v13-c03-mit-lotteries2015": "mit-expected-utility",
+      "v13-c03-mit-risk2015": "mit-risk-attitudes"
+    }
+  }
+}

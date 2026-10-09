@@ -1,0 +1,125 @@
+{
+  "chapter": "v13-c04",
+  "date": "2026-10-09",
+  "peer": "bs_author",
+  "author": "c05_review",
+  "status": "separate_peer_review_complete_pending_coordinator_acceptance",
+  "scope": "Read the full manuscript, all six cases and twelve exact solutions, the complete author checker, source preparation, sources record and author record. Write scope is only this record and scripts/check_v13_c04_peer.py.",
+  "bindings": [
+    {
+      "path": "content/chapters/v13-c04.html",
+      "bytes": 67352,
+      "sha256": "0f7f95328abce57bd33cbe1dcc43afdb1750424daa3f23c4365d3b1a3ef09167"
+    },
+    {
+      "path": "scripts/check_v13_c04.py",
+      "bytes": 34501,
+      "sha256": "4845197cbf2ae020bff2818c3149ccd496fb4fb063ffab5daaf98e28ce13c909"
+    },
+    {
+      "path": "content/reviews/v13-c04-sources.json",
+      "bytes": 5720,
+      "sha256": "b2b9641755908880f3cb201690e5695396d5d5352b9d212e9cbdc04978cb9ab4"
+    },
+    {
+      "path": "content/reviews/v13-c04-author.json",
+      "bytes": 9716,
+      "sha256": "3eba3e2d1b38f778059482c18bb13f753e62a7e770324d71bd09ea15b1dd515b"
+    },
+    {
+      "path": "scripts/check_v13_c04_peer.py",
+      "bytes": 32474,
+      "sha256": "77a43f33638a12c95853d141d2f81b1da4fe922594235bae1632359bb1f8c3ba"
+    }
+  ],
+  "proof_audit": {
+    "v13-c04-economy": "Pass. The same commodity/date/location convention, net supply and complete ownership sum give p·z≤0 from budgets, and equality only after exhaustion. Homogeneous profits and owner incomes scale with prices. All direct Cobb–Douglas cases separately exclude zero-price nonattainment and do not falsely invoke global strict coordinate monotonicity.",
+    "v13-c04-sperner": "Pass. Ordered barycentric-coordinate drops are nonnegative and reconstruct every point. Ties delete precisely the nonshared chain vertices, proving common-face compatibility, including restrictions to old faces. Triangular coordinates establish nondegeneracy; nested-face averages prove geometric mesh decay. Each marked facet has one boundary or two interior incidences; simplex contributions 1/2/0 and the inherited opposite-face labeling complete the dimension induction from d=0.",
+    "v13-c04-brouwer": "Pass. Every nonfixed simplex vertex has a strictly positive deficit, whose index cannot be a zero coordinate. A compact subsequence of one full-cell vertex and vanishing cell diameter give a common limit for all labels; coordinate sums force equality. Nearest-point attainment, strict midpoint uniqueness and the two variational inequalities prove continuous nonexpansive projection. The explicit containing simplex then extends Brouwer to compact convex sets with empty ambient interior.",
+    "v13-c04-kakutani": "Pass. Compact range is expressly used to extract an image subsequence in the closed-graph/UHC implication. Finite nets make tent denominators positive; convex range makes their averages eligible for the proved Brouwer theorem. All active sites approach the same limit uniformly. UHC puts selected values near the limiting image, whose compactness and convexity allow nearby averaged image points; closedness gives final membership. No arbitrary continuous selection or circular Nash theorem is presumed.",
+    "v13-c04-existence": "Pass. Compact generator supports, not the full potentially unbounded disposal argmax, provide representatives and resource bounds. Individual positive endowments ensure positive continuous income and the explicit lower budget approximation. Demand/supply/auction values are nonempty compact convex with proved closed graphs. At a product fixed point auction plus owner accounting first gives z≤0; feasibility puts choices below caps, then strict monotonicity excludes zero prices and permits exhaustion. Positive prices convert Walras equality into exact clearing. Preferred uncapped choices are shrunk to cheaper preferred bundles; weak convex mixtures plus a separate strict coordinate increase contradict capped optimality.",
+    "v13-c04-limits": "Pass. The theorem is only a sufficient compact-generator class. The Leontief positive-price family has separately qualified weak monotonicity; linear preferences satisfy the theorem yet permit an allocation continuum. Unique scalar fixed points need not attract iteration. Strictly coordinate-increasing quadratic preferences can have nonconvex upper contours and no equilibrium at any positive or boundary price. Mean-feasible lotteries change deterministic feasibility."
+  },
+  "case_audit": {
+    "v13-c04-case1": "Both original and transferred-endowment markets, endogenous incomes and individual budgets reconstructed. New exercise-1 endowment solved separately. Polynomial maximum-difference certificates supply an independent global-demand route.",
+    "v13-c04-case2": "Root input t=sqrt(n) gives 3t²+t−4=(t−1)(3t+4); its positive root gives w=1. Every capacity/interior/boundary-price profit branch and both owner-income ledgers reconcile.",
+    "v13-c04-case3": "All six deficits, labels, four marked-edge incidences and the unique full cell recalculated. The displayed centroid is fixed only by the stipulated linear cycle.",
+    "v13-c04-case4": "All four distinct hypothesis failures and the interval-valued midpoint repair proved branchwise. Their nonexistence conclusions do not rely on a finite search.",
+    "v13-c04-case5": "Complete requested positive-price Leontief family, full linear price/allocation families and distinct alternating subsequential limits verified.",
+    "v13-c04-case6": "Upper-contour midpoint failure and the funded cheaper endpoint beating the sole clearing bundle hold at every positive price; free-good unboundedness excludes every normalized boundary."
+  },
+  "exercise_audit": {
+    "v13-c04-ex1": "Global demand formula, sole positive relative price 5/3, both incomes/bundles, budgets, commodity balances and excluded boundaries solve every requested part.",
+    "v13-c04-ex2": "Quarter/three-quarter and half ownership give the stated distributions. Omitting profit gives a value gap exactly equal to minus profit; differing spending shares invalidate general ownership invariance.",
+    "v13-c04-ex3": "All parity contributions and boundary restrictions are justified. Table labels/incidences agree. Constant map e0 at vertex e2 makes the weak-label index 1 forbidden, while strict label 2 is valid.",
+    "v13-c04-ex4": "Common-limit and projection/extension proofs are complete. Orthogonality and clipping yield all three specified segment projections, including its lower-dimensional domain.",
+    "v13-c04-ex5": "The finite-net/UHC/convex-limit argument closes every step. Rational/irrational selection demonstrates discontinuity; a constant-image convex average is correctly distinguished from general graph membership.",
+    "v13-c04-ex6": "Nonconvex value, missing graph limit, nonconvex domain and noncompact domain are distinct failures. The repaired image includes the midpoint and the other branches exclude every other fixed point.",
+    "v13-c04-ex7": "All optimizer/product properties are derived. Bounds (4,5), cap 6 and individual income floor 1/2 agree; the direct case’s Cobb–Douglas boundary caveat is retained.",
+    "v13-c04-ex8": "Feasibility, cap interior, positive prices, exhaustion and clearing are in the required order. Cap removal uses only weak convex mixing plus the stated strict increase. The flat example has convex upper contours but lacks strict monotonicity.",
+    "v13-c04-ex9": "Both complete requested equilibrium families are derived and correctly scoped. The unique fixed point/failed-iteration distinction has no unsupported economic stability conclusion.",
+    "v13-c04-ex10": "Nonconvex contours and strict coordinate increase are demonstrated; all positive and boundary normalized prices are covered. Lottery and convexification proposals are identified as changed primitives/feasibility.",
+    "v13-c04-ex11": "The quadratic firm problem covers w=1/2 exactly. Capacity is economically impossible here; factorization rejects the negative root and both commodity accounts clear at the positive root.",
+    "v13-c04-ex12": "The illustrative memo addresses all assertions. Four explicit 0–3 dimensions total twelve points and reward justified diagnosis plus concrete repair; no single policy opinion or fabricated empirical confidence is required."
+  },
+  "independent_oracle": {
+    "expected_value_policy": "All primitives come from the chapter’s original contracts. No author function is imported or executed; no blueprint or saved output is a numerical oracle. Mathematical proof review remains separate from finite computation.",
+    "distinct_routes": "Cobb–Douglas spending maxima use exact polynomial factorizations; production roots use t=sqrt(n); subdivision volumes use Leibniz determinants; independent face triangulations and tied-coordinate survivors check compatibility. Exact household budgets, ownership, resources, boundary supports, tent averages and projection certificates are reconstructed.",
+    "additional_witnesses": [
+      "A nonlinear simplex-interval map has a fully labeled dyadic cell of width 1/256 whose rational midpoint is not fixed; the limit step remains essential.",
+      "For F(x)={x²}, sites 0 and 1 with epsilon=2 yield a tent-map fixed point at 1/2, although 1/2 is not in F(1/2). Finite averaging alone is insufficient.",
+      "The closed graph F(0)={0}, F(x)={1/x} for x>0 has escaping images and fails UHC at zero; this explicitly shows the need for the compact-range qualification.",
+      "Positive-income boundary budgets admit approaching radial choices; with omega=(0,1) approaching price (1,0), target (0,2) always needs scaling 1/2 and cannot be approximated. The latter violates the theorem’s individual endowment assumption.",
+      "A cheaper preferred point outside an artificial cap is shrunk, mixed inside the cap and strictly improved while remaining affordable, directly checking the cap-removal construction."
+    ],
+    "intervention_groups": [
+      "Endowment/income and price normalization",
+      "Ownership and heterogeneous expenditure shares",
+      "Omitted profit and full production branches",
+      "Admissible versus weak Sperner labels",
+      "Barycentric faces, ties and mesh",
+      "Nonlinear full-cell midpoint",
+      "Lower-dimensional projection and containing simplex",
+      "Correspondence hypothesis failures and tent limits",
+      "Positive versus zero-income budget approximation",
+      "Auction/accounting order and cap removal",
+      "Price/allocation multiplicity and nonconvergent iteration",
+      "Nonconvex preference and free-good boundaries"
+    ],
+    "domain_checks": "Actual invalid calls cover exact types and bounds, dimensions, simplex/permutation membership, economic positivity/ownership, tent coverage, strict JSON and restricted arithmetic/reader markup. These are independent-checker contract tests, not claims of testing author functions."
+  },
+  "source_audit": {
+    "actual_primary_inspector": "c05_review",
+    "peer_inspection": "Read the complete source preparation and final scoped record; reused documented primary evidence. No new primary-body or equation-image inspection is claimed by bs_author.",
+    "mathew": "Physical pages 1–3, sections 1–2; images 2–3. The dimension-two source context and parity typo are separated from this chapter’s independently proved arbitrary-dimensional extension.",
+    "tamuz": "Pages 1,4–7,13–17; images 14–16. Kakutani is only stated there. The chapter does not import its general cone compactification, unrestricted graph/UHC identification or a strict-mixture implication.",
+    "condie": "Full supplied Chapter 7 HTML scope, including the excess-demand/boundary route. Its stated Kakutani and aggregate arguments are context rather than unproved inputs to this chapter.",
+    "limits": "Three scoped primary sources and five actual images belong to the author’s recorded inspection. Eleven retained artifacts and source preparation are provenance only, outside the six-file peer runtime."
+  },
+  "reader_and_instruction": "All methods needed by the twelve exercises precede their use; six worked articles and exact grouped solution pairing are checked. The six-row label table, eleven primitive markers and thirty-nine result markers are reconstructed. Teach-back and delayed retention have substantive answer guides. Reader links remain flat and chapter IDs namespaced.",
+  "reviewed_deltas": "Read the final solution-8 sentence associating (0,1,0) with all three bundles and editorial-reproduction wording; no numerical change. Canonical HTML is byte-identical to that final working version. Independently applied every documented checker path/docstring/status replacement and verified exact canonical equality. Full recursive source/author record comparison found only the documented status, provenance, paths and bindings changes; all final four sizes/hashes match root freeze and promotion record.",
+  "validation": {
+    "required_final_gates": [
+      "normal workspace quiet API",
+      "optimized exact-six isolated quiet API from /",
+      "optimized exact-six isolated silent CLI from /"
+    ],
+    "runtime_members": [
+      "content/chapters/v13-c04.html",
+      "scripts/check_v13_c04.py",
+      "content/reviews/v13-c04-sources.json",
+      "content/reviews/v13-c04-author.json",
+      "scripts/check_v13_c04_peer.py",
+      "content/reviews/v13-c04-peer.json"
+    ],
+    "integrity": "Capture import and check stdout/stderr; require strict JSON-safe matching API results, exact isolated membership and unchanged runtime bytes, with bytecode disabled.",
+    "execution_evidence": "Actual final results and freeze hashes accompany the handoff after final canonical binding. This record does not hash itself."
+  },
+  "findings": [],
+  "open_findings": [],
+  "limitations": [
+    "Bounded finite checks support but do not mechanically prove the arbitrary-dimensional arguments.",
+    "The economic existence theorem is sufficient for its stated class; no general uniqueness, adjustment convergence, welfare or empirical conclusion is certified.",
+    "Separate agent review is not independent human academic certification."
+  ]
+}

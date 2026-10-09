@@ -1,0 +1,320 @@
+{
+  "chapter": "v13-c05",
+  "date": "2026-10-09",
+  "status": "original seeds independently computed; full writing authorized without another approval",
+  "cases": {
+    "W1": {
+      "prices": [
+        "1",
+        "1"
+      ],
+      "wealth": [
+        "6",
+        "6"
+      ],
+      "allocations": [
+        [
+          "2",
+          "4"
+        ],
+        [
+          "4",
+          "2"
+        ]
+      ],
+      "private_externality_utilities": [
+        6,
+        -3
+      ],
+      "compensated_utilities": [
+        6,
+        -2
+      ],
+      "compensation": 2
+    },
+    "W2": {
+      "n": 1,
+      "output": 3,
+      "profit": 1,
+      "prices": [
+        "2",
+        "1"
+      ],
+      "target": [
+        [
+          "10/3",
+          "10/3"
+        ],
+        [
+          "2/3",
+          "8/3"
+        ]
+      ],
+      "wealth": [
+        "10",
+        "4"
+      ],
+      "ownership_income": [
+        "29/4",
+        "27/4"
+      ],
+      "transfers": [
+        "11/4",
+        "-11/4"
+      ],
+      "changed_share_income": [
+        "31/4",
+        "25/4"
+      ],
+      "changed_share_transfers": [
+        "9/4",
+        "-9/4"
+      ],
+      "ignored_profit_transfers": [
+        "3",
+        "-2"
+      ]
+    },
+    "W3": {
+      "boundary_price": [
+        1,
+        0
+      ],
+      "boundary_wealth": [
+        0,
+        1
+      ],
+      "target": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "technology": [
+        [
+          0,
+          0
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -2,
+          3
+        ]
+      ],
+      "technology_utilities": [
+        0,
+        1,
+        0
+      ],
+      "convexified_weight": "2/5",
+      "convexified_consumption": [
+        "6/5",
+        "6/5"
+      ]
+    },
+    "W4": {
+      "heterogeneous_individual": [
+        [
+          [
+            "1",
+            "6"
+          ],
+          [
+            "9/2",
+            "3"
+          ]
+        ],
+        [
+          [
+            "3/2",
+            "9"
+          ],
+          [
+            "3",
+            "2"
+          ]
+        ]
+      ],
+      "heterogeneous_totals": [
+        [
+          "11/2",
+          "9"
+        ],
+        [
+          "9/2",
+          "11"
+        ]
+      ],
+      "common_individual": [
+        [
+          [
+            "5/2",
+            "3"
+          ],
+          [
+            "11/4",
+            "13/2"
+          ]
+        ],
+        [
+          [
+            "7/2",
+            "5"
+          ],
+          [
+            "7/4",
+            "9/2"
+          ]
+        ]
+      ],
+      "common_totals": [
+        [
+          "21/4",
+          "19/2"
+        ],
+        [
+          "21/4",
+          "19/2"
+        ]
+      ],
+      "common_b": [
+        "1/4",
+        "1/2"
+      ],
+      "common_a": [
+        [
+          "1/2",
+          "-1"
+        ],
+        [
+          "-1/4",
+          "1/2"
+        ]
+      ]
+    },
+    "W5": {
+      "profile": [
+        "ABCD",
+        "ABDC",
+        "BCAD",
+        "BCDA",
+        "CABD"
+      ],
+      "pairwise_for_first": {
+        "AB": 3,
+        "AC": 2,
+        "AD": 4,
+        "BC": 4,
+        "BD": 5,
+        "CD": 4
+      },
+      "borda_old": [
+        6,
+        7,
+        2
+      ],
+      "borda_new": [
+        8,
+        4,
+        3
+      ],
+      "median_peak": 3,
+      "median_votes": {
+        "0": [
+          4,
+          1,
+          0
+        ],
+        "1": [
+          3,
+          1,
+          1
+        ],
+        "2": [
+          3,
+          2,
+          0
+        ],
+        "4": [
+          3,
+          2,
+          0
+        ],
+        "5": [
+          3,
+          2,
+          0
+        ],
+        "6": [
+          3,
+          2,
+          0
+        ]
+      }
+    },
+    "W6": {
+      "utilitarian": [
+        "12/5",
+        "48/5"
+      ],
+      "weighted_2_1": [
+        6,
+        6
+      ],
+      "maxmin": [
+        "48/5",
+        "12/5"
+      ],
+      "rescaled_u1_factor4": [
+        "48/5",
+        "12/5"
+      ],
+      "sum_objective_squared": 60,
+      "weighted_objective_squared": 96,
+      "maxmin_level_squared": "48/5",
+      "origin_shift_min_before": [
+        1,
+        2
+      ],
+      "origin_shift_min_after": [
+        4,
+        2
+      ]
+    }
+  },
+  "proof_contract": [
+    "First welfare: LNS makes weakly better bundles cost at least wealth, strictly better bundles more; profit ownership and balanced transfers make total value contradiction. No convexity required.",
+    "Second welfare: convex Xi in R_+^L, relative-continuous LNS weak orders with convex upper contours, convex nonempty Yj and free-disposal feasibility. Prove open/noncompact separation via closed convex projections and a boundary limit. Separate strict-improvement sums from interior resource set; extend to all resources, derive nonnegative nonzero price, slack complementarity, firm supports and consumer lower-cost bounds. Construct transfers from p.xstar minus endowment/profit wealth. Prove distinct cheaper-bundle upgrade via convex accessibility and relative continuity.",
+    "Aggregation iff common affine Engel slopes on a C1 product of open connected income intervals, at each fixed common price and n>=2. Proof uses balanced infinitesimal income transfers. Restricted one-total observations insufficient; no general integrability or normative representative utility claimed.",
+    "Finite Arrow for every weak-order profile on >=3 alternatives and finite nonempty voters, weak-order social outputs, unanimity for strict preferences and pairwise IIA. Almost-decisive pair propagates to every strongly decisive ordered pair using three-alternative profiles, including outsiders' ties. A smallest coalition splits into two smaller candidate coalitions; social weak/strict branches force one to be decisive, hence singleton dictator.",
+    "Odd-voter single-peaked median peak is a strict Condorcet winner by counting peaks at least/at most the median; no stronger strategy-proofness or agenda theorem asserted.",
+    "Positive weighted sums preserve Pareto improvements but depend on interpersonal scales; max-min needs a separate efficiency check. Complete resource-frontier optima via Cauchy–Schwarz and a max-min feasibility bound."
+  ],
+  "exercise_plan": [
+    "first-welfare proof/exchange",
+    "externality and financed compensation",
+    "noncompact separation and welfare support",
+    "production/transfers/changed ownership",
+    "quasi versus optimum/cheaper upgrade",
+    "nonconvex production support obstruction",
+    "aggregation converse/domain",
+    "common-slope subsistence transfer",
+    "complete finite Arrow proof",
+    "majority/Borda IIA evidence",
+    "single-peaked median proof/ties",
+    "social-frontier optima and referee rubric"
+  ],
+  "limits": [
+    "Synthetic exact models; no national policy/legal/empirical claims.",
+    "Preference continuity is relative to consumption sets; no smooth interior substitute for separation.",
+    "Balanced value transfers presume the stated lump-sum authority and complete-market trading opportunities.",
+    "No general representative-consumer theorem, infinite-voter Arrow extension or strategic-voting theorem."
+  ]
+}

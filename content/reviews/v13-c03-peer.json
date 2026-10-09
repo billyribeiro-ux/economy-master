@@ -1,0 +1,196 @@
+{
+  "chapter": "v13-c03",
+  "date": "2026-10-09",
+  "peer": "bs_author",
+  "author": "ito_author",
+  "status": "separate_peer_review_complete_pending_coordinator_acceptance",
+  "scope": "Full six-case manuscript, every one of twelve exact prompts and solutions, all universal proof routes, complete author checker, source record and author audit. Only the two assigned peer files were written.",
+  "bindings": [
+    {
+      "path": "content/chapters/v13-c03.html",
+      "bytes": 55826,
+      "sha256": "723203e1bdba0bebd55ca5e3e6bc5aa8eb0feb0cfc3b238a02c0bbf7bcdc91b9"
+    },
+    {
+      "path": "scripts/check_v13_c03.py",
+      "bytes": 23994,
+      "sha256": "9d7c4e6a4ae861cb347bada83b0b3441d46c1c27d400416f9675e162637a2666"
+    },
+    {
+      "path": "content/reviews/v13-c03-sources.json",
+      "bytes": 8430,
+      "sha256": "d0bd29ca63ff93ee35853dae8e99ea3b6d7ba11c733f40625dc247fc3430d6b9"
+    },
+    {
+      "path": "content/reviews/v13-c03-author.json",
+      "bytes": 9076,
+      "sha256": "3340cf25ecac4cf5743fc7a659f915a3bf5cf1bd19f8c80259acefa0a125f3c6"
+    },
+    {
+      "path": "scripts/check_v13_c03_peer.py",
+      "bytes": 28462,
+      "sha256": "6309655a2d4665d5fef7f9a27b6675154d6f1cd4551c5394fa7d44968b1c55b6"
+    }
+  ],
+  "promotion_audit": {
+    "evidence": "production/v13-c03-promotion-delta.json",
+    "inspection": "Independently compared the entire canonical HTML to working HTML after exactly two data-source substitutions, and canonical checker to working checker after exactly the documented path/ID/docstring substitutions. Both equality checks passed. Canonical source and author records were read fully; all four final byte/hash bindings verified.",
+    "mathematical_delta": "None. Existing mit-expected-utility and mit-risk-attitudes identities reuse the same inspected URLs. Working source evidence is preserved; provenance files are not peer runtime dependencies."
+  },
+  "proof_audit": [
+    {
+      "id": "v13-c03-eu",
+      "judgment": "Pass. Finite best/worst prize bounds follow by repeated independence. Strict calibration order, closed-cut existence (including zero endpoint), uniqueness and substitution establish an affine lottery index. The all-indifferent case is separated. Positive affine uniqueness concerns expected indices, not arbitrary ordinal transformations. The interval-wealth EU assumption is explicitly additional."
+    },
+    {
+      "id": "v13-c03-risk",
+      "judgment": "Pass. Finite CE existence uses continuity and strict increase on a common interval; binary Jensen gives the concavity converse. The C2 positive-derivative inverse formula has the correct Arrow–Pratt sign and both CE comparison directions. The local C3 proof first obtains CE-w=O(epsilon²) using a derivative bounded away from zero; fixed bounded shocks justify the uniform cubic remainder. The explicit log example has a stronger fourth-order error for separate algebraic reasons."
+    },
+    {
+      "id": "v13-c03-dominance",
+      "judgment": "Pass. Summation by utility increments gives the correct FSD CDF direction and indicator converse. Negative lower-put utilities give SSD necessity; decreasing nonnegative secants give its affine-plus-negative-hinge sufficiency, including one/two atoms and the mean term. All real thresholds reduce to union knots plus constant outer differences. Increasing-concave order is not incorrectly restricted to equal means."
+    },
+    {
+      "id": "v13-c03-separation",
+      "judgment": "Pass. Endpoint truncation utilities bound X inside the Y support interval when means agree; constant Y is handled. Conditional-row constraints generate a compact convex marginal set. Nearest-point separation is proved by the right derivative on segments. Pair-support reduction gives a finite concave upper envelope with bounded slopes; adding Mx makes it increasing and equal means cancel M. Independent row maximization then contradicts separation. Numerical coupling and upper-hull witnesses support, but do not prove, this argument."
+    },
+    {
+      "id": "v13-c03-bayes",
+      "judgment": "Pass. Zero-probability signals receive no posterior and contribute zero. Independent action rights and linear utility payoffs permit columnwise deterministic maxima. Ignore-information and statewise maxima bound value. The nonnegative loss decomposition proves zero gain iff one action is optimal at every positive posterior. Monetary fees can be directly subtracted only in the stated risk-neutral/additive-utility contract."
+    },
+    {
+      "id": "v13-c03-blackwell",
+      "judgment": "Pass. State-independent randomized garbling preserves every statewise action law. For the converse, the compact convex garbling image admits the proved nearest-point separator; uniform-prior payoffs nH, or H/pi for fixed full-support pi, supply a strict decision witness. A zero-prior state prevents that construction and the constant/perfect experiment counterexample is valid. Neither task accuracy nor posterior energy replaces all-payoff quantification."
+    }
+  ],
+  "case_audit": [
+    {
+      "id": "v13-c03-case1",
+      "method": "Exact finite EU and transformed indices; independent-copy variance formula checks all four mean–variance decisions and the common-mixture reversal."
+    },
+    {
+      "id": "v13-c03-case2",
+      "method": "Geometric and harmonic CE derivations; 50-digit Decimal square root checks the printed premium and half-risk error against the exact rationalized expression and strict rational bound."
+    },
+    {
+      "id": "v13-c03-case3",
+      "method": "Direct atom sums for CDFs, lower moments and capped utilities; finite increment/hinge identities and outer thresholds independently check both noncomparabilities."
+    },
+    {
+      "id": "v13-c03-case4",
+      "method": "Joint probabilities and Bayes plausibility; enumerate every contingent action plan before comparing with posterior maxima; changed payoffs and an impossible added signal test the equality and zero-mass boundaries."
+    },
+    {
+      "id": "v13-c03-case5",
+      "method": "Exact channel multiplication, randomized-policy payoff, unique reverse linear solution with negative entries and acquisition values on both sides of the equality fee."
+    },
+    {
+      "id": "v13-c03-case6",
+      "method": "Whole-policy values for both binary jobs and three-class classification, posterior-energy sums and repeated-row obstructions. An additional nearest-point witness separates E from H at uniform and nonuniform full-support priors."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "id": "v13-c03-ex1",
+      "judgment": "Complete calibration/converse/uniqueness route and all three lottery value pairs solve the exact prompt; degenerate indifference is not omitted."
+    },
+    {
+      "id": "v13-c03-ex2",
+      "judgment": "All four first/second moments and values agree; independence is the failed ordering axiom. Relabeling a representing criterion cannot remove the observed ordering reversal."
+    },
+    {
+      "id": "v13-c03-ex3",
+      "judgment": "Both exact CEs/premiums and the differentiated composition identity agree. Every finite risk, common connected interval, C2 and positive derivatives are retained in both comparison directions."
+    },
+    {
+      "id": "v13-c03-ex4",
+      "judgment": "Uniform Taylor and inverse mean-value steps justify the local order. Explicit symmetric-log rationalization proves the positive half-risk error below 1/1000 without extending the generic remainder."
+    },
+    {
+      "id": "v13-c03-ex5",
+      "judgment": "Finite summation and indicator converse include zero masses at union support points. Strictly increasing utilities give strict shift preference; unequal means preclude a mean-preserving coupling."
+    },
+    {
+      "id": "v13-c03-ex6",
+      "judgment": "Both lower-moment directions, conditional Jensen and the full finite equal-mean coupling converse are supplied, including support bounds, constant case and bounded envelope slopes. The sure-3 spread and crossing CDFs agree."
+    },
+    {
+      "id": "v13-c03-ex7",
+      "judgment": "Every printed CDF/lower-moment knot and both variances agree. Opposite capped-utility rankings refute the assertion; adding any positive linear term preserves the differences because means coincide."
+    },
+    {
+      "id": "v13-c03-ex8",
+      "judgment": "Joint probabilities, posteriors, optimum, perfect-information bound and fee threshold are correct. The common-action equivalence and changed investment payoff solve the qualitative parts; fee utility units are explicit."
+    },
+    {
+      "id": "v13-c03-ex9",
+      "judgment": "Product experiment, conditional values, simulation, negative reverse kernel and net acquisition ranking agree. The exact extra-fee boundary includes the indifference point."
+    },
+    {
+      "id": "v13-c03-ex10",
+      "judgment": "Simulation and finite separating-payoff converse are both proved before this prompt. Fixed full-support rescaling is valid; the missing-support counterexample gives equality for all payoffs without a garbling."
+    },
+    {
+      "id": "v13-c03-ex11",
+      "judgment": "Both opposing tasks, classification, posterior energy and both repeated-row impossibility arguments agree. The solution identifies precisely the invalid universal inference from equal summaries."
+    },
+    {
+      "id": "v13-c03-ex12",
+      "judgment": "The six requested dimensions each earn two stated points (issue plus concrete condition/witness/evidence design), totaling twelve. The illustrative recommendation addresses every dimension; alternative justified decisions are allowed and no nonexistent sampling law is assumed."
+    }
+  ],
+  "independent_oracle": {
+    "construction": "Primitives were transcribed from the actual synthetic contracts, not taken from author functions, generated results or the design blueprint. The author checker was read as code but is never imported or executed by this peer runtime. Printed anchors are compared to independent calculations; manually reviewed proofs carry the universal claims.",
+    "additional_witnesses": [
+      "X=(1,2) and Y=(0,3), both equally weighted, with joint masses ((1/3,1/6),(1/6,1/3)); check both marginals and both conditional means.",
+      "Heights (0,2,1) at (0,1,3): pairwise barycentric maximization has slopes 2 and -1/2. Adding x/2 makes the finite concave envelope increasing.",
+      "Project H onto E-achievable rows: C=((0,1),(1/2,1/2),(1/2,1/2)). Residual squared norm is one; its payoff separates E value zero from H value one under pi=(1/3,1/3,1/3) and (1/2,1/3,1/6)."
+    ],
+    "intervention_groups": [
+      "Affine versus nonlinear prize-utility transforms",
+      "Common-risk mixtures and zero/one mixture weights",
+      "Negative, zero, half and full symmetric log shock scales",
+      "Atom/outer/interior thresholds and strictly increasing capped witnesses",
+      "Nonconstant conditional-mean coupling",
+      "Finite concave-envelope slope correction",
+      "Common posterior action and impossible signal",
+      "Acquisition-fee equality and both neighboring sides",
+      "Opposing tasks versus equal classification/energy",
+      "Separator payoffs at two full-support priors",
+      "Invisible states under a degenerate prior"
+    ],
+    "domain": "Actual rejection cases exercise bounded exact numbers, invalid probability masses, support ordering/duplicates, dimensions, channel rows, mixture/hull domains, strict JSON duplicates/nonfinite/overflow, restricted numeric-expression parsing and malformed reader IDs/answer placement. These test the independent checker contract; they are not mislabeled author API tests."
+  },
+  "source_audit": {
+    "actual_primary_inspector": "ito_author",
+    "peer_activity": "Read the complete final source record and its claim-to-scope boundaries; reused the documented primary inspection. No new primary PDF, webpage or equation-image inspection is claimed by bs_author.",
+    "scopes": "MIT lottery physical pages 1–8/images 4,7,8; risk pages 1–5/images 3,4; dominance pages 1–5/images 3,4,5. The finite atom/coupling proofs are independently supplied, not credited to an unread source converse.",
+    "blackwell_limits": "Börgers actual extracted text pages 1–7 only. Direct PDF 403, no retained PDF/image inspection, no pages 8–13 or original Blackwell papers. The extracted sign inconsistency remains qualified as extracted text, and the chapter uses its own nearest-point proof.",
+    "canonical_identity": "Two existing exact-URL source IDs reused on promotion; all four source hyperlinks match the final proposals."
+  },
+  "instruction_and_scope": "All six worked articles, twelve ol.exercises prompts and paired grouped details.solutions are checked. Every proof method required by the exercises is taught first. Teach-back and delayed retention have substantive answers. Flat prerequisite/successor routes and namespaced IDs are retained. Original exact probabilities are not empirical validation; finite experiments do not establish arbitrary measurable-space, ambiguity or strategic-information results.",
+  "validation": {
+    "required_final_gates": [
+      "normal workspace quiet API",
+      "optimized exact-six isolated quiet API from /",
+      "optimized exact-six isolated silent CLI from /"
+    ],
+    "runtime_members": [
+      "content/chapters/v13-c03.html",
+      "scripts/check_v13_c03.py",
+      "content/reviews/v13-c03-sources.json",
+      "content/reviews/v13-c03-author.json",
+      "scripts/check_v13_c03_peer.py",
+      "content/reviews/v13-c03-peer.json"
+    ],
+    "integrity": "The harness snapshots the six input members, captures import and check stdout/stderr, requires strict JSON-safe results, and checks exact isolated membership and unchanged bytes after both isolated executions. Bytecode is disabled.",
+    "execution_evidence": "The three actual final gate results and exact two-file freeze hashes accompany the handoff. This record is bound before those gates and does not hash itself."
+  },
+  "findings": [],
+  "open_findings": [],
+  "limitations": [
+    "Separate agent review is not independent human academic certification.",
+    "Finite numeric witnesses corroborate the manually audited universal proofs; no random grid or arbitrary-input theorem certification is claimed.",
+    "Primary artifacts and production provenance are intentionally excluded from the portable six-file runtime."
+  ]
+}

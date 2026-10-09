@@ -1,0 +1,136 @@
+{
+  "chapter": "v13-c04",
+  "author": "c05_review",
+  "date": "2026-10-09",
+  "status": "Canonical author package reviewed by root; separate peer acceptance pending.",
+  "runtime_payloads": [
+    "content/chapters/v13-c04.html",
+    "scripts/check_v13_c04.py",
+    "content/reviews/v13-c04-sources.json",
+    "content/reviews/v13-c04-author.json"
+  ],
+  "payload_bindings": [
+    {
+      "path": "content/chapters/v13-c04.html",
+      "bytes": 67352,
+      "sha256": "0f7f95328abce57bd33cbe1dcc43afdb1750424daa3f23c4365d3b1a3ef09167"
+    },
+    {
+      "path": "scripts/check_v13_c04.py",
+      "bytes": 34501,
+      "sha256": "4845197cbf2ae020bff2818c3149ccd496fb4fb063ffab5daaf98e28ce13c909"
+    },
+    {
+      "path": "content/reviews/v13-c04-sources.json",
+      "bytes": 5720,
+      "sha256": "b2b9641755908880f3cb201690e5695396d5d5352b9d212e9cbdc04978cb9ab4"
+    }
+  ],
+  "provenance_bindings": [
+    {
+      "path": "production/v13-c04-source-preparation.json",
+      "bytes": 8936,
+      "sha256": "666223662e0b88a2888caecd2e773cc9036c190947ed3055febb1001d953d375"
+    },
+    {
+      "path": "production/v13-c04-blueprint-proposal.json",
+      "bytes": 9820,
+      "sha256": "4e656cb3f8d384f64380f7ee4a5b957c2fe01c0abc6efe5b3f0da4aa7dadc3f7"
+    }
+  ],
+  "proof_audit": {
+    "P1": "v13-c04-economy: income includes every owned profit exactly once. Budget feasibility gives p\u00b7z\u22640; exhaustion gives equality. Scaling prices also scales profit incomes. Explicit net inputs, resources and exact clearing.",
+    "P2": "v13-c04-sperner: ordered-coordinate drops prove barycentric coverage/common faces; nested-face barycentres give mesh contraction. Interior/boundary facet incidences support arbitrary-dimensional parity induction, including d=0.",
+    "P3": "v13-c04-brouwer: strict labels respect the boundary; compact subsequence and vanishing mesh supply all coordinate inequalities. Projection is attained, unique and nonexpansive; a containing simplex extends the proved theorem to every compact convex finite-dimensional K.",
+    "P4": "v13-c04-kakutani: compact-range graph/UHC equivalence proved. Positive-denominator finite tent averages have Brouwer fixed points. All active sites approach the limit; UHC, nearest image points and convexity/closedness give membership. No continuous selection or Nash circularity.",
+    "P5": "v13-c04-existence sections5.1\u20135.3: compact support representatives, positive individual incomes, closed capped budgets and explicit lower approximation justify demand graphs. Product-map hypotheses are all derived; auction plus accounts gives feasibility, then cap interior, positive prices, exhaustion and exact clearing in that order.",
+    "P6": "v13-c04-existence section5.4 and v13-c04-limits: preferred affordable bundles shrink to strict cheaper ones; convex mixing gives weak preference, then strict monotonicity supplies the final capped contradiction. The theorem is a sufficient compact-generator class; direct Cobb\u2013Douglas cases and Leontief preferences are separately qualified. Nonuniqueness and nonconvergence are not conflated."
+  },
+  "exercise_audit": {
+    "v13-c04-ex1": "New endowment3 solved globally; both individual budgets/markets and all boundary prices covered.",
+    "v13-c04-ex2": "Two ownership ledgers and omitted-profit \u22121 value gap exactly reconcile; heterogeneous-share restriction explained.",
+    "v13-c04-ex3": "Complete parity induction, six strict labels, four incidence counts and explicit weak-label boundary failure.",
+    "v13-c04-ex4": "Compact limit and projection proof supplied; all three segment projections derived from the quadratic.",
+    "v13-c04-ex5": "Net/UHC/convex-limit proof complete; discontinuous selection and special constant-image scope distinguished.",
+    "v13-c04-ex6": "Every failed hypothesis has an exact no-fixed-point argument; interval repair gives unique midpoint.",
+    "v13-c04-ex7": "All optimizer/product hypotheses derived; resource bounds(4,5), cap6 and income floor1/2 verified with Cobb\u2013Douglas qualification.",
+    "v13-c04-ex8": "Correct economic implication order and cap removal; convex-only flat-mixture witness lacks the separately stated strict monotonicity.",
+    "v13-c04-ex9": "Full requested positive-price Leontief family and full linear price/allocation family; scalar iteration limitation explicit.",
+    "v13-c04-ex10": "Nonexistence proof covers every normalized price and nonconvex upper contours; lotteries/convexification change the economy.",
+    "v13-c04-ex11": "Every firm branch and boundary, both polynomial roots and economic rejection; remaining market checked.",
+    "v13-c04-ex12": "Illustrative full referee memo and four3-point dimensions with explicit0\u20133 scoring; no unique opinion required."
+  },
+  "source_audit": "Three fresh primary-body scopes, five actual equation-page images and eleven retained artifacts are recorded in the bound preparation. The source record expressly separates limited source statements from our complete independent proofs.",
+  "numerical_method": "Exact Fraction reconstruction of household/firm accounts, log-optimality supporting gradients, quadratic firm branch certificates, finite barycentric determinants/facet incidences/mesh and ordered-coordinate reconstruction, strict deficit labels, segment variational certificates, tent averages and explicit failure witnesses. It does not compare a saved output file or import another checker.",
+  "focused_interventions": [
+    "Endowment transfer and new exercise economy",
+    "Resource, price-income and taste changes",
+    "Ownership extremes and heterogeneous expenditure shares",
+    "Omitted profit income",
+    "Production branch boundary and tighter capacity equilibrium",
+    "All eight admissible midpoint labelings and weak-label failure",
+    "Barycentric witnesses in dimensions1\u20133",
+    "Correspondence repairs and tent-map averages",
+    "Projection boundary and variational certificates",
+    "Capped-budget approximation and cap-removal witness",
+    "Price/allocation multiplicity and nonconvergent iteration"
+  ],
+  "domain_and_portability": "Actual rejection calls include invalid exact types, prices/income/shares, individual endowments, ownership, production inputs, simplex coordinates/map dimensions, degenerate cells, unsupported finite witness dimensions, uncovered tent sites, strict JSON and restricted arithmetic syntax. Rational-square and dimension caps are checker witness limits, not restrictions claimed for the universal theorems. No Python assert, network, writing or nonstdlib dependency.",
+  "reader_structure": {
+    "actual_shared_Document": {
+      "worked_cases": 6,
+      "exercises": 12,
+      "solutions": 12
+    },
+    "result_markers": 39,
+    "primitive_markers": 11,
+    "label_table_rows": 6,
+    "answered_teach_back": true,
+    "answered_retention": true,
+    "successor": "v13-c05 Welfare, aggregation and social choice"
+  },
+  "reviewed_revisions": [
+    {
+      "finding": "Cobb\u2013Douglas is not strictly coordinate-monotone on axes.",
+      "resolution": "Both economic cases proved directly, including zero-price nonattainment; no false invocation of the stronger main theorem. Root agreed before prose freeze."
+    },
+    {
+      "finding": "Source statements do not alone supply the complete fixed-point/economic proof.",
+      "resolution": "All arbitrary-dimensional and correspondence steps supplied, with source parity typo, compact-range and strict-mixture cautions retained."
+    },
+    {
+      "finding": "Final section numbering and machine-readable table target.",
+      "resolution": "Reviewed prefix changed only Section6\u2192Section5 for the theorem cross-reference and addition of the cycle-table ID; no proof or case mathematics changed."
+    },
+    {
+      "finding": "Root noted a reproduction sentence could imply an unavailable reader-downloadable check.",
+      "resolution": "Changed \u201cThe companion author check\u201d to \u201cEditorial checks\u201d; concrete fraction reproduction guidance preserved."
+    },
+    {
+      "finding": "Solution8 attached a three-utility vector grammatically to one mixture.",
+      "resolution": "Sentence now explicitly lists utilities of the three bundles as(0,1,0), respectively; numerical contract unchanged."
+    }
+  ],
+  "final_gate_contract": {
+    "required_runs": [
+      "normal workspace quiet API",
+      "optimized exact-four quiet API from unrelated cwd",
+      "optimized exact-four silent CLI from unrelated cwd"
+    ],
+    "requirements": "Strict JSON-safe identical API summaries; no stdout/stderr; exact isolated membership and all bytes unchanged. Final run evidence is reported with the six-file freeze; provenance files are not runtime requirements."
+  },
+  "unresolved_findings": [],
+  "limitations": [
+    "Working author review is machine-assisted and is not separate peer acceptance or human academic certification.",
+    "Finite exact witnesses support, but do not mechanically prove, universal mathematical arguments.",
+    "The theorem is sufficient for the explicit compact-generator class; no all-technology existence, unique/stable equilibrium, empirical validation or welfare guarantee is claimed.",
+    "Coordinator alone promotes, accepts, integrates and publishes after dependencies and separate review."
+  ],
+  "promotion": {
+    "working_record": "production/v13-c04-author-review-working.json",
+    "root_full_review": "production/v13-c04-root-manuscript-review.json",
+    "mathematical_delta": [],
+    "manuscript_delta": "None; canonical manuscript byte-identical to final working HTML.",
+    "checker_delta": "Four runtime paths, package description and status text only."
+  }
+}

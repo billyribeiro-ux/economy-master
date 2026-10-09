@@ -1,0 +1,142 @@
+{
+  "chapter": "v13-c06",
+  "date": "2026-10-09",
+  "status": "Original root design seeds; author must independently derive, prove completeness and expand into full chapter",
+  "root_seed_arithmetic_checks": 32,
+  "cases": [
+    {
+      "id": "W1",
+      "theme": "Finite mixed Nash and zero-sum saddle audit",
+      "row_matrix": [
+        [
+          3,
+          -1
+        ],
+        [
+          -2,
+          2
+        ]
+      ],
+      "column": "negative row payoff",
+      "results": "p(U)=1/2, q(L)=3/8, value=1/2; unique Nash, no pure saddle",
+      "intervention": "A_UL=5 gives p=2/5,q=3/10,value=4/5; prove support-case completeness"
+    },
+    {
+      "id": "W2",
+      "theme": "Weak domination and perfect-equilibrium selection",
+      "payoff_rows": [
+        [
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "results": "p=Pr(U),q=Pr(L); U-D=1-q, L-R=1-p. Nash iff p=1 or q=1. Uniform epsilon floors 0<epsilon<1/2 give unique p=q=1-epsilon and each payoff 2-epsilon-epsilon^2. Unique perfect limit(U,L)."
+    },
+    {
+      "id": "W3",
+      "theme": "Perfection preserves multiplicity",
+      "payoff_rows": [
+        [
+          [
+            4,
+            4
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      ],
+      "results": "All Nash: two strict pure (U,L),(D,R), and p=q=3/5 with each payoff12/5. All perfect. Prove support-case completeness; refinement does not ensure unique/efficient selection."
+    },
+    {
+      "id": "W4",
+      "theme": "Bayesian entry and conditional beliefs",
+      "primitives": "Independent private costs1 or3 eachprob1/2. N pays0. E pays4-c_i-4*indicator(other E).",
+      "results": "Type gains3-4q and1-4q. All5 aggregate-entry BNE: (0,1),(1/4,3/4),(1/2,1/2),(3/4,1/4),(1,0). Type actions for aggregate0,1/4,1/2,3/4,1 are (0,0),(1/2,0),(1,0),(1,1/2),(1,1). Exante payoffs respectively(0,2),(0,1),(1/2,1/2),(1,0),(2,0).",
+      "proof": "Use complete piecewise best-response correspondence, not grid-only evidence. q<1/4 -> ownq1; q=1/4 -> [1/2,1]; 1/4<q<3/4 ->1/2; q=3/4 ->[0,1/2];q>3/4 ->0.",
+      "intervention": "Joint type probabilities LL,LH,HL,HH=(3/8,1/8,1/8,3/8) preserve marginals. Low-only entry has conditional other-low probabilities3/4 given L and1/4 given H: all own types indifferent, weak BNE, exante0. No claim of all BNE in changed joint distribution."
+    },
+    {
+      "id": "W5",
+      "theme": "Private recommendations improve upon all Nash mixtures",
+      "payoff_rows": [
+        [
+          [
+            6,
+            6
+          ],
+          [
+            1,
+            8
+          ]
+        ],
+        [
+          [
+            8,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "actions": "Y,A",
+      "results": "Nash: YA,AY total9 and mixed Pr(A)=2/3 each gives payoff8/3 each. Joint(alpha,beta,gamma,delta) forYY,YA,AY,AA is CE iff beta>=2alpha,gamma>=2alpha,2gamma>=delta,2beta>=delta plus probability constraints. mu=(1/5,2/5,2/5,0) CE, each24/5,total48/5.",
+      "global_bound": "W=12alpha+9(beta+gamma)=9+3alpha-9delta <=9+3(1-delta)/5-9delta<=48/5; equality forces unique mu.",
+      "interventions": "Make entire recommendation profile public: YY fails. Same marginals independent product(9/25,6/25,6/25,4/25) has beta-2alpha=-12/25; conditional private Y ties expected8/3, private A gives8 versus6."
+    },
+    {
+      "id": "W6",
+      "theme": "Coarse obedience versus conditional obedience",
+      "row_matrix": [
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          2,
+          1,
+          -1
+        ],
+        [
+          -1,
+          2,
+          1
+        ]
+      ],
+      "column": "transpose row matrix",
+      "primitives": "Actions0,1,2. Own payoff1 tie,2 if own=(other+1)mod3,-1 otherwise.",
+      "results": "Uniform diagonal joint gives each1. Every fixed exante deviation gives2/3, so CCE. Recommendation-contingent map a->a+1 gives2, so not CE. Independent uniform profile is Nash/CE with each2/3.",
+      "limits": "Do not claim all equilibria in 3x3 without deriving them; distinguish deviation rights, no empirical calibration."
+    }
+  ]
+}

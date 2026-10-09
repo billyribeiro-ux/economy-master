@@ -1,0 +1,66 @@
+{
+  "chapter": "v13-c03",
+  "date": "2026-10-09",
+  "status": "accepted_after_root_and_separate_peer_review",
+  "root_reading": "Entire manuscript/proofs,6cases and12exact solutions; complete author/peer checkers and source/author/peer records. All final canonical migration changes read.",
+  "root_working_evidence": "production/v13-c03-root-working-review.json",
+  "root_author_validation": "production/v13-c03-author-validation.json",
+  "root_peer_API": {
+    "chapter": "v13-c03",
+    "status": "passed",
+    "comparisons": 260,
+    "rejections": 38,
+    "mathematical_interventions": 11,
+    "policy_tables": 18,
+    "enumerated_rules": 82,
+    "numeric_anchors": 25,
+    "worked_cases": 6,
+    "solved_exercises": 12,
+    "source_scopes": 4,
+    "author_execution_used_as_oracle": false
+  },
+  "quiet_and_unchanged": true,
+  "reused_peer_final_gates": [
+    "Normal workspace quiet API",
+    "Optimized exact-six quiet API from /",
+    "Optimized exact-six silent CLI from /"
+  ],
+  "peer_gate_source": "bs_author final frozen handoff9October2026; root verifies bound final bytes and equal summary.",
+  "bindings": [
+    {
+      "path": "content/chapters/v13-c03.html",
+      "bytes": 55826,
+      "sha256": "723203e1bdba0bebd55ca5e3e6bc5aa8eb0feb0cfc3b238a02c0bbf7bcdc91b9"
+    },
+    {
+      "path": "scripts/check_v13_c03.py",
+      "bytes": 23994,
+      "sha256": "9d7c4e6a4ae861cb347bada83b0b3441d46c1c27d400416f9675e162637a2666"
+    },
+    {
+      "path": "content/reviews/v13-c03-sources.json",
+      "bytes": 8430,
+      "sha256": "d0bd29ca63ff93ee35853dae8e99ea3b6d7ba11c733f40625dc247fc3430d6b9"
+    },
+    {
+      "path": "content/reviews/v13-c03-author.json",
+      "bytes": 9076,
+      "sha256": "3340cf25ecac4cf5743fc7a659f915a3bf5cf1bd19f8c80259acefa0a125f3c6"
+    },
+    {
+      "path": "scripts/check_v13_c03_peer.py",
+      "bytes": 28462,
+      "sha256": "6309655a2d4665d5fef7f9a27b6675154d6f1cd4551c5394fa7d44968b1c55b6"
+    },
+    {
+      "path": "content/reviews/v13-c03-peer.json",
+      "bytes": 14437,
+      "sha256": "d06cf34dabb8171eea19a2293768a37786a998316ed7a4ce0c6cf8cb2fcfe196"
+    }
+  ],
+  "open_findings": [],
+  "limits": [
+    "Machine-assisted review, no external human academic certification.",
+    "Finite-domain scope and interval-EU assumption retained; rendered readerUI remains pending."
+  ]
+}

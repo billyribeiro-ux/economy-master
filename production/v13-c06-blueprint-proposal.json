@@ -1,0 +1,90 @@
+{
+  "chapter": "v13-c06",
+  "date": "2026-10-09",
+  "status": "Internal compact design supporting direct full authoring, not an approval stage.",
+  "root_seed_binding": {
+    "path": "production/v13-c06-blueprint-root.json",
+    "bytes": 4523,
+    "sha256": "0fb9dcee326723e244d62fa2aa1b4225da7d60d8505e44c1d0216d4860625409"
+  },
+  "independent_seed_and_transfer_groups": 43,
+  "seed_result": "All six cases and stated exercise-transfer anchors independently matched exactly. Completeness proofs checked by support/region arguments; no grid-only equilibrium claim.",
+  "case_design": "Preserve all six root cases and their primitive matrices/prior/payoffs. Read-only bound root design retains complete originals.",
+  "proof_decisions": {
+    "P1": "Finite pure-action support criterion and all Kakutani hypotheses proved; C04 is the noncircular fixed-point prerequisite.",
+    "P2": "Finite common prior with positive own-type marginals; finite type-agents, conditional sums and exante/interim equivalence. Correlated types require conditional entry probabilities.",
+    "P3": "Positive action-specific floors have sums<1; perturbed BR fixed points exist. Approximate pure deviations prove limits Nash. Equivalence proof has a common finite tail forward, explicit outside/inside-support lower bounds reverse.",
+    "P4": "Fully mixed opponents turn any mixed weak-dominance strict witness into strictly better expectation. Strict pure and fully mixed Nash are perfect; no generic converse or unique selection.",
+    "P5": "Private-recommendation pairwise CE inequalities equal all deterministic/random contingent-deviation rights. Compact convex nonempty polytope, product CE iff Nash; W5 global linear welfare bound with unique equality case.",
+    "P6": "Unconditional CCE deviations, CE inclusion and equality when every player has at most two actions. Original3-action separation and one-parameter transfer; no learning theorem inferred."
+  },
+  "exercise_contracts": [
+    {
+      "id": "E1",
+      "task": "Solve the changed zero-sum upper-left5 game, all support cases and saddle guarantees.",
+      "anchors_and_scope": "p2/5,q3/10,value4/5; positive affine own-utility transformations preserve best replies."
+    },
+    {
+      "id": "E2",
+      "task": "Prove support criterion and finite mixed Nash using C04 Kakutani.",
+      "anchors_and_scope": "Nonempty compact convex BR and closed graph from finite pure-deviation comparisons."
+    },
+    {
+      "id": "E3",
+      "task": "Complete W2 Nash continuum and asymmetric tremble-floor calculation.",
+      "anchors_and_scope": "Row floor1/10,column floor1/5 ->p9/10,q4/5,payoffs89/50,47/25; uniform1/10 gives189/100 each."
+    },
+    {
+      "id": "E4",
+      "task": "Prove both strategic-form perfection characterizations.",
+      "anchors_and_scope": "For supported pair sigma=(1/2,1/2,0), tau=(9/20,9/20,1/10),n10 construction gives lower bounds(1/10,1/10,1/10), excess(7/20,7/20,0)."
+    },
+    {
+      "id": "E5",
+      "task": "Prove mixed weak-domination exclusion and supply a Nash/nonperfect example.",
+      "anchors_and_scope": "Row T=(2,0,2),M=(0,2,2),D=(1,1,1); column payoff0. Half(T+M)=(1,1,2), so D against(.5,.5,0) is Nash but not perfect; full-mix domination gap equals third-column probability."
+    },
+    {
+      "id": "E6",
+      "task": "All coordination Nash/perfection and changed lower-right payoff5.",
+      "anchors_and_scope": "Originalp=q3/5,pay12/5; changedp=q5/7,pay20/7, both strict pure equilibria remain."
+    },
+    {
+      "id": "E7",
+      "task": "Derive entire independent-type W4 BNE correspondence and type/exante table.",
+      "anchors_and_scope": "All five aggregate pairs from complete piecewise best-response proof, no grid proof."
+    },
+    {
+      "id": "E8",
+      "task": "Correlated and anticorrelated entry priors, plus zero-type probability boundary.",
+      "anchors_and_scope": "Anticorrelated LL,LH,HL,HH=(1/8,3/8,3/8,1/8) gives low-only gains(2,-2), payoff1 each; correlated gains0/pay0. An absent own type has no prior-defined conditional belief."
+    },
+    {
+      "id": "E9",
+      "task": "Derive W5 CE constraints/welfare bound and new YY payoff(5,5).",
+      "anchors_and_scope": "Original unique mu(1/5,2/5,2/5,0),W48/5; new unique mu(1/7,3/7,3/7,0),W64/7,each32/7."
+    },
+    {
+      "id": "E10",
+      "task": "Prove product CE iff Nash and convexity, then audit private versus public recommendation information.",
+      "anchors_and_scope": "W5privateYobey/deviate8/3;privateA8vs6;publicYYdeviation;independent same marginals slack−12/25."
+    },
+    {
+      "id": "E11",
+      "task": "Prove CE⇒CCE and two-action coincidence; analyze a3-action joint mixture.",
+      "anchors_and_scope": "mu_lambda=(1-lambda)uniform product+lambda uniform diagonal; follow2/3+lambda/3,fixed2/3,cyclic2/3+4lambda/3,CEiff lambda0; atlambda1/2 values5/6,2/3,4/3."
+    },
+    {
+      "id": "E12",
+      "task": "Referee inference, learning, type beliefs and recommendation disclosure claims.",
+      "anchors_and_scope": "Four3-point dimensions: equilibrium/proof, refinement/selection, information/deviation rights, empirical identification/learning; full illustrative memo."
+    }
+  ],
+  "source_preparation": {
+    "path": "production/v13-c06-source-preparation.json",
+    "bytes": 8594,
+    "sha256": "33082012e4c61358b3ee05c916bbc58d17dcd8f0062edf5a4d94d2dd8c59763b"
+  },
+  "unresolved_design_findings": [],
+  "limits": "Finite utility models, strategic-form perfection only, no empirical identification, automatic learning convergence or exhaustive3x3 equilibrium classification."
+}
