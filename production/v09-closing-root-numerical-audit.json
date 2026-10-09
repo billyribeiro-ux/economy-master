@@ -1,0 +1,66 @@
+{
+  "status": "pass",
+  "reviewer": "coordinating author",
+  "method": "No author model/checker imports; reconstruct from original dated cash, unit prices and state laws.",
+  "comparisons_by_chapter": {
+    "v09-c10": 199,
+    "v09-c11": 219,
+    "v09-c12": 309
+  },
+  "total_comparisons": 727,
+  "anchors": {
+    "v09-c10": {
+      "property_base_equity_irr": 0.3488927378855484,
+      "private_net_irr": 0.16731236330250976,
+      "delayed_pre_distribution": [
+        50,
+        17,
+        -6,
+        3
+      ],
+      "repaired_final_cash": 127,
+      "smoothing_four_period_sum_variance": "296/3125",
+      "exercise7_cash": [
+        "475",
+        "1921/4",
+        "256179/500"
+      ]
+    },
+    "v09-c11": {
+      "fixed_target_schedule": [
+        5,
+        7
+      ],
+      "capacity_score_winner": 6,
+      "exercise8_size": 8,
+      "shortfall": "369/2",
+      "source_of_numeric_independence": "unit-price integration and scenario wealth"
+    },
+    "v09-c12": {
+      "candidate_pairs": 3111,
+      "feasible_pairs": 28,
+      "winner": [
+        370,
+        430
+      ],
+      "reverse_contribution_zero_line": "15229417/202000",
+      "reverse_contribution_full_line": "15579417/202000",
+      "method": "pairwise witness covariance and direct state-reserve moments for every candidate"
+    }
+  },
+  "audited_outputs": [
+    {
+      "path": "content/projects/v09-c10-output.json",
+      "sha256": "dbc0448805d889989202dac9bd5d2e4a24d6ba869758d6110250213a3ff48aa0"
+    },
+    {
+      "path": "content/projects/v09-c11-output.json",
+      "sha256": "4ce0f396c38895a2fd4219ec75f654972f61cd32a25a1c40b00613b4d9200a19"
+    },
+    {
+      "path": "content/projects/v09-c12-output.json",
+      "sha256": "ab89615026af0da05d960f103b2811bdb1d52860f1419e704515cbe729300e75"
+    }
+  ],
+  "limits": "Finite synthetic arithmetic audit. Proof, pedagogy, complete open-response rubrics and source scope reviewed separately; no human certification or visual UI claim."
+}

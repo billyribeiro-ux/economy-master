@@ -1,0 +1,739 @@
+{
+  "case": "Larch Research Reserve",
+  "units": {
+    "cash": "kCU",
+    "variance": "kCU squared",
+    "return": "simple one-year decimal",
+    "risk_denominator": "original pretrade wealth"
+  },
+  "moment_witness": {
+    "mean": [
+      "1/10",
+      "3/50"
+    ],
+    "covariance": [
+      [
+        "1/25",
+        "3/500"
+      ],
+      [
+        "3/500",
+        "1/100"
+      ]
+    ],
+    "determinant": "91/250000"
+  },
+  "optimization": {
+    "candidates": 3111,
+    "feasible_count": 28,
+    "nonexclusive_rejection_counts": {
+      "active_risk": 3048,
+      "date1_buffer": 470,
+      "design_stress": 470,
+      "total_risk": 481,
+      "cash": 66
+    },
+    "selected": {
+      "equity": "370",
+      "bond": "430",
+      "fee": "17/20",
+      "cash": "3983/20",
+      "expected_reserve": "172890583/200000",
+      "variance": "46171/5",
+      "active_variance": "171/5",
+      "criterion": "169196903/200000",
+      "date1_liquidity_margin": "2283/2000",
+      "feasible": true,
+      "violations": [],
+      "stresses": {
+        "equity_fall": {
+          "cash_before_t1": "402283/2000",
+          "contribution_t1": "0",
+          "draw_t1": "0",
+          "available_t1": "402283/2000",
+          "grant_t1": "150",
+          "payment_gap_t1": "0",
+          "buffer_gap_t1": "0",
+          "cash_after_t1": "102283/2000",
+          "mandate_proceeds_t2": "1421/2",
+          "cash_before_obligations_t2": "152430583/200000",
+          "grant_t2": "50",
+          "loan_repayment_t2": "0",
+          "payment_gap_t2": "0",
+          "terminal_reserve": "142430583/200000",
+          "reserve_floor_gap": "0",
+          "payments_funded": true,
+          "policy_cash_and_floor_pass": true
+        },
+        "inflation_funding": {
+          "cash_before_t1": "402283/2000",
+          "contribution_t1": "0",
+          "draw_t1": "0",
+          "available_t1": "402283/2000",
+          "grant_t1": "180",
+          "payment_gap_t1": "0",
+          "buffer_gap_t1": "0",
+          "cash_after_t1": "42283/2000",
+          "mandate_proceeds_t2": "6929/10",
+          "cash_before_obligations_t2": "142850583/200000",
+          "grant_t2": "60",
+          "loan_repayment_t2": "0",
+          "payment_gap_t2": "0",
+          "terminal_reserve": "130850583/200000",
+          "reserve_floor_gap": "0",
+          "payments_funded": true,
+          "policy_cash_and_floor_pass": true
+        }
+      }
+    },
+    "feasible_ranked": [
+      {
+        "equity": "370",
+        "bond": "430",
+        "fee": "17/20",
+        "cash": "3983/20",
+        "expected_reserve": "172890583/200000",
+        "variance": "46171/5",
+        "active_variance": "171/5",
+        "criterion": "169196903/200000"
+      },
+      {
+        "equity": "370",
+        "bond": "420",
+        "fee": "4/5",
+        "cash": "1046/5",
+        "expected_reserve": "21602623/25000",
+        "variance": "45524/5",
+        "active_variance": "164/5",
+        "criterion": "21147383/25000"
+      },
+      {
+        "equity": "380",
+        "bond": "420",
+        "fee": "9/10",
+        "cash": "1991/10",
+        "expected_reserve": "86480191/100000",
+        "variance": "47276/5",
+        "active_variance": "76/5",
+        "criterion": "84589151/100000"
+      },
+      {
+        "equity": "370",
+        "bond": "410",
+        "fee": "3/4",
+        "cash": "877/4",
+        "expected_reserve": "34550277/40000",
+        "variance": "44887/5",
+        "active_variance": "167/5",
+        "criterion": "6766417/8000"
+      },
+      {
+        "equity": "380",
+        "bond": "410",
+        "fee": "17/20",
+        "cash": "4183/20",
+        "expected_reserve": "172890783/200000",
+        "variance": "46633/5",
+        "active_variance": "73/5",
+        "criterion": "169160143/200000"
+      },
+      {
+        "equity": "390",
+        "bond": "410",
+        "fee": "19/20",
+        "cash": "3981/20",
+        "expected_reserve": "173030181/200000",
+        "variance": "48419/5",
+        "active_variance": "19/5",
+        "criterion": "169156661/200000"
+      },
+      {
+        "equity": "380",
+        "bond": "400",
+        "fee": "4/5",
+        "cash": "1096/5",
+        "expected_reserve": "2700331/3125",
+        "variance": "9200",
+        "active_variance": "16",
+        "criterion": "2642831/3125"
+      },
+      {
+        "equity": "370",
+        "bond": "400",
+        "fee": "7/10",
+        "cash": "2293/10",
+        "expected_reserve": "86340893/100000",
+        "variance": "8852",
+        "active_variance": "36",
+        "criterion": "84570493/100000"
+      },
+      {
+        "equity": "390",
+        "bond": "400",
+        "fee": "9/10",
+        "cash": "2091/10",
+        "expected_reserve": "86480291/100000",
+        "variance": "9556",
+        "active_variance": "4",
+        "criterion": "84569091/100000"
+      },
+      {
+        "equity": "400",
+        "bond": "400",
+        "fee": "1",
+        "cash": "199",
+        "expected_reserve": "8654999/10000",
+        "variance": "9920",
+        "active_variance": "0",
+        "criterion": "8456599/10000"
+      },
+      {
+        "equity": "380",
+        "bond": "390",
+        "fee": "17/20",
+        "cash": "4583/20",
+        "expected_reserve": "172731183/200000",
+        "variance": "45377/5",
+        "active_variance": "97/5",
+        "criterion": "169101023/200000"
+      },
+      {
+        "equity": "390",
+        "bond": "390",
+        "fee": "19/20",
+        "cash": "4381/20",
+        "expected_reserve": "172870581/200000",
+        "variance": "47151/5",
+        "active_variance": "31/5",
+        "criterion": "169098501/200000"
+      },
+      {
+        "equity": "400",
+        "bond": "390",
+        "fee": "21/20",
+        "cash": "4179/20",
+        "expected_reserve": "173009979/200000",
+        "variance": "9793",
+        "active_variance": "1",
+        "criterion": "169092779/200000"
+      },
+      {
+        "equity": "380",
+        "bond": "380",
+        "fee": "9/10",
+        "cash": "2391/10",
+        "expected_reserve": "86320591/100000",
+        "variance": "44764/5",
+        "active_variance": "124/5",
+        "criterion": "84530031/100000"
+      },
+      {
+        "equity": "390",
+        "bond": "380",
+        "fee": "1",
+        "cash": "229",
+        "expected_reserve": "8639029/10000",
+        "variance": "46532/5",
+        "active_variance": "52/5",
+        "criterion": "8452901/10000"
+      },
+      {
+        "equity": "400",
+        "bond": "380",
+        "fee": "11/10",
+        "cash": "2189/10",
+        "expected_reserve": "86459989/100000",
+        "variance": "9668",
+        "active_variance": "4",
+        "criterion": "84526389/100000"
+      },
+      {
+        "equity": "380",
+        "bond": "370",
+        "fee": "19/20",
+        "cash": "4981/20",
+        "expected_reserve": "172551181/200000",
+        "variance": "44161/5",
+        "active_variance": "161/5",
+        "criterion": "169018301/200000"
+      },
+      {
+        "equity": "390",
+        "bond": "370",
+        "fee": "21/20",
+        "cash": "4779/20",
+        "expected_reserve": "172690579/200000",
+        "variance": "45923/5",
+        "active_variance": "83/5",
+        "criterion": "169016739/200000"
+      },
+      {
+        "equity": "400",
+        "bond": "370",
+        "fee": "23/20",
+        "cash": "4577/20",
+        "expected_reserve": "172829977/200000",
+        "variance": "9545",
+        "active_variance": "9",
+        "criterion": "169011977/200000"
+      },
+      {
+        "equity": "410",
+        "bond": "370",
+        "fee": "5/4",
+        "cash": "875/4",
+        "expected_reserve": "276751/320",
+        "variance": "49567/5",
+        "active_variance": "47/5",
+        "criterion": "33800803/40000"
+      },
+      {
+        "equity": "390",
+        "bond": "360",
+        "fee": "11/10",
+        "cash": "2489/10",
+        "expected_reserve": "86300289/100000",
+        "variance": "45324/5",
+        "active_variance": "124/5",
+        "criterion": "84487329/100000"
+      },
+      {
+        "equity": "400",
+        "bond": "360",
+        "fee": "6/5",
+        "cash": "1194/5",
+        "expected_reserve": "21592497/25000",
+        "variance": "9424",
+        "active_variance": "16",
+        "criterion": "21121297/25000"
+      },
+      {
+        "equity": "410",
+        "bond": "360",
+        "fee": "13/10",
+        "cash": "2287/10",
+        "expected_reserve": "86439687/100000",
+        "variance": "48956/5",
+        "active_variance": "76/5",
+        "criterion": "84481447/100000"
+      },
+      {
+        "equity": "390",
+        "bond": "350",
+        "fee": "23/20",
+        "cash": "5177/20",
+        "expected_reserve": "172510577/200000",
+        "variance": "8947",
+        "active_variance": "35",
+        "criterion": "168931777/200000"
+      },
+      {
+        "equity": "400",
+        "bond": "350",
+        "fee": "5/4",
+        "cash": "995/4",
+        "expected_reserve": "6905999/8000",
+        "variance": "9305",
+        "active_variance": "25",
+        "criterion": "6757119/8000"
+      },
+      {
+        "equity": "410",
+        "bond": "350",
+        "fee": "27/20",
+        "cash": "4773/20",
+        "expected_reserve": "172789373/200000",
+        "variance": "9671",
+        "active_variance": "23",
+        "criterion": "168920973/200000"
+      },
+      {
+        "equity": "400",
+        "bond": "340",
+        "fee": "13/10",
+        "cash": "2587/10",
+        "expected_reserve": "86279987/100000",
+        "variance": "9188",
+        "active_variance": "36",
+        "criterion": "84442387/100000"
+      },
+      {
+        "equity": "410",
+        "bond": "340",
+        "fee": "7/5",
+        "cash": "1243/5",
+        "expected_reserve": "43174843/50000",
+        "variance": "47764/5",
+        "active_variance": "164/5",
+        "criterion": "42219563/50000"
+      }
+    ]
+  },
+  "benchmark": {
+    "equity": "400",
+    "bond": "400",
+    "fee": "1",
+    "cash": "199",
+    "expected_reserve": "8654999/10000",
+    "variance": "9920",
+    "active_variance": "0",
+    "criterion": "8456599/10000",
+    "date1_liquidity_margin": "99/100",
+    "feasible": true,
+    "violations": [],
+    "stresses": {
+      "equity_fall": {
+        "cash_before_t1": "20099/100",
+        "contribution_t1": "0",
+        "draw_t1": "0",
+        "available_t1": "20099/100",
+        "grant_t1": "150",
+        "payment_gap_t1": "0",
+        "buffer_gap_t1": "0",
+        "cash_after_t1": "5099/100",
+        "mandate_proceeds_t2": "700",
+        "cash_before_obligations_t2": "7514999/10000",
+        "grant_t2": "50",
+        "loan_repayment_t2": "0",
+        "payment_gap_t2": "0",
+        "terminal_reserve": "7014999/10000",
+        "reserve_floor_gap": "0",
+        "payments_funded": true,
+        "policy_cash_and_floor_pass": true
+      },
+      "inflation_funding": {
+        "cash_before_t1": "20099/100",
+        "contribution_t1": "0",
+        "draw_t1": "0",
+        "available_t1": "20099/100",
+        "grant_t1": "180",
+        "payment_gap_t1": "0",
+        "buffer_gap_t1": "0",
+        "cash_after_t1": "2099/100",
+        "mandate_proceeds_t2": "692",
+        "cash_before_obligations_t2": "7131999/10000",
+        "grant_t2": "60",
+        "loan_repayment_t2": "0",
+        "payment_gap_t2": "0",
+        "terminal_reserve": "6531999/10000",
+        "reserve_floor_gap": "0",
+        "payments_funded": true,
+        "policy_cash_and_floor_pass": true
+      }
+    }
+  },
+  "inherited_position": {
+    "equity": "300",
+    "bond": "400",
+    "fee": "0",
+    "cash": "300",
+    "expected_reserve": "85853/100",
+    "variance": "6640",
+    "active_variance": "400",
+    "criterion": "3381/4",
+    "date1_liquidity_margin": "103",
+    "feasible": false,
+    "violations": [
+      "active_risk"
+    ],
+    "stresses": {
+      "equity_fall": {
+        "cash_before_t1": "303",
+        "contribution_t1": "0",
+        "draw_t1": "0",
+        "available_t1": "303",
+        "grant_t1": "150",
+        "payment_gap_t1": "0",
+        "buffer_gap_t1": "0",
+        "cash_after_t1": "153",
+        "mandate_proceeds_t2": "630",
+        "cash_before_obligations_t2": "78453/100",
+        "grant_t2": "50",
+        "loan_repayment_t2": "0",
+        "payment_gap_t2": "0",
+        "terminal_reserve": "73453/100",
+        "reserve_floor_gap": "0",
+        "payments_funded": true,
+        "policy_cash_and_floor_pass": true
+      },
+      "inflation_funding": {
+        "cash_before_t1": "303",
+        "contribution_t1": "0",
+        "draw_t1": "0",
+        "available_t1": "303",
+        "grant_t1": "180",
+        "payment_gap_t1": "0",
+        "buffer_gap_t1": "0",
+        "cash_after_t1": "123",
+        "mandate_proceeds_t2": "607",
+        "cash_before_obligations_t2": "73123/100",
+        "grant_t2": "60",
+        "loan_repayment_t2": "0",
+        "payment_gap_t2": "0",
+        "terminal_reserve": "67123/100",
+        "reserve_floor_gap": "0",
+        "payments_funded": true,
+        "policy_cash_and_floor_pass": true
+      }
+    }
+  },
+  "risk_decomposition": {
+    "variance_contributions": [
+      "32153/5",
+      "14018/5"
+    ],
+    "active_variance_contributions": [
+      "153/5",
+      "18/5"
+    ],
+    "volatility_kCU_approx": 96.09474491354874,
+    "volatility_contributions_kCU_approx": [
+      66.91937218611969,
+      29.175372727429036
+    ],
+    "active_volatility_kCU_approx": 5.848076606885378,
+    "volatility_fraction_initial_wealth_approx": 0.09609474491354873
+  },
+  "date1_bill_thresholds": {
+    "no_line_keep_buffer": "362283/2000",
+    "max_line_keep_buffer": "412283/2000",
+    "max_line_allow_zero_cash": "452283/2000"
+  },
+  "reverse_stress": {
+    "no_external_funding_max_line": {
+      "cash_before_t1": "402283/2000",
+      "contribution_t1": "0",
+      "draw_t1": "25",
+      "available_t1": "452283/2000",
+      "grant_t1": "240",
+      "payment_gap_t1": "27717/2000",
+      "buffer_gap_t1": "67717/2000",
+      "cash_after_t1": null,
+      "mandate_proceeds_t2": "6731/10",
+      "cash_before_obligations_t2": null,
+      "grant_t2": "60",
+      "loan_repayment_t2": "27",
+      "payment_gap_t2": null,
+      "terminal_reserve": null,
+      "reserve_floor_gap": null,
+      "payments_funded": false,
+      "policy_cash_and_floor_pass": false
+    },
+    "buffer_only_external_funding_max_line": {
+      "cash_before_t1": "402283/2000",
+      "contribution_t1": "67717/2000",
+      "draw_t1": "25",
+      "available_t1": "260",
+      "grant_t1": "240",
+      "payment_gap_t1": "0",
+      "buffer_gap_t1": "0",
+      "cash_after_t1": "20",
+      "mandate_proceeds_t2": "6731/10",
+      "cash_before_obligations_t2": "6933/10",
+      "grant_t2": "60",
+      "loan_repayment_t2": "27",
+      "payment_gap_t2": "0",
+      "terminal_reserve": "6063/10",
+      "reserve_floor_gap": "437/10",
+      "payments_funded": true,
+      "policy_cash_and_floor_pass": false
+    },
+    "both_constraints_no_line": {
+      "draw": "0",
+      "cash_constraint_contribution": "117717/2000",
+      "floor_constraint_contribution": "15229417/202000",
+      "minimum_contribution": "15229417/202000",
+      "ledger": {
+        "cash_before_t1": "402283/2000",
+        "contribution_t1": "15229417/202000",
+        "draw_t1": "0",
+        "available_t1": "27930/101",
+        "grant_t1": "240",
+        "payment_gap_t1": "0",
+        "buffer_gap_t1": "0",
+        "cash_after_t1": "3690/101",
+        "mandate_proceeds_t2": "6731/10",
+        "cash_before_obligations_t2": "710",
+        "grant_t2": "60",
+        "loan_repayment_t2": "0",
+        "payment_gap_t2": "0",
+        "terminal_reserve": "650",
+        "reserve_floor_gap": "0",
+        "payments_funded": true,
+        "policy_cash_and_floor_pass": true
+      }
+    },
+    "both_constraints_max_line": {
+      "draw": "25",
+      "cash_constraint_contribution": "67717/2000",
+      "floor_constraint_contribution": "15579417/202000",
+      "minimum_contribution": "15579417/202000",
+      "ledger": {
+        "cash_before_t1": "402283/2000",
+        "contribution_t1": "15579417/202000",
+        "draw_t1": "25",
+        "available_t1": "30630/101",
+        "grant_t1": "240",
+        "payment_gap_t1": "0",
+        "buffer_gap_t1": "0",
+        "cash_after_t1": "6390/101",
+        "mandate_proceeds_t2": "6731/10",
+        "cash_before_obligations_t2": "737",
+        "grant_t2": "60",
+        "loan_repayment_t2": "27",
+        "payment_gap_t2": "0",
+        "terminal_reserve": "650",
+        "reserve_floor_gap": "0",
+        "payments_funded": true,
+        "policy_cash_and_floor_pass": true
+      }
+    },
+    "minimum_external_funding": {
+      "draw": "0",
+      "cash_constraint_contribution": "117717/2000",
+      "floor_constraint_contribution": "15229417/202000",
+      "minimum_contribution": "15229417/202000",
+      "ledger": {
+        "cash_before_t1": "402283/2000",
+        "contribution_t1": "15229417/202000",
+        "draw_t1": "0",
+        "available_t1": "27930/101",
+        "grant_t1": "240",
+        "payment_gap_t1": "0",
+        "buffer_gap_t1": "0",
+        "cash_after_t1": "3690/101",
+        "mandate_proceeds_t2": "6731/10",
+        "cash_before_obligations_t2": "710",
+        "grant_t2": "60",
+        "loan_repayment_t2": "0",
+        "payment_gap_t2": "0",
+        "terminal_reserve": "650",
+        "reserve_floor_gap": "0",
+        "payments_funded": true,
+        "policy_cash_and_floor_pass": true
+      }
+    }
+  },
+  "execution_report": {
+    "available": true,
+    "unfilled_equity": "10",
+    "actual_position": {
+      "equity": "360",
+      "bond": "430",
+      "fee": "3/4",
+      "cash": "837/4",
+      "expected_reserve": "34550237/40000",
+      "variance": "44453/5",
+      "active_variance": "293/5",
+      "criterion": "33838989/40000",
+      "date1_liquidity_margin": "4537/400",
+      "feasible": false,
+      "violations": [
+        "active_risk"
+      ],
+      "stresses": {
+        "equity_fall": {
+          "cash_before_t1": "84537/400",
+          "contribution_t1": "0",
+          "draw_t1": "0",
+          "available_t1": "84537/400",
+          "grant_t1": "150",
+          "payment_gap_t1": "0",
+          "buffer_gap_t1": "0",
+          "cash_after_t1": "24537/400",
+          "mandate_proceeds_t2": "1407/2",
+          "cash_before_obligations_t2": "30618237/40000",
+          "grant_t2": "50",
+          "loan_repayment_t2": "0",
+          "payment_gap_t2": "0",
+          "terminal_reserve": "28618237/40000",
+          "reserve_floor_gap": "0",
+          "payments_funded": true,
+          "policy_cash_and_floor_pass": true
+        },
+        "inflation_funding": {
+          "cash_before_t1": "84537/400",
+          "contribution_t1": "0",
+          "draw_t1": "0",
+          "available_t1": "84537/400",
+          "grant_t1": "180",
+          "payment_gap_t1": "0",
+          "buffer_gap_t1": "0",
+          "cash_after_t1": "12537/400",
+          "mandate_proceeds_t2": "3422/5",
+          "cash_before_obligations_t2": "28642237/40000",
+          "grant_t2": "60",
+          "loan_repayment_t2": "0",
+          "payment_gap_t2": "0",
+          "terminal_reserve": "26242237/40000",
+          "reserve_floor_gap": "0",
+          "payments_funded": true,
+          "policy_cash_and_floor_pass": true
+        }
+      }
+    },
+    "target_ledger": {
+      "cash_before_t1": "402283/2000",
+      "contribution_t1": "0",
+      "draw_t1": "0",
+      "available_t1": "402283/2000",
+      "grant_t1": "150",
+      "payment_gap_t1": "0",
+      "buffer_gap_t1": "0",
+      "cash_after_t1": "102283/2000",
+      "mandate_proceeds_t2": "8487/10",
+      "cash_before_obligations_t2": "180070583/200000",
+      "grant_t2": "50",
+      "loan_repayment_t2": "0",
+      "payment_gap_t2": "0",
+      "terminal_reserve": "170070583/200000",
+      "reserve_floor_gap": "0",
+      "payments_funded": true,
+      "policy_cash_and_floor_pass": true
+    },
+    "actual_ledger": {
+      "cash_before_t1": "84537/400",
+      "contribution_t1": "0",
+      "draw_t1": "0",
+      "available_t1": "84537/400",
+      "grant_t1": "150",
+      "payment_gap_t1": "0",
+      "buffer_gap_t1": "0",
+      "cash_after_t1": "24537/400",
+      "mandate_proceeds_t2": "1675/2",
+      "cash_before_obligations_t2": "35978237/40000",
+      "grant_t2": "50",
+      "loan_repayment_t2": "0",
+      "payment_gap_t2": "0",
+      "terminal_reserve": "33978237/40000",
+      "reserve_floor_gap": "0",
+      "payments_funded": true,
+      "policy_cash_and_floor_pass": true
+    },
+    "benchmark_ledger": {
+      "cash_before_t1": "20099/100",
+      "contribution_t1": "0",
+      "draw_t1": "0",
+      "available_t1": "20099/100",
+      "grant_t1": "150",
+      "payment_gap_t1": "0",
+      "buffer_gap_t1": "0",
+      "cash_after_t1": "5099/100",
+      "mandate_proceeds_t2": "852",
+      "cash_before_obligations_t2": "9034999/10000",
+      "grant_t2": "50",
+      "loan_repayment_t2": "0",
+      "payment_gap_t2": "0",
+      "terminal_reserve": "8534999/10000",
+      "reserve_floor_gap": "0",
+      "payments_funded": true,
+      "policy_cash_and_floor_pass": true
+    },
+    "reserve_gap_decomposition": {
+      "policy_selection": "-629397/200000",
+      "implementation": "-89699/100000",
+      "total_vs_benchmark": "-161759/40000"
+    },
+    "initial_active_budget_breach": true
+  }
+}

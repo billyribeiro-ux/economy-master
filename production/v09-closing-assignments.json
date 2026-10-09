@@ -1,0 +1,226 @@
+{
+  "batch": "v09-closing",
+  "date": "2026-10-09",
+  "previous_goal_turn": "progress: accepted and published c05–c08; 104 chapters, 8 volume packages, 2 cumulative packages; whole-library checks and offline archive pass.",
+  "authorization": "User explicitly authorized three economics/finance specialists and autonomous review/production.",
+  "shared_rules": [
+    "Read AGENTS.md, PRODUCTION_PLAN.md, STATUS.json, this exact assignment, canonical chapter spec and relevant accepted predecessors. Preserve existing work.",
+    "Own only the nine listed paths. Coordinator alone edits curriculum, shared sources/status/build/verify, final acceptance reviews and hosting. Do not delegate, publish, install libraries or add frameworks/features.",
+    "Adjacent predecessor manuscripts may be drafted concurrently against these stated prerequisite contracts. Acceptance must follow c09→c10→c11→c12. Explain any new technique needed locally; do not rely on unwritten details.",
+    "Full chapter package: objective/prerequisites, motivating problem, definitions/units, intuition and adequate formal derivation/proof, boundary conditions, at least four fully worked examples, eight original exercises with complete solutions and critique rubrics, answered teach-back and delayed retention, scoped sources and extension.",
+    "Use HTML fragments with h2/h3, no h1/eyebrow duplication. Use existing worked/exercises/solutions and source-link conventions. Cross-chapter links use generated .html URLs. No decorative images.",
+    "Fetch actual authoritative primary source bodies for narrow specialist claims, accurately record edition/page/section/date scope, reuse exact accepted source records when applicable, and return proposed additions in own sources JSON. Curriculum benchmark links alone are insufficient. Synthetic fixtures explicitly authored; no current empirical or legal claims without verification.",
+    "Plain standard-library Python offline CLI accepts --input and optional --output; strict finite inputs and internally consistent conventions; entire output JSON frozen; manifest hashes all four distributed payloads. No network or package dependencies at runtime.",
+    "Meaningful quiet check() returns strict JSON, no stdout/stderr; independently recompute methods, every determinate exercise and material boundary case, run allowed parameter interventions and rejected contradictory/domain inputs, complete output regression, all distributed hashes and isolated portable normal/optimized execution. Do not treat passing code as proof or external academic certification.",
+    "Author review includes all eight non-self owned payload byte sizes/SHA256, full solution/proof/source audit, findings and honest limits. Report preliminary model architecture early for coordinator audit; freeze at completion and do not modify frozen files without telling coordinator."
+  ],
+  "assignments": [
+    {
+      "owner": "root",
+      "chapter_id": "v09-c09",
+      "state": "assigned",
+      "canonical_spec": {
+        "id": "v09-c09",
+        "number": 9,
+        "title": "Strategic and dynamic asset allocation",
+        "outcome": "Design allocation policies across horizons and investor constraints.",
+        "coverage": [
+          "Lifecycle",
+          "liabilities",
+          "hedging demand",
+          "rebalancing",
+          "tactical decisions",
+          "estimation risk"
+        ],
+        "prerequisites": [
+          "v09-c08"
+        ],
+        "level": "Advanced",
+        "status": "planned",
+        "manuscript": "chapters/v09-c09.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Strategic and dynamic allocation: explicit investor objective, horizons, liquid wealth and future liabilities/income. Derive liability and human-capital hedge demand with feasible constraints, finite-tree Bellman allocation and genuinely state-contingent hedging demand, dollar self-financing rebalancing with costs, strategic versus tactical information discipline and estimation-risk sensitivity. Original synthetic models, every objective and cash-flow convention stated, full solutions and portable lab. Do not infer lower long-horizon risk solely from annualized variance or prescribe universal age rules.",
+      "owned_paths": [
+        "content/chapters/v09-c09.html",
+        "content/projects/v09-c09-inputs.json",
+        "content/projects/v09-c09-analysis.py",
+        "content/projects/v09-c09-output.json",
+        "content/projects/v09-c09-manifest.json",
+        "content/projects/v09-c09-README.txt",
+        "scripts/check_v09_c09.py",
+        "content/reviews/v09-c09-author.json",
+        "content/reviews/v09-c09-sources.json"
+      ]
+    },
+    {
+      "owner": "cost_peer",
+      "chapter_id": "v09-c10",
+      "state": "assigned",
+      "canonical_spec": {
+        "id": "v09-c10",
+        "number": 10,
+        "title": "Alternative assets and illiquidity",
+        "outcome": "Compare nontraditional investments with transparent valuation and liquidity assumptions.",
+        "coverage": [
+          "Real estate",
+          "private markets",
+          "commodities",
+          "hedge funds",
+          "appraisal smoothing",
+          "lockups"
+        ],
+        "prerequisites": [
+          "v09-c09"
+        ],
+        "level": "Advanced",
+        "status": "planned",
+        "manuscript": "chapters/v09-c10.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Compare real estate, private equity/debt, commodity exposure and hedge-fund mandates by cash-flow/claim/financing structure. Derive original transparent valuation and leverage cases, investor versus fund cash timing/fees, appraisal-smoothing variance/covariance distortion and unsmoothing assumptions, and lockup/capital-call/liquidity stress. Include determinate private cash comparisons (IRR domains and benchmark-relative value as appropriate), commodity collateral/roll accounting and strategy-specific hedge-fund costs/risks. No universal alternative premium, fake current performance or undated regulatory facts. Four substantial worked cases, eight complete exercises, explicit assumptions/boundaries and an offline lab.",
+      "owned_paths": [
+        "content/chapters/v09-c10.html",
+        "content/projects/v09-c10-inputs.json",
+        "content/projects/v09-c10-analysis.py",
+        "content/projects/v09-c10-output.json",
+        "content/projects/v09-c10-manifest.json",
+        "content/projects/v09-c10-README.txt",
+        "scripts/check_v09_c10.py",
+        "content/reviews/v09-c10-author.json",
+        "content/reviews/v09-c10-sources.json"
+      ]
+    },
+    {
+      "owner": "equity_peer",
+      "chapter_id": "v09-c11",
+      "state": "assigned",
+      "canonical_spec": {
+        "id": "v09-c11",
+        "number": 11,
+        "title": "Execution, trading costs and market microstructure",
+        "outcome": "Evaluate execution and liquidity effects on feasible investment strategies.",
+        "coverage": [
+          "Bid-ask spread",
+          "impact",
+          "order types",
+          "information",
+          "execution benchmarks",
+          "capacity"
+        ],
+        "prerequisites": [
+          "v09-c10"
+        ],
+        "level": "Advanced",
+        "status": "planned",
+        "manuscript": "chapters/v09-c11.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Teach quoted/effective/realized spread definitions with exact sign/timestamp/unit conventions, original information/adverse-selection mechanism, market/limit order execution and nonexecution risk, implementation shortfall with delay/fill/opportunity/fee components, endogenous impact/cost/risk tradeoffs and capacity constraints. Fully derive any model used; market mechanics in a stipulated venue contract rather than unsupported universal rules. Original reproducible dated order/fill/cash and finite optimization cases, four worked examples, eight fully solved transfers, strict information timing and benchmark limits.",
+      "owned_paths": [
+        "content/chapters/v09-c11.html",
+        "content/projects/v09-c11-inputs.json",
+        "content/projects/v09-c11-analysis.py",
+        "content/projects/v09-c11-output.json",
+        "content/projects/v09-c11-manifest.json",
+        "content/projects/v09-c11-README.txt",
+        "scripts/check_v09_c11.py",
+        "content/reviews/v09-c11-author.json",
+        "content/reviews/v09-c11-sources.json"
+      ]
+    },
+    {
+      "owner": "financial_diagnosis",
+      "chapter_id": "v09-c12",
+      "state": "assigned",
+      "canonical_spec": {
+        "id": "v09-c12",
+        "number": 12,
+        "title": "Investment policy and portfolio integration",
+        "outcome": "Defend a mandate and portfolio using economic objectives and robust evidence.",
+        "coverage": [
+          "IPS",
+          "governance",
+          "benchmarks",
+          "risk budget",
+          "costs",
+          "stress scenarios",
+          "reporting"
+        ],
+        "prerequisites": [
+          "v09-c11"
+        ],
+        "level": "Advanced",
+        "status": "planned",
+        "manuscript": "chapters/v09-c12.html",
+        "sources": [
+          "mit-finance",
+          "wharton-finance-courses"
+        ],
+        "required_worked_examples": 2,
+        "required_exercises": 8,
+        "review": {
+          "arithmetic": false,
+          "reasoning": false,
+          "solutions": false,
+          "sources": false,
+          "instruction": false,
+          "structure": false
+        }
+      },
+      "scope": "Integrate investments into a complete original investment policy and committee decision case: investor liabilities/objectives, investable menu, ex-ante strategic benchmark, cash liquidity, covariance/active risk budget, financing and actual cost rules, coherent stresses and loss/shortfall, delegation/escalation/rebalancing/reporting. Derive and solve a reproducible constrained portfolio decision with feasible alternatives and complete cash/risk/benchmark reconciliations; distinguish chosen policy judgment from mathematical implication and sample evidence. Include a filled IPS and reporting example, four worked cases and eight fully solved exercises with explicit rubrics. This chapter prepares but does not substitute for the separate full Volume 9 assessment package.",
+      "owned_paths": [
+        "content/chapters/v09-c12.html",
+        "content/projects/v09-c12-inputs.json",
+        "content/projects/v09-c12-analysis.py",
+        "content/projects/v09-c12-output.json",
+        "content/projects/v09-c12-manifest.json",
+        "content/projects/v09-c12-README.txt",
+        "scripts/check_v09_c12.py",
+        "content/reviews/v09-c12-author.json",
+        "content/reviews/v09-c12-sources.json"
+      ]
+    }
+  ],
+  "root_scope": "Author c09 and arrange separate peer; independently audit all specialist manuscript, solution, code and source scopes; dependency acceptance; rebuild/check/archive and existing owner-private Site publishing.",
+  "status": "All four packages independently accepted and checked; archive ready; same-site publication in progress."
+}

@@ -1,0 +1,338 @@
+{
+  "chapter": "v09-c11",
+  "title": "Execution, trading costs and market microstructure",
+  "author": "equity and allocation specialist",
+  "date": "2026-10-09",
+  "edition_boundary": "2026-10-06",
+  "assignment": "production/v09-closing-assignments.json",
+  "state": "author-review-complete",
+  "status": "passed_author_review",
+  "acceptance": "Pending independent coordinator audit and dependency-order acceptance after c09/c10. Specialist changed no shared canonical, build or hosting state.",
+  "review_type": "Full original manuscript, four substantial worked cases, every exact exercise and complete solution, answered teach-back/retention, full lab/checker/input/output, inspected narrow primary-source bodies and final exact hashes. Author review is not independent human certification.",
+  "coverage": {
+    "outcome": "Evaluate execution and liquidity effects on feasible investment strategies.",
+    "canonical": {
+      "Bid-ask spread": "Quote depth; aggressor signs; effective/realized/midpoint identity; common arrival reference, horizon and basis-point denominator; fees distinct from price measures.",
+      "impact": "Within-block cumulative-quantity integral, persistent versus temporary terms, exact shock timing, expected cost and variance, explicit E+lambda Var objective, convex projection and integer ties.",
+      "order types": "Market and marketable/passive limit; IOC versus FOK and remaining quantity; finite displayed depth; independent snapshot contract; price-time queue contract; no universal venue/default assumptions.",
+      "information": "Original symmetric one-arrival Bayesian dealer case, type-conditioned profit and participation boundary; correlated passive fill/nonfill scenarios and before-outcome policy choice.",
+      "execution benchmarks": "Paper-minus-actual wealth including original unfilled target; full-target delay/execution/opportunity/fee telescope; external market VWAP versus own fill average; timestamp and sample-selection limits.",
+      "capacity": "Fixed required quantity versus separately authorized scale; entire exact size grid; physical cap, largest nonnegative-score quantity and maximizing quantity distinguished; supplied benefits exclude own marking gains."
+    },
+    "prerequisites": "Read current closing assignment/canonical specs, full production instructions/checkpoint and accepted information/return/mean-variance conventions. Coordinated c12 actual-versus-target reporting interface; adjacent chapter references use exact curriculum routes.",
+    "chapter_words": 7098,
+    "worked_examples": 4,
+    "exercises": 8,
+    "complete_solutions": 8,
+    "teaching": "Answered committee comparison of spread, marks, full-target shortfall and authorized capacity; requires a cash identity and authority boundary.",
+    "retention": "Later midpoint changes RS/MC while ES is fixed; attempted residual completion exposes202.5 cash deficit, common added-funds comparison,202.5 total IS and18 incremental shortfall.",
+    "lab": "Five exact independent contracts: atomic book, dealer, passive queue, dated shortfall and two-block impact with complete authorized-size grid. Four distributed payloads plus manifest.",
+    "ownership": "Only nine assigned paths written; eight non-author payloads hashed. No children, shared edits, installation or publication."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v09-c11.html",
+      "bytes": 49412,
+      "sha256": "861bc4fcbf6242819b665c18a4a9b6cabbaf5860cf9f74ee722653a58f3612c5"
+    },
+    {
+      "path": "content/projects/v09-c11-inputs.json",
+      "bytes": 2862,
+      "sha256": "e3094eb39f1adfbf4f6e25cb6662be4352829cbddb3e4c889997c621c2bddd33"
+    },
+    {
+      "path": "content/projects/v09-c11-analysis.py",
+      "bytes": 16935,
+      "sha256": "b6286b42b42f4491e08d5aac3fba9a69e52af2b3bc4ee5efdbf4e8aba27af699"
+    },
+    {
+      "path": "content/projects/v09-c11-output.json",
+      "bytes": 9962,
+      "sha256": "4ce0f396c38895a2fd4219ec75f654972f61cd32a25a1c40b00613b4d9200a19"
+    },
+    {
+      "path": "content/projects/v09-c11-manifest.json",
+      "bytes": 745,
+      "sha256": "7afd605883d6d97d25a1035052033962d9fcf8955ddc2a7c73e983bd7dfb97ad"
+    },
+    {
+      "path": "content/projects/v09-c11-README.txt",
+      "bytes": 12642,
+      "sha256": "f4f6770a9c585373659e8e8507285fe44e8c6798433d094f7c0dbe0317d4fb58"
+    },
+    {
+      "path": "scripts/check_v09_c11.py",
+      "bytes": 29182,
+      "sha256": "d77f2d292656d6a327f7e0b1426580491f9f4cba33eed7f841b8561a1bf51612"
+    },
+    {
+      "path": "content/reviews/v09-c11-sources.json",
+      "bytes": 3402,
+      "sha256": "66b0f00913b911a9bd4241d2d53200286957859ebba302927905a1181729b58d"
+    }
+  ],
+  "reasoning_checks": [
+    "Atomic matching preserves finite eligible quantity and price priority. IOC residual cancels; FOK partial execution is prohibited. No-fill averages remain undefined. Alternative orders start from the same snapshot/account.",
+    "Both atomic snapshot signs require cash - d*gross - fees >=0; sell targets also require owned inventory. A sale whose fee exceeds proceeds is admitted only if initial cash covers the difference. The dated shortfall model separately checks cash at each fill, including an early fee deficit later proceeds would otherwise conceal.",
+    "Arrival aggregate spread uses one explicitly frozen midpoint, not changing per-child quotes. Fee exclusion, sign, common denominator and future-mark horizon preserve ES=RS+MC. Neither RS nor MC is automatically a cash-profit or causal-impact estimate.",
+    "Dealer Bayes derivation is independently checked by nature/type/direction enumeration. Uninformed demand is exogenous; the one-share quote is updated after arrival. Theta1 is excluded because strict participation disappears; theta0 is an allowed zero-information boundary.",
+    "Passive queue scenarios retain dependence between sell volume and future price. Both complete policies are fixed before outcomes and funded at each date. Cancel-only policy retains the missed rising-state paper gain and is labeled a different completion mandate.",
+    "Full-target shortfall is derived from identical initial cash/inventory and common final marks. The alternative filled-only delay convention is distinguished, preventing duplicate delay on residual shares. Side symmetry and empty/full-fill boundaries are checked.",
+    "The VWAP sample explicitly excludes own fills and is defined over the supplied interval. Favorable filled-only gross cost does not erase original-target shortfall or establish skill; data-selection and causal estimation limits are taught.",
+    "Persistent cost derives from the within-block integral kQ²/2 and reconciles all actual state cash. Interim midpoint excludes temporary impact, shock occurs between blocks, and the second block is the committed remainder. No own-price mark is counted as a cash benefit.",
+    "J is E[C]+lambda Var(C) with inverse-CU lambda, not a lambda/2 convention or asserted universal expected utility. Strict convexity and derivative signs prove the continuous optimum and projection; floor/ceiling and all integer ties are separately handled.",
+    "Capacity grid optimizes every integer quantity anew, includes abstention and exposes all ties. The baseline6/11/14 distinctions and benefit2 transfer8/14/14 are conditional on separate sizing authority; requiredQ12 is never silently resized.",
+    "Impact prefunding intentionally covers every allowed schedule in the full grid, so the stated timing constraints remain the two capacities. This is not misrepresented as an optimizer with an additional endogenous cash constraint.",
+    "Delayed completion in the shortfall case costs10202.5 but initial cash is10000. The proposed order is infeasible without202.5 added funding; supplying it equally to paper/actual leaves the202.5 wealth shortfall intact.",
+    "Empirical discussion separates exact model arithmetic from identification of coefficients and forecast benefits. No real current venue rule, quote, return, capacity or estimated alpha is invented."
+  ],
+  "exercise_audit": [
+    {
+      "exercise": 1,
+      "status": "pass",
+      "result": "Sell ES/RS/MC=.1/-.3/.4 CU per share;20/-60/80 bps; correct mark and causal limits."
+    },
+    {
+      "exercise": 2,
+      "status": "pass",
+      "result": "Sell market450 gross44920, fee4.5, net44915.5, average4492/45; limit400 gross39940, net39936, average99.85, cancelled50; FOK no fill."
+    },
+    {
+      "exercise": 3,
+      "status": "pass",
+      "result": "High posteriors5/8 and3/8; ask101,bid99,spread2; informed gain3, uninformed dealer gain1; weighted-.75/+.75; endpoint qualifications."
+    },
+    {
+      "exercise": 4,
+      "status": "pass",
+      "result": "Ahead100 yields fall80 passive plus20 at deadline, cash4985/5061, expected5030.6 and IS30.6; restored queue break-even fall probability5/7."
+    },
+    {
+      "exercise": 5,
+      "status": "pass",
+      "result": "Paper12000, actual11912.5, delay40/execution12.5/opportunity30/fee5; total87.5,875/12 bps; resized250 target gives different42.5 comparison."
+    },
+    {
+      "exercise": 6,
+      "status": "pass",
+      "result": "External VWAP20.3; own average2841/140; gross filled-only cost-2.5, fee-inclusive4.5; original-target184.5 retained; complete reporting/inference criteria."
+    },
+    {
+      "exercise": 7,
+      "status": "pass",
+      "result": "Lambda0 selects4/8; integer switch2/25 with4/8–5/7 tie;3/9 dominated for every nonnegative lambda; continuous first-cap threshold6/35."
+    },
+    {
+      "exercise": 8,
+      "status": "pass",
+      "result": "Benefit2 gives optimalQ8 with4/4 andscore7.2; largest nonnegativeQ14 and physical14; requiredQ12 remains separate; target-change authority and parameter uncertainty explicit."
+    }
+  ],
+  "numerical_checks": {
+    "chapter": "v09-c11",
+    "status": "passed",
+    "groups": 8,
+    "checks": [
+      "Snapshot depth, signed spreads and sell transfers",
+      "Enumerated informed/uninformed conditional cash",
+      "Queue selection and dated deadline cash",
+      "Independent paper/actual wealth and original target",
+      "Per-share impact integration and shock-state objective",
+      "Complete authorized-size grid and integer ties",
+      "Meaningful timing, funding and contract-domain rejection",
+      "Complete frozen output, HTML, sources and four-file hashes"
+    ],
+    "anchors": {
+      "book": {
+        "market_cash": 30063,
+        "limit_cash": "50085/2",
+        "sell_gross": [
+          44920,
+          39940,
+          0
+        ],
+        "sell_spreads_bps": [
+          20,
+          -60,
+          80
+        ],
+        "high_fee_sell_boundary_final_cash": "0"
+      },
+      "dealer": {
+        "bid_ask_cases": [
+          [
+            "496/5",
+            "504/5"
+          ],
+          [
+            "99",
+            "101"
+          ],
+          [
+            "100",
+            "100"
+          ]
+        ],
+        "exercise3_weighted_profits": [
+          "-3/4",
+          "3/4"
+        ]
+      },
+      "queue": {
+        "expected_shortfalls": [
+          "33",
+          "153/5"
+        ],
+        "cancel_shortfall": "132/5",
+        "fall_probability_threshold": "5/7"
+      },
+      "shortfall": {
+        "baseline": "369/2",
+        "sell_exercise": "175/2",
+        "sell_bps": "875/12",
+        "funded_retention": "405/2",
+        "retention_extra_cash": "405/2"
+      },
+      "impact": {
+        "mean": "147/10",
+        "variance": "49/4",
+        "objective": "98/5",
+        "state_cash": [
+          "3056/5",
+          "3091/5"
+        ],
+        "integer_lambda_switch": "2/25",
+        "continuous_cap_threshold": "6/35",
+        "moment_comparisons": 9
+      },
+      "capacity": {
+        "benefit_1_5": [
+          6,
+          11,
+          14
+        ],
+        "benefit_2": [
+          8,
+          14,
+          14
+        ],
+        "size_scenarios_independently_recomputed": 30
+      }
+    },
+    "rejected_inputs": [
+      "changed-priority-contract",
+      "lambda-half-convention",
+      "float-input",
+      "boolean-quantity",
+      "nonfinite-price-string",
+      "crossed-book",
+      "unordered-book",
+      "future-mark-before-fill",
+      "unsupported-order-type",
+      "snapshot-unfunded",
+      "snapshot-sell-fee-cash-deficit",
+      "dealer-no-participation-rule",
+      "nonpositive-low-value",
+      "probabilities-do-not-sum",
+      "deadline-ask-below-mid",
+      "deadline-unfunded",
+      "prearrival-fill",
+      "postvaluation-fill",
+      "overfilled-original-target",
+      "negative-fee",
+      "unowned-sell-target",
+      "retention-unfunded-completion",
+      "intermediate-cash-deficit",
+      "nonpositive-impacted-domain",
+      "nonconvex-temporary-input",
+      "negative-risk-penalty",
+      "fractional-block-capacity",
+      "grid-not-prefunded"
+    ],
+    "package": {
+      "worked": 4,
+      "exercises": 8,
+      "solutions": 8,
+      "chapter_words": 7098,
+      "manifest_files": 4,
+      "scoped_sources": 3
+    }
+  },
+  "commands_and_contracts": [
+    {
+      "command": "python3 -B book/content/projects/v09-c11-analysis.py --output book/content/projects/v09-c11-output.json",
+      "result": "Complete exact baseline produced; later per-fill funding guard leaves output unchanged."
+    },
+    {
+      "command": "python3 -B book/scripts/check_v09_c11.py plus captured runpy/check()",
+      "result": "Eight groups pass; quiet import/run/check returns strict JSON. No assert-dependent validation."
+    },
+    {
+      "command": "python3 -B -O /absolute/path/book/scripts/check_v09_c11.py from /private/tmp",
+      "result": "Same eight groups pass without working-directory dependence."
+    },
+    {
+      "command": "Four assets copied into temporary directory; normal and optimized CLI run from /private/tmp; stdout mode also compared",
+      "result": "No stdout/stderr with --output; normal/optimized/stderr behavior and entire generated output bytes match reference."
+    },
+    {
+      "command": "Direct whitespace/final-newline scan of eight payloads",
+      "result": "Passed. Workspace root is not the publishing Git repository; no root Git diff success is claimed."
+    },
+    {
+      "command": "Post-coordinator-fix captured normal and optimized check(), isolated portable normal/optimized CLI and stdout comparison",
+      "result": "All eight groups pass with28 rejections, including exact funded and unfunded snapshot sell-fee boundaries. Complete baseline output unchanged."
+    }
+  ],
+  "source_checks": {
+    "record": "content/reviews/v09-c11-sources.json",
+    "new_sources": 3,
+    "reused_sources": 0,
+    "actual_content_inspected": [
+      "SEC actual3-page March2011 Trading Basics PDF, order terminology and broker-policy qualification; no source cases copied.",
+      "Hasbrouck actual202-page author PDF version14c,13December2025: scoped13.2–13.3 first-trade dealer discussion and16.1–16.3 measurement; exact convention differences noted.",
+      "Almgren–Chriss actual42-page December2000 manuscript: sections1.1–1.5 and2.1, manuscript7–13, including timing, E+lambda V and discrete eta adjustment; original model here uses different within-block prices."
+    ],
+    "scope": "Dated terminology and narrow methodological context only. All fixture prices, amounts, coefficients, queue scenarios, exercises, derivations and code are authored.",
+    "not_claimed": "No source-complete proof review, current legal/venue compliance, empirical coefficient calibration, exact paper replication or current investment recommendation. Failed/unread candidate source bodies are not presented as inspected."
+  },
+  "resolved_findings": [
+    {
+      "id": "c11-coordinator-risk-convention",
+      "finding": "Preliminary audit requested explicit risk-objective normalization for the19.6 score.",
+      "resolution": "Chapter, fixed input label, README, program and checker all use E[C]+lambda Var(C);lambda=.4 multiplies12.25 directly, with inverse-CU units."
+    },
+    {
+      "id": "c11-coordinator-impact-timing",
+      "finding": "Preliminary audit required kQ²/2 to follow from specified execution pricing and dated shock/mark timing.",
+      "resolution": "Within-block quantity-path integral derived; first midpoint, between-block shock, second average price and actual cash paths all reconciled independently."
+    },
+    {
+      "id": "c11-coordinator-capacity-authority",
+      "finding": "Preliminary audit distinguished maximizing size6, nonnegative-score size11 and physical14.",
+      "resolution": "Each is tied to a separately authorized benefit model; unchanged mandatory quantity12 remains a full-completion problem."
+    },
+    {
+      "id": "c11-author-retention-funding",
+      "finding": "Completing remaining150 shares at20.6 plusfees needs10202.5, exceeding original10000 cash.",
+      "resolution": "Retention explicitly states202.5 additional funding or infeasibility; checker rejects unfunded completion and independently verifies funded wealth difference."
+    },
+    {
+      "id": "c11-author-prefix-funding",
+      "finding": "An unusually large sell fee can make an early cash deficit despite sufficient final proceeds.",
+      "resolution": "Validate cash after every ordered fill; focused counterexample rejects the temporary deficit instead of borrowing implicitly."
+    },
+    {
+      "id": "c11-coordinator-snapshot-sell-funding",
+      "finding": "Root independent review found the atomic snapshot only checked cash for buys. With cash0, a one-share sell at99.9 and fee100 incorrectly left negative cash.",
+      "resolution": "Use the signed post-trade cash condition for both buy and sell. Added a rejection for cash0/fee100 and independent feasible boundaries cash0.1/fee100 and cash0/fee99.9, both leaving zero. README documents the atomic cash convention. All eight focused groups and28 domain rejections pass; portable normal/optimized/stdout output remains byte-identical to the baseline."
+    }
+  ],
+  "open_findings": [],
+  "limitations": [
+    "Author/automated review is not independent human certification; coordinator acceptance and dependency audit remain pending.",
+    "All contracts, data, probabilities and coefficients are synthetic. No actual venue priority, depth, price, broker service, empirical impact or forecast benefit is authenticated.",
+    "Finite models omit dynamic strategic response, variable arrival volume, complex routing, transient impact, general tail-risk preferences and real-data estimation. Extensions require a different model and validation.",
+    "Whole-library build, shared source registration, final acceptance, visual/mobile/keyboard/print QA and publication are coordinator tasks and are not claimed here."
+  ]
+}

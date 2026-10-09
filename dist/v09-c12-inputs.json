@@ -1,0 +1,113 @@
+{
+  "schema": "v09-c12-larch-1",
+  "case": "Larch Research Reserve",
+  "provenance": "Original synthetic teaching case; no market observations, forecasts or legal requirements.",
+  "conventions": {
+    "unit": "kCU",
+    "dates": [
+      "t0",
+      "t1_half_year",
+      "t2_one_year"
+    ],
+    "grants": "t1 after cash growth; t2 after all mandate proceeds and before final reserve",
+    "mandates": "one-year funded positions; no interim redemption or pledge; terminal factors net of all exit costs",
+    "line": "contingent t1 only; may count toward cash buffer; fully repaid at t2; excluded from ordinary feasibility",
+    "moment_witness": "synthetic planning law only; design, reverse and reporting fixtures are separate conditional scenarios without probabilities",
+    "benchmark": "same initial wealth, inherited positions, date-0 fee rule and grant dates; pre-cost target with fees deducted from cash"
+  },
+  "wealth": "1000",
+  "lot": "10",
+  "initial": {
+    "equity": "300",
+    "bond": "400"
+  },
+  "caps": {
+    "equity": "500",
+    "bond": "600"
+  },
+  "entry_fee": {
+    "equity": "0.01",
+    "bond": "0.005"
+  },
+  "cash_half_year_factor": "1.01",
+  "line_capacity": "25",
+  "line_repayment_factor": "1.08",
+  "benchmark": {
+    "equity": "400",
+    "bond": "400"
+  },
+  "policy": {
+    "gamma": "4",
+    "variance_limit": "10000",
+    "active_variance_limit": "36",
+    "cash_buffer": "20",
+    "reserve_floor": "650"
+  },
+  "planning_grants": {
+    "t1": "150",
+    "t2": "50"
+  },
+  "moment_states": [
+    {
+      "probability": "7/52",
+      "equity_return": "3/10",
+      "bond_return": "11/50"
+    },
+    {
+      "probability": "3/13",
+      "equity_return": "3/10",
+      "bond_return": "9/100"
+    },
+    {
+      "probability": "7/52",
+      "equity_return": "3/10",
+      "bond_return": "-1/25"
+    },
+    {
+      "probability": "7/52",
+      "equity_return": "-1/10",
+      "bond_return": "4/25"
+    },
+    {
+      "probability": "3/13",
+      "equity_return": "-1/10",
+      "bond_return": "3/100"
+    },
+    {
+      "probability": "7/52",
+      "equity_return": "-1/10",
+      "bond_return": "-1/10"
+    }
+  ],
+  "design_stresses": [
+    {
+      "name": "equity_fall",
+      "equity_return": "-0.30",
+      "bond_return": "0.05",
+      "grant_t1": "150",
+      "grant_t2": "50"
+    },
+    {
+      "name": "inflation_funding",
+      "equity_return": "-0.15",
+      "bond_return": "-0.12",
+      "grant_t1": "180",
+      "grant_t2": "60"
+    }
+  ],
+  "reverse_stress": {
+    "name": "outside_design",
+    "equity_return": "-0.25",
+    "bond_return": "-0.08",
+    "grant_t1": "240",
+    "grant_t2": "60"
+  },
+  "report_fixture": {
+    "name": "execution_audit",
+    "equity_return": "0.12",
+    "bond_return": "0.01",
+    "grant_t1": "150",
+    "grant_t2": "50",
+    "unfilled_equity_lots": 1
+  }
+}

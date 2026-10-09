@@ -1,0 +1,185 @@
+{
+  "chapter": "v09-c09",
+  "title": "Strategic and dynamic asset allocation",
+  "date": "2026-10-09",
+  "reviewer": "financial diagnosis specialist; separate from coordinating author",
+  "assignment": "production/v09-closing-c09-peer-assignment.json",
+  "state": "peer-review-complete",
+  "status": "Pass after one proof-scope clarification; no open material finding. Coordinator acceptance/publication remain separate.",
+  "scope_read": [
+    "Complete final 6,001-word HTML manuscript, five worked examples and every one of eight prompt/solution pairs, teach-back, retention and extension",
+    "Complete inputs, analysis, reference output, README, manifest, focused checker, scoped source list and final author record",
+    "Actual official MIT 32-page dynamic-programming lecture within cited finite-horizon/IID/state-augmentation scope; all three substantive pages of official four-page principle-of-optimality handout; actual 2018 St. Louis Fed article body and endnotes within expressly limited human-capital accounting scope"
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v09-c09.html",
+      "bytes": 42198,
+      "sha256": "14cd53b6b063843994db7f33e8bc27ca4b9fe0a7a52c982a8c129f28dc36c05e"
+    },
+    {
+      "path": "content/projects/v09-c09-inputs.json",
+      "bytes": 2949,
+      "sha256": "0217eb873441f43eaf63f670b17711a015514c97b9df1b553d5ebdb9adfcec46"
+    },
+    {
+      "path": "content/projects/v09-c09-analysis.py",
+      "bytes": 15530,
+      "sha256": "cbfffa93bb6465375cd168e81ce042eece2e9cab184c197c48e52a0ff7a564c4"
+    },
+    {
+      "path": "content/projects/v09-c09-output.json",
+      "bytes": 10558,
+      "sha256": "0a740876cf554ab695e5f79ae751a8def1185a1ccffc9b6a2b8ec2113877bea4"
+    },
+    {
+      "path": "content/projects/v09-c09-manifest.json",
+      "bytes": 793,
+      "sha256": "dddc55760a9ed950655ac0c6821ef8955ce73e4da7b189ff22a68995563d7b0b"
+    },
+    {
+      "path": "content/projects/v09-c09-README.txt",
+      "bytes": 7568,
+      "sha256": "c6ea238b03d3d2b97400ca6f289fa5ed6a1634eeb11b66957cf16634284e7490"
+    },
+    {
+      "path": "scripts/check_v09_c09.py",
+      "bytes": 22364,
+      "sha256": "dc4d755d9f5eb4548b0b7e3db820a64a788b62ff164f53d9999065862b46ed32"
+    },
+    {
+      "path": "content/reviews/v09-c09-sources.json",
+      "bytes": 2624,
+      "sha256": "7eb994c78c3d25ebe4e05d7fe94be93ca49f2832384936458cef9f8a9bed92e8"
+    },
+    {
+      "path": "content/reviews/v09-c09-author.json",
+      "bytes": 9394,
+      "sha256": "c4126c8f6eb7cf25c62a53cd0ae92fc5ee90d724898feca9f2c0d3621c34927a"
+    }
+  ],
+  "findings": [
+    {
+      "id": "v09-c09-peer-01",
+      "severity": "proof-scope clarification",
+      "status": "resolved",
+      "location": "Chapter #horizon, generic IID CRRA horizon-independence paragraph",
+      "original_issue": "Positivity of gross returns and compact fractions alone did not state the integrability and attainment conditions needed for a finite positive value coefficient. Nonintegrable tails can invalidate that conclusion outside the finite examples.",
+      "author_resolution": "Restricted the return law to finite support and required continuous positive gross factors on the compact fraction set. Explicitly derived uniform positive/finite bounds, finite continuous expected utility and attained maxima.",
+      "peer_verification": "Read final paragraph and verified it supplies the needed finite-horizon assumptions. Positive scaling preserves utility order for gamma greater than one. All numerical finite-tree cases and their independent comparisons remain unchanged."
+    }
+  ],
+  "open_findings": [],
+  "independent_mathematics": {
+    "comparisons": 210,
+    "method": "Fresh ephemeral standard-library Fraction and 60-digit Decimal reconstruction; not a rerun or import of the author checker for these comparisons.",
+    "groups": [
+      {
+        "comparisons": 55,
+        "scope": "Five liability/income/reserve cases; actual four-state resources, surplus central moments, exact objective and neighboring one-sided/strict-concavity certificates. Includes all exercise1 and retention numbers."
+      },
+      {
+        "comparisons": 42,
+        "scope": "Six household cases; nontradable income plus funded financial holdings, both terminal states, financial fractions and exact log derivatives at interior/no-borrow/no-short optima. Includes both exercise2 transfers."
+      },
+      {
+        "comparisons": 43,
+        "scope": "Independent quadratic equation 13 alpha squared +280 alpha -50=0, high-precision root, complete Bellman cash/path probabilities, expected utility and CE, positive one-node state prices, swapped continuation root/boundary and all IID exercise3/4 outcomes."
+      },
+      {
+        "comparisons": 24,
+        "scope": "Buy and sale rebalancing quantities, cash-paid fees, original-resource identity, post-fee fraction and both terminal comparison paths, including exercise5."
+      },
+      {
+        "comparisons": 38,
+        "scope": "Known-mean buy/hold/sell kinks, increased fee and binding funded ceiling, all objective gains, robust lower-endpoint choices and common adverse-law scores including exercises6/7."
+      },
+      {
+        "comparisons": 8,
+        "scope": "Cumulative versus average log variance at both horizons and exact two-order withdrawal timing identities."
+      }
+    ],
+    "critical_anchors": {
+      "baseline_liability_risky": 70,
+      "baseline_surplus_mean": "44.8",
+      "baseline_surplus_variance": 136,
+      "baseline_score": "43.44",
+      "changed_income_risky": [
+        30,
+        5
+      ],
+      "stock_like_income_financial_fraction": "1/4",
+      "down_child_fraction": "2/9",
+      "down_child_coefficient": "9/10",
+      "initial_dynamic_fraction_approx": 0.17711497750592795,
+      "optimal_dynamic_CE_approx": 107.21007796126484,
+      "myopic_start_CE": "750/7",
+      "reversed_optimum": 0,
+      "reversed_CE": "3000/29",
+      "iid_CE": "10000/81",
+      "purchase": "9600/503",
+      "sale": "-2400/497",
+      "band": "[37.5,62.5]",
+      "funded_ceiling": "10070/101",
+      "robust_choice": "43.75",
+      "nominal_choice": "56.25",
+      "worst_scores": [
+        "1/2",
+        "25/64",
+        "33/64"
+      ],
+      "withdrawal_paths": [
+        78,
+        74
+      ]
+    }
+  },
+  "supplied_checker": {
+    "quiet_call": "Imported and called check() once under captured stdout/stderr; both empty; return serializes with allow_nan=False.",
+    "status": "pass",
+    "groups": 8,
+    "comparisons": 393,
+    "domain_rejections": 27,
+    "coarse_feasible_policies": 1331,
+    "distinction": "These author-checker results are separate from the 210 independently reconstructed comparisons. The coarse policy grid is diagnostic; the written strict-curvature and Bellman proof supplies optimality."
+  },
+  "file_integrity": {
+    "payloads": 8,
+    "payload_size_and_sha256_comparisons": 16,
+    "author_record_sha256": "c4126c8f6eb7cf25c62a53cd0ae92fc5ee90d724898feca9f2c0d3621c34927a",
+    "chapter_sha256": "14cd53b6b063843994db7f33e8bc27ca4b9fe0a7a52c982a8c129f28dc36c05e",
+    "note": "All eight final payload hashes and byte counts match the refreshed author record; ninth recorded hash is the author record itself. No author files modified by reviewer."
+  },
+  "proof_and_instruction_audit": [
+    "Currency-surplus mean-variance criterion states inverse-CU gamma, covariance sign and unspanned residual; one-dimensional clipping is not generalized to vector clipping.",
+    "Positive log-resource domain, exactly spanned nontradable endowment, exposure-versus-cash distinction and opposite financial-fraction lifecycle comparisons are explicit; no universal age rule.",
+    "Finite-support homothetic induction now has finite value/attainment conditions; period fractions may repeat while dollar quantities change. Average log variance is not terminal wealth safety.",
+    "Bellman upper bound and attaining continuation argument preserves nonanticipation and requires the observed opportunity state. Initial zero-premium exposure hedges state-dependent marginal continuation value; log additive continuation is independent of the initial trade here.",
+    "Initial and child return laws straddle safe return, supporting positive state prices; physical probabilities are not confused with pricing probabilities.",
+    "Post-fee target formulas have correct buy/sell signs; proportional-cost objective and no-trade interval are conditional one-period models with a real cash-funded ceiling.",
+    "Robust lower-mean endpoint uses long-only exposure; narrowed uncertainty kink, alternative high-mean performance and lack of confidence interpretation are explained.",
+    "All eight problems are taught before use, complete determinate solutions reconcile, and open memo critique has explicit evaluative criteria; answered retention and extension do not promise a personalized investment policy."
+  ],
+  "source_audit": [
+    {
+      "id": "v09-c09-mit-dp",
+      "url": "https://ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/434ff3cbe0f9753416e4979d9ef1e34a_MIT15_450F10_lec05.pdf",
+      "inspected": "Official 32-page PDF, PDF pages 3–12 and 15–17, concerning dated self-financing dynamics, IID/CRRA induction and sufficient state augmentation. Broader continuous-time and option examples excluded."
+    },
+    {
+      "id": "v09-c09-mit-principle",
+      "url": "https://ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/cf1324b59f64e482761348947a1a97da_MIT15_450F10_handout03.pdf",
+      "inspected": "Official four-page PDF, all three substantive pages: iterated-expectation upper bound, attaining tail policy and the IID justification for wealth sufficiency. Chapter appropriately augments with opportunity node."
+    },
+    {
+      "id": "v09-c09-human-capital",
+      "url": "https://www.stlouisfed.org/publications/regional-economist/fourth-quarter-2018/role-age-investment-mix",
+      "inspected": "Actual article dated 25 October 2018, particularly Theory item 2 and endnotes. Only future-income resource accounting adopted; broad earnings-safety and horizon-irrelevance language and household survey claims expressly excluded."
+    }
+  ],
+  "limits": [
+    "Independent machine-assisted specialist peer review is not external human academic or professional certification.",
+    "Original finite synthetic models do not establish empirical forecasts, actual income safety, universal lifecycle rules or investor suitability.",
+    "Shared-library build, dependency acceptance, browser/print review and publication remain coordinator-owned."
+  ]
+}

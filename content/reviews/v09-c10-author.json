@@ -1,0 +1,265 @@
+{
+  "chapter": "v09-c10",
+  "date": "2026-10-09",
+  "author": "cost_peer",
+  "state": "author-review-complete; coordinator independent review and dependency acceptance pending",
+  "assignment": "production/v09-closing-assignments.json",
+  "scope": "Complete advanced alternatives/illiquidity chapter, four original worked cases, eight original fully solved exercises, answered teaching and retention; all nine assigned paths complete. No shared edits, child agents, acceptance or publishing.",
+  "visible_text_words": 7501,
+  "worked_examples": 4,
+  "exercises": 8,
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "reasoning_review": [
+    "Claims, prices, NAV, immediately executable sale proceeds and contractual withdrawal rights are separated. Real estate, private equity and senior private debt, commodity exposures and hedge-fund mandates receive explicit cash/financing treatment. No common alternative-asset return law or universal premium is asserted.",
+    "Property teaching separates NOI from capital expenditure, asset from equity cash, opening-principal interest from amortization, quoted forward-NOI cap rate from an appropriate discount rate, and a gross sale from net sale proceeds. Debt is a supplied par quote and fully performs; the case does not infer debt pricing from the asset return or fund a shortfall through an implicit loan.",
+    "Property asset cash equals lender plus equity cash at every date. Baseline and joint NOI/cap-rate stress both fully repay the debt. IRR uniqueness for conventional cash is proved on r > -1; a positive root additionally requires positive zero-rate NPV. A separate scaled-NPV proof handles a negative cash prefix followed by a positive suffix without assuming that multiple-call NPV itself is globally monotone.",
+    "Appraisal moments are derived from a stationary geometric filter of iid latent returns and jointly iid latent/market pairs. Variance, lag covariance, contemporary covariance/beta/correlation and additive horizon variance use their actual assumptions. An infinite weighted representation and a recursion give equivalent proofs. The additive sum result is not represented as a compounded-wealth theorem.",
+    "The fixed-initial-value finite path is distinct from stationary population formulas. Known-theta unsmoothing is an algebraic inverse rather than an empirical parameter estimate; theta=0, theta=1 and error amplification are explained. A report at NAV does not imply executable trading.",
+    "Private commitment coverage, investment calls, fee base and dates, terminal-only carry base, unused-commitment release and complete liquidation are explicit. Gross investment capital and proceeds are separated from total LP contributions and net distributions. LP, GP and company-level realized cash close exactly under the stated contract.",
+    "The public-benchmark ratio compounds both positive cash legs to one terminal date using the same three supplied gross returns. Its scope is a synthetic dated cash comparison, not risk-adjusted alpha or proof of a nonnegative self-financing benchmark account. Net IRR and multiples are distinguished.",
+    "Investor income, spending, calls and distributions have an explicit sequence. The liquidity test examines pre-distribution deadlines. The delayed case is marked unfunded and has no implemented terminal_cash; diagnostic arithmetic and if-funded IRR are labeled. The initial reserve repair reduces the planned gated allocation by the same amount and preserves total initial resources.",
+    "Private debt is taught as a priority claim min(promised repayment, available cash), with residual limited-liability equity. State cash and expected dollar returns reconcile, while promised coupon, expected return, fair value and early redemption are distinguished. Probabilities are synthetic physical probabilities, not risk-neutral weights.",
+    "The commodity case follows the same dated contract from entry to settlement; the old contract is settled before a zero-initial-value replacement is opened. A difference between old and new futures quotes is not treated as immediate cash loss. Notional is not cash purchase value. Fixed quantity allows exposure/NAV leverage to drift.",
+    "Cash yield, variation settlement, opening-NAV management fee, performance fee above an old net high-water mark and margin test are sequenced explicitly. Reserved margin remains within cash, and its release is not income. Main-path execution stops at first failed margin test. Observed test dates are a fictional contract, not real exchange intraperiod feasibility.",
+    "Hedge-fund discussion examines specific long-short equity, relative-value, event-driven and managed-futures/macroeconomic mechanisms; gross exposure, borrow/recall risk, basis, collateral, tail losses, event timing and operational controls are connected to the mandate rather than listed as universal empirical claims.",
+    "Every exercise was solved against its prompt. Seven have independent determinate numerical reconstructions; E8 has an explicit committee rubric allowing multiple defensible allocations with funded constraints and evidence. Teach-back and all four retention questions have answers. Needed algebra and financial methods are developed before use.",
+    "Fragment has no h1, four actual worked asides, eight exercise items and eight complete solution items. IDs are unique and tags balanced. All five lab routes are flat offline filenames. Adjacent c09/c11 acceptance remains the coordinator dependency gate; deeper v10 material is clearly labeled planned."
+  ],
+  "numerical_validation": {
+    "status": "passed",
+    "command": "python3 -B book/scripts/check_v09_c10.py",
+    "groups": 9,
+    "comparisons": 1589,
+    "domain_rejections": 28,
+    "count_scope": "Includes economic anchors, output-field/reference checks, structure/source/integrity and portable CLI comparisons; not 1589 distinct financial derivations.",
+    "checks": [
+      {
+        "name": "Property financing, dated claim conservation, direct discounting and independent IRR roots",
+        "status": "passed"
+      },
+      {
+        "name": "Filter-weight variance/covariance, additive horizon risk, direct convolution and wealth compounding",
+        "status": "passed"
+      },
+      {
+        "name": "Fund-versus-investor fee waterfall, multiples, independent net IRR and forward benchmark cash legs",
+        "status": "passed"
+      },
+      {
+        "name": "Independent cumulative deadline test, unfunded status and fully financed reserve repair",
+        "status": "passed"
+      },
+      {
+        "name": "Independent contract payoffs, full fee/NAV closure, roll accounting and margin constraint",
+        "status": "passed"
+      },
+      {
+        "name": "All seven determinate exercises and numerical retention; E8 reviewed by explicit reasoning rubric",
+        "status": "passed"
+      },
+      {
+        "name": "Allowed financial interventions, exact funding boundaries and contradictory/domain input rejections",
+        "status": "passed"
+      },
+      {
+        "name": "Complete output regression, manuscript structure, scoped source records and distributed payload integrity",
+        "status": "passed"
+      },
+      {
+        "name": "Copied offline normal/optimized CLI, strict JSON and no-clobber output behavior",
+        "status": "passed"
+      }
+    ],
+    "independent_routes": [
+      "Property debt reconstructed from cumulative prior principal rather than the model balance recurrence; full dated claim sums and exact separate NPV checked. Independent Newton roots in discount-factor coordinates compared with gross-rate bracketing.",
+      "Smoothing variance reconstructed through squared impulse weights and an exact geometric tail; the full four-by-four covariance matrix independently supplies return-sum variance. Finite reports reconstructed by direct convolution rather than the model recursion.",
+      "LP and GP cash reconstructed by ownership perimeter. Benchmark legs rolled forward as accounts rather than using the model terminal multipliers.",
+      "Liquidity reconstructed from cumulative dated events at each deadline rather than the previous period closing balance; minimal reserve, funded initial allocation repair and null implemented terminal value verified.",
+      "Futures cumulative P&L checked contract by contract and every fee/cash line against independently calculated exact anchors. Unequal rate transfer prevents cancellation of cash yield and management fees by assumption.",
+      "All seven determinate exercise results and numerical retention are independently reconstructed. Open committee decision receives manual reasoning/criteria review rather than a purported automated opinion grade."
+    ],
+    "allowed_interventions": [
+      "Exit cap rate to .084; zero debt with zero amortization",
+      "Theta zero report identity",
+      "No distribution delay; insufficient initial gated allocation to fund repair",
+      "Larger date-1 spending with separately funded reserve repair",
+      "Lower final private realization and corresponding carry/TVPI/benchmark changes",
+      "Main futures first-period margin failure; exact binding reserve and one-CU violation; exact high-water recovery; unequal management/yield rates"
+    ],
+    "portable_execution": "Verified quiet import/run and quiet check() capture. Complete strict output regression, isolated default-input normal Python, explicit --input/--output under optimized Python, no stdout/stderr on successful file output, existing input/reference/output collision rejection, duplicate JSON-key and nonfinite-constant rejection. No runtime network or external package.",
+    "precision": "All cash, fractions and covariance amounts exact via Fraction strings; finite IRRs, standard deviations and correlations checked to 1e-12 absolute/relative tolerance. The numerical IRR routine has a bounded bracketing domain and rejects unsupported sign patterns."
+  },
+  "critical_anchors": {
+    "property": {
+      "asset_cash": [
+        "-1020",
+        "78",
+        "84",
+        "1545"
+      ],
+      "lender_cash": [
+        "-600",
+        "56",
+        "274/5",
+        "2968/5"
+      ],
+      "equity_cash": [
+        "-420",
+        "22",
+        "146/5",
+        "4757/5"
+      ],
+      "base_asset_npv": "374160/1331",
+      "base_asset_irr": 0.1989252878152339,
+      "base_equity_irr": 0.3488927378855484,
+      "stress_final_equity": "1556/5",
+      "stress_equity_irr": -0.05122333412095914
+    },
+    "smoothing": {
+      "reported_variance": "1/100",
+      "latent_beta": "2/3",
+      "reported_beta": "4/15",
+      "reported_covariance": "3/500",
+      "reported_correlation": "2/5",
+      "four_return_sum_variance": "296/3125",
+      "finite_true_final_wealth": "702/625",
+      "finite_reported_final_wealth": "4363508509074/3814697265625"
+    },
+    "private": {
+      "net_cash": [
+        "-40",
+        "-24",
+        "-10",
+        "108"
+      ],
+      "gross_multiple": "14/9",
+      "lp_net_tvpi": "65/48",
+      "net_irr": 0.16731236330250976,
+      "benchmark_contribution_fv": "9871/100",
+      "benchmark_distribution_fv": "6469/50",
+      "benchmark_ratio": "12938/9871",
+      "benchmark_excess": "3067/100",
+      "delayed_call_shortfall": "6",
+      "repaired_initial_cash": "96",
+      "repaired_gated_allocation": "19",
+      "delayed_if_funded_irr": 0.15552949006648298
+    },
+    "futures": {
+      "variation_cash": [
+        "-20",
+        "-10",
+        "80"
+      ],
+      "ending_cash": [
+        "980",
+        "970",
+        "1040"
+      ],
+      "total_interest": "59/2",
+      "total_management": "59/2",
+      "total_performance": "10",
+      "net_total_return": "1/25",
+      "stress_ending_cash": "150",
+      "stress_margin_shortfall": "50",
+      "exercise_unequal_rates_final_cash": "256179/500"
+    }
+  },
+  "source_review": {
+    "proposal_file": "content/reviews/v09-c10-sources.json",
+    "records": 6,
+    "exact_reused_ids": [
+      "v08-c10-kaplan-stromberg",
+      "v08-c10-ilpa-performance"
+    ],
+    "new_inspected_ids": [
+      "v09-c10-mit-property",
+      "v09-c10-getmansky-lo-makarov",
+      "v09-c10-cme-mtm",
+      "v09-c10-cme-roll"
+    ],
+    "scope": "Actual primary bodies inspected for the new methods; exact accepted historical institutional/reporting records reused within scope. Proposals specify pages/sections/version and exclusions. The reused ILPA record retains its original Northpass reference because it is exact record reuse; Rowan is independently stipulated and not an ILPA template implementation.",
+    "exclusions": "No historical empirical estimate, manager ranking, current term prevalence, CME product schedule/tick size or dated regulatory statement is imported. Curriculum benchmark links do not substitute for method sources. All Rowan cases, exercises and computations are original."
+  },
+  "findings": [
+    {
+      "id": "c10-timing-and-perimeter",
+      "origin": "coordinator architecture review",
+      "status": "resolved before final author freeze",
+      "finding": "Keep private calls/fees/distributions and gross-versus-net perimeters explicit; distinguish a futures roll quote difference from immediate cash loss.",
+      "resolution": "Case and model conventions fix the chronology, separate all cash ownership, reject changed timing conventions and label the delayed path unfunded. The futures ledger settles the old contract before opening its replacement at zero initial value."
+    },
+    {
+      "id": "c10-irr-teaching-proof",
+      "origin": "author final instruction audit",
+      "status": "resolved before final author freeze",
+      "finding": "A one-sign-change statement should not require an untaught polynomial-sign theorem.",
+      "resolution": "Added the elementary scaled-NPV proof with x=1+r and k as last negative-cash date; directly establishes strict monotonicity and opposite endpoint signs on x>0."
+    },
+    {
+      "id": "c10-source-route",
+      "origin": "primary-source retrieval",
+      "status": "resolved",
+      "finding": "The MIT DSpace PDF download route failed to fetch.",
+      "resolution": "Inspected the actual published 81-page 2004 article reached from Andrew Lo's official MIT publications page. Source record gives the inspected URL and honest scope; no claim to have read the failed route."
+    }
+  ],
+  "unresolved_subject_matter_findings": [],
+  "limitations": [
+    "Author review is not coordinator acceptance or independent human academic certification. Coordinator controls prerequisite acceptance, full-library structural integration and publishing.",
+    "Synthetic conditional cases are not observed investment performance, a forecast, a fitted smoothing process, real property/debt pricing, a legal interpretation or personalized investment advice.",
+    "The property model excludes defaults, taxes, new equity and refinancing; unsupported cash deficits are rejected. Private carry and margin contracts are deliberately stipulated, not universal market terms.",
+    "Smoothing does not identify its own parameter without additional evidence. Population iid assumptions and fixed-initial finite-path illustration are separate; additive long-run variance is not compounded return variance.",
+    "Liquidity reserves protect only specified dated paths. No unmodeled borrowing, secondary sale, gated redemption or intraperiod futures execution is assumed. The margin model ends execution at the first unfunded observed test.",
+    "Known broader limitation remains: browser visual/mobile/keyboard/print QA has not been completed because local file preview was rejected by browser security policy. This assignment did not circumvent that restriction or claim visual verification."
+  ],
+  "reviewed_payloads": [
+    {
+      "path": "content/chapters/v09-c10.html",
+      "bytes": 52274,
+      "sha256": "92831ee694ddf719ef1bfdb3d5d1a1b910ccef7b470621baebe3964618d74caa"
+    },
+    {
+      "path": "content/projects/v09-c10-inputs.json",
+      "bytes": 2726,
+      "sha256": "e3c4a8e1dfa6e2de0cb260ca103781dc86c977c1914182f62f02c989176194db"
+    },
+    {
+      "path": "content/projects/v09-c10-analysis.py",
+      "bytes": 21435,
+      "sha256": "905966fbb755e55ff46ae28006bfa8b77365194b7eebb857077e60a35f55258e"
+    },
+    {
+      "path": "content/projects/v09-c10-output.json",
+      "bytes": 12849,
+      "sha256": "dbc0448805d889989202dac9bd5d2e4a24d6ba869758d6110250213a3ff48aa0"
+    },
+    {
+      "path": "content/projects/v09-c10-manifest.json",
+      "bytes": 807,
+      "sha256": "9b33b410068d8a0523caf9d571bd4f9afa5bdc3d2b6c15474d32402f47da92d4"
+    },
+    {
+      "path": "content/projects/v09-c10-README.txt",
+      "bytes": 11739,
+      "sha256": "62ca4915e91ca0ce8b9d39fc66398e6f94b55ce9571687a61a3cb68712e8a76f"
+    },
+    {
+      "path": "scripts/check_v09_c10.py",
+      "bytes": 29309,
+      "sha256": "1894835d474c1646cb343f6be094ba9197d362f162256f47328b8b4543a13c02"
+    },
+    {
+      "path": "content/reviews/v09-c10-sources.json",
+      "bytes": 6910,
+      "sha256": "9d06515d63dd52d49e5d64726b11110700c410726fa10b14577a212168cbdc0f"
+    }
+  ],
+  "freeze": "All eight non-author payloads hashed after final content/checker/source review. No further payload edits intended without notifying the coordinator and refreshing hashes."
+}

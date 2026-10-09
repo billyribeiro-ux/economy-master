@@ -1,0 +1,34 @@
+{
+  "case": "Rowan alternatives desk",
+  "provenance": "Original synthetic teaching fixtures; no observed market data or investment recommendation.",
+  "conventions": {
+    "property": "Annual dates 0,1,2,3; no tax; quoted par debt; interest on opening principal; full repayment without refinancing or default; sale after date-3 operations uses date-4 NOI.",
+    "smoothing": "Population moments assume stationary geometric filter and jointly iid latent/market returns; finite path has separately fixed initial appraisal return; simple returns, not log returns.",
+    "private": "Commitment covers investment capital only; annual fees at dates 1,2,3 on original commitment; terminal-only carry on positive gross distributions less investment capital, excluding management fees; remaining commitment released at 3.",
+    "liquidity": "No interest, borrowing or sale of gated NAV; initial call at 0; each year income then spending then contribution before distribution; negative diagnostic balances are unfunded, not loans.",
+    "futures": "Three model periods, not annualized; fixed units and multiplier 1; interest on all opening cash then variation settlement then opening-NAV management fee then performance fee then margin test; roll after date-1 settlement; final positions close after date-3 test."
+  },
+  "property": {
+    "purchase": "1000", "entry_cost": "20", "loan": "600", "loan_rate": "0.06",
+    "principal_payments": ["20", "20", "560"],
+    "noi": ["90", "96", "102"], "capex": ["12", "12", "12"],
+    "forward_noi": "105", "exit_cap_rate": "0.07", "sale_cost_rate": "0.03", "asset_discount_rate": "0.10",
+    "stress_forward_noi": "84", "stress_exit_cap_rate": "0.10"
+  },
+  "smoothing": {
+    "theta": "0.6", "latent_mean": "0.08", "latent_sigma": "0.20", "market_sigma": "0.15", "latent_market_correlation": "0.5", "safe_simple_return": "0.02",
+    "initial_appraisal_return": "0.08", "latent_path": ["-0.20", "0.20", "-0.10", "0.30"], "sum_horizon": 4
+  },
+  "private": {
+    "commitment": "100", "investment_calls": ["40", "30", "20", "0"], "annual_fee_rate": "0.02", "carry_rate": "0.20",
+    "gross_distributions": ["0", "8", "12", "120"], "benchmark_gross_returns": ["1.10", "1.05", "0.95"],
+    "delay_first_distribution": "8"
+  },
+  "liquidity": {
+    "initial_cash": "90", "gated_nav": "25", "income": ["5", "5", "5"], "spending": ["6", "6", "6"]
+  },
+  "futures": {
+    "initial_cash": "1000", "units": "10", "near_entry": "100", "near_settlement": "98", "deferred_entry": "105", "deferred_marks": ["104", "112"],
+    "spot_start": "100", "spot_end": "112", "cash_yield": "0.01", "management_rate": "0.01", "performance_rate": "0.20", "margin_reserve": "200", "stress_first_settlement": "15"
+  }
+}

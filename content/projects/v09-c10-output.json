@@ -1,0 +1,470 @@
+{
+  "chapter": "v09-c10",
+  "case": "Rowan alternatives desk",
+  "provenance": "Original synthetic teaching fixtures; no observed market data or investment recommendation.",
+  "units": "CU and explicitly labeled simple returns; property/private annual, futures model periods",
+  "property": {
+    "initial_uses": "1020",
+    "initial_debt": "600",
+    "initial_equity": "420",
+    "operations": [
+      {
+        "date": 1,
+        "opening_debt": "600",
+        "noi": "90",
+        "capex": "12",
+        "operating_cash": "78",
+        "interest": "36",
+        "principal": "20",
+        "debt_service": "56",
+        "closing_debt": "580"
+      },
+      {
+        "date": 2,
+        "opening_debt": "580",
+        "noi": "96",
+        "capex": "12",
+        "operating_cash": "84",
+        "interest": "174/5",
+        "principal": "20",
+        "debt_service": "274/5",
+        "closing_debt": "560"
+      },
+      {
+        "date": 3,
+        "opening_debt": "560",
+        "noi": "102",
+        "capex": "12",
+        "operating_cash": "90",
+        "interest": "168/5",
+        "principal": "560",
+        "debt_service": "2968/5",
+        "closing_debt": "0"
+      }
+    ],
+    "lender_cash": [
+      "-600",
+      "56",
+      "274/5",
+      "2968/5"
+    ],
+    "lender_irr": 0.06000000000000005,
+    "base": {
+      "forward_noi": "105",
+      "cap_rate": "7/100",
+      "gross_sale": "1500",
+      "sale_cost": "45",
+      "net_sale": "1455",
+      "asset_cash": [
+        "-1020",
+        "78",
+        "84",
+        "1545"
+      ],
+      "equity_cash": [
+        "-420",
+        "22",
+        "146/5",
+        "4757/5"
+      ],
+      "asset_npv_at_supplied_rate": "374160/1331",
+      "asset_irr": 0.1989252878152339,
+      "equity_irr": 0.3488927378855484
+    },
+    "stress": {
+      "forward_noi": "84",
+      "cap_rate": "1/10",
+      "gross_sale": "840",
+      "sale_cost": "126/5",
+      "net_sale": "4074/5",
+      "asset_cash": [
+        "-1020",
+        "78",
+        "84",
+        "4524/5"
+      ],
+      "equity_cash": [
+        "-420",
+        "22",
+        "146/5",
+        "1556/5"
+      ],
+      "asset_npv_at_supplied_rate": "-266040/1331",
+      "asset_irr": 0.01631278074976228,
+      "equity_irr": -0.05122333412095914
+    }
+  },
+  "smoothing": {
+    "population": {
+      "mean": "2/25",
+      "latent_variance": "1/25",
+      "reported_variance": "1/100",
+      "reported_sigma": 0.1,
+      "lag_one_correlation": "3/5",
+      "latent_market_covariance": "3/200",
+      "reported_market_covariance": "3/500",
+      "latent_beta": "2/3",
+      "reported_beta": "4/15",
+      "reported_market_correlation": 0.4,
+      "latent_sharpe": "3/10",
+      "reported_sharpe": 0.6,
+      "sum_horizon": 4,
+      "variance_of_sum": "296/3125",
+      "long_run_variance_per_period": "1/25"
+    },
+    "finite_path": {
+      "initial_appraisal_return": "2/25",
+      "latent_returns": [
+        "-1/5",
+        "1/5",
+        "-1/10",
+        "3/10"
+      ],
+      "reported_returns": [
+        "-4/125",
+        "38/625",
+        "-11/3125",
+        "1842/15625"
+      ],
+      "unsmoothed_returns": [
+        "-1/5",
+        "1/5",
+        "-1/10",
+        "3/10"
+      ],
+      "wealth_indices": [
+        {
+          "date": 1,
+          "latent_index": "4/5",
+          "appraisal_index": "121/125"
+        },
+        {
+          "date": 2,
+          "latent_index": "24/25",
+          "appraisal_index": "80223/78125"
+        },
+        {
+          "date": 3,
+          "latent_index": "108/125",
+          "appraisal_index": "249814422/244140625"
+        },
+        {
+          "date": 4,
+          "latent_index": "702/625",
+          "appraisal_index": "4363508509074/3814697265625"
+        }
+      ],
+      "interpretation": "Fixed-initial-value finite illustration; not a sample estimate of stationary population moments or realizable reported NAV."
+    }
+  },
+  "private": {
+    "investment_capital": "90",
+    "unused_commitment_released_at_3": "10",
+    "fees": [
+      "0",
+      "2",
+      "2",
+      "2"
+    ],
+    "carry_paid_at_3": "10",
+    "gross_distributions": [
+      "0",
+      "8",
+      "12",
+      "120"
+    ],
+    "lp_contributions": [
+      "40",
+      "32",
+      "22",
+      "2"
+    ],
+    "lp_net_distributions": [
+      "0",
+      "8",
+      "12",
+      "110"
+    ],
+    "lp_net_cash": [
+      "-40",
+      "-24",
+      "-10",
+      "108"
+    ],
+    "lp_net_irr": 0.16731236330250976,
+    "gross_investment_multiple": "14/9",
+    "lp_net_tvpi": "65/48",
+    "lp_net_dpi": "65/48",
+    "lp_rvpi": "0",
+    "gp_management_plus_carry": "16",
+    "lp_net_profit": "34",
+    "benchmark": {
+      "terminal_multipliers": [
+        "4389/4000",
+        "399/400",
+        "19/20",
+        "1"
+      ],
+      "fv_contributions": "9871/100",
+      "fv_net_distributions": "6469/50",
+      "cash_flow_matched_ratio": "12938/9871",
+      "terminal_relative_excess": "3067/100",
+      "scope": "Dated cash comparison to supplied synthetic benchmark, not risk-adjusted alpha or a guaranteed self-financing benchmark replica."
+    },
+    "liquidity_base": {
+      "initial_cash": "90",
+      "ledger": [
+        {
+          "date": 0,
+          "income": "0",
+          "spending": "0",
+          "contribution": "40",
+          "before_distribution": "50",
+          "distribution": "0",
+          "after_distribution": "50"
+        },
+        {
+          "date": 1,
+          "income": "5",
+          "spending": "6",
+          "contribution": "32",
+          "before_distribution": "17",
+          "distribution": "8",
+          "after_distribution": "25"
+        },
+        {
+          "date": 2,
+          "income": "5",
+          "spending": "6",
+          "contribution": "22",
+          "before_distribution": "2",
+          "distribution": "12",
+          "after_distribution": "14"
+        },
+        {
+          "date": 3,
+          "income": "5",
+          "spending": "6",
+          "contribution": "2",
+          "before_distribution": "11",
+          "distribution": "110",
+          "after_distribution": "121"
+        }
+      ],
+      "minimum_cash": "2",
+      "feasible": true,
+      "additional_initial_reserve_needed": "0",
+      "terminal_cash": "121",
+      "unfunded_diagnostic_terminal_balance": null,
+      "status": "funded through all stipulated deadlines"
+    },
+    "delayed_net_distributions": [
+      "0",
+      "0",
+      "12",
+      "118"
+    ],
+    "delayed_net_cash": [
+      "-40",
+      "-32",
+      "-10",
+      "116"
+    ],
+    "delayed_lp_irr_if_funded": 0.15552949006648298,
+    "liquidity_delayed": {
+      "initial_cash": "90",
+      "ledger": [
+        {
+          "date": 0,
+          "income": "0",
+          "spending": "0",
+          "contribution": "40",
+          "before_distribution": "50",
+          "distribution": "0",
+          "after_distribution": "50"
+        },
+        {
+          "date": 1,
+          "income": "5",
+          "spending": "6",
+          "contribution": "32",
+          "before_distribution": "17",
+          "distribution": "0",
+          "after_distribution": "17"
+        },
+        {
+          "date": 2,
+          "income": "5",
+          "spending": "6",
+          "contribution": "22",
+          "before_distribution": "-6",
+          "distribution": "12",
+          "after_distribution": "6"
+        },
+        {
+          "date": 3,
+          "income": "5",
+          "spending": "6",
+          "contribution": "2",
+          "before_distribution": "3",
+          "distribution": "118",
+          "after_distribution": "121"
+        }
+      ],
+      "minimum_cash": "-6",
+      "feasible": false,
+      "additional_initial_reserve_needed": "6",
+      "terminal_cash": null,
+      "unfunded_diagnostic_terminal_balance": "121",
+      "status": "unfunded diagnostic only; no implicit borrowing or completed investment path"
+    },
+    "repair_by_reducing_initial_gated_allocation": {
+      "feasible": true,
+      "liquid_reserve_increase": "6",
+      "gated_allocation_after": "19",
+      "ledger": {
+        "initial_cash": "96",
+        "ledger": [
+          {
+            "date": 0,
+            "income": "0",
+            "spending": "0",
+            "contribution": "40",
+            "before_distribution": "56",
+            "distribution": "0",
+            "after_distribution": "56"
+          },
+          {
+            "date": 1,
+            "income": "5",
+            "spending": "6",
+            "contribution": "32",
+            "before_distribution": "23",
+            "distribution": "0",
+            "after_distribution": "23"
+          },
+          {
+            "date": 2,
+            "income": "5",
+            "spending": "6",
+            "contribution": "22",
+            "before_distribution": "0",
+            "distribution": "12",
+            "after_distribution": "12"
+          },
+          {
+            "date": 3,
+            "income": "5",
+            "spending": "6",
+            "contribution": "2",
+            "before_distribution": "9",
+            "distribution": "118",
+            "after_distribution": "127"
+          }
+        ],
+        "minimum_cash": "0",
+        "feasible": true,
+        "additional_initial_reserve_needed": "0",
+        "terminal_cash": "127",
+        "unfunded_diagnostic_terminal_balance": null,
+        "status": "funded through all stipulated deadlines"
+      }
+    }
+  },
+  "futures": {
+    "ledger": [
+      {
+        "date": 1,
+        "opening_cash": "1000",
+        "opening_high_water": "1000",
+        "interest": "10",
+        "entry_or_previous_mark": "100",
+        "settlement": "98",
+        "variation_cash": "-20",
+        "management_fee": "10",
+        "pre_performance_cash": "980",
+        "performance_fee": "0",
+        "ending_cash": "980",
+        "ending_high_water": "1000",
+        "margin_reserve": "200",
+        "free_cash_above_margin": "780",
+        "margin_shortfall": "0",
+        "feasible": true
+      },
+      {
+        "date": 2,
+        "opening_cash": "980",
+        "opening_high_water": "1000",
+        "interest": "49/5",
+        "entry_or_previous_mark": "105",
+        "settlement": "104",
+        "variation_cash": "-10",
+        "management_fee": "49/5",
+        "pre_performance_cash": "970",
+        "performance_fee": "0",
+        "ending_cash": "970",
+        "ending_high_water": "1000",
+        "margin_reserve": "200",
+        "free_cash_above_margin": "770",
+        "margin_shortfall": "0",
+        "feasible": true
+      },
+      {
+        "date": 3,
+        "opening_cash": "970",
+        "opening_high_water": "1000",
+        "interest": "97/10",
+        "entry_or_previous_mark": "104",
+        "settlement": "112",
+        "variation_cash": "80",
+        "management_fee": "97/10",
+        "pre_performance_cash": "1050",
+        "performance_fee": "10",
+        "ending_cash": "1040",
+        "ending_high_water": "1040",
+        "margin_reserve": "200",
+        "free_cash_above_margin": "840",
+        "margin_shortfall": "0",
+        "feasible": true
+      }
+    ],
+    "feasible": true,
+    "completed_periods": 3,
+    "terminal_cash": "1040",
+    "net_total_return": "1/25",
+    "total_variation_cash_through_observed_rows": "50",
+    "total_interest_through_observed_rows": "59/2",
+    "total_management_through_observed_rows": "59/2",
+    "total_performance_through_observed_rows": "10",
+    "spot_total_return": "3/25",
+    "new_contract_notional_at_roll": "1050",
+    "new_contract_initial_cash_price": "0",
+    "stress_first_period": {
+      "date": 1,
+      "opening_cash": "1000",
+      "opening_high_water": "1000",
+      "interest": "10",
+      "entry_or_previous_mark": "100",
+      "settlement": "15",
+      "variation_cash": "-850",
+      "management_fee": "10",
+      "pre_performance_cash": "150",
+      "performance_fee": "0",
+      "ending_cash": "150",
+      "ending_high_water": "1000",
+      "margin_reserve": "200",
+      "free_cash_above_margin": "-50",
+      "margin_shortfall": "50",
+      "feasible": false
+    },
+    "status": "All stipulated marks funded; final margin release is not income."
+  },
+  "limits": [
+    "Synthetic conditional cases, not current data, expected outperformance or investment advice.",
+    "Property model admits only fully performing debt with specified capital; default/workout and taxes are outside its domain.",
+    "Smoothing moments require the stated population assumptions; known-theta inversion is not an empirical estimate.",
+    "Private debt/strategy-comparison exercises are independently solved in the checker and text, not forecast by the four-case lab.",
+    "A negative cash diagnostic is an unfunded policy, not an implicit borrowing facility; benchmark ratio is not risk adjustment.",
+    "Futures cash chronology and margin observations are stipulated; no intraperiod price path or financing facility is invented."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "case": "Cedar allocation council — authored teaching cases",
+  "provenance": "Synthetic parameters created for this chapter; no observed or forecast market data.",
+  "units": "CU and one-period gross returns; each panel is a separate stated model.",
+  "conventions": {
+    "liability": "Four equally likely independent-sign states; fixed mean-variance preference over terminal CU surplus; long-only and a beginning cash reserve.",
+    "lifecycle": "One-period terminal log utility; safe gross return one; nontradable endowment H0+h*(G-1); no borrowing or shorting.",
+    "dynamic": "Two-period terminal utility -1/W; safe gross return one at every node; exogenous observed tree; long-only fractions in [0,1]; no flows or costs.",
+    "rebalancing": "One risky asset and cash marked before trading; proportional fee on absolute risky CU traded, paid from cash immediately; target is a post-fee wealth fraction.",
+    "bands": "One-period CU mean-variance preference, zero liability covariance, safe gross return one; cash-paid proportional fee, long-only and no borrowing.",
+    "uncertainty": "Only the risky mean varies over a fixed closed interval; variance and risk coefficient are known model inputs; no confidence interpretation."
+  },
+  "liability": {
+    "wealth": 100, "safe_gross": "1.02", "reserve": 20,
+    "excess_mean": "0.04", "excess_sign_loading": "0.2", "gamma": "0.02",
+    "liability_mean": 80, "liability_u": 8, "liability_v": 6,
+    "income_mean": 20, "income_u": 4, "income_v": 0
+  },
+  "lifecycle": {
+    "up_probability": "0.5", "up_gross": "1.25", "down_gross": "0.8",
+    "households": [
+      {"name": "early, certain income", "wealth": 40, "income_intercept": 60, "income_exposure": 0},
+      {"name": "middle, certain income", "wealth": 60, "income_intercept": 40, "income_exposure": 0},
+      {"name": "retired, no future income", "wealth": 100, "income_intercept": 0, "income_exposure": 0},
+      {"name": "early, stock-like income", "wealth": 40, "income_intercept": 60, "income_exposure": 40}
+    ]
+  },
+  "dynamic": {
+    "wealth": 100,
+    "initial": {"up_probability": "1/3", "up_gross": "1.2", "down_gross": "0.9"},
+    "after_up": {"up_probability": "0.5", "up_gross": "1.2", "down_gross": "0.8"},
+    "after_down": {"up_probability": "0.5", "up_gross": 4, "down_gross": "0.25"}
+  },
+  "rebalancing": {
+    "risky_before": 72, "cash_before": 40, "target": "0.6", "fee_rate": "0.01",
+    "next_risky_gross": ["0.8", "1.2"]
+  },
+  "bands": {
+    "wealth": 100, "mean_excess": "0.04", "variance": "0.04", "gamma": "0.02", "fee_rate": "0.01",
+    "risky_before": [30, 55, 70]
+  },
+  "uncertainty": {
+    "wealth": 100, "risky_before": 50, "estimated_mean": "0.05", "half_width": "0.02",
+    "variance": "0.04", "gamma": "0.02", "fee_rate": "0.005"
+  },
+  "horizon": {"mean_log": "0.03", "sd_log": "0.2", "periods": [1, 20]},
+  "withdrawals": {"wealth": 100, "payment": 10, "gross_returns": ["1.2", "0.8"]}
+}

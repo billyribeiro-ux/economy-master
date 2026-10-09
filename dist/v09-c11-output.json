@@ -1,0 +1,479 @@
+{
+  "case_id": "v09-c11-execution-1",
+  "book": {
+    "arrival_mid": "100",
+    "quoted_spread": "1/5",
+    "quoted_spread_bps": "20",
+    "orders": [
+      {
+        "id": "market300",
+        "side": "buy",
+        "filled": 300,
+        "cancelled": 0,
+        "fills": [
+          {
+            "quantity": 100,
+            "price": "1001/10"
+          },
+          {
+            "quantity": 150,
+            "price": "501/5"
+          },
+          {
+            "quantity": 50,
+            "price": "502/5"
+          }
+        ],
+        "gross": "30060",
+        "fees": "3",
+        "cash_change": "-30063",
+        "average": "501/5",
+        "spreads": {
+          "effective": "2/5",
+          "realized": "1/10",
+          "midpoint_component": "3/10",
+          "effective_bps": "40",
+          "realized_bps": "10",
+          "midpoint_component_bps": "30"
+        }
+      },
+      {
+        "id": "limit300",
+        "side": "buy",
+        "filled": 250,
+        "cancelled": 50,
+        "fills": [
+          {
+            "quantity": 100,
+            "price": "1001/10"
+          },
+          {
+            "quantity": 150,
+            "price": "501/5"
+          }
+        ],
+        "gross": "25040",
+        "fees": "5/2",
+        "cash_change": "-50085/2",
+        "average": "2504/25",
+        "spreads": {
+          "effective": "8/25",
+          "realized": "1/50",
+          "midpoint_component": "3/10",
+          "effective_bps": "32",
+          "realized_bps": "2",
+          "midpoint_component_bps": "30"
+        }
+      },
+      {
+        "id": "fok300",
+        "side": "buy",
+        "filled": 0,
+        "cancelled": 300,
+        "fills": [],
+        "gross": "0",
+        "fees": "0",
+        "cash_change": "0",
+        "average": null,
+        "spreads": null
+      }
+    ]
+  },
+  "dealer": {
+    "buy_probability": "1/2",
+    "high_given_buy": "7/10",
+    "high_given_sell": "3/10",
+    "ask": "504/5",
+    "bid": "496/5",
+    "spread": "8/5",
+    "informed_gain_per_trade": "6/5",
+    "dealer_gain_per_uninformed_trade": "4/5",
+    "weighted_informed_loss": "-12/25",
+    "weighted_uninformed_gain": "12/25",
+    "expected_dealer_profit": "0"
+  },
+  "queue": {
+    "immediate_cash": "5011",
+    "immediate_shortfall": "11",
+    "states": [
+      {
+        "id": "fall",
+        "probability": "2/5",
+        "passive_fill": 100,
+        "deadline_fill": 0,
+        "entry_cash": "4991",
+        "deadline_cash": "0",
+        "complete_cash": "4991",
+        "paper_wealth": "5950",
+        "complete_wealth": "5959",
+        "cancel_wealth": "5959",
+        "complete_shortfall": "-9",
+        "cancel_shortfall": "-9",
+        "conditional_passive_mark_gain": "-40"
+      },
+      {
+        "id": "rise",
+        "probability": "3/5",
+        "passive_fill": 0,
+        "deadline_fill": 100,
+        "entry_cash": "0",
+        "deadline_cash": "5061",
+        "complete_cash": "5061",
+        "paper_wealth": "6050",
+        "complete_wealth": "5989",
+        "cancel_wealth": "6000",
+        "complete_shortfall": "61",
+        "cancel_shortfall": "50",
+        "conditional_passive_mark_gain": "0"
+      }
+    ],
+    "expected_complete_cash": "5033",
+    "expected_complete_shortfall": "33",
+    "expected_cancel_shortfall": "132/5"
+  },
+  "shortfall": {
+    "filled": 350,
+    "unfilled": 150,
+    "gross": "14205/2",
+    "fees": "7",
+    "cash_after_fills": "5781/2",
+    "paper_wealth": "10250",
+    "actual_wealth": "20131/2",
+    "paper_gain": "250",
+    "actual_gain": "131/2",
+    "delay": "100",
+    "execution": "65/2",
+    "opportunity": "45",
+    "shortfall": "369/2",
+    "wealth_shortfall": "369/2",
+    "shortfall_bps": "369/2",
+    "average_fill_price": "2841/140",
+    "external_vwap": "203/10",
+    "filled_vwap_cost": "-5/2",
+    "filled_vwap_cost_with_fees": "9/2"
+  },
+  "impact": {
+    "objective_convention": "E[cost] + lambda Var(cost)",
+    "feasible": true,
+    "continuous_unconstrained_q1": "6",
+    "continuous_feasible_q1": 5,
+    "candidates": [
+      {
+        "q1": 3,
+        "q2": 9,
+        "expected_cost": "147/10",
+        "variance": "81/4",
+        "objective": "114/5",
+        "block1_price": "2031/40",
+        "block2_prices": [
+          "407/8",
+          "415/8"
+        ],
+        "state_costs": [
+          "51/5",
+          "96/5"
+        ],
+        "state_cash": [
+          "3051/5",
+          "3096/5"
+        ]
+      },
+      {
+        "q1": 4,
+        "q2": 8,
+        "expected_cost": "72/5",
+        "variance": "16",
+        "objective": "104/5",
+        "block1_price": "51",
+        "block2_prices": [
+          "254/5",
+          "259/5"
+        ],
+        "state_costs": [
+          "52/5",
+          "92/5"
+        ],
+        "state_cash": [
+          "3052/5",
+          "3092/5"
+        ]
+      },
+      {
+        "q1": 5,
+        "q2": 7,
+        "expected_cost": "147/10",
+        "variance": "49/4",
+        "objective": "98/5",
+        "block1_price": "2049/40",
+        "block2_prices": [
+          "2029/40",
+          "2069/40"
+        ],
+        "state_costs": [
+          "56/5",
+          "91/5"
+        ],
+        "state_cash": [
+          "3056/5",
+          "3091/5"
+        ]
+      }
+    ],
+    "selected": {
+      "q1": 5,
+      "q2": 7,
+      "expected_cost": "147/10",
+      "variance": "49/4",
+      "objective": "98/5",
+      "block1_price": "2049/40",
+      "block2_prices": [
+        "2029/40",
+        "2069/40"
+      ],
+      "state_costs": [
+        "56/5",
+        "91/5"
+      ],
+      "state_cash": [
+        "3056/5",
+        "3091/5"
+      ]
+    },
+    "capacity_grid": [
+      {
+        "quantity": 0,
+        "q1": 0,
+        "q2": 0,
+        "objective": "0",
+        "gross_benefit": "0",
+        "net_score": "0",
+        "optimal_schedules": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "quantity": 1,
+        "q1": 0,
+        "q2": 1,
+        "objective": "13/40",
+        "gross_benefit": "3/2",
+        "net_score": "47/40",
+        "optimal_schedules": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "quantity": 2,
+        "q1": 1,
+        "q2": 1,
+        "objective": "7/10",
+        "gross_benefit": "3",
+        "net_score": "23/10",
+        "optimal_schedules": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "quantity": 3,
+        "q1": 1,
+        "q2": 2,
+        "objective": "61/40",
+        "gross_benefit": "9/2",
+        "net_score": "119/40",
+        "optimal_schedules": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "quantity": 4,
+        "q1": 2,
+        "q2": 2,
+        "objective": "12/5",
+        "gross_benefit": "6",
+        "net_score": "18/5",
+        "optimal_schedules": [
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      {
+        "quantity": 5,
+        "q1": 2,
+        "q2": 3,
+        "objective": "149/40",
+        "gross_benefit": "15/2",
+        "net_score": "151/40",
+        "optimal_schedules": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      },
+      {
+        "quantity": 6,
+        "q1": 3,
+        "q2": 3,
+        "objective": "51/10",
+        "gross_benefit": "9",
+        "net_score": "39/10",
+        "optimal_schedules": [
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      {
+        "quantity": 7,
+        "q1": 3,
+        "q2": 4,
+        "objective": "277/40",
+        "gross_benefit": "21/2",
+        "net_score": "143/40",
+        "optimal_schedules": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ]
+      },
+      {
+        "quantity": 8,
+        "q1": 4,
+        "q2": 4,
+        "objective": "44/5",
+        "gross_benefit": "12",
+        "net_score": "16/5",
+        "optimal_schedules": [
+          [
+            4,
+            4
+          ]
+        ]
+      },
+      {
+        "quantity": 9,
+        "q1": 4,
+        "q2": 5,
+        "objective": "89/8",
+        "gross_benefit": "27/2",
+        "net_score": "19/8",
+        "optimal_schedules": [
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            4
+          ]
+        ]
+      },
+      {
+        "quantity": 10,
+        "q1": 5,
+        "q2": 5,
+        "objective": "27/2",
+        "gross_benefit": "15",
+        "net_score": "3/2",
+        "optimal_schedules": [
+          [
+            5,
+            5
+          ]
+        ]
+      },
+      {
+        "quantity": 11,
+        "q1": 5,
+        "q2": 6,
+        "objective": "653/40",
+        "gross_benefit": "33/2",
+        "net_score": "7/40",
+        "optimal_schedules": [
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "quantity": 12,
+        "q1": 5,
+        "q2": 7,
+        "objective": "98/5",
+        "gross_benefit": "18",
+        "net_score": "-8/5",
+        "optimal_schedules": [
+          [
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "quantity": 13,
+        "q1": 5,
+        "q2": 8,
+        "objective": "933/40",
+        "gross_benefit": "39/2",
+        "net_score": "-153/40",
+        "optimal_schedules": [
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "quantity": 14,
+        "q1": 5,
+        "q2": 9,
+        "objective": "55/2",
+        "gross_benefit": "21",
+        "net_score": "-13/2",
+        "optimal_schedules": [
+          [
+            5,
+            9
+          ]
+        ]
+      }
+    ],
+    "tie_rule": "smaller first block; then smaller total quantity for equal net scores",
+    "physical_capacity": 14,
+    "optimal_quantity": 6,
+    "largest_nonnegative_score_quantity": 11
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "case_id": "v09-c11-execution-1",
+  "provenance": "Original synthetic teaching contracts; no observed prices or calibrated trading estimates.",
+  "conventions": {
+    "currency": "CU",
+    "quantity": "whole shares",
+    "interest": "zero over all case dates",
+    "book": "independent atomic snapshots; price priority; IOC remainder cancelled; FOK all or none",
+    "queue": "price-time priority; stated sell volume reaches this queue; no cancellations or new orders ahead",
+    "shortfall": "paper minus actual terminal wealth; original target retained",
+    "impact": "monotone buy; within-block average persistent impact; shock between blocks",
+    "objective": "expected cost plus lambda times cost variance",
+    "capacity": "quantity choice separately authorized; gross benefit excludes own-price marking"
+  },
+  "book": {
+    "quote_time": 0,
+    "arrival_time": 1,
+    "mark_time": 11,
+    "bids": [["99.90", 200], ["99.80", 200], ["99.60", 200]],
+    "asks": [["100.10", 100], ["100.20", 150], ["100.40", 250]],
+    "future_mid": "100.15",
+    "fee_per_share": "0.01",
+    "cash": 100000,
+    "initial_shares": 600,
+    "orders": [
+      {"id": "market300", "side": "buy", "quantity": 300, "limit": null, "instruction": "IOC"},
+      {"id": "limit300", "side": "buy", "quantity": 300, "limit": "100.20", "instruction": "IOC"},
+      {"id": "fok300", "side": "buy", "quantity": 300, "limit": "100.20", "instruction": "FOK"}
+    ]
+  },
+  "dealer": {"mid_value": 100, "value_half_range": 2, "informed_probability": "2/5"},
+  "queue": {
+    "quantity": 100,
+    "ahead": 80,
+    "decision_mid": 50,
+    "immediate_ask": "50.1",
+    "limit": "49.9",
+    "fee_per_share": "0.01",
+    "cash": 6000,
+    "states": [
+      {"id": "fall", "probability": "2/5", "sell_volume": 180, "deadline_mid": "49.5", "deadline_ask": "49.6"},
+      {"id": "rise", "probability": "3/5", "sell_volume": 80, "deadline_mid": "50.5", "deadline_ask": "50.6"}
+    ]
+  },
+  "shortfall": {
+    "side": "buy",
+    "quantity": 500,
+    "decision_time": 0,
+    "arrival_time": 1,
+    "terminal_time": 4,
+    "decision_price": 20,
+    "arrival_price": "20.2",
+    "terminal_price": "20.5",
+    "fee_per_share": "0.02",
+    "initial_cash": 10000,
+    "initial_shares": 0,
+    "fills": [{"time": 2, "quantity": 200, "price": "20.25"}, {"time": 3, "quantity": 150, "price": "20.35"}],
+    "external_trades": [{"time": 1, "quantity": 1000, "price": "20.1"}, {"time": 2, "quantity": 2000, "price": "20.3"}, {"time": 3, "quantity": 2000, "price": "20.4"}]
+  },
+  "impact": {
+    "quantity": 12,
+    "initial_mid": 50,
+    "shock_magnitude": "0.5",
+    "persistent_k": "0.05",
+    "temporary_eta1": "0.2",
+    "temporary_eta2": "0.1",
+    "half_spread_and_fee": "0.1",
+    "lambda": "0.4",
+    "capacity1": 5,
+    "capacity2": 9,
+    "cash": 1000,
+    "gross_benefit_per_share": "1.5"
+  }
+}

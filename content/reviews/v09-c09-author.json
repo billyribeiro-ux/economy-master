@@ -1,0 +1,165 @@
+{
+  "chapter": "v09-c09",
+  "title": "Strategic and dynamic asset allocation",
+  "date": "2026-10-09",
+  "edition_boundary": "2026-10-06",
+  "author": "Coordinating author",
+  "assignment": "production/v09-closing-assignments.json",
+  "state": "author-review-complete",
+  "status": "Author checks pass; separate specialist peer and dependency-ordered coordinator acceptance pending.",
+  "canonical_outcome": "Design allocation policies across horizons and investor constraints.",
+  "counts": {
+    "visible_words": 6001,
+    "worked_examples": 5,
+    "exercises": 8,
+    "complete_solutions": 8
+  },
+  "coverage": [
+    "Lifecycle",
+    "liabilities",
+    "hedging demand",
+    "rebalancing",
+    "tactical decisions",
+    "estimation risk"
+  ],
+  "gates": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v09-c09.html",
+      "bytes": 42198,
+      "sha256": "14cd53b6b063843994db7f33e8bc27ca4b9fe0a7a52c982a8c129f28dc36c05e"
+    },
+    {
+      "path": "content/projects/v09-c09-inputs.json",
+      "bytes": 2949,
+      "sha256": "0217eb873441f43eaf63f670b17711a015514c97b9df1b553d5ebdb9adfcec46"
+    },
+    {
+      "path": "content/projects/v09-c09-analysis.py",
+      "bytes": 15530,
+      "sha256": "cbfffa93bb6465375cd168e81ce042eece2e9cab184c197c48e52a0ff7a564c4"
+    },
+    {
+      "path": "content/projects/v09-c09-output.json",
+      "bytes": 10558,
+      "sha256": "0a740876cf554ab695e5f79ae751a8def1185a1ccffc9b6a2b8ec2113877bea4"
+    },
+    {
+      "path": "content/projects/v09-c09-manifest.json",
+      "bytes": 793,
+      "sha256": "dddc55760a9ed950655ac0c6821ef8955ce73e4da7b189ff22a68995563d7b0b"
+    },
+    {
+      "path": "content/projects/v09-c09-README.txt",
+      "bytes": 7568,
+      "sha256": "c6ea238b03d3d2b97400ca6f289fa5ed6a1634eeb11b66957cf16634284e7490"
+    },
+    {
+      "path": "scripts/check_v09_c09.py",
+      "bytes": 22364,
+      "sha256": "dc4d755d9f5eb4548b0b7e3db820a64a788b62ff164f53d9999065862b46ed32"
+    },
+    {
+      "path": "content/reviews/v09-c09-sources.json",
+      "bytes": 2624,
+      "sha256": "7eb994c78c3d25ebe4e05d7fe94be93ca49f2832384936458cef9f8a9bed92e8"
+    }
+  ],
+  "reasoning_review": [
+    "One-period surplus identity distinguishes nontradable net obligations from asset prices. CU mean-variance preference is explicitly stipulated; gamma units, covariance sign, strict concavity, one-dimensional clipping and multi-asset residual hedge conditions derived.",
+    "Two-state log utility is defined on positive terminal resources. Nontradable endowment exposure is separate from available cash; global curvature and both borrowing/short bounds checked. Same total intercept permits opposite financial-weight lifecycle comparisons without claiming an actual saving trajectory.",
+    "Cumulative versus average log variance, cash-flow sequence risk and IID homothetic horizon-independence are separately proved. The positive scaling coefficient avoids reversing utility order for relative risk aversion above one.",
+    "Finite-tree Bellman upper bound and attaining continuation argument includes nonanticipation, sufficient state and compact/positive-wealth conditions. Repeating conditional mean-variance preferences is not asserted to solve an initial terminal mean-variance problem.",
+    "CRRA2 continuation coefficients derive original first-period hedge with zero instantaneous premium. Conditional laws and probabilities remain exogenous; reversed future sets change hedge sign; log additive value has no hedge here. Each node has positive gross returns straddling safe return.",
+    "Post-fee target cash equation uses correct separate buy/sell denominators; path comparisons do not imply a guaranteed premium.",
+    "No-trade kink, strict piecewise concavity and actual cash-funded feasible interval proved. Robust lower-mean endpoint is justified only for nonnegative holdings; width is a policy assumption and covariance is held fixed."
+  ],
+  "worked_example_review": [
+    "All four liability states, reserve cap, unspanned residual, mean and variance preferences checked. Baseline70 risky, mean44.8, variance136, score43.44; zero-covariance alternative differs in both mean and variance.",
+    "Four household budgets, spanned income and exact log derivatives verified. Early certain income reaches no-borrow cap40; correlated income changes risky10 and25% financial fraction.",
+    "Child-node2/9 policy and9/10 coefficient, root radical solution .1771149775, complete intermediate/terminal cash, path utility and matched myopic comparison checked.",
+    "Exact sale/fee/post-fee target, both next-return scenario outcomes and all resource equalities checked.",
+    "No-trade interval37.5\u201362.5, buy/sell cash and gains; nominal56.25 versus robust43.75, common adverse-law scores and narrow-band equality all checked."
+  ],
+  "exercise_review": [
+    {
+      "number": 1,
+      "status": "pass",
+      "scope": "Changed income covariance, gamma comparison, exact state cash and global constraint signs."
+    },
+    {
+      "number": 2,
+      "status": "pass",
+      "scope": "Endowment h80 creates prohibited short and derivative -1/6720; certain-income denominator and unspanned-risk critique."
+    },
+    {
+      "number": 3,
+      "status": "pass",
+      "scope": "IID Bellman fractions, all four terminal paths, mean156.25, utility -81/10000 and CE10000/81; fraction versus quantities distinction."
+    },
+    {
+      "number": 4,
+      "status": "pass",
+      "scope": "Reversed continuation coefficients, no-short derivative -1/150, root sign and CE3000/29; altered unconditional opportunity mix identified."
+    },
+    {
+      "number": 5,
+      "status": "pass",
+      "scope": "Purchase9600/503, paid fee96/503, all cash/target identities and zero-fee boundary."
+    },
+    {
+      "number": 6,
+      "status": "pass",
+      "scope": "Sell62.5 and9/400 gain, higher-fee no-trade, high-mean funded ceiling10070/101 and fee30/101."
+    },
+    {
+      "number": 7,
+      "status": "pass",
+      "scope": "Worst-case long-only endpoint proof, three exact scores, narrowed ambiguity kink and scope with shorts/covariance uncertainty."
+    },
+    {
+      "number": 8,
+      "status": "pass",
+      "scope": "Four flawed statements diagnosed; explicit objective/timing/endowment/information/cost/funding/review rubric and defensible protocol."
+    }
+  ],
+  "numerical_checks": {
+    "chapter": "v09-c09",
+    "status": "pass",
+    "groups": 8,
+    "comparisons": 393,
+    "coarse_feasible_policies": 1331,
+    "domain_rejections": 27,
+    "checks": [
+      "Independent state-cash polynomial optimization, pairwise surplus variance, reserve and liability/income interventions",
+      "Bracketed expected-log optima, nontradable resource cash, stock-like endowment and no-borrow/no-short boundaries",
+      "Independent bracketed Bellman choices, complete dated tree cash, IID/reversed opportunities and 1331 coarse feasible policy comparisons",
+      "Post-fee target solved independently with monotonicity; both trade signs, cash/stock endpoints and path-specific outcomes",
+      "Piecewise quadratic interpolation and full funding boundaries; altered fees/means and independently minimized ambiguity criteria",
+      "Independent log-sum moment example and withdrawal-lot timing identities",
+      "Meaningful provenance, information/fee, finite-number, preference, endowment and solvency contract rejections",
+      "Complete reference output, manifest, isolated normal/optimized CLI, source/HTML boundaries and instructional structure"
+    ],
+    "limits": "Arithmetic, contract and reproducibility evidence for original synthetic models; proofs/source interpretation and independent peer review are separate; no empirical, human-certification or UI claim."
+  },
+  "retention_review": "Answered teach-back and changed-obligation delayed calculation (risky60, mean44.4, variance136, score43.04) plus exact78/74 withdrawal example verified.",
+  "source_review": "Actual official Kogan32-page lecture and4-page proof handout read in scoped substantive portions; actual author St. Louis Fed article body read for human-capital accounting only. No blanket age/horizon/earnings-safety statements or empirical returns adopted. All cases and problems original.",
+  "resolved_findings": [
+    "Added explicit positive-mean-gross input contract to the funded moment-only panels before final package hashes.",
+    "Separate specialist peer identified missing integrability/attainment assumptions in the generic IID homothetic theorem. Restricted the law to finite support and stated continuous positive gross factors on the compact fraction set, yielding finite continuous expected utility and attained maxima. All finite-tree numerical examples are unchanged."
+  ],
+  "open_findings": [],
+  "limitations": [
+    "Author/checker review is not independent human academic certification.",
+    "Synthetic cases and policy sets do not validate empirical forecasts, optimal client allocations or real market contracts.",
+    "The geometric grid comparison is a coarse diagnostic; analytic strict-concavity and Bellman arguments supply the optimality proofs.",
+    "Whole-library structural/publication and visual/mobile/keyboard/print gates remain separate."
+  ]
+}
