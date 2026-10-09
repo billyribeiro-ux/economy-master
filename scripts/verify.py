@@ -193,6 +193,10 @@ from check_v13_c09 import check as check_v13_c09
 from check_v13_c09_peer import check as check_v13_c09_peer
 from check_v13_c10 import check as check_v13_c10
 from check_v13_c10_peer import check as check_v13_c10_peer
+from check_v13_c11 import check as check_v13_c11
+from check_v13_c11_peer import check as check_v13_c11_peer
+from check_v13_c12 import check as check_v13_c12
+from check_v13_c12_peer import check as check_v13_c12_peer
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -638,8 +642,8 @@ def main():
     v12_time_structural_peer_check = {'v12-c09': check_v12_c09_peer(), 'v12-c10': check_v12_c10_peer()}
     v12_closing_check = {'v12-c11': check_v12_c11(), 'v12-c12': check_v12_c12()}
     v12_closing_peer_check = {'v12-c11': check_v12_c11_peer(), 'v12-c12': check_v12_c12_peer()}
-    v13_opening_check = {'v13-c01': check_v13_c01(), 'v13-c02': check_v13_c02(), 'v13-c03': check_v13_c03(), 'v13-c04': check_v13_c04(), 'v13-c05': check_v13_c05(), 'v13-c06': check_v13_c06(), 'v13-c07': check_v13_c07(), 'v13-c08': check_v13_c08(), 'v13-c09': check_v13_c09(), 'v13-c10': check_v13_c10()}
-    v13_opening_peer_check = {'v13-c01': check_v13_c01_peer(), 'v13-c02': check_v13_c02_peer(), 'v13-c03': check_v13_c03_peer(), 'v13-c04': check_v13_c04_peer(), 'v13-c05': check_v13_c05_peer(), 'v13-c06': check_v13_c06_peer(), 'v13-c07': check_v13_c07_peer(), 'v13-c08': check_v13_c08_peer(), 'v13-c09': check_v13_c09_peer(), 'v13-c10': check_v13_c10_peer()}
+    v13_opening_check = {'v13-c01': check_v13_c01(), 'v13-c02': check_v13_c02(), 'v13-c03': check_v13_c03(), 'v13-c04': check_v13_c04(), 'v13-c05': check_v13_c05(), 'v13-c06': check_v13_c06(), 'v13-c07': check_v13_c07(), 'v13-c08': check_v13_c08(), 'v13-c09': check_v13_c09(), 'v13-c10': check_v13_c10(), 'v13-c11': check_v13_c11(), 'v13-c12': check_v13_c12()}
+    v13_opening_peer_check = {'v13-c01': check_v13_c01_peer(), 'v13-c02': check_v13_c02_peer(), 'v13-c03': check_v13_c03_peer(), 'v13-c04': check_v13_c04_peer(), 'v13-c05': check_v13_c05_peer(), 'v13-c06': check_v13_c06_peer(), 'v13-c07': check_v13_c07_peer(), 'v13-c08': check_v13_c08_peer(), 'v13-c09': check_v13_c09_peer(), 'v13-c10': check_v13_c10_peer(), 'v13-c11': check_v13_c11_peer(), 'v13-c12': check_v13_c12_peer()}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -720,6 +724,8 @@ def main():
     report['checks'].append('Volume 13 chapter8: full finite IC/minimal and excess rents, exact bunching certificates, nonsmooth continuum envelope, integrable mean-contract theorem and complete pure signaling/refinement/boundary proofs. Six cases, twelve solutions and independent author/peer calculations and frozen source/payload bindings checked.')
     report['checks'].append('Volume 13 chapter9: complete all-action contract, sufficiency, limited-liability, finite promise-recursion and declared-class relational incentive proofs. Six cases, twelve solutions, independent author/peer computations and final source/payload bindings checked.')
     report['checks'].append('Volume 13 chapter10: selected-equilibrium revelation, known-cost Groves and funded resource accounts, nonsmooth payment envelope, global regular BIC auction optimum, full-domain first-price/all-pay equilibria and qualified revenue equivalence/preference counterexample. Six cases, twelve solutions and independent author/peer numerical/source/payload checks.')
+    report['checks'].append('Volume13 chapter11: complete finite strict one-to-one DA incentive proof with incomplete lists/outside, nonnegative partial-assignment certificates, global network-game and all-three-node graph classifications, funded accounts and coordination limits. Six cases/twelve solutions; independent author3256 and peer912 comparisons, exact sources and frozen payload checks.')
+    report['checks'].append('Volume13 chapter12: complete original welfare/global-optimality/selection/approximation/identification/referee proof and solution package, including actual off-equilibrium funding and sharp error attainments. Six cases/twelve solutions, author346 and separate peer226 comparisons, exact sources and frozen payload checks.')
     report['checks'].extend(['Volume 11 chapters9–12: funded currency parity versus physical scenarios, segmented cash and sovereign claim budgets; regulatory and conduct incentives, financed resolution; finite run equilibria, auction feedback and consolidated recipient resources; finite governance choices, collateral, escalation incentives and decision evidence. Four author and four separate peer laboratories with exact final bindings, independently reviewed proofs and all36 closing exercise solutions.',
         'Volume 11 chapters5–8: dated funding and collateral, feasible liquidity support and ALM; process deadlines, identity accounting and common control failures; consistent revaluation, network contagion and certified reverse stress; insurance selection and dependence, pension cash, guarantee resources and household debt. Four author and four separate peer laboratories, all exact exercise reviews and frozen payload bindings.',
         'Volume 11 chapters1–4: screening and enforcement incentives, money creation and private-type run best replies; bank double entries, economic value, capital and dated cash; corporate debt service, evidence and recovery waterfalls; probability-atom VaR/ES, coherence, dependence, horizon and backtesting limits. Four author and four separate peer laboratories with independent oracles and final payload bindings.',

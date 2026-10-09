@@ -1,0 +1,1012 @@
+{
+  "volume": "v13",
+  "component": "integrative_project",
+  "date": "2026-10-09",
+  "author": "c05_review",
+  "stage": "blueprint_only",
+  "status": "Complete original design and executed numerical anchors; ready for root independent review. No project manuscript, downloadable lab or acceptance is claimed.",
+  "title": "Restoration after a noisy warning: a theoretical research note with a complete incentive certificate",
+  "assignment": "production/v13-assessment-project-blueprint-assignment.json",
+  "architecture": "production/v13-assessment-architecture.json",
+  "research_brief": {
+    "question": "How quickly can two collaborators restore a productive relationship after a noisy warning without making hidden shirking profitable? Does active repair change the answer?",
+    "contribution": "Solve one small declared public-protocol class completely, prove incentives against arbitrary history-dependent deviations, identify a false welfare/forgiveness inference, and distinguish noisy data, a changed technology and a policy-class optimum.",
+    "deliverables": [
+      "An original research note with primitives, theorem, complete proof, all exact cases, counterexample and two extensions; a concise interpretation/evidence section.",
+      "A reproducible standard-library package with exact input/output fractions, an independently reconstructed check and an honest manifest.",
+      "A required actual-paper transfer dossier: exact selected model/result, a proof audit, a boundary/counterexample, a bounded extension and a substantive referee report."
+    ],
+    "suggested_scope": "Open-resource research project. Main exposition may be about 2,000–3,500 words, with full proof and computational appendices as needed; completeness governs. The paper dossier is a separate concise appendix, not a claim to have performed new publishable research.",
+    "distinction_from_chapters": "C07's finite reset automaton observes actions perfectly and C09's relational example tests a principal's discretionary payments. Here hidden simultaneous actions affect an imperfect public signal; innocent collaboration is sometimes interrupted, recovery trades off incentives and losses, and the all-state public-control inequality handles arbitrary private as well as public histories. There are no wages or subsidy transfers."
+  },
+  "primitives": {
+    "agents": "Two indefinitely lived collaborators, i=1,2, with common discount delta=4/5. No private type, persistent hidden state, wealth state, or strategic monitoring authority.",
+    "states": [
+      "G: productive collaboration",
+      "R: review/repair interval"
+    ],
+    "actions": "At every date each agent privately chooses W=1 or N=0. Both actions are available in both states. Each receives fresh per-period capacity sufficient for one action, which cannot be saved or borrowed.",
+    "payoffs": {
+      "units": "Stipulated common cardinal utility-equivalent units. Benefits and consumed effort are additive real flows. Interpersonal addition is an explicit instructional welfare normalization, not a conclusion from ordinal preferences.",
+      "G": "u_i=4 a_j-a_i; one unit of effort cost produces four units of benefit to the other agent.",
+      "R": "u_i=-(3/4)a_i; review effort has no current benefit and consumes 3/4 units. In the baseline, the external restoration process does not respond to that effort. The active-repair extension changes that technology explicitly.",
+      "action_order": [
+        "WW",
+        "WN",
+        "NW",
+        "NN"
+      ],
+      "G_table": [
+        [
+          "3",
+          "3"
+        ],
+        [
+          "-1",
+          "4"
+        ],
+        [
+          "4",
+          "-1"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "R_table": [
+        [
+          "-3/4",
+          "-3/4"
+        ],
+        [
+          "-3/4",
+          "0"
+        ],
+        [
+          "0",
+          "-3/4"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "resource_scope": "There are no payments, wages, fines, escrow balances, loans or sponsor transfers. Effort costs are real consumed resources/disutility in the stated common units, not a transfer credited to another account. No cash-solvency claim is made."
+    },
+    "timing": [
+      "Observe current public state and every past public signal.",
+      "Choose simultaneous hidden actions, possibly using private randomization and remembered own actions.",
+      "Receive the current real payoff. Nature draws a public binary report with a law depending only on the current state and action pair; draws are conditionally independent over time.",
+      "A good report sets next state G; a bad report sets next state R. The shared rule and authenticated reports cannot be unilaterally falsified or reset. The players remain free to deviate in their actions at every date."
+    ],
+    "monitoring": {
+      "G_good_probabilities": {
+        "WW": "9/10",
+        "WN": "3/5",
+        "NW": "3/5",
+        "NN": "1/5"
+      },
+      "R_good_probabilities": "In the baseline all four action pairs have probability r, an exogenous public restoration lottery.",
+      "r_grid": [
+        "0",
+        "1/4",
+        "1/2",
+        "3/4",
+        "1"
+      ],
+      "noise_scope": "All four G probabilities lie strictly between zero and one. In particular, compliant work produces a false warning with probability 1/10. Deterministic restoration at r=0 or r=1 does not make the G monitoring perfect.",
+      "information_scope": "Both players know the complete action-conditional laws. Private past actions do not change future opportunities once the public state is fixed. A different persistent private state or manipulable report would require a new proof."
+    },
+    "prescribed_protocol": "Start in G; both choose W in G and N in R. For mechanism comparison the only baseline control is r in the five-element grid. Initial G is the design objective, but all R continuations must also be incentive compatible.",
+    "deviations": "Each player may deviate with any randomized strategy depending on the entire public and private history. Four pure stationary own policies are enumerated only as reproducible numerical witnesses. Neither that finite enumeration nor the design grid limits the unilateral-deviation theorem.",
+    "values": "V_s=E[sum_{t>=0}delta^t u_t | current state s] is unnormalized. U_s=(1-delta)V_s has stage-payoff units. The report must not substitute stationary long-run averages for a specified initial-state discounted value."
+  },
+  "proof_contracts": [
+    {
+      "id": "P1-values",
+      "claim": "Each prescribed finite public protocol has unique bounded continuation values.",
+      "proof": "The two-state transition matrix P is row stochastic. The series V=sum_{t>=0}delta^t P^t g converges in sup norm because |P^t g|_infty<=|g|_infty and delta<1. It satisfies V=g+delta PV. Any two solutions differ by at most delta times their own sup distance, hence are equal. This proves invertibility on the required domain before the 2x2 calculation is used.",
+      "limits": "This is a finite-state discounted value result, not an all-equilibrium uniqueness result."
+    },
+    {
+      "id": "P2-global-incentives",
+      "claim": "Bellman inequalities at every state and every own pure action are necessary and sufficient for the prescribed public profile to defeat every unilateral history-dependent randomized deviation.",
+      "proof": "For player i let V_i be its prescribed value and require V_i(s)>=g_i(s,a_i,a_-i(s))+delta sum_{s'}P(s'|s,a_i,a_-i(s))V_i(s') for each state and pure action, with equality at the prescribed action. Conditional on any private/public history ending at s, opponents still use a_-i(s), and the next-law/reward depend only on s and the current action. The inequality therefore also holds after privately deviating earlier. Random current actions average the pure bounds. Repeated conditioning gives E[sum_{t=0}^{N-1}delta^t g_i(t)+delta^N V_i(s_N)]<=V_i(s_0) for any complete deviating strategy. Bounded values and payoffs make the terminal term and discounted payoff tail vanish as N tends to infinity. Thus no entire deviation improves continuation value after any history. Necessity follows by deviating for one action and returning. This supplies the imperfect-public-monitoring argument directly; it does not import the perfect-monitoring shortcut.",
+      "tie_convention": "Weak inequality is incentive compatibility; equality allows alternative best responses. Strict margins are reported separately."
+    },
+    {
+      "id": "P3-baseline",
+      "claim": "For the W-in-G/N-in-R protocol, D=V_G-V_R=3/[1-delta(alpha-r)], V_R=delta r D/(1-delta), V_G=V_R+D. The G margin is delta(alpha-beta)D-1; the R margin is 3/4.",
+      "proof": "Subtract the two exact value equations V_G=3+delta[alpha V_G+(1-alpha)V_R] and V_R=delta[r V_G+(1-r)V_R]. A unilateral G deviation saves one now and lowers the good-report probability from alpha to beta. A unilateral R effort change costs 3/4 and cannot alter restoration. The denominator is positive since alpha<1 and delta<1. Combine both margins with P2, rather than checking only the initial state.",
+      "baseline_result": "At r=1/2, V=(225/17,150/17), U=(45/17,30/17), margins=(1/17,3/4). The exact baseline patience threshold for this r is delta>=10/13."
+    },
+    {
+      "id": "P4-design-class",
+      "claim": "For the stated alpha=9/10, beta=3/5 and delta=4/5, this protocol is incentive compatible exactly when 0<=r<=11/20. Its normalized initial-G payoff is strictly increasing in r.",
+      "proof": "The G condition reduces to delta[3(alpha-beta)+alpha-r]>=1, or r<=4alpha-3beta-1/delta=11/20. For general permitted alpha,beta, U_G=3(1-delta+delta r)/(1-delta alpha+delta r); its derivative is 3delta^2(1-alpha)/(1-delta alpha+delta r)^2>0. Hence the complete feasible grid is {0,1/4,1/2}, with unique grid maximizer r=1/2. If the control is enlarged to every r in [0,1], the weak-IC optimum is r=11/20 with U=(8/3,11/6). Under strict G IC the same value is a supremum, unattained in this continuous class.",
+      "counterexample": "r=3/4 raises hypothetical-compliance U_G to 30/11, but its G margin is -2/11. The repeated stationary deviation N in both states gives U=(20/7,15/7), so the value comparison is not an implementable improvement. The always-N profile is itself a public equilibrium with value zero after every state: current W only incurs a cost and the prescribed future value remains zero. Therefore certification does not imply uniqueness of repeated-game equilibrium.",
+      "limits": "The five-grid optimum, its explicitly enlarged one-parameter optimum and a global institution optimum are different objects. Other state spaces, recommendations, signal rules, mixed policies, coalitional deviations and renegotiation are not optimized or certified."
+    },
+    {
+      "id": "P5-garbling",
+      "claim": "An explicit public garbling lowers the sustainable restoration ceiling in this declared family.",
+      "proof": "With probability eta replace the raw binary G report by an independent fair coin, otherwise retain it. This is the action-independent stochastic kernel (1-eta)I+eta J/2. It produces alpha_eta=9/10-2eta/5, beta_eta=3/5-eta/10, and the both-N probability 1/5+3eta/10. Repeating P3 gives r<=11/20-13eta/10. No r>=0 supports the cooperative protocol when eta>11/26. This is a proved comparative static for the specified garbling and family, not a blanket statement about every monitoring change.",
+      "answers": "At eta=1/4 the ceiling is 9/40; only r=0 in the five-grid is feasible and U=(5/3,0). Enlarging the control continuously gives r=9/40 and U=(19/9,1). At eta=1/2 the ceiling is -1/10 and the entire five-grid fails. Always-N remains a feasible zero-value equilibrium, so an empty cooperative class is not nonexistence of equilibrium."
+    },
+    {
+      "id": "P6-active-repair",
+      "claim": "Changing review technology can make positive repair effort credible and improve both conditional values, while an off-path monitoring change can destroy that conclusion without altering the compliant data law.",
+      "proof": "Keep the same R cost k=3/4, but change good-report probabilities in R to (WW,WN,NW,NN)=(3/4,1/4,1/4,1/10), and prescribe W in both states. Now D=(3+k)/[1-delta(alpha-r_WW)], (1-delta)V_R=-k+delta r_WW D. The G margin is -1+delta(alpha-beta)D and the R margin is -k+delta(r_WW-r_NW)D. Both positive margins and P2 establish incentives after every history.",
+      "answers": "V=(585/44,795/88), U=(117/44,159/88), margins=(1/44,21/22). Relative to the certified baseline at r=1/2, the two U improvements are (9/748,63/1496). These gains are conditional on the new repair technology; real review effort is included as -3/4 per worker. If only R one-worker success rises from 1/4 to 3/5, the entire compliant transition/payoff law and V stay identical but the R margin becomes -21/88 while the G margin stays 1/44. Checking fit or G incentives alone therefore misses a profitable repair-state deviation.",
+      "interpretation": "Signal distributions under compliance do not identify all action-conditional deviation laws. Evidence for repair efficacy and authenticated reports is a separate requirement."
+    }
+  ],
+  "exact_benchmarks": {
+    "baseline_grid": [
+      {
+        "r": "0",
+        "eta": "0",
+        "profile": [
+          1,
+          0
+        ],
+        "V": [
+          "75/7",
+          "0"
+        ],
+        "U": [
+          "15/7",
+          "0"
+        ],
+        "incentive_margins": [
+          "11/7",
+          "3/4"
+        ],
+        "feasible": true,
+        "best_stationary_values": [
+          "15/7",
+          "0"
+        ],
+        "all_four_stationary_deviations": [
+          {
+            "actions_G_R": [
+              0,
+              0
+            ],
+            "normalized_values": [
+              "20/13",
+              "0"
+            ]
+          },
+          {
+            "actions_G_R": [
+              0,
+              1
+            ],
+            "normalized_values": [
+              "14/13",
+              "-3/4"
+            ]
+          },
+          {
+            "actions_G_R": [
+              1,
+              0
+            ],
+            "normalized_values": [
+              "15/7",
+              "0"
+            ]
+          },
+          {
+            "actions_G_R": [
+              1,
+              1
+            ],
+            "normalized_values": [
+              "27/14",
+              "-3/4"
+            ]
+          }
+        ]
+      },
+      {
+        "r": "1/4",
+        "eta": "0",
+        "profile": [
+          1,
+          0
+        ],
+        "V": [
+          "25/2",
+          "25/4"
+        ],
+        "U": [
+          "5/2",
+          "5/4"
+        ],
+        "incentive_margins": [
+          "1/2",
+          "3/4"
+        ],
+        "feasible": true,
+        "best_stationary_values": [
+          "5/2",
+          "5/4"
+        ],
+        "all_four_stationary_deviations": [
+          {
+            "actions_G_R": [
+              0,
+              0
+            ],
+            "normalized_values": [
+              "20/9",
+              "10/9"
+            ]
+          },
+          {
+            "actions_G_R": [
+              0,
+              1
+            ],
+            "normalized_values": [
+              "17/9",
+              "41/72"
+            ]
+          },
+          {
+            "actions_G_R": [
+              1,
+              0
+            ],
+            "normalized_values": [
+              "5/2",
+              "5/4"
+            ]
+          },
+          {
+            "actions_G_R": [
+              1,
+              1
+            ],
+            "normalized_values": [
+              "19/8",
+              "13/16"
+            ]
+          }
+        ]
+      },
+      {
+        "r": "1/2",
+        "eta": "0",
+        "profile": [
+          1,
+          0
+        ],
+        "V": [
+          "225/17",
+          "150/17"
+        ],
+        "U": [
+          "45/17",
+          "30/17"
+        ],
+        "incentive_margins": [
+          "1/17",
+          "3/4"
+        ],
+        "feasible": true,
+        "best_stationary_values": [
+          "45/17",
+          "30/17"
+        ],
+        "all_four_stationary_deviations": [
+          {
+            "actions_G_R": [
+              0,
+              0
+            ],
+            "normalized_values": [
+              "60/23",
+              "40/23"
+            ]
+          },
+          {
+            "actions_G_R": [
+              0,
+              1
+            ],
+            "normalized_values": [
+              "54/23",
+              "121/92"
+            ]
+          },
+          {
+            "actions_G_R": [
+              1,
+              0
+            ],
+            "normalized_values": [
+              "45/17",
+              "30/17"
+            ]
+          },
+          {
+            "actions_G_R": [
+              1,
+              1
+            ],
+            "normalized_values": [
+              "87/34",
+              "99/68"
+            ]
+          }
+        ]
+      },
+      {
+        "r": "3/4",
+        "eta": "0",
+        "profile": [
+          1,
+          0
+        ],
+        "V": [
+          "150/11",
+          "225/22"
+        ],
+        "U": [
+          "30/11",
+          "45/22"
+        ],
+        "incentive_margins": [
+          "-2/11",
+          "3/4"
+        ],
+        "feasible": false,
+        "best_stationary_values": [
+          "20/7",
+          "15/7"
+        ],
+        "all_four_stationary_deviations": [
+          {
+            "actions_G_R": [
+              0,
+              0
+            ],
+            "normalized_values": [
+              "20/7",
+              "15/7"
+            ]
+          },
+          {
+            "actions_G_R": [
+              0,
+              1
+            ],
+            "normalized_values": [
+              "37/14",
+              "201/112"
+            ]
+          },
+          {
+            "actions_G_R": [
+              1,
+              0
+            ],
+            "normalized_values": [
+              "30/11",
+              "45/22"
+            ]
+          },
+          {
+            "actions_G_R": [
+              1,
+              1
+            ],
+            "normalized_values": [
+              "117/44",
+              "159/88"
+            ]
+          }
+        ]
+      },
+      {
+        "r": "1",
+        "eta": "0",
+        "profile": [
+          1,
+          0
+        ],
+        "V": [
+          "125/9",
+          "100/9"
+        ],
+        "U": [
+          "25/9",
+          "20/9"
+        ],
+        "incentive_margins": [
+          "-1/3",
+          "3/4"
+        ],
+        "feasible": false,
+        "best_stationary_values": [
+          "100/33",
+          "80/33"
+        ],
+        "all_four_stationary_deviations": [
+          {
+            "actions_G_R": [
+              0,
+              0
+            ],
+            "normalized_values": [
+              "100/33",
+              "80/33"
+            ]
+          },
+          {
+            "actions_G_R": [
+              0,
+              1
+            ],
+            "normalized_values": [
+              "94/33",
+              "281/132"
+            ]
+          },
+          {
+            "actions_G_R": [
+              1,
+              0
+            ],
+            "normalized_values": [
+              "25/9",
+              "20/9"
+            ]
+          },
+          {
+            "actions_G_R": [
+              1,
+              1
+            ],
+            "normalized_values": [
+              "49/18",
+              "73/36"
+            ]
+          }
+        ]
+      }
+    ],
+    "continuous_boundary": {
+      "r": "11/20",
+      "V": [
+        "40/3",
+        "55/6"
+      ],
+      "U": [
+        "8/3",
+        "11/6"
+      ],
+      "margins": [
+        "0",
+        "3/4"
+      ],
+      "weak_IC": "attained",
+      "strict_IC": "supremum only"
+    },
+    "garbling": [
+      {
+        "eta": "1/4",
+        "alpha": "4/5",
+        "beta": "23/40",
+        "r_upper": "9/40",
+        "grid_feasible": [
+          "0"
+        ],
+        "best_grid": {
+          "r": "0",
+          "V": [
+            "25/3",
+            "0"
+          ],
+          "U": [
+            "5/3",
+            "0"
+          ],
+          "incentive_margins": [
+            "1/2",
+            "3/4"
+          ]
+        },
+        "r0_G_margin": "1/2"
+      },
+      {
+        "eta": "1/2",
+        "alpha": "7/10",
+        "beta": "11/20",
+        "r_upper": "-1/10",
+        "grid_feasible": [],
+        "best_grid": null,
+        "r0_G_margin": "-2/11"
+      }
+    ],
+    "noisy_continuous": {
+      "r": "9/40",
+      "eta": "1/4",
+      "V": [
+        "95/9",
+        "5"
+      ],
+      "U": [
+        "19/9",
+        "1"
+      ],
+      "incentive_margins": [
+        "0",
+        "3/4"
+      ]
+    },
+    "active_repair": {
+      "r": "3/4",
+      "eta": "0",
+      "profile": [
+        1,
+        1
+      ],
+      "V": [
+        "585/44",
+        "795/88"
+      ],
+      "U": [
+        "117/44",
+        "159/88"
+      ],
+      "incentive_margins": [
+        "1/44",
+        "21/22"
+      ],
+      "feasible": true,
+      "best_stationary_values": [
+        "117/44",
+        "159/88"
+      ],
+      "all_four_stationary_deviations": [
+        {
+          "actions_G_R": [
+            0,
+            0
+          ],
+          "normalized_values": [
+            "20/9",
+            "10/9"
+          ]
+        },
+        {
+          "actions_G_R": [
+            0,
+            1
+          ],
+          "normalized_values": [
+            "37/14",
+            "201/112"
+          ]
+        },
+        {
+          "actions_G_R": [
+            1,
+            0
+          ],
+          "normalized_values": [
+            "5/2",
+            "5/4"
+          ]
+        },
+        {
+          "actions_G_R": [
+            1,
+            1
+          ],
+          "normalized_values": [
+            "117/44",
+            "159/88"
+          ]
+        }
+      ]
+    },
+    "unchanged_compliance_but_failed_repair": {
+      "r": "3/4",
+      "eta": "0",
+      "profile": [
+        1,
+        1
+      ],
+      "V": [
+        "585/44",
+        "795/88"
+      ],
+      "U": [
+        "117/44",
+        "159/88"
+      ],
+      "incentive_margins": [
+        "1/44",
+        "-21/88"
+      ],
+      "feasible": false,
+      "best_stationary_values": [
+        "68/25",
+        "48/25"
+      ],
+      "all_four_stationary_deviations": [
+        {
+          "actions_G_R": [
+            0,
+            0
+          ],
+          "normalized_values": [
+            "68/25",
+            "48/25"
+          ]
+        },
+        {
+          "actions_G_R": [
+            0,
+            1
+          ],
+          "normalized_values": [
+            "37/14",
+            "201/112"
+          ]
+        },
+        {
+          "actions_G_R": [
+            1,
+            0
+          ],
+          "normalized_values": [
+            "51/19",
+            "36/19"
+          ]
+        },
+        {
+          "actions_G_R": [
+            1,
+            1
+          ],
+          "normalized_values": [
+            "117/44",
+            "159/88"
+          ]
+        }
+      ]
+    },
+    "long_run_vs_initial_state": {
+      "baseline": {
+        "stationary_G": "5/6",
+        "stationary_flow_per_agent": "5/2",
+        "discounted_G_occupancy_from_G": "15/17",
+        "normalized_value_from_G": "45/17"
+      },
+      "active_repair": {
+        "stationary_G": "15/17",
+        "stationary_flow_per_agent": "87/34",
+        "discounted_G_occupancy_from_G": "10/11",
+        "normalized_value_from_G": "117/44"
+      },
+      "explanation": "Stationary weights solve pi=pi P; discounted weights solve w=(1-delta)e_G+delta wP. The second is the relevant weighting for the stated starting-state welfare objective. At r=0 the baseline review state is absorbing and the long-run cooperative fraction is zero despite a positive initial-G discounted value."
+    }
+  },
+  "actual_paper_dossier": {
+    "required": true,
+    "selected_primary": {
+      "id": "v13-c11-bkd-networks2014",
+      "title": "Yann Bramoulle, Rachel Kranton and Martin D'Amours, Strategic Interaction and Networks",
+      "url": "https://sites.duke.edu/rachelkranton/files/2016/09/strategic-interaction-and-networks-aer.pdf",
+      "version": "Final published American Economic Review 104(3), 898–930, March 2014; the 2016/09 upload path is not the publication date.",
+      "precise_result": "Proposition 1 on printed page 904, its Appendix proof on 921, and the footnote-8 generic finiteness/active-set algorithm qualification on 922. The normalized best-response domain is on 901–903.",
+      "current_actual_inspection": "c05_review actually read retained extracted physical pages 4–7 and 24–25, corresponding to printed 901–904 and 921–922, and viewed the retained physical-page-6/printed-903 equation image during this design. No new download, whole-paper reading or inspection of every theorem is claimed.",
+      "inherited_scope": "The accepted C11 source record independently attributes earlier broader text/image inspection to ito_author. Its exact source identity and retained artifact bytes are reused; this does not turn the current scoped inspection into a whole-paper claim."
+    },
+    "model_and_exact_statement": {
+      "primitives": "Finite simple undirected graph G with zero diagonal and binary symmetric links; nonnegative real actions; normalized intrinsic target 1; interaction gamma in [0,1]. Use the quadratic representative u_i=x_i-(1/2)x_i^2-gamma*x_i*sum_j G_ij x_j, whose unique own best reply is max(0,1-gamma sum_j G_ij x_j). The statement concerns pure Nash outcomes.",
+      "proposition": "For a proposed positive active set A, x_A>0 and x_(N\\A)=0. It is equilibrium iff (I+gamma G_A)x_A=1 and gamma G_(N\\A,A)x_A>=1. Empty A is tested separately and fails here. True activity means strict positivity; allowing zero candidate entries in an enumeration requires deduplication/reindexing.",
+      "proof_audit": "For necessity, each positive coordinate is at the unique interior best reply, yielding the active equalities; each zero coordinate requires its unconstrained reply to be nonpositive, giving inactive inequalities. For sufficiency, the same two conditions put every player exactly at its globally optimal clipped quadratic reply. The appendix compresses this coordinate argument; the benchmark explicitly writes both directions. Brouwer on [0,1]^n establishes existence under these base restrictions, but does not establish uniqueness.",
+      "generic_qualification": "For each active set the determinant det(I+gamma G_A) is a polynomial with constant term one, so it vanishes at only finitely many gamma values. Finitely many active sets give finitely many exceptional values. Outside that set each support produces at most one candidate and complete active-set enumeration yields finitely many equilibria. At exceptional values singular linear systems can produce continua; skipping them is not a complete enumeration there."
+    },
+    "original_worked_benchmark": {
+      "graph": "Four-cycle with undirected edges {1,2},{2,3},{3,4},{4,1}; no diagonals.",
+      "regular_case": "At gamma=1/4 the max-reply map has sup-norm contraction factor 1/2. The unique equilibrium is (2/3,2/3,2/3,2/3), confirmed by all sixteen active sets. This is the authors' base model with an original constructed benchmark, not a copied paper example.",
+      "singular_boundary": "At gamma=1/2, opposite vertices have identical replies, so x1=x3=a and x2=x4=b. Each lies in [0,1], and the two clipped conditions reduce to a=1-b, b=1-a. Thus the complete equilibrium set is {(a,1-a,a,1-a):0<=a<=1}. The active-set matrix for all four vertices is singular. The two opposite-pair supports give endpoints; discarding the singular full support loses every interior point. This refutes an overreading of generic finiteness, not Proposition 1.",
+      "welfare_scope": "At these critical equilibria each player's quadratic payoff is x_i^2/2, so aggregate welfare is a^2+(1-a)^2, ranging from 1/2 to 1. The potential sum_i x_i-(1/2)sum_i x_i^2-gamma sum_{i<j}G_ij x_i x_j equals one throughout. A constant potential across equilibria is not constant aggregate welfare or an equilibrium selection rule.",
+      "bounded_extension": "Keep gamma=1/2 and the same four-cycle but change intrinsic targets to (1,1,1,1+epsilon), with 0<epsilon<=1. Derive the new clipped replies directly. Opposite vertices 1 and 3 share action a in [0,1]; then x2=1-a and x4=1+epsilon-a. Their common reply requires a=max(0,a-epsilon/2), hence a=0. The unique equilibrium is (0,1,0,1+epsilon). For epsilon=1/5 it is (0,1,0,6/5), with aggregate payoff 61/50. This changes the primitive targets and is proved directly; it is not obtained by inserting heterogeneity into the unaltered normalized proposition.",
+      "report_benchmark": "The paper's active-set characterization correctly separates positive and inactive actions, and its finiteness claim is generic. A replication note that reports only two equilibria for the critical four-cycle has omitted the singular full-support family; it must report the complete segment or restrict the parameter claim. The welfare ranking requires actual payoffs rather than the potential. The one-target perturbation is a proportionate extension showing how a degeneracy can disappear under a declared changed primitive. Neither this computation nor the source result identifies an empirical network interaction coefficient or chooses an equilibrium."
+    },
+    "learner_deliverables": [
+      "Read the stated primary body and identify the exact version, model, result and relied-on proof pages; report any inaccessible material.",
+      "Reconstruct both directions and every domain condition of the active-set characterization, then explain the generic qualification.",
+      "Reproduce the original four-cycle regular, singular and heterogeneous cases; explicitly handle the continuum rather than report only grid points.",
+      "Write a referee-style assessment separating a valid theorem from an overextended implementation, with one tractable extension and an evidence/interpretation limitation."
+    ],
+    "honesty": "The supplied worked benchmark and scoped author inspection are completed design work. No learner's paper reading, independent replication, referee report or research originality has been performed or certified. A learner may propose a different primary paper with an equally exact and feasible scope, but cannot replace the required proof/evidence work with a bibliography."
+  },
+  "tasks_and_instructor_answers": [
+    {
+      "id": "v13-project-p1",
+      "task": "Specify timing, observations, the complete action-contingent report laws and real-flow ledger; derive both value equations and solve baseline r=1/2.",
+      "answer": "Use the declared state/action tables. G earns 3 under WW; R earns zero under NN. The equations and exact V/U are P3 and the baseline table. The per-agent initial-G value 45/17 is not the stationary flow 5/2. No transfer account exists, and consumed effort is not credited elsewhere."
+    },
+    {
+      "id": "v13-project-p2",
+      "task": "Prove the all-history unilateral incentive theorem and certify every baseline state; state the result's limits.",
+      "answer": "Supply P1–P3 including conditional history sufficiency, random-action averaging, the iterated inequality and vanishing tail. Margins (1/17,3/4) certify both players by symmetry. The always-N equilibrium and unexamined alternative protocol classes preclude a uniqueness or global-institution-optimality claim."
+    },
+    {
+      "id": "v13-project-p3",
+      "task": "Enumerate the entire restoration grid and four stationary own deviations, select the best certified candidate, and test the faster-restoration claim. Analyze the continuous-control and strict-IC boundary.",
+      "answer": "Use every row in exact_benchmarks.baseline_grid. Feasible r values are 0,1/4,1/2; the last uniquely maximizes initial-G U within that grid. At 3/4, compliance payoff rises but margin is -2/11 and an actual repeating deviation gives 20/7 instead of 30/11. Continuous weak optimum 11/20 is attained, while requiring strictly positive G margin leaves an unattained supremum. Enumeration corroborates rather than proves arbitrary-history incentives."
+    },
+    {
+      "id": "v13-project-p4",
+      "task": "Implement the stated garbling, prove the restoration boundary and solve eta=1/4 and eta=1/2, distinguishing lack of cooperative candidates from lack of equilibrium.",
+      "answer": "Apply P5 and the exact garbling table. At 1/4 only the grid's r=0 works, but continuous r=9/40 is feasible; at 1/2 no cooperative member works. Always-N remains a valid zero equilibrium. No generic information-monotonicity assertion beyond this precise experiment is required."
+    },
+    {
+      "id": "v13-project-p5",
+      "task": "Solve the active-repair technology and verify both states, then change only the one-worker R report probability to 3/5.",
+      "answer": "Use P6 and both exact repair tables. With one-worker rate 1/4, G and R margins are positive and both conditional values exceed the certified baseline. With 3/5 the same compliant values hide R margin -21/88. Current repair costs are included in welfare; signal-law validation off the recommended path is material."
+    },
+    {
+      "id": "v13-project-p6",
+      "task": "Complete the actual-paper transfer dossier and the original four-cycle benchmark.",
+      "answer": "State and prove the precise active-set characterization, preserve its generic qualifier, derive the full critical segment and the perturbed unique solution, and use the supplied substantive report benchmark. A finite support solver must return a family or an explicit unresolved singular status, never silently drop the family."
+    },
+    {
+      "id": "v13-project-p7",
+      "task": "Deliver a reproducible research package and a concise final claim/evidence/referee memorandum.",
+      "answer": "Outputs must distinguish values under hypothetical compliance from certified equilibria, finite-class optima from unrestricted claims, and actual source inspection from learner work. The memorandum states what signal/effort/timing observations could test the maintained laws; it does not call synthetic exact fractions empirical validation. A full demonstration should reproduce the table, give an actual invalid-input/alias-preservation test and explain one altered-model boundary."
+    }
+  ],
+  "planned_runtime": {
+    "no_files_written_yet": true,
+    "proposed_nine_paths": [
+      "content/assessments/parts/v13-project.html",
+      "content/projects/v13-assessment-inputs.json",
+      "content/projects/v13-assessment-analysis.py",
+      "content/projects/v13-assessment-output.json",
+      "content/projects/v13-assessment-manifest.json",
+      "content/projects/v13-assessment-README.txt",
+      "scripts/check_v13_project.py",
+      "content/reviews/v13-project-author.json",
+      "content/reviews/v13-project-sources.json"
+    ],
+    "input_design": {
+      "schema_version": 1,
+      "exact_numbers": "Integers or explicit rational strings only; never bool, float, NaN/Infinity or a silently rounded numerical probability.",
+      "fields": [
+        "delta and G benefit/cost; R real effort cost",
+        "all four G action-conditional probabilities and complete R baseline/repair laws",
+        "restoration grid; garbling values; the changed off-path repair probability",
+        "four-cycle regular interaction, exact singular boundary and positive target perturbation"
+      ],
+      "domains": "Two declared states and binary actions; 0<delta<1, benefit>cost>0, positive R cost; complete symmetric G signal law with 0<q_NN<=q_WN=q_NW<q_WW<1; unique grid rates in [0,1]; garbling in [0,1]; complete valid R probability laws. The paper benchmark uses the fixed four-cycle, a regular gamma in (0,1/2), the exact boundary 1/2, and epsilon in (0,1]. Unsupported graphs or singular families must be rejected explicitly rather than approximated by a grid.",
+      "provenance": "Every numerical economic input is synthetic and author-created. Source-paper model restrictions and identity are separately attributed. No real collaborator data, estimated coefficient or experiment is claimed.",
+      "exact_baseline_payload": {"schema_version":1,"economy":{"discount":"4/5","benefit":"4","collaboration_effort_cost":"1","review_effort_cost":"3/4","initial_state":"G","good_report_in_G":{"WW":"9/10","WN":"3/5","NW":"3/5","NN":"1/5"}},"restoration_grid":["0","1/4","1/2","3/4","1"],"garbling_values":["1/4","1/2"],"active_repair":{"good_report_in_R":{"WW":"3/4","WN":"1/4","NW":"1/4","NN":"1/10"},"counterfactual_one_worker_good_probability":"3/5"},"paper_case":{"vertices":4,"undirected_edges":[[1,2],[2,3],[3,4],[1,4]],"regular_interaction":"1/4","singular_interaction":"1/2","last_target_increase":"1/5"}},
+      "generalized_formula": "For supported positive benefit b>c>0, use cooperative flow b-c, D=(b-c)/(1-delta(alpha-r)), G margin delta(alpha-beta)D-c and R margin k; the continuous ceiling is alpha+(alpha-beta)(b-c)/c-1/delta. The displayed 3, -1 and 11/20 are the fixed benchmark specialization. The all-state Bellman proof itself uses the actual bounded payoff and transition tables."
+    },
+    "run_api": "Quiet deterministic run(data) returns strict JSON-safe output without mutating its caller's input or writing files. Solve each 2x2 value system with fractions, construct every state/action Bellman residual, enumerate the declared finite candidate/deviation class, and report the symbolic boundary family separately from finite graph points.",
+    "outputs": [
+      "Exact normalized and unnormalized state values; all pure-action Bellman margins and explicit certification status.",
+      "All five protocol rows, all four own-policy values per row, complete feasible set and best candidate or explicit null if none.",
+      "Continuous weak versus strict-IC boundary status; garbling and active-repair results; hypothetical-compliance labels when margins fail.",
+      "Stationary versus discounted occupancy measures and real-welfare reconciliation.",
+      "All sixteen active-set checks at the regular/critical/heterogeneous network cases; the analytically certified critical family and generic-domain warning."
+    ],
+    "implementation_methods": "Stdlib fractions.Fraction, exact 2x2 linear algebra and finite loops; four-node Gaussian elimination plus an explicit analytically proved singular-family handler. No simulation, optimizer, network call, arbitrary equilibrium grid or installed package is needed.",
+    "numerical_failure_semantics": "An economically valid but incentive-incompatible protocol is a valid input and returns not_certified with its profitable-deviation witness; it must not be rejected as malformed. Empty feasible design sets use null plus a reason. Invalid dimensions/probabilities/domains are actual exceptions.",
+    "CLI": "Quiet default generation to neighboring v13-assessment-output.json; explicit input/output paths supported. Before opening output, protect input, implementation, README and manifest by direct resolved-path, symlink and existing-hardlink checks. Normal and -O must preserve validation and bytes on rejection.",
+    "documentation_and_manifest": "README gives offline commands, timing, normalization, field units/domains, output statuses, exact-fraction convention and the source/runtime boundary. Manifest binds the other four downloadable payloads; author review binds all eight nonself final author paths.",
+    "independent_checker": "Reconstruct payoffs and transitions independently from inputs; compare value-equation and closed-form routes, Bellman inequality/tail hypotheses, all finite class members and the two extension counterexamples. Independently enumerate graph active sets and verify family coefficients, not merely saved-output equality or reused author helpers. Test malformed JSON duplicate/unknown keys, nonfinite/bool scalars, bad dimensions, out-of-domain discounts/probabilities, unsupported graph families and real direct/symbolic/hard output alias preservation.",
+    "final_gates_after_authorization": "Required future gates: quiet normal workspace API; quiet optimized exact-nine portable API/CLI from unrelated cwd, strict JSON, unchanged input/runtime bytes and directory membership, focused actual alias rejections; full manuscript/task/solution/source review and separate peer. These have not been executed because final files do not yet exist.",
+    "reader_structure": "Project HTML uses existing project heading, project-prefixed IDs and standard exercise/solution disclosure/pairing. Download links are flat basenames, matching the offline build. No production-only proof/checker/provenance path is presented as an available reader attachment."
+  },
+  "rubric": {
+    "total_points": 100,
+    "essential_domains": [
+      {
+        "id": "model_and_global_proof",
+        "points": 20,
+        "subparts": [
+          [
+            "Complete primitives, timing, observation and units",
+            4
+          ],
+          [
+            "Exact state values and normalization",
+            6
+          ],
+          [
+            "Every-state Bellman proof through arbitrary private/public histories and bounded tail",
+            10
+          ]
+        ]
+      },
+      {
+        "id": "design_and_counterexample",
+        "points": 20,
+        "subparts": [
+          [
+            "Complete declared finite search and all deviation witnesses",
+            5
+          ],
+          [
+            "Exact class optimum and continuous boundary",
+            5
+          ],
+          [
+            "Actual profitable faster-restoration deviation",
+            5
+          ],
+          [
+            "Weak/strict, equilibrium uniqueness and class/global distinctions",
+            5
+          ]
+        ]
+      },
+      {
+        "id": "extensions",
+        "points": 20,
+        "subparts": [
+          [
+            "Explicit garbling kernel, sharp ceiling and both noise regimes",
+            10
+          ],
+          [
+            "Costly repair values, both incentive states and unchanged-on-path failure",
+            10
+          ]
+        ]
+      },
+      {
+        "id": "actual_paper_transfer",
+        "points": 20,
+        "subparts": [
+          [
+            "Exact primary identity, version, model and inspection scope",
+            4
+          ],
+          [
+            "Both directions of the theorem and its generic qualification",
+            6
+          ],
+          [
+            "Complete singular-boundary counterexample",
+            4
+          ],
+          [
+            "Declared heterogeneous extension and proof",
+            4
+          ],
+          [
+            "Proportionate substantive referee assessment",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "reproducibility_and_research_judgment",
+        "points": 20,
+        "subparts": [
+          [
+            "Portable exact package, deterministic output and real domain/alias checks",
+            8
+          ],
+          [
+            "Provenance and completed-versus-proposed work honesty",
+            4
+          ],
+          [
+            "Real-flow accounting and conditional welfare comparisons",
+            4
+          ],
+          [
+            "Claim/evidence memorandum and clear oral explanation",
+            4
+          ]
+        ]
+      }
+    ],
+    "advancement": "Author-created criterion: at least 85/100 and at least 15/20 in each essential domain, plus a successful changed-primitive explanation. These are instructional thresholds, not institution-calibrated standards.",
+    "critical_errors": [
+      "Using stationary-policy enumeration as the proof against all-history deviations.",
+      "Ignoring a review-state incentive or treating hypothetical-compliance values as an equilibrium when a margin is negative.",
+      "Treating the best declared grid member as the globally optimal institution or unique repeated-game equilibrium.",
+      "Dropping real repair costs, inventing a payment/funding account, or double-counting benefits.",
+      "Silently omitting the singular network family, changing the source theorem's domain, or inventing source/learner inspection or empirical evidence."
+    ],
+    "grading_policy": "A critical error requires substantive remediation even if the arithmetic subtotal is high. Alternate defensible models/interpretations require explicit primitives, complete solutions and evidence; a preferred policy opinion earns no substitute credit.",
+    "human_boundary": "The package can assess reasoning and reproducibility. Research novelty, significance, publication suitability and a learner's independent professional competence require external expert judgment."
+  },
+  "outcome_map": {
+    "direct": [
+      "C03: explicit finite garbling and information scope",
+      "C06: pure/mixed deviation rights and equilibrium certification",
+      "C07: infinite public-history continuation incentives and credible restoration",
+      "C09: hidden action, complete action-conditional laws and off-path incentives",
+      "C11: original active-set/network boundary transfer",
+      "C12: quantifiers, counterexamples, changed-model repairs and substantive referee work"
+    ],
+    "used_with_bounded_depth": [
+      "C01: welfare normalization is stated rather than inferred from ordinal representations",
+      "C02: clipped quadratic best replies in the paper benchmark",
+      "C04: finite value existence and inherited Brouwer context, not a new general-equilibrium theorem",
+      "C05: real surplus versus transfer or potential labels",
+      "C08: incentive discipline without a private-type screening/signaling theorem",
+      "C10: implementation/search-class distinctions without an auction/payment-characterization proof"
+    ],
+    "assessment_gap": "This single project does not independently assess every theorem from all twelve chapters. The two exam forms and support package must carry the full outcome map; no chapter coverage is inferred from a heading."
+  },
+  "source_routes": [
+    {
+      "id": "v13-c06-manea-noncoop2017",
+      "url": "https://ocw.mit.edu/courses/14-126-game-theory-spring-2016/a4d0a3949ab29c2a2f55442a9723d205_MIT14_126S16_noncoop.pdf",
+      "use": "Accepted C07 discounted-tail and public-strategy proof discipline; exact noisy hidden-action theorem here is independently derived.",
+      "inspection": "Reuse accepted C07 actual-inspector attribution to ito_author. No new Manea body or image inspection claimed."
+    },
+    {
+      "id": "v13-c09-stole-contracts1999",
+      "url": "https://ocw.mit.edu/courses/14-124-microeconomic-theory-iv-spring-2017/be21e9cc762231c50ab42bbf35ead5db_MIT14_124S17_LecNote1_2.pdf",
+      "use": "Accepted C09 distinction between public signals and hidden actions/global IC; no wage-contract or continuous first-order theorem imported.",
+      "inspection": "Reuse accepted C09 actual-inspector attribution to ito_author. No new Stole body or image inspection claimed."
+    },
+    {
+      "id": "v13-c11-bkd-networks2014",
+      "url": "https://sites.duke.edu/rachelkranton/files/2016/09/strategic-interaction-and-networks-aer.pdf",
+      "use": "Required actual-paper dossier, exactly scoped above.",
+      "inspection": "Fresh current reading of retained six text pages and one existing equation image, with earlier accepted attribution preserved. No whole-paper claim."
+    }
+  ],
+  "independent_design_validation": {
+    "status": "Executed; all comparisons passed before proposal freeze.",
+    "exact_comparisons": 157,
+    "method": "Exact fractions, direct 2x2 value-equation residuals versus independent closed-form gap/margin identities; complete five-protocol/four-deviation tables; Gaussian elimination of all sixteen graph active sets at each requested regime, with singular family proved analytically. No simulation or parameter grid is treated as a universal proof.",
+    "evaluated_scope": "Five baseline protocols times all four own stationary policies; two garbling regimes; the continuous boundary; active repair and its changed-off-path law; exact discount cutoff; sixteen graph active sets at each of three regimes and analytic singular-family witnesses.",
+    "limitations": "The computation was executed through standard-library Python on stdin and created no ancillary design file. It is not the future deliverable implementation or an independent human review. Finite arithmetic is distinguished from the full proof contracts.",
+    "source_and_prior_scope_bindings": [
+      {
+        "path": "content/reviews/v13-c07-sources.json",
+        "bytes": 6372,
+        "sha256": "6bd35a3ffabddb64c64a103d82438aac7cc7b4dd779abac60bb5d792eb97d949"
+      },
+      {
+        "path": "content/reviews/v13-c09-sources.json",
+        "bytes": 6164,
+        "sha256": "3aadf0987dc198add0bd00f57214a56ab00e34edb5baebfb7ae562fa3ad59f90"
+      },
+      {
+        "path": "content/reviews/v13-c11-sources.json",
+        "bytes": 10248,
+        "sha256": "591d5b0c7542d61839820c37a7689653cc5a2687fdda7a6a31ca2140a45b8cb0"
+      },
+      {
+        "path": "../tmp/pdfs/v13-c11/bramoulle-kranton-damours2014.pdf",
+        "bytes": 941299,
+        "sha256": "619d7f2b5c9bb0c92088ad86dde41e68a9e1e7cfb14ce8310706eb0aa209e1e4"
+      },
+      {
+        "path": "../tmp/pdfs/v13-c11/bramoulle-kranton-damours2014.txt",
+        "bytes": 136603,
+        "sha256": "b4e6c2385bf1bc79f677e5a249594d3db66b7d64ba6c4d6e693d310b323fbf0f"
+      },
+      {
+        "path": "../tmp/pdfs/v13-c11/bramoulle-kranton-damours2014-physical-6.png",
+        "bytes": 325415,
+        "sha256": "f9528cdaf8468dc86f7d9dcd2b4577484a069775084b114879d4748227915a50"
+      }
+    ]
+  },
+  "unresolved_findings": [],
+  "next_gate": "Root independently audits this exact one-file proposal before granting any final project-file authoring scope. All frozen C12 and other chapter payloads remain untouched."
+}

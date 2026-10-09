@@ -1,0 +1,180 @@
+{
+  "volume": "v13",
+  "component": "support",
+  "date": "2026-10-09",
+  "author": "root",
+  "status": "full_support_HTML_drafted_checker_records_and_peer_pending",
+  "architecture": "production/v13-assessment-architecture.json",
+  "administration": "Eight five-point diagnostic tasks (40 total; readiness34/40 with at least4 onD2/D7/D8), five four-point oral transfers (20total;17and3each) and five ten-point delayed tasks (50total;43and8each), all solved. These are author-created uncalibrated practice criteria. Written forms keep85/100 and15/20 per domain; project is separate.",
+  "diagnostic": [
+    {
+      "id": "v13-d1",
+      "prompt": "A single-valued choice rule selects a from{a,b}, b from{b,c}, and c from{a,c}. Can a strict complete transitive preference rationalize it? Identify an exact contradiction and a minimal repair.",
+      "solution": "Revealed strict comparisons a>b>c>a form a cycle. Transitivity of the first two gives a>c, contradicting c>a. Changing the third choice to a produces the strict ranking a>b>c, which rationalizes all three menus. Completeness alone does not forbid the original cycle.",
+      "routes": [
+        "v13-c01"
+      ]
+    },
+    {
+      "id": "v13-d2",
+      "prompt": "Maximize6x-x^2/2 over0<=x<=4. Give the global solution/value, the upper-bound multiplier and the local value derivative when the upper bound B varies near4.",
+      "solution": "Derivative6-x is positive on[0,4], so x*=4 and value16. With L=6x-x^2/2+lambda(B-x), lambda=2, nonnegativity slack. Near4, V(B)=6B-B^2/2 and Vprime=6-B, hence2 at4. Unrestricted stationary6 is infeasible; the exact concave quadratic and monotonicity give global justification.",
+      "routes": [
+        "v02",
+        "v13-c02"
+      ]
+    },
+    {
+      "id": "v13-d3",
+      "prompt": "With utility sqrt(w), a lottery gives wealth4 or16 with equal probability. Find expected wealth, expected utility, certainty equivalent and risk premium. Does applying sqrt to expected wealth compute expected utility?",
+      "solution": "Ew=10,Eu=(2+4)/2=3,CE=9,risk premium1. sqrt(10)>3 by strict concavity/Jensen for this nondegenerate lottery; nonlinear utility of the mean is not mean utility. Wealth units and utility units differ.",
+      "routes": [
+        "v03",
+        "v13-c03"
+      ]
+    },
+    {
+      "id": "v13-d4",
+      "prompt": "Two price-taking agents have utility xy, endowments(2,0) and(0,2), no production, and prices(r,1),r>0. Derive demands, all normalized equilibria and Walras law at every positive r.",
+      "solution": "Each spends half income on each good: A income2r demands(1,r), B income2 demands(1/r,1). Aggregate supply(2,2); z=(1/r-1,r-1), so r*zx+zy=0 for allr. Clearing gives unique normalizedr=1 and both consume(1,1). Prices in other normalizations are proportional; Walras law alone holds even away from equilibrium.",
+      "routes": [
+        "v05",
+        "v13-c02",
+        "v13-c04"
+      ]
+    },
+    {
+      "id": "v13-d5",
+      "prompt": "A zero-sum2x2 game gives the row player payoffs[[2,-1],[-2,1]]. Define p=Pr(row1),q=Pr(column1). Find all Nash equilibria and the value.",
+      "solution": "No pure cell is mutually optimal. Row payoffs3q-1 and1-3q equal atq=1/3. Column minimizes expected row payoff4p-2 versus1-2p, equal atp=1/2. Any boundary mixture would induce a strict response and fail the other response, so this is the unique equilibrium and value0. Independent randomization is specified.",
+      "routes": [
+        "v05",
+        "v13-c06"
+      ]
+    },
+    {
+      "id": "v13-d6",
+      "prompt": "An entrant chooses Out yielding(0,3), or In followed by incumbent Fight yielding(-1,0) or Accommodate yielding(2,2), in entrant/incumbent order. Find every pure subgame-perfect equilibrium and assess the deterrent threat.",
+      "solution": "After In the incumbent strictly prefers accommodation2>0; entrant then chooses In since2>0. Unique pure SP strategy is(In,Accommodate). Out/Fight is a normal-form Nash profile because entry against Fight loses, and Fight is off-path after Out; it is not credible in the proper subgame.",
+      "routes": [
+        "v05",
+        "v13-c07"
+      ]
+    },
+    {
+      "id": "v13-d7",
+      "prompt": "A buyer has type theta1 or3, equal prior, utility theta*q-t and outside0. MenuL=(q1,t1),H=(q2,t7/2); seller costq^2/2. Buyer starts5 cash, seller2 cash, production is paid before delivery, then buyer pays. Check both IC/IR constraints and each profit, expected profit, buyer surplus and total surplus.",
+      "solution": "Low gets0 fromL versus-3/2 fromH; high gets2 fromL versus5/2 fromH. Assigned reports are strictly IC; low IR binds, high has positive rent. Production costs1/2 and2 can be prefunded from2; payments1 and7/2 fit buyer5. Profits1/2 and3/2, expected1; buyer expected5/4; real surplus expected9/4 equals sum. Low participation requires a declared accept-at-indifference convention, or state that rejection is also individually optimal.",
+      "routes": [
+        "v05",
+        "v13-c08"
+      ]
+    },
+    {
+      "id": "v13-d8",
+      "prompt": "T(x)=1/2+x/4 on[0,1]. Verify invariance and contraction; find the unique fixed point and certify the error of xhat7/10 using its true residual.",
+      "solution": "T maps[0,1] into[1/2,3/4] and is1/4-Lipschitz. Fixed point2/3; residual|7/10-T(7/10)|=1/40; error<=residual/(1-1/4)=1/30, here attained exactly. Geometric iteration/Cauchy gives existence; distance inequality uniqueness. Small residual alone without its model/constant would not justify this bound.",
+      "routes": [
+        "v02",
+        "v13-c04",
+        "v13-c11",
+        "v13-c12"
+      ]
+    }
+  ],
+  "oral_transfer": [
+    {
+      "id": "v13-o1",
+      "domain": "choice_duality_information",
+      "prompt": "Explain the admissible utility transformations for deterministic ordinal choice and expected-utility risk, then why multiplying one person utility by a positive constant can change a social sum without changing that person choices. Supply a simple two-allocation witness.",
+      "answer": "Ordinal preferences admit strictly increasing transforms; a vNM expected-utility representation over lotteries admits positive affine transforms. Positive scaling of one person is in both classes, but changes an interpersonal sum unless welfare weights are transformed too. Allocations with utility vectors(3,0) and(0,2) rank first under equal sum3>2; multiplying second person utility by2 reverses3<4. This does not establish any empirical or ethical weight.",
+      "rubric": "Reward correct domains, explicit numerical witness and distinction between individual representation and interpersonal comparison; remediate arbitrary nonlinear vNM transforms or unidentified welfare weights."
+    },
+    {
+      "id": "v13-o2",
+      "domain": "equilibrium_welfare",
+      "prompt": "Using diagnostic4, explain why value-balanced excess demand is weaker than market clearing, why normalization does not imply economically unique allocation in arbitrary economies, and what assumptions a welfare claim needs.",
+      "answer": "For example r2 givesz=(-1/2,1) with value balance0 but nonzero quantities. In this particular economy algebra proves unique normalized price/allocation; Walras law cannot do that generally. A welfare theorem additionally needs appropriate local nonsatiation, price-taking optimization, feasible transfers/endowments/production rights and absence of unpriced effects in its stated version; decentralization requires its own convexity/support assumptions. Do not use the special example as a general uniqueness proof.",
+      "rubric": "Require exact nonclearing witness, price-scale versus allocation distinction and a scoped theorem assumption audit, not a memorized universal claim."
+    },
+    {
+      "id": "v13-o3",
+      "domain": "strategic_dynamics",
+      "prompt": "Explain why unique best replies do not imply unique Nash, and why a normal-form Nash threat may fail sequential credibility. Supply taught explicit examples and distinguish existence, uniqueness and selection.",
+      "answer": "The substitute game gamma1 has unique own response max(0,1-xother) but a continuumx1+x2=1. In diagnostic6 Out/Fight is Nash but the incumbent would accommodate after entry, so it is not subgame perfect. A selector or adjustment law is an added object; finding one equilibrium does not establish either uniqueness or how it is reached.",
+      "rubric": "Require complete example domains and the actual profitable off-path deviation; no inference of dynamics from equilibrium equations."
+    },
+    {
+      "id": "v13-o4",
+      "domain": "incentives_design",
+      "prompt": "A risk-neutral agent chooses hidden L or H, costs0 or1, success probabilities1/4 or3/4. Wagesw0,w1>=0 depend on failure/success; outside0. Principal has4 cash before payroll and receives value4 only after success. Find the least expected wage implementing H, compare its profit with inducing L, and state tie and action-domain qualifications.",
+      "answer": "Global H-IC is(w1-w0)/2>=1, so w1>=w0+2. Expected H wagew0/4+3w1/4>=w0+3/2, minimized at(0,2), expected3/2. H utility1/2, L deviation utility1/2: weakIC, H requires specified tie-breaking; strict implementation has infimum3/2 unattained withw1>2. Wages fit4 prefunding. H expected profit3-3/2=3/2; L with zero wages profit1. Only these two actions are allowed; a first-order condition cannot rule out undeclared other actions.",
+      "rubric": "Require all-action inequality, limited-liability optimum and principal/sponsor ledger, tie qualification and no continuous-action/global inference."
+    },
+    {
+      "id": "v13-o5",
+      "domain": "networks_research",
+      "prompt": "A referee says proposer optimality of DA proves truthful reporting. Locate the logical gap and give the actual noncircular proof architecture; explain why the result does not protect recipients or capped first-choice reports.",
+      "answer": "Proposer optimality compares stable outcomes under one fixed profile, while a lie changes the stable set. Prove finite unmatched-set invariance, construct the institution-proposing reject-all menu independent of the applicant report, use singleton/coupling for membership and strictly-above truncation/coupling to exclude better menu options. Every report selects its reported-best menu item including outside; truth selects its true best. Recipients change a different domain; a cap can exclude the full truthful list. No group/capacity/tie theorem follows.",
+      "rubric": "Require noncircular intermediate results and both directions of menu choice; a finite example or citation alone is insufficient."
+    }
+  ],
+  "delayed_retention": [
+    {
+      "id": "v13-r1",
+      "domain": "choice_duality_information",
+      "prompt": "Foru=sqrt(xy),prices(2,1),wealth12, derive Marshallian demand. For target utility3 derive the general positive-price expenditure function and Hicksian demand, verify cost and Shephard derivative.",
+      "solution": "At anyp>0, x=m/(2px),y=m/(2py); observed(3,6). Constraintxy>=ubar^2 with cost minimization givesh=(ubar*sqrt(py/px),ubar*sqrt(px/py)),e=2ubar*sqrt(px*py). Atubar3,p(2,1):h=(3/sqrt2,3sqrt2),e=6sqrt2. Cost2h_x+h_y=6sqrt2;partial e/partial px=ubar*sqrt(py/px)=h_x. Positive prices/target and global AM-GM or convex feasible epigraph argument required.",
+      "routes": [
+        "v13-c02"
+      ]
+    },
+    {
+      "id": "v13-r2",
+      "domain": "equilibrium_welfare",
+      "prompt": "Two agents choose nonnegative effort withui=2(x1+x2)-xi^2/2; utilities are comparable and effort costs are disutility. Solve all pure Nash and the global sum-utility optimum, then assess whether mutual preference for the planner allocation makes it Nash.",
+      "solution": "Own square givesuniqueBR2 irrespective of other: uniqueNash(2,2),utilities(6,6),W12. W=4(x1+x2)-(x1^2+x2^2)/2=16-[(x1-4)^2+(x2-4)^2]/2: uniqueglobalplanner(4,4),utilities(8,8),W16. Both prefer planner to Nash, but atother4 deviating4to2 raisesownutility8to10. Pareto comparison does not establish individual incentives or implementation.",
+      "routes": [
+        "v13-c05",
+        "v13-c11"
+      ]
+    },
+    {
+      "id": "v13-r3",
+      "domain": "strategic_dynamics",
+      "prompt": "In infinitely repeated public-observation PD withCC(3,3),DC(5,0),CD(0,5),DD(1,1), discountdelta in[0,1), audit grim trigger after every history. Derive exact weak incentive threshold and evaluate delta3/5.",
+      "solution": "In punishment D strictly dominates C againstD (1>0), so all histories there are credible. Cooperation gives3/(1-delta); first deviation yields atmost5+delta/(1-delta), followed by optimalD. Inequalitydelta>=1/2. Delaying first deviation multiplies same gain by positive discount; no deviation ever has positive gain, including randomized/bounded histories. At3/5 values15/2 and13/2, difference1. Equality permits indifference; perfect public monitoring, common discount and infinite bounded discounted payoffs explicit.",
+      "routes": [
+        "v13-c07",
+        "v13-c09"
+      ]
+    },
+    {
+      "id": "v13-r4",
+      "domain": "incentives_design",
+      "prompt": "A single risk-neutral buyer has value theta in[0,4], outside0 and cash4. Seller owns one zero-cost object. Report r produces allocation lottery probabilityr/4 and deterministic expected-payment amount r^2/8 charged regardless of lottery result. Prove dominant truthfulness in expected utility and interim IR. Under uniform values compute expected revenue and compare posted price2; identify the participation timing limitation.",
+      "solution": "Expected payofftheta*r/4-r^2/8=theta^2/8-(r-theta)^2/8, maximized attruth, givesnonnegative interimutilitytheta^2/8. All payments<=2 fitcash4. UniformEtheta^2=16/3 so revenue2/3. Postedprice2 sells withprob1/2 and gives revenue1, so truthfulnessalone notoptimalrevenue. The lottery fee can cause negative realized utility when no object is received; participation must precede the lottery with risk neutrality, not a claim of ex-post IR or universaltruthfulness for risk aversion.",
+      "routes": [
+        "v13-c08",
+        "v13-c10"
+      ]
+    },
+    {
+      "id": "v13-r5",
+      "domain": "networks_research",
+      "prompt": "In the taught three-node connection model take rho1/2,c9/16. Classify stable and efficient graphs and their welfare. For target path12,23 let each leaf paycenter1/8 conditional on its designatededge; each starts2 cash and paysmaintenance/transfers before benefits. Check target stability/financing and whether bilateral improvements can form it fromempty.",
+      "solution": "Thresholdsrho-rho^2=1/4,rho1/2,rho+rho^2/2=5/8. Onlyempty isstable; all3paths efficient. Welfarebyedgecount(0,-1/8,1/4,-3/8). Target grossnetbeforetransfers leaf3/16,center-1/8; withpayments net(1/16,1/8,1/16). Centerdelete leaves1/16 so loses1/16; leafdelete loses1/16; adding13gain-5/16. Everygraphleafprefunding<=2c+t=5/4<2,centermaintenance<=9/8<2; transfersbalance. Firstlinkcombinedsurplus-1/8, impossiblebothweakgain underbalanced endpointpayments; coordinatedthreeparty package is a different allowedmove.",
+      "routes": [
+        "v13-c11",
+        "v13-c12"
+      ]
+    }
+  ],
+  "indices": "Final support must map notation and concepts to actual chapter sections; include all12 outcome routes and links. Reuse accepted exact source IDs with prior inspector attribution, no fresh source inspection claim.",
+  "next_gates": [
+    "Author calculate every new numeric contract and read exact taught prerequisite scopes.",
+    "Full support HTML plus compact checker/source/author records.",
+    "Separate independent peer review before volume acceptance."
+  ],
+  "clarification": "D7 actual low-type trade and its expected accounts require declared acceptance at zero utility; O4 strict hidden-action implementation has an unattained wage infimum, distinct from weakIC tie convention."
+}

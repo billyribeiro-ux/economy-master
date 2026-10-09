@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-09",
+  "status": "publication_pending_network_recovery",
+  "source": {
+    "project_id": "appgprj_6ac52f5d03948191b8aaa5d45486bdf3",
+    "checkout_path": "/Users/billyribeiro/Desktop/economy-master/book",
+    "commit_sha": "601d47377edcf23a9700e89386045bf28fd4b355",
+    "archive": "/private/tmp/economy-v13-contracts-auctions-site.tar.gz"
+  },
+  "last_confirmed_private_chapters": 152,
+  "ready_accepted_offline_chapters": 154,
+  "prior_confirmed_version_number": 55,
+  "attempts": [
+    {
+      "stage": "first archive upload",
+      "result": "Failed sending OpenAI file upload request to chatgpt.com/backend-api/files; no saved-version/deployment ID returned."
+    },
+    {
+      "stage": "same verified archive retry",
+      "result": "MCP transport send error to chatgpt.com/backend-api/ps/mcp; no saved-version/deployment ID returned. Completion is unconfirmed."
+    },
+    {
+      "stage": "read-only state verification",
+      "result": "get_site failed with the same MCP transport send error; last confirmed deployment remains152."
+    },
+    {
+      "stage": "native service recovery and safe retry",
+      "result": "get_site and newest-first list_site_versions succeeded: latest55 is the confirmed152 source, no154 version. Owner-only policy confirmed. Preserved154 archive bytes/hash unchanged. Same archive retry failed at OpenAI file upload before any saved-version/deployment ID."
+    }
+  ],
+  "recovery": "Source and offline release preserved. Native metadata service responds, but archive file-upload service still fails. Continue authoring and reconcile remote versions before any later retry.",
+  "audience": "Previously confirmed owner-private custom policy preserved; no access changes.",
+  "offline": "production/v13-contracts-auctions-offline-package.json",
+  "preserved_archive": {
+    "path": "/private/tmp/economy-v13-contracts-auctions-site.tar.gz",
+    "bytes": 10007135,
+    "sha256": "62393da5eb5bd672ecd766b54c2d4387b8f3531ad7d78b3c106079d19ca0e2e9"
+  }
+}
