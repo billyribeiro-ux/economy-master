@@ -1,0 +1,249 @@
+{
+  "chapter": "v13-c11",
+  "date": "2026-10-09",
+  "owner": "ito_author",
+  "status": "source_preparation_frozen_for_root_review",
+  "contract": "production/v13-c11-preparation-assignment.json",
+  "method": "Actual scoped body reading, nine rendered equation/proof-page images, exact URL reuse and retained artifact hashes. No entire-document verification or empirical replication claim.",
+  "deferred_followup": "V05-C11 and STATUS explicitly defer proposer-DA strategy-proofness. The complete finite proof route is in the companion blueprint; proposer optimality alone is not used as an incentive proof.",
+  "sources": [
+    {
+      "id": "v05-c11-manea-matching",
+      "title": "Mihai Manea — Matching Theory, based on slides by Fuhito Kojima",
+      "url": "https://ocw.mit.edu/courses/14-16-strategy-and-information-spring-2016/53dbe8d681978367f9c04182aa3c9b97_MIT14_16S16_Matching.pdf",
+      "date_scope": "Reuse the exact accepted source ID and URL. Footer date June 27, 2016; Spring 2016 host course.",
+      "actual_inspection": {
+        "text": "New reading: physical 7–18 and 32–38, printed slide labels 8–19 and 33–39. Relied scope: strict preferences/outside, matching and blocking, DA algorithm/stability, first achievable rejection proof, incentive theorem statement.",
+        "images": [
+          {
+            "file": "manea-matching2016-physical-17.png",
+            "physical_page": 17,
+            "printed_label": "18 / 53",
+            "checked": "First rejected achievable partner argument and strict blocking direction."
+          }
+        ]
+      },
+      "use": "Definitions, termination/stability and proposer optimality. Chapter will expand the rejection proof to explicit outside-option cases.",
+      "limits": "Printed slide 37 states proposer strategy-proofness; it is not a supplied proof of it. Historical institutional examples/statistics and many-to-one results are not imported.",
+      "artifacts": [
+        {
+          "path": "tmp/pdfs/v13-c11/manea-matching2016.pdf",
+          "bytes": 272309,
+          "sha256": "fb694684dd1aec73c5a99aed15545d1e7d2bb907fc615e9f711c48ea9a336739"
+        },
+        {
+          "path": "tmp/pdfs/v13-c11/manea-matching2016.txt",
+          "bytes": 35283,
+          "sha256": "a59ff919b3cafa74aba31dcf96b9ea995e3898c4e1d0ddfa60bc36ceb89cce0a"
+        },
+        {
+          "path": "tmp/pdfs/v13-c11/manea-matching2016-physical-17.png",
+          "bytes": 209945,
+          "sha256": "c61a08e1c17b3cdb0ec7e132c8aa66c936aedc07286849f44c1fbcb146d7fa55"
+        }
+      ]
+    },
+    {
+      "id": "v13-c11-ght-menu2026",
+      "title": "Yannai A. Gonczarowski, Ori Heffetz and Clayton Thomas — Strategyproofness-Exposing Descriptions of Matching Mechanisms",
+      "url": "https://arxiv.org/pdf/2209.13148v4",
+      "date_scope": "Author preprint, arXiv 2209.13148v4, September 9, 2026. Cover and versioned primary URL inspected; exact-version PDF equals the retrieved unversioned body byte for byte. No claim of journal publication.",
+      "actual_inspection": {
+        "text": "Physical 1; 7–14 (printed 6–13: strict reports, partial lists/outside in footnote 7, DA, menu definitions, opposite-side Description 1 and main proof); Appendix B physical 36 bottom through 38 opening (printed A.4–A.6). Many-to-one remarks on A.6 read only to delimit scope.",
+        "images": [
+          {
+            "file": "gonczarowski-menu-physical-1.png",
+            "physical_page": 1,
+            "printed_label": "cover",
+            "checked": "Authors, title, September 9, 2026 and arXiv v4."
+          },
+          {
+            "file": "gonczarowski-menu-physical-7.png",
+            "physical_page": 7,
+            "printed_label": "6",
+            "checked": "Strict one-to-one domain and partial-list/outside convention."
+          },
+          {
+            "file": "gonczarowski-menu-physical-13.png",
+            "physical_page": 13,
+            "printed_label": "12",
+            "checked": "Description 1 uses institution-proposing DA without the applicant, not applicant-proposing DA."
+          },
+          {
+            "file": "gonczarowski-menu-physical-37.png",
+            "physical_page": 37,
+            "printed_label": "A.5",
+            "checked": "Singleton and strictly-above truncation arguments in the noncircular Appendix B proof."
+          }
+        ]
+      },
+      "use": "Noncircular fixed-menu route to individual proposer strategy-proofness. Blueprint supplies the finite unmatched-set lemma, schedule coupling and truncation-prefix details rather than invoking them without proof.",
+      "limits": "The main-text proof on printed 13 assumes strategy-proofness and cannot establish it. Appendix B invokes unmatched-set invariance and abbreviates the truncation reasoning; both will be proved. No group, capacity, substitutes-with-contracts, tie, TTC, communication-complexity or experimental theorem is claimed.",
+      "artifacts": [
+        {
+          "path": "tmp/pdfs/v13-c11/gonczarowski-menu.pdf",
+          "bytes": 1053162,
+          "sha256": "cb018ebddfe34a0333fc86ba504cc054e38e7528dcba92641a4e95817344632a"
+        },
+        {
+          "path": "tmp/pdfs/v13-c11/gonczarowski-menu.txt",
+          "bytes": 168645,
+          "sha256": "ef6ae3812789016595b5a82059dcc705a51c3fcb39addf7d7a2b47c34438e3ae"
+        },
+        {
+          "path": "tmp/pdfs/v13-c11/gonczarowski-menu-physical-1.png",
+          "bytes": 376165,
+          "sha256": "2f4cbda0905caa01f571b4011addd810a779ee595160624f6938aa5bb2e4b132"
+        },
+        {
+          "path": "tmp/pdfs/v13-c11/gonczarowski-menu-physical-7.png",
+          "bytes": 293685,
+          "sha256": "1a4c47e46db2770826823f887474e00514b3231d04aea5376f774109c9155076"
+        },
+        {
+          "path": "tmp/pdfs/v13-c11/gonczarowski-menu-physical-13.png",
+          "bytes": 299053,
+          "sha256": "6a55d78d2040740f61d906e033ae4661156ed806cf95012c3a5e92b2c4d3b410"
+        },
+        {
+          "path": "tmp/pdfs/v13-c11/gonczarowski-menu-physical-37.png",
+          "bytes": 312109,
+          "sha256": "df2068f6d823e705c2945f8622b7089d61109f939e8ee8dbdfbdca53022b9d5b"
+        }
+      ]
+    },
+    {
+      "id": "v13-c11-pass-assignment",
+      "title": "Rafael Pass — A Course in Networks and Markets, Chapter 8: Matching Markets",
+      "url": "https://www.cs.cornell.edu/~rafael/networks-html/chapter8.html",
+      "date_scope": "Author-hosted HTML. Title page names Rafael Pass alone. Copyright page says ©2018 and catalogues MIT Press [2019]; preserve that distinction rather than inventing an edition date.",
+      "actual_inspection": {
+        "text": "Sections 8.1–8.3: unit-demand valuation-minus-price model; outside allocation; preferred-choice graph/market clearing; cancellation of payments and proof of welfare optimality. Title and copyright pages read separately.",
+        "images": []
+      },
+      "use": "Assignment utility and ownership accounting; our direct nonnegative price/utility upper bound gives a complete certificate for all feasible partial assignments, including a forbidden edge.",
+      "limits": "No reliance on the general price-existence algorithm of section 8.4, Hall theorem, general LP integrality, budgets-as-quasilinear equivalence, or source examples. Cornell Chapter 14 was discovery reading only; its abbreviated complete-market incentive proof is not a relied source.",
+      "artifacts": [
+        {
+          "path": "tmp/pdfs/v13-c11/cornell-assignment.html",
+          "bytes": 91364,
+          "sha256": "821c7941854ba2026059ec9684d71043f462823692d30f8b8bf78e2bcb4f2a90"
+        },
+        {
+          "path": "tmp/pdfs/v13-c11/cornell-title.html",
+          "bytes": 1361,
+          "sha256": "0c999775951edd95e5ae4b3c3b29ae0db6b6d38f429009c378bab3c4c718253d"
+        },
+        {
+          "path": "tmp/pdfs/v13-c11/cornell-copyright.html",
+          "bytes": 2883,
+          "sha256": "8a8da860ad2a88e6708f929fa7c8f75561986cd02971e0fdab710684a271a8cf"
+        }
+      ]
+    },
+    {
+      "id": "v13-c11-bkd-networks2014",
+      "title": "Yann Bramoullé, Rachel Kranton and Martin D’Amours — Strategic Interaction and Networks",
+      "url": "https://sites.duke.edu/rachelkranton/files/2016/09/strategic-interaction-and-networks-aer.pdf",
+      "date_scope": "Final published article, American Economic Review 104(3), 898–930, March 2014; author publication page labels it final. The upload path contains 2016/09 and is not the article date.",
+      "actual_inspection": {
+        "text": "I.A–C, printed 901–904 / physical 4–7: game, quadratic payoff, nonnegative best replies and active sets. V.C printed 918–919 / physical 21–22: endogenous peer outcomes, constraints and selection cautions. VI.A printed 919–920 / physical 22–23: complements, nonexistence and caps. Appendix printed 921–922 / physical 24–25: active-set proof and quadratic potential conditions.",
+        "images": [
+          {
+            "file": "bramoulle-kranton-damours2014-physical-6.png",
+            "physical_page": 6,
+            "printed_label": "903",
+            "checked": "Negative cross term, max(0,·) best reply and stated base parameter domain."
+          },
+          {
+            "file": "bramoulle-kranton-damours2014-physical-23.png",
+            "physical_page": 23,
+            "printed_label": "920",
+            "checked": "Complementarity amplification/nonexistence, capped best reply, and scope of sufficient curvature conditions."
+          }
+        ]
+      },
+      "use": "Economic interpretation of complements/substitutes and boundary active-set logic. Our finite path/two-agent solutions, contraction proof, planner square completion and funding incidence are derived independently.",
+      "limits": "Do not conflate the potential with aggregate welfare, own-action concavity with uniqueness, or an inverse matrix with a feasible equilibrium. No general spectral characterization, asymptotic stability, directed-network or empirical-identification result is asserted without its own proof. The gamma=2 two-agent case is independently proved outside the paper’s base delta∈[0,1].",
+      "artifacts": [
+        {
+          "path": "tmp/pdfs/v13-c11/bramoulle-kranton-damours2014.pdf",
+          "bytes": 941299,
+          "sha256": "619d7f2b5c9bb0c92088ad86dde41e68a9e1e7cfb14ce8310706eb0aa209e1e4"
+        },
+        {
+          "path": "tmp/pdfs/v13-c11/bramoulle-kranton-damours2014.txt",
+          "bytes": 136603,
+          "sha256": "b4e6c2385bf1bc79f677e5a249594d3db66b7d64ba6c4d6e693d310b323fbf0f"
+        },
+        {
+          "path": "tmp/pdfs/v13-c11/bramoulle-kranton-damours2014-physical-6.png",
+          "bytes": 325415,
+          "sha256": "f9528cdaf8468dc86f7d9dcd2b4577484a069775084b114879d4748227915a50"
+        },
+        {
+          "path": "tmp/pdfs/v13-c11/bramoulle-kranton-damours2014-physical-23.png",
+          "bytes": 441216,
+          "sha256": "13e9d6f378d872221314d6e7377d3a05cc71e10c37c95931bd9a84efbbe955e0"
+        }
+      ]
+    },
+    {
+      "id": "v13-c11-jackson-network-formation",
+      "title": "Matthew O. Jackson — A Survey of Models of Network Formation: Stability and Efficiency",
+      "url": "https://web.stanford.edu/~jacksonm/netsurv.pdf",
+      "date_scope": "Author-hosted body: January 2003; revision November 29, 2003. Cover footnote says the book chapter appears in 2005, while current author listing says 2004. Cite the inspected revised manuscript, not an inferred publication year.",
+      "actual_inspection": {
+        "text": "Cover; printed/physical 12, Example 1 connections model; 21–22, pairwise stability and its single-link/coalition limits; 32–34, efficiency definitions and connections-model comparison.",
+        "images": [
+          {
+            "file": "jackson-networks-survey2003-physical-12.png",
+            "physical_page": 12,
+            "printed_label": "12",
+            "checked": "Distance-discounted benefit, per-endpoint costs and three-node path payoff form."
+          },
+          {
+            "file": "jackson-networks-survey2003-physical-21.png",
+            "physical_page": 21,
+            "printed_label": "21",
+            "checked": "Unilateral deletion and absent-edge weak/strict consent convention."
+          }
+        ]
+      },
+      "use": "Primary exposition by a co-originator of the connections model, attributed there to Jackson–Wolinsky (1996). Our three-node all-graph classification, equality boundaries and contract-conditioned transfers are proved directly.",
+      "limits": "This is an actually inspected author survey, not a claim that the original 1996 article was read. No general-n classification, convergence-to-efficiency, coalition stability or empirical causal-network conclusion is imported.",
+      "artifacts": [
+        {
+          "path": "tmp/pdfs/v13-c11/jackson-networks-survey2003.pdf",
+          "bytes": 363138,
+          "sha256": "462f74ced38b2ef0e58bf44c36b0861e1031191e30568b9d8496ada57a30aaa8"
+        },
+        {
+          "path": "tmp/pdfs/v13-c11/jackson-networks-survey2003.txt",
+          "bytes": 152168,
+          "sha256": "ec7c6ed718b773870fab1ece127587d63c0b848381f27082813410280248e681"
+        },
+        {
+          "path": "tmp/pdfs/v13-c11/jackson-networks-survey2003-physical-12.png",
+          "bytes": 239374,
+          "sha256": "07e9bd0b4b05edd7cc24f0cc568c7f6123b46e1d037a93ea1dcc8499b98bd800"
+        },
+        {
+          "path": "tmp/pdfs/v13-c11/jackson-networks-survey2003-physical-21.png",
+          "bytes": 263526,
+          "sha256": "c5a943f2a9db07f651619d75b3d1a40659922a719168ef0d49c658bf6397e4e8"
+        }
+      ]
+    }
+  ],
+  "artifact_path_base": "Repository root /Users/billyribeiro/Desktop/economy-master; paths below tmp/ are outside book/.",
+  "artifact_count": 20,
+  "source_body_count": 5,
+  "inspected_page_image_count": 9,
+  "access_limits": [
+    "No access-control bypasses, installations, copied problems or nonprimary proof mirrors were needed.",
+    "Source dates and scopes above apply to the bodies actually inspected; no invented current market rules or observations."
+  ],
+  "unresolved_proof_gap": null,
+  "review_boundary": "Preparation and proposed proof architecture only; the chapter is not yet written or accepted."
+}

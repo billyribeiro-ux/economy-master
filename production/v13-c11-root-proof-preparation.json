@@ -1,0 +1,41 @@
+{
+  "chapter": "v13-c11",
+  "date": "2026-10-09",
+  "status": "root_DA_proof_route_passed_pending_full_blueprint_and_manuscript",
+  "source": {
+    "url": "https://arxiv.org/pdf/2209.13148v4",
+    "title": "Gonczarowski, Heffetz and Thomas, Strategyproofness-Exposing Descriptions of Matching Mechanisms",
+    "version": "9 September2026; arXiv2209.13148v4",
+    "root_actual_text": "Retained extraction lines280–355 (definitions/partial-list and DA conventions) and1482–1537 (AppendixB opening proof, physical36–38/printedA.4–A.6 opening); no entire-paper reading claim.",
+    "root_actual_image": "Physical37/printedA.5 viewed with view_image.",
+    "web_metadata": "Opened official arXiv abstract https://arxiv.org/abs/2209.13148 and verified v4 revision9Sep2026.",
+    "excluded_route": "Main-text proof assumes strategy-proofness and cannot establish that property. AppendixB avoids it but cites unmatched-set invariance and compresses coupling/prefix steps; chapter must prove those."
+  },
+  "artifact_bindings": [
+    {
+      "path": "../tmp/pdfs/v13-c11/gonczarowski-menu.pdf",
+      "bytes": 1053162,
+      "sha256": "cb018ebddfe34a0333fc86ba504cc054e38e7528dcba92641a4e95817344632a"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c11/gonczarowski-menu.txt",
+      "bytes": 168645,
+      "sha256": "ef6ae3812789016595b5a82059dcc705a51c3fcb39addf7d7a2b47c34438e3ae"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c11/gonczarowski-menu-physical-37.png",
+      "bytes": 312109,
+      "sha256": "df2068f6d823e705c2945f8622b7089d61109f939e8ee8dbdfbdca53022b9d5b"
+    }
+  ],
+  "independent_root_argument": {
+    "domain": "Finite strict one-to-one matching, both-side acceptable partners/outside options; fixed other reports and ordered-subset own reports. No ties, capacities, couples or group-incentive extension.",
+    "DA_rejection": "At the earliest rejection of a pair belonging to any stable matching, the receiving side holds a preferred proposer. That proposer has either already been rejected by its supposedly better stable partner (contradicting earliest rejection) or prefers this receiver to its stable partner, producing a blocking pair. Thus no rejected pair is stable; termination and final stability give proposer optimality and schedule independence.",
+    "unmatched_invariance": "Assume applicant i0 unmatched in stable mu but matched in stable nu. Its nu-partner must have a preferred mu-partner by mu-stability; that applicant must have a preferred nu-partner by nu-stability. These alternating edges must continue. Injectivity of each matching rules out a first repeat: backward propagation would give an incoming mu-edge to i0, impossible. A finite graph cannot support an infinite nonrepeating path. Swap matchings and sides to obtain the common unmatched sets.",
+    "menu_membership": "Run recipient-proposing DA with i rejecting all offers; its offer set S plus outside depends only on other reports/priorities. If APDA under an arbitrary report matches i to h, the resulting matching stays stable when i accepts only h. Unmatched invariance implies recipient DA under that singleton also matches i. Its run and reject-all agree until h first offers, so h belongs to S.",
+    "no_better_menu_option": "Truncate the arbitrary report strictly above its final APDA partner h. Couple APDA up to just before i first proposes to h; all earlier proposals/rejections agree. In the truncated run i is then unmatched and has exhausted its list, hence stays unmatched. If h is outside the original run already supplies this fact. Unmatched invariance gives the same under recipient DA. An applicant receiver that accepts any offer never becomes unmatched again, so none of the truncated-list offers occurred. Coupling recipient DA with reject-all up to the first such offer excludes every reported-better member of S.",
+    "truthfulness": "Every ordered-subset report selects its best member of the same S plus outside. The truthful report therefore weakly dominates every false report, including truncation and declaring truly unacceptable partners acceptable; the outside option dominates those partners in true preferences."
+  },
+  "status_limit": "This establishes the candidate finite proof route after actual source inspection; not full C11 acceptance or a completed manuscript. Author must include all stated lemmas and couplings; numerical blueprint and all exercises still require review.",
+  "open_findings": []
+}

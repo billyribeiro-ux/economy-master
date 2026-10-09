@@ -1,0 +1,325 @@
+{
+  "chapter": "v13-c12",
+  "title": "Theory synthesis and research critique",
+  "date": "2026-10-09",
+  "author": "c05_review",
+  "status": "Complete design-only six-case/twelve-transfer proposal; root independent confirmation and C11 acceptance remain prerequisites to chapter acceptance.",
+  "source_preparation": {
+    "path": "production/v13-c12-source-preparation.json",
+    "bytes": 9126,
+    "sha256": "ec19ec64cfebfed400331eda11c3855b6e41b764bef4cfc07d6fa759058e2497"
+  },
+  "organizing_question": "What exactly does a theoretical contribution establish, and what evidence would distinguish its interpretation from an alternative? Teach claim→domain→proof→counterexample→minimal repair→decision, without confusing those stages.",
+  "proof_dependency_map": {
+    "ordinal_welfare": "C01 representations distinguish individual rankings from interpersonal welfare scales.",
+    "optimization": "C02 calculus/concavity and Volume2 compactness support complete global certificates; a local condition is not a replacement.",
+    "games": "C06 finite mixed best replies/CE; derive all case-specific support regimes directly.",
+    "existence_approximation": "C04 hypothesis discipline and Volume2 contraction; scalar existence, uniqueness, convergence and approximation each receive their own proof.",
+    "information_incentives": "C08–C10 keep information, participation, commitment, money transfers and equilibrium selection explicit.",
+    "matching": "Pending C11 supplies only finite strict one-to-one terminology; the fresh2×2 exercise enumerates all7 feasible matchings and all blockers. No stronger matching incentive theorem is needed."
+  },
+  "worked_cases": [
+    {
+      "id": "W1",
+      "title": "An ordinal representation is not a social welfare scale",
+      "primitives": "Two people share12 units of a divisible resource: x,y≥0 and x+y≤12. Own utilities u1=log(1+x),u2=log(1+y), with no numeraire or interpersonal scale given. Compare the unweighted sum with the same sum after replacing u1 by4u1; individual feasible sets and observed choices are unchanged.",
+      "claim_to_audit": "The unique maximizer of the sum is a welfare conclusion implied solely by the agents’ preferences.",
+      "complete_solution": "Strict increase uses all resources. With y=12−x, the unweighted derivative1/(1+x)−1/(13−x) vanishes at x=6; the second derivative is strictly negative, so(6,6) is the unique global sum maximizer. With4u1+u2, the derivative4/(1+x)−1/(13−x) vanishes at x=51/5, giving y=9/5; strict concavity again proves unique global optimality. Multiplication of only one person’s utility by4 preserves every own comparison, even expected-utility comparisons when an affine scale is admissible, but changes the sum’s maximizer.",
+      "global_family": "For normalized welfare λlog(1+x)+(1−λ)log(13−x), λ∈[0,1], the unique maximizer is x*(λ)=min(12,max(0,14λ−1)). The derivative numerator has the sign of14λ−1−x; this proves interior and both boundary regimes. At λ=0 or1 strict monotonicity selects the endpoint. Every full-use allocation is Pareto efficient: improving one strictly requires lowering the other because both own utilities increase; a slack allocation is dominated.",
+      "exact_results": {
+        "baseline_allocation": [
+          "6",
+          "6"
+        ],
+        "rescaled_allocation": [
+          "51/5",
+          "9/5"
+        ],
+        "interior_weight_derivative": "14",
+        "boundary_weights": [
+          "1/14",
+          "13/14"
+        ]
+      },
+      "minimal_repair": "Specify an interpersonal welfare functional or an economically justified common money-metric normalization as additional structure. Do not describe observed ordinal choices as identifying normative weights. A changed normalization is not a mathematical flaw in the conditional optimization theorem; it defeats the claimed inference from preferences alone.",
+      "interpretation": "Separate existence/uniqueness conditional on a social objective from the choice of that objective. The two representations predict identical individual choices under every unchanged feasible set; those observations cannot choose between the proposed social sums."
+    },
+    {
+      "id": "W2",
+      "title": "A strict local maximum with a large global loss",
+      "primitives": "A planner selects capacity x∈[0,5]. Declared net real benefit is V(x)=−3x^4+28x^3−84x^2+96x; all coefficients are synthetic normalized units. There is no hidden constraint that excludes any point of this interval.",
+      "claim_to_audit": "A stationary point with a negative second derivative proves the globally optimal policy.",
+      "complete_solution": "V is continuous on a compact interval, so a global maximum exists. V′(x)=−12(x−1)(x−2)(x−4), with signs +,−,+,− on the four successive regions. Critical points are1,2,4. V″ at these points is−36,24,−72. Values at0,1,2,4,5 are0,37,32,64,5. These are every possible global maximizer candidate by the sign argument; x*=4 is uniquely global. The strict local maximum x=1 has zero gradient but regret27. The interior local minimum x=2 also satisfies the first-order equation.",
+      "qualified_repairs": "Either certify the original global comparison, or explicitly restrict the model to a concave objective class. The changed example Q(x)=64−3(x−4)^2 is globally strictly concave on[0,5]. At x=23/6 its gradient is1 and exact loss is1/12. Completing the square proves the global certificate; it does not make the original polynomial concave.",
+      "approximation_theorem": "If f is continuous on compact K, sup_K|f−fhat|≤ε, and a supplied xhat satisfies sup_K fhat−fhat(xhat)≤η, then max_K f−f(xhat)≤2ε+η. Proof: for a true maximizer x*, f(x*)−f(xhat)≤[f(x*)−fhat(x*)]+[fhat(x*)−fhat(xhat)]+[fhat(xhat)−f(xhat)]≤ε+η+ε. This presupposes a global approximate-solver certificate, not a small gradient. No attainment of fhat’s supremum is needed beyond the given certificate.",
+      "exact_results": {
+        "stationary_points": [
+          "1",
+          "2",
+          "4"
+        ],
+        "critical_boundary_values": [
+          "0",
+          "37",
+          "32",
+          "64",
+          "5"
+        ],
+        "global_maximum": "64",
+        "local_regret": "27",
+        "concave_variant_loss": "1/12"
+      },
+      "interpretation": "A missing global proof is consequential because it changes the policy and objective by an exact amount. Request the relevant certificate rather than a broad unspecified numerical robustness exercise."
+    },
+    {
+      "id": "W3",
+      "title": "A subsidy changes an equilibrium correspondence, not a chosen outcome",
+      "primitives": "Two simultaneous agents choose a_i∈{0,1}. Payoff is a_i(3a_j−1+s), with common subsidy s∈[0,3/2]. Each can cover its real action cost1. A separate provider commits actual cash2s before actions, pays s to each adopter afterward, and keeps any unused cash. Transfers are enforceable and are not a resource creation. Mixed Nash randomizations are independent.",
+      "claim_to_audit": "Existence of a favorable adoption equilibrium means every equilibrium responds positively to a subsidy, and determines a policy prediction.",
+      "complete_solution": "If the opponent adopts with probability p_j, the adoption gain is3p_j−1+s. For0≤s<1, all Nash equilibria are(0,0),(1,1) and the interior independent mixture p1=p2=(1−s)/3. To prove completeness, if one player is pure then the other’s strict best reply forces the corresponding pure coordination profile; if both mix, both gain equations must vanish. At s=1, gain is3p_j: any positive adoption probability forces the opponent to1 and then oneself to1, leaving only(0,0) and(1,1). For s>1 adoption is strictly dominant, so(1,1) is unique. These arguments cover every mixed profile, not a grid.",
+      "accounts": "At s=0 the interior adoption probability is1/3 and each expected utility and real welfare are0. At s=1/2 it falls to1/6: each agent’s expected utility remains0, provider expected payment is1/6, and consolidated real welfare is−1/6. In the full-adoption equilibrium at s=1/2, agent utilities total5, provider wealth falls1, and real welfare is4. At no adoption every change is0. The real welfare formula is6p1p2−p1−p2; provider payments cancel subsidies in agent utility.",
+      "minimal_repair": "State an equilibrium-set comparative-static result, or add and justify a particular selection rule/adjustment process as a distinct assumption. The interior mixed branch falls with s while the pure branches persist, so no universal adoption direction follows for s<1. At s>1 dominance supplies the stronger selection-free conclusion, at a separately funded cost.",
+      "exact_results": {
+        "mixed_probabilities_s0": [
+          "1/3",
+          "1/3"
+        ],
+        "mixed_probabilities_s_half": [
+          "1/6",
+          "1/6"
+        ],
+        "mixed_real_welfare_s_half": "−1/6",
+        "full_adoption_agent_utility": "5",
+        "full_adoption_provider_loss": "1",
+        "full_adoption_real_welfare": "4"
+      },
+      "C11_difference": "Ito author confirmed C11 uses continuous quadratic effort/substitutes and finite graph stability, not this binary mixed-adoption mechanism. No generic network selection theorem is inherited."
+    },
+    {
+      "id": "W4",
+      "title": "Separate the fixed point, the algorithm and the approximation error",
+      "primitives": "A stipulated deterministic activity-adjustment model is x_{t+1}=Tθ(x_t)=(θ+x_t^2)/4 on[0,1], θ∈[0,3]. A stationary equilibrium is exactly a fixed point of this law. No optimizing-agent microfoundation beyond this declared response law is claimed.",
+      "global_proof": "The map is continuous and maps[0,1] into itself because0≤(θ+x²)/4≤1. For all x,y, |Tθ(x)−Tθ(y)|=|x−y|(x+y)/4≤|x−y|/2. Iteration increments are bounded by2^(−t)|x1−x0|; their geometric tail makes the sequence Cauchy in the closed interval. Its limit is fixed by continuity. If x*,y* are both fixed, their distance is at most half itself, hence zero. This proves existence, uniqueness and global convergence separately. The two algebraic roots are2±sqrt(4−θ); only the minus root is in[0,1].",
+      "residual_and_parameter_proof": "For any candidate xhat in[0,1], |xhat−x*|≤|xhat−Tθ(xhat)|+(1/2)|xhat−x*|, so distance≤2 times residual. For θ,θ′, insert the two maps and use sup|Tθ−Tθ′|=|θ−θ′|/4 to obtain |x*(θ)−x*(θ′)|≤|θ−θ′|/2. Interior differentiation of the explicit root gives1/(4−2x*), equal to1/3 at the baseline; this local derivative is not the uniform sensitivity constant.",
+      "complete_solution": "At θ=7/4, fixed point is1/2, the other quadratic root7/2 is outside the domain, and starting at zero gives x1=7/16,x2=497/1024. For candidate3/5, the exact residual is29/400, so the certified distance bound is29/200 while actual distance is1/10. Changing θ to51/25 gives exact fixed point3/5; parameter change29/100 and output change1/10 give secant ratio10/29. This is consistent with the uniform1/2 bound.",
+      "two_error_theorem": "Suppose only that a computed map That has uniform error≤ε against Tθ and the returned point has |xhat−That(xhat)|≤η. Then true fixed-point distance≤2(ε+η), by the triangle inequality and residual certificate. This does not assert That is itself a contraction or has any fixed point. At xhat3/5, simultaneous claimed bounds ε=η=1/100 are impossible: they would require residual≤1/50 whereas actual residual is29/400. With ε1/100, numerical residual must be at least1/16.",
+      "exact_results": {
+        "fixed_point": "1/2",
+        "residual": "29/400",
+        "distance_bound": "29/200",
+        "actual_distance": "1/10",
+        "perturbed_parameter": "51/25",
+        "perturbed_fixed_point": "3/5",
+        "parameter_shift": "29/100",
+        "local_derivative": "1/3"
+      },
+      "interpretation": "A small residual is meaningful only with a proved stability constant. Model approximation, numerical error and data uncertainty are separate quantities; none is inferred from a solver convergence message."
+    },
+    {
+      "id": "W5",
+      "title": "The same observed market law can imply different tax effects",
+      "primitives": "Observed Z is−1 or1 with probability1/2 each. A competitive producer has real numeraire cost C(q)=q²/4, so supply q=2p_s for nonnegative prices. Model A has aggregate benefit B_A(q,Z)=(4+2Z)q−q²/4, hence demand q=8−2p_b+4Z when positive. Model B has B_B(q,Z)=(3+3Z/2)q−q²/8, hence demand q=12−4p_b+6Z. Price-taking consumers/producers, known Z, enforceable trades and no binding budgets are maintained. Buyer cash20 and producer working resources9 suffice on the stated states/interventions. A unit tax τ∈[0,1] gives p_b=p_s+τ; the seller remits τq to a government account initially zero. Production consumes numeraire, so the resource cost is real.",
+      "claim_to_audit": "Perfect fit of the observed price/quantity law identifies a unique tax counterfactual and welfare effect.",
+      "complete_solution": "At τ=0, either model has unique clearing p_b=p_s=2+Z and q=4+2Z. Thus the full joint law of observed(Z,p,q), not merely its moments, is identical. Under a tax with the structural equations held fixed, A gives p_s=2+Z−τ/2 and q=4+2Z−τ; B gives p_s=2+Z−2τ/3 and q=4+2Z−4τ/3. All quantities/prices stay positive for Z=±1,0≤τ≤1. Strict concavity of each side’s problem and the strictly falling demand/increasing supply prove the unique interior equilibrium.",
+      "welfare_and_funding": "Buyer utility net of the cash constant is B−p_b q; producer profit is p_s q−C; government receipts are τq. Their sum is B−C. The government receipt is a transfer, not a resource gain. Complete the quadratic around the no-tax efficient q0=4+2Z: real welfare loss is τ²/2 in A and2τ²/3 in B, in either state. At τ=1, mean q is3 versus8/3; mean p_s is3/2 versus4/3; mean p_b is5/2 versus7/3; mean government receipt is3 versus8/3; real losses are1/2 versus2/3. Baseline expected real welfare is10 in A and15/2 in B, also not identified by the observed law alone.",
+      "minimal_repair_and_evidence": "Report the model-dependent counterfactuals, or add defensible identifying restrictions/data. A balanced policy pilot varying τ independently of Z can distinguish these two maintained models through different quantity slopes, provided the structural equations, prices, enforcement and population are stable. This is discrimination within the two-model class, not a generic identification theorem or a claim that an observationally fitted equation is invariant to policy.",
+      "exact_results": {
+        "baseline_states": [
+          [
+            "−1",
+            "1",
+            "2"
+          ],
+          [
+            "1",
+            "3",
+            "6"
+          ]
+        ],
+        "tax1_mean_quantities": [
+          "3",
+          "8/3"
+        ],
+        "tax1_mean_revenue": [
+          "3",
+          "8/3"
+        ],
+        "tax1_real_losses": [
+          "1/2",
+          "2/3"
+        ],
+        "baseline_mean_welfare": [
+          "10",
+          "15/2"
+        ]
+      },
+      "scope": "The cash endowments enforce feasibility without driving choices in the stated domain; outside this range binding budgets, zero demand or different participation would require new equilibrium analysis."
+    },
+    {
+      "id": "W6",
+      "title": "A complete referee report with a sharp implementation-budget repair",
+      "original_submission": "Title: Budget-capped grants uniquely select efficient adoption. Abstract: Two agents with adoption costs1 and2 each receive benefit3 if both adopt. A sponsor has cash1 and pays half a unit to each adopter. Since both agents strictly prefer the proposed full-adoption outcome to unilateral nonadoption at that profile, the policy uniquely implements full adoption, improves everyone’s welfare and proves a subsidy-induced adoption increase. Suggested proof: verify both full-adoption best replies and invoke finite Nash existence.",
+      "primitives": "Actions a_i∈{0,1}; payoffs a_i(3a_j−c_i+s_i), c=(1,2). Sponsor grants s_i≥0 are announced and funded before play with s1+s2≤K, paid only on own adoption; sponsor has no direct adoption benefit. Each agent can finance its own cost. Scope is all independent mixed Nash equilibria. Real surplus is6a1a2−a1−2a2; it is uniquely maximized at(1,1), with value3. No learning or selection mechanism is part of the submitted model.",
+      "complete_baseline_solution": "For K=1 and s=(1/2,1/2), best-reply gains are3p2−1/2 and3p1−3/2. All Nash equilibria are(0,0),(1,1), and(p1,p2)=(1/2,1/6), by the same complete support argument as W3. At full adoption utilities are(5/2,3/2), sponsor wealth falls1, and real surplus is3. At the interior mixture each agent has expected utility0, sponsor expected outlay is1/3, and real surplus is−1/3. The full-adoption welfare gain is conditional on a selection change from no adoption; a starting full-adoption equilibrium has the same real surplus. The sponsor is worse off, so the claimed Pareto improvement including it is false.",
+      "global_design_theorem": "For any nonnegative grants and any0<c1,c2<b, unique Nash implementation of full adoption holds iff some s_i>c_i. Necessity: if both s_i≤c_i, no adoption is a Nash equilibrium, including equality. Sufficiency: if s_i>c_i, i has strictly dominant adoption; then j strictly adopts because b−c_j+s_j>0. This covers every mixed equilibrium. Under c=(1,2), a feasible uniquely implementing grant exists iff K>1. The infimum required budget is1 and is not attained; for K>1 choose s1=1+δ≤K,s2=0, with δ>0. Supporting full adoption as one equilibrium needs no subsidy at all. Existence, selected implementation and unique implementation are different problems.",
+      "boundary_solution": "At K=1, grant(1,0) does not repair uniqueness. Player1’s gain is3p2 and player2’s is3p1−2. The complete equilibrium set is {(p1,0):0≤p1≤2/3} union{(1,1)}. If p2>0 then player1 must choose1 and player2 then chooses1. If p2=0, player1 is indifferent and player2 is best replying exactly when p1≤2/3. Adding a deterministic behavioral tie rule favoring adoption would change the model; it is not supplied by weak Nash incentives.",
+      "feasible_extension": "If costs are only known to lie in[3/4,5/4] and[7/4,9/4], benefit remains3, and a fixed grant must uniquely implement full adoption for every cost realization, the same theorem at the worst-cost profile gives robust implementation iff s1>5/4 or s2>9/4. Robust budget infimum5/4 is unattained. A funded budget3/2 and grant(11/8,0) suffice, while full-adoption real welfare lies in[5/2,7/2]. The cost intervals are stipulated uncertainty bounds, not estimated confidence sets.",
+      "referee_report_benchmark": {
+        "summary": "The submission asks a relevant implementation question but proves only that full adoption is one equilibrium; the announced budget does not guarantee selection.",
+        "major_1": "Give the exact no-adoption and mixed counterexamples and the best-reply quantifier error. Existence of a Nash equilibrium cannot imply uniqueness or convergence.",
+        "major_2": "Replace the alleged minimum1 with the strict budget condition K>1 and the explicit funded targeted construction; document the equality continuum. Distinguish model changes such as a tie-selection rule from proof repairs.",
+        "major_3": "Include the sponsor’s loss in the welfare claim, separate real surplus from transfers, and state the baseline equilibrium selection. An observed adoption change would not establish that the proposed model uniquely predicts it.",
+        "minor_or_optional": "Clarify whether p_i denotes own or opponent adoption and report cash timing. The bounded-cost extension is a useful follow-up, not a demand for every conceivable distribution or network extension.",
+        "recommendation_scope": "The unique-implementation/Pareto claims are invalid as written. A mathematically valid revision is possible using the proved qualified theorem and narrowed interpretation. Actual contribution, publication fit and research quality require external expert judgment; the chapter does not award those statuses."
+      },
+      "exact_results": {
+        "fair_mixed_probabilities": [
+          "1/2",
+          "1/6"
+        ],
+        "fair_mixed_real_welfare": "−1/3",
+        "unique_budget_condition": "K>1",
+        "unattained_infimum": "1",
+        "boundary_mixed_segment": "p1∈[0,2/3],p2=0",
+        "robust_unattained_infimum": "5/4",
+        "robust_grant": [
+          "11/8",
+          "0"
+        ],
+        "robust_full_surplus_interval": [
+          "5/2",
+          "7/2"
+        ]
+      }
+    }
+  ],
+  "exercise_transfers": [
+    {
+      "id": "E1",
+      "prompt": "In W1’s normalized weighted objective, compute the unique allocations at λ=1/4 and3/4, and at λ=1/14 and13/14. Prove the entire clipped formula and explain why this is sensitivity to a normative weight rather than an identified behavioral comparative static.",
+      "solution": "Allocations are(5/2,19/2),(19/2,5/2),(0,12),(12,0). The derivative has sign14λ−1−x over a positive denominator, giving the unique clipped maximum including endpoints. Preferences/feasible sets remain unchanged as the welfare weight changes; choice data alone do not identify it."
+    },
+    {
+      "id": "E2",
+      "prompt": "In a strict2×2 matching market, proposers A rank X>Y>outside and B rank Y>X>outside; recipients X rank B>A>outside and Y rank A>B>outside. All pairs are acceptable. Give both proposer-DA and recipient-DA outcomes and enumerate every stable matching. Then use cardinal values A:(X5,Y4), B:(X4,Y5), X:(A1,B100), Y:(A100,B1). Compare total assigned values before and after multiplying both proposers’ utilities by100, without altering preferences.",
+      "solution": "All7 partial matchings are considered: empty and the4 single-pair matchings have an unmatched blocking pair. Both perfect matchings are stable: M1=(AX,BY) gives every proposer its top and M2=(AY,BX) gives every recipient its top. Proposer-DA stops at M1 and recipient-DA at M2. The sums are12 and208 initially, then1002 and1000 after scaling proposer utilities. Stability is ordinal; cardinal sum efficiency and interpersonal scale are additional structure. No claim about ties, capacities or group incentives is used."
+    },
+    {
+      "id": "E3",
+      "prompt": "Change W2’s feasible interval to[0,3] while leaving the quartic unchanged. Find its unique global maximizer and value, listing every endpoint/stationary candidate. Explain why the old strict local maximum remains insufficient.",
+      "solution": "Candidates0,1,2,3 have values0,37,32,45. The derivative sign is positive from2 to3, so x=3 is uniquely global with value45, despite a nonzero derivative at that constrained endpoint. Candidate1 still has a strict negative second derivative but now regret8. A changed capacity constraint changes the problem; it does not validate the local-only proof."
+    },
+    {
+      "id": "E4",
+      "prompt": "Prove the W2 global approximation bound2ε+η and show it is sharp when ε=3/4,η=1/2. Construct a two-point compact feasible set and true/approximating objectives where a permitted returned point incurs exactly that loss.",
+      "solution": "Take K={A,B}, f(A)=0,f(B)=2, fhat(A)=3/4,fhat(B)=5/4, and return A. Uniform error is3/4, the approximating objective gap is1/2, and true regret is2=2ε+η. The displayed three-term decomposition proves the bound in general. The approximation certificate is global; a gradient equation supplies no substitute."
+    },
+    {
+      "id": "E5",
+      "prompt": "Change W3’s two adoption costs to3/2, keep benefit3, and pay subsidy1/2 to each adopter from a funded provider account1. Find every Nash equilibrium, the independent mixed probabilities, all-adoption real welfare and mixed expected provider loss/real welfare. Compare its mixed adoption probability with the no-subsidy game at the same new costs.",
+      "solution": "Gains are3p_j−1 with the subsidy, so equilibria are(0,0),(1,1), and(1/3,1/3). The no-subsidy interior mixture is(1/2,1/2). Full-adoption utilities total4, provider loses1 and real welfare is3. At the mixed profile each expected utility is0, provider expected loss is1/3 and real welfare−1/3. The complete support proof rules out one-sided mixing."
+    },
+    {
+      "id": "E6",
+      "prompt": "For W3 at subsidy1/2, a mediator privately recommends(1,1) with probability1/4 and(0,0) otherwise; the provider keeps its funded cash1. Verify every CE obedience constraint. Compute expected total agent utility, provider loss and real welfare. Would independent randomization with the same marginals be Nash?",
+      "solution": "At a positive-probability recommendation1 the other agent is certainly1; obeying gains5/2 versus0. At recommendation0 the other is0; deviating gains−1/2 versus0. These check all binary contingent deviations. Expected accounts are5/4,1/4,1. Independent marginals1/4 would give adoption gain3/4−1/2=1/4>0, so an interior independent mixture at those marginals is not Nash. The joint recommendation law and conditional information, not only marginals, determine the incentive claim."
+    },
+    {
+      "id": "E7",
+      "prompt": "Use W4’s map with θ=15/16. Compute the exact stationary point in[0,1], the other quadratic root, and the residual/distance certificate for xhat=1/3. Derive the local parameter derivative at the true fixed point and distinguish it from the uniform bound.",
+      "solution": "Roots are1/4 and15/4, so the admissible fixed point is1/4. Residual is1/3−(15/16+1/9)/4=41/576; certified distance is41/288, actual distance1/12. Local derivative is1/(4−1/2)=2/7. The global parameter Lipschitz bound is1/2 over the whole[0,3] parameter domain; a smaller local derivative at one point does not replace it."
+    },
+    {
+      "id": "E8",
+      "prompt": "At W4’s θ=7/4, a report returns xhat3/5 and claims numerical residual at most1/100 relative to its computed map and uniform map error at most1/100. Test the claims. If the uniform map error really is1/100, how large must the numerical residual be? Give a valid distinct map for which3/5 is exactly fixed.",
+      "solution": "The exact true residual29/400 exceeds1/50, so both claimed bounds cannot hold. The true distance1/10 also exceeds the claimed bound1/25. Numerical residual must be at least29/400−1/100=1/16. The distinct map T_(51/25) has exact fixed point3/5 and uniform error(51/25−7/4)/4=29/400; with numerical residual0 its valid distance bound is29/200. This is model error, not proof that the baseline was solved accurately."
+    },
+    {
+      "id": "E9",
+      "prompt": "In W5 apply taxτ=1/2. For each structural model find mean quantity, seller price, buyer price, government receipts and the exact real welfare loss. Reconcile transfers and state which maintained restrictions make the comparison meaningful.",
+      "solution": "A means are(7/2,7/4,9/4,7/4,1/8); B means are(10/3,5/3,13/6,5/3,1/6), in the requested order. Statewise quantity slopes remain−1 and−4/3. Government receipts cancel the tax component of buyer spending in total welfare; the difference is benefit minus real production cost. Demand/supply equations, exogeneity of the new tax assignment, population, information and nonbinding budgets must remain as specified."
+    },
+    {
+      "id": "E10",
+      "prompt": "A balanced pilot atτ=1 in W5 has exactly equal numbers of the two Z states. Suppose its measured average quantity differs from the exact model average by at mostε, with this deterministic error bound justified externally. Find when the two model prediction intervals are disjoint, and analyze ε=1/6. Does successful discrimination identify the economy among all models?",
+      "solution": "Predicted means are3 and8/3, separated by1/3. Intervals[3−ε,3+ε] and[8/3−ε,8/3+ε] are disjoint iff ε<1/6. At ε=1/6 they touch at17/6, so that observation is consistent with both. This is only discrimination between the stated two invariant structural models; the error bound, balance and policy invariance are assumptions/evidence obligations, not consequences of the prior observational fit."
+    },
+    {
+      "id": "E11",
+      "prompt": "In W6 with costs(1,2), benefit3 and budgetK=3/2, compare unrestricted targeted grants with an added equal-grant restriction s1=s2=s. Give a funded uniquely implementing targeted choice. Prove the infimum budget for unique implementation under equal grants and explain attainment. Evaluate the equal-grant choice s=3/4, including the mixed equilibrium’s real welfare.",
+      "solution": "Target(5/4,0) is funded and makes agent1 strictly adopt; agent2 then strictly follows. Full-adoption utilities are(13/4,1), provider loses5/4 and real welfare is3. Under equal grants, uniqueness iff s>1, so total required budget is strictly above2 and the infimum2 is not attained. Budget3/2 permits only s≤3/4, hence cannot uniquely implement. At s3/4 the equilibria include both pure coordination outcomes and mixed(p1,p2)=(5/12,1/12); provider expected loss3/8 and real welfare−3/8. The distributional equal-grant constraint changes the feasible policy set and required funding."
+    },
+    {
+      "id": "E12",
+      "prompt": "Referee a fresh version of the W6 claim with benefit4, costs(3/2,5/2), sponsor cash3/2 and grants(3/4,3/4). The submission claims unique full adoption and a Pareto improvement. Supply exact counterexamples/accounts, a sharp budget repair and a proportionate extension/evidence request. Distinguish major correctness issues from optional suggestions.",
+      "solution": "The complete Nash set is(0,0),(1,1), and mixed(7/16,3/16). At the mixed point agents have zero expected utility, provider loses15/32 and real welfare is−15/32. At full adoption agents receive(13/4,9/4), sponsor loses3/2, and real welfare is4, so the sponsor is not Pareto-improved. Unique implementation requires s1>3/2 or s2>5/2; required-budget infimum3/2 is unattained and any K>3/2 can fund a strictly targeted grant. A report should identify the mistaken best-reply quantifier, give these full conditional claims, distinguish added tie selection from a proof repair and assess what selection/financing evidence is missing.",
+      "rubric": "Ten points:2 for faithful model/question/quantifiers;2 for all exact equilibrium counterexamples and accounts;2 for the necessary-and-sufficient strict budget repair and boundary;2 for welfare/selection/identification limits;2 for an economically relevant bounded extension with explicit primitives and a proportionate required-versus-optional distinction. No score depends on a policy preference or a publication-prestige judgment."
+    }
+  ],
+  "teaching_structure": {
+    "opening": "Ask the reader to classify five sentences as definition, conditional theorem, existence claim, selected prediction or empirical claim before testing them. Give the answer and explain the different evidence each needs.",
+    "claim_ledger": "For each original case record target, primitives, quantifiers, domain, proof input, conclusion, counterexample, minimal repair and interpretation. Proof dependencies precede the result they justify.",
+    "full_report": "W6 includes the actual short submitted model/claim/argument, a faithful summary, explicit consequential counterexamples, a necessary-and-sufficient repair, welfare accounts, a bounded original extension and an illustrated report. Do not stop at a list of review tips.",
+    "teach_back": "Explain why local correctness, an existing equilibrium, a small computed residual and exact observational fit each answer different questions. Answer using W2 regret27, W3 multiple branches, W4 stability/error certificate and W5 same-law counterfactual difference.",
+    "retention": "Reconstruct the two-sided approximation bound, the adoption best-reply threshold, the strict versus weak funding boundary and the pilot discrimination condition. Provide complete answer key in the future manuscript.",
+    "external_judgment": "Rubrics assess argument, proofs, evidence and limitations. Actual originality/research significance, seminar defense and publication quality require external human evaluation."
+  },
+  "independent_validation": {
+    "status": "Passed36 exact grouped Fraction comparisons from original primitives before writing this proposal.",
+    "method": "Exact derivative coefficients/critical values; weighted log first-order roots with global concavity/sign proofs; mixed-strategy conditional-gain equations and provider cancellation; scalar fixed-point/residual identities; structural clearing plus integrated quadratic real welfare; strict global funding logic. Computational anchors corroborate but do not replace the proofs.",
+    "case_groups": [
+      "W1 baseline/rescaled allocations and E1 boundaries; E2 two stable-match cardinal comparisons",
+      "W2 all stationary/boundary values, regret, concave variant and E3/E4 transfers",
+      "W3 original/new costs, funded mixed/pure accounts and E6 recommendation accounts",
+      "W4 exact roots, iterations, residuals, parameter shifts and E7/E8 error transfers",
+      "W5 both full baseline state laws, τ1 andτ1/2 complete accounts, E10 separation boundary",
+      "W6 fair/targeted/equal-grant and E12 new-parameter accounts"
+    ],
+    "key_exact_anchors": {
+      "W1": [
+        "(6,6)",
+        "(51/5,9/5)"
+      ],
+      "W2": [
+        "(0,37,32,64,5)",
+        "27"
+      ],
+      "W3": [
+        "1/3",
+        "1/6",
+        "−1/6"
+      ],
+      "W4": [
+        "29/400",
+        "29/200",
+        "1/10",
+        "10/29"
+      ],
+      "W5": [
+        "3",
+        "8/3",
+        "1/2",
+        "2/3"
+      ],
+      "W6": [
+        "(1/2,1/6)",
+        "−1/3",
+        "K>1"
+      ],
+      "E12": [
+        "(7/16,3/16)",
+        "−15/32",
+        "4"
+      ]
+    }
+  },
+  "source_scope": "Two short original-author method guides newly read, plus prior finite-game source reuse. All mathematical examples/proofs are original and derived here from accepted tools. No source supplies the novel numerical cases; no source quotation or uninspected deep result is needed.",
+  "excluded_extensions": [
+    "Generic infinite-dimensional equilibrium or identification theorem",
+    "Matching group strategy-proofness, ties, couples or institutional powers",
+    "A universal selection/dynamics theorem or policy-invariance guarantee",
+    "Empirically estimated cost/error bounds or observed welfare weights",
+    "Journal acceptance, accreditation or research-quality certification"
+  ],
+  "unresolved_design_questions": []
+}

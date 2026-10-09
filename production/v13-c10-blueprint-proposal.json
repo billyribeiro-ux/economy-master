@@ -1,0 +1,776 @@
+{
+  "chapter": "v13-c10",
+  "title": "Mechanism design and auctions",
+  "date": "2026-10-09",
+  "status": "Original six-case/twelve-exercise proposal and source preparation complete; no manuscript or acceptance claimed.",
+  "author": "c05_review",
+  "source_preparation": {
+    "path": "production/v13-c10-source-preparation.json",
+    "bytes": 10935,
+    "sha256": "abc7f7543fd379d02ca9ab6da4a52a239f68f49eef228cfac84ed82d2a388069"
+  },
+  "prerequisites": "Use C08 complete monotone integral-envelope proof after acceptance; C09 hidden action/commitment distinctions remain dependencies. Preserve all frozen C08 bytes.",
+  "instructional_sequence": [
+    "Define outcomes, types, messages, information, expected-utility/transfer domains and participation date.",
+    "Prove selected-equilibrium revelation and qualify implementation.",
+    "Prove known-cost Groves/pivot statements and reconcile funding in two distinct institutions.",
+    "Prove pointwise versus interim monotone/payment characterizations, with jumps and constants.",
+    "Derive virtual revenue and globally optimal regular single-item allocation over BIC/IR mechanisms.",
+    "Prove revenue equivalence and complete original first/all-pay equilibrium; change preferences and refute the retained candidate precisely."
+  ],
+  "proof_contracts": [
+    {
+      "id": "P1",
+      "title": "Selected-equilibrium revelation, dominant and Bayesian",
+      "domain": "Finite agents; privately observed own types and utility depending on outcome and own type. Begin with finite sets for every sum, then state the same composition for Borel spaces under measurable strategy/outcome kernels and finite per-deviation/ex ante absolute expectations. Original mechanism is committed; communication is costless and carries no independent payoff or unsimulated hidden action. Mixed strategies use independent private seeds, not an unmodeled correlating mediator. Bayesian beliefs are the original conditional type law, with positive finite-type marginals or a declared regular conditional version for every type considered.",
+      "proof": "Given equilibrium strategies σ_i(t_i), define direct outcome by drawing the original messages from σ_i(reported t_i), then running the original outcome kernel. A false direct report is precisely one feasible original deviation σ_i(false report). Dominance holds for each opponents’ message profile and therefore after integrating their simulated messages at any fixed report vector. Bayesian optimality holds conditional on the TRUE type and original conditional law of opponents; simulate the same law and integrate the original inequality. Truth reproduces the chosen equilibrium distribution at each type profile. Conversely, the direct mechanism itself is an implementation. Extend pure comparisons to mixed false reports by linearity of expected utility.",
+      "limits": "No independence is needed for Bayesian revelation. No unique/full implementation or elimination of other equilibria follows; no transfer of unverifiable hidden actions into reports is assumed. Randomized DSIC here means expected utility over the announced mechanism randomization unless a realized-seed claim is separately proved."
+    },
+    {
+      "id": "P2",
+      "title": "Known-cost Groves/VCG truthfulness, conditional pivot IR and cash",
+      "domain": "Finite nonempty feasible outcome set Ω, finite real private valuation functions v_i(ω,t_i), known report-independent resource cost C(ω), quasilinear payments from agents to designer, commitment and no binding budgets. Choose a welfare maximizer with fixed report-independent tie priority.",
+      "proof": "Choose ω*=argmax[Σ reported v_i−C]. With p_i=h_i(t_-i)−[Σ_{j≠i} reported v_j(ω*)−C(ω*)], true utility is the true-own/reported-others welfare minus h_i. Truth maximizes that expression globally; any lie selects another feasible outcome. For pivot h_i take maximum others’ welfare net of cost in a declared without-i environment. If each without-i outcome embeds feasibly in the full problem with unchanged others/cost and nonnegative value for i (zero in an excludable removal), full optimum welfare≥h_i, hence truthful utility≥0. All payments sum with designer net receipts to cancel transfers, leaving Σtrue values−C.",
+      "limits": "IR depends on feasible-removal/outside normalization, not the Groves name. No general nonnegative-payment, budget balance or Groves-necessity theorem is asserted. The project gives an exact deficit and a separately endowed financing ledger."
+    },
+    {
+      "id": "P3",
+      "title": "Single-parameter payment characterization with jumps",
+      "domain": "Own value v_i∈[0,H_i], bounded measurable allocation x_i∈[0,1] and expected payment p_i; private quasilinear utility v_i x_i−p_i. For randomized mechanisms, IC is in expected utility over mechanism coins at fixed opponents’ reports.",
+      "proof": "Fix opponents’ reports and use both cross-report inequalities to obtain monotonicity and (w−v)x(v)≤U(w)−U(v)≤(w−v)x(w). Bounded monotone lower/upper Riemann sums force U(v)=U(0)+∫0^v x(s)ds. Integral bounds prove the converse for all pairs and jumps. Therefore p(v)=v x(v)−∫0^v x(s)ds−U(0); uniqueness requires the boundary constant. IR for all types at this fixed profile is U(0)≥0. For a deterministic threshold allocation and U(0)=0, a served bidder pays the critical threshold and an unserved bidder zero, with equality/tie assignment allowed.",
+      "limits": "An expected-payment identity does not uniquely specify the realized payment lottery or guarantee realized ex-post IR. The posted-price lottery in case3 proves stronger truthfulness/IR seed by seed."
+    },
+    {
+      "id": "P4",
+      "title": "Interim BIC and expected virtual revenue",
+      "domain": "Independent private values on bounded intervals, fixed population, measurable feasible allocation Σx_i≤1. Every report has integrable expected payment and ex ante absolute transfers are finite. Define X_i(r)=E_-i,coins x_i(r,V_-i) and P_i analogously using the SAME opponents’ law for all true types. For virtual values, F_i absolutely continuous with f_i>0 on the interior (null endpoints may be treated by the integral form); bounded supports make [v f_i−(1−F_i)] integrable.",
+      "proof": "Apply P3’s pairwise/Riemann argument to the interim objects: BIC iff X_i is nondecreasing and P_i(v)=vX_i(v)−∫0^v X_i(s)ds−U_i(0). Reverse the bounded rent integral to derive E[P_i]=∫[v f_i(v)−(1−F_i(v))]X_i(v)dv−U_i(0)=E[φ_i(V_i)x_i(V)]−U_i(0), φ_i=v−(1−F_i)/f_i. Sum across agents.",
+      "limits": "Independence makes the common-law comparison possible; with correlation a false report cannot substitute the posterior conditional on that false type. Interim feasibility alone is not characterized; the mechanism’s ex-post allocation feasibility remains a separate input. Boundary utilities are never silently discarded."
+    },
+    {
+      "id": "P5",
+      "title": "Global regular optimal single-item auctions over BIC/IR mechanisms",
+      "domain": "P4 assumptions, known nondecreasing virtual-value functions, seller initial value/cost zero and interim IR at every type. Normalize the constructed mechanism at U_i(0)=0. Fixed tie priority is independent of reports, including the zero-virtual boundary.",
+      "proof": "For every feasible possibly randomized allocation, Σφ_i(v_i)x_i(v)≤max(0,φ_1(v_1),…,φ_n(v_n)). IR makes all boundary utilities nonnegative, so expected revenue is bounded by the expectation of this pointwise maximum. Assign to a highest nonnegative virtual value, or do not sell if all are negative. Nondecreasing φ_i and fixed ties make own allocation monotone; P3 supplies normalized DSIC payments and IR. It attains the bound and therefore is optimal against all stated BIC/interim-IR mechanisms. For iid strictly increasing φ the rule is second price with a threshold reserve; for asymmetric laws it may favor a lower physical value. For known delivery cost c, subtract cΣx before taking the pointwise maximum to bound net seller profit.",
+      "limits": "No irregular ironing, multi-item revenue-optimal or empirical-prior estimation theorem. Uniqueness beyond null ties is not claimed. Bidder-specific zero-virtual reserves alone do not specify an asymmetric winner/payment rule."
+    },
+    {
+      "id": "P6",
+      "title": "Revenue equivalence, global first/all-pay equilibrium and a risk boundary",
+      "domain": "Independent private values and quasilinear risk-neutral utility for equivalence; same interim X_i and same U_i(0), fixed participants and integrable transfers. Original continuous cases use n=3 and F(v)=(v/10)^2 with all nonnegative bids allowed and fixed ties; no binding financing constraint.",
+      "proof": "P4 without the virtual transform fixes P_i for each type under common X_i/U_i(0), hence total expected receipts. In the power-law case, opponents’ highest type CDF is (z/10)^4. For first price b(z)=4z/5, utility derivative is4z³(v−z)/10⁴. It has the correct global sign; bid zero and bids above8 are checked separately. For all pay b_A(z)=4z⁵/(5·10⁴), derivative of v(z/10)^4−b_A(z) is the same. Over-support bids only raise cost after winning probability is already one. Second-price truth is established by pointwise threshold comparison. Derive three expected revenues independently from maximum, second-order statistic and total all-pay integrals. CARA case supplies an exact strictly profitable deviation and a general strict-concavity derivative test, not a new equilibrium formula.",
+      "limits": "Revenue equivalence is interim/ex ante, not a realized-profile payment equality. It fails as an applicable theorem when risk neutrality, common allocation, boundary utilities, independence or participation assumptions change. Second-price truth with private values survives any increasing transformation of realized monetary gain; no risk-averse revenue ranking follows."
+    }
+  ],
+  "worked_cases": [
+    {
+      "id": "W1",
+      "title": "Cost-owned VCG assignment and its single-object restriction",
+      "inputs": {
+        "unit_demand_values": [
+          [
+            9,
+            4
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "goods": [
+          "A",
+          "B"
+        ],
+        "delivery_resource_cost_per_allocated_good": 1,
+        "outside_value": 0,
+        "payment_direction": "buyer to seller",
+        "feasible": "Each good assigned at most once; each bidder receives at most one; goods may be retained. Fixed outcome priority resolves ties independently of reports."
+      },
+      "results": {
+        "owners": [
+          1,
+          2
+        ],
+        "gross": "16",
+        "cost": "2",
+        "payment": [
+          "7",
+          "6",
+          "0"
+        ],
+        "u": [
+          "2",
+          "1",
+          "0"
+        ],
+        "revenue": "13",
+        "seller_profit": "11",
+        "welfare": "14",
+        "full_feasible_outcomes": 13
+      },
+      "single_object_restriction": {
+        "owners": [
+          1
+        ],
+        "gross": "9",
+        "cost": "1",
+        "payment": [
+          "8",
+          "0",
+          "0"
+        ],
+        "u": [
+          "1",
+          "0",
+          "0"
+        ],
+        "revenue": "8",
+        "seller_profit": "7",
+        "welfare": "8",
+        "full_feasible_outcomes": 4
+      },
+      "proof": "Enumerate all13 feasible full allocations for the numerical optimum, all7 outcomes after each removal, and prove general Groves truthfulness separately by welfare comparison. Declared removal embeds with zero own allocation/value and the same remaining allocation/cost. Revenue13 is not surplus: after cost2 and buyer surplus3, total14.",
+      "scope": "Efficient quasilinear multiparameter allocation, not revenue maximization or unique implementation."
+    },
+    {
+      "id": "W2",
+      "title": "A truthful public project that needs actual funding",
+      "inputs": {
+        "benefits": [
+          7,
+          6,
+          4
+        ],
+        "resource_cost": 12,
+        "outcomes": [
+          "do not build",
+          "build"
+        ],
+        "tie": "Build at total reported benefit equal to cost.",
+        "types": "Nonnegative project benefits, outside0, no other private action.",
+        "designer_opening_cash": 12,
+        "finance": "Designer commits its own12 numeraire endowment. Buyer payments arrive before the project expense; no additional grant is assumed."
+      },
+      "results": {
+        "build": true,
+        "payment": [
+          "2",
+          "1",
+          0
+        ],
+        "u": [
+          "5",
+          "5",
+          "4"
+        ],
+        "revenue": "3",
+        "deficit": "9",
+        "welfare": 5,
+        "closing_designer_cash": "3"
+      },
+      "proof": "Cost-owned pivot formula p_i=max(0,sum others−12)−(sum others−12)·build. Designer closes3 after receipts3 and expense12; its wealth loss9 plus buyer net gains14 equals surplus5.",
+      "constraint_counterexample": "Efficient truthful pivot payments do not finance project cost. Equal division of cost among reported beneficiaries can balance the ledger but has the profitable underreport in E3; no universal impossibility theorem is inferred."
+    },
+    {
+      "id": "W3",
+      "title": "A discontinuous truthful allocation and a Bayesian side-bet contrast",
+      "inputs": {
+        "value_interval": [
+          0,
+          10
+        ],
+        "allocation": "0 below2;1/3 on[2,7);1 on[7,10]",
+        "posted_price_lottery": {
+          "prices": [
+            2,
+            7
+          ],
+          "probabilities": [
+            "1/3",
+            "2/3"
+          ]
+        },
+        "price_tie": "Accept at equality; price draw independent of all reports."
+      },
+      "results": {
+        "expected_payments": [
+          "0",
+          "2/3",
+          "16/3"
+        ],
+        "type5": [
+          "1/3",
+          "2/3",
+          "1"
+        ],
+        "type7": [
+          "1",
+          "16/3",
+          "5/3"
+        ],
+        "utility": "0 below2;(v−2)/3 on[2,7);v−16/3 above7"
+      },
+      "BIC_contrast": {
+        "types": [
+          0,
+          2
+        ],
+        "iid_probabilities": [
+          "1/2",
+          "1/2"
+        ],
+        "allocation": "A fair coin assigns the object, independently of reports.",
+        "payments": "p1=(r1−1)(r2−1);p2=−p1",
+        "funding": "Each bidder has at least1 initial numeraire for the possible transfer; designer receives net0. Participation is interim with a declared participation tie; no ex-post IR assertion.",
+        "results": "Every report yields expected payment0 under independence, so interim utility θ_i/2 and truth is BIC. For bidder1 true0/opponent report0, changing report0 to2 changes payment+1 to−1, an ex-post gain2. Under the E5 correlated law, own conditional payments change and BIC fails."
+      },
+      "proof": "Apply nonsmooth payment theorem and verify the posted-price implementation for each realized seed. For the side bet enumerate the exact finite conditional laws; distinguish expectation truth from dominance."
+    },
+    {
+      "id": "W4",
+      "title": "An optimal asymmetric auction can select the lower value",
+      "inputs": {
+        "independent_distributions": [
+          "Uniform[0,6]",
+          "Uniform[0,12]"
+        ],
+        "seller_cost": 0,
+        "fixed_priority": "Bidder1 wins a virtual tie; serve a highest virtual value at zero, and do not sell below zero."
+      },
+      "rule": {
+        "virtual_values": [
+          "2v1−6",
+          "2v2−12"
+        ],
+        "allocation": "Choose the largest nonnegative virtual value.",
+        "winner_payments": [
+          "max(3,v2−3) if bidder1 wins; otherwise0",
+          "max(6,v1+3) if bidder2 wins; otherwise0"
+        ],
+        "zero_virtual_reserves": [
+          3,
+          6
+        ]
+      },
+      "results": {
+        "sale_probability": "3/4",
+        "expected_revenue": "31/8",
+        "bidder_expected_payments": [
+          "1",
+          "23/8"
+        ],
+        "expected_allocated_value": "11/2",
+        "expected_buyer_rent": "13/8",
+        "efficient_expected_value": "13/2",
+        "efficient_VCG_revenue": "5/2",
+        "surplus_loss": "1",
+        "at_values_5_7": {
+          "winner": 1,
+          "payment": 4,
+          "winner_utility": 1
+        }
+      },
+      "proof": "Independently integrate actual threshold receipts over the rectangular law and the positive-maximum virtual tail. Derive interim allocations X1=(v+3)/12 forv≥3; X2=(v−3)/6 for6≤v≤9 and1 above9. P5 proves global optimality among all stated BIC/IR mechanisms, not merely among reserve auctions.",
+      "scope": "Reserve levels alone are insufficient: the asymmetric virtual ranking changes both winner and critical payment."
+    },
+    {
+      "id": "W5",
+      "title": "First price, all pay and second price with a nonuniform law",
+      "inputs": {
+        "bidders": 3,
+        "iid_CDF": "F(v)=(v/10)^2 on[0,10]",
+        "bid_domain": "All nonnegative bids; losses and payments are enforced with no binding budget.",
+        "information": "Each sees only own value; common law and rules; risk neutral, fixed population."
+      },
+      "rules": {
+        "first_price": "b(v)=4v/5",
+        "all_pay": "b_A(v)=4v^5/(5·10^4)",
+        "second_price": "Truthful bid; highest rival payment"
+      },
+      "results": {
+        "type5": {
+          "first_price_bid": "4",
+          "win_probability": "1/16",
+          "interim_payment": "1/4",
+          "interim_utility": "1/16",
+          "all_pay_bid": "1/4"
+        },
+        "expected_maximum": "60/7",
+        "each_format_expected_revenue": "48/7",
+        "aggregate_buyer_surplus": "12/7",
+        "per_bidder_ex_ante_surplus": "4/7"
+      },
+      "proof": "Full derivative sign plus zero/over-support bids establishes both symmetric equilibria. Maximum CDF(v/10)^6 gives its mean; second-highest density12v^3/10^4−12v^5/10^6 gives independent second-price revenue; sum unconditional all-pay bids gives a third receipt calculation.",
+      "scope": "These are constructed symmetric equilibria, not all-equilibrium uniqueness; all-pay interim IR does not imply no realized losing payment."
+    },
+    {
+      "id": "W6",
+      "title": "Global risk aversion invalidates the retained risk-neutral bid function",
+      "inputs": {
+        "same_population_and_law_as": "W5",
+        "new_Bernoulli_utility": "u(z)=1−2^(−5z), z any real monetary gain; u(0)=0",
+        "candidate_opponents": "Continue the risk-neutral b(v)=4v/5 solely to test whether it remains an equilibrium.",
+        "true_value": 5,
+        "candidate_bid": 4,
+        "deviation_bid": "24/5"
+      },
+      "results": {
+        "candidate_win_probability": "1/16",
+        "candidate_expected_CARA_utility": "31/512",
+        "deviation_win_probability": "81/625",
+        "deviation_expected_CARA_utility": "81/1250",
+        "strict_gain": "1361/320000",
+        "candidate_expected_money": "1/16",
+        "deviation_expected_money": "81/3125"
+      },
+      "proof": "u is finite, increasing and strictly concave on all real gains. The exact positive gain refutes the candidate at value5; continuity preserves a positive interval of true types, so the finding does not depend on a null-type convention. Second-price truthful bidding still maximizes monetary utility pointwise and therefore any increasing transformation.",
+      "scope": "No risk-averse BNE or seller-revenue ordering is claimed. This case identifies exactly why expected monetary allocation/payment equivalence cannot substitute for the changed expected-utility maximization."
+    }
+  ],
+  "exercise_transfers": [
+    {
+      "id": "E1",
+      "prompt": "Apply Bayesian revelation to the selected first-price equilibrium W5. Describe the direct allocation/payment mechanism and compute type5 interim accounts. With other true/reported values(2,3), compare own truthful report5 and report4. Explain why the direct mechanism is BIC but this realization refutes DSIC; give the general strategy-composition proof and identify where correlation would remain allowed.",
+      "answer": "Direct outcome runs bids4r_i/5. Type5 has X1/16,P1/4,U1/16. At opponents(2,3), truth wins/pays4/gives1, report4 wins/pays16/5/gives9/5, gain4/5. BIC compares the original conditional distribution, not this fixed realization; revelation itself does not require independence or unique/full implementation."
+    },
+    {
+      "id": "E2",
+      "prompt": "In W1 change only bidder3 value for B from6 to8. Recompute efficient allocation, all pivot payments and the cost/resource ledger, then explain why a naive sum of receipts and gross value double-counts transfers.",
+      "answer": {
+        "owners": [
+          1,
+          3
+        ],
+        "gross": "17",
+        "cost": "2",
+        "payment": [
+          "8",
+          "0",
+          "7"
+        ],
+        "u": [
+          "1",
+          "0",
+          "1"
+        ],
+        "revenue": "15",
+        "seller_profit": "13",
+        "welfare": "15",
+        "full_feasible_outcomes": 13
+      }
+    },
+    {
+      "id": "E3",
+      "prompt": "For the project cost12 use benefits(8,3,2). Compute pivot payments, buyer utilities and funded deficit. Compare the rule that builds whenever reports sum to at least12 and charges each bidder4 when built: exhibit a profitable false report and identify both IC/IR failures.",
+      "answer": {
+        "pivot": {
+          "build": true,
+          "payment": [
+            "7",
+            "2",
+            "1"
+          ],
+          "u": [
+            "1",
+            "1",
+            "1"
+          ],
+          "revenue": "10",
+          "deficit": "2",
+          "welfare": 1,
+          "closing_designer_cash": "10"
+        },
+        "equal_share_deviation": "Type3 has utility2−4=−2 at truth; reporting0 makes the total11 and cancels provision, utility0, strict gain2. The pivot remains truthful but has deficit2; equal shares do not repair all incentive/participation conditions."
+      }
+    },
+    {
+      "id": "E4",
+      "prompt": "Replace the price lottery in W3 by prices3 and8 with probabilities1/4 and3/4. Derive the entire allocation, expected-payment and utility functions, including both jump points. Give type6 and type9 accounts and distinguish expected-payment uniqueness from a claim about every realized payment rule.",
+      "answer": "x=0 below3,1/4 on[3,8),1 above8; p=0,3/4,27/4; U=0,(v−3)/4,v−27/4. Type6:(x,p,U)=(1/4,3/4,3/4); type9:(1,27/4,9/4). The independent posted-price realization is universally truthful and realized IR; an arbitrary payment lottery with those same means need not share the latter property."
+    },
+    {
+      "id": "E5",
+      "prompt": "Change only the type law in the W3 side-bet mechanism to probabilities(3/8,1/8,1/8,3/8) on(0,0),(0,2),(2,0),(2,2). Marginals are unchanged. Calculate bidder1 truthful and opposite-report conditional expected payments at each own type; decide BIC and explain the failure of using the marginal-law X/P envelope.",
+      "answer": "Conditional matching probability3/4, mismatch1/4. Truthful expected p1=1/2 and false-report expected p1=−1/2 for either own type; unchanged allocation gives gain1. Hence truth is not BIC, despite unchanged marginals and budget balance. Conditional law is held at the actual type when evaluating a false report."
+    },
+    {
+      "id": "E6",
+      "prompt": "In W4 compute allocation, actual payment and utility at(4,8) and at the virtual tie(6,9), with fixed priority1. Check the tie type’s deviation and explain why the asymmetric rule is not simply a standard second-price auction with each bidder’s own reserve.",
+      "answer": "At(4,8), virtuals(2,4), bidder2 wins/pays7/gets1. At(6,9), virtuals(6,6), bidder1 wins/pays6/gets0; bidder2 can overreport to win but then pays9 and still gets0 at its true value. Tie selection is weak IC. Thresholds include distribution-dependent offsets, not merely a common highest-rival bid."
+    },
+    {
+      "id": "E7",
+      "prompt": "Two iid Uniform[0,8] bidders and zero seller value: derive the revenue-optimal reserve and prove optimality against all stated BIC/interim-IR mechanisms. Compare reserve0 and the optimum in sale probability, receipts, allocated value and buyer surplus.",
+      "answer": "Virtual2v−8 gives reserve4 and normalized threshold payments. Optimal sale3/4,R10/3,value14/3,rent4/3. Without reserve sale1,R8/3,value16/3,rent8/3. Global pointwise virtual bound, not just differentiation over reserves, establishes the broader optimum; ties are fixed."
+    },
+    {
+      "id": "E8",
+      "prompt": "Return to W4 and impose a known real delivery cost2 incurred only if sold; maximize seller net profit, not gross receipts. Derive winner rule, critical payments and sale probability, then compute expected net profit and receipts independently.",
+      "answer": "Choose highest virtual value only when it is at least2. Winning thresholds p1=max(4,v2−3),p2=max(7,v1+3). Sale11/18. Net profit271/108; receipts403/108; their difference2·11/18=11/9 is real expected cost. Actual threshold integrations give E[p1]=49/54,E[p2]=305/108. The same pointwise bound applies to φ−2."
+    },
+    {
+      "id": "E9",
+      "prompt": "In the power-law family F(v)=(v/10)^2 reduce bidder count to2. Derive and globally verify first-price/all-pay strategies, type5 accounts, expected allocated value, revenue and aggregate rent.",
+      "answer": "First price2v/3; all pay2v^3/(3·10^2). Type5 bid10/3,X1/4,P5/6,U5/12. Emax8,R16/3,rent8/3. Same all-domain sign and over-support checks are required; expected payment is not the first-price bid."
+    },
+    {
+      "id": "E10",
+      "prompt": "Add a compulsory report-independent fee2/7 per bidder to every W5 format. Compute the revenue/buyer-utility ledger and lowest-type utility. Does revenue equivalence or the optimal-IR theorem prohibit it? Explain what must be re-solved with voluntary entry.",
+      "answer": "Bid incentives and X stay fixed; R54/7,total buyer surplus6/7,lowest utility−2/7. Common boundary utilities change, and interim IR fails, so neither theorem forbids the change. With voluntary entry, low-surplus types decline, altering participation/opponent distributions and requiring a new equilibrium; do not retain fixed-three-bidder receipts."
+    },
+    {
+      "id": "E11",
+      "prompt": "For a differentiable increasing strictly concave u with u(0)=0, evaluate the derivative of expected utility when a true typev in(0,10) locally increases the imitated type z fromv against W5’s risk-neutral bidding function. Prove its sign using concavity. Explain why this refutes the candidate without proving the new risk-averse equilibrium or a revenue ranking.",
+      "answer": "Derivative at z=v is[4v^3/10^4]·[u(v/5)−(v/5)u′(v/5)]>0, since the tangent at positive v/5 lies strictly above u(0)=0 at zero. A small feasible higher bid improves utility for every interior positive type, with positive winning surplus retained. New opponents’ equilibrium responses and revenue remain unsolved."
+    },
+    {
+      "id": "E12",
+      "prompt": "Critique a policy memo claiming: revelation gives unique implementation; VCG automatically funds every project; equality of interim allocation probabilities alone fixes receipts under any information/preferences; a reserve first-order condition proves global optimality. Give corrected claims, one case-based counterexample for each relevant mistake, and the evidence needed before applying the chosen mechanism.",
+      "answer": "Rubric: distinguish selected equilibrium from full/unique implementation; supply W2 deficit9 and actual designer endowment; require common-law risk-neutral interim IC, same boundary utility and integrable transfers, using W3/E5/W6 as failures; distinguish feasibility/regularity and the pointwise virtual upper bound from a reserve-only stationary condition. State commitment, participation dates, budgets, prior estimation, cost ownership and tie rules. Do not claim causal behavior or endorse a policy solely from fitting a theoretical mechanism."
+    }
+  ],
+  "independent_validation": {
+    "exact_groups": 35,
+    "results": [
+      {
+        "id": "W1-assignment",
+        "computed": [
+          1,
+          2
+        ]
+      },
+      {
+        "id": "W1-payments",
+        "computed": [
+          "7",
+          "6",
+          "0"
+        ]
+      },
+      {
+        "id": "W1-ledger",
+        "computed": [
+          "16",
+          "2",
+          "13",
+          "11",
+          "14"
+        ]
+      },
+      {
+        "id": "W1-single-object",
+        "computed": [
+          [
+            1
+          ],
+          [
+            "8",
+            "0",
+            "0"
+          ],
+          "7",
+          "8"
+        ]
+      },
+      {
+        "id": "E2-changed-demand",
+        "computed": [
+          [
+            1,
+            3
+          ],
+          [
+            "8",
+            "0",
+            "7"
+          ],
+          "15"
+        ]
+      },
+      {
+        "id": "W2-pivots",
+        "computed": [
+          "2",
+          "1",
+          0
+        ]
+      },
+      {
+        "id": "W2-resource-ledger",
+        "computed": [
+          [
+            "5",
+            "5",
+            "4"
+          ],
+          "3",
+          "9",
+          "3",
+          5
+        ]
+      },
+      {
+        "id": "E3-new-project",
+        "computed": [
+          [
+            "7",
+            "2",
+            "1"
+          ],
+          [
+            "1",
+            "1",
+            "1"
+          ],
+          "2"
+        ]
+      },
+      {
+        "id": "E3-equal-fee-deviation",
+        "computed": "2"
+      },
+      {
+        "id": "W3-step-payments",
+        "computed": [
+          0,
+          "2/3",
+          "16/3"
+        ]
+      },
+      {
+        "id": "W3-step-boundaries",
+        "computed": [
+          [
+            "1/3",
+            "2/3",
+            "0"
+          ],
+          [
+            "1/3",
+            "2/3",
+            "1"
+          ],
+          [
+            "1",
+            "16/3",
+            "5/3"
+          ]
+        ]
+      },
+      {
+        "id": "E4-price-lottery",
+        "computed": [
+          [
+            "1/4",
+            "3/4",
+            "3/4"
+          ],
+          [
+            "1",
+            "27/4",
+            "9/4"
+          ]
+        ]
+      },
+      {
+        "id": "W3-independent-zero-mean-(0, 0)",
+        "computed": "0"
+      },
+      {
+        "id": "W3-independent-zero-mean-(0, 2)",
+        "computed": "0"
+      },
+      {
+        "id": "W3-independent-zero-mean-(1, 0)",
+        "computed": "0"
+      },
+      {
+        "id": "W3-independent-zero-mean-(1, 2)",
+        "computed": "0"
+      },
+      {
+        "id": "W3-expost-lie-gain",
+        "computed": "2"
+      },
+      {
+        "id": "E5-correlated-side-bet-0",
+        "computed": [
+          "1/2",
+          "-1/2",
+          "1"
+        ]
+      },
+      {
+        "id": "E5-correlated-side-bet-2",
+        "computed": [
+          "1/2",
+          "-1/2",
+          "1"
+        ]
+      },
+      {
+        "id": "W4-independent-revenue-oracles",
+        "computed": [
+          "31/8",
+          "1",
+          "23/8",
+          "31/8"
+        ]
+      },
+      {
+        "id": "W4-allocation-and-rent",
+        "computed": [
+          "23/16",
+          "65/16",
+          "11/2",
+          "13/8"
+        ]
+      },
+      {
+        "id": "W4-efficient-ledger",
+        "computed": [
+          "13/2",
+          "5/2",
+          "1"
+        ]
+      },
+      {
+        "id": "W4-sale",
+        "computed": "3/4"
+      },
+      {
+        "id": "W4-asymmetric-profile",
+        "computed": [
+          4,
+          2,
+          4,
+          1
+        ]
+      },
+      {
+        "id": "E6-virtual-tie",
+        "computed": [
+          6,
+          6,
+          6
+        ]
+      },
+      {
+        "id": "E7-iid-reserve",
+        "computed": [
+          "3/4",
+          "10/3",
+          "14/3",
+          "4/3",
+          "16/3"
+        ]
+      },
+      {
+        "id": "E8-positive-cost",
+        "computed": [
+          "11/18",
+          "271/108",
+          "403/108",
+          "403/108"
+        ]
+      },
+      {
+        "id": "W5-interim",
+        "computed": [
+          "4",
+          "1/16",
+          "1/4",
+          "1/16"
+        ]
+      },
+      {
+        "id": "W5-aggregate",
+        "computed": [
+          "60/7",
+          "48/7",
+          "12/7",
+          "4/7"
+        ]
+      },
+      {
+        "id": "W5-three-format-revenues",
+        "computed": [
+          "48/7",
+          "48/7",
+          "48/7"
+        ]
+      },
+      {
+        "id": "E1-direct-report-deviation",
+        "computed": [
+          "1",
+          "9/5",
+          "4/5"
+        ]
+      },
+      {
+        "id": "E9-two-bidder-power-law",
+        "computed": [
+          "10/3",
+          "1/4",
+          "5/6",
+          "5/12",
+          "8",
+          "16/3",
+          "8/3"
+        ]
+      },
+      {
+        "id": "E10-fee-ledger",
+        "computed": [
+          "54/7",
+          "6/7",
+          "-2/7"
+        ]
+      },
+      {
+        "id": "W6-CARA-refutation",
+        "computed": [
+          "24/5",
+          "81/625",
+          "31/512",
+          "81/1250",
+          "1361/320000"
+        ]
+      },
+      {
+        "id": "W6-monetary-versus-utility",
+        "computed": [
+          "1/16",
+          "81/3125"
+        ]
+      }
+    ],
+    "methods": [
+      "Complete small assignment/removal enumeration from valuations and real delivery costs",
+      "Exact project pivot and cash accounts",
+      "Posted-price lottery expectations and every finite side-bet report/conditional law",
+      "Threshold receipt integration independent of the positive-virtual-max tail integral",
+      "Exact polynomial order-statistic/all-pay integration and pointwise account reconciliation",
+      "Exact CARA values at gains1 and1/5, with globally valid real-domain utility"
+    ],
+    "limits": "Arithmetic confirms original seeds; universal proof routes above remain to be fully written and independently reviewed. No grid establishes global optimality or a risk-averse equilibrium."
+  },
+  "teaching_and_retention_plan": "Answered teach-back will distinguish DSIC/BIC, interim/realized payments, IC/IR/budget balance, and revenue/welfare. Delayed retention will reconstruct the boundary-utility payment identity and use an unseen changed resource-cost or conditional-law case, not only repeat a known price.",
+  "source_cautions": [
+    "Correct the Levin p6 conditional-payment factor as recorded in preparation.",
+    "Supply the unstated revelation composition and BIC optimality proofs rather than citing a theorem label.",
+    "Use the C08 nonsmooth integral route, not a derivative of a step allocation."
+  ],
+  "unresolved_design_questions": [],
+  "excluded_extensions": [
+    "No full/unique implementation theorem, Green–Laffont impossibility or Groves-necessity classification.",
+    "No unrestricted irregular ironing, multidimensional revenue-optimal mechanism, endogenous-entry solution or correlated-value virtual formula.",
+    "CARA case refutes a candidate; it does not characterize all risk-averse equilibria or format-revenue rankings.",
+    "No auctions/matching empirical or institutional practice claim from the synthetic calculations."
+  ]
+}

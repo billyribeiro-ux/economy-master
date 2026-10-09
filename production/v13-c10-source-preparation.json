@@ -1,0 +1,188 @@
+{
+  "chapter": "v13-c10",
+  "date": "2026-10-09",
+  "inspector": "c05_review",
+  "status": "Primary source preparation complete; no chapter authored or accepted by this task.",
+  "assignment": {
+    "path": "production/v13-c10-preparation-assignment.json",
+    "bytes": 3132,
+    "sha256": "a42b012d4cd52a788a27c49159beba7e1ef37c086921ce4d36d422d73d54dceb"
+  },
+  "continuity": {
+    "introductory_auction": {
+      "path": "content/chapters/v05-c11.html",
+      "bytes": 34165,
+      "sha256": "b26038461af87523848e69ebc3fd40577cd21c0c64005821f7502603653da097"
+    },
+    "public_goods": {
+      "path": "content/chapters/v05-c10.html",
+      "bytes": 42585,
+      "sha256": "f702e3da942a499a35892a8fd1e63dabc333b8acb8ef3a78960fd1099703169e"
+    },
+    "scope": "Read full V05-C11 auction/matching chapter, including all auction exercises/solutions and current source record. V05-C10 was inspected for public-project continuity; it is not the introductory auction chapter. Root corrected the assignment route after notification. V05-C11 proves continuous-allocation revenue equivalence and uniform first-price cases; graduate work supplies nonsmooth, Bayesian-optimal and general Groves/revelation proofs. Matching/DA stays with C11.",
+    "frozen_C08_prerequisite": {
+      "path": "production/v13-c08-working.html",
+      "bytes": 61378,
+      "sha256": "36a2751e82289fbe0ec9af189578a73ef7eea52a0b4bdb4d6f4da8c25eb4b939"
+    }
+  },
+  "sources": [
+    {
+      "id": "v05-c11-levin-auctions",
+      "reuse": true,
+      "title": "Jonathan Levin, Auction Theory",
+      "url": "https://web.stanford.edu/~jdlevin/Econ%20286/Auctions.pdf",
+      "stem": "levin-auctions2004",
+      "actual_version": "October 2004, actual physical/printed page1; thirteen-page PDF.",
+      "actual_reading": "Fresh official web and local body inspection of physical/printed1–7, especially first-price derivation3–4 and revenue equivalence5–7. Adjacent common-value opening8 was encountered but is not relied upon. Pages9–13 are outside this task’s used scope.",
+      "actual_images": [
+        3,
+        6
+      ],
+      "supports": "IPV information assumptions, first/second-price rules, equilibrium bid derivation, interim revenue identity and all-pay construction.",
+      "proof_limits": [
+        "First-price sufficiency/global deviations are referred elsewhere in the source; original power-distribution examples will prove them over the entire nonnegative bid domain.",
+        "Physical/printed6 first correctly derives P(v)=integral t dG(t), then incorrectly equates that interim payment to a conditional order-statistic expectation without multiplying by G(v). The actual page image confirms the missing winning-probability factor; use P(v)=G(v) E[payment | win,v].",
+        "No general uniqueness, affiliated/common-value revenue ranking, clock equivalence or large-auction aggregation theorem is imported."
+      ]
+    },
+    {
+      "id": "v13-c10-ozdaglar-mechanism2010",
+      "reuse": false,
+      "title": "Asu Ozdaglar, 6.254 Lecture20: Mechanism Design II",
+      "url": "https://ocw.mit.edu/courses/6-254-game-theory-with-engineering-applications-spring-2010/4bad561319453ce5c37ff094549c5486_MIT6_254S10_lec20.pdf",
+      "stem": "ozdaglar-mechanism2010",
+      "actual_version": "May4,2010 on actual cover; MIT Spring2010 course. Physical pages equal slide numbers through20; page21 is OCW notice.",
+      "actual_reading": "Cover1 and body2–20 read locally. Relied-on scope4–12 for mechanism/DS revelation/Groves/Clarke, and18–19 for conditional BNE/BIC and Bayesian revelation. Sections13–17 and20 were read only to exclude broader uniqueness, impossibility and dAGV claims.",
+      "actual_images": [
+        8,
+        10,
+        19
+      ],
+      "supports": "Direct and indirect mechanisms, selected-equilibrium implementation, dominant versus conditional Bayesian incentive inequalities, and Groves welfare-comparison proof.",
+      "proof_limits": [
+        "Transfers in the slides flow TO the agent; chapter payments flow FROM the agent. Reverse signs consistently and include the designer’s known resource cost once.",
+        "Both revelation results are stated, not fully proved by strategy composition. Supply pure and independently randomized strategy-simulation proofs, with commitment and measurable integrable payoffs.",
+        "Do not import a general Groves-necessity/Green–Laffont budget impossibility/dAGV theorem. The proposed project deficit is an exact counterexample to automatic self-financing, not a proof of every-mechanism impossibility. Pivot IR requires a separately stated feasible-removal/nonnegative-value embedding."
+      ]
+    },
+    {
+      "id": "v13-c10-roughgarden-revenue2013",
+      "reuse": false,
+      "title": "Tim Roughgarden, CS364A Lecture5: Revenue-Maximizing Auctions",
+      "url": "https://www.timroughgarden.org/f13/l/l5.pdf",
+      "stem": "roughgarden-revenue2013",
+      "actual_version": "October7,2013 on actual first page; eight-page document.",
+      "actual_reading": "All eight physical/printed pages read as text. Relied-on sections1.3/1.4,2 and3.1: independent distributions, virtual-revenue derivation, regular single-item pointwise maximization. Section3.2 read to mark unproved extensions.",
+      "actual_images": [
+        5,
+        7
+      ],
+      "supports": "Known independent private-value distributions; expected virtual surplus; monotone regular virtual allocation and reserve interpretation.",
+      "proof_limits": [
+        "Web PDF open failed; HTTPS retrieval succeeded and actual local body/images were inspected. Retrieval failure is not misrepresented as body reading.",
+        "Physical4 uses derivatives for payments and leaves nonsmooth justification to the reader. Reuse/rederive the C08 pairwise integral-envelope argument, including jumps and the boundary-utility constant.",
+        "Physical8 states optimality against all BIC mechanisms without proving it. Supply the independent interim envelope plus feasible pointwise virtual upper bound to prove this extension in the declared single-item class.",
+        "No irregular ironing, named-family regularity catalogue, multi-parameter optimal auction, computational-complexity or real-platform practice claim is adopted."
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "../tmp/pdfs/v13-c10/levin-auctions2004.pdf",
+      "bytes": 210411,
+      "sha256": "cc8e8eb3b527bd97580c8d604b0c5d76ccf811cde9e95844f6e916948dc6c5c0"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c10/levin-auctions2004.txt",
+      "bytes": 28294,
+      "sha256": "937d530930b17c44d6278860dd40e51e8a80a6402e5ce43c5cad00cf585702dd"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c10/levin-auctions2004-retrieval.json",
+      "bytes": 215,
+      "sha256": "a3ac0ef93539bae1296c4480700e8efcdc53d97f8cd27b236a2a2855ac6ebd65"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c10/levin-auctions2004-p3.png",
+      "bytes": 172928,
+      "sha256": "ec73c945810e647d47307692368075c6d4acdacd2a42fd03cce2f1d5cae4c4a2"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c10/levin-auctions2004-p6.png",
+      "bytes": 159654,
+      "sha256": "b13c8d119cda8ca5d358ab19b64957f6a4ca654ebe9fd1fce7cb1f7ad057d816"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c10/ozdaglar-mechanism2010.pdf",
+      "bytes": 216786,
+      "sha256": "72f9231218bd92da45c9af28f3c43dc5be313f91f0ceb84f63a10293ff06d9f6"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c10/ozdaglar-mechanism2010.txt",
+      "bytes": 19761,
+      "sha256": "d1a4e150fb462f43c2b2fbab1006d69ebbcf1423d470b69a6d9e7e00a1839ab9"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c10/ozdaglar-mechanism2010-retrieval.json",
+      "bytes": 385,
+      "sha256": "2ca2639285f41106ca8a31fafb15ea99296791941084061b749d822cc4f0223f"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c10/ozdaglar-mechanism2010-p8.png",
+      "bytes": 62005,
+      "sha256": "6fffd7c49fb53a69b093d4cb74be35f15f2b4b81fec597d443e9d22ed9dca9b0"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c10/ozdaglar-mechanism2010-p10.png",
+      "bytes": 58050,
+      "sha256": "0b651777cb6ddbdcbd195793ae13c4723cab4917263c7e0eb0a7bdcf2494713d"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c10/ozdaglar-mechanism2010-p19.png",
+      "bytes": 42091,
+      "sha256": "f311fde8eb2566655019ca10d1631957dec28ec5a18b9bb9a64292a53bd619ec"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c10/roughgarden-revenue2013.pdf",
+      "bytes": 149183,
+      "sha256": "34ccdb251a620788317e68b2b57f13a27b718f8b4db178747f09e1075496845c"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c10/roughgarden-revenue2013.txt",
+      "bytes": 24295,
+      "sha256": "25d7180445f3647adeb7fb95279f69623cae4a5e6148e4042c728eb786e297ab"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c10/roughgarden-revenue2013-retrieval.json",
+      "bytes": 187,
+      "sha256": "48027d6ebf02c84933d6782c4b7c13ef0d4b7a4a91bbd7a2f4e57d8b8bf9ccdb"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c10/roughgarden-revenue2013-p5.png",
+      "bytes": 167375,
+      "sha256": "bbedb7505e75aca52cac28a3c31123f47e195a9df580901bff92b6548d39ddc6"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c10/roughgarden-revenue2013-p7.png",
+      "bytes": 257575,
+      "sha256": "85c609104233b8fdaa1daffa13bc55d777b0bcae28ddcf88e34e7bf74de499e4"
+    }
+  ],
+  "inspection_method": "Retained three official/author PDFs, three extracted texts and three retrieval records outside book. Rendered and actually viewed seven equation pages using pdftoppm/view_image; physical/printed mappings checked on the images. No source pages embedded in reader material. No whole-source claim beyond Roughgarden’s short eight-page text.",
+  "source_gaps_resolved_in_proposal": [
+    "Complete strategy-composition revelation proofs",
+    "General known-cost Groves ledger and conditional pivot IR",
+    "Nonsmooth pointwise/interim payment characterization with constants",
+    "BIC global revenue upper bound under independent laws",
+    "Global first-price/all-pay deviations, not only first-order conditions",
+    "CARA counterexample to retaining the risk-neutral equilibrium; no new risk-averse-equilibrium claim"
+  ],
+  "retained_boundaries": [
+    "Revelation reproduces a selected equilibrium, not unique/full implementation; communication and hidden actions outside the simulated outcome are excluded.",
+    "BIC revelation can retain correlated type laws, but the one-variable interim envelope and virtual-revenue theorem assume independence.",
+    "Random expected payments require per-report and ex ante absolute integrability/joint measurability; finite/bounded examples satisfy them.",
+    "Known distribution, fixed participation population, private values, commitment, no binding budgets and enforced transfers are substantive model assumptions.",
+    "The proposed CARA utility is finite, increasing and concave on all real monetary gains, so no hidden overbid-domain restriction is needed."
+  ]
+}

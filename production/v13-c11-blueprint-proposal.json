@@ -1,0 +1,741 @@
+{
+  "chapter": "v13-c11",
+  "title": "Matching, networks and market design",
+  "date": "2026-10-09",
+  "owner": "ito_author",
+  "status": "original_blueprint_frozen_for_root_review_not_manuscript",
+  "contract": "production/v13-c11-preparation-assignment.json",
+  "source_preparation": {
+    "path": "book/production/v13-c11-source-preparation.json",
+    "bytes": 14332,
+    "sha256": "fb48fcde53419155dc569b21091d7dea6ebb54afaec963f3017ab7e1cfdb94ac"
+  },
+  "coherent_instructional_architecture": "A design desk must separate three questions: allocating nontransferable placements under ordinal priorities, selling independently owned unit-demand objects with money, and governing links and effort when payoffs depend on neighbors. Six original finite/small cases change one declared information, report, resource or behavioral constraint at a time. They are distinct economic models, not a fictitious common cash account; no empirical application or historical data is implied.",
+  "learning_sequence": [
+    "Strict one-to-one DA and its complete noncircular individual incentive proof, including outside options.",
+    "Two original matching markets, recipient manipulation and report-domain restrictions.",
+    "A separate transferable-utility assignment model with full global price certificates and owned payments.",
+    "Complementary and substitute network games: global best replies, existence/uniqueness boundaries, planner welfare and financed intervention.",
+    "Endogenous link formation: all three-node graphs, exact consent boundaries and coordination limits."
+  ],
+  "prerequisites": {
+    "direct": "V13-C10 mechanism design/auctions is still in production; final acceptance must follow its acceptance.",
+    "already_proved_inputs": [
+      "Finite game Nash/best-response definitions in V13-C06.",
+      "Linear systems, quadratic forms and norms from V02; the contraction reasoning needed here is supplied explicitly.",
+      "V05-C11 definitions and DA optimality are reviewed and extended; its deferred proposer-strategy-proofness follow-up is explicitly closed by the full proof route.",
+      "V12 causal inference supplies the vocabulary for research critique, not empirical evidence for these synthetic cases."
+    ],
+    "excluded_shortcuts": [
+      "No unproved LP-integrality/Hall/price-existence theorem.",
+      "No general strategic-complements lattice theorem or general spectral NE theorem.",
+      "No assumed unmatched-set theorem or strategy-proofness in the menu proof.",
+      "No ties, capacities, couples, private budget manipulation or coalitional matching theorem."
+    ]
+  },
+  "mandatory_complete_proof": {
+    "domain": "Finite disjoint sets A (applicants) and H (one-seat institutions), either possibly empty and not necessarily equally large. Every agent has a strict preference order over the opposite side plus outside ∅; only partners strictly above outside are acceptable. Equivalently report any ordered subset; the ordering below outside is immaterial. Matching is a partial bijection. No transfers or externalities. For individual applicant strategy-proofness, fix every other report and every institution priority/acceptability list arbitrarily. No ties, couples, capacities or coalition-report theorem is asserted.",
+    "DA_termination_and_stability": "Choose any unmatched proposer with an untried acceptable recipient; it proposes to its highest untried acceptable name. A recipient retains its highest acceptable proposal so far and rejects the others. Each directed pair is tried at most once, so at most |A||H| proposals occur. Held partners only improve in recipient preference; no recipient returns to unmatched after an acceptable acceptance. Final individual rationality is immediate. If (a,h) blocked the outcome, a preferred h to its final partner or outside and hence proposed to h before stopping. Rejection then means h already held or later obtained someone strictly preferred to a; that preference persists to the end, contradicting blocking. The proof also applies after interchanging the sides.",
+    "first_rejection_and_order_independence": "Call a pair achievable if it occurs in some stable matching for the fixed report profile. Suppose the first rejection of an achievable pair (a,h) occurs. It cannot be an acceptability rejection, since stable matches are individually rational. Let μ be stable with μ(a)=h, and let b≠a be the proposer h keeps; h strictly prefers b to a. Proposer b has already proposed to h, so every recipient b ranks above h rejected b earlier. If μ(b) were above h, that would be an earlier rejection of an achievable pair. It cannot equal h because μ(a)=h. If μ(b)=∅, h is still strictly better because b only proposes to acceptable names. Thus b strictly prefers h to μ(b), making (b,h) a blocking pair of μ. Contradiction. Every proposer therefore weakly prefers the DA outcome to every stable matching, including an unmatched comparison. All legal proposal schedules yield stable proposer-optimal outcomes. Under strict preferences two such outcomes give every proposer the same partner, hence the same matching: schedule independence. This result is not used alone to infer incentive compatibility.",
+    "unmatched_set_lemma": "Let μ and ν be stable for the same finite strict profile. Suppose μ(m0)=∅ but ν(m0)=h0. Individual rationality gives h0≻m0∅. Stability of μ forces μ(h0)=m1 to exist and satisfy m1≻h0m0. Since ν(h0)=m0, stability of ν forces ν(m1)=h1 to exist and satisfy h1≻m1h0. Stability of μ then forces μ(h1)=m2 with m2≻h1m1. Continue: hk=ν(mk), mk+1=μ(hk), hk≻mkμ(mk) and mk+1≻hkν(hk). Acceptability and strict stability supply each next nonempty partner. No finite cycle is possible. At a first repeated applicant mk+1=mj, j=0 would give m0 a μ-partner, impossible. If j>0, injectivity of μ gives hk=h(j−1), and injectivity of ν then gives mk=m(j−1), an earlier repeated applicant, contrary to choice of the first repeat. Thus all applicants along the path are distinct, contrary to finiteness. Swapping μ and ν excludes the opposite unmatched discrepancy; interchanging the two sides proves the same statement for institutions. All stable matchings have exactly the same unmatched agents. This is a proved finite one-to-one lemma, not an invoked general rural-hospitals theorem.",
+    "fixed_menu_construction": "Fix applicant i and all other reports/priorities. Run institution-proposing DA with i rejecting every offer. Let S_i contain ∅ and every institution that proposes to i. The run and S_i do not depend on i’s report. Deleting the futile offers to i gives a legal institution-proposing DA run with i removed; schedule independence identifies its outcome ν^-i. Institutions propose down their strict acceptable lists, so h offers to i in the reject-all run exactly when h ranks i above ν^-i(h), interpreting ν^-i(h)=∅ if unmatched. This also excludes institutions that consider i unacceptable. Thus S_i={∅}∪{h:i≻hν^-i(h)} is an equivalent computable definition.",
+    "singleton_inclusion": "Take any report P_i and let h*=APDA_i(P_i,P_-i). If h*=∅, it is already in S_i. Otherwise its full APDA matching remains individually rational and stable when i’s list is replaced by the singleton [h*]: i keeps h*, and deleting all other acceptable names creates no new blocking pair; the other agents’ assignments and comparisons do not change. By the unmatched-set lemma, institution-proposing DA for this singleton report must also match i, necessarily to h*. Couple its run with reject-all, selecting the same free institution at each step until the first offer from h*. The responses coincide before that event because i rejects all other institutions. The singleton run must have that event to match i; therefore the reject-all run has it too. Consequently h*∈S_i.",
+    "strict_truncation_prefix": "If h* is matched, truncate P_i to T_i consisting of names strictly above h*. Take a legal full APDA execution, and reproduce its prefix ending just before i’s first proposal to its final partner h*. Every prior i-proposal belongs to T_i and has been rejected, so every step of this prefix is legal and has the same response in the truncated problem. At the end i is unmatched and has exhausted T_i; it can never make another proposal and remains unmatched while all other proposers finish legally. If h*=∅, T_i is the original full acceptable list and the original completed execution already proves i is unmatched. Thus there is a stable APDA outcome with i unmatched in the truncated problem, and the unmatched-set lemma forces IPDA under T_i to leave i unmatched as well.",
+    "exclude_preferred_menu_offers": "In institution-proposing DA, applicant i is a receiver. After accepting any institution in T_i it must always hold some acceptable institution, since it only upgrades and held proposers do not withdraw. Since the T_i run ends unmatched, no such offer ever arrives. Couple this run to reject-all until the first T_i offer; if one occurred in either run, the identical earlier responses would make it occur in both. It does not occur. Therefore no institution in S_i is strictly P_i-preferred to h*.",
+    "truthfulness_and_boundaries": "Singleton inclusion and preferred-offer exclusion prove that for every possible ordered-subset report P_i, APDA selects its P_i-best element of the same S_i, including outside. A truthful report selects the true-preference maximum over that set; any unilateral misreport still yields a member of S_i, so cannot strictly improve true utility. The argument covers reordering, truncation, empty reports and falsely declaring a truly unacceptable institution acceptable. S_i may contain such names, but the true outside option outranks them. Reports constrained to at most K names are a different message domain and need not contain the full truthful type; a sincere top-K rule is not the theorem. Unilateral changes in capacities, eligibility or priorities change S_i and are institutional interventions, not fixed-environment preference misreports.",
+    "source_dependency": "Gonczarowski–Heffetz–Thomas v4, Appendix B physical 36–38 / A.4–A.6 supplies the menu route. Its main-text proof assumes strategy-proofness and is excluded as a proof of it. The unmatched-set and prefix/coupling arguments above supply the abbreviated/invoked steps. The finite proofs do not use DA strategy-proofness anywhere before the conclusion."
+  },
+  "worked_cases": [
+    {
+      "id": "W1",
+      "title": "Outside options in an incomplete placement market",
+      "purpose": "Distinguish feasibility, stability, proposer optimality and a report-independent menu; handle an applicant who remains unmatched.",
+      "primitives": {
+        "applicants": {
+          "A": [
+            "X",
+            "Y"
+          ],
+          "B": [
+            "Y",
+            "X"
+          ],
+          "C": [
+            "Z"
+          ],
+          "D": [
+            "Z"
+          ]
+        },
+        "institutions": {
+          "X": [
+            "B",
+            "A"
+          ],
+          "Y": [
+            "A",
+            "B"
+          ],
+          "Z": [
+            "C",
+            "D"
+          ]
+        },
+        "conventions": "One seat per institution; omitted names are below outside. Ordered acceptable lists are strict; no money or cross-match externalities."
+      },
+      "exact": {
+        "IR_matchings": 21,
+        "stable": [
+          {
+            "A": "X",
+            "B": "Y",
+            "C": "Z",
+            "D": null
+          },
+          {
+            "A": "Y",
+            "B": "X",
+            "C": "Z",
+            "D": null
+          }
+        ],
+        "APDA": {
+          "A": "X",
+          "B": "Y",
+          "C": "Z",
+          "D": null
+        },
+        "IPDA": {
+          "A": "Y",
+          "B": "X",
+          "C": "Z",
+          "D": null
+        },
+        "menus_without_outside": {
+          "A": [
+            "X",
+            "Y"
+          ],
+          "B": [
+            "X",
+            "Y"
+          ],
+          "C": [
+            "Z"
+          ],
+          "D": []
+        },
+        "unilateral_reports": 64
+      },
+      "global_check": "Enumerate all 21 individually rational partial matchings and every mutually acceptable potential blocking pair; exactly the two displayed stable outcomes survive. Enumerate 16 ordered subsets per applicant, 64 unilateral reports total, including lists of truly unacceptable institutions. Every result equals the report-best fixed menu member and none improves true preference.",
+      "transfers": [
+        "Remove applicant C entirely, or instead reverse Z’s priority to D above C: D obtains Z and C is absent or unmatched, respectively. These change the environment.",
+        "One applicant/one institution boundary: applicant’s true acceptable list is empty and institution accepts the applicant. Truth gives outside; falsely reporting the institution yields a truly unacceptable match. Empty-side and empty-list DA terminate without proposals."
+      ],
+      "proof": "Use the complete general DA/menu proof above, then explicit finite enumeration. The unchanged matched set across the two stable outcomes is a consequence with outside options; it is not inferred merely from equal cardinalities."
+    },
+    {
+      "id": "W2",
+      "title": "Recipient manipulation and a binding report-list cap",
+      "purpose": "Give a distinct four-agent rejection chain; show why unrestricted applicant strategy-proofness does not cover recipient reports or a top-K reporting instruction.",
+      "primitives": {
+        "applicants": {
+          "A": [
+            "X",
+            "Y",
+            "Z",
+            "W"
+          ],
+          "B": [
+            "Y",
+            "Z",
+            "X",
+            "W"
+          ],
+          "C": [
+            "Z",
+            "X",
+            "Y",
+            "W"
+          ],
+          "D": [
+            "X",
+            "W",
+            "Y",
+            "Z"
+          ]
+        },
+        "institutions": {
+          "X": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ],
+          "Y": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "Z": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ],
+          "W": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "conventions": "All listed partners are acceptable; outside is last. Distinct case from W1."
+      },
+      "exact": {
+        "IR_matchings": 209,
+        "stable": [
+          {
+            "A": "X",
+            "B": "Y",
+            "C": "Z",
+            "D": "W"
+          },
+          {
+            "A": "Y",
+            "B": "Z",
+            "C": "X",
+            "D": "W"
+          }
+        ],
+        "APDA": {
+          "A": "X",
+          "B": "Y",
+          "C": "Z",
+          "D": "W"
+        },
+        "IPDA": {
+          "A": "Y",
+          "B": "Z",
+          "C": "X",
+          "D": "W"
+        },
+        "menus_without_outside": {
+          "A": [
+            "W",
+            "X",
+            "Y"
+          ],
+          "B": [
+            "Y",
+            "Z"
+          ],
+          "C": [
+            "X",
+            "Z"
+          ],
+          "D": [
+            "W"
+          ]
+        },
+        "unilateral_reports": 260,
+        "receiver_lie": {
+          "A": "Y",
+          "B": "Z",
+          "C": "X",
+          "D": "W"
+        },
+        "sincere_cap1": {
+          "A": "X",
+          "B": "Y",
+          "C": "Z",
+          "D": null
+        },
+        "cap1_D_W": {
+          "A": "X",
+          "B": "Y",
+          "C": "Z",
+          "D": "W"
+        },
+        "sincere_cap2": {
+          "A": "X",
+          "B": "Y",
+          "C": "Z",
+          "D": "W"
+        }
+      },
+      "receiver_change": "Only X changes its reported order from C,A,D,B to C,D,A,B. D temporarily displaces A at X; A displaces B at Y; B displaces C at Z; C displaces D at X; D ends at W. X improves in its true order from A to C. The final rotated outcome is also stable for true preferences, which does not prevent strategic selection of it.",
+      "list_cap": "Under a one-name cap, sincere reports A:X, B:Y, C:Z, D:X leave D unmatched. D’s available report [W] obtains W. A two-name cap with sincere first-two reports restores the unrestricted baseline. Full truth was unavailable at cap 1; no contradiction of the fixed-menu theorem.",
+      "global_check": "Enumerate all 209 partial matchings, all blocking pairs and 65 ordered subsets for each applicant (260 unilateral deviations) with the institution profile fixed. Exactly two stable matchings; report outcomes agree with menus. No general two-sided impossibility, group-strategy-proofness or cap-optimality claim."
+    },
+    {
+      "id": "W3",
+      "title": "A price-supported assignment with owned objects",
+      "purpose": "Replace ordinal placement by a different monetary unit-demand allocation model and certify global value without a general LP theorem.",
+      "primitives": {
+        "values": {
+          "A": {
+            "X": 12,
+            "Y": 8,
+            "Z": 2
+          },
+          "B": {
+            "X": 10,
+            "Y": 6,
+            "Z": 5
+          },
+          "C": {
+            "X": 4,
+            "Y": 9,
+            "Z": 7
+          }
+        },
+        "ownership": "Three distinct sellers each own one corresponding object X, Y or Z and value retention at 0. Each buyer owns 20 units of currency, may buy at most one object and has outside incremental utility 0. Buyer utility increment is value minus payment; seller utility increment is the payment. Prices are nonnegative. Each object has at most one buyer. Currency is transferable without fees; liquidity never binds at the displayed prices."
+      },
+      "exact": {
+        "partial_count": 34,
+        "value": 26,
+        "optimal": [
+          {
+            "A": "X",
+            "B": "Z",
+            "C": "Y"
+          }
+        ],
+        "prices": {
+          "X": 5,
+          "Y": 2,
+          "Z": 0
+        },
+        "utilities": {
+          "A": 7,
+          "B": 5,
+          "C": 7
+        },
+        "full_values": [
+          {
+            "matching": {
+              "A": "X",
+              "B": "Y",
+              "C": "Z"
+            },
+            "value": 25
+          },
+          {
+            "matching": {
+              "A": "X",
+              "B": "Z",
+              "C": "Y"
+            },
+            "value": 26
+          },
+          {
+            "matching": {
+              "A": "Y",
+              "B": "X",
+              "C": "Z"
+            },
+            "value": 25
+          },
+          {
+            "matching": {
+              "A": "Y",
+              "B": "Z",
+              "C": "X"
+            },
+            "value": 17
+          },
+          {
+            "matching": {
+              "A": "Z",
+              "B": "X",
+              "C": "Y"
+            },
+            "value": 21
+          },
+          {
+            "matching": {
+              "A": "Z",
+              "B": "Y",
+              "C": "X"
+            },
+            "value": 12
+          }
+        ],
+        "forbid_BZ": {
+          "partial_count": 27,
+          "value": 25,
+          "optimal": [
+            {
+              "A": "X",
+              "B": "Y",
+              "C": "Z"
+            },
+            {
+              "A": "Y",
+              "B": "X",
+              "C": "Z"
+            }
+          ],
+          "prices": {
+            "X": 6,
+            "Y": 2,
+            "Z": 0
+          },
+          "utilities": {
+            "A": 6,
+            "B": 4,
+            "C": 7
+          },
+          "full_values": [
+            {
+              "matching": {
+                "A": "X",
+                "B": "Y",
+                "C": "Z"
+              },
+              "value": 25
+            },
+            {
+              "matching": {
+                "A": "Y",
+                "B": "X",
+                "C": "Z"
+              },
+              "value": 25
+            },
+            {
+              "matching": {
+                "A": "Z",
+                "B": "X",
+                "C": "Y"
+              },
+              "value": 21
+            },
+            {
+              "matching": {
+                "A": "Z",
+                "B": "Y",
+                "C": "X"
+              },
+              "value": 12
+            }
+          ]
+        }
+      },
+      "cash_ledger": "Baseline purchases A→X for 5, B→Z for 0, C→Y for 2. Buyer cash closes at (15,20,18), sellers (X,Y,Z) receive (5,2,0); total cash stays 60. Buyer utility increments (7,5,7) and seller receipts 7 sum to value 26. Retention at price 0 is an allowed seller indifference.",
+      "certificate_theorem": "On any finite allowed edge set, suppose u_i≥0, p_j≥0 and u_i+p_j≥v_ij. For any feasible partial matching, sum of assigned values is at most the sum of u_i over matched buyers plus p_j over sold objects, which is at most Σ_i u_i+Σ_j p_j. If a candidate has equality on its assigned edges and zero u for unmatched buyers and zero p for unsold objects, it attains this global bound. Its buyers optimize over every allowed object and outside; sellers willingly sell nonnegative-price objects. This proves optimality and supports the displayed allocation. Existence of some value maximizer follows from finiteness, but general supporting-price existence and integrality are not claimed.",
+      "changed_constraint": "Forbid B–Z. The new optimal value is 25, with exactly A-X/B-Y/C-Z and A-Y/B-X/C-Z. Prices (6,2,0), utilities (6,4,7) certify the restricted problem. Recompute the allowed edge inequalities; the removed edge would violate the certificate. At zero prices A and B both demand X, so efficient allocation alone is not a price-clearing argument.",
+      "scope": "No summing of ordinal placement ranks. This is a separate ownership/transfer model, not a claim that payments can be added to W1 without changing its institutions."
+    },
+    {
+      "id": "W4",
+      "title": "Complementary effort, welfare and a fully financed implementation",
+      "purpose": "Solve a network game globally, distinguish a sufficient contraction condition from an exact boundary, and track who pays for efficient action.",
+      "primitives": {
+        "network_edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "game": "x_i≥0, u_i=x_i−x_i²/2+β x_iΣ_j G_ij x_j; G is the undirected three-node path and β≥0. Pure Nash equilibrium; others’ actions fixed in each best-response calculation. Utility is quasilinear in cash: u_i is the effort-benefit utility net of effort disutility, expressed in the same unit, not a schedule of cash receipts or cash invoices. Only the implementation’s specified fees and subsidies enter its cash ledger.",
+        "baseline_beta": "1/4"
+      },
+      "exact": {
+        "NE": [
+          "10/7",
+          "12/7",
+          "10/7"
+        ],
+        "NE_utilities": [
+          "50/49",
+          "72/49",
+          "50/49"
+        ],
+        "NE_welfare": "172/49",
+        "planner": [
+          "3",
+          "4",
+          "3"
+        ],
+        "planner_gross_utilities": [
+          "3/2",
+          "2",
+          "3/2"
+        ],
+        "planner_welfare": "5",
+        "subsidy": [
+          "1",
+          "3/2",
+          "1"
+        ],
+        "charges": [
+          "9/2",
+          "3",
+          "9/2"
+        ],
+        "cash_endowment_each": 10,
+        "funded_policy_action_cap": 4,
+        "after_transfer": [
+          "0",
+          "5",
+          "0"
+        ],
+        "beta_3_5_NE": [
+          "40/7",
+          "55/7",
+          "40/7"
+        ],
+        "beta_3_4_linear_solution": [
+          "-14",
+          "-20",
+          "-14"
+        ]
+      },
+      "global_equilibrium_proof": "Own-action curvature is −1 and the unique best reply is max(0,1+βΣG_ij x_j). More generally, in u_i=a_i x_i−x_i²/2+x_iΣ_{j≠i}b_ijx_j with fixed finite coefficients and b_ii=0, B_i(x)=max(0,a_i+Σb_ijx_j) is Lipschitz in sup norm with constant q=max_iΣ_j|b_ij|. If q<1, iteration differences shrink geometrically, so their telescoping sum is Cauchy in the closed complete orthant; continuity gives a fixed point, and ||x−y||≤q||x−y|| gives uniqueness. This supplies existence on the unbounded domain without an unproved compactness claim. For β=1/4, q=1/2 and the exact linear solution is positive.",
+      "planner_proof": "Aggregate W=1ᵀx−xᵀ(I−2βG)x/2. At β=1/4, Q=I−G/2 and zᵀQz=(z1−z2/2)²+(z3−z2/2)²+z2²/2>0 for nonzero z. The stationary x*=(3,4,3) is feasible and W(x*)−W(x)=(x−x*)ᵀQ(x−x*)/2≥0 globally; unique optimum W=5, versus Nash 172/49. The game potential has coefficient βG, while welfare has 2βG; they must not be conflated.",
+      "funded_policy": "For this implementation variant explicitly impose 0≤x_i≤4 and endow each agent with 10 cash. Baseline NE and x* remain feasible. Set s=(1,3/2,1). After observable efforts, first collect charge_i=(1/2)Σ_{j≠i}s_jx_j from each agent, then pay subsidy_i=s_ix_i from the pool. Charges are at most (5,4,5), so the initial cash suffices at every permitted profile; total charges equal total subsidies identically. Each charge is independent of its own agent’s action, so the best reply becomes min(4,max(0,1+s_i+βΣG_ijx_j)), still a q=1/2 contraction. Its unique equilibrium is x*. At x*, payments are (3,6,3), charges (9/2,3,9/2), net cash transfers (−3/2,3,−3/2), and net utility increments (0,5,0). Total cash stays 30; the pool ends at zero. This is a stipulated enforceable compulsory fee policy, not a voluntary Pareto improvement: both endpoints lose relative to the baseline 50/49 each.",
+      "boundary_transfers": "Return explicitly to the original unbounded game for parameter comparisons. At β=3/5, q=6/5 fails the sufficient contraction test, but the unique NE is (40/7,55/7,40/7). For any β≥0 all equilibrium actions are positive, and x1=x3 solves (1−2β²)x1=1+β. Thus no finite NE exists for β≥1/√2; β=3/4 produces the infeasible formal vector (−14,−20,−14). Change the action set to [0,2] at β=3/4: every best reply is at least 1, which forces the center to 2 and then both leaves to 2, proving unique equilibrium (2,2,2). The cap changes the model; inverse-matrix output alone is not an equilibrium."
+    },
+    {
+      "id": "W5",
+      "title": "Substitution, boundary activity and multiple equilibria",
+      "purpose": "Show that strict concavity of every individual objective does not ensure a unique game equilibrium, and give all pure solutions including a continuum.",
+      "primitives": {
+        "players": 2,
+        "game": "x_i≥0; u_i=x_i−x_i²/2−γx_ix_j, j≠i; γ≥0; pure Nash outcomes; outside action 0.",
+        "best_reply": "max(0,1−γx_j)"
+      },
+      "exact": {
+        "gamma_1_2": {
+          "NE": [
+            [
+              "2/3",
+              "2/3"
+            ]
+          ],
+          "welfare": [
+            "4/9"
+          ]
+        },
+        "gamma_1": {
+          "NE": "{(z,1−z):0≤z≤1}",
+          "NE_welfare_range": [
+            "1/4",
+            "1/2"
+          ]
+        },
+        "gamma_2": {
+          "NE": [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1/3",
+              "1/3"
+            ],
+            [
+              "1",
+              "0"
+            ]
+          ],
+          "welfare": [
+            "1/2",
+            "1/9",
+            "1/2"
+          ]
+        }
+      },
+      "complete_active_set_proof": "No equilibrium has both actions zero, because each would choose 1. With only i active, its action must be 1 and the other best reply is zero exactly when γ≥1. With both active, x1+γx2=1 and γx1+x2=1. At γ≠1 this gives x1=x2=1/(1+γ); at γ=1 the equations coincide and give the entire segment x1+x2=1. Hence γ<1 has only the interior profile; γ=1 has the segment including endpoints; γ>1 has precisely the interior profile and the two specialized profiles. The finite examples use γ=1/2,1,2. Strict own-action concavity supplies each unique best reply, not a unique fixed point.",
+      "global_welfare_proof": "Let S=x1+x2. W=S−S²/2+(1−2γ)x1x2. At γ=1/2 the complete planner set is S=1, W=1/2. At γ=1 or 2, the last term is nonpositive, so W≤S−S²/2≤1/2, with equality exactly at (1,0) or (0,1). At γ=1 the equilibrium welfare is [z²+(1−z)²]/2, spanning 1/4 to 1/2. At γ=2 the interior equilibrium yields 1/9 while specialized equilibria yield 1/2. No unprovided equilibrium-selection probabilities or dynamics are inferred."
+    },
+    {
+      "id": "W6",
+      "title": "Link formation, welfare and coordinated financed entry",
+      "purpose": "Separate static pairwise stability, aggregate efficiency and reachability by bilateral moves; make a side-payment intervention explicit.",
+      "primitives": {
+        "nodes": [
+          1,
+          2,
+          3
+        ],
+        "graphs": "All eight simple undirected labeled graphs. A link needs both endpoints’ consent to form; either endpoint may delete it. Only one-link deviations enter pairwise stability.",
+        "payoff": "u_i(g)=Σ_{j≠i, connected}ρ^{d_g(i,j)}−c degree_i(g), 0<ρ<1, c≥0; shortest-path distance. Each endpoint pays c for its direct link, so total resource cost is 2c per edge. No benefit from disconnected nodes.",
+        "stability_convention": "No endpoint can strictly gain from deleting an existing edge. No absent edge can give both endpoints weak gains and at least one a strict gain. Both indifferent permits its absence.",
+        "baseline": [
+          "ρ=3/5",
+          "c=1/2"
+        ],
+        "changed_cost": "c=7/10"
+      },
+      "class_welfare": {
+        "empty": "0",
+        "single_edge": "2ρ−2c",
+        "two_edge_path": "4ρ+2ρ²−4c",
+        "triangle": "6ρ−6c"
+      },
+      "complete_stability_classification": "Empty iff c≥ρ. A single-edge graph is never stable: if c>ρ delete, and if c≤ρ adding a link to the isolated node gives the existing endpoint ρ−c≥0 and the isolated endpoint ρ+ρ²−c>0. Each path is stable iff ρ−ρ²≤c≤ρ: its center’s gain from deleting an edge is c−ρ, each leaf’s deletion gain is c−ρ−ρ², and adding the missing leaf edge gives each endpoint ρ−ρ²−c. Triangle is stable iff c≤ρ−ρ², from its deletion gain c−ρ+ρ². These exhaust all eight graphs, including equality: at c=ρ−ρ², triangle and all three paths are stable; at c=ρ, empty and all three paths are stable.",
+      "complete_efficiency_classification": "Compare the four displayed welfare classes. Triangle is uniquely efficient as an architecture for c<ρ−ρ²; triangle and all paths tie at equality. All paths maximize for ρ−ρ²<c<ρ+ρ²/2. Paths and empty tie at c=ρ+ρ²/2; empty uniquely maximizes above it. Single-edge graphs never maximize for 0<ρ<1: where they beat empty, a path has higher welfare; where they do not, the appropriate path/triangle or empty beats them. Distinguish architecture from labeled uniqueness.",
+      "exact": {
+        "baseline": {
+          "stable": "three paths",
+          "efficient": "three paths",
+          "path_payoffs_leaves_center": [
+            "23/50",
+            "1/5",
+            "23/50"
+          ],
+          "class_welfare_empty_single_path_triangle": [
+            "0",
+            "1/5",
+            "28/25",
+            "3/5"
+          ]
+        },
+        "changed": {
+          "stable": "empty only",
+          "efficient": "three paths",
+          "path_payoffs": [
+            "13/50",
+            "−1/5",
+            "13/50"
+          ],
+          "class_welfare_empty_single_path_triangle": [
+            "0",
+            "−1/5",
+            "8/25",
+            "−3/5"
+          ]
+        },
+        "thresholds": [
+          "6/25",
+          "3/5",
+          "39/50"
+        ]
+      },
+      "financed_contract": "At ρ=3/5,c=7/10 designate node 2 as center. Each leaf pays it t=3/20 whenever its designated link to node 2 exists; the payment stops when that link is absent. Other edges carry no transfers. All three players start with 2 units of cash; maintenance costs and these transfers can be paid before benefits at every graph (a leaf owes at most 2c+t=31/20<2). The transfers sum to zero and are funded by leaves, not an external subsidy. At path {12,23}, net incremental payoffs are (11/100,1/10,11/100), summing to 8/25. Center loses 1/20 by deleting either edge; each leaf loses 11/100 by deleting its edge; either leaf’s gain from adding edge13 is −23/50. The contracted path is pairwise stable and all three prefer its simultaneous package to empty.",
+      "reachability_boundary": "The empty graph nevertheless remains pairwise stable under this rule. More generally, at c=7/10 the total payoff increment of the first isolated link is 2ρ−2c=−1/5; no balanced transfer between only its endpoints can give both weak gains. Therefore bilateral myopic link additions cannot start from empty. Reaching the desirable path requires an expressly allowed three-party simultaneous package or a different funded intertemporal protocol. No claim of spontaneous efficient convergence, farsighted equilibrium or general coalition stability is made.",
+      "finite_check": "Shortest paths and payoffs recomputed for all eight labeled graphs at both costs and the three exact thresholds. Every possible edge addition/deletion checked with the stated weak/strict rule; all eight contracted graphs checked as well. Exactly empty and the designated contracted path are stable at the changed cost."
+    }
+  ],
+  "exercise_plan": [
+    {
+      "id": "E1",
+      "focus": "DA foundations and rejection lemma",
+      "prompt_scope": "Prove termination/stability and the first rejected achievable pair lemma with incomplete lists; derive schedule independence without presuming strategy-proofness.",
+      "solution_route": "DA and first-rejection proofs above, with individual rationality and unmatched cases explicit."
+    },
+    {
+      "id": "E2",
+      "focus": "Incomplete market enumeration and institutional change",
+      "prompt_scope": "For W1 find every stable matching and the two side-optimal outcomes; derive each menu; remove C and then separately reverse Z’s priority.",
+      "solution_route": "21 IR partial assignments, two stable matchings, menus shown in W1; D obtains Z in each changed environment and no resource is duplicated."
+    },
+    {
+      "id": "E3",
+      "focus": "Complete incentive proof",
+      "prompt_scope": "Prove finite unmatched-set invariance, fixed-menu inclusion/exclusion and proposer strategy-proofness for all ordered-subset reports. Explain why the proposition does not follow just from proposer optimality.",
+      "solution_route": "Alternating path, singleton, strict-truncation prefix and permanent receiver holding as explicitly supplied; below-outside and empty-list cases included."
+    },
+    {
+      "id": "E4",
+      "focus": "Recipient report and list-cap transfer",
+      "prompt_scope": "Trace W2 under X’s specified lie and under caps 1 and 2. Identify whose incentives are covered and whether the full true type is an admissible message.",
+      "solution_route": "Four-player rejection chain gives the rotated matching; D’s one-name W report improves on sincere cap-1 X; unrestricted applicant result remains intact."
+    },
+    {
+      "id": "E5",
+      "focus": "Global assignment certificate",
+      "prompt_scope": "Prove the finite partial-assignment upper bound and use W3 to certify every allocation, demand and monetary payment. Include unsold/unmatched complementary equalities.",
+      "solution_route": "Nonnegative (u,p) bound, equality on assigned edges and zero unused terms; 34 partial matchings, unique value 26, currency 60 conserved."
+    },
+    {
+      "id": "E6",
+      "focus": "Forbidden-edge and price transfer",
+      "prompt_scope": "Forbid B–Z in W3 and solve again. Check both attaining assignments and every allowed dual inequality; explain zero-price excess demand.",
+      "solution_route": "27 partial matchings, optimum 25 with two displayed assignments; (p,u)=((6,2,0),(6,4,7)); no claimed certificate on a removed edge."
+    },
+    {
+      "id": "E7",
+      "focus": "Unbounded-domain network equilibrium",
+      "prompt_scope": "Derive the global best reply and prove the sup-norm contraction result, then calculate W4 Nash effort, utility and welfare.",
+      "solution_route": "Geometric Cauchy iteration in the closed orthant, continuity and contraction uniqueness; efforts (10/7,12/7,10/7), welfare 172/49."
+    },
+    {
+      "id": "E8",
+      "focus": "Planner and funded implementation",
+      "prompt_scope": "Prove the W4 planner optimum globally, then prove feasibility, exact budget balance and equilibrium implementation of the capped fee/subsidy rule; evaluate voluntary participation.",
+      "solution_route": "Square completion gives unique (3,4,3), W=5. Own-independent charges balance at every permitted profile and are cash-feasible. Modified clipped BR contraction selects x*. Net increments (0,5,0) show endpoint losses."
+    },
+    {
+      "id": "E9",
+      "focus": "Sufficient condition versus exact failure",
+      "prompt_scope": "Change β to 3/5 and 3/4 in the unbounded W4 game, derive the exact existence boundary, and then impose cap 2 at β=3/4.",
+      "solution_route": "Positive best replies force the scalar equation; 3/5 has unique positive solution despite failed row bound; β≥1/√2 has none; cap 2 changes the game and yields unique (2,2,2)."
+    },
+    {
+      "id": "E10",
+      "focus": "All substitute equilibria and welfare",
+      "prompt_scope": "Solve every active pattern in W5 for all γ≥0, specializing to 1/2,1,2; give the complete continuum and global planner sets at those values.",
+      "solution_route": "Four activity patterns; special γ=1 rank loss; W=S−S²/2+(1−2γ)x1x2 proves the stated global welfare results, not just stationary points."
+    },
+    {
+      "id": "E11",
+      "focus": "Every graph and exact equality conventions",
+      "prompt_scope": "Classify all eight W6 graphs for arbitrary 0<ρ<1,c≥0 under pairwise stability and efficiency, including all thresholds and label multiplicities.",
+      "solution_route": "Four payoff architectures plus endpoint edge deltas; exact classifications in W6, with weak consent and strict improvement treated separately."
+    },
+    {
+      "id": "E12",
+      "focus": "Financed design and research critique",
+      "prompt_scope": "Verify W6’s contract, identify risk bearers and why the package does not start through bilateral moves. Give a referee-style assessment of a claim that observing this network proves a positive causal spillover or that stable means efficient.",
+      "solution_route": "All cash/edge margins and the −1/5 first-link joint surplus; demand a stated formation protocol, enforceability/participation and funding, exogenous variation or justified causal design, separation of latent types/homophily/common shocks from spillovers, and an equilibrium-selection/measurement argument. Full credit requires a precise model counterexample and a feasible evidence strategy; an opinion or raw neighbor regression is insufficient."
+    }
+  ],
+  "teach_back_plan": "Explain to a placement applicant why truth selects the best fixed menu member; to a seller why the assignment certificate bounds every alternative; and to a network policymaker why financed efficiency, voluntary participation and bilateral reachability are different claims. Supply an answered model explanation in the eventual chapter.",
+  "retention_plan": [
+    "Reconstruct the singleton/truncation proof without naming a theorem that has not been proved.",
+    "Rebuild one assignment certificate and its payment ledger from the value table.",
+    "Identify the factor-of-two difference between game potential and aggregate welfare.",
+    "Explain why a stable empty graph can coexist with a profitable three-party package."
+  ],
+  "verification": {
+    "status": "passed",
+    "equality_or_group_checks": 789,
+    "complete_report_checks": {
+      "W1": 64,
+      "W2": 260
+    },
+    "finite_sets": {
+      "W1_IR_partial_matchings": 21,
+      "W2_IR_partial_matchings": 209,
+      "W3_partial_assignments": 34,
+      "W3_forbidden_edge_partial_assignments": 27,
+      "W6_graphs_per_case": 8
+    },
+    "method": "Independent stdlib primitive enumerators: DA proposal queues versus blocking-pair enumeration; opposite-side reject-all menus versus all applicant reports; all finite assignment values versus price certificates; Fraction linear systems/global algebra; shortest-path payoffs and every edge deviation. This verifies original finite cases, not the universal theorems, which require the supplied proofs.",
+    "evidence": [
+      {
+        "path": "tmp/pdfs/v13-c11/seed-audit.py",
+        "bytes": 12780,
+        "sha256": "d9b5beedfbdb3e88df5ab703ce50ebf821b800327c44fbbb7cacad45d915ae1f"
+      },
+      {
+        "path": "tmp/pdfs/v13-c11/seed-audit-output.json",
+        "bytes": 25089,
+        "sha256": "2abd7972d95d4109e7d0504574aaef8b8bc3aaaf1dca51c4d5694f16bb5ad469"
+      }
+    ],
+    "scope": "No full chapter/runtime author gates claimed at this preparation stage. Future author checker should remain bounded to these meaningful finite sets and targeted domain/structure gates."
+  },
+  "resolved_design_refinement": "The initial fixed lump-sum subsidy sketch was strengthened before this frozen proposal: the W4 implementation now uses own-action-independent cross-funded charges, a declared action cap and endowed cash. Balance and cash feasibility hold at every permitted profile, not just at the target equilibrium. No existing chapter or frozen package changed.",
+  "unresolved_mathematical_issue": null,
+  "remaining_work": "Await root blueprint assessment and explicit full-author ownership contract. Then produce original full manuscript, all twelve complete solutions, answer teach-back/retention and a compact independently checked author package. Preparation is not acceptance."
+}

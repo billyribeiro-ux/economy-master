@@ -1,0 +1,99 @@
+{
+  "chapter": "v13-c10",
+  "status": "Scoped primary source records approved for canonical C10 author package; actual inspectors and limits preserved.",
+  "sources": [
+    {
+      "id": "v05-c11-levin-auctions",
+      "reuse_existing_id": true,
+      "title": "Jonathan Levin, Auction Theory",
+      "url": "https://web.stanford.edu/~jdlevin/Econ%20286/Auctions.pdf",
+      "checked": "2026-10-09",
+      "actual_inspector": "c05_review",
+      "document_version": "October 2004, actual physical/printed page1; thirteen-page PDF.",
+      "actual_body_scope": "Fresh official web and local body inspection of physical/printed1–7, especially first-price derivation3–4 and revenue equivalence5–7. Adjacent common-value opening8 was encountered but is not relied upon. Pages9–13 are outside this task’s used scope.",
+      "images_inspected": [
+        3,
+        6
+      ],
+      "supported_use": "IPV information assumptions, first/second-price rules, equilibrium bid derivation, interim revenue identity and all-pay construction.",
+      "limits": [
+        "First-price sufficiency/global deviations are referred elsewhere in the source; original power-distribution examples will prove them over the entire nonnegative bid domain.",
+        "Physical/printed6 first correctly derives P(v)=integral t dG(t), then incorrectly equates that interim payment to a conditional order-statistic expectation without multiplying by G(v). The actual page image confirms the missing winning-probability factor; use P(v)=G(v) E[payment | win,v].",
+        "No general uniqueness, affiliated/common-value revenue ranking, clock equivalence or large-auction aggregation theorem is imported."
+      ],
+      "primary_body_binding": {
+        "path": "../tmp/pdfs/v13-c10/levin-auctions2004.pdf",
+        "bytes": 210411,
+        "sha256": "cc8e8eb3b527bd97580c8d604b0c5d76ccf811cde9e95844f6e916948dc6c5c0"
+      }
+    },
+    {
+      "id": "v13-c10-ozdaglar-mechanism2010",
+      "reuse_existing_id": false,
+      "title": "Asu Ozdaglar, 6.254 Lecture20: Mechanism Design II",
+      "url": "https://ocw.mit.edu/courses/6-254-game-theory-with-engineering-applications-spring-2010/4bad561319453ce5c37ff094549c5486_MIT6_254S10_lec20.pdf",
+      "checked": "2026-10-09",
+      "actual_inspector": "c05_review",
+      "document_version": "May4,2010 on actual cover; MIT Spring2010 course. Physical pages equal slide numbers through20; page21 is OCW notice.",
+      "actual_body_scope": "Cover1 and body2–20 read locally. Relied-on scope4–12 for mechanism/DS revelation/Groves/Clarke, and18–19 for conditional BNE/BIC and Bayesian revelation. Sections13–17 and20 were read only to exclude broader uniqueness, impossibility and dAGV claims.",
+      "images_inspected": [
+        8,
+        10,
+        19
+      ],
+      "supported_use": "Direct and indirect mechanisms, selected-equilibrium implementation, dominant versus conditional Bayesian incentive inequalities, and Groves welfare-comparison proof.",
+      "limits": [
+        "Transfers in the slides flow TO the agent; chapter payments flow FROM the agent. Reverse signs consistently and include the designer’s known resource cost once.",
+        "Both revelation results are stated, not fully proved by strategy composition. Supply pure and independently randomized strategy-simulation proofs, with commitment and measurable integrable payoffs.",
+        "Do not import a general Groves-necessity/Green–Laffont budget impossibility/dAGV theorem. The proposed project deficit is an exact counterexample to automatic self-financing, not a proof of every-mechanism impossibility. Pivot IR requires a separately stated feasible-removal/nonnegative-value embedding."
+      ],
+      "primary_body_binding": {
+        "path": "../tmp/pdfs/v13-c10/ozdaglar-mechanism2010.pdf",
+        "bytes": 216786,
+        "sha256": "72f9231218bd92da45c9af28f3c43dc5be313f91f0ceb84f63a10293ff06d9f6"
+      }
+    },
+    {
+      "id": "v13-c10-roughgarden-revenue2013",
+      "reuse_existing_id": false,
+      "title": "Tim Roughgarden, CS364A Lecture5: Revenue-Maximizing Auctions",
+      "url": "https://www.timroughgarden.org/f13/l/l5.pdf",
+      "checked": "2026-10-09",
+      "actual_inspector": "c05_review",
+      "document_version": "October7,2013 on actual first page; eight-page document.",
+      "actual_body_scope": "All eight physical/printed pages read as text. Relied-on sections1.3/1.4,2 and3.1: independent distributions, virtual-revenue derivation, regular single-item pointwise maximization. Section3.2 read to mark unproved extensions.",
+      "images_inspected": [
+        5,
+        7
+      ],
+      "supported_use": "Known independent private-value distributions; expected virtual surplus; monotone regular virtual allocation and reserve interpretation.",
+      "limits": [
+        "Web PDF open failed; HTTPS retrieval succeeded and actual local body/images were inspected. Retrieval failure is not misrepresented as body reading.",
+        "Physical4 uses derivatives for payments and leaves nonsmooth justification to the reader. Reuse/rederive the C08 pairwise integral-envelope argument, including jumps and the boundary-utility constant.",
+        "Physical8 states optimality against all BIC mechanisms without proving it. Supply the independent interim envelope plus feasible pointwise virtual upper bound to prove this extension in the declared single-item class.",
+        "No irregular ironing, named-family regularity catalogue, multi-parameter optimal auction, computational-complexity or real-platform practice claim is adopted."
+      ],
+      "primary_body_binding": {
+        "path": "../tmp/pdfs/v13-c10/roughgarden-revenue2013.pdf",
+        "bytes": 149183,
+        "sha256": "34ccdb251a620788317e68b2b57f13a27b718f8b4db178747f09e1075496845c"
+      }
+    }
+  ],
+  "source_preparation": {
+    "path": "production/v13-c10-source-preparation.json",
+    "sha256": "abc7f7543fd379d02ca9ab6da4a52a239f68f49eef228cfac84ed82d2a388069"
+  },
+  "blueprint": {
+    "path": "production/v13-c10-blueprint-proposal.json",
+    "sha256": "f6229e12ca09ff05f441d919e8e3fa46ac85e00dba221c910669240104065128"
+  },
+  "original_work": "All six numerical cases, twelve exercise transfers, cash accounts and proof completions are original instructional constructions. Sources supply scoped method routes, not these quantities or evidence of observed auction behavior.",
+  "runtime_boundary": "Only canonical chapter HTML/checker/source/author JSON are runtime files; preparation, blueprint and retained PDF/text/images are provenance, never runtime dependencies.",
+  "excluded_claims": [
+    "Unique/full implementation; universal budget-balance impossibility; Groves necessity",
+    "General irregular ironing or multi-object revenue optimality",
+    "Solved risk-averse first-price equilibrium or its revenue ranking",
+    "Current platform/legal practice or empirical identification from bids alone"
+  ]
+}

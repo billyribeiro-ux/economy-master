@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-09",
+  "batch": "v13-contracts-auctions",
+  "first_completed_verification": {
+    "status": "failed",
+    "html_pages_checked": 176,
+    "chapters": 154,
+    "errors": [
+      "v13-c09: missing teaching/retention check",
+      "v13-c09: missing recorded editorial review",
+      "v13-c10: missing recorded editorial review"
+    ]
+  },
+  "repairs": [
+    "Added canonical review_record paths for the two existing accepted editorial records.",
+    "Shared retention-label recognizer now accepts delayed recall, the explicit existing C09 section10 heading with fully reviewed prompts and answers. No frozen manuscript/checker/source/author/peer payload changed."
+  ],
+  "execution_note": "An earlier premature verify process was terminated before completion and restarted after build completion; only completed verification results are relied upon.",
+  "remaining": "Rebuild after metadata/recognizer repair and run full verification once."
+}

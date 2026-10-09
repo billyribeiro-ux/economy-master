@@ -1,0 +1,234 @@
+{
+  "chapter": "v13-c11",
+  "date": "2026-10-09",
+  "status": "root_independent_case_validation_passed",
+  "groups": 52,
+  "checks": [
+    {
+      "group": "W1-mutual-IR-count",
+      "status": "passed"
+    },
+    {
+      "group": "W1-full-stable-set-and-side-optima",
+      "status": "passed"
+    },
+    {
+      "group": "W1-fixed-menus",
+      "status": "passed"
+    },
+    {
+      "group": "W1-all-unilateral-ordered-subset-reports",
+      "status": "passed"
+    },
+    {
+      "group": "W2-mutual-IR-count",
+      "status": "passed"
+    },
+    {
+      "group": "W2-full-stable-set-and-side-optima",
+      "status": "passed"
+    },
+    {
+      "group": "W2-fixed-menus",
+      "status": "passed"
+    },
+    {
+      "group": "W2-all-unilateral-ordered-subset-reports",
+      "status": "passed"
+    },
+    {
+      "group": "W1-remove-C",
+      "status": "passed"
+    },
+    {
+      "group": "W1-reverse-Z",
+      "status": "passed"
+    },
+    {
+      "group": "W2-recipient-manipulation",
+      "status": "passed"
+    },
+    {
+      "group": "W2-sincere-one-name",
+      "status": "passed"
+    },
+    {
+      "group": "W2-one-name-deviation",
+      "status": "passed"
+    },
+    {
+      "group": "W2-two-name",
+      "status": "passed"
+    },
+    {
+      "group": "W3-baseline",
+      "status": "passed"
+    },
+    {
+      "group": "W3-certificate-allowed-edges-False",
+      "status": "passed"
+    },
+    {
+      "group": "W3-attained-certificate-False",
+      "status": "passed"
+    },
+    {
+      "group": "W3-forbidden",
+      "status": "passed"
+    },
+    {
+      "group": "W3-certificate-allowed-edges-True",
+      "status": "passed"
+    },
+    {
+      "group": "W3-attained-certificate-True",
+      "status": "passed"
+    },
+    {
+      "group": "W3-currency-conservation",
+      "status": "passed"
+    },
+    {
+      "group": "W3-removed-edge-actually-violates",
+      "status": "passed"
+    },
+    {
+      "group": "W4-baseline-equilibrium",
+      "status": "passed"
+    },
+    {
+      "group": "W4-NE-utility-and-welfare",
+      "status": "passed"
+    },
+    {
+      "group": "W4-planner",
+      "status": "passed"
+    },
+    {
+      "group": "W4-planner-gradient",
+      "status": "passed"
+    },
+    {
+      "group": "W4-target-charges",
+      "status": "passed"
+    },
+    {
+      "group": "W4-net-utilities",
+      "status": "passed"
+    },
+    {
+      "group": "W4-all-corner-charge-maxima",
+      "status": "passed"
+    },
+    {
+      "group": "W4-target-clipped-best-responses",
+      "status": "passed"
+    },
+    {
+      "group": "W4-failed-sufficient-bound-positive-equilibrium",
+      "status": "passed"
+    },
+    {
+      "group": "W4-infeasible-formal-inverse",
+      "status": "passed"
+    },
+    {
+      "group": "W4-cap2-best-responses",
+      "status": "passed"
+    },
+    {
+      "group": "W5-half-welfare",
+      "status": "passed"
+    },
+    {
+      "group": "W5-gamma2-welfare",
+      "status": "passed"
+    },
+    {
+      "group": "W5-gamma1-endpoint-center-range",
+      "status": "passed"
+    },
+    {
+      "group": "W6-baseline-payoffs",
+      "status": "passed"
+    },
+    {
+      "group": "W6-changed-payoffs",
+      "status": "passed"
+    },
+    {
+      "group": "W6-baseline-classes",
+      "status": "passed"
+    },
+    {
+      "group": "W6-changed-classes",
+      "status": "passed"
+    },
+    {
+      "group": "W6-all-eight-at-cost-0",
+      "status": "passed"
+    },
+    {
+      "group": "W6-all-eight-at-cost-6/25",
+      "status": "passed"
+    },
+    {
+      "group": "W6-all-eight-at-cost-1/2",
+      "status": "passed"
+    },
+    {
+      "group": "W6-all-eight-at-cost-3/5",
+      "status": "passed"
+    },
+    {
+      "group": "W6-all-eight-at-cost-7/10",
+      "status": "passed"
+    },
+    {
+      "group": "W6-all-eight-at-cost-39/50",
+      "status": "passed"
+    },
+    {
+      "group": "W6-all-eight-at-cost-1",
+      "status": "passed"
+    },
+    {
+      "group": "W6-contracted-payoffs",
+      "status": "passed"
+    },
+    {
+      "group": "W6-contracted-all-eight-stability",
+      "status": "passed"
+    },
+    {
+      "group": "W6-deletion-and-addition-margins",
+      "status": "passed"
+    },
+    {
+      "group": "W6-first-link-obstruction",
+      "status": "passed"
+    },
+    {
+      "group": "W6-prefunded-leaf-maximum",
+      "status": "passed"
+    }
+  ],
+  "methods": [
+    "Exhaustive mutual-IR partial matching and blocking-pair enumeration; derive side optima from the complete stable set, then compare every ordered-subset report with opposite-side removal menus. No author DA helper imported.",
+    "Every unit-demand partial assignment versus exact allowed-edge utility/price bound; actual currency conservation.",
+    "Independent path scalar equations and exact payoff/charge calculations; global quadratic, contraction and active-set arguments separately read.",
+    "Floyd shortest-path enumeration of all8 graphs and every endpoint move, including exact threshold equalities and conditional balanced transfers."
+  ],
+  "all_exact_exercise_routes_read": 12,
+  "author_seed_used_as_oracle": false,
+  "proof_route": "production/v13-c11-root-proof-preparation.json",
+  "source_evidence": "production/v13-c11-root-source-validation.json",
+  "open_findings": [],
+  "limits": "Blueprint validation only; full manuscript and all final exercises/checker/source/author/separate peer gates remain necessary.",
+  "reviewed_blueprint": {
+    "path": "production/v13-c11-blueprint-proposal.json",
+    "bytes": 42513,
+    "sha256": "7a977237cb9bb3692a6298437754ea75dd9e6d63dc63563a2e1bfce74b4b62fc"
+  },
+  "full_blueprint_read": true
+}
