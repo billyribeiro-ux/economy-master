@@ -1,0 +1,96 @@
+{
+  "chapter": "v13-c06",
+  "date": "2026-10-09",
+  "peer": "bs_author",
+  "status": "separate_peer_review_complete_pending_coordinator_acceptance",
+  "scope": "Complete six-case manuscript, twelve exact prompts/solutions, author checker, source/author records and source preparation read. No author or shared file edited. Final canonical quartet inspected and bound.",
+  "bindings": [
+    {
+      "path": "content/chapters/v13-c06.html",
+      "bytes": 61095,
+      "sha256": "92686df5c2f286e6892944a8dcf65fea7edd4ddd7bc269ddcc208d09ca7af6ab"
+    },
+    {
+      "path": "scripts/check_v13_c06.py",
+      "bytes": 35533,
+      "sha256": "36ec17d82cd05db25b53f2b260e5271e0f6ee84a50342a2560077ad653ef7d2d"
+    },
+    {
+      "path": "content/reviews/v13-c06-sources.json",
+      "bytes": 7211,
+      "sha256": "690df4b122a3b9ebca2a1c5873f9155f13252b772e5066dba1819627c88fda12"
+    },
+    {
+      "path": "content/reviews/v13-c06-author.json",
+      "bytes": 9246,
+      "sha256": "bdb2b3e9649f60aa4083011091c1c32432094c5d94d102e4d42e4d244b397544"
+    },
+    {
+      "path": "scripts/check_v13_c06_peer.py",
+      "bytes": 32124,
+      "sha256": "f0bada72c7518ec4335a7a130a4c7e6379fe58f7e588f1f977d637b2393be873"
+    }
+  ],
+  "independence": "Original payoff tables and type laws supply every primitive. No author checker execution, generated numeric output or blueprint was used as an oracle. The author implementation was read for separate code/domain review. Provenance and primary artifacts are not runtime dependencies.",
+  "proof_audit": {
+    "nash": "v13-c06-nash: passed. Pure values have a finite maximum; a convex average equals it exactly on maximizing support. The mixed-strategy product is compact convex and each best-reply value a nonempty compact simplex. Passing all finite payoff inequalities to limits proves the closed graph. Accepted C04 supplies Kakutani without using Nash circularly. No pure-equilibrium or convergence inference.",
+    "perfection": "v13-c06-perfection: passed. Positive floors with sum below one produce an affine simplex, so constrained existence applies. Approximate every unperturbed pure deviation by a feasible perturbed vertex before taking limits. Finitely many positive limiting support masses exceed their vanishing floors on one common tail. Reverse floors equal tremble mass off support and min(half-mass,1/k) on support: positive, sum below one, vanishing, with all discretionary probability on best actions. Full mixing gives positive weight to the strict mixed-dominance witness. Strict pure and fully mixed Nash are sufficient for perfection; neither uniqueness nor an extensive-form theorem follows.",
+    "bayesian": "v13-c06-bayesian: passed. Positive own marginals define the conditional ratios; joint cells may be zero. The finite type-agent game has the displayed conditional payoffs; other own-type agents are mutually unrealized. Independent plan draws have the same realized typewise marginals. Ex ante/interim equivalence uses positive own-type weights; a null type requires omission or added beliefs. Both correlated priors preserve marginals but change the actual typewise incentives.",
+    "correlated": "v13-c06-correlated: passed. Single-recommendation rules isolate each unnormalized inequality; summing covers all deterministic rules and nonnegative kernels cover randomized rules. Null recommendations are vacuous. Product factorization and support establish CE iff Nash for product laws, hence nonemptiness; linearity gives convexity. Both welfare bounds have strictly positive dual weights and unique binding equalities. Private versus fully public signals and independent replacement have different incentive tests.",
+    "coarse": "v13-c06-coarse: passed. Summing pairwise CE terms gives every fixed-target CCE comparison. With at most two actions, exactly one nonzero recommendation term remains, proving equality of the concepts. For the stated three-action family the following, fixed-deviation and cyclic-deviation payoffs are affine in lambda; CCE holds throughout and CE only at zero. This is a complete family result, not a classification of all game equilibria or a learning theorem.",
+    "support_completeness": "Cases1–5 and ex1,3,6–9: passed. Every binary support cell is considered, including the weak game’s full boundary edges. Dominance excludes every alternative perfect limit, beyond one uniform-floor path. The entry model’s five response regions and both boundary intervals exhaust its probability domain and yield exactly five typewise BNE. Original/changed CE welfare uniqueness follows a global nonnegative linear certificate and equality conditions, not a grid."
+  },
+  "exercise_audit": {
+    "v13-c06-ex1": "Passed: changed zero-sum support exhaustion, both saddle bounds and value; positive affine own transformations preserve incentives while separate scales can alter a social sum.",
+    "v13-c06-ex2": "Passed: full support criterion, pure/mixed deviation equivalence, all Kakutani hypotheses and limits on dynamic or pure existence claims.",
+    "v13-c06-ex3": "Passed: entire Nash continuum, asymmetric constrained profile/payoffs and unique perfect limit across all admissible floor sequences.",
+    "v13-c06-ex4": "Passed: both sequence-equivalence directions, simultaneous finite tail, strict floor feasibility and exact discretionary mass; forced inferior actions explain non-Nash trembles.",
+    "v13-c06-ex5": "Passed: no pure dominator, mixed dominator, Nash/nonperfect witness, general mixed-dominance exclusion and the two separate sufficient perfection results.",
+    "v13-c06-ex6": "Passed: three complete equilibria before/after the changed coordination payoff; all remain perfect, with no unique or welfare-best selection.",
+    "v13-c06-ex7": "Passed: five-region correspondence, all five aggregate pairs, equilibrium-specific type plans and all joint-state/interim payoff accounts.",
+    "v13-c06-ex8": "Passed: correlated and anticorrelated conditional beliefs/gains/payoffs, every type best reply and the null-type information limit.",
+    "v13-c06-ex9": "Passed: all four CE inequalities under each YY payoff, both global welfare bounds and unique equality distributions, individual payoffs and original Nash-hull comparison.",
+    "v13-c06-ex10": "Passed: all-rule/product/convexity proofs; actual private conditional comparisons, public YY deviation and failed independent law with the same marginals.",
+    "v13-c06-ex11": "Passed: general CE inclusion and binary equality, whole stated mixture family, exact half-mixture payoffs/slack and correct restriction of the classification.",
+    "v13-c06-ex12": "Passed: full reasoned correction and four explicit 0–3 rubric dimensions, totaling 12; each maximum requires diagnosis, supporting example/argument and the additional evidence or specification. No empirical identification or learning theorem is fabricated."
+  },
+  "oracle": {
+    "routes": [
+      "Nine exact binary support intervals per game preserve open ends and continuum branches.",
+      "Five-region entry candidate set reconstructed from thresholds and constant responses; every equilibrium checked by direct joint-type summation and conditional optimality.",
+      "CE objective-gap coefficient identities prove global bounds and unique equality cases independently of author vertex enumeration.",
+      "All 27 contingent rules per player evaluated at the two affine-family endpoints; coefficients cover every lambda, with the requested midpoint computed separately."
+    ],
+    "coverage": "All 18 input markers and 43 printed results, six cases/twelve transfers or proofs; plus sparse joint priors with positive own marginals, null-type limits, asymmetric floors, nonperfect mixed-dominated support, price-free utility rescaling and information changes.",
+    "domains": "Actual peer helper calls reject inexact/nonfinite/oversized scalars, malformed games/probabilities/rules, infeasible floors, invalid type plans, zero own marginals, null-recommendation division, unsafe numeric expressions and duplicate/nonfinite JSON. These do not claim execution coverage of the author validator.",
+    "limits": "Finite certificates corroborate the written universal proofs and complete stated small-game classifications. No generic algorithm for all finite-game equilibria, empirical behavior, dynamic convergence or extensive-form perfection is claimed."
+  },
+  "source_audit": {
+    "attribution": "Peer read the full preparation and final source-use records; no fresh primary body/image inspection by bs_author. Actual complete scoped primary inspector is c05_review; root’s narrower prior discovery remains separately attributed.",
+    "Manea": "2017 document on 2016 course URL; inspected physical/printed 1 and 45–47, images 1 and 45. Omitted equivalence proof is supplied in the chapter and feasible floors are explicitly qualified.",
+    "Yildiz": "Spring 2022 cover on 2024 course; physical pages equal inspected Arabic pages+8. Stated finite Nash, CE/product and positive-marginal Bayesian sections plus three equation images support only those scopes.",
+    "Roughgarden": "2013 lecture, pages 1 and 5–7 plus image 7. Cost-minimization inequalities are consistently translated to utility maximization; adjacent learning/application results are excluded.",
+    "access_boundary": "Three scoped source records and six specifically viewed images, not whole-PDF verification. Fourteen retained artifacts are provenance only; no external retrieval is required at runtime."
+  },
+  "instruction": "Methods precede their exact exercises; all determinate answers and the open referee rubric are complete. Six worked containers, twelve paired disclosures, flat routes, exact citations and answered teach-back/retention are checked locally without shared imports.",
+  "validation": {
+    "required_gates": [
+      "normal workspace quiet API",
+      "optimized exact-six quiet API from /",
+      "optimized exact-six silent CLI from /"
+    ],
+    "runtime_members": [
+      "content/chapters/v13-c06.html",
+      "scripts/check_v13_c06.py",
+      "content/reviews/v13-c06-sources.json",
+      "content/reviews/v13-c06-author.json",
+      "scripts/check_v13_c06_peer.py",
+      "content/reviews/v13-c06-peer.json"
+    ],
+    "integrity": "Capture all import/check stdout/stderr; require matching strict JSON-safe summaries, exact isolated membership and unchanged bytes, with bytecode disabled. Actual final results accompany the frozen handoff; this record does not hash itself."
+  },
+  "findings": [],
+  "open_findings": [],
+  "acceptance_boundary": "Root owns canonical acceptance and integration. Separate AI peer review does not certify learner competence or independent human academic approval.",
+  "promotion_review": "Actual final diff inspected: 61,095-byte manuscript unchanged from SHA256 92686df5c2f286e6892944a8dcf65fea7edd4ddd7bc269ddcc208d09ca7af6ab; checker has only four runtime path replacements and its status label; source/author changes are metadata and bindings. No mathematical change. All four final canonical payloads, plus this peer checker, are bound above."
+}

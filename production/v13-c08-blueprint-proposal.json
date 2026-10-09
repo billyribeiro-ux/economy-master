@@ -1,0 +1,115 @@
+{
+  "chapter": "v13-c08",
+  "status": "Independent original-case reconstruction complete; direct full authoring proceeds without additional approval.",
+  "date": "2026-10-09",
+  "root_input": {
+    "path": "production/v13-c08-blueprint-root.json",
+    "bytes": 11540,
+    "sha256": "67336a5e4c66c1756f69e332672301ed29afc7384ae6275b46ea763452023803"
+  },
+  "six_cases": [
+    {
+      "id": "W1",
+      "result": "φ=(0,1,3), q=(0,1,3), U=(0,0,1), t=(0,2,8); profit5/4, rent1/4, welfare3/2, first best15/8, loss3/8.",
+      "independent_method": "All nine pairwise IC gaps and three IR; exact primitive payment/cost aggregation and complete-square bound."
+    },
+    {
+      "id": "W2",
+      "result": "φ=(1,−1,4), q=(2/3,2/3,4), U=(0,2/3,4/3), t=(4/3,4/3,44/3), profit10/3.",
+      "independent_method": "All nine IC/three IR; tangent gradient(1/6,−1/6,0) on order cone. Strict quadratic remainder gives unique allocation."
+    },
+    {
+      "id": "W3",
+      "result": "Uniform[1,3]: threshold3/2, payment9/4, cost9/8, profit9/8, rent9/16, welfare27/16, first best13/6, loss23/48.",
+      "independent_method": "Integrate the original payment, cost and rent polynomials exactly; pointwise constrained quadratic optimum is monotone."
+    },
+    {
+      "id": "W4",
+      "result": "Equal-probability quality0/4 and deterministic2, payment3: utilities1,5; quadratic profits−1 and1. With sqrt cost lottery2 exceeds deterministic3−sqrt2.",
+      "independent_method": "Expected realized cash/cost/utility; no optimal-lottery assertion."
+    },
+    {
+      "id": "W5",
+      "result": "All pure pooling sp∈[0,1]; all pure separation(0,h), h∈[3,9]; strict refinement eliminates pooling/excess h and admits h=3. Net welfare8/3 versus zero-education pooling3.",
+      "independent_method": "Derive necessary cross-signal and zero-signal deviations, construct entire wage schedule, check open refinement witness intervals."
+    },
+    {
+      "id": "W6",
+      "result": "κ=1/6 yields separation[18/5,18], pooling[0,6/5], least h18/5, high wage28/5, net22/5, output16/5, cost2/5, welfare14/5. κ=1/3 any h≥9/2 survives with forced H beliefs above9/2; κ>1/3 no finite H best reply.",
+      "independent_method": "Net-cost substitution plus full global beliefs; strictly distinguish H indifference from dominated types."
+    }
+  ],
+  "exercise_transfers": [
+    {
+      "id": "E1",
+      "input": "W1 priors(1/4,1/4,1/2)",
+      "answer": "φ(−2,0,3); q(0,0,3), U0, t(0,0,9), profit9/4, first best23/8, loss5/8."
+    },
+    {
+      "id": "E2",
+      "input": "W2 quality cap1",
+      "answer": "q(2/3,2/3,1), t(4/3,4/3,8/3), profit23/15; gradient(1/6,−1/6,6/5) certifies global optimum including cap."
+    },
+    {
+      "id": "E3",
+      "input": "W1 q fixed, U=(0,1/2,5/2)",
+      "answer": "t(0,3/2,13/2); every off-diagonal IC strict, low participation weak; profit3/4. A positive common rent shift ensures strict IR and reduces profit equally."
+    },
+    {
+      "id": "E4",
+      "input": "Uniform[1,3], step q0 below2, q2 above2, q(2)=a∈[0,2]",
+      "answer": "U=2 max(θ−2,0); t=0 below2,2a at2,4 above2; IC for every a; U not differentiable at2; profit1."
+    },
+    {
+      "id": "E5",
+      "input": "Uniform[1,4], quadratic cost, cap5",
+      "answer": "threshold2, q=max(0,2θ−4), U=(θ−2)² above2,t=θ²−4; payment32/9,cost16/9,profit16/9,rent8/9,welfare8/3,first best7/2,loss5/6."
+    },
+    {
+      "id": "E6",
+      "input": "Quality0 with1/3 and3 with2/3; payment3; types2,4; compare prior commitment and ex-post rejection",
+      "answer": "Committed utilities1,5; profit0 versus mean-contract1. Ex-post rejection of0 yields utilities2,6, expected payment2,cost3,profit−1."
+    },
+    {
+      "id": "E7",
+      "input": "W5 high prior1/2",
+      "answer": "Pooling wage7/2, cap3/2; separation unchanged[3,9]; pool witness(sp+3/2,sp+9/2); least-separation welfare3."
+    },
+    {
+      "id": "E8",
+      "input": "W5 pool1 or separation6; off-path signal4; compare least separation3",
+      "answer": "Pool: L2>1, H8/3<11/3. Excess separation: L2>1, H3<11/3. Least separation: H4>11/3, so both types dominated and no restriction."
+    },
+    {
+      "id": "E9",
+      "input": "κ=1/4",
+      "answer": "Separation[4,36], pooling[0,4/3], least high wage6, net14/3, output10/3,cost4/9,welfare26/9."
+    },
+    {
+      "id": "E10",
+      "input": "κ=1/3,h6; examine signals5,4; thenκ=1/2",
+      "answer": "At5 only L dominated; H belief required, wage20/3,H net5. At4 neither dominated, L belief deters. κ1/2 gives H lower bound2+s/6→∞."
+    },
+    {
+      "id": "E11",
+      "input": "Research claim that rising posted quality/payment and education wages establish private types and optimal separation",
+      "answer": "Rubric requires information/commitment/ties, cost/risk/timing, counterfactual beliefs and credible empirical design; no unique causal inference from model fit."
+    },
+    {
+      "id": "E12",
+      "input": "Continuum W3 quality fixed; lower-type rentδ; compare finite E3 flexibility",
+      "answer": "IC pins t=t0−δ, IR iffδ≥0, profit9/8−δ; δ1/4 yields7/8. Finite gaps permit different adjacent rents; continuum envelope removes them."
+    }
+  ],
+  "proof_limits": [
+    "Weak IC does not uniquely implement; chosen truth/participation ties stated.",
+    "Continuum allocation uniqueness is almost everywhere unless point values are separately pinned by IC/monotonicity.",
+    "No general ironing algorithm, mixed-signal uniqueness or causal interpretation.",
+    "Boundary high indifference requires H off-path beliefs, not unsupported low beliefs."
+  ],
+  "source_inspection": {
+    "path": "production/v13-c08-source-preparation.json",
+    "bytes": 6660,
+    "sha256": "32aa5cbc7ad58dd74e0956e4fc1ba9ae65a35be52257fe60d591a50a9f1d68d3"
+  }
+}

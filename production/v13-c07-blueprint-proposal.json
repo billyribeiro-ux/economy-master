@@ -1,0 +1,50 @@
+{
+  "chapter": "v13-c07",
+  "date": "2026-10-09",
+  "status": "Author independently confirmed original coordinator seeds; full manuscript proceeds without approval stage",
+  "origin": "Original library cases in bound root blueprint; recomputed from tree/stage/type primitives, not from its reported outputs.",
+  "readonly_design": {
+    "path": "production/v13-c07-blueprint-root.json",
+    "bytes": 7075,
+    "sha256": "900c57d3a4b5fa9c6c78c0af2f675b4306c5366c41f23c8faaf0c6458aa52cc4"
+  },
+  "cases": [
+    {
+      "id": "W1",
+      "data": "Out (2,3); In then F (-1,-2) or A (4,1).",
+      "derived": "All Nash: (In,A), or Out and Fight probability f in [2/5,1]. Unique SPE In,A. Entry-cost k gives SPE entry iff k<2, arbitrary entry at k=2, out if k>2; A after every entry."
+    },
+    {
+      "id": "W2",
+      "data": "Stop (1,1); Continue then H/L probabilities 1/3,2/3; one P2 information set. P1 A/B payoffs 0/3; P2 A pays 3/0, B pays 0/2.",
+      "derived": "Weak PBE Stop,A with belief H>=2/5. Consistency forces H=1/3 under every positive Continue tremble, so sequential equilibrium uniquely Continue,B; A=1 versus B=4/3 for P2."
+    },
+    {
+      "id": "W3",
+      "data": "PD ordered CC,CD,DC,DD: (4,4),(-1,6),(6,-1),(1,1).",
+      "derived": "D strictly dominant. Finite known horizon all-D SPE by backward induction. Infinite grim: 4/(1-d)>=6+d/(1-d) iff d>=2/5, separately for each player."
+    },
+    {
+      "id": "W4",
+      "data": "Cooperation state, T punishment states; any departure starts/resets T subsequent DD periods.",
+      "derived": "Pk=(1-d^k)/(1-d)+d^k*4/(1-d). Cooperation iff 2<=3 sum_{t=1}^T d^t; punishment gain from obeying 2+d(P[k-1]-P[T])>=2. Thresholds T1 2/3, T2 (sqrt(33)-3)/6, limit 2/5. At d=1/2,T2: Vc=8,P1=5,P2=7/2; cooperation deviation=31/4 and punishment deviation=3/4. T1 deviation=17/2 fails."
+    },
+    {
+      "id": "W5",
+      "data": "AA,AB,BA,BB pay (2,2),(0,5),(5,0),(1,1); iid public lottery AB probability lambda, BA otherwise.",
+      "derived": "BB is unique stage Nash. Target (5(1-lambda),5lambda), losing recommendation gain 1. Lambda 1/2: target(5/2,5/2), common threshold2/5. Lambda1/3: target(10/3,5/3), bounds3/10 and3/5. Strict Nash surplus needs lambda in(1/5,4/5). Proved general threshold Gamma_i/(Gamma_i+v_i-r_i) for restricted Nash reversion."
+    },
+    {
+      "id": "W6",
+      "data": "Two distinct entrants, private incumbent commitment type C forced to Fight; R strategic. Incumbent stage Out/F/A 4/-1/1, entrant Out/F/A 0/-2/2, incumbent discount4/5.",
+      "derived": "Prior1/3: R first Fight q=1/2; posterior after F1/2, after A0, after Out1/3. Second entry after F1/6 and after A/Out1. First entry payoff -2/3, hence Out. R first-entry F and A both9/5; path R24/5,C16/5. Prior1/5: q1/4; first entry payoff2/5, hence Enter; path R9/5,C23/15. Complete consistent trembles respect C singleton action."
+    }
+  ],
+  "additional_transfers": [
+    "Perfect-recall three-plan mixture: (X,L,L)1/2,(X,R,L)1/6,(Y,L,R)1/3. Behavioral X2/3,L|X3/4,L|Y0; terminal masses(1/2,1/6,0,1/3).",
+    "Conditional cancellation: H/L prior1/3,2/3; own Go probability g>0; chance continuation rates3/4,1/4. Later masses g/4,g/6 give H posterior3/5, including g approaching zero and a later own deviation to Go.",
+    "Absentminded two-exit transfer pays0,5,1. Behavioral value1+3p-4p^2 maximized at p3/8 with25/16; mixed pure plans at most1. Perfect recall fails."
+  ],
+  "proof_contract": "Finite realization equivalence; finite backward induction; common-sequence consistency and own-factor cancellation; local-to-global sequential rationality; existence via finite agent-form perfection. Infinite discounted tail bound and last-deviation elimination. Complete Nash-reversion public-lottery constructive theorem, not a general minmax folk theorem.",
+  "domains": "Finite trees/positive chance after structural pruning, perfect recall; bounded finite repeated stage games with 0<discount<1, public monitoring/finite public iid signals. Commitment actions are primitive restrictions. No strategic learning or empirical-frequency claim."
+}

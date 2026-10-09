@@ -1,0 +1,127 @@
+{
+  "chapter": "v13-c06",
+  "author": "c05_review",
+  "date": "2026-10-09",
+  "status": "Canonical author package; root review passed, separate peer acceptance pending.",
+  "payload_bindings": [
+    {
+      "path": "content/chapters/v13-c06.html",
+      "bytes": 61095,
+      "sha256": "92686df5c2f286e6892944a8dcf65fea7edd4ddd7bc269ddcc208d09ca7af6ab"
+    },
+    {
+      "path": "scripts/check_v13_c06.py",
+      "bytes": 35533,
+      "sha256": "36ec17d82cd05db25b53f2b260e5271e0f6ee84a50342a2560077ad653ef7d2d"
+    },
+    {
+      "path": "content/reviews/v13-c06-sources.json",
+      "bytes": 7211,
+      "sha256": "690df4b122a3b9ebca2a1c5873f9155f13252b772e5066dba1819627c88fda12"
+    }
+  ],
+  "provenance_bindings": [
+    {
+      "path": "production/v13-c06-source-preparation.json",
+      "bytes": 8594,
+      "sha256": "b51177ad55c683b4fd878884acd850c74e707993c3b26ee55890854cddebe44c"
+    },
+    {
+      "path": "production/v13-c06-blueprint-proposal.json",
+      "bytes": 5609,
+      "sha256": "b56e990704065c559cdf440a921333f5f33f207c610aa873d30ab15d3b92b294"
+    }
+  ],
+  "proof_audit": {
+    "P1": "v13-c06-nash: finite polynomial payoffs, support criterion and pure/mixed deviations derived. Every BR has nonempty compact convex values and a closed graph from finite inequalities. C04 Kakutani closes the retained finite mixed-Nash follow-up without circularity.",
+    "P2": "v13-c06-bayesian: positive own-type marginals define conditional laws; finite type-agents yield BNE. Typewise/exante equivalence uses positive weights. Correlated types and zero-probability types explicitly distinguished; case4 complete five-region classification.",
+    "P3": "v13-c06-perfection: feasible positive-floor simplices, constrained existence and approximated deviations prove limits Nash. Forward characterization uses a finite common tail; reverse uses outside-support tau floors and inside min(tau/2,1/k), proving positivity, sum<1, vanishing and optimal residual allocation.",
+    "P4": "v13-c06-perfection and cases2–3: full support gives positive weight to a strict mixed-dominance witness. Strict pure and fully mixed Nash are proved sufficient for perfection, with no converse/unique-selection assertion. Strategic form is distinguished from independent information-set trembles.",
+    "P5": "v13-c06-correlated: unnormalized CE conditions handle null recommendations. Single-recommendation rules give necessity; sums and randomized kernels give sufficiency. Product factorization proves CE iff Nash; linearity gives convex mixtures. Case5 full Nash set and exact global welfare/equality proof establish a unique CE optimum outside the Nash hull.",
+    "P6": "v13-c06-coarse: unconditional deviation inequalities follow by summing CE. With at most two own actions each unconditional target inequality reduces to one CE comparison. Three-action diagonal and one-parameter transfer establish strict inclusion without claiming all3x3 equilibria or convergence."
+  },
+  "exercise_audit": {
+    "v13-c06-ex1": "Changed zero-sum matrix solved with all supports excluded/retained, both global guarantees and positive-affine versus welfare-unit scope.",
+    "v13-c06-ex2": "Full support, finite deviation and closed-graph/Kakutani proof, with pure-existence and convergence limits.",
+    "v13-c06-ex3": "Entire Nash continuum, two asymmetric floor bounds/payoffs and all-sequence perfect uniqueness verified.",
+    "v13-c06-ex4": "Both characterization directions and numerical residual-simplex construction; no unconstrained-Nash assumption on trembles.",
+    "v13-c06-ex5": "Mixed-only weak domination, exact Nash/nonperfect witness and the two sufficient perfection results proved.",
+    "v13-c06-ex6": "Complete coordination support classification before/after lower-right5; all three remain perfect and selection limits explicit.",
+    "v13-c06-ex7": "Five-region exhaustive BNE proof, equilibrium-specific type plans and all joint/typewise payoff accounts agree.",
+    "v13-c06-ex8": "Both correlation laws retain marginals but change conditional gains; low-only strategies checked typewise and null-type belief specification qualified.",
+    "v13-c06-ex9": "Original and changed-YY CE inequalities, global welfare upper bounds and unique equality cases independently recomputed.",
+    "v13-c06-ex10": "All deviation rules/product/convexity proofs plus private conditional values, public YY failure and independent-marginal failure.",
+    "v13-c06-ex11": "General CE⇒CCE and two-action equality; whole declared mixture family classified with exact half-mixture values.",
+    "v13-c06-ex12": "Full illustrative referee memo and four3-point rubric distinguish solution concepts, information, empirical identification and dynamic proof requirements."
+  },
+  "numerical_method": "Independent exact Fraction calculations from matrices and priors: strict-corner support classification, global linear constrained bounds,81 finite type-agent support systems, conditional/joint payoff reconciliation, four-profile CE vertex enumeration from original payoff inequalities, all deterministic recommendation maps and focused law/constraint changes. No author-output oracle or shared numerical checker is imported.",
+  "focused_interventions": [
+    "Changed zero-sum reward",
+    "Positive affine utility changes",
+    "Uniform versus asymmetric tremble bounds",
+    "Reverse-floor support construction",
+    "Mixed-only dominance and full-support perturbation",
+    "Changed coordination reward",
+    "Independent-type support enumeration",
+    "Correlated/anticorrelated type laws",
+    "Original/changed CE optimum and private/public/independent information",
+    "Diagonal/product mixture and all27 ternary rules per player",
+    "Two-action CE/CCE identity"
+  ],
+  "source_audit": "Three primary sources, actual stated text scopes and six page images;14 retained artifacts. Manea actual2017 date distinguished from2016 hosting, Yildiz2022 cover from2024 hosting. Roughgarden CCE cost inequalities translated consistently to utility maximization. No unsupported extension from surrounding material.",
+  "reader_structure": {
+    "shared_Document": {
+      "worked_cases": 6,
+      "exercises": 12,
+      "solutions": 12
+    },
+    "primitive_markers": 18,
+    "result_markers": 43,
+    "answered_teach_back": true,
+    "answered_retention": true,
+    "successor": "v13-c07 Dynamic and repeated games"
+  },
+  "root_read_delta": {
+    "root_full_read_html_bytes": 60699,
+    "root_full_read_html_sha256": "f0282fe4d9e3020dacc353a697da946287d540d6b9b27057fede95cb52f1cc8e",
+    "final_delta": "Eight data-input span wrappers added to exercise primitives; dominance prompt describes the unchanged rows as respective payoff vectors in one tuple. No numerical/proof/solution changes. Root subsequently confirmed reading this exact exercise markup/prose delta."
+  },
+  "resolved_findings": [
+    {
+      "scope": "Source version",
+      "resolution": "Actual Manea first-page date verified in text/image; proposed source ID uses2017 and preserves the2016 URL."
+    },
+    {
+      "scope": "Source proof limits",
+      "resolution": "Positive uniform floors restricted to feasible action-count bounds; omitted perfection equivalence fully proved, no unsupported extensive-form result imported."
+    }
+  ],
+  "runtime_and_domains": "Quiet deterministic check(root=None), JSON-safe return and silent CLI. Exactly four runtime files; no network, writes, assertions or third-party imports. Real malformed-domain calls test utilities/probabilities/shapes, feasible floors, null types/recommendations, deviation rights, restricted numeric markers and strict JSON. Small game/vertex caps are numerical-oracle scope, not restrictions on the finite universal theorem.",
+  "final_gate_contract": {
+    "runs": [
+      "normal workspace quiet API",
+      "optimized exact-four quiet API from /",
+      "optimized exact-four silent CLI from /"
+    ],
+    "requirements": "Identical strict-JSON API summaries, no stdout/stderr, unchanged exact isolated membership and all payload bytes. Final evidence reported with six-file freeze; no redundant gate matrix."
+  },
+  "unresolved_findings": [],
+  "limitations": [
+    "Machine-assisted working author review is not separate peer/canonical acceptance or human academic certification.",
+    "Finite support/vertex/deviation checks supplement the written universal proofs; no broad grid substitutes for completeness.",
+    "No automatic empirical prediction, uniqueness, learning convergence, information equivalence or extensive-form perfection result.",
+    "Acceptance follows C05 and coordinator/separate review; shared/canonical/hosting files remain outside this author scope."
+  ],
+  "root_promotion": {
+    "date": "2026-10-09",
+    "manuscript": "Unchanged final61095-byte working manuscript",
+    "delta": "Four checker runtime paths and return-status label; source/author disposition and bindings only. No mathematical edits.",
+    "root_full_review": "production/v13-c06-root-manuscript-review.json",
+    "canonical_runtime_paths": [
+      "content/chapters/v13-c06.html",
+      "scripts/check_v13_c06.py",
+      "content/reviews/v13-c06-sources.json",
+      "content/reviews/v13-c06-author.json"
+    ]
+  }
+}

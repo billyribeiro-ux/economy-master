@@ -1,0 +1,311 @@
+{
+  "chapter": "v13-c08",
+  "date": "2026-10-09",
+  "status": "Root original design, independent seed checks completed; manuscript remains planned",
+  "source_attribution": "These are original cases, not copied from source examples. Source discovery is supporting theory only. Author independently recomputes all primitives and checks general claims.",
+  "core_proofs": [
+    "Finite single-buyer quasilinear screening with finite ordered types, positive probabilities, bounded nonnegative quality, outside option zero and menu commitment. Prove direct-menu equivalence only for this single-agent maintained class, weak IC/IR and explicit participation/report tie convention. Do not claim unique implementation from weak IC.",
+    "Prove finite IC iff monotone quality and adjacent lower/upper utility-increment inequalities; telescope to all global constraints. Derive minimal rents with low IR and adjacent downward IC binding, then the exact finite virtual-surplus identity. Prove global optimality, exclusion and bunching, not only FOCs.",
+    "Continuum bounded monotone allocation IC/envelope equivalence by pairwise inequalities and Riemann sums, including jumps; derive rent integration and virtual surplus with explicit positive-density and convex-cost regularity. Prove the original uniform case globally. No unsupported general continuous ironing algorithm.",
+    "Risk-neutral lotteries: preserve all interim utilities by replacing a report lottery with its mean quality/payment; Jensen yields weakly lower convex expected cost. Explain participation timing, ex-post losses and nonconvex-cost counterexample without asserting a global optimum for that counterexample.",
+    "Explicit competitive posterior-wage signaling model: two types, continuous education, observed signal and type-dependent costs. Define pure PBE with Bayes on path and competitive wage as maintained pricing condition (or fully derive wage competition). Do not misapply finite sequential-existence theorem to continuous signals.",
+    "Fully characterize all pure pooling and separating education outcomes. Formally define equilibrium-dominated types via strict payoff comparison over sequentially rational/competitive responses and the Intuitive Criterion. Prove elimination of every pure pooling and excess-education separating equilibrium, plus survival of the least-cost outcome. Restrict uniqueness to pure education outcomes, not off-path beliefs or all mixed strategies.",
+    "Productive education changes net marginal signaling costs. Prove revised interval and refinement under positive net costs, zero-net-cost boundary failure of strict selection, and lack of finite high-type best response when productive return exceeds private marginal cost. Beliefs at the zero-net-cost boundary must respect refinement while allowing high type indifference.",
+    "At least six substantial original worked cases and twelve complete solutions, including new parameter transfers, proof tasks, all IC/IR branches, model critique/rubric, teach-back, retention and bridge to C09 hidden action/contracts. Explain adverse selection, single crossing and commitment; distinguish empirical evidence from illustrative model implications."
+  ],
+  "worked_cases": [
+    {
+      "id": "W1",
+      "title": "Three types, rents and exclusion",
+      "primitives": {
+        "theta": [
+          1,
+          2,
+          3
+        ],
+        "probabilities": [
+          "1/2",
+          "1/4",
+          "1/4"
+        ],
+        "cost": "q^2/2",
+        "quality_cap": 5
+      },
+      "derived": {
+        "virtual": [
+          0,
+          1,
+          3
+        ],
+        "q": [
+          0,
+          1,
+          3
+        ],
+        "U": [
+          0,
+          0,
+          1
+        ],
+        "t": [
+          0,
+          2,
+          8
+        ],
+        "profit": "5/4",
+        "expected_rent": "1/4",
+        "welfare": "3/2",
+        "first_best": "15/8",
+        "loss": "3/8"
+      }
+    },
+    {
+      "id": "W2",
+      "title": "Nonregular types and bunching",
+      "primitives": {
+        "theta": [
+          2,
+          3,
+          4
+        ],
+        "probabilities": [
+          "1/2",
+          "1/10",
+          "2/5"
+        ],
+        "cost": "q^2/2",
+        "quality_cap": 5
+      },
+      "derived": {
+        "virtual": [
+          1,
+          -1,
+          4
+        ],
+        "q": [
+          "2/3",
+          "2/3",
+          4
+        ],
+        "U": [
+          0,
+          "2/3",
+          "4/3"
+        ],
+        "t": [
+          "4/3",
+          "4/3",
+          "44/3"
+        ],
+        "profit": "10/3",
+        "gradient": [
+          "1/6",
+          "-1/6",
+          0
+        ]
+      },
+      "proof": "Weighted pooling of first two virtual values. Tangent bound is (q1-q2)/6 <= 0 at feasible monotone allocations; strict concavity gives unique allocation. Check every IC/IR."
+    },
+    {
+      "id": "W3",
+      "title": "Continuum screening and an exclusion threshold",
+      "primitives": {
+        "theta": "Uniform[1,3]",
+        "cost": "q^2/2",
+        "quality_cap": 5
+      },
+      "derived": {
+        "virtual": "2theta-3",
+        "q": "max(0,2theta-3)",
+        "U": "0 below 3/2; (theta-3/2)^2 above",
+        "t": "0 below 3/2; theta^2-9/4 above",
+        "expected_payment": "9/4",
+        "expected_cost": "9/8",
+        "profit": "9/8",
+        "expected_rent": "9/16",
+        "welfare": "27/16",
+        "first_best": "13/6",
+        "loss": "23/48"
+      }
+    },
+    {
+      "id": "W4",
+      "title": "Random contracts, convexity and participation timing",
+      "primitives": {
+        "types": [
+          2,
+          4
+        ],
+        "deterministic_quality": 2,
+        "lottery": "quality 0 or4 with equal probability",
+        "fixed_payment": 3
+      },
+      "derived": {
+        "expected_utilities": [
+          1,
+          5
+        ],
+        "quadratic_deterministic_profit": 1,
+        "quadratic_lottery_profit": -1,
+        "sqrt_deterministic_profit": "3-sqrt(2)",
+        "sqrt_lottery_profit": 2,
+        "zero_quality_realized_utility": -3
+      },
+      "scope": "Convex cost theorem over report lotteries; sqrt cost example compares same interim contract only. No global randomized optimal-menu claim. Acceptance before lottery and no later rejection right."
+    },
+    {
+      "id": "W5",
+      "title": "Education equilibria and exact refinement selection",
+      "primitives": {
+        "vL": 2,
+        "vH": 5,
+        "priorH": "1/3",
+        "costL": "s",
+        "costH": "s/3",
+        "signals": "s>=0",
+        "wage": "2+3muH"
+      },
+      "derived": {
+        "pure_separation": "sL=0; sH in[3,9]",
+        "pure_pooling": "sp in[0,1], wage3",
+        "pool_eliminating_deviation": "s in(2+sp,6+sp)",
+        "overeducation_eliminating_deviation": "s in(3,sH)",
+        "unique_surviving_pure_outcome": "sL=0,sH=3; not unique beliefs",
+        "net_welfare_least_separation": "8/3",
+        "net_welfare_pool0": 3,
+        "high_net_separation": 4,
+        "low_net_separation": 2
+      },
+      "proof_cautions": "Criterion has no restriction when every type is equilibrium dominated. At least separating offpath0<s<3, both types can gain under maximal wage; low belief deters. Above3 all types strictly lose. Pure outcome uniqueness only."
+    },
+    {
+      "id": "W6",
+      "title": "Productive education and a boundary where strict selection fails",
+      "primitives": {
+        "productivity": "vtheta+kappa*s",
+        "private_costs": "unchanged W5",
+        "kappa_case": "1/6"
+      },
+      "derived": {
+        "positive_net_cost_range": "0<=kappa<1/3",
+        "separation_interval": "[3/(1-kappa),3/(1/3-kappa)]",
+        "case_interval": [
+          "18/5",
+          18
+        ],
+        "high_wage": "28/5",
+        "high_net": "22/5",
+        "expected_output": "16/5",
+        "expected_cost": "2/5",
+        "net_welfare": "14/5",
+        "boundary_kappa": "1/3",
+        "boundary_separation": "sL=0, any sH>=9/2; high net5 and no strictly profitable education undercut; assign H belief beyond9/2 to obey criterion",
+        "above_boundary": "kappa>1/3: high net payoff lower bound 2+(kappa-1/3)s unbounded, so no finite best response"
+      },
+      "scope": "Prove boundary selection failure explicitly; no universal labor-market inference."
+    }
+  ],
+  "root_seed_validation": {
+    "groups": 24,
+    "results": [
+      {
+        "id": "W1-rents",
+        "result": "[Fraction(0, 1), Fraction(0, 1), Fraction(1, 1)]"
+      },
+      {
+        "id": "W1-payments",
+        "result": "[Fraction(0, 1), Fraction(2, 1), Fraction(8, 1)]"
+      },
+      {
+        "id": "W1-profit-rent",
+        "result": "(Fraction(5, 4), Fraction(1, 4))"
+      },
+      {
+        "id": "W1-virtual",
+        "result": "[Fraction(0, 1), Fraction(1, 1), Fraction(3, 1)]"
+      },
+      {
+        "id": "W1-firstbest-and-loss",
+        "result": "(Fraction(15, 8), Fraction(3, 8))"
+      },
+      {
+        "id": "W2-virtual",
+        "result": "[Fraction(1, 1), Fraction(-1, 1), Fraction(4, 1)]"
+      },
+      {
+        "id": "W2-rents",
+        "result": "[Fraction(0, 1), Fraction(2, 3), Fraction(4, 3)]"
+      },
+      {
+        "id": "W2-payments",
+        "result": "[Fraction(4, 3), Fraction(4, 3), Fraction(44, 3)]"
+      },
+      {
+        "id": "W2-profit",
+        "result": "10/3"
+      },
+      {
+        "id": "W2-global-tangent-certificate",
+        "result": "[Fraction(1, 6), Fraction(-1, 6), Fraction(0, 1)]"
+      },
+      {
+        "id": "W3-expected-payment-cost",
+        "result": "(Fraction(9, 4), Fraction(9, 8))"
+      },
+      {
+        "id": "W3-profit-rent-welfare",
+        "result": "(Fraction(9, 8), Fraction(9, 16), Fraction(27, 16))"
+      },
+      {
+        "id": "W3-firstbest-loss",
+        "result": "(Fraction(13, 6), Fraction(23, 48))"
+      },
+      {
+        "id": "W3-theta2-theta3",
+        "result": "[(Fraction(1, 1), Fraction(1, 4), Fraction(7, 4)), (Fraction(3, 1), Fraction(9, 4), Fraction(27, 4))]"
+      },
+      {
+        "id": "W4-interim-rents",
+        "result": "[1, 5]"
+      },
+      {
+        "id": "W4-convex-cost-profit",
+        "result": "(Fraction(1, 1), Fraction(-1, 1))"
+      },
+      {
+        "id": "W4-concave-fixed-contract-counterexample",
+        "result": "lottery profit 2 > deterministic 3-sqrt(2); interim low/high utility 1,5; realized zero-quality utility -3"
+      },
+      {
+        "id": "W5-separating-range",
+        "result": "(Fraction(3, 1), Fraction(9, 1))"
+      },
+      {
+        "id": "W5-pooling-range-and-welfare",
+        "result": "(Fraction(1, 1), Fraction(8, 3))"
+      },
+      {
+        "id": "W5-refinement-witnesses",
+        "result": "all three pooling and three excess-education witnesses satisfy strict type-elimination/gain inequalities; general intervals must be proved"
+      },
+      {
+        "id": "W6-productive-separating-range",
+        "result": "(Fraction(18, 5), Fraction(18, 1))"
+      },
+      {
+        "id": "W6-high-wage-utility",
+        "result": "(Fraction(28, 5), Fraction(22, 5))"
+      },
+      {
+        "id": "W6-output-cost-welfare",
+        "result": "(Fraction(16, 5), Fraction(2, 5), Fraction(14, 5))"
+      },
+      {
+        "id": "W6-zero-net-high-cost-threshold",
+        "result": "9/2"
+      }
+    ],
+    "finite_menu_IC_IR": "All 9 comparisons and 3 IR constraints checked in each original finite menu",
+    "limits": "Numerical seeds do not verify general proofs or unwritten manuscript."
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "chapter": "v13-c07",
+  "date": "2026-10-09",
+  "status": "Original root design; exact seed arithmetic checked, author must independently derive full proofs and all equilibrium completeness claims",
+  "root_seed_groups": 20,
+  "cases": [
+    {
+      "id": "W1",
+      "theme": "Credible continuation and normal-form threats",
+      "tree": "Entrant Out -> (2,3); In -> incumbent chooses Fight(-1,-2) or Accommodate(4,1).",
+      "results": "Unique SPE (In,Accommodate). All normal-form Nash: pure (In,A) plus entrantOut and incumbentFight probability f in[2/5,1]. Prove completeness.",
+      "intervention": "Entry costk subtracts only entrant In payoffs; SPE entry iff k<2, arbitrary entry mixing at k=2, Out ifk>2; incumbentA everywhere. Distinguish equilibrium behavior, complete contingent plans and outcome."
+    },
+    {
+      "id": "W2",
+      "theme": "Off-path Bayes consistency is substantive",
+      "tree": "Player1 Stop ->(1,1). Continue -> NatureH withprob1/3 orL withprob2/3, then player2 one information set, A/B. Player1 gets0 fromA and3 fromB in either state. Player2 A pays3 inH,0 inL; B pays0 inH,2 inL.",
+      "results": "Explicitly defined weak PBE (sequential rationality plus Bayes only at positive-reach sets) can support Stop,A with beliefPrH>=2/5. Every fully mixed perturbation preserves conditionalPrH=1/3 afterContinue, so unique sequential assessment is Continue,B,belief1/3. Also subgame perfection forcesB in this particular tree; do not say every weakPBE is SPE.",
+      "scope": "Use precise weakPBE label; general PBE has multiple conventions. Show an actual completely mixed sequence for the surviving assessment."
+    },
+    {
+      "id": "W3",
+      "theme": "Finite unravelling versus infinite cooperation",
+      "payoff_rows": [
+        [
+          [
+            4,
+            4
+          ],
+          [
+            -1,
+            6
+          ]
+        ],
+        [
+          [
+            6,
+            -1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      ],
+      "actions": "C,D",
+      "results": "D strictly dominant; any finite known horizon has unique all-D SPE by backwards induction. Infinite perfect-monitoring grim trigger sustains CC iff each player discountdelta>=2/5. PunishmentDD credible. Use normalizedpayoffs(1-delta)sum delta^tu and explicitly convert continuation formulas.",
+      "limits": "Different discounts each need own bound; no convergence/learning/empirical prediction claim."
+    },
+    {
+      "id": "W4",
+      "theme": "Finite punishments and credible forgiveness",
+      "game": "Same originalPD asW3",
+      "automaton": "C state prescribesCC; any departure startsTperiodsofDD. Duringpunishment, prescribedDD counts remainingkdown; any departure resetsT. Afterk=1 obedience returnC. Define all offpath states.",
+      "results": "Vc=4/(1-delta);Pk=(1-delta^k)/(1-delta)+delta^kVc. CooperationIC 2<=3sum_{t=1}^T delta^t. Punishment deviations lose current2andreset longerbadstate, so unprofitable. T1threshold2/3;T2threshold(sqrt33-3)/6;infinite-limitthreshold2/5.",
+      "exact_witness": "delta1/2,T2: Vc8,P1=5,P2=7/2; cooperate8 vs deviation31/4; punishment deviation3/4. T1fails,T2passes."
+    },
+    {
+      "id": "W5",
+      "theme": "Constructive folk result with a public lottery",
+      "payoff_rows": [
+        [
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        [
+          [
+            5,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      ],
+      "actions": "A,B",
+      "results": "B strictly dominant, unique stageNashBB gives(1,1). Public iid lottery choosesAB orBA each1/2, visible before actions; follow on cooperative path, any departure triggersBBforever. Targetv=(5/2,5/2). Only losing recommendedA has current deviationgain1. Conditional recommendation incentive givesdelta>=2/5. Expected continuation promise supports this joint play even though stage obedience fails.",
+      "intervention": "LotteryPrAB=lambda=1/3: target(10/3,5/3), respectivebounds3/10and3/5, commondelta>=3/5. StrictsurplusoverNash requireslambda in(1/5,4/5); endpoint failure of this construction is not automatically general impossibility.",
+      "general_proof": "Finite game with stageNashalpha yieldingr, public finite-support iid lottery over pure profiles withtargetv_i>r_i. LetGamma_i=max positive unilateral gain over recommendedprofiles. StrategyNashreversion SPE if (1-delta)Gamma_i<=delta(v_i-r_i), i.e.delta>=Gamma_i/(Gamma_i+v_i-r_i). Prove all histories including publicsignal andpunishment. This is a complete restricted constructive folk result, not the full arbitrary-minmax folk theorem.",
+      "conditions": "Infinite horizon,boundedpayoffs,perfect observation anddeviationdetection,crediblepunishment,exogenouspublicrandomization,strictsurplus,patience explicit. Explain feasibility and individual-security necessary conditions and actual source-supported general folk-theorem boundaries without pretending to prove broader frontier claims."
+    },
+    {
+      "id": "W6",
+      "theme": "Two-period reputation from private commitment",
+      "tree": "One long-run incumbent typeR rational or typeC committedtoFight drawn once; privately knows type. Two distinct short-run entrants eachchooseOutorEnter then incumbentrespondsF/A ifEnter. Stage incumbentOut4,F=-1,A=1; currententrantOut0,F=-2,A=2. Incumbentdiscount4/5. Commitmenttype has forcedF action, not a rational type expected to choose a dominated move.",
+      "baseline": "PriorPrC=1/3. Rationalincumbentperiod2alwaysA. Rationalperiod1Fprobq=1/2 ifentered. PosteriorafterF=1/2,afterA=0,afterOutprior1/3. Period2entrant enters1/6afterF,1afterA/Out. Firstentrant Outstrictly since hypothetical entrypayoff-2/3. R isindifferent iffirstentered: F=-1+(4/5)*(4-3/6)=9/5=A=1+4/5. OnpathRgets24/5,commitment16/5.",
+      "intervention": "Prior1/5 requiresq=1/4 to keepposteriorF1/2. Sameperiod2mix1/6;firstentrant entrypayoff2/5>0 andenters. Showbothcomplete sequential assessments, not claimall possible equilibria.",
+      "proof": "Verifyeveryinformation set,type,conditionalbelief anddecision. Exhibitfullymixed behavior sequence givingBayeslimit posteriorsevenoffpath; actualinitialentrytrembleindependentofunknowntype. DefinepostOut/postF/postAcontinuations. No arbitrary offpath beliefs or guaranteedreputation claim."
+    }
+  ],
+  "suggested_exercise_transfer": {
+    "perfect_recall_failure": "Original absentminded twoexitproblem: exitatfirst0,exitsecond5,passboth1; bothdecisionnodes oneinfoset. Stationarybehavior exitp gives1+3p-4p^2, maxp3/8value25/16. Mixedpureplans alwaysExit/alwaysContinue get atmost1. Violatesperfectrecall, so Kuhn equivalence not applicable."
+  },
+  "proof_scope": "Fullfiniteperfectrecall sequential-existence and Kuhn proof ifclaimed; complete perfect-monitoring infinite one-shot principle; complete restrictedNashreversion publiclotteryfolk proof; not an all-reputation or general public/private-monitoring folk theorem."
+}
