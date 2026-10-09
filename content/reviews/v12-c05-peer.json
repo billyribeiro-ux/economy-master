@@ -1,0 +1,526 @@
+{
+  "chapter": "v12-c05",
+  "peer": "bs_author",
+  "author": "ito_author",
+  "date": "2026-10-09",
+  "assignment": "production/v12-c05-peer-assignment.json",
+  "status": "Independent peer review complete and frozen; one observation-scope finding resolved before final binding, no open material finding or required repair. Coordinator acceptance remains separate.",
+  "owned_paths": [
+    "scripts/check_v12_c05_peer.py",
+    "content/reviews/v12-c05-peer.json"
+  ],
+  "reading_scope": {
+    "author_files": "All four final canonical author files read in full: the manuscript, independent author checker, source-scope record and author audit. The two repaired manuscript paragraphs and updated author repair entry were reread against the final contract.",
+    "manuscript": "All six worked cases, all general derivations and proofs, all 12 exact prompts and their complete solutions/rubric, teach-back criteria and four delayed-retention answers.",
+    "prerequisite_boundary": "Fixed-dimensional iid whole-unit LLN/CLT, continuous matrix inversion, delta method, projection/known GLS and fixed-dimensional moment estimation are inherited only within the accepted c01-c04 scope. No general dynamic-panel, factor or non-MAR theorem is presumed.",
+    "independence": "The peer numerical code does not import, call or copy the author checker as its financial or mathematical oracle. The author checker is executed only in separately labeled integration gates.",
+    "external_scope": "Primary-body inspection is reused from the earlier source preparation personally performed by this reviewer. The current review verifies exact inherited source scope and the manuscript use; it does not claim another retrieval or a full read of every referenced PDF."
+  },
+  "proof_audit": [
+    {
+      "claim": "Within/LSDV equivalence and identified coordinates",
+      "assessment": "Passed",
+      "reason": "Minimization in each unit intercept yields its outcome mean minus its regressor mean times the candidate coefficient. Substitution gives the M objective. Its Gram quadratic form is the sum of squared transformed directions, so positive definiteness is exactly uniqueness. A time-constant column disappears. Increasing other units does not remove the fixed-T noise in a particular unit intercept."
+    },
+    {
+      "claim": "Mean restrictions, consistency and fixed-dimensional whole-unit CLT",
+      "assessment": "Passed",
+      "reason": "Full-history strict exogeneity implies the centered within score by conditional expectation; contemporaneous or sequential means do not, as the bounded feedback construction shows. The stated iid whole-unit law, fixed p and T, fourth moments and positive population Gram justify the LLNs, inversion and score CLT. Within transformation removes c exactly, so its almost-sure finiteness suffices without a moment assumption on c. A finite singular event is distinguished from the asymptotic convention."
+    },
+    {
+      "claim": "Residual-score covariance replacement and normalization",
+      "assessment": "Passed",
+      "reason": "Using the exact identity ghat=g-H delta, the cross-product difference is bounded by two times the coefficient-error norm times the average score/Gram product, plus the squared error norm times the average squared Gram. Cauchy–Schwarz and the fourth-moment bounds give finite expectations; iid laws make these averages bounded in probability, while coefficient consistency removes them. The true-score second-moment average has a finite-first-moment LLN. V estimates root-N covariance; divide by N for coefficient covariance and require a positive fixed-contrast variance to studentize."
+    },
+    {
+      "claim": "Known compound covariance and working random-effects weighting",
+      "assessment": "Passed",
+      "reason": "The within and constant projections diagonalize the compound covariance. Their inverse weights and quasi-demeaning square root produce A transpose A=sigma_u squared times Omega inverse. Zero random-effect variance gives pooled weighting; the infinite-ratio limit loses the constant direction. Mean orthogonality is separate from the actual conditional covariance needed for the known-GLS efficiency result inherited from c02. No universal variance-component consistency or causal interpretation is asserted."
+    },
+    {
+      "claim": "Balanced correlated-effects equality and structural interpretation",
+      "assessment": "Passed",
+      "reason": "Under a common positive weight at every date of each balanced unit, within and between residuals have zero cross term. Reparameterizing dated and mean coefficients as b and k=b+d separates both objectives. Full rank of both blocks ensures the unique equality. The conditional heterogeneity interpretation separately needs E[c|X]=alpha+xbar prime pi and strict idiosyncratic exogeneity; projection onto xbar alone is insufficient. A one-date weight intervention produces different full LSDV and CRE slopes and confirms that the stated domain is substantive."
+    },
+    {
+      "claim": "Sequential feedback and original finite dynamic FE law",
+      "assessment": "Passed",
+      "reason": "The feedback design has centered contemporaneous and sequential innovations but a dated future regressor revealing the first disturbance. Its difference cross-moment is -1 with Gram 2, giving beta-1/2. For the dynamic initial condition y0=0, exact two-transition FE is rho-1 plus an average of independent fair-sign products. Its fixed-T bias and variance 1/N are proved for this law, not quoted as a stationary general bias formula."
+    },
+    {
+      "claim": "Lag-IV validity, relevance and ratio variance",
+      "assessment": "Passed",
+      "reason": "The instrument y1 is orthogonal to e3-e2 under the independent innovation law. Direct recursion gives B=rho-1, A=rho B and score variance 2. With B nonzero, the ratio expansion and iid score CLT give variance 2/B squared. Past-information measurability centers both adjacent innovation terms under the stated sequential conditional mean. Differenced errors share an innovation and covariance -1. The rho=1 moment is flat but another law feature retains rho; serial feedback e3=e1 instead breaks validity. Population relevance does not prevent a finite sample denominator from being zero."
+    },
+    {
+      "claim": "Finite-cell observed-law identification and response support",
+      "assessment": "Passed after one recorded repair",
+      "reason": "MAR and a positive cell response probability yield the weighted identity by iterated expectation and bounded inverse weights. To infer identification from the declared record (H,R,RY), the moment must also be computable from (H,Y) for respondents. Root added precisely this condition to section 5 and solution 8 after the peer finding. The mean satisfies it. Finite positive cells identify response probabilities from baseline counts, but an absent respondent cell still makes the finite estimator unavailable; the union-bound probability tends to zero without justifying invented outcomes."
+    },
+    {
+      "claim": "Fitted response probabilities, influence and feasible covariance",
+      "assessment": "Passed",
+      "reason": "The estimator is a rational map of cell frequency, respondent outcome mass and respondent mass. Its derivatives (mu_h,1/p_h,-mu_h/p_h) retain the empirical composition contribution. The resulting influence has an orthogonal baseline-mean component and weighted residual component. Finite second moments, positive finite cells and an iid vector CLT support the delta remainder. Finite-cell laws for Y and Y squared support the feasible variance with respondent-count denominators. Observable-atom directional differentiation independently recovers both the population influence and the actual finite-cohort plug-in variance."
+    },
+    {
+      "claim": "Exact known-propensity comparison and non-MAR equivalence",
+      "assessment": "Passed",
+      "reason": "The known-p unnormalized influence differs from the fitted-cell influence by mu_H times (R/p-1). Under the declared MAR law this difference is orthogonal to the fitted influence; its squared expectation is the stated nonnegative variance gap. A normalized known-p ratio and an estimator using fixed known baseline shares are different estimators, explicitly distinguished by the peer oracle. Replacing only latent missing outcomes by 3 or 9 preserves the entire five-atom observed distribution while changing the full mean. No generic estimated-propensity efficiency theorem or nonignorable-selection remedy follows."
+    },
+    {
+      "claim": "Common factors, two-way demeaning and failure of independent-unit inference",
+      "assessment": "Passed",
+      "reason": "Expanding row, column and grand means leaves the product of centered loading and centered factor. For the balanced specified signs both x and its common-shock error survive, so the slope is 2+U for every repeated balanced sample. All cross-unit score covariances equal 4; the average score variance remains 4 and coefficient-error variance remains 1. The fitted residual meat is nevertheless zero. Homogeneous loading is removed by date effects. Conditioning on U changes the conditional projection target and does not restore identification of the original slope."
+    }
+  ],
+  "prompt_solution_audit": [
+    {
+      "id": "v12-c05-e1",
+      "assessment": "Passed",
+      "independent_answer": "Intercept profiling gives a_i=ybar_i-xbar_i prime b and the M normal equation. Sum H_i must be positive definite. A time-constant regressor is annihilated; fixed T leaves c_i+ubar_i rather than consistent recovery of each c_i."
+    },
+    {
+      "id": "v12-c05-e2",
+      "assessment": "Passed",
+      "independent_answer": "Enumerating the 16 unit states gives pooled Gram 4 and cross-product 10, target 5/2; within H=2, centered score variance 2 and target 2. The exact unit slope error has probabilities 1/4,1/2,1/4 at -1,0,1, so averaging N units gives variance 1/(2N). A recorded b column has zero within variation."
+    },
+    {
+      "id": "v12-c05-e3",
+      "assessment": "Passed",
+      "independent_answer": "Conditional sign enumeration gives E[e1|z]=0 and E[e2|z,e1]=0, also the coarser contemporaneous means. E[e1|X]=e1. Difference Gram 2 and difference error cross-product -1 imply the within limit beta-1/2."
+    },
+    {
+      "id": "v12-c05-e4",
+      "assessment": "Passed",
+      "independent_answer": "Omega=4I+11 prime has inverse I/4-11 prime/28 and theta=1-2/sqrt(7). The inverse maps the constant vector to one seventh and the centered vector to one quarter. Quasi-demeaning scales constants by 2/sqrt(7) and leaves centered vectors unchanged. Weighted mean orthogonality and rank justify consistency; the actual conditional covariance additionally justifies known-GLS efficiency. At sigma_a squared=0, theta=0 and inverse is I/4."
+    },
+    {
+      "id": "v12-c05-e5",
+      "assessment": "Passed",
+      "independent_answer": "Full four-parameter LSDV gives unit intercepts -8/5,2,26/5 and dated slope 12/5. Independent full three-parameter CRE gives (26/19,12/5,202/95). Within Gram/cross-products are 20 and 48; between centered Gram/cross-products are 19/4 and 43/2, with slope 86/19. The common-weight objective splits; conditional interpretation additionally requires the stated E[c|X] restriction."
+    },
+    {
+      "id": "v12-c05-e6",
+      "assessment": "Passed",
+      "independent_answer": "At rho=1/2 the exact FE mean is -1/2 and variance 1/N. Recursive three-sign enumeration gives lag moment denominator -1/2, numerator -1/4, centered score second moment 2 and root-N IV variance 8. Adjacent differences have covariance -1 and cannot be treated as independent rows."
+    },
+    {
+      "id": "v12-c05-e7",
+      "assessment": "Passed",
+      "independent_answer": "At rho=0 the IV variance is 2; at rho=9/10 the denominator is -1/10 and variance 200. At rho=1 all proposed slopes give zero for this moment, without implying whole-law nonidentification. With e3=e1 and rho=1/2 the error moment is 1, numerator 3/4, denominator -1/2 and ratio target -3/2; the sequential innovation restriction fails."
+    },
+    {
+      "id": "v12-c05-e8",
+      "assessment": "Passed after observation-scope repair",
+      "independent_answer": "Iterated expectation proves the weighting identity, with integrability and respondent computability now explicit. Differentiating the observed-cell rational functional gives mu_H-mu+R(Y-mu_H)/p_H. The example has fitted-cell root-N variance 6 and known-p unnormalized variance 42; the orthogonal extra term contributes 36. The empirical baseline-composition variance must remain."
+    },
+    {
+      "id": "v12-c05-e9",
+      "assessment": "Passed",
+      "independent_answer": "With H=1 response 1/2, response mass is 3/4 and outcome response mass 5/2, so respondent mean is 10/3; fitted variance is 11/2 and known-p unnormalized variance 47/2. Enumerating two observed records gives probability 3/4 that a response cell is empty. At the original response law, replacing all missing Y by 3 or by 9 gives full means 3 or 5 with the identical five-atom observed distribution."
+    },
+    {
+      "id": "v12-c05-e10",
+      "assessment": "Passed",
+      "independent_answer": "Balanced signs have zero row and column means, so both demeanings leave the heterogeneous factor design unchanged. The fitted slope is 2+U, every score is 2U, average score variance is 4 and coefficient-error variance is 1. Residual score meat is zero. Homogeneous loading is eliminated by date means; conditioning on U changes the target to 2+U."
+    },
+    {
+      "id": "v12-c05-e11",
+      "assessment": "Passed",
+      "independent_answer": "The replacement bound consists of 2||delta|| average ||g||||H|| plus ||delta|| squared average ||H|| squared. The stated moments and iid LLNs make the averages O_p(1); delta=o_p(1) removes both. The true-score mean outer product converges to B. Divide the root-N covariance by N and require positive contrast variance. The common-factor case fails the score LLN and coefficient consistency, with persistent off-diagonal covariances."
+    },
+    {
+      "id": "v12-c05-e12",
+      "assessment": "Passed; open rubric determinate in requirements",
+      "independent_answer": "Six distinct objections cover chosen time-varying investment, dynamic strict-exogeneity failure, selection, within-unit dependence, cross-unit shocks/few units, and invalid causal or exogeneity inference from test nonrejection. Two feasible proposals must each name the information required and what remains unresolved. An association-only conclusion matches the current evidence. Scoring is 6 times 1 plus 2 times 2 plus 2, totaling 12; no preferred coefficient sign is required."
+    }
+  ],
+  "answered_teaching": {
+    "teach_back": "The supplied criteria separately assess transformation, centered identifying moment, moment rank and independent repetition using three distinct counterexamples.",
+    "delayed_retention": [
+      "Zero random-effect variance gives theta=0.",
+      "At rho=0, within probability limit is -1 and valid lag-IV root-N variance is 2.",
+      "The variances 11/2 and 47/2 refer to different fitted-cell and known-p unnormalized estimators of the same mean 4.",
+      "The common score average 2U has mean zero and variance 4 for every N; zero mean does not supply convergence in probability."
+    ],
+    "assessment": "All answers agree with the taught methods and exact prompts."
+  },
+  "independent_numerical_method": {
+    "arithmetic": "Exact fractions for all finite laws, full normal equations, probability maps and covariance sums; nine floating comparisons check the square-root whitening identity with absolute tolerance 2e-12.",
+    "within": "Pair differences and a compressed exact slope-error convolution for N=2 and N=3; not a reuse of the author full-sample enumeration.",
+    "weights": "Independent generic elimination fits the full LSDV and CRE designs. It verifies common weight rescaling and a changed date weight, giving slopes 73/31 and 1179/509 outside the common-weight identity.",
+    "dynamics": "Generate y recursively from signs at rho=0,1/2,9/10,1 and from the explicit serial-feedback alternative. Check transformed moments, exact FE laws, IV variances, adjacent error covariance and a feature outside the flat instrument moment.",
+    "attrition": "Aggregate six latent states into five observable records before evaluation. Differentiate the observed-probability rational estimator along each atom perturbation. Compare fitted, fixed-composition, known-p unnormalized and normalized estimators. Actual 12- and 8-unit observed cohorts independently reproduce feasible root-N variances 6 and 11/2 and mean-estimator variances 1/2 and 11/16.",
+    "dependence": "For N=4 and N=8 compute both demeaning operators, every true cross-unit score covariance, the actual fitted residual scores and the homogeneous-loading alternative.",
+    "bounded_domain": "At most 32 rows and four regression coordinates, exact magnitudes at most one million, two complete dates in the pair-difference routine, positive weights and response support, declared dynamic coefficient range [-2,2]. Every rejection uses explicit exceptions and remains active under optimized Python.",
+    "printed_answer_checks": "All 18 weighted-sample table cells, 61 paired answer or hypothesis anchors derived from the calculations, all 12 exact prompt/solution pair IDs and manual full-solution reading.",
+    "limitations": "Finite evidence does not prove asymptotic limits. The separate analytic audit checks their sufficient conditions and derivations. No simulation, empirical estimate or broad undirected parameter grid is offered."
+  },
+  "source_audit": {
+    "preparation": {
+      "path": "production/v12-c05-source-preparation.json",
+      "bytes": 15098,
+      "sha256": "04bbf6b151164a4fd242837d78121b241af61922b178c95bf9c4a9a870c6f280",
+      "prepared_by": "bs_author",
+      "read_by_chapter_author": "Complete preparation record, all four inspected scopes and cautions; source-body inspection is attributed to that preparation, not repeated or enlarged.",
+      "runtime_dependency": false
+    },
+    "current_verification": "Every original source-preparation field, including URL, body hash, inspected text range, actual rendered pages, equation caution and excluded scope, matches its canonical source record exactly after the proposed_id to id rename.",
+    "inspected_primary_bodies": 4,
+    "previously_visually_inspected_equation_pages": 14,
+    "sources": [
+      {
+        "id": "v12-c05-mit-panel2017",
+        "title": "14.382 Spring 2017 Lecture 8: Linear Panel Data Models Under Strict and Weak Exogeneity",
+        "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/049489cf2ae5d050409ee2c5cbd5346f_MIT14_382S17_lec8.pdf",
+        "bytes": 439732,
+        "sha256": "13bf51c70f114615c7cba47f8473be8be89ecd330f85f24f5fe8e07cecbc6f37",
+        "text_scope": "Pages 1–2 and 5–10; selected surrounding context. Physical and printed page numbers agree.",
+        "actual_equation_pages": [
+          5,
+          8,
+          9,
+          10
+        ],
+        "chapter_use": "Within transformation and whole-unit covariance; distinction of strict versus sequential histories; finite-sample correlated-effects comparison. The chapter supplies its own sufficient moment conditions and proof.",
+        "cautions": [
+          "The actual page 9 images contain nonzero signs in both displayed dynamic endogeneity calculations; text extraction lost them. Preserve the signs and supply initial-condition assumptions.",
+          "Page 8 displays orthogonality of the heterogeneity residual to the unit mean alone. That restriction alone does not establish orthogonality to every dated regressor. Use a full conditional-mean restriction or restrict the claim to the balanced-sample FE slope identity.",
+          "Use explicit conditional expectations rather than allowing the perpendicular symbol to suggest independence."
+        ],
+        "not_adopted": "Empirical examples, a general dynamic bias formula, bootstrap validity and causal validation from nonrejection of a trend test."
+      },
+      {
+        "id": "v12-c05-imbens-wooldridge-panel2014",
+        "title": "Econometrics of Cross Section and Panel Data: Lecture 3, Linear Panel Data Models I",
+        "url": "https://www.cemmap.ac.uk/wp-content/legacy/uploads/cemmap/forms/Imbens_Wooldridge_notes.pdf",
+        "bytes": 2359802,
+        "sha256": "8c63665d2e27354e3334ec6b6914d18a40a53884b1da965b88d7f2c63bbf9ea5",
+        "text_scope": "Physical pages 39–45, Lecture 3 printed pages 1–7. The other lectures in the combined file were not audited.",
+        "actual_equation_pages": [
+          42,
+          43,
+          45
+        ],
+        "chapter_use": "Conditional random-effects mean restrictions, full-history versus unit-mean heterogeneity, and limitations of estimator-comparison tests. The balanced common-weight identity is proved directly.",
+        "cautions": [
+          "A subsequent conditional-mean conclusion on printed page 5 requires the conditional-mean version, not merely the displayed linear projection. Preserve that distinction.",
+          "Printed page 7 says time effects can introduce a 'nonsingularity'; context and redundant comparisons indicate singularity. This wording was checked in the actual page image."
+        ],
+        "not_adopted": "No current Stata behavior claim, automatic robust Hausman chi-square law, unbalanced-panel FE/CRE identity, nonlinear CRE result or unexamined later section."
+      },
+      {
+        "id": "v12-c05-arellano-predetermined2009",
+        "title": "Dynamic Panel Data Models II: Lags and Predetermined Variables",
+        "url": "https://www.cemfi.es/~arellano/predetermined-variables-class-note.pdf",
+        "bytes": 296896,
+        "sha256": "2fef1c129f0154e898213d963419c42935696f9b99c81904a79d0ef83cac65ee",
+        "text_scope": "Setup on pages 1–4; pages 9–15. Physical and printed page numbers agree. Application prose supplies context, not validated empirical findings.",
+        "actual_equation_pages": [
+          10,
+          12,
+          14,
+          15
+        ],
+        "chapter_use": "Dynamic transformed-score endogeneity, past-information instruments and independent-unit GMM covariance; aggregate-shock limitations. The chapter proves only its explicit bounded finite-T laws.",
+        "cautions": [
+          "The notes' large-T statements require additional limit conditions; a martingale-difference property alone is not a sufficient law-of-large-numbers theorem. Independence of idiosyncratic units is sufficient for a stated cross-sectional route, not necessary in every possible model.",
+          "The chapter should prove a bounded fixed-T counterexample and explicit valid lag moments, not import a general Nickell formula or automatic system-GMM moments."
+        ],
+        "not_adopted": "Application estimates, unrestricted large-T consistency, many-instrument asymptotics and unexamined additional level-moment sections."
+      },
+      {
+        "id": "v12-c05-wooldridge-ipw2004",
+        "title": "Inverse probability weighted estimation for general missing data problems",
+        "url": "https://www.cemmap.ac.uk/wp-content/uploads/2020/08/CWP0504.pdf",
+        "bytes": 144365,
+        "sha256": "5d5c56792f189d6398317b2f006a64fb64ae050afb124e9e9caeb436fdc21d66",
+        "text_scope": "Population objective and selection setup, pages 4–8; selection-model context on page 9; identification and nuisance-adjusted theorem on pages 10–11. Physical and printed page numbers agree.",
+        "actual_equation_pages": [
+          6,
+          10,
+          11
+        ],
+        "chapter_use": "Population selection weighting and the need to account for estimated response probabilities. The chapter independently derives a narrower finite-cell MAR influence and does not import the paper’s general theorem.",
+        "cautions": [
+          "The paper covers more than baseline-observed MAR. The proposed chapter uses that narrower sufficient case and does not equate the entire paper's condition with MAR.",
+          "Positivity alone does not guarantee finite variance, and fitted weights do not repair selection on unobserved outcomes. The theorem is not a universal estimated-propensity efficiency result."
+        ],
+        "not_adopted": "The later 2007 journal version, generic nuisance estimation, censoring applications and selection-on-unobservables correction are not audited here."
+      }
+    ],
+    "assessment": "Scoped primary evidence supports the invoked distinctions. The original finite laws and proofs are explicitly author-created. No original Mundlak/Chamberlain, Nickell, Arellano-Bond or later system-GMM proof body is claimed as read."
+  },
+  "structure": {
+    "actual_shared_reader": "The actual scripts.verify.Document class was extracted by AST and executed read-only on the final manuscript, avoiding the full shared regression runner.",
+    "worked_examples": 6,
+    "exercises": 12,
+    "solutions": 12,
+    "unique_ids": 21,
+    "peer_parser": "Balanced nesting, six worked containers, all 12 unique prompt IDs and all 12 matching data-solution-for targets; four source routes and five flat chapter routes.",
+    "review_limits": "Canonical source and chapter routing were inspected; full rendered reader, publication and whole-edition link checks remain coordinator work."
+  },
+  "findings": [
+    {
+      "id": "v12-c05-peer-observed-moment",
+      "status": "resolved before final binding",
+      "origin": "Independent exact observed-record and identification audit by bs_author",
+      "finding": "The original general MAR identity was correct algebraically, but observed-law identification of E[psi(W)] did not follow from observing (H,R,RY) unless the moment was computable for respondents. The mean example itself was already computable.",
+      "repair_owner": "Coordinator /root; no author payload was edited by this peer.",
+      "resolution": "Section 5 now requires psi(W) be calculable from (H,Y) whenever R=1; solution 8 explicitly distinguishes this observation condition from the algebraic identity. The canonical author audit records the finding.",
+      "verification": "Both final sentences were reread. Deleting exactly these two additions from the final HTML reconstructs all 45,252 prior bytes and SHA256 35ca4671e06ca46204882fe506ee724f11cff44bad926d9f855e14efb744a8ba. No numerical, other prose, checker or source change accompanied the repair.",
+      "final_manuscript_sha256": "250dafe5c4b5a704f387c31fb2f279dc166120900dc144288751279d36ad976f",
+      "final_author_sha256": "cf5b53bcae484c2b16c54f8fff8da9a23b567e83ec3ebed2224ed379741cf6de"
+    }
+  ],
+  "required_repairs": [],
+  "open_material_findings": [],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v12-c05.html",
+      "bytes": 45579,
+      "sha256": "250dafe5c4b5a704f387c31fb2f279dc166120900dc144288751279d36ad976f"
+    },
+    {
+      "path": "scripts/check_v12_c05.py",
+      "bytes": 29101,
+      "sha256": "d6b374aae3127a2a5db524b9985fb7a164ae411ebb79a1fc07af70960388e92c"
+    },
+    {
+      "path": "content/reviews/v12-c05-sources.json",
+      "bytes": 11991,
+      "sha256": "7f23b2573b754bd57d632057783c1282efc93850eacde6a81cd990ba060f530e"
+    },
+    {
+      "path": "content/reviews/v12-c05-author.json",
+      "bytes": 26535,
+      "sha256": "cf5b53bcae484c2b16c54f8fff8da9a23b567e83ec3ebed2224ed379741cf6de"
+    },
+    {
+      "path": "scripts/check_v12_c05_peer.py",
+      "bytes": 29539,
+      "sha256": "caaf683a1f73df0e9ff2cc5d060002b7af61f32a6683c627d84980eebf7be279"
+    }
+  ],
+  "execution_validation": {
+    "status": "passed",
+    "executions": [
+      {
+        "tree": "workspace",
+        "checker": "peer",
+        "mode": "normal",
+        "entry": "api",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "workspace",
+        "checker": "peer",
+        "mode": "normal",
+        "entry": "cli",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "workspace",
+        "checker": "author_integration_only",
+        "mode": "normal",
+        "entry": "api",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "workspace",
+        "checker": "peer",
+        "mode": "optimized",
+        "entry": "api",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "workspace",
+        "checker": "peer",
+        "mode": "optimized",
+        "entry": "cli",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "workspace",
+        "checker": "author_integration_only",
+        "mode": "optimized",
+        "entry": "api",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "peer",
+        "mode": "normal",
+        "entry": "api",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "peer",
+        "mode": "normal",
+        "entry": "cli",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "peer",
+        "mode": "optimized",
+        "entry": "api",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "peer",
+        "mode": "optimized",
+        "entry": "cli",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      }
+    ],
+    "peer_summary": {
+      "attrition_observed_law_results": [
+        {
+          "fitted_variance": "6",
+          "known_p_HT_variance": "42",
+          "response": "1/3",
+          "response_empty_N2": "5/6"
+        },
+        {
+          "fitted_variance": "11/2",
+          "known_p_HT_variance": "47/2",
+          "response": "1/2",
+          "response_empty_N2": "3/4"
+        }
+      ],
+      "author_code_used_as_oracle": false,
+      "chapter": "v12-c05",
+      "common_shock_units": [
+        4,
+        8
+      ],
+      "comparisons": 208,
+      "domain_rejections": 18,
+      "intervention_scopes": [
+        "Compressed score-law convolution verifies finite-N variance without treating repeated dates as independent.",
+        "Compare within, working RE and augmented conditional-mean targets; whitening is separate from mean orthogonality.",
+        "Direct LSDV and CRE fits agree under common unit weights; changing one date weight supplies a concrete failure outside that contract.",
+        "Sequential feedback, changing relevance and serial innovations separate transformed endogeneity, moment rank and whole-law identification.",
+        "Observed-law differentiation distinguishes fitted propensities, fixed composition, unnormalized and normalized known-propensity estimators.",
+        "Response-probability changes, empty cells, full response and observationally identical non-MAR laws test the identification and finite-support boundaries.",
+        "Four and eight units share the same shock; full cross-unit covariance and homogeneous-loading alternatives explain why residual meat is misleading."
+      ],
+      "limitations": "Bounded exact evidence and separately recorded proof reading; no empirical validity, general panel theorem, rendered UI or acceptance claim.",
+      "nonself_bindings": 5,
+      "paired_solution_anchors": 61,
+      "purposeful_interventions": 7,
+      "rejection_scopes": [
+        "boolean scalar",
+        "nonfinite scalar",
+        "out-of-bound rational",
+        "singular normal equation",
+        "time-constant within regressor",
+        "incomplete history",
+        "zero unit weight",
+        "outside bounded dynamic law",
+        "zero sample IV denominator",
+        "finite sample denominator zero despite population relevance",
+        "zero response support",
+        "invalid response probability",
+        "response-empty cell",
+        "fabricated missing outcome",
+        "boolean cell",
+        "duplicate JSON member",
+        "nonfinite JSON literal",
+        "overflowing JSON exponent"
+      ],
+      "solved_exercises": 12,
+      "status": "independent peer checks passed",
+      "worked_examples": 6
+    },
+    "author_integration_only": {
+      "label": "Author API import/execution is regression integration evidence only, never the peer oracle.",
+      "comparisons": 272,
+      "normal_and_optimized_summaries_equal": true
+    },
+    "quiet_import_and_check": true,
+    "normal_and_optimized_summaries_equal": true,
+    "cwd": "/",
+    "isolated_runtime_files": [
+      "content/chapters/v12-c05.html",
+      "scripts/check_v12_c05.py",
+      "content/reviews/v12-c05-sources.json",
+      "content/reviews/v12-c05-author.json",
+      "scripts/check_v12_c05_peer.py",
+      "content/reviews/v12-c05-peer.json"
+    ],
+    "exact_isolated_file_count": 6,
+    "isolated_membership_unchanged": true,
+    "all_six_payload_bytes_unchanged_by_execution": true,
+    "payload_tamper_rejections": [
+      {
+        "mutated_temporary_copy": "content/chapters/v12-c05.html",
+        "mode": "normal",
+        "rejected": true,
+        "original_restored": true
+      },
+      {
+        "mutated_temporary_copy": "content/chapters/v12-c05.html",
+        "mode": "optimized",
+        "rejected": true,
+        "original_restored": true
+      },
+      {
+        "mutated_temporary_copy": "scripts/check_v12_c05_peer.py",
+        "mode": "normal",
+        "rejected": true,
+        "original_restored": true
+      },
+      {
+        "mutated_temporary_copy": "scripts/check_v12_c05_peer.py",
+        "mode": "optimized",
+        "rejected": true,
+        "original_restored": true
+      }
+    ],
+    "output_aliases": "Not applicable: this read-only checker has no output path, mutation command or input generator. Exact file membership and every payload byte are preserved by execution.",
+    "final_record_step": "After this final serialization, all eight peer API/CLI normal/optimized workspace and exact-six-file gates were rerun successfully on these bytes before the externally reported freeze; author inputs and peer checker remained unchanged.",
+    "limitations": "Actual shared Document execution and source-preparation comparison are read-only review evidence, not dependencies of the isolated six-file checker."
+  },
+  "preserved_prior_artifacts": [
+    {
+      "path": "production/v12-c07-source-preparation.json",
+      "bytes": 19999,
+      "sha256": "46fc29aa764c37d299eafe2ad71bacb5a977f2b02b81919f0d563152b7ad1766"
+    },
+    {
+      "path": "scripts/check_v12_c04_peer.py",
+      "bytes": 29097,
+      "sha256": "33e36931857a6c46dfd683b3c897837f3a5327e0e80856f2918d378b5a3fbf2c"
+    },
+    {
+      "path": "content/reviews/v12-c04-peer.json",
+      "bytes": 25079,
+      "sha256": "bb05d71e1cbc4bfeeda5420d8184f925885a1fae21ba8a2594e5a35fd6630249"
+    }
+  ],
+  "acceptance_boundary": "This is a separate automated specialist peer audit of the bounded chapter package, not human certification, empirical validation, proof of every panel extension, whole-volume acceptance or publication approval. The coordinator retains canonical acceptance authority."
+}

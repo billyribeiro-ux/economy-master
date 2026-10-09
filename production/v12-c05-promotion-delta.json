@@ -1,0 +1,129 @@
+{
+  "chapter": "v12-c05",
+  "date": "2026-10-09",
+  "working_inputs": [
+    {
+      "path": "production/v12-c05-working.html",
+      "bytes": 45263,
+      "sha256": "e8e782a589f37aacfbaa36779a88b406c01733c6e051778cda6fe7b7ce23b419"
+    },
+    {
+      "path": "production/check_v12_c05_working.py",
+      "bytes": 28972,
+      "sha256": "dd8cae0b21bd8ee3f304bf9e2ad2d6fc5baeb4e0385e057a45b84c5348282014"
+    },
+    {
+      "path": "production/v12-c05-sources-working.json",
+      "bytes": 11724,
+      "sha256": "f64b7374ebb29da51bee3b3a81ff0725dfe0c0ee3dc94a65d9596540ac8164ef"
+    },
+    {
+      "path": "production/v12-c05-author-review-working.json",
+      "bytes": 23823,
+      "sha256": "e6a25fed918965daf8de862e7cbb741b24912141ea90cece716453b1276b53a8"
+    }
+  ],
+  "canonical_inputs": [
+    {
+      "path": "content/chapters/v12-c05.html",
+      "bytes": 45579,
+      "sha256": "250dafe5c4b5a704f387c31fb2f279dc166120900dc144288751279d36ad976f"
+    },
+    {
+      "path": "scripts/check_v12_c05.py",
+      "bytes": 29101,
+      "sha256": "d6b374aae3127a2a5db524b9985fb7a164ae411ebb79a1fc07af70960388e92c"
+    },
+    {
+      "path": "content/reviews/v12-c05-sources.json",
+      "bytes": 11991,
+      "sha256": "7f23b2573b754bd57d632057783c1282efc93850eacde6a81cd990ba060f530e"
+    },
+    {
+      "path": "content/reviews/v12-c05-author.json",
+      "bytes": 26535,
+      "sha256": "cf5b53bcae484c2b16c54f8fff8da9a23b567e83ec3ebed2224ed379741cf6de"
+    }
+  ],
+  "HTML_change": {
+    "old": "python3 production/check_v12_c05_working.py",
+    "new": "python3 scripts/check_v12_c05.py"
+  },
+  "checker_exact_replacements": [
+    {
+      "old": "four-file v12-c05 working package.",
+      "new": "four-file v12-c05 panel-data package."
+    },
+    {
+      "old": "BASE = Path(__file__).resolve().parent",
+      "new": "BASE = Path(__file__).resolve().parents[1]"
+    },
+    {
+      "old": "v12-c05-working.html",
+      "new": "content/chapters/v12-c05.html"
+    },
+    {
+      "old": "check_v12_c05_working.py",
+      "new": "scripts/check_v12_c05.py"
+    },
+    {
+      "old": "v12-c05-sources-working.json",
+      "new": "content/reviews/v12-c05-sources.json"
+    },
+    {
+      "old": "v12-c05-author-review-working.json",
+      "new": "content/reviews/v12-c05-author.json"
+    },
+    {
+      "old": "        for path in FILES:\n            shutil.copy2(BASE/path, target/path)",
+      "new": "        for path in FILES:\n            (target/path).parent.mkdir(parents=True, exist_ok=True)\n            shutil.copy2(BASE/path, target/path)"
+    },
+    {
+      "old": "{p.name for p in target.iterdir()}",
+      "new": "{str(p.relative_to(target)) for p in target.rglob('*') if p.is_file()}"
+    }
+  ],
+  "root_reading": "Complete original manuscript, all proofs/six cases/twelve exact prompts and solutions, complete checker, all source-preparation and source records and full author audit read. Root finite blueprint and analytic judgments recorded separately.",
+  "open_root_findings": [],
+  "state": "Canonical review; separate peer pending.",
+  "peer_repair_history": [
+    {
+      "date": "2026-10-09",
+      "origin": "bs_author separate peer exact observed-record audit",
+      "finding": "General MAR moment identity alone does not imply identification from (H,R,RY) when the respondent moment itself is unobserved.",
+      "resolution": "Section5 and solution8 explicitly require computability of the moment from (H,Y) whenR=1. Mean targetY satisfies it. No formulas, problem constants or numerical answers changed.",
+      "prior_canonical_inputs": [
+        {
+          "path": "content/chapters/v12-c05.html",
+          "bytes": 45252,
+          "sha256": "35ca4671e06ca46204882fe506ee724f11cff44bad926d9f855e14efb744a8ba"
+        },
+        {
+          "path": "scripts/check_v12_c05.py",
+          "bytes": 29101,
+          "sha256": "d6b374aae3127a2a5db524b9985fb7a164ae411ebb79a1fc07af70960388e92c"
+        },
+        {
+          "path": "content/reviews/v12-c05-sources.json",
+          "bytes": 11991,
+          "sha256": "7f23b2573b754bd57d632057783c1282efc93850eacde6a81cd990ba060f530e"
+        },
+        {
+          "path": "content/reviews/v12-c05-author.json",
+          "bytes": 25252,
+          "sha256": "bba3c2a5b92d37b114db510b121bd35556c469abed1eff387df9bc12e6d06907"
+        }
+      ]
+    }
+  ],
+  "HTML_change_after_initial_promotion": [
+    {
+      "old": "with the response flag distinguishing a missing value from a zero outcome. Assume E|ψ(W)|&lt;∞",
+      "new": "with the response flag distinguishing a missing value from a zero outcome. For a moment to be identified from this record, require that ψ(W) can be calculated from (H,Y) whenever R=1; for the mean below, ψ(W)=Y. Assume E|ψ(W)|&lt;∞"
+    },
+    {
+      "old": "By MAR, E[Rψ/p|W,H]=ψ, and integrability justifies expectation. The finite-cell estimate",
+      "new": "By MAR, E[Rψ/p|W,H]=ψ, and integrability justifies expectation. Identification from (H,R,RY) also uses the stated requirement that ψ is computable from (H,Y) for respondents; the algebraic identity alone does not make an unobserved moment observable. The finite-cell estimate"
+    }
+  ]
+}

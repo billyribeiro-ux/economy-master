@@ -1,0 +1,423 @@
+{
+  "chapter": "v12-c08",
+  "date": "2026-10-09",
+  "prepared_by": "root",
+  "state": "Original six-case numerical blueprint verified before author dispatch; analytic manuscript and separate review still required.",
+  "comparisons": 55,
+  "checks": [
+    "sharp window contrast",
+    "sharp full-support contrast",
+    "three-score local-linear weights",
+    "local-quadratic weights",
+    "local-linear mean jump",
+    "quadratic-corrected mean jump",
+    "linear jump noise variance multiplier",
+    "corrected jump noise variance multiplier",
+    "estimated correction gives quadratic weights",
+    "bounded-curvature bias radius",
+    "linear quadratic remainder weight",
+    "grid constant reproduction k2",
+    "grid linear reproduction k2",
+    "grid bias k2",
+    "grid variance k2",
+    "grid constant reproduction k3",
+    "grid linear reproduction k3",
+    "grid bias k3",
+    "grid variance k3",
+    "grid constant reproduction k4",
+    "grid linear reproduction k4",
+    "grid bias k4",
+    "grid variance k4",
+    "grid constant reproduction k7",
+    "grid linear reproduction k7",
+    "grid bias k7",
+    "grid variance k7",
+    "grid constant reproduction k20",
+    "grid linear reproduction k20",
+    "grid bias k20",
+    "grid variance k20",
+    "fuzzy treatment limits",
+    "fuzzy outcome limits",
+    "fuzzy local complier effect",
+    "fuzzy cutoff ATE differs",
+    "exclusion-failure ratio",
+    "defier ratio outside switching-type effects",
+    "full donor weights",
+    "full exact prefit",
+    "supported factor forecast",
+    "supported synthetic effects",
+    "removed donor constrained weights",
+    "removed donor training loss",
+    "removed donor post gaps",
+    "removed donor holdout gap",
+    "unseen post factor same data alternative effects",
+    "donor spillover changes reported gaps",
+    "placebo preMSE unit0",
+    "placebo preMSE unit1",
+    "placebo preMSE unit2",
+    "placebo preMSE unit3",
+    "all refitted placebo gaps",
+    "inclusive placebo ranks",
+    "uniform benchmark rejects too often under nonuniform assignment",
+    "actual law weighted tail retains rank validity"
+  ],
+  "case1": {
+    "law": "R uniform[-1,1],Y0=2+R+R\u00b2,Y1=Y0+3+R,D=1{R>=0}.",
+    "cutoff_effect": 3,
+    "full_support_difference": "9/2",
+    "window_h_1_5_difference": "33/10",
+    "observational_alternative": "Set both potential outcomes equal to the actually observed piecewise curve; same(Y,D,R),zero effect,discontinuous untreated mean.",
+    "sorting_transfer": "Let U fair0/1,V uniform[-1,1]independent,R=(2U\u22121)|V|,Y0=Y1=U. R still uniform withcontinuous density,mean outcome jumps1,causal effect0."
+  },
+  "case2": {
+    "positive_distances": [
+      "1/10",
+      "1/5",
+      "3/10"
+    ],
+    "left_mean_values": [
+      "81/100",
+      "16/25",
+      "49/100"
+    ],
+    "right_mean_values": [
+      "69/20",
+      "4",
+      "93/20"
+    ],
+    "linear_weights": [
+      "4/3",
+      "1/3",
+      "-2/3"
+    ],
+    "quadratic_weights": [
+      "3",
+      "-3",
+      "1"
+    ],
+    "linear_mean_jump": "28/15",
+    "true_and_corrected_mean_jump": 2,
+    "linear_variance_multiplier": "14/3",
+    "corrected_variance_multiplier": 38,
+    "known_sigma": "1/10",
+    "bounded_second_derivatives": [
+      10,
+      2
+    ],
+    "worst_case_bias_bound": "13/25",
+    "bias_aware_95_halfwidth": 0.943400612067412,
+    "wrong_old_variance_corrected_CI_coverage": 0.5078205300463543,
+    "grid_contract": "Two independent side grids\u00b1j/n,j1..n with independent Gaussian variance\u03c3\u00b2; selectkpoints eachside,h=k/n.",
+    "grid_weights": "2(2k+1\u22123j)/(k(k\u22121))",
+    "grid_exact_bias": "\u2212(q_plus\u2212q_minus)(k+1)(k+2)/(6n\u00b2) for exact quadratic mean functions",
+    "grid_exact_variance": "4\u03c3\u00b2(2k+1)/(k(k\u22121))",
+    "leading_MSE_optimum": "h^5=72\u03c3\u00b2/((q_plus\u2212q_minus)^2 n),nonzero curvature difference; integerk withk/(n h_opt)\u21921",
+    "optimal_standardized_abs_bias": "1/2",
+    "conventional_95_asymptotic_coverage": 0.9209024658394034,
+    "fixed_fraction_bandwidth_abs_bias_ratio": "r^(5/2)/2,notzero forfixedr>0; trueundersmoothing requiresh/h_opt\u21920andnh\u2192infinity",
+    "consistency_proof_bound": "sum|w_j|\u2264sqrt(k sumw_j\u00b2)\u2264sqrt10,k\u22652. B\u2264(L_plus+L_minus)sqrt10*h\u00b2/2. Variance\u226420\u03c3\u00b2/k. Thus h\u21920,k\u2192\u221e yieldsmean-squareconsistency."
+  },
+  "case3": {
+    "types": [
+      {
+        "name": "always",
+        "mass": "1/4",
+        "d0": 1,
+        "d1": 1,
+        "y0": "2",
+        "effect": "6"
+      },
+      {
+        "name": "complier",
+        "mass": "1/2",
+        "d0": 0,
+        "d1": 1,
+        "y0": "1",
+        "effect": "4"
+      },
+      {
+        "name": "never",
+        "mass": "1/4",
+        "d0": 0,
+        "d1": 0,
+        "y0": "0",
+        "effect": "0"
+      }
+    ],
+    "treatment_limits": [
+      "1/4",
+      "3/4"
+    ],
+    "outcome_limits": [
+      "5/2",
+      "9/2"
+    ],
+    "first_stage": "1/2",
+    "outcome_jump": "2",
+    "local_LATE": 4,
+    "cutoff_ATE": "7/2",
+    "exclusion_transfer_ratio": 5,
+    "defier_transfer": "C3/8,F1/8,A1/4,N1/4;switcher effects4and8 givefirststage1/4,jump1/2,ratio2."
+  },
+  "case4": {
+    "donor_pre_training": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "2",
+        "2"
+      ],
+      [
+        "1",
+        "3"
+      ]
+    ],
+    "treated_training": [
+      "5/4",
+      "2"
+    ],
+    "full_projection": {
+      "weights": [
+        "1/4",
+        "1/2",
+        "1/4"
+      ],
+      "fit": [
+        "5/4",
+        "2"
+      ],
+      "error": [
+        "0",
+        "0"
+      ],
+      "loss": "0"
+    },
+    "holdout_treated": "11/4",
+    "donor_loadings": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "factor_values": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "treated_loading": [
+      "5/4",
+      "3/4"
+    ],
+    "post_observed": [
+      "11/2",
+      "29/4"
+    ],
+    "post_counterfactual": [
+      "7/2",
+      "17/4"
+    ],
+    "effects": [
+      "2",
+      "3"
+    ],
+    "drop_third_donor": {
+      "weights": [
+        "3/10",
+        "7/10"
+      ],
+      "fit": [
+        "7/5",
+        "17/10"
+      ],
+      "error": [
+        "-3/20",
+        "3/10"
+      ],
+      "loss": "9/80"
+    },
+    "drop_post_forecast": [
+      "23/10",
+      "13/5"
+    ],
+    "drop_post_gaps": [
+      "16/5",
+      "93/20"
+    ],
+    "drop_holdout_gap": "3/4"
+  },
+  "case5": {
+    "hidden_factor": "Augment original factor with gpre=0,post=(1,2),treatedloading1,donors0. Sameobservedpanel admits effects(1,1)ratherthan(2,3);pre factor matrixnotfullrank.",
+    "spillover": "Adding2 to donorBpost reduces reportedgapbywB*2=1.",
+    "nonunique_weights": "Two donors bothpre(1,1),treatedpre(1,1);postdonors(2,8),observedtreated7. Everyconvexweight fits preexactly; forecasts[2,8],gaps[-1,5]. This is an identification interval only under explicitly maintained fixed-convex-mixture restriction,otherwise only forecast range."
+  },
+  "case6": {
+    "pre_table": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "0"
+      ],
+      [
+        "0",
+        "2"
+      ],
+      [
+        "2",
+        "2"
+      ]
+    ],
+    "post_table": [
+      "4",
+      "0",
+      "1",
+      "2"
+    ],
+    "all_refits": [
+      {
+        "unit": 0,
+        "donors": [
+          1,
+          2,
+          3
+        ],
+        "weights": [
+          "1/2",
+          "1/2",
+          "0"
+        ],
+        "fit": [
+          "1",
+          "1"
+        ],
+        "error": [
+          "-1",
+          "-1"
+        ],
+        "loss": "2",
+        "post_gap": "7/2",
+        "score": "7/2",
+        "uniform_inclusive_p": "1/4",
+        "actual_weighted_p": "7/10"
+      },
+      {
+        "unit": 1,
+        "donors": [
+          0,
+          2,
+          3
+        ],
+        "weights": [
+          "1/2",
+          "0",
+          "1/2"
+        ],
+        "fit": [
+          "1",
+          "1"
+        ],
+        "error": [
+          "1",
+          "-1"
+        ],
+        "loss": "2",
+        "post_gap": "-3",
+        "score": "3",
+        "uniform_inclusive_p": "1/2",
+        "actual_weighted_p": "4/5"
+      },
+      {
+        "unit": 2,
+        "donors": [
+          0,
+          1,
+          3
+        ],
+        "weights": [
+          "1/2",
+          "0",
+          "1/2"
+        ],
+        "fit": [
+          "1",
+          "1"
+        ],
+        "error": [
+          "-1",
+          "1"
+        ],
+        "loss": "2",
+        "post_gap": "-2",
+        "score": "2",
+        "uniform_inclusive_p": "3/4",
+        "actual_weighted_p": "9/10"
+      },
+      {
+        "unit": 3,
+        "donors": [
+          0,
+          1,
+          2
+        ],
+        "weights": [
+          "0",
+          "1/2",
+          "1/2"
+        ],
+        "fit": [
+          "1",
+          "1"
+        ],
+        "error": [
+          "1",
+          "1"
+        ],
+        "loss": "2",
+        "post_gap": "3/2",
+        "score": "3/2",
+        "uniform_inclusive_p": "1",
+        "actual_weighted_p": "1"
+      }
+    ],
+    "uniform_assignment_size_at_alpha_1_4": "1/4",
+    "minimum_uniform_p": "1/4",
+    "alternative_assignment": [
+      "7/10",
+      "1/10",
+      "1/10",
+      "1/10"
+    ],
+    "wrong_uniform_rejection_probability_at_alpha_1_4": "7/10",
+    "weighted_rejection_probability_at_alpha_1_4": "0"
+  },
+  "proof_requirements": [
+    "Sharp one-sided continuity identity and the conditional-version/support conventions; localwindowdoesnotfollowasrandomized.",
+    "Weightedleast-squares cut-off intercept formula/reproduction and knownGaussian conditional bias/variance,estimatedbias covariance included.",
+    "Exactquadraticgrid variance/bias and rates;boundedcurvaturefiniteknownGaussian confidence bound. No generic RBC/many-bandwidth selection theorem.",
+    "Local fuzzy constant-type sufficient model with continuous relevant composite means, exclusion,no defiers,positive firststage; deriveweightedcomplier ratio.",
+    "Compact simplex optimizer and uniqueness condition onfeasiblezero-sumdirections; finite noiselessfactor supportproof and approximatefitbound viafullrankleftinverse. Do not infergeneralstochasticSCconsistency.",
+    "Fullalgorithm refitting and inclusiveweightedrank validity underactualsharp-nullassignment; observationalrankbenchmarknotcalibrated byitself."
+  ],
+  "limitations": "Original controlled finite examples and narrowly specified analytic proofs, not empirical results, current software, broad method frontier or renderedUI review.",
+  "independent_author_confirmation": {
+    "date": "2026-10-09",
+    "author": "ito_author",
+    "state": "All six cases independently confirmed; root approves prose/checker production.",
+    "detail": "Sharp contrasts/sorting, both local-polynomial systems, Gaussian coverage/bias, grid rates, fuzzy targets/defier transfer, convex-hull refits, hidden-factor/spillover/nonunique laws and actual assignment ranks agree. The specified orthogonal design has correction variance multiplier 100/3 and exactly zero covariance with the original local-linear jump; this is computed for this case, never presumed generally. Defier transfer is fully specified by baseline 1 and effect 8, with D limits3/8,5/8 and Y limits7/2,4.",
+    "root_extra_exact_checks": 2
+  }
+}

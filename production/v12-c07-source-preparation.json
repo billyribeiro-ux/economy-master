@@ -1,0 +1,178 @@
+{
+  "chapter": "v12-c07",
+  "title": "Difference-in-differences and event studies",
+  "date": "2026-10-09",
+  "author": "bs_author",
+  "status": "Scoped primary source preparation complete; no manuscript or acceptance claim",
+  "assignment": "production/v12-c07-source-assignment.json",
+  "owned_path": "production/v12-c07-source-preparation.json",
+  "inspection_method": {
+    "primary_bodies": 4,
+    "retrieval": "Public author or author-deposited PDF bodies retrieved into memory. Byte counts and SHA256 values identify the exact inspected versions, rather than an unspecified latest paper.",
+    "equation_review": "Existing Poppler pdftotext supplied scoped text. Existing pdftoppm rendered complete selected pages through stdin/stdout; actual PNG image blocks were emitted and read. Fourteen pages were visually inspected: thirteen assumption/equation pages and the Rambachan–Roth published title page.",
+    "tool_limit": "Earlier web screenshot attempts returned text image markers without image blocks; those attempts are not counted as visual evidence. Memory rendering supplied the actual images.",
+    "local_artifacts": "No downloaded PDF, image, extracted text or other local artifact was created. This assigned JSON is the only output file.",
+    "scope_limit": "Selected sections and equations were inspected, not all proofs, appendices or empirical applications. This is machine-assisted evidence preparation, not external expert certification, reader UI review or a completed chapter."
+  },
+  "sources": [
+    {
+      "proposed_id": "callaway-santanna-did-2020-v4",
+      "authors": ["Brantly Callaway", "Pedro H. C. Sant’Anna"],
+      "title": "Difference-in-Differences with Multiple Time Periods",
+      "version": "arXiv:1803.09015v4, 1 December 2020",
+      "type": "Author-deposited manuscript; not an inspection of the subsequently published journal body",
+      "url": "https://arxiv.org/pdf/1803.09015v4",
+      "listing_url": "https://arxiv.org/abs/1803.09015",
+      "pdf_pages": 45,
+      "bytes": 828138,
+      "sha256": "88cdd094589af58608a0d6675a00b57f36c8583d5f1e40e892e06a700307867f",
+      "text_scope": "Physical/printed pages 1–11 and 14–16; selected Remarks 4 and 6 on page 12. Assumptions 1–6, equations (2.2)–(2.9), Theorem 1, aggregation table and equations (3.4)–(3.6).",
+      "visually_inspected_physical_pages": [8, 10, 11, 16],
+      "page_number_rule": "Physical and printed page numbers coincide.",
+      "verified_scope": "Absorbing adoption, whole-unit iid sampling, group-time ATT, conditional counterfactual trends, overlap and known anticipation horizon. Identification uses baseline g−delta−1 and never-treated or eligible not-yet-treated comparisons. OR/IPW/DR population formulas are distinct from estimator inference. Event-time aggregation can change cohort composition; fixed-cohort aggregation removes that source of change.",
+      "equation_cautions": "Eligibility extends through t+delta. Without a never-treated group, effects after the last eligible comparison disappears are unidentified by this theorem. Observed nonadoption through T differs from known nonadoption beyond T. The cumulative calendar aggregation is not generally a convex average. Random sampling is not randomized adoption.",
+      "not_adopted": "General nuisance-estimation, multiplier-bootstrap, simultaneous-band or repeated-cross-section proofs; appendices and empirical conclusions were not audited."
+    },
+    {
+      "proposed_id": "sun-abraham-event-study-2020-v2",
+      "authors": ["Liyang Sun", "Sarah Abraham"],
+      "title": "Estimating Dynamic Treatment Effects in Event Studies with Heterogeneous Treatment Effects",
+      "version": "arXiv:1804.05785v2, 22 September 2020; PDF creation metadata is 23 September",
+      "type": "Author-deposited manuscript; not an inspection of the subsequently published journal body",
+      "url": "https://arxiv.org/pdf/1804.05785v2",
+      "listing_url": "https://arxiv.org/abs/1804.05785",
+      "pdf_pages": 51,
+      "bytes": 681004,
+      "sha256": "4562d82bed76a712e3a1fe1831beb8a38962062524fa36483875ba5fe059bc9c",
+      "text_scope": "Physical/printed pages 6–8, 12–15 and 21–23: assumptions, coefficient decomposition, auxiliary weight regression, interaction-weighted construction and DID representation.",
+      "visually_inspected_physical_pages": [8, 15, 22],
+      "page_number_rule": "Physical and printed page numbers coincide.",
+      "verified_scope": "Cohort-relative-time effects can contaminate coefficients for other relative times, including leads. Interaction-weighted estimates combine supported cohort-specific effects. A last-treated reference cohort is used only before its adoption; always-treated units lack a preperiod. Normalizations and rank matter when all cohorts eventually adopt.",
+      "equation_cautions": "Page 15 has an impact-period inconsistency: Proposition 3 states l≥0, whereas equation (15) uses l>0 and adjacent prose removes l≤0. Page 8 Assumption 2 excludes only l<0; retain l=0 treatment effects. Its discussion of older Callaway–Sant’Anna drafts does not describe the inspected December v4 anticipation allowance.",
+      "not_adopted": "Online Appendix B asymptotic proof, general covariate adjustment or simultaneous inference. Page 23 distinguishes its pointwise inference from simultaneous bands."
+    },
+    {
+      "proposed_id": "goodman-bacon-timing-2020-author",
+      "authors": ["Andrew Goodman-Bacon"],
+      "title": "Difference-in-Differences with Variation in Treatment Timing",
+      "version": "Author manuscript dated August 2020 on its cover; PDF metadata 15 August 2020",
+      "type": "Author-linked public manuscript; distinct from the NBER 2018 and published 2021 versions",
+      "listing_url": "https://www.goodman-bacon.com/publications",
+      "url": "https://drive.google.com/file/d/1gUg7INdzM9A1d1OqCFZjLg9a-BAxMBzf/view?usp=drive_link",
+      "retrieved_url": "https://drive.google.com/uc?export=download&id=1gUg7INdzM9A1d1OqCFZjLg9a-BAxMBzf",
+      "final_retrieval_url": "https://drive.usercontent.google.com/download?id=1gUg7INdzM9A1d1OqCFZjLg9a-BAxMBzf&export=download",
+      "pdf_pages": 49,
+      "bytes": 517963,
+      "sha256": "613a4c794562908a88f0ac59b584615f0b2cac74d0c9e1e18e727510441e7304",
+      "text_scope": "Physical pages 1–2, 6–9 and 13–14: cover, setup, FWL, pairwise contrasts/weights, Theorem 1 and causal decomposition (14a)–(15b).",
+      "visually_inspected_physical_pages": [9, 13],
+      "page_number_rule": "Cover is unnumbered; body printed page equals physical page minus one.",
+      "verified_scope": "Balanced-panel binary absorbing-treatment TWFE decomposes into two-by-two contrasts with nonnegative comparison weights determined by sample shares and treatment variation. An already-treated comparison subtracts its changing treatment effect, so positive comparison weights do not imply positive weights on every cohort-date effect.",
+      "equation_cautions": "Equations (10a)–(10g) are the inspected basic regression decomposition, without an added-covariate extension. Its algebra is not a causal identification assumption. Empty groups, constant treatment and zero residual treatment variance need separate treatment. Extracted mathematical glyphs were unreliable; rendered equations were checked.",
+      "not_adopted": "Appendix A general proof, empirical estimates or unrestricted extensions. NBER PDF retrieval returned 403; its landing metadata was not substituted for body inspection."
+    },
+    {
+      "proposed_id": "rambachan-roth-parallel-trends-2023",
+      "authors": ["Ashesh Rambachan", "Jonathan Roth"],
+      "title": "A More Credible Approach to Parallel Trends",
+      "version": "Published Review of Economic Studies 90(5), 2023, pages 2555–2591; advance access 15 February 2023; DOI 10.1093/restud/rdad018",
+      "type": "Published journal PDF hosted on an author's website, although the listing link is labeled Draft",
+      "url": "https://www.jonathandroth.com/assets/files/HonestParallelTrends_Main.pdf",
+      "listing_url": "https://www.jonathandroth.com/papers/",
+      "pdf_pages": 37,
+      "bytes": 916176,
+      "sha256": "2ef3448e51bb946478ad323b8e00fc5de80fcc1b274ec26aa01dfaa9e458b7dc",
+      "text_scope": "Physical pages 1–12 / printed 2555–2566: setup, identified set, restriction families, inferential goal and start of moment-inequality representation.",
+      "visually_inspected_physical_pages": [1, 8, 9, 10, 11],
+      "page_number_rule": "Printed page equals physical page plus 2554; physical page 1 confirms published identity.",
+      "verified_scope": "The reduced form separates treatment effects from counterfactual trend departures, with zero pre-treatment effects. Restrictions on departures identify a set. Relative-magnitude restrictions bound consecutive first differences; smoothness bounds second differences. Zero smoothness permits a linear differential trend. Identified sets and confidence sets address different uncertainty.",
+      "equation_cautions": "Normalize delta_0=0 and justify the reduced form first. Do not treat contaminated raw TWFE leads as clean pretrend departures. Generic closed-convex endpoint language in Lemma 2.1 needs attainment qualifications; the independent caution below supplies them. No pretest proves the missing counterfactual.",
+      "not_adopted": "General uniform-inference, ARP conditional-testing, power, FLCI or software guarantees. Their later proofs and supplementary material were not inspected."
+    }
+  ],
+  "independent_mathematical_cautions": [
+    {
+      "topic": "Anticipation and eligible controls",
+      "decision": "Use a separate symbol a for a known nonnegative integer anticipation horizon in our eventual chapter, leaving delta available for trend departures. For post-treatment t≥g, use b=g−a−1 and a control first-treated date strictly greater than t+a. Require b within the observed calendar, positive cohort/control probabilities and the stated conditional trend equality. An observed untreated unit can still be anticipating. Treat unsupported cells as unidentified, never as zero."
+    },
+    {
+      "topic": "Endpoints and sharpness",
+      "decision": "For a closed interval formula with attained maxima/minima, assume and verify a nonempty compact feasible fiber after fixing the observed preperiod coordinates. Convexity gives interval shape; compactness gives closedness and attainment. Empty fibers mean restrictions conflict with population preperiod information. Use infimum/supremum and endpoint qualifications in any broader theorem.",
+      "original_counterexample": "The set {(d_pre,d_1,d_2): d_pre=0, 0<d_1≤1, d_2≥1/d_1} is closed and convex in finite-dimensional Euclidean space. With beta_pre=0, beta_post=(0,0) and target theta=−d_1, its linear image is [−1,0), not a closed interval with an attained upper endpoint. Divergence of d_2 prevents a finite limit at d_1=0. Thus closed convexity alone does not justify every literal max/min in a generic statement."
+    },
+    {
+      "topic": "Sampling and inference",
+      "decision": "A fixed-T vector for one independently sampled unit may inherit c01–c03 LLN/CLT and fixed-dimensional delta-method arguments after stating moments, positive cell probabilities and rank. Dependence within that vector is allowed; arbitrary cross-unit or policy-cluster dependence is not. Fixed policy-cluster counts are not made asymptotically large by more individuals. Pointwise consistency and normality do not establish uniform coverage over a sensitivity class."
+    },
+    {
+      "topic": "Design boundaries",
+      "decision": "The core examples should stipulate consistency, no interference, absorbing binary treatment, observed whole-unit panels and stable population definitions. Treatment reversals, spillovers, endogenous attrition, repeated cross-sections and changing measurement require distinct assumptions. Predetermined covariate adjustment does not itself establish counterfactual parallel trends; post-treatment adjustment can change the estimand."
+    }
+  ],
+  "original_proof_blueprint_proposals": [
+    {
+      "topic": "Two-period and group-time identification",
+      "proposal": "Define Y_t(g), Y_t(infinity), observed consistency and ATT(g,t) before regression. Add and subtract the untreated treated-group outcome, proving DID equals ATT plus a difference in counterfactual changes, with no anticipation at the baseline. For finitely many baseline-X cells, identify each conditional change and average using the treated cohort's X distribution. Derive the equivalent normalized odds-weight identity by conditional expectation and Bayes' rule. If double robustness is included, prove its population remainder identity explicitly and derive finite-cell nuisance uncertainty rather than importing a general machine-learning theorem.",
+      "boundary": "A causal target, observational trend restriction, estimator and sampling law are four separate objects. Earlier randomization methods provide a contrast, not a substitute for unobserved-trend identification."
+    },
+    {
+      "topic": "Finite TWFE and comparison decomposition",
+      "proposal": "Prove the finite FWL identity using c02 orthogonal projections. Under an additive untreated group/time table, write the coefficient as a weighted sum of cohort-date effects, show those effect weights sum to one and inspect their signs. Separately expand a bounded three-group/four-date example into its four two-by-two comparisons. This teaches both decompositions with an original exact proof; a general all-design Bacon theorem may remain a sourced extension unless its full proof is taught.",
+      "original_case": {
+        "calendar": [1, 2, 3, 4],
+        "cohorts": "Equal masses first treated at dates 2 and 4, plus a never-treated cohort; untreated outcomes identically zero.",
+        "observed_group_rows": [[0, 1, 3, 7], [0, 0, 0, 2], [0, 0, 0, 0]],
+        "treated_cell_weights": ["3/10", "3/10", "-1/10", "1/2"],
+        "twfe_coefficient": "3/2",
+        "two_by_two_contrasts": ["11/3", "2", "2", "-3"],
+        "comparison_order": "Early versus never; late versus never; early versus not-yet-late before date 4; late versus already-early after date 1.",
+        "comparison_weights": ["3/10", "3/10", "1/5", "1/5"],
+        "verification": "Direct Fraction double demeaning and an independently assembled four-contrast weighted sum both yield 3/2. The fourth contrast is 2−(7−2)=−3."
+      },
+      "boundary": "The positive contrast weights do not remove the early cohort's changing effect from the late-versus-early contrast. All numbers here are original, not a paper's empirical example."
+    },
+    {
+      "topic": "Event-time contamination and composition",
+      "proposal": "For a declared full-rank design, derive each event coefficient as a row of (X'X)^{-1}X' applied to the full cohort-by-time mean table. Use an original rational table to show a nonzero fitted lead despite no anticipation and parallel untreated trends. Then estimate supported cohort-specific changes using clean controls and aggregate with declared nonnegative weights. Show that changing support can alter the aggregate even when within-cohort effects are constant; compare a fixed-cohort target. Check omitted categories, binning and observed support explicitly.",
+      "case_anchor": "In the preceding original table, the ordinary impact average is (1+2)/2=3/2, while the event-one average is 3 and contains only the early cohort. The early-only balanced targets are 1 and 3. Therefore the two aggregate differences are 3/2 and 2, respectively.",
+      "boundary": "The displayed case anchors establish composition effects; a specific contaminated-lead regression has not yet been selected or calculated. No manuscript or untested numerical lead claim is supplied."
+    },
+    {
+      "topic": "Sharp sensitivity sets with original finite bounds",
+      "proposal": "Use two preperiod coordinates, an omitted baseline 0 and two postperiod coordinates. Treat population reduced-form values as known for identification, then handle sampling separately. Prove sharpness by constructing every allowed departure path and setting post effects equal to observed reduced form minus departures. For compact convex fibers, continuous linear projection gives attained endpoints and fills the interval; parameterize the small original example directly rather than invoking an untaught optimization solver.",
+      "original_case": {
+        "preperiod_departures": {"-2": -2, "-1": -1, "0": 0},
+        "post_reduced_form": [4, 6],
+        "target": "Equal-weight average of the two post-treatment effects.",
+        "relative_magnitude": "With Mbar≥0, each post increment is bounded in absolute value by Mbar. The sharp interval is [5−3 Mbar/2, 5+3 Mbar/2]; at Mbar=1 it is [7/2,13/2].",
+        "smoothness": "With M≥0, let post increments be 1+e0 and 1+e0+e1, where |e0|,|e1|≤M. The sharp interval is [7/2−2M,7/2+2M]; at M=1 it is [3/2,11/2]. At M=0 the nonparallel linear differential trend gives target 7/2.",
+        "verification": "The linear objectives attain extrema at the four square vertices; Fraction enumeration independently verified both intervals at bound 1. These are population identification bounds, not confidence intervals."
+      },
+      "boundary": "Relative-magnitude and smoothness parameters encode different scientific restrictions and units. Neither is selected automatically by a nonsignificant pretrend test."
+    },
+    {
+      "topic": "Pretrend logic and a taught confidence projection",
+      "proposal": "Construct two observationally identical laws with zero preperiod group gaps and observed post gap 4: one has untreated post gap 0 and effect 4; the other untreated post gap 3 and effect 1. This directly proves that perfect preperiod equality alone does not identify the post effect. If inferential sensitivity is taught, begin with a finite known-covariance Gaussian reduced form. Build simultaneous coordinate intervals by a union bound, then project all beta in that confidence region and all compatible departures into the effect target. On the event that the region contains the true beta, the projection contains the true target; this supplies a complete conservative coverage proof.",
+      "boundary": "Account for uncertainty in estimated pretrends as well as post outcomes. A plug-in identified interval is not this confidence projection. General uniformly asymptotic or optimized honest-DiD inference remains a stated further-study route unless its additional assumptions and proof are supplied."
+    }
+  ],
+  "source_questions_and_decisions": {
+    "sufficient_for_scoped_original_blueprint": true,
+    "blocking_missing_primary_scope": [],
+    "inaccessible_or_uninspected": [
+      "NBER Goodman-Bacon PDF returned 403. The author-linked August 2020 public PDF was successfully read instead, and its different version is explicit.",
+      "The published Callaway–Sant’Anna, Sun–Abraham and Goodman-Bacon bodies were not inspected; their author versions are the actual equation sources.",
+      "Rambachan–Roth later inference proofs and supplementary material, and the other papers' general inference appendices, are outside this scoped reading."
+    ],
+    "decision": "Root owns the later chapter blueprint and assignment. Favor finite exact counterexamples, explicit supported targets and directly proved finite-dimensional identification/inference. Future reader acceptance still requires the c06 prerequisite and all original manuscript, solution, arithmetic, source and separate review gates."
+  },
+  "preserved_scope": {
+    "frozen_c03_peer_untouched": true,
+    "earlier_author_and_peer_packages_untouched": true,
+    "shared_or_canonical_edits": false,
+    "manuscript_or_checker_created": false,
+    "publishing": false,
+    "delegation": false,
+    "installations": false
+  }
+}

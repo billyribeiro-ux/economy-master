@@ -1,0 +1,153 @@
+{
+  "chapter": "v12-c08",
+  "date": "2026-10-09",
+  "prepared_by": "root coordinating author",
+  "state": "Three exact primary bodies and focused sections inspected; original chapter author assignment remains separate.",
+  "sources": [
+    {
+      "id": "v12-c08-cattaneo-titiunik2022",
+      "authors": [
+        "Matias D. Cattaneo",
+        "Rocío Titiunik"
+      ],
+      "title": "Regression Discontinuity Designs",
+      "version": "Annual Review of Economics14(2022),821–851; author-hosted published version",
+      "url": "https://titiunik.github.io/files/publications/CattaneoTitiunik2022-ARE.pdf",
+      "listing_url": "https://titiunik.github.io/publications/",
+      "doi": "10.1146/annurev-economics-051520-021409",
+      "local_pdf": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c08-rd-review.pdf",
+      "bytes": 473052,
+      "sha256": "5e22b7bb4065ca5da18c5f02aa49b01bf963ebf7d7aeec5f3ef305ecdc00ac99",
+      "pdf_pages": 34,
+      "text_read_physical_pages": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "visually_read_physical_pages": [
+        4,
+        8
+      ],
+      "page_mapping": "Physical4–8 are journal824–828.",
+      "verified_scope": [
+        "Sharp treatment rule and local continuity identification; absence of common support at an exact score.",
+        "Local-randomization window requires its own assignment and outcome exclusion restrictions.",
+        "Fuzzy treatment versus assignment effects; different complier conventions require explicit continuity/exclusion/monotonicity conditions."
+      ],
+      "cautions": [
+        "Do not equate continuity with a randomized finite window or use observed balance/density tests as proof of unobserved continuity.",
+        "Use an explicitly specified constant-near-cutoff compliance-type sufficient model; the review surveys several distinct fuzzy definitions.",
+        "The chapter must define its own probability law rather than import the review’s differing uses of Fisher/Neyman terminology."
+      ],
+      "not_adopted": "General fuzzy inference, extrapolation, multidimensional/discrete-score extensions, software behavior and later uninspected sections."
+    },
+    {
+      "id": "v12-c08-cit-foundations2019",
+      "authors": [
+        "Matias D. Cattaneo",
+        "Nicolás Idrobo",
+        "Rocío Titiunik"
+      ],
+      "title": "A Practical Introduction to Regression Discontinuity Designs: Foundations",
+      "version": "arXiv1911.09511v1,21November2019; manuscript title dated22November2019; subsequent book2020 not substituted for this body",
+      "url": "https://arxiv.org/pdf/1911.09511",
+      "listing_url": "https://arxiv.org/abs/1911.09511",
+      "published_doi": "10.1017/9781108684606",
+      "local_pdf": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c08-rd-foundations.pdf",
+      "bytes": 1242429,
+      "sha256": "a4f103e8518fb871503c22cceb179a4f614de43edd6d85236a489022b4c67ed3",
+      "pdf_pages": 117,
+      "text_read_physical_pages": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        100,
+        101,
+        102
+      ],
+      "visually_read_physical_pages": [
+        45,
+        72,
+        73
+      ],
+      "page_mapping": "Printed page=physical−3 in inspected body.",
+      "verified_scope": [
+        "Separate side-local polynomial weighted regressions, raw observations, cutoff intercept difference, kernel/order/bandwidth roles.",
+        "Smoothing bias and estimation/inference bandwidth distinction; bias correction must account for randomness and covariance of the estimated correction.",
+        "Density diagnostics and the separately assumed exact binomial experiment."
+      ],
+      "cautions": [
+        "A fixed fractional reduction of an MSE-optimal bandwidth does not by itself make standardized leading bias vanish. The original fixed-grid proof will show that undersmoothing requires a rate condition, not merely a smaller number.",
+        "Do not infer universal finite-sample variance ordering, superiority, coverage or software guarantees from the monograph’s asymptotic discussion. Prove only explicit known-Gaussian local calculations.",
+        "Continuity of density does not establish potential-outcome continuity; absence of rejection is not no-manipulation identification. Exact finite-window binomial validity requires its declared probability law.",
+        "Empirical examples and commands are contextual source text, not reproduced or independently validated."
+      ],
+      "not_adopted": "No general robust-bias-correction theorem, automatic bandwidth implementation, cluster/nonparametric coverage refinement or empirical application audit."
+    },
+    {
+      "id": "v12-c08-abadie2021",
+      "author": "Alberto Abadie",
+      "title": "Using Synthetic Controls: Feasibility, Data Requirements, and Methodological Aspects",
+      "version": "Journal of Economic Literature59(2),June2021,391–425; MIT author-hosted final published body",
+      "url": "https://economics.mit.edu/sites/default/files/publications/jel.20191450.pdf",
+      "listing_url": "https://economics.mit.edu/people/faculty/alberto-abadie/papers",
+      "doi": "10.1257/jel.20191450",
+      "local_pdf": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c08-abadie-sc.pdf",
+      "bytes": 790971,
+      "sha256": "5864e08fd2204ddb329e90daa3b2dee591f7f442ea8e61300f9698f830254393",
+      "pdf_pages": 35,
+      "text_read_physical_pages": [
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        20,
+        21,
+        24,
+        25
+      ],
+      "visually_read_physical_pages": [
+        6,
+        10,
+        13,
+        14
+      ],
+      "page_mapping": "Journal page=physical+390.",
+      "verified_scope": [
+        "Treatment/counterfactual definition, nonnegative simplex weights and preperiod-only predictor criterion.",
+        "Linear common-factor logic and limits of good prefit, too many donors, long preperiods and interpolation.",
+        "Refitted in-space placebo gaps, post/preRMSPE, inclusive treated-unit rank and actual versus benchmark assignment law.",
+        "Donor spillovers, convex-hull support, preperiod holdout/backdating and leave-one-donor diagnostics."
+      ],
+      "cautions": [
+        "Page6 occasionally calls weights positive; feasible simplex includes zero weights, as preceding definition/formula state.",
+        "The general stochastic bias theorem and original2010appendix are not proved/read here; use an original finite noiseless factor/rank proof and explicit counterexamples.",
+        "Perfect prefit alone does not imply future-factor support; nonunique weights can produce different forecasts.",
+        "A zero preRMSPE needs explicit handling; do not divide by zero. Uniform placebo ranks have design validity only for the stipulated assignment law, otherwise are a benchmark comparison.",
+        "Excluding possible spillover donors addresses a stated threat and may worsen support; it does not prove absence of all interference."
+      ],
+      "not_adopted": "No German reunification or other empirical effect validation, general stochastic bias bound, automatic sparse/unique optimizer, observational randomization guarantee, conformal or later extension theorem."
+    }
+  ],
+  "inspection_method": "Public PDFs retrieved by standard-library urllib; byte hashes and Poppler page counts recorded. Complete listed text pages read;9complete equation pages rendered using existing Poppler and actually viewed. No installations or authoredPDF.",
+  "actual_equation_pages_viewed": 9,
+  "limits": "Focused substantive source review only. Not a full-document, empirical application, current software, rendered textbook UI or human certification audit. Original examples/proofs must be independently verified.",
+  "scratch_policy": "Keep v12-c08 PDF/text/PNG inputs while upcoming author/reviewer needs them; do not alter older active assignment scratch."
+}

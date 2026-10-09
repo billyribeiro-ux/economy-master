@@ -1,0 +1,193 @@
+{
+  "chapter": "v12-c04",
+  "state": "Canonical scoped source record; coordinator/peer acceptance pending.",
+  "preparation": "production/v12-c04-source-preparation.json",
+  "preparation_bytes": 13375,
+  "preparation_sha256": "2325957d8ec77c8046fe74eae1dd170f520f52d9d297dbf4584fc439f4c927c7",
+  "proposals": [
+    {
+      "id": "v12-c04-mit-nonlinear2017",
+      "title": "Nonlinear and Binary Regression, Predictive Effects, and M-Estimation",
+      "authors": [
+        "Victor Chernozhukov",
+        "Ivan Fernandez-Val"
+      ],
+      "publication": "Spring 2017, MIT 14.382 Lecture6",
+      "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/1c38d1d141f59c69ca57c68801fb75b1_MIT14_382S17_lec6.pdf",
+      "use": "Predictive/discrete and derivative effects, empirical target-distribution uncertainty, stacked moments, binary links, conditional likelihood, M-estimation and robust covariance. Empirical figures encountered are not adopted as evidence; sorted-effect/bootstrap and application results are outside chapter proof scope.",
+      "checked": "2026-10-09",
+      "status": "Actual scoped primary body and selected rendered equations inspected; working proposal only.",
+      "inspection": {
+        "pdf_pages": 26,
+        "bytes": 531103,
+        "sha256": "5ef98668b0d867d83ea15909bdc7db211e82ec0ab5e8578ef1892b401c9da6fc",
+        "read_pages": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "rendered_pages": [
+          7,
+          14
+        ],
+        "method": "Existing exact PDF bytes and extracted text read; selected pages rendered in memory via pdftoppm and visually inspected. No files added outside owned paths."
+      },
+      "cautions_and_proof_limits": [
+        "Page14 defines score as gradient log likelihood and G as negative expected Hessian, but displays a leading negative G inverse score expansion. With these definitions use the positive A inverse score expansion; derive it from the score equation.",
+        "Page13 correctly derives the minimization-loss sign but is not the same sign convention as the page14 likelihood score.",
+        "Page14 broadly states efficiency relative to every consistent asymptotically normal GMM estimator without all regular estimator/model restrictions. The chapter does not adopt that universal claim.",
+        "Page8 refers to a quantile function as nonincreasing; increasing quantile ordering is the relevant convention. Sorted effects are excluded.",
+        "Uniqueness/concavity does not guarantee an unconstrained finite maximizer under separation. Explicit finite boundary cases are required.",
+        "The selected source provides a stacked-moment route for APE uncertainty; the chapter supplies the explicit empirical-X term and retains its cross covariance under misspecification."
+      ]
+    },
+    {
+      "id": "v12-c04-selection2007",
+      "title": "14.385 Nonlinear Econometrics, Lecture1: Basic Overview of Some Principal Methods",
+      "authors": [
+        "Victor Chernozhukov"
+      ],
+      "publication": "Fall 2007",
+      "url": "https://ocw.mit.edu/courses/14-385-nonlinear-econometric-analysis-fall-2007/0b7c3f5ce9642cc7f603d6404a8975e5_lecture01.pdf",
+      "use": "Conditional/marginal likelihood distinction, censored mixed likelihood and the TypeII sample-selection observed-data factorization. The explicit bivariate-normal selected density and Mills mean are derived in the chapter; page14 leaves the details to homework.",
+      "checked": "2026-10-09",
+      "status": "Actual scoped primary body and selected rendered equations inspected; working proposal only.",
+      "inspection": {
+        "pdf_pages": 24,
+        "bytes": 154406,
+        "sha256": "562c34f1661893bfdbd354f96ae934eba2d5369524bfc59f7c9522d5c0757761",
+        "read_pages": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "rendered_pages": [
+          11,
+          13
+        ],
+        "method": "Existing exact PDF bytes and extracted text read; selected pages rendered in memory via pdftoppm and visually inspected. No files added outside owned paths."
+      },
+      "cautions_and_proof_limits": [
+        "Setting the unavailable outcome to zero is a storage convention; the unselected contribution is probability mass, not an observed outcome density at zero.",
+        "The selected-outcome conditional density must be multiplied by the selection probability in the joint observed-data likelihood.",
+        "Distributional and identification hypotheses remain essential. The chapter does not import an unconditional efficiency or generic selection identification theorem."
+      ]
+    },
+    {
+      "id": "v12-c04-mit-likelihood2016",
+      "title": "18.650 Statistics for Applications, Chapter 3: Maximum Likelihood Estimation",
+      "authors": [
+        "Philippe Rigollet"
+      ],
+      "publication": "Fall 2016",
+      "url": "https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/36624c2682b346b07cab3da416b752a7_MIT18_650F16_Maximum_LE.pdf",
+      "use": "KL definition and information inequality, likelihood maximization, gradient/Hessian, examples, information and regular limit statement. PDF page numbers differ from the slide footers by one.",
+      "checked": "2026-10-09",
+      "status": "Actual scoped primary body and selected rendered equations inspected; working proposal only.",
+      "inspection": {
+        "pdf_pages": 25,
+        "bytes": 201321,
+        "sha256": "b088a9dc1d3ff98ef950d3da27e28df66dae39b94819d81af6f5949ea416cb51",
+        "read_pages": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "rendered_pages": [
+          9,
+          14,
+          23,
+          24
+        ],
+        "method": "Existing exact PDF bytes and extracted text read; selected pages rendered in memory via pdftoppm and visually inspected. No files added outside owned paths."
+      },
+      "cautions_and_proof_limits": [
+        "Rendered PDF page9 has the correct not-equal/non-triangle signs that text extraction drops.",
+        "The page14 strict-concavity iff negative Hessian display is not a necessary condition for all strictly concave smooth functions and must exclude the zero direction. Use negative-definite Hessian as a sufficient condition on a convex domain.",
+        "The page15 score equation requires an interior attained optimum; strict concavity alone does not establish existence. The open Bernoulli/Poisson parameter spaces on pages17\u201318 also have zero-count/boundary existence exceptions.",
+        "Page24 explicitly leaves additional technical conditions unspecified. The chapter must supply compact measurable selection, uniform convergence, local Hessian and moment hypotheses rather than claim the slide gives a complete proof."
+      ]
+    },
+    {
+      "id": "v12-c04-counts1999",
+      "title": "Essentials of Count Data Regression",
+      "authors": [
+        "A. Colin Cameron",
+        "Pravin K. Trivedi"
+      ],
+      "publication": "June 30, 1999, author-hosted preprint",
+      "url": "https://cameron.econ.ucdavis.edu/research/CTE01preprint.pdf",
+      "use": "Poisson score/mean link and interpretation, overdispersion, selected/truncated count caution and Section4.1 correct-mean quasi-likelihood sandwich. The file name contains E01 but the document title page is dated June30,1999; no final publication year is invented.",
+      "checked": "2026-10-09",
+      "status": "Actual scoped primary body and selected rendered equations inspected; working proposal only.",
+      "inspection": {
+        "pdf_pages": 17,
+        "bytes": 237127,
+        "sha256": "28aebb8a42a0558c429cd5209f0095600d886178e50d737c05bec02a065ceb45",
+        "read_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          9,
+          10
+        ],
+        "rendered_pages": [
+          3,
+          4,
+          10
+        ],
+        "method": "Existing exact PDF bytes and extracted text read; selected pages rendered in memory via pdftoppm and visually inspected. No files added outside owned paths."
+      },
+      "cautions_and_proof_limits": [
+        "Page3 concavity/iterative-solution statement needs sample rank and attained finite maximum; an all-zero count group can drive its fitted log mean toward negative infinity.",
+        "Page3 labels a derivative times one unit as a one-unit change. The chapter distinguishes an infinitesimal derivative from the exact finite exp(beta_j)-1 change.",
+        "Rendered page4 equation2.9 uses 1-F(c) for the stated event Y>=c; with F(y)=P(Y<=y) the integer endpoint should be 1-F(c-1). That censored-count formula is not adopted.",
+        "Rendered page10 contains a linear residual y-x prime beta in its omega discussion; use y-exp(x prime beta) in this mean model. The actual robust plug-in formula immediately below uses the fitted mean correctly.",
+        "Correct conditional mean alone supplies score centering, not all LLN/CLT, rank, existence or covariance regularity. The chapter proves those under explicit bounded-regressor and finite second-moment sufficient conditions."
+      ]
+    }
+  ],
+  "scope": "At most these four primary method documents; retrieved bytes reused read-only. Exact pages above, not complete-body inspection outside those pages. Original chapter proofs supply the stated sufficient conditions and full normal-selection algebra.",
+  "original_work": "All finite samples, laws, numerical computations, counterexamples, exercises, solutions, teach-back and retention cases are original. No empirical finding, universal MLE efficiency or causal identification claim is imported.",
+  "excluded_claims": [
+    "General dependent or clustered likelihood inference",
+    "Growing-dimensional or selection-adjusted inference",
+    "Generic regularity or identification for every selection specification",
+    "Sorted-effect or bootstrap validity",
+    "Universal causal interpretation of conditional densities or predictive derivatives",
+    "A universal finite-MLE existence assertion from concavity alone"
+  ],
+  "source_catalogue_changes": "Four scoped primary entries registered by coordinating author; inspection details unchanged."
+}

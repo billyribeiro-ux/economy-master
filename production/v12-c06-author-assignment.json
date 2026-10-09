@@ -1,0 +1,53 @@
+{
+  "chapter": "v12-c06",
+  "date": "2026-10-09",
+  "author": "c05_review",
+  "state": "authoring assigned after corrected c04 author freeze",
+  "owned_paths": [
+    "production/v12-c06-working.html",
+    "production/check_v12_c06_working.py",
+    "production/v12-c06-sources-working.json",
+    "production/v12-c06-author-review-working.json"
+  ],
+  "read_only_evidence": [
+    "production/v12-c06-source-preparation.json",
+    "production/v12-c06-blueprint-root-audit.json",
+    "content/chapters/v12-c01.html",
+    "content/chapters/v12-c02.html",
+    "content/chapters/v12-c03.html",
+    "production/v12-c05-author-assignment.json"
+  ],
+  "scope": "Canonical Experiments and causal inference: potential outcomes, assignment/randomization, compliance, interference, attrition, power and randomization inference. Seven substantive original worked cases and twelve complete solved proof/calculation/transfer/research-review exercises; answered teach-back and retention. Root has already inspected three focused primary sources and10actual equation pages; reuse exact scopes honestly without claiming new full-document readings.",
+  "source_ids": [
+    "v12-c06-ding-experiments",
+    "v12-c06-aronow-samii-interference",
+    "v12-c06-dgk-toolkit"
+  ],
+  "source_policy": "Three new primary scopes in root preparation; reuse accepted c03 LATE derivation and its inspected ImbensAngrist source if cited, explicitly distinguishing inherited from fresh inspection. Source preparation is read-only provenance, not a runtime dependency. No further broad browsing needed unless a concrete unresolved mathematical fact arises.",
+  "prerequisites": "Accepted c01\u2013c03, c04 frozen full author and c05 current panel contract. Draft ahead; acceptance remains after c05. Fixed-population assignment, iid superpopulation sampling and known-Gaussian planning are distinct probability laws.",
+  "proof_contract": [
+    "Derive fixed-count inclusion moments, unbiased difference in means and exact variance S1\u00b2/n1+S0\u00b2/n0\u2212S_tau\u00b2/N; show unbiased sample arm variances by finite pair-difference identity. Expected Neyman conservatism is not pointwise dominance or finite coverage. Do not inherit the unproved finite-population CLT in source; normal power uses its separate explicitly known-Gaussian contract.",
+    "Prove finite Fisher sharp-null inclusive weighted-rank validity including ties. Constant-shift test inversion has coverage for that sharp constant effect, not an arbitrary heterogeneous ATE. Enumerate power using actual alternative potential outcomes and the same stated test. Provide an analytic exact inversion argument, not a finite parameter grid.",
+    "Independent stratified assignment gives weighted-stratum estimand/variance. Explicit treatment counts and independent assignment units; precision comparison is for the stipulated population, not universal stratification superiority. Cluster assignment requires cluster-level information and a specified target/weight.",
+    "Known independent-Gaussian arms: derive exact two-tailed power and optimal continuous variance allocation, integer floor/ceil choice and minimum sample size evidence. Label known variance and stipulated effect. If explaining cluster power, derive variance from independent Gaussian common/idiosyncratic shocks, distinguish variance and standard-error multipliers.",
+    "Compliance: define assignment ITT even without exclusion; LATE adds c03 assumptions. Derive random-arm mean influences and covariance-aware ratio influence with nonzero first stage; exceptional empty arm samples vanish under positive fixed assignment probability. Do not equate this iid-superpopulation variance with the finite-population design variance.",
+    "Interference: correctly specified known exposure mapping, positive marginal assignment-exposure probabilities, HT unbiasedness and joint-inclusion covariance. Full synthetic table allows exact variance; observed data need not identify every variance term when joint probabilities vanish.",
+    "Attrition: observed response rates/means plus bounded outcomes give sharp population identification interval, with explicit observationally equivalent endpoint constructions. Equal response rates do not imply MAR or zero selection bias; identification bounds are not confidence intervals."
+  ],
+  "original_cases": [
+    "1. Six-unit heterogeneous finite population: y0=(0,1,2,3,4,5),tau=(0,2,0,2,0,2),n1=3. Mean tau1;S0\u00b27/2,S1\u00b259/10,S_tau\u00b26/5,actualV44/15,E Neyman47/15. Treat0,2,4 yields estimate\u22121 andVhat8/3 below true variance. Exact20assignments.",
+    "2. Same y0, constant effects0/1/2/3/4; inclusive two-sided Fisher test atalpha1/10 has size/powers1/10,1/20,1/10,1/5,2/5; atalpha1/20 allzero. Observed last3 treated withyobs=(0,1,2,5,6,7): constant-shift inversion atalpha1/10 accepts[3,7]. Prove outside strict group separation, boundary ties and interior rank analytically; true constant2 can be excluded in a tail realization.",
+    "3. Eight units,y0=(0,1,2,3,10,11,12,13),constanttau2. Complete4treated70assignments variance15; independent2of4eachstratum36assignments variance5/6. Both unbiased2.",
+    "4. Independent Gaussian arm outcomes with known variances9/1, effect1, two-sidedalpha.05: optimalp=.75,variance coefficient16 versus balanced20; minimal integerN126,n1=94,n0=32,power.8012698751691925; minimal equalN158,79each,power.8025412076610389. Contrast finite exact Fisher power and planning law.",
+    "5. Independent fair encouragement; never/always/complier shares1/2,1/8,3/8; treatment potentials(1,7),(2,6),(3,5). Treatment means1/8,1/2; outcome means19/8,25/8;ITT3/4,firststage3/8,LATE2,ATE17/4,treated5/16,ATT14/5. Joint delta root-n variance116/3 (all covariance ingredients in root audit).",
+    "6. Three-node path independent fair Bernoulli assignment; exposure(ownD,anytreatedneighbor);Y=b_i+tau_iD+3G,b=(1,2,3),tau=(2,4,6). Edge pi00/pi10=1/4,center1/8. HTdifference mean4,variance688/9 across8assignments. Fixed-one-of-three assignment makes center(0,0) impossible; no full-population contrast identification by weighting then.",
+    "7. Randomized assignment withY(0),Y(1)bounded[0,10],armresponse.8/.8,respondentmeans8/6: sharpATE[\u22122/5,18/5] despite equal response. Use independent potential responses withmasses.64,.16,.16,.04; fill missing treatment/control potential outcomes at opposite endpoints for sharpness; mix endpoint laws for interiorvalues."
+  ],
+  "additional_teaching_decisions": [
+    "An optional rigorous finite weak-ATE bound can use S_d\u00b2\u2264N R_d\u00b2/[4(N\u22121)] and Chebyshev with known outcome ranges; derive it explicitly if included. It need not be useful/narrow, and should not be called a normal interval.",
+    "Cluster transfer candidate:20independentGaussian clusters of10,10clusters/arm,commonvariance1,idiosyncratic4 givescontrastvariance7/25; iid-row error gives1/10,variance multiplier14/5,SEsqrt(14/5). All assumptions explicit; no estimated-variance finite normal guarantee.",
+    "Any new finite example/changed constants require independent arithmetic before prose. Send a compact confirmation/correction of root blueprint first; root retains all architecture and acceptance authority."
+  ],
+  "runtime_gates": "Four-file quiet readonly check() and CLI; standard library only; explicit domain failures active under -O; exact visible calculations and problem/answer pairing; three nonself author bindings; final normal/-O API/CLI workspace and exact-four-file isolation fromcwd=/, unchanged bytes/membership. Analytic proof/solution/source audit separate from numerical comparisons.",
+  "boundaries": "Only four owned files; no root sourceprep/blueprint edits, canonical/catalogue/shared/checkpoint/hosting changes, installations or additional agents. No user questions. Preserve frozen c04. No reader UI, current empirical data or human-certification claim."
+}

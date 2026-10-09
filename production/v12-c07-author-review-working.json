@@ -1,0 +1,329 @@
+{
+  "chapter": "v12-c07",
+  "title": "Difference-in-differences and event studies",
+  "date": "2026-10-09",
+  "author": "ito_author",
+  "state": "Complete author manuscript, analytic review and execution gates passed; four owned working files frozen for separate review. Not canonical acceptance or publication.",
+  "ownership": [
+    "production/v12-c07-working.html",
+    "production/check_v12_c07_working.py",
+    "production/v12-c07-sources-working.json",
+    "production/v12-c07-author-review-working.json"
+  ],
+  "canonical_scope": {
+    "outcome": "Defend counterfactual trends and handle treatment timing and heterogeneous effects.",
+    "coverage": [
+      "Parallel trends",
+      "anticipation",
+      "staggered adoption",
+      "event studies",
+      "weighting",
+      "sensitivity"
+    ],
+    "worked_examples": 6,
+    "fully_solved_exercises": 12
+  },
+  "prerequisites": {
+    "c01_c03": "Accepted fixed-dimensional iid limits, FWL and moment estimation.",
+    "c05": "Frozen full author panel package, independent-unit/cell influence contracts.",
+    "c06": "Defined full potential-outcome/assignment-law author contract; drafting ahead permitted, acceptance remains sequential.",
+    "distinction": "Whole-unit iid sampling is not randomized policy adoption or independent policy clusters."
+  },
+  "proof_audit": [
+    {
+      "topic": "Potential-outcome and group-time identity",
+      "reasoning": "Consistency and no interference define own-cohort outcomes. An unaffected target baseline and clean controls allow adding/subtracting the target untreated change to separate ATT and counterfactual trend bias. Conditional equality within finite baseline cells is integrated over the target cohort distribution.",
+      "boundary": "Random sampling is not random adoption, observed pretrends do not verify future counterfactual trends, and control eligibility/observation support are substantive.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "True normalized odds and DR remainder",
+      "reasoning": "Conditional expectation gives E[(1−A)p/(1−p)]=pi and its weighted conditional-outcome mean. For finite candidate functions the common-pi functional has remainder E[(p−ptilde)(m0−mtilde)/(1−ptilde)]/pi by one exact conditional algebra expansion.",
+      "boundary": "Either correctly specified nuisance cancels the population remainder. Both terms use actual treated share pi, not an arbitrary normalization of misspecified odds. No generic nuisance-learning inference follows.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Finite-cell estimated influence",
+      "reasoning": "The joint cell counts and change totals are fixed-dimensional iid averages with finite second moments. Positive cell probabilities make the ratio map smooth. Derivatives of target cell shares, target means and control means give three stated contributions; their sum is phi. Plug-in squared influence is consistent by finite-cell laws for counts, changes and squared changes.",
+      "boundary": "Estimated target-cell composition contributes uncertainty. Return unavailable for any empty group/cell; a fixed auxiliary value on the exponentially unlikely exceptional event supports the limit sequence only. Divide V by N; positive V needed for studentization.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "TWFE finite FWL and effect weights",
+      "reasoning": "Residualizing treatment against normalized group/date effects gives beta=Dtilde prime Y/(Dtilde prime Dtilde). Balanced demeaning supplies the exact residuals. Under additive untreated means, only treated cell effects remain, weighted by Dtilde/den. Dtilde prime D=den proves weights sum to one.",
+      "boundary": "Projection does not ensure nonnegative treated weights or causal validity under arbitrary untreated paths. Effect interpretation uses the stipulated additive untreated model and no anticipation.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "All-table four-comparison identity",
+      "reasoning": "The four comparison expressions have coefficient vectors whose fixed weights3/10,3/10,1/5,1/5 sum to the full12-cell FWL operator. Equality of all basis coefficients proves the finite identity for every outcome table in this design.",
+      "boundary": "Only the equal-mass three-cohort/four-date design is proved. Positive comparison weights still subtract a changing already-treated effect; no general all-design Bacon proof is claimed.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Complete event-study operator and rank",
+      "reasoning": "The full12×11 design contains three group indicators, three normalized date indicators and every observed relative-time category except−1. Independent full-design inversion equals the5-column residual route. Residual Gram A/12 has determinant1/54; all60 operator entries and their action on fixed-effect/event columns are checked.",
+      "boundary": "Impact zero is included. Contamination coefficients require exactly this set of columns and normalization; no unspecified binning or arbitrary event-design equivalence. Finite mean-table algebra is distinct from statistical inference.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Supported event-time aggregation",
+      "reasoning": "Clean never-treated comparisons identify each supported cohort-date effect. Nonnegative cohort weights define the target explicitly. At impact both E/L appear, while eventone has only E; holding E fixed changes the question. A constant-effect-per-cohort transfer isolates composition from dynamics.",
+      "boundary": "Unobserved L eventone is omitted from support, not imputed zero. Cohort-specific identification assumptions remain necessary.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Anticipation baseline and control timing",
+      "reasoning": "Known horizon a means outcomes unaffected only at s<g−a. Baseline g−a−1 and control first adoption>t+a make both compared dates unaffected. Counterexamples separately contaminate the target baseline and the not-yet-adopted control.",
+      "boundary": "Observed nonadoption through T is weaker than knowing G>T+a. Missing baselines, always-treated groups and late unsupported comparisons are not identified as zero.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Pretrend nonidentification and sharp compact fibers",
+      "reasoning": "Reduced form b=tau+delta with normalized baseline and zero preeffects fixes pre departures but not post ones. Two counterfactual worlds produce identical zero pre gaps and post gap4 with effects4/1. Nonempty compact convex departure fibers have continuous-linear images that attain bounds and fill an interval. For each allowed path, explicit untreated/treated potential means reproduce all observations.",
+      "boundary": "Closed convexity alone is not a general endpoint-attainment theorem. Empty fibers are incompatible restrictions; no additional outcome or sign bounds are silently imposed.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Relative and smoothness square parametrizations",
+      "reasoning": "Relative post increments u,v lie in a compact square and target5−u−v/2 has radius3Mbar/2. Smoothness deviations e0,e1 give departure increments1+e0 and1+e0+e1 and target7/2−3e0/2−e1/2 with radius2M. Every vertex and an interior sharpness witness are reconstructed.",
+      "boundary": "Relative magnitude is dimensionless relative to preincrement size; curvature is stated for unit-spaced periods. M0 permits a linear nonparallel departure, unlike the relative Mbar0 restriction.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Finite known-Gaussian confidence projection",
+      "reasoning": "Known normal marginal scales give coordinate failurealpha/2 at z=Phi inverse(1−alpha/4); union bound covers both means with probability>=1−alpha regardless of correlation. The true admissible pair is then in the projected set. Compatible triples form a nonempty compact set; fixed preendpoint witness proves the interval directly despite lack of general joint convexity.",
+      "boundary": "Preperiod uncertainty is included. Symbolic endpoints define the proof; printed decimals are approximations. This is not arbitrary DID normality, a generic clustered limit, bootstrap, ARP or RR uniform-asymptotic procedure.",
+      "status": "checked analytically"
+    }
+  ],
+  "exercise_solution_audit": [
+    {
+      "id": "v12-c07-e1",
+      "exact_prompt": "Starting from the potential outcomes, derive the group-time DID identity in section 1. State the precise role of consistency, interference, an unaffected baseline and parallel trends. How do the baseline and control eligibility change with a known anticipation horizon a?",
+      "independent_solution": "Add/subtract the target untreated post mean after substituting consistent unaffected baseline/control outcomes. Counterfactual change equality removes the remaining bias; anticipation uses b=g−a−1 and G>t+a.",
+      "evidence": "Complete estimand/assumption/timing derivation read; no random adoption inferred.",
+      "status": "complete solution checked against exact prompt"
+    },
+    {
+      "id": "v12-c07-e2",
+      "exact_prompt": "For example 1, derive every group/cell probability, p(H), treated covariate frequency, conditional change mean, ATT and unadjusted DID. Prove the true normalized-odds identity and compute its comparison counterfactual mean.",
+      "independent_solution": "The joint masses imply H shares1/2, treated share1/2, p1/4,3/4, target H shares1/4,3/4 and control shares3/4,1/4. m0(1,3),m1(3,7) giveATT7/2; raw6−3/2=9/2. Odds masses1/8,3/8 normalize to control counterfactual5/2.",
+      "evidence": "Eight atoms and actual16-record cohort independently reconstruct all moments and fitted probabilities.",
+      "status": "complete solution checked against exact prompt"
+    },
+    {
+      "id": "v12-c07-e3",
+      "exact_prompt": "Derive the exact population remainder for T(p̃,m̃). Evaluate all four combinations of p̃=p or 1/2 and m̃=m₀ or 0 in example 1. Explain why arbitrarily renormalizing misspecified comparison odds is not covered by the displayed remainder.",
+      "independent_solution": "Conditional expansion yields exact product remainder. Three combinations with at least one correct nuisance give7/2; both wrong atptilde1/2,mtilde0 give9/2 and remainder1. Separately renormalized false odds change the algebra.",
+      "evidence": "All four cases independently checked; actual-pi denominator explicit in both functional terms.",
+      "status": "complete solution checked against exact prompt"
+    },
+    {
+      "id": "v12-c07-e4",
+      "exact_prompt": "Differentiate the finite-cell estimator in section 2 to derive its influence. Compute each of the three orthogonal variance components in example 1 and their total. State the exceptional finite-sample event and the normalization for the estimator's covariance.",
+      "independent_solution": "Differentiate treated composition, target means and comparison means for phi. Components have variances3/2,2,14/3 and zero cross moments, totaling49/6; omitting composition gives20/3. Empty group/cell unavailable; varianceV/N.",
+      "evidence": "All finite influence cross moments and fitted-cohort residual influence checked, analytic differentiability assumptions separate.",
+      "status": "complete solution checked against exact prompt"
+    },
+    {
+      "id": "v12-c07-e5",
+      "exact_prompt": "Reconstruct example 2's residual treatment table, squared norm and all four effect weights. Replace E4's effect by x>0 and solve exactly for the zero and negative TWFE boundaries. Explain why the effect weights sum to one without all being positive.",
+      "independent_solution": "D residual times12 is (−5,3,3,−1),(1,−3,−3,5),(4,0,0,−4), squared norm5/6. Treated weights3/10,3/10,−1/10,1/2 yield(22−x)/10, crossing zero at22 and negative above22.",
+      "evidence": "Direct centered full table and targeted7/22/23 final-effect interventions checked.",
+      "status": "complete solution checked against exact prompt"
+    },
+    {
+      "id": "v12-c07-e6",
+      "exact_prompt": "Define the four two-by-two comparisons in example 2 and evaluate them. Prove their weighted sum equals TWFE for every outcome table with this fixed design by matching all twelve cell coefficients. Identify the changing treatment effect subtracted by the fourth comparison.",
+      "independent_solution": "Comparisons11/3,2,2,−3 with weights3/10,3/10,1/5,1/5 give3/2. Their full12-cell coefficient vector equals the FWL operator. Last comparison subtracts early effect increase7−(1+3)/2=5.",
+      "evidence": "Every one of12 basis outcome tables verifies the all-table identity, separate from the causal effect table.",
+      "status": "complete solution checked against exact prompt"
+    },
+    {
+      "id": "v12-c07-e7",
+      "exact_prompt": "Use the full event design in example 3 to verify its residual Gram rank and solve for all five coefficients. Express each coefficient in terms of the four treated-cell effects when untreated outcomes are zero. Recompute the vector when L4 changes from 2 to 1.",
+      "independent_solution": "Residual A/12 has positive pivots and determinant1/54. Full solve gives−3/8,−1/8,3/2,27/8,57/8. Effect operator yields (3(a−b)/8,(a−b)/8,(a+b)/2,c+3(b−a)/8,d+(b−a)/8). Equal impact1 produces0,0,1,3,7.",
+      "evidence": "Full11-column OLS, residual5-column OLS, all60 operator entries and operator action on all11 design columns agree.",
+      "status": "complete solution checked against exact prompt"
+    },
+    {
+      "id": "v12-c07-e8",
+      "exact_prompt": "For example 3 compare changing-cohort and fixed-E impact/event-one targets. Then change all three E post effects to 1 while retaining L4=2. Show a changing aggregate despite constant cohort effects, and explain why the missing L event-one effect is not zero.",
+      "independent_solution": "Changing-composition targets3/2 and3 differ by3/2; E-only1 and3 differ by2. With constant E effects1, changing averages3/2→1 decline1/2, while E-only1→1 is unchanged. L eventone unobserved, not zero.",
+      "evidence": "Both effect-pattern transfers checked under the same actual support.",
+      "status": "complete solution checked against exact prompt"
+    },
+    {
+      "id": "v12-c07-e9",
+      "exact_prompt": "In example 4 calculate the date-3 estimates using baseline 2, the correct baseline 1 and the anticipatory adoption-4 comparison. Explain the absence of identification when no eligible controls remain, and the additional information needed when t+a exceeds the observed calendar.",
+      "independent_solution": "Target baseline2 DID3, safe baseline1 DID5; anticipatory adoption4 control gives3 atdate3 and failsG>4. Without eligible controls the target is unsupported. Future adoption information is needed beyond the observed calendar when t+a>T.",
+      "evidence": "Three dated calculations, final-date safe target and strict control boundary checked.",
+      "status": "complete solution checked against exact prompt"
+    },
+    {
+      "id": "v12-c07-e10",
+      "exact_prompt": "Derive both sharp intervals in example 5 by displaying the four vertices and constructing compatible potential outcomes. Evaluate both at bound 1/2 and at zero. Explain the different units and why zero smoothness does not mean parallel trends.",
+      "independent_solution": "Relative vertex targets5±3Mbar/2,5±Mbar/2 give[17/4,23/4] at1/2 and{5} at0. Smooth targets7/2±2M,7/2±M give[5/2,9/2] and{7/2}. Convex paths plus explicit potential-outcome construction establish sharpness.",
+      "evidence": "Each family checked at0,1/2,1, all square vertices, compatible observed means and a nonendpoint convex witness.",
+      "status": "complete solution checked against exact prompt"
+    },
+    {
+      "id": "v12-c07-e11",
+      "exact_prompt": "Prove the finite known-Gaussian confidence projection's coverage, accounting for both coordinates. Derive the attained interval for observed (0,4) at M̄=1 and at M̄=2. Contrast this with treating the estimated preperiod mean as an exactly known population zero.",
+      "independent_solution": "Two coordinate failuresalpha/2 imply joint coverage>=1−alpha. Project every compatible departure, including uncertain premean. AtMbar1 obtain4±2h; at2 obtain4±3h with attained endpoints and full interval witness. Known true prezero would be a stronger different information contract.",
+      "evidence": "Quantile independently reconstructed by erf bisection; marginal tail, endpoint corners and all printed rounded intervals checked.",
+      "status": "complete solution checked against exact prompt"
+    },
+    {
+      "id": "v12-c07-e12",
+      "exact_prompt": "A report pools regions with staggered adoption, bins several leads, sees an insignificant joint lead test, uses all not-yet-adopted regions despite a documented one-period anticipation window, and interprets its TWFE coefficient as an equally weighted ATT. It chooses a sensitivity bound after seeing the estimate and labels a plug-in identified interval a 95% confidence interval. Give six distinct objections, two feasible repairs with explicit remaining assumptions, and a defensible conclusion. The solution rubric allocates 12 points.",
+      "independent_solution": "Six distinct critiques cover unobserved trends/pretest, event contamination/binning, unequal/negative weights, anticipation eligibility, post-result restriction choice and uncertainty/information units. Two repairs must state data/support/remaining assumptions; current inference is not yet established.",
+      "evidence": "12-point rubric reconciles6+4+2; repair choices are graded for justified scope, not estimator labels or preferred sign.",
+      "status": "complete solution checked against exact prompt"
+    }
+  ],
+  "worked_case_audit": [
+    {
+      "case": 1,
+      "anchors": "Eight atoms; ATT7/2/raw9/2; root-N variance49/6 with all nuisance/composition terms."
+    },
+    {
+      "case": 2,
+      "anchors": "Residual norm5/6; effect weights3/10,3/10,−1/10,1/2; four comparison values11/3,2,2,−3; atE4=23 coefficient−1/10."
+    },
+    {
+      "case": 3,
+      "anchors": "Full12×11 design, residual5×5Gram determinant1/54, five coefficients−3/8,−1/8,3/2,27/8,57/8, complete5×12operator and supported aggregates."
+    },
+    {
+      "case": 4,
+      "anchors": "Knowna1/g3 safe baseline1,target5; contaminated baseline2 or adoption4control gives3. Unsupported cells not zero."
+    },
+    {
+      "case": 5,
+      "anchors": "Relative5±3Mbar/2, smooth7/2±2M; all vertices and constructive sharpness; zero-pretrend nonidentification4versus1."
+    },
+    {
+      "case": 6,
+      "anchors": "Exact known-Gaussian coordinate union bound; h0.4482805455209893; projected4±2h and transfer4±3h."
+    }
+  ],
+  "teaching_review": {
+    "teach_back": "Answered positive comparison/negative effect-weight distinction and two identical-observable pretrend worlds.",
+    "retention": "Four answered timing, sign-boundary, sensitivity and preperiod-uncertainty prompts.",
+    "learning_sequence": "Potential outcomes and identifying trend first, finite-cell estimation second, exact regression weighting third, anticipation/support fourth, identification sensitivity then separate confidence law.",
+    "research_critique": "Explicit12-point criteria require six distinctions, two scoped repairs and a limited conclusion."
+  },
+  "source_review": {
+    "primary_scopes": 4,
+    "preparation": "Complete frozen source-preparation record read; exact body/page inspections attributed to bs_author. No additional full-document or inference-appendix reading claimed.",
+    "versions": "CS December2020v4; SA September2020v2; Goodman-Bacon August2020 author manuscript; RR published2023 PDF.",
+    "cautions": "Retain impact zero, exact anticipation horizon, actual-pi DR denominator, compact-fiber endpoints, and finite known-Gaussian scope.",
+    "not_claimed": "General nuisance, repeated-cross-section, all-design decomposition, cluster, uniform-asymptotic/ARP/FLCI/bootstrap or empirical policy validation."
+  },
+  "refinements": [
+    {
+      "origin": "independent architecture pass",
+      "resolution": "Explicitly separate normalized true odds from the common actual-pi working DR functional; avoids attaching its product remainder to a differently normalized misspecified estimator."
+    },
+    {
+      "origin": "analytic author pass",
+      "resolution": "Confidence compatibility triples are nonempty compact but need not be convex. Direct fixed-preendpoint witness proves the interval; no false joint-convexity assumption."
+    },
+    {
+      "origin": "source/curriculum pass",
+      "resolution": "Sensitivity periods explicitly unit-spaced; successor label corrected to canonical Regression discontinuity and synthetic controls."
+    },
+    {
+      "origin": "checker first execution",
+      "resolution": "One literal answer anchor sought twelve although the solution displayed the complete12-cell vector. Changed it to the actual FWL operator wording; no arithmetic or solution changed."
+    },
+    {
+      "origin": "numerical-domain pass",
+      "resolution": "Normal quantile helper explicitly rejects an alpha whose floating confidence level rounds to one; optimized mode exercises that boundary."
+    }
+  ],
+  "open_findings": [],
+  "checker_contract": {
+    "entry": "Quiet check() returns strict JSON compatible summary; default CLI quiet on success.",
+    "runtime_files": 4,
+    "dependencies": "Standard library only; no assignment, source-preparation, root numerical audit, shared verifier, catalogue, network or randomness at runtime.",
+    "bounded_domain": "Exact int/Fraction arithmetic with explicit boolean/nonfinite/magnitude rejection; matrix order<=11, small balanced tables, complete finite cells, strict candidate overlap, two declared sensitivity families/bounds0..4, valid representable Gaussian quantile and positive known scale.",
+    "independent_methods": "Finite law expectation versus actual saturated cohort; full11-column OLS versus residual5-column operator; all12 comparison basis tables; sensitivity path vertices and compatible outcome witnesses; NormalDist quantile versus erf bisection.",
+    "scope": "Finite evidence supports the separately recorded analytic proof audit. There is no general model or empirical-data claim."
+  },
+  "reader_structure": {
+    "method": "Actual shared Document class AST extracted read-only, no aggregator import and no runtime dependency.",
+    "worked_examples": 6,
+    "exercises": 12,
+    "solutions": 12,
+    "unique_ids": 22,
+    "links": 10,
+    "rendered_UI": "not inspected"
+  },
+  "validation": {
+    "status": "passed",
+    "summary": {
+      "chapter": "v12-c07",
+      "status": "author checks passed; separate review required",
+      "comparisons": 294,
+      "domain_rejections": 18,
+      "strict_JSON_rejections": 6,
+      "worked_examples": 6,
+      "exact_prompts_and_solutions": 12,
+      "visible_anchors": 103,
+      "primary_scopes": 4,
+      "finite_evidence": {
+        "conditional_joint_atoms": 8,
+        "fitted_sample_records": 16,
+        "TWFE_basis_cells": 12,
+        "event_full_design_shape": [
+          12,
+          11
+        ],
+        "event_operator_entries": 60,
+        "event_coefficients": [
+          "-3/8",
+          "-1/8",
+          "3/2",
+          "27/8",
+          "57/8"
+        ],
+        "conditional_root_variance": "49/6",
+        "sensitivity_families": 2
+      },
+      "limits": "Finite original laws and separate analytic proof audit; no empirically verified parallel trends, generic nuisance/cluster/uniform-inference theorem, rendered UI or external human certification."
+    },
+    "normal_and_optimized_workspace_API_CLI": true,
+    "normal_and_optimized_exact_four_API_CLI": true,
+    "cwd": "/",
+    "quiet_import_check_and_default_CLI": true,
+    "strict_JSON_results": true,
+    "unchanged_payload_bytes_and_exact_isolated_membership": true,
+    "three_nonself_bindings": true,
+    "reader_scope": "Actual shared Document recognizes six worked examples and twelve paired prompts/solutions; no rendered UI claim.",
+    "analytic_scope": "Eleven separate proof audits and all twelve exact-prompt solution audits accompany the numerical evidence."
+  },
+  "payloads": {
+    "v12-c07-working.html": {
+      "bytes": 44042,
+      "sha256": "3da8a9d8be2472df5931c27bf826e48323f7ba0c38c97850ef46a4f8b13978c5"
+    },
+    "check_v12_c07_working.py": {
+      "bytes": 30056,
+      "sha256": "44a86866d53963b88fa0f1680c083a5126c2b49e162f67493598c868e5c25ca7"
+    },
+    "v12-c07-sources-working.json": {
+      "bytes": 12943,
+      "sha256": "f08dcc085af81b77b1aedae812651eb2ed79c928764f229967854aff9d51fc7e"
+    }
+  },
+  "limitations": [
+    "Working author package is not canonical acceptance or publication; c06 prerequisite and separate review gates remain required.",
+    "Finite arithmetic cannot verify parallel counterfactual trends, adoption selection, independence, no interference or external policy validity.",
+    "Fixed-dimensional iid whole-unit inference, original finite regression designs and exactly known Gaussian confidence law only; no general high-dimensional, few-cluster, bootstrap or uniform-asymptotic theorem.",
+    "Scoped primary sections and equation pages only; uninspected source appendices and empirical applications not claimed read.",
+    "Rendered reader/mobile/print and independent human certification remain outside this evidence."
+  ]
+}

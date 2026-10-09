@@ -1,0 +1,480 @@
+{
+  "chapter": "v12-c04",
+  "peer": "bs_author, separate machine-assisted reviewer",
+  "author": "c05_review",
+  "date": "2026-10-09",
+  "assignment": "production/v12-c04-peer-assignment.json",
+  "status": "Independent peer review complete and frozen; no material finding or required repair. Coordinator acceptance remains separate.",
+  "owned_paths": [
+    "scripts/check_v12_c04_peer.py",
+    "content/reviews/v12-c04-peer.json"
+  ],
+  "reading_scope": {
+    "manuscript": "All 195 lines, including six worked cases, all twelve exact prompts and complete solutions, every displayed proof, teach-back and four answered delayed tasks.",
+    "program": "Entire 534-line author checker, including all validators, numerical routes, markup parser, frozen bindings and quiet entry point. Author code is not imported, called or treated as a numerical oracle by the peer checker.",
+    "records": "Full canonical source and author records; promotion delta; canonical four-file peer assignment. Historical working validation is distinguished from canonical promotion metadata.",
+    "promotion": "The current canonical manuscript is byte-identical to the final working manuscript. The disclosed final panel-data transition matches canonical c05; source and checker promotion changes have their stated metadata/path scope."
+  },
+  "proof_audit": [
+    {
+      "topic": "Common-support KL",
+      "finding": "Normalization gives E r=1; integrable log ratios and nonnegative r−1−log r prove the gap and equality. Equal densities imply equal labels only with injectivity. Conditional equality is only almost everywhere on the actual covariate support; no causal claim follows."
+    },
+    {
+      "topic": "Information interchange",
+      "finding": "Common positive support, twice differentiable densities and first/second derivative domination license both derivatives of normalization. Score outer-product and Hessian integrability are explicit. Misspecification uses the actual law and separates A from B; unconditional zero score does not imply conditional zero score."
+    },
+    {
+      "topic": "Global selection before local rate",
+      "finding": "Continuity and compactness give an attained maximizer, with measurable selection imposed explicitly. Uniform convergence and a strict compact separation prove consistency before the Hessian segment is used. Interiority, uniform local Hessians and nonsingular curvature yield a bounded inverse and the rate from the centered score CLT. The positive A-inverse score sign is correct."
+    },
+    {
+      "topic": "Feasible covariance",
+      "finding": "The square-integrable Lipschitz score envelope bounds the average squared plug-in error; Cauchy–Schwarz handles both outer-product cross terms. Hessian replacement is separate. Positive limiting contrast variance is required for studentization. Approximate objective and approximate score conditions are correctly assigned different roles."
+    },
+    {
+      "topic": "Binary primitive conditions and existence",
+      "finding": "Bounded regressors and compact convex coefficients supply bounded derivatives and probabilities away from endpoints. Conditional KL, monotone link and E xx-prime rank identify the coefficient. Positive expected weighted rank supplies curvature. The separated sample has a monotone unattained unrestricted likelihood and a constrained boundary fit. Probit formulas do not assert an unproved general probit theorem."
+    },
+    {
+      "topic": "Predictive-effect influence",
+      "finding": "The expansion includes empirical-X fluctuation and the parameter influence jointly, with local derivative convergence and finite second moments. The covariance cancellation uses conditional centering. The offset counterexample has nonzero Cov(h,s), so its negative cross term matters. Known target weights describe a distinct estimator. A discrete X law identifies support-point conditional means, not a unique interpolating derivative."
+    },
+    {
+      "topic": "Correct-mean count model",
+      "finding": "The exponential convexity gap proves mean-criterion identification without a Poisson law. Compact bounded-index conditions and E Y-squared finite supply the global/local envelopes, centered finite-variance score and curvature. Meat uses Y−exp(x-prime beta); omitting D changes the target despite a centered unconditional score. Population and finite-sample matrices are correctly separated."
+    },
+    {
+      "topic": "Gaussian selection",
+      "finding": "The independent-normal construction and orthogonal rotation yield the selected joint density; integration preserves selected probability plus unselected mass. Selected-only sampling divides by Phi(a). Two tail integrals give Mills mean and selected variance, including its rho-squared term. The text proves these distributional formulas and explicitly withholds universal identification or regular selection-MLE inference."
+    },
+    {
+      "topic": "Moving support",
+      "finding": "The declared closed-support density has its maximum at a positive sample maximum. The exact maximum CDF gives the expectation, n-rate exponential gap and exact confidence coverage. The omitted moving-boundary derivative explains the formal uncentered score; mere interiority of the population parameter is insufficient."
+    },
+    {
+      "topic": "Instruction and scope",
+      "finding": "Every required exercise method is taught or explicitly inherited from c01–c03. The open audit gives seven distinct diagnoses, repairs and evidence requirements for its at-least-six request. Teach-back and delayed checks are answered. Six-observation and eight-row asymptotic calculations are not described as exact normal calibrations."
+    }
+  ],
+  "prompt_solution_audit": [
+    {
+      "id": "v12-c04-e01",
+      "result": "Complete ratio-gap proof, redundant-label example, conditional support and causal/pseudo-target limits."
+    },
+    {
+      "id": "v12-c04-e02",
+      "result": "Global exponential optimum and all-zero failure; minute rate 1/105, mean 105 and information 11025; rate and mean variances transform oppositely, log-rate variance is invariant."
+    },
+    {
+      "id": "v12-c04-e03",
+      "result": "Full consistency/rate and covariance replacement argument. Explicit global selection, local envelopes and different objective/score approximation thresholds are retained."
+    },
+    {
+      "id": "v12-c04-e04",
+      "result": "Group logits yield odds ratio 16, contrast 3/5, full coefficient covariance and contrast variance 2/125; independent group-variance transformation agrees."
+    },
+    {
+      "id": "v12-c04-e05",
+      "result": "Monotone separated path has no unrestricted finite maximum; t=2 on its compact path has positive directional score. Probit origin values and distinct units/roles are correct."
+    },
+    {
+      "id": "v12-c04-e06",
+      "result": "All three-point APE ingredients, I=diag(5/24,1/8), distribution variance L-squared/1152, g and coefficient variance checked. Finite-law refitting independently verifies each influence and the known-target contrast."
+    },
+    {
+      "id": "v12-c04-e07",
+      "result": "Strict curvature and zero average score uniquely select beta=0. Exact atom moments give full variance 541/50176, omitted-cross 625/50176 and known-target 9/784. Refitting after changing each observation mass confirms the full influence; a distinct smooth actual-mean extension illustrates derivative nonidentification."
+    },
+    {
+      "id": "v12-c04-e08",
+      "result": "Primitive correct-mean proof is sufficient for the stated iid result. Independent saturated-group influences recover the population matrices and separate sample means 2/6, fitted residuals, root variance 8/3 and slope covariance 1/3."
+    },
+    {
+      "id": "v12-c04-e09",
+      "result": "Intercept pseudo-target log 3 has A=3, B=11, root variance 11/9 and conditional residual means −1/+1. Its missing contrast is not restored by robust errors."
+    },
+    {
+      "id": "v12-c04-e10",
+      "result": "Joint/conditional density distinction and both tail integrations are complete. Selected variance 4−2/pi, reversed correlation and unchanged selection probability verified from latent-normal integration."
+    },
+    {
+      "id": "v12-c04-e11",
+      "result": "Support likelihood, exact maximum law, expectation, n-rate limit and exact coverage are proved. Finite tail 81/256 and interval [4,8] are not replaced by limit formulas."
+    },
+    {
+      "id": "v12-c04-e12",
+      "result": "Seven defensible diagnoses exceed the six requested, each with repair/evidence. Alternative supported designs are allowed; neither robust labels nor successful code execution certify identification."
+    }
+  ],
+  "independent_numerical_method": {
+    "summary": {
+      "chapter": "v12-c04",
+      "status": "passed",
+      "comparisons": 157,
+      "exact_numeric_anchors": 34,
+      "rounded_numeric_anchors": 9,
+      "worked_cases": 6,
+      "exercises": 12,
+      "solutions": 12,
+      "purposeful_interventions": 8,
+      "intervention_scopes": [
+        "Physical-unit changes and direct rate-functional perturbation distinguish scale and expansion sign.",
+        "Unequal binary cell sizes and group relabeling check target versus precision.",
+        "Separated likelihood and constrained path distinguish finite existence from a regular interior fit.",
+        "Refit after contamination of each of six probability atoms; compare empirical and known X targets.",
+        "Misspecified offset model retains a nonzero covariance; an alternative smooth extension separates interpolation from identification.",
+        "Count scaling, changed dispersion and omitted groups distinguish the mean target from its robust precision.",
+        "Latent-normal integration changes correlation, cutoff and units; rho-zero selected-only samples carry no selection-index information through the outcome density.",
+        "Different sample sizes and scales retain an exact maximum pivot; the finite tail differs from the asymptotic exponential tail."
+      ],
+      "executed_rejections": 17,
+      "rejection_scopes": [
+        "duplicate JSON member",
+        "nonfinite JSON literal",
+        "overflowing JSON exponent",
+        "boolean scalar",
+        "infinite scalar",
+        "zero-success finite-logit failure",
+        "all-success finite-logit failure",
+        "invalid success count",
+        "unnormalized probability law",
+        "nonbinary observation",
+        "rank-deficient curvature",
+        "zero fitted log-count mean",
+        "missing independent count group",
+        "boolean count",
+        "zero outcome scale",
+        "singular normal correlation",
+        "outside bounded quadrature case"
+      ],
+      "directional_probability_atoms": 10,
+      "latent_selection_cases": 4,
+      "nonself_peer_bindings": 5,
+      "author_code_used_as_oracle": false,
+      "limits": "Finite independent evidence plus separately recorded analytic reading; no general theorem, empirical validity, reader UI or chapter acceptance established by execution."
+    },
+    "group_models": "Binary coefficient covariance is obtained by transforming independent group log-odds, not by copying an inverse-Hessian formula. Count covariance comes from saturated conditional-mean influence vectors; row-wise A/B are checked separately.",
+    "predictive_effects": "For each of six correct-model and four misspecified-law atoms, perturb the full probability law in both directions, refit the finite logit and differentiate the resulting target numerically. The six correct-model atoms are additionally refit with the original X target distribution fixed. These are 32 finite refits and 10 distinct atom directions.",
+    "selection": "Composite 32-node Gauss–Legendre integration over the selecting latent normal uses its conditional outcome mean/variance and the independent second normal. A separate convolution recovers the density. It does not reuse the author Simpson outcome-density oracle.",
+    "selection_bounds": "Four changed-parameter cases; selecting index magnitude below one, finite means/scales and nonsingular correlations. Upper integration endpoint 10. Normal tail truncation is negligible at the stated 2e-8 moment tolerance; quadrature is numerical evidence, not a general error theorem.",
+    "maximum": "The finite tail is reconstructed as the product of individual threshold probabilities; density integration separately checks expectations at three changed sample-size/scale pairs. Exact rational pivot arithmetic checks scale invariance.",
+    "printed_values": "Every data-calc value independently reconstructed: 34 exact rational and 9 rounded anchors. Unmarked matrices and all table contracts were also checked by full reading and original-law algebra.",
+    "strictness": "Independent metadata parsing rejects duplicate members, nonfinite literals and overflowing decimal exponents. Seventeen meaningful invalid domains actually raise explicit exceptions under normal and optimized Python.",
+    "limitations": "Finite perturbation derivatives and quadrature do not prove asymptotic or identification theorems. Analytic proof reading is separate; no simulations, saved author outputs or author helper functions are oracles."
+  },
+  "source_audit": {
+    "record_read": "All four canonical proposals and their source-preparation boundaries read. No empirical application or general bootstrap, dependent-data, uniform-inference or efficiency result is imported.",
+    "independent_body_check": [
+      {
+        "id": "v12-c04-mit-nonlinear2017",
+        "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/1c38d1d141f59c69ca57c68801fb75b1_MIT14_382S17_lec6.pdf",
+        "bytes": 531103,
+        "sha256": "5ef98668b0d867d83ea15909bdc7db211e82ec0ab5e8578ef1892b401c9da6fc",
+        "visually_read_physical_pages": [
+          7,
+          14
+        ],
+        "scope": "Stacked predictive-effect moments and likelihood score/information sign. The displayed negative expansion conflicts with its own likelihood-score convention; the chapter independently derives the correct positive sign."
+      },
+      {
+        "id": "v12-c04-selection2007",
+        "url": "https://ocw.mit.edu/courses/14-385-nonlinear-econometric-analysis-fall-2007/0b7c3f5ce9642cc7f603d6404a8975e5_lecture01.pdf",
+        "bytes": 154406,
+        "sha256": "562c34f1661893bfdbd354f96ae934eba2d5369524bfc59f7c9522d5c0757761",
+        "visually_read_physical_pages": [
+          13
+        ],
+        "scope": "Observed missingness convention and joint mixed likelihood. The chapter supplies its own Gaussian density, mean and variance derivations."
+      },
+      {
+        "id": "v12-c04-mit-likelihood2016",
+        "url": "https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/36624c2682b346b07cab3da416b752a7_MIT18_650F16_Maximum_LE.pdf",
+        "bytes": 201321,
+        "sha256": "b088a9dc1d3ff98ef950d3da27e28df66dae39b94819d81af6f5949ea416cb51",
+        "visually_read_physical_pages": [
+          23
+        ],
+        "scope": "Information definition and identity, under stated regularity. Physical page 23 has slide footer 22/23. The chapter supplies explicit interchange/global/local conditions."
+      },
+      {
+        "id": "v12-c04-counts1999",
+        "url": "https://cameron.econ.ucdavis.edu/research/CTE01preprint.pdf",
+        "bytes": 237127,
+        "sha256": "28aebb8a42a0558c429cd5209f0095600d886178e50d737c05bec02a065ceb45",
+        "visually_read_physical_pages": [
+          10
+        ],
+        "scope": "Correct-mean count quasi-likelihood sandwich. The isolated linear-residual notation on this page is not adopted; the chapter uses the exponential fitted mean consistently."
+      }
+    ],
+    "method": "Four public PDF bodies fetched into memory; all exact hashes match author provenance. Five focused complete pages were rendered by existing Poppler through memory and actually read as images. No source artifact was written.",
+    "limits": "This independent source check is only the listed pages; it is not a fresh full-paper audit or a claim to have independently reinspected every author-listed source page."
+  },
+  "structure": {
+    "actual_shared_Document": {
+      "worked": 6,
+      "exercises": 12,
+      "solutions": 12,
+      "unique_ids": 31
+    },
+    "method": "Executed the actual scripts.verify.Document class in the workspace, separately from the standalone peer parser. No shared verifier changes.",
+    "reader_UI": "Not inspected or certified."
+  },
+  "findings": [],
+  "required_repairs": [],
+  "resolved_before_peer": [
+    {
+      "scope": "Final transition",
+      "finding": "Coordinator corrected the next-chapter description to panel/longitudinal topics before canonical freeze. Current final sentence is appropriate."
+    },
+    {
+      "scope": "Exercise 7 interpretation",
+      "finding": "The frozen prompt/solution explicitly distinguish the working logistic derivative from an actual derivative unidentified by the discrete support. No further repair is needed."
+    }
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v12-c04.html",
+      "bytes": 65009,
+      "sha256": "c3d2594551b59f176dbccc75b3091e3812c4e6c0cff8af059d68e9e66808045f"
+    },
+    {
+      "path": "scripts/check_v12_c04.py",
+      "bytes": 31942,
+      "sha256": "7f48f88146899bd7e4ebf0736aaba950d198ae5937ab90e0e88f07c1aee5f918"
+    },
+    {
+      "path": "content/reviews/v12-c04-sources.json",
+      "bytes": 10573,
+      "sha256": "e7bc91a990bd4410f36b01897a4666106485d932d092881ea9e83714306a15b2"
+    },
+    {
+      "path": "content/reviews/v12-c04-author.json",
+      "bytes": 23754,
+      "sha256": "335270b2733df2ec328470febed8ae99408e824c7b9df3dbc93409f18e93db15"
+    },
+    {
+      "path": "scripts/check_v12_c04_peer.py",
+      "bytes": 29097,
+      "sha256": "33e36931857a6c46dfd683b3c897837f3a5327e0e80856f2918d378b5a3fbf2c"
+    }
+  ],
+  "execution_validation": {
+    "status": "passed",
+    "executions": [
+      {
+        "tree": "workspace",
+        "checker": "peer",
+        "mode": "normal",
+        "entry": "api",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "workspace",
+        "checker": "peer",
+        "mode": "normal",
+        "entry": "cli",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "workspace",
+        "checker": "peer",
+        "mode": "optimized",
+        "entry": "api",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "workspace",
+        "checker": "peer",
+        "mode": "optimized",
+        "entry": "cli",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "workspace",
+        "checker": "author_integration_only",
+        "mode": "normal",
+        "entry": "api",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "workspace",
+        "checker": "author_integration_only",
+        "mode": "normal",
+        "entry": "cli",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "workspace",
+        "checker": "author_integration_only",
+        "mode": "optimized",
+        "entry": "api",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "workspace",
+        "checker": "author_integration_only",
+        "mode": "optimized",
+        "entry": "cli",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "peer",
+        "mode": "normal",
+        "entry": "api",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "peer",
+        "mode": "normal",
+        "entry": "cli",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "peer",
+        "mode": "optimized",
+        "entry": "api",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "peer",
+        "mode": "optimized",
+        "entry": "cli",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "author_integration_only",
+        "mode": "normal",
+        "entry": "api",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "author_integration_only",
+        "mode": "normal",
+        "entry": "cli",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "author_integration_only",
+        "mode": "optimized",
+        "entry": "api",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "author_integration_only",
+        "mode": "optimized",
+        "entry": "cli",
+        "cwd": "/",
+        "exit_code": 0,
+        "quiet": true
+      }
+    ],
+    "peer_summary": {
+      "author_code_used_as_oracle": false,
+      "chapter": "v12-c04",
+      "comparisons": 157,
+      "directional_probability_atoms": 10,
+      "exact_numeric_anchors": 34,
+      "executed_rejections": 17,
+      "exercises": 12,
+      "intervention_scopes": [
+        "Physical-unit changes and direct rate-functional perturbation distinguish scale and expansion sign.",
+        "Unequal binary cell sizes and group relabeling check target versus precision.",
+        "Separated likelihood and constrained path distinguish finite existence from a regular interior fit.",
+        "Refit after contamination of each of six probability atoms; compare empirical and known X targets.",
+        "Misspecified offset model retains a nonzero covariance; an alternative smooth extension separates interpolation from identification.",
+        "Count scaling, changed dispersion and omitted groups distinguish the mean target from its robust precision.",
+        "Latent-normal integration changes correlation, cutoff and units; rho-zero selected-only samples carry no selection-index information through the outcome density.",
+        "Different sample sizes and scales retain an exact maximum pivot; the finite tail differs from the asymptotic exponential tail."
+      ],
+      "latent_selection_cases": 4,
+      "limits": "Finite independent evidence plus separately recorded analytic reading; no general theorem, empirical validity, reader UI or chapter acceptance established by execution.",
+      "nonself_peer_bindings": 5,
+      "purposeful_interventions": 8,
+      "rejection_scopes": [
+        "duplicate JSON member",
+        "nonfinite JSON literal",
+        "overflowing JSON exponent",
+        "boolean scalar",
+        "infinite scalar",
+        "zero-success finite-logit failure",
+        "all-success finite-logit failure",
+        "invalid success count",
+        "unnormalized probability law",
+        "nonbinary observation",
+        "rank-deficient curvature",
+        "zero fitted log-count mean",
+        "missing independent count group",
+        "boolean count",
+        "zero outcome scale",
+        "singular normal correlation",
+        "outside bounded quadrature case"
+      ],
+      "rounded_numeric_anchors": 9,
+      "solutions": 12,
+      "status": "passed",
+      "worked_cases": 6
+    },
+    "author_integration_only": {
+      "label": "Regression execution only; never used as the peer numerical oracle.",
+      "comparisons": 193,
+      "executed_rejections": 33
+    },
+    "quiet_import_and_check": true,
+    "normal_and_optimized_summaries_equal": true,
+    "cwd": "/",
+    "isolated_runtime_files": [
+      "content/chapters/v12-c04.html",
+      "scripts/check_v12_c04.py",
+      "content/reviews/v12-c04-sources.json",
+      "content/reviews/v12-c04-author.json",
+      "scripts/check_v12_c04_peer.py",
+      "content/reviews/v12-c04-peer.json"
+    ],
+    "exact_isolated_file_count": 6,
+    "isolated_membership_unchanged": true,
+    "all_six_payload_bytes_unchanged_by_execution": true,
+    "final_record_step": "Final serialization changes only this peer record. The same peer normal/optimized API and CLI gates are rerun on its final bytes before the externally reported freeze; author inputs and peer checker remain unchanged.",
+    "limitations": "Shared Document check and primary-source page inspection are workspace review evidence, not runtime requirements of the isolated six-file checker."
+  },
+  "acceptance_boundary": "Peer review recommends no content repair. The coordinator alone accepts the chapter in prerequisite order and handles canonical state, build and publication. Machine-assisted review does not certify learner mastery or replace external academic review."
+}

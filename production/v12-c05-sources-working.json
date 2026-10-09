@@ -1,0 +1,167 @@
+{
+  "chapter": "v12-c05",
+  "date": "2026-10-09",
+  "state": "Four scoped source proposals for working manuscript; canonical integration and acceptance remain separate.",
+  "preparation_provenance": {
+    "path": "production/v12-c05-source-preparation.json",
+    "bytes": 15098,
+    "sha256": "04bbf6b151164a4fd242837d78121b241af61922b178c95bf9c4a9a870c6f280",
+    "prepared_by": "bs_author",
+    "read_by_chapter_author": "Complete preparation record, all four inspected scopes and cautions; source-body inspection is attributed to that preparation, not repeated or enlarged.",
+    "runtime_dependency": false
+  },
+  "sources": [
+    {
+      "authors": [
+        "Victor Chernozhukov",
+        "Ivan Fernández-Val"
+      ],
+      "title": "14.382 Spring 2017 Lecture 8: Linear Panel Data Models Under Strict and Weak Exogeneity",
+      "date": "Spring 2017",
+      "type": "Official MIT course lecture notes",
+      "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/049489cf2ae5d050409ee2c5cbd5346f_MIT14_382S17_lec8.pdf",
+      "listing_url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/pages/lecture-notes/",
+      "pdf_pages": 17,
+      "bytes": 439732,
+      "sha256": "13bf51c70f114615c7cba47f8473be8be89ecd330f85f24f5fe8e07cecbc6f37",
+      "text_scope": "Pages 1–2 and 5–10; selected surrounding context. Physical and printed page numbers agree.",
+      "visually_inspected_physical_pages": [
+        5,
+        8,
+        9,
+        10
+      ],
+      "verified_scope": [
+        "Pages 5–6: within transformation, rank and score covariance formed at the unit level; independent units allow within-unit serial dependence.",
+        "Page 8: unit-mean correlated-effect construction and FE comparison.",
+        "Pages 9–10: dynamic within/first-difference endogeneity, sequential information sets and lagged moments."
+      ],
+      "equation_cautions": [
+        "The actual page 9 images contain nonzero signs in both displayed dynamic endogeneity calculations; text extraction lost them. Preserve the signs and supply initial-condition assumptions.",
+        "Page 8 displays orthogonality of the heterogeneity residual to the unit mean alone. That restriction alone does not establish orthogonality to every dated regressor. Use a full conditional-mean restriction or restrict the claim to the balanced-sample FE slope identity.",
+        "Use explicit conditional expectations rather than allowing the perpendicular symbol to suggest independence."
+      ],
+      "not_adopted": "Empirical examples, a general dynamic bias formula, bootstrap validity and causal validation from nonrejection of a trend test.",
+      "id": "v12-c05-mit-panel2017",
+      "chapter_use": "Within transformation and whole-unit covariance; distinction of strict versus sequential histories; finite-sample correlated-effects comparison. The chapter supplies its own sufficient moment conditions and proof.",
+      "checked": "2026-10-09",
+      "verification": "Scoped substantive primary inspection reused from the frozen source-preparation evidence; no new full-document read claimed by chapter author."
+    },
+    {
+      "authors": [
+        "Guido Imbens",
+        "Jeffrey M. Wooldridge"
+      ],
+      "title": "Econometrics of Cross Section and Panel Data: Lecture 3, Linear Panel Data Models I",
+      "date": "23 June 2014",
+      "type": "Author course notes hosted by cemmap/PEPA",
+      "url": "https://www.cemmap.ac.uk/wp-content/legacy/uploads/cemmap/forms/Imbens_Wooldridge_notes.pdf",
+      "pdf_pages": 473,
+      "bytes": 2359802,
+      "sha256": "8c63665d2e27354e3334ec6b6914d18a40a53884b1da965b88d7f2c63bbf9ea5",
+      "text_scope": "Physical pages 39–45, Lecture 3 printed pages 1–7. The other lectures in the combined file were not audited.",
+      "visually_inspected_physical_pages": [
+        42,
+        43,
+        45
+      ],
+      "visual_printed_pages": [
+        4,
+        5,
+        7
+      ],
+      "verified_scope": [
+        "Printed pages 2–4 distinguish contemporaneous, strict and sequential exogeneity; equation (1.8) states the conditional-mean RE restriction.",
+        "Printed page 5 separates full-history linear projection from the unit-mean conditional specification.",
+        "Printed pages 6–7 distinguish robust comparison from the usual Hausman covariance-difference calculation and restrict comparison to identified, nonredundant slopes."
+      ],
+      "equation_cautions": [
+        "A subsequent conditional-mean conclusion on printed page 5 requires the conditional-mean version, not merely the displayed linear projection. Preserve that distinction.",
+        "Printed page 7 says time effects can introduce a 'nonsingularity'; context and redundant comparisons indicate singularity. This wording was checked in the actual page image."
+      ],
+      "not_adopted": "No current Stata behavior claim, automatic robust Hausman chi-square law, unbalanced-panel FE/CRE identity, nonlinear CRE result or unexamined later section.",
+      "id": "v12-c05-imbens-wooldridge-panel2014",
+      "chapter_use": "Conditional random-effects mean restrictions, full-history versus unit-mean heterogeneity, and limitations of estimator-comparison tests. The balanced common-weight identity is proved directly.",
+      "checked": "2026-10-09",
+      "verification": "Scoped substantive primary inspection reused from the frozen source-preparation evidence; no new full-document read claimed by chapter author."
+    },
+    {
+      "author": "Manuel Arellano",
+      "title": "Dynamic Panel Data Models II: Lags and Predetermined Variables",
+      "date": "Revised 18 October 2009",
+      "type": "Author class notes hosted by CEMFI",
+      "url": "https://www.cemfi.es/~arellano/predetermined-variables-class-note.pdf",
+      "author_page": "https://www.cemfi.es/~arellano/",
+      "pdf_pages": 25,
+      "bytes": 296896,
+      "sha256": "2fef1c129f0154e898213d963419c42935696f9b99c81904a79d0ef83cac65ee",
+      "text_scope": "Setup on pages 1–4; pages 9–15. Physical and printed page numbers agree. Application prose supplies context, not validated empirical findings.",
+      "visually_inspected_physical_pages": [
+        10,
+        12,
+        14,
+        15
+      ],
+      "verified_scope": [
+        "Page 10, equations (37)–(40): strict explanatory-variable exogeneity and a sequential dynamic information set are different restrictions; the former alone permits serially correlated disturbances.",
+        "Page 14: nonzero transformed score persists with fixed T as the unit count rises.",
+        "Page 15, equations (59)–(63): past-information moments after effect removal, identification and unit-level GMM covariance.",
+        "Page 12: aggregate shocks can defeat a cross-sectional law of large numbers."
+      ],
+      "interpretive_limits": [
+        "The notes' large-T statements require additional limit conditions; a martingale-difference property alone is not a sufficient law-of-large-numbers theorem. Independence of idiosyncratic units is sufficient for a stated cross-sectional route, not necessary in every possible model.",
+        "The chapter should prove a bounded fixed-T counterexample and explicit valid lag moments, not import a general Nickell formula or automatic system-GMM moments."
+      ],
+      "not_adopted": "Application estimates, unrestricted large-T consistency, many-instrument asymptotics and unexamined additional level-moment sections.",
+      "id": "v12-c05-arellano-predetermined2009",
+      "chapter_use": "Dynamic transformed-score endogeneity, past-information instruments and independent-unit GMM covariance; aggregate-shock limitations. The chapter proves only its explicit bounded finite-T laws.",
+      "checked": "2026-10-09",
+      "verification": "Scoped substantive primary inspection reused from the frozen source-preparation evidence; no new full-document read claimed by chapter author."
+    },
+    {
+      "author": "Jeffrey M. Wooldridge",
+      "title": "Inverse probability weighted estimation for general missing data problems",
+      "date": "1 April 2004",
+      "series": "cemmap Working Paper CWP05/04",
+      "doi": "10.1920/wp.cem.2004.0504",
+      "type": "Author working paper from the issuing research institute",
+      "url": "https://www.cemmap.ac.uk/wp-content/uploads/2020/08/CWP0504.pdf",
+      "publisher_url": "https://cemmap.ac.uk/publication/inverse-probability-weighted-estimation-for-general-missing-data-problems/",
+      "pdf_pages": 37,
+      "bytes": 144365,
+      "sha256": "5d5c56792f189d6398317b2f006a64fb64ae050afb124e9e9caeb436fdc21d66",
+      "text_scope": "Population objective and selection setup, pages 4–8; selection-model context on page 9; identification and nuisance-adjusted theorem on pages 10–11. Physical and printed page numbers agree.",
+      "visually_inspected_physical_pages": [
+        6,
+        10,
+        11
+      ],
+      "verified_scope": [
+        "Page 6, Assumption 3.1: specified selection probability, positivity and observation requirements.",
+        "Page 10, equations (3.5)–(3.6): conditional expectation recovers the population objective; convergence also needs moment and uniformity conditions.",
+        "Page 11, Theorem 3.1: estimation of the selection model enters the influence covariance under its stated likelihood and regularity assumptions."
+      ],
+      "interpretive_limits": [
+        "The paper covers more than baseline-observed MAR. The proposed chapter uses that narrower sufficient case and does not equate the entire paper's condition with MAR.",
+        "Positivity alone does not guarantee finite variance, and fitted weights do not repair selection on unobserved outcomes. The theorem is not a universal estimated-propensity efficiency result."
+      ],
+      "not_adopted": "The later 2007 journal version, generic nuisance estimation, censoring applications and selection-on-unobservables correction are not audited here.",
+      "id": "v12-c05-wooldridge-ipw2004",
+      "chapter_use": "Population selection weighting and the need to account for estimated response probabilities. The chapter independently derives a narrower finite-cell MAR influence and does not import the paper’s general theorem.",
+      "checked": "2026-10-09",
+      "verification": "Scoped substantive primary inspection reused from the frozen source-preparation evidence; no new full-document read claimed by chapter author."
+    }
+  ],
+  "scope_limits": [
+    "Original finite laws and proofs are not empirical estimates. Historical teaching sources are not current software or institutional rules.",
+    "No original Mundlak/Chamberlain, Nickell, Arellano–Bond or later system-GMM proof body was inspected in this assignment. No such full-paper read is claimed.",
+    "No automatic robust Hausman, unbalanced/nonlinear CRE, many-instrument, weak-identification-uniform, interactive-factor, two-way-cluster or nonignorable-selection theorem is inferred."
+  ],
+  "source_cautions_applied": [
+    "MIT rendered dynamic calculations use nonzero signs even where text extraction dropped them.",
+    "Mean-projection orthogonality is not full conditional-mean exogeneity; CRE interpretation requires E[c|X]=alpha+xbar prime pi.",
+    "The lecture’s covariance-difference test warning is retained without copying the contextual nonsingularity typo as a theorem.",
+    "A martingale-difference assumption alone is not a law of large numbers; independent whole units support the fixed-T limits here.",
+    "IPW paper is broader than baseline MAR; fitted finite-cell weighting gets its own derived influence, with finite response-empty samples and non-MAR nonidentification explicit."
+  ]
+}

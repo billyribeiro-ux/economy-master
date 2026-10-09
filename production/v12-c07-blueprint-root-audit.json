@@ -1,0 +1,145 @@
+{
+  "chapter": "v12-c07",
+  "date": "2026-10-09",
+  "state": "Original root finite-design blueprint; no manuscript or acceptance",
+  "conditional_DID": {
+    "law": "P(G,H)=(1/8,3/8,3/8,1/8) when enumerated (G1H0,G1H1,G0H0,G0H1); independent fair eps. All baseline outcomes zero. Untreated outcome change1+2H+eps; treatment effect2+2H. P(G1)=1/2.",
+    "propensities_H0_H1": [
+      "1/4",
+      "3/4"
+    ],
+    "ATT": "7/2",
+    "unadjusted_DID": "9/2",
+    "fitted_cell_influence_variance": "49/6",
+    "influence": "G/pi*(DeltaY-m0(H)-ATT) -(1-G)/pi*p(H)/(1-p(H))*(DeltaY-m0(H))",
+    "population_DR_remainder": "E[(p-p_tilde)/(1-p_tilde)*(m0-m_tilde)]/pi; prove by conditional expectation, finite-cell inference separately."
+  },
+  "event_study": {
+    "cohorts": [
+      2,
+      4,
+      null
+    ],
+    "times": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "outcomes": [
+      [
+        "0",
+        "1",
+        "3",
+        "7"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "2"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "effects": "All untreated outcomes zero; early cohort effects1,3,7;late effect2;no anticipation.",
+    "event_columns": [
+      -3,
+      -2,
+      0,
+      1,
+      2
+    ],
+    "omitted_relative_time": -1,
+    "regression": "Equal-row-weight unit and time FE plus every observed event dummy except-1; within5x5Gram is nonsingular.",
+    "exact_coefficients": [
+      "-3/8",
+      "-1/8",
+      "3/2",
+      "27/8",
+      "57/8"
+    ],
+    "method": "Independent rational double demeaning and Gaussian elimination. Full mean table; finite coefficient arithmetic does not itself assert causal effects.",
+    "scope": "These values require exactly this declared set of leads/lags and normalization; no reuse under different binning or omitted categories."
+  },
+  "source_preparation": "production/v12-c07-source-preparation.json, fully read by coordinator",
+  "TWFE": {
+    "treated_cell_weights": [
+      "3/10",
+      "3/10",
+      "-1/10",
+      "1/2"
+    ],
+    "coefficient": "3/2",
+    "comparison_weights": [
+      "3/10",
+      "3/10",
+      "1/5",
+      "1/5"
+    ],
+    "comparisons": [
+      "11/3",
+      "2",
+      "2",
+      "-3"
+    ],
+    "late_early_effect_intervention": "Replace early final effect7 by23; weighted effect becomes-1/10 although all treatment effects are positive."
+  },
+  "anticipation": {
+    "calendar": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "target_adoption": 3,
+    "known_anticipation_horizon": 1,
+    "target_observed": [
+      1,
+      4,
+      8,
+      9
+    ],
+    "never_observed": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "all_untreated_paths": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "target_effect_at3": 5,
+    "naive_baseline2_DID": 3,
+    "correct_baseline1_DID": 5,
+    "not_yet_adoption4_at3": "With anticipation effect2 atdate3, its outcome5 is already affected although treatment indicator stillzero; using it instead of never-treated controls gives3. Eligibility requires first treatment>t+a."
+  },
+  "known_Gaussian_projection": {
+    "sampling_contract": "Bivariate reduced-form estimator is exactly Gaussian with known marginal SD1/5 each; independent coordinates may be used. Population preeffect iszero, baseline departure0, departure restriction abs(delta_post)<=Mbar*abs(beta_pre), Mbar1.",
+    "observed_estimates": [
+      0,
+      4
+    ],
+    "alpha": 0.05,
+    "Bonferroni_critical": 2.2414027276049464,
+    "coordinate_halfwidth": 0.4482805455209893,
+    "projected_CI": [
+      3.1034389089580214,
+      4.896561091041979
+    ],
+    "proof": "Each coordinate fails with probabilityalpha/2; union bound gives jointcoverage>=1-alpha. On that event all true reduced-form coordinates and the allowed true departure are among the projected pairs. Rectangle extrema attain displayed endpoints. A plug-in sensitivity interval ignores uncertainty in pretrend and post reduced forms.",
+    "scope": "A directly proved finite known-Gaussian construction, not the general uniformly asymptotic HonestDiD procedure."
+  },
+  "author_independent_confirmation_2026_10_09": {
+    "status": "approved to draft",
+    "author_confirmation": "Independent eight-atom law, full OLS residual Gram, four-comparison operator, sensitivity vertices and known-Gaussian projection agree with root blueprint. DR remainder uses the actual treated share pi in both terms; arbitrary working-odds renormalization is not the same functional.",
+    "limits": "Retain explicit anticipation eligibility, cohort composition, compact sensitivity fibers and known-Gaussian confidence scope."
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "chapter": "v12-c05",
+  "title": "Panel data and longitudinal identification",
+  "date": "2026-10-09",
+  "author": "ito_author",
+  "state": "Complete author package, analytic audit and execution gates passed; four owned working files frozen for separate review. Not canonical acceptance or publication.",
+  "ownership": [
+    "production/v12-c05-working.html",
+    "production/check_v12_c05_working.py",
+    "production/v12-c05-sources-working.json",
+    "production/v12-c05-author-review-working.json"
+  ],
+  "canonical_scope": {
+    "outcome": "Evaluate within-unit identification and dynamic-panel assumptions.",
+    "coverage": [
+      "Fixed-random effects",
+      "correlated heterogeneity",
+      "dynamic panels",
+      "attrition",
+      "dependence"
+    ],
+    "actual_worked_examples": 6,
+    "actual_solved_exercises": 12
+  },
+  "prerequisites": {
+    "c01": "Accepted finite-dimensional iid LLN/CLT/inversion/delta.",
+    "c02": "Frozen unit-score and GLS proof under separate review at assignment.",
+    "c03": "Frozen fixed-dimensional moment estimation under separate review at assignment.",
+    "c04": "Working likelihood/conditional-model specification; actual acceptance remains sequential.",
+    "limits": "No unproved mixing, many-instrument or interactive-factor theorem used."
+  },
+  "proof_audit": [
+    {
+      "topic": "Within/LSDV and rank",
+      "reasoning": "For each b, minimize the separate intercept to get ybar−xbar prime b. Substitution leaves the M objective, whose Gram quadratic form is the sum of squared transformed linear combinations. Full within rank gives uniqueness; constant columns are annihilated. A particular unit effect retains its fixed-T average disturbance.",
+      "boundary": "Exact algebra; no causal or consistency conclusion without separate assumptions.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Mean restrictions and fixed-T within asymptotics",
+      "reasoning": "Strict E[u_t|X,c]=0 centers X prime M u. With iid whole vectors, fixed p,T, finite fourth moments of X,u and positive within Q, H and g are square integrable. LLNs and continuous inversion prove consistency before the unit-score CLT gives Q inverse B Q inverse. The common effect is removed exactly and needs no fourth moment in this proof.",
+      "boundary": "Sequential or contemporaneous exogeneity alone need not center the transformed score; increasing T and heterogeneous slopes require new analysis.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Residual unit-score covariance",
+      "reasoning": "The exact relation ghat=g−H delta yields the two-term norm bound. Finite squared H and g make both bounding averages O_p(1); consistency makes the bound o_p(1). The true-score outer-product law requires only the established square score moment. Studentization additionally requires a positive limiting contrast variance.",
+      "boundary": "Covariance of beta-hat is Vhat/N; no exact t or few-unit coverage theorem.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Compound quasi-demeaning",
+      "reasoning": "P and M are orthogonal projections. Omega has eigenvalues sigma_u² and sigma_u²+T sigma_a² on the two subspaces. Inversion and A=M+(1−theta)P give A prime A=sigma_u² Omega inverse with sigma_u²>0 and sigma_a²>=0.",
+      "boundary": "A known positive working weight may target a biased projection; mean conditions and conditional covariance efficiency conditions are distinct. Infinity is a limit of weights, not an invertible covariance.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Balanced common-weight CRE identity",
+      "reasoning": "Reparameterize dated slope b and mean slope d as (b,b+d). Because each weighted within deviation sums to zero under a common within-unit weight, the objective splits into full-rank within and between objectives. Their separate minimizers determine the exact sample equality and all coefficients.",
+      "boundary": "Only balanced same-sample linear common-weight identity proved. Structural mean coefficients require E[c|X]=alpha+xbar prime pi and strict idiosyncratic conditional mean zero; mean-projection orthogonality alone is insufficient. Population structural interpretation also requires the explicitly stated finite augmented moments and positive population Gram.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Fixed-T dynamic counterexample",
+      "reasoning": "Initial y0=0, effect zero and independent fair e1,e2 give regressor (0,e1). Each within Gram is 1/2 and numerator yields rho−1+e1e2. Averaging iid units proves exact mean rho−1, variance1/N and that probability limit.",
+      "boundary": "This is a specific bounded two-transition law, not a stationary Nickell formula.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Lag-IV identification and asymptotics",
+      "reasoning": "With independent third innovation, z=y1 is orthogonal to e3−e2. The relevance expectation is rho−1 and squared score mean is2. Exact ratio expansion and iid unit CLT give root-N variance2/(rho−1)² at each fixed rho unequal1. Under the general stated sequential conditional mean, iterated expectation centers instruments measurable two dates back.",
+      "boundary": "At rho1 this moment is flat in proposed coefficient; no claim of whole-data nonidentification. Finite denominator can vanish; near-boundary uniformity, system GMM, large moment dimension and serial innovation validity are not inherited.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "MAR population moment",
+      "reasoning": "Finite always-observed H and E[R|W,H]=p(H)>=epsilon imply E[R psi/p|W,H]=psi with integrability supplied by bounded inverse probabilities.",
+      "boundary": "Positivity is not MAR; finite variance separately needs moments. Missing-outcome alternatives show no unrestricted point identification.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Finite-cell fitted-weight influence",
+      "reasoning": "Write the estimate as sum pi_hat a_hat/b_hat. At positive population denominators its derivatives are (mu_h,1/p_h,−mu_h/p_h). Joint iid finite-dimensional CLT and differentiability give influence mu_H−mu+R(Y−mu_H)/p_H. Orthogonality conditionally on H yields Var(mu_H)+E Var(Y|H)/p_H. Plug-in consistency follows finite-cell laws for count,Y,Y².",
+      "boundary": "The baseline-frequency fluctuation cannot be omitted. Empty response-cell event is explicitly unavailable; a fixed auxiliary value only supports the asymptotic sequence because its probability is exponentially small.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Known-propensity comparison",
+      "reasoning": "Known-p unnormalized weighting has influence RY/p−mu. Its difference from the fitted-cell influence is mu_H(R/p−1), orthogonal to the latter under MAR. The variance gap E[mu_H²(1−p)/p] is nonnegative for these exact estimators.",
+      "boundary": "No universal estimated-propensity efficiency theorem or conflation with normalized known-p ratio estimator.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Common-factor demeaning and LLN failure",
+      "reasoning": "Date demeaning leaves (lambda_i−mean lambda)F_t; balanced two-way demeaning leaves (lambda_i−mean lambda)(F_t−mean F). Centered q,s leave the teaching design/error untouched, making beta-hat=2+U and every unit score2U. Full cross-unit covariance gives variance4 for the average score.",
+      "boundary": "The common-shock law is explicitly separate from the iid-unit theorem. Conditioning changes the target, and zero fitted residual covariance does not restore consistency. No general factor/two-way-cluster theorem.",
+      "status": "checked analytically"
+    }
+  ],
+  "exercise_solution_audit": [
+    {
+      "id": "v12-c05-e1",
+      "exact_prompt": "Derive the within/LSDV equality from the least-squares objective. Give the necessary sample rank condition. Explain why a recorded time-constant regressor and each individual unit effect are not consistently learned merely by increasing N with fixed T.",
+      "independent_solution": "Minimize each intercept first, then use sum||MXa||² for rank. A constant column has no within information and a fixed unit’s disturbance average persists.",
+      "evidence": "Objective substitution, rank and fixed-T distinction checked.",
+      "status": "complete answer checked against exact prompt"
+    },
+    {
+      "id": "v12-c05-e2",
+      "exact_prompt": "For the 16-state law in example 1, compute the pooled through-origin target, within target, unit Gram, score variance and exact finite-N within variance. Would appending b as another within regressor identify its separate coefficient?",
+      "independent_solution": "Pooled Q4 and XY10 give5/2; within H2, score d(e2−e1) has variance2; exact within variance1/(2N). Appended b has zero transformed column.",
+      "evidence": "16 independent sign states and256 two-unit states checked.",
+      "status": "complete answer checked against exact prompt"
+    },
+    {
+      "id": "v12-c05-e3",
+      "exact_prompt": "Let z,e₁,e₂ be independent fair signs, c=0, x₁=z, x₂=e₁ and yₜ=βxₜ+eₜ. Repeat units independently. Verify sequential and contemporaneous exogeneity but refute strict exogeneity. Compute the probability limit of the two-date within slope.",
+      "independent_solution": "Sequential E[e1|z]=0 and E[e2|z,e1]=0; strict first disturbance conditional on full X equals x2. E Delta x²2 and E Delta x Delta e−1 imply target beta−1/2.",
+      "evidence": "All8 sign states and each finite conditional group checked.",
+      "status": "complete answer checked against exact prompt"
+    },
+    {
+      "id": "v12-c05-e4",
+      "exact_prompt": "For T=3, σᵤ²=4 and σₐ²=1, derive θ and Ω⁻¹. State their action on the constant vector and on x=(−1,0,1)′. Explain which mean and covariance restrictions turn the weights into a consistent, efficient GLS procedure and what changes at σₐ²=0.",
+      "independent_solution": "T3 compound eigenvalues4/7 give theta1−2/sqrt7 and inverse I/4−11prime/28. Constant and zero-sum directions receive1/7 and1/4. Exogeneity centers score; true covariance supports efficiency.",
+      "evidence": "Exact inverse multiplication and transformed cross-product checked; sigma_a²0 gives pooled boundary.",
+      "status": "complete answer checked against exact prompt"
+    },
+    {
+      "id": "v12-c05-e5",
+      "exact_prompt": "Reconstruct every coefficient in example 3 using the within and between decompositions. Prove why the dated-regressor coefficient equals the weighted within coefficient. State the additional condition needed to interpret the added mean coefficient as a conditional heterogeneity coefficient.",
+      "independent_solution": "Within denominator20 numerator48 ->12/5. Between centered Gram19/4 and cross43/2 ->86/19; intercept26/19 and added mean202/95. Orthogonal objective decomposition proves equality.",
+      "evidence": "Separate full3x3 normal equation and split objective at optimum and off-optimum reconstruct all coefficients.",
+      "status": "complete answer checked against exact prompt"
+    },
+    {
+      "id": "v12-c05-e6",
+      "exact_prompt": "In example 4 at ρ=1/2, derive the exact two-transition FE distribution's mean and variance. For the additional third transition derive the lag-IV numerator, denominator, moment variance and root-N limit variance. Explain why differenced rows cannot be treated as independent observations.",
+      "independent_solution": "FE at rho1/2 has mean−1/2 variance1/N. Lag-IV denominator−1/2 numerator−1/4, moment variance2, root-N variance8. Adjacent differenced errors have covariance−1.",
+      "evidence": "8 innovation states, ratio and finite moments independently compared.",
+      "status": "complete answer checked against exact prompt"
+    },
+    {
+      "id": "v12-c05-e7",
+      "exact_prompt": "Keep example 4's initial law. Compute lag-IV root-N variance at ρ=0 and at ρ=9/10, and explain the rank boundary at ρ=1. Separately set e₃=e₁ while retaining independent fair e₁,e₂ and ρ=1/2. Recompute the instrument's error moment and ratio target; identify the violated assumption.",
+      "independent_solution": "At rho0 variance2; at rho9/10 variance200; rho1 loses instrument rank. With e3=e1, score mean1 and numerator3/4 give target−3/2, violating innovation mean zero given past.",
+      "evidence": "Changed-mechanism exact law and flat boundary candidate moments checked.",
+      "status": "complete answer checked against exact prompt"
+    },
+    {
+      "id": "v12-c05-e8",
+      "exact_prompt": "Prove the finite-cell MAR weighted-moment identity and derive the fitted-cell mean influence, including estimated baseline frequencies. For example 5 compute the fitted-cell and known-p unnormalized root-N variances and explain their difference. Do not use the oracle variance for the fitted estimator.",
+      "independent_solution": "Differentiate cell-frequency/count/total map for full influence. Original variance6 versus HT42; orthogonal added response-level term has variance36.",
+      "evidence": "Complete latent law and actual12-record fitted-propensity cohort checked.",
+      "status": "complete answer checked against exact prompt"
+    },
+    {
+      "id": "v12-c05-e9",
+      "exact_prompt": "In example 5 change only the H=1 response probability from 1/3 to 1/2. Compute the respondent target, fitted-cell variance and known-p unnormalized variance. For N=2 compute the probability that at least one baseline cell has no respondents. Then explain why the original example's observed law cannot distinguish full means 3 and 5 without MAR.",
+      "independent_solution": "At response1/2 respondent10/3, fitted11/2, HT47/2. Empty-cell probability atN2 is1/4+9/16−1/16=3/4. Original missing outcome alternatives3/9 give full means3/5 and identical observed law.",
+      "evidence": "Both six-atom laws, all36 two-draw outcomes, changed8-record cohort and exact observed probability maps checked.",
+      "status": "complete answer checked against exact prompt"
+    },
+    {
+      "id": "v12-c05-e10",
+      "exact_prompt": "Prove both demeaning results in example 6. Compute the variance of the average unit score and the residual-based unit-score covariance. Compare homogeneous loadings. Why does conditioning on the common U not recover the same target?",
+      "independent_solution": "All row/column means zero; within/two-way slope2+U. Average score variance4, fitted covariance0, true coefficient error variance1. Homogeneous loadings removed by time mean. Conditioning yields target2+U.",
+      "evidence": "Two shocks and4/8 unit designs independently reconstructed.",
+      "status": "complete answer checked against exact prompt"
+    },
+    {
+      "id": "v12-c05-e11",
+      "exact_prompt": "Under section 1's assumptions, prove B̂→B using ĝᵢ=gᵢ−Hᵢδ. State the normalization for the covariance of β̂ and the additional condition for a fixed contrast's studentization. Identify exactly which step fails in example 6; changing a finite-sample multiplier is not an answer.",
+      "independent_solution": "Residual outer-product expansion bounded by2||delta||average||g||||H||+||delta||²average||H||². Iid moments and consistency establish Bhat, then Vhat/N; require positive contrast variance. Common-shock score LLN and consistency fail.",
+      "evidence": "Analytic bound read separately; finite covariance multipliers cannot supply missing independence.",
+      "status": "complete answer checked against exact prompt"
+    },
+    {
+      "id": "v12-c05-e12",
+      "exact_prompt": "A study follows eight firms for three dates, regresses outcomes on lagged outcomes and chosen investment, adds firm and date effects, discards nonresponding firms, and reports row-iid standard errors. It concludes that investment causes growth because a random-effects comparison test did not reject. Give six distinct objections tied to identification or inference, two feasible redesigns or sensitivity analyses with limited claims, and a concise conclusion the existing design could honestly support. The rubric below allocates 12 points.",
+      "independent_solution": "Six distinct critiques: time-varying confounding, dynamic history, attrition, within-unit dependence, cross-unit/few-unit evidence and invalid nonrejection logic. Two feasible changes must name data/assumptions and limitations; existing conclusion is descriptive association.",
+      "evidence": "Exact12-point rubric reconciles6+4+2 and grades reasoning rather than a preferred sign or method name.",
+      "status": "complete answer checked against exact prompt"
+    }
+  ],
+  "worked_case_audit": [
+    {
+      "case": 1,
+      "anchors": "16 states, pooled5/2, within2, Q2/B2/root variance1/2; exact finite variance1/(2N)."
+    },
+    {
+      "case": 2,
+      "anchors": "Working Q8/3, omitted moment2/3, XY6, target9/4; CRE2/1."
+    },
+    {
+      "case": 3,
+      "anchors": "Six sample observations, common weights1/2/1, within12/5, intercept26/19, mean202/95, between86/19."
+    },
+    {
+      "case": 4,
+      "anchors": "FE probability limitrho−1; at1/2 IV B−1/2/A−1/4/Bscore2/V8, failed rankrho1."
+    },
+    {
+      "case": 5,
+      "anchors": "Six latent/five observable atoms; cohort4/variance5/respondent3; fittedV6/known-pHTV42; missing means3/5."
+    },
+    {
+      "case": 6,
+      "anchors": "Fixed common-U law gives slopes1/3, score variance4, residual covariance0 for any repeated balanced design."
+    }
+  ],
+  "answered_teaching": {
+    "teach_back": "Explicit answer distinguishes effect removal, centered/ranked moments and independent repeated information.",
+    "retention": "Four answered parts: theta0; dynamic target−1 and variance2 at rho0; fitted11/2 versus HT47/2; zero-mean common score does not converge."
+  },
+  "sources": {
+    "inspected_primary_scopes_reused": 4,
+    "method": "Complete frozen source-preparation record read. Source body retrieval and selected equation-page inspection attributed to bs_author; author does not claim a new full-document read.",
+    "ids": [
+      "v12-c05-mit-panel2017",
+      "v12-c05-imbens-wooldridge-panel2014",
+      "v12-c05-arellano-predetermined2009",
+      "v12-c05-wooldridge-ipw2004"
+    ],
+    "boundaries": "No original general stationary bias, system GMM, arbitrary CRE/robust Hausman or non-MAR identification source claimed read."
+  },
+  "refinements": [
+    {
+      "origin": "independent blueprint enumeration",
+      "issue": "Six latent attrition atoms are only five observable atoms because both missing outcomes collapse.",
+      "resolution": "Manuscript, checker, source scope and contract use exact latent/observed distinction."
+    },
+    {
+      "origin": "author proof pass",
+      "issue": "Separate random-effects mean and covariance conditions, and explicit feasible cell covariance.",
+      "resolution": "Stated finite weighted moments/Gram and independent-unit law for consistency; added exact plug-in finite-cell variance formula and its moment justification."
+    },
+    {
+      "origin": "checker first execution",
+      "issue": "One solution anchor looked for an absent English word despite the correct conditional-mean equation being present.",
+      "resolution": "Anchor now matches the actual E[c|X] restriction. No arithmetic or manuscript solution changed for this checker-only refinement."
+    }
+  ],
+  "open_findings": [],
+  "checker_contract": {
+    "purpose": "Bounded independent rational finite examples and explicit domain failures; not a generic estimator package.",
+    "public_entry": "check() returns strict JSON compatible summary quietly; default CLI is silent on success.",
+    "runtime_files": 4,
+    "dependency_limits": "Standard library only; no source-preparation, catalogue, production-assignment, shared verifier, network, randomness or repository-route existence dependency.",
+    "domain": "Exact int/Fraction scalar helpers reject booleans, floats and magnitude over10^6; bounded unit/date dimensions, positive common weights, full rank, covariance positivity, bounded rho, valid response support and actually observed cell outcomes enforced.",
+    "source_guards": "Three nonself SHA256 and byte bindings; checker performs no file writes.",
+    "independence": "Centered panel fit versus finite law identities; direct full normal equation versus within/between split; all-state dynamic ratios; explicit observed probability maps and fitted cohort formulas. Numerical tests do not prove asymptotic hypotheses."
+  },
+  "reader_structure": {
+    "method": "Actual shared Document class AST extracted read-only, without importing the final aggregator. Not a runtime dependency.",
+    "worked_examples": 6,
+    "exercises": 12,
+    "solutions": 12,
+    "unique_ids": 21,
+    "links": 9,
+    "rendered_UI": "not inspected"
+  },
+  "validation": {
+    "status": "passed",
+    "summary": {
+      "chapter": "v12-c05",
+      "status": "author checks passed; separate review required",
+      "comparisons": 272,
+      "domain_rejections": 17,
+      "strict_JSON_rejections": 6,
+      "worked_examples": 6,
+      "exact_prompts_and_solutions": 12,
+      "paired_anchors": 71,
+      "primary_scopes": 4,
+      "finite_evidence": {
+        "finite_FE_states": 16,
+        "exact_two_unit_FE_states": 256,
+        "dynamic_states_per_law": 8,
+        "attrition_latent_atoms": 6,
+        "attrition_observed_atoms": 5,
+        "common_shock_unit_counts": [
+          4,
+          8
+        ],
+        "sample_CRE": [
+          "26/19",
+          "12/5",
+          "202/95"
+        ]
+      },
+      "limitations": "Finite exact calculations and separate analytic review; no empirical validation, general dynamic or interactive-factor theorem, uniform coverage, rendered UI or human certification."
+    },
+    "normal_and_optimized_workspace_API_CLI": true,
+    "normal_and_optimized_exact_four_API_CLI": true,
+    "cwd": "/",
+    "quiet_import_check_and_default_CLI": true,
+    "strict_JSON_roundtrip": true,
+    "unchanged_payload_bytes_and_exact_isolated_membership": true,
+    "three_nonself_bindings": true,
+    "structural_scope": "Actual shared Document recognized six worked examples and twelve exercise/solution pairs. No rendered UI claim.",
+    "proof_scope": "Eleven analytic proof audits and twelve exact-prompt solution audits accompany the finite computations."
+  },
+  "payloads": {
+    "v12-c05-working.html": {
+      "bytes": 45263,
+      "sha256": "e8e782a589f37aacfbaa36779a88b406c01733c6e051778cda6fe7b7ce23b419"
+    },
+    "check_v12_c05_working.py": {
+      "bytes": 28972,
+      "sha256": "dd8cae0b21bd8ee3f304bf9e2ad2d6fc5baeb4e0385e057a45b84c5348282014"
+    },
+    "v12-c05-sources-working.json": {
+      "bytes": 11724,
+      "sha256": "f64b7374ebb29da51bee3b3a81ff0725dfe0c0ee3dc94a65d9596540ac8164ef"
+    }
+  },
+  "limitations": [
+    "Working author package is not accepted or published. Adjacent prerequisites must be accepted before canonical chapter acceptance.",
+    "Finite exact checks support, but do not replace, the separate analytic proof and exact-prompt review. No external human certification or empirical causal validation.",
+    "Fixed-T iid-unit asymptotics do not supply long-panel, weak-identification-uniform, few-cluster, two-way-cluster, interactive-factor or nonignorable-attrition inference.",
+    "Only the four supplied primary scopes are reused; no whole-document read or unavailable original-paper proof inspection is claimed.",
+    "Rendered browser/mobile/print checks remain separate."
+  ]
+}

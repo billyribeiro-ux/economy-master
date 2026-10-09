@@ -1,0 +1,216 @@
+{
+  "chapter": "v12-c06",
+  "state": "Working primary source proposals; no canonical catalogue changes or chapter acceptance.",
+  "preparation": "production/v12-c06-source-preparation.json",
+  "preparation_bytes": 6682,
+  "preparation_sha256": "b040483f70285e15e6b023d28ddb7cc742c155fd2901727c47d9f47fede85bdb",
+  "proposals": [
+    {
+      "id": "v12-c06-ding-experiments",
+      "title": "A First Course in Causal Inference",
+      "authors": [
+        "Peng Ding"
+      ],
+      "publication": "arXiv 2305.18793v2, 3 October 2023",
+      "url": "https://arxiv.org/pdf/2305.18793v2",
+      "use": "Finite complete-randomization assignment moments, exact difference-in-means variance and expected Neyman variance; independent stratified weighted variance; separate superpopulation versus randomization perspectives. Prior accepted v05-c12 sharp-null rank scope physical51–55/printed25–29 is reused honestly.",
+      "checked": "2026-10-09",
+      "status": "Working source proposal using the coordinator's recorded scoped primary-body and actual equation-page inspection. No new full-document inspection claimed by this author.",
+      "inspection": {
+        "reader": "root",
+        "provenance": "production/v12-c06-source-preparation.json",
+        "pdf_pages": 490,
+        "bytes": 6037823,
+        "sha256": "3fe2bb982b6d13500f704f1e4fbe4d2e5b44ad0726249296ecd6f96892719115",
+        "read_pages": [
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          92,
+          156,
+          157
+        ],
+        "rendered_pages": [
+          70,
+          73,
+          74,
+          92
+        ],
+        "page_mapping": "Printed pages are physical minus26 in these sections.",
+        "method": "Coordinator read the indicated body text and actual rendered equation pages. C06 author read the complete preparation record and independently verified the retained PDF bytes/hashes; no fresh whole-source reading is asserted."
+      },
+      "cautions_and_proof_limits": [
+        "The finite-population CLT is stated rather than proved in the inspected section; it is not inherited as a proved theorem. A nondegenerate normalized variance and a specified triangular-array condition would be essential.",
+        "A conservative asymptotic variance does not imply a realized estimate always exceeds true variance or exact finite-sample coverage. A limit at nominal coverage alone also does not establish eventual finite coverage above nominal.",
+        "Terminology for CRE in the later superpopulation section includes independent assignment. Our chapter distinguishes fixed treatment count from independent Bernoulli assignment."
+      ]
+    },
+    {
+      "id": "v12-c06-aronow-samii-interference",
+      "title": "Estimating average causal effects under general interference, with application to a social network experiment",
+      "authors": [
+        "Peter M. Aronow",
+        "Cyrus Samii"
+      ],
+      "publication": "Retrieved body: arXiv 1305.6156v4, 20 June 2018; the 2017 journal reference is a separate publication record",
+      "url": "https://arxiv.org/pdf/1305.6156",
+      "use": "Known randomization distribution and exposure mapping; individual and joint exposure probabilities; positive support and correctly specified exposure-level potential outcomes; HT mean unbiasedness and finite covariance expansion.",
+      "checked": "2026-10-09",
+      "status": "Working source proposal using the coordinator's recorded scoped primary-body and actual equation-page inspection. No new full-document inspection claimed by this author.",
+      "inspection": {
+        "reader": "root",
+        "provenance": "production/v12-c06-source-preparation.json",
+        "pdf_pages": 40,
+        "bytes": 1031502,
+        "sha256": "0e90860ec951314c117b018ae76acb5adb1c476aec0516315c4d6c34bc6cccbb",
+        "read_pages": [
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "rendered_pages": [
+          6,
+          8,
+          9
+        ],
+        "page_mapping": "Physical PDF page numbers as recorded; no inferred printed offset.",
+        "method": "Coordinator read the indicated body text and actual rendered equation pages. C06 author read the complete preparation record and independently verified the retained PDF bytes/hashes; no fresh whole-source reading is asserted."
+      },
+      "cautions_and_proof_limits": [
+        "An exposure label must map equal labels to equal potential outcomes across assignments; merely calculating a network label does not validate it.",
+        "Positive marginal exposure probabilities identify that target mean but do not guarantee all joint probabilities are positive or all contrast variance terms are observable.",
+        "General asymptotic inference, later refinements and empirical results are outside inspected/proved scope."
+      ]
+    },
+    {
+      "id": "v12-c06-dgk-toolkit",
+      "title": "Using Randomization in Development Economics Research: A Toolkit",
+      "authors": [
+        "Esther Duflo",
+        "Rachel Glennerster",
+        "Michael Kremer"
+      ],
+      "publication": "CEPR Discussion Paper 6059, January 2007, inspected 92-page discussion-paper version",
+      "url": "https://economics.mit.edu/sites/default/files/2022-08/Using%20Randomization%20in%20Development%20Economics%20Resea.pdf",
+      "use": "Design/power tradeoffs, group assignment and independent cluster information, compliance and attrition; equal response rates need not remove selection bias.",
+      "checked": "2026-10-09",
+      "status": "Working source proposal using the coordinator's recorded scoped primary-body and actual equation-page inspection. No new full-document inspection claimed by this author.",
+      "inspection": {
+        "reader": "root",
+        "provenance": "production/v12-c06-source-preparation.json",
+        "pdf_pages": 92,
+        "bytes": 465290,
+        "sha256": "90ff46a74214d1105f8f43dc694e9ec70bf8dea850ea3eaca27ff66c7f0fd0d8",
+        "read_pages": [
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          62,
+          63,
+          64,
+          65
+        ],
+        "rendered_pages": [
+          33,
+          36,
+          63
+        ],
+        "page_mapping": "Printed page numbers are physical minus4 in inspected sections.",
+        "method": "Coordinator read the indicated body text and actual rendered equation pages. C06 author read the complete preparation record and independently verified the retained PDF bytes/hashes; no fresh whole-source reading is asserted."
+      },
+      "cautions_and_proof_limits": [
+        "Power quantile expressions in this source are planning approximations. Our original known-Gaussian example derives both tails exactly; no unknown-variance exact t power is inherited.",
+        "Distinguish standard-error multiplier sqrt(1+(m-1)rho) from variance multiplier1+(m-1)rho; rho is the common-component share, not the idiosyncratic variance share.",
+        "Displayed group-count formula scales as inverse square root of J with critical values held fixed; the adjacent roughly proportional wording must not be copied literally.",
+        "Increasing compliance strengthens the assignment contrast under fixed local effect; its inverse enters a detectable local effect. Do not reverse that direction.",
+        "Basic bounded-outcome attrition intervals here are original population identification bounds, not the more restrictive monotonicity/rank-based trimming bounds discussed later in the source.",
+        "No historical application, general multiarm allocation claim or source exercise is adopted as our own evidence."
+      ]
+    }
+  ],
+  "reused": [
+    {
+      "id": "v12-c03-imbens-angrist1994",
+      "title": "Identification and Estimation of Local Average Treatment Effects",
+      "authors": [
+        "Guido W. Imbens",
+        "Joshua D. Angrist"
+      ],
+      "publication": "Econometrica 62(2), March 1994, pages 467–475",
+      "url": "https://www.gsb.stanford.edu/sites/default/files/publication/pdfs/article-1994-mar-identification-estimation-local-average-treatment-effects.pdf",
+      "use": "Accepted c03 binary compliance decomposition, rederived in the stated binary experiment contract. The new type table, direct-assignment transfer and random-arm ratio covariance are original.",
+      "inspection_status": "Inherited accepted c03 primary inspection; not a new c06 source-body read.",
+      "inspection_provenance": "content/reviews/v12-c03-sources.json and production/v12-c03-sources-working.json",
+      "inspection": {
+        "date_checked": "2026-10-09",
+        "pdf_pages": 9,
+        "bytes": 803740,
+        "sha256": "24512532d490a8ef400e30f33379cfbc15ab0291fbbd55d859215744d8d89992",
+        "body_scope_read": "Rendered PDF pages1–9, printed467–475. Main method scope: Conditions1–3, signed response decomposition, Theorem1 and proof, Theorems2–3 and appendix proofs; references inspected as bibliography only.",
+        "rendered_pages_read": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "proof_limits": "Use a separately stated binary potential-outcome contract with assignment independence, exclusion, consistency, positivity, integrability and positive complier mass. No automatic ATE, treatment-on-treated, multivalued-instrument weighting or transportability claim. The appendix's estimated-instrument covariance warns against ignoring first-stage nuisance estimation.",
+      "cautions": [
+        "Random assignment of an encouragement does not itself exclude its direct outcome effect. Administrative-selection and historical application examples were read but are neither reproduced nor claimed to establish validity in a new case."
+      ]
+    }
+  ],
+  "source_to_proof_map": [
+    {
+      "source": "v12-c06-ding-experiments",
+      "chapter_scope": "Sections 2–4: fixed-count inclusion and covariance algebra, pair-difference sample-variance proof, exact finite weighted-rank reasoning and independent stratum weights. The constant-shift inversion and all data are original.",
+      "not_inherited": "No finite-population CLT or normal coverage from expected covariance conservatism. The original known-range Chebyshev result is proved in full."
+    },
+    {
+      "source": "v12-c06-aronow-samii-interference",
+      "chapter_scope": "Section 7: correct exposure mapping, marginal and joint design probabilities, positive support, HT unbiasedness and finite covariance expansion.",
+      "not_inherited": "No general large-network normal theorem, joint positivity, automatic observable variance estimator or empirical exposure validity."
+    },
+    {
+      "source": "v12-c06-dgk-toolkit",
+      "chapter_scope": "Sections 5 and 8: design/power choices, independent cluster information, compliance/attrition threats.",
+      "not_inherited": "The exact two-tail Gaussian power/allocation proof, common-shock variance identity and sharp bounded-outcome endpoint construction are original. No generic t-power formula, proportional group-count rule or trimming result is claimed."
+    },
+    {
+      "source": "v12-c03-imbens-angrist1994",
+      "chapter_scope": "Section 6: binary assignment independence, exclusion, monotonicity and complier decomposition; accepted c03 proof interface.",
+      "not_inherited": "No population ATE or ATT interpretation without their own mixture assumptions, no transport and no uniform weak-first-stage inference."
+    }
+  ],
+  "original_work": "Seven finite or fully specified Gaussian teaching cases; all exercise prompts, solutions, numerical tables, counterexamples, analytic inversion, known-range bound, covariance certificates and retention examples are original. No empirical data or historical intervention finding is adopted.",
+  "runtime_policy": "This record is one of four portable runtime author files. Preparation records, PDFs, canonical chapters/catalogue and the network are provenance only and are not required by the checker.",
+  "excluded_claims": [
+    "A finite-population CLT from a finite variance formula",
+    "Pointwise domination or exact normal coverage from expected Neyman conservatism",
+    "Weak-average coverage from constant-effect sharp-null inversion",
+    "Generic unknown-variance, cluster, large-network or selection-adjusted inference",
+    "Uniform weak-first-stage ratio validity",
+    "Exclusion, exposure-map sufficiency or missing at random from random assignment alone",
+    "Observed-law identification of all joint variance products when joint probabilities vanish",
+    "A population identification interval as a sampling confidence interval",
+    "Empirical effectiveness, transport or external human certification"
+  ],
+  "source_catalogue_changes": "None; integration remains coordinator-owned."
+}
