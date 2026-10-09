@@ -1,0 +1,76 @@
+{
+  "chapter": "v13-c01",
+  "date": "2026-10-09",
+  "working_bindings": [
+    {
+      "path": "production/v13-c01-working.html",
+      "bytes": 58999,
+      "sha256": "4197dd53e2c923a7c965ec9092e5860a012330b2561c60149acd99555835a04d"
+    },
+    {
+      "path": "production/check_v13_c01_working.py",
+      "bytes": 32606,
+      "sha256": "26876af40593adb491e77d7a512f1f91804ce2df2999146d05a37d355978d65d"
+    },
+    {
+      "path": "production/v13-c01-sources-working.json",
+      "bytes": 16725,
+      "sha256": "b59b5905270d9fa8e1988a54d67f4984f6df2c7dd1455339d0d39bd466b7120b"
+    },
+    {
+      "path": "production/v13-c01-author-review-working.json",
+      "bytes": 12018,
+      "sha256": "be5039bcc44b85a405cecd371644f5826e8d2862a54499e2fb90e508b91ac330"
+    }
+  ],
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v13-c01.html",
+      "bytes": 58999,
+      "sha256": "4197dd53e2c923a7c965ec9092e5860a012330b2561c60149acd99555835a04d"
+    },
+    {
+      "path": "scripts/check_v13_c01.py",
+      "bytes": 32565,
+      "sha256": "6a0c846ab46319ed4ff6edb32bf9446d698019aa427897c22046125094029d7e"
+    },
+    {
+      "path": "content/reviews/v13-c01-sources.json",
+      "bytes": 16723,
+      "sha256": "a46ed9cb1878b2341f5731d0d6edba76ec35ce95f1b06bd69d42f3b3bb827623"
+    },
+    {
+      "path": "content/reviews/v13-c01-author.json",
+      "bytes": 12168,
+      "sha256": "2ce76b27fa713cc93ddc5087bd38cd78bbecbacdd22334cf0988499dc2e82013"
+    }
+  ],
+  "manuscript_byte_identical": true,
+  "checker_changes": [
+    {
+      "from": "production/v13-c01-working.html",
+      "to": "content/chapters/v13-c01.html"
+    },
+    {
+      "from": "production/check_v13_c01_working.py",
+      "to": "scripts/check_v13_c01.py"
+    },
+    {
+      "from": "production/v13-c01-sources-working.json",
+      "to": "content/reviews/v13-c01-sources.json"
+    },
+    {
+      "from": "production/v13-c01-author-review-working.json",
+      "to": "content/reviews/v13-c01-author.json"
+    },
+    {
+      "from": "Only the adjacent four working payloads",
+      "to": "Only the four canonical payloads"
+    },
+    {
+      "from": "usage: python3 -B check_v13_c01_working.py",
+      "to": "usage: python3 -B check_v13_c01.py"
+    }
+  ],
+  "metadata_only": "Canonical source status; author source/runtime paths and three nonself bindings; original working execution evidence preserved as historical."
+}

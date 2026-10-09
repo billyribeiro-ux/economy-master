@@ -1,0 +1,165 @@
+{
+  "chapter": "v13-c04",
+  "date": "2026-10-09",
+  "actual_inspector": "c05_review",
+  "status": "Focused source preparation completed for working authoring; no canonical source merge.",
+  "discovery_record": "production/v13-c04-source-discovery.json",
+  "sources": [
+    {
+      "id": "v13-c04-mathew2010",
+      "title": "Akhil Mathew, Sperner’s Lemma, Brouwer’s Fixed-Point Theorem, and the Subdivision of Squares into Triangles",
+      "version": "Document date November7,2010; retrieved9October2026.",
+      "retrieval": {
+        "file": "mathew2010.pdf",
+        "requested_url": "https://math.uchicago.edu/~amathew/HMMT.pdf",
+        "final_url": "https://math.uchicago.edu/~amathew/HMMT.pdf",
+        "http_status": 200,
+        "retrieved_utc": "2026-10-09T15:26:18.556044+00:00",
+        "headers": {
+          "Content-Type": "application/pdf",
+          "Last-Modified": "Thu, 03 Sep 2015 20:21:02 GMT",
+          "ETag": "\"32355-51edd859fc780\""
+        },
+        "bytes": 205653,
+        "sha256": "67259c3c36958bfdc66f4042427988173b8dada2982aa8d5a47b2108ce9b044f"
+      },
+      "actual_text_read": "Physical/printed pages1-3, sections1-2 only; the section3 start on page3 is excluded from use.",
+      "actual_equation_images_inspected": [
+        "mathew-page-2.png",
+        "mathew-page-3.png"
+      ],
+      "supported_scope": "Two-dimensional marked-edge parity and the deficit-label/compactness route to Brouwer in dimension2.",
+      "proof_limits": [
+        "The source explicitly proves Brouwer only for n=2. Our arbitrary-dimensional parity induction, compatible barycentric subdivisions, mesh contraction and projection extension are supplied independently.",
+        "Page2 says the non-full case is odd, immediately contradicted by its own tau=2 example; use even.",
+        "No nesting of selected full simplices is needed or claimed; a compact subsequence plus vanishing mesh supplies the limit.",
+        "No valuation or Monsky result is used."
+      ]
+    },
+    {
+      "id": "v13-c04-tamuz2021",
+      "title": "Omer Tamuz, General Equilibrium Theory, Lecture Notes",
+      "version": "Cover says2021; retrieval header Last-Modified7April2026 is retained as metadata, not an invented publication date.",
+      "retrieval": {
+        "file": "tamuz2021.pdf",
+        "requested_url": "https://www.tamuz.caltech.edu/teaching/ss205b/lectures.pdf",
+        "final_url": "https://www.tamuz.caltech.edu/teaching/ss205b/lectures.pdf",
+        "http_status": 200,
+        "retrieved_utc": "2026-10-09T15:26:19.334325+00:00",
+        "headers": {
+          "Content-Type": "application/pdf",
+          "Last-Modified": "Tue, 07 Apr 2026 19:53:09 GMT",
+          "ETag": "\"44ec8-64ee421f0cc38\""
+        },
+        "bytes": 282312,
+        "sha256": "22d1e5ee8e27bbb58b0a59839ccfdf388a865a7333a43e683765caf7cd07f1ec"
+      },
+      "actual_text_read": "Physical/printed pages1,4-7,13-17: preferences and convexity versus convexity-star, prices/choice, production support, Walras accounting/free disposal, full compactification page14, Kakutani/Debreu statements, existence and the compact exchange argument.",
+      "actual_equation_images_inspected": [
+        "tamuz-page-14.png",
+        "tamuz-page-15.png",
+        "tamuz-page-16.png"
+      ],
+      "supported_scope": "Correspondence/price-auction architecture and private ownership accounting; distinctions between convex preferences and the stronger strict-improvement mixture condition.",
+      "proof_limits": [
+        "Kakutani is stated, not proved; our complete proof derives it from the proved finite-dimensional Brouwer result.",
+        "The source defines UHC through sequential closed graph. Our chapter defines the open-neighborhood notion and proves equivalence with closed graph only with compact range and closed values.",
+        "The general page14 cone-enlargement compactification is not adopted. Passing to a closed conical hull need not preserve the original no-free-production hypothesis: (-epsilon^2,epsilon) can scale to(-epsilon,1) and converge to(0,1). Our theorem uses an explicit compact generator instead.",
+        "No global LNS is inferred on an entire bounded box from strict monotonicity at its maximal corner. Budget exhaustion is proved only after the fixed allocation is strictly below the cap.",
+        "Our cap removal uses convex preferences, strict cheaper scaling and a coordinate improvement; it does not import convexity-star or the source general existence theorem."
+      ]
+    },
+    {
+      "id": "v13-c04-condie-existence",
+      "title": "Scott Condie, Advanced Microeconomic Theory Class Notes, Chapter7: The Existence of General Equilibrium",
+      "version": "Mutable author-hosted HTML retrieved9October2026; header modification date is not a publication date.",
+      "retrieval": {
+        "file": "condie-ge.html",
+        "requested_url": "https://scottcondie.github.io/teaching/580/chapters/ge-existence.html",
+        "final_url": "https://scottcondie.github.io/teaching/580/chapters/ge-existence.html",
+        "http_status": 200,
+        "retrieved_utc": "2026-10-09T15:26:19.759391+00:00",
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8",
+          "Last-Modified": "Wed, 30 Sep 2026 16:15:31 GMT",
+          "ETag": "\"6abd35a3-9d55\""
+        },
+        "bytes": 40277,
+        "sha256": "81d392bfa2c3d73654cd3f4afbc0c6cc7542d013dc3e6b4a728bd2da9d4e6bb9"
+      },
+      "actual_text_read": "Complete web-rendered chapter7 sections7.1-7.2, Propositions7.1-7.3 and all five proof steps, including boundary correspondence equation7.1. Local raw HTML retained.",
+      "actual_equation_images_inspected": [],
+      "supported_scope": "Normalized prices, full excess-demand conditions, Walras-law and price-maximizer route, and why boundary behavior requires proof.",
+      "proof_limits": [
+        "Kakutani is stated without proof.",
+        "Its interior excess-demand/boundary-blowup route is context, not the theorem imported here; our economic proof derives every correspondence property from individual assumptions and compact generators.",
+        "No aggregate-wealth bound is silently substituted for positive wealth for each household. Our assumptions give omega_i strictly positive individually."
+      ]
+    }
+  ],
+  "artifact_inventory": [
+    {
+      "path": "../tmp/pdfs/v13-c04/condie-ge.html",
+      "bytes": 40277,
+      "sha256": "81d392bfa2c3d73654cd3f4afbc0c6cc7542d013dc3e6b4a728bd2da9d4e6bb9"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c04/mathew-page-2.png",
+      "bytes": 232822,
+      "sha256": "a2f82c56c9cfb110ea55742c88f81c375b08a31f3058a351b203b936307b7af3"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c04/mathew-page-3.png",
+      "bytes": 211249,
+      "sha256": "3e807510ccba532411f7efa3205e358a7a4e57d3d6dbd3cf0c9453dad0e9c3d9"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c04/mathew2010.pdf",
+      "bytes": 205653,
+      "sha256": "67259c3c36958bfdc66f4042427988173b8dada2982aa8d5a47b2108ce9b044f"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c04/mathew2010.txt",
+      "bytes": 13193,
+      "sha256": "80cfa2799715319e8e978bc79c3403d432c5e72d177a3d8f0642a817cfaaf523"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c04/retrieval.json",
+      "bytes": 1631,
+      "sha256": "c44c5370890e16e92d3ad73dd047868fa93c78a452210a16e0216239b23c1486"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c04/tamuz-page-14.png",
+      "bytes": 253701,
+      "sha256": "ee3cbf5a4fa6abe9618957dc1ae3f497a46d5d2e28f4d5ce0fcedf1309889524"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c04/tamuz-page-15.png",
+      "bytes": 240492,
+      "sha256": "10646009defcd679eef0bfb0c73283edfa891c684eb0fcbff88568f18e95a712"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c04/tamuz-page-16.png",
+      "bytes": 129978,
+      "sha256": "66617acd3ce59043b44f3df331b9f5a295f2a5a474450e4dc4fd6cfd433495f4"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c04/tamuz2021.pdf",
+      "bytes": 282312,
+      "sha256": "22d1e5ee8e27bbb58b0a59839ccfdf388a865a7333a43e683765caf7cd07f1ec"
+    },
+    {
+      "path": "../tmp/pdfs/v13-c04/tamuz2021.txt",
+      "bytes": 107309,
+      "sha256": "4997dfe6630e4ab43c21944740fa017f2b0ddbe0ab6ab4ec60a2c6e2c02d0d0c"
+    }
+  ],
+  "method": "Actual text/body reading and five rendered equation-page inspections; original proofs and examples independently developed. No whole-document inspection beyond stated pages or source-certified general theorem is claimed.",
+  "source_issues_resolved_in_our_route": [
+    "Mathew parity typo and dimension restriction",
+    "Compact-range qualification for correspondence graph/UHC equivalence",
+    "No unsupported cone-enlargement compactification",
+    "No bounded-box corner LNS or unproved strict-mixture implication"
+  ],
+  "runtime_boundary": "This preparation and outside-book artifacts are provenance only; final runtime uses exactly HTML, checker, sources record and author review."
+}

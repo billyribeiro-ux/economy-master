@@ -1,0 +1,232 @@
+{
+  "chapter": "v13-c04",
+  "date": "2026-10-09",
+  "author": "c05_review",
+  "status": "Compact internal blueprint supporting immediate full authoring; not a separate approval gate.",
+  "independent_seed_check": {
+    "grouped_comparisons": 38,
+    "result": "All six root case seeds matched exactly, including both exchanges, ownership production and all8 boundary-admissible midpoint labelings.",
+    "root_contract": {
+      "path": "production/v13-c04-author-assignment.json",
+      "bytes": 10595,
+      "sha256": "f62ae7e8d902be193346b9bf11ec35a3a438c10764ee1011953d03bb90ada6df"
+    }
+  },
+  "case_scope_refinement": "W1/W2 Cobb-Douglas preferences are weakly monotone on the full orthant and strictly monotone only away from axes. Their equilibria are established directly, including zero-price nonattainment, not by incorrectly invoking the stronger global strict-coordinate theorem. W5 Leontief is also explicitly weakly monotone. The linear W5 example satisfies the main preference hypotheses.",
+  "proof_contracts": [
+    {
+      "id": "P1",
+      "title": "Economic definitions and Walras accounting",
+      "route": "State finite households/firms, net supplies, ownership shares summing to1, incomes and exact market clearing. Distinguish weak budget inequality from equality after exhaustion; positive price scaling normalizes without altering choices."
+    },
+    {
+      "id": "P2",
+      "title": "Finite-dimensional Sperner with fine triangulations",
+      "route": "Define compatible triangulations and facet incidences. Prove barycentric subdivision coverage/intersections using ordered barycentric coordinates and coefficients k(lambda_k-lambda_(k+1)); nested-face barycentres give mesh contraction d/(d+1). Induct on dimension using marked facets0..d-1 and interior2/boundary1 parity."
+    },
+    {
+      "id": "P3",
+      "title": "Brouwer plus compact-convex extension",
+      "route": "Use strict coordinate deficits, stop at an exact fixed vertex, and take a compact subsequence of fully labeled cells with vanishing mesh. Prove nearest-point projection uniqueness, variational inequalities and nonexpansiveness, then extend through a containing simplex."
+    },
+    {
+      "id": "P4",
+      "title": "Kakutani",
+      "route": "Prove compact-range closed graph implies open-neighborhood UHC and its converse with closed values. Finite epsilon/2 nets and tent weights give continuous approximate selections; Brouwer fixed points converge, all active selected values are close to F(limit), convexity/closedness finish."
+    },
+    {
+      "id": "P5",
+      "title": "Sufficient compact-generator economic existence",
+      "route": "Continuous convex strictly coordinate-monotone orthant preferences, individual positive endowments, compact convex K_j containing0 and full disposal. Continuous positive profit incomes, common cap above aggregate resource upper bounds, budget approximation by strict cheaper zero, maximizing comparisons and closed graphs. Apply Kakutani to price/household/firm product. Auction and accounting give z<=0; zero prices contradict cap/resources; cap interior gives exhaustion and exact clearing."
+    },
+    {
+      "id": "P6",
+      "title": "Remove the cap and delimit claims",
+      "route": "Globally preferred affordable bundle remains preferred after a slight radial shrink and becomes strictly cheaper. Small mixture with cap-interior allocation is weakly preferred under convexity; a small coordinate increase makes a strictly preferred capped affordable bundle. Firms already maximize over full disposal technology. No universal production, uniqueness or convergence claim."
+    }
+  ],
+  "worked_cases": "Use the six root_original_case_seeds unchanged numerically; their complete inputs and independently checked anchors are in the bound assignment.",
+  "exercise_contracts": [
+    {
+      "id": "E1",
+      "task": "Derive exchange demand and solve a new second-good endowment3 for household1; verify every income/budget/market and uniqueness within this model.",
+      "anchors": {
+        "price": "5/3",
+        "incomes": [
+          "29/3",
+          "17/3"
+        ],
+        "allocations": [
+          [
+            "58/15",
+            "29/9"
+          ],
+          [
+            "17/15",
+            "34/9"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "E2",
+      "task": "Reconstruct W2 ownership budgets, compare equal profit shares, and diagnose omission of profits atw1.",
+      "anchors": {
+        "equal_incomes": [
+          3,
+          3
+        ],
+        "equal_allocations": [
+          [
+            "3/2",
+            "3/2"
+          ],
+          [
+            "3/2",
+            "3/2"
+          ]
+        ],
+        "omitted_profit_aggregate_demand": [
+          "5/2",
+          "5/2"
+        ],
+        "omitted_Walras_value": "-1"
+      }
+    },
+    {
+      "id": "E3",
+      "task": "Prove Sperner by general facet parity, verify the W3 labeling, and show why replacing strict label deficits by weak ones can violate a boundary.",
+      "anchors": {
+        "vertex_order": [
+          "e0",
+          "e1",
+          "e2",
+          "m01",
+          "m02",
+          "m12"
+        ],
+        "labels": [
+          0,
+          1,
+          2,
+          1,
+          0,
+          2
+        ],
+        "full_triangle": "central",
+        "weak_label_failure": "constant f=e0 at e2 permits label1 though its coordinate1 is0"
+      }
+    },
+    {
+      "id": "E4",
+      "task": "Prove the simplex limiting step and compact-convex projection extension. Derive projection onto {(t,1-t):0<=t<=1} at(2,2),(-1,0),(2,0).",
+      "anchors": {
+        "projections": [
+          [
+            "1/2",
+            "1/2"
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "E5",
+      "task": "Supply the epsilon-net Kakutani proof, including compact-range graph/UHC and the final convex approximation; explain why arbitrary selections need not be continuous.",
+      "anchors": {
+        "finite_illustration": "For constant F(x)=[1/4,3/4], every weighted selection stays in this interval; no finite approximation is asserted to solve arbitrary discontinuous correspondences exactly."
+      }
+    },
+    {
+      "id": "E6",
+      "task": "Audit every W4 fixed-point failure and the interval-value repair, with explicit failed hypotheses and fixed/nonfixed arguments.",
+      "anchors": {
+        "repaired_fixed": "1/2",
+        "closed_graph_failure_limit": [
+          "1/2",
+          1
+        ],
+        "disconnected_swap": "no fixed point",
+        "noncompact_affine_map": "formal fixed1 excluded"
+      }
+    },
+    {
+      "id": "E7",
+      "task": "Derive the GE product correspondence and its graph/convexity properties. For W2 compute aggregate resource bounds and a valid common cap, without treating its boundary Cobb-Douglas utility as globally strictly monotone.",
+      "anchors": {
+        "aggregate_endowment": [
+          4,
+          1
+        ],
+        "generator_coordinate_maxima": [
+          0,
+          4
+        ],
+        "aggregate_bounds": [
+          4,
+          5
+        ],
+        "valid_cap": 6,
+        "income_lower_bound": "1/2"
+      }
+    },
+    {
+      "id": "E8",
+      "task": "Prove exact clearing and cap removal with ordinary convex preferences plus strict coordinate monotonicity. Show convex preferences alone need not make a mixture with a better bundle strictly better.",
+      "anchors": {
+        "flat_witness": "u=max(0,min(x1,x2)-1), x=(0,0), better=(2,2), one-quarter mixture=(1/2,1/2) remains utility0; this separate example lacks main theorem strict monotonicity"
+      }
+    },
+    {
+      "id": "E9",
+      "task": "Derive the full Leontief positive-price family and linear-utility allocation family, and distinguish which examples satisfy main theorem hypotheses.",
+      "anchors": {
+        "Leontief": "all strictly positive ratios, allocations(1,1),(2,2)",
+        "linear": "equal prices; allocations(a,2-a),(2-a,a),0<=a<=2"
+      }
+    },
+    {
+      "id": "E10",
+      "task": "Prove W6 nonexistence under positive and zero prices, and explain why randomized or convexified allocations change the deterministic problem.",
+      "anchors": {
+        "endowment_utility": 2,
+        "cheaper_good_endpoint_utility_lower_bound": 4
+      }
+    },
+    {
+      "id": "E11",
+      "task": "Derive W2 firm supply at every wage, exclude capacity, solve the clearing polynomial and relate residual clearing to Walras law.",
+      "anchors": {
+        "capacity": "0<w<=1/2,n4,q4,profit4-4w",
+        "interior": "w>1/2,n1/w^2,q2/w,profit1/w",
+        "roots": [
+          1,
+          "-3/4"
+        ],
+        "equilibrium_wage": 1
+      }
+    },
+    {
+      "id": "E12",
+      "task": "Referee numerical-to-general claims about existence, unrestricted production, uniqueness, convergence and deterministic feasibility; give a12-point rubric and concrete repairs.",
+      "anchors": {
+        "rubric": "4 dimensions x3points: hypotheses/accounting; fixed-point proof/numerical limits; uniqueness/convergence; original feasibility/convexification"
+      }
+    }
+  ],
+  "source_preparation": {
+    "path": "production/v13-c04-source-preparation.json",
+    "bytes": 8936,
+    "sha256": "666223662e0b88a2888caecd2e773cc9036c190947ed3055febb1001d953d375"
+  },
+  "followup_fulfilled_by_design": "Finite-dimensional Sperner->Brouwer->Kakutani, with no appeal to Nash and no missing arbitrary-dimensional subdivision step. Completion depends on final manuscript and reviews.",
+  "runtime_boundary": "Only the final four runtime author files are read by the checker. This design and source preparation are provenance.",
+  "unresolved_design_findings": []
+}

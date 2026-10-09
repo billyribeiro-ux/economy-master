@@ -1,0 +1,226 @@
+{
+  "chapter": "v13-c03",
+  "date": "2026-10-09",
+  "status": "original finite blueprint; author proceeds under active contract",
+  "cases": {
+    "W1": {
+      "eu": [
+        "9/20",
+        "19/40"
+      ],
+      "nonlinear": [
+        "69/200",
+        "127/400"
+      ],
+      "affine": [
+        "59/10",
+        "119/20"
+      ],
+      "violation": [
+        "2",
+        "36/25",
+        "2",
+        "211/100"
+      ]
+    },
+    "W2": {
+      "mean": 10,
+      "reciprocal_CE": "91/10",
+      "reciprocal_premium": "9/10",
+      "local_log_premium": "9/20",
+      "half_risk_local": "9/80",
+      "half_risk_error_bound": "81/115520",
+      "log_CE_decimal": "9.5393920141694564915262158602322654025462342525055",
+      "log_premium_decimal": "0.4606079858305435084737841397677345974537657474945",
+      "half_risk_CE_decimal": "9.886859966642594255774001149762327765025391143772",
+      "half_risk_error_decimal": "0.000640033357405744225998850237672234974608856228"
+    },
+    "W3": {
+      "means": [
+        "2",
+        "2"
+      ],
+      "variances": [
+        "2",
+        "3"
+      ],
+      "cdf_diff": [
+        "1/3",
+        "-5/12",
+        "1/4",
+        "0"
+      ],
+      "lower_diff": [
+        "0",
+        "1/3",
+        "-1/2",
+        "0"
+      ],
+      "capped1": [
+        "2/3",
+        "1"
+      ],
+      "capped3": [
+        "2",
+        "3/2"
+      ]
+    },
+    "W4": {
+      "signal": [
+        "5/12",
+        "7/12"
+      ],
+      "posterior": [
+        [
+          "3/5",
+          "2/5"
+        ],
+        [
+          "1/7",
+          "6/7"
+        ]
+      ],
+      "value": "1"
+    },
+    "W5": {
+      "Q": [
+        [
+          "7/12",
+          "5/12"
+        ],
+        [
+          "5/12",
+          "7/12"
+        ]
+      ],
+      "value": {
+        "signal": [
+          "17/36",
+          "19/36"
+        ],
+        "posterior": [
+          [
+            "7/17",
+            "10/17"
+          ],
+          [
+            "5/19",
+            "14/19"
+          ]
+        ],
+        "value": "1/3"
+      },
+      "cost_P_net": "1/4"
+    },
+    "W6": {
+      "E_job1": {
+        "signal": [
+          "1/3",
+          "2/3"
+        ],
+        "posterior": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/2",
+            "1/2"
+          ]
+        ],
+        "value": "1"
+      },
+      "H_job1": {
+        "signal": [
+          "1/3",
+          "2/3"
+        ],
+        "posterior": [
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "1/2",
+            "0",
+            "1/2"
+          ]
+        ],
+        "value": "2/3"
+      },
+      "E_job2": {
+        "signal": [
+          "1/3",
+          "2/3"
+        ],
+        "posterior": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/2",
+            "1/2"
+          ]
+        ],
+        "value": "2/3"
+      },
+      "H_job2": {
+        "signal": [
+          "1/3",
+          "2/3"
+        ],
+        "posterior": [
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "1/2",
+            "0",
+            "1/2"
+          ]
+        ],
+        "value": "1"
+      },
+      "posterior_energy": [
+        "1/3",
+        "1/3"
+      ]
+    }
+  },
+  "proofs": [
+    "Finite mixture-continuous independent weak order: calibration between best/worst prizes, affine representation, degenerate/equivalent outcomes and positive affine uniqueness.",
+    "Concavity, certainty equivalents, Arrow–Pratt comparison under C2 positive derivatives, C3 local risk-premium expansion with bounded finite shock.",
+    "Finite FSD telescoping, increasing-concave SSD hinge decomposition, and equal-mean spread equivalence by a compact convex separation and concave-envelope construction.",
+    "Finite Bayes and free-information weak value, exact strict-value condition, costs and action constraints.",
+    "Blackwell garbling sufficiency and full finite converse: nearest point in {PG}, separating matrix and payoff witness under a full-support prior."
+  ],
+  "exercise_plan": [
+    "e01 finite EU and affine scale",
+    "e02 continuous independence violation",
+    "e03 certainty equivalents and comparative risk aversion",
+    "e04 small-risk remainder and half-risk bound",
+    "e05 FSD proof and shift",
+    "e06 SSD and finite mean-preserving coupling",
+    "e07 variance and incomparable lotteries",
+    "e08 Bayes, strict value and acquisition",
+    "e09 garbling, reverse failure and fees",
+    "e10 full Blackwell converse and zero-prior limit",
+    "e11 noncomparable experiments and posterior energy",
+    "e12 research/referee transfer"
+  ],
+  "limits": [
+    "Assume a wealth-interval EU representation separately from finite-prize representation.",
+    "Finite states/signals/actions; no general measurable-space Blackwell theorem.",
+    "Synthetic stipulated probabilities and utilities, not empirical likelihood estimates.",
+    "Free randomized garbling and unchanged action possibilities are part of the value comparison.",
+    "Sources and blueprint are provenance only, not four-file runtime dependencies."
+  ]
+}

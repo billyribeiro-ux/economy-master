@@ -173,6 +173,10 @@ from check_v12_c11_peer import check as check_v12_c11_peer
 from check_v12_c12 import check as check_v12_c12
 from check_v12_c12_peer import check as check_v12_c12_peer
 from check_v12_assessment import check as check_v12_assessment
+from check_v13_c01 import check as check_v13_c01
+from check_v13_c01_peer import check as check_v13_c01_peer
+from check_v13_c02 import check as check_v13_c02
+from check_v13_c02_peer import check as check_v13_c02_peer
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -618,6 +622,8 @@ def main():
     v12_time_structural_peer_check = {'v12-c09': check_v12_c09_peer(), 'v12-c10': check_v12_c10_peer()}
     v12_closing_check = {'v12-c11': check_v12_c11(), 'v12-c12': check_v12_c12()}
     v12_closing_peer_check = {'v12-c11': check_v12_c11_peer(), 'v12-c12': check_v12_c12_peer()}
+    v13_opening_check = {'v13-c01': check_v13_c01(), 'v13-c02': check_v13_c02()}
+    v13_opening_peer_check = {'v13-c01': check_v13_c01_peer(), 'v13-c02': check_v13_c02_peer()}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -686,7 +692,10 @@ def main():
               'volume_12_closing_check': v12_closing_check,
               'volume_12_closing_peer_check': v12_closing_peer_check,
               'volume_12_assessment_check': v12_assessment_check,
+              'volume_13_opening_check': v13_opening_check,
+              'volume_13_opening_peer_check': v13_opening_peer_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
+    report['checks'].append('Volume 13 chapters1–2: complete finite and continuous preference representation, menu rationalization and positive Afriat proof; consumer and producer duality, qualified envelopes, Slutsky restrictions, constructive homothetic recovery and convex free-disposal hull reconstruction. Two author and two separate peer laboratories, all24 exercise solutions and exact reviewed payload bindings; conditional-cost closedness finding repaired.')
     report['checks'].extend(['Volume 11 chapters9–12: funded currency parity versus physical scenarios, segmented cash and sovereign claim budgets; regulatory and conduct incentives, financed resolution; finite run equilibria, auction feedback and consolidated recipient resources; finite governance choices, collateral, escalation incentives and decision evidence. Four author and four separate peer laboratories with exact final bindings, independently reviewed proofs and all36 closing exercise solutions.',
         'Volume 11 chapters5–8: dated funding and collateral, feasible liquidity support and ALM; process deadlines, identity accounting and common control failures; consistent revaluation, network contagion and certified reverse stress; insurance selection and dependence, pension cash, guarantee resources and household debt. Four author and four separate peer laboratories, all exact exercise reviews and frozen payload bindings.',
         'Volume 11 chapters1–4: screening and enforcement incentives, money creation and private-type run best replies; bank double entries, economic value, capital and dated cash; corporate debt service, evidence and recovery waterfalls; probability-atom VaR/ES, coherence, dependence, horizon and backtesting limits. Four author and four separate peer laboratories with independent oracles and final payload bindings.',

@@ -1,0 +1,15 @@
+{
+  "id": "v13-c02-conditional-cost-closedness",
+  "found_by": "bs_author",
+  "reviewed_by": "root",
+  "status": "resolved",
+  "location": "Conditional input-cost envelope paragraph after P5 profit envelope",
+  "issue": "Attainment, locally bounded optimizers and unique optimizer alone do not guarantee the input-cost derivative unless the feasible input set is closed or an equivalent optimizer-limit condition is supplied.",
+  "counterexample": "Z={(2,1)} union {(1-t,2+t+t^2):0<t<=1/2}. At p=(1,1), unique optimum(2,1); neighboring positive prices have attained bounded optima. For p1<=p2 nearby C=2p1+p2; for p1>p2, t=(p1-p2)/(2p2), C=p1+2p2-(p1-p2)^2/(4p2). The p1 derivative limits are2 and1. The missing limit input(1,2) establishes nonclosedness.",
+  "root_evidence": "Direct expansion and completing the square establish both branches; exact rational checks at positive differences1/8 and1/16 confirm the active branch. Convexity is unnecessary for this envelope but closedness is required for the invoked optimizer subsequence argument.",
+  "repair": {
+    "from": "With attainment, local boundedness and uniqueness, its price gradient",
+    "to": "With a closed feasible input set, attainment, local boundedness and uniqueness, its price gradient"
+  },
+  "scope": "Only the canonical manuscript qualifier changes; all concrete mathematical cases, numerical anchors and working historical files remain unchanged."
+}

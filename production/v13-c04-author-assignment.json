@@ -1,0 +1,95 @@
+{
+  "chapter": "v13-c04",
+  "date": "2026-10-09",
+  "author": "c05_review",
+  "status": "active_full_working_authoring_after_C02_freeze",
+  "specification": {
+    "id": "v13-c04",
+    "number": 4,
+    "title": "General equilibrium and existence",
+    "outcome": "Explain and apply equilibrium existence arguments and their assumptions.",
+    "coverage": [
+      "Exchange-production economies",
+      "fixed points",
+      "excess demand",
+      "Walras law",
+      "existence",
+      "uniqueness limits"
+    ],
+    "prerequisites": [
+      "v13-c03"
+    ],
+    "level": "Graduate",
+    "status": "planned",
+    "manuscript": "chapters/v13-c04.html",
+    "sources": [
+      "harvard-economics-requirements",
+      "mit-economics-curriculum"
+    ],
+    "required_worked_examples": 3,
+    "required_exercises": 10,
+    "review": {
+      "arithmetic": false,
+      "reasoning": false,
+      "solutions": false,
+      "sources": false,
+      "instruction": false,
+      "structure": false
+    }
+  },
+  "owned_paths": [
+    "production/v13-c04-source-preparation.json",
+    "production/v13-c04-blueprint-proposal.json",
+    "production/v13-c04-working.html",
+    "production/check_v13_c04_working.py",
+    "production/v13-c04-sources-working.json",
+    "production/v13-c04-author-review-working.json"
+  ],
+  "prerequisite_contracts": [
+    "content/chapters/v13-c01.html",
+    "production/v13-c02-working.html",
+    "production/v13-c03-author-assignment.json"
+  ],
+  "source_discovery": "production/v13-c04-source-discovery.json",
+  "required_proof_followup": "Fulfill retained V05 followup: a complete finite-dimensional fixed-point chain for graduate general equilibrium and later mixed-Nash existence. No circular use of Nash to prove the only fixed-point input available for Nash.",
+  "scope": "Full graduate general equilibrium/existence chapter: exchange and private-ownership production, price normalization and Walras law, correspondences, fixed-point proof chain, complete existence theorem under explicit sufficient economic conditions, failures and uniqueness/convergence limits. Six original worked cases and twelve complete solved exercises. Source prep/compact blueprint are internal evidence, not approval gates. Independently resolve routine choices and proceed to full manuscript; report material findings.",
+  "root_proof_route": [
+    "Prove finite-dimensional Sperner by induction/parity: count d-simplex facets carrying labels0..d-1. A fully labeled d-simplex contributes1, a simplex using exactly0..d-1 with one repeated label contributes2, others0. Interior facets counted twice; boundary matching facets occur only on face opposite d, whose count is odd by induction. Define compatible finite triangulations, including barycentric subdivision and mesh contraction d/(d+1), rather than assuming fine triangulations without explanation.",
+    "Brouwer on simplex: unless a vertex is already fixed, label by a coordinate i with v_i>f_i(v); coordinates summing to1 ensure a label, and v_i=0 cannot receive i. A full simplex at each vanishing mesh supplies all coordinate inequalities in a compact subsequential limit, hence f(x)=x. Extend to arbitrary nonempty compact convex K via a containing simplex and the Euclidean nearest-point projection; prove projection existence, uniqueness and continuity/nonexpansiveness with its variational inequalities.",
+    "Kakutani on compact convex K: closed graph, nonempty convex compact values. For an epsilon/2 net x_j, choose y_j in F(x_j) and continuous weights proportional to max(0,epsilon-distance(x,x_j)). Weighted y gives a continuous K-valued map and a Brouwer fixed point x_epsilon. Closed graph plus compact range supplies upper hemicontinuity; as x_epsilon converges, every active y_j lies arbitrarily close to F(limit), and convexity/closedness puts the limit in its own image. Supply each implication, including compact-range condition; do not treat a plotting grid as proof.",
+    "Complete economic existence route: finitely many households with continuous, convex preferences and strict coordinate monotonicity on R_+^L, each endowment omega_i>>0. Firms have Y_j=K_j-R_+^L with K_j nonempty compact convex containing0; ownership shares nonnegative and sum_i theta_ij=1. This is an explicit sufficient compact-generator production class, not every unbounded Arrow-Debreu technology. Pure exchange is included. Profits are continuous supports, nonnegative. On normalized nonnegative price simplex, incomes p.omega_i+sum theta*pi_j(p)>0.",
+    "Choose common consumption cap M larger than every aggregate endowment plus componentwise generator supply bound. Prove capped budget correspondences continuous using strict cheaper zero, and compact demand graph/convex values using actual maximizing comparisons. Product correspondence comprises price argmax of q.excess, consumer demands at profit incomes, and firm maximizers. Kakutani fixed point has p.z<=0 by ownership accounting and q.z<=p.z for every simplex q, hence z<=0. Any zero-price good forces every strictly monotone consumer to cap M, contradicting aggregate upper resource bound; therefore p>>0. At feasible fixed point every consumption coordinate is strictly below M, so budget exhaustion yields p.z=0 and all z=0.",
+    "Prove removal of consumption caps: a strictly preferred globally affordable x_prime can be radially shrunk slightly while remaining preferred and becoming strictly cheaper (positive prices/income). A small convex mixture with the interior capped optimum is weakly preferred and strictly cheaper; a tiny coordinate increase stays in the box/budget and is strictly better, a contradiction. This avoids importing semistrict convexity from mere convex preferences. Firms optimize on full disposal technologies at nonnegative prices. Explain all sufficient hypotheses and distinguish existence, uniqueness and convergence."
+  ],
+  "root_original_case_seeds": [
+    {
+      "id": "W1",
+      "description": "Two consumers, endowments(4,1),(1,4), Cobb-Douglas exponents(2/3,1/3),(1/3,2/3). Normalize p2=1. Total first-good demand3+2/p1, supply5 =>p1=1; wealth5each; allocations(10/3,5/3),(5/3,10/3). Additional second-good endowment for consumer1 gives(4,2),(1,4), price4/3, wealth22/3 and16/3, allocations(11/3,22/9),(4/3,32/9). Prove demand/global uniqueness for these scenarios, reconcile every market and budget; do not generalize uniqueness."
+    },
+    {
+      "id": "W2",
+      "description": "Private-ownership production with input/leisure good and consumption good. Firm compact convex K={(−n,q):0<=n<=4,0<=q<=2sqrt(n)} followed by disposal; households each omega=(2,1/2), utility sqrt(leisure*consumption), profit shares1/4,3/4. Normalize output price1. Interior supply n=1/w^2, q=2/w, profit1/w; clearing gives4w^2-w-3=0, w=1. Supply(-1,2), profit1, wealth11/4 and13/4, demands(11/8,11/8),(13/8,13/8); totals(3,3). Exclude capacity branch w<=1/2 separately. Change shares to1/2 each: prices/supply same, each consumption(3/2,3/2). Ownership-income accounting is essential."
+    },
+    {
+      "id": "W3",
+      "description": "Simplex coordinate cycle f(x0,x1,x2)=(x1,x2,x0). n=2 triangular lattice, label smallest i with v_i>f_i(v). Corner labels0,1,2; edge midpoints01,02,12 have labels1,0,2; only central small triangle is fully labeled. Exact fixed point(1/3,1/3,1/3). Show parity and finite approximate certificate separately from general limiting proof."
+    },
+    {
+      "id": "W4",
+      "description": "Kakutani hypotheses: F(x)={1} below1/2, F(1/2)={0,1}, F(x)={0} above1/2 is closed graph/nonempty but nonconvex at1/2 and has no fixed point. Filling F(1/2)=[0,1] restores1/2. A step with F(1/2)={0} loses closed graph. Disconnected domain{0,1} with swapping map; noncompact[0,1) with f=(1+x)/2. Demonstrate exact failure hypotheses, no generic numerical certificate."
+    },
+    {
+      "id": "W5",
+      "description": "Existence does not establish uniqueness or convergence. Leontief households min(x1,x2) with endowments(1,1),(2,2) admit every strictly positive price ratio with demands equal endowments; state weak versus strict monotonicity carefully. Separate identical linear utilities x1+x2 with endowments(1,1) each: p1=p2 but continuum of clearing allocations. A continuous self-map f(x)=1-x has unique fixed point1/2 but starting0 iterates0,1,0,...; this is a mathematical convergence counterexample, not a claimed actual adjustment mechanism."
+    },
+    {
+      "id": "W6",
+      "description": "Nonconvex preferences and nonexistence: one household omega=(1,1), u=x1^2+x2^2 on nonnegative orthant. Continuous and strictly coordinate increasing, but upper contours nonconvex. At every positive price the budget-maximizing endpoint strictly beats endowed interior bundle, so no market-clearing demand. Zero price gives unbounded utility. Convexifying consumption opportunities or expected allocations changes the original problem; do not claim it creates feasible deterministic equilibrium."
+    }
+  ],
+  "author_responsibility": "Independently recompute every seed and verify every proof before adopting. Correct or replace any faulty seed with a reported justification. Add twelve nonduplicate exercises with full solutions spanning derivation, proof, counterexample, data/interpretation and referee critique. Explain definitions before use, answered teach-back/retention, source limits and successor welfare theory.",
+  "source_policy": "Use primary author/official lecture references for unresolved specialist scope; root discovery records exactly what has been read and cautions, not a complete source audit. Retain actual text/image/version scope and bindings. Source artifacts may be under ../tmp/pdfs/v13-c04/. No arbitrary wordy source duplication, no fabricated primary inspection.",
+  "runtime_gates": "Exactly four runtime working files: HTML, checker, sources, author review. Quiet no-mutation independent stdlib check(root=None), strict JSON, silent CLI. Run only normal workspace API and optimized exact-four API/CLI from unrelated cwd, unchanged exact membership/bytes; no extra gate matrix. Preparation/blueprint are provenance, not runtime dependencies.",
+  "ownership": "Own only six listed production paths and outside-book source scratch. No canonical/source-catalogue/status/build/hosting/other-package edits, no child agents, no installations or paid tools. C04 cannot be accepted before C03.",
+  "limits": "Machine-assisted author work, not canonical/peer acceptance, empirical proof, general all-technology existence, unique/stable equilibrium, reader QA or human certification."
+}

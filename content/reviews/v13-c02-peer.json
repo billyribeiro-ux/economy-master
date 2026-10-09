@@ -1,0 +1,91 @@
+{
+  "chapter": "v13-c02",
+  "date": "2026-10-09",
+  "reviewer": "bs_author",
+  "author": "c05_review; canonical qualification repair by root",
+  "status": "Separate substantive review complete; one proof-hypothesis finding resolved; final gate evidence accompanies freeze",
+  "assignment": "production/v13-c02-peer-assignment.json",
+  "reading": "Read the complete working quartet, all six worked cases, P1–P6 proofs, twelve exact prompts/solutions, open rubric and answered retention. Directly diffed every final canonical file against its working original. The only manuscript change adds closedness to the conditional input-cost envelope. Numerical checker logic is unchanged; canonical paths, status and provenance/binding changes were inspected.",
+  "proof_judgments": {
+    "P1 / v13-c02-consumer": "Positive prices compactify each budget and every relevant cheaper expenditure set. Closed target contours give existence; continuity on radial paths gives no excess utility for attainable targets at least u(0). Local nonsatiation supplies budget exhaustion and the inverse starting at income. Both correspondence equalities, zero income/target and nonattainable targets are correctly distinguished.",
+    "P2 / v13-c02-envelopes": "The fixed feasible target set gives price concavity, degree-one expenditure and every minimizer’s supergradient inequality. A common positive price bound controls nearby optimizers; closed feasibility makes their cluster points optimal. Uniqueness gives a full vector derivative, while compact H gives the directional minimum. Roy uses both signs of a feasible income-price perturbation and divides only under positive income derivative.",
+    "P3 / v13-c02-slutsky": "The row-demand/column-price convention gives Dp x + xm x-transpose. A C1 Hicksian gradient makes the expenditure potential C2, yielding symmetry and a negative-semidefinite Hessian with the price null direction. The skew share field satisfies the preliminary checks but violates this necessary smooth symmetry; no generic global sufficiency or nonsmooth impossibility theorem is inferred.",
+    "P4 / v13-c02-integrability": "Positive C1 concave degree-one c and its nonnegative gradient give Euler and a full-price supporting inequality. The infimum-defined U is finite, concave, monotone and homogeneous. Explicit nonnegative witnesses establish target and income attainment without assuming boundary continuity or arbitrary uniqueness. The concrete min index is proved with positive-price limits including zero coordinates; AM–GM separately proves its unique Hicksian demand.",
+    "P5 / v13-c02-producer": "Supremum/infimum signs yield profit convexity and cost-price concavity. The profit envelope retains closedness, nearby finite attainment, bounded optimizers and uniqueness. The repaired conditional-cost statement now likewise retains closedness of the feasible input set. Output convexity requires a separate feasible-plan mixing condition. Model AM–GM and completed-square bounds prove global optima; the full Hessian square identity and r=0 qualification are correct.",
+    "P6 / v13-c02-reconstruction": "Affine-dependence elimination proves that at most L+1 generators suffice and therefore the convex hull is compact. Its disposal hull is closed by subsequences. A strict separator cannot have a negative coordinate under free disposal; compact support permits a small positive perturbation that retains the gap. This reconstructs the convex disposal hull using all positive prices, while preserving the original nonconvex and tie-supply identification limits."
+  },
+  "exact_exercise_judgments": {
+    "v13-c02-ex1": "Both value/correspondence identities have the required assumptions; target 1 under the bounded exponential utility is genuinely unattained.",
+    "v13-c02-ex2": "Shifted-domain AM–GM solutions, zero surplus, complete fixed-income derivatives, compensation matrix and both money-loss reference conventions agree.",
+    "v13-c02-ex3": "The whole minimizing segment and every-direction minimum are derived; its opposite directional slopes refute an ordinary gradient.",
+    "v13-c02-ex4": "Unique total-goods demand survives cubing, while all three indirect derivatives vanish at the anchor. The ordinal replacement restores a valid Roy denominator.",
+    "v13-c02-ex5": "Share positivity is restricted to the stated log domain. Budget and scaling cancel exactly; the full compensated matrix has the claimed skew part, projection quadratic form and symmetry violation.",
+    "v13-c02-ex6": "The alpha family satisfies the global construction. The explicit min index, AM–GM witnesses and zero-target case give the printed transfer bundle, expenditure and achieved utility.",
+    "v13-c02-ex7": "Independent antiderivatives give both two-segment paths. An added constant preserves derivatives but fails expenditure homogeneity, Euler and witness cost.",
+    "v13-c02-ex8": "All q≥0 have the stated global conditional input minimum; price concavity and output convexity concern different arguments. Swapping input prices gives the stated allocation and profit.",
+    "v13-c02-ex9": "Completed squares prove finite global profit. Monomial derivatives reproduce every Hessian entry, negative net-input sign, PSD square factorization and price kernel; r=0 uses the explicit boundary function.",
+    "v13-c02-ex10": "Participation, entry tie, interior branch, capacity and both equality boundaries are fully solved. The losing stationary point and matching-first/different-second capacity derivatives are correctly distinguished.",
+    "v13-c02-ex11": "Every compactness/closedness/separation/positive-normal step is supplied. The half mixture is missing from the original set yet cannot be distinguished by any positive-price profit value.",
+    "v13-c02-ex12": "Each of the three claims has a diagnosis, explicit witness, delimited replacement and evidence/scope repair. Three four-point dimensions total 12 and admit alternative valid reasoning."
+  },
+  "instruction": "The six proof routes precede their exercises. Teach-back requires mechanisms and assumptions; the four delayed questions have answers and an eight-point reasoned rubric. The next-chapter route and ordinal-versus-money distinctions are maintained.",
+  "independent_arithmetic": "New exact-Fraction oracles use simplified rational Marshallian demands and closed-form derivatives rather than author automatic differentiation, monomial exponent derivatives plus an independent square coefficient matrix, AM–GM equality bundles, coordinate antiderivatives, and complete active-versus-inactive branches. Original versus convexified support is separately computed on the two hull frontier pieces. Every actual primitive and numerical result marker is compared; the author checker is read and bound but never imported.",
+  "focused_checks": "Zero surplus/targets/output price; both one-sided kink directions; Roy away from its zero factor; off-anchor log-domain scaling; one-zero/both-zero constructive price sequences; income/price homogeneity and invalid additive constant; entry and capacity neighbors/ties; missing original mixture and entire tied hull segment; explicit nonclosed-cost counterexample. Invalid exact types, prices, targets, domains, marker grammar, strict JSON and reader pairings are actually exercised. Rational-square restrictions belong only to the exact oracle, not the manuscript theorem domains.",
+  "resolved_findings": [
+    {
+      "id": "v13-c02-conditional-cost-closedness",
+      "status": "resolved before final binding",
+      "found_by": "bs_author",
+      "confirmed_and_repaired_by": "root",
+      "location": "v13-c02-producer conditional input-cost envelope paragraph",
+      "issue": "Attainment, locally bounded optimizers and uniqueness alone do not preserve feasibility of optimizer limits when the input set is not closed.",
+      "witness": "Z={(2,1)} union {(1−t,2+t+t²):0<t≤1/2}. At p=(1,1), (2,1) uniquely minimizes. All nearby optima are bounded and attained. For p1≤p2, C=2p1+p2; for p1>p2, C=p1+2p2−(p1−p2)²/(4p2), attained at t=(p1−p2)/(2p2). The p1 derivative limits are 2 and 1. The missing limit input is (1,2).",
+      "repair": "Final canonical sentence explicitly adds a closed feasible input set. All examples and numeric anchors remain unchanged. The peer checker verifies the repair text and independently reconstructs both counterexample branches and limiting slopes.",
+      "root_record": "production/v13-c02-peer-finding-resolution.json"
+    }
+  ],
+  "remaining_author_findings": [],
+  "source_review": {
+    "new_primary_body_or_image_reads_by_peer": 0,
+    "actual_action": "Read the complete scoped source record and audit its proof hypotheses and limits; match both actual URLs in the manuscript. No new primary-body inspection is claimed.",
+    "actual_prior_inspection": "Root inspected the recorded MIT consumer-theory pages and four actual rendered equation pages, plus the entire Condie section 3.2 HTML body. Text-only web screenshot responses were not counted as images. c05_review read the retained records and independently authored the proofs; this peer likewise reuses those scopes.",
+    "limits": "Source retrieval/header dates are not publication dates. Neither source supports universal differentiability, generic global Marshallian integrability, closedness-only profit existence, automatic output convexity, recovery of nonconvex gaps or empirical welfare identification. Original proofs supply the stated narrower results."
+  },
+  "final_gate_contract": {
+    "executions": [
+      "Normal workspace quiet API",
+      "Optimized exact-six quiet API from /",
+      "Optimized exact-six silent CLI from /"
+    ],
+    "checks": "Strict JSON-safe equal summaries, quiet import/API/CLI, five nonself peer bindings, unchanged exact six-file bytes and isolated membership; bytecode disabled.",
+    "evidence": "Actual required gate outcomes accompany the frozen parent handoff; no unexecuted gate is represented here as passed."
+  },
+  "limits": "Separate machine-assisted editorial review. Exact finite checks complement the full analytic proofs; no empirical identification, statistical confidence, rendered reader QA, independent human certification or whole-volume acceptance is asserted.",
+  "payload_bindings": [
+    {
+      "path": "content/chapters/v13-c02.html",
+      "bytes": 58346,
+      "sha256": "ce3aabb12cd0f0af9ce2e1cb0cc3bebcbf262c9b53b2ba3ab569fd078ea1a44c"
+    },
+    {
+      "path": "scripts/check_v13_c02.py",
+      "bytes": 24957,
+      "sha256": "57e5380d954ff1153821f01220f8f963bfc86be58ad6b292446da9f45ecef9d7"
+    },
+    {
+      "path": "content/reviews/v13-c02-sources.json",
+      "bytes": 5018,
+      "sha256": "2c47c071d29f19010636ebf8a853efea867d7d3063ef4c63de2b10f91c9ca7a1"
+    },
+    {
+      "path": "content/reviews/v13-c02-author.json",
+      "bytes": 11425,
+      "sha256": "89d3c4c2cd02ee169988d99e3e1a4c11a269e5ae412bd025bb24889a95a4362d"
+    },
+    {
+      "path": "scripts/check_v13_c02_peer.py",
+      "bytes": 24748,
+      "sha256": "8e9ecf32ed97ea9c7a5eb06c52af28ed03e762f910b38689f24cb7295cacdaac"
+    }
+  ]
+}
