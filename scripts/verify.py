@@ -147,6 +147,7 @@ from check_v11_c11_peer import check as check_v11_c11_peer
 from check_v11_c12_peer import check as check_v11_c12_peer
 from check_v11_assessment import check as check_v11_assessment
 from check_economics_core import check as check_economics_core
+from check_finance_core import check as check_finance_core
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -539,6 +540,7 @@ def main():
         ('v06-c11', check_v06_c11), ('v06-c12', check_v06_c12))}
     v06_assessment_check = check_v06_assessment()
     economics_core_check = check_economics_core()
+    finance_core_check = check_finance_core()
     v07_assessment_check = check_v07_assessment()
     v07_chapter_check = {'v07-c01': check_v07_c01(), 'v07-c02': check_v07_c02(),
                          'v07-c03': check_v07_c03(), 'v07-c04': check_v07_c04(),
@@ -605,6 +607,7 @@ def main():
               'volume_4_assessment_check': v04_assessment_check,
               'foundation_assessment_check': foundation_check,
               'economics_core_assessment_check': economics_core_check,
+              'finance_core_assessment_check': finance_core_check,
               'volume_5_opening_checks': v05_opening_check,
               'volume_5_middle_checks': v05_middle_check,
               'volume_5_closing_checks': v05_closing_check,

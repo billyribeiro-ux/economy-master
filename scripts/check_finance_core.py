@@ -25,6 +25,7 @@ class Page(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.stack = []; self.ids = []; self.points = {}; self.answers = {}
         self.targets = []; self.links = []; self.h1 = 0; self.active = None
+        self.answer_depth = 0
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
@@ -41,14 +42,16 @@ class Page(HTMLParser):
             require(self.active is None, 'non-nested answer')
             self.active = a['data-solution-for']; self.targets.append(self.active)
             self.answers[self.active] = ''
+            self.answer_depth = len(self.stack) + 1
         if tag not in ('br', 'hr', 'img', 'input', 'meta', 'link'):
             self.stack.append(tag)
 
     def handle_endtag(self, tag):
         require(self.stack and self.stack[-1] == tag, 'balanced HTML '+tag)
-        self.stack.pop()
-        if tag == 'li':
+        if len(self.stack) == self.answer_depth:
             self.active = None
+            self.answer_depth = 0
+        self.stack.pop()
 
     def handle_data(self, value):
         if self.active is not None:
@@ -135,6 +138,8 @@ def support_check():
     price = lambda values: sum(p*x for p, x in zip(prices, values))
     eq((price(assets), price(debts), price(equities)), (72, 60, 12), 'R2 values of different claims')
     eq((62-price(debts), price(equities)-(62-price(debts))), (2, 10), 'R2 own funded contribution and NPV')
+    eq((70-price(debts), 5-(62-price(debts))), (10, 3), 'R2 outside providers retain unspent endowments')
+    eq(5-(62-price(debts))+price(equities)-5, 10, 'R2 investor total wealth gain')
     eq(F(4, 5)*80+F(1, 5)*60, 76, 'R2 physical debt payment differs from proceeds')
     printed('r2', 'debt proceeds 60', 'equity value 12', 'NPV ten', 'available acquisition')
     variance = lambda w: F(1, 100)*w*w+F(1, 25)*(1-w)**2+F(1, 100)*w*(1-w)
@@ -210,6 +215,9 @@ def check():
     require(actual == '\n\n'.join(bodies)+'\n', 'exact five-part final assembly')
     page = Page(); page.feed(actual)
     require(not page.stack and page.h1 == 1 and len(page.ids) == len(set(page.ids)), 'whole-page structure')
+    transfers = {'finance-core-project-t'+str(i) for i in range(1, 7)}
+    require(page.active is None and len(page.points) == 55 and set(page.answers) == set(page.points) | transfers,
+            'complete cumulative prompt and answer pairing')
     from check_finance_core_exam_a import check as a
     from check_finance_core_exam_b import check as b
     from check_finance_core_project import check as project

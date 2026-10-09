@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-09",
+  "status": "Four primary scopes prepared; complete working manuscript exists but remains unaccepted outside reader build",
+  "target": "v12-c01",
+  "sources": [
+    {
+      "proposed_id": "v12-c01-mit-limit-tools",
+      "title": "Anna Mikusheva, MIT 14.381 \u2014 Lecture 2: Limit Theorems (Fall 2018)",
+      "url": "https://ocw.mit.edu/courses/14-381-statistical-method-in-economics-fall-2018/9684a62ef140ffcfb3258bce01b460bc_MIT14_381F18_lec2.pdf",
+      "retrieval": "Actual six-page PDF retrieved and all substantive printed pages 1\u20135 read; pages 4\u20135 also rendered locally and visually inspected. Official course identifies instructor and Fall 2018.",
+      "scope": "Finite-variance LLN, scalar/vector CLT statements, probability versus distribution convergence, stochastic orders, Slutsky and first-order delta reasoning. Original chapter proofs/examples must state their own assumptions.",
+      "source_cautions": "Printed page 4 omits an absolute value in the Op tail definition and omits centering in its sample-mean order example; do not adopt those literal formulas. The source mean-value proof assumes continuous derivative. Use a norm-based stochastic bound and a differentiability remainder proof. General dependence and Lindeberg-Feller extensions are not established by the new chapter merely by citing these notes."
+    },
+    {
+      "proposed_id": "v12-c01-mit-extremum",
+      "title": "Victor Chernozhukov, MIT 14.385 \u2014 Lecture 2: Consistency for Extremum Estimators (Fall 2007)",
+      "url": "https://ocw.mit.edu/courses/14-385-nonlinear-econometric-analysis-fall-2007/065f6c53a14295dcd7e90cf281bf902f_lecture02.pdf",
+      "retrieval": "Actual 23-page PDF retrieved. Read physical pages 10\u201319 covering compact extremum consistency, proof, identification warning, measurability, pointwise/uniform distinction, ULLN and finite-grid idea. Physical pages 10 and 12 rendered and visually inspected.",
+      "scope": "Separation plus uniform criterion convergence as sufficient conditions for consistency. Chapter will independently prove a finite-dimensional compact approximate-minimizer result and a bounded/Lipschitz finite-net ULLN.",
+      "source_cautions": "No claim to reproduce or verify all mixing-process, outer-probability, convexity or nonlinear-choice extensions. State measurability/separability explicitly; pointwise consistency across laws is distinct from uniform-in-parameter criterion convergence."
+    },
+    {
+      "proposed_id": "v12-c01-mit-delta",
+      "title": "Peter Kempthorne, MIT 18.655 \u2014 Lecture 16: Asymptotics, Consistency and Delta Method (Spring 2016)",
+      "url": "https://ocw.mit.edu/courses/18-655-mathematical-statistics-spring-2016/2ca793c6ea6c4a6fece39c0da3440ba2_MIT18_655S16_LecNote16.pdf",
+      "retrieval": "Actual 33-page PDF retrieved; read slides 3\u201311 on consistency/plug-ins and slides 22\u201323 on distributional delta/studentization. Slide 22 rendered and visually inspected.",
+      "scope": "Consistent plug-in functionals, first-order differentiability remainder and studentized mean. Original exact examples will distinguish weak distributional limits from convergence of moments.",
+      "source_cautions": "Do not adopt uncentered shorthand in the sample-mean bound or claim finite-sample coverage from a limit theorem. No source examples, images or numerical problems reproduced."
+    },
+    {
+      "proposed_id": "v12-c01-aldous-chewi-cw",
+      "title": "David Aldous, Probability Theory (Berkeley C205B/C218B, Spring 2017), notes by Sinho Chewi \u2014 Lecture 8, Cram\u00e9r\u2013Wold device",
+      "url": "https://www.stat.berkeley.edu/~aldous/205B/chewi_notes.pdf",
+      "retrieval": "Actual104-page instructor-hosted PDF retrieved. Read title and printed31\u201333 (physical32\u201334): Theorems8.1,8.2,8.4 and Gaussian covariance construction. Printed31/physical32 rendered locally and visually inspected.",
+      "source_bytes": 644028,
+      "source_sha256": "a20ea8ff8e35178e79e351d29ed169729de27507521d93fa9b035ea785431b6f",
+      "scope": "Direct support for the explicitly invoked finite-dimensional Cram\u00e9r\u2013Wold characterization; scalar projections identify a joint limit when a matching vector law exists. The chapter derives its scalar-contrast limits and constructs the Gaussian candidate from a covariance square root.",
+      "source_cautions": "The source reduces the device to a multivariate characteristic-function continuity theorem which is invoked there. This does not amount to a full foundational proof in this chapter. The printed32 tightness display has an n-versus-k sum-index slip; use trace covariance independently. No later Markov/ergodic material read or certified."
+    }
+  ],
+  "design_boundaries": [
+    "All original proofs and examples; accepted Volume 2/3/4 methods supply prior tools. Three worked examples and at least ten fully solved graduate exercises, including proofs and research critique.",
+    "Identify target and observable law before estimator. Give a two-world nonidentification construction, identified-set and model-dependent target distinctions.",
+    "Develop probability/distribution convergence and stochastic orders with quantifiers and exact rare-event counterexamples. Prove compact approximate extremum consistency and one sufficient uniform LLN by finite net.",
+    "Derive asymptotically linear expansion, studentization and multivariate delta with valid covariance. Provide zero-derivative/nonregular counterexample; do not infer moment convergence or universal uniform coverage.",
+    "No extra framework, random-grid artifact or installations. Any reproducible demonstration must be focused and exact or numerically documented, with standard-library code only."
+  ],
+  "limitations": "Source preparation is not a completed chapter; manuscripts, full independent proof/solution checks, separate peer, canonical integration and publishing remain. Locally rendered source PDF pages do not satisfy pending textbook reader UI QA."
+}

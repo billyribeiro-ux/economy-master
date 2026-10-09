@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "case": "Morrow Components and Cedar Reserve",
+  "provenance": "Original synthetic teaching contract; CU amounts, state prices, probabilities, rights, budgets and dates are stipulated, not observed data or legal advice.",
+  "contract": {
+    "currency": "CU",
+    "terminal_cutoffs": ["09:00", "12:00", "16:00"],
+    "parent_opening": {"cash": 10, "receivables": 20, "inventory": 30, "ppe": 60, "payables": 20, "debt": 40, "equity": 60},
+    "parent_period": {"sales": 100, "purchases": 50, "supplier_cash": 55, "cogs": 60, "other_cash_cost": 20, "depreciation": 10, "retained_cash_floor": 10},
+    "project": {"ppe_cost": 30, "inventory_cost": 20, "depreciation": 20, "other_cash_cost": 30, "equipment_sale": 10, "sales": [50, 80, 110], "note_face": 50},
+    "market": {"states": ["down", "normal", "up"], "state_prices": [0.2, 0.3, 0.4], "bill_price": 0.9, "historical_note_quote": 41, "historical_escrow_quote": 4, "historical_credit_quote": 2.4},
+    "reserve": {"client_prefunding": 57.6, "sponsor_cash": 6.4, "client_due": [20, 44], "terminal_capital_floor": 2, "note_fractions": [0.5, 0.75, 1], "hedge_fractions_of_note": [0.5, 1], "note_execution_fee": 0.1, "escrow_custody_fee": 0.4, "es_level": 0.9},
+    "providers": {"client_payer_cash": 60, "sponsor_cash": 10, "note_underwriter_cash": 50, "equity_subscriber_cash": 20, "bill_issuer_cash": 100, "escrow_pool_cash": 20, "credit_pool_cash": 12, "protection_face": 20, "dealer_units_each_claim": 1}
+  },
+  "experiment": {
+    "historical_collections": 90,
+    "down_revenue_loss": 0,
+    "information": "after_trade",
+    "physical_probabilities": [0.05, 0.55, 0.4],
+    "escrow_settlement": "12:00",
+    "escrow_senior_claim": 0
+  }
+}

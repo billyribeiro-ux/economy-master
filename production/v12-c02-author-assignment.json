@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-09",
+  "chapter": "v12-c02",
+  "owner": "bs_author",
+  "state": "authorized working chapter outside reader build; acceptance waits for c01",
+  "owned_paths": [
+    "production/v12-c02-working.html",
+    "production/check_v12_c02_working.py",
+    "production/v12-c02-sources-working.json",
+    "production/v12-c02-author-review-working.json"
+  ],
+  "read_inputs": [
+    "content/curriculum.json",
+    "production/v12-c01-working.html",
+    "production/v12-c01-author-assignment.json",
+    "production/v12-c02-source-preparation.json"
+  ],
+  "scope": "Complete graduate Linear models and robust inference: population/sample projections, OLS, known-covariance GLS, heteroskedasticity, independent clusters, serial correlation and finite-sample concerns. At least four substantive original worked examples and twelve complete solved exercises, proofs/derivations and research critique; teach-back, delayed check, precise limitations.",
+  "proof_decisions": {
+    "inherited": "C01 norm order algebra, iid finite-second-moment score CLT via scalar contrasts/Cramer-Wold, LLN, compact approximate-minimizer consistency and delta/studentization. No dependent or high-dimensional theorem inherited. C01 is working, so acceptance must wait for its review.",
+    "OLS_GLS": "Give exact fixed-design unbiasedness/covariance under declared full rank, conditional mean zero and positive-definite covariance. Derive whitening and positive-semidefinite efficiency difference, with a concrete misspecified covariance counterexample. Separate projection estimand from structural/causal interpretation.",
+    "HC": "Use fixed-dimensional iid sampling and explicit moments strong enough for every residual-replacement LLN/Cauchy-Schwarz bound. Show bread/meat and plug-in validity; discuss leverage and why HC corrections are not exact coverage.",
+    "clusters": "Start with iid independent bounded-size clusters and cluster-score LLN/CLT, with correct cluster rather than row normalization. Show a finite cluster dependence example and uncertainty when independent cluster count is small.",
+    "serial": "Choose a deliberately bounded stationary fixed-m-dependent process for a fully justified example. Derive Bartlett PSD by zero-extended sums; distinguish PSD, long-run variance consistency and CLT. If proving a general bounded-m-dependent case, justify blocking/triangular limit and residual/bandwidth bounds explicitly; conservative sufficient rates are acceptable. If invoking a broader theorem, inspect primary proof source and state exact conditions/proof limit. Do not extrapolate fixed bandwidth Bartlett weights to consistency with nonzero lag covariance.",
+    "FGLS": "A finite-dimensional stable working covariance model is acceptable, but demonstrate the actual weighted Gram and score assumptions. Changing weights under mean misspecification may change the projection estimand. No generic assertion that an ever-growing estimated covariance matrix is consistent.",
+    "Gaussian_exact_inference": "Only claim exact t/F where a conditional Gaussian homoskedastic model and independent quadratic-form reasoning are supplied or accurately inherited; otherwise label asymptotic inference."
+  },
+  "implementation": "Static HTML fragment in existing chapter style. Flat reader links; source IDs proposed in source working JSON. Stdlib quiet check() resolves working file from its own path and works normal/-O from cwd=/ in exact four-file tree. Meaningful independent exact arithmetic/finite-state/covariance evidence and key boundary cases, no undirected grids or redundant tests. Author review binds three nonself final payloads and separates proof reading from numerical reproduction. Use current source-preparation bodies, original problems, no full-source claims.",
+  "handoff": "Send a compact mathematical blueprint with original example quantities and proof decisions before extensive prose; root resolves specific mathematical concerns without asking user. After author freeze root reads all, executes gates and assigns separate peer. Root alone finalizes canonical paths, curriculum, catalogue, status, shared code and publishing.",
+  "boundaries": "Only four owned working files. No finance payload changes, canonical/shared/hosting changes, installations, paid services or child agents. Keep drafts out of content/chapters until root publishes finance-core.",
+  "limits": "A complete draft is not accepted or published material; finite illustrative conditions are not universal robust inference."
+}

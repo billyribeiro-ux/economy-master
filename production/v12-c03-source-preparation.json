@@ -1,0 +1,167 @@
+{
+  "chapter": "v12-c03",
+  "title": "Instrumental variables and GMM",
+  "date_checked": "2026-10-09",
+  "owner": "c05_review",
+  "assignment": "production/v12-c03-source-preparation-assignment.json",
+  "status": "Bounded source preparation complete; no chapter manuscript, source-catalogue addition, review acceptance or publication implied.",
+  "owned_path": "production/v12-c03-source-preparation.json",
+  "canonical_fit": {
+    "outcome": "Derive moment-based estimators and evaluate instrument relevance and validity.",
+    "coverage": ["IV", "2SLS", "weak instruments", "exclusion", "GMM", "overidentification", "local effects"],
+    "later_minimum": "Graduate chapter with at least three original worked cases and ten fully solved exercises, including derivation/proof and research critique. This record is preparation only.",
+    "sequence": "Acceptance follows accepted v12-c01 and v12-c02, not merely their current working interfaces. Both remain preliminary at this preparation's inspection."
+  },
+  "prerequisite_reading": {
+    "files_read": [
+      "production/v12-c01-author-assignment.json",
+      "production/v12-c01-working.html",
+      "production/v12-c02-source-preparation.json"
+    ],
+    "c01_interface": "Read the working chapter's identification counterexample, stochastic-order algebra, compact approximate-minimizer consistency, finite-net uniform LLN, differentiability-remainder delta method, asymptotic linearity and studentization. Its inherited probability results are fixed-law iid LLN/CLT; the finite-dimensional vector extension explicitly invokes Cramer-Wold. Its weak-sequence example does not establish uniform inference. These are working proof interfaces, not accepted new prerequisites.",
+    "c02_interface": "Read the complete preparation: fixed-rank OLS/GLS and residual covariance replacement are planned; clustering is bounded to explicitly independent cluster designs. The inspected MIT Lecture4 scope there is page10's dependence/HAC discussion, not its GMM/J/weak-identification sections. Generic dependent-data CLTs, HAC consistency, high-dimensional rates and few-cluster critical values are not inherited proofs.",
+    "safe_reuse": "Use finite-dimensional matrix algebra and positive-definite inverses from Volume2, iid integrable LLN and finite-second-moment CLT from Volume3, and c01 order/consistency arguments only after the coordinator accepts the prerequisite package. Derive the IV/GMM Jacobian, weighting, covariance replacement and test projection explicitly.",
+    "scope_search": "Existing stable records adequately supplied the c01/c02 interface but not the full requested IV/GMM/LATE proof scope. Four targeted primary method documents were therefore retrieved; no broad literature survey or new current institutional claim was needed."
+  },
+  "inspection_protocol": {
+    "substantive_primary_documents": 4,
+    "metadata_route": "Official MIT14.382 Spring2017 lecture listing verified the three lecture titles and instructors; the Stanford GSB author-publication page supplied the fourth PDF link. These metadata pages are not additional method authorities.",
+    "mit_listing_url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/pages/lecture-notes/",
+    "method": "Downloaded public PDFs, recorded exact byte hashes, extracted MIT text with pdftotext -layout, and inspected selected page renderings for equations. The Imbens-Angrist PDF is image-based; its empty text extraction was not treated as reading. All nine pages were rendered and visually read, including the appendix; the last page is references.",
+    "tools": "Existing pdftotext and pdftoppm plus image viewing; no installations. Applied the available PDF skill only for read-only inspection.",
+    "fresh_vs_inherited": "All four body scopes below were actually inspected for this preparation. MIT Lecture4 page10's earlier c02 inspection remains inherited and is not relabeled as a newly proved dependent-data result.",
+    "access_note": "The web PDF fetcher returned403 for the publicly linked Stanford PDF. An ordinary unauthenticated urllib request to that same public URL succeeded. No authentication, cookies or access controls were changed. The downloaded scan was then inspected directly.",
+    "artifact_policy": "Only this JSON is written for the preparation. Source PDFs, extracted text and selected renderings were kept in this agent's temporary directory outside the repository; hashes and inspected scopes are preserved here. No manuscript or tests were created."
+  },
+  "sources": [
+    {
+      "preparation_key": "mit-14-382-2017-l2-iv",
+      "title": "Structural Equations Models and IV, Take1",
+      "authors": ["Victor Chernozhukov", "Ivan Fernandez-Val"],
+      "publication": "MIT OpenCourseWare, 14.382 Econometrics, Spring2017, Lecture2",
+      "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/dbf8d6d02238c7ad02d665d7202b0aff_MIT14_382S17_lec2.pdf",
+      "date_checked": "2026-10-09",
+      "pdf_pages": 14,
+      "bytes": 424458,
+      "sha256": "e880c174534ad604529b933c035feaee052d6c05498dd1ec3ff3020c7792f7b3",
+      "body_scope_read": "PDF/printed pages4–10: reduced-form ratio, sample/population partialling, iid expansion, first-stage diagnostic, candidate-null inversion and moment-based test.",
+      "rendered_pages_read": [8, 10],
+      "use": "Motivate the IV moment denominator and inversion of a test at each candidate coefficient.",
+      "proof_limits": "The partialling equivalence and variance consistency need explicit conditions. No universal F20 safety threshold, empirical instrument validity, finite-sample coverage or uniform triangular-array theorem is adopted.",
+      "transcription_caution": "Page10 visibly omits candidate a in the displayed population-residual sample moment below (3.1), although surrounding definitions and the variance include a. Re-derive it as the sample average of (Ytilde-a Dtilde)Ztilde. Page8's first-stage statistic is the squared coefficient/standard-error ratio."
+    },
+    {
+      "preparation_key": "mit-14-382-2017-l3-gmm",
+      "title": "Structural Equations Models and GMM",
+      "authors": ["Victor Chernozhukov", "Ivan Fernandez-Val"],
+      "publication": "MIT OpenCourseWare, 14.382 Econometrics, Spring2017, Lecture3",
+      "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/f6b8cd36eee8df2b259c979a1fd2673e_MIT14_382S17_lec3.pdf",
+      "date_checked": "2026-10-09",
+      "pdf_pages": 18,
+      "bytes": 412380,
+      "sha256": "3ac400328d35e42a48024c442b59b7df66a325675a07926cda34e26a8c1c2cc0",
+      "body_scope_read": "PDF/printed pages5–13: criterion, rank, weighting and efficiency, fixed-dimensional linear theorem/proof and 2SLS special case. Earlier model setup was read for notation; later system-estimation/application material is not needed.",
+      "rendered_pages_read": [5, 10, 11],
+      "use": "Linear GMM algebra, sandwich covariance and the distinction between 2SLS weighting and efficient weighting under heteroskedasticity.",
+      "proof_limits": "The formal theorem fixes dimensions and population matrices and assumes the relevant LLN/CLT. Counting moments is not identification; nonlinear global uniqueness requires more. Efficiency is within the specified valid-moment estimator class.",
+      "transcription_cautions": [
+        "Page5's positive Jacobian blocks conflict with differentiating its residual moment; page13 correctly gives the negative sign. Page11's signed expansion also has the necessary minus sign. A symmetric normal law does not license dropping that sign in a joint expansion.",
+        "Page10's displayed L=G Omega^-1 has incompatible dimensions under G being m-by-d and transformed moments L' g. Use L=Omega^-1 G, or derive the equivalent properly oriented expression."
+      ]
+    },
+    {
+      "preparation_key": "mit-14-382-2017-l4-nonlinear-j-ar",
+      "title": "Euler Equations, Nonlinear GMM, and Other Adventures",
+      "authors": ["Victor Chernozhukov", "Ivan Fernandez-Val"],
+      "publication": "MIT OpenCourseWare, 14.382 Econometrics, Spring2017, Lecture4",
+      "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/e1aecf6a41da164603168343fcce76bd_MIT14_382S17_lec4.pdf",
+      "date_checked": "2026-10-09",
+      "pdf_pages": 23,
+      "bytes": 517698,
+      "sha256": "67de66174ca8144a2dbe90b83242750e6c074ca3def85fefec85dc06b6b620f8",
+      "body_scope_read": "PDF/printed pages6–9,11–14 and the page20 J-proof hint: ConditionG, nonlinear consistency/linearization, J statistic, global versus local rank and candidate-moment inversion. Page14's empirical section was incidental, not adopted.",
+      "rendered_pages_read": [6, 7, 12, 13, 14],
+      "use": "State regularity requirements and separate an optimized overidentification test from an unoptimized candidate-null test.",
+      "proof_limits": "J's proof is assigned as an exercise; the chapter must supply its whitening/projection argument. Candidate-null CLT and covariance consistency are assumptions, not consequences of weak relevance. Pointwise conditions do not prove uniform coverage over drifting laws or simultaneous coverage of an entire identified set. CUE equivalence is stated without proof and is not a chapter result.",
+      "transcription_caution": "Keep the signed minus from the page11 linearization when combining residual and estimator limits. The symmetric marginal normal display has the same variance but is not the signed influence identity. Finite-grid inversion is only an approximation to the full set."
+    },
+    {
+      "preparation_key": "imbens-angrist-1994-late",
+      "title": "Identification and Estimation of Local Average Treatment Effects",
+      "authors": ["Guido W. Imbens", "Joshua D. Angrist"],
+      "publication": "Econometrica62(2), March1994, pages467–475",
+      "author_metadata_url": "https://www.gsb.stanford.edu/faculty-research/publications/identification-estimation-local-average-treatment-effects",
+      "url": "https://www.gsb.stanford.edu/sites/default/files/publication/pdfs/article-1994-mar-identification-estimation-local-average-treatment-effects.pdf",
+      "date_checked": "2026-10-09",
+      "pdf_pages": 9,
+      "bytes": 803740,
+      "sha256": "24512532d490a8ef400e30f33379cfbc15ab0291fbbd55d859215744d8d89992",
+      "body_scope_read": "Rendered PDF pages1–9, printed467–475. Main method scope: Conditions1–3, signed response decomposition, Theorem1 and proof, Theorems2–3 and appendix proofs; references inspected as bibliography only.",
+      "rendered_pages_read": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "use": "Binary encouragement LATE and a transparent monotonicity/exclusion failure exercise; distinguish the affected subgroup from the population average.",
+      "proof_limits": "Use a separately stated binary potential-outcome contract with assignment independence, exclusion, consistency, positivity, integrability and positive complier mass. No automatic ATE, treatment-on-treated, multivalued-instrument weighting or transportability claim. The appendix's estimated-instrument covariance warns against ignoring first-stage nuisance estimation.",
+      "scope_caution": "Random assignment of an encouragement does not itself exclude its direct outcome effect. Administrative-selection and historical application examples were read but are neither reproduced nor claimed to establish validity in a new case."
+    }
+  ],
+  "proposed_original_proof_design": [
+    {
+      "topic": "Moment validity and rank before estimation",
+      "plan": "Define y=x'beta+u, z in R^m and B=E[zx'] with k coefficients. Distinguish E[zu]=0 from rank(B)=k and from an economically defended exclusion restriction. Derive the sample projection formula for 2SLS under stated sample ranks; include every included exogenous regressor in the instrument span. Explain that a fitted first stage is a projection, not proof of a causal channel.",
+      "boundary": "No IV-moment point identification when rank fails; extra distributional or structural restrictions might identify a different model, so do not claim that a zero first stage makes every conceivable model unidentified."
+    },
+    {
+      "topic": "Fixed-dimensional iid linear GMM and feasible covariance",
+      "plan": "Write g_n(beta)=a_n-B_n beta and derive exactly beta_hat-beta0=(B_n'W_n B_n)^-1 B_n'W_n g_n(beta0). Assume W_n tends to positive-definite W, B has full column rank, E||zx'|| is finite and E||zu||^2 is finite. LLN, the score CLT and inverse continuity then give consistency and the sandwich limit. With G=-B the influence multiplier is -(G'WG)^-1G'W. For residual covariance replacement add E||zx'||^2<infinity: the average squared fitted-score difference is bounded by ||beta_hat-beta0||^2 times the sample average of ||zx'||^2. Cauchy-Schwarz controls cross terms.",
+      "boundary": "Use structural residuals y-X beta_hat for covariance, not y-Xhat beta_hat. State sample singularity and nonpositive covariance handling; do not silently regularize and claim the same estimator."
+    },
+    {
+      "topic": "Efficient weighting and overidentification",
+      "plan": "For Omega positive definite, define K_W=(B'WB)^-1B'W and K_*=(B'Omega^-1B)^-1B'Omega^-1. Prove K_W B=K_* B=I, the covariance cross term vanishes, and V_W-V_*=(K_W-K_*)Omega(K_W-K_*)' is positive semidefinite. Then whiten the fitted moment with H=Omega^-1/2 B: its limit is [I-H(H'H)^-1H']N. An orthogonal diagonalization gives chi-square m-k for the optimally weighted J statistic, with consistent feasible weighting and strong rank explicitly imposed.",
+      "boundary": "Exactly identified moments provide no positive-degree overidentification test. Nonrejection cannot verify a structural exclusion: construct E[zu]=B delta, so all moments fit beta0+delta while missing the intended structural coefficient. Rejection does not isolate which instrument or model condition failed."
+    },
+    {
+      "topic": "A bounded nonlinear GMM theorem",
+      "plan": "Use a compact parameter space, a unique population zero, continuous moments, a measurable exact minimizer, W_n tending to a fixed positive-definite W, and c01's uniform-LLN conditions. Specify an interior true parameter and uniform Jacobian convergence on a neighborhood, a continuous full-rank population derivative, and an iid score CLT. Prove criterion uniform convergence and consistency first, then use the integrated Jacobian and the first-order condition to derive the signed root-n expansion. Provide an original scalar counterexample separating global uniqueness from derivative rank.",
+      "boundary": "A mere o_P(1) objective error gives the stated consistency result, not automatically the same root-n expansion. Approximate solvers need an explicit tighter optimization/gradient condition. No CUE, dependent-process, many-instrument or nonsmooth theorem is smuggled into this result."
+    },
+    {
+      "topic": "Weak relevance and exact candidate-null inversion",
+      "plan": "Use deterministic Z with Z'Z=n in a one-instrument triangular model x=Z pi_n+v, y=beta x+u, with jointly Gaussian iid disturbances, positive-definite disturbance covariance and an explicitly allowed u-v correlation. Derive beta_hat-beta=U/(sqrt(n)pi_n+V). Taking pi_n=c/sqrt(n) leaves a nonshrinking ratio, while every nonzero fixed pi belongs to a different pointwise asymptotic argument. For a clean exact test use known structural-error variance sigma^2 and a full-rank fixed instrument matrix: at beta=b, (y-bx)'P_Z(y-bx)/sigma^2 is chi-square rank(Z), independent of first-stage strength. Prove this from an orthonormal projection and invert the actual inequality.",
+      "boundary": "Known-variance projected inversion has a nonnegative quadratic coefficient and yields an interval, a degenerate interval, all real numbers or the empty set; it cannot produce two disjoint rays. Such other shapes require a different, candidate-dependent variance statistic whose assumptions and inequality must be derived separately. A finite search grid does not certify the full confidence set. Simulation may illustrate a theorem, not prove uniform coverage."
+    },
+    {
+      "topic": "Binary LATE with causal assumptions kept separate",
+      "plan": "Introduce potential D(0),D(1),Y(0),Y(1), observed consistency and no interference, binary instrument positivity, independence of assignment from joint potentials, exclusion of direct instrument effects, finite moments and D(1)>=D(0) with positive complier probability. Decompose the two conditional outcome means by compliance type and prove the Wald ratio equals the complier average effect. An original finite law will give LATE different from ATE; an altered defier or direct-effect law will show exactly which equality fails.",
+      "boundary": "The constant-coefficient IV structural model and heterogeneous LATE model are distinct contracts. Do not label every 2SLS coefficient an ATE, infer individual monotonicity from an average first stage, or export the local effect to a new population without further evidence."
+    }
+  ],
+  "bounded_original_chapter_architecture": {
+    "worked_case_candidates": [
+      "A small overidentified linear moment system: compute 2SLS and covariance-weighted GMM, audit structural residuals, and distinguish a genuine rank loss from invalid moment selection.",
+      "A Gaussian fixed-instrument weak-sequence case: derive the random ratio and solve the full known-variance candidate-null acceptance quadratic, including a boundary with no informative finite interval.",
+      "A finite randomized encouragement with heterogeneous compliance: compute complier effect, population effect and the signed change under a stipulated violation."
+    ],
+    "exercise_coverage_to_author_later": [
+      "One-instrument ratio and reduced-form derivation with an explicit zero-denominator boundary.",
+      "Projection derivation of 2SLS with included controls and full-rank conditions.",
+      "A rank counterexample despite more moments than coefficients.",
+      "Fixed-dimensional linear-GMM consistency and signed influence proof.",
+      "Residual covariance replacement and an incorrect second-stage residual diagnosis.",
+      "Efficient-weight covariance-difference proof and a heteroskedastic numerical comparison.",
+      "Whitened-projection J proof and an aligned invalid-moment counterexample.",
+      "Weak-sequence calculation versus a fixed-law normal approximation.",
+      "Exact candidate-null inversion, including the proper set-shape and domain boundaries.",
+      "Binary LATE derivation and a finite defier/exclusion sensitivity.",
+      "A research critique separating assignment, exclusion, relevance, estimand and external validity; accept justified alternative designs under an explicit rubric."
+    ],
+    "future_lab": "A small standard-library fixed-dimensional laboratory can use transparent elimination/solves, explicit rank and covariance domains, exact finite compliance expectations, and analytical scalar quadratic-set inversion. Its independent checker should reconstruct original contracts and meaningful rank, exclusion, covariance and weak-boundary interventions; no saved-output-only oracle or unbounded fuzzing. Later author assignment will determine exact owned paths and all portability, alias-protection and normal/-O gates.",
+    "teaching_and_retention": "Require an answered teach-back that explains why relevance, validity and the target population are different, plus a delayed rank/weak-inference/causal-scope transfer. No learner performance or timing evidence exists yet."
+  },
+  "unresolved_limits": [
+    "This is an inspected source and proof-design record, not a completed chapter or proof audit of future prose.",
+    "The working c01 and c02 interfaces must be reconciled with their final accepted texts before authoring/acceptance; no dependency gate is bypassed.",
+    "The four sources suffice for the bounded fixed-dimensional iid and binary-LATE design. Generic dependent GMM, uniform weak-identification inference, many instruments, conditional-likelihood methods, CUE proofs and general multivalued-treatment effects are outside this preparation.",
+    "Source equations are not copied unquestioningly: the rendered transcription cautions are recorded above, and the chapter must independently derive its own signed and dimensionally conformable formulas.",
+    "No new tests, empirical data analysis, classroom timing, current legal statement or independent human certification is claimed."
+  ]
+}

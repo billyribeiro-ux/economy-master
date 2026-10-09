@@ -1,0 +1,99 @@
+{
+  "chapter": "v12-c02",
+  "title": "Linear models and robust inference",
+  "date_checked": "2026-10-09",
+  "owner": "bs_author",
+  "assignment": "production/v12-c02-source-preparation-assignment.json",
+  "state": "bounded primary-source preparation complete; chapter remains planned",
+  "scope": "Three primary instructor/author PDFs, selected passages only. No manuscript, code, catalogue entry or chapter acceptance is supplied.",
+  "inspection_method": {
+    "discovery": "Official MIT OpenCourseWare and the author's UC Davis research page; third-party search results were not used as substantive evidence.",
+    "body_access": "All three selected PDFs downloaded successfully from the listed primary URLs. Web extraction and local pdftotext were used for scoped reading.",
+    "equation_review": "Nine selected pages were rendered with existing pdftoppm and actually viewed as images. Web screenshot calls exposed only text references here and are not counted as visual inspections.",
+    "page_convention": "PDF pages below are one-based. Printed page numbers are separately recorded where different.",
+    "temporary_files": "PDFs, extracted text and page images were read-only intermediates outside the repository and removed after inspection. Their source-byte hashes are retained below.",
+    "source_reuse": "No adequate previously accepted V04 robust-inference body scope was located in the targeted local search. These are fresh scoped inspections, not inherited whole-document claims."
+  },
+  "sources": [
+    {
+      "suggested_id": "v12-c02-mit-linear2017",
+      "authors": "Victor Chernozhukov and Ivan Fernandez-Val",
+      "title": "14.382 Spring 2017 Lecture 1: Least Squares, Adaptive Partialling Out, Simultaneous Inference",
+      "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/c62d33e015c910b0d126bcc9344cf2c5_MIT14_382S17_lec1.pdf",
+      "official_listing": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/pages/lecture-notes/",
+      "source_date": "Spring 2017 course materials",
+      "pdf_pages": 19,
+      "bytes": 450851,
+      "sha256": "1f41b11c5dd0e83eb5b27231cda6ca0dfb0de933b7a12e9549a94986020afa3a",
+      "text_inspected": "Printed/PDF pp.2-6: Sections 2-4, through equation (4.4).",
+      "visually_inspected_pdf_pages": [2, 4, 6],
+      "supports": "Population linear projection, orthogonality and rank; sample normal equations; population/sample partial regression; predictive versus causal interpretation; score-based sandwich representation.",
+      "limits": "Growing-dimension asymptotics are stated with unspecified regularity and without the full proof. They cannot certify the chapter's theorem assumptions.",
+      "transcription_cautions": "The p.4 argmin displays omit a square; derive the squared-loss objective independently. The p.3 randomization sentence says independence from X although X includes D: use a properly stated potential-outcome/baseline-covariate condition, not that literal sentence. No source empirical example or exercise will be reused."
+    },
+    {
+      "suggested_id": "v12-c02-cameron-miller2015",
+      "authors": "A. Colin Cameron and Douglas L. Miller",
+      "title": "A Practitioner's Guide to Cluster-Robust Inference",
+      "url": "https://cameron.econ.ucdavis.edu/research/Cameron_Miller_JHR_2015.pdf",
+      "source_date": "2015, Journal of Human Resources 50(2), 317-372 in this 56-page author-hosted PDF",
+      "pdf_pages": 56,
+      "bytes": 711978,
+      "sha256": "bef4a50190bcc37677e49f5a4384b291c083b28d0d6a27665a79f70e2cf99526",
+      "text_inspected": "II.A printed p.320; II.C-D pp.323-325, equations (7)-(16); VI opening and VI.A pp.340-341.",
+      "visually_inspected_pdf_pages": [7, 8, 9, 24, 25],
+      "supports": "Conditional covariance and cluster-score sandwich; averaging over independent clusters; known-covariance GLS versus estimated weighting; covariance-model-dependent efficiency; robust inference with a working covariance; few-cluster bias and critical-value limitations.",
+      "limits": "No universal adequate cluster count or exact general t(G-1) result follows. Current software behavior, multiway methods and bootstrap refinements were not audited.",
+      "equation_check": "Rendered pp.324-325 confirm that the correction c multiplies the covariance, equivalently residuals are scaled by sqrt(c); text extraction dropped the square root. FGLS residuals and both weighting factors in equation (15) were checked visually."
+    },
+    {
+      "suggested_id": "v12-c02-mit-hac2017",
+      "authors": "Victor Chernozhukov and Ivan Fernandez-Val",
+      "title": "14.382 Spring 2017 Lecture 4: Euler Equations, Nonlinear GMM, and Other Adventures",
+      "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/e1aecf6a41da164603168343fcce76bd_MIT14_382S17_lec4.pdf",
+      "source_date": "Spring 2017 course materials",
+      "pdf_pages": 23,
+      "bytes": 517698,
+      "sha256": "67de66174ca8144a2dbe90b83242750e6c074ca3def85fefec85dc06b6b620f8",
+      "text_inspected": "Printed/PDF p.10, Lemma 2 and the immediately following long-run covariance and Newey-West estimator; reference [14] on p.22.",
+      "visually_inspected_pdf_pages": [10],
+      "supports": "Long-run covariance as the sum of score autocovariances; Bartlett weights 1-lag/(L+1), common denominator n and symmetric lag terms; explicit dependence and moment assumptions for a stated CLT.",
+      "limits": "The mixing CLT is invoked, not proved there. The page asserts positive semidefiniteness but supplies neither its proof nor bandwidth conditions proving HAC consistency. General GMM results elsewhere in the PDF are outside this inspection and this preparation scope."
+    }
+  ],
+  "unavailable_lead": {
+    "title": "Newey and West, A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix",
+    "landing_url": "https://www.nber.org/papers/t0055",
+    "attempted_pdf_urls": [
+      "https://www.nber.org/system/files/working_papers/t0055/t0055.pdf",
+      "https://www.nber.org/papers/t0055.pdf"
+    ],
+    "observed": "Web retrieval failed; the papers/t0055.pdf response reported HTTP 403. The body was not inspected and access was not bypassed.",
+    "use": "Discovery lead only. The accessible MIT p.10 is the inspected HAC-method scope; it does not substitute for verification of the original consistency theorem."
+  },
+  "proposed_chapter_design": [
+    "Begin with an original finite distribution where the best linear predictor exists but has no stipulated causal interpretation; derive the population objective and sample projection separately.",
+    "Use a small full-rank fixed design with declared positive-definite covariance to derive OLS covariance, whitening and the GLS efficiency comparison. Then perturb the working covariance while retaining the true covariance for an independent variance calculation.",
+    "Develop the IID fixed-dimension sandwich before aggregating observations into independent bounded-size clusters. Compare individual score squares with squared cluster score sums in one original example.",
+    "Use a small explicit serial-dependence process to distinguish score autocorrelation from heteroskedasticity. Derive Bartlett positive semidefiniteness from zero-extended moving sums, and label lag choice and finite-sample sensitivity.",
+    "Make finite-sample concerns substantive: rank deficiency, leverage, too few independent clusters, nonpositive estimated variances under an inappropriate truncation, and the difference between changing an estimator and changing its standard error.",
+    "Reserve at least three worked cases and ten fully solved exercises, including full-rank/GLS and sandwich proofs, one dependence transfer, and a critique of causal or exact-inference overclaiming. Numerical source examples are not a problem bank."
+  ],
+  "proof_contract_to_resolve_before_authoring": [
+    "Confirm what v12-c01 proves about vector LLN/CLT, continuous mapping, Slutsky, stochastic orders and matrix inversion. No growing-dimension or dependent-data theorem should be inherited by implication.",
+    "For exact fixed-design OLS/GLS results require full column rank, conditional mean zero and known positive-definite covariance; show the covariance difference is positive semidefinite. Exact Gaussian t/F inference requires its own distributional derivation.",
+    "For IID HC consistency give explicit fixed-dimension moment and nonsingular population-Gram assumptions and bound the residual-replacement error. HC1/HC2/HC3 finite-sample adjustments are not automatically exact inference.",
+    "For estimated weights, specify a finite-dimensional covariance model and a stable weighted-Gram/score limit. Consistency of an ever-growing estimated covariance array is not a complete FGLS proof condition.",
+    "For clustering, start with independent identically distributed bounded-size clusters and prove the cluster-level LLN/CLT route. Growing, unbalanced or dominant clusters require additional hypotheses; a large observation count alone is insufficient.",
+    "For HAC, either prove a deliberately bounded dependence case, including the needed CLT and residual/bandwidth errors, or label a precisely stated general theorem as invoked after retrieving its proof source. Positive semidefiniteness alone proves neither consistency nor coverage.",
+    "Keep inference and identification separate. A changed weighting rule can change a projection estimand under mean misspecification; robust standard errors do not supply exogeneity or causal identification."
+  ],
+  "handoff": {
+    "only_repository_file_written": "production/v12-c02-source-preparation.json",
+    "new_manuscripts_or_labs": 0,
+    "new_catalogue_entries": 0,
+    "source_acceptance": "Proposed scoped evidence only; root must decide final chapter/source integration.",
+    "priority": "Finance-core project peer takes priority immediately on activation.",
+    "limits": "No whole-document or complete modern-literature claim, no legal/current-market claim, and no chapter acceptance."
+  }
+}

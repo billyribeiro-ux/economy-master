@@ -1,0 +1,1116 @@
+{
+  "schema": 1,
+  "project": "finance-core",
+  "information": "after_trade",
+  "parent": {
+    "income": 10,
+    "direct_cfo": 15,
+    "indirect_cfo": 15,
+    "closing": {
+      "cash": 25,
+      "receivables": 30,
+      "inventory": 20,
+      "ppe": 50,
+      "payables": 15,
+      "debt": 40,
+      "equity": 70
+    },
+    "assets": 125,
+    "liabilities_and_equity": 125,
+    "cash_after_paying_all_ap": 10,
+    "operating_reserve_gap": 0,
+    "parent_gate": true
+  },
+  "project_claims": {
+    "sales_cash": [
+      50,
+      80,
+      110
+    ],
+    "operating_income": [
+      -20,
+      10,
+      40
+    ],
+    "estate": [
+      30,
+      60,
+      90
+    ],
+    "note_paid": [
+      30,
+      50,
+      50
+    ],
+    "note_unpaid_nominal": [
+      20,
+      0,
+      0
+    ],
+    "equity_paid": [
+      0,
+      10,
+      40
+    ],
+    "current_asset_pv": 60,
+    "current_note_pv": 41,
+    "equity_pv": 19,
+    "current_unfunded_opportunity_npv": 10,
+    "entry_note_proceeds": 41,
+    "new_equity_cash": 9,
+    "new_equity_share": 0.47368421052631576,
+    "parent_equity_share": 0.5263157894736842,
+    "entry_note_discount": 9,
+    "pre_resolution_book_equity": [
+      -20,
+      10,
+      40
+    ],
+    "protection_current_pvs": {
+      "escrow": 4,
+      "credit": 2.4
+    }
+  },
+  "physical_probabilities": [
+    0.05,
+    0.55,
+    0.4
+  ],
+  "state_prices": [
+    0.2,
+    0.3,
+    0.4
+  ],
+  "opening_reserve_cash": 64,
+  "client_full_performance_pv": 57.6,
+  "full_performance_pv_scope": "Performing supported policies only; not a fair-value statement for rejected portfolios.",
+  "cash_only_terminal_benchmark": 7.111111111111111,
+  "policies": [
+    {
+      "id": "1/2-none-0",
+      "note_fraction": 0.5,
+      "kind": "none",
+      "hedge_fraction": 0,
+      "entry_fees": 0.05,
+      "bill_purchase": 43.45,
+      "cash_after09": 28.27777777777778,
+      "net_capital_by_state": [
+        -0.7222222222222222,
+        9.277777777777779,
+        9.277777777777779
+      ],
+      "missed_at_deadline_by_state": [
+        0.7222222222222222,
+        0,
+        0
+      ],
+      "client_unpaid_by_state": [
+        0.7222222222222222,
+        0,
+        0
+      ],
+      "physical_mean_capital": 8.777777777777779,
+      "timely": false,
+      "capital_floor_met": false,
+      "eligible": false,
+      "risk": {
+        "mean_loss": -1.6666666666666667,
+        "var": -2.1666666666666665,
+        "es": 2.8333333333333335,
+        "loss_by_state": [
+          7.833333333333333,
+          -2.1666666666666665,
+          -2.1666666666666665
+        ]
+      }
+    },
+    {
+      "id": "1/2-credit-1/4",
+      "note_fraction": 0.5,
+      "kind": "credit",
+      "hedge_fraction": 0.25,
+      "entry_fees": 0.05,
+      "bill_purchase": 42.85,
+      "cash_after09": 27.61111111111111,
+      "net_capital_by_state": [
+        1.6111111111111112,
+        8.61111111111111,
+        8.61111111111111
+      ],
+      "missed_at_deadline_by_state": [
+        1.3888888888888888,
+        0,
+        0
+      ],
+      "client_unpaid_by_state": [
+        0,
+        0,
+        0
+      ],
+      "physical_mean_capital": 8.261111111111111,
+      "timely": false,
+      "capital_floor_met": false,
+      "eligible": false,
+      "risk": {
+        "mean_loss": -1.15,
+        "var": -1.5,
+        "es": 2,
+        "loss_by_state": [
+          5.5,
+          -1.5,
+          -1.5
+        ]
+      }
+    },
+    {
+      "id": "1/2-credit-1/2",
+      "note_fraction": 0.5,
+      "kind": "credit",
+      "hedge_fraction": 0.5,
+      "entry_fees": 0.05,
+      "bill_purchase": 42.25,
+      "cash_after09": 26.944444444444443,
+      "net_capital_by_state": [
+        3.9444444444444446,
+        7.944444444444445,
+        7.944444444444445
+      ],
+      "missed_at_deadline_by_state": [
+        2.0555555555555554,
+        0,
+        0
+      ],
+      "client_unpaid_by_state": [
+        0,
+        0,
+        0
+      ],
+      "physical_mean_capital": 7.7444444444444445,
+      "timely": false,
+      "capital_floor_met": true,
+      "eligible": false,
+      "risk": {
+        "mean_loss": -0.6333333333333333,
+        "var": -0.8333333333333334,
+        "es": 1.1666666666666667,
+        "loss_by_state": [
+          3.1666666666666665,
+          -0.8333333333333334,
+          -0.8333333333333334
+        ]
+      }
+    },
+    {
+      "id": "1/2-escrow-1/4",
+      "note_fraction": 0.5,
+      "kind": "escrow",
+      "hedge_fraction": 0.25,
+      "entry_fees": 0.15,
+      "bill_purchase": 42.35,
+      "cash_after09": 27.055555555555557,
+      "net_capital_by_state": [
+        3.0555555555555554,
+        8.055555555555555,
+        8.055555555555555
+      ],
+      "missed_at_deadline_by_state": [
+        0,
+        0,
+        0
+      ],
+      "client_unpaid_by_state": [
+        0,
+        0,
+        0
+      ],
+      "physical_mean_capital": 7.805555555555555,
+      "timely": true,
+      "capital_floor_met": true,
+      "eligible": true,
+      "risk": {
+        "mean_loss": -0.6944444444444444,
+        "var": -0.9444444444444444,
+        "es": 1.5555555555555556,
+        "loss_by_state": [
+          4.055555555555555,
+          -0.9444444444444444,
+          -0.9444444444444444
+        ]
+      }
+    },
+    {
+      "id": "1/2-escrow-1/2",
+      "note_fraction": 0.5,
+      "kind": "escrow",
+      "hedge_fraction": 0.5,
+      "entry_fees": 0.25,
+      "bill_purchase": 41.25,
+      "cash_after09": 25.833333333333332,
+      "net_capital_by_state": [
+        6.833333333333333,
+        6.833333333333333,
+        6.833333333333333
+      ],
+      "missed_at_deadline_by_state": [
+        0,
+        0,
+        0
+      ],
+      "client_unpaid_by_state": [
+        0,
+        0,
+        0
+      ],
+      "physical_mean_capital": 6.833333333333333,
+      "timely": true,
+      "capital_floor_met": true,
+      "eligible": true,
+      "risk": {
+        "mean_loss": 0.2777777777777778,
+        "var": 0.2777777777777778,
+        "es": 0.2777777777777778,
+        "loss_by_state": [
+          0.2777777777777778,
+          0.2777777777777778,
+          0.2777777777777778
+        ]
+      }
+    },
+    {
+      "id": "3/4-none-0",
+      "note_fraction": 0.75,
+      "kind": "none",
+      "hedge_fraction": 0,
+      "entry_fees": 0.075,
+      "bill_purchase": 33.175,
+      "cash_after09": 16.86111111111111,
+      "net_capital_by_state": [
+        -4.638888888888889,
+        10.36111111111111,
+        10.36111111111111
+      ],
+      "missed_at_deadline_by_state": [
+        4.638888888888889,
+        0,
+        0
+      ],
+      "client_unpaid_by_state": [
+        4.638888888888889,
+        0,
+        0
+      ],
+      "physical_mean_capital": 9.61111111111111,
+      "timely": false,
+      "capital_floor_met": false,
+      "eligible": false,
+      "risk": {
+        "mean_loss": -2.5,
+        "var": -3.25,
+        "es": 4.25,
+        "loss_by_state": [
+          11.75,
+          -3.25,
+          -3.25
+        ]
+      }
+    },
+    {
+      "id": "3/4-credit-3/8",
+      "note_fraction": 0.75,
+      "kind": "credit",
+      "hedge_fraction": 0.375,
+      "entry_fees": 0.075,
+      "bill_purchase": 32.275,
+      "cash_after09": 15.86111111111111,
+      "net_capital_by_state": [
+        -1.1388888888888888,
+        9.36111111111111,
+        9.36111111111111
+      ],
+      "missed_at_deadline_by_state": [
+        5.638888888888889,
+        0,
+        0
+      ],
+      "client_unpaid_by_state": [
+        1.1388888888888888,
+        0,
+        0
+      ],
+      "physical_mean_capital": 8.83611111111111,
+      "timely": false,
+      "capital_floor_met": false,
+      "eligible": false,
+      "risk": {
+        "mean_loss": -1.725,
+        "var": -2.25,
+        "es": 3,
+        "loss_by_state": [
+          8.25,
+          -2.25,
+          -2.25
+        ]
+      }
+    },
+    {
+      "id": "3/4-credit-3/4",
+      "note_fraction": 0.75,
+      "kind": "credit",
+      "hedge_fraction": 0.75,
+      "entry_fees": 0.075,
+      "bill_purchase": 31.375,
+      "cash_after09": 14.86111111111111,
+      "net_capital_by_state": [
+        2.361111111111111,
+        8.36111111111111,
+        8.36111111111111
+      ],
+      "missed_at_deadline_by_state": [
+        6.638888888888889,
+        0,
+        0
+      ],
+      "client_unpaid_by_state": [
+        0,
+        0,
+        0
+      ],
+      "physical_mean_capital": 8.061111111111112,
+      "timely": false,
+      "capital_floor_met": true,
+      "eligible": false,
+      "risk": {
+        "mean_loss": -0.95,
+        "var": -1.25,
+        "es": 1.75,
+        "loss_by_state": [
+          4.75,
+          -1.25,
+          -1.25
+        ]
+      }
+    },
+    {
+      "id": "3/4-escrow-3/8",
+      "note_fraction": 0.75,
+      "kind": "escrow",
+      "hedge_fraction": 0.375,
+      "entry_fees": 0.225,
+      "bill_purchase": 31.525,
+      "cash_after09": 15.027777777777779,
+      "net_capital_by_state": [
+        1.0277777777777777,
+        8.527777777777779,
+        8.527777777777779
+      ],
+      "missed_at_deadline_by_state": [
+        0,
+        0,
+        0
+      ],
+      "client_unpaid_by_state": [
+        0,
+        0,
+        0
+      ],
+      "physical_mean_capital": 8.152777777777779,
+      "timely": true,
+      "capital_floor_met": false,
+      "eligible": false,
+      "risk": {
+        "mean_loss": -1.0416666666666667,
+        "var": -1.4166666666666667,
+        "es": 2.3333333333333335,
+        "loss_by_state": [
+          6.083333333333333,
+          -1.4166666666666667,
+          -1.4166666666666667
+        ]
+      }
+    },
+    {
+      "id": "3/4-escrow-3/4",
+      "note_fraction": 0.75,
+      "kind": "escrow",
+      "hedge_fraction": 0.75,
+      "entry_fees": 0.375,
+      "bill_purchase": 29.875,
+      "cash_after09": 13.194444444444445,
+      "net_capital_by_state": [
+        6.694444444444445,
+        6.694444444444445,
+        6.694444444444445
+      ],
+      "missed_at_deadline_by_state": [
+        0,
+        0,
+        0
+      ],
+      "client_unpaid_by_state": [
+        0,
+        0,
+        0
+      ],
+      "physical_mean_capital": 6.694444444444445,
+      "timely": true,
+      "capital_floor_met": true,
+      "eligible": true,
+      "risk": {
+        "mean_loss": 0.4166666666666667,
+        "var": 0.4166666666666667,
+        "es": 0.4166666666666667,
+        "loss_by_state": [
+          0.4166666666666667,
+          0.4166666666666667,
+          0.4166666666666667
+        ]
+      }
+    },
+    {
+      "id": "1-none-0",
+      "note_fraction": 1,
+      "kind": "none",
+      "hedge_fraction": 0,
+      "entry_fees": 0.1,
+      "bill_purchase": 22.9,
+      "cash_after09": 5.444444444444445,
+      "net_capital_by_state": [
+        -8.555555555555555,
+        11.444444444444445,
+        11.444444444444445
+      ],
+      "missed_at_deadline_by_state": [
+        8.555555555555555,
+        0,
+        0
+      ],
+      "client_unpaid_by_state": [
+        8.555555555555555,
+        0,
+        0
+      ],
+      "physical_mean_capital": 10.444444444444445,
+      "timely": false,
+      "capital_floor_met": false,
+      "eligible": false,
+      "risk": {
+        "mean_loss": -3.3333333333333335,
+        "var": -4.333333333333333,
+        "es": 5.666666666666667,
+        "loss_by_state": [
+          15.666666666666666,
+          -4.333333333333333,
+          -4.333333333333333
+        ]
+      }
+    },
+    {
+      "id": "1-credit-1/2",
+      "note_fraction": 1,
+      "kind": "credit",
+      "hedge_fraction": 0.5,
+      "entry_fees": 0.1,
+      "bill_purchase": 21.7,
+      "cash_after09": 4.111111111111111,
+      "net_capital_by_state": [
+        -3.888888888888889,
+        10.11111111111111,
+        10.11111111111111
+      ],
+      "missed_at_deadline_by_state": [
+        9.88888888888889,
+        0,
+        0
+      ],
+      "client_unpaid_by_state": [
+        3.888888888888889,
+        0,
+        0
+      ],
+      "physical_mean_capital": 9.411111111111111,
+      "timely": false,
+      "capital_floor_met": false,
+      "eligible": false,
+      "risk": {
+        "mean_loss": -2.3,
+        "var": -3,
+        "es": 4,
+        "loss_by_state": [
+          11,
+          -3,
+          -3
+        ]
+      }
+    },
+    {
+      "id": "1-credit-1",
+      "note_fraction": 1,
+      "kind": "credit",
+      "hedge_fraction": 1,
+      "entry_fees": 0.1,
+      "bill_purchase": 20.5,
+      "cash_after09": 2.7777777777777777,
+      "net_capital_by_state": [
+        0.7777777777777778,
+        8.777777777777779,
+        8.777777777777779
+      ],
+      "missed_at_deadline_by_state": [
+        11.222222222222221,
+        0,
+        0
+      ],
+      "client_unpaid_by_state": [
+        0,
+        0,
+        0
+      ],
+      "physical_mean_capital": 8.377777777777778,
+      "timely": false,
+      "capital_floor_met": false,
+      "eligible": false,
+      "risk": {
+        "mean_loss": -1.2666666666666666,
+        "var": -1.6666666666666667,
+        "es": 2.3333333333333335,
+        "loss_by_state": [
+          6.333333333333333,
+          -1.6666666666666667,
+          -1.6666666666666667
+        ]
+      }
+    },
+    {
+      "id": "1-escrow-1/2",
+      "note_fraction": 1,
+      "kind": "escrow",
+      "hedge_fraction": 0.5,
+      "entry_fees": 0.3,
+      "bill_purchase": 20.7,
+      "cash_after09": 3,
+      "net_capital_by_state": [
+        -1,
+        9,
+        9
+      ],
+      "missed_at_deadline_by_state": [
+        1,
+        0,
+        0
+      ],
+      "client_unpaid_by_state": [
+        1,
+        0,
+        0
+      ],
+      "physical_mean_capital": 8.5,
+      "timely": false,
+      "capital_floor_met": false,
+      "eligible": false,
+      "risk": {
+        "mean_loss": -1.3888888888888888,
+        "var": -1.8888888888888888,
+        "es": 3.111111111111111,
+        "loss_by_state": [
+          8.11111111111111,
+          -1.8888888888888888,
+          -1.8888888888888888
+        ]
+      }
+    },
+    {
+      "id": "1-escrow-1",
+      "note_fraction": 1,
+      "kind": "escrow",
+      "hedge_fraction": 1,
+      "entry_fees": 0.5,
+      "bill_purchase": 18.5,
+      "cash_after09": 0.5555555555555556,
+      "net_capital_by_state": [
+        6.555555555555555,
+        6.555555555555555,
+        6.555555555555555
+      ],
+      "missed_at_deadline_by_state": [
+        0,
+        0,
+        0
+      ],
+      "client_unpaid_by_state": [
+        0,
+        0,
+        0
+      ],
+      "physical_mean_capital": 6.555555555555555,
+      "timely": true,
+      "capital_floor_met": true,
+      "eligible": true,
+      "risk": {
+        "mean_loss": 0.5555555555555556,
+        "var": 0.5555555555555556,
+        "es": 0.5555555555555556,
+        "loss_by_state": [
+          0.5555555555555556,
+          0.5555555555555556,
+          0.5555555555555556
+        ]
+      }
+    }
+  ],
+  "eligible_policy_ids": [
+    "1/2-escrow-1/4",
+    "1/2-escrow-1/2",
+    "3/4-escrow-3/4",
+    "1-escrow-1"
+  ],
+  "selected_policy": "1/2-escrow-1/4",
+  "comparison_scope": "prospective_entry",
+  "menu_has_feasible_policy": true,
+  "prospective_entry_approval": true,
+  "actual_after_trade_position": null,
+  "institution_approval": true,
+  "approval_scope": "Modeled gates for prospective selection, or unchanged baseline holdings after a shock; no executed switch or verified external authority.",
+  "shown_policy": "1/2-escrow-1/4",
+  "shown_policy_reason": "prospective selection",
+  "entry": {
+    "transfers": [
+      {
+        "payer": "client_payer",
+        "recipient": "reserve",
+        "cash": 57.6,
+        "reason": "fixed client subscription"
+      },
+      {
+        "payer": "sponsor",
+        "recipient": "reserve",
+        "cash": 6.4,
+        "reason": "paid-in sponsor equity"
+      },
+      {
+        "payer": "reserve",
+        "recipient": "spv",
+        "cash": 20.5,
+        "reason": "note purchase"
+      },
+      {
+        "payer": "note_underwriter",
+        "recipient": "spv",
+        "cash": 20.5,
+        "reason": "remaining note purchase"
+      },
+      {
+        "payer": "equity_subscriber",
+        "recipient": "spv",
+        "cash": 9,
+        "reason": "residual equity subscription"
+      },
+      {
+        "payer": "spv",
+        "recipient": "equipment_seller",
+        "cash": 30,
+        "reason": "initial equipment"
+      },
+      {
+        "payer": "spv",
+        "recipient": "inventory_supplier",
+        "cash": 20,
+        "reason": "initial inventory"
+      },
+      {
+        "payer": "reserve",
+        "recipient": "dealer",
+        "cash": 1,
+        "reason": "existing protection transferred; no pool contribution"
+      },
+      {
+        "payer": "reserve",
+        "recipient": "fee_provider",
+        "cash": 0.15,
+        "reason": "execution and custody costs"
+      },
+      {
+        "payer": "reserve",
+        "recipient": "bill_issuer",
+        "cash": 42.35,
+        "reason": "bill purchase"
+      }
+    ],
+    "remaining_cash": {
+      "reserve": 0,
+      "client_payer": 2.4,
+      "sponsor": 3.6,
+      "note_underwriter": 29.5,
+      "equity_subscriber": 11,
+      "dealer": 1,
+      "fee_provider": 0.15,
+      "bill_issuer": 142.35,
+      "spv": 0,
+      "equipment_seller": 30,
+      "inventory_supplier": 20,
+      "escrow_pool": 20,
+      "credit_pool": 12
+    },
+    "cash_sum_before": 272,
+    "cash_sum_after": 272,
+    "dealer_escrow_units_retained": 0.75,
+    "dealer_credit_units_retained": 1,
+    "dealer_original_reference_claim_value": 6.4,
+    "dealer_after_sale_cash_plus_reference_claim_value": 6.4
+  },
+  "shown_reserve_states": [
+    {
+      "state": "down",
+      "paid09": 20,
+      "paid12": 44,
+      "missed_at_deadline": 0,
+      "late_cure": 0,
+      "terminal_cash": 3.0555555555555554,
+      "client_unpaid_nominal": 0,
+      "terminal_net_capital": 3.0555555555555554,
+      "journal": [
+        {
+          "time": "09:00",
+          "event": "bill_redemption",
+          "receipt": 47.05555555555556,
+          "payment": 0,
+          "new_client_due": 0,
+          "cash": 47.05555555555556,
+          "client_arrears": 0
+        },
+        {
+          "time": "09:00",
+          "event": "first_client_payment",
+          "receipt": 0,
+          "payment": 20,
+          "new_client_due": 20,
+          "cash": 27.055555555555557,
+          "client_arrears": 0
+        },
+        {
+          "time": "12:00",
+          "event": "project_note_receipt",
+          "receipt": 15,
+          "payment": 0,
+          "new_client_due": 0,
+          "cash": 42.05555555555556,
+          "client_arrears": 0
+        },
+        {
+          "time": "12:00",
+          "event": "escrow_receipt",
+          "receipt": 5,
+          "payment": 0,
+          "new_client_due": 0,
+          "cash": 47.05555555555556,
+          "client_arrears": 0
+        },
+        {
+          "time": "12:00",
+          "event": "second_client_payment",
+          "receipt": 0,
+          "payment": 44,
+          "new_client_due": 44,
+          "cash": 3.0555555555555554,
+          "client_arrears": 0
+        },
+        {
+          "time": "16:00",
+          "event": "late_protection_receipt",
+          "receipt": 0,
+          "payment": 0,
+          "new_client_due": 0,
+          "cash": 3.0555555555555554,
+          "client_arrears": 0
+        },
+        {
+          "time": "16:00",
+          "event": "late_client_cure",
+          "receipt": 0,
+          "payment": 0,
+          "new_client_due": 0,
+          "cash": 3.0555555555555554,
+          "client_arrears": 0
+        }
+      ]
+    },
+    {
+      "state": "normal",
+      "paid09": 20,
+      "paid12": 44,
+      "missed_at_deadline": 0,
+      "late_cure": 0,
+      "terminal_cash": 8.055555555555555,
+      "client_unpaid_nominal": 0,
+      "terminal_net_capital": 8.055555555555555,
+      "journal": [
+        {
+          "time": "09:00",
+          "event": "bill_redemption",
+          "receipt": 47.05555555555556,
+          "payment": 0,
+          "new_client_due": 0,
+          "cash": 47.05555555555556,
+          "client_arrears": 0
+        },
+        {
+          "time": "09:00",
+          "event": "first_client_payment",
+          "receipt": 0,
+          "payment": 20,
+          "new_client_due": 20,
+          "cash": 27.055555555555557,
+          "client_arrears": 0
+        },
+        {
+          "time": "12:00",
+          "event": "project_note_receipt",
+          "receipt": 25,
+          "payment": 0,
+          "new_client_due": 0,
+          "cash": 52.05555555555556,
+          "client_arrears": 0
+        },
+        {
+          "time": "12:00",
+          "event": "escrow_receipt",
+          "receipt": 0,
+          "payment": 0,
+          "new_client_due": 0,
+          "cash": 52.05555555555556,
+          "client_arrears": 0
+        },
+        {
+          "time": "12:00",
+          "event": "second_client_payment",
+          "receipt": 0,
+          "payment": 44,
+          "new_client_due": 44,
+          "cash": 8.055555555555555,
+          "client_arrears": 0
+        },
+        {
+          "time": "16:00",
+          "event": "late_protection_receipt",
+          "receipt": 0,
+          "payment": 0,
+          "new_client_due": 0,
+          "cash": 8.055555555555555,
+          "client_arrears": 0
+        },
+        {
+          "time": "16:00",
+          "event": "late_client_cure",
+          "receipt": 0,
+          "payment": 0,
+          "new_client_due": 0,
+          "cash": 8.055555555555555,
+          "client_arrears": 0
+        }
+      ]
+    },
+    {
+      "state": "up",
+      "paid09": 20,
+      "paid12": 44,
+      "missed_at_deadline": 0,
+      "late_cure": 0,
+      "terminal_cash": 8.055555555555555,
+      "client_unpaid_nominal": 0,
+      "terminal_net_capital": 8.055555555555555,
+      "journal": [
+        {
+          "time": "09:00",
+          "event": "bill_redemption",
+          "receipt": 47.05555555555556,
+          "payment": 0,
+          "new_client_due": 0,
+          "cash": 47.05555555555556,
+          "client_arrears": 0
+        },
+        {
+          "time": "09:00",
+          "event": "first_client_payment",
+          "receipt": 0,
+          "payment": 20,
+          "new_client_due": 20,
+          "cash": 27.055555555555557,
+          "client_arrears": 0
+        },
+        {
+          "time": "12:00",
+          "event": "project_note_receipt",
+          "receipt": 25,
+          "payment": 0,
+          "new_client_due": 0,
+          "cash": 52.05555555555556,
+          "client_arrears": 0
+        },
+        {
+          "time": "12:00",
+          "event": "escrow_receipt",
+          "receipt": 0,
+          "payment": 0,
+          "new_client_due": 0,
+          "cash": 52.05555555555556,
+          "client_arrears": 0
+        },
+        {
+          "time": "12:00",
+          "event": "second_client_payment",
+          "receipt": 0,
+          "payment": 44,
+          "new_client_due": 44,
+          "cash": 8.055555555555555,
+          "client_arrears": 0
+        },
+        {
+          "time": "16:00",
+          "event": "late_protection_receipt",
+          "receipt": 0,
+          "payment": 0,
+          "new_client_due": 0,
+          "cash": 8.055555555555555,
+          "client_arrears": 0
+        },
+        {
+          "time": "16:00",
+          "event": "late_client_cure",
+          "receipt": 0,
+          "payment": 0,
+          "new_client_due": 0,
+          "cash": 8.055555555555555,
+          "client_arrears": 0
+        }
+      ]
+    }
+  ],
+  "shown_terminal_allocations": [
+    {
+      "state": "down",
+      "spv_cash": {
+        "customer_receipt": 50,
+        "equipment_buyer_receipt": 10,
+        "operating_payee": 30,
+        "cedar_note": 15,
+        "underwriter_note": 15,
+        "new_equity_holder": 0,
+        "parent_shareholder": 0,
+        "ending_cash": 0,
+        "cedar_note_unpaid_nominal": 10,
+        "underwriter_note_unpaid_nominal": 10
+      },
+      "escrow_pool": {
+        "settlement": "12:00",
+        "senior_paid": 0,
+        "cedar_paid": 5,
+        "dealer_paid": 15,
+        "writer_cash_return": 0,
+        "cedar_unpaid_nominal": 0,
+        "dealer_unpaid_nominal": 0
+      },
+      "credit_pool": {
+        "settlement": "16:00",
+        "cedar_paid": 0,
+        "dealer_paid": 12,
+        "writer_cash_return": 0,
+        "cedar_unpaid_nominal": 0,
+        "dealer_unpaid_nominal": 8
+      },
+      "bill_issuer_after_redemption": 95.29444444444445
+    },
+    {
+      "state": "normal",
+      "spv_cash": {
+        "customer_receipt": 80,
+        "equipment_buyer_receipt": 10,
+        "operating_payee": 30,
+        "cedar_note": 25,
+        "underwriter_note": 25,
+        "new_equity_holder": 4.7368421052631575,
+        "parent_shareholder": 5.2631578947368425,
+        "ending_cash": 0,
+        "cedar_note_unpaid_nominal": 0,
+        "underwriter_note_unpaid_nominal": 0
+      },
+      "escrow_pool": {
+        "settlement": "12:00",
+        "senior_paid": 0,
+        "cedar_paid": 0,
+        "dealer_paid": 0,
+        "writer_cash_return": 20,
+        "cedar_unpaid_nominal": 0,
+        "dealer_unpaid_nominal": 0
+      },
+      "credit_pool": {
+        "settlement": "16:00",
+        "cedar_paid": 0,
+        "dealer_paid": 0,
+        "writer_cash_return": 12,
+        "cedar_unpaid_nominal": 0,
+        "dealer_unpaid_nominal": 0
+      },
+      "bill_issuer_after_redemption": 95.29444444444445
+    },
+    {
+      "state": "up",
+      "spv_cash": {
+        "customer_receipt": 110,
+        "equipment_buyer_receipt": 10,
+        "operating_payee": 30,
+        "cedar_note": 25,
+        "underwriter_note": 25,
+        "new_equity_holder": 18.94736842105263,
+        "parent_shareholder": 21.05263157894737,
+        "ending_cash": 0,
+        "cedar_note_unpaid_nominal": 0,
+        "underwriter_note_unpaid_nominal": 0
+      },
+      "escrow_pool": {
+        "settlement": "12:00",
+        "senior_paid": 0,
+        "cedar_paid": 0,
+        "dealer_paid": 0,
+        "writer_cash_return": 20,
+        "cedar_unpaid_nominal": 0,
+        "dealer_unpaid_nominal": 0
+      },
+      "credit_pool": {
+        "settlement": "16:00",
+        "cedar_paid": 0,
+        "dealer_paid": 0,
+        "writer_cash_return": 12,
+        "cedar_unpaid_nominal": 0,
+        "dealer_unpaid_nominal": 0
+      },
+      "bill_issuer_after_redemption": 95.29444444444445
+    }
+  ],
+  "shown_terminal_net_pv": 6.25,
+  "exact": {
+    "selected_mean": "281/36",
+    "shown_net_capital": [
+      "55/18",
+      "145/18",
+      "145/18"
+    ],
+    "shown_terminal_net_pv": "25/4",
+    "shown_es90": "14/9"
+  },
+  "fixed_position_reverse_certificate": {
+    "position": "1/2-escrow-1/4",
+    "information": "after_trade",
+    "bad_capital_intercept": "55/18",
+    "bad_capital_shock_slope": "-1/2",
+    "capital_floor_boundary": "19/9",
+    "boundary_is_inclusive": true,
+    "scope": "fixed position; total down-revenue loss from baseline, not distance from this experiment"
+  },
+  "limits": [
+    "Finite 15-policy mandate, three stipulated states; no empirical frequency or general optimizer.",
+    "After-trade shocks compare hypothetical original-entry policies at historical tickets; actual holdings stay at the baseline position, with no refund or rebalance.",
+    "Same-day 09/12/16 timing with zero intraday carry; late cures preserve missed deadlines.",
+    "External customers/equipment buyer are stipulated funded payers; cash conservation covers listed accounts/transfers only.",
+    "Unpaid nominal project/protection claims survive with zero additional modeled recovery, not legal cancellation.",
+    "Provider idle cash returns at its stated settlement time and cannot fund Cedar's earlier obligations."
+  ]
+}

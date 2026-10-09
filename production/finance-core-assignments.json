@@ -1,7 +1,7 @@
 {
   "batch": "finance-core",
   "date": "2026-10-09",
-  "state": "all three original authors active; final cumulative manuscript remains absent",
+  "state": "all four components accepted; final manuscript assembled; coherent edition validation next",
   "authorization": "MASTER_PLAN explicit three existing specialists. A specialist with its frozen prior review complete may draft against the 60 accepted prerequisite chapters; finance-core acceptance still requires full Volume 11 package acceptance. No new or child agents.",
   "canonical_spec": {
     "id": "finance-core",
@@ -20,7 +20,7 @@
     "manuscript": "cross-assessments/finance-core.html",
     "page": "finance-core-assessment.html"
   },
-  "prerequisite_evidence": "All 60 Volume 7–11 chapters accepted; Volume 11 assessment not yet accepted at contract creation. No dependent component is represented as written.",
+  "prerequisite_evidence": "All 60 Volume 7\u201311 chapters accepted; Volume 11 assessment not yet accepted at contract creation. No dependent component is represented as written.",
   "domains": {
     "D1": "Reconciled accounting, operating cash, estimates and quality of evidence; journal entries and rights constrain later finance claims (Volume 7).",
     "D2": "Incremental value, coherent FCFF/claim discounting, ownership and funded investment or financing decisions (Volume 8).",
@@ -41,31 +41,77 @@
     {
       "owner": "bs_author",
       "task": "finance-core-exam-a",
-      "state": "active author blueprint",
+      "state": "complete author, separate peer and coordinator gates passed; integrated cumulative package accepted",
       "scope": "Original Form A built around an operating-company investment/acquisition and its investors or intermediary. Five connected but independently solvable 20-point cases. Combine reported accounts and working capital with incremental valuation; distinguish claim proceeds/ownership from face values; assess a funded portfolio or performance claim using physical and pricing data; derive a finite hedge and its actual collateral/settlement cash; close with a coherent downside/funding and governance recommendation. Avoid importing unstated outputs from earlier cases. At least one explicit all-recipient claim reconciliation and one boundary/global decision proof.",
       "owned_paths": [
         "content/cross-assessments/parts/finance-core-exam-a.html",
         "scripts/check_finance_core_exam_a.py",
         "content/reviews/finance-core-exam-a-author.json",
         "content/reviews/finance-core-exam-a-sources.json"
-      ]
+      ],
+      "frozen_files": [
+        {
+          "path": "content/cross-assessments/parts/finance-core-exam-a.html",
+          "bytes": 44122,
+          "sha256": "3b03154d13551f50dd0f9ebe7f3603f1effa0157c087b4216b790d8579a286c2"
+        },
+        {
+          "path": "scripts/check_finance_core_exam_a.py",
+          "bytes": 22041,
+          "sha256": "cf5d7065fbc7d95dd14aae18a36f9ab472406876d0fb4ae2ae4d33eef7d1b179"
+        },
+        {
+          "path": "content/reviews/finance-core-exam-a-author.json",
+          "bytes": 23086,
+          "sha256": "437bc867d22eff298bbd7a9d410c426b370c538f8024fbe22d1fe13e89517e83"
+        },
+        {
+          "path": "content/reviews/finance-core-exam-a-sources.json",
+          "bytes": 17365,
+          "sha256": "f1b18a6448e394a9f98e4235cb1d2825c59d3333c3f6acdcb5fd059f402b5c5a"
+        }
+      ],
+      "peer_contract": "production/finance-core-exam-a-peer-assignment.json"
     },
     {
       "owner": "c05_review",
       "task": "finance-core-exam-b",
-      "state": "active author blueprint",
+      "state": "complete author, separate peer and coordinator gates passed; integrated cumulative package accepted",
       "scope": "Original structurally distinct reassessment: prefer divestment/restructuring or a different production/ownership model, changed accounting estimates/information, constrained or liability-relative allocation, a different derivative or curve/credit mechanism, and a timing/authority change in a funded institutional decision. Five 20-point cases must require transfer, not merely new numbers from Form A. Include an independently derived feasible set/boundary, explicit retained claims and provider budget. Coordinate blueprint with root and Form A author before full prose.",
       "owned_paths": [
         "content/cross-assessments/parts/finance-core-exam-b.html",
         "scripts/check_finance_core_exam_b.py",
         "content/reviews/finance-core-exam-b-author.json",
         "content/reviews/finance-core-exam-b-sources.json"
-      ]
+      ],
+      "frozen_files": [
+        {
+          "path": "content/cross-assessments/parts/finance-core-exam-b.html",
+          "bytes": 50824,
+          "sha256": "28a17d322d8a2799c4d677c3e231454256fc9eeafa7cc9c03c72fa6eb71071c4"
+        },
+        {
+          "path": "scripts/check_finance_core_exam_b.py",
+          "bytes": 32179,
+          "sha256": "735235fc7a16639bb35d0f48221098844b1b432a8d4b5d556cbd088c576f7a73"
+        },
+        {
+          "path": "content/reviews/finance-core-exam-b-author.json",
+          "bytes": 32828,
+          "sha256": "4d7710022ecbbdb059a6c7fd9dd2ca3917afc73020ab98ac3189993f3df81f28"
+        },
+        {
+          "path": "content/reviews/finance-core-exam-b-sources.json",
+          "bytes": 20586,
+          "sha256": "a39ed10222bf26f582eff76cf4c19207291cddccd104e9a8170a275b70072896"
+        }
+      ],
+      "repair_record": "production/finance-core-exam-b-repair-assignment.json"
     },
     {
       "owner": "ito_author",
       "task": "finance-core-project",
-      "state": "active author architecture",
+      "state": "complete author, separate peer and coordinator gates passed; integrated cumulative package accepted",
       "scope": "Original integrated practical connecting actual operating transactions and claims to financing/valuation, a funded investor mandate, derivative/credit/settlement exposures, and an evidence-based institutional decision. Prefer one fictional operating group and a named outside investor/intermediary with two or three dated cutoffs and a small complete finite state law. Begin from original inputs, reconcile accrual income and cash, price appropriate claims with separately supplied positive state prices, distinguish physical risk weights, compare a finite menu of genuinely funded policies, trace collateral/creditor/ownership flows, and derive a meaningful reverse or sensitivity boundary. Include investment-policy objectives and implementation costs or constraints. Do not relabel Portlight, concatenate old chapter labs, or add broad simulation. Every external receipt must name payer/currency/date and stipulate funded scope; distinguish cash, economic value, book value and nominal surviving claims. Require independent learner analysis/code, decision memo and correction/evidence log. Six new transfer tasks with full answers; five-domain 100-point rubric and complete instructor benchmark.",
       "owned_paths": [
         "content/cross-assessments/parts/finance-core-project.html",
@@ -91,7 +137,7 @@
   ],
   "root_scope": "Eight prerequisite diagnostic items with complete answers; administration/coverage/scoring map; five oral transfer prompts and five distinct delayed retention cases with complete solutions; remediation/index/synthesis. Read/independently solve every final component, source/proof/code audit, separate-peer coordination, canonical/structural/numerical/offline/publication gates.",
   "support_preparation": "production/finance-core-support-design-notes.json; unaccepted candidates to recompute before authoring",
-  "peer_rotation": "Persist exact separate contracts after freezes: Form A to c05_review, Form B to ito_author, project and root support to bs_author; root may adjust rotation for availability while retaining separate review.",
+  "peer_rotation": "Form A to c05_review; Form B to ito_author; project to bs_author. Root support queued to c05_review immediately after its B author freeze, while A is still drafting; independent author/reviewer roles preserved.",
   "limitations": [
     "This queued production contract is a plan, not written or accepted cumulative assessment material.",
     "Learner timing/equating and real external human assessment remain distinct."
@@ -102,5 +148,39 @@
     "decision": "Permit an available specialist to begin the next original author component while root finishes Volume 11 integration and remaining independent peers. Exact ownership is already persisted; no accepted status changes.",
     "evidence": "All 60 prerequisite chapters accepted and published; all Volume 11 authors frozen and passed root financial checks, support and Form A separately reviewed and root accepted, and no remaining material reported financial finding. MASTER_PLAN permits adjacent drafting with acceptance following dependencies. Avoid idle author time while preserving every gate."
   },
-  "root_support_state": "Opening/closing original drafts contain eight solved diagnostics, five oral transfers and five solved retention cases, administration, remediation, indices and synthesis; checker/audit/peer gates pending."
+  "root_support_state": "Five frozen author support payloads; separate c05_review peer active after B author freeze",
+  "root_support_frozen_files": [
+    {
+      "path": "content/cross-assessments/parts/finance-core-support-opening.html",
+      "bytes": 19055,
+      "sha256": "9feb645b729d574d67c0fc6f5f0d6e71fc91bd4da05e28c626232a8c0d5f1763"
+    },
+    {
+      "path": "content/cross-assessments/parts/finance-core-support-closing.html",
+      "bytes": 27389,
+      "sha256": "08f7ca20df264010e209433b5d6134446d9be32f31c75299dc155d72d5e3c76d"
+    },
+    {
+      "path": "scripts/check_finance_core.py",
+      "bytes": 12808,
+      "sha256": "cb7e4052f31e0720481ff90a9624aaef93bd1b49c2ed2e787a88a94d85926f66"
+    },
+    {
+      "path": "content/reviews/finance-core-support-sources.json",
+      "bytes": 17969,
+      "sha256": "f09e0db1b97f60f68994fc11b787bfb8f9f4447682e8a2095a93b306fbdcd396"
+    },
+    {
+      "path": "content/reviews/finance-core-support-author.json",
+      "bytes": 9208,
+      "sha256": "13812115e98e37e11af37e7bfba88c6167c7bcbb57bfc4436ec5ff753bc4c970"
+    }
+  ],
+  "blueprint_audits": [
+    "production/finance-core-exam-a-blueprint-root-audit.json",
+    "production/finance-core-exam-b-blueprint-root-audit.json",
+    "production/finance-core-project-blueprint-root-audit.json"
+  ],
+  "support_peer_contract": "production/finance-core-support-peer-assignment.json",
+  "final_review": "content/reviews/finance-core.json"
 }

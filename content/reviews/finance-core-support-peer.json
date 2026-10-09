@@ -1,0 +1,376 @@
+{
+  "component": "finance-core-support",
+  "date": "2026-10-09",
+  "reviewer": "c05_review, separately scoped machine-assisted peer",
+  "assignment": "production/finance-core-support-peer-assignment.json",
+  "status": "Separate peer review and bounded parser repair review complete; no unresolved findings; frozen for coordinator acceptance.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "scoring": true,
+    "instruction": true,
+    "structure": true,
+    "source_scope": true
+  },
+  "reviewed_scope": {
+    "full_author_payloads": [
+      "content/cross-assessments/parts/finance-core-support-opening.html",
+      "content/cross-assessments/parts/finance-core-support-closing.html",
+      "scripts/check_finance_core.py",
+      "content/reviews/finance-core-support-sources.json",
+      "content/reviews/finance-core-support-author.json"
+    ],
+    "exact_prompts": 18,
+    "diagnostic": {
+      "items": 8,
+      "points": 40
+    },
+    "oral": {
+      "items": 5,
+      "points": 20
+    },
+    "retention": {
+      "items": 5,
+      "points": 50
+    },
+    "sole_heading_one": true,
+    "all_printed_rubric_allocations_reconciled": true
+  },
+  "independence": {
+    "method": "All five final author files were fully read. Every exact prompt, answer, rubric, proof and stated source scope was separately assessed. The checker imports no author checker/helper and reads no author numerical output as an oracle.",
+    "distinct_oracles": [
+      "Actual payer/recipient transfer ledgers with explicit external liquidation/recovery receipts.",
+      "Exact linear-system elimination for stock/bank replication and separate Arrow-price equations.",
+      "Statewise senior allocations followed by separately funded acquisition wallets and market-value wealth accounting.",
+      "Independent orthogonal-factor covariance reconstruction and polynomial coefficients certifying the entire feasible interval.",
+      "Complete bounded grant/bridge polygon vertices from pairwise constraint intersections, cross-checked against dated recipient budgets."
+    ],
+    "bounds": "Twelve named mechanism interventions, no random search or wide undirected parameter grid. Sixty purposeful polygon intersections cover four economically distinct recovery/timing cases. Finite checks support, but do not substitute for, the separately read mathematical proofs.",
+    "oracle_rejections": "Ten actual rejection calls concern this peer oracle and evidence loader: probability normalization, dimension, positive extension, boolean/nonfinite money, singular linear system, stated nonnegative-interest domain, unfunded transfer, duplicate JSON key and nonfinite JSON. They are not represented as an author lab input API."
+  },
+  "prompt_solution_audit": [
+    {
+      "prompt": "finance-core-d1",
+      "points": 5,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Construct the receivable roll-forward and cash receipts ledger independently, then compare the indirect cash bridge.",
+      "recomputed_result": "Gross receivables 35; income 35; CFO 25; final cash 20. Delaying ten of collections yields AR 45, CFO 15 and final cash 10 with income still 35.",
+      "assumptions_and_scope": "Depreciation is the current expense under the supplied policy. Capital expenditure buys an asset; borrowing creates a liability. Neither is current revenue or the entire current income expense."
+    },
+    {
+      "prompt": "finance-core-d2",
+      "points": 5,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Compute the stipulated unlevered operating tax and subtract investment before allocating operating value to claims.",
+      "recomputed_result": "FCFF 18; supplied operating EV 180 plus surplus cash 10 less debt market value 50 yields equity 140.",
+      "assumptions_and_scope": "The financing-interest four is excluded from FCFF; deducting it changes the priced object. A single-period FCFF does not determine the independently supplied enterprise value."
+    },
+    {
+      "prompt": "finance-core-d3",
+      "points": 5,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Use the actual three-quarter-share position and distinguish terminal share value from separately held dividends.",
+      "recomputed_result": "Stock proceeds 66 plus dividend cash three give 69; bond gives 38. Stock total return 15%; portfolio terminal wealth 107 and return 7%.",
+      "assumptions_and_scope": "Zero interest on dividends, no fees and no external contributions are explicit. The dividend enters once; this is not a general performance-attribution formula with cash flows."
+    },
+    {
+      "prompt": "finance-core-d4",
+      "points": 5,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Purchase the required Arrow units and separately apply the physical probability vector.",
+      "recomputed_result": "Twenty U arrows cost eight; physical mean payoff 14. One of each Arrow costs 0.9 and pays one surely, gross return 10/9.",
+      "assumptions_and_scope": "State prices need not sum to one. Physical probabilities do; no arbitrary physical-mean discount substitutes for the traded replication."
+    },
+    {
+      "prompt": "finance-core-d5",
+      "points": 5,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Price each dated payment with its own zero and equate the time-zero cost of a date-one reinvestment with a date-two zero holding.",
+      "recomputed_result": "Price 99.3; gross forward 16/15 and net 1/15.",
+      "assumptions_and_scope": "No credit loss or trading friction is stipulated. The exercise does not require or infer a yield-to-maturity quotation."
+    },
+    {
+      "prompt": "finance-core-d6",
+      "points": 5,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Solve the two terminal stock/bank equations by rational elimination; independently solve the bank/stock state-price equations.",
+      "recomputed_result": "Delta 3/5; initial bank position -160/7; initial price 50/7; terminal hedge 15/0. Arrow prices 10/21 each imply normalized up probability 1/2.",
+      "assumptions_and_scope": "Fractional positions and equal borrowing/lending at 1.05 are permitted. The negative bank position remains a terminal repayment of 24; no physical forecast is required."
+    },
+    {
+      "prompt": "finance-core-d7",
+      "points": 5,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Execute funded transfers lender-to-firm-to-creditor, then recognize the stated receivable receipt and repay principal plus interest.",
+      "recomputed_result": "Five-unit gap; first cash zero; later firm cash 6.5 and lender cash 5.5. Interest is 0.5.",
+      "assumptions_and_scope": "Book equity 30 is not an early resource. Collection exchanges an existing receivable for cash and does not recognize twelve of revenue again."
+    },
+    {
+      "prompt": "finance-core-d8",
+      "points": 5,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Sum eight actual discounted payments and add the exact geometric tail; roll the resulting value forward past the first payment.",
+      "recomputed_result": "Discounted ratio 17/18; value 200; after-payment continuation 204, whose first cash flow is date-two 12.24.",
+      "assumptions_and_scope": "Constant positive growth and discount factors are stipulated. At growth equal to discount the positive terms do not tend to zero, so the finite perpetuity formula cannot be used."
+    },
+    {
+      "prompt": "finance-core-o1",
+      "points": 4,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Separate the balance-sheet label, recoverable-value estimate and cash-arrival event; apply the same dated-resource test used for d7/o5.",
+      "recomputed_result": "An unchanged collection date and access leave the original deadline failure unchanged. A higher carrying amount alone supplies zero cash.",
+      "assumptions_and_scope": "An allowance revision requires evidence under the stated policy. A real sale, advance, contribution or effective deadline amendment must identify funding, authority, costs and surviving claims. No national recognition rule is asserted."
+    },
+    {
+      "prompt": "finance-core-o2",
+      "points": 4,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Hold both state payoffs and traded Arrow prices fixed while changing only the physical distribution.",
+      "recomputed_result": "Physical expected payoff changes 108 to 72; traded-price value stays 72.",
+      "assumptions_and_scope": "The final numerical equality between the new mean and the price is incidental. Changed claim payoffs, enforceability, access or traded pricing inputs can justify revaluation; a forecast alone does not override this contract."
+    },
+    {
+      "prompt": "finance-core-o3",
+      "points": 4,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Use the convex-hull bound on mean return after deducting the fee from the actual initial budget.",
+      "recomputed_result": "Investable cash 98; maximum expected wealth 107.8, a 7.8% net return on initial 100 and shortfall 0.2. A one-unit fee would allow 108.9.",
+      "assumptions_and_scope": "The maximum fee consistent with the 108 target is 20/11. Any new capital or opportunity set is a mandate change, not an implicit resource; the target concerns expected wealth, not sure payment."
+    },
+    {
+      "prompt": "finance-core-o4",
+      "points": 4,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Use the two extreme equations to force the unique affine hedge; construct state prices from any proposed call price in (0,10); exhibit endpoint arbitrages if the call is introduced at either endpoint.",
+      "recomputed_result": "Half-stock minus 30 debt gives 20/10/0 versus call 20/0/0. For c in (0,10), prices (c/20,1-c/10,c/20) are positive and price bank, stock and call.",
+      "assumptions_and_scope": "The middle-state residual proves nonreplication. At c=0 a free long call has nonnegative nonzero payoff; at c=10 long the extreme hedge and short the call has payoff 0/10/0 at zero cost. No unique selected price or investor agreement is claimed."
+    },
+    {
+      "prompt": "finance-core-o5",
+      "points": 4,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Place the actual advance on a time line and compute receipts accessible at 10:00.",
+      "recomputed_result": "No cash at 10:00 and a five-unit missed payment despite an irrevocable 09:00 promise. Moving actual delivery to 09:00 changes the result; noon delivery cannot revise history.",
+      "assumptions_and_scope": "A revised plan needs usable cash or an effective deadline change, with account ownership, permission, finality, timestamps and repayment evidenced. Contractual approval alone does not execute settlement."
+    },
+    {
+      "prompt": "finance-core-r1",
+      "points": 10,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Rebuild gross AR from revenue and receipts; separately subtract the allowance and calculate direct operating cash; compare both allowable indirect bridges.",
+      "recomputed_result": "Gross AR 40, net AR 34, income 54, CFO 50 by direct/gross/net routes, FCFF 25, final cash 25. Adding the provision to the net-AR bridge wrongly gives 56.",
+      "assumptions_and_scope": "No charge-offs, taxes, financing interest or other accruals are present. Changing the allowance from six to zero changes income/net AR but leaves actual cash unchanged. The provision is not a payment or new funding."
+    },
+    {
+      "prompt": "finance-core-r2",
+      "points": 10,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Allocate terminal resources senior-first, price actual state claims, and execute the separately endowed acquisition transfers.",
+      "recomputed_result": "Debt pays 80/60, equity 40/0; values 60/12 sum to operating 72. Debt buyer pays 60 and retains 10; investor contributes two and retains three; seller receives 62. Wealth is 70 for debt buyer and 15 for investor, giving NPV ten once.",
+      "assumptions_and_scope": "Debt face differs from actual payoff, proceeds and physical expected payment 76. The low-state face deficiency is 20 with no other recourse under the stipulated contract. The negotiated 62 opportunity is limited, not a maintained frictionless market quote. Lowering debt face to 60 preserves NPV ten but raises required investor cash to eight, which exceeds its five-unit endowment."
+    },
+    {
+      "prompt": "finance-core-r3",
+      "points": 10,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Reconstruct the covariance with two orthogonal unit-variance shocks, then compare polynomial coefficients for global positivity certificates.",
+      "recomputed_result": "Variance .04w^2-.07w+.04; determinant 3/8000. Global minimum w=7/8, variance 3/320, mean 13/200. Mean at least .08 gives exactly [0,1/2], with minimum at 1/2 and variance 3/200.",
+      "assumptions_and_scope": "The unconstrained square certificate is V=1/25(w-7/8)^2+3/320. On [0,1/2], V(w)-V(1/2)=(1/2-w)(1/20-w/25), strictly positive away from the right endpoint. A .09 mean target gives endpoint 1/4 and variance 1/40; .11 is infeasible. Conditional estimates are not known future risks or guarantees."
+    },
+    {
+      "prompt": "finance-core-r4",
+      "points": 10,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Trace both state-specific cash ledgers with buyer 15, original bank 30, distinct provider five and separate inaccessible margin; use an affine terminal budget certificate.",
+      "recomputed_result": "Extra charge 5/26; total quote 265/26; bridge 125/26; repayment exactly five. Each state pays bank 30 and call 20/0, returns collateral once, repays the bridge and leaves seller cash zero. Provider ends with five plus interest 5/26.",
+      "assumptions_and_scope": "At x=0 the full-payment projection is short 0.2; this is an unfunded deficiency, not an assertion that a negative cash payment succeeds. The original base ten is entirely invested. Returned margin principal is not income or expense; only bridge interest creates the additional cost. Every smaller x fails under the fixed policy. This private quote is not claimed to be competitively accepted or a universal no-arbitrage price."
+    },
+    {
+      "prompt": "finance-core-r5",
+      "points": 10,
+      "result": "passed separate full prompt/answer/rubric review",
+      "independent_method": "Enumerate intersections of the exact bounded two-variable feasible region in grant and bridge, then separately execute the equality cash plan including donor and provider endowments.",
+      "recomputed_result": "Early cash 27 and gap nine; recovery 3+8.5=11.5; bridge alone leaves late deficit .95. Feasible vertices (g,b) are (19/21,170/21),(.95,9),(1,8),(1,9). Minimum grant 19/21 at bridge 170/21 pays supplier 36, then repays 8.5 with zero company cash at both cutoffs.",
+      "assumptions_and_scope": "Final cash is g-.5-.05b and first cash g+b-9; surplus borrowing is carried, not lost. Extra half-unit borrowing at the minimum grant leaves a 1/40 interest deficit. Dealer pays from twenty H in exchange for twenty F; donor retains 2/21; provider ends with nine plus 17/42 interest. Grant equals ultimate .5 resource loss plus 17/42 interest. Recovery excludes collateral, and counterparty nonpayment is not silently erased. No default frequency or fair inception forward price is inferred."
+    }
+  ],
+  "proof_audit": [
+    {
+      "claim": "Perpetuity convergence and date accounting",
+      "review": "The positive geometric ratio is 17/18; an eight-term partial sum plus its exact remaining tail equals 200. Rolling one period and removing only date-one twelve gives 204. Equal growth and discount invalidate convergence. Passed."
+    },
+    {
+      "claim": "Complete pricing versus incomplete extension",
+      "review": "D4/D6 correctly use replication under specified traded assets. O4 has a unique hedge at two extreme states but a ten-unit residual in the added state. The full positive-extension family and explicit endpoint arbitrages establish the open call-value interval, not a unique selected price. Passed."
+    },
+    {
+      "claim": "Acquisition value and owner wealth",
+      "review": "Statewise senior/residual allocation and linear valuation conserve operating resources. The negotiated surplus ten accrues once to the acquiring investor; fair debt does not produce another surplus. All initial cash payers have sufficient distinct endowments. Passed."
+    },
+    {
+      "claim": "Portfolio global minima",
+      "review": "Positive covariance determinant and complete-square identity prove the unconstrained result. Independent factor reconstruction yields the same coefficients. The exact feasible interval and positive difference factor establish the constrained global and unique optimum without relying on sampled weights. Passed."
+    },
+    {
+      "claim": "Collateral funding threshold",
+      "review": "The original hedge consumes the base premium. Segregated margin is returned once before the distinct bridge is repaid. Terminal seller cash is 1.04x-.2 in either state; positive slope yields necessary and sufficient x>=5/26 within supplied endowments. The x=0 negative full-payment projection signals infeasibility. Passed."
+    },
+    {
+      "claim": "FX grant global optimum with retained excess borrowing",
+      "review": "Both cash constraints and both funding caps define a compact convex polygon. Its four exact vertices include the optimum and the excess-borrowing boundary (.95,9). Source proof derives a matching lower bound and executes equality. The proof includes retained surplus cash and therefore covers all authorized bridge sizes. Passed."
+    }
+  ],
+  "instruction_and_scoring": {
+    "administration": "Written forms are distinct 300-minute suggested closed-resource 100-point forms, nonprogrammable calculator allowed, five 20-point domains; written/practical thresholds 85 overall and 15 each are clearly authored choices. Practical open-resource rules and independent reconstruction precede reference use.",
+    "support_thresholds": "Diagnostic 34/40 and at least four each on 1,2,6,7; oral 17/20 and at least three each; retention 43/50 and at least eight each. Timing, 14-21-day delay, and equating are not claimed to have empirical calibration.",
+    "rubric_audit": "Each of the 18 solutions has a stated 5/4/10-point rubric. Allocation words at the end of each rubric criterion sum to the prompt score. Conceptual and proof requirements receive points; follow-through treatment and defensible alternative recommendations are explicit.",
+    "coverage": "Support samples and connects the five essential domains without claiming to test every result of all sixty chapters. Sixty accepted chapter routes provide remediation and indices. Planned graduate links describe next study rather than claiming those chapters are accepted.",
+    "integrity": "Critical cash, claim, measurement, authority, probability, validation and evidence errors require correction and a fresh transfer even if aggregate thresholds pass. No admission, accreditation, actual professional authority or learner achievement is asserted."
+  },
+  "source_audit": {
+    "result": "passed scope and accepted-method-route review",
+    "actual_work": "Read the entire source record and all links/claim scopes in both fragments; matched all sixty titles, IDs, paths and accepted statuses against the current curriculum and existing chapter files in a separate read-only workspace check.",
+    "primary_scope": "There are no new source proposals or fresh external primary claims. The support uses accepted instruction and its separately scoped primary sources for stable methods; it does not claim a new full primary-source rereading. No unresolved specialist fact required browsing.",
+    "local_link_scope": "All support chapter links are flat reader filenames. Same-page support anchors exist; form-a, form-b and project are explicitly declared external assembly targets to be checked in the final cumulative build. The exact seven-file isolated peer does not falsely require all chapter files or the future assembly.",
+    "no_claims": "No invented current market data, legal powers, actual accounting mandate, default probabilities, empirically calibrated duration or external certification."
+  },
+  "implementation_audit": {
+    "author": "Read all of scripts/check_finance_core.py, including support_check() and the future exact five-part integration check(). Its support arithmetic is explicit and scoped. Future integration intentionally requires other components and peers; this peer does not call that incomplete assembled gate or use it as its numerical oracle.",
+    "peer": "Quiet check() reads only the seven scoped files, uses explicit exception checks that survive -O, performs no network access or persistent writes, rejects duplicate/nonfinite evidence JSON, and returns JSON-safe primitives. The CLI emits only its strict JSON summary.",
+    "structural_separation": "A separate HTMLParser verifies balanced fragments, one h1, exact scored li IDs, one solution per prompt, rubric totals and 69 printed/conceptual anchors. These are structural checks and do not substitute for the full substantive reading."
+  },
+  "findings": [],
+  "open_findings": [],
+  "validation": {
+    "status": "passed",
+    "normal_and_optimized_summaries_equal": true,
+    "quiet_check_and_import": true,
+    "strict_json_safe": true,
+    "workspace_and_isolated_runs": 4,
+    "unrelated_working_directory": "/",
+    "isolated_exact_file_count": 7,
+    "isolated_contents": "Five frozen author files, peer checker and peer review only. No author numerical helper imported, extra files or payload mutations.",
+    "shared_Document_parser": {
+      "exercise_count": 18,
+      "solution_count": 18,
+      "h1": 1,
+      "unique_ids": 28
+    },
+    "canonical_source_route_check": {
+      "accepted_chapters": 60,
+      "titles_ids_and_existing_paths_match": true
+    },
+    "final_summary": {
+      "component": "finance-core-support-peer",
+      "status": "passed",
+      "comparisons": 389,
+      "financial_interventions": 12,
+      "intervention_scopes": [
+        "Receipts delayed while income is fixed; receivable and closing cash move in opposite directions.",
+        "Allowance zero versus six preserves cash; using net AR plus a second provision addition fails.",
+        "Changing physical probabilities changes the forecast, leaving traded state-price valuation fixed.",
+        "Move an actual five-unit disbursement across the deadline; unchanged promise/value cannot repair the earlier cutoff.",
+        "At growth equal to discount, positive discounted payments do not tend to zero; the perpetuity formula is unavailable.",
+        "A one-unit fee makes the previously impossible expected-wealth target feasible without hidden leverage.",
+        "Restoring the middle state destroys exact replication; endpoint prices admit explicit nonnegative nonzero zero-cost portfolios.",
+        "Debt face reduced to sixty leaves NPV unchanged but raises required own cash above the investor's five-unit endowment.",
+        "A nine-percent mean target restricts the optimum to one-quarter in asset one; eleven percent is impossible in this opportunity set.",
+        "The margin threshold fails just below the sharp extra charge and collapses to zero when bridge interest is removed.",
+        "At the minimum grant, an extra half-unit bridge is retained initially but creates a terminal one-fortieth deficit from interest.",
+        "Change the amount or delivery date of recovery: grant can become zero, infeasible, or one-half with no bridge."
+      ],
+      "oracle_domain_rejections": 10,
+      "funded_transfer_and_receipt_rows": 33,
+      "purposeful_polygon_candidates": 60,
+      "exact_prompts_and_solutions": 18,
+      "rubric_points": {
+        "diagnostic": 40,
+        "oral": 20,
+        "retention": 50
+      },
+      "printed_or_conceptual_anchors": 69,
+      "rounded_values_checked": 2,
+      "author_payloads_bound": 5,
+      "peer_checker_bound": true,
+      "source_method_routes": 60,
+      "limits": "Synthetic contracts and bounded independent evidence; no rendered UI, timing calibration, learner certification or final coordinator acceptance is implied."
+    }
+  },
+  "limitations": [
+    "Machine-assisted separate review is not independent human academic certification or a guarantee of error-free material.",
+    "All quantities, rights and funding endowments are synthetic case assumptions. This review does not certify actual borrower liquidity, enforceability, accounting compliance, option quotes or forward fair values.",
+    "Support timing, score thresholds and equivalence of exam forms remain authored choices rather than measured psychometric properties.",
+    "No rendered browser/mobile/keyboard/print QA or learner achievement is claimed.",
+    "The final five-part assembly, all external assembly targets and whole-library regressions remain coordinator responsibilities before acceptance/publication."
+  ],
+  "acceptance_recommendation": "No substantive repair requested. Ready for coordinator consideration after final peer execution/freeze; this record does not itself accept or publish the component.",
+  "reviewed_hashes": [
+    {
+      "path": "content/cross-assessments/parts/finance-core-support-opening.html",
+      "bytes": 19055,
+      "sha256": "9feb645b729d574d67c0fc6f5f0d6e71fc91bd4da05e28c626232a8c0d5f1763"
+    },
+    {
+      "path": "content/cross-assessments/parts/finance-core-support-closing.html",
+      "bytes": 27389,
+      "sha256": "08f7ca20df264010e209433b5d6134446d9be32f31c75299dc155d72d5e3c76d"
+    },
+    {
+      "path": "scripts/check_finance_core.py",
+      "bytes": 13195,
+      "sha256": "2305796a9d7e0a955c2b37f3e80aa6c1b89870e8b1e253f0476476530f414cbb"
+    },
+    {
+      "path": "content/reviews/finance-core-support-sources.json",
+      "bytes": 17969,
+      "sha256": "f09e0db1b97f60f68994fc11b787bfb8f9f4447682e8a2095a93b306fbdcd396"
+    },
+    {
+      "path": "content/reviews/finance-core-support-author.json",
+      "bytes": 10050,
+      "sha256": "a4d9c0baf028d4838ed2a827b85be0e26e6e20c59987ead4cc32bd7263188576"
+    },
+    {
+      "path": "scripts/check_finance_core_support_peer.py",
+      "bytes": 31852,
+      "sha256": "7c23c335cf2fc72c2f4f941a8568ef6b90ba8dc9720cc1aed324bd439716b329"
+    }
+  ],
+  "parser_integration_delta_review": {
+    "assignment": "production/finance-core-parser-repair-assignment.json",
+    "origin": "Root final assembly found active-answer tracking could outlive a project details.solution answer, while nested li could prematurely end its captured text.",
+    "delta_verified": "Reversing only answer_depth initialization/assignment/end handling and the final55-plus6 pairing gate reconstructs the exact prior frozen12,808-byte checker hash cb7e4052f31e0720481ff90a9624aaef93bd1b49c2ed2e787a88a94d85926f66. The earlier financial comparisons remain identical.",
+    "code_review": "Read the entire changed Page class, exact closing-element depth logic and final cumulative pairing gate. The enclosing answer remains active across nested lists and ends before following sibling/outside content; true nested answers and malformed closing tags are rejected.",
+    "independent_fixture": {
+      "captured": {
+        "a": "SABCD",
+        "b": "TE",
+        "c": "FGH"
+      },
+      "deliberate_rejections": 2,
+      "active_after_close": null
+    },
+    "whole_assembly": {
+      "fragments": 5,
+      "scored_prompts": 55,
+      "project_transfers": 6,
+      "distinct_answers": 61,
+      "all_answers_nonempty": true,
+      "exact_pairing": true,
+      "unique_ids": 110,
+      "h1": 1,
+      "every_fragment_closes_answer_state": true,
+      "shared_Document_exercises": 61,
+      "shared_Document_solutions": 61
+    },
+    "financial_scope": "No new financial cases or changed numerical findings. Root amended the exact scope to permit only two embedded author-freeze tuples in the independent peer checker. No peer algorithm, parser, financial logic or intervention changed.",
+    "limitations": "Static parser evidence only; does not claim rendered browser/keyboard/print QA or coordinator publication acceptance.",
+    "peer_checker_constant_refresh": "The author checker and author audit byte-size/SHA256 tuples were refreshed. Reversing exactly these two replacements reconstructs the entire prior31,851-byte peer checker SHA2564b6041643b0c23a761ca848995d683fbc57b5f64a0b01b704d591140b8d3bc4e byte-for-byte.",
+    "final_validation": {
+      "normal_and_optimized_quiet_checks": 4,
+      "workspace_and_exact_seven_file_tree": "passed from cwd=/; unchanged identical389-comparison peer summaries; imports/check() silent, strict JSON-safe, no file mutation or extra output file",
+      "peer_checker_changes": "Two embedded author size/hash tuples only; exact reverse-delta byte preservation verified."
+    }
+  }
+}
