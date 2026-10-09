@@ -1,0 +1,200 @@
+{
+  "case": "Oriole authored risk cases",
+  "base": {
+    "call": 8.288309863733858,
+    "put": 11.849649159552925,
+    "prepaid_stock": 118.65756535334798,
+    "discounted_strike": 122.21890464916704,
+    "d1": -0.03835527651872953,
+    "d2": -0.24620137342699477,
+    "call_delta": 0.4792798674509495,
+    "put_delta": -0.5095331771602836,
+    "gamma": 0.015804533531403948,
+    "vega": 40.96535091339903,
+    "call_theta": -7.168510611643539,
+    "put_theta": -5.281806952468747,
+    "vega_per_volatility_point": 0.4096535091339903,
+    "derivative_status": "interior; floating-point vega may underflow in extreme tails"
+  },
+  "portfolio": {
+    "option_units": -1500.0,
+    "call_market_value": -12432.464795600787,
+    "delta_shares": -718.9198011764242,
+    "gamma": -23.70680029710592,
+    "vega_per_unit_sigma": -61448.026370098545,
+    "vega_per_volatility_point": -614.4802637009855,
+    "calendar_theta_per_year": 10752.765917465309,
+    "stock_trade_to_zero_delta": 718.9198011764242
+  },
+  "shock": {
+    "terms": {
+      "delta": 1.4378396023528486,
+      "gamma": 0.07112040089131777,
+      "vega": 0.6144802637009854,
+      "theta": -0.028446470681125154
+    },
+    "approximate_change": 2.094993796264027,
+    "exact_repriced_change": 2.105551642381215,
+    "mixed_shock_residual": 0.010557846117188241,
+    "spot_only_exact_change": 1.5083987665086624,
+    "spot_only_taylor_change": 1.5089600032441663,
+    "spot_only_remainder_bound": 0.0008226686330958855,
+    "bound_scope": "Certified analytic spot-only third-derivative bound; no claim this bounds the mixed time/volatility residual."
+  },
+  "implied_volatility": {
+    "quote": 11.05,
+    "lower_price_bound": 0.0,
+    "upper_price_bound": 118.65756535334798,
+    "price_resolution": 1.2221890464916704e-09,
+    "sigma_cap": 2.0,
+    "sigma": 0.3073774716758635,
+    "bracket": [
+      0.30737747164675966,
+      0.3073774717049673
+    ],
+    "price_residual": -7.992433381787123e-10,
+    "iterations": 35,
+    "status": "bracketed",
+    "bracket_prices": [
+      11.049999998007934,
+      11.050000000393602
+    ],
+    "vega_at_solution": 40.98556806932428,
+    "local_sigma_change_per_price_unit": 0.024398832250136646
+  },
+  "smile": {
+    "individual_implied_volatilities": [
+      {
+        "quote": 14.0,
+        "lower_price_bound": 10.0,
+        "upper_price_bound": 100.0,
+        "price_resolution": 9.999999999999999e-10,
+        "sigma_cap": 2.0,
+        "sigma": 0.21243758642231114,
+        "bracket": [
+          0.2124375863932073,
+          0.21243758645141497
+        ],
+        "price_residual": 1.936655280587729e-10,
+        "iterations": 35,
+        "status": "bracketed",
+        "bracket_prices": [
+          13.999999999225139,
+          14.000000001162206
+        ],
+        "vega_at_solution": 33.27885091247995,
+        "local_sigma_change_per_price_unit": 0.03004911445500026
+      },
+      {
+        "quote": 11.0,
+        "lower_price_bound": 0.0,
+        "upper_price_bound": 100.0,
+        "price_resolution": 9.999999999999999e-10,
+        "sigma_cap": 2.0,
+        "sigma": 0.276608415908413,
+        "bracket": [
+          0.2766084158793092,
+          0.27660841593751684
+        ],
+        "price_residual": -5.688534088221786e-10,
+        "iterations": 35,
+        "status": "bracketed",
+        "bracket_prices": [
+          10.999999998281133,
+          11.000000000581167
+        ],
+        "vega_at_solution": 39.51449733910812,
+        "local_sigma_change_per_price_unit": 0.02530716742815008
+      },
+      {
+        "quote": 5.0,
+        "lower_price_bound": 0.0,
+        "upper_price_bound": 100.0,
+        "price_resolution": 1.1e-09,
+        "sigma_cap": 2.0,
+        "sigma": 0.2188737913093064,
+        "bracket": [
+          0.21887379128020257,
+          0.21887379133841023
+        ],
+        "price_residual": -4.0400749412583536e-10,
+        "iterations": 35,
+        "status": "bracketed",
+        "bracket_prices": [
+          4.999999998495014,
+          5.0000000006969785
+        ],
+        "vega_at_solution": 37.82941657529179,
+        "local_sigma_change_per_price_unit": 0.026434454732065526
+      }
+    ],
+    "adjacent_price_slopes": [
+      -0.3,
+      -0.6
+    ],
+    "weighted_butterfly_costs": [
+      -1.5
+    ],
+    "vertical_spread_screen_passes": true,
+    "convexity_screen_passes": false,
+    "scope": "Finite same-expiry quote tests only; passing does not construct an arbitrage-free dynamic surface."
+  },
+  "hedge": {
+    "initial_price": 8.288309863733858,
+    "initial_shares": 0.4792798674509495,
+    "initial_bank": -49.22527423038009,
+    "ledger": [
+      {
+        "date": 0.25,
+        "spot": 126.0,
+        "incoming_shares_after_dividends": 0.4810805411068314,
+        "incoming_bank": -49.59585171559716,
+        "wealth_before_trade": 11.020296463863595,
+        "call_mark": 9.386277452133271,
+        "target_shares": 0.565595070426506,
+        "stock_trade_cash": 10.648830694279003,
+        "ideal_bank_after_trade": -60.24468240987616,
+        "fee": 0.021297661388558004,
+        "bank_with_fees_after_trade": -60.26598007126472,
+        "self_financing_residual": 7.105427357601002e-15,
+        "unhedged_mark_difference": 1.6340190117303237
+      },
+      {
+        "date": 0.5,
+        "spot": 113.0,
+        "incoming_shares_after_dividends": 0.5677200337566586,
+        "incoming_bank": -60.698216153551584,
+        "wealth_before_trade": 3.454147660950838,
+        "call_mark": 1.673729106696097,
+        "target_shares": 0.22583930140798564,
+        "stock_trade_cash": -38.63252275540004,
+        "ideal_bank_after_trade": -22.065693398151545,
+        "fee": 0.07726504551080007,
+        "bank_with_fees_after_trade": -22.164416438008345,
+        "self_financing_residual": -7.105427357601002e-15,
+        "unhedged_mark_difference": 1.7804185542547408
+      },
+      {
+        "date": 0.75,
+        "spot": 130.0,
+        "incoming_shares_after_dividends": 0.2266877887076316,
+        "incoming_bank": -22.23180825067199,
+        "wealth_before_trade": 7.237604281320117,
+        "call_mark": 5.0,
+        "payoff": 5.0,
+        "ideal_terminal_error": 2.2376042813201167,
+        "funded_fee_terminal_error": 2.1381380351243955
+      }
+    ],
+    "scope": "Dividend reinvestment is continuous and frictionless between scheduled delta resets; only interior reset stock trades pay the stated fee. No external cash injection or terminal reset to the model mark."
+  },
+  "variance_account": {
+    "contributions": [
+      -0.6874999999999999,
+      2.249999999999999
+    ],
+    "total_discounted_error": 1.5624999999999991,
+    "time_average_actual_variance": 0.065,
+    "scope": "Exact accounting for supplied piecewise constant weights; not a generated diffusion or a discrete realized-variance hedge identity."
+  }
+}

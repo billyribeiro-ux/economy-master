@@ -1,0 +1,95 @@
+{
+  "schema": "v10-c12-sable-output-1",
+  "bond": {
+    "benchmark_value": "2040",
+    "candidate_value": "2061",
+    "price_error": "21",
+    "position_value_error": "840",
+    "absolute_error_pass": false,
+    "per_cash_flow_error": [
+      "0",
+      "0",
+      "21"
+    ]
+  },
+  "curve_family": {
+    "linear_coefficient": "-1",
+    "quadratic_coefficient": "-1",
+    "calibration_residuals": [
+      "0",
+      "0"
+    ],
+    "unidentified_loading": "6",
+    "target_lower": "82",
+    "target_upper": "94",
+    "target_spread": "12",
+    "spread_within_limit": false,
+    "interpretation": "Assumption-conditioned range over supplied curvature interval; not a confidence interval or empirical price guarantee."
+  },
+  "conditioning": {
+    "slope": "-1",
+    "intercept": "100",
+    "first_weight": "-199",
+    "second_weight": "200",
+    "prediction": "97",
+    "second_quote_plus_bound_change": "2",
+    "two_quote_error_bound": "399/100",
+    "absolute_condition_factor": "399"
+  },
+  "book": {
+    "unit_errors": [
+      "1/100",
+      "-1/50",
+      "-1/100"
+    ],
+    "unit_passes": [
+      true,
+      true,
+      true
+    ],
+    "position_contributions": [
+      "2",
+      "3",
+      "-1"
+    ],
+    "signed_error": "4",
+    "gross_comparison_error": "6",
+    "bound_from_unit_tolerances": "9",
+    "signed_pass": false,
+    "gross_pass": false,
+    "unit_rmse_approx": 0.01414213562373095
+  },
+  "holdout": {
+    "observations": 8,
+    "mean_error": "1/2",
+    "mean_squared_error": "3/2",
+    "sample_variance": "10/7",
+    "rmse_approx": 1.224744871391589,
+    "iid_standard_error_if_assumed_approx": 0.4225771273642583,
+    "scope": "Descriptive synthetic outcome comparison. The conditional IID standard error is not a verified sampling law, coverage guarantee or causal test."
+  },
+  "decision": {
+    "as_of": "2026-10-06",
+    "effective_notional_limit": "120000",
+    "exception_valid_for_size_only": true,
+    "checks": {
+      "numeric_benchmark": false,
+      "curve_scope": false,
+      "book_units": true,
+      "book_signed": false,
+      "book_gross": false,
+      "version_binding": true,
+      "independent_challenge": true,
+      "fresh_evidence": true,
+      "notional_limit": true
+    },
+    "failed_gates": [
+      "numeric_benchmark",
+      "curve_scope",
+      "book_signed",
+      "book_gross"
+    ],
+    "recommendation": "reject_requested_use",
+    "scope": "Declared fictional policy only. Size exceptions waive no numerical, model-scope, version, challenger or evidence-age gate; no real authority is exercised."
+  }
+}

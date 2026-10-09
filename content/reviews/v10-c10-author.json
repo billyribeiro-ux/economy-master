@@ -1,0 +1,211 @@
+{
+  "chapter": "v10-c10",
+  "date": "2026-10-09",
+  "status": "author-review-complete; independent peer and prerequisite acceptance pending",
+  "reviewer": "ito_author, machine-assisted author review; not independent peer review or external human certification",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Original graduate numerical-pricing chapter: four worked examples, twelve fully solved proof/calculation/transfer/research prompts, answered teach-back and delayed retention. CRR finite exercise, explicit log-PDE and proved smooth-solution error bound, exact-terminal GBM simulation, fixed controls, antithetic pair units and independent policy-evaluation lower bound. Four primary source bodies scoped separately.",
+  "prerequisite_contract": {
+    "c06": "Finite stock/account replication, strictly positive pricing probabilities and finite Snell/feasible stopping logic. Constant continuous dividend reinvestment adjustment derived here.",
+    "c07_c08": "Brownian/GBM exact law and finite moments; constant-rate/yield Q pricing; scalar PDE and analytic vanilla anchors. No general Girsanov or SDE convergence invoked.",
+    "c09": "Agreed directly with c05_review: fixed-parameter Greeks; positive lower vega throughout a bracket gives an inverse error bound. Calendar theta is -V_tau. No MC Greek estimator assumed.",
+    "c11": "Agreed directly with bs_author: separate model/monitoring/discretization/sampling errors, same-law grid comparisons and explicitly bounded proof scopes. C11 provides its own additional independent-driver/jump arguments.",
+    "acceptance": "Adjacent drafting is not prerequisite acceptance. Root alone integrates c09 then c10 then c11/c12 after distinct review gates."
+  },
+  "proof_audit": [
+    "CRR probability uses ex-dividend drift r-q. Reinvesting a proportional dividend from Delta exp(-q dt) initial shares yields Delta next-date shares, producing the stated two-state pricing weight. Strict interior probability domain is enforced rather than clipped.",
+    "Finite Snell recursion proved by backward domination and constructive attainment with an adapted first-exercise rule. Nested dates increase value only when transitions and information are held fixed. Cross-N CRR refinement changes the law; neither monotone convergence nor an American limit rate is claimed.",
+    "Log-price/discount transformation gives w_tau=a w_xx+b w_x with a=sigma^2/2, b=r-q-a. Explicit weights have correct drift orientation, are nonnegative under separate spatial and CFL conditions, and sum to one. Maximum principle includes every initial and boundary node.",
+    "Taylor/integral remainder constants k Mtt/2, a h^2 M4/12 and |b| h^2 M3/6 are derived. Convexity propagates one-step residuals to epsilon+T eta. Continuity and bounded derivatives on the closed rectangle are explicit; the vanilla kink does not meet those hypotheses.",
+    "Manufactured exponential derivative suprema and maximum-norm bound are analytical, verified by an independent forward stopped-walk representation. Exact vanilla boundaries isolate mesh error; the alternate boundary envelope bounds the difference between the two discrete schemes only. Negative-rate discount conversion is retained.",
+    "Implicit positive-operator extension uses a strict discrete-minimum argument; no unproved Crank-Nicolson positivity claim. The laboratory implements only the explicit scheme.",
+    "IID estimator mean/variance, unbiased sample variance and fixed-n CLT scope are distinguished from deterministic PRNG diagnostics. Bounded-payoff Hoeffding bound proved via tilted variance, log-MGF integration and Markov optimization; no same bound applied to generally unbounded stock controls.",
+    "Antithetic variance identities now explicitly require square integrability. Independent-copy covariance identity proves nonpositive covariance for opposite monotonicity, with equality allowed. Independent units are pair means; f(z)=z^2 proves the method can worsen variance for a nonmonotone payoff.",
+    "Fixed control sign and completed-square minimum derived. Independent pilot conditioning preserves unbiasedness under integrability; same-sample fitting does not inherit this proof. Truncated lognormal moments derive the raw optimal coefficient; paired moments differ, illustrated by an actual increase when methods are combined.",
+    "Frozen adapted policy independently evaluated has conditional expected value no greater than the finite-grid optimal stopping supremum. Explicit samples may exceed that optimum. No regression consistency, full duality, continuously monitored barrier convergence or universal LSM guarantee claimed.",
+    "SHA256 counter byte protocol, 53-bit midpoint rounding cap and Box-Muller ideal polar proof stated separately. The finite deterministic stream is not asserted to be independent normal draws. Analytical moments and interval formulas concern the ideal reference law."
+  ],
+  "prompt_audit": [
+    {
+      "exercise": 1,
+      "review": "Inverse error .0006666667 sigma=.06666667 percentage points and gamma price-error bound1.2 derived with units and bracket/approximation exclusions."
+    },
+    {
+      "exercise": 2,
+      "review": "Exact rational strike88 terminal payoffs, down continuation268/13, up140/39, European16870/1521, all-date19180/1521, premium770/507 and root exercise comparison independently recomputed."
+    },
+    {
+      "exercise": 3,
+      "review": "Full backward induction, constructive adapted policy and same-law feasible-set inclusion supplied. Stride192/4/1 values checked; changed CRR law and hindsight information errors explained."
+    },
+    {
+      "exercise": 4,
+      "review": "Weights(.37,.20,.43), unsafe(.555,-.20,.645) and nonnegative-data counterexample verified; spatial positivity cannot be repaired by time shrinking."
+    },
+    {
+      "exercise": 5,
+      "review": "All three Taylor constants, global induction and exact23/12000=.001916666667 bound checked. Closed-rectangle derivative hypotheses explicitly exclude raw kink."
+    },
+    {
+      "exercise": 6,
+      "review": "Negative-rate conversion .006 exp(.06)=.00637101928 and domain/resolution interaction correct. Discrete-boundary comparison is not a full-domain error certificate."
+    },
+    {
+      "exercise": 7,
+      "review": "Ceiling of5000log40 is18445; fixed-variance CLT plan984. Independent pilot/fixed sample versus repeated-stopping scope explained without exact CLT coverage promise."
+    },
+    {
+      "exercise": 8,
+      "review": "Covariance expansion and monotonicity proof supplied; Gaussian fourth moment gives2/n antithetic versus1/n independent, with correct independent-unit counts."
+    },
+    {
+      "exercise": 9,
+      "review": "Optimal beta-1.6, minimum variance36, beta-1 variance45, beta+1 variance205; pilot integrability/conditioning and paired covariance change explained."
+    },
+    {
+      "exercise": 10,
+      "review": "Completed-square truncated moments and all three raw product identities derived; terminal-law versus continuous-monitoring distinction and unbounded adjusted variable analyzed."
+    },
+    {
+      "exercise": 11,
+      "review": "Exercise3, wait3.5, adapted optimum4, hindsight5 independently enumerated. Conditional supremum proof, all-L sample counterexample and evaluation reuse bias explained."
+    },
+    {
+      "exercise": 12,
+      "review": "Original open research critique includes explicit ten-point rubric, contract/model/numerical/sampling/policy separation, negative-price counterexample, primary reading scope and justified rejection of unsupported .001 claim."
+    },
+    {
+      "exercise": "teach-back/retention",
+      "review": "Answered target distinctions and new retention values k<=.1, sample10000, expectation/sample distinction and nonsmooth derivative caveat all checked."
+    }
+  ],
+  "numerical_validation": {
+    "commands": [
+      "python3 scripts/check_v10_c10.py",
+      "python3 -O scripts/check_v10_c10.py"
+    ],
+    "result": "passed in normal and optimized modes with all eight nonself bindings verified; check() and import are quiet",
+    "independent_comparisons": 229,
+    "invalid_inputs_rejected": 67,
+    "enumerated_small_tree_policies": 1040,
+    "oracles": [
+      "Direct positive lognormal payoff and moment Simpson integration on split smooth intervals, 4096/8192 panel refinement; no normal CDF in primary price/moment oracle.",
+      "European terminal binomial distribution sums and exact terminal mean, independent of backward recursion; 1024 all-date and16 coarse-date policy maps exhaustively evaluated over all four-step paths.",
+      "Forward killed Markov-walk propagation with boundary receipts checks the backward PDE code; all coarse manufactured nodes and all main/narrow-domain central prices compared.",
+      "Independent hex-digest/complex-polar random stream reconstruction and online Welford summaries versus model two-pass sums; analytical moment targets remain separate from finite-seed diagnostics.",
+      "Exact Fraction arithmetic for worked/solved tree cases, local/global bounds, control coefficients, stopping policy examples and retention anchors."
+    ],
+    "tolerances": "Default absolute3e-10 plus relative2e-11; payoff quadrature absolute2e-8, moment integrals3e-7, controlled variance6e-7; quadrature refinement2e-7. Killed-walk price agreement2e-9, manufactured coarse maximum2e-11. These are numerical tolerances, not proof of stochastic convergence.",
+    "interventions": [
+      "same-law exercise stride1/4/24",
+      "control coefficient0 and wrong-sign+1",
+      "seed-only invariance",
+      "alpha changes concentration width but not fixed95% CLT diagnostic",
+      "yield/volatility/rate financial directions against direct integrals",
+      "finite boundary error at sigma.4,L.8",
+      "valid high-vol negative-rate and rare-event low-vol domain edges",
+      "Boolean/nonfinite/huge integer/schema/financial/work-budget/stability rejection"
+    ],
+    "final_summary": {
+      "chapter": "v10-c10",
+      "status": "passed",
+      "independent_comparisons": 229,
+      "invalid_inputs_rejected": 67,
+      "worked_examples": 4,
+      "solved_exercises": 12,
+      "enumerated_small_tree_policies": 1040,
+      "author_payload_hashes_verified": 8,
+      "groups": [
+        "direct lognormal payoff and moment quadrature with refinement, analytic control variance",
+        "independent binomial expectations and exhaustive finite adapted exercise-policy enumeration",
+        "killed random-walk PDE oracle, full manufactured maximum error, stability and boundary interventions",
+        "independent seed/sample reconstruction, estimator units, financial and variance-reduction interventions",
+        "exact worked/solved arithmetic, error and confidence bounds, policy and counterexample checks",
+        "strict nested, Boolean/nonfinite, financial-invariant, mesh stability and work-budget rejections",
+        "isolated normal/optimized explicit CLI and quiet API, strict JSON token/duplicate rejection",
+        "complete HTML/prompts/solutions, source scope, flat links and frozen payload integrity"
+      ],
+      "limits": "Author checks, not independent peer/human certification or empirical model validation. Numerical tests do not prove tree/LSM convergence, nonsmooth PDE rates, random-stream independence or interval coverage."
+    }
+  },
+  "execution_checks": {
+    "portable": "Isolated temporary directory using only copied model and inputs, explicit --input/--output CLI and quiet run(data), normal and -O. Input does not mutate; output is strict JSON. No framework, installation or external state.",
+    "runtime": "Tree counts<=256 with at most6 trees; PDE sum(space_steps*time_steps)<=2000000 and three sweeps; MC pairs<=16384. Boundary arrays and output are bounded. Input byte ceiling65536.",
+    "manifest": "Four payloads: inputs, analysis, output and standalone README. The eight nonself author files are bound below.",
+    "final_gate": {
+      "normal_quiet_check_api": true,
+      "optimized_cli_exit": 0,
+      "optimized_stderr": "",
+      "summaries_identical": true,
+      "all_eight_hashes_verified": true
+    }
+  },
+  "resolved_findings": [
+    "Initial strike88 exercise arithmetic corrected using exact fractions before freeze; the premium increases because immediate strike cash grows4 while discounted continuation grows4/1.04.",
+    "Coordinator pre-freeze proof audit requested explicit square-integrability in antithetic variance section; applied.",
+    "Finite-domain numeric validator orders range checks before math.isfinite so enormous integer inputs are rejected cleanly instead of raising a float-conversion overflow.",
+    "Added explicit rare-payoff zero sample variance caveat; no coverage certification inferred from the deterministic seed or a zero interval."
+  ],
+  "open_findings": [],
+  "pending_gates": [
+    "Separate assigned peer review of frozen package",
+    "Coordinator acceptance in prerequisite order, shared build/regression, link integration and eventual publication",
+    "Visual/mobile/keyboard/print UI QA remains a separate library gate"
+  ],
+  "limitations": [
+    "Author verification is not external academic certification or empirical market validation.",
+    "General tree/optimal-stopping convergence, nonsmooth PDE rates, regression consistency, continuous-barrier corrections, multilevel/QMC and general SDE weak convergence are further study, not proved here.",
+    "The exact-boundary vanilla PDE is a verification device; finite asymptotic boundaries and raw payoff initialization have distinct errors.",
+    "The generator is deterministic; mathematical IID/CLT/Hoeffding results concern an ideal reference law. Seed reproduction is not a proof of random-stream quality or coverage.",
+    "Control variance reduction is not guaranteed for arbitrary coefficients or composition with pairing. Feasible-policy lower bounds are expectations rather than samplewise inequalities."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c10.html",
+      "bytes": 52840,
+      "sha256": "7aeb953dcef9f33dc3353cd8dc390917fefb49ac40bc402d176e50279eea539c"
+    },
+    {
+      "path": "content/projects/v10-c10-inputs.json",
+      "bytes": 574,
+      "sha256": "4c1f0cb5a70dc258a1c083a4e73039bfa48c21bb390ef42cdee006f0ce7c0f69"
+    },
+    {
+      "path": "content/projects/v10-c10-analysis.py",
+      "bytes": 15039,
+      "sha256": "09302fe6d86041713fbb41e451771a9049109ce75d48d2f2d2d1b05c2b02577e"
+    },
+    {
+      "path": "content/projects/v10-c10-output.json",
+      "bytes": 6808,
+      "sha256": "2ed5f275e6f98010dafaaa698669237285df1ae927ca4267cb9995cccfdfdd00"
+    },
+    {
+      "path": "content/projects/v10-c10-manifest.json",
+      "bytes": 670,
+      "sha256": "441d176687c9f1b1f4b314d17c74f8cf7807b4d40c2caedb4396f5ddc06826f1"
+    },
+    {
+      "path": "content/projects/v10-c10-README.txt",
+      "bytes": 11482,
+      "sha256": "f9922efe5cf3cfe7664125702398959df397fafdd727bc86e90b2e4102e77e30"
+    },
+    {
+      "path": "scripts/check_v10_c10.py",
+      "bytes": 30284,
+      "sha256": "c770bbf9f4dbdd95dd3a5fb53b3c8f9003368cfe5404637e404f840d1de8d7b6"
+    },
+    {
+      "path": "content/reviews/v10-c10-sources.json",
+      "bytes": 4349,
+      "sha256": "9e787fa3899a27202e416092dcc4b0847ea1fd360bd1376a7bc8620dfb92b129"
+    }
+  ]
+}

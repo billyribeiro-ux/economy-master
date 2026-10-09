@@ -1,0 +1,252 @@
+{
+  "chapter": "v10-c10",
+  "date": "2026-10-09",
+  "status": "peer-review-passed; coordinator integration and prerequisite acceptance pending",
+  "reviewer": "c05_review, separately scoped specialist from ito_author; independent machine-assisted review, not external human academic certification",
+  "recommendation": "No material repair requested. Ready for coordinator acceptance after prerequisite and shared structural gates.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Read the complete manuscript, all four worked examples, twelve exact prompts and complete solutions, answered teach-back/retention, the five-file laboratory, full author checker and author review. Independently recomputed financial/domain cases and reopened all four cited primary PDF bodies. Only the assigned three peer files were written.",
+  "proof_findings": [
+    {
+      "topic": "Targets and inverse conditioning",
+      "verdict": "passed",
+      "reason": "The exact error decomposition compares clearly specified contract/model/grid targets; price-to-IV bound requires both roots inside an interval with a positive vega lower bound. Central gamma evaluation-error coefficient is 4/h^2, distinct from truncation and model error."
+    },
+    {
+      "topic": "Dividend-adjusted CRR and adapted stopping",
+      "verdict": "passed",
+      "reason": "Initial delta shares adjusted by exp(-q dt) grow to the required next-date shares under reinvestment; the resulting p uses r-q and is strictly interior. Finite Snell induction both dominates every feasible stopping rule and constructs one attaining the maximum. Nested dates are ordered only under the same law and information. Independent full-history policy enumeration confirms prices without assuming recombination restricts admissible decisions."
+    },
+    {
+      "topic": "Log-price PDE transformation and stability",
+      "verdict": "passed",
+      "reason": "Discounting removes the zeroth-order reaction and log coordinates give a=sigma^2/2, b=r-q-a. The left/right drift signs are correct. Spatial nonnegativity and explicit time restrictions are independent; positive row weights sum to one. Initial and every boundary date enter the maximum principle. Negative-rate conversion multiplies errors by exp(-rT)."
+    },
+    {
+      "topic": "Consistency and conditional convergence",
+      "verdict": "passed",
+      "reason": "Taylor/integral remainders yield k Mtt/2, a h^2 M4/12 and abs(b) h^2 M3/6. The stable recurrence gives epsilon+T eta on a closed rectangle with the stated smooth derivatives. Vanilla initial kink violates those hypotheses; the text explicitly declines to import the smooth rate to raw put values. Manufactured derivative suprema and errors verified by an independent sine spectral solution of the discrete operator."
+    },
+    {
+      "topic": "Boundaries and implicit extension",
+      "verdict": "passed",
+      "reason": "Exact vanilla boundary arrays are identified as a verification device; the maximum boundary discrepancy only bounds the difference between the two discrete schemes. Domain enlargement at fixed node count coarsens space and changes error/stability. Strict diagonal dominance gives nonsingularity and a negative-minimum contradiction gives positivity for the stated implicit operator; no universal Crank-Nicolson positivity claim is made."
+    },
+    {
+      "topic": "Monte Carlo and bounded confidence statement",
+      "verdict": "passed",
+      "reason": "IID finite second moments support mean/variance and fixed-n CLT with positive population variance; zero sample variance in rare events is not certification. Tilted bounded variance proves the stated two-sided Hoeffding inequality. Exact terminal GBM removes terminal-law discretization but not unobserved barriers. SHA256/Box-Muller protocol is reproducible and explicitly distinguished from proved ideal IID normals."
+    },
+    {
+      "topic": "Antithetics and controls",
+      "verdict": "passed",
+      "reason": "Square-integrability precedes covariance identities; opposite monotonicity gives a nonpositive product, including equality. Pair means are the independent units. The square-normal counterexample and completed-square signed control optimum are correct. Independent pilot conditioning requires integrability and does not transfer to same-sample fitting. Separate adaptive integrals confirm that the baseline raw control worsens ideal paired variance, beyond the observed finite-seed example."
+    },
+    {
+      "topic": "Truncated moments and feasible policies",
+      "verdict": "passed",
+      "reason": "Gaussian square completion produces L_j and the expanded put/stock products with correct discounts. A nonzero stock control is not bounded, so the put Hoeffding bound is withheld. A frozen adapted rule has conditional expected payoff below the finite-grid supremum; individual sample means may exceed it. Evaluation reuse invalidates the simple selected-policy argument. No regression consistency or continuous-exercise convergence is claimed."
+    }
+  ],
+  "prompt_audit": [
+    {
+      "exercise": 1,
+      "verdict": "passed",
+      "independent_reasoning": "Exact .012/18=1/1500 sigma, .06666667 volatility percentage points; evaluation contribution to gamma is 1.2. Complete-bracket and excluded model/truncation scope are stated."
+    },
+    {
+      "exercise": 2,
+      "verdict": "passed",
+      "independent_reasoning": "Exact fractions recompute terminal 36.8/8/0, continuation 268/13 and 140/39, European 16870/1521 and stopping 19180/1521. Root continues; premium 770/507 is correct."
+    },
+    {
+      "exercise": 3,
+      "verdict": "passed",
+      "independent_reasoning": "Finite domination/attainment and same-law feasible-set inclusion proved. Stride 192 is a mathematical root/maturity exercise case; public lab cap 32 is separately documented, and equivalent root/maturity value follows from its European price. N = 24 versus N = 192 ordering does not imply nested-law monotonicity."
+    },
+    {
+      "exercise": 4,
+      "verdict": "passed",
+      "independent_reasoning": "Exact weights (.37,.20,.43) and (.555,-.20,.645); the latter produce negative .20 from nonnegative neighbors (0,1,0). Shrinking positive k cannot fix a negative spatial off-diagonal rate."
+    },
+    {
+      "exercise": 5,
+      "verdict": "passed",
+      "independent_reasoning": "All three remainder constants and global induction checked. Exact bound 23/12000=.001916666667; closed-rectangle smoothness excludes the raw payoff kink."
+    },
+    {
+      "exercise": 6,
+      "verdict": "passed",
+      "independent_reasoning": "Negative rate amplifies .006 to .006 exp(.06)=.006371019279. Doubling L at fixed M doubles h, worsens drift resolution and eases the time CFL condition. Comparable-resolution domain experiment is correctly specified."
+    },
+    {
+      "exercise": 7,
+      "verdict": "passed",
+      "independent_reasoning": "Ceil(5000 log40)=18445 gives finite-sample bounded guarantee; normal planning gives 984. Independent pilot is separated from reused/repeated-stopping evaluation and is not an exact normal coverage guarantee."
+    },
+    {
+      "exercise": 8,
+      "verdict": "passed",
+      "independent_reasoning": "Independent-copy covariance identity and nonpositive monotone product derived. Normal square variance is 2; n reflected pair means have 2/n variance versus 1/n for 2n independent evaluations."
+    },
+    {
+      "exercise": 9,
+      "verdict": "passed",
+      "independent_reasoning": "Exact optimal beta=-1.6; variances 36,45,205 at optimum,-1,+1. Conditional independent-pilot mean proof and integrability caveat are sufficient; pairing changes relevant covariance."
+    },
+    {
+      "exercise": 10,
+      "verdict": "passed",
+      "independent_reasoning": "Completed square and all three discounted moment expansions checked independently with centered moment integrals. Exact endpoint sampling does not determine a continuous crossing. Nonzero stock control loses boundedness but retains finite GBM variance."
+    },
+    {
+      "exercise": 11,
+      "verdict": "passed",
+      "independent_reasoning": "Four equally likely states give values 3,3.5,4,5 for exercise/wait/optimal/hindsight. All-L exercising sample yields 5 despite optimal 4; training-conditioned expectation argument and holdout reuse warning are correct."
+    },
+    {
+      "exercise": 12,
+      "verdict": "passed",
+      "independent_reasoning": "Complete ten-point rubric separates contract/monitoring/law/numerical/sampling/policy/empirical questions. Negative stencil counterexample, antithetic units, frozen controls/rules and primary reading scopes support rejection of the unsupported .001 claim."
+    },
+    {
+      "exercise": "teach-back and retention",
+      "verdict": "passed",
+      "independent_reasoning": "All distinctions have an explicit model answer; new retention arithmetic k<=.1 and 10000 observations checked. Expected-policy bound versus sample and missing nonsmooth derivative conditions are correctly answered."
+    }
+  ],
+  "source_audit": [
+    {
+      "id": "v10-c10-giles-fd",
+      "url": "https://people.maths.ox.ac.uk/gilesm/AIMS/lec1.pdf",
+      "checked": "2026-10-09",
+      "scope": "Reopened actual 21-slide PDF; title and slides 4–8 inspected. Explicit heat stencil, Fourier and maximum-norm restrictions support the specified introductory role. The chapter supplies its own drift, discount and smooth-error proof, without claiming a source theorem for kinked puts."
+    },
+    {
+      "id": "v10-c10-haugh-output",
+      "url": "https://www.columbia.edu/~mh2078/MonteCarlo/MCS_Output_Analysis.pdf",
+      "checked": "2026-10-09",
+      "scope": "Reopened actual 8-page PDF, 2017 header, Section 1 confidence construction and Section 2 two-stage run-length discussion on pages 1–4. Approximate fixed-sample context matches the chapter; neither historical informal confidence wording nor sequential guarantees are imported."
+    },
+    {
+      "id": "v10-c10-haugh-variance",
+      "url": "https://www.columbia.edu/~mh2078/MonteCarlo/MCS_Var_Red_Basic.pdf",
+      "checked": "2026-10-09",
+      "scope": "Reopened actual 13-page PDF. Inspected Section 2.1 pilot/main control discussion on pages 3–4 and Section 3 pair-unit/covariance/normal-reflection discussion on pages 7–9. Sign conventions differ by coefficient definition and chapter is internally correct. It uses a non-strict monotonicity inequality and original counterexamples."
+    },
+    {
+      "id": "v10-c10-haugh-stopping",
+      "url": "https://www.columbia.edu/~mh2078/wsc03.pdf",
+      "checked": "2026-10-09",
+      "scope": "Reopened actual 8-page 2003 primary paper; Section 2.1 on pages 2–3 describes finite exercise, conditional continuation approximations and feasible adapted policy values. Chapter confines its claim to conditional expected policy bounds and leaves duality/regression convergence as further study."
+    }
+  ],
+  "numerical_validation": {
+    "chapter": "v10-c10",
+    "status": "passed",
+    "independent_comparisons": 247,
+    "invalid_inputs_rejected": 72,
+    "full_history_stopping_policies": 2082,
+    "economic_interventions": [
+      "fixed-law exercise opportunities and negative-rate/dividend policy enumeration",
+      "negative-rate narrow-domain spectral boundary check",
+      "zero control",
+      "wrong-sign control",
+      "seed-only change",
+      "concentration confidence change",
+      "homogeneous price scale",
+      "volatility economic direction",
+      "dividend_yield economic direction",
+      "rate economic direction",
+      "reject unstable, nonpositive-probability and malformed financial domains"
+    ],
+    "worked_examples": 4,
+    "solved_exercises": 12,
+    "author_payload_hashes_verified": 9,
+    "groups": [
+      "adaptive payoff/centered-moment integrals and ideal paired-control variance",
+      "48-digit full-history finite stopping-policy enumeration",
+      "independent sine spectral Dirichlet solver and manufactured global error",
+      "independent sample reconstruction and correct statistical units",
+      "economic, boundary, scaling and strict-domain interventions",
+      "all determinate exercise arithmetic and separately audited proofs",
+      "portable normal/-O, source scopes and exact author/peer integrity"
+    ],
+    "limits": "Separate machine-assisted peer review, not human academic certification. Numerical quadrature and spectral comparisons are tolerance-based checks, not proofs of general tree convergence, nonsmooth PDE rates, ideal RNG quality or empirical validation."
+  },
+  "oracle_independence": [
+    "Adaptive Gaussian payoff/centered-product integrals split at both reflected payoff thresholds, with tolerance refinement; no model CDF or saved output as the main price/moment oracle.",
+    "48-digit Decimal full-history stopping subtrees: 677 all-date and 17 every-second-date policies per four-step market, across three rate/yield markets, totaling 2082. Policies may take different actions after paths recombine, unlike the author Markov-map enumeration.",
+    "Sine eigenvectors diagonalize a symmetrized tridiagonal Dirichlet operator; modal boundary convolution independently reproduces put prices and every manufactured terminal node. This is separate from both author stencil recursion and author-checker killed-walk propagation.",
+    "Independent struct-unpacked counter bytes and statistics module exact-float sample moments, checked against both ideal-law quadrature and per-estimator independent-unit formulas.",
+    "Exact Fraction worksheets, homogeneous price/variance scaling, same-law exercise, seed, alpha, control sign, economic monotonicity and negative-rate finite-boundary interventions."
+  ],
+  "execution_checks": {
+    "normal_and_optimized": "Both passed with identical JSON-safe summaries.",
+    "quiet_check_api": true,
+    "portable": "Isolated five-file package, normal/-O explicit input/output in a directory containing spaces. Malformed JSON, duplicate keys, excessive input bytes, numeric/financial invalidity and identical input/output reject; existing destinations and source remain intact.",
+    "author_checker": "Author check() independently rerun quietly:229 comparisons,67 invalid rejections,1040 Markov-policy maps and eight nonself author hashes pass. Author checks are additional evidence, separate from this peer checker."
+  },
+  "findings": [],
+  "open_findings": [],
+  "limitations": [
+    "Machine-assisted peer review is not independent human academic certification or empirical pricing/hedging validation.",
+    "Adaptive quadrature and the spectral oracle use floating arithmetic and tolerances; they do not establish general tree convergence, nonsmooth PDE rates, randomized stream quality or interval coverage.",
+    "The finite-policy enumeration validates its small markets only; the broader finite Snell statement is checked analytically. Source retrieval is a scoped method check, not endorsement of every claim in the sources.",
+    "No author/canonical/shared files or hosting changed. Coordinator owns acceptance and remaining whole-edition visual/mobile/keyboard/print gates."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c10.html",
+      "bytes": 52840,
+      "sha256": "7aeb953dcef9f33dc3353cd8dc390917fefb49ac40bc402d176e50279eea539c"
+    },
+    {
+      "path": "content/projects/v10-c10-inputs.json",
+      "bytes": 574,
+      "sha256": "4c1f0cb5a70dc258a1c083a4e73039bfa48c21bb390ef42cdee006f0ce7c0f69"
+    },
+    {
+      "path": "content/projects/v10-c10-analysis.py",
+      "bytes": 15039,
+      "sha256": "09302fe6d86041713fbb41e451771a9049109ce75d48d2f2d2d1b05c2b02577e"
+    },
+    {
+      "path": "content/projects/v10-c10-output.json",
+      "bytes": 6808,
+      "sha256": "2ed5f275e6f98010dafaaa698669237285df1ae927ca4267cb9995cccfdfdd00"
+    },
+    {
+      "path": "content/projects/v10-c10-manifest.json",
+      "bytes": 670,
+      "sha256": "441d176687c9f1b1f4b314d17c74f8cf7807b4d40c2caedb4396f5ddc06826f1"
+    },
+    {
+      "path": "content/projects/v10-c10-README.txt",
+      "bytes": 11482,
+      "sha256": "f9922efe5cf3cfe7664125702398959df397fafdd727bc86e90b2e4102e77e30"
+    },
+    {
+      "path": "scripts/check_v10_c10.py",
+      "bytes": 30284,
+      "sha256": "c770bbf9f4dbdd95dd3a5fb53b3c8f9003368cfe5404637e404f840d1de8d7b6"
+    },
+    {
+      "path": "content/reviews/v10-c10-sources.json",
+      "bytes": 4349,
+      "sha256": "9e787fa3899a27202e416092dcc4b0847ea1fd360bd1376a7bc8620dfb92b129"
+    },
+    {
+      "path": "content/reviews/v10-c10-author.json",
+      "bytes": 15492,
+      "sha256": "e71a4163290697a67e3f7c9d7fde39d460a34c1cb5cbf4ea6c908d97b4370b10"
+    }
+  ]
+}

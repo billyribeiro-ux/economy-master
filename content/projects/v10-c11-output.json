@@ -1,0 +1,467 @@
+{
+  "schema": "v10-c11-output-1",
+  "state_order": [
+    "decline",
+    "quiet_recovery",
+    "spike_return",
+    "advance"
+  ],
+  "forward": "104",
+  "closed_pricing_vertices": [
+    [
+      "0",
+      "0",
+      "9/10",
+      "1/10"
+    ],
+    [
+      "0",
+      "9/10",
+      "0",
+      "1/10"
+    ],
+    [
+      "9/20",
+      "0",
+      "0",
+      "11/20"
+    ]
+  ],
+  "strict_positive_baseline": [
+    "3/20",
+    "3/10",
+    "3/10",
+    "1/4"
+  ],
+  "claims": {
+    "call": {
+      "terminal_payoff": [
+        "0",
+        "10",
+        "10",
+        "50"
+      ],
+      "lower": "175/13",
+      "upper": "1375/52",
+      "replicable": false,
+      "endpoints_open": true,
+      "subhedge": {
+        "cost": "175/13",
+        "stock_units": "1",
+        "terminal_cash": "-90",
+        "initial_cash": "-1125/13",
+        "terminal_values": [
+          "-30",
+          "10",
+          "10",
+          "50"
+        ]
+      },
+      "superhedge": {
+        "cost": "1375/52",
+        "stock_units": "5/8",
+        "terminal_cash": "-75/2",
+        "initial_cash": "-1875/52",
+        "terminal_values": [
+          "0",
+          "25",
+          "25",
+          "50"
+        ]
+      },
+      "closed_vertex_prices": [
+        "175/13",
+        "175/13",
+        "1375/52"
+      ]
+    },
+    "up_out": {
+      "terminal_payoff": [
+        "0",
+        "10",
+        "0",
+        "0"
+      ],
+      "lower": "0",
+      "upper": "225/26",
+      "replicable": false,
+      "endpoints_open": true,
+      "subhedge": {
+        "cost": "0",
+        "stock_units": "0",
+        "terminal_cash": "0",
+        "initial_cash": "0",
+        "terminal_values": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "superhedge": {
+        "cost": "225/26",
+        "stock_units": "-1/4",
+        "terminal_cash": "35",
+        "initial_cash": "875/26",
+        "terminal_values": [
+          "20",
+          "10",
+          "10",
+          "0"
+        ]
+      },
+      "closed_vertex_prices": [
+        "0",
+        "225/26",
+        "0"
+      ]
+    },
+    "terminal_only_up_out": {
+      "terminal_payoff": [
+        "0",
+        "10",
+        "10",
+        "0"
+      ],
+      "lower": "0",
+      "upper": "225/26",
+      "replicable": false,
+      "endpoints_open": true,
+      "subhedge": {
+        "cost": "0",
+        "stock_units": "0",
+        "terminal_cash": "0",
+        "initial_cash": "0",
+        "terminal_values": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "superhedge": {
+        "cost": "225/26",
+        "stock_units": "-1/4",
+        "terminal_cash": "35",
+        "initial_cash": "875/26",
+        "terminal_values": [
+          "20",
+          "10",
+          "10",
+          "0"
+        ]
+      },
+      "closed_vertex_prices": [
+        "225/26",
+        "225/26",
+        "0"
+      ]
+    },
+    "asian": {
+      "terminal_payoff": [
+        "0",
+        "0",
+        "20",
+        "30"
+      ],
+      "lower": "75/26",
+      "upper": "525/26",
+      "replicable": false,
+      "endpoints_open": true,
+      "subhedge": {
+        "cost": "75/26",
+        "stock_units": "3/4",
+        "terminal_cash": "-75",
+        "initial_cash": "-1875/26",
+        "terminal_values": [
+          "-30",
+          "0",
+          "0",
+          "30"
+        ]
+      },
+      "superhedge": {
+        "cost": "525/26",
+        "stock_units": "1/4",
+        "terminal_cash": "-5",
+        "initial_cash": "-125/26",
+        "terminal_values": [
+          "10",
+          "20",
+          "20",
+          "30"
+        ]
+      },
+      "closed_vertex_prices": [
+        "525/26",
+        "75/26",
+        "825/52"
+      ]
+    },
+    "credit_net": {
+      "terminal_payoff": [
+        "62998/1717",
+        "79542/1751",
+        "-103/17",
+        "-103/17"
+      ],
+      "lower": "-2575/442",
+      "upper": "3526345/91052",
+      "replicable": false,
+      "endpoints_open": true,
+      "subhedge": {
+        "cost": "-2575/442",
+        "stock_units": "0",
+        "terminal_cash": "-103/17",
+        "initial_cash": "-2575/442",
+        "terminal_values": [
+          "-103/17",
+          "-103/17",
+          "-103/17",
+          "-103/17"
+        ]
+      },
+      "superhedge": {
+        "cost": "3526345/91052",
+        "stock_units": "-5303/4120",
+        "terminal_cash": "609839/3502",
+        "initial_cash": "15245975/91052",
+        "terminal_values": [
+          "169693/1751",
+          "79542/1751",
+          "79542/1751",
+          "-103/17"
+        ]
+      },
+      "closed_vertex_prices": [
+        "-2575/442",
+        "3526345/91052",
+        "2262745/178568"
+      ]
+    },
+    "stock": {
+      "terminal_payoff": [
+        "60",
+        "100",
+        "100",
+        "140"
+      ],
+      "lower": "100",
+      "upper": "100",
+      "replicable": true,
+      "endpoints_open": false,
+      "subhedge": {
+        "cost": "100",
+        "stock_units": "1",
+        "terminal_cash": "0",
+        "initial_cash": "0",
+        "terminal_values": [
+          "60",
+          "100",
+          "100",
+          "140"
+        ]
+      },
+      "superhedge": {
+        "cost": "100",
+        "stock_units": "1",
+        "terminal_cash": "0",
+        "initial_cash": "0",
+        "terminal_values": [
+          "60",
+          "100",
+          "100",
+          "140"
+        ]
+      },
+      "closed_vertex_prices": [
+        "100",
+        "100",
+        "100"
+      ]
+    }
+  },
+  "quotes": [
+    {
+      "id": "quiet_weight",
+      "probabilities": [
+        "1/5",
+        "2/5",
+        "1/10",
+        "3/10"
+      ],
+      "state_prices": [
+        "5/26",
+        "5/13",
+        "5/52",
+        "15/52"
+      ],
+      "prices": {
+        "call": "250/13",
+        "up_out": "50/13",
+        "terminal_only_up_out": "125/26",
+        "asian": "275/26",
+        "credit_net": "3001950/135239",
+        "stock": "100"
+      },
+      "credit": {
+        "protection_pv": "5875/221",
+        "unit_annuity_pv": "10084475/6897189",
+        "premium_pv": "10084475/2299063",
+        "fair_spread": "1466823/8067580"
+      }
+    },
+    {
+      "id": "spike_weight",
+      "probabilities": [
+        "1/5",
+        "1/10",
+        "2/5",
+        "3/10"
+      ],
+      "state_prices": [
+        "5/26",
+        "5/52",
+        "5/13",
+        "15/52"
+      ],
+      "prices": {
+        "call": "250/13",
+        "up_out": "25/26",
+        "terminal_only_up_out": "125/26",
+        "asian": "425/26",
+        "credit_net": "3973755/540956",
+        "stock": "100"
+      },
+      "credit": {
+        "protection_pv": "5375/442",
+        "unit_annuity_pv": "44278415/27588756",
+        "premium_pv": "44278415/9196252",
+        "fair_spread": "1341987/17711366"
+      }
+    }
+  ],
+  "credit_state_ledgers": [
+    {
+      "state": "decline",
+      "default_index": 1,
+      "settlement_index": 2,
+      "unit_annuity_pv": "50/101",
+      "protection_pv": "625/17",
+      "premium_pv": "150/101",
+      "net_pv": "60575/1717",
+      "payments": [
+        {
+          "index": 1,
+          "kind": "accrued_premium",
+          "cash": "-3/2"
+        },
+        {
+          "index": 2,
+          "kind": "protection",
+          "cash": "75/2"
+        }
+      ]
+    },
+    {
+      "state": "quiet_recovery",
+      "default_index": 3,
+      "settlement_index": 4,
+      "unit_annuity_pv": "7700/5253",
+      "protection_pv": "625/13",
+      "premium_pv": "7700/1751",
+      "net_pv": "994275/22763",
+      "payments": [
+        {
+          "index": 2,
+          "kind": "scheduled_premium",
+          "cash": "-3"
+        },
+        {
+          "index": 3,
+          "kind": "accrued_premium",
+          "cash": "-3/2"
+        },
+        {
+          "index": 4,
+          "kind": "protection",
+          "cash": "50"
+        }
+      ]
+    },
+    {
+      "state": "spike_return",
+      "default_index": null,
+      "settlement_index": null,
+      "unit_annuity_pv": "2575/1326",
+      "protection_pv": "0",
+      "premium_pv": "2575/442",
+      "net_pv": "-2575/442",
+      "payments": [
+        {
+          "index": 2,
+          "kind": "scheduled_premium",
+          "cash": "-3"
+        },
+        {
+          "index": 4,
+          "kind": "scheduled_premium",
+          "cash": "-3"
+        }
+      ]
+    },
+    {
+      "state": "advance",
+      "default_index": null,
+      "settlement_index": null,
+      "unit_annuity_pv": "2575/1326",
+      "protection_pv": "0",
+      "premium_pv": "2575/442",
+      "net_pv": "-2575/442",
+      "payments": [
+        {
+          "index": 2,
+          "kind": "scheduled_premium",
+          "cash": "-3"
+        },
+        {
+          "index": 4,
+          "kind": "scheduled_premium",
+          "cash": "-3"
+        }
+      ]
+    }
+  ],
+  "fair_spread_bounds": {
+    "lower": "0",
+    "upper": "47277/165362",
+    "endpoints_open": true,
+    "closed_vertex_spreads": [
+      "0",
+      "47277/165362",
+      "35451/276602"
+    ]
+  },
+  "jump_cases": [
+    {
+      "id": "down20",
+      "before": "100",
+      "after": "64",
+      "delta_before": "2",
+      "stock_hedge_gain": "-40",
+      "claim_change": "-36",
+      "claim_minus_hedge": "4",
+      "identity_jump_squared_over_scale": "4"
+    },
+    {
+      "id": "up50",
+      "before": "100",
+      "after": "225",
+      "delta_before": "2",
+      "stock_hedge_gain": "100",
+      "claim_change": "125",
+      "claim_minus_hedge": "25",
+      "identity_jump_squared_over_scale": "25"
+    }
+  ]
+}

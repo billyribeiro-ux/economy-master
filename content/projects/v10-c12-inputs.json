@@ -1,0 +1,59 @@
+{
+  "schema": "v10-c12-sable-1",
+  "provenance": "Original synthetic Sable model-review evidence; no market observations or real approval authority.",
+  "bond": {
+    "cash_flows": ["100", "100", "2100"],
+    "benchmark_discounts": ["0.98", "0.94", "0.88"],
+    "candidate_discounts": ["0.98", "0.94", "0.89"],
+    "position": "40",
+    "price_tolerance": "0.000001"
+  },
+  "curve_family": {
+    "price_at_one": "98",
+    "price_at_two": "94",
+    "curvature_lower": "-1",
+    "curvature_upper": "1",
+    "requested_tenor": "3",
+    "spread_limit": "2"
+  },
+  "conditioning": {
+    "first_tenor": "1",
+    "second_tenor": "1.01",
+    "first_quote": "99",
+    "second_quote": "98.99",
+    "target_tenor": "3",
+    "quote_error_bound": "0.01"
+  },
+  "book": {
+    "benchmark_prices": ["100", "80", "50"],
+    "candidate_prices": ["100.01", "79.98", "49.99"],
+    "positions": ["200", "-150", "100"],
+    "unit_tolerances": ["0.02", "0.02", "0.02"],
+    "signed_error_limit": "3",
+    "gross_error_limit": "5"
+  },
+  "holdout": {
+    "training_ids": ["train_a", "train_b", "train_c"],
+    "evaluation_ids": ["hold_1", "hold_2", "hold_3", "hold_4", "hold_5", "hold_6", "hold_7", "hold_8"],
+    "forecast_errors": ["-1", "-1", "0", "0", "1", "1", "2", "2"],
+    "contract": "Errors are frozen forecast minus subsequent comparison value in CU; the synthetic list does not establish an IID sampling law."
+  },
+  "decision": {
+    "as_of": "2026-10-06",
+    "requested_version": "sable_2",
+    "reviewed_version": "sable_2",
+    "owner": "developer_a",
+    "challenger": "reviewer_b",
+    "data_age_days": 2,
+    "max_data_age_days": 5,
+    "requested_notional": "100000",
+    "ordinary_limit": "50000",
+    "exception": {
+      "enabled": true,
+      "approver": "committee_c",
+      "reason": "Time-limited synthetic extension of position size; no waiver of numeric, version or model-scope failures.",
+      "expires": "2026-10-13",
+      "notional_limit": "120000"
+    }
+  }
+}

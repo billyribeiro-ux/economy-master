@@ -1,0 +1,82 @@
+{
+  "chapter": "v10-c11",
+  "date": "2026-10-09",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating reviewer and separately scoped author/peer specialists; no external human certification",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Full graduate chapter: 5 worked examples, 12 fully solved exercises, answered teaching/retention, explicit proof/source limits and a portable standard-library laboratory.",
+  "author_review": "reviews/v10-c11-author.json",
+  "peer_review": "reviews/v10-c11-peer.json",
+  "detailed_review": "production/v10-closing-root-review-notes.json",
+  "root_numerical_evidence": "production/v10-closing-root-numerical-audit.json",
+  "verified_payload_hashes": 9,
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c11.html",
+      "bytes": 53300,
+      "sha256": "4f31336eb10f0a0a3377318c3e0164b29ec4e985dc5d25b0c9c327739e0c1e27"
+    },
+    {
+      "path": "content/projects/v10-c11-inputs.json",
+      "bytes": 1295,
+      "sha256": "3268e0f7e2c326a3e9a8a267ac971ea44648e94388b5758da36393f695be0b06"
+    },
+    {
+      "path": "content/projects/v10-c11-analysis.py",
+      "bytes": 14327,
+      "sha256": "15eb59e614f0cb65e80bb16e54067c80573fbc2dde266af84caf8b1379408511"
+    },
+    {
+      "path": "content/projects/v10-c11-output.json",
+      "bytes": 9465,
+      "sha256": "78a8a552d8d82c2864fd2ddd8bdc975517242c879dd796ab4ec4074f60df49ad"
+    },
+    {
+      "path": "content/projects/v10-c11-manifest.json",
+      "bytes": 671,
+      "sha256": "7961cc4b63f8d303dd4b00256c5933a19490eed6c9ca2b7cee1e967a6d484690"
+    },
+    {
+      "path": "content/projects/v10-c11-README.txt",
+      "bytes": 11092,
+      "sha256": "ecc528ef57cc8bcbfd76ad760ff68beac01a1e7a50e09ec51ffecfff9e40cad9"
+    },
+    {
+      "path": "scripts/check_v10_c11.py",
+      "bytes": 26721,
+      "sha256": "a71eb1d6e3e98b415cfbc8d36fe42d93d87ecdd14bfb1e4f740e8fc9ade085e5"
+    },
+    {
+      "path": "content/reviews/v10-c11-sources.json",
+      "bytes": 4131,
+      "sha256": "ff252b4ff60f4a3254c3da800be966499be197a8e668a8805cfda5b072f4eeab"
+    },
+    {
+      "path": "content/reviews/v10-c11-author.json",
+      "bytes": 13343,
+      "sha256": "f9c1ecd2ce3683195b8384b2cfa4fa49681dd6f8d7bbf0c24e61b45bc622ff5e"
+    }
+  ],
+  "resolved_peer_findings": [],
+  "resolved_coordinator_findings": [
+    {
+      "issue": "Exercise3 digital interval incorrectly stated(0,D), overlooking calibrated p2<.9.",
+      "correct_interval": "(0,45/52) with D=25/26",
+      "witness": "Superhedge (140\u2212x)/40 pays(2,1,0),cost45/52; buy it and short the digital to get(2,0,0) at zero initial cost.",
+      "state": "resolved in final frozen author manuscript and separately verified"
+    }
+  ],
+  "open_content_findings": [],
+  "limitations": [
+    "Machine-assisted author, separate peer and coordinator review is not independent human certification.",
+    "Original synthetic calculations do not establish empirical model validity, observed current prices or actual authority.",
+    "Whole-edition visual/mobile/keyboard/print QA remains pending."
+  ]
+}

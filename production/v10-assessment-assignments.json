@@ -1,0 +1,90 @@
+{
+  "batch": "v10-assessment",
+  "date": "2026-10-09",
+  "authorization": "Explicit specialist authorization recorded in MASTER_PLAN.md. Queue only; no assignment dispatched before existing author/peer work completes.",
+  "batch_state": "root support draft underway while closing chapters receive separate peer review; specialist assessment scopes remain queued",
+  "canonical_spec": {
+    "id": "v10",
+    "title": "Fixed income, derivatives and quantitative finance",
+    "assessment": "Price and hedge contingent claims, derive continuous-time results and explain model, credit and liquidity risk.",
+    "project": "Build a documented pricing-and-risk toolkit with bond valuation, curve construction, binomial options, Monte Carlo and hedge-error analysis."
+  },
+  "chapter_prerequisites": [
+    "v10-c01",
+    "v10-c02",
+    "v10-c03",
+    "v10-c04",
+    "v10-c05",
+    "v10-c06",
+    "v10-c07",
+    "v10-c08",
+    "v10-c09",
+    "v10-c10",
+    "v10-c11",
+    "v10-c12"
+  ],
+  "shared_rules": {
+    "exam_contract": "Original distinct Forms A/B: five20-point domains,100 points,240-minute suggested uncalibrated design target. Complete worked determinate solutions, explicit subpart point allocation, proof hypotheses, open-answer rubrics. Each form maps all12 chapter outcomes. Supply necessary normal-CDF values or small tables for pencil-and-paper arithmetic; no unstated software access in a closed-resource section. No copied chapter problems or number-only reassessment. Coordinate blueprints before full drafting.",
+    "domains": {
+      "D1": "Cash-flow pricing, curve construction and rate exposure (c01\u2013c03)",
+      "D2": "Credit, forwards/futures/swaps and dated collateral/funding cash (c04\u2013c05)",
+      "D3": "Finite replication/stopping, Brownian/Ito and continuous valuation (c06\u2013c08)",
+      "D4": "Greeks, volatility, financed hedging and numerical/sampling error (c09\u2013c10)",
+      "D5": "Incomplete/exotic contract identification and controlled model use (c11\u2013c12)"
+    },
+    "acceptance": "All payloads independently recomputed, all prompts solved, methods already taught, explicit provenance/source scope, peer/coordinator audit before acceptance. Root alone assembles final v10.html and updates canonical/shared/hosting. No subagents, new installations or external messages."
+  },
+  "assignments": [
+    {
+      "owner": "bs_author",
+      "task": "v10-exam-a",
+      "state": "queued, not dispatched",
+      "scope": "Form A uses coherent bond/curve/hedge and option-pricing cases across D1\u2013D5, including a nonparallel or short-rate distinction, explicitly dated credit/funding, actual self-financing replication and Ito/PDE reasoning, numerical-error evidence, and a finite nonunique valuation/permission decision. Author chooses tractable original values and publishes blueprint before drafting; all12 chapters must have assessed evidence.",
+      "owned_paths": [
+        "content/assessments/parts/v10-exam-a.html",
+        "scripts/check_v10_exam_a.py",
+        "content/reviews/v10-exam-a-author.json",
+        "content/reviews/v10-exam-a-sources.json"
+      ]
+    },
+    {
+      "owner": "c05_review",
+      "task": "v10-exam-b",
+      "state": "queued, not dispatched",
+      "scope": "Form B is a structurally distinct reassessment across identical D1\u2013D5 coverage: different cash timing/information set, alternative hedge/credit/equivalent-measure or early-exercise cases, discrete hedge/variance/conditioning diagnosis, and different incomplete/exotic/model-control evidence. Coordinate with A to avoid number-only variants; develop complete solutions and scoring.",
+      "owned_paths": [
+        "content/assessments/parts/v10-exam-b.html",
+        "scripts/check_v10_exam_b.py",
+        "content/reviews/v10-exam-b-author.json",
+        "content/reviews/v10-exam-b-sources.json"
+      ]
+    },
+    {
+      "owner": "ito_author",
+      "task": "v10-project",
+      "state": "queued, not dispatched",
+      "scope": "Build an original coherent pricing-and-risk toolkit and model-use defense, beyond rerunning chapter labs. Required: dated bond cash/curve construction, rate shocks/hedge sensitivities, finite-tree options and exercise, independently anchored vanilla/Monte Carlo with declared sampling units/error, funded discrete-hedge error/transaction costs, and explicitly scoped credit/path/nonunique valuation or governance failure cases. Inputs and cash conventions must fit one fictional desk decision. Separate exact arithmetic, deterministic discretization, ideal sampling uncertainty and model/contract uncertainty; do not let code correctness approve all uses. Supply bounded standard-library model, full synthetic inputs/provenance/output/manifest/README, independent numerical/intervention checker, complete instructor guide,100-point rubric and essential-domain floors, required learner report/code/evidence/limitations, and new transfer tasks. Send architecture and numeric anchors to root before full prose.",
+      "owned_paths": [
+        "content/assessments/parts/v10-project.html",
+        "content/projects/v10-assessment-inputs.json",
+        "content/projects/v10-assessment-analysis.py",
+        "content/projects/v10-assessment-output.json",
+        "content/projects/v10-assessment-manifest.json",
+        "content/projects/v10-assessment-README.txt",
+        "scripts/check_v10_project.py",
+        "content/reviews/v10-project-author.json",
+        "content/reviews/v10-project-sources.json"
+      ]
+    }
+  ],
+  "root_owned": [
+    "content/assessments/parts/v10-support-opening.html",
+    "content/assessments/parts/v10-support-closing.html",
+    "scripts/check_v10_assessment.py",
+    "content/reviews/v10-support-author.json",
+    "content/reviews/v10-support-sources.json",
+    "content/assessments/v10.html",
+    "content/reviews/v10-assessment.json"
+  ],
+  "root_scope": "Prerequisite diagnostic and complete answers; administration, coverage/domain map, thresholds and critical-error rules; oral transfer/teach-back; distinct delayed retention with solutions and remediation; notation/concept index linked to actual chapter anchors; volume synthesis and honest limitations. Integrate all components, root independent numerical/proof/prompt audit, structural/full regression/offline checks and private publication."
+}

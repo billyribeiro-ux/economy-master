@@ -1,0 +1,38 @@
+{
+  "chapter": "v10-c10",
+  "proposals": [
+    {
+      "id": "v10-c10-giles-fd",
+      "title": "Mike Giles — Lecture 1: Introduction to finite difference methods (AIMS lecture notes)",
+      "url": "https://people.maths.ox.ac.uk/gilesm/AIMS/lec1.pdf",
+      "use": "Primary teaching context for the forward-time central-space heat stencil, explicit time restriction and maximum-norm stability argument. The chapter independently derives its discounted log-price drift scheme and conditional smooth-solution error bound.",
+      "checked": "2026-10-09",
+      "verification": "Actual 21-slide primary author PDF retrieved. Slides 4–8 inspected for centered differences, explicit heat equation stencil, Fourier amplification and the maximum-norm inequality; later Black–Scholes application located. No unstated theorem for nonsmooth option payoff, artificial boundaries, drift positivity or American convergence imported. No lecture date inferred from search-engine crawl metadata."
+    },
+    {
+      "id": "v10-c10-haugh-output",
+      "title": "Martin Haugh — Output Analysis and Run-Length Control (2017)",
+      "url": "https://www.columbia.edu/~mh2078/MonteCarlo/MCS_Output_Analysis.pdf",
+      "use": "Primary source context for iid sample means, variance, approximate CLT intervals and fixed/pilot run-length planning. The chapter proves its own bounded-payoff concentration bound and carefully separates a fixed-sample guarantee from sequential stopping.",
+      "checked": "2026-10-09",
+      "verification": "Actual 8-page author PDF retrieved; title/header, Section 1 pages 1–3 and Section 2 pages 3–5 inspected. No source numerical example reproduced. The chapter does not adopt the informal implication that interval narrowness increases the confidence level, nor claim fixed-n coverage for arbitrary sequential stopping. Bootstrap section is outside cited scope."
+    },
+    {
+      "id": "v10-c10-haugh-variance",
+      "title": "Martin Haugh — Simulation Efficiency and an Introduction to Variance Reduction Methods",
+      "url": "https://www.columbia.edu/~mh2078/MonteCarlo/MCS_Var_Red_Basic.pdf",
+      "use": "Primary method context for cost-times-variance comparisons, independent-pilot controls, antithetic pair units and their covariance criterion. Chapter derives signed controls and a one-dimensional non-strict covariance inequality with original numerical cases.",
+      "checked": "2026-10-09",
+      "verification": "Actual 13-page author PDF retrieved. Sections 1–2.1 on pages 1–4 and Section 3 on pages 7–9 inspected, including pilot/main separation, variance formula, pair averaging, monotone transformations and normal antithetics. The source's strict monotonicity-based inequality is not adopted for constant/degenerate payoffs; chapter proves nonpositive covariance and discusses equality. No general claim of variance reduction for arbitrary nonmonotone payoff or composed control/pair methods is imported."
+    },
+    {
+      "id": "v10-c10-haugh-stopping",
+      "title": "Martin Haugh — Duality Theory and Simulation in Financial Engineering (Proceedings of the 2003 Winter Simulation Conference)",
+      "url": "https://www.columbia.edu/~mh2078/wsc03.pdf",
+      "use": "Primary research context for regression continuation approximations, feasible adapted exercise policies, and further study of dual bounds. The chapter proves only finite-grid optimal stopping and independent fixed-policy expected lower bounds, not the paper's full duality theory.",
+      "checked": "2026-10-09",
+      "verification": "Actual 8-page author paper retrieved; title, introduction and Section 2.1 on pages 2–3 inspected, especially the exercise rule and policy-value lower-bound paragraph. Section 2.2 located only as further study; no dual algorithm or regression convergence theorem claimed proved. The chapter makes training/evaluation separation and sample-versus-expectation distinction explicit rather than treating every simulated estimate as a lower bound."
+    }
+  ],
+  "scope_limit": "Original synthetic examples, exercise solutions and program. No current trading data, general tree/LSM convergence, nonsmooth PDE rate, new random-number independence theorem or empirical model validity claim. Source retrieval is distinct from independent peer review and external human certification."
+}

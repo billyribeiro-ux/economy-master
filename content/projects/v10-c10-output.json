@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "chapter": "v10-c10",
+  "units": "CU per one option; times in years",
+  "analytic": {
+    "european_call": 11.284433172979284,
+    "european_put": 11.596767760843868
+  },
+  "tree": [
+    {
+      "steps": 24,
+      "up": 1.0644944589178593,
+      "down": 0.9394130628134758,
+      "probability_up": 0.4968817143183643,
+      "european_call": 11.369813337312822,
+      "european_put": 11.682147925177397,
+      "bermudan_put": 12.148353999794043,
+      "all_grid_dates_put": 12.251137730100472,
+      "strict_exercise_nodes": 110,
+      "parity_residual": 8.881784197001252e-15,
+      "european_put_error": 0.0853801643335288
+    },
+    {
+      "steps": 48,
+      "up": 1.045185282809479,
+      "down": 0.9567681601026565,
+      "probability_up": 0.49779266509898434,
+      "european_call": 11.340658081574297,
+      "european_put": 11.652992669438857,
+      "bermudan_put": 12.160770953335398,
+      "all_grid_dates_put": 12.209645269669632,
+      "strict_exercise_nodes": 466,
+      "parity_residual": 2.3092638912203256e-14,
+      "european_put_error": 0.05622490859498974
+    },
+    {
+      "steps": 96,
+      "up": 1.0317434074991028,
+      "down": 0.9692332344763441,
+      "probability_up": 0.49843833924747816,
+      "european_call": 11.30730895184312,
+      "european_put": 11.619643539707752,
+      "bermudan_put": 12.155126181621432,
+      "all_grid_dates_put": 12.176792467570383,
+      "strict_exercise_nodes": 1969,
+      "parity_residual": -4.796163466380676e-14,
+      "european_put_error": 0.022875778863884477
+    },
+    {
+      "steps": 192,
+      "up": 1.0223430357807888,
+      "down": 0.9781452653377496,
+      "probability_up": 0.49889544237069794,
+      "european_call": 11.277406483416783,
+      "european_put": 11.589741071281363,
+      "bermudan_put": 12.14231680446702,
+      "all_grid_dates_put": 12.152470369297182,
+      "strict_exercise_nodes": 8223,
+      "parity_residual": 3.552713678800501e-15,
+      "european_put_error": -0.007026689562504629
+    }
+  ],
+  "finite_difference": [
+    {
+      "space_steps": 40,
+      "time_steps": 100,
+      "dx": 0.08,
+      "dt": 0.015,
+      "weights": [
+        0.073828125,
+        0.853515625,
+        0.07265624999999999
+      ],
+      "spot_low": 19.382065727486918,
+      "spot_high": 475.49111274193103,
+      "put_exact_boundary": 11.612615536328706,
+      "put_asymptotic_boundary": 11.612615536328706,
+      "boundary_effect": 0.0,
+      "discrete_boundary_effect_bound": 1.0482261516166706e-06,
+      "manufactured_max_error": 0.00012225629368334268,
+      "manufactured_global_bound": 0.0009915087096778357,
+      "exact_boundary_put_error": 0.015847775484838067
+    },
+    {
+      "space_steps": 80,
+      "time_steps": 400,
+      "dx": 0.04,
+      "dt": 0.00375,
+      "weights": [
+        0.07353515625,
+        0.853515625,
+        0.07294921875
+      ],
+      "spot_low": 19.382065727486918,
+      "spot_high": 475.49111274193103,
+      "put_exact_boundary": 11.578416115407121,
+      "put_asymptotic_boundary": 11.578416115407121,
+      "boundary_effect": 0.0,
+      "discrete_boundary_effect_bound": 1.0482261516166706e-06,
+      "manufactured_max_error": 3.065723431561196e-05,
+      "manufactured_global_bound": 0.0002478771774194589,
+      "exact_boundary_put_error": -0.018351645436746722
+    },
+    {
+      "space_steps": 160,
+      "time_steps": 1600,
+      "dx": 0.02,
+      "dt": 0.0009375,
+      "weights": [
+        0.07338867187499999,
+        0.853515625,
+        0.073095703125
+      ],
+      "spot_low": 19.382065727486918,
+      "spot_high": 475.49111274193103,
+      "put_exact_boundary": 11.592656261694971,
+      "put_asymptotic_boundary": 11.592656261694971,
+      "boundary_effect": 0.0,
+      "discrete_boundary_effect_bound": 1.0482261516166706e-06,
+      "manufactured_max_error": 7.679356627043887e-06,
+      "manufactured_global_bound": 6.196929435486473e-05,
+      "exact_boundary_put_error": -0.004111499148896414
+    }
+  ],
+  "monte_carlo": {
+    "generator": "SHA256 ASCII v10-c10:seed:index; two 53-bit midpoint uniforms; Box-Muller",
+    "seed": 271828,
+    "pairs": 4096,
+    "payoff_evaluations_per_method": 8192,
+    "first_three_normal_pairs": [
+      [
+        2.427186357240564,
+        1.4647872088291303
+      ],
+      [
+        -1.00238401326848,
+        0.15277829758258282
+      ],
+      [
+        -2.4235473754352066,
+        1.367458392081592
+      ]
+    ],
+    "fixed_beta": -0.35,
+    "hoeffding_alpha": 0.05,
+    "normal_sample_mean": 0.004190513312017121,
+    "normal_sample_second_moment": 1.00064286277775,
+    "discounted_stock_sample_mean": 93.98023491811624,
+    "ideal_analytic": {
+      "put_mean": 11.59676776084387,
+      "put_variance": 201.13451917819856,
+      "discounted_stock_mean": 93.86411877056028,
+      "discounted_stock_variance": 865.9385545964027,
+      "put_stock_covariance": -331.9974699980012,
+      "optimal_beta": -0.38339610615067116,
+      "fixed_control_variance": 74.81376311765706
+    },
+    "plain": {
+      "units": 8192,
+      "mean": 11.56107809851297,
+      "sample_variance": 200.46097728443434,
+      "standard_error": 0.15642996561134412,
+      "clt95_interval": [
+        11.254480999811896,
+        11.867675197214044
+      ],
+      "hoeffding_half_width": 1.4131217900902013
+    },
+    "fixed_control": {
+      "units": 8192,
+      "mean": 11.601718750157554,
+      "sample_variance": 74.01294275100965,
+      "standard_error": 0.09505147579422614,
+      "clt95_interval": [
+        11.41542128092349,
+        11.788016219391618
+      ],
+      "hoeffding_half_width": null
+    },
+    "antithetic": {
+      "units": 4096,
+      "mean": 11.558920601149744,
+      "sample_variance": 34.46050668919235,
+      "standard_error": 0.09172355008892809,
+      "clt95_interval": [
+        11.379145746441289,
+        11.738695455858199
+      ],
+      "hoeffding_half_width": 1.998456000830509
+    },
+    "antithetic_fixed_control": {
+      "units": 4096,
+      "mean": 11.55724706001749,
+      "sample_variance": 62.38563579458721,
+      "standard_error": 0.12341340329928874,
+      "clt95_interval": [
+        11.315361234341367,
+        11.799132885693613
+      ],
+      "hoeffding_half_width": null
+    }
+  },
+  "limits": [
+    "All inputs are original synthetic teaching parameters, not market observations.",
+    "All-grid-date tree put is finite-model optimal stopping, not a continuous American price.",
+    "Exact PDE boundary is a vanilla verification device; asymptotic boundary introduces error.",
+    "Manufactured smooth-solution error bound does not certify the kinked option payoff rate.",
+    "Intervals require ideal independent random draws; deterministic test-stream quality is not proved.",
+    "Sampling intervals exclude model, monitoring, PDE, policy and floating-point errors."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "chapter": "v10-c09",
+  "proposals": [
+    {
+      "id": "v10-c09-haugh-greeks",
+      "title": "Martin Haugh — The Black–Scholes Model (2016), Sections 2–4",
+      "url": "https://www.columbia.edu/~mh2078/FoundationsFE/BlackScholes.pdf",
+      "use": "Scoped further reading on vanilla Greeks, volatility-surface representation and delta hedging. Chapter proofs, inverse-domain argument, discounted funding identity, numerical cases and exercises are original.",
+      "checked": "2026-10-09",
+      "verification": "Actual 12-page author PDF retrieved and read: Section 2 on printed pages 3–6, Section 3 on pages 7–10 and Section 4 on pages 11–12; 2016 header inspected. Mathematical method source, not evidence about current market conventions. The chapter derives exact dividend-adjusted bounds and a funded discounted hedge-error identity rather than adopting abbreviated source bounds or an undiscounted P&L formula for nonzero rates. It declares its calibrated response rule explicitly and does not import the source's market-convention labels. Source examples and exercises were not reproduced."
+    },
+    {
+      "id": "v10-c09-haugh-differences",
+      "title": "Martin Haugh — Estimating the Greeks (2017), Section 1",
+      "url": "https://www.columbia.edu/~mh2078/MonteCarlo/MCS_Greeks.pdf",
+      "use": "Further reading on finite-difference sensitivity estimation and the distinction between perturbation and evaluation/sampling error. This deterministic chapter separately proves its derivative-bound error inequalities; simulation methods are reserved for the next chapter.",
+      "checked": "2026-10-09",
+      "verification": "Actual 12-page author PDF retrieved, 2017 header and Section 1 on printed pages 1–2 inspected for forward/central differences and perturbation-versus-sampling issues. No claim that the rest of the estimator theory was reviewed or established here. Original deterministic error budgets, numbers and problems are independently developed, not copied from its simulation examples."
+    }
+  ],
+  "scope_limit": "Primary body inspection supports the specified further-reading roles. Link/body inspection is separate from mathematical author/peer review, and neither is external human certification. No current market observation or empirical effectiveness claim is drawn from these historical notes."
+}

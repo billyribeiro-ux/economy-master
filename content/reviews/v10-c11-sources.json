@@ -1,0 +1,30 @@
+{
+  "chapter": "v10-c11",
+  "proposals": [
+    {
+      "id": "v10-c11-haugh-discrete",
+      "title": "Martin Haugh — Martingale Pricing Theory in Discrete-Time and Discrete-Space Models (2016), single-period completeness sections",
+      "url": "https://www.columbia.edu/~mh2078/ContinuousFE/MartingalePricingDiscreteModels.pdf",
+      "use": "Further reading for positive state prices, attainability, finite-market completeness and nonunique pricing measures. The chapter supplies its own constructive stock/cash envelope proof, endpoint qualification, original states and exercises, without invoking the source's linear-programming duality route.",
+      "checked": "2026-10-09",
+      "verification": "Opened actual 30-page primary author PDF from the Continuous-Time Finance course index; PDF header identifies 2016 Foundations of Financial Engineering notes. Read definitions on printed pages 1–4 and Section 1.2 completeness/uniqueness discussion, Theorems 6–7 and proof on printed pages 7–8. The course index explicitly describes these as the more recent Foundations notes. The already catalogued v10-c06-haugh-discrete uses another author-hosted route and focuses on self-financing/early exercise; this proposal records the additionally inspected single-period scope. No source example or problem is reproduced, no general continuous-time FTAP is imported."
+    },
+    {
+      "id": "v10-c11-haugh-extensions",
+      "title": "Martin Haugh — Local Volatility, Stochastic Volatility and Jump-Diffusion Models (Fall 2013)",
+      "url": "https://www.columbia.edu/~mh2078/ContinuousFE/LocalStochasticJumps.pdf",
+      "use": "Further-study map for volatility-factor exposure, missing hedging instruments and jump payoff changes. Original bounded-factor constant-tilt example, restricted independent-driver proof and deterministic finite-event telescoping proof establish only the results used in the chapter.",
+      "checked": "2026-10-09",
+      "verification": "Opened actual 21-page primary author PDF and inspected header; Section 2 on printed pages 4–5, including two drivers, factor drift choice and integrability footnote; Sections 3.1 and 3.4 on printed pages 9–10 and 14, including pre-event integrands and the jump-change formula. Heston/CIR existence, general stochastic Girsanov, Feynman–Kac, transform formulas, Poisson/Levy characterization and empirical judgments in the notes are not assumed or claimed as proved. The chapter's scheduled finite-jump theorem is deliberately narrower than general jump calculus."
+    },
+    {
+      "id": "v10-c11-duffie-cds",
+      "title": "Darrell Duffie — Credit Swap Valuation, Financial Analysts Journal 55(1), 73–87 (January/February 1999)",
+      "url": "https://www.darrellduffie.com/uploads/1/4/8/0/148007615/duffiecreditswapvaluation1999.pdf",
+      "use": "Historical primary exposition of premium versus protection cash flows, accrued-premium and settlement-date distinctions, and the need to state counterparty assumptions. All finite-state credit contracts, numbers and fair-spread ratio proofs in this chapter are original instructional constructions.",
+      "checked": "2026-10-09",
+      "verification": "Followed author Credit Risk index to actual 15-page published article; read The Basics on printed pages 73–74, default-free-counterparty scope on page 74, next-coupon settlement assumption on page 75, and Payment of Accrued Credit Swap Premium on page 77. No historical market convention, LIBOR-era quotation practice or approximated average accrual is asserted as current. The chapter defines exact dates and accrual, and labels its seller protection haircut as a toy cash rule, not bilateral closeout/CVA or current documentation."
+    }
+  ],
+  "scope_limit": "Only the stated actual-body sections were inspected. Source retrieval is not independent mathematical or human certification. Proofs, examples and problems are original; historical sources are not evidence of current market terms. Prerequisite scalar Ito and constant normal tilt are linked to accepted c07/c08 rather than reasserted as unproved general theories."
+}

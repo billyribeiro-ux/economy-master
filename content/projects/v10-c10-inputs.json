@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "market": {
+    "spot": 96.0,
+    "strike": 100.0,
+    "rate": 0.04,
+    "dividend_yield": 0.015,
+    "volatility": 0.25,
+    "maturity": 1.5
+  },
+  "tree": {
+    "steps": [24, 48, 96, 192],
+    "exercise_stride": 4
+  },
+  "finite_difference": {
+    "log_half_width": 1.6,
+    "grids": [
+      {"space_steps": 40, "time_steps": 100},
+      {"space_steps": 80, "time_steps": 400},
+      {"space_steps": 160, "time_steps": 1600}
+    ]
+  },
+  "monte_carlo": {
+    "seed": 271828,
+    "pairs": 4096,
+    "control_beta": -0.35,
+    "alpha": 0.05
+  }
+}

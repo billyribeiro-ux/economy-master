@@ -1,0 +1,30 @@
+{
+  "schema": "v10-c11-input-1",
+  "market": {
+    "spot": 100,
+    "times": [0, "1/2", 1, "3/2", 2],
+    "discounts": [1, "100/101", "50/51", "100/103", "25/26"],
+    "states": [
+      {"id": "decline", "stock_path": [100, 90, 80, 70, 60], "default_index": 1, "recovery": "1/4", "protection_fraction": "1/2"},
+      {"id": "quiet_recovery", "stock_path": [100, 90, 80, 90, 100], "default_index": 3, "recovery": "1/2", "protection_fraction": 1},
+      {"id": "spike_return", "stock_path": [100, 110, 140, 120, 100], "default_index": null, "recovery": 1, "protection_fraction": 1},
+      {"id": "advance", "stock_path": [100, 110, 120, 130, 140], "default_index": null, "recovery": 1, "protection_fraction": 1}
+    ]
+  },
+  "contracts": {
+    "strike": 90,
+    "barrier": 130,
+    "monitor_indices": [2, 4],
+    "average_indices": [2, 4],
+    "average_strike": 100,
+    "credit": {"premium_indices": [2, 4], "notional": 100, "premium_rate": "3/100", "settlement_delay": 1}
+  },
+  "measures": [
+    {"id": "quiet_weight", "probabilities": ["1/5", "2/5", "1/10", "3/10"]},
+    {"id": "spike_weight", "probabilities": ["1/5", "1/10", "2/5", "3/10"]}
+  ],
+  "jump_cases": [
+    {"id": "down20", "spot": 100, "jump": -20, "scale": 100},
+    {"id": "up50", "spot": 100, "jump": 50, "scale": 100}
+  ]
+}

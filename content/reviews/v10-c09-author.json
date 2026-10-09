@@ -1,0 +1,187 @@
+{
+  "chapter": "v10-c09",
+  "date": "2026-10-09",
+  "status": "author-review-complete; separate peer/coordinator acceptance pending",
+  "reviewer": "c05_review author assignment, machine-assisted author review; not independent peer or external human certification",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Five original worked examples; ten exact original exercises with full solutions, proof and research critique; answered teach-back and retention; bounded deterministic original lab; two scoped primary-source proposals.",
+  "prerequisite_contract": {
+    "accepted": "v10-c08 dividend-adjusted vanilla formula, funded PDE and parity; v10-c07 restricted scalar localized Ito for continuous adapted coefficients, positive paths and deterministic time/parameter transformations.",
+    "coordination": "Confirmed tau=T-t, calendar Theta=-C_tau and fixed-input Greeks with c10/c11 authors. C10 may use finite positive-vega interval conditioning; c11 may use fixed-model-vol funded mismatch under the stated diffusion scope. No general random volatility-surface dynamics, Girsanov theorem, tree convergence or jump replication is smuggled into c09."
+  },
+  "proof_audit": [
+    "Derived delta/gamma/vega/calendar theta by A phi(d1)=H phi(d2); put adjustments follow differentiated parity. Units, volatility point scaling, position signs and nonuniversal theta sign are explicit. Same S/sigma/tau vega-gamma identity proves a rank restriction, not universal portfolio interchangeability.",
+    "Multivariate Taylor is applied to the line segment with continuous third derivatives in a compact interior region. Abbreviated delta/gamma/vega/theta approximation omits mixed Hessian terms. Independent analytic spot-only C_SSS supremum bound is derived from monotone d1 and bounded normal density; it does not purport to cover mixed shocks.",
+    "Calibrated total first/second derivatives follow the chain rule under a declared twice differentiable spot response. Cross-sectional strike skew alone does not identify spot dynamics or prove a replication rule.",
+    "Positive vega proves strict monotonicity in sigma; normal-argument endpoint limits and the intermediate-value theorem prove the exact open quote range and uniqueness. Zero spot, strike or maturity fail strict identification. Mean-value inverse bound requires a positive lower vega throughout the solution interval. Floating-point/cap/near-boundary statuses do not assert interval certification.",
+    "Strike monotonicity, discounted Lipschitz bounds and weighted convexity are payoff comparisons under matched executable rights. Unequal-strike weights and full piecewise butterfly payoff verified; finite passing screens are not a full dynamic arbitrage-free surface theorem.",
+    "Every discrete hedge reset preserves incoming stock plus bank less fees. Dividend shares grow continuously under the specified frictionless reinvestment rule. Cash is not replaced by the model mark. Fees are debited at payment date and accrue thereafter. Terminal liquidation and written payoff have correct signs even on the losing path.",
+    "For actual positive continuous diffusion with continuous adapted coefficients and fixed pricing sigma, subtracting funded gains and actual-path Ito cancels physical drift/diffusion terms and yields dE=rE dt+Gamma*S^2*(sigma_model^2-a^2)dt/2. Discounting is explicit. Localized bounded integrands and integrable pathwise 1/sqrt(T-t) cash-gamma majorant justify terminal extension; expectations need additional integrability. Negative q can be covered by exp(abs(q)*T). No unproved process-existence or arbitrary-predictable-coefficient theorem is assumed.",
+    "The weighted two-slice variance example is algebra with supplied weights, not two claimed diffusion realizations. Continuous mismatch is not an exact discrete realized-variance identity; the discrete expansion retains mixed/time/spatial remainder effects and excludes fees, changed marks and jumps.",
+    "Central-difference delta/gamma bounds include both smooth truncation and bounded evaluation error. The optimal delta perturbation is derived analytically, with an explicit smooth-domain and actual-price-error condition. Numerical grid refinement is a diagnostic rather than proof of these smoothness assumptions."
+  ],
+  "prompt_audit": [
+    {
+      "exercise": 1,
+      "review": "Independently differentiated all Greeks and parity signs; S85/K90 transfer price and Greeks verified using payoff quadrature and numerical derivatives. Vega display scaling checked."
+    },
+    {
+      "exercise": 2,
+      "review": "Exact rational worksheet gives 300 option units, -80 stock units, residual vega -3000 and -30 CU for .01 sigma. Same-vol/maturity gamma-vega proportionality and rank limitation proved."
+    },
+    {
+      "exercise": 3,
+      "review": "Analytic third derivative and interval bound derived; original spot residual -0.000561237 lies within .000822669. Full mixed residual .010557846 correctly includes omitted Hessian terms."
+    },
+    {
+      "exercise": 4,
+      "review": "Total delta .44 and full second-derivative chain rule checked; the cross-sectional strike response is explicitly distinct from the stipulated spot response."
+    },
+    {
+      "exercise": 5,
+      "review": "Strict inverse-domain existence/uniqueness proof and all boundary classifications checked. Independent integral ATM quote 6.372453964 implies sigma .4; interval lower-vega 2 and price error .05 yield .025 sigma, not a one-point certification."
+    },
+    {
+      "exercise": 6,
+      "review": "All first-reset cash/share terms independently reconstructed from integrated delta and dated trade sums. Forced mark reset withdraws 1.634019011730. Final 95 gives ideal -.696468323447 and fees -.795934569643; separately compounded fees reconcile exactly within floating tolerance."
+    },
+    {
+      "exercise": 7,
+      "review": "Funded discounted error sign, physical-drift cancellation, terminal localized/pathwise limit and expectation limitations audited. Exact fraction weights give 1.5625 and -2.1875 with identical unweighted variance .065; no discrete-identity inference."
+    },
+    {
+      "exercise": 8,
+      "review": "Unequal weights .6/.4, price cost -.8, all four terminal intervals and nonnegative triangular payoff checked exactly with fractions. Individual inversions do not cure joint convexity violation."
+    },
+    {
+      "exercise": 9,
+      "review": "Taylor and evaluation-error contributions derived; minimum h = .1 and bound .000015 checked. Entire symmetric interval must lie in the stated smooth region with an independently justified price error."
+    },
+    {
+      "exercise": 10,
+      "review": "All five memo errors corrected. Complete illustrative protocol requires frozen response/trading rules, contemporaneous executable terms, independent numerical tests, out-of-sample selection and cash reconciliation, two numeric corrections, uncertainty and limits. Explicit open-response rubric supplied."
+    },
+    {
+      "exercise": "teach-back and delayed retention",
+      "review": "Model explanation distinguishes sensitivity, response rule, trading strategy and debt. All five answers checked: -48 CU, vega 30/.30, stock cannot remove gamma, no finite upper-bound IV, and a trade of 2 preserves wealth 7 unless an external 1 is withdrawn."
+    }
+  ],
+  "resolved_findings": [
+    {
+      "finding": "Portfolio text initially described a target stock holding as an additional purchase even with pre-existing shares.",
+      "repair": "Explicitly distinguishes total target -sum(n*delta) from incremental trade -h-sum(n*delta). Model already used correct incremental trade."
+    },
+    {
+      "finding": "Terminal mismatch statement needed to justify the stochastic-gains extension despite a possible terminal delta discontinuity.",
+      "repair": "Bounded delta and localized continuous coefficients supply integrability through T; explicit cash-gamma integrable majorant and payoff limit complete the pathwise argument."
+    },
+    {
+      "finding": "A two-sided quadrature truncation envelope must count both tails.",
+      "repair": "README states conservative 2*(A+H)*Phi(-12) with the shifted upper cutoff, still below 1e-25 CU on the declared domain."
+    }
+  ],
+  "numerical_validation": {
+    "chapter": "v10-c09",
+    "status": "passed",
+    "comparisons": 526,
+    "invalid_inputs_rejected": 87,
+    "economic_interventions": [
+      "reverse option position",
+      "add delta-neutralizing stock",
+      "double contract multiplier",
+      "signed spot perturbations and separate mixed-shock error",
+      "inverse exact and near-boundary statuses",
+      "lower inversion cap",
+      "price perturbation and inverse conditioning",
+      "middle smile quote correction",
+      "final stock loss",
+      "zero fees",
+      "double fees",
+      "zero dividend reinvestment",
+      "negative financing",
+      "reverse actual variance order"
+    ],
+    "worked_examples": 5,
+    "solved_exercises": 10,
+    "author_payload_hashes_verified": 8,
+    "groups": [
+      "quiet strict JSON API and nonmutation; saved output secondary check",
+      "payoff quadrature with grid refinement, independent finite differences, PDE/parity and interior/boundary stresses",
+      "worked examples, portfolio scaling, controlled Taylor shocks, total response and rational problem anchors",
+      "independent implied-volatility anchors, endpoint/cap classifications and local conditioning",
+      "finite strike inequalities, independent smile inversions and exact uneven butterfly payoff",
+      "expanded dated cash/trade/fee funding, loss paths, negative rate/yield interventions and rational variance weights",
+      "strict finite bounded domain, bool/type/overflow/shape and financially infeasible input rejection",
+      "four-payload manifest and isolated five-file normal/-O stdout/file CLI with rejection preserving output",
+      "balanced original chapter, all problem/solution anchors, answered teaching and exact source/download references"
+    ],
+    "limits": "Machine-assisted author verification, not peer/human certification or empirical hedge evidence. Quadrature and finite differences are numerical checks; mathematical proofs and assumptions are reviewed separately.",
+    "normal_and_optimized_identical": true,
+    "quiet_check_api": true
+  },
+  "execution_checks": [
+    "Normal Python and -O checkers passed with identical summaries; check() imported and called under captured stdout/stderr produced no output and returned a strict JSON-safe summary.",
+    "Standalone five-file package tested normal and -O with explicit input, stdout and explicit file output in a temporary directory containing spaces.",
+    "Invalid JSON-shaped data, duplicate keys, nonfinite constants and overflow rejected without modifying an existing output; public run preserves its input."
+  ],
+  "open_findings": [],
+  "pending_gates": [
+    "Separate peer audit of the exact frozen nine files and coordinator acceptance.",
+    "Root owns canonical source integration, dependency-order acceptance, shared rebuild/structural checks and publication.",
+    "Whole-edition visual/mobile/keyboard/print QA remains pending under the recorded browser restriction."
+  ],
+  "limitations": [
+    "Synthetic deterministic examples and an idealized continuous-yield European contract; no empirical quote/hedge validation or executable-market claim.",
+    "Double precision can underflow in extreme tails; numerical bisection brackets and Simpson refinement are not interval arithmetic or a global error certificate.",
+    "The lab rejects boundary base Greek inputs and distinguishes model boundary prices internally. General stochastic-volatility, jumps and altered payout/funding require additional models."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c09.html",
+      "bytes": 51268,
+      "sha256": "602ae024a1b24d8b6a407f2bda96317e4ef230f7a0bf4bf0fae2551742ea1157"
+    },
+    {
+      "path": "content/projects/v10-c09-inputs.json",
+      "bytes": 829,
+      "sha256": "9696d1291e0a8db7b92cdb6852a112280a109be4b944845be9f4aa67be97e243"
+    },
+    {
+      "path": "content/projects/v10-c09-analysis.py",
+      "bytes": 15105,
+      "sha256": "41235b7717767dba833e37c0c9735fa9bdde4f57b53c2815783b91ed16d37e0f"
+    },
+    {
+      "path": "content/projects/v10-c09-output.json",
+      "bytes": 6801,
+      "sha256": "c7585b3f45b47336b9bdd0b27188b57867cb194d105f2e0320f11732f00a40c2"
+    },
+    {
+      "path": "content/projects/v10-c09-manifest.json",
+      "bytes": 670,
+      "sha256": "a331bfcc911e88f8eaa88c03328ac84f8df2054380d126a57e568295baf40083"
+    },
+    {
+      "path": "content/projects/v10-c09-README.txt",
+      "bytes": 11605,
+      "sha256": "2863ace55662a3ae42d09434a6495c2165e18ce5b139bcac9c42fbf9244bb797"
+    },
+    {
+      "path": "scripts/check_v10_c09.py",
+      "bytes": 29843,
+      "sha256": "cf223d4213430c584e160eeda28093215ca9b95f2a0e73e62c1f5565e6a8bd2f"
+    },
+    {
+      "path": "content/reviews/v10-c09-sources.json",
+      "bytes": 2365,
+      "sha256": "5693e526ca67deca86fd3171f35d8746319358d2611e5c88b421aac09f5ba1b5"
+    }
+  ]
+}

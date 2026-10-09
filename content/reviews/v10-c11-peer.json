@@ -1,0 +1,292 @@
+{
+  "chapter": "v10-c11",
+  "status": "peer-review-passed; coordinator and prerequisite acceptance pending",
+  "date": "2026-10-09",
+  "reviewer": "ito_author, separate from bs_author/c11 author; independent machine-assisted peer review, not external human certification",
+  "recommendation": "No author repair required. Accept only after coordinator integration and dependency-order gates.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Read the complete frozen manuscript, all five worked cases, every one of the twelve exact prompts and full solutions, answered teaching/retention, full model/input/output/README/manifest, author review and proposed source scope. Inspected the author checker oracle/structure sections and created a distinct independent checker. Source bodies were retrieved separately. The author implementation is executed as the system under test; its helper functions are not used as financial or numerical oracles.",
+  "proof_findings": [
+    {
+      "topic": "Finite market and admissibility",
+      "verdict": "passed",
+      "reason": "Every stated possible state has positive physical probability. Stock trading is restricted to time zero and maturity; observed intermediate stock marks are not tradable quotes. Deterministic bank reinvestment/borrowing permits the terminal-equivalent treatment of dated payments. A pricing probability is not identified with a physical frequency."
+    },
+    {
+      "topic": "Extremal pricing laws",
+      "verdict": "passed",
+      "reason": "For the compact calibrated simplex, the null direction preserving mass and stock mean reduces a linear optimizer to at most two states. The convex splitting argument also decomposes any law into these basic laws. Repeated outcomes and singleton support at the forward are handled. With the forward strictly inside the stock range, each possible state appears positively in a feasible basic law, so their average is strictly positive."
+    },
+    {
+      "topic": "Exact hedges and open endpoints",
+      "verdict": "passed",
+      "reason": "The affine superhedge envelope is coercive because min(x)<F<max(x); its minimum occurs at a breakpoint or a flat segment adjoining one. Active slopes bracket zero, producing a feasible one/two-state pricing law that attains the hedge cost. Negating the payoff supplies the subhedge. At a nonreplicable endpoint the nonnegative hedge residual is positive in a possible state, giving arbitrage; mixing positive laws obtains every strict interior price. A singleton range implies affine replication."
+    },
+    {
+      "topic": "Independent drivers and vector Ito",
+      "verdict": "passed",
+      "reason": "The weighted cross-variation second-moment bound follows from conditional independence and zero conditional means. Coefficient freezing uses the isometry and localization; drift terms vanish by finite variation/Cauchy-Schwarz, and the Taylor remainder is controlled on compact sets. The proof is explicitly restricted to continuous adapted coefficients and C1,2 functions, with stopped coefficients handled by dominated convergence at the single stopping discontinuity. No general semimartingale formula is assumed."
+    },
+    {
+      "topic": "Factor hedging and rank",
+      "verdict": "passed",
+      "reason": "The orthogonal Brownian exposure, minimum instantaneous-variance stock position and residual variance are derived by completing a square. An extra traded instrument matches two instantaneous exposures only under the stated nonzero determinant. Financing, terminal matching, admissibility and global existence are not inferred from this local linear system."
+    },
+    {
+      "topic": "Remaining risk premium and martingale scope",
+      "verdict": "passed",
+      "reason": "The constant exponential-normal tilt changes the second Brownian driver alone; finite-dimensional independent increments preserve the first driver and the joint Brownian structure. Equivalent finite-horizon laws preserve the stochastic-integral limit in probability. For the explicit bounded volatility, stopped Ito and the integral inequality bound E[S_t^2] by S0^2 exp(.25^2 t); the resulting finite integral second moment makes stock a true L2 martingale. Different digital expectations exclude common admissible replication. A normalized density is correctly not claimed to prove a stock martingale for arbitrary unbounded coefficients."
+    },
+    {
+      "topic": "Candidate factor PDE",
+      "verdict": "passed",
+      "reason": "The mixed derivative coefficient and factor drift under the selected pricing law are correct. The chapter labels this a candidate equation and requires regularity, terminal matching and a suitable discounted martingale for a valuation representation; it does not silently assert existence, uniqueness or a general stochastic-premium theorem."
+    },
+    {
+      "topic": "Finite scheduled jumps",
+      "verdict": "passed",
+      "reason": "Applying the continuous formula between finitely many deterministic event dates and telescoping supplies the exact jump increments. The integral Taylor remainder uses the pre-jump derivative and remains valid for both signs of jump within the domain. Post-jump rebalancing cannot earn the preceding stock move. This proof is not presented as a random-time compensator or Levy-process theorem."
+    },
+    {
+      "topic": "Monitoring and history",
+      "verdict": "passed",
+      "reason": "For the same law and nonnegative call payoff, nested observations shrink survival pathwise. The result is not applied to nonnested observations or changed dynamics. Equal terminal distributions need not identify barriers or averages, and extra Asian fixings have no universal monotone effect. Additional intermediate stock trading requires conditional calibration, which the original finite model deliberately does not impose."
+    },
+    {
+      "topic": "Dated credit cash flows",
+      "verdict": "passed",
+      "reason": "Default is processed before a coincident coupon; elapsed premium is paid at default, protection at the separately specified settlement date. Recovery and the seller paid fraction enter protection only. Each amount is discounted at its payment date before terminal accumulation. The joint-state model does not replace joint expectations with products of marginal averages, and is not described as a current legal CDS convention or bilateral CVA model."
+    },
+    {
+      "topic": "Spread ratio extrema",
+      "verdict": "passed",
+      "reason": "Strictly positive state annuities make every basic-law denominator positive. A mixture ratio is a convex average of basic-law ratios weighted by their annuities; nonconstant endpoints are excluded for strictly positive pricing laws by the endpoint hedge argument applied to loss minus spread times annuity. The zero-annuity counterexample explains why discarding zero denominators can conceal an unbounded spread."
+    }
+  ],
+  "worked_cases": [
+    {
+      "case": 1,
+      "verdict": "passed",
+      "checks": "Exact three-state family p=(a,.9-2a,.1+a), 0<a<.45; call interval (50/13,275/13), affine hedge bounds and endpoint residuals."
+    },
+    {
+      "case": 2,
+      "verdict": "passed",
+      "checks": "Driver exposures 8.84 and 2.88; minimum-variance stock .442; residual variance 8.2944; extra option quantity 2 and stock .05; exposure determinant 28.8."
+    },
+    {
+      "case": 3,
+      "verdict": "passed",
+      "checks": "Exact quadratic jump gaps 4 and 25 for -20 and +50, with pre-event gains and funding scope distinguished."
+    },
+    {
+      "case": 4,
+      "verdict": "passed",
+      "checks": "Both laws give call 250/13 and terminal barrier 125/26; monitored barrier prices 50/13 and 25/26; Asian prices 275/26 and 425/26. Exact vertices and all affine hedge certificates independently verified."
+    },
+    {
+      "case": 5,
+      "verdict": "passed",
+      "checks": "Full dated ledger, default-before-coupon and delayed payment. Under law A, loss PV 5875/221, annuity 10084475/6897189, net value 3001950/135239 and spread 1466823/8067580. Fair-spread range (0,47277/165362); endpoints qualified."
+    }
+  ],
+  "prompt_audit": [
+    {
+      "exercise": 1,
+      "verdict": "passed",
+      "independent_reasoning": "Recomputed E[h]=12+10a and the open range (150/13,825/52). Subhedge .5x-40 and superhedge .375x-22.5 have residuals (10,0,0) and (0,5,0), respectively, demonstrating both endpoint arbitrages."
+    },
+    {
+      "exercise": 2,
+      "verdict": "passed",
+      "independent_reasoning": "Audited the support-reduction proof with repeated outcomes, singleton forward states, the everywhere-positive average, and the F=max(x) counterexample. Buying max(x) terminal bank cash and shorting stock gives zero initial cost and a strictly positive payoff in every smaller-stock state."
+    },
+    {
+      "exercise": 3,
+      "verdict": "passed",
+      "independent_reasoning": "Exact row reduction gives p=(1/5,1/2,3/10); the call costs 150/13 and is replicated by .5 stock, -30 terminal cash and -20 digitals. The corrected true digital range is (0,45/52). Its upper superhedge (140-x)/40 pays (2,1,0), costs 45/52 and leaves residual (2,0,0). The coarser inadmissible quotes zero and 25/26 are also correctly diagnosed."
+    },
+    {
+      "exercise": 4,
+      "verdict": "passed",
+      "independent_reasoning": "Conditional orthogonality yields E[(sum H_i DeltaW1_i DeltaW2_i)^2] <= ||H||infinity^2 t mesh. The vector formula for xy supplies drift rho and square-integrable stochastic terms, hence E[X_t Y_t]=rho t."
+    },
+    {
+      "exercise": 5,
+      "verdict": "passed",
+      "independent_reasoning": "For VY=-8 the first exposure is 12.44, minimum-variance stock is .622 and residual variance is 3.6864 dt. The second option position -4/3 and stock 53/60 match both drivers. The solution lists rank and global replication conditions rather than claiming they follow from these numbers."
+    },
+    {
+      "exercise": 6,
+      "verdict": "passed",
+      "independent_reasoning": "Audited the independent constant tilt, bounded-coefficient stopped second-moment bound and true-martingale conclusion. Independently integrated the tilted density; at T=4 the digital prices are .5 and .158655253931457 for lambda zero and one half. The limitation for unbounded volatility is explicit."
+    },
+    {
+      "exercise": 7,
+      "verdict": "passed",
+      "independent_reasoning": "For f(S)=S^3/10000, delta is 3 and gamma is .06 at S=100. Exact residuals for jumps -20 and +50 are 11.2 and 87.5; the constant-gamma terms 12 and 75 omit the cubic remainder. The finite-event telescoping and pre-event holding requirement answer the proof and timing parts."
+    },
+    {
+      "exercise": 8,
+      "verdict": "passed",
+      "independent_reasoning": "At barrier 120 the monitored payoff is (0,10,0,0), with prices 50/13 and 25/26; terminal-only monitoring gives (0,10,10,0), priced 125/26 under both laws. Audited the pathwise nested-event proof and both directions of the extra-fixing Asian counterexample."
+    },
+    {
+      "exercise": 9,
+      "verdict": "passed",
+      "independent_reasoning": "The independent date-interval accrual automaton gives immediate-settlement protection PV 279250/10403, net value 51629775/2299063 and spread 740571/4033790. Restoring delayed settlement and full Decline seller performance adds 125/17 protection PV and 405717/8067580 annual spread. Dependence and discount timing explain why marginal averages cannot replace the ledger."
+    },
+    {
+      "exercise": 10,
+      "verdict": "passed",
+      "independent_reasoning": "The annuity-weighted convex-combination proof is valid with positive denominators; nonconstant positive-law ranges are open. With L=(1,0), A=(0,1), p/(1-p) diverges as p tends to one, so the zero denominator cannot be silently removed."
+    },
+    {
+      "exercise": 11,
+      "verdict": "passed",
+      "independent_reasoning": "Both positive laws calibrate the original stock and bank, so a physical law does not become uniquely identified by no-arbitrage. At the uniquely identified year-one Spike mark 140, the conditional terminal-stock PV is 1275/13, not 140. Making that mark tradable changes the market and invalidates the retained laws."
+    },
+    {
+      "exercise": 12,
+      "verdict": "passed",
+      "independent_reasoning": "All six claims are corrected with defensible scope: terminal calibration versus histories, exposure rank, local instrument matching versus global admissibility, exact jump gaps, pricing versus physical default intensities, and sampling precision versus contract definition. The three proposed identification/contract/implementation tests are concrete and their limitations explicit; the 12-point rubric does not demand a unique open-response opinion."
+    },
+    {
+      "exercise": "teach-back and delayed retention",
+      "verdict": "passed",
+      "independent_reasoning": "The answered teaching example distinguishes nonunique pricing laws from computational accuracy and disputed payment dates. Retention answers are the replication singleton, residual variance 4 dt, jump gap 9, knockout at barrier equality, and .04 per year = 400 basis points."
+    }
+  ],
+  "numerical_validation": {
+    "chapter": "v10-c11",
+    "status": "passed",
+    "peer_comparisons": 2997,
+    "invalid_inputs_rejected": 57,
+    "financial_interventions": 16,
+    "independent_calibrated_grid_laws": 361,
+    "author_files_bound": 9,
+    "worked_examples_reviewed": 5,
+    "solved_exercises_reviewed": 12,
+    "count_definition": "Each executed scalar/vector/object equality, inequality or tolerance comparison counts once. The 47 direct invalid API cases and 10 malformed CLI JSON cases count separately as rejections. Sixteen independently chosen valid input changes count as financial interventions. Reading a proof is not counted as a numerical comparison.",
+    "independent_oracles": [
+      "Generic exact Gauss-Jordan elimination enumerates feasible one/two-state supports; a separately parameterized 361-law calibrated grid cross-checks the baseline extrema.",
+      "A date-by-date accrual automaton accumulates elapsed intervals before processing default or coupon events, then discounts the independently reconstructed signed payments at their actual dates.",
+      "Independent payoff reconstruction and statewise hedge domination plus a feasible matching pricing law certify each bound; duplicate terminal states, a singleton at the forward and a two-state complete market are included.",
+      "Direct Simpson integration of the tilted Gaussian density checks normalization, mean, second moment and digital value at two refinements. This numerical exercise checks arithmetic; the manuscript martingale and tilt proof is audited separately.",
+      "Exact rational linear systems and polynomial expansion recompute all determinate worked/exercise anchors, the corrected digital endpoint, factor exposures and finite jump gaps."
+    ],
+    "interventions": [
+      "barrier equality",
+      "terminal-only monitoring",
+      "nonnested early-only monitoring",
+      "changed Asian fixing",
+      "immediate protection settlement",
+      "full seller performance",
+      "zero seller performance",
+      "default exactly on coupon date",
+      "zero quoted premium",
+      "notional scaling",
+      "irregular payment dates",
+      "zero and complete-loss stock jumps",
+      "negative deterministic rates",
+      "singleton terminal state at forward",
+      "eight duplicate terminal states",
+      "two-state complete market"
+    ],
+    "portable_execution": "Isolated copied model/input pair tested with normal and optimized Python: explicit --input/--output CLI, default script-relative input, quiet import/run(data), input preservation, strict JSON output and duplicate/nonfinite/malformed JSON rejection. Model uses standard library only.",
+    "limits": "The declared bounded domain is tested meaningfully, not exhaustively. Numerical quadrature does not prove the probability or martingale statements. This audit does not validate the empirical model, legal enforceability, real counterparty behavior, human learning or browser visual QA."
+  },
+  "source_body_review": [
+    {
+      "id": "v10-c11-haugh-discrete",
+      "url": "https://www.columbia.edu/~mh2078/ContinuousFE/MartingalePricingDiscreteModels.pdf",
+      "checked": "2026-10-09",
+      "inspected": "Actual 30-page 2016 lecture-note body: finite-market definitions with positive physical probabilities, attainable claims and state prices; printed pages 6-8 on positive state-price vectors, rank and uniqueness/completeness. Used only to corroborate the surrounding finite-market scope; the chapter supplies its own restricted constructive interval proof."
+    },
+    {
+      "id": "v10-c11-haugh-extensions",
+      "url": "https://www.columbia.edu/~mh2078/ContinuousFE/LocalStochasticJumps.pdf",
+      "checked": "2026-10-09",
+      "inspected": "Actual 21-page Fall 2013 note: Section 2 on independent/correlated factor drivers and remaining risk premium, including the integrability caveat; Section 3.1 on pre-event integrands and Section 3.4 on finite jump increments. Broader Girsanov, Heston and random-jump claims in the note are not imported as proved chapter results."
+    },
+    {
+      "id": "v10-c11-duffie-cds",
+      "url": "https://www.darrellduffie.com/uploads/1/4/8/0/148007615/duffiecreditswapvaluation1999.pdf",
+      "checked": "2026-10-09",
+      "inspected": "Actual 15-page 1999 paper: printed pages 75 and 77 concerning delayed/next-coupon settlement assumptions, accrued premiums and the half-period approximation. The chapter calls this historical context and uses an explicitly synthetic exact dated ledger, not a claim about current contractual market convention."
+    }
+  ],
+  "findings": [],
+  "necessary_repairs": [],
+  "confirmed_prior_repair": "Independently verified the frozen correction to the digital upper endpoint 45/52 and its superhedge (140-x)/40, with residual (2,0,0). No further author edit was necessary.",
+  "remaining_gates": [
+    "Coordinator integration and c09-to-c10-to-c11 dependency acceptance; this record is not canonical acceptance.",
+    "Whole-edition visual/mobile/keyboard/print QA and remaining volume/library packages are separate and are not certified by this chapter peer audit."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v10-c11.html",
+      "bytes": 53300,
+      "sha256": "4f31336eb10f0a0a3377318c3e0164b29ec4e985dc5d25b0c9c327739e0c1e27"
+    },
+    {
+      "path": "content/projects/v10-c11-inputs.json",
+      "bytes": 1295,
+      "sha256": "3268e0f7e2c326a3e9a8a267ac971ea44648e94388b5758da36393f695be0b06"
+    },
+    {
+      "path": "content/projects/v10-c11-analysis.py",
+      "bytes": 14327,
+      "sha256": "15eb59e614f0cb65e80bb16e54067c80573fbc2dde266af84caf8b1379408511"
+    },
+    {
+      "path": "content/projects/v10-c11-output.json",
+      "bytes": 9465,
+      "sha256": "78a8a552d8d82c2864fd2ddd8bdc975517242c879dd796ab4ec4074f60df49ad"
+    },
+    {
+      "path": "content/projects/v10-c11-manifest.json",
+      "bytes": 671,
+      "sha256": "7961cc4b63f8d303dd4b00256c5933a19490eed6c9ca2b7cee1e967a6d484690"
+    },
+    {
+      "path": "content/projects/v10-c11-README.txt",
+      "bytes": 11092,
+      "sha256": "ecc528ef57cc8bcbfd76ad760ff68beac01a1e7a50e09ec51ffecfff9e40cad9"
+    },
+    {
+      "path": "scripts/check_v10_c11.py",
+      "bytes": 26721,
+      "sha256": "a71eb1d6e3e98b415cfbc8d36fe42d93d87ecdd14bfb1e4f740e8fc9ade085e5"
+    },
+    {
+      "path": "content/reviews/v10-c11-sources.json",
+      "bytes": 4131,
+      "sha256": "ff252b4ff60f4a3254c3da800be966499be197a8e668a8805cfda5b072f4eeab"
+    },
+    {
+      "path": "content/reviews/v10-c11-author.json",
+      "bytes": 13343,
+      "sha256": "f9c1ecd2ce3683195b8384b2cfa4fa49681dd6f8d7bbf0c24e61b45bc622ff5e"
+    }
+  ],
+  "reviewer_artifacts": [
+    {
+      "path": "scripts/check_v10_c11_peer.py",
+      "bytes": 27686,
+      "sha256": "3d54ac8e360e3f452c300c527a7280a22173f4fcef3711e605c7192159138d2c"
+    },
+    {
+      "path": "content/reviews/v10-c11-peer-manifest.json",
+      "bytes": 1617,
+      "sha256": "be3c74700f7bdb59a4995f3ac4d7a7af362a6b78fd57790756c1da5337fa2f4f"
+    }
+  ]
+}

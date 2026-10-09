@@ -1,0 +1,92 @@
+{
+  "batch": "v10-closing",
+  "state": "Coordinator full proof/prompt/source/implementation audit passed; accepted chapter records written in prerequisite order. Whole-edition rebuild follows.",
+  "date": "2026-10-09",
+  "chapters": {
+    "v10-c10": {
+      "read": "Complete manuscript, all12 exact prompts/solutions, teaching/retention, primary proposals, model through generator implementation. Final frozen author bytes/checker verified; separate peer active.",
+      "proof_findings": [
+        "CRR gain convention includes dividend reinvestment; tree refinement not falsely ordered across changed models.",
+        "Snell finite-policy construction and fixed-law exercise-set inclusion are proved.",
+        "Explicit log-PDE maximum principle follows from positive weights; residual constants1/2,1/12,1/6 and global bound follow by induction. Smooth closed-rectangle scope excludes payoff kink.",
+        "Bounded-MGF Hoeffding derivation and sample variance identities are valid under stated ideal sampling law. Hash stream is honestly deterministic.",
+        "Antithetic and signed control formulas preserve expectation under their hypotheses; held-out adapted-rule values bound the optimal expectation, not every realized sample."
+      ],
+      "requested_repairs": [
+        {
+          "issue": "Variance identities follow an opener requiring only integrability.",
+          "action": "Specify square-integrability for variance/covariance identities.",
+          "state": "resolved in final frozen author manuscript and separately verified"
+        }
+      ],
+      "coordinator_decision": "Accepted after separate peer and all nine author bindings; no unresolved content findings."
+    },
+    "v10-c11": {
+      "read": "Complete manuscript, all12 exact prompts/solutions and teaching/retention. Final author byte/checker audit and separate peer passed; acceptance still pending prerequisites.",
+      "proof_findings": [
+        "Finite two-support reduction, coercive affine hedge envelope and active slopes construct closed bounds; strict positive laws remove endpoints for nonreplicable payoffs.",
+        "Weighted cross-variation and vector Ito extension include localization, finite drift terms and continuity bounds.",
+        "Bounded-volatility constant second-driver tilt preserves an L2 stock martingale and gives distinct factor-digital expectations in an explicitly admissible class.",
+        "Finite scheduled jump telescoping and integral Taylor remainder match predictable pre-jump stock gain.",
+        "Path-price examples explicitly restrict stock trading to date0/T; credit claims retain accrued premiums, settlement, default order and separate seller fractions.",
+        "Fair-spread ratio argument requires all vertex annuities positive; boundary counterexample and open endpoint qualification supplied."
+      ],
+      "requested_repairs": [
+        {
+          "issue": "Exercise3 digital interval incorrectly stated(0,D), overlooking calibrated p2<.9.",
+          "correct_interval": "(0,45/52) with D=25/26",
+          "witness": "Superhedge (140\u2212x)/40 pays(2,1,0),cost45/52; buy it and short the digital to get(2,0,0) at zero initial cost.",
+          "state": "resolved in final frozen author manuscript and separately verified"
+        }
+      ],
+      "coordinator_decision": "Accepted after separate peer and all nine author bindings; no unresolved content findings."
+    },
+    "v10-c12": {
+      "read": "Root author package and separate specialist full peer are complete and frozen. All10 exact prompts/solutions, proof/source and complete lab independently reviewed; no material findings. Acceptance still pending prerequisites.",
+      "author_checker": "2,660 executed comparisons including eight author bindings;107 invalid contracts/strict-JSON rejections;34 financial interventions.",
+      "coordinator_decision": "Accepted after separate peer and all nine author bindings; no unresolved content findings."
+    },
+    "v10-c09": {
+      "read": "Full frozen manuscript, all10 exact prompts and complete solutions, five worked examples, teaching/retention, full model, inputs/output and author source scope. Separate peer active.",
+      "proof_findings": [
+        "Greek derivation uses density cancellation and calendar theta signs; signed multipliers and volatility-point scale explicit.",
+        "Gamma/vega rank claim follows from common S,sigma,tau identity, without pretending stock spans curvature.",
+        "Multivariate Taylor has all mixed terms; analytic spot-only third derivative bound is not applied to a mixed shock.",
+        "IV existence/uniqueness follows from positive vega and exact limits; floating boundaries, cap and quote precision remain separate.",
+        "Finite strike screens are necessary cash-payoff inequalities and do not identify a dynamic surface.",
+        "Discrete dividends, trade cash, bank interest and fees are financed without resetting wealth to model marks.",
+        "Continuous mismatch identity includes discounting, writer sign and pathwise terminal integrability under continuous bounded-on-path coefficients; no unproved expectation theorem or exact discrete realized-variance identity claimed."
+      ],
+      "numerical_evidence": "Independent payoff quadrature, finite-difference Greeks, IV residual, original mixed/spot shocks, funded dividend/fee ledger, weighted variance and new exercise anchors in production/v10-closing-root-numerical-audit.json.",
+      "requested_repairs": [],
+      "coordinator_decision": "Accepted after separate peer and all nine author bindings; no unresolved content findings."
+    }
+  },
+  "limitations": [
+    "Numerical checks are distinct from proof/source review and do not establish empirical model adequacy.",
+    "No closing draft accepted or published;116-chapter edition remains live.",
+    "Whole-edition visual/mobile/keyboard/print checks pending."
+  ],
+  "numerical_evidence": "production/v10-closing-root-numerical-audit.json",
+  "numerical_summary": {
+    "batch": "v10-closing",
+    "status": "passed",
+    "comparisons": 153,
+    "count_definition": "Executed coordinator comparisons only; no author or peer counts included.",
+    "independent_mc_moments": {
+      "put": 11.596767760844095,
+      "variance_put": 201.13451917819532,
+      "variance_discounted_stock": 865.9385545964027,
+      "covariance_put_stock": -331.9974699980037,
+      "fixed_control_variance": 74.81376311765209
+    },
+    "groups": [
+      "payoff-integral finite-difference Greeks, inversion, shocks and funded fee ledger",
+      "direct payoff/moment quadrature and terminal tree sums",
+      "exact finite stopping, stencil and sampling exercises",
+      "finite calibrated laws, original exotic and dated-credit cash expectations",
+      "corrected digital interval, jump residual and orthogonal exposure"
+    ],
+    "limitations": "Separate coordinator arithmetic; final artifact hashes, full prompt/proof/source review and peer gates are recorded separately. No empirical validity or UI QA claim."
+  }
+}

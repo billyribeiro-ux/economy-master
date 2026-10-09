@@ -112,6 +112,14 @@ from check_v10_c05_peer import check as check_v10_c05_peer
 from check_v10_c06_peer import check as check_v10_c06_peer
 from check_v10_c07_peer import check as check_v10_c07_peer
 from check_v10_c08_peer import check as check_v10_c08_peer
+from check_v10_c09 import check as check_v10_c09
+from check_v10_c10 import check as check_v10_c10
+from check_v10_c11 import check as check_v10_c11
+from check_v10_c12 import check as check_v10_c12
+from check_v10_c09_peer import check as check_v10_c09_peer
+from check_v10_c10_peer import check as check_v10_c10_peer
+from check_v10_c11_peer import check as check_v10_c11_peer
+from check_v10_c12_peer import check as check_v10_c12_peer
 from check_economics_core import check as check_economics_core
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -526,6 +534,10 @@ def main():
                         'v10-c07': check_v10_c07(), 'v10-c08': check_v10_c08()}
     v10_middle_peer_check = {'v10-c05': check_v10_c05_peer(), 'v10-c06': check_v10_c06_peer(),
                              'v10-c07': check_v10_c07_peer(), 'v10-c08': check_v10_c08_peer()}
+    v10_closing_check = {'v10-c09': check_v10_c09(), 'v10-c10': check_v10_c10(),
+                         'v10-c11': check_v10_c11(), 'v10-c12': check_v10_c12()}
+    v10_closing_peer_check = {'v10-c09': check_v10_c09_peer(), 'v10-c10': check_v10_c10_peer(),
+                              'v10-c11': check_v10_c11_peer(), 'v10-c12': check_v10_c12_peer()}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -572,8 +584,11 @@ def main():
               'volume_10_opening_checks': v10_opening_check,
               'volume_10_middle_checks': v10_middle_check,
               'volume_10_middle_peer_checks': v10_middle_peer_check,
+              'volume_10_closing_checks': v10_closing_check,
+              'volume_10_closing_peer_checks': v10_closing_peer_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
-    report['checks'].extend(['Volume 8 chapters 1–4: incremental capital budgeting and IRR domains; FCFF/FCFE and dated claim pricing; coherent capital/return fade and terminal sensitivity; covariance, policy-specific leverage, WACC and finite APV with independent pricing checks',
+    report['checks'].extend(['Volume 10 chapters9–12: Greek units, inversion and funded hedge errors; proved smooth-grid stability and numerical/sampling diagnostics; finite incomplete-market bounds, explicit risk drivers and dated exotic/credit cash; identification, conditioning, aggregate error and version-bound model use. Four separate author/peer laboratories and reviewed-payload bindings.',
+        'Volume 8 chapters 1–4: incremental capital budgeting and IRR domains; FCFF/FCFE and dated claim pricing; coherent capital/return fade and terminal sensitivity; covariance, policy-specific leverage, WACC and finite APV with independent pricing checks',
         'Volume 10 chapters5–8: dated carry, funded futures/margin and swaps; full finite option replication, adapted stopping and fees; Brownian/QV/integral and GBM numerical-error anchors; funded Black–Scholes PDE, constant measure tilt, vanilla pricing and finite hedge errors. Author and independent peer checkers, bounded input contracts, portable labs and exact reviewed payloads',
         'Volume 10 chapters 1–4: dated bond cash, settlement accrual, bootstrapping, YTM/forward conventions and curve identification; yield/key sensitivities, funded immunization and failure cases; finite pricing versus physical rate dynamics, calibrated Arrow trees and hedge errors; structural/default-time credit, recovery timing, absorption, dependence and conditional spread calibration',
         'Volume 9 chapters 1–4: dated total/simple/log and flow-adjusted returns; finite-state and sample covariance, financing and concentration; exact frontier, allocation and constraint certificates with shrinkage sensitivity; investor demand, market clearing, pricing/proxy/sample distinctions and conditional CAPM limits',
