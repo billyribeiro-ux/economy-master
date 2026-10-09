@@ -1,0 +1,575 @@
+{
+  "chapter": "v12-c08",
+  "peer": "bs_author",
+  "author": "ito_author",
+  "date": "2026-10-09",
+  "assignment": "production/v12-c08-peer-assignment.json",
+  "status": "Frozen independent peer review: no material open finding; all quiet normal/-O workspace and exact-six API/CLI gates passed. Coordinator acceptance is separate.",
+  "owned_paths": [
+    "scripts/check_v12_c08_peer.py",
+    "content/reviews/v12-c08-peer.json"
+  ],
+  "reading_scope": {
+    "author_files_read_in_full": [
+      "content/chapters/v12-c08.html",
+      "scripts/check_v12_c08.py",
+      "content/reviews/v12-c08-sources.json",
+      "content/reviews/v12-c08-author.json"
+    ],
+    "mathematics": "Read every identification, local-regression, Gaussian-coverage, grid-sequence, compliance, convex-optimization, factor-support and rank-calibration argument; all six worked cases, all twelve exact prompts and complete solutions, critique rubric, teach-back and delayed retention.",
+    "author_implementation": "Read the entire checker and author record. Author helper output is never an independent oracle. The peer imports no author implementation.",
+    "source_records": "Read the complete canonical source record and root preparation; verified retained PDF bytes/hashes and exact text/rendered page scopes, with primary body/image readings attributed to root.",
+    "remaining_read_scope": "No claim to have newly read every source page, general RBC theorem, stochastic synthetic-control proof, empirical application or uninspected appendix."
+  },
+  "proof_audit": [
+    {
+      "topic": "Sharp cutoff target and continuous versions",
+      "independent_review": "On either side the treatment rule and consistency equate the observed conditional mean to the corresponding potential-outcome mean almost everywhere. The one-sided limits equal the values at zero of the maintained continuous versions. If two continuous versions differed at a supported point, they would differ on a neighborhood having positive probability, contradicting almost-everywhere equality. Hence the cutoff target is well defined despite P(R=0)=0. Equality of an arbitrary conditional expectation value on a null event would not suffice.",
+      "scope_and_conditions": "Continuous potential-outcome mean versions on a neighborhood and positive score density on both sides; consistency and the sharp rule. The result is local, not a finite-window randomization or external-validity statement.",
+      "finding": "Pass; no material repair."
+    },
+    {
+      "topic": "Observed-law equivalence and density-preserving sorting",
+      "independent_review": "For the quadratic sharp model, exact uniform window integration gives right mean 5+h+h²/3 and left mean 2−h/2+h²/3, so the contrast is 3+3h/2. Setting both potential outcomes equal to the observed piecewise curve leaves (R,D,Y) unchanged with zero individual effects, violating continuity. In the independent U/V sorting construction, conditioning on U fixes the sign and |V| is uniform. Each half line has density 1/2 while Y(0)=Y(1)=U jumps in composition at zero. Smooth density therefore does not prove the required outcome continuity.",
+      "scope_and_conditions": "The counterexamples distinguish one observed distribution from causal completions and distinguish an outcome discontinuity from a density discontinuity. They do not claim that a particular observed dataset has been validated.",
+      "finding": "Pass; no material repair."
+    },
+    {
+      "topic": "Local linear weights and same-data correction",
+      "independent_review": "Independently used centered regression: w_j=K_j/ΣK−xbar K_j(x_j−xbar)/ΣK(x−xbar)². This reproduces constants and a zero linear moment. Lagrange interpolation yields quadratic cutoff weights without using the author normal-equation inverse. The positive distances 1/10,1/5,3/10 give w=(4/3,1/3,−2/3), v=(3,−3,1), and leading-coefficient weights q=(50,−100,50). Adding q/30 to w yields v. Equal independent noise gives old jump variance 14σ²/3, added-correction variance 100σ²/3, covariance zero, corrected variance 38σ². A peer transfer with variance multipliers (1,2,1) instead gives covariance −20σ²/9 and corrected variance 56σ², confirming zero covariance is design specific.",
+      "scope_and_conditions": "Fixed nonzero scores on one side, nonnegative effective kernels, identified slope; correction estimates use the same observations. The finite variance statement assumes the stipulated known independent Gaussian noise, not an estimated variance or adaptive bandwidth.",
+      "finding": "Pass; no material repair."
+    },
+    {
+      "topic": "Bounded curvature and Gaussian coverage",
+      "independent_review": "Taylor expansion with bounded second derivatives gives each intercept bias at most (L_s/2)Σ|w_j|r_j², since constant and linear reproduction hold. The computed unsigned moment is 13/150, so L+=10 and L−=2 give B=13/25. If |bias|≤B, the event |noise|≤z_(.975) SE implies |estimate−target|≤B+z SE. Thus the interval has at least 95% coverage under the known Gaussian law. Decimal integration independently gives radius 0.9434006120674119. The corrected unbiased estimator with the old SE has coverage 2Φ(z sqrt((14/3)/38))−1=0.5078205300463541. This is not a uniform claim about all bias correction.",
+      "scope_and_conditions": "Predetermined scores and widths, known noise variance and the stated deterministic derivative bounds; B is a triangle bound, not asserted sharp. The event argument covers every admitted mean bias, separately from the finite endpoint numerical check.",
+      "finding": "Pass; no material repair."
+    },
+    {
+      "topic": "Arbitrary-k identities, scaling and rate undersmoothing",
+      "independent_review": "Substituting the elementary sums of j, j² and j³ into the centered-regression expression gives w_j=2(2k+1−3j)/(k(k−1)), Σw=1, Σjw=0, Σj²w=−(k+1)(k+2)/6 and Σw²=2(2k+1)/(k(k−1)). Hence b=−δq(k+1)(k+2)/(6n²), V=4σ²(2k+1)/(k(k−1)). With k≈nh, leading MSE is δq²h⁴/36+8σ²/(nh); differentiation gives h_opt⁵=72σ²/(δq²n), and at this optimum squared bias/variance tends to 1/4. Since nh_opt grows as n^(4/5), floor rounding has vanishing relative error. A fixed fraction r leaves |b|/SE→r^(5/2)/2. For h=n^(−a), 1/5<a<1 is the sufficient rate condition; a=1/4 works. Cauchy-Schwarz yields Σ|w|≤sqrt(10) and V≤20σ²/k, giving the stated deterministic-curvature consistency bound.",
+      "scope_and_conditions": "n denotes observations available per side; 2≤k≤n. Nonzero curvature contrast for the interior leading optimum, fixed independent Gaussian errors for exact coverage, and no data-selected bandwidth. The formulas and finite illustrations do not establish a generic nonparametric RBC theorem.",
+      "finding": "Pass; no material repair."
+    },
+    {
+      "topic": "Fuzzy type population and signed decomposition",
+      "independent_review": "With a common cutoff distribution of compliance types, each type mean has the same limiting untreated and treated values from the two sides. Exclusion removes direct eligibility effects. Always and never takers cancel from the limit difference; under monotonicity only compliers remain, giving ΔY=P(C)E[effect|C] and ΔD=P(C)>0. The original masses give limits D=(1/4,3/4), Y=(5/2,9/2), LATE 4 and ATE 7/2. A direct eligibility increment 1/2 makes the ratio 5 while preserving the first stage. Under the separate defier model, ΔY=(3/8)4−(1/8)8=1/2 and ΔD=1/4, so ratio 2 is a signed type contrast.",
+      "scope_and_conditions": "Constant type proportions near the cutoff, continuous type-conditional potential means, consistency, no spillovers and the explicitly imposed exclusion/monotonicity conditions. Positive first stage alone neither establishes them nor identifies the population ATE.",
+      "finding": "Pass; no material repair."
+    },
+    {
+      "topic": "Simplex existence, fitted-predictor uniqueness and ties",
+      "independent_review": "The finite simplex is compact and nonempty; continuous quadratic loss attains a minimum. Distinct fitted predictors at two minima would make their feasible midpoint improve loss by one quarter of the squared positive-definite V norm of their fit difference. Thus the fitted predictor is unique, while weights are unique exactly when no other feasible weight has the same fit, equivalently no nonzero zero-sum feasible flat direction at the optimum. Full column rank of the augmented donor matrix is sufficient but not necessary. Sequentially minimizing weight coordinates over compact nested minimizer sets defines the lexicographic tie rule.",
+      "scope_and_conditions": "V is predetermined and positive definite; nonnegative weights may equal zero. A tie rule resolves an algorithm, not a causal identification problem. The peer geometric solver checks Euclidean two-dimensional cases, while the general V-norm statement was audited analytically.",
+      "finding": "Pass; no material repair."
+    },
+    {
+      "topic": "Factor support and approximate fit",
+      "independent_review": "With untreated training outcome vectors, common noiseless factors imply e=F_pre Δλ. Full column rank yields a left inverse L and Δλ=Le; exact fit then gives exact future counterfactuals. With nonzero e, future discrepancy is f_t′Le and is bounded by ||f_t′L|| ||e||. Full rank is not necessary for a particular future date: if f_t is in the row span of F_pre, every unobserved loading in ker(F_pre) is annihilated. A peer transfer with pre rows (1,0),(2,0) and loading difference (0,7) verifies zero discrepancy for future (3,0) and discrepancy 7 for (0,1).",
+      "scope_and_conditions": "No anticipation, unaffected donors, noiseless shared untreated factor model, training on outcomes rather than arbitrary predictors, and the declared rank or future-row-space condition. No stochastic-error or unknown-factor estimation theorem is inherited.",
+      "finding": "Pass; no material repair."
+    },
+    {
+      "topic": "Observed-data counterexamples and mixture-range sharpness",
+      "independent_review": "Adding a factor that is zero in every preperiod and (1,2) post-treatment, with treated loading one and donor loadings zero, preserves all observed data while changing the treated untreated path and compensating effects. The pre-factor matrix has a zero column. Separately increasing observed donor B post outcomes by 2 changes the data and the forecast by one; it is a spillover sensitivity case, not observational equivalence. With duplicate donor preperiods and post values 2,8, all weights fit; prediction 8−6w spans [2,8] and effect −1+6w spans [−1,5]. Each point is attainable under a maintained fixed donor-mixture law, establishing sharpness only within that law. An unconstrained post-only factor can escape the range.",
+      "scope_and_conditions": "The observed panel held fixed in the first construction is distinguished from changed donor observations in the second. Good prefit, holdout fit and an optimizer range do not by themselves identify a causal effect.",
+      "finding": "Pass; no material repair."
+    },
+    {
+      "topic": "Fully replayed placebo ranks under the actual law",
+      "independent_review": "Under a sharp null, fix the complete outcome panel and rerun the same prespecified algorithm for every candidate label. Group tied scores and order groups from largest down. The inclusive upper-tail value at each group is cumulative actual assignment mass. Rejection at p≤α is either empty or a full upper tail whose mass equals its lowest included p and is ≤α. This works with nonuniform known masses and the explicit +infinity top category for zero-pre/positive-post error; zero/zero is score zero. The independent convex-hull refits recover all four square-panel forecasts (1,1), losses 2, gaps 7/2,−3,−2,3/2, and both sets of tails.",
+      "scope_and_conditions": "The actual assignment law and sharp null calibrate ranks. Uniform observational ranks are benchmark comparisons unless uniform assignment is defended. Full procedure replay includes fitting/tie/donor rules; a correct factor forecast is not required for the finite rank proof.",
+      "finding": "Pass; no material repair."
+    }
+  ],
+  "prompt_solution_audit": [
+    {
+      "prompt_id": "v12-c08-e1",
+      "exact_prompt_scope": "Prove sharp continuity identification, explain the zero-probability cutoff and construct same observations without identification.",
+      "independent_solution": "One-sided observed means recover continuous potential-outcome versions; positive support makes the version unique. P(R=0)=0 prevents an arbitrary conditional value from being the target. Setting both potentials to the observed piecewise curve yields exactly the same observations and zero effects while violating continuity.",
+      "answer_and_method_check": "Compared with the complete printed solution and the methods taught before the prompt; no material discrepancy."
+    },
+    {
+      "prompt_id": "v12-c08-e2",
+      "exact_prompt_scope": "Compute wide/narrow means and analyze density-preserving sorting, then distinguish local randomization.",
+      "independent_solution": "Exact quadratic integration gives 3+3h/2, hence 9/2 at h=1 and 33/10 at h=1/5. In the sorting construction each side has density 1/2 and all treatment effects are zero, but the observed outcome jumps from 0 to 1. A randomized finite window additionally needs its own assignment and score-exclusion restrictions.",
+      "answer_and_method_check": "Compared with the complete printed solution and the methods taught before the prompt; no material discrepancy."
+    },
+    {
+      "prompt_id": "v12-c08-e3",
+      "exact_prompt_scope": "Derive fixed-score linear/quadratic weights, moments, means and variances, interpreting negative weights.",
+      "independent_solution": "Centered-regression weights (4/3,1/3,−2/3) reproduce degree one; Lagrange cutoff weights (3,−3,1) reproduce degree two. Linear jump mean is 28/15 rather than target 2; quadratic jump mean is 2. Variances are 14σ²/3 and 38σ². Negative outcome weights perform local extrapolation; they are not treatment probabilities.",
+      "answer_and_method_check": "Compared with the complete printed solution and the methods taught before the prompt; no material discrepancy."
+    },
+    {
+      "prompt_id": "v12-c08-e4",
+      "exact_prompt_scope": "Calculate estimated-correction variance and covariance, old-SE coverage and a curvature-aware interval.",
+      "independent_solution": "Leading quadratic coefficient weights are 50(1,−2,1). Added correction q/30 has jump variance 100σ²/3 and zero covariance with the original jump in this specific design. Corrected variance is 38σ², giving old-SE coverage 0.5078205300463541. Unsigned moment 13/150 with curvature bounds 10 and 2 gives B=13/25 and radius 0.9434006120674119. The triangle event proves at least 95% coverage under the specified Gaussian contract.",
+      "answer_and_method_check": "Compared with the complete printed solution and the methods taught before the prompt; no material discrepancy."
+    },
+    {
+      "prompt_id": "v12-c08-e5",
+      "exact_prompt_scope": "Establish arbitrary-grid formulas, derive optimal width and analyze fixed fractions and proper undersmoothing.",
+      "independent_solution": "Direct sum identities produce exact b=−δq(k+1)(k+2)/(6n²) and V=4σ²(2k+1)/(k(k−1)). Differentiate leading MSE to obtain h_opt⁵=72σ²/(δq²n); scaled bias tends to 1/2, so nominal normal coverage tends to 0.9209024658394033. A fixed fraction r leaves r^(5/2)/2; h=n^(−1/4) makes scaled bias vanish while local information grows. Cauchy-Schwarz gives sqrt(10) absolute-weight and 20σ²/k variance bounds. Integer rounding is negligible relative to nh_opt→infinity.",
+      "answer_and_method_check": "Compared with the complete printed solution and the methods taught before the prompt; no material discrepancy."
+    },
+    {
+      "prompt_id": "v12-c08-e6",
+      "exact_prompt_scope": "Compute all cutoff type limits and estimands, add direct eligibility, then introduce defiers.",
+      "independent_solution": "Original D limits are 1/4 and 3/4, Y limits 5/2 and 9/2; the local ratio 4 differs from ATE 7/2. Adding eligibility/2 gives Y contrast 5/2 and ratio 5: exclusion fails. The defier table gives D limits 3/8 and 5/8, Y limits 7/2 and 4, ratio 2. This lies outside the complier/defier effect interval [4,8] because monotonicity fails and weights are signed. Common-cutoff type conditions, not merely a positive first stage, justify the decomposition.",
+      "answer_and_method_check": "Compared with the complete printed solution and the methods taught before the prompt; no material discrepancy."
+    },
+    {
+      "prompt_id": "v12-c08-e7",
+      "exact_prompt_scope": "Prove optimizer existence and distinguish weight/fit uniqueness; solve the full three-donor fit.",
+      "independent_solution": "Compactness and the strict midpoint identity establish existence and unique fitted predictors. No feasible flat direction is the exact uniqueness condition. Interior barycentric weights (1/4,1/2,1/4) fit (5/4,2), recover loading (5/4,3/4), predict holdout 11/4 and post 7/2,17/4, and yield gaps 2,3. Augmented donor columns are independent in this case.",
+      "answer_and_method_check": "Compared with the complete printed solution and the methods taught before the prompt; no material discrepancy."
+    },
+    {
+      "prompt_id": "v12-c08-e8",
+      "exact_prompt_scope": "Refit after deleting C and derive/compute the factor extrapolation bound.",
+      "independent_solution": "Project the target onto the A–B segment: minimizing (−3/4+2a)²+a² gives a=3/10, fit (7/5,17/10), residual (−3/20,3/10) and loss 9/80. Holdout gap is 3/4. Post predictions are 23/10,13/5 and gaps 16/5,93/20. With L=((1,0),(−1,1)), future rows f′L are (−2,3),(−3,4), giving discrepancies 6/5,33/20 and the corresponding Cauchy-Schwarz bound.",
+      "answer_and_method_check": "Compared with the complete printed solution and the methods taught before the prompt; no material discrepancy."
+    },
+    {
+      "prompt_id": "v12-c08-e9",
+      "exact_prompt_scope": "Construct a same-observed hidden-factor alternative and contrast a changed-data donor-spillover case.",
+      "independent_solution": "The hidden factor is zero in every preperiod and (1,2) in the two postperiods, with only the treated loading nonzero. Untreated outcomes become 9/2,25/4 and effects 1,1 while every observed outcome stays fixed; no preperiod holdout reveals the zero column. A separate +2 shift to donor B post outcomes raises the fitted forecast by one and changes gaps to 1,2, explicitly altering the observed donor data.",
+      "answer_and_method_check": "Compared with the complete printed solution and the methods taught before the prompt; no material discrepancy."
+    },
+    {
+      "prompt_id": "v12-c08-e10",
+      "exact_prompt_scope": "Solve the degenerate donor fit and delimit the sharpness claim.",
+      "independent_solution": "Every (w,1−w) is optimal. Prediction 8−6w spans [2,8]; gap −1+6w spans [−1,5]. Lexicographic minimization chooses (0,1), prediction 8 and gap −1. Each mixture constructs a full compatible untreated path and effect under the maintained fixed-mixture restriction; absent that restriction a post-only treated factor puts the counterfactual outside this range.",
+      "answer_and_method_check": "Compared with the complete printed solution and the methods taught before the prompt; no material discrepancy."
+    },
+    {
+      "prompt_id": "v12-c08-e11",
+      "exact_prompt_scope": "Refit all placebo candidates, compare actual and uniform label laws, and prove inclusive rank validity with boundary scores.",
+      "independent_solution": "Each geometric projection fits (1,1) with pre-MSE 1. Signed gaps are (7/2,−3,−2,3/2); ratios are their absolute values. Uniform tails are (1/4,1/2,3/4,1); at α=1/4 size is 1/4 and at 5% size is zero. For actual masses (7/10,1/10,1/10,1/10), the false uniform test has size 7/10. Actual tails (7/10,4/5,9/10,1) reject with probability zero at 1/4. Ordered whole tied tails prove the general finite result, including +infinity and zero/zero categories.",
+      "answer_and_method_check": "Compared with the complete printed solution and the methods taught before the prompt; no material discrepancy."
+    },
+    {
+      "prompt_id": "v12-c08-e12",
+      "exact_prompt_scope": "Evaluate the research report using the exact six-objection, two-repair and conclusion rubric.",
+      "independent_solution": "Six distinct objections concern fixed-fraction undersmoothing, density nonrejection, neglected correction uncertainty, post-selected donors, unsupported perfect-prefit extrapolation and falsely randomized observational ranks. Each earns one point. Two repairs, worth two points each, must separately state an RD target/continuity/inference contract and a prespecified donor/training/holdout protocol plus remaining limitations. The two-point conclusion separates counterfactual assumptions, estimation and calibration. Total 12; no required effect sign or estimator brand.",
+      "answer_and_method_check": "Compared with the complete printed solution and the methods taught before the prompt; no material discrepancy."
+    }
+  ],
+  "worked_case_audit": [
+    {
+      "case": 1,
+      "evidence": "Quadratic window means and density-preserving sorting independently reconstructed.",
+      "result": "Pass."
+    },
+    {
+      "case": 2,
+      "evidence": "All six fixed-score means, local-linear/quadratic weights, correction, covariance and coverage reconstructed.",
+      "result": "Pass."
+    },
+    {
+      "case": 3,
+      "evidence": "All fuzzy D/Y limits, complier versus population effect and distinct exclusion/defier transfers reconstructed.",
+      "result": "Pass."
+    },
+    {
+      "case": 4,
+      "evidence": "Full and drop-donor fits, held-out and post forecasts, all residuals and extrapolation errors independently reconstructed.",
+      "result": "Pass."
+    },
+    {
+      "case": 5,
+      "evidence": "Same-data hidden factor, separate contaminated donor observations, nonunique-fit mixture range and tie rule reconstructed.",
+      "result": "Pass."
+    },
+    {
+      "case": 6,
+      "evidence": "All four complete placebo fits and actual-law rank probabilities reconstructed.",
+      "result": "Pass."
+    }
+  ],
+  "independent_numerical_method": {
+    "separation": "Peer code does not import, call or copy any author implementation or treat author execution as the numerical oracle. All finite model inputs originate in the printed contracts. Its own c06 Decimal normal-integration helper is reused verbatim apart from the surrounding chapter-specific validation name; it is embedded in this standalone file and has no c06 runtime dependency.",
+    "routes": [
+      "Exact Simpson integration of quadratic mean functions and direct pushforward CDF algebra.",
+      "Centered-regression weights and direct Lagrange polynomial products, independently of author normal-equation inversion.",
+      "Exact moments and covariance, plus a changed heteroskedastic covariance transfer.",
+      "50-digit Decimal integration of the normal exponential series and bisection for the .975 quantile, independently of author NormalDist/erf calculations.",
+      "Finite grid rounding/rate comparisons combined with separately audited arbitrary-k derivations.",
+      "Planar convex-hull geometry: all segment projections, interior barycentric coordinates and a global normal-cone inequality, rather than the author active-face solver.",
+      "Loading differences, future-row-space transfer and observed-data counterexamples.",
+      "Full placebo refits and grouped exact actual-law assignment masses, including infinity and zero-zero ties."
+    ],
+    "gaussian_accuracy": "The normal integral uses an alternating integrated exponential series at |x|≤8 with 50-digit Decimal arithmetic; beyond k=32 the absolute terms decrease. Stopping below 1e−43 bounds the remaining alternating tail before float conversion. The 2e−12 comparison tolerance safely exceeds float rounding and the precision of the printed 12-decimal anchors. The quantile uses 56 bisections on [0,3].",
+    "bounded_scope": "Local fits have 2–32 scores; geometric problems have two coordinates and two or three donors; types have 2–4 rows; label laws have 2–8 positive masses; exact input magnitudes ≤10^6; closed-form grid counts satisfy 2≤k≤n≤10^8. No undirected grid search or empirical data claim.",
+    "numeric_vs_literal_anchors": "The 70 solution anchors include computed exact/rounded values and a small set of required assumption/rubric words; they are not represented as 70 distinct numerical calculations."
+  },
+  "source_audit": {
+    "policy": "Reuse the recorded primary scopes honestly; no new primary-body or equation-image reading by this peer is claimed.",
+    "preparation": {
+      "path": "production/v12-c08-source-preparation.json",
+      "bytes": 8099,
+      "sha256": "65678cdd37f4df6c05b4e533ccf48c8dafbf9cd54fbf8a116c5e937fee3d4e00"
+    },
+    "performed": "Read complete source and preparation records, compared all title/URL/body hash/size/text-page/rendered-page scopes, recomputed all three retained PDF hashes, and matched all three title/URL records against the canonical catalogue. All comparisons passed. The nine actual equation-page inspections remain attributed to root.",
+    "scopes": [
+      {
+        "id": "v12-c08-cattaneo-titiunik2022",
+        "title": "Regression Discontinuity Designs",
+        "url": "https://titiunik.github.io/files/publications/CattaneoTitiunik2022-ARE.pdf",
+        "version": "Annual Review of Economics 14 (2022), 821–851; author-hosted published version",
+        "bytes": 473052,
+        "sha256": "5e22b7bb4065ca5da18c5f02aa49b01bf963ebf7d7aeec5f3ef305ecdc00ac99",
+        "text_read_physical_pages": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "visually_read_physical_pages": [
+          4,
+          8
+        ],
+        "page_mapping": "Physical4–8 are journal824–828.",
+        "original_body_reader": "root",
+        "peer_action": "Read and verify the recorded scope and retained bytes; independently audit the chapter original proofs.",
+        "adopted_scope": "Sharp continuity targets and the separate local-randomization framework; fuzzy assignment, receipt, exclusion and monotonicity under the chapter's explicit common cutoff-type population. Original sorting and observational-equivalence examples prove their own claims.",
+        "not_adopted": "General fuzzy inference, extrapolation, multidimensional/discrete-score extensions, software behavior and later uninspected sections."
+      },
+      {
+        "id": "v12-c08-cit-foundations2019",
+        "title": "A Practical Introduction to Regression Discontinuity Designs: Foundations",
+        "url": "https://arxiv.org/pdf/1911.09511",
+        "version": "arXiv:1911.09511v1, 21 November 2019; manuscript title dated 22 November 2019; the subsequent 2020 book is not substituted for this inspected body",
+        "bytes": 1242429,
+        "sha256": "a4f103e8518fb871503c22cceb179a4f614de43edd6d85236a489022b4c67ed3",
+        "text_read_physical_pages": [
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          100,
+          101,
+          102
+        ],
+        "visually_read_physical_pages": [
+          45,
+          72,
+          73
+        ],
+        "page_mapping": "Printed page=physical−3 in inspected body.",
+        "original_body_reader": "root",
+        "peer_action": "Read and verify the recorded scope and retained bytes; independently audit the chapter original proofs.",
+        "adopted_scope": "Separate-side local-polynomial weights, smoothing bias, estimated-correction uncertainty and the limitations of density diagnostics. The original fixed-score known-Gaussian proof establishes only its own finite coverage and rate calculations.",
+        "not_adopted": "No general robust-bias-correction theorem, automatic bandwidth implementation, cluster/nonparametric coverage refinement or empirical application audit."
+      },
+      {
+        "id": "v12-c08-abadie2021",
+        "title": "Using Synthetic Controls: Feasibility, Data Requirements, and Methodological Aspects",
+        "url": "https://economics.mit.edu/sites/default/files/publications/jel.20191450.pdf",
+        "version": "Journal of Economic Literature 59(2), June 2021, 391–425; MIT author-hosted final published body",
+        "bytes": 790971,
+        "sha256": "5864e08fd2204ddb329e90daa3b2dee591f7f442ea8e61300f9698f830254393",
+        "text_read_physical_pages": [
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          13,
+          14,
+          20,
+          21,
+          24,
+          25
+        ],
+        "visually_read_physical_pages": [
+          6,
+          10,
+          13,
+          14
+        ],
+        "page_mapping": "Journal page=physical+390.",
+        "original_body_reader": "root",
+        "peer_action": "Read and verify the recorded scope and retained bytes; independently audit the chapter original proofs.",
+        "adopted_scope": "Preperiod simplex fitting, convex support, factor logic, donor contamination, holdouts and fully refitted placebo comparisons. Original finite noiseless rank proofs and actual-law inclusive-rank calculations replace any unproved general theorem.",
+        "not_adopted": "No German reunification or other empirical effect validation, general stochastic bias bound, automatic sparse/unique optimizer, observational randomization guarantee, conformal or later extension theorem."
+      }
+    ],
+    "assessment": "The manuscript preserves continuity/local-randomization distinctions; full uncertainty of an estimated correction; genuine rate rather than fixed-fraction undersmoothing; a finite known-Gaussian contract; an explicit fuzzy type population; nonnegative simplex weights including zero; noiseless factor/support assumptions; causal versus algorithmic ranges; and actual-law rather than assumed-uniform placebo calibration.",
+    "runtime": "Source PDFs, preparation, catalogue and accepted prerequisite chapters are read-only audit provenance, not dependencies of the six-file peer runtime."
+  },
+  "structure": {
+    "actual_shared_parser": "Extracted and executed the unchanged scripts.verify.Document class through its AST, avoiding unrelated module-level edition checks. This is a development-only read of the actual shared parser.",
+    "worked_cases": 6,
+    "exercises": 12,
+    "solutions": 12,
+    "ids": 22,
+    "unique_ids": 22,
+    "peer_parser": "All twelve exact v12-c08-e1 through v12-c08-e12 prompts and solution targets pair in order; balanced HTML, unique attributes/IDs, three source IDs and flat chapter/source links checked.",
+    "source_catalogue": "All three source IDs, titles and URLs match canonical records. The c09 transition is an explicitly future chapter route; it is not represented as accepted content."
+  },
+  "findings": [],
+  "required_repairs": [],
+  "open_material_findings": [],
+  "author_repair_boundary": "No author file changed or repair requested during this peer. A peer-only initial literal anchor was changed to match the printed equation Y(1)−Y(0)=0, and a peer-only integration-rule comment was corrected to name Simpson averaging; neither was an author finding.",
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v12-c08.html",
+      "bytes": 44192,
+      "sha256": "f605836d96e7b8b6a344bbabd0898a10161390680a0527540d32b3e57e172a38"
+    },
+    {
+      "path": "scripts/check_v12_c08.py",
+      "bytes": 31269,
+      "sha256": "6bbe39c449f28b8ebbd9b39f844894e8d51f990db9e9ea9f1ff0620b57ec6621"
+    },
+    {
+      "path": "content/reviews/v12-c08-sources.json",
+      "bytes": 12555,
+      "sha256": "6b7327aaf29551b5c33e734c01b3d94cdd743452a1f4ddb1a697501648a17d07"
+    },
+    {
+      "path": "content/reviews/v12-c08-author.json",
+      "bytes": 34799,
+      "sha256": "b6119abefdbf6869c01249b42d9155c50c39187c3c34fa0c9e214e6e01416cbd"
+    },
+    {
+      "path": "scripts/check_v12_c08_peer.py",
+      "bytes": 24952,
+      "sha256": "4eed1fa015247799e01900a2cf8386c59015b341bee4d446cbbe4cff4d1429a6"
+    }
+  ],
+  "execution_validation": {
+    "date": "2026-10-09",
+    "state": "passed",
+    "independent_peer": {
+      "runs": [
+        {
+          "location": "workspace",
+          "cwd": "/",
+          "mode": "API",
+          "optimized": false,
+          "returncode": 0,
+          "import_and_check_stdout_bytes": 0,
+          "stderr_bytes": 0,
+          "strict_json_api": true
+        },
+        {
+          "location": "workspace",
+          "cwd": "/",
+          "mode": "CLI",
+          "optimized": false,
+          "returncode": 0,
+          "import_and_check_stdout_bytes": 0,
+          "stderr_bytes": 0,
+          "strict_json_api": false
+        },
+        {
+          "location": "workspace",
+          "cwd": "/",
+          "mode": "API",
+          "optimized": true,
+          "returncode": 0,
+          "import_and_check_stdout_bytes": 0,
+          "stderr_bytes": 0,
+          "strict_json_api": true
+        },
+        {
+          "location": "workspace",
+          "cwd": "/",
+          "mode": "CLI",
+          "optimized": true,
+          "returncode": 0,
+          "import_and_check_stdout_bytes": 0,
+          "stderr_bytes": 0,
+          "strict_json_api": false
+        },
+        {
+          "location": "exact-six-file-copy",
+          "cwd": "/",
+          "mode": "API",
+          "optimized": false,
+          "returncode": 0,
+          "import_and_check_stdout_bytes": 0,
+          "stderr_bytes": 0,
+          "strict_json_api": true
+        },
+        {
+          "location": "exact-six-file-copy",
+          "cwd": "/",
+          "mode": "CLI",
+          "optimized": false,
+          "returncode": 0,
+          "import_and_check_stdout_bytes": 0,
+          "stderr_bytes": 0,
+          "strict_json_api": false
+        },
+        {
+          "location": "exact-six-file-copy",
+          "cwd": "/",
+          "mode": "API",
+          "optimized": true,
+          "returncode": 0,
+          "import_and_check_stdout_bytes": 0,
+          "stderr_bytes": 0,
+          "strict_json_api": true
+        },
+        {
+          "location": "exact-six-file-copy",
+          "cwd": "/",
+          "mode": "CLI",
+          "optimized": true,
+          "returncode": 0,
+          "import_and_check_stdout_bytes": 0,
+          "stderr_bytes": 0,
+          "strict_json_api": false
+        }
+      ],
+      "summary": {
+        "author_code_used_as_oracle": false,
+        "chapter": "v12-c08",
+        "comparisons": 187,
+        "computed_solution_anchors": 70,
+        "domain_rejections": 21,
+        "exercises": 12,
+        "finite_evidence": {
+          "curvature_radius": 0.9434006120674119,
+          "optimal_width_coverage": 0.9209024658394033,
+          "rounded_optimal_scaled_bias": [
+            0.5007350973672423,
+            0.5000007970991721
+          ],
+          "undersmoothed_scaled_bias": [
+            0.7470329260253106,
+            0.2357027907255649
+          ],
+          "weighted_placebo_p": [
+            "7/10",
+            "4/5",
+            "9/10",
+            "1"
+          ],
+          "wrong_corrected_coverage": 0.5078205300463541
+        },
+        "intervention_scopes": [
+          "Exact quadratic integration and the complete sorting-score CDF distinguish window means, smooth density and causal continuity.",
+          "Centered regression and Lagrange interpolation independently recover all weights; changed noise variances demonstrate why the zero covariance is not general.",
+          "Five exact grids, finite rounding and two rate sequences distinguish a leading-MSE optimum, fixed-fraction bias and true rate undersmoothing.",
+          "Distinct type tables and direct eligibility shifts separate exclusion, monotonicity and positive first stage.",
+          "Planar projection supplies global simplex fits; independent loading differences and a rank-deficient row-span example test the factor extrapolation assumptions.",
+          "Hidden-factor observational equivalence, changed donor observations and degenerate-fit mixture ranges preserve distinct identification claims.",
+          "All four placebo algorithms are refitted; actual assignment weights, infinity ties and zero-zero scores determine finite calibration."
+        ],
+        "limits": "Finite independent evidence and separately recorded proof review; no empirical validity, general RBC or stochastic synthetic-control theorem, rendered UI or acceptance claim.",
+        "nonself_peer_bindings": 5,
+        "purposeful_interventions": 7,
+        "rejection_scopes": [
+          "boolean scalar",
+          "nonfinite scalar",
+          "outside magnitude bound",
+          "local rank failure",
+          "mixed cutoff sides",
+          "zero kernel support",
+          "negative kernel",
+          "quadratic interpolation rank",
+          "unavailable grid observations",
+          "boolean grid count",
+          "one local point",
+          "outside proved Gaussian numerical interval",
+          "incomplete donor coordinate",
+          "zero cutoff first stage",
+          "incomplete type law",
+          "negative preMSE",
+          "unsupported assignment label",
+          "invalid infinity encoding",
+          "duplicate JSON",
+          "nonfinite JSON",
+          "overflowed JSON"
+        ],
+        "solutions": 12,
+        "status": "independent peer checks passed",
+        "worked_cases": 6
+      },
+      "all_four_api_summaries_equal": true,
+      "workspace_payload_bytes_unchanged": true,
+      "isolated_payload_bytes_and_exact_membership_unchanged": true,
+      "temporary_author_hash_interventions_rejected": [
+        "content/chapters/v12-c08.html",
+        "scripts/check_v12_c08.py",
+        "content/reviews/v12-c08-sources.json",
+        "content/reviews/v12-c08-author.json"
+      ]
+    },
+    "author_integration_only": {
+      "runs": 2,
+      "modes": [
+        "normal API",
+        "optimized API"
+      ],
+      "cwd": "/",
+      "quiet_import_and_check": true,
+      "equal_strict_json_summaries": true,
+      "summary": {
+        "chapter": "v12-c08",
+        "comparisons": 254,
+        "domain_rejections": 18,
+        "exact_prompts_and_solutions": 12,
+        "finite_evidence": {
+          "actual_weighted_p": [
+            "7/10",
+            "4/5",
+            "9/10",
+            "1"
+          ],
+          "corrected_multiplier": "38",
+          "correction_covariance_multiplier": "0",
+          "full_donor_weights": [
+            "1/4",
+            "1/2",
+            "1/4"
+          ],
+          "grid_checks_k": [
+            2,
+            3,
+            7,
+            20
+          ],
+          "local_score_count_per_side": 3,
+          "original_jump_variance_multiplier": "14/3",
+          "placebo_refits": 4
+        },
+        "limits": "Finite original cases and separate analytic audit; no empirical continuity proof, generic RBC or stochastic synthetic-control theorem, observational assignment calibration, rendered UI or human certification.",
+        "primary_scopes": 3,
+        "status": "author checks passed; separate review required",
+        "strict_JSON_rejections": 6,
+        "visible_anchors": 78,
+        "worked_examples": 6
+      },
+      "role": "Integration evidence only; author output was not the peer numerical oracle."
+    },
+    "read_only_contract": "Both import and check() were captured separately from the harness JSON report. Success emitted no stdout/stderr. CLI success emitted no stdout/stderr. All subprocesses used cwd=/ and -B with PYTHONDONTWRITEBYTECODE=1. Exact isolation held only the four author files and two peer files; no other source/runtime path was copied.",
+    "final_record_revalidation": "The completed peer record is followed by a second full eight-run gate over its final bytes, with no subsequent record mutation. Final freeze hashes are reported outside the self-unhashed record."
+  },
+  "preserved_prior_artifacts": "C06, C05, C04 peer payloads, C07 source preparation and all earlier authored/assessment payloads remain frozen; this scope writes only its two assigned peer paths.",
+  "acceptance_boundary": "This is a separate agent content and finite-computation review, not external human certification or a claim of empirical identification. The coordinator retains chapter acceptance, canonical changes, integration and publication.",
+  "teaching_audit": {
+    "prerequisite_routes": "Local regressions use fixed-design linear algebra and Gaussian calculations taught in c01/c02; fuzzy type decomposition builds on c03/c06 and is rederived; counterfactual cautions follow c07. No unproved general theorem is required by an exact exercise.",
+    "teach_back": "Answered criteria distinguish density diagnostics from continuity, prefit from future-factor support, and point-forecast structure from assignment-based placebo calibration.",
+    "retention": "Independent k=2 grid gives weights (2,−1) and jump variance 10σ². For h=n^(−1/4), k grows while sqrt(nh)h² vanishes. The removed-donor date-3 discrepancy is 6/5; proper candidate-A tail mass is 7/10.",
+    "limits": "No rendering, visual/mobile/print audit or learner performance result is inferred from structural and numerical checks."
+  }
+}

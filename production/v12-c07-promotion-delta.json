@@ -1,0 +1,87 @@
+{
+  "chapter": "v12-c07",
+  "date": "2026-10-09",
+  "working_inputs": [
+    {
+      "path": "production/v12-c07-working.html",
+      "bytes": 44042,
+      "sha256": "3da8a9d8be2472df5931c27bf826e48323f7ba0c38c97850ef46a4f8b13978c5"
+    },
+    {
+      "path": "production/check_v12_c07_working.py",
+      "bytes": 30056,
+      "sha256": "44a86866d53963b88fa0f1680c083a5126c2b49e162f67493598c868e5c25ca7"
+    },
+    {
+      "path": "production/v12-c07-sources-working.json",
+      "bytes": 12943,
+      "sha256": "f08dcc085af81b77b1aedae812651eb2ed79c928764f229967854aff9d51fc7e"
+    },
+    {
+      "path": "production/v12-c07-author-review-working.json",
+      "bytes": 25802,
+      "sha256": "343167822ee3c313ae7703010f9af716d85cbc55fd8c5e35b2f0d94200889dc3"
+    }
+  ],
+  "canonical_inputs": [
+    {
+      "path": "content/chapters/v12-c07.html",
+      "bytes": 44031,
+      "sha256": "43332ecc8582880b3e2ffc9f92980bbb83a55014d4c564a76bcff54cd9d2cee7"
+    },
+    {
+      "path": "scripts/check_v12_c07.py",
+      "bytes": 30182,
+      "sha256": "a3dde3b958f87e128182dd86d2345db8f31698129552ad1a2d4b4a41c50d47b4"
+    },
+    {
+      "path": "content/reviews/v12-c07-sources.json",
+      "bytes": 13293,
+      "sha256": "25b05577bf982cc536e786714958709d788a2a11ebc19e3cf61196a4943abf70"
+    },
+    {
+      "path": "content/reviews/v12-c07-author.json",
+      "bytes": 26964,
+      "sha256": "2cce28728a625d1ce7fd7dcd3884daeb9d811171c689f1602835db17c2464bf4"
+    }
+  ],
+  "HTML_exact_replacements": [
+    {
+      "old": "python3 production/check_v12_c07_working.py",
+      "new": "python3 scripts/check_v12_c07.py"
+    }
+  ],
+  "checker_exact_replacements": [
+    {
+      "old": "BASE = Path(__file__).resolve().parent",
+      "new": "BASE = Path(__file__).resolve().parents[1]"
+    },
+    {
+      "old": "v12-c07-working.html",
+      "new": "content/chapters/v12-c07.html"
+    },
+    {
+      "old": "check_v12_c07_working.py",
+      "new": "scripts/check_v12_c07.py"
+    },
+    {
+      "old": "v12-c07-sources-working.json",
+      "new": "content/reviews/v12-c07-sources.json"
+    },
+    {
+      "old": "v12-c07-author-review-working.json",
+      "new": "content/reviews/v12-c07-author.json"
+    },
+    {
+      "old": "        for path in FILES:\n            shutil.copy2(BASE/path, target/path)",
+      "new": "        for path in FILES:\n            (target/path).parent.mkdir(parents=True, exist_ok=True)\n            shutil.copy2(BASE/path, target/path)"
+    },
+    {
+      "old": "{p.name for p in target.iterdir()}",
+      "new": "{str(p.relative_to(target)) for p in target.rglob('*') if p.is_file()}"
+    }
+  ],
+  "root_reading": "production/v12-c07-root-reading.json",
+  "open_root_findings": [],
+  "state": "Canonical review; all eight root author execution gates passed; separate peer pending."
+}

@@ -1,0 +1,405 @@
+{
+  "chapter": "v12-c10",
+  "date": "2026-10-09",
+  "state": "Root original blueprint numerically checked; requires independent author confirmation, full manuscript and separate peer before acceptance",
+  "comparison_count": 91,
+  "methods": "Exact Fraction reconstruction of finite laws, linear systems, moment maps and derivatives; explicit Gaussian laws; stable log-sum fixed-point iteration and analytic residual bounds; independent finite-difference derivative checks; monotone-interval scalar root bisection. No simulated empirical outcomes or source exercises are passed off as evidence.",
+  "cases": [
+    {
+      "case": 1,
+      "title": "Supply-demand identification, calibration and policy invariance",
+      "inputs": "Independent W,Z,U,V fair signs. Demand Q=10+W−2P+U; supply Q=1+P−Z+V. Unit tax t changes producer receipt to P−t while maintained primitives and shock laws are invariant.",
+      "results": {
+        "support_size": 16,
+        "mean_PQ": [
+          3,
+          4
+        ],
+        "cost_instrument_covariances": [
+          "1/3",
+          "-2/3"
+        ],
+        "demand_instrument_covariances": [
+          "1/3",
+          "1/3"
+        ],
+        "demand_OLS_P_coefficient_controlling_W": -1,
+        "supply_OLS_P_coefficient_controlling_Z": 0,
+        "identified_demand_slope": 2,
+        "identified_supply_slope": 1,
+        "cost_only_equivalent_family": [
+          {
+            "d": "1",
+            "c": "1",
+            "g": "1",
+            "tax1_price": "10/3",
+            "tax1_quantity": "10/3"
+          },
+          {
+            "d": "1/2",
+            "c": "5/2",
+            "g": "5/6",
+            "tax1_price": "16/5",
+            "tax1_quantity": "18/5"
+          }
+        ]
+      },
+      "proof": "Solve the simultaneous system, verify exclusion/mean orthogonality and nonzero first-stage covariances. With only noiseless cost-shifter variation P=3+Z/3,Q=4−2Z/3, all d>0,c=4−3d,g=(2+d)/3 reproduce the entire observed mapping while tax incidence varies. Fixing g=1 externally calibrates d=1; this is not information supplied by that cost-only dataset. The 16-atom identified experiment is a separate richer data law."
+    },
+    {
+      "case": 2,
+      "title": "Minimum-distance targets and counterfactual sensitivity",
+      "inputs": {
+        "marginal_cost": "MC(q)=a+bq",
+        "design_quantities": [
+          0,
+          1,
+          2
+        ],
+        "reported_moments": [
+          1,
+          3,
+          6
+        ],
+        "weight_diagonal": [
+          1,
+          2,
+          1
+        ],
+        "known_root_N_covariance_diagonal": [
+          1,
+          "1/2",
+          1
+        ],
+        "counterfactual_price": 5
+      },
+      "results": {
+        "G": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "normal_matrix": [
+          [
+            "4",
+            "4"
+          ],
+          [
+            "4",
+            "6"
+          ]
+        ],
+        "parameter_map": [
+          [
+            "3/4",
+            "1/2",
+            "-1/4"
+          ],
+          [
+            "-1/2",
+            "0",
+            "1/2"
+          ]
+        ],
+        "pseudo_true_parameters": [
+          "3/4",
+          "5/2"
+        ],
+        "residuals": [
+          "1/4",
+          "-1/4",
+          "1/4"
+        ],
+        "weighted_loss": "1/4",
+        "root_N_parameter_covariance": [
+          [
+            "3/4",
+            "-1/2"
+          ],
+          [
+            "-1/2",
+            "1/2"
+          ]
+        ],
+        "implied_quantity": "17/10",
+        "moment_sensitivity": [
+          "1/25",
+          "-1/5",
+          "-6/25"
+        ],
+        "root_N_quantity_variance": "99/1250",
+        "third_moment_plus_one_tenth_quantity": "57/34",
+        "exact_quantity_change": "-2/85",
+        "linear_change": "-3/125",
+        "perfect_fit_transfer": {
+          "observed_moments": [
+            1,
+            3,
+            5
+          ],
+          "baseline_MC": "1+2q",
+          "alternative_MC": "1+2q+q(q−1)(q−2)",
+          "alternative_derivative": "1+3(q−1)^2>0",
+          "price13_quantities": [
+            6,
+            3
+          ]
+        }
+      },
+      "proof": "Full column rank plus positive W gives a unique global linear minimum-distance projection, whether the three population moments are compatible or not. Under a stipulated Gaussian sample-moment law centered at (1,3,6), the parameter map gives exact covariance A S A-prime/N and delta inference for the projection-implied quantity, not a structural truth claim. Differentiate FOC and the counterfactual; show finite perturbation versus derivative. In the separate perfectly fitted transfer, two strictly increasing marginal-cost curves agree at all observed q but give different globally optimal competitive output at price13. Fit and rank alone cannot justify extrapolation. The implied-quantity variance is an asymptotic delta variance; do not claim finite Gaussian ratio moments exist merely because its denominator is nonzero almost surely."
+    },
+    {
+      "case": 3,
+      "title": "Simulation coupling, fixed simulation noise and likelihood bias",
+      "inputs": {
+        "additive_observation": "Y_i=theta+epsilon_i, independent standard Gaussian errors",
+        "simulator": "theta+Z_ir, independent standard Gaussian simulation shocks",
+        "N": 100,
+        "R": 4,
+        "finite_difference_h": "1/100",
+        "binary_true_probability": "9/25",
+        "binary_parameter_domain": [
+          "1/4",
+          "3/4"
+        ],
+        "binary_probability_simulator": "p+(1/5)Z_i, Z_i fair±1 independent of Y_i"
+      },
+      "results": {
+        "independent_per_record_MSM_variance": "1/80",
+        "one_common_R_draw_set_MSM_variance": "13/50",
+        "independent_draw_forward_difference_variance": 5000,
+        "same_draws_across_parameter_values_derivative": 1,
+        "same_draw_derivative_variance": 0,
+        "fixed_R1_simulated_likelihood_target": "2/5",
+        "true_likelihood_target": "9/25",
+        "expected_simulated_score_at_truth": "625/1848",
+        "H": "15/2",
+        "Omega": "15/2",
+        "root_N_variance_about_wrong_target": "2/15",
+        "ordinary_MLE_root_N_variance": "144/625",
+        "nonvanishing_target_bias": "1/25"
+      },
+      "proof": "Independent draws per row give variance(1+1/R)/N; one reused draw set across rows gives1/N+1/R and a random probability limit at fixed R. Common random numbers across parameter evaluations are a different coupling: additive simulation derivative becomes exactly1. For Bernoulli data, average log likelihood converges uniformly on the compact positive-probability domain; strict concavity and exact expected-score zero give p*=2/5, despite unbiased probability simulation. Jensen bias is computed through the criterion, not presumed estimator bias. Bounded derivatives and the iid CLT give sandwich2/15 around the wrong target. Averaging R signs keeps probabilities at least1/20 and expected supremum criterion discrepancy <=4/sqrt(R), so R_N→infinity suffices for consistency by Markov and argmax separation; no general MSL rate theorem claimed."
+    },
+    {
+      "case": 4,
+      "title": "Indirect inference: binding rank, global signs and shared covariates",
+      "inputs": {
+        "structural_model": "Y_i=theta^2+X_i+epsilon_i; X and epsilon independent N(0,1); theta in[0,3] unless the sign-unrestricted transfer is explicitly invoked",
+        "auxiliary_statistic": "sample mean",
+        "simulation": "theta^2+the same observed X_i+u_hi; H independent Gaussian simulation streams, independent of X and epsilon",
+        "H": 2,
+        "synthetic_X": [
+          "-1",
+          "0",
+          "1",
+          "0"
+        ],
+        "synthetic_Y": [
+          "0",
+          "2",
+          "4",
+          "3"
+        ],
+        "synthetic_simulation_streams": [
+          [
+            "-1",
+            "0",
+            "1",
+            "2"
+          ],
+          [
+            "-1",
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "interior_true_theta": "3/2"
+      },
+      "results": {
+        "binding_function": "b(theta)=theta^2",
+        "synthetic_observed_mean": "9/4",
+        "synthetic_simulation_noise_mean": "1/4",
+        "positive_estimate_squared": "2",
+        "positive_estimate": 1.4142135623730951,
+        "sign_unrestricted_minimizers": "±sqrt(2)",
+        "observation_auxiliary_root_N_variance": 2,
+        "simulation_auxiliary_root_N_variance": "3/2",
+        "cross_covariance": 1,
+        "difference_root_N_variance": "3/2",
+        "theta_root_N_variance": "1/6",
+        "incorrect_independent_marginals_theta_variance": "7/18",
+        "incorrect_blanket_1_plus_1_over_H_theta_variance": "1/3",
+        "boundary_law": "N^(1/4) theta_hat -> sqrt(max(Z,0)), Z~N(0,3/2); atom1/2 at0"
+      },
+      "proof": "Uniform convergence is exact because sample binding differs from theta^2 only by a scalar sample-noise mean. On nonnegative theta the population map is injective; allowing signs gives two global minima even where the derivative is nonzero. For theta0>0 use theta_hat−theta0=(D−theta0^2)/(theta_hat+theta0) and the known Gaussian difference law. The common observed X path cancels, making the cross covariance essential. At theta0=0 the derivative vanishes and positive-part square root has the stated nonnormal fourth-root limit; clipping at3 is asymptotically irrelevant. No unqualified1+1/H rule for another simulator design."
+    },
+    {
+      "case": 5,
+      "title": "Two-state dynamic choice and numerical error in nested estimation",
+      "inputs": {
+        "states": [
+          0,
+          1
+        ],
+        "keep_transition": "next state1 with probability1",
+        "replace_transition": "next state0 with probability1",
+        "keep_utility": "−c*s",
+        "replace_utility": "−r",
+        "discount_beta": "1/2",
+        "r": "log5",
+        "c": "log(20/11)",
+        "shock_normalization": "eta iid with CDF exp(−exp(−x)); epsilon=eta−E eta, independent across alternatives/time and future transitions",
+        "synthetic_records": "36 independent decision makers observed once,20 initialized in state0 (4 replace),16 in state1 (5 replace); NOT counts from one deterministic-transition trajectory"
+      },
+      "results": {
+        "V_exact": [
+          "0",
+          "log(16/25)"
+        ],
+        "replacement_probabilities": [
+          "1/5",
+          "5/16"
+        ],
+        "controlled_transition": [
+          [
+            "1/5",
+            "4/5"
+          ],
+          [
+            "5/16",
+            "11/16"
+          ]
+        ],
+        "stationary_distribution": [
+          "25/89",
+          "64/89"
+        ],
+        "stationary_replacement_rate": "25/89",
+        "conditional_cross_section_log_likelihood": -19.94543046364768,
+        "inverse_choice_parameters": {
+          "Delta": "log(p0/p1)",
+          "c": "log((1−p0)/p0)−log((1−p1)/p1)",
+          "r": "log((1−p0)/p0)−beta*Delta"
+        },
+        "value_parameter_derivative_matrix_rc": [
+          [
+            "-82/169",
+            "-88/169"
+          ],
+          [
+            "-100/169",
+            "-198/169"
+          ]
+        ],
+        "log_odds_derivative_matrix_rc": [
+          [
+            "-160/169",
+            "55/169"
+          ],
+          [
+            "-160/169",
+            "224/169"
+          ]
+        ],
+        "probability_derivative_matrix_rc": [
+          [
+            "-128/845",
+            "44/845"
+          ],
+          [
+            "-275/1352",
+            "385/1352"
+          ]
+        ],
+        "utility_subsidy_log2_dynamic_replacement_probabilities": [
+          0.32410336852188565,
+          0.46576847213647327
+        ],
+        "utility_subsidy_log2_static_replacement_probabilities": [
+          "1/3",
+          "10/21"
+        ],
+        "equivalent_static_baseline": "beta0,r=log4,c unchanged gives the same two baseline choice probabilities",
+        "numeric_Bellman_residuals": [
+          9.43689570931383e-15,
+          5.662137425588298e-15
+        ]
+      },
+      "proof": "Derive centered Gumbel expected max and choice probabilities from the CDF; the finite mean cancels without needing a numerical Euler constant. Monotonicity and translation show log-sum is1-Lipschitz and Bellman beta-contractive, giving unique value and residual/(1−beta) error bound. Product likelihood is for independent one-choice records; for a true trajectory use sequential action/transition factorization, not conditioning on all future states. Known beta and normalization identify r,c from the two positive probabilities; unknown beta gives an observationally equivalent family and different subsidy predictions. Differentiate Bellman using (I−beta P_pi)^−1, justified by the Neumann series; ignoring value sensitivity gives a wrong gradient. Per-record log choice likelihood error is at most2beta*residual/(1−beta), and conditioning deteriorates as beta approaches1. Subsidy is in normalized utility units, not an identified dollar welfare measure."
+    },
+    {
+      "case": 6,
+      "title": "Multiple equilibria and an explicit selection boundary",
+      "inputs": {
+        "population": "Unit mass with an exactly specified logistic taste distribution; agents take aggregate q as given",
+        "best_response_fraction": "Lambda(a+bq)",
+        "a": "−2log3",
+        "b": "4log3",
+        "intervention": "add h to a, preserving taste distribution and b"
+      },
+      "results": {
+        "baseline_equilibria": [
+          "1/4",
+          "1/2",
+          "3/4"
+        ],
+        "iteration_slopes": [
+          0.8239592165010823,
+          1.0986122886681098,
+          0.8239592165010823
+        ],
+        "local_q_derivatives_wrt_h": [
+          1.0650941007721244,
+          -2.535180993936788,
+          1.0650941007721244
+        ],
+        "critical_q": [
+          0.3501994881741365,
+          0.6498005118258635
+        ],
+        "positive_fold_h": 0.04012827998744084,
+        "h_0_02_equilibria": [
+          0.2760556326238449,
+          0.4473046408310697,
+          0.7685398674493529
+        ],
+        "h_0_1_equilibrium": [
+          0.8156316732509019
+        ],
+        "unrestricted_selection_mean_interval_at_h_0_02": [
+          0.2760556326238449,
+          0.7685398674493529
+        ],
+        "unique_comparison": "b=2,a=−1 gives unique q=1/2, contraction modulus1/2 and dq/da=1/2"
+      },
+      "proof": "The population type distribution gives the response equation without invoking an unproved continuum iid law. Continuity gives existence; |b|<4 gives contraction. For b=4log3, logit(q)−b(q−1/2) has only two derivative zeros, hence at most three roots; the three exact roots establish all equilibria. The implicit derivative is valid only off the fold. Stable outer branches and unstable middle branch refer to this specified naive iteration, not an automatically justified economic equilibrium selection. For each policy, unrestricted selection probabilities give the convex hull of equilibrium outputs; observed baseline selection does not identify a future selection rule. Branch-continuation predictions require that additional maintained rule. Numerical roots are bracket calculations supporting the separately proved shape argument."
+    }
+  ],
+  "global_proof_contract": [
+    "State identification as injectivity of the maintained observable-law or population-moment map, separate from parameter normalization/calibration and fit. Local derivative rank does not imply global identification.",
+    "Derive compact-parameter extremum consistency by uniform convergence plus an attained positive separation gap, using accepted c01 as a named prerequisite where appropriate. Give actual uniformity in the finite/smooth examples, not a pointwise-LLN shortcut.",
+    "Separate sampling error, simulation error and deterministic numerical approximation; probabilities, conditioning and simulation sharing define their joint law.",
+    "Use model-specific fixed-dimensional iid CLTs/delta tools from accepted c01–c04; do not import general dependent simulation, dynamic likelihood or equilibrium-selection inference merely from primary citations.",
+    "Teach implicit/contractive equilibrium sensitivities with the complete assumptions and a multiple-root counterexample. Counterfactual invariance remains a maintained scientific claim."
+  ],
+  "prerequisite_routes": [
+    "v12-c03",
+    "v12-c04",
+    "v02-c10",
+    "v05-c05",
+    "v05-c07"
+  ],
+  "source_preparation": "production/v12-c10-source-preparation.json (separate scoped primary inspection, pending freeze at blueprint creation)",
+  "limits": "Original bounded examples and proof design, not a written or accepted chapter, empirical application, human certification or rendered UI check."
+}

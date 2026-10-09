@@ -1,0 +1,63 @@
+{
+  "chapter": "v12-c11",
+  "date": "2026-10-09",
+  "specialist": "bs_author",
+  "task": "Scoped primary-source preparation only, after preserving the frozen c08 peer. Numerical blueprint and full authoring will be separately assigned.",
+  "owned_paths": [
+    "production/v12-c11-source-preparation.json"
+  ],
+  "owned_scratch_subtree": "../tmp/pdfs/v12-c11/ (record every exact path, bytes and SHA256)",
+  "canonical_specification": {
+    "id": "v12-c11",
+    "number": 11,
+    "title": "Bayesian, high-dimensional and machine-learning methods",
+    "outcome": "Apply modern methods while preserving valid inference and honest model evaluation.",
+    "coverage": [
+      "Bayesian computation",
+      "regularization",
+      "cross-fitting",
+      "double robustness",
+      "causal ML",
+      "multiple testing"
+    ],
+    "prerequisites": [
+      "v12-c10"
+    ],
+    "level": "Graduate",
+    "status": "planned",
+    "manuscript": "chapters/v12-c11.html",
+    "sources": [
+      "harvard-economics-requirements",
+      "mit-economics-curriculum",
+      "wharton-finance-courses"
+    ],
+    "required_worked_examples": 3,
+    "required_exercises": 10,
+    "review": {
+      "arithmetic": false,
+      "reasoning": false,
+      "solutions": false,
+      "sources": false,
+      "instruction": false,
+      "structure": false
+    }
+  },
+  "source_selection": [
+    "An actual primary Hastings1970 or comparably authoritative original/official finite Metropolis-Hastings source covering detailed balance and stationary distributions; no third-party MCMC blog. Restrict convergence adoption to assumptions actually proved/read.",
+    "Author-hosted Statistical Learning with Sparsity (Hastie/Tibshirani/Wainwright) or Wainwright primary source for lasso KKT/basic inequality/cone/restricted-eigenvalue prediction estimation arguments; scope only required sections, not the whole book.",
+    "Chernozhukov et al. Double/debiased machine learning for treatment and structural parameters, exact original/author-hosted published or explicitly versioned arXiv body; orthogonal scores, cross-fitting, product-rate and variance conditions.",
+    "Benjamini-Hochberg1995 original FDR paper, with a primary Benjamini-Yekutieli2001 extension only if required for an intended dependence claim. Identify precise null-uniformity/independence or dependence assumptions and separate FDR from familywise control."
+  ],
+  "existing_prerequisites": [
+    "Accepted v03-c08 supplies basic multiple tests and v03-c09 basic Bayesian posterior/decision calculations; inspect their source records before adding redundant foundations.",
+    "Accepted v12-c01–c04 finite-dimensional iid/delta/likelihood/GMM tools and c07 population double robustness are available. They do not silently supply high-dimensional nuisance or dependent-chain CLTs."
+  ],
+  "anticipated_original_scope": "Finite Bayesian posterior and MCMC balance/convergence/Monte Carlo precision; regularization and fixed-design lasso inequalities; cross-fitted orthogonal ATE or partially linear scores with a complete narrow iid proof; multiplicity with finite original calculations and explicit dependence boundaries. These are directions for choosing sources, not numerical contracts or acceptance claims.",
+  "requirements": [
+    "Retrieve only needed primary bodies; verify bibliography/version and actual PDF or official body; read relevant text and render/view key equation pages with existing tools. Accurate physical/printed page maps.",
+    "Record exact claim-to-page links, actual inspector, equations viewed, transcription caveats, assumptions needed for each claimed theorem and exclusions. Do not treat abstract/link availability as body verification.",
+    "Proposed catalogue entries use verification key. All source artifacts remain scratch/provenance; no manuscript, checker, catalogue/curriculum/checkpoint/shared script/build/hosting changes.",
+    "Use standard-library tools and existing PDF utilities; no installations, paywalled access workaround, copied source exercises or additional agents.",
+    "Stop at a frozen complete preparation record and report its hash. Root may then assign a separate peer task."
+  ]
+}

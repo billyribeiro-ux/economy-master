@@ -158,6 +158,12 @@ from check_v12_c04 import check as check_v12_c04
 from check_v12_c04_peer import check as check_v12_c04_peer
 from check_v12_c05 import check as check_v12_c05
 from check_v12_c05_peer import check as check_v12_c05_peer
+from check_v12_c06 import check as check_v12_c06
+from check_v12_c06_peer import check as check_v12_c06_peer
+from check_v12_c07 import check as check_v12_c07
+from check_v12_c07_peer import check as check_v12_c07_peer
+from check_v12_c08 import check as check_v12_c08
+from check_v12_c08_peer import check as check_v12_c08_peer
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT/'dist'
@@ -404,7 +410,7 @@ def main():
                 and set(parsed.solution_targets) <= set(parsed.ids),f'{c["id"]}: invalid separate solution pairing')
         require(set(parsed.sources) <= source_ids,f'{c["id"]}: unknown citation')
         labels = text.casefold()
-        require('teach-back' in labels and any(label in labels for label in ('delayed check', 'delayed retention')),
+        require('teach-back' in labels and any(label in labels for label in ('delayed check', 'delayed retention', 'retention check')),
                 f'{c["id"]}: missing teaching/retention check')
         if c['status']=='accepted':
             require(all(c['review'].values()),f'{c["id"]}: acceptance without complete review record')
@@ -596,6 +602,8 @@ def main():
     v12_opening_peer_check = {'v12-c01': check_v12_c01_peer(), 'v12-c02': check_v12_c02_peer(), 'v12-c03': check_v12_c03_peer()}
     v12_middle_check = {'v12-c04': check_v12_c04(), 'v12-c05': check_v12_c05()}
     v12_middle_peer_check = {'v12-c04': check_v12_c04_peer(), 'v12-c05': check_v12_c05_peer()}
+    v12_causal_design_check = {'v12-c06': check_v12_c06(), 'v12-c07': check_v12_c07(), 'v12-c08': check_v12_c08()}
+    v12_causal_design_peer_check = {'v12-c06': check_v12_c06_peer(), 'v12-c07': check_v12_c07_peer(), 'v12-c08': check_v12_c08_peer()}
     report = {'status':'failed' if errors else 'passed','chapter_packages_available':available,
               'html_pages_checked':len(pages),'curriculum_chapters':len(chapters),
               'cross_volume_packages_available':cumulative_available,
@@ -657,6 +665,8 @@ def main():
               'volume_12_opening_peer_check': v12_opening_peer_check,
               'volume_12_middle_check': v12_middle_check,
               'volume_12_middle_peer_check': v12_middle_peer_check,
+              'volume_12_causal_design_check': v12_causal_design_check,
+              'volume_12_causal_design_peer_check': v12_causal_design_peer_check,
               'errors':errors,'limitations':['These checks do not certify all subject-matter claims or externally assess learner competence.']}
     report['checks'].extend(['Volume 11 chapters9–12: funded currency parity versus physical scenarios, segmented cash and sovereign claim budgets; regulatory and conduct incentives, financed resolution; finite run equilibria, auction feedback and consolidated recipient resources; finite governance choices, collateral, escalation incentives and decision evidence. Four author and four separate peer laboratories with exact final bindings, independently reviewed proofs and all36 closing exercise solutions.',
         'Volume 11 chapters5–8: dated funding and collateral, feasible liquidity support and ALM; process deadlines, identity accounting and common control failures; consistent revaluation, network contagion and certified reverse stress; insurance selection and dependence, pension cash, guarantee resources and household debt. Four author and four separate peer laboratories, all exact exercise reviews and frozen payload bindings.',

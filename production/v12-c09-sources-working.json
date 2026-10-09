@@ -1,0 +1,366 @@
+{
+  "chapter": "v12-c09",
+  "date": "2026-10-09",
+  "state": "Author source proposal; one existing ID reused and four new IDs proposed. Canonical catalogue changes remain root responsibilities.",
+  "preparation_provenance": {
+    "path": "production/v12-c09-source-preparation.json",
+    "bytes": 36001,
+    "sha256": "5593643ada6b4fb20c814488a058d1f9ad774e4571d5e7e1dcac57ff28b5df43",
+    "source_inspector": "c05_review",
+    "root_record": "production/v12-c09-source-root-reading.json",
+    "author_action": "Read the complete preparation including all five source versions, actual page scopes, equation cautions and proof recommendations. The source artifacts are not runtime inputs.",
+    "actual_source_equation_pages_viewed_by_specialist": 13,
+    "root_retained_artifact_hashes_verified": 25,
+    "new_full_body_reads_claimed": false,
+    "runtime_dependency": false,
+    "coordinator_action": "Read the complete preparation/provenance record and verify retained artifact hashes; actual primary text and equation-image inspection was performed by c05_review. No new coordinator primary-body or image inspection is implied."
+  },
+  "sources": [
+    {
+      "id": "v04-c10-mit-stationarity",
+      "reuse_existing_id": true,
+      "authors": [
+        "Anna Mikusheva",
+        "Paul Schrimpf (scribe)"
+      ],
+      "title": "Lecture Notes 1: Stationarity, Lag Operator, ARMA, and Covariance Structure",
+      "version_and_year": {
+        "body_course": "14.384 Time Series Analysis, Fall 2007",
+        "lecture_date": "2007-09-06",
+        "stated_revision": "2009-09-09",
+        "hosting_course": "MIT OCW Fall 2013",
+        "caution": "The course route and later PDF modification date do not replace the body lecture/revision dates."
+      },
+      "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/4f2256b0a9c3157a2676806ed261eb8f_MIT14_384F13_lec1.pdf",
+      "requested_url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/4f2256b0a9c3157a2676806ed261eb8f_MIT14_384F13_lec1.pdf",
+      "official_listing": {
+        "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/pages/lecture-notes/",
+        "inspection": "Official lecture index and source body inspected. Reuse the existing catalogue ID; no catalogue edit made."
+      },
+      "pdf_pages": 6,
+      "bytes": 172499,
+      "sha256": "2269b5ccdea1be78010f0655422ccda4019b07df94dad8b03e5c696bbc0267cc",
+      "page_mapping": "Physical 1–5 equal printed 1–5; physical 6 is an unnumbered OCW attribution page.",
+      "text_read_physical_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "visually_read_physical_pages": [
+        2,
+        4
+      ],
+      "supported_scope": [
+        "Definitions of strict and covariance stationarity; white noise and lag notation (physical 2).",
+        "Stable geometric lag inverses and AR/MA/ARMA representations; covariance sums (physical 3–5).",
+        "Random-walk variance as a contrast with a stable causal representation; this is method context, not a general unit-root test proof."
+      ],
+      "conditions_retained": [
+        "Covariance stationarity requires finite second moments. Strict stationarity alone does not imply those moments.",
+        "For the original causal construction use iid centered innovations with finite variance, a two-sided innovation history and square-summable filter coefficients; absolute summability is a convenient stronger condition.",
+        "A causal AR polynomial has roots outside the unit circle. The reciprocal eigenvalue notation in the notes uses moduli below one. State which polynomial and convention are meant.",
+        "Conditional-mean forecasts need independent or suitably conditionally centered future innovations relative to the information set; uncorrelated white noise alone guarantees only linear-projection statements. Invertibility concerns recovering innovations and is separate from causality."
+      ],
+      "cautions": [
+        "The physical-2 white-noise cross-moment line omits the distinct-time qualification; the zero cross moment is for t different from s.",
+        "The final AR(1) moving-average display on physical 4 has e_i where lagged e_(t-i) is needed; the preceding geometric expansion gives the intended indices. Visually confirmed.",
+        "The random-walk variance addition uses innovation orthogonality to the prior state. It is not valid for arbitrary correlated initialization.",
+        "The simple partial-fraction presentation is not a proof for repeated polynomial roots. A directly derived ARMA(1,1) construction avoids that unproved step.",
+        "Failure of the causal root condition does not exclude every anticipative stationary solution driven by future shocks. Specify a causal adapted solution."
+      ],
+      "not_adopted": [
+        "No generic dependent-data CLT or parameter-estimation theorem inherited from stationarity.",
+        "No empirical evidence about any actual financial series.",
+        "No claim that a correlogram, differencing rule or unit-root test proves the data-generating law."
+      ],
+      "chapter_use": "Definitions, causal lag filters, covariance algebra and the separate innovation/information condition. The chapter independently proves the repeated-factor sufficient construction and its original ARMA(1,1) case.",
+      "checked": "2026-10-09",
+      "verification": "Reuse of the exact specialist-inspected primary scope in the frozen preparation, which root and the chapter author fully read as a record. No new full-source or uninspected-page reading claimed by the chapter author."
+    },
+    {
+      "id": "v12-c09-mit-vars",
+      "reuse_existing_id": false,
+      "authors": [
+        "Anna Mikusheva",
+        "Paul Schrimpf (scribe)"
+      ],
+      "title": "Lecture Notes 11: VARs",
+      "version_and_year": {
+        "body_course": "14.384 Time Series Analysis, Fall 2007",
+        "lecture_date": "2007-09-27",
+        "stated_revision": "2009-10-05",
+        "hosting_course": "MIT OCW Fall 2013",
+        "caution": "The PDF creation/TeX timestamps are technical metadata, not a newly verified edition."
+      },
+      "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/a0f9daa509414e993f12a9a070c83449_MIT14_384F13_lec11.pdf",
+      "requested_url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/a0f9daa509414e993f12a9a070c83449_MIT14_384F13_lec11.pdf",
+      "official_listing": {
+        "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/resources/mit14_384f13_lec11/",
+        "inspection": "Official resource page, lecture listing and body inspected."
+      },
+      "pdf_pages": 6,
+      "bytes": 146195,
+      "sha256": "d741c5d353ba0a8f336fa1b686801d12b58d89631db2273e71ef4f0000ad851c",
+      "page_mapping": "Physical 1–5 equal printed 1–5; physical 6 is an unnumbered OCW attribution page.",
+      "text_read_physical_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "visually_read_physical_pages": [
+        1,
+        2
+      ],
+      "supported_scope": [
+        "VAR lag/companion formulation and covariance Lyapunov equation (physical 1).",
+        "Equation-wise estimation under a Gaussian conditional-likelihood specification, predictive Granger restrictions, and reduced-form versus structural impulse responses (physical 2–3).",
+        "Bootstrap and delta-method discussion was read (physical 4–5), but is not adopted as a complete validity proof."
+      ],
+      "conditions_retained": [
+        "For covariance and known-parameter forecasts assume iid centered vector innovations with finite covariance and an explicitly proved bound ||A^j|| ≤ C r^j for r < 1. A stated matrix-norm contraction is a sufficient alternative.",
+        "Gaussian conditional likelihood with identical regressors in each equation, full-rank sample design and nonsingular covariance gives equation-wise OLS; an unconditional initial-state density can add parameter-dependent terms.",
+        "For a conditional distribution forecast, state independent Gaussian innovations. For structural interpretation, add identifying restrictions beyond the covariance factorization."
+      ],
+      "cautions": [
+        "Physical 1 defines vec by stacking rows, then displays the identity for column stacking. Use consistent column stacking, or avoid vec by proving the covariance series directly. Visually confirmed.",
+        "Physical 2 repeats the restricted covariance determinant in both terms of its LR display. The intended comparison is T(log det Omega_restricted − log det Omega_unrestricted); no LR inference theorem is adopted here. Visually confirmed.",
+        "The shorthand statements about usual OLS asymptotics require stability, rank, suitable score limit laws and variance conditions beyond white noise alone.",
+        "A covariance factor D is not uniquely identified: DQ has the same DD-prime for orthogonal Q. Predictive exclusion is not an intervention-causal conclusion."
+      ],
+      "not_adopted": [
+        "No unrestricted VAR estimation CLT, near-unit-root bootstrap validity or general impulse-response confidence theorem claimed.",
+        "No claim that a chosen Cholesky ordering is established by observational covariance alone."
+      ],
+      "chapter_use": "VAR companion/covariance and reduced-form versus structural response distinctions. The chapter independently proves its geometric series and Lyapunov uniqueness without importing the source vec/LR slips or general estimator inference.",
+      "checked": "2026-10-09",
+      "verification": "Reuse of the exact specialist-inspected primary scope in the frozen preparation, which root and the chapter author fully read as a record. No new full-source or uninspected-page reading claimed by the chapter author."
+    },
+    {
+      "id": "v12-c09-mit-cointegration",
+      "reuse_existing_id": false,
+      "authors": [
+        "Anna Mikusheva",
+        "Paul Schrimpf (scribe)"
+      ],
+      "title": "Lecture Notes 20: Cointegration",
+      "version_and_year": {
+        "body_course": "14.384 Time Series Analysis, Fall 2007",
+        "lecture_date": "2007-11-01",
+        "stated_revision": null,
+        "hosting_course": "MIT OCW Fall 2013",
+        "caution": "No revision date is stated in the body; PDF creation/modification metadata is not substituted."
+      },
+      "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/4c0d665d324c565fb9b6d258538cb78e_MIT14_384F13_lec20.pdf",
+      "requested_url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/4c0d665d324c565fb9b6d258538cb78e_MIT14_384F13_lec20.pdf",
+      "official_listing": {
+        "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/resources/mit14_384f13_lec20/",
+        "inspection": "Official resource page, lecture listing and complete body inspected."
+      },
+      "pdf_pages": 6,
+      "bytes": 198378,
+      "sha256": "5c5f5e723eb38c7208ad44caa7070a11721500eb71fc744674b9a44170796183",
+      "page_mapping": "Physical 1–5 equal printed 1–5; physical 6 is an unnumbered OCW attribution page.",
+      "text_read_physical_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "visually_read_physical_pages": [
+        1,
+        2
+      ],
+      "supported_scope": [
+        "An integrated regressor plus stationary regression error can give a stationary linear combination (physical 2).",
+        "Different persistent-regressor normalizations and endogeneity-sensitive nonstandard limits are illustrated (physical 1–4).",
+        "The notes explicitly state the multivariate Brownian convergence results without proofs (physical 1); their display is a roadmap, not a discharged prerequisite."
+      ],
+      "conditions_retained": [
+        "Use a fully specified common-trend model and state initialization, innovation law, independence and the stationary spread law.",
+        "For the proposed special Gaussian unit-root derivation use zero initial level, no deterministic regressors, iid centered Gaussian increments and a directly proved Brownian-grid argument. Changing any of these changes the inference problem.",
+        "For a conditional Gaussian cointegrating slope calculation require the level-error vector to be independent of the whole regressor path; mere contemporaneous zero covariance is not enough."
+      ],
+      "cautions": [
+        "Physical 2 contains a phi-not-equal-zero condition correctly in the rendered source; extraction can flatten the not-equal sign.",
+        "Calling both levels random walks is imprecise for y_t = beta x_t + iid e_t: y is generally integrated, with serially dependent increments, rather than a pure iid-increment random walk.",
+        "A shifted scaled limiting distribution does not by itself prove the stated finite-sample expectation-bias order; moment convergence or uniform-integrability conditions would also be needed.",
+        "The stationary-block asymptotic statements later in the notes are not complete assumption-and-proof packages. They cannot support a general stationary-data CLT."
+      ],
+      "not_adopted": [
+        "No full functional CLT, Dickey–Fuller critical-value theory, Engle–Granger test law, Johansen rank theorem or general VECM inference proof imported.",
+        "The historical permanent-income discussion is not newly verified empirical evidence."
+      ],
+      "chapter_use": "Integrated levels with a stationary combination and model-dependent normalizations. The chapter proves a restricted Gaussian Brownian-grid limit and independent stationary-spread T rate, without adopting the source's unproved general functional limits or test laws.",
+      "checked": "2026-10-09",
+      "verification": "Reuse of the exact specialist-inspected primary scope in the frozen preparation, which root and the chapter author fully read as a record. No new full-source or uninspected-page reading claimed by the chapter author."
+    },
+    {
+      "id": "v12-c09-bollerslev-garch1986",
+      "reuse_existing_id": false,
+      "authors": [
+        "Tim Bollerslev"
+      ],
+      "title": "Generalized Autoregressive Conditional Heteroskedasticity",
+      "version_and_year": {
+        "journal": "Journal of Econometrics",
+        "volume": 31,
+        "year": 1986,
+        "pages": "307–327",
+        "doi": "10.1016/0304-4076(86)90063-1",
+        "body_received": "May 1985",
+        "body_final_version_received": "February 1986",
+        "caution": "The original journal body is inspected; scan/creation timestamps are not publication dates."
+      },
+      "url": "https://public.econ.duke.edu/~boller/Published_Papers/joe_86.pdf",
+      "requested_url": "https://econ.duke.edu/~boller/Published_Papers/joe_86.pdf",
+      "official_listing": {
+        "url": "https://public.econ.duke.edu/~boller/research.html",
+        "secondary_official_metadata": "https://scholars.duke.edu/publication/651658",
+        "inspection": "Author publication listing and official Duke record inspected; listing leads to the retained author-hosted original paper."
+      },
+      "pdf_pages": 21,
+      "bytes": 790837,
+      "sha256": "60353d437aadda9179df4e7cfcc55f0dd343840b04c6ee7d83285eb33fa17e1a",
+      "page_mapping": "Printed page = physical page + 306, for physical 1–21.",
+      "text_read_physical_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visually_read_physical_pages": [
+        3,
+        4,
+        5,
+        7,
+        19
+      ],
+      "supported_scope": [
+        "Original GARCH definition and nonnegative coefficient domain, normal conditional innovation specification (physical 3, equations 1–2).",
+        "Finite unconditional second-moment condition and squared-process representation (physical 4, theorem 1 and equations 6–7).",
+        "GARCH(1,1) higher-moment criterion, Gaussian fourth moment, excess kurtosis and explicit fourth-moment requirement for squared autocovariances (physical 5–8).",
+        "Appendix construction and moment recursions inspected (physical 17–20), including equation A6 and the theorem-2 binomial expansion."
+      ],
+      "conditions_retained": [
+        "For the original treatment write epsilon_t = sqrt(h_t) z_t with iid z, E z = 0, E z^2 = 1, omega > 0 and alpha,beta ≥ 0. State adaptation and independence from past h.",
+        "The condition alpha + beta < 1 supports a causal finite-mean variance process and finite return variance; it is not a necessary characterization of all strictly stationary solutions.",
+        "For fourth moments require kappa = E z^4 finite and kappa alpha^2 + 2 alpha beta + beta^2 < 1. The paper uses kappa = 3 under normality.",
+        "Serial covariance of squared returns and L2 properties of epsilon_t^2 − h_t require finite fourth moments of returns."
+      ],
+      "cautions": [
+        "Physical-5 equation 8 visibly appears to omit the plus sign between alpha_0 and alpha_1 epsilon_(t−1)^2; equations 2 and the appendix binomial formula establish the intended additive recursion. OCR is especially unreliable on this scan.",
+        "The physical-7 kurtosis expression subtracts 3; it is excess kurtosis. Adding 3 gives raw kurtosis. Its strictly positive claim needs alpha > 0; the allowed alpha = 0 boundary gives zero excess kurtosis.",
+        "At physical 4 the squared innovation is called serially uncorrelated before a fourth-moment condition is imposed. Without that moment, a covariance need not exist; use only the integrable martingale-difference statement until L2 is proved.",
+        "The physical-5 assertion about an odd moment from an existing preceding even moment needs existence of that odd absolute moment. Symmetry alone does not make an undefined expectation equal zero.",
+        "The Gaussian moment polynomial is not distribution free. Replacing Gaussian innovations requires a newly stated innovation moment and an independent proof."
+      ],
+      "not_adopted": [
+        "No full strict-stationarity necessity theorem from the finite-variance condition.",
+        "No GARCH maximum-likelihood/QMLE asymptotic normality, estimation standard errors or diagnostic-test validity inherited.",
+        "Physical 9–16 and 21 were not substantively read; empirical inflation estimates and full estimation section are outside this record. The empirical paragraph encountered at physical 17 is not adopted or reproduced."
+      ],
+      "chapter_use": "Original GARCH recursion, second/fourth moment distinctions and squared-process covariance context. The positive-log product construction and finite-support infinite-variance transfer are independently derived.",
+      "checked": "2026-10-09",
+      "verification": "Reuse of the exact specialist-inspected primary scope in the frozen preparation, which root and the chapter author fully read as a record. No new full-source or uninspected-page reading claimed by the chapter author."
+    },
+    {
+      "id": "v12-c09-diebold-forecast2012",
+      "reuse_existing_id": false,
+      "authors": [
+        "Francis X. Diebold"
+      ],
+      "title": "Comparing Predictive Accuracy, Twenty Years Later: A Personal Perspective on the Use and Abuse of Diebold-Mariano Tests",
+      "version_and_year": {
+        "series": "Penn Institute for Economic Research Working Paper",
+        "number": "12-035",
+        "body_date": "2012-09-07",
+        "year": 2012,
+        "caution": "This is the dated working-paper body, not the later journal version. Search-engine crawl/publication labels are not used as version evidence."
+      },
+      "url": "https://economics.sas.upenn.edu/sites/default/files/filevault/12-035.pdf",
+      "requested_url": "https://economics.sas.upenn.edu/sites/default/files/filevault/12-035.pdf",
+      "official_listing": {
+        "url": "https://economics.sas.upenn.edu/sites/default/files/filevault/12-035.pdf",
+        "inspection": "The official Penn-hosted body includes the PIER cover identifying paper 12-035 and the author; no separate current Penn item page was located. The cover identifies https://ssrn.com/abstract=2144210, which was not needed as a technical authority.",
+        "listing_limit": "Official repository cover/body rather than an independently retrieved separate landing-page record."
+      },
+      "pdf_pages": 18,
+      "bytes": 470547,
+      "sha256": "b61da48094d19d544bf13957b85b1da8b63c557e69cdbfe8db5cdf39a25efc3a",
+      "page_mapping": "Physical 1 is the PIER cover; physical 2 is the dated title page; physical 3–18 equal printed 1–16.",
+      "text_read_physical_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        14,
+        15
+      ],
+      "visually_read_physical_pages": [
+        4,
+        8
+      ],
+      "supported_scope": [
+        "Loss differences and equal expected predictive loss as the target (physical 4).",
+        "Serial dependence matters for the sampling variance; different forecast/model-estimation arrangements require different assumptions (physical 4–8).",
+        "Real-time information and data vintages matter when reconstructing historical forecasts (physical 14–15)."
+      ],
+      "conditions_retained": [
+        "Define the target, loss, forecast horizon, origin-time information, evaluation sample and whether parameters are fixed, recursively estimated or selected.",
+        "A dependent-data normal limit needs an actual CLT plus a positive finite limiting variance and a consistent variance estimator; covariance stationarity alone is insufficient.",
+        "For the bounded chapter proof, derive the finite-dimensional law of the stipulated overlapping Gaussian forecast errors/loss difference. Do not treat an arbitrary HAC label as a proof."
+      ],
+      "cautions": [
+        "Physical 4 states covariance stationarity as enough for normal studentized inference; this is too weak. A common non-Gaussian centered random variable repeated at every date is stationary with positive finite variance, but its sample mean does not satisfy the asserted normal limit. This counterexample is our qualification, not a claim quoted from the paper.",
+        "Physical 8 displays an F statistic with degrees-of-freedom notation inconsistent with its definition of k, and an unqualified optimality claim. Neither display nor optimality assertion is adopted.",
+        "The same page lists t-star/T tending to infinity despite the preceding split having 0 < t-star < T. That shorthand cannot be used as a coherent asymptotic regime without redefining the sample lengths.",
+        "Read the document as a methodological perspective, including disputed preferences about model comparison; its recommendations are not a general proof that one evaluation design dominates all others."
+      ],
+      "not_adopted": [
+        "No generic Diebold–Mariano CLT from stationarity; no universal HAC consistency or nested/reestimated-model test validity.",
+        "No original 1995 paper or later 2015 body claimed inspected.",
+        "Physical 9–13 and 16–18 were not substantively inspected. No empirical forecast superiority is asserted."
+      ],
+      "chapter_use": "Forecast target, serial loss dependence, estimation/selection arrangements and real-time information. The original finite Gaussian overlap/selection proof explicitly rejects stationarity alone as a CLT assumption.",
+      "checked": "2026-10-09",
+      "verification": "Reuse of the exact specialist-inspected primary scope in the frozen preparation, which root and the chapter author fully read as a record. No new full-source or uninspected-page reading claimed by the chapter author."
+    }
+  ],
+  "applied_scope_decisions": [
+    "Use zero serial cross moment only at distinct dates; preserve lagged innovation indices. Covariance stationarity includes finite second moments and never supplies a generic CLT.",
+    "State independent future innovations for conditional means, and separate causal filter construction from observed-past invertibility. Prove the repeated-root sufficient inverse by multiplying geometric series after common-factor cancellation.",
+    "Avoid the inconsistent source vec convention by solving the covariance series directly. No LR display or general VAR inference claim is adopted.",
+    "For stable Gaussian AR(1), the full lag vector fixes every innovation except the last. The conditional score is Gaussian with generally nonzero mean and variance sigma² times the final lag squared, not centered with variance sigma² D. The unconditional limit is proved separately through spectral rotation and smooth replacement.",
+    "Use exact Brownian-grid equality in law only for iid Gaussian zero-start unit-root levels with no deterministic regressors; no generic functional CLT or critical-value theory is imported.",
+    "Specify iid eta_t~N(0,sigma_eta²) with positive variance and stationary Gaussian v0 independent of all future eta_t. The complete spread input is independent of the entire random-walk path in the conditional level-OLS covariance. Recover only innovations t=2,3,4 from the four recorded spread values; v0 is not observed. Prove T-tightness without an optional mixed-normal extension.",
+    "Use an additive GARCH recursion and distinguish raw/excess kurtosis. Prove the positive product-series stationarity condition and separate second/fourth moment conditions; squared covariances require the fourth return moment.",
+    "The non-Gaussian finite-support GARCH transfer has its own standardized innovation law and log-product proof; the Gaussian moment polynomial is not used unchanged.",
+    "The exact finite normal forecast result is for the fixed linear loss difference with known covariance; average squared loss is not declared normal. Evaluation selection and a new disjoint-innovation block are different experiments."
+  ],
+  "not_claimed": [
+    "New reading of the original 1995 Diebold–Mariano paper, the later 2015 body or uninspected empirical sections.",
+    "General ARMA/VAR estimation, bootstrap, structural identification, local-to-unity, deterministic-term unit-root, Engle–Granger/Johansen, QMLE, HAC, nested-model or reestimated-forecast inference theorems.",
+    "Empirically validated financial forecasts, current market observations, source-paper certification, rendered textbook UI or independent human certification."
+  ],
+  "limits": "Scoped primary methodological context is separate from the original proofs and finite numerical evidence. The source preparation and root artifact audit remain immutable provenance, not hidden execution dependencies."
+}

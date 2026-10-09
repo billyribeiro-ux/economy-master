@@ -1,0 +1,94 @@
+{
+  "chapter": "v12-c10",
+  "date": "2026-10-09",
+  "author": "c05_review",
+  "state": "Begin independent original-case/proof confirmation after frozen source preparation; full authoring follows successful first gate.",
+  "owned_paths": [
+    "production/v12-c10-working.html",
+    "production/check_v12_c10_working.py",
+    "production/v12-c10-sources-working.json",
+    "production/v12-c10-author-review-working.json"
+  ],
+  "readonly_evidence": [
+    {
+      "path": "production/v12-c10-blueprint-root-audit.json",
+      "bytes": 17072,
+      "sha256": "7ac19a39ed3c74c63840750e3b4b411ad3d8877b29cbb0d69516d5e782505777"
+    },
+    {
+      "path": "production/v12-c10-source-preparation.json",
+      "bytes": 47097,
+      "sha256": "98778e081182ff2dbbc28e22dcd9f31ffd62009208eae867413d78cbb420ac7d"
+    }
+  ],
+  "canonical_specification": {
+    "id": "v12-c10",
+    "number": 10,
+    "title": "Structural estimation and economic mechanisms",
+    "outcome": "Connect economic models to data and distinguish calibration from identified estimation.",
+    "coverage": [
+      "Structural parameters",
+      "moments",
+      "simulation",
+      "equilibrium",
+      "indirect inference",
+      "sensitivity"
+    ],
+    "prerequisites": [
+      "v12-c09"
+    ],
+    "level": "Graduate",
+    "status": "planned",
+    "manuscript": "chapters/v12-c10.html",
+    "sources": [
+      "harvard-economics-requirements",
+      "mit-economics-curriculum",
+      "wharton-finance-courses"
+    ],
+    "required_worked_examples": 3,
+    "required_exercises": 10,
+    "review": {
+      "arithmetic": false,
+      "reasoning": false,
+      "solutions": false,
+      "sources": false,
+      "instruction": false,
+      "structure": false
+    }
+  },
+  "prerequisite_contract": "Canonical c09 dependency must be accepted before this chapter. Explicitly recall/link accepted v02-c10 contraction/implicit-function/spectral tools, v12-c01 compact extremum/delta tools, v12-c03 GMM and v12-c04 likelihood. Do not assume a general dynamic estimation or dependent-data simulation theorem.",
+  "scope": "Complete original graduate chapter: six substantial worked cases, twelve original fully solved exact exercises spanning proofs/calculation/transfer/research critique; all symbols, targets, units, assumptions and inference laws before use. Answered teach-back and retention. The root blueprint supplies checked original input contracts, not prose or an oracle for your checker.",
+  "first_gate": "Read both frozen evidence files fully. Independently reconstruct all six cases and confirm principal results and complete proof routes before full prose. Especially check pseudo-true versus structural parameters, simulation coupling across records versus parameter evaluations, shared-X indirect covariance, centered Gumbel expected max, independent one-choice records versus a dynamic trajectory, all Bellman derivatives and equilibrium fold/selection boundaries. Report refinements or discrepancies before drafting against them.",
+  "proof_contract": [
+    "State identification as injectivity of the maintained observable-law or population-moment map, separate from parameter normalization/calibration and fit. Local derivative rank does not imply global identification.",
+    "Derive compact-parameter extremum consistency by uniform convergence plus an attained positive separation gap, using accepted c01 as a named prerequisite where appropriate. Give actual uniformity in the finite/smooth examples, not a pointwise-LLN shortcut.",
+    "Separate sampling error, simulation error and deterministic numerical approximation; probabilities, conditioning and simulation sharing define their joint law.",
+    "Use model-specific fixed-dimensional iid CLTs/delta tools from accepted c01–c04; do not import general dependent simulation, dynamic likelihood or equilibrium-selection inference merely from primary citations.",
+    "Teach implicit/contractive equilibrium sensitivities with the complete assumptions and a multiple-root counterexample. Counterfactual invariance remains a maintained scientific claim.",
+    "Solve the simultaneous system, verify exclusion/mean orthogonality and nonzero first-stage covariances. With only noiseless cost-shifter variation P=3+Z/3,Q=4−2Z/3, all d>0,c=4−3d,g=(2+d)/3 reproduce the entire observed mapping while tax incidence varies. Fixing g=1 externally calibrates d=1; this is not information supplied by that cost-only dataset. The 16-atom identified experiment is a separate richer data law.",
+    "Full column rank plus positive W gives a unique global linear minimum-distance projection, whether the three population moments are compatible or not. Under a stipulated Gaussian sample-moment law centered at (1,3,6), the parameter map gives exact covariance A S A-prime/N and delta inference for the projection-implied quantity, not a structural truth claim. Differentiate FOC and the counterfactual; show finite perturbation versus derivative. In the separate perfectly fitted transfer, two strictly increasing marginal-cost curves agree at all observed q but give different globally optimal competitive output at price13. Fit and rank alone cannot justify extrapolation. The implied-quantity variance is an asymptotic delta variance; do not claim finite Gaussian ratio moments exist merely because its denominator is nonzero almost surely.",
+    "Independent draws per row give variance(1+1/R)/N; one reused draw set across rows gives1/N+1/R and a random probability limit at fixed R. Common random numbers across parameter evaluations are a different coupling: additive simulation derivative becomes exactly1. For Bernoulli data, average log likelihood converges uniformly on the compact positive-probability domain; strict concavity and exact expected-score zero give p*=2/5, despite unbiased probability simulation. Jensen bias is computed through the criterion, not presumed estimator bias. Bounded derivatives and the iid CLT give sandwich2/15 around the wrong target. Averaging R signs keeps probabilities at least1/20 and expected supremum criterion discrepancy <=4/sqrt(R), so R_N→infinity suffices for consistency by Markov and argmax separation; no general MSL rate theorem claimed.",
+    "Uniform convergence is exact because sample binding differs from theta^2 only by a scalar sample-noise mean. On nonnegative theta the population map is injective; allowing signs gives two global minima even where the derivative is nonzero. For theta0>0 use theta_hat−theta0=(D−theta0^2)/(theta_hat+theta0) and the known Gaussian difference law. The common observed X path cancels, making the cross covariance essential. At theta0=0 the derivative vanishes and positive-part square root has the stated nonnormal fourth-root limit; clipping at3 is asymptotically irrelevant. No unqualified1+1/H rule for another simulator design.",
+    "Derive centered Gumbel expected max and choice probabilities from the CDF; the finite mean cancels without needing a numerical Euler constant. Monotonicity and translation show log-sum is1-Lipschitz and Bellman beta-contractive, giving unique value and residual/(1−beta) error bound. Product likelihood is for independent one-choice records; for a true trajectory use sequential action/transition factorization, not conditioning on all future states. Known beta and normalization identify r,c from the two positive probabilities; unknown beta gives an observationally equivalent family and different subsidy predictions. Differentiate Bellman using (I−beta P_pi)^−1, justified by the Neumann series; ignoring value sensitivity gives a wrong gradient. Per-record log choice likelihood error is at most2beta*residual/(1−beta), and conditioning deteriorates as beta approaches1. Subsidy is in normalized utility units, not an identified dollar welfare measure.",
+    "The population type distribution gives the response equation without invoking an unproved continuum iid law. Continuity gives existence; |b|<4 gives contraction. For b=4log3, logit(q)−b(q−1/2) has only two derivative zeros, hence at most three roots; the three exact roots establish all equilibria. The implicit derivative is valid only off the fold. Stable outer branches and unstable middle branch refer to this specified naive iteration, not an automatically justified economic equilibrium selection. For each policy, unrestricted selection probabilities give the convex hull of equilibrium outputs; observed baseline selection does not identify a future selection rule. Branch-continuation predictions require that additional maintained rule. Numerical roots are bracket calculations supporting the separately proved shape argument."
+  ],
+  "focused_requirements": [
+    "Case1 cost-only observational equivalence is a separate noiseless submodel from the identified16-atom law; do not claim unchanged richer joint law when changing supply slope.",
+    "Case2 distinguish exact linear parameter covariance from only asymptotic ratio/delta variance; finite denominator nonzero almost surely does not establish finite ratio moments. Perfect-fit extrapolation transfer changes the reported moment vector to(1,3,5) explicitly.",
+    "Case3 compact positivity makes uniform LLN and concavity arguments available. Derive the fixed-R1 target2/5 from expected score under true p9/25; the lower centered variance does not remove its1/25 bias. The R_N consistency bound is sufficient, not a general MSL efficiency/rate theorem.",
+    "Case4 sign-unrestricted local derivative rank is not global injectivity; theta0=0 gives the separate fourth-root law. Use true shared observed X in every simulation; preserve its cross covariance.",
+    "Case5 exact utility normalization epsilon=eta−E eta, eta standard Gumbel. Its finite mean cancels from expected max; no incorrect sign of Euler constant. All36 synthetic one-choice decisions are independent initial-state observations, not a single deterministic-transition path. A trajectory likelihood must use sequential factorization. Beta and utility scale are maintained, not identified from the two baseline choice rates. Subsidy is normalized utility, not dollar welfare.",
+    "Case6 derivative/fold proof and all equilibrium counts must be complete; stability means the declared iteration only. Selection and counterfactual invariance are explicit maintained assumptions; unidentified selection produces a set/convex hull, not a confidence interval."
+  ],
+  "source_policy": "Reuse the exact three scoped primary inspections you performed and preserve their byte/page/version/caution provenance. Root is separately reading the preparation; do not infer root inspected its PDF images. Proposed source entries use verification, not status, as catalogue field. Original equilibrium/calibration derivations may cite accepted prerequisite routes; no extra empirical data or source exercises.",
+  "runtime_contract": [
+    "Four owned runtime files only, root relative to checker; standard-library Python; no source PDF, preparation record, network, shared verifier or previous chapter at execution.",
+    "Independent numerical reconstruction with purposefully changed assumptions/domain failures; computed visible answers paired to all exact prompts; no saved numerical summary as truth.",
+    "Quiet import, strict JSON-safe check() summary, quiet successful CLI; explicit errors under -O. Final normal/-O API/CLI from cwd=/ in workspace and exact-four temporary tree, unchanged payloads and membership.",
+    "Author record binds three other final files without self-hash. Actual shared Document via read-only AST extraction for structure only."
+  ],
+  "boundaries": [
+    "Preserve frozen source record/scratch, c07 peer and all prior work. Only four author-owned paths; no canonical curriculum/catalogue/checkpoint/shared scripts/build/hosting changes; no new agents.",
+    "No acceptance until root/separate peer and dependency gates. No UI or independent human certification claim."
+  ]
+}

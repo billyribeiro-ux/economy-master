@@ -1,0 +1,598 @@
+{
+  "chapter": "v12-c06",
+  "peer": "bs_author",
+  "author": "c05_review",
+  "date": "2026-10-09",
+  "assignment": "production/v12-c06-peer-assignment.json",
+  "status": "Independent peer review complete and frozen; no material author finding or requested repair. Coordinator acceptance remains separate.",
+  "owned_paths": [
+    "scripts/check_v12_c06_peer.py",
+    "content/reviews/v12-c06-peer.json"
+  ],
+  "reading_scope": {
+    "author_payloads": "All four final canonical author files read completely: 70,286-byte manuscript, 43,356-byte author checker, source record and author audit.",
+    "manuscript": "All proofs, seven worked cases, all twelve exact prompts and complete solutions, the full open rubric, teach-back benchmark and four retention answers.",
+    "prerequisites": "Accepted c01 fixed-dimensional iid laws/delta method, c03 binary compliance proof and c05 whole-unit dependence/observation distinctions. No finite-population, large-network or generic cluster limit theorem is silently inherited.",
+    "independence": "The peer checker contains its own numerical routines and never imports/calls the author checker or consumes a saved author numerical summary as truth. Author execution is separately labeled integration only."
+  },
+  "proof_audit": [
+    {
+      "claim": "Finite population and probability laws",
+      "assessment": "Passed within stated scope",
+      "independent_reasoning": "Complete randomization fixes both potential-outcome lists and the arm count. The iid encouragement model instead samples independent whole-unit potential vectors and independent encouragements. Known-Gaussian planning stipulates independent Gaussian arm observations with known variances. The manuscript consistently separates their targets and uncertainty; no finite-population normal limit is inferred from a variance formula."
+    },
+    {
+      "claim": "Inclusion moments and exact finite variance",
+      "assessment": "Passed within stated scope",
+      "independent_reasoning": "Counting single and pair inclusions gives p and n1(n1-1)/(N(N-1)), with the pair count zero at n1=1. Negative off-diagonal covariance follows from the fixed count. Writing the random part as a linear combination of indicators yields the centered coefficient sum and then S1 squared/n1 plus S0 squared/n0 minus S_tau squared/N. No constant-effect assumption enters this identity. Independent Bernoulli assignment changes both joint moments and arm-count denominators."
+    },
+    {
+      "claim": "Sample variance and a finite weak-average interval",
+      "assessment": "Passed within stated scope",
+      "independent_reasoning": "The pair-distance identity with denominator m(m-1) and pair inclusion probability proves unbiased sample arm variances when m is at least two. Hence Neyman conservatism is in expectation, with the supplied realized counterexample below the true variance. The bounded-product variance inequality, the N/(N-1) conversion and Chebyshev prove the known-range weak-average coverage statement. Its closed interval is conservative at the possible equality boundary; zero range gives exactness. Observed extrema and Gaussian critical values are correctly excluded."
+    },
+    {
+      "claim": "Weighted ranks, ties, sharp imputation and inversion",
+      "assessment": "Passed within stated scope",
+      "independent_reasoning": "Grouping equal statistic levels and accumulating their positive assignment masses proves the inclusive rank inequality for nonuniform laws. The strict-tail example is invalid precisely because it omits the tied observed level. Subtracting c times actual assignment imputes the untreated list only under a sharp constant effect. Ordering, endpoint ties and improving exchanges prove acceptance [3,7] on the whole real line. The independent subset-polynomial certificate derives every comparison root and checks all point and open cells, including both unbounded tails. Repeated-assignment coverage is not truth for every realized set or heterogeneous-average coverage."
+    },
+    {
+      "claim": "Alternative power and complement symmetry",
+      "assessment": "Passed within stated scope",
+      "independent_reasoning": "The true effect generates each observed table before applying the unchanged sharp-zero procedure. The exact rejection counts are therefore alternative probabilities, not null p-values relabeled as power. A balanced allocation and its distinct complement always have opposite contrasts and equal absolute statistics, so the minimum inclusive probability is 2/20. The small-design nonmonotone power is correctly restricted to this specified discrete procedure."
+    },
+    {
+      "claim": "Stratification and cluster targets",
+      "assessment": "Passed within stated scope",
+      "independent_reasoning": "Independent stratum draws make cross-stratum covariance zero; the full-population estimator uses population shares and squared shares in its variance. Unequal treatment fractions change the naive pooled baseline mixture. Singleton cells lack ordinary sample variances even when a full synthetic potential table supplies oracle design variance. Cluster means target an average across clusters; unequal cluster size generally changes the relationship to an average across people."
+    },
+    {
+      "claim": "Known-Gaussian power, integer allocation and cluster information",
+      "assessment": "Passed within stated scope",
+      "independent_reasoning": "The exact Gaussian contrast yields both rejection tails. Its power is increasing in positive absolute noncentrality. Strict convexity and endpoint divergence give the unique continuous allocation; monotonicity on each side restricts integer candidates to adjacent integers. Adding one observation to an existing optimum strictly lowers attainable variance, so the two sample-size boundary checks establish global minima. The independent Gaussian common/idiosyncratic decomposition gives the cluster variance and fixed-cluster information floor; the standard-error factor is the square root of the variance factor. Assignment independence and known variances are stated."
+    },
+    {
+      "claim": "Assignment ITT, LATE and treated-population mixtures",
+      "assessment": "Passed within stated scope",
+      "independent_reasoning": "Random encouragement identifies assignment potential-outcome differences before exclusion. Binary consistency, independence, exclusion, monotonicity and positive complier mass then yield the complier decomposition inherited from accepted c03 and rederived here. The ATE and actual-treated effect use different type weights. Specifying encouragement probability is essential for the latter mixture. The direct assignment increment preserves the ITT interpretation but breaks treatment-only exclusion."
+    },
+    {
+      "claim": "Random-arm ratios and feasible covariance",
+      "assessment": "Passed within stated scope",
+      "independent_reasoning": "The arm-mean identity has a random empirical denominator. LLN and the joint finite-second-moment iid CLT give signed arm influences; the exact ratio identity retains the outcome/treatment covariance. Positive arm probabilities and fixed nonzero population first stage make undefined finite events asymptotically negligible but do not remove them in actual data. Fitted influence coefficients converge on events with denominators bounded away from zero; an envelope proportional to 1+|Y|, the LLN for 1+Y squared and Cauchy-Schwarz establish feasible covariance consistency. Positive limiting variance is separately needed for studentization. No uniform weak-first-stage inference is claimed."
+    },
+    {
+      "claim": "Exposure mapping, HT means and full covariance",
+      "assessment": "Passed within stated scope",
+      "independent_reasoning": "Correct mapping makes the observed outcome equal the specified exposure outcome on its indicator event, so positive marginal probability proves HT unbiasedness. Expanding all pairs of indicators proves the full covariance identity, including repeated units and mutually exclusive exposures. Positive marginals do not imply joint support. The entire synthetic potential table allows an oracle covariance calculation, while an experiment need not reveal every product. Fixed-one assignment loses center untreated-unexposed support; the remote-effect witness independently breaks the old exposure map."
+    },
+    {
+      "claim": "Bounded attrition and complete observed-law sharpness",
+      "assessment": "Passed within stated scope",
+      "independent_reasoning": "Total expectation bounds each missing arm mean without MAR. Opposite endpoint completions preserve the distribution of (Z,R,Y when observed), not just its first moments, and independent mixtures attain every intermediate effect. The independent-response construction is sufficient, not necessary: the peer also verifies both extreme feasible response couplings with identical observed law and endpoint effects. Equal response rates neither establish equal identities nor rule out outcome selection. A population identified interval remains distinct from its sample-estimated uncertainty."
+    },
+    {
+      "claim": "Instruction, exact questions and research critique",
+      "assessment": "Passed within stated scope",
+      "independent_reasoning": "Every proof method requested by the twelve prompts is taught or within a specifically accepted prerequisite. The referee rubric covers all eight named issues and requires actual evidence or repair proposals; it does not grade a predetermined sign or policy conclusion. Teach-back and all four retention answers are coherent with the targets and probability laws proved earlier."
+    }
+  ],
+  "prompt_solution_audit": [
+    {
+      "id": "v12-c06-e01",
+      "assessment": "Passed against exact prompt",
+      "independent_solution": "Subset counts give EZ_i=n1/N and EZ_iZ_j=n1(n1-1)/(N(N-1)). The centered coefficient expansion proves unbiasedness and S1 squared/n1+S0 squared/n0-S_tau squared/N. Bernoulli pair covariance is zero, with random and possibly empty arm counts; fixed-count denominators cannot be reused unchanged."
+    },
+    {
+      "id": "v12-c06-e02",
+      "assessment": "Passed against exact prompt",
+      "independent_solution": "The pair-distance sample variance has denominator m(m-1); pair inclusion proves its unbiasedness for m>=2. In the 0,2,4 assignment the mean contrast is -1 and estimated variance 8/3, below 44/15. The full-population bounds imply C=37/5 and 90% halfwidth sqrt(74)=8.602325 rounded. The proof uses prospective counterfactual ranges and Chebyshev, not observed extrema or a normal pivot."
+    },
+    {
+      "id": "v12-c06-e03",
+      "assessment": "Passed against exact prompt",
+      "independent_solution": "For probabilities (1/2,1/4,1/4) and statistics (2,2,0), inclusive values are (3/4,3/4,1) and rejection mass is zero at 1/4. Strict tails give (0,0,3/4) and invalid rejection mass 3/4. Grouped cumulative masses prove the general rank result. A weak average-zero null does not impute unit-specific missing outcomes."
+    },
+    {
+      "id": "v12-c06-e04",
+      "assessment": "Passed against exact prompt",
+      "independent_solution": "The observed contrast is 5-c after adjustment. Outside [3,7], only the observed extreme allocation and its complement are as extreme, giving p=1/10 and rejection. At 3 and 7 tied swaps produce p=1/5; at 5 the statistic is zero and p=1. Interior swaps increase extremeness, so the entire interval is accepted. Exact zero-null rejection counts across actual assignments are 2,1,2,4,8 for effects 0 through 4. No p<=1/20 is possible. Excluding a true value in one tail realization does not refute repeated-assignment coverage."
+    },
+    {
+      "id": "v12-c06-e05",
+      "assessment": "Passed against exact prompt",
+      "independent_solution": "The population stratum weights remain 1/2 each. Independent 1-of-4 and 3-of-4 assignment yields 16 choices, target 2 and variance 10/9. Expected pooled arm means are 11 and 4, producing 7 instead of 2. Single treated/control cells do not support sample variance estimation. Full potential-table variance information is distinct from observable sample information."
+    },
+    {
+      "id": "v12-c06-e06",
+      "assessment": "Passed against exact prompt",
+      "independent_solution": "Both normal tails give Phi(lambda-z)+Phi(-lambda-z). Strict convexity yields p=3/4 for variances 9 and 1; compare adjacent integer allocations. Exhaustive independent finite optimization confirms 94/31 at N=125, variance 373/2914 and power .798168, versus 94/32 at N=126, variance 191/1504 and power .801270. Equal arms give powers .797546 at total 156 and .802541 at 158. Strict improvement of attainable variance with N proves minima 126 and 158. Changed variances/reference law, effect or size/power target, costs/allocation constraints, clustering or attrition require a new calculation."
+    },
+    {
+      "id": "v12-c06-e07",
+      "assessment": "Passed against exact prompt",
+      "independent_solution": "A cluster mean has variance sigma_A squared+sigma_e squared/m; J independent clusters per arm give twice this divided by J. With J=m=10 and components 1 and 4, the variance is 7/25 versus the independent-row 1/10. Their ratio is 14/5 and the standard-error factor is sqrt(14/5)=1.673320 rounded. Zero common variance gives factor one; fixed J with growing m retains variance 2 sigma_A squared/J, here 1/5. Unequal cluster sizes require a separate target/weight choice."
+    },
+    {
+      "id": "v12-c06-e08",
+      "assessment": "Passed against exact prompt",
+      "independent_solution": "The random-arm quotient and joint CLT give signed influences and (psi_Y-beta psi_D)/gamma, including their covariance. Nonempty arms, a nonzero fitted first stage and a positive limiting variance remain separate qualifications. Q=Y-2D takes values 1,4,3 with mean 17/8 and variance 87/64; its contrast variance and division by (3/8) squared yield 116/3. A direct Z/2 increment makes ITT 5/4 and the ratio 10/3, with unchanged uptake and treatment effect 2 at fixed encouragement. Exclusion fails while assignment identification survives."
+    },
+    {
+      "id": "v12-c06-e09",
+      "assessment": "Passed against exact prompt",
+      "independent_solution": "Exposure-indicator expectations prove the HT mean; expanding every indicator product gives the full joint covariance. The eight contrast outcomes are (-32/3,32/3,16,0,0,16,0,0), with mean 4, second moment 832/9 and variance 688/9. Adjacent treated-unexposed events have zero joint probability. A full synthetic table permits oracle product evaluation, whereas a single experiment does not generally observe all such potential products."
+    },
+    {
+      "id": "v12-c06-e10",
+      "assessment": "Passed against exact prompt",
+      "independent_solution": "Endpoints have probabilities (1-p) squared and p(1-p) for 00 and 10; the center has (1-p) cubed and p(1-p) squared. Under fixed-one assignment the center 00 event is impossible. Changing that unrestricted potential outcome leaves the design observed law unchanged. Separately, assignments 000 and 001 give unit 0 the same old 00 label but augmented outcomes 1 and 3. Inclusion weights cannot repair a misspecified mapping."
+    },
+    {
+      "id": "v12-c06-e11",
+      "assessment": "Passed against exact prompt",
+      "independent_solution": "The arm mean r_d m_d+(1-r_d)u_d and bounded u_d give the lower and upper effect endpoints. Independent potential-response cells of masses 16/25,4/25,4/25,1/25 support both full-law completions: lower means 32/5 and 34/5, upper means 42/5 and 24/5, yielding effects -2/5 and 18/5. Their complete observed distributions agree. An assignment-independent mixture keeps that distribution and interpolates all effects. Equal response rates and precise respondent means do not supply missing counterfactual outcomes."
+    },
+    {
+      "id": "v12-c06-e12",
+      "assessment": "Passed against exact prompt",
+      "independent_solution": "The solution and open rubric require the actual branch design law, assignment unit and target; distinguish randomized encouragement ITT from selected receipt regression and qualified LATE; investigate recommendation spillovers and exposure support; request follow-up identities and outcome bounds; disclose selection among twelve outcomes; and separate prospective model-based power from observed uncertainty with estimated variances. Each unresolved claim needs a specific evidence request or valid repair. No generic permutation, multiplicity correction or policy conclusion is asserted without its own justification."
+    }
+  ],
+  "teaching_audit": {
+    "teach_back": "The criteria require a design-to-target-to-uncertainty argument using a finite inclusion identity, compliance distinction and one actual interference or attrition counterexample. They correctly reject automatic ATE/normal/transport conclusions.",
+    "retention": [
+      "Expected Neyman excess remains valid when a particular estimate is below true variance.",
+      "The inclusive balanced complement-symmetric p-value is at least 2/20, never .05.",
+      "Growing rows within the same ten independent clusters per arm leaves variance 1/5.",
+      "Measuring treatment nonrespondents at outcome 4 fixes that mean at 36/5 and narrows the ATE interval to [2/5,12/5]."
+    ]
+  },
+  "independent_numerical_method": {
+    "finite_assignments": "Enumerate named treatment subsets using exact fractions; compute each observed arm variance from pair distances. Verify the complete assignment distribution, the coefficient-order-statistic support, single/pair inclusion probabilities including one treated unit, the treatment-heterogeneity correction and constant-effect/zero-range boundaries.",
+    "fisher": "A dynamic-programming subset-generating polynomial records selected count, overlap with the observed treated subset and outcome sum. Its coefficients reconstruct null tails. Squared-tail comparisons factor into affine terms with exact roots 3,4,9/2,5,11/2,6,7. The seven roots and eight open cells exhaust the real line, including both unbounded components; signs cannot change away from these roots. Alternative tables are generated independently for all twenty actual assignments at five true effects.",
+    "strata": "Convolve the two independent stratum contrast laws and reconstruct pooled observed means. Compare population weights with unequal treatment shares, rather than assuming the pooled target is unchanged.",
+    "gaussian": "Integrate the exponential Taylor series in 50-digit Decimal arithmetic and invert the CDF by bisection. The code does not use author erfc/NormalDist calculations. On |x|<=8, terms decrease beyond index 32; the alternating remainder at cutoff is below 1e-43 before float conversion, with sufficient precision for cancellation. Displays are checked to absolute 5e-7 and internal Gaussian symmetries to 2e-12. Exhaustive integer optimization is restricted to the two substantive boundary totals. Monotone optimal variance supplies the proof across all smaller totals.",
+    "clusters": "Reconstruct independent common-shock and idiosyncratic-shock coefficients in the final contrast. The sum of coefficient squares times component variances directly yields the information retained by fixed clusters.",
+    "encouragement": "Form the six-atom observed law and differentiate the complete rational mean-difference ratio along each observed-probability perturbation. Compare the resulting joint covariance with an independent residual-type calculation. A sixteen-row sample independently reconstructs feasible covariance, and direct assignment effects/changed assignment probability check interpretation and composition.",
+    "interference": "Represent the six target exposure indicators as a random vector over the eight assignments. Calculate its entire 6-by-6 covariance matrix and quadratic-form contrast variance, under p=1/2 and p=1/3. Mapping and marginal support failures are explicitly exercised, with positive marginal and zero joint probabilities distinguished.",
+    "attrition": "Use complete potential-response laws with joint response probability 3/5,16/25,4/5, covering the two extreme couplings and the author independent construction. Every endpoint has exactly the same observed (Z,R,Y when observed) distribution. A 3/4-1/4 endpoint mixture demonstrates an interior value; the analytic mixture argument covers all interior values. Complete response, zero response and actual extra follow-up test the identification boundaries.",
+    "visible_values": "All 84 exact numerical markers and six six-decimal markers are independently reconstructed. All twelve exact IDs are paired with solutions. Unmarked formulas, table inputs and proof statements were read analytically.",
+    "domain": "Read-only check() has no external input file or output option. Private finite routines have explicit declared bounds: at most ten assignment units, 512 allocation observations, 32 observed atoms, exact scalar magnitude at most one million and Gaussian numerical arguments within eight standard deviations. Actual exception tests, including strict JSON failures, remain active under -O.",
+    "limits": "Finite numerical execution is not a proof of an asymptotic theorem or substantive experiment assumptions. The analytic audit above supplies the separate proof review."
+  },
+  "source_audit": {
+    "policy": "Recorded primary scopes are reused honestly under the assignment contract; no new body-text or equation-image inspection by this peer is claimed for the three c06 primary sources.",
+    "preparation": {
+      "path": "production/v12-c06-source-preparation.json",
+      "bytes": 6682,
+      "sha256": "b040483f70285e15e6b023d28ddb7cc742c155fd2901727c47d9f47fede85bdb"
+    },
+    "current_actions": "Read complete source/preparation records, compared URL/body hash/size/text-page scope/rendered-page scope, and independently recomputed hashes of all three retained primary PDFs. Every comparison matched. The ten equation-page inspections remain attributed to root.",
+    "scopes": [
+      {
+        "id": "v12-c06-ding-experiments",
+        "title": "A First Course in Causal Inference",
+        "url": "https://arxiv.org/pdf/2305.18793v2",
+        "publication": "arXiv 2305.18793v2, 3 October 2023",
+        "inspection": {
+          "reader": "root",
+          "provenance": "production/v12-c06-source-preparation.json",
+          "pdf_pages": 490,
+          "bytes": 6037823,
+          "sha256": "3fe2bb982b6d13500f704f1e4fbe4d2e5b44ad0726249296ecd6f96892719115",
+          "read_pages": [
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            92,
+            156,
+            157
+          ],
+          "rendered_pages": [
+            70,
+            73,
+            74,
+            92
+          ],
+          "page_mapping": "Printed pages are physical minus26 in these sections.",
+          "method": "Coordinator read the indicated body text and actual rendered equation pages. C06 author read the complete preparation record and independently verified the retained PDF bytes/hashes; no fresh whole-source reading is asserted."
+        },
+        "cautions_and_proof_limits": [
+          "The finite-population CLT is stated rather than proved in the inspected section; it is not inherited as a proved theorem. A nondegenerate normalized variance and a specified triangular-array condition would be essential.",
+          "A conservative asymptotic variance does not imply a realized estimate always exceeds true variance or exact finite-sample coverage. A limit at nominal coverage alone also does not establish eventual finite coverage above nominal.",
+          "Terminology for CRE in the later superpopulation section includes independent assignment. Our chapter distinguishes fixed treatment count from independent Bernoulli assignment."
+        ]
+      },
+      {
+        "id": "v12-c06-aronow-samii-interference",
+        "title": "Estimating average causal effects under general interference, with application to a social network experiment",
+        "url": "https://arxiv.org/pdf/1305.6156",
+        "publication": "Retrieved body: arXiv 1305.6156v4, 20 June 2018; the 2017 journal reference is a separate publication record",
+        "inspection": {
+          "reader": "root",
+          "provenance": "production/v12-c06-source-preparation.json",
+          "pdf_pages": 40,
+          "bytes": 1031502,
+          "sha256": "0e90860ec951314c117b018ae76acb5adb1c476aec0516315c4d6c34bc6cccbb",
+          "read_pages": [
+            1,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "rendered_pages": [
+            6,
+            8,
+            9
+          ],
+          "page_mapping": "Physical PDF page numbers as recorded; no inferred printed offset.",
+          "method": "Coordinator read the indicated body text and actual rendered equation pages. C06 author read the complete preparation record and independently verified the retained PDF bytes/hashes; no fresh whole-source reading is asserted."
+        },
+        "cautions_and_proof_limits": [
+          "An exposure label must map equal labels to equal potential outcomes across assignments; merely calculating a network label does not validate it.",
+          "Positive marginal exposure probabilities identify that target mean but do not guarantee all joint probabilities are positive or all contrast variance terms are observable.",
+          "General asymptotic inference, later refinements and empirical results are outside inspected/proved scope."
+        ]
+      },
+      {
+        "id": "v12-c06-dgk-toolkit",
+        "title": "Using Randomization in Development Economics Research: A Toolkit",
+        "url": "https://economics.mit.edu/sites/default/files/2022-08/Using%20Randomization%20in%20Development%20Economics%20Resea.pdf",
+        "publication": "CEPR Discussion Paper 6059, January 2007, inspected 92-page discussion-paper version",
+        "inspection": {
+          "reader": "root",
+          "provenance": "production/v12-c06-source-preparation.json",
+          "pdf_pages": 92,
+          "bytes": 465290,
+          "sha256": "90ff46a74214d1105f8f43dc694e9ec70bf8dea850ea3eaca27ff66c7f0fd0d8",
+          "read_pages": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            62,
+            63,
+            64,
+            65
+          ],
+          "rendered_pages": [
+            33,
+            36,
+            63
+          ],
+          "page_mapping": "Printed page numbers are physical minus4 in inspected sections.",
+          "method": "Coordinator read the indicated body text and actual rendered equation pages. C06 author read the complete preparation record and independently verified the retained PDF bytes/hashes; no fresh whole-source reading is asserted."
+        },
+        "cautions_and_proof_limits": [
+          "Power quantile expressions in this source are planning approximations. Our original known-Gaussian example derives both tails exactly; no unknown-variance exact t power is inherited.",
+          "Distinguish standard-error multiplier sqrt(1+(m-1)rho) from variance multiplier1+(m-1)rho; rho is the common-component share, not the idiosyncratic variance share.",
+          "Displayed group-count formula scales as inverse square root of J with critical values held fixed; the adjacent roughly proportional wording must not be copied literally.",
+          "Increasing compliance strengthens the assignment contrast under fixed local effect; its inverse enters a detectable local effect. Do not reverse that direction.",
+          "Basic bounded-outcome attrition intervals here are original population identification bounds, not the more restrictive monotonicity/rank-based trimming bounds discussed later in the source.",
+          "No historical application, general multiarm allocation claim or source exercise is adopted as our own evidence."
+        ]
+      }
+    ],
+    "accepted_reuse": [
+      {
+        "id": "v12-c03-imbens-angrist1994",
+        "title": "Identification and Estimation of Local Average Treatment Effects",
+        "authors": [
+          "Guido W. Imbens",
+          "Joshua D. Angrist"
+        ],
+        "publication": "Econometrica 62(2), March 1994, pages 467–475",
+        "url": "https://www.gsb.stanford.edu/sites/default/files/publication/pdfs/article-1994-mar-identification-estimation-local-average-treatment-effects.pdf",
+        "use": "Accepted c03 binary compliance decomposition, rederived in the stated binary experiment contract. The new type table, direct-assignment transfer and random-arm ratio covariance are original.",
+        "inspection_status": "Inherited accepted c03 primary inspection; not a new c06 source-body read.",
+        "inspection_provenance": "content/reviews/v12-c03-sources.json and production/v12-c03-sources-working.json",
+        "inspection": {
+          "date_checked": "2026-10-09",
+          "pdf_pages": 9,
+          "bytes": 803740,
+          "sha256": "24512532d490a8ef400e30f33379cfbc15ab0291fbbd55d859215744d8d89992",
+          "body_scope_read": "Rendered PDF pages1–9, printed467–475. Main method scope: Conditions1–3, signed response decomposition, Theorem1 and proof, Theorems2–3 and appendix proofs; references inspected as bibliography only.",
+          "rendered_pages_read": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        "proof_limits": "Use a separately stated binary potential-outcome contract with assignment independence, exclusion, consistency, positivity, integrability and positive complier mass. No automatic ATE, treatment-on-treated, multivalued-instrument weighting or transportability claim. The appendix's estimated-instrument covariance warns against ignoring first-stage nuisance estimation.",
+        "cautions": [
+          "Random assignment of an encouragement does not itself exclude its direct outcome effect. Administrative-selection and historical application examples were read but are neither reproduced nor claimed to establish validity in a new case."
+        ]
+      }
+    ],
+    "assessment": "The source-to-proof distinctions are retained: no finite-population CLT, automatic normal coverage, generic network inference, observable estimator of every zero-joint-probability product, generic t-power, trimming theorem or treatment interpretation from random assignment alone.",
+    "runtime": "PDFs, preparation records, accepted chapters and catalogue are read-only provenance and are not required by the six-file peer checker."
+  },
+  "structure": {
+    "actual_shared_Document": "Executed the exact scripts.verify.Document class AST read-only on the final canonical manuscript.",
+    "worked_cases": 7,
+    "exercises": 12,
+    "solutions": 12,
+    "unique_ids": 32,
+    "paired_prompt_solution_ids": 12,
+    "flat_chapter_routes": [
+      "v12-c01.html",
+      "v12-c03.html",
+      "v12-c05.html"
+    ],
+    "source_routes": 4,
+    "limitation": "No full reader/browser/mobile/print or whole-edition acceptance claim."
+  },
+  "findings": [],
+  "required_repairs": [],
+  "open_material_findings": [],
+  "author_repair_boundary": "No canonical author file was changed during this peer assignment. The preexisting explicit independence of cluster assignment and Gaussian shocks was read as part of the frozen author contract, not a new peer repair.",
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v12-c06.html",
+      "bytes": 70286,
+      "sha256": "e5e0bf5c694c76a1cc3217b624e67be4770d9160719c86eb9041472c74d9fe8d"
+    },
+    {
+      "path": "scripts/check_v12_c06.py",
+      "bytes": 43356,
+      "sha256": "1e785d5e2b5d716d9db3898de7afe5c1ac29e49366db3489029739ea20ac2530"
+    },
+    {
+      "path": "content/reviews/v12-c06-sources.json",
+      "bytes": 13255,
+      "sha256": "198d3ea06a366a1144d98b06cf3529887a2e8e01bb13fac60c52b3a544521f3a"
+    },
+    {
+      "path": "content/reviews/v12-c06-author.json",
+      "bytes": 30613,
+      "sha256": "bf5cac4edb4eabb1ff21b2b097c45473210f8659389f047e21108d6aaca24dbd"
+    },
+    {
+      "path": "scripts/check_v12_c06_peer.py",
+      "bytes": 30520,
+      "sha256": "d339e8029c8d8982e69efcbfb6f1a9d15e349ab5e865b852855bef81ecd95c28"
+    }
+  ],
+  "execution_validation": {
+    "status": "passed",
+    "executions": [
+      {
+        "tree": "workspace",
+        "checker": "peer",
+        "mode": "normal",
+        "entry": "api",
+        "cwd": "/",
+        "quiet": true,
+        "exit_code": 0
+      },
+      {
+        "tree": "workspace",
+        "checker": "peer",
+        "mode": "normal",
+        "entry": "cli",
+        "cwd": "/",
+        "quiet": true,
+        "exit_code": 0
+      },
+      {
+        "tree": "workspace",
+        "checker": "author_integration_only",
+        "mode": "normal",
+        "entry": "api",
+        "cwd": "/",
+        "quiet": true,
+        "exit_code": 0
+      },
+      {
+        "tree": "workspace",
+        "checker": "peer",
+        "mode": "optimized",
+        "entry": "api",
+        "cwd": "/",
+        "quiet": true,
+        "exit_code": 0
+      },
+      {
+        "tree": "workspace",
+        "checker": "peer",
+        "mode": "optimized",
+        "entry": "cli",
+        "cwd": "/",
+        "quiet": true,
+        "exit_code": 0
+      },
+      {
+        "tree": "workspace",
+        "checker": "author_integration_only",
+        "mode": "optimized",
+        "entry": "api",
+        "cwd": "/",
+        "quiet": true,
+        "exit_code": 0
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "peer",
+        "mode": "normal",
+        "entry": "api",
+        "cwd": "/",
+        "quiet": true,
+        "exit_code": 0
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "peer",
+        "mode": "normal",
+        "entry": "cli",
+        "cwd": "/",
+        "quiet": true,
+        "exit_code": 0
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "peer",
+        "mode": "optimized",
+        "entry": "api",
+        "cwd": "/",
+        "quiet": true,
+        "exit_code": 0
+      },
+      {
+        "tree": "isolated_exact_six",
+        "checker": "peer",
+        "mode": "optimized",
+        "entry": "cli",
+        "cwd": "/",
+        "quiet": true,
+        "exit_code": 0
+      }
+    ],
+    "peer_summary": {
+      "author_code_used_as_oracle": false,
+      "chapter": "v12-c06",
+      "comparisons": 233,
+      "domain_rejections": 27,
+      "exact_numeric_anchors": 84,
+      "exercises": 12,
+      "fisher_breakpoints": [
+        "3",
+        "4",
+        "9/2",
+        "5",
+        "11/2",
+        "6",
+        "7"
+      ],
+      "gaussian_method": "50-digit exponential-series integration and bisection; bounded absolute argument 8",
+      "intervention_scopes": [
+        "Singleton inclusion boundary, changed fixed counts and constant effects separate finite covariance and variance-estimation scope.",
+        "Subset-generating polynomials certify every real Fisher candidate; alternative generation and unequal tied masses check the actual rejection law.",
+        "Changing treatment fractions inside fixed strata preserves the weighted estimand while moving the naive pooled expectation.",
+        "Decimal exponential integration and quantile bisection verify Gaussian powers; full integer optimization and independent latent-shock coefficients certify allocation and cluster information.",
+        "Observed-law quotient derivatives and actual sample frequencies check covariance-aware Wald inference; direct encouragement and assignment frequency separate ITT, LATE, ATT and precision.",
+        "Six exposure indicators reconstruct the full covariance; nonuniform assignment and absent joint or marginal support distinguish mean, variance and mapping identification.",
+        "Extreme, independent and common potential-response couplings give the same complete observed law and sharp bounds; mixtures and measured follow-up separate identification from sampling precision."
+      ],
+      "limits": "Independent finite evidence plus separate proof reading; no empirical validity, general asymptotic theorem, rendered UI or acceptance claim.",
+      "nonself_peer_bindings": 5,
+      "purposeful_interventions": 7,
+      "rejection_scopes": [
+        "boolean numeric input",
+        "nonfinite numeric input",
+        "out-of-scope magnitude",
+        "outside finite assignment bound",
+        "empty treated arm",
+        "empty control arm",
+        "incomplete potential table",
+        "singleton sample variance",
+        "unnormalized rank law",
+        "negative assignment mass",
+        "unproved Gaussian numerical domain",
+        "zero planning variance",
+        "two-arm allocation impossible",
+        "zero arm variance",
+        "zero encouragement probability",
+        "empty observed encouragement arm",
+        "finite zero estimated first stage",
+        "fixed-one center target exposure unavailable",
+        "degenerate marginal exposure support",
+        "remote spillover invalidates the exposure map",
+        "invalid response coupling",
+        "invalid response probability",
+        "respondent outcome outside support",
+        "fabricated respondent mean",
+        "duplicate JSON key",
+        "nonfinite JSON literal",
+        "overflowing JSON decimal"
+      ],
+      "rounded_numeric_anchors": 6,
+      "solutions": 12,
+      "status": "independent peer checks passed",
+      "whole_real_line_cells_and_endpoints": 15,
+      "worked_cases": 7
+    },
+    "author_integration_only": {
+      "label": "Author API execution is regression integration evidence only, not an independent oracle.",
+      "comparisons": 298,
+      "normal_and_optimized_summaries_equal": true
+    },
+    "quiet_import_and_check": true,
+    "normal_and_optimized_summaries_equal": true,
+    "cwd": "/",
+    "isolated_runtime_files": [
+      "content/chapters/v12-c06.html",
+      "scripts/check_v12_c06.py",
+      "content/reviews/v12-c06-sources.json",
+      "content/reviews/v12-c06-author.json",
+      "scripts/check_v12_c06_peer.py",
+      "content/reviews/v12-c06-peer.json"
+    ],
+    "exact_isolated_file_count": 6,
+    "isolated_membership_unchanged": true,
+    "all_six_payload_bytes_unchanged_by_execution": true,
+    "payload_tamper_rejections": [
+      {
+        "temporary_copy": "content/chapters/v12-c06.html",
+        "mode": "normal",
+        "rejected": true,
+        "original_restored": true
+      },
+      {
+        "temporary_copy": "content/chapters/v12-c06.html",
+        "mode": "optimized",
+        "rejected": true,
+        "original_restored": true
+      },
+      {
+        "temporary_copy": "scripts/check_v12_c06_peer.py",
+        "mode": "normal",
+        "rejected": true,
+        "original_restored": true
+      },
+      {
+        "temporary_copy": "scripts/check_v12_c06_peer.py",
+        "mode": "optimized",
+        "rejected": true,
+        "original_restored": true
+      }
+    ],
+    "output_aliases": "Not applicable: no output option, output mutation or external input generator exists; all six payload bytes and exact temporary file membership remain unchanged by execution.",
+    "final_record_step": "After this final serialization, all eight normal/optimized workspace/exact-six peer API/CLI gates were rerun successfully on these bytes before reporting the freeze; author inputs and peer checker remained unchanged.",
+    "limitations": "Actual shared Document and primary-byte provenance checks are read-only workspace evidence, not isolated runtime dependencies."
+  },
+  "preserved_prior_artifacts": [
+    {
+      "path": "scripts/check_v12_c05_peer.py",
+      "bytes": 29539,
+      "sha256": "caaf683a1f73df0e9ff2cc5d060002b7af61f32a6683c627d84980eebf7be279"
+    },
+    {
+      "path": "content/reviews/v12-c05-peer.json",
+      "bytes": 35505,
+      "sha256": "5b624f07d0355d98a5a7b7d9e88b740b3cc8d6c6dab384bfeebe89ce9f2846e4"
+    },
+    {
+      "path": "production/v12-c07-source-preparation.json",
+      "bytes": 19999,
+      "sha256": "46fc29aa764c37d299eafe2ad71bacb5a977f2b02b81919f0d563152b7ad1766"
+    }
+  ],
+  "acceptance_boundary": "This separate machine-assisted peer audit is bounded mathematical, instructional and reproducibility evidence. It is not empirical validation, rendered-reader approval, external human certification, whole-volume completion or canonical acceptance. The coordinator retains acceptance and publishing authority."
+}

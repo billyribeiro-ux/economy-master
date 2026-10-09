@@ -1,0 +1,542 @@
+{
+  "chapter": "v12-c09",
+  "date": "2026-10-09",
+  "state": "Scoped source preparation complete; no c09 manuscript, numerical blueprint, acceptance or catalogue mutation performed.",
+  "assignment": "production/v12-c09-source-assignment.json",
+  "specialist": "c05_review",
+  "method": "Primary bodies retained with exact hashes; pdftotext -layout for text inspection; pdftoppm at 110 dpi and view_image for actual selected equation-page inspection. No installation. No generated or reconstructed substitute pages.",
+  "source_count": 5,
+  "actual_inspection_totals": {
+    "pdf_pages_in_retained_bodies": 57,
+    "physical_text_pages_read": 40,
+    "rendered_equation_pages_actually_viewed": 13
+  },
+  "sources": [
+    {
+      "proposed_stable_id": "v04-c10-mit-stationarity",
+      "reuse_existing_id": true,
+      "title": "Lecture Notes 1: Stationarity, Lag Operator, ARMA, and Covariance Structure",
+      "authors": [
+        "Anna Mikusheva",
+        "Paul Schrimpf (scribe)"
+      ],
+      "version_and_year": {
+        "body_course": "14.384 Time Series Analysis, Fall 2007",
+        "lecture_date": "2007-09-06",
+        "stated_revision": "2009-09-09",
+        "hosting_course": "MIT OCW Fall 2013",
+        "caution": "The course route and later PDF modification date do not replace the body lecture/revision dates."
+      },
+      "retrieved": "2026-10-09",
+      "requested_url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/4f2256b0a9c3157a2676806ed261eb8f_MIT14_384F13_lec1.pdf",
+      "body_url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/4f2256b0a9c3157a2676806ed261eb8f_MIT14_384F13_lec1.pdf",
+      "official_listing": {
+        "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/pages/lecture-notes/",
+        "inspection": "Official lecture index and source body inspected. Reuse the existing catalogue ID; no catalogue edit made."
+      },
+      "body": {
+        "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-mit-arma.pdf",
+        "bytes": 172499,
+        "sha256": "2269b5ccdea1be78010f0655422ccda4019b07df94dad8b03e5c696bbc0267cc"
+      },
+      "extracted_text": {
+        "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-mit-arma.txt",
+        "bytes": 19307,
+        "sha256": "f10e846ff12899ed617e6921005e4d3d2319f861b61dfaea343f68a2ff1b4e99"
+      },
+      "physical_page_count": 6,
+      "physical_to_printed_pages": "Physical 1–5 equal printed 1–5; physical 6 is an unnumbered OCW attribution page.",
+      "actual_text_pages_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "actual_rendered_equation_pages_inspected": [
+        2,
+        4
+      ],
+      "supported_scope": [
+        "Definitions of strict and covariance stationarity; white noise and lag notation (physical 2).",
+        "Stable geometric lag inverses and AR/MA/ARMA representations; covariance sums (physical 3–5).",
+        "Random-walk variance as a contrast with a stable causal representation; this is method context, not a general unit-root test proof."
+      ],
+      "sufficient_conditions_to_state_in_original_treatment": [
+        "Covariance stationarity requires finite second moments. Strict stationarity alone does not imply those moments.",
+        "For the original causal construction use iid centered innovations with finite variance, a two-sided innovation history and square-summable filter coefficients; absolute summability is a convenient stronger condition.",
+        "A causal AR polynomial has roots outside the unit circle. The reciprocal eigenvalue notation in the notes uses moduli below one. State which polynomial and convention are meant.",
+        "Conditional-mean forecasts need independent or suitably conditionally centered future innovations relative to the information set; uncorrelated white noise alone guarantees only linear-projection statements. Invertibility concerns recovering innovations and is separate from causality."
+      ],
+      "source_and_extraction_cautions": [
+        "The physical-2 white-noise cross-moment line omits the distinct-time qualification; the zero cross moment is for t different from s.",
+        "The final AR(1) moving-average display on physical 4 has e_i where lagged e_(t-i) is needed; the preceding geometric expansion gives the intended indices. Visually confirmed.",
+        "The random-walk variance addition uses innovation orthogonality to the prior state. It is not valid for arbitrary correlated initialization.",
+        "The simple partial-fraction presentation is not a proof for repeated polynomial roots. A directly derived ARMA(1,1) construction avoids that unproved step.",
+        "Failure of the causal root condition does not exclude every anticipative stationary solution driven by future shocks. Specify a causal adapted solution."
+      ],
+      "excluded_claims": [
+        "No generic dependent-data CLT or parameter-estimation theorem inherited from stationarity.",
+        "No empirical evidence about any actual financial series.",
+        "No claim that a correlogram, differencing rule or unit-root test proves the data-generating law."
+      ]
+    },
+    {
+      "proposed_stable_id": "v12-c09-mit-vars",
+      "reuse_existing_id": false,
+      "title": "Lecture Notes 11: VARs",
+      "authors": [
+        "Anna Mikusheva",
+        "Paul Schrimpf (scribe)"
+      ],
+      "version_and_year": {
+        "body_course": "14.384 Time Series Analysis, Fall 2007",
+        "lecture_date": "2007-09-27",
+        "stated_revision": "2009-10-05",
+        "hosting_course": "MIT OCW Fall 2013",
+        "caution": "The PDF creation/TeX timestamps are technical metadata, not a newly verified edition."
+      },
+      "retrieved": "2026-10-09",
+      "requested_url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/a0f9daa509414e993f12a9a070c83449_MIT14_384F13_lec11.pdf",
+      "body_url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/a0f9daa509414e993f12a9a070c83449_MIT14_384F13_lec11.pdf",
+      "official_listing": {
+        "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/resources/mit14_384f13_lec11/",
+        "inspection": "Official resource page, lecture listing and body inspected."
+      },
+      "body": {
+        "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-mit-var.pdf",
+        "bytes": 146195,
+        "sha256": "d741c5d353ba0a8f336fa1b686801d12b58d89631db2273e71ef4f0000ad851c"
+      },
+      "extracted_text": {
+        "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-mit-var.txt",
+        "bytes": 17744,
+        "sha256": "a8005290b708866816e8dcb6b925f2421beb07deeda1b907885ff8782fce5f74"
+      },
+      "physical_page_count": 6,
+      "physical_to_printed_pages": "Physical 1–5 equal printed 1–5; physical 6 is an unnumbered OCW attribution page.",
+      "actual_text_pages_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "actual_rendered_equation_pages_inspected": [
+        1,
+        2
+      ],
+      "supported_scope": [
+        "VAR lag/companion formulation and covariance Lyapunov equation (physical 1).",
+        "Equation-wise estimation under a Gaussian conditional-likelihood specification, predictive Granger restrictions, and reduced-form versus structural impulse responses (physical 2–3).",
+        "Bootstrap and delta-method discussion was read (physical 4–5), but is not adopted as a complete validity proof."
+      ],
+      "sufficient_conditions_to_state_in_original_treatment": [
+        "For covariance and known-parameter forecasts assume iid centered vector innovations with finite covariance and an explicitly proved bound ||A^j|| ≤ C r^j for r < 1. A stated matrix-norm contraction is a sufficient alternative.",
+        "Gaussian conditional likelihood with identical regressors in each equation, full-rank sample design and nonsingular covariance gives equation-wise OLS; an unconditional initial-state density can add parameter-dependent terms.",
+        "For a conditional distribution forecast, state independent Gaussian innovations. For structural interpretation, add identifying restrictions beyond the covariance factorization."
+      ],
+      "source_and_extraction_cautions": [
+        "Physical 1 defines vec by stacking rows, then displays the identity for column stacking. Use consistent column stacking, or avoid vec by proving the covariance series directly. Visually confirmed.",
+        "Physical 2 repeats the restricted covariance determinant in both terms of its LR display. The intended comparison is T(log det Omega_restricted − log det Omega_unrestricted); no LR inference theorem is adopted here. Visually confirmed.",
+        "The shorthand statements about usual OLS asymptotics require stability, rank, suitable score limit laws and variance conditions beyond white noise alone.",
+        "A covariance factor D is not uniquely identified: DQ has the same DD-prime for orthogonal Q. Predictive exclusion is not an intervention-causal conclusion."
+      ],
+      "excluded_claims": [
+        "No unrestricted VAR estimation CLT, near-unit-root bootstrap validity or general impulse-response confidence theorem claimed.",
+        "No claim that a chosen Cholesky ordering is established by observational covariance alone."
+      ]
+    },
+    {
+      "proposed_stable_id": "v12-c09-mit-cointegration",
+      "reuse_existing_id": false,
+      "title": "Lecture Notes 20: Cointegration",
+      "authors": [
+        "Anna Mikusheva",
+        "Paul Schrimpf (scribe)"
+      ],
+      "version_and_year": {
+        "body_course": "14.384 Time Series Analysis, Fall 2007",
+        "lecture_date": "2007-11-01",
+        "stated_revision": null,
+        "hosting_course": "MIT OCW Fall 2013",
+        "caution": "No revision date is stated in the body; PDF creation/modification metadata is not substituted."
+      },
+      "retrieved": "2026-10-09",
+      "requested_url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/4c0d665d324c565fb9b6d258538cb78e_MIT14_384F13_lec20.pdf",
+      "body_url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/4c0d665d324c565fb9b6d258538cb78e_MIT14_384F13_lec20.pdf",
+      "official_listing": {
+        "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/resources/mit14_384f13_lec20/",
+        "inspection": "Official resource page, lecture listing and complete body inspected."
+      },
+      "body": {
+        "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-mit-cointegration.pdf",
+        "bytes": 198378,
+        "sha256": "5c5f5e723eb38c7208ad44caa7070a11721500eb71fc744674b9a44170796183"
+      },
+      "extracted_text": {
+        "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-mit-cointegration.txt",
+        "bytes": 18701,
+        "sha256": "d68ce51499fd47e62792662020d053a79f1ed582ce4bbb541867c31e6cb885b6"
+      },
+      "physical_page_count": 6,
+      "physical_to_printed_pages": "Physical 1–5 equal printed 1–5; physical 6 is an unnumbered OCW attribution page.",
+      "actual_text_pages_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "actual_rendered_equation_pages_inspected": [
+        1,
+        2
+      ],
+      "supported_scope": [
+        "An integrated regressor plus stationary regression error can give a stationary linear combination (physical 2).",
+        "Different persistent-regressor normalizations and endogeneity-sensitive nonstandard limits are illustrated (physical 1–4).",
+        "The notes explicitly state the multivariate Brownian convergence results without proofs (physical 1); their display is a roadmap, not a discharged prerequisite."
+      ],
+      "sufficient_conditions_to_state_in_original_treatment": [
+        "Use a fully specified common-trend model and state initialization, innovation law, independence and the stationary spread law.",
+        "For the proposed special Gaussian unit-root derivation use zero initial level, no deterministic regressors, iid centered Gaussian increments and a directly proved Brownian-grid argument. Changing any of these changes the inference problem.",
+        "For a conditional Gaussian cointegrating slope calculation require the level-error vector to be independent of the whole regressor path; mere contemporaneous zero covariance is not enough."
+      ],
+      "source_and_extraction_cautions": [
+        "Physical 2 contains a phi-not-equal-zero condition correctly in the rendered source; extraction can flatten the not-equal sign.",
+        "Calling both levels random walks is imprecise for y_t = beta x_t + iid e_t: y is generally integrated, with serially dependent increments, rather than a pure iid-increment random walk.",
+        "A shifted scaled limiting distribution does not by itself prove the stated finite-sample expectation-bias order; moment convergence or uniform-integrability conditions would also be needed.",
+        "The stationary-block asymptotic statements later in the notes are not complete assumption-and-proof packages. They cannot support a general stationary-data CLT."
+      ],
+      "excluded_claims": [
+        "No full functional CLT, Dickey–Fuller critical-value theory, Engle–Granger test law, Johansen rank theorem or general VECM inference proof imported.",
+        "The historical permanent-income discussion is not newly verified empirical evidence."
+      ]
+    },
+    {
+      "proposed_stable_id": "v12-c09-bollerslev-garch1986",
+      "reuse_existing_id": false,
+      "title": "Generalized Autoregressive Conditional Heteroskedasticity",
+      "authors": [
+        "Tim Bollerslev"
+      ],
+      "version_and_year": {
+        "journal": "Journal of Econometrics",
+        "volume": 31,
+        "year": 1986,
+        "pages": "307–327",
+        "doi": "10.1016/0304-4076(86)90063-1",
+        "body_received": "May 1985",
+        "body_final_version_received": "February 1986",
+        "caution": "The original journal body is inspected; scan/creation timestamps are not publication dates."
+      },
+      "retrieved": "2026-10-09",
+      "requested_url": "https://econ.duke.edu/~boller/Published_Papers/joe_86.pdf",
+      "body_url": "https://public.econ.duke.edu/~boller/Published_Papers/joe_86.pdf",
+      "official_listing": {
+        "url": "https://public.econ.duke.edu/~boller/research.html",
+        "secondary_official_metadata": "https://scholars.duke.edu/publication/651658",
+        "inspection": "Author publication listing and official Duke record inspected; listing leads to the retained author-hosted original paper."
+      },
+      "body": {
+        "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-bollerslev1986.pdf",
+        "bytes": 790837,
+        "sha256": "60353d437aadda9179df4e7cfcc55f0dd343840b04c6ee7d83285eb33fa17e1a"
+      },
+      "extracted_text": {
+        "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-bollerslev1986.txt",
+        "bytes": 45113,
+        "sha256": "0680a3d800010fe881a11a2c095a9a8c4c3a2e1d4168d38d8a648c0835277529"
+      },
+      "physical_page_count": 21,
+      "physical_to_printed_pages": "Printed page = physical page + 306, for physical 1–21.",
+      "actual_text_pages_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        17,
+        18,
+        19,
+        20
+      ],
+      "actual_rendered_equation_pages_inspected": [
+        3,
+        4,
+        5,
+        7,
+        19
+      ],
+      "supported_scope": [
+        "Original GARCH definition and nonnegative coefficient domain, normal conditional innovation specification (physical 3, equations 1–2).",
+        "Finite unconditional second-moment condition and squared-process representation (physical 4, theorem 1 and equations 6–7).",
+        "GARCH(1,1) higher-moment criterion, Gaussian fourth moment, excess kurtosis and explicit fourth-moment requirement for squared autocovariances (physical 5–8).",
+        "Appendix construction and moment recursions inspected (physical 17–20), including equation A6 and the theorem-2 binomial expansion."
+      ],
+      "sufficient_conditions_to_state_in_original_treatment": [
+        "For the original treatment write epsilon_t = sqrt(h_t) z_t with iid z, E z = 0, E z^2 = 1, omega > 0 and alpha,beta ≥ 0. State adaptation and independence from past h.",
+        "The condition alpha + beta < 1 supports a causal finite-mean variance process and finite return variance; it is not a necessary characterization of all strictly stationary solutions.",
+        "For fourth moments require kappa = E z^4 finite and kappa alpha^2 + 2 alpha beta + beta^2 < 1. The paper uses kappa = 3 under normality.",
+        "Serial covariance of squared returns and L2 properties of epsilon_t^2 − h_t require finite fourth moments of returns."
+      ],
+      "source_and_extraction_cautions": [
+        "Physical-5 equation 8 visibly appears to omit the plus sign between alpha_0 and alpha_1 epsilon_(t−1)^2; equations 2 and the appendix binomial formula establish the intended additive recursion. OCR is especially unreliable on this scan.",
+        "The physical-7 kurtosis expression subtracts 3; it is excess kurtosis. Adding 3 gives raw kurtosis. Its strictly positive claim needs alpha > 0; the allowed alpha = 0 boundary gives zero excess kurtosis.",
+        "At physical 4 the squared innovation is called serially uncorrelated before a fourth-moment condition is imposed. Without that moment, a covariance need not exist; use only the integrable martingale-difference statement until L2 is proved.",
+        "The physical-5 assertion about an odd moment from an existing preceding even moment needs existence of that odd absolute moment. Symmetry alone does not make an undefined expectation equal zero.",
+        "The Gaussian moment polynomial is not distribution free. Replacing Gaussian innovations requires a newly stated innovation moment and an independent proof."
+      ],
+      "excluded_claims": [
+        "No full strict-stationarity necessity theorem from the finite-variance condition.",
+        "No GARCH maximum-likelihood/QMLE asymptotic normality, estimation standard errors or diagnostic-test validity inherited.",
+        "Physical 9–16 and 21 were not substantively read; empirical inflation estimates and full estimation section are outside this record. The empirical paragraph encountered at physical 17 is not adopted or reproduced."
+      ]
+    },
+    {
+      "proposed_stable_id": "v12-c09-diebold-forecast2012",
+      "reuse_existing_id": false,
+      "title": "Comparing Predictive Accuracy, Twenty Years Later: A Personal Perspective on the Use and Abuse of Diebold-Mariano Tests",
+      "authors": [
+        "Francis X. Diebold"
+      ],
+      "version_and_year": {
+        "series": "Penn Institute for Economic Research Working Paper",
+        "number": "12-035",
+        "body_date": "2012-09-07",
+        "year": 2012,
+        "caution": "This is the dated working-paper body, not the later journal version. Search-engine crawl/publication labels are not used as version evidence."
+      },
+      "retrieved": "2026-10-09",
+      "requested_url": "https://economics.sas.upenn.edu/sites/default/files/filevault/12-035.pdf",
+      "body_url": "https://economics.sas.upenn.edu/sites/default/files/filevault/12-035.pdf",
+      "official_listing": {
+        "url": "https://economics.sas.upenn.edu/sites/default/files/filevault/12-035.pdf",
+        "inspection": "The official Penn-hosted body includes the PIER cover identifying paper 12-035 and the author; no separate current Penn item page was located. The cover identifies https://ssrn.com/abstract=2144210, which was not needed as a technical authority.",
+        "listing_limit": "Official repository cover/body rather than an independently retrieved separate landing-page record."
+      },
+      "body": {
+        "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-diebold2012.pdf",
+        "bytes": 470547,
+        "sha256": "b61da48094d19d544bf13957b85b1da8b63c557e69cdbfe8db5cdf39a25efc3a"
+      },
+      "extracted_text": {
+        "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-diebold2012.txt",
+        "bytes": 41145,
+        "sha256": "877190ab88a1bae8d232f115d384c1f027eb31b0f3498982e08daed60fc82d01"
+      },
+      "physical_page_count": 18,
+      "physical_to_printed_pages": "Physical 1 is the PIER cover; physical 2 is the dated title page; physical 3–18 equal printed 1–16.",
+      "actual_text_pages_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        14,
+        15
+      ],
+      "actual_rendered_equation_pages_inspected": [
+        4,
+        8
+      ],
+      "supported_scope": [
+        "Loss differences and equal expected predictive loss as the target (physical 4).",
+        "Serial dependence matters for the sampling variance; different forecast/model-estimation arrangements require different assumptions (physical 4–8).",
+        "Real-time information and data vintages matter when reconstructing historical forecasts (physical 14–15)."
+      ],
+      "sufficient_conditions_to_state_in_original_treatment": [
+        "Define the target, loss, forecast horizon, origin-time information, evaluation sample and whether parameters are fixed, recursively estimated or selected.",
+        "A dependent-data normal limit needs an actual CLT plus a positive finite limiting variance and a consistent variance estimator; covariance stationarity alone is insufficient.",
+        "For the bounded chapter proof, derive the finite-dimensional law of the stipulated overlapping Gaussian forecast errors/loss difference. Do not treat an arbitrary HAC label as a proof."
+      ],
+      "source_and_extraction_cautions": [
+        "Physical 4 states covariance stationarity as enough for normal studentized inference; this is too weak. A common non-Gaussian centered random variable repeated at every date is stationary with positive finite variance, but its sample mean does not satisfy the asserted normal limit. This counterexample is our qualification, not a claim quoted from the paper.",
+        "Physical 8 displays an F statistic with degrees-of-freedom notation inconsistent with its definition of k, and an unqualified optimality claim. Neither display nor optimality assertion is adopted.",
+        "The same page lists t-star/T tending to infinity despite the preceding split having 0 < t-star < T. That shorthand cannot be used as a coherent asymptotic regime without redefining the sample lengths.",
+        "Read the document as a methodological perspective, including disputed preferences about model comparison; its recommendations are not a general proof that one evaluation design dominates all others."
+      ],
+      "excluded_claims": [
+        "No generic Diebold–Mariano CLT from stationarity; no universal HAC consistency or nested/reestimated-model test validity.",
+        "No original 1995 paper or later 2015 body claimed inspected.",
+        "Physical 9–13 and 16–18 were not substantively inspected. No empirical forecast superiority is asserted."
+      ]
+    }
+  ],
+  "rendered_page_evidence": [
+    {
+      "source": "mit-arma",
+      "page": 2,
+      "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-mit-arma-p2.png",
+      "bytes": 170220,
+      "sha256": "742dd5d6989ee70c61bbcb619154c747e197ba770fd40110e8427c9c298cc1ba",
+      "actual_visual_inspection": "Completed: rendered equation page viewed and compared with extracted text on 2026-10-09."
+    },
+    {
+      "source": "mit-arma",
+      "page": 4,
+      "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-mit-arma-p4.png",
+      "bytes": 144085,
+      "sha256": "42f62be6b49bf4cdb626c38f81f511d72bfc1a656f4f2eca6738772fbff2d4f4",
+      "actual_visual_inspection": "Completed: rendered equation page viewed and compared with extracted text on 2026-10-09."
+    },
+    {
+      "source": "mit-var",
+      "page": 1,
+      "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-mit-var-p1.png",
+      "bytes": 135128,
+      "sha256": "21e644416d4500791bb6746e2fde374b55206955053be7ad69bef51d250862d5",
+      "actual_visual_inspection": "Completed: rendered equation page viewed and compared with extracted text on 2026-10-09."
+    },
+    {
+      "source": "mit-var",
+      "page": 2,
+      "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-mit-var-p2.png",
+      "bytes": 224087,
+      "sha256": "cf6a2e0d494f8c04c2851b993d08880af1e963d242bc958b2e22f44b0ee2dabc",
+      "actual_visual_inspection": "Completed: rendered equation page viewed and compared with extracted text on 2026-10-09."
+    },
+    {
+      "source": "mit-cointegration",
+      "page": 1,
+      "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-mit-cointegration-p1.png",
+      "bytes": 151439,
+      "sha256": "bb10b90ffaae44c38c60f5883861e0d3dfa44a239688094b58b3a7a192342e41",
+      "actual_visual_inspection": "Completed: rendered equation page viewed and compared with extracted text on 2026-10-09."
+    },
+    {
+      "source": "mit-cointegration",
+      "page": 2,
+      "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-mit-cointegration-p2.png",
+      "bytes": 201209,
+      "sha256": "daad7e65e43137fc2202ec7f5974325a2f45a46b27ff170fda0ff5a8a6075267",
+      "actual_visual_inspection": "Completed: rendered equation page viewed and compared with extracted text on 2026-10-09."
+    },
+    {
+      "source": "bollerslev1986",
+      "page": 3,
+      "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-bollerslev1986-p3.png",
+      "bytes": 83101,
+      "sha256": "046a2fe53ce25fa5ddedc315543776b20f12c15cc1bd9c566be727ed95bcafb5",
+      "actual_visual_inspection": "Completed: rendered equation page viewed and compared with extracted text on 2026-10-09."
+    },
+    {
+      "source": "bollerslev1986",
+      "page": 4,
+      "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-bollerslev1986-p4.png",
+      "bytes": 89890,
+      "sha256": "968bf793449f43ba4bbc34578cea278bfafebd141d8da2c10761795cade08030",
+      "actual_visual_inspection": "Completed: rendered equation page viewed and compared with extracted text on 2026-10-09."
+    },
+    {
+      "source": "bollerslev1986",
+      "page": 5,
+      "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-bollerslev1986-p5.png",
+      "bytes": 83286,
+      "sha256": "1912cd56d7c036005949d0b6d73908da8e3985c017e7a869e10a38b5eac427f9",
+      "actual_visual_inspection": "Completed: rendered equation page viewed and compared with extracted text on 2026-10-09."
+    },
+    {
+      "source": "bollerslev1986",
+      "page": 7,
+      "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-bollerslev1986-p7.png",
+      "bytes": 102866,
+      "sha256": "0ee5a76b9e34aa23424cc3bb1568bfaf0cae06eb0bc909c29cc50e5ef2a3bce4",
+      "actual_visual_inspection": "Completed: rendered equation page viewed and compared with extracted text on 2026-10-09."
+    },
+    {
+      "source": "bollerslev1986",
+      "page": 19,
+      "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-bollerslev1986-p19.png",
+      "bytes": 53618,
+      "sha256": "43fe055b0b984ad6d0ea099b504843cc9c01dc4ee04ee7fefdf36c4d34668e6c",
+      "actual_visual_inspection": "Completed: rendered equation page viewed and compared with extracted text on 2026-10-09."
+    },
+    {
+      "source": "diebold2012",
+      "page": 4,
+      "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-diebold2012-p4.png",
+      "bytes": 209263,
+      "sha256": "7a44d0e0844a3aa76b1488ee28fd18b2742fe853e99610491f27980e2ec24f83",
+      "actual_visual_inspection": "Completed: rendered equation page viewed and compared with extracted text on 2026-10-09."
+    },
+    {
+      "source": "diebold2012",
+      "page": 8,
+      "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-diebold2012-p8.png",
+      "bytes": 227568,
+      "sha256": "2a4a6a9b264809d513b38d70ca6c70d676290612de2a8d336afd8c5430820d0d",
+      "actual_visual_inspection": "Completed: rendered equation page viewed and compared with extracted text on 2026-10-09."
+    }
+  ],
+  "retrieval_manifest": {
+    "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-retrieval.json",
+    "bytes": 5793,
+    "sha256": "5df3da05beff3d66119942d26c22ae2c95ba7fe540f024f2a62c704397e4dda8"
+  },
+  "render_manifest": {
+    "path": "/Users/billyribeiro/Desktop/economy-master/tmp/pdfs/v12-c09-render-manifest.json",
+    "bytes": 5269,
+    "sha256": "0e0d17ea2ca7aab20429d915abddd411ce69adee3b320588716a0bbe2966643d"
+  },
+  "proof_route_recommendations": [
+    {
+      "topic": "Stable ARMA and information",
+      "recommendation": "Construct the causal L2 filter from finite partial sums, bound the L2 tail, and derive covariance by orthogonality. For ARMA(1,1), directly obtain psi_0 = 1 and psi_j = (phi + theta) phi^(j−1) for j ≥ 1, with |phi| < 1. Prove innovation recovery separately when |theta| < 1 using the chosen plus-sign MA convention. Derive conditional forecasts only after specifying the information set and independence of future innovations.",
+      "limits": "Known parameters and a stated innovation law do not include parameter uncertainty; no generic time-series estimation theorem is needed."
+    },
+    {
+      "topic": "Stable VAR and structural nonidentification",
+      "recommendation": "Use an explicit triangular matrix or a demonstrated geometric power bound. Prove the covariance series sum_j A^j Omega (A-prime)^j converges, solves its Lyapunov equation and is unique by iterating the difference equation. Derive h-step forecast covariance from the independent future innovation sum. Show a pair of orthogonally rotated covariance factors generates the same observable Gaussian law but different named shock responses.",
+      "limits": "An observational covariance factorization is not causal identification. Generic VAR(p) stability or inference needs its own algebra and probability conditions."
+    },
+    {
+      "topic": "Restricted Gaussian unit-root limit",
+      "recommendation": "With Y_0 = 0 and iid N(0,1) increments, couple each sample size T in law to sqrt(T) Brownian grid increments. The denominator T^(-2) sum Y_(t−1)^2 converges by continuity and Riemann sums to integral B^2. Use the exact identity sum Y_(t−1) epsilon_t = (Y_T^2 − sum epsilon_t^2)/2. Grid quadratic variation has mean 1 and variance 2/T, giving the numerator limit (B(1)^2 − 1)/2. The denominator is positive almost surely. This proves the special nonstandard slope limit without importing a general functional CLT.",
+      "limits": "This is a proposed original proof route using the library Brownian prerequisite. It is not a claim that the MIT notes prove it. Zero start, Gaussian law and absence of deterministic regressors must be explicit; other laws and test critical values remain separate."
+    },
+    {
+      "topic": "Explicit cointegration and rate",
+      "recommendation": "Write a common random trend plus a stationary spread, then derive the error-correction equations from that same system. Stationarity of the spread proves the specified cointegrating relation. If a slope case uses iid Gaussian level error independent of the whole regressor path, its conditional OLS law is normal with variance sigma_v^2/sum x_t^2; the same Brownian-grid denominator explains the T rate.",
+      "limits": "Do not silently transfer this conditional law to endogenous spread innovations, serially correlated residuals, unknown cointegration rank or general Johansen/Engle–Granger inference."
+    },
+    {
+      "topic": "GARCH existence and separate moment thresholds",
+      "recommendation": "Set A_t = alpha z_t^2 + beta. For E A < 1, construct h_t = omega sum_(k≥0) product_(j=1..k) A_(t−j). Nonnegativity and Tonelli give finite expectation and almost-sure finiteness; the shifted iid functional is strictly stationary. A finite-mean uniqueness claim needs a compatible causal solution and the contraction iteration. Derive E h = omega/(1−E A). When E A^2 < 1, prove finite second moment of h and its recurrence, then E epsilon^4 = E z^4 E h^2. Use the tower property to derive future conditional variance and accumulated martingale-return variance.",
+      "limits": "For a distinct strictly stationary but infinite-variance case, independently prove a sufficient negative expected-log-product criterion with integrability and positivity conditions, or an explicit finite-support product example. Do not present the second-moment condition as necessary for strict stationarity. QMLE theory is not supplied."
+    },
+    {
+      "topic": "Overlapping forecast evaluation and selection",
+      "recommendation": "Use a fixed Gaussian innovation law and a stated pair of forecasts so their overlapping error/loss-difference covariance can be calculated directly. For a Gaussian MA(1) loss difference, Var(mean) = [T gamma_0 + 2(T−1) gamma_1]/T^2; exact finite Gaussian inference is available if the covariance is known. If covariance is estimated, prove the required finite-dependence LLN and residual-centering replacement, and explicitly exclude zero limiting variance. Build the holdout-selection counterexample from the actual selection rule and fresh-versus-reused observations.",
+      "limits": "Original examples belong to the coordinator blueprint. No stationarity-only CLT, universal HAC theorem or independent-holdout claim after reuse of the same outcomes."
+    }
+  ],
+  "coverage_and_remaining_gaps": {
+    "ARMA_VAR": "Stable causal constructions and exact known-parameter forecast laws are viable; generic estimation/IRF/bootstrap claims are excluded.",
+    "unit_roots_cointegration": "Explicit Gaussian random-walk and common-trend constructions are viable; the notes do not discharge the general functional-limit or rank-test proof burden. MIT lecture 17 was only located as a metadata lead, not retrieved or used as inspected evidence.",
+    "volatility": "The original GARCH moment scope is inspected; strict versus second versus fourth moments must be proved separately under a stated innovation law.",
+    "forecast_evaluation": "A model-specific overlapping Gaussian law and a constructed selection example are viable. The inspected perspective paper is insufficient for a general stationarity-based CLT.",
+    "additional_retrieval": "No further source is needed for the bounded routes if their original proofs are completed. Any expansion to generic ARMA/VAR estimator asymptotics, unit-root/cointegration tests, GARCH QMLE or reestimated/nested forecast tests needs explicit proof and further source inspection."
+  },
+  "preserved_frozen_c06_sha256": {
+    "production/v12-c06-working.html": "e5e0bf5c694c76a1cc3217b624e67be4770d9160719c86eb9041472c74d9fe8d",
+    "production/check_v12_c06_working.py": "5f8791b9aa621fe0b65e066867ad908964794234dca2ae5af3d76767bbe0ff16",
+    "production/v12-c06-sources-working.json": "3c9bd5d631e2c150132d4f06a4bfc43611e305d2e027f3999972e113bc731fc9",
+    "production/v12-c06-author-review-working.json": "6a0dc2bf759be2ddde96fa3e2c17de0760f061d6033e39c5cd9c92dcb238dab5"
+  },
+  "limits": [
+    "Inspection is of the exact listed pages and equations, not certification of whole papers or all their references.",
+    "Original proposed proof routes are not attributed as results proved by the inspected sources.",
+    "No actual financial series, estimated model or forecasting performance was empirically validated.",
+    "Source preparation is machine-assisted evidence for later authoring and review, not independent human academic certification."
+  ]
+}

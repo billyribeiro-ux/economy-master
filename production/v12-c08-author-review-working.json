@@ -1,0 +1,398 @@
+{
+  "chapter": "v12-c08",
+  "title": "Regression discontinuity and synthetic controls",
+  "date": "2026-10-09",
+  "author": "ito_author",
+  "state": "Complete author package; author gates passed. Separate substantive review and dependency-ordered canonical acceptance remain required.",
+  "ownership": [
+    "production/v12-c08-working.html",
+    "production/check_v12_c08_working.py",
+    "production/v12-c08-sources-working.json",
+    "production/v12-c08-author-review-working.json"
+  ],
+  "canonical_scope": {
+    "outcome": "Evaluate local and comparative designs with transparent support and validity conditions.",
+    "coverage": [
+      "Continuity",
+      "manipulation",
+      "bandwidth",
+      "fuzzy RD",
+      "donor pools",
+      "synthetic control",
+      "placebo analysis"
+    ],
+    "worked_examples": 6,
+    "fully_solved_exercises": 12
+  },
+  "prerequisites": "Use the persisted c01–c07 contracts and established linear algebra/normal/finite-assignment tools. Drafting precedes dependency-ordered canonical acceptance; no planned successor theorem is assumed.",
+  "proof_audit": [
+    {
+      "topic": "Sharp continuity target and observational nonidentification",
+      "reasoning": "Consistency identifies the observed conditional versions separately on each open side. Positive support plus continuity makes the potential-outcome versions unique at the cutoff; taking limits yields their difference. Giving both potential outcomes the observed discontinuous curve reproduces the same observed law with zero effect.",
+      "boundary": "The estimand uses continuous limits, not an arbitrary conditional value on the zero-probability cutoff. Continuity does not identify every score or randomize a finite window.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Boundary weighted least squares and Gaussian law",
+      "reasoning": "The two weighted normal equations have determinant S0 S2−S1²>0 when distinct positively weighted scores exist. Their inverse gives each outcome weight. Summing weights and score-weighted weights proves constant/linear reproduction. Independent fixed-score Gaussian errors yield the exact linear normal law with variance equal to the sum of squared weights times variances.",
+      "boundary": "Positive kernels may generate negative equivalent outcome weights. The variance/normality conclusion is conditional on fixed scores and known independent Gaussian errors, not a generic RD theorem.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Same-data correction and bounded-curvature interval",
+      "reasoning": "Quadratic reproduction gives v=(3,−3,1). The finite difference qhat=50(Y1−2Y2+Y3) and adding the estimated curvature difference/30 changes w into v. The independent two-side covariance is 2σ² w·[(5/3)(1,−2,1)]=0; correction variance is 100σ²/3 and total is 38σ². A separate Taylor remainder bound uses absolute rather than signed squared-score weights. The triangle inequality on the central Gaussian event proves at least 95% coverage with deterministic bias bound plus z SE.",
+      "boundary": "Zero covariance is design-specific. The conservative B=13/25 need not be sharp. No generic unknown-variance or adaptive-bandwidth coverage follows.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Fixed-grid identities, optimal leading width and rate undersmoothing",
+      "reasoning": "Insert finite sums of j, j² and j³ into the intercept formula. The resulting affine weights give exact constant/linear reproduction, quadratic moment and squared-weight identities. Exact quadratic bias and variance yield the leading MSE; differentiating for nonzero curvature difference gives h_opt^5=72σ²/(delta_q² n). Since n h_opt diverges, integer rounding is asymptotically negligible. Substitution gives absolute standardized bias 1/2 and the stated normal coverage. Multiplying h by fixed r multiplies standardized bias by r^(5/2); h=n^(−a), 1/5<a<1, removes it while retaining diverging local sample size.",
+      "boundary": "n counts available observations on EACH side; total available rows are 2n. The optimum is for a leading expansion with known curvature and is not used at delta_q=0. A fixed fraction is not rate undersmoothing.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Bounded-curvature mean-square consistency",
+      "reasoning": "Taylor remainder and reproduction bound absolute bias by (Lplus+Lminus) h² sum|w|/2. Cauchy–Schwarz and the exact squared-weight sum give sum|w|<=sqrt(10); exact variance is <=20σ²/k. Squared bias plus variance tends to zero when h tends to zero and k diverges. The deterministic bound also permits the finite known-Gaussian interval argument.",
+      "boundary": "This proof does not establish the causal continuity restriction, a score-density law, unknown-variance coverage or validity after outcome-driven bandwidth search.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Fuzzy common-cutoff complier identity",
+      "reasoning": "Constant type probabilities and continuous within-type potential means give common one-sided composite limits. Exclusion and no interference permit conditioning on receipt type. Under monotonicity nonswitchers cancel; the receipt jump is pC and the outcome jump is pC times the complier mean effect. Positive pC permits division. Direct eligibility and fully specified defier variants alter different premises.",
+      "boundary": "The resulting effect is local to compliers in the common cutoff population, distinct from the assignment ITT and cutoff ATE. No weak-first-stage normal inference is supplied.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Simplex existence, fit uniqueness and weight selection",
+      "reasoning": "A continuous loss on the nonempty compact simplex attains its minimum. Positive-definite V makes the midpoint of two distinct optimal fitted predictors strictly improve the loss, so the fit is unique. Different optimal weights exist exactly when a nonzero feasible zero-sum direction has zero donor-predictor image. Augmented full column rank is a stronger sufficient condition. Sequential coordinate minimization on compact optimal sets defines the lexicographically smallest optimizer.",
+      "boundary": "An algorithmic tie rule does not establish causal identification. Zero donor weights are allowed. Numerical enumeration covers the stated small identity-V cases and certifies the global optimum by KKT.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Noiseless factor rank, future row span and approximate-fit bound",
+      "reasoning": "For untreated training outcome vectors, e=Fpre(lambda1−Lambda0 w). Under full column rank, L=(Fpre prime Fpre)^−1 Fpre prime is a left inverse, giving loading error Le. Exact fit yields zero future error; approximate fit gives |f prime L e|<=||f prime L|| ||e||. Alternatively a future factor row in the row span has f prime=a prime Fpre, so exact fit suffices at that date even if Fpre is rank deficient.",
+      "boundary": "No anticipation in training, unaffected donors, the maintained common-factor structure and the relevant rank/row-space condition are explicit. A new factor absent from every preperiod or added fit noise breaks this proof.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Support loss, hidden factors and contamination",
+      "reasoning": "Deleting donor C reduces the feasible training set to a segment, whose strictly convex scalar loss gives weights 3/10 and 7/10. The exact left-inverse discrepancies explain changed gaps. A treated-only post factor with zero prehistory preserves the complete observed panel while changing untreated post values and effects. Separately, a donor-B spillover changes observed donor values and weighted predictions.",
+      "boundary": "The hidden-factor example is observational equivalence; the spillover example is a changed-data intervention. Holdouts with the factor identically zero cannot identify its future loading.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Optimal-weight range versus sharp causal interval",
+      "reasoning": "Identical prefit columns make every two-donor convex weight optimal. Post forecasts are the affine map 8−6w and gaps −1+6w, so their closed ranges are attained. Under the additional fixed-mixture restriction, every w supplies an admissible untreated post outcome and treatment effect reproducing observations, proving sharpness. Without it a treated-only post factor produces counterfactuals outside the donor range.",
+      "boundary": "A range over optimal forecasts alone is not an identified causal set. Lexicographic selection produces one reproducible forecast but cannot narrow the causal set without added information.",
+      "status": "checked analytically"
+    },
+    {
+      "topic": "Actual-law inclusive placebo rank",
+      "reasoning": "Under the sharp null the panel is fixed for every label. Replay the full prescribed fitting/statistic algorithm for each label. Inclusive upper-tail probabilities are constant across ties and monotone in scores. Any nonempty rejection set is an entire upper tail with mass equal to the p-value at its lowest score, no greater than alpha. The declared infinity and zero categories fit the same ordering argument.",
+      "boundary": "The theorem needs the actual known assignment probabilities and a sharp null for all units/dates; it is not a weak average-effect test or automatic observational calibration. Filtering and donor selection must be specified and replayed.",
+      "status": "checked analytically"
+    }
+  ],
+  "exercise_solution_audit": [
+    {
+      "id": "v12-c08-e1",
+      "exact_prompt": "Prove sharp RD identification using continuous conditional versions and positive score support around zero. Explain why a value assigned arbitrarily on R=0 is not the estimand. Construct example 1's zero-effect observational alternative and identify the assumption it violates.",
+      "topic": "Continuous cutoff versions and counterexample",
+      "independent_solution": "Taking each observed one-sided limit gives m1(0)−m0(0). Positive support prevents two continuous versions from differing at zero. P(R=0)=0 leaves arbitrary noncontinuous event values irrelevant. Setting both potentials to the observed piecewise curve supplies zero effects with the identical (R,D,Y) law and fails continuity.",
+      "prompt_match_and_limits": "Both the uniqueness argument and full observational counterexample answer the exact prompt; no finite-window randomization claimed.",
+      "status": "Complete prompt and corresponding solution read; mathematical reasoning and stated numerical results checked."
+    },
+    {
+      "id": "v12-c08-e2",
+      "exact_prompt": "Derive example 1's finite-window mean contrast and evaluate h=1 and h=1/5. Prove that the separate U,V sorting construction has a continuous uniform score density, an observed jump 1 and zero causal effect. What does this say about a passing density diagnostic?",
+      "topic": "Window averages and sorting",
+      "independent_solution": "Uniform-window first/second moments give right 5+h+h²/3 and left 2−h/2+h²/3; differences 9/2 and 33/10. Fair independent sign times |V| yields density 1/2 on each side, while U and hence the observed outcome jump from 0 to 1. Both potentials equal U, so effects are identically zero.",
+      "prompt_match_and_limits": "A passing density diagnostic cannot prove the missing potential-outcome restriction; the complete score/type law is supplied.",
+      "status": "Complete prompt and corresponding solution read; mathematical reasoning and stated numerical results checked."
+    },
+    {
+      "id": "v12-c08-e3",
+      "exact_prompt": "Derive the weighted local-linear intercept and its two reproduction identities. For the six scores in example 2 reconstruct the linear and quadratic intercept weights, both mean jumps and both variance multipliers. Explain the negative outcome weights.",
+      "topic": "Equivalent weights and variance",
+      "independent_solution": "Solving the two normal equations gives wj=Kj(S2−S1 xj)/Delta, sum w=1 and sum wx=0. Exact rational WLS gives (4/3,1/3,−2/3); quadratic normal equations give (3,−3,1). The jump means are 28/15 and 2, and variance multipliers 14/3 and 38.",
+      "prompt_match_and_limits": "All six exact mean coordinates and reproduction identities are reconstructed; negative equivalent weights are boundary extrapolation, not negative kernels.",
+      "status": "Complete prompt and corresponding solution read; mathematical reasoning and stated numerical results checked."
+    },
+    {
+      "id": "v12-c08-e4",
+      "exact_prompt": "Derive the same-data quadratic bias correction, including the variance of the correction and its covariance with the original estimate. Compute the coverage from using the old variance afterward. Separately derive the bounded-curvature bias bound and the known-Gaussian 95% radius in example 2.",
+      "topic": "Estimated correction versus deterministic bias bound",
+      "independent_solution": "The correction vector is (5/3)(1,−2,1); its two-side variance is 100σ²/3 and covariance with the original jump is exactly zero. The total is 38σ². Old-variance coverage is 0.5078205300463543. Absolute squared-score moment 13/150 gives B=13/25 and radius 0.943400612067412.",
+      "prompt_match_and_limits": "The same-data covariance is explicitly computed. The Taylor-bound interval is a separate conservative result with known noise and fixed curvature bounds.",
+      "status": "Complete prompt and corresponding solution read; mathematical reasoning and stated numerical results checked."
+    },
+    {
+      "id": "v12-c08-e5",
+      "exact_prompt": "Prove all four fixed-grid weight identities in section 3 and derive exact quadratic bias and variance. Derive the leading MSE-optimal bandwidth, its limiting standardized bias and conventional coverage. Explain why a fixed half-width fraction is not rate undersmoothing, give a valid power rate, and prove bounded-curvature mean-square consistency.",
+      "topic": "Grid proof and rates",
+      "independent_solution": "Direct sums establish all four grid identities. Bias is −delta_q(k+1)(k+2)/(6n²), variance 4σ²(2k+1)/(k(k−1)). Leading h_opt^5=72σ²/(delta_q² n) gives standardized bias magnitude 1/2 and coverage 0.9209024658394034. Fixed fraction r leaves r^(5/2)/2. Power 1/4 gives diverging local k and vanishing scaled bias. Uniform sqrt(10) weight and 20σ²/k variance bounds prove MSE consistency.",
+      "prompt_match_and_limits": "The analytic proof uses arbitrary integer k; focused exact checks at k=2,3,7,20 test its arithmetic. n is per side; fixed fractions and power rates are distinguished.",
+      "status": "Complete prompt and corresponding solution read; mathematical reasoning and stated numerical results checked."
+    },
+    {
+      "id": "v12-c08-e6",
+      "exact_prompt": "Derive the fuzzy local Wald identity from the common cutoff type population and calculate all receipt/outcome limits, assignment effect, complier effect and cutoff ATE in example 3. Recalculate the direct-eligibility and defier variants, identifying which premise each violates.",
+      "topic": "Fuzzy effects and failures",
+      "independent_solution": "Original D limits 1/4,3/4 and Y limits 5/2,9/2 imply ITT 2, first stage 1/2, complier effect 4 and cutoff ATE 7/2. Direct eligibility Z/2 yields ratio 5. The defier law gives D limits 3/8,5/8, Y limits 7/2,4, first stage 1/4 and ratio 2, outside switching effects 4 and 8.",
+      "prompt_match_and_limits": "Type probabilities, untreated levels and effects fully determine both transfers. The answer separately identifies exclusion and monotonicity violations.",
+      "status": "Complete prompt and corresponding solution read; mathematical reasoning and stated numerical results checked."
+    },
+    {
+      "id": "v12-c08-e7",
+      "exact_prompt": "Prove that the simplex synthetic-control objective has an attained minimum and a unique fitted predictor, and state precisely when weights are unique. Recover example 4's full donor weights, held-out prediction, post counterfactuals and effects.",
+      "topic": "Synthetic-control optimum and full fit",
+      "independent_solution": "Compactness ensures existence; the strict fit-norm midpoint inequality ensures unique fitted predictors. Feasible zero-sum flat directions characterize weight nonuniqueness. Solving the augmented donor system gives (1/4,1/2,1/4), held-out 11/4, post 7/2 and 17/4, and effects 2 and 3.",
+      "prompt_match_and_limits": "The exact augmented matrix is nonsingular. Causal interpretation additionally uses the factor and no-contamination premises, not optimizer uniqueness alone.",
+      "status": "Complete prompt and corresponding solution read; mathematical reasoning and stated numerical results checked."
+    },
+    {
+      "id": "v12-c08-e8",
+      "exact_prompt": "Exclude C in example 4 and solve the constrained objective. Compute training loss, holdout gap, post predictions and reported gaps. Derive the noiseless factor left-inverse bound and use the supplied factor matrix to recover the two counterfactual discrepancies.",
+      "topic": "Donor removal and error amplification",
+      "independent_solution": "Loss(a)=(−3/4+2a)²+a² has derivative −3+10a; optimum a=3/10 lies in [0,1]. Fit (7/5,17/10), residual (−3/20,3/10), loss 9/80, holdout gap 3/4; post forecasts 23/10,13/5 and gaps 16/5,93/20. Left inverse ((1,0),(−1,1)) produces future rows (−2,3),(−3,4) and errors 6/5,33/20.",
+      "prompt_match_and_limits": "Independent active-face/KKT fitting and an augmented-system calculation agree with the scalar derivative proof. Both requested future discrepancies and the bound hypotheses are supplied.",
+      "status": "Complete prompt and corresponding solution read; mathematical reasoning and stated numerical results checked."
+    },
+    {
+      "id": "v12-c08-e9",
+      "exact_prompt": "Construct the post-only-factor alternative in example 5 with exactly the same observed panel and explain the failed rank condition. Separately calculate the donor-B spillover effect on reported gaps. Why does a preperiod holdout not rule out the first failure?",
+      "topic": "Identical observations versus changed donors",
+      "independent_solution": "A post-only factor (1,2), loading only on the treated unit, changes untreated post values to 9/2,25/4 while observed post values remain 11/2,29/4; effects become 1,1. Its all-zero pre-factor column destroys rank. A separate +2 spillover to B raises the forecast by 1 and changes gaps to 1,2.",
+      "prompt_match_and_limits": "Every preperiod holdout remains uninformative about the hidden factor. The answer does not call the changed donor-spillover data observationally equivalent.",
+      "status": "Complete prompt and corresponding solution read; mathematical reasoning and stated numerical results checked."
+    },
+    {
+      "id": "v12-c08-e10",
+      "exact_prompt": "For the identical-prefit two-donor case, derive all optimal weights, the forecast and gap ranges, and the lexicographic selection. Prove sharpness under the maintained fixed-mixture restriction, and explain why that restriction is necessary to call the range an identification interval.",
+      "topic": "Nonunique mixture and sharpness",
+      "independent_solution": "Every (w,1−w), 0<=w<=1, fits. Forecast 8−6w spans [2,8] and gap −1+6w spans [−1,5]. Lexicographic minimization picks (0,1), forecast 8, gap −1. Each w is a sharpness witness only under the maintained fixed-mixture restriction.",
+      "prompt_match_and_limits": "All endpoints and an interior witness are numerically reconstructed; a treated-only factor explains why the range is otherwise not a causal identified set.",
+      "status": "Complete prompt and corresponding solution read; mathematical reasoning and stated numerical results checked."
+    },
+    {
+      "id": "v12-c08-e11",
+      "exact_prompt": "Reconstruct all four leave-one-unit-out refits and RMSPE scores in example 6. Prove inclusive weighted-rank validity with ties and the declared zero-preRMSPE convention. Calculate rejection probabilities at α=1/4 under uniform assignment, false uniform ranking under the alternative law, and correct weighted ranking; explain the 5% boundary.",
+      "topic": "All placebo refits and actual tails",
+      "independent_solution": "All four fits project to (1,1), have pre-MSE 1 and give gaps 7/2,−3,−2,3/2. Uniform inclusive tails are 1/4,1/2,3/4,1; actual-law tails are 7/10,4/5,9/10,1. Rejection at 1/4 has probability 1/4 under uniform design, 7/10 for false uniform ranking under the alternative design, and zero with correct alternative weights. No 5% rejection is possible in the uniform four-label experiment.",
+      "prompt_match_and_limits": "The upper-tail proof includes ties, infinity and zero/zero conventions. The checker uses squared ratios for exact ordering and never emits a nonfinite JSON value.",
+      "status": "Complete prompt and corresponding solution read; mathematical reasoning and stated numerical results checked."
+    },
+    {
+      "id": "v12-c08-e12",
+      "exact_prompt": "A report divides an MSE-optimal RD bandwidth by two, treats a nonsignificant density test as proof of random assignment, and applies the original standard error after bias correction. Its synthetic-control section chooses donors after viewing post outcomes, equates perfect prefit with causal identification, and calls a uniform placebo rank an exact p-value for an observational intervention. Give six distinct objections, two feasible repairs with explicit assumptions and limitations, and a defensible conclusion. The solution rubric allocates 12 points.",
+      "topic": "Research audit and repair rubric",
+      "independent_solution": "Six distinct objections address fixed-fraction smoothing, density nonrejection, old post-correction variance, post-outcome donor choice, identification from prefit and false observational randomization language. Two repairs require explicit RD and SC inference/identification assumptions and acknowledge remaining limits. A defensible conclusion separates description, causal identification and calibrated uncertainty.",
+      "prompt_match_and_limits": "Rubric sums to 12: six objections at 1 each, two repairs at 2 each and conclusion at 2. It does not require a chosen sign, brand or unsupported empirical assertion.",
+      "status": "Complete prompt and corresponding solution read; mathematical reasoning and stated numerical results checked."
+    }
+  ],
+  "worked_case_audit": [
+    {
+      "case": 1,
+      "law": "Continuous-score population; separate sorting law",
+      "anchors": [
+        "cutoff 3",
+        "full-window 9/2",
+        "h=1/5 window 33/10",
+        "sorting density 1/2, observed jump 1, effect 0"
+      ],
+      "method": "Polynomial antiderivatives plus an independent sign/magnitude distribution pushforward."
+    },
+    {
+      "case": 2,
+      "law": "Fixed six scores, independent Gaussian errors, known sigma=1/10",
+      "anchors": [
+        "w=(4/3,1/3,−2/3)",
+        "v=(3,−3,1)",
+        "mean 28/15 versus 2",
+        "variance 14σ²/3 versus 38σ²",
+        "correction variance 100σ²/3 and covariance 0",
+        "old-variance coverage 0.507820530046",
+        "bounded-curvature radius 0.943400612067"
+      ],
+      "method": "Independent rational normal-equation inversion and finite-difference weights; NormalDist critical quantile cross-checked with erf."
+    },
+    {
+      "case": 3,
+      "law": "Constant-near-cutoff fully specified type distribution",
+      "anchors": [
+        "first stage 1/2",
+        "local complier effect 4",
+        "ATE 7/2",
+        "direct-effect ratio 5",
+        "defier ratio 2"
+      ],
+      "method": "Enumerate receipt and potential-outcome totals separately on each eligibility side."
+    },
+    {
+      "case": 4,
+      "law": "Noiseless common factors, pre-outcome training and held-out untreated date",
+      "anchors": [
+        "weights (1/4,1/2,1/4)",
+        "full post (7/2,17/4)",
+        "drop-C loss 9/80",
+        "drop-C gaps (16/5,93/20)",
+        "left-inverse errors (6/5,33/20)"
+      ],
+      "method": "Enumerate constrained active faces with KKT certificate; independently invert the augmented exact-fit system and factor matrix."
+    },
+    {
+      "case": 5,
+      "law": "Separate observational-equivalent factor law, spillover intervention and identical-prefit panel",
+      "anchors": [
+        "same-data effects (1,1)",
+        "spillover gaps (1,2)",
+        "forecast [2,8]",
+        "gap [−1,5]",
+        "lexicographic weights (0,1)"
+      ],
+      "method": "Explicit counterfactual construction, weighted spillover addition and complete affine mixture parametrization."
+    },
+    {
+      "case": 6,
+      "law": "Fixed four-unit panel under known sharp-null assignment",
+      "anchors": [
+        "all four pre-MSEs 1",
+        "gaps (7/2,−3,−2,3/2)",
+        "uniform size 1/4",
+        "false uniform size 7/10",
+        "proper alternative size 0"
+      ],
+      "method": "Refit all four constrained donor problems; sum actual assignment mass of each inclusive upper tail; separately test tied infinity and all-zero scores."
+    }
+  ],
+  "teaching_review": {
+    "progression": "Cutoff target and observational counterexamples precede estimation. Exact known-Gaussian calculations lead to bandwidth rates, then fuzzy identification. Synthetic fitting precedes rank conditions, support failures and placebo probability laws. Every exercise uses a taught calculation or proved argument.",
+    "law_separation": "Continuous-score populations, fixed-score Gaussian sequences, cutoff-type mixtures, noiseless factor tables and finite randomized labels are explicitly separate laws.",
+    "teach_back": "Answered: smooth density and exact prefit are diagnostics, not proof of unobserved counterfactual restrictions. Factor/support conditions support a causal forecast; a sharp null and actual assignment law support finite rank calibration.",
+    "retention": "Answered and recomputed: k=2 weights (2,−1), jump variance 10σ²; n^(−1/4) has proper rate under the declared Gaussian sequence; drop-C discrepancy at s=3 is 6/5; candidate A proper alternative-law tail is 7/10.",
+    "research_rubric": "Twelve points, exact six objections/two limited repairs/defensible conclusion. Distinguishes assumption critique from outcome preferences.",
+    "reader_spacing": "Ordinary prose and numerical values separated; mathematical subscripts, vectors and equations retain compact notation. Flat links and standard paired exercise/solution markup supplied."
+  },
+  "source_review": {
+    "primary_scopes": 3,
+    "preparation_sha256": "65678cdd37f4df6c05b4e533ccf48c8dafbf9cd54fbf8a116c5e937fee3d4e00",
+    "review": "Complete frozen root preparation read, including actual versions, listed text sections, nine equation-page inspections, cautions and exclusions. Source proposal retains that scope; no new full-body reading claimed.",
+    "source_and_proof_distinction": "Original cases, finite laws and proofs are derived independently. Sources give inspected methodological context, not empirical validation or a substitute for the chapter proof."
+  },
+  "refinements": [
+    {
+      "origin": "Independent first-gate derivation, confirmed by root",
+      "change": "Explicitly computed same-data correction covariance as exactly zero in the equal-weight design and correction variance 100σ²/3; retained general covariance accounting.",
+      "status": "resolved before full author package"
+    },
+    {
+      "origin": "Independent first-gate specification",
+      "change": "Fully specified defier baseline 1 and effect 8, with all four type probabilities and receipt states, rather than relying on switching effects alone.",
+      "status": "resolved"
+    },
+    {
+      "origin": "Final author proof audit",
+      "change": "Stated that the finite factor proof takes training predictors to be untreated outcome vectors and requires no anticipation plus unaffected prediction-date donors.",
+      "status": "resolved"
+    },
+    {
+      "origin": "Initial checker execution",
+      "change": "Aligned a literal zero-effect anchor with the printed equation Y(1)−Y(0)=0 and made the negative-weight anchor specific. No manuscript arithmetic changed.",
+      "status": "resolved"
+    }
+  ],
+  "open_findings": [],
+  "checker_contract": {
+    "API": "Quiet read-only check() returns strict-JSON-compatible summary; default CLI calls check() silently. Helper domains are intentionally bounded original cases, not an arbitrary estimator or user-data engine.",
+    "independent_methods": "Exact Fraction antiderivatives, normal equations, active-face simplex optimization with KKT, separate augmented affine system, factor left inverse and finite actual-law tail sums. No root blueprint/checker or external library imported.",
+    "bounded_domain": "Exact int/Fraction inputs and inverted matrix entries have magnitude <=10^6; degree 1 or 2, with 2..32 strictly one-sided score rows and supported weighted polynomial rank; grid 2<=k<=32 and k<=n<=100000; 2..4 fully specified positive-mass compliance types; 2..3 donor/predictor coordinates; 2..8 supported assignment labels. Nonfinite, boolean, negative kernel/error and missing-rank/probability cases reject explicitly. These helpers serve the bounded original cases, not an unrestricted estimation API.",
+    "domain_rejection_count": 18,
+    "strict_JSON_rejection_count": 6,
+    "runtime_inputs": "Only the four adjacent owned payloads; no repository path-existence, source PDF, external network or blueprint dependencies.",
+    "binding": "Author record binds the exact three nonself files; final freeze separately gives all four hashes. Checks do not mutate bytes or produce output files."
+  },
+  "reader_structure": {
+    "worked": 6,
+    "prompts": 12,
+    "paired_solutions": 12,
+    "teach_back_answered": true,
+    "retention_answered": true,
+    "actual_shared_Document": {
+      "examples": 6,
+      "exercises": 12,
+      "solutions": 12,
+      "method": "Read-only extraction of the actual shared Document class, without importing or invoking the shared verifier."
+    },
+    "visual_UI": "not performed or claimed"
+  },
+  "validation": {
+    "status": "passed",
+    "summary": {
+      "chapter": "v12-c08",
+      "status": "author checks passed; separate review required",
+      "comparisons": 254,
+      "domain_rejections": 18,
+      "strict_JSON_rejections": 6,
+      "worked_examples": 6,
+      "exact_prompts_and_solutions": 12,
+      "visible_anchors": 78,
+      "primary_scopes": 3,
+      "finite_evidence": {
+        "local_score_count_per_side": 3,
+        "grid_checks_k": [
+          2,
+          3,
+          7,
+          20
+        ],
+        "original_jump_variance_multiplier": "14/3",
+        "corrected_multiplier": "38",
+        "correction_covariance_multiplier": "0",
+        "full_donor_weights": [
+          "1/4",
+          "1/2",
+          "1/4"
+        ],
+        "placebo_refits": 4,
+        "actual_weighted_p": [
+          "7/10",
+          "4/5",
+          "9/10",
+          "1"
+        ]
+      },
+      "limits": "Finite original cases and separate analytic audit; no empirical continuity proof, generic RBC or stochastic synthetic-control theorem, observational assignment calibration, rendered UI or human certification."
+    },
+    "normal_and_optimized_workspace_API_CLI": true,
+    "normal_and_optimized_exact_four_API_CLI": true,
+    "cwd": "/",
+    "quiet_import_check_and_default_CLI": true,
+    "strict_JSON_results": true,
+    "unchanged_payload_bytes_and_exact_isolated_membership": true,
+    "three_nonself_bindings": true,
+    "reader_scope": "Actual shared Document recognizes six worked examples and twelve paired prompts/solutions. This is a structural check, not a rendered UI pass.",
+    "analytic_scope": "Eleven full proof audits, six original case audits and all twelve exact-prompt solution audits accompany the finite arithmetic checks."
+  },
+  "payloads": {
+    "v12-c08-working.html": {
+      "bytes": 44203,
+      "sha256": "dd67b340eb57627d78a46c984c391bca4536ea8ab0a7cc4a1daa6f04c4649099"
+    },
+    "check_v12_c08_working.py": {
+      "bytes": 31129,
+      "sha256": "4f4fa0d4d84dd4114352dd9b9701dbd8fb7d3dd00db812eec7f6f49c5f25b0a2"
+    },
+    "v12-c08-sources-working.json": {
+      "bytes": 12328,
+      "sha256": "bc4de10959f070f0f27b18794af5c4f924031ea53a5eb2a605dd961a98ab6588"
+    }
+  },
+  "limitations": [
+    "Author checks and finite examples do not verify empirical continuity, exclusion, factor support, interference absence or an observational assignment law.",
+    "Known-Gaussian fixed-score inference is restricted; no general RBC, unknown-variance adaptive bandwidth, weak-first-stage or stochastic synthetic-control theorem is claimed.",
+    "Runtime helpers cover the declared small finite laws; no generic statistical software, donor-search optimization or large-data algorithm is supplied.",
+    "Working files remain subject to separate review and dependency-ordered canonical promotion by root. No shared catalogue, accepted status or publishing action is part of this author scope.",
+    "No rendered UI or independent human certification claim."
+  ]
+}

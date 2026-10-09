@@ -1,0 +1,83 @@
+{
+  "chapter": "v12-c10",
+  "date": "2026-10-09",
+  "specialist": "c05_review",
+  "task": "Scoped primary-source preparation only; full author assignment will follow an independently checked original blueprint.",
+  "owned_paths": [
+    "production/v12-c10-source-preparation.json"
+  ],
+  "owned_scratch_subtree": "../tmp/pdfs/v12-c10/ (all artifacts must be inventoried by exact relative path, bytes and SHA256 in the preparation record)",
+  "canonical_specification": {
+    "id": "v12-c10",
+    "number": 10,
+    "title": "Structural estimation and economic mechanisms",
+    "outcome": "Connect economic models to data and distinguish calibration from identified estimation.",
+    "coverage": [
+      "Structural parameters",
+      "moments",
+      "simulation",
+      "equilibrium",
+      "indirect inference",
+      "sensitivity"
+    ],
+    "prerequisites": [
+      "v12-c09"
+    ],
+    "level": "Graduate",
+    "status": "planned",
+    "manuscript": "chapters/v12-c10.html",
+    "sources": [
+      "harvard-economics-requirements",
+      "mit-economics-curriculum",
+      "wharton-finance-courses"
+    ],
+    "required_worked_examples": 3,
+    "required_exercises": 10,
+    "review": {
+      "arithmetic": false,
+      "reasoning": false,
+      "solutions": false,
+      "sources": false,
+      "instruction": false,
+      "structure": false
+    }
+  },
+  "starting_primary_bodies": [
+    {
+      "proposed_id": "v12-c10-train-simulation2009",
+      "title": "Kenneth Train, Discrete Choice Methods with Simulation, second edition, chapter 10 Simulation-Assisted Estimation (2009), printed237–258",
+      "url": "https://eml.berkeley.edu/books/choice2nd/Ch10_p237-258.pdf",
+      "official_listing": "https://eml.berkeley.edu/books/choice2.html",
+      "scope": "Simulation-assisted likelihood/moments/scores; Jensen bias, independent versus shared simulations and the precise assumptions behind any asymptotics."
+    },
+    {
+      "proposed_id": "v12-c10-rust1987",
+      "title": "John Rust, Optimal Replacement of GMC Bus Engines: An Empirical Model of Harold Zurcher, Econometrica55(5),999–1033 (1987)",
+      "url": "https://editorialexpress.com/jrust/crest_lectures/zurcher.pdf",
+      "doi": "10.2307/1911259",
+      "official_listing": "https://editorialexpress.com/jrust/nfxp_description.html",
+      "scope": "Inspect the model, Bellman/conditional-choice construction and nested fixed-point estimation sections; do not copy the bus data, estimates or original exercises."
+    },
+    {
+      "proposed_id": "v12-c10-gourieroux-monfort-renault1993",
+      "title": "Christian Gourieroux, Alain Monfort and Eric Renault, Indirect Inference, Journal of Applied Econometrics8(Suppl),S85–S118 (1993)",
+      "url": "https://www.stat.cmu.edu/~cshalizi/462/readings/Indirect%20Inference%20%28Gourieroux%2C%20Monfort%20and%20Renault%29.pdf",
+      "doi": "10.1002/jae.3950080507",
+      "official_metadata": "https://researchportal.ip-paris.fr/fr/publications/indirect-inference/",
+      "scope": "Binding function, identification/rank, simulated auxiliary estimates, weighting and simulation-noise scope. Inspect only the theory sections needed to support a self-contained original finite-dimensional treatment."
+    }
+  ],
+  "root_existing_inspection": "Root read the Train official index and partial body web text on physical1–9, Rust official NFXP description and introductory text only, and the indirect-inference search excerpt. No root PDF images or complete substantive body inspection yet. Reuse URLs; independently inspect needed text and rendered equation pages and accurately name actual inspector.",
+  "focused_cautions": [
+    "Train: score zero requires interior first-order conditions and is not globally equivalent to MLE; moment orthogonality is weaker than independence; general simulation consistency/CLTs need uniformity, rate and identification conditions. A Jensen log bias is not automatically the same as estimator bias.",
+    "Train reciprocal-probability product unbiasedness needs independent simulation streams or a justified covariance argument; inspect actual equation context before recording a finding.",
+    "Rust1987 empirical model must not be treated as a universal identification/consistency theorem. Distinguish normalized utility/shock scale and maintained transition/discount assumptions. Verify physical versus printed pagination (PDF appears to include a cover).",
+    "Indirect inference: local full-rank derivative is not global injectivity; finite simulation draws and sample size limits are separate; avoid adopting general dependent-data CLTs without assumptions."
+  ],
+  "deliverable": [
+    "Accurate bibliographic identity/version, primary-body URLs, checked2026-10-09, retrieval hashes/page counts and exact inspected physical/printed text scopes.",
+    "Actually render and view selected key equation pages with existing PDF tools; record which images were viewed and preserve them. No whole-book or whole-paper claim when only scoped pages are read.",
+    "Claim-to-page mapping, source-specific cautions, useful proof assumptions and proposed catalogue entries using verification key; separate new inspection from reused accepted material.",
+    "No chapter prose, checker, canonical metadata, shared scripts, checkpoint or hosting changes; no additional agents or installations. Stop at frozen source-preparation record and report hashes."
+  ]
+}

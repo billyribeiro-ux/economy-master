@@ -1,0 +1,43 @@
+{
+  "chapter": "v12-c09",
+  "date": "2026-10-09",
+  "state": "Root read all182 manuscript lines and every exact exercise/solution; two narrow clarity repairs requested before final four-file validation",
+  "frozen_inputs": [
+    {
+      "path": "production/v12-c09-working.html",
+      "bytes": 56522,
+      "sha256": "456797963670561ec5988d65ef5191c6e6abb107af5863f3adc0ab238ba95ac9"
+    },
+    {
+      "path": "production/check_v12_c09_working.py",
+      "bytes": 32886,
+      "sha256": "fb48712421d2c47560eb4dc46adb9ee6a417b8528629b1cdd365a84b7a8f988a"
+    },
+    {
+      "path": "production/v12-c09-sources-working.json",
+      "bytes": 26484,
+      "sha256": "dd4b23c24d2af1dff5fb52c8a560bc05afc18acd2c7c8f8194a8962e6adc510a"
+    },
+    {
+      "path": "production/v12-c09-author-review-working.json",
+      "bytes": 36856,
+      "sha256": "be7ea6d9e9e6214b896fecfa384644b0749ef0dc66c5f9f4afdcf1a311b5c472"
+    }
+  ],
+  "findings": [
+    {
+      "id": "c09-root-01",
+      "location": "section5 opening model paragraph",
+      "issue": "The conditional Gaussian spread law and covariance calculations require iid Gaussian eta_t and independence of stationary v0 from future eta_t. Current text names stationary Gaussian initialization and independence from x but leaves those innovation-law details implicit.",
+      "required_repair": "Explicitly state eta_t iid N(0,sigma_eta²), sigma_eta²>0, and v0~N(0,gamma_v) independent of all future spread innovations; retain independence from the full random-walk history. Update corresponding author proof scope without changing original calculations."
+    },
+    {
+      "id": "c09-root-02",
+      "location": "final source-scope paragraph",
+      "issue": "prepared by the source specialist and read by the coordinator could blur actual primary-body reading versus reading the provenance record.",
+      "required_repair": "Specify that the specialist inspected selected primary body text/equation images and the coordinator read the preparation/provenance record and checked artifacts. No new coordinator body/image inspection is implied."
+    }
+  ],
+  "no_other_manuscript_finding": "Filters, stable spectral/smooth replacement proof, Brownian-grid limits, stationary-spread rate, product-stationarity/moment arguments, overlap/selection laws and all twelve solutions fully read; no other material finding at this stage. Checker and complete author/source records remain to be read by root.",
+  "boundaries": "Author repairs only the four existing working paths, updates nonself bindings and final author review, reruns quiet normal/-O workspace/exact-four gates, returns exact delta/freeze. Canonical promotion and separate peer remain root controlled."
+}

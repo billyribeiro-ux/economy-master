@@ -1,0 +1,155 @@
+{
+  "chapter": "v12-c07",
+  "date": "2026-10-09",
+  "state": "Canonical scoped primary-source record integrated by coordinator; source inspection remains exactly as attributed below. Chapter acceptance is separate.",
+  "preparation_provenance": {
+    "path": "production/v12-c07-source-preparation.json",
+    "bytes": 19999,
+    "sha256": "46fc29aa764c37d299eafe2ad71bacb5a977f2b02b81919f0d563152b7ad1766",
+    "prepared_by": "bs_author",
+    "chapter_author_scope": "Read entire preparation record and every mathematical caution. Actual primary retrieval and fourteen rendered-page inspections are attributed to that preparation.",
+    "runtime_dependency": false
+  },
+  "sources": [
+    {
+      "authors": [
+        "Brantly Callaway",
+        "Pedro H. C. Sant’Anna"
+      ],
+      "title": "Difference-in-Differences with Multiple Time Periods",
+      "version": "arXiv:1803.09015v4, 1 December 2020",
+      "type": "Author-deposited manuscript; not an inspection of the subsequently published journal body",
+      "url": "https://arxiv.org/pdf/1803.09015v4",
+      "listing_url": "https://arxiv.org/abs/1803.09015",
+      "pdf_pages": 45,
+      "bytes": 828138,
+      "sha256": "88cdd094589af58608a0d6675a00b57f36c8583d5f1e40e892e06a700307867f",
+      "text_scope": "Physical/printed pages 1–11 and 14–16; selected Remarks 4 and 6 on page 12. Assumptions 1–6, equations (2.2)–(2.9), Theorem 1, aggregation table and equations (3.4)–(3.6).",
+      "visually_inspected_physical_pages": [
+        8,
+        10,
+        11,
+        16
+      ],
+      "page_number_rule": "Physical and printed page numbers coincide.",
+      "verified_scope": "Absorbing adoption, whole-unit iid sampling, group-time ATT, conditional counterfactual trends, overlap and known anticipation horizon. Identification uses baseline g−delta−1 and never-treated or eligible not-yet-treated comparisons. OR/IPW/DR population formulas are distinct from estimator inference. Event-time aggregation can change cohort composition; fixed-cohort aggregation removes that source of change.",
+      "equation_cautions": "Eligibility extends through t+delta. Without a never-treated group, effects after the last eligible comparison disappears are unidentified by this theorem. Observed nonadoption through T differs from known nonadoption beyond T. The cumulative calendar aggregation is not generally a convex average. Random sampling is not randomized adoption.",
+      "not_adopted": "General nuisance-estimation, multiplier-bootstrap, simultaneous-band or repeated-cross-section proofs; appendices and empirical conclusions were not audited.",
+      "preparation_id": "callaway-santanna-did-2020-v4",
+      "id": "v12-c07-callaway-santanna2020",
+      "chapter_use": "Group-time ATT, conditional trends, overlap, anticipation-safe baselines and controls, and supported cohort aggregation. The chapter proves its finite-cell identification/remainder/influence results directly.",
+      "checked": "2026-10-09",
+      "verification": "Exact scoped primary inspection reused from frozen bs_author preparation, which root fully read. No new full-document or appendix inspection claimed by chapter author."
+    },
+    {
+      "authors": [
+        "Liyang Sun",
+        "Sarah Abraham"
+      ],
+      "title": "Estimating Dynamic Treatment Effects in Event Studies with Heterogeneous Treatment Effects",
+      "version": "arXiv:1804.05785v2, 22 September 2020; PDF creation metadata is 23 September",
+      "type": "Author-deposited manuscript; not an inspection of the subsequently published journal body",
+      "url": "https://arxiv.org/pdf/1804.05785v2",
+      "listing_url": "https://arxiv.org/abs/1804.05785",
+      "pdf_pages": 51,
+      "bytes": 681004,
+      "sha256": "4562d82bed76a712e3a1fe1831beb8a38962062524fa36483875ba5fe059bc9c",
+      "text_scope": "Physical/printed pages 6–8, 12–15 and 21–23: assumptions, coefficient decomposition, auxiliary weight regression, interaction-weighted construction and DID representation.",
+      "visually_inspected_physical_pages": [
+        8,
+        15,
+        22
+      ],
+      "page_number_rule": "Physical and printed page numbers coincide.",
+      "verified_scope": "Cohort-relative-time effects can contaminate coefficients for other relative times, including leads. Interaction-weighted estimates combine supported cohort-specific effects. A last-treated reference cohort is used only before its adoption; always-treated units lack a preperiod. Normalizations and rank matter when all cohorts eventually adopt.",
+      "equation_cautions": "Page 15 has an impact-period inconsistency: Proposition 3 states l≥0, whereas equation (15) uses l>0 and adjacent prose removes l≤0. Page 8 Assumption 2 excludes only l<0; retain l=0 treatment effects. Its discussion of older Callaway–Sant’Anna drafts does not describe the inspected December v4 anticipation allowance.",
+      "not_adopted": "Online Appendix B asymptotic proof, general covariate adjustment or simultaneous inference. Page 23 distinguishes its pointwise inference from simultaneous bands.",
+      "preparation_id": "sun-abraham-event-study-2020-v2",
+      "id": "v12-c07-sun-abraham2020",
+      "chapter_use": "Contamination of relative-time coefficients under heterogeneity and cohort-specific aggregation. The full original rational regression is independently derived; impact time zero is included explicitly.",
+      "checked": "2026-10-09",
+      "verification": "Exact scoped primary inspection reused from frozen bs_author preparation, which root fully read. No new full-document or appendix inspection claimed by chapter author."
+    },
+    {
+      "authors": [
+        "Andrew Goodman-Bacon"
+      ],
+      "title": "Difference-in-Differences with Variation in Treatment Timing",
+      "version": "Author manuscript dated August 2020 on its cover; PDF metadata 15 August 2020",
+      "type": "Author-linked public manuscript; distinct from the NBER 2018 and published 2021 versions",
+      "listing_url": "https://www.goodman-bacon.com/publications",
+      "url": "https://drive.google.com/file/d/1gUg7INdzM9A1d1OqCFZjLg9a-BAxMBzf/view?usp=drive_link",
+      "retrieved_url": "https://drive.google.com/uc?export=download&id=1gUg7INdzM9A1d1OqCFZjLg9a-BAxMBzf",
+      "final_retrieval_url": "https://drive.usercontent.google.com/download?id=1gUg7INdzM9A1d1OqCFZjLg9a-BAxMBzf&export=download",
+      "pdf_pages": 49,
+      "bytes": 517963,
+      "sha256": "613a4c794562908a88f0ac59b584615f0b2cac74d0c9e1e18e727510441e7304",
+      "text_scope": "Physical pages 1–2, 6–9 and 13–14: cover, setup, FWL, pairwise contrasts/weights, Theorem 1 and causal decomposition (14a)–(15b).",
+      "visually_inspected_physical_pages": [
+        9,
+        13
+      ],
+      "page_number_rule": "Cover is unnumbered; body printed page equals physical page minus one.",
+      "verified_scope": "Balanced-panel binary absorbing-treatment TWFE decomposes into two-by-two contrasts with nonnegative comparison weights determined by sample shares and treatment variation. An already-treated comparison subtracts its changing treatment effect, so positive comparison weights do not imply positive weights on every cohort-date effect.",
+      "equation_cautions": "Equations (10a)–(10g) are the inspected basic regression decomposition, without an added-covariate extension. Its algebra is not a causal identification assumption. Empty groups, constant treatment and zero residual treatment variance need separate treatment. Extracted mathematical glyphs were unreliable; rendered equations were checked.",
+      "not_adopted": "Appendix A general proof, empirical estimates or unrestricted extensions. NBER PDF retrieval returned 403; its landing metadata was not substituted for body inspection.",
+      "preparation_id": "goodman-bacon-timing-2020-author",
+      "id": "v12-c07-goodman-bacon2020",
+      "chapter_use": "Comparison versus treatment-effect weighting in a basic balanced absorbing-treatment TWFE regression. The chapter proves only its complete original three-cohort/four-date decomposition, not the general appendix theorem.",
+      "checked": "2026-10-09",
+      "verification": "Exact scoped primary inspection reused from frozen bs_author preparation, which root fully read. No new full-document or appendix inspection claimed by chapter author."
+    },
+    {
+      "authors": [
+        "Ashesh Rambachan",
+        "Jonathan Roth"
+      ],
+      "title": "A More Credible Approach to Parallel Trends",
+      "version": "Published Review of Economic Studies 90(5), 2023, pages 2555–2591; advance access 15 February 2023; DOI 10.1093/restud/rdad018",
+      "type": "Published journal PDF hosted on an author's website, although the listing link is labeled Draft",
+      "url": "https://www.jonathandroth.com/assets/files/HonestParallelTrends_Main.pdf",
+      "listing_url": "https://www.jonathandroth.com/papers/",
+      "pdf_pages": 37,
+      "bytes": 916176,
+      "sha256": "2ef3448e51bb946478ad323b8e00fc5de80fcc1b274ec26aa01dfaa9e458b7dc",
+      "text_scope": "Physical pages 1–12 / printed 2555–2566: setup, identified set, restriction families, inferential goal and start of moment-inequality representation.",
+      "visually_inspected_physical_pages": [
+        1,
+        8,
+        9,
+        10,
+        11
+      ],
+      "page_number_rule": "Printed page equals physical page plus 2554; physical page 1 confirms published identity.",
+      "verified_scope": "The reduced form separates treatment effects from counterfactual trend departures, with zero pre-treatment effects. Restrictions on departures identify a set. Relative-magnitude restrictions bound consecutive first differences; smoothness bounds second differences. Zero smoothness permits a linear differential trend. Identified sets and confidence sets address different uncertainty.",
+      "equation_cautions": "Normalize delta_0=0 and justify the reduced form first. Do not treat contaminated raw TWFE leads as clean pretrend departures. Generic closed-convex endpoint language in Lemma 2.1 needs attainment qualifications; the independent caution below supplies them. No pretest proves the missing counterfactual.",
+      "not_adopted": "General uniform-inference, ARP conditional-testing, power, FLCI or software guarantees. Their later proofs and supplementary material were not inspected.",
+      "preparation_id": "rambachan-roth-parallel-trends-2023",
+      "id": "v12-c07-rambachan-roth2023",
+      "chapter_use": "Reduced-form/departure decomposition, relative-increment versus curvature sensitivity, and the difference between identified and confidence sets. Compact fibers and original square sharpness are proved directly, as is a separate finite known-Gaussian projection.",
+      "checked": "2026-10-09",
+      "verification": "Exact scoped primary inspection reused from frozen bs_author preparation, which root fully read. No new full-document or appendix inspection claimed by chapter author."
+    }
+  ],
+  "cautions_applied": [
+    "Adoption sampling is not random assignment. Complete iid unit vectors do not justify treating a fixed number of policy clusters as large.",
+    "Use baseline g−a−1 and eligible control adoption strictly after t+a. Observed nonadoption through T does not certify no anticipation at t when t+a>T.",
+    "The DR population functional uses actual treated share pi for both terms. Normalized true odds are proved separately; no remainder claimed under arbitrary renormalization of misspecified odds.",
+    "Retain impact relative time zero. The inspected Sun–Abraham version has an inconsistent impact-period exclusion in one display; no such exclusion is copied.",
+    "Finite regression design, normalization, full residual Gram and every outcome-operator entry are explicit. No general all-design decomposition or inference appendix is claimed proved.",
+    "Attained sensitivity bounds are proved for nonempty compact convex fibers, with explicit square parametrizations. Closed convexity alone is not taken as a general attainment theorem.",
+    "The Gaussian confidence projection includes preperiod uncertainty and is a proved finite stipulated law, not generic uniform asymptotic, ARP, FLCI or bootstrap inference."
+  ],
+  "not_inspected_or_adopted": [
+    "NBER Goodman-Bacon PDF returned 403. The author-linked August 2020 public PDF was successfully read instead, and its different version is explicit.",
+    "The published Callaway–Sant’Anna, Sun–Abraham and Goodman-Bacon bodies were not inspected; their author versions are the actual equation sources.",
+    "Rambachan–Roth later inference proofs and supplementary material, and the other papers' general inference appendices, are outside this scoped reading."
+  ],
+  "limits": "Original examples and solutions are not source empirical tables, current policy estimates, a full-paper proof audit, a validated causal design or external human certification.",
+  "source_catalogue_changes": "Coordinator registered the new source IDs; accepted reused sources unchanged.",
+  "working_source_record": {
+    "path": "production/v12-c07-sources-working.json",
+    "bytes": 12943,
+    "sha256": "f08dcc085af81b77b1aedae812651eb2ed79c928764f229967854aff9d51fc7e"
+  }
+}
