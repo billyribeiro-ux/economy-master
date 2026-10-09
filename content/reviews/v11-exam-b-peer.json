@@ -1,0 +1,298 @@
+{
+  "component": "v11-exam-b",
+  "date": "2026-10-09",
+  "reviewer": "ito_author, separate machine-assisted peer",
+  "assignment": "production/v11-assessment-exam-b-peer-assignment.json",
+  "status": "independent-peer-review-passed; both peer-owned files frozen; coordinator acceptance remains separate",
+  "owned_paths": [
+    "scripts/check_v11_exam_b_peer.py",
+    "content/reviews/v11-exam-b-peer.json"
+  ],
+  "review": {
+    "full_manuscript": true,
+    "all_thirteen_exact_prompts": true,
+    "complete_solutions": true,
+    "proof_assumptions": true,
+    "arithmetic": true,
+    "scoring_and_instruction": true,
+    "source_scope": true,
+    "author_code_and_contracts": true,
+    "actual_reader_structure": true,
+    "final_bound_execution": true
+  },
+  "scope": "Read the complete final Form B fragment, every exact prompt and answer, the complete 481-line author checker, author audit and seven-source record. Independently derive each substantive result from the supplied contracts; do not use author financial helpers or its checker results as an arithmetic oracle. Only the peer checker and this record were written. The nine Portlight author files remain frozen.",
+  "decision": "Recommend component acceptance after the recorded final peer and coordinator gates. No unresolved material mathematical, financial, instructional or source-scope finding is known. The one peer-origin reader finding was repaired by the original author before final bindings.",
+  "prompt_solution_audit": [
+    {
+      "prompt": "v11-b-q1a",
+      "points": 6,
+      "verdict": "passed",
+      "independent_solution": "The default-probability reduction is 1/10. Multiplying by creditor loss 20 gives total benefit 2; subtract cost 3/2 for surplus 1/2. Larch retains 3/5 of the benefit, or 6/5, so its incremental payoff without a fee is -3/10. A conditional fee 2/5 raises it to 1/10; the investor retains avoided loss 4/5 less that fee, or 2/5. They sum to 1/2 because the fee is a transfer. A fee paid under both actions cancels from the comparison. The weak monitor threshold is 3/10 and the investor’s maximum weak fee is 4/5; the given 2/5 lies strictly between.",
+      "assumptions_and_scoring": "Risk neutrality, funded cost, loss allocation and independently verifiable completion are supplied. This is a post-lending incentive comparison, not a claim of ex ante loan profitability or a delegated-monitoring optimum. The 2+1+2+1 scoring accounts for all six points."
+    },
+    {
+      "prompt": "v11-b-q1b",
+      "points": 8,
+      "verdict": "passed",
+      "independent_solution": "Construct principal from face minus cumulative contractual amortization, then interest on that opening amount. Old rows are (60,4.8,20,24.8) and (40,3.2,40,43.2). The first date has 22 cash and misses 2.8; its later contractual row cannot be described as executed. Amended rows are (48,1.92,18,19.92) and (30,1.2,30,31.2). Prefix resources leave 2.08 after date 1; date 2 has 28.08 and needs 3.12 more. A timely nonrepayable contribution 3.12 yields final cash zero and complete principal repayment. Any smaller amount leaves the corresponding final deficit.",
+      "assumptions_and_scoring": "CFADS already excludes all operating/investment expenses; cash carries at zero, and no extra collateral or borrowing is available. Refuse unconditional approval of the unfunded amendment; require the stated cash path and actual timely sponsor funding. The four two-point allocations cover both schedules, sharp contribution and decision."
+    },
+    {
+      "prompt": "v11-b-q1c",
+      "points": 6,
+      "verdict": "passed",
+      "independent_solution": "Opening assets 18+182-10=190 equal deposits 160 plus debt 12 plus equity 18. Provision 6 is debit expense/credit allowance: allowance 16, net loans 166, assets 184, equity 12. Charge-off 12 is debit allowance/credit gross loan: gross 170, allowance 4, net loans 166, assets 184, equity 12. Both entry vectors leave cash 18 and liabilities 172 unchanged. Charging the same covered 12 to income again would duplicate the recognized loss.",
+      "assumptions_and_scoring": "Amounts are stipulated recognition conventions in a separate ledger, not an inferred expected-loss rule or national accounting requirement. No monitoring fee/cost is inserted into this snapshot. Allocations 2+2+1+1 cover full identities and the cash/income distinction."
+    },
+    {
+      "prompt": "v11-b-q2a",
+      "points": 10,
+      "verdict": "passed",
+      "independent_solution": "The four joint probabilities are theta,1/4-theta,1/4-theta,1/2+theta, so nonnegativity gives [0,1/4]. Aggregate loss masses at 0,6,12 are 1/2+theta,1/2-2theta,theta; their mean is always 3. Integrating the increasing quantile over the worst fifth gives 6+30theta until theta=1/5 and 12 thereafter. Enough loss-6 mass exists in the first branch since 3/10-theta>=0. Thus ES<=9 exactly for theta in [0,1/10]. At theta=1/5, the CDF equals 4/5 at 6, so lower VaR is 6 while ES is 12.",
+      "assumptions_and_scoring": "Marginals identify the mean but not dependence, tail loss or policy compliance. Quantile equality and a partially used atom are essential. Peer checks both sides of the policy and tail-regime boundaries, plus both admissible endpoints. Scoring 3+1+3+1+2 totals ten."
+    },
+    {
+      "prompt": "v11-b-q2b",
+      "points": 10,
+      "verdict": "passed",
+      "independent_solution": "Partial portfolio EVE is 120+80-100-50=50 CU. The common 0.01 annual-rate increase changes fixed assets by -4.8 and fixed liabilities by -2; subtracting liability change yields delta EVE -2.8, hence approximate EVE 47.2. Full-year floating income rises 0.8 and expense 0.5, giving delta NII +0.3 CU over that year. The separate account still has only 5 against 8 due today, a 3-CU funding gap.",
+      "assumptions_and_scoring": "The EVE is explicitly for the four supplied positions, excluding the separate payment account. Floating balances/reset assumptions, fixed coupons, parallel small shock and ignored options/convexity/credit/basis effects are clear. A mark or next-year income is not present settlement cash. Scoring 4+2+2+2 is complete."
+    },
+    {
+      "prompt": "v11-b-q3a",
+      "points": 6,
+      "verdict": "passed",
+      "independent_solution": "Partition on the common event: residual conditional rates are (.08-.04)/.96=1/24 and (.12-.04)/.96=1/12. Common plus conditional-joint mass is .04+.96/(24*12)=13/300. Bayes gives common-cause posterior (1/25)/(13/300)=12/13. The marginal product .08*.12=.0096 omits the dependence induced by C.",
+      "assumptions_and_scoring": "Independence is conditional only, and the event partition is complete. The posterior motivates investigation but is not proof of any individual incident’s cause. The probabilities are synthetic, and no link to the separate severity variable is given. Three two-point allocations cover rates, dependence and posterior."
+    },
+    {
+      "prompt": "v11-b-q3b",
+      "points": 8,
+      "verdict": "passed",
+      "independent_solution": "Funded collateral capacity is 60(0.9-0.2x)=54-12x, used once. Actual cash is 16-32x on [0,.3), then 4-32x on [.3,1]. The first branch is strictly above left limit 6.4; at .3 the actual value jumps to -5.6 and continues decreasing. Therefore failure is [.3,1] with attained failing boundary .3. Stale cash 16-32x crosses zero at .5 and fails only above it. On [0,.5] the global actual minimum is -12 at .5. Extra cash k>=12 is necessary there and k=12 leaves both decreasing branches and their jump nonnegative, proving sufficiency for the entire requested interval.",
+      "assumptions_and_scoring": "Collateral advance is a separately committed pre-cutoff loan, not sale proceeds or net income. Its later repayment is outside the declared one-cutoff window. Endpoints and branch proof establish an interval certificate; a finite sample alone does not. Scoring 2+2+1+3 covers this proof and strict/equality cases."
+    },
+    {
+      "prompt": "v11-b-q3c",
+      "points": 6,
+      "verdict": "passed",
+      "independent_solution": "Reject certification over [0,.5]: the candidate timing rule is false for x>=.3 and the unfunded actual system fails there. Limited calculations for x<=.2 require independent verification of that branch and timing, even though observations fit. The model owner repairs the gate; treasury identifies and proves arrival of the extra 12 if used; independent challenge tests both sides/equality of .3, endpoint .5, collateral uniqueness, late-receipt exclusion and source conservation, alongside the monotone-branch proof. An accountable owner records permitted use, cutoff and escalation.",
+      "assumptions_and_scoring": "Neither hypothetical severity nor the unrelated route panel identifies P(x>=.3). Fit does not validate deployed scope, funding or rights. The open-answer solution accepts equivalent concrete roles and evidence. Scoring 2+3+1 is aligned with the exact prompt."
+    },
+    {
+      "prompt": "v11-b-q4a",
+      "points": 10,
+      "verdict": "passed",
+      "independent_solution": "State rows (promise,shortfall,guarantee,benefit,per survivor,unpaid,sponsor surplus,unused guarantor) are (30,0,0,30,30,0,15,20), (60,5,5,60,30,0,0,15) and (60,30,8,38,19,22,0,0). Recipient resources reconcile to 65,75,38 respectively. Weighted promise is 51, benefit 46.6, unpaid 4.4 and actual guarantee 4.1. The probability-weighted promise equals receipts plus unpaid exactly.",
+      "assumptions_and_scoring": "The nominal guarantee is constrained by both cap and state-specific resources. No state surplus finances a mutually exclusive bad state. Even a fully funded cap 20 leaves 10 of a 30 shortfall; raising both funding and cap to 30 would be a different contract. These are physical future expectations, not market prices. Four state/table conservation groups and 4+2+2+2 scoring are complete."
+    },
+    {
+      "prompt": "v11-b-q4b",
+      "points": 10,
+      "verdict": "passed",
+      "independent_solution": "Convert the permitted 2 F for 4 H, retaining 8 H outside both F-payment routes. Before new funding the F pool is 19 against first obligations 25. Without grant, carry B-6 requires B>=6; at cutoff 2, including that carry gives -B/10, so no permitted B can pass both. With a grant, first B+g>=6 and second g-B/10>=0. Adding the first inequality and ten times the second yields 11g>=6. Equality g=6/11 and B=60/11 is inside cap 7 and leaves zero at both dates.",
+      "assumptions_and_scoring": "The peer also minimizes the independent one-dimensional envelope max(6-B,B/10,0), then changes borrowing cap, interest and conversion access separately. The donor must be separately funded; H cannot be relabeled F, and borrowing carries repayment. Resource feasibility is not willingness, commitment or real legal permission. Scoring 2+3+3+2 is complete."
+    },
+    {
+      "prompt": "v11-b-q5a",
+      "points": 6,
+      "verdict": "passed",
+      "independent_solution": "Expected incremental misconduct gain is 6-p*min(F,9); at p=1/3 its minimum over face fines is 3, so no nominal fine increase deters. With maximum collectible amount 9, the lowest achievable weak threshold is p=2/3, where indifference remains. Strict deterrence requires p*min(F,9)>6; for F>=9 this is p>2/3. An effective fine 8 at p=.9 gives -1.2, while a fine 5 cannot deter even at p=1.",
+      "assumptions_and_scoring": "The final answer properly gives the general strict condition instead of claiming F>=9 is always necessary. Detection, collection and action set are exogenous; no welfare or implementability conclusion follows. Scoring 2+1+2+1 includes the tie and scope distinctions."
+    },
+    {
+      "prompt": "v11-b-q5b",
+      "points": 8,
+      "verdict": "passed",
+      "independent_solution": "Converting 12 notes changes notes 40 to 28 and aggregate equity 8 to 20 while cash 6 and assets 60 stay unchanged. After paying 6 to the client, issuer assets 54 face notes 28 and client arrears 6, equity 20. Client cash 1+6 misses supplier 8 by 1. A separately funded bridge 1 pays suppliers in full, leaving claim 6 against bridge 1 and equity 5. Terminal asset 54 pays notes 28/client 6/issuer equity 20; client repays 1 and distributes 5. Asset 28.5 pays notes 28/client.5/issuer equity 0; client repays.5, public loses.5 and client equity is 0. Claim impairment 5.5 equals lost client equity 5 plus public loss.5 once.",
+      "assumptions_and_scoring": "Priorities, capped claims, final supplier payment, terminal loss and limited liability are explicit. Aggregate issuer equity allocation between old shareholders and converted holders is deliberately unspecified. The public bridge has no direct issuer-asset claim. Scoring 2+1+3+2 covers the two complete waterfalls and transmission."
+    },
+    {
+      "prompt": "v11-b-q5c",
+      "points": 6,
+      "verdict": "passed",
+      "independent_solution": "For g in [0,0.2], b = 1-g supplies the same total early cash 1. Adverse client estate 0.5 is below every permitted bridge, so public loss is 0.5-g. The numerical cap 0.4 requires g >= 0.1; equality b = 0.9 repays 0.5 and loses 0.4, with public cash 0.1 undrawn plus 0.5 repaid = 0.6. Client adverse equity is zero. Initial equity 5 plus consumed grant 0.1 plus public loss 0.4 allocates the same 5.5 impairment. Benchmark client equity is 6-0.9=5.1 for existing holders; the grant buys no claim.",
+      "assumptions_and_scoring": "Current evidence is insufficient: an email is not received cash. Treasury must prove source and receipt before supplier settlement; the effective-rights owner verifies conversion/priorities/no hidden refund; independent risk reconstructs both states and the loss cap; the board delegate records decision scope, cutoff and failure trigger. No unrecorded waiver is accepted. Scoring 2+1+3 distinguishes numerical feasibility from permission to execute."
+    }
+  ],
+  "proof_and_boundary_review": {
+    "method_domain": "All determinate arguments are finite arithmetic, finite probabilities, affine inequalities and declared priority waterfalls. No unproved continuous equilibrium, stochastic existence or national legal theorem is introduced.",
+    "tails": "A finite increasing quantile integral over [alpha,1] independently gives exact ES and the boundary atom; full joint-probability nonnegativity gives the dependence domain. Endpoints theta=0 and 1/4 and both sides of theta=.1/.2 are examined.",
+    "reverse_stress": "The two slopes are -32 and the timing jump is -12. The global interval bound uses actual endpoint and one-sided limit values, with an attained failure at .3. No probability of severity or later loan solvency is inferred.",
+    "sovereign": "The sharp grant lower bound is a nonnegative combination of both dated constraints, and the candidate attains it within the borrowing bound. Separate envelope minimization uses endpoints plus the intersection of decreasing/increasing affine constraints, not the author’s two-variable vertex helper.",
+    "network": "Cumulative priority tranches exhaust the issuer estate, then the distinct client estate. The public vehicle retains undrawn cash; grant is external cash with no equity/refund right. Unpaid final claims and limited liability prevent negative distributions; network impairment is allocated, never added again.",
+    "model_use_and_deterrence": "Read the final clarifications exactly: a restricted x<=.2 calculation requires independent branch/timing evidence, and general strict deterrence is p*min(F,9)>6. Neither fit nor a headline face penalty alone proves the desired action."
+  },
+  "instruction_scoring_and_administration": {
+    "subparts": 13,
+    "domains": 5,
+    "points": 100,
+    "point_map": {
+      "D1": [
+        6,
+        8,
+        6
+      ],
+      "D2": [
+        10,
+        10
+      ],
+      "D3": [
+        6,
+        8,
+        6
+      ],
+      "D4": [
+        10,
+        10
+      ],
+      "D5": [
+        6,
+        8,
+        6
+      ]
+    },
+    "administration": "240 minutes, about 48 per case, closed resource with nonprogrammable calculator; explicitly an uncalibrated design target. Required arithmetic and methods are provided or taught in linked prerequisite chapters. Each open decision gives concrete criteria while admitting equivalent supported roles/recommendations.",
+    "shared_support_crosscheck": "Actually read the current shared support administration read-only:85/100 and 15/20 per domain, separate project/oral, critical-error remediation and method/follow-through credit. Form B matches these five domains and is used after documented remediation; no statistical form equating is claimed.",
+    "complete_coverage": "All 12 accepted chapter files exist and are linked from the scored map. D1 covers monitoring/accounts/credit; D2 dependence-tail and dated ALM; D3 common controls/deployed model use and jump reverse stress; D4 survivor/guarantor and sovereign currency carry; D5 conduct/resolution/network/governance.",
+    "critical_distinctions": "Cash versus book equity, contractual schedule versus executed payment, impairment versus chargeoff, marginals versus joint law, present value versus income versus dated funds, model fit versus certified use, path severity versus probability, guarantee cap versus resources, borrowing proceeds versus full carry/repayment, conversion versus new cash, and approval evidence versus an unexecuted email are all explicitly assessed.",
+    "form_comparison_limit": "The reassessment uses changed mechanisms, rights and information under the coordinated blueprint. This peer does not claim psychometric equivalence or a new complete independent audit of Form A."
+  },
+  "source_review": {
+    "records_read": 7,
+    "new_retrieval_or_proposal": false,
+    "actual_internal_routes": "Read content/sources.json: all seven cited IDs and exact URLs match the accepted catalogue. Read canonical Volume 11 entries and confirmed all 12 chapter target files exist with accepted status. Peer portable execution checks the standalone routes/IDs and source record; it does not require those shared files.",
+    "scopes": [
+      "Diamond 1996 official body scope is delegated monitoring/completion and limited inspected sections; no full optimal-debt or diversification theorem is imported.",
+      "OCC commercial-loan source retains historical March 1990 narrative/March 1998 procedures and its explicitly scoped cash/collateral reading; no current compliance opinion or accounting recognition rule is imported.",
+      "Rockafellar-Uryasev exact finite loss/atom/threshold scope supports the method, while the exam rederives the new dependence family and numerical tail.",
+      "BCBS 2008 inspected liquidity passages support dated availability, location and collateral framing; no Basel ratio, legal entitlement or funded facility is inferred from guidance.",
+      "April 2026 Federal Reserve/FDIC/OCC model-risk guidance is reused within the recorded actual 12-page scope and distinguished from binding law; the original certification rule is not labeled an agency mandate.",
+      "Escolano 2010 is an author technical note on debt dynamics, not an asserted IMF policy or estimate of sovereign willingness; currency/carry/grant values are original.",
+      "Final July 2015 BCBS bank governance scoped paragraphs support roles, reporting and challenge; resolution powers, bridge terms, sanctions and public-loss limits remain invented contracts."
+    ],
+    "provenance": "The four frozen author records were actually read. Prior primary body scopes were reused as supplied, not claimed freshly retrieved by this peer. No outside dataset, mortality table, country fact or empirical frequency is needed for the synthetic panels."
+  },
+  "independent_checker": {
+    "path": "scripts/check_v11_exam_b_peer.py",
+    "financial_oracle": "Uses only the exam contract values, not author private functions or their returned financial values: cash-prefix sums; separate debit/credit vectors; quantile-interval integration; common-event conditioning; monotone branch proof/endpoints; survivor state allocations; one-dimensional funding envelope; cumulative creditor-priority tranches and residual client estate.",
+    "printed_and_table_scope": "Every one of 66 data-calc spans and all numeric cells of the supplied pension table plus all three solution tables are compared to independent exact fractions. Thirteen prompt/solution/scoring links, all source IDs and exact frozen bindings are checked. Qualitative/proof review is recorded separately here rather than disguised as numeric testing.",
+    "focused_interventions": [
+      "completion fee at the weak monitoring threshold",
+      "amended loan with a strictly smaller sponsor contribution",
+      "ES policy limit at theta=.1 and both sides",
+      "tail-atom regime at theta=.2 and both sides",
+      "common event at the smaller route marginal",
+      "stress interval contribution just below12",
+      "processing gate beyond the requested interval",
+      "guarantor resource increase separately from cap increase",
+      "sovereign borrowing cap5",
+      "sovereign zero borrowing interest",
+      "sovereign conversion cap1",
+      "effective conduct probability and collectible-fine frontier",
+      "private grant just below the public-loss boundary",
+      "issuer estate at the senior-note boundary"
+    ],
+    "author_integration": "After all independent financial work, quietly imports and calls the author check() as an additional integration gate. Its 246 comparisons are reported separately and do not supply the peer’s financial expected values.",
+    "strict_domain_scope": "Six rejected impossible inputs test the peer oracle’s finite domains; four duplicate/nonfinite JSON fixtures exercise strict record parsing. No fictitious project-style run(data), financial CLI or output file guard is claimed for this closed-resource exam checker.",
+    "portable_scope": "The exact four author files plus two peer files are sufficient. The API is quiet and read-only; standalone CLI prints only its strict-JSON summary. Normal and optimized isolated runs from an unrelated working directory must leave exactly those six files."
+  },
+  "findings": [
+    {
+      "id": "B-peer-reader-spacing",
+      "severity": "minor editorial",
+      "origin": "separate peer actual full-manuscript reading",
+      "observed_original": "Q4a contained `a30 gap`; Q4b contained `a.7 gap`. Numerical meaning and scoring were unaffected.",
+      "repair": "The original author replaced them with `a 30 gap` and `a 0.7 gap` and refreshed its manuscript binding. Root reissued the four-file freeze.",
+      "verification": "Read final text. Reversing exactly these two substitutions reproduces original HTML SHA256 424b0d219811ca041ae0fdde46049248295731daab4a3e1a9fc65a04953db017; final HTML SHA256 352d073c83e503b8ecddc3dc5c72c7892eab30c2baf950c3c3d9d4a994c2c447. No extra manuscript change found.",
+      "status": "resolved"
+    }
+  ],
+  "unresolved_findings": [],
+  "validation": {
+    "state": "passed; final four author payloads and own peer checker bound; both peer files frozen",
+    "bootstrap": {
+      "independent_comparisons": 234,
+      "printed_numeric_anchors": 66,
+      "complete_numeric_tables": 4,
+      "focused_interventions": 14,
+      "oracle_domain_and_strict_json_rejections": 10,
+      "scored_subparts": 13,
+      "author_integration_comparisons": 246
+    },
+    "actual_shared_reader": {
+      "parser": "scripts/verify.py Document",
+      "executed_read_only": true,
+      "solution_items": 13,
+      "unique_ids": 41,
+      "links": 19,
+      "source_ids": 7,
+      "heading_structure": "one h2, eleven h3 and no h1; balanced standalone fragment also checked independently",
+      "visual_QA_claimed": false
+    },
+    "executed_summary": {
+      "author_integration_comparisons": 246,
+      "author_nonself_bindings": 3,
+      "author_payload_bindings": 4,
+      "chapter_outcomes": 12,
+      "complete_numeric_tables": 4,
+      "component": "v11-exam-b-peer",
+      "essential_domains": 5,
+      "focused_interventions": 14,
+      "independent_comparisons": 251,
+      "oracle_domain_and_strict_json_rejections": 10,
+      "peer_checker_binding": true,
+      "points": 100,
+      "portable_runs": 2,
+      "printed_numeric_anchors": 66,
+      "scored_subparts": 13,
+      "solved_subparts": 13,
+      "status": "passed"
+    },
+    "quiet_normal_and_optimized_API": "Actually passed under python3 -I -B and python3 -I -B -O from /, with captured empty stdout/stderr and identical strict-JSON summaries. Each run separately executed both normal and optimized six-file isolated checks.",
+    "exact_portable_six_file_layout": "Four frozen author payloads plus peer checker and this review record copied to a fresh temporary tree; both interpreter modes ran the quiet API from / and left exactly the same six files. No chapter model, source catalogue, production assignment or shared verifier was needed by the portable check.",
+    "observed_seconds": {
+      "normal": 0.11972337499901187,
+      "optimized": 0.12006145900159026
+    },
+    "runtime_limit": "Observed local focused checks only, not a performance guarantee or enlarged fuzz campaign.",
+    "binding_scope": "All three author nonself hashes and all four exact target payloads plus the peer checker match their byte counts/SHA256. Review record deliberately has no self-hash.",
+    "source_and_reader_scope": "Actual workspace chapter/source routes and actual shared Document were checked read-only; these are structural evidence, not rendered browser approval.",
+    "standalone_CLI": "Actually executed the peer script under python3 -I -B and python3 -I -B -O from /; each returned exit0, only the identical strict-JSON summary on stdout, and no error output. The CLI and API are distinguished: API silent, CLI summary only."
+  },
+  "limitations": [
+    "This is a separate machine-assisted peer review, not external academic or human certification, learner mastery or canonical package acceptance.",
+    "All economics is conditional on supplied synthetic laws, funding and rights. Numerical feasibility cannot authenticate delivery, title, mandate, donor cash or actual compliance.",
+    "Duration is a local first-order approximation; no exact large-shock price claim is approved.",
+    "Physical probabilities, severe-state arithmetic and deterministic stress paths do not supply market prices, empirical incident rates, a country default probability or a universal welfare optimum.",
+    "Exam timing, form equivalence and retention effectiveness have not been calibrated on learners.",
+    "Shared integration, complete-volume regression and rendered browser/mobile/keyboard/print QA remain separate coordinator gates."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/assessments/parts/v11-exam-b.html",
+      "bytes": 43334,
+      "sha256": "352d073c83e503b8ecddc3dc5c72c7892eab30c2baf950c3c3d9d4a994c2c447"
+    },
+    {
+      "path": "scripts/check_v11_exam_b.py",
+      "bytes": 27816,
+      "sha256": "cef367edab022435179c1d9335c1e69a8886669475859e33d3e88d1b3fa618f6"
+    },
+    {
+      "path": "content/reviews/v11-exam-b-author.json",
+      "bytes": 25486,
+      "sha256": "c2288605928ea01056d2d75a7a459caf8d52f8df1479391d0c1591de41ddbac7"
+    },
+    {
+      "path": "content/reviews/v11-exam-b-sources.json",
+      "bytes": 12170,
+      "sha256": "6f4d704160f21b5dc713a4500b3225d4efe9896e4c8cee2ff72eaaaa1bd72315"
+    },
+    {
+      "path": "scripts/check_v11_exam_b_peer.py",
+      "bytes": 26432,
+      "sha256": "b947d9b2d88c58c8cb3e3edccf08ecf4b813369839e745bf72a01df27ea1ebec"
+    }
+  ]
+}

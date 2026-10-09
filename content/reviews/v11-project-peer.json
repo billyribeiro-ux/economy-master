@@ -1,0 +1,327 @@
+{
+  "component": "v11-project",
+  "reviewer": "bs_author",
+  "date": "2026-10-09",
+  "assignment": "production/v11-assessment-project-peer-assignment.json",
+  "status": "independent peer review passed; two peer files frozen for coordinator acceptance and integration",
+  "independence": "Separate reviewer from ito_author. Only the two peer-owned files were written. The financial oracle invokes the public run(data) only; no author checker, private model helper, saved answer or coordinator calculation supplies its expected payments. The complete frozen author checker was read as implementation evidence, not used as the arithmetic oracle.",
+  "review": {
+    "all_nine_author_payloads_read": true,
+    "all_six_deliverables": true,
+    "all_six_transfer_prompts_and_answers": true,
+    "proofs": true,
+    "financial_units_and_dates": true,
+    "independent_arithmetic": true,
+    "rubric_and_instruction": true,
+    "source_scope": true,
+    "reader_structure_and_routes": true,
+    "strict_domains_and_output_aliases": true
+  },
+  "read_scope": {
+    "manuscript": "Entire contract, three complete joint states, six deliverables, six unfamiliar transfers, five-domain rubric, all six instructor-guide sections, every formula/table and limitation.",
+    "code_and_records": "Entire 375-line model, 715-line author checker, 261-line README, inputs, four-payload manifest, source proposal and author audit. The 566,441-byte output was parsed in full, all 54 original candidate-state records independently reconstructed, all 69 selected journal rows checked, and every saved byte matched a fresh independently checked result.",
+    "existing_methods": "Accepted Volume 11 chapter methods: balance-sheet and impairment identities, actual dated cash, finite probability atoms, collateral-funded borrowing, currency location, retained claims, finite ranking and conditional one-factor reverse stress. No untaught stochastic, optimization or statutory theory is assumed."
+  },
+  "contract_and_proof_audit": [
+    {
+      "claim": "Opening institutions and outside money",
+      "finding": "Bank assets 172, deposits 140 and equity 32 H reconcile. Pension 1 cash plus 12 deposit against 15 benefits gives -2; bank-pension consolidation eliminates the internal 12 and yields 30. Sponsor 30, lender 20, dealer 100 H/40 F and collateral buyer 20 H are separately endowed. Bill, operating and foreign-issuer receipts are explicitly stipulated externally funded arrivals; this does not establish a closed whole-economy balance sheet."
+    },
+    {
+      "claim": "Currency, timing and rights",
+      "finding": "Prepositioning costs 2f H before either deadline. A delayed F purchase remains a titled in-transit asset, never early F cash. Early 09:00 F settlement precedes 10:00 H and 10:15 benefits; final 17:00 F precedes 18:00 H and 18:15 benefits. Local conversion caps and funding dates are explicit fictional rights, not assertions about any current country."
+    },
+    {
+      "claim": "Credit and double counting",
+      "finding": "Operating service ratios are 1,3/5,2/5 early and 1,4/5,7/10 final. Net collateral 0,10,12 plus operating receipts gives total actual loan receipts 60,54,48 and losses 0,6,12. Original arrears 0,8,12 become terminal nominal claims 0,6,12. Impairment and later collection are separate accounting events; nominal rights survive the carrying-value writeoff. Offshore unpaid principal 0,2,4 F is impaired once at the scenario exchange rate."
+    },
+    {
+      "claim": "Actual priority settlement and reserves",
+      "finding": "Independent prefix-claim allocation pays each creditor the intersection of its priority interval with available resources. The reserve is a closing test and is not withheld from creditors. Early misses remain in the gate even when late money clears all outstanding claims. A partially unpaid secured loan retains both its claim and collateral pledge; no hidden foreclosure or liability cancellation occurs."
+    },
+    {
+      "claim": "Equity bridge",
+      "finding": "Starting from received-capital-adjusted equity 32+b, revalue the original net F position 1+f, add 20(q-1), subtract domestic impairment, scenario-spot foreign impairment and 0.05g. Currency trades at the stated spot, principal collections, deposit withdrawals and secured principal transfers do not alter equity. Independent terminal assets minus every remaining nominal liability equals that bridge for every checked state."
+    },
+    {
+      "claim": "Finite policy proof",
+      "finding": "Joint early conversion is zero, so f>=9 forces menu f=10. Timely benefits require z>=2, forcing z=2. With f=10, early H resources before borrowing are b+8; attaining cash 2 after claims 30 requires a draw 24-b. Capacity 20/3 implies b>=52/3, forcing b=20. Direct checks of later cash and equity prove sufficiency. Exactly one of all 18 policies qualifies; the finite objective is gross committed b+z=22, not welfare or a global optimum."
+    },
+    {
+      "claim": "Selected balances and weak-policy transmission",
+      "finding": "Selected normal/credit/joint final equity is 52,393/10,1246/45. Joint draw 4 pledges 12 units, early capital is 251/9 and late conversion 7/5 F leaves 2 H and 28/5 F. For (10,10,2), early pension receipt 20/3 yields a 16/3 benefit miss, later 43/9 F conversion clears arrears, and final equity 158/9 still fails the floor. The benefit delay is not added again as a separate bank accounting loss."
+    },
+    {
+      "claim": "Ownership and counterparties",
+      "finding": "The sponsor pays b+z in cash and buys b/(32+b) of residual bank equity, with a zero floor for shareholder limited liability. Under the selected plan it retains 8 H cash and a joint marked bank stake 1246/117. The lender receives funded repayment 4.2 after advancing 4; dealer currency inventories and collateral-buyer proceeds allocation reconcile separately."
+    },
+    {
+      "claim": "Physical risk measure",
+      "finding": "Capital-adjusted losses 0,127/10,1094/45 with physical masses 1/2,1/3,1/6 yield mean 2237/270 and lower VaR 127/10. Integrating the CDF step quantile over the worst quarter uses all 1/6 joint mass and 1/12 of credit mass, giving ES 5519/270. The probabilities do not determine robust feasibility, claim prices or an empirical frequency."
+    },
+    {
+      "claim": "Reverse-stress proof and equality",
+      "finding": "For fixed selected policy and all other joint inputs unchanged, the requested draw is 4. Collateral requires q>=4/15. In that feasible-draw region final equity is 94/5+20q, so capital requires q>=3/50. The first boundary is q=4/15, y=sqrt(15)/2-1, equality feasible with equity 362/15. Full early creditors can still pay at q=2/15, below the reserve boundary. The fixed draw is not extrapolated beyond its feasible region."
+    },
+    {
+      "claim": "Supported reverse domain",
+      "finding": "Only y in [0,4] is supported. Positive critical prices within [1/25,1] receive an exact rational enclosing yield interval and executed equality check; an outside/zero threshold receives null equality/bracket evidence. The peer checks adjacent admitted decimal yields around the irrational baseline root and the exact rational prior-claim boundary."
+    }
+  ],
+  "deliverables": [
+    {
+      "id": "v11-project-task-1",
+      "result": "Complete and determinate where numerical. Guide reconciles bank/pension and endowed providers, maps delivery and ownership, and gives explicit evidence criteria for operational/legal facts outside arithmetic."
+    },
+    {
+      "id": "v11-project-task-2",
+      "result": "All service ratios, gross-to-net collateral allocations, early/final arrears and equity effects are supplied and independently verified. Unpaid nominal claims are distinguished from zero book assets."
+    },
+    {
+      "id": "v11-project-task-3",
+      "result": "All 18 policies execute capped payments in each of three states. Five reported closes per state and 23 events per selected state reconcile. The weak-policy reconstruction is complete; borrower, pension and bank obligations are distinct. Learners must supply their own implementation and independent checks."
+    },
+    {
+      "id": "v11-project-task-4",
+      "result": "Loss origin, CDF convention, ES boundary atom, scenario probability scope, one-factor boundary, equality and capital condition are fully solved and match independent computation."
+    },
+    {
+      "id": "v11-project-task-5",
+      "result": "The open memo rubric is precise: funded transfers, loss bearers, actual evidence and authority, responsibility, independent challenge, observable failure controls, revision and incentive limits. Guide gives a defensible conditional approval without guaranteeing truthfulness or real authority."
+    },
+    {
+      "id": "v11-project-task-6",
+      "result": "Reproducible inputs, changes, outputs, source/evidence log, manifest, independent oracle and correction chronology are specified. All six transfer answers and the ten-minute defense are supplied; every chapter has a concrete method route."
+    }
+  ],
+  "transfer_audit": [
+    {
+      "id": "v11-project-transfer-1",
+      "answer": "Delayed joint prefunding leaves only 6 F before 09:00, so the 15 F call misses 9 F under every original policy. The H outlay remains spent. Final 26 F receipts/resources pay retained 19 F deposits, leaving 7 F before conversion and unchanged final equity 1246/45. A genuine early source or changed right is required; terminal equality does not repair timing.",
+      "result": "passed"
+    },
+    {
+      "id": "v11-project-transfer-2",
+      "answer": "Cap 1 F leaves final H 4/5, missing reserve by 6/5 but paying every creditor; equity is unchanged. For 0<=delta<=4, draw=4-delta and needed conversion H=4.2-1.05delta, so least delta=8/7. At b=148/7, draw 20/7, conversion 1 F, equity 260/9. Adding b=22 selects (22,10,2), draw 2, conversion 7/10 F, equity 2681/90. An admitted amount just below the continuous remedy fails.",
+      "result": "passed"
+    },
+    {
+      "id": "v11-project-transfer-3",
+      "answer": "Benefits 17 exceed maximum old pension cash 1+2+12=15 by 2 in every state. Added z = 4 selects (20,10,4), actual sponsor outlay 24 and remaining cash 6; bank accounts are unchanged. The two-date case does not imply lifelong adequacy or an unstated guarantee.",
+      "result": "passed"
+    },
+    {
+      "id": "v11-project-transfer-4",
+      "answer": "Eligibility 10 caps borrowing at 10/3, leaving early cash 4/3 and reserve gap 2/3 while paying creditors. Least additional bank equity 2/3 gives b = 62/3, draw 10/3, late conversion 7/6 F and equity 511/18. All 20 units remain owned and marked; the inaccessibility is not another market loss. An admitted amount below the remedy fails.",
+      "result": "passed"
+    },
+    {
+      "id": "v11-project-transfer-5",
+      "answer": "Prior claim 9 gives bank net collateral 6, final receipt 34, total recovery 42, nominal arrears/loss 18. Late conversion 17/5 F leaves 18/5 F and equity 976/45; original policy still qualifies. Capital now requires q>=9/25, so y<=2/3; equality has equity 20 and borrowing capacity 27/5 greater than draw 4. A slightly higher supported yield fails.",
+      "result": "passed"
+    },
+    {
+      "id": "v11-project-transfer-6",
+      "answer": "The explicit off-model conversion leaves only 2 of the pension deposit liquid. Cash 1+grant 2+deposit 2 pays 5 against benefits 15, leaving 10. Illiquid bank equity creates no settlement cash. The fixed sponsor retains only 8, so an additional 10 needs a redesigned funded arrangement, rights and named risk bearer. The original approval does not transfer automatically.",
+      "result": "passed"
+    }
+  ],
+  "instruction_and_scoring": {
+    "administration": "Original open-resource project; 14-20 hours is an uncalibrated planning estimate. Independent implementation and initial decision precede reference-guide use. Memo maximum 1,200 words and oral defense ten minutes.",
+    "rubric": [
+      {
+        "domain": "D1",
+        "subpoints": [
+          5,
+          6,
+          6,
+          3
+        ]
+      },
+      {
+        "domain": "D2",
+        "subpoints": [
+          8,
+          4,
+          5,
+          3
+        ]
+      },
+      {
+        "domain": "D3",
+        "subpoints": [
+          5,
+          6,
+          5,
+          4
+        ]
+      },
+      {
+        "domain": "D4",
+        "subpoints": [
+          6,
+          6,
+          5,
+          3
+        ]
+      },
+      {
+        "domain": "D5",
+        "subpoints": [
+          5,
+          5,
+          5,
+          5
+        ]
+      }
+    ],
+    "total": 100,
+    "essential_floor": "At least 15/20 in each domain and 85/100 overall, plus transfer/teach-back and remediation of critical errors; these are library design criteria.",
+    "grading": "Transparent arithmetic errors carry through without repeated deductions; new conceptual errors are separately scored. Alternative recommendations can earn full credit after answering the original contract and specifying altered rights, funding and consequences.",
+    "critical_errors": "Dates/currency location, duplicated resources or pledged collateral, deleted missed/written-off rights, double impairment, manufactured reserves, unfunded debt conversion, averaging obligations over scenarios, omitted pension deficit and altered evidence all trigger remediation."
+  },
+  "source_review": {
+    "new_retrievals": 0,
+    "new_primary_claims": 0,
+    "reused_ids": [
+      "v11-c04-rockafellar-uryasev",
+      "v11-c02-bcbs-liquidity2008",
+      "v11-c07-bcbs-stress2018",
+      "v11-c12-bcbs-governance2015"
+    ],
+    "scope": "Verified each in-text citation and exact source-proposal scope against the original synthetic claim it frames. Reused accepted body inspections; no fresh whole-document reading is claimed here. Uses finite-tail atom definitions and dated international guidance about liquidity execution, coherent stress and governance. No national law, actual liquidity facility, empirical scenario probability or effectiveness estimate is imported."
+  },
+  "structure_and_routes": {
+    "actual_shared_parser": "scripts.verify.Document imported and executed read-only with bytecode disabled",
+    "unique_ids": 27,
+    "h2_count": 1,
+    "h3_count": 13,
+    "guide_solution_items": 6,
+    "routes_checked": 22,
+    "source_ids": 4,
+    "route_scope": "All 12 chapter routes and 4 source anchors resolve in existing dist pages; the repeated c04 method route also resolves. Five flat attachment links resolve to the exact frozen source payloads awaiting coordinator assembly. This is not an assembled-project page or browser visual check.",
+    "fragment_balance": "Independent explicit tag-stack parser passes; no extra h1, all IDs use the assigned namespace except shared project anchor."
+  },
+  "independent_checker": {
+    "path": "scripts/check_v11_project_peer.py",
+    "method": "Cumulative creditor-interval allocation derives partial payments from resource totals. Independent event vectors reconstruct each account, marked assets/liabilities, counterparty balance and retained claim. Residual terminal equity independently matches the capital bridge. ES is obtained by integrating the step quantile, not by reusing the reference tail filler.",
+    "bounded_scope": "All 18 baseline policies in 3 states, all 69 selected event rows; fixed-policy checks for six transfer mechanisms and six additional boundary groups. Expanded b = 22 and z = 4 selection is tested without an unrelated parameter grid. Comparison totals include bundled account dictionaries and are not counts of independent economic theories.",
+    "boundaries": [
+      "delayed prefunding with spent H and titled in-transit F",
+      "late conversion cap 1 and exact/just-insufficient equity remedies",
+      "benefits 17 and funded grant 4",
+      "eligible 10 and exact/just-insufficient remedy",
+      "prior claim 9 and capital boundary equality/strict failure",
+      "off-model deposit-to-equity cash gap",
+      "adjacent admissible yields around the irrational reserve boundary",
+      "lender endowment equal to 4 and just below 4",
+      "zero late conversion retains unpaid household balance",
+      "zero interest changes expense and FX need",
+      "unpaid secured claim retains pledged collateral and shareholder zero floor",
+      "normal-only zero reverse threshold returns no false equality"
+    ],
+    "domain_tests": "32 actually rejected API contracts cover exact keys/types, bounded rational syntax, initial resources, positive claims, choice uniqueness, opening prefunding, sponsor/dealer/buyer resources, owned eligibility, rates/probabilities/scenarios and repayment limits. Tests preserve inputs and require quiet ValueError failures. Twelve invalid CLI documents exercise duplicate/nonfinite/malformed/oversized/domain rejection while preserving existing output.",
+    "file_protection": "20 actual normal/optimized attempts target input/model directly, through resolved-parent paths, symbolic links and hard links, plus default-output symbolic aliases. All are refused and protected bytes remain unchanged.",
+    "saved_output": "The full fresh baseline report equals the parsed saved output and its canonical sorted/indented bytes. Input nonmutation, quiet import/call, strict JSON and fresh results after returned-object mutation all pass.",
+    "check_api": "check() is quiet, JSON-safe and independent of working directory. The standalone CLI prints only its small JSON summary. No network, installation or shared-library module is needed."
+  },
+  "findings": [],
+  "unresolved_findings": [],
+  "author_changes_requested": [],
+  "validation": {
+    "state": "passed",
+    "summary": {
+      "component": "v11-project-peer",
+      "status": "passed",
+      "comparisons": 5226,
+      "baseline_policies": 18,
+      "independently_recomputed_policy_states": 116,
+      "selected_journal_rows": 69,
+      "transfer_answers": 6,
+      "focused_mechanism_groups": 12,
+      "essential_domains": 5,
+      "rubric_points": 100,
+      "invalid_api_cases": 32,
+      "invalid_cli_cases": 12,
+      "protected_alias_attempts": 20,
+      "portable_model_runs": 4,
+      "author_payloads_bound": 9,
+      "own_checker_bound": true
+    },
+    "quiet_import_and_check": true,
+    "strict_json_safe_summary": true,
+    "workspace_normal_and_optimized": true,
+    "exact_eleven_file_normal_and_optimized": true,
+    "normal_and_optimized_summaries_identical": true,
+    "execution": "Four quiet API runs under python3 -I -B, with and without -O: workspace and an unrelated temporary directory containing exactly nine frozen author files plus the two peer files. Working directory /; no shared imports. Model default/explicit CLIs execute in both modes inside each checker run, including actual invalid and alias attempts.",
+    "observed_seconds": {
+      "workspace_normal": 1.7563,
+      "workspace_optimized": 1.7558,
+      "isolated_normal": 1.7514,
+      "isolated_optimized": 1.7533
+    },
+    "runtime_scope": "Observed concurrent local runs, not a performance guarantee. No undirected parameter grid.",
+    "bindings": "Exactly nine final author payloads plus the peer checker, with byte counts and SHA256. The peer record has no self-hash. Author eight-nonself and four-payload manifest bindings are also checked."
+  },
+  "limitations": [
+    "Separate-agent review reduces error risk but is not external human certification or learner completion.",
+    "Only the finite declared policy and scenario contract, plus named transfers and boundary cases, was audited; no all-path solvency, strategic equilibrium or global optimum is established.",
+    "Actual external receipts, beneficiary delivery, title, authority and organizational effectiveness require evidence beyond these synthetic inputs.",
+    "Marked long bonds are retained assets, not automatically usable cash. Remaining pension bank claims are reconciled at face, not certified economic default recoveries.",
+    "The oral deposit-to-equity transfer intentionally changes rights outside the implemented baseline schema.",
+    "No whole-economy endowment audit, lifelong actuarial valuation, current-law verification, rendered browser/mobile/keyboard/print audit or full-volume acceptance is claimed.",
+    "Coordinator acceptance, assembly, shared regression and publishing remain the coordinator’s separate responsibility."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/assessments/parts/v11-project.html",
+      "bytes": 39428,
+      "sha256": "47344af32955e7ab034cd2335bafe5eb89c0c7120a9d1254febae7d390c723f2"
+    },
+    {
+      "path": "content/projects/v11-assessment-inputs.json",
+      "bytes": 2082,
+      "sha256": "2c8ca3d0aca537e35931d5ad48b0b13c46f5c4220df3876355ea2dfa0325f584"
+    },
+    {
+      "path": "content/projects/v11-assessment-analysis.py",
+      "bytes": 27801,
+      "sha256": "f063db70bfa0f356ffe3ad232ebd379c3a083d2e1ce1ef9bb73e471f5b3cc06e"
+    },
+    {
+      "path": "content/projects/v11-assessment-output.json",
+      "bytes": 566441,
+      "sha256": "2533920d1f25c637a31910d5085887d4fca57a1d924c1455e0a8fcd2c39e53f0"
+    },
+    {
+      "path": "content/projects/v11-assessment-manifest.json",
+      "bytes": 1162,
+      "sha256": "71fe2de3a90dc5ebb111558660aa1f878dcaae329d0ce76b800f6d02baaa8ea5"
+    },
+    {
+      "path": "content/projects/v11-assessment-README.txt",
+      "bytes": 17127,
+      "sha256": "2ad3b071b80a0553e78b0eacbf1319acb65155af1a2afc42ade087e1f700c334"
+    },
+    {
+      "path": "scripts/check_v11_project.py",
+      "bytes": 47009,
+      "sha256": "da3262e86b2a35c24e4eb8b471974c638a88aff24bad74533899476306636af6"
+    },
+    {
+      "path": "content/reviews/v11-project-author.json",
+      "bytes": 28067,
+      "sha256": "677919d3a35edba5825a7d396e52d76a5afc3d19c704acc576805e94db1e7790"
+    },
+    {
+      "path": "content/reviews/v11-project-sources.json",
+      "bytes": 3037,
+      "sha256": "d39f5bdd1e02ce7c0558388950aa66980c7639324437bc07669ca9ba553d844a"
+    },
+    {
+      "path": "scripts/check_v11_project_peer.py",
+      "bytes": 40703,
+      "sha256": "4b330c9bb87124a4292a958a1f70cb4773187f51ae433038f68eddf90609798b"
+    }
+  ]
+}

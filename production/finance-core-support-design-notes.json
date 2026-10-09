@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-09",
+  "status": "Preparatory original support designs only. Finance-core remains planned; no manuscript or package acceptance.",
+  "activation": "Produce after the Volume 11 package is accepted. The current Volume 11 reviews retain priority.",
+  "candidate_administration": "Two structurally distinct 100-point closed-resource forms, five 20-point domains covering accounting/cash, corporate valuation, investment pricing/allocation, fixed-income/derivative hedging, and institution/governance integration. Consider 300 minutes as an uncalibrated target. Require cross-volume reasoning, complete solutions, a reproducible practical, diagnostic, oral, retention and remediation. No claim that one cumulative test samples every detail of all sixty prerequisite chapters.",
+  "support_diagnostic_candidates": [
+    {
+      "item": "D1 accrual and cash",
+      "contract": "Revenue100, receipts80, starting gross AR15/ending35, paid expenses55, depreciation10, no tax/interest/other accrual. Opening cash12, capex20, borrowing8, dividend5.",
+      "anchors": "Income35; CFO25; ending cash20."
+    },
+    {
+      "item": "D2 FCFF and enterprise/equity bridge",
+      "contract": "EBIT40, tax1/4, depreciation8, capex15, increase NWC5; financing interest4 is excluded from FCFF. Independently supplied operating enterprise value180, debt value50, unrestricted surplus cash10.",
+      "anchors": "FCFF18; equity140. Do not infer the supplied enterprise value from one observed FCFF."
+    },
+    {
+      "item": "D3 funded portfolio returns",
+      "contract": "Stock80 pays dividend4 and ends88, total return15%; separate zero-transaction-cost funded portfolio starts100 with60 in that return and40 in a bond returning-5%.",
+      "anchors": "Closing holdings69 and38, total107, portfolio return7%; no new cash contribution."
+    },
+    {
+      "item": "D4 state prices and physical weights",
+      "contract": "Two Arrow prices .4/.5, payoff20/0, physical weights .7/.3; positive common discount price .9.",
+      "anchors": "Price8, physical mean14, risk-free gross10/9; weights have different jobs."
+    },
+    {
+      "item": "D5 dated fixed-income values",
+      "contract": "Bond pays5 at1 and105 at2, discount factors .96/.9.",
+      "anchors": "Price99.3; gross forward from1 to2=.96/.9=16/15, net1/15."
+    },
+    {
+      "item": "D6 binomial replication",
+      "contract": "S0=50, next S65/40, gross bank return1.05, callK50, unrestricted specified frictionless replication.",
+      "anchors": "Payoffs15/0; delta3/5; initial bank holding-160/7; call50/7; risk-neutral upweight1/2."
+    },
+    {
+      "item": "D7 value versus dated cash",
+      "contract": "Assets200/liabilities170/equity30; usable cash4, due9, existing receivable12 collects only after deadline. A separately funded5 bridge can arrive first and requires5.5 after receipt.",
+      "anchors": "Early gap5 despite positive equity; funded early cash0 and later6.5. Collection replaces the receivable, not profit."
+    },
+    {
+      "item": "D8 terminal timing",
+      "contract": "FCFF at1=12, grows2% forever from next payment, constant appropriate discount8%, complete perpetual contract and no extra terminal assets.",
+      "anchors": "Continuation at1=12.24/.06=204; value at0=(12+204)/1.08=200. Need r>g and cannot add the year1 cash twice."
+    }
+  ],
+  "support_retention_candidates": [
+    {
+      "item": "R1 allowance, cash and FCFF",
+      "contract": "Revenue130, receipts110, opening gross AR20/ending40, new allowance6 from zero, cash operating costs60, depreciation10, no tax/interest/other accrual; opening cash10, capex25, debt issuance5, dividend15.",
+      "anchors": "Net AR34; income54; CFO50, either add depreciation10 plus provision6 less gross AR growth20, or add10 less net AR growth14. Do not add provision again with net AR change. FCFF25, closing cash25."
+    },
+    {
+      "item": "R2 claim pricing and funded acquisition",
+      "contract": "Operating asset next payoffs120/60; state prices .3/.6. New debt face80 pays actual min(face,assets), equity residual, limited liability and no costs. Acquisition outlay62 funded with proceeds from that debt and own cash.",
+      "anchors": "Operating price72; debt price60; equity12; own contribution2; NPV10. Issuing face80 does not raise80. Physical upweight.8 would give expected assets108 but does not price the claim."
+    },
+    {
+      "item": "R3 allocation constraint",
+      "contract": "Two risky mean returns .06/.10; covariance [[.01,.005],[.005,.04]], weightsw/1-w, no shorting. Compare minimum variance to target mean at least.08.",
+      "anchors": "Variance .04w^2-.07w+.04; unrestricted minimumw7/8, variance3/320, mean13/200. Target requiresw<=1/2, constrained optimumw1/2, variance3/200. Positive definite covariance and global convex argument required. Transaction-cost transfer optional; do not silently insert unfinanced fees."
+    },
+    {
+      "item": "R4 replicating payoff versus collateral funding",
+      "contract": "S0=80, terminal100/60, zero risk-free rate, callK80, frictionless initial price10 replicated by half-share and debt30. A separate lender later requires margin5 before terminal; returned in cash before final settlements. Restricted bridge costs4%. An extra initial charge x can be kept as cash and applied to margin, reducing required bridge to5-x, 0<=x<=5.",
+      "anchors": "Reference option payoffs replicate exactly. Without extra charge, bridge5 repays5.2 from returned margin5, leaving funding loss.2. Break-even extra charge solves5-1.04(5-x)=0, hencex5/26. This is a private funding-policy break-even amount, not a new universal arbitrage-free call price. All loan, collateral and refund dates and provider cash need explicit definition."
+    },
+    {
+      "item": "R5 FX hedge, counterparty credit and settlement",
+      "contract": "Original company has cash4H, collects20F before due36H, stressed spot1H/F. A stipulated cash-settled short20F forward strike2H/F has positive payoff20H. Posted collateral3H is usable on default; remaining17H recovers50%=8.5H only after cutoff. No other resources. Funded bridge may fill early gap and repays1.05 principal after the8.5H arrives; a nonrepayable grant g arriving early reduces bridge one-for-one.",
+      "anchors": "Ultimate forward recovery11.5, ultimate totalcash35.5 (unfunded .5 loss), but timely cash4+20+3=27 and early gap9. Bridge-only repayment9.45 exceeds late8.5 by.95. Minimum grantg19/21 and bridge170/21 make repayment8.5 exactly. Do not add collateral to a recovery already applied to full payoff; define unsecured recovery base. Zero initial premium is stipulated and not justified as fair under counterparty risk."
+    }
+  ],
+  "limits": "These are original candidate contracts saved for continuity, not finished prompts, solved assessment material, verified student timing or accepted source/review packages. Recheck arithmetic and inspect instruction fit when authoring. Do not publish as a completed cumulative assessment."
+}

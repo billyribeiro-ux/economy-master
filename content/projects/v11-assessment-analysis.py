@@ -215,6 +215,12 @@ def evaluate(data, policy, scenario, journal=False, price_override=None):
     result = dict(scenario=scenario['id'], bond_price=quote,
                   borrower=dict(primary_cash_first=borrower_first, primary_cash_final=Q(scenario['borrower_cash_final']),
                                 collateral_net_to_bank=net_collateral, actual_final_receipt=borrower_final,
+                                collateral_allocation=dict(buyer_cash_before_H=endowed['collateral_buyer_home_cash'],
+                                                           buyer_paid_H=Q(scenario['collateral_gross']),
+                                                           buyer_cash_after_H=endowed['collateral_buyer_home_cash'] - Q(scenario['collateral_gross']),
+                                                           liquidation_cost_H=Q(scenario['collateral_cost']),
+                                                           prior_creditor_H=Q(scenario['collateral_prior_claim']),
+                                                           bank_recovery_H=net_collateral),
                                 first_service_ratio=borrower_first / due['borrower_principal'],
                                 final_operating_service_ratio=Q(scenario['borrower_cash_final']) / (bank['domestic_loan_face'] - due['borrower_principal']),
                                 first_nominal_arrears=due['borrower_principal'] - borrower_first,
@@ -233,10 +239,10 @@ def evaluate(data, policy, scenario, journal=False, price_override=None):
                                      closing_equity_H=reconciliation, capital_flow_adjusted_loss_H=initial_equity + b - reconciliation),
                   external_funding=dict(sponsor_cash_committed_H=b + z, sponsor_cash_remaining_H=sponsor_cash,
                                         new_investor_equity_fraction=b / (initial_equity + b),
-                                        new_investor_closing_marked_stake_H=b * reconciliation / (initial_equity + b),
+                                        new_investor_closing_marked_stake_H=b * max(Q(0), reconciliation) / (initial_equity + b),
                                         lender_cash_remaining_H=lender_cash, lender_claim_H=state['secured_claim'],
                                         dealer_home_cash=dealer_home, dealer_foreign_cash=dealer_foreign),
-                  gates=dict(every_external_claim_timely=timely, home_reserve_met=cash_ok, bank_equity_floor_met=equity_ok),
+                  gates=dict(bank_and_pension_obligations_timely=timely, home_reserve_met=cash_ok, bank_equity_floor_met=equity_ok),
                   feasible=timely and cash_ok and equity_ok)
     if journal: result['journal'] = rows
     return result
@@ -283,11 +289,11 @@ def reverse_certificate(data, policy, scenario):
             if 1 / (1 + middle) ** 2 >= critical: lower = middle
             else: upper = middle
         bracket = [lower, upper]
-    at_boundary = evaluate(data, policy, scenario, price_override=critical) if critical > 0 else None
+    at_boundary = evaluate(data, policy, scenario, price_override=critical) if within else None
     return dict(scenario=scenario['id'], fixed_policy=dict(zip(('bank_equity_H', 'prefund_F', 'pension_contribution_H'), policy)),
                 held_fixed='Every other contract, receipt, price, FX rule, funding rule and monitoring time; only the long-bond yield changes.',
                 required_draw_H=draw, collateral_price_floor=collateral_floor, equity_price_floor=equity_floor,
-                binding_price_floor=critical, equality_feasible=at_boundary['feasible'] if at_boundary else True,
+                binding_price_floor=critical, equality_feasible=at_boundary['feasible'] if at_boundary else None,
                 boundary_within_supported_yield_0_to_4=within, yield_boundary_bracket=bracket,
                 yield_boundary_formula='1/sqrt(binding_price_floor) - 1 when the positive price boundary lies in the supported domain',
                 boundary_final_equity_H=at_boundary['equity_bridge']['closing_equity_H'] if at_boundary else None,

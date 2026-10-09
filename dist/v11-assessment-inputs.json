@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "provenance": "Original fictional Portlight bank and pension settlement case. H and F are synthetic currencies; times are contractual cutoffs, not years. No empirical data or actual legal authority.",
+  "initial_spot": "2",
+  "bank": {
+    "home_cash": "20", "foreign_cash": "6", "bill": "20", "long_bond_units": "20",
+    "domestic_loan_face": "60", "foreign_claim_face": "20",
+    "household_deposits": "78", "pension_deposit": "12", "foreign_deposits": "25"
+  },
+  "first_due": {"households": "18", "foreign_deposits": "15", "borrower_principal": "20"},
+  "pension": {"cash": "1", "benefits": "15"},
+  "endowments": {"sponsor_home_cash": "30", "lender_home_cash": "20", "dealer_home_cash": "100", "dealer_foreign_cash": "40", "collateral_buyer_home_cash": "20"},
+  "facility": {"eligible_bond_units": "20", "interest": "1/20"},
+  "limits": {"home_reserve": "2", "bank_equity": "20"},
+  "choices": {"bank_equity": ["0", "10", "20"], "prefund_foreign": ["0", "5", "10"], "pension_contribution": ["0", "2"]},
+  "risk_alpha": "3/4",
+  "reverse_scenario": "joint",
+  "scenarios": [
+    {"id": "normal", "probability": "1/2", "spot": "2", "bond_yield": "0", "haircut": "1/10", "borrower_cash_first": "20", "borrower_cash_final": "40", "collateral_gross": "0", "collateral_cost": "0", "collateral_prior_claim": "0", "foreign_recovery": "20", "early_fx_cap": "20", "late_fx_cap": "20", "prefund_timely": true},
+    {"id": "credit", "probability": "1/3", "spot": "5/2", "bond_yield": "1/4", "haircut": "1/5", "borrower_cash_first": "12", "borrower_cash_final": "32", "collateral_gross": "14", "collateral_cost": "2", "collateral_prior_claim": "2", "foreign_recovery": "18", "early_fx_cap": "4", "late_fx_cap": "4", "prefund_timely": true},
+    {"id": "joint", "probability": "1/6", "spot": "3", "bond_yield": "1/2", "haircut": "1/4", "borrower_cash_first": "8", "borrower_cash_final": "28", "collateral_gross": "18", "collateral_cost": "3", "collateral_prior_claim": "3", "foreign_recovery": "16", "early_fx_cap": "0", "late_fx_cap": "5", "prefund_timely": true}
+  ]
+}
