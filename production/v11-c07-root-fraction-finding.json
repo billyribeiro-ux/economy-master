@@ -1,0 +1,33 @@
+{
+  "chapter": "v11-c07",
+  "status": "resolved; coordinator final full re-read and separate peer exact-fraction confirmation passed; chapter accepted",
+  "date": "2026-10-09",
+  "manuscript_read_sha256": "e8e95b2333ca2d849c43d7c0bfb6fcefbcb50c12a02b7cba7264b02f86b1468f",
+  "location": "Exercise 3 complete solution, original joint-stress funding ceiling 20",
+  "derivation": "Old paydown is 10135/1058; cash after incident/network and new borrowing is 34. Exact actual withdrawal is 34 - 10135/1058 = 25837/1058. Subtract from withdrawal request 40 and original deposits 137.",
+  "repairs": [
+    {
+      "label": "withdrawals paid",
+      "written": "12919/529",
+      "correct": "25837/1058"
+    },
+    {
+      "label": "withdrawals unpaid",
+      "written": "8241/529",
+      "correct": "16483/1058"
+    },
+    {
+      "label": "closing deposit liability",
+      "written": "59554/529",
+      "correct": "119109/1058"
+    }
+  ],
+  "effect": "Three exact displayed fractions differ by 1/1058 from their correct values. The associated rounded decimals and stated total liabilities 143 are correct. Root independent oracle stopped on the first erroneous fraction; this was not inferred from a formatting check.",
+  "review_requirement": "Author corrects all three before freezing, reruns final checks and binds exact payload. Peer independently verifies cash and liabilities; root compares manuscript delta and independent audit.",
+  "final_manuscript_sha256": "28a71de8fc7c55a496dd645c372a4fa9c3462a320900074348ba1fade3b7bc11",
+  "additional_author_finding": {
+    "written": "529/1102",
+    "correct": "1058/2205",
+    "derivation": "New pledge equals20/((1-0.5)*(44100/529))=1058/2205. Coordinator independently confirmed against stated draw and price."
+  }
+}

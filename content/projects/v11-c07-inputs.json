@@ -1,0 +1,41 @@
+{
+  "schema": "v11-c07-inputs-1",
+  "institution": {
+    "cash": "12",
+    "bond_face": "441/4",
+    "bond_years": 2,
+    "loan_face": "84",
+    "base_yield": "1/20",
+    "deposits": "137",
+    "secured_old": "20",
+    "pledged_fraction": "1/4",
+    "facility_limit": "20",
+    "secured_daily_rate": "1/1000",
+    "cash_floor": "2",
+    "equity_floor": "10"
+  },
+  "network": {
+    "obligation": "20",
+    "interbank_share": "1/2",
+    "external_b": "12",
+    "external_c": "12"
+  },
+  "reference": {"haircut": "1/5", "withdrawal": "20"},
+  "scenarios": [
+    {"id": "reference", "yield": "1/20", "loan_loss_fraction": "0", "external_b": "12", "external_c": "12", "haircut": "1/5", "withdrawal": "20", "operating_cash_loss": "0", "facility_limit": "20"},
+    {"id": "rate_rise", "yield": "3/20", "loan_loss_fraction": "0", "external_b": "12", "external_c": "12", "haircut": "3/10", "withdrawal": "20", "operating_cash_loss": "0", "facility_limit": "20"},
+    {"id": "sector_recession", "yield": "1/50", "loan_loss_fraction": "2/5", "external_b": "2", "external_c": "8", "haircut": "1/4", "withdrawal": "30", "operating_cash_loss": "2", "facility_limit": "20"},
+    {"id": "joint", "yield": "3/20", "loan_loss_fraction": "1/5", "external_b": "2", "external_c": "8", "haircut": "1/2", "withdrawal": "40", "operating_cash_loss": "2", "facility_limit": "20"},
+    {"id": "funding_outage", "yield": "1/20", "loan_loss_fraction": "0", "external_b": "12", "external_c": "12", "haircut": "1/5", "withdrawal": "30", "operating_cash_loss": "0", "facility_limit": "0"}
+  ],
+  "reverse": {
+    "yield_increase": "1/10",
+    "loan_loss_increase": "1/5",
+    "b_resource_drop": "10",
+    "c_resource_drop": "4",
+    "haircut_increase": "3/10",
+    "withdrawal_increase": "20",
+    "operating_loss_increase": "2",
+    "bisections": 40
+  }
+}

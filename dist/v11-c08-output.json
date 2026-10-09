@@ -1,0 +1,580 @@
+{
+  "schema": 1,
+  "units": "Synthetic nominal currency units; annual dates; physical probabilities",
+  "insurance": {
+    "types": [
+      {
+        "id": "low",
+        "no_insurance_utility_approx": "9.6",
+        "full_insurance_max_premium_approx": "7.84",
+        "accepts_pooled_full_insurance": false,
+        "offers": [
+          {
+            "id": "uninsured",
+            "expected_utility_approx": "9.6",
+            "premium_minus_expected_claim": "0"
+          },
+          {
+            "id": "partial",
+            "expected_utility_approx": "9.621194779558086646030262619444151056176",
+            "premium_minus_expected_claim": "0"
+          },
+          {
+            "id": "full",
+            "expected_utility_approx": "8.625543461139129869893576719600473903074",
+            "premium_minus_expected_claim": "96/5"
+          }
+        ],
+        "maximizing_contracts_approx": [
+          "partial"
+        ]
+      },
+      {
+        "id": "high",
+        "no_insurance_utility_approx": "8.4",
+        "full_insurance_max_premium_approx": "29.44",
+        "accepts_pooled_full_insurance": true,
+        "offers": [
+          {
+            "id": "uninsured",
+            "expected_utility_approx": "8.4",
+            "premium_minus_expected_claim": "0"
+          },
+          {
+            "id": "partial",
+            "expected_utility_approx": "8.605020083059388884514720877499309239929",
+            "premium_minus_expected_claim": "-12/5"
+          },
+          {
+            "id": "full",
+            "expected_utility_approx": "8.625543461139129869893576719600473903074",
+            "premium_minus_expected_claim": "0"
+          }
+        ],
+        "maximizing_contracts_approx": [
+          "full"
+        ]
+      }
+    ],
+    "pooled_claim_probability": "1/4",
+    "pooled_full_premium": "16",
+    "buyer_share": "1/2",
+    "selected_claim_probability": "2/5",
+    "margin_per_selected_policy": "-48/5",
+    "scope": "Square-root utility; solvent contractual payout assumed for choices. Decimal utility approximations use precision 40 and absolute tie tolerance 1e-30; pool purchase on indifference. Fixed menu only, no market equilibrium."
+  },
+  "pool": {
+    "members": 100,
+    "marginal_probability": "1/4",
+    "resources": "1800",
+    "expected_claims": "1600",
+    "expected_premium_margin": "200",
+    "common_probability_variance": "9/400",
+    "conditional_bernoulli_variance": "33/200",
+    "limiting_variance_average_claim": "2304/25",
+    "laws": {
+      "independent": {
+        "shortfall_probability": "41687755371558398186554541981489209438247603584941348498629/200867255532373784442745261542645325315275374222849104412672",
+        "expected_unpaid_claims": "984881017653827216475976335591388340958112846066597373578075/25108406941546723055343157692830665664409421777856138051584",
+        "variance_average_claim": "192/25"
+      },
+      "common_regime": {
+        "shortfall_probability": "1239459451243128951766401478502190235430904318009831067969817893203462980890305507407805163870108207/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "expected_unpaid_claims": "950818258849184255356229560201457053817008324982628571233654719816031099518093835126429375300144613/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "variance_average_claim": "61824/625"
+      }
+    },
+    "scope": "Claims paid at one date, no expenses/interest/reinsurance; conditional independence within each stipulated common regime; strict resource shortfall. Expected unpaid claims are before any support or resolution."
+  },
+  "annuity": {
+    "single_life_states": [
+      {
+        "payments_received": 0,
+        "probability": "1/10",
+        "present_value": "0"
+      },
+      {
+        "payments_received": 1,
+        "probability": "3/20",
+        "present_value": "96/5"
+      },
+      {
+        "payments_received": 2,
+        "probability": "3/20",
+        "present_value": "188/5"
+      },
+      {
+        "payments_received": 3,
+        "probability": "3/5",
+        "present_value": "276/5"
+      }
+    ],
+    "mean_per_life": "1041/25",
+    "variance_per_life": "226059/625",
+    "expected_cohort_liability": "4164",
+    "iid_variance_average": "226059/62500",
+    "iid_variance_total": "904236/25",
+    "regimes": [
+      {
+        "id": "shorter",
+        "weight": "0.5",
+        "mean": "181/5",
+        "variance": "52151/125"
+      },
+      {
+        "id": "longer",
+        "weight": "0.5",
+        "mean": "1177/25",
+        "variance": "154371/625"
+      }
+    ],
+    "within_regime_variance": "207563/625",
+    "between_regime_mean_variance": "18496/625",
+    "common_regime_variance_average": "2057163/62500",
+    "common_regime_variance_total": "8228652/25",
+    "stress_mean_per_life": "1177/25",
+    "stress_expected_cohort_liability": "4708",
+    "temporary_death_benefit_pv": "183/5",
+    "scope": "Temporary end-year survivor payments only; deterministic discounts and physical survival law. Average and total variances have CU-squared units. Actuarial expectation is not automatically a market price."
+  },
+  "pension": {
+    "initial_asset_pv": "4300",
+    "expected_liability_pv": "4164",
+    "expected_surplus": "136",
+    "surplus_derivative_per_unit_parallel_continuous_rate": "-1344",
+    "curve_shift": "0.01",
+    "shifted_asset_pv_approx": 4211.106148607898,
+    "shifted_liability_pv_approx": 4088.2707653091093,
+    "shifted_surplus_approx": 122.83538329878866,
+    "paths": [
+      {
+        "id": "baseline_counts",
+        "path_liability_pv": "4164",
+        "initial_path_surplus": "136",
+        "minimum_extra_initial_cash_with_stated_markets": "0",
+        "without_support": {
+          "rows": [
+            {
+              "date": 1,
+              "opening_cash": "200",
+              "accrued_cash": "625/3",
+              "matured_face": "1000",
+              "sales": [
+                {
+                  "maturity": 3,
+                  "face_sold": "7100/11",
+                  "price_per_face": "11/12",
+                  "receipt": "1775/3"
+                }
+              ],
+              "due": "1800",
+              "paid": "1800",
+              "unpaid": "0",
+              "closing_cash": "0",
+              "remaining_faces": [
+                "0",
+                "1500",
+                "14900/11"
+              ]
+            },
+            {
+              "date": 2,
+              "opening_cash": "0",
+              "accrued_cash": "0",
+              "matured_face": "1500",
+              "sales": [],
+              "due": "1500",
+              "paid": "1500",
+              "unpaid": "0",
+              "closing_cash": "0",
+              "remaining_faces": [
+                "0",
+                "0",
+                "14900/11"
+              ]
+            },
+            {
+              "date": 3,
+              "opening_cash": "0",
+              "accrued_cash": "0",
+              "matured_face": "14900/11",
+              "sales": [],
+              "due": "1200",
+              "paid": "1200",
+              "unpaid": "0",
+              "closing_cash": "1700/11",
+              "remaining_faces": [
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          "first_unpaid_date": null,
+          "all_payments_met": true,
+          "terminal_cash": "1700/11",
+          "scope": "Maturities and accrued cash arrive before payout; sell latest remaining maturities first at executable deterministic D[j]/D[t], before payout. No borrowing; stop at first unpaid benefit."
+        },
+        "with_minimum_extra_cash": {
+          "rows": [
+            {
+              "date": 1,
+              "opening_cash": "200",
+              "accrued_cash": "625/3",
+              "matured_face": "1000",
+              "sales": [
+                {
+                  "maturity": 3,
+                  "face_sold": "7100/11",
+                  "price_per_face": "11/12",
+                  "receipt": "1775/3"
+                }
+              ],
+              "due": "1800",
+              "paid": "1800",
+              "unpaid": "0",
+              "closing_cash": "0",
+              "remaining_faces": [
+                "0",
+                "1500",
+                "14900/11"
+              ]
+            },
+            {
+              "date": 2,
+              "opening_cash": "0",
+              "accrued_cash": "0",
+              "matured_face": "1500",
+              "sales": [],
+              "due": "1500",
+              "paid": "1500",
+              "unpaid": "0",
+              "closing_cash": "0",
+              "remaining_faces": [
+                "0",
+                "0",
+                "14900/11"
+              ]
+            },
+            {
+              "date": 3,
+              "opening_cash": "0",
+              "accrued_cash": "0",
+              "matured_face": "14900/11",
+              "sales": [],
+              "due": "1200",
+              "paid": "1200",
+              "unpaid": "0",
+              "closing_cash": "1700/11",
+              "remaining_faces": [
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          "first_unpaid_date": null,
+          "all_payments_met": true,
+          "terminal_cash": "1700/11",
+          "scope": "Maturities and accrued cash arrive before payout; sell latest remaining maturities first at executable deterministic D[j]/D[t], before payout. No borrowing; stop at first unpaid benefit."
+        }
+      },
+      {
+        "id": "longer_lives",
+        "path_liability_pv": "4708",
+        "initial_path_surplus": "-408",
+        "minimum_extra_initial_cash_with_stated_markets": "408",
+        "without_support": {
+          "rows": [
+            {
+              "date": 1,
+              "opening_cash": "200",
+              "accrued_cash": "625/3",
+              "matured_face": "1000",
+              "sales": [
+                {
+                  "maturity": 3,
+                  "face_sold": "8300/11",
+                  "price_per_face": "11/12",
+                  "receipt": "2075/3"
+                }
+              ],
+              "due": "1900",
+              "paid": "1900",
+              "unpaid": "0",
+              "closing_cash": "0",
+              "remaining_faces": [
+                "0",
+                "1500",
+                "13700/11"
+              ]
+            },
+            {
+              "date": 2,
+              "opening_cash": "0",
+              "accrued_cash": "0",
+              "matured_face": "1500",
+              "sales": [
+                {
+                  "maturity": 3,
+                  "face_sold": "2300/11",
+                  "price_per_face": "22/23",
+                  "receipt": "200"
+                }
+              ],
+              "due": "1700",
+              "paid": "1700",
+              "unpaid": "0",
+              "closing_cash": "0",
+              "remaining_faces": [
+                "0",
+                "0",
+                "11400/11"
+              ]
+            },
+            {
+              "date": 3,
+              "opening_cash": "0",
+              "accrued_cash": "0",
+              "matured_face": "11400/11",
+              "sales": [],
+              "due": "1500",
+              "paid": "11400/11",
+              "unpaid": "5100/11",
+              "closing_cash": "0",
+              "remaining_faces": [
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          "first_unpaid_date": 3,
+          "all_payments_met": false,
+          "terminal_cash": null,
+          "scope": "Maturities and accrued cash arrive before payout; sell latest remaining maturities first at executable deterministic D[j]/D[t], before payout. No borrowing; stop at first unpaid benefit."
+        },
+        "with_minimum_extra_cash": {
+          "rows": [
+            {
+              "date": 1,
+              "opening_cash": "608",
+              "accrued_cash": "1900/3",
+              "matured_face": "1000",
+              "sales": [
+                {
+                  "maturity": 3,
+                  "face_sold": "3200/11",
+                  "price_per_face": "11/12",
+                  "receipt": "800/3"
+                }
+              ],
+              "due": "1900",
+              "paid": "1900",
+              "unpaid": "0",
+              "closing_cash": "0",
+              "remaining_faces": [
+                "0",
+                "1500",
+                "18800/11"
+              ]
+            },
+            {
+              "date": 2,
+              "opening_cash": "0",
+              "accrued_cash": "0",
+              "matured_face": "1500",
+              "sales": [
+                {
+                  "maturity": 3,
+                  "face_sold": "2300/11",
+                  "price_per_face": "22/23",
+                  "receipt": "200"
+                }
+              ],
+              "due": "1700",
+              "paid": "1700",
+              "unpaid": "0",
+              "closing_cash": "0",
+              "remaining_faces": [
+                "0",
+                "0",
+                "1500"
+              ]
+            },
+            {
+              "date": 3,
+              "opening_cash": "0",
+              "accrued_cash": "0",
+              "matured_face": "1500",
+              "sales": [],
+              "due": "1500",
+              "paid": "1500",
+              "unpaid": "0",
+              "closing_cash": "0",
+              "remaining_faces": [
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          "first_unpaid_date": null,
+          "all_payments_met": true,
+          "terminal_cash": "0",
+          "scope": "Maturities and accrued cash arrive before payout; sell latest remaining maturities first at executable deterministic D[j]/D[t], before payout. No borrowing; stop at first unpaid benefit."
+        }
+      }
+    ]
+  },
+  "guarantee": {
+    "states": [
+      {
+        "id": "weak_sponsor",
+        "probability": "1/4",
+        "assets": "60",
+        "required_sponsor_topup": "40",
+        "actual_sponsor_payment": "5",
+        "guarantor_payment": "0",
+        "participant_payment": "65",
+        "participant_shortfall": "35",
+        "residual_assets": "0"
+      },
+      {
+        "id": "strong_assets",
+        "probability": "3/4",
+        "assets": "120",
+        "required_sponsor_topup": "0",
+        "actual_sponsor_payment": "0",
+        "guarantor_payment": "0",
+        "participant_payment": "100",
+        "participant_shortfall": "0",
+        "residual_assets": "20"
+      }
+    ],
+    "expectations": {
+      "assets": "105",
+      "required_sponsor_topup": "10",
+      "actual_sponsor_payment": "5/4",
+      "guarantor_payment": "0",
+      "participant_payment": "365/4",
+      "participant_shortfall": "35/4",
+      "residual_assets": "15"
+    },
+    "scope": "One terminal benefit; assets then sponsor then guarantor; separately available state-specific capacities are external to assets. No premiums, subrogation or statutory insurance is modeled. Residual assets belong to the stipulated sponsor."
+  },
+  "household": {
+    "loans": [
+      {
+        "id": "amortizing",
+        "rows": [
+          {
+            "date": 1,
+            "opening_cash": "6",
+            "income": "38",
+            "consumption": "24",
+            "contribution": "3",
+            "interest": "12/5",
+            "principal": "8",
+            "debt_service": "52/5",
+            "remaining_debt": "16",
+            "projected_liquid": "33/5",
+            "opening_pension": "30",
+            "pension_account": "171/5"
+          },
+          {
+            "date": 2,
+            "opening_cash": "33/5",
+            "income": "34",
+            "consumption": "25",
+            "contribution": "3",
+            "interest": "8/5",
+            "principal": "8",
+            "debt_service": "48/5",
+            "remaining_debt": "8",
+            "projected_liquid": "3",
+            "opening_pension": "171/5",
+            "pension_account": "1689/50"
+          },
+          {
+            "date": 3,
+            "opening_cash": "3",
+            "income": "36",
+            "consumption": "26",
+            "contribution": "3",
+            "interest": "4/5",
+            "principal": "8",
+            "debt_service": "44/5",
+            "remaining_debt": "0",
+            "projected_liquid": "6/5",
+            "opening_pension": "1689/50",
+            "pension_account": "20079/500"
+          }
+        ],
+        "total_interest": "24/5",
+        "minimum_projected_liquid": "6/5",
+        "first_floor_breach": 3,
+        "first_negative_cash": null,
+        "minimum_extra_initial_cash_for_floor": "4/5"
+      },
+      {
+        "id": "bullet",
+        "rows": [
+          {
+            "date": 1,
+            "opening_cash": "6",
+            "income": "38",
+            "consumption": "24",
+            "contribution": "3",
+            "interest": "48/25",
+            "principal": "0",
+            "debt_service": "48/25",
+            "remaining_debt": "24",
+            "projected_liquid": "377/25",
+            "opening_pension": "30",
+            "pension_account": "171/5"
+          },
+          {
+            "date": 2,
+            "opening_cash": "377/25",
+            "income": "34",
+            "consumption": "25",
+            "contribution": "3",
+            "interest": "48/25",
+            "principal": "0",
+            "debt_service": "48/25",
+            "remaining_debt": "24",
+            "projected_liquid": "479/25",
+            "opening_pension": "171/5",
+            "pension_account": "1689/50"
+          },
+          {
+            "date": 3,
+            "opening_cash": "479/25",
+            "income": "36",
+            "consumption": "26",
+            "contribution": "3",
+            "interest": "48/25",
+            "principal": "24",
+            "debt_service": "648/25",
+            "remaining_debt": "0",
+            "projected_liquid": "6/25",
+            "opening_pension": "1689/50",
+            "pension_account": "20079/500"
+          }
+        ],
+        "total_interest": "144/25",
+        "minimum_projected_liquid": "6/25",
+        "first_floor_breach": 3,
+        "first_negative_cash": null,
+        "minimum_extra_initial_cash_for_floor": "44/25"
+      }
+    ],
+    "scope": "Debt already exists after a financed purchase; no fresh loan proceeds added. Liquid money earns zero; income precedes end-year obligations. Pension return precedes contribution; pension locked beyond final date. Negative projected cash signals failure, never an assumed borrowing facility. Fixed-plan cash minimum includes date zero."
+  },
+  "limits": [
+    "Original stipulated cases, not observed frequencies, legal advice, a solvency standard or a personal recommendation.",
+    "Exact fractions are strings; square-root utility and exponential curve shifts are explicitly approximate.",
+    "Conditional independence, execution access, survival laws and support capacities are assumptions requiring separate evidence in an actual application."
+  ]
+}

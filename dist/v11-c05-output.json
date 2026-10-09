@@ -1,0 +1,1830 @@
+{
+  "alm": [
+    {
+      "asset_pv": "100",
+      "asset_yield_derivative": "-82000/441",
+      "case": "base",
+      "economic_equity": "10",
+      "economic_equity_yield_derivative": "655159600/4084101",
+      "fixed_liability_pv": "80",
+      "fixed_liability_yield_derivative": "-1414561600/4084101",
+      "floating_liability_pv": "20",
+      "next_year_interest_income_net": "0",
+      "nii_yield_derivative": "-20",
+      "yield": "1/20"
+    },
+    {
+      "asset_pv": "1103500/11449",
+      "asset_yield_derivative": "-215350000/1225043",
+      "case": "shock",
+      "economic_equity": "181550217030/14025517307",
+      "economic_equity_yield_derivative": "202089317990000/1500730351849",
+      "fixed_liability_pv": "1030029560400/14025517307",
+      "fixed_liability_yield_derivative": "-465902328040000/1500730351849",
+      "floating_liability_pv": "20",
+      "next_year_interest_income_net": "-2/5",
+      "nii_yield_derivative": "-20",
+      "yield": "7/100"
+    }
+  ],
+  "currency_case": {
+    "authorized_late_transfer_headroom_after_receipt": "2",
+    "authorized_late_transfer_headroom_at_deadline": "-8",
+    "authorized_timely_transfer_headroom": "2",
+    "no_authorized_transfer_headroom": "-8",
+    "potential_converted_cu": "10"
+  },
+  "fixed_policy_certificate": {
+    "additional_cash_needed": "399/10",
+    "all_scenarios_feasible": false,
+    "binding_cutoffs": [
+      {
+        "cutoff": 2,
+        "scenario": "joint_stress"
+      }
+    ],
+    "required_upfront_cash": "399/10"
+  },
+  "opening_book_equity": "123/5",
+  "scenarios": [
+    {
+      "additional_cash_needed": "0",
+      "collateral_principal_paydown": "0",
+      "feasible_under_fixed_policy": true,
+      "first_failure_cutoff": null,
+      "initial_secured_capacity": "40",
+      "journal": [
+        {
+          "assets_after": "255",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "equity": "0"
+          },
+          "cutoff": 0,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "upfront_cash_equity",
+          "liabilities_after": "1152/5"
+        },
+        {
+          "assets_after": "285",
+          "balance_error": "0",
+          "cash_flow": "30",
+          "changes": {
+            "cash": "30",
+            "secured_principal": "30"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "secured_draw",
+          "liabilities_after": "1302/5"
+        },
+        {
+          "assets_after": "325",
+          "balance_error": "0",
+          "cash_flow": "40",
+          "changes": {
+            "cash": "40",
+            "rollover_principal": "40"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "new_rollover_draw",
+          "liabilities_after": "1502/5"
+        },
+        {
+          "assets_after": "325",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "loans": "0"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "loan_principal_receipt",
+          "liabilities_after": "1502/5"
+        },
+        {
+          "assets_after": "325",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "other_liabilities": "0"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "other_liability_payment",
+          "liabilities_after": "1502/5"
+        },
+        {
+          "assets_after": "325",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "initial_margin": "0"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "initial_margin_transfer",
+          "liabilities_after": "1502/5"
+        },
+        {
+          "assets_after": "285",
+          "balance_error": "0",
+          "cash_flow": "-40",
+          "changes": {
+            "cash": "-40",
+            "legacy_principal": "-40"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "legacy_principal_repayment",
+          "liabilities_after": "1302/5"
+        },
+        {
+          "assets_after": "1423/5",
+          "balance_error": "0",
+          "cash_flow": "-2/5",
+          "changes": {
+            "cash": "-2/5",
+            "legacy_interest_payable": "-2/5"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "legacy_accrued_interest_payment",
+          "liabilities_after": "260"
+        },
+        {
+          "assets_after": "1373/5",
+          "balance_error": "0",
+          "cash_flow": "-10",
+          "changes": {
+            "cash": "-10",
+            "deposits": "-10"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "deposit_withdrawal",
+          "liabilities_after": "250"
+        },
+        {
+          "assets_after": "1363/5",
+          "balance_error": "0",
+          "cash_flow": "-2",
+          "changes": {
+            "cash": "-2",
+            "equity": "-2"
+          },
+          "cutoff": 1,
+          "equity_after": "113/5",
+          "equity_change": "-2",
+          "event": "variation_settlement",
+          "liabilities_after": "250"
+        },
+        {
+          "assets_after": "1363/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "equity": "-1/2",
+            "new_interest_payable": "1/2"
+          },
+          "cutoff": 2,
+          "equity_after": "221/10",
+          "equity_change": "-1/2",
+          "event": "funding_interest_accrual",
+          "liabilities_after": "501/2"
+        },
+        {
+          "assets_after": "1363/5",
+          "balance_error": "0",
+          "cash_flow": "12",
+          "changes": {
+            "cash": "12",
+            "loans": "-12"
+          },
+          "cutoff": 2,
+          "equity_after": "221/10",
+          "equity_change": "0",
+          "event": "loan_principal_receipt",
+          "liabilities_after": "501/2"
+        },
+        {
+          "assets_after": "1363/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "other_liabilities": "0"
+          },
+          "cutoff": 2,
+          "equity_after": "221/10",
+          "equity_change": "0",
+          "event": "other_liability_payment",
+          "liabilities_after": "501/2"
+        },
+        {
+          "assets_after": "1363/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "initial_margin": "0"
+          },
+          "cutoff": 2,
+          "equity_after": "221/10",
+          "equity_change": "0",
+          "event": "initial_margin_transfer",
+          "liabilities_after": "501/2"
+        },
+        {
+          "assets_after": "1363/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "loans": "0"
+          },
+          "cutoff": 2,
+          "equity_after": "221/10",
+          "equity_change": "0",
+          "event": "customer_line_advance",
+          "liabilities_after": "501/2"
+        },
+        {
+          "assets_after": "1363/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "secured_principal": "0"
+          },
+          "cutoff": 2,
+          "equity_after": "221/10",
+          "equity_change": "0",
+          "event": "collateral_principal_paydown",
+          "liabilities_after": "501/2"
+        },
+        {
+          "assets_after": "1348/5",
+          "balance_error": "0",
+          "cash_flow": "-3",
+          "changes": {
+            "cash": "-3",
+            "deposits": "-3"
+          },
+          "cutoff": 2,
+          "equity_after": "221/10",
+          "equity_change": "0",
+          "event": "deposit_withdrawal",
+          "liabilities_after": "495/2"
+        },
+        {
+          "assets_after": "1328/5",
+          "balance_error": "0",
+          "cash_flow": "-4",
+          "changes": {
+            "cash": "-4",
+            "equity": "-4"
+          },
+          "cutoff": 2,
+          "equity_after": "181/10",
+          "equity_change": "-4",
+          "event": "variation_settlement",
+          "liabilities_after": "495/2"
+        },
+        {
+          "assets_after": "1328/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "equity": "-1/2",
+            "new_interest_payable": "1/2"
+          },
+          "cutoff": 3,
+          "equity_after": "88/5",
+          "equity_change": "-1/2",
+          "event": "funding_interest_accrual",
+          "liabilities_after": "248"
+        },
+        {
+          "assets_after": "1328/5",
+          "balance_error": "0",
+          "cash_flow": "18",
+          "changes": {
+            "cash": "18",
+            "loans": "-18"
+          },
+          "cutoff": 3,
+          "equity_after": "88/5",
+          "equity_change": "0",
+          "event": "loan_principal_receipt",
+          "liabilities_after": "248"
+        },
+        {
+          "assets_after": "1343/5",
+          "balance_error": "0",
+          "cash_flow": "3",
+          "changes": {
+            "cash": "3",
+            "equity": "3"
+          },
+          "cutoff": 3,
+          "equity_after": "103/5",
+          "equity_change": "3",
+          "event": "variation_settlement",
+          "liabilities_after": "248"
+        },
+        {
+          "assets_after": "1343/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "initial_margin": "0"
+          },
+          "cutoff": 3,
+          "equity_after": "103/5",
+          "equity_change": "0",
+          "event": "initial_margin_transfer",
+          "liabilities_after": "248"
+        },
+        {
+          "assets_after": "1318/5",
+          "balance_error": "0",
+          "cash_flow": "-5",
+          "changes": {
+            "cash": "-5",
+            "deposits": "-5"
+          },
+          "cutoff": 3,
+          "equity_after": "103/5",
+          "equity_change": "0",
+          "event": "deposit_withdrawal",
+          "liabilities_after": "243"
+        },
+        {
+          "assets_after": "1288/5",
+          "balance_error": "0",
+          "cash_flow": "-6",
+          "changes": {
+            "cash": "-6",
+            "other_liabilities": "-6"
+          },
+          "cutoff": 3,
+          "equity_after": "103/5",
+          "equity_change": "0",
+          "event": "other_liability_payment",
+          "liabilities_after": "237"
+        },
+        {
+          "assets_after": "1288/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "equity": "-1/2",
+            "new_interest_payable": "1/2"
+          },
+          "cutoff": 4,
+          "equity_after": "201/10",
+          "equity_change": "-1/2",
+          "event": "funding_interest_accrual",
+          "liabilities_after": "475/2"
+        },
+        {
+          "assets_after": "1288/5",
+          "balance_error": "0",
+          "cash_flow": "40",
+          "changes": {
+            "cash": "40",
+            "loans": "-40"
+          },
+          "cutoff": 4,
+          "equity_after": "201/10",
+          "equity_change": "0",
+          "event": "loan_principal_receipt",
+          "liabilities_after": "475/2"
+        },
+        {
+          "assets_after": "1288/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "deposits": "0"
+          },
+          "cutoff": 4,
+          "equity_after": "201/10",
+          "equity_change": "0",
+          "event": "deposit_withdrawal",
+          "liabilities_after": "475/2"
+        },
+        {
+          "assets_after": "1288/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "other_liabilities": "0"
+          },
+          "cutoff": 4,
+          "equity_after": "201/10",
+          "equity_change": "0",
+          "event": "other_liability_payment",
+          "liabilities_after": "475/2"
+        },
+        {
+          "assets_after": "1313/5",
+          "balance_error": "0",
+          "cash_flow": "5",
+          "changes": {
+            "cash": "5",
+            "equity": "5"
+          },
+          "cutoff": 4,
+          "equity_after": "251/10",
+          "equity_change": "5",
+          "event": "variation_settlement",
+          "liabilities_after": "475/2"
+        },
+        {
+          "assets_after": "1313/5",
+          "balance_error": "0",
+          "cash_flow": "5",
+          "changes": {
+            "cash": "5",
+            "initial_margin": "-5"
+          },
+          "cutoff": 4,
+          "equity_after": "251/10",
+          "equity_change": "0",
+          "event": "initial_margin_transfer",
+          "liabilities_after": "475/2"
+        },
+        {
+          "assets_after": "1163/5",
+          "balance_error": "0",
+          "cash_flow": "-30",
+          "changes": {
+            "cash": "-30",
+            "secured_principal": "-30"
+          },
+          "cutoff": 4,
+          "equity_after": "251/10",
+          "equity_change": "0",
+          "event": "secured_maturity_repayment",
+          "liabilities_after": "415/2"
+        },
+        {
+          "assets_after": "963/5",
+          "balance_error": "0",
+          "cash_flow": "-40",
+          "changes": {
+            "cash": "-40",
+            "rollover_principal": "-40"
+          },
+          "cutoff": 4,
+          "equity_after": "251/10",
+          "equity_change": "0",
+          "event": "rollover_maturity_repayment",
+          "liabilities_after": "335/2"
+        },
+        {
+          "assets_after": "1911/10",
+          "balance_error": "0",
+          "cash_flow": "-3/2",
+          "changes": {
+            "cash": "-3/2",
+            "new_interest_payable": "-3/2"
+          },
+          "cutoff": 4,
+          "equity_after": "251/10",
+          "equity_change": "0",
+          "event": "funding_interest_payment",
+          "liabilities_after": "166"
+        }
+      ],
+      "maintenance_capacity": "40",
+      "name": "base",
+      "required_upfront_cash": "0",
+      "rollover_draw": "40",
+      "rollover_interest_total": "3/5",
+      "rows": [
+        {
+          "already_pledged_units": "20",
+          "available_cash": "168/5",
+          "available_cash_without_buffer": "168/5",
+          "balance_error": "0",
+          "cash_gap": "0",
+          "cutoff": 1,
+          "free_eligible_units": "25/2",
+          "inaccessible_units": "10",
+          "marked_equity": "113/5",
+          "new_pledged_units": "75/2",
+          "state": {
+            "cash": "188/5",
+            "deposits": "150",
+            "equity": "113/5",
+            "initial_margin": "5",
+            "legacy_interest_payable": "0",
+            "legacy_principal": "0",
+            "loans": "150",
+            "new_interest_payable": "0",
+            "other_liabilities": "30",
+            "rollover_principal": "40",
+            "secured_principal": "30",
+            "securities_book": "80"
+          },
+          "total_assets": "1363/5",
+          "total_liabilities": "250"
+        },
+        {
+          "already_pledged_units": "20",
+          "available_cash": "193/5",
+          "available_cash_without_buffer": "193/5",
+          "balance_error": "0",
+          "cash_gap": "0",
+          "cutoff": 2,
+          "free_eligible_units": "25/2",
+          "inaccessible_units": "10",
+          "marked_equity": "181/10",
+          "new_pledged_units": "75/2",
+          "state": {
+            "cash": "213/5",
+            "deposits": "147",
+            "equity": "181/10",
+            "initial_margin": "5",
+            "legacy_interest_payable": "0",
+            "legacy_principal": "0",
+            "loans": "138",
+            "new_interest_payable": "1/2",
+            "other_liabilities": "30",
+            "rollover_principal": "40",
+            "secured_principal": "30",
+            "securities_book": "80"
+          },
+          "total_assets": "1328/5",
+          "total_liabilities": "495/2"
+        },
+        {
+          "already_pledged_units": "20",
+          "available_cash": "243/5",
+          "available_cash_without_buffer": "243/5",
+          "balance_error": "0",
+          "cash_gap": "0",
+          "cutoff": 3,
+          "free_eligible_units": "25/2",
+          "inaccessible_units": "10",
+          "marked_equity": "103/5",
+          "new_pledged_units": "75/2",
+          "state": {
+            "cash": "263/5",
+            "deposits": "142",
+            "equity": "103/5",
+            "initial_margin": "5",
+            "legacy_interest_payable": "0",
+            "legacy_principal": "0",
+            "loans": "120",
+            "new_interest_payable": "1",
+            "other_liabilities": "24",
+            "rollover_principal": "40",
+            "secured_principal": "30",
+            "securities_book": "80"
+          },
+          "total_assets": "1288/5",
+          "total_liabilities": "237"
+        },
+        {
+          "already_pledged_units": "20",
+          "available_cash": "271/10",
+          "available_cash_without_buffer": "271/10",
+          "balance_error": "0",
+          "cash_gap": "0",
+          "cutoff": 4,
+          "free_eligible_units": "50",
+          "inaccessible_units": "10",
+          "marked_equity": "251/10",
+          "new_pledged_units": "0",
+          "state": {
+            "cash": "311/10",
+            "deposits": "142",
+            "equity": "251/10",
+            "initial_margin": "0",
+            "legacy_interest_payable": "0",
+            "legacy_principal": "0",
+            "loans": "80",
+            "new_interest_payable": "0",
+            "other_liabilities": "24",
+            "rollover_principal": "0",
+            "secured_principal": "0",
+            "securities_book": "80"
+          },
+          "total_assets": "1911/10",
+          "total_liabilities": "166"
+        }
+      ],
+      "secured_draw": "30",
+      "secured_interest_total": "9/10"
+    },
+    {
+      "additional_cash_needed": "32/5",
+      "collateral_principal_paydown": "0",
+      "feasible_under_fixed_policy": false,
+      "first_failure_cutoff": 1,
+      "initial_secured_capacity": "40",
+      "journal": [
+        {
+          "assets_after": "255",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "equity": "0"
+          },
+          "cutoff": 0,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "upfront_cash_equity",
+          "liabilities_after": "1152/5"
+        },
+        {
+          "assets_after": "285",
+          "balance_error": "0",
+          "cash_flow": "30",
+          "changes": {
+            "cash": "30",
+            "secured_principal": "30"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "secured_draw",
+          "liabilities_after": "1302/5"
+        },
+        {
+          "assets_after": "285",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "rollover_principal": "0"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "new_rollover_draw",
+          "liabilities_after": "1302/5"
+        },
+        {
+          "assets_after": "285",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "loans": "0"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "loan_principal_receipt",
+          "liabilities_after": "1302/5"
+        },
+        {
+          "assets_after": "285",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "other_liabilities": "0"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "other_liability_payment",
+          "liabilities_after": "1302/5"
+        },
+        {
+          "assets_after": "285",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "initial_margin": "0"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "initial_margin_transfer",
+          "liabilities_after": "1302/5"
+        },
+        {
+          "assets_after": "245",
+          "balance_error": "0",
+          "cash_flow": "-40",
+          "changes": {
+            "cash": "-40",
+            "legacy_principal": "-40"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "legacy_principal_repayment",
+          "liabilities_after": "1102/5"
+        },
+        {
+          "assets_after": "1223/5",
+          "balance_error": "0",
+          "cash_flow": "-2/5",
+          "changes": {
+            "cash": "-2/5",
+            "legacy_interest_payable": "-2/5"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "legacy_accrued_interest_payment",
+          "liabilities_after": "220"
+        },
+        {
+          "assets_after": "1173/5",
+          "balance_error": "0",
+          "cash_flow": "-10",
+          "changes": {
+            "cash": "-10",
+            "deposits": "-10"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "deposit_withdrawal",
+          "liabilities_after": "210"
+        },
+        {
+          "assets_after": "1163/5",
+          "balance_error": "0",
+          "cash_flow": "-2",
+          "changes": {
+            "cash": "-2",
+            "equity": "-2"
+          },
+          "cutoff": 1,
+          "equity_after": "113/5",
+          "equity_change": "-2",
+          "event": "variation_settlement",
+          "liabilities_after": "210"
+        },
+        {
+          "assets_after": "1163/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "equity": "-3/10",
+            "new_interest_payable": "3/10"
+          },
+          "cutoff": 2,
+          "equity_after": "223/10",
+          "equity_change": "-3/10",
+          "event": "funding_interest_accrual",
+          "liabilities_after": "2103/10"
+        },
+        {
+          "assets_after": "1163/5",
+          "balance_error": "0",
+          "cash_flow": "12",
+          "changes": {
+            "cash": "12",
+            "loans": "-12"
+          },
+          "cutoff": 2,
+          "equity_after": "223/10",
+          "equity_change": "0",
+          "event": "loan_principal_receipt",
+          "liabilities_after": "2103/10"
+        },
+        {
+          "assets_after": "1163/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "other_liabilities": "0"
+          },
+          "cutoff": 2,
+          "equity_after": "223/10",
+          "equity_change": "0",
+          "event": "other_liability_payment",
+          "liabilities_after": "2103/10"
+        },
+        {
+          "assets_after": "1163/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "initial_margin": "0"
+          },
+          "cutoff": 2,
+          "equity_after": "223/10",
+          "equity_change": "0",
+          "event": "initial_margin_transfer",
+          "liabilities_after": "2103/10"
+        },
+        {
+          "assets_after": "1163/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "loans": "0"
+          },
+          "cutoff": 2,
+          "equity_after": "223/10",
+          "equity_change": "0",
+          "event": "customer_line_advance",
+          "liabilities_after": "2103/10"
+        },
+        {
+          "assets_after": "1163/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "secured_principal": "0"
+          },
+          "cutoff": 2,
+          "equity_after": "223/10",
+          "equity_change": "0",
+          "event": "collateral_principal_paydown",
+          "liabilities_after": "2103/10"
+        },
+        {
+          "assets_after": "1148/5",
+          "balance_error": "0",
+          "cash_flow": "-3",
+          "changes": {
+            "cash": "-3",
+            "deposits": "-3"
+          },
+          "cutoff": 2,
+          "equity_after": "223/10",
+          "equity_change": "0",
+          "event": "deposit_withdrawal",
+          "liabilities_after": "2073/10"
+        },
+        {
+          "assets_after": "1128/5",
+          "balance_error": "0",
+          "cash_flow": "-4",
+          "changes": {
+            "cash": "-4",
+            "equity": "-4"
+          },
+          "cutoff": 2,
+          "equity_after": "183/10",
+          "equity_change": "-4",
+          "event": "variation_settlement",
+          "liabilities_after": "2073/10"
+        },
+        {
+          "assets_after": "1128/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "equity": "-3/10",
+            "new_interest_payable": "3/10"
+          },
+          "cutoff": 3,
+          "equity_after": "18",
+          "equity_change": "-3/10",
+          "event": "funding_interest_accrual",
+          "liabilities_after": "1038/5"
+        },
+        {
+          "assets_after": "1128/5",
+          "balance_error": "0",
+          "cash_flow": "18",
+          "changes": {
+            "cash": "18",
+            "loans": "-18"
+          },
+          "cutoff": 3,
+          "equity_after": "18",
+          "equity_change": "0",
+          "event": "loan_principal_receipt",
+          "liabilities_after": "1038/5"
+        },
+        {
+          "assets_after": "1143/5",
+          "balance_error": "0",
+          "cash_flow": "3",
+          "changes": {
+            "cash": "3",
+            "equity": "3"
+          },
+          "cutoff": 3,
+          "equity_after": "21",
+          "equity_change": "3",
+          "event": "variation_settlement",
+          "liabilities_after": "1038/5"
+        },
+        {
+          "assets_after": "1143/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "initial_margin": "0"
+          },
+          "cutoff": 3,
+          "equity_after": "21",
+          "equity_change": "0",
+          "event": "initial_margin_transfer",
+          "liabilities_after": "1038/5"
+        },
+        {
+          "assets_after": "1118/5",
+          "balance_error": "0",
+          "cash_flow": "-5",
+          "changes": {
+            "cash": "-5",
+            "deposits": "-5"
+          },
+          "cutoff": 3,
+          "equity_after": "21",
+          "equity_change": "0",
+          "event": "deposit_withdrawal",
+          "liabilities_after": "1013/5"
+        },
+        {
+          "assets_after": "1088/5",
+          "balance_error": "0",
+          "cash_flow": "-6",
+          "changes": {
+            "cash": "-6",
+            "other_liabilities": "-6"
+          },
+          "cutoff": 3,
+          "equity_after": "21",
+          "equity_change": "0",
+          "event": "other_liability_payment",
+          "liabilities_after": "983/5"
+        },
+        {
+          "assets_after": "1088/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "equity": "-3/10",
+            "new_interest_payable": "3/10"
+          },
+          "cutoff": 4,
+          "equity_after": "207/10",
+          "equity_change": "-3/10",
+          "event": "funding_interest_accrual",
+          "liabilities_after": "1969/10"
+        },
+        {
+          "assets_after": "1088/5",
+          "balance_error": "0",
+          "cash_flow": "40",
+          "changes": {
+            "cash": "40",
+            "loans": "-40"
+          },
+          "cutoff": 4,
+          "equity_after": "207/10",
+          "equity_change": "0",
+          "event": "loan_principal_receipt",
+          "liabilities_after": "1969/10"
+        },
+        {
+          "assets_after": "1088/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "deposits": "0"
+          },
+          "cutoff": 4,
+          "equity_after": "207/10",
+          "equity_change": "0",
+          "event": "deposit_withdrawal",
+          "liabilities_after": "1969/10"
+        },
+        {
+          "assets_after": "1088/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "other_liabilities": "0"
+          },
+          "cutoff": 4,
+          "equity_after": "207/10",
+          "equity_change": "0",
+          "event": "other_liability_payment",
+          "liabilities_after": "1969/10"
+        },
+        {
+          "assets_after": "1113/5",
+          "balance_error": "0",
+          "cash_flow": "5",
+          "changes": {
+            "cash": "5",
+            "equity": "5"
+          },
+          "cutoff": 4,
+          "equity_after": "257/10",
+          "equity_change": "5",
+          "event": "variation_settlement",
+          "liabilities_after": "1969/10"
+        },
+        {
+          "assets_after": "1113/5",
+          "balance_error": "0",
+          "cash_flow": "5",
+          "changes": {
+            "cash": "5",
+            "initial_margin": "-5"
+          },
+          "cutoff": 4,
+          "equity_after": "257/10",
+          "equity_change": "0",
+          "event": "initial_margin_transfer",
+          "liabilities_after": "1969/10"
+        },
+        {
+          "assets_after": "1113/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "rollover_principal": "0"
+          },
+          "cutoff": 4,
+          "equity_after": "257/10",
+          "equity_change": "0",
+          "event": "rollover_maturity_repayment",
+          "liabilities_after": "1969/10"
+        },
+        {
+          "assets_after": "963/5",
+          "balance_error": "0",
+          "cash_flow": "-30",
+          "changes": {
+            "cash": "-30",
+            "secured_principal": "-30"
+          },
+          "cutoff": 4,
+          "equity_after": "257/10",
+          "equity_change": "0",
+          "event": "secured_maturity_repayment",
+          "liabilities_after": "1669/10"
+        },
+        {
+          "assets_after": "1917/10",
+          "balance_error": "0",
+          "cash_flow": "-9/10",
+          "changes": {
+            "cash": "-9/10",
+            "new_interest_payable": "-9/10"
+          },
+          "cutoff": 4,
+          "equity_after": "257/10",
+          "equity_change": "0",
+          "event": "funding_interest_payment",
+          "liabilities_after": "166"
+        }
+      ],
+      "maintenance_capacity": "40",
+      "name": "rollover_failure",
+      "required_upfront_cash": "32/5",
+      "rollover_draw": "0",
+      "rollover_interest_total": "0",
+      "rows": [
+        {
+          "already_pledged_units": "20",
+          "available_cash": "-32/5",
+          "available_cash_without_buffer": "-32/5",
+          "balance_error": "0",
+          "cash_gap": "32/5",
+          "cutoff": 1,
+          "free_eligible_units": "25/2",
+          "inaccessible_units": "10",
+          "marked_equity": "113/5",
+          "new_pledged_units": "75/2",
+          "state": {
+            "cash": "-12/5",
+            "deposits": "150",
+            "equity": "113/5",
+            "initial_margin": "5",
+            "legacy_interest_payable": "0",
+            "legacy_principal": "0",
+            "loans": "150",
+            "new_interest_payable": "0",
+            "other_liabilities": "30",
+            "rollover_principal": "0",
+            "secured_principal": "30",
+            "securities_book": "80"
+          },
+          "total_assets": "1163/5",
+          "total_liabilities": "210"
+        },
+        {
+          "already_pledged_units": "20",
+          "available_cash": "-7/5",
+          "available_cash_without_buffer": "-7/5",
+          "balance_error": "0",
+          "cash_gap": "7/5",
+          "cutoff": 2,
+          "free_eligible_units": "25/2",
+          "inaccessible_units": "10",
+          "marked_equity": "183/10",
+          "new_pledged_units": "75/2",
+          "state": {
+            "cash": "13/5",
+            "deposits": "147",
+            "equity": "183/10",
+            "initial_margin": "5",
+            "legacy_interest_payable": "0",
+            "legacy_principal": "0",
+            "loans": "138",
+            "new_interest_payable": "3/10",
+            "other_liabilities": "30",
+            "rollover_principal": "0",
+            "secured_principal": "30",
+            "securities_book": "80"
+          },
+          "total_assets": "1128/5",
+          "total_liabilities": "2073/10"
+        },
+        {
+          "already_pledged_units": "20",
+          "available_cash": "43/5",
+          "available_cash_without_buffer": "43/5",
+          "balance_error": "0",
+          "cash_gap": "0",
+          "cutoff": 3,
+          "free_eligible_units": "25/2",
+          "inaccessible_units": "10",
+          "marked_equity": "21",
+          "new_pledged_units": "75/2",
+          "state": {
+            "cash": "63/5",
+            "deposits": "142",
+            "equity": "21",
+            "initial_margin": "5",
+            "legacy_interest_payable": "0",
+            "legacy_principal": "0",
+            "loans": "120",
+            "new_interest_payable": "3/5",
+            "other_liabilities": "24",
+            "rollover_principal": "0",
+            "secured_principal": "30",
+            "securities_book": "80"
+          },
+          "total_assets": "1088/5",
+          "total_liabilities": "983/5"
+        },
+        {
+          "already_pledged_units": "20",
+          "available_cash": "277/10",
+          "available_cash_without_buffer": "277/10",
+          "balance_error": "0",
+          "cash_gap": "0",
+          "cutoff": 4,
+          "free_eligible_units": "50",
+          "inaccessible_units": "10",
+          "marked_equity": "257/10",
+          "new_pledged_units": "0",
+          "state": {
+            "cash": "317/10",
+            "deposits": "142",
+            "equity": "257/10",
+            "initial_margin": "0",
+            "legacy_interest_payable": "0",
+            "legacy_principal": "0",
+            "loans": "80",
+            "new_interest_payable": "0",
+            "other_liabilities": "24",
+            "rollover_principal": "0",
+            "secured_principal": "0",
+            "securities_book": "80"
+          },
+          "total_assets": "1917/10",
+          "total_liabilities": "166"
+        }
+      ],
+      "secured_draw": "30",
+      "secured_interest_total": "9/10"
+    },
+    {
+      "additional_cash_needed": "399/10",
+      "collateral_principal_paydown": "11/2",
+      "feasible_under_fixed_policy": false,
+      "first_failure_cutoff": 1,
+      "initial_secured_capacity": "40",
+      "journal": [
+        {
+          "assets_after": "255",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "equity": "0"
+          },
+          "cutoff": 0,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "upfront_cash_equity",
+          "liabilities_after": "1152/5"
+        },
+        {
+          "assets_after": "285",
+          "balance_error": "0",
+          "cash_flow": "30",
+          "changes": {
+            "cash": "30",
+            "secured_principal": "30"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "secured_draw",
+          "liabilities_after": "1302/5"
+        },
+        {
+          "assets_after": "285",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "rollover_principal": "0"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "new_rollover_draw",
+          "liabilities_after": "1302/5"
+        },
+        {
+          "assets_after": "285",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "loans": "0"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "loan_principal_receipt",
+          "liabilities_after": "1302/5"
+        },
+        {
+          "assets_after": "285",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "other_liabilities": "0"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "other_liability_payment",
+          "liabilities_after": "1302/5"
+        },
+        {
+          "assets_after": "285",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "initial_margin": "0"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "initial_margin_transfer",
+          "liabilities_after": "1302/5"
+        },
+        {
+          "assets_after": "245",
+          "balance_error": "0",
+          "cash_flow": "-40",
+          "changes": {
+            "cash": "-40",
+            "legacy_principal": "-40"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "legacy_principal_repayment",
+          "liabilities_after": "1102/5"
+        },
+        {
+          "assets_after": "1223/5",
+          "balance_error": "0",
+          "cash_flow": "-2/5",
+          "changes": {
+            "cash": "-2/5",
+            "legacy_interest_payable": "-2/5"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "legacy_accrued_interest_payment",
+          "liabilities_after": "220"
+        },
+        {
+          "assets_after": "1143/5",
+          "balance_error": "0",
+          "cash_flow": "-16",
+          "changes": {
+            "cash": "-16",
+            "deposits": "-16"
+          },
+          "cutoff": 1,
+          "equity_after": "123/5",
+          "equity_change": "0",
+          "event": "deposit_withdrawal",
+          "liabilities_after": "204"
+        },
+        {
+          "assets_after": "1128/5",
+          "balance_error": "0",
+          "cash_flow": "-3",
+          "changes": {
+            "cash": "-3",
+            "equity": "-3"
+          },
+          "cutoff": 1,
+          "equity_after": "108/5",
+          "equity_change": "-3",
+          "event": "variation_settlement",
+          "liabilities_after": "204"
+        },
+        {
+          "assets_after": "1128/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "equity": "-3/10",
+            "new_interest_payable": "3/10"
+          },
+          "cutoff": 2,
+          "equity_after": "213/10",
+          "equity_change": "-3/10",
+          "event": "funding_interest_accrual",
+          "liabilities_after": "2043/10"
+        },
+        {
+          "assets_after": "1128/5",
+          "balance_error": "0",
+          "cash_flow": "12",
+          "changes": {
+            "cash": "12",
+            "loans": "-12"
+          },
+          "cutoff": 2,
+          "equity_after": "213/10",
+          "equity_change": "0",
+          "event": "loan_principal_receipt",
+          "liabilities_after": "2043/10"
+        },
+        {
+          "assets_after": "1128/5",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "other_liabilities": "0"
+          },
+          "cutoff": 2,
+          "equity_after": "213/10",
+          "equity_change": "0",
+          "event": "other_liability_payment",
+          "liabilities_after": "2043/10"
+        },
+        {
+          "assets_after": "1088/5",
+          "balance_error": "0",
+          "cash_flow": "-8",
+          "changes": {
+            "cash": "-8",
+            "deposits": "-8"
+          },
+          "cutoff": 2,
+          "equity_after": "213/10",
+          "equity_change": "0",
+          "event": "deposit_withdrawal",
+          "liabilities_after": "1963/10"
+        },
+        {
+          "assets_after": "1043/5",
+          "balance_error": "0",
+          "cash_flow": "-9",
+          "changes": {
+            "cash": "-9",
+            "equity": "-9"
+          },
+          "cutoff": 2,
+          "equity_after": "123/10",
+          "equity_change": "-9",
+          "event": "variation_settlement",
+          "liabilities_after": "1963/10"
+        },
+        {
+          "assets_after": "1043/5",
+          "balance_error": "0",
+          "cash_flow": "-4",
+          "changes": {
+            "cash": "-4",
+            "initial_margin": "4"
+          },
+          "cutoff": 2,
+          "equity_after": "123/10",
+          "equity_change": "0",
+          "event": "initial_margin_transfer",
+          "liabilities_after": "1963/10"
+        },
+        {
+          "assets_after": "1043/5",
+          "balance_error": "0",
+          "cash_flow": "-12",
+          "changes": {
+            "cash": "-12",
+            "loans": "12"
+          },
+          "cutoff": 2,
+          "equity_after": "123/10",
+          "equity_change": "0",
+          "event": "customer_line_advance",
+          "liabilities_after": "1963/10"
+        },
+        {
+          "assets_after": "2031/10",
+          "balance_error": "0",
+          "cash_flow": "-11/2",
+          "changes": {
+            "cash": "-11/2",
+            "secured_principal": "-11/2"
+          },
+          "cutoff": 2,
+          "equity_after": "123/10",
+          "equity_change": "0",
+          "event": "collateral_principal_paydown",
+          "liabilities_after": "954/5"
+        },
+        {
+          "assets_after": "2031/10",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "equity": "-49/200",
+            "new_interest_payable": "49/200"
+          },
+          "cutoff": 3,
+          "equity_after": "2411/200",
+          "equity_change": "-49/200",
+          "event": "funding_interest_accrual",
+          "liabilities_after": "38209/200"
+        },
+        {
+          "assets_after": "2031/10",
+          "balance_error": "0",
+          "cash_flow": "18",
+          "changes": {
+            "cash": "18",
+            "loans": "-18"
+          },
+          "cutoff": 3,
+          "equity_after": "2411/200",
+          "equity_change": "0",
+          "event": "loan_principal_receipt",
+          "liabilities_after": "38209/200"
+        },
+        {
+          "assets_after": "2081/10",
+          "balance_error": "0",
+          "cash_flow": "5",
+          "changes": {
+            "cash": "5",
+            "equity": "5"
+          },
+          "cutoff": 3,
+          "equity_after": "3411/200",
+          "equity_change": "5",
+          "event": "variation_settlement",
+          "liabilities_after": "38209/200"
+        },
+        {
+          "assets_after": "2081/10",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "initial_margin": "0"
+          },
+          "cutoff": 3,
+          "equity_after": "3411/200",
+          "equity_change": "0",
+          "event": "initial_margin_transfer",
+          "liabilities_after": "38209/200"
+        },
+        {
+          "assets_after": "2011/10",
+          "balance_error": "0",
+          "cash_flow": "-7",
+          "changes": {
+            "cash": "-7",
+            "deposits": "-7"
+          },
+          "cutoff": 3,
+          "equity_after": "3411/200",
+          "equity_change": "0",
+          "event": "deposit_withdrawal",
+          "liabilities_after": "36809/200"
+        },
+        {
+          "assets_after": "1951/10",
+          "balance_error": "0",
+          "cash_flow": "-6",
+          "changes": {
+            "cash": "-6",
+            "other_liabilities": "-6"
+          },
+          "cutoff": 3,
+          "equity_after": "3411/200",
+          "equity_change": "0",
+          "event": "other_liability_payment",
+          "liabilities_after": "35609/200"
+        },
+        {
+          "assets_after": "1951/10",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "equity": "-49/200",
+            "new_interest_payable": "49/200"
+          },
+          "cutoff": 4,
+          "equity_after": "1681/100",
+          "equity_change": "-49/200",
+          "event": "funding_interest_accrual",
+          "liabilities_after": "17829/100"
+        },
+        {
+          "assets_after": "1951/10",
+          "balance_error": "0",
+          "cash_flow": "40",
+          "changes": {
+            "cash": "40",
+            "loans": "-40"
+          },
+          "cutoff": 4,
+          "equity_after": "1681/100",
+          "equity_change": "0",
+          "event": "loan_principal_receipt",
+          "liabilities_after": "17829/100"
+        },
+        {
+          "assets_after": "1951/10",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "deposits": "0"
+          },
+          "cutoff": 4,
+          "equity_after": "1681/100",
+          "equity_change": "0",
+          "event": "deposit_withdrawal",
+          "liabilities_after": "17829/100"
+        },
+        {
+          "assets_after": "1951/10",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "other_liabilities": "0"
+          },
+          "cutoff": 4,
+          "equity_after": "1681/100",
+          "equity_change": "0",
+          "event": "other_liability_payment",
+          "liabilities_after": "17829/100"
+        },
+        {
+          "assets_after": "2051/10",
+          "balance_error": "0",
+          "cash_flow": "10",
+          "changes": {
+            "cash": "10",
+            "equity": "10"
+          },
+          "cutoff": 4,
+          "equity_after": "2681/100",
+          "equity_change": "10",
+          "event": "variation_settlement",
+          "liabilities_after": "17829/100"
+        },
+        {
+          "assets_after": "2051/10",
+          "balance_error": "0",
+          "cash_flow": "9",
+          "changes": {
+            "cash": "9",
+            "initial_margin": "-9"
+          },
+          "cutoff": 4,
+          "equity_after": "2681/100",
+          "equity_change": "0",
+          "event": "initial_margin_transfer",
+          "liabilities_after": "17829/100"
+        },
+        {
+          "assets_after": "2051/10",
+          "balance_error": "0",
+          "cash_flow": "0",
+          "changes": {
+            "cash": "0",
+            "rollover_principal": "0"
+          },
+          "cutoff": 4,
+          "equity_after": "2681/100",
+          "equity_change": "0",
+          "event": "rollover_maturity_repayment",
+          "liabilities_after": "17829/100"
+        },
+        {
+          "assets_after": "903/5",
+          "balance_error": "0",
+          "cash_flow": "-49/2",
+          "changes": {
+            "cash": "-49/2",
+            "secured_principal": "-49/2"
+          },
+          "cutoff": 4,
+          "equity_after": "2681/100",
+          "equity_change": "0",
+          "event": "secured_maturity_repayment",
+          "liabilities_after": "15379/100"
+        },
+        {
+          "assets_after": "17981/100",
+          "balance_error": "0",
+          "cash_flow": "-79/100",
+          "changes": {
+            "cash": "-79/100",
+            "new_interest_payable": "-79/100"
+          },
+          "cutoff": 4,
+          "equity_after": "2681/100",
+          "equity_change": "0",
+          "event": "funding_interest_payment",
+          "liabilities_after": "153"
+        }
+      ],
+      "maintenance_capacity": "49/2",
+      "name": "joint_stress",
+      "required_upfront_cash": "399/10",
+      "rollover_draw": "0",
+      "rollover_interest_total": "0",
+      "rows": [
+        {
+          "already_pledged_units": "20",
+          "available_cash": "-67/5",
+          "available_cash_without_buffer": "-67/5",
+          "balance_error": "0",
+          "cash_gap": "67/5",
+          "cutoff": 1,
+          "free_eligible_units": "25/2",
+          "inaccessible_units": "10",
+          "marked_equity": "108/5",
+          "new_pledged_units": "75/2",
+          "state": {
+            "cash": "-47/5",
+            "deposits": "144",
+            "equity": "108/5",
+            "initial_margin": "5",
+            "legacy_interest_payable": "0",
+            "legacy_principal": "0",
+            "loans": "150",
+            "new_interest_payable": "0",
+            "other_liabilities": "30",
+            "rollover_principal": "0",
+            "secured_principal": "30",
+            "securities_book": "80"
+          },
+          "total_assets": "1128/5",
+          "total_liabilities": "204"
+        },
+        {
+          "already_pledged_units": "20",
+          "available_cash": "-399/10",
+          "available_cash_without_buffer": "-399/10",
+          "balance_error": "0",
+          "cash_gap": "399/10",
+          "cutoff": 2,
+          "free_eligible_units": "0",
+          "inaccessible_units": "10",
+          "marked_equity": "-117/10",
+          "new_pledged_units": "50",
+          "state": {
+            "cash": "-359/10",
+            "deposits": "136",
+            "equity": "123/10",
+            "initial_margin": "9",
+            "legacy_interest_payable": "0",
+            "legacy_principal": "0",
+            "loans": "150",
+            "new_interest_payable": "3/10",
+            "other_liabilities": "30",
+            "rollover_principal": "0",
+            "secured_principal": "49/2",
+            "securities_book": "80"
+          },
+          "total_assets": "2031/10",
+          "total_liabilities": "954/5"
+        },
+        {
+          "already_pledged_units": "20",
+          "available_cash": "-299/10",
+          "available_cash_without_buffer": "-299/10",
+          "balance_error": "0",
+          "cash_gap": "299/10",
+          "cutoff": 3,
+          "free_eligible_units": "0",
+          "inaccessible_units": "10",
+          "marked_equity": "-1389/200",
+          "new_pledged_units": "50",
+          "state": {
+            "cash": "-259/10",
+            "deposits": "129",
+            "equity": "3411/200",
+            "initial_margin": "9",
+            "legacy_interest_payable": "0",
+            "legacy_principal": "0",
+            "loans": "132",
+            "new_interest_payable": "109/200",
+            "other_liabilities": "24",
+            "rollover_principal": "0",
+            "secured_principal": "49/2",
+            "securities_book": "80"
+          },
+          "total_assets": "1951/10",
+          "total_liabilities": "35609/200"
+        },
+        {
+          "already_pledged_units": "20",
+          "available_cash": "381/100",
+          "available_cash_without_buffer": "381/100",
+          "balance_error": "0",
+          "cash_gap": "0",
+          "cutoff": 4,
+          "free_eligible_units": "50",
+          "inaccessible_units": "10",
+          "marked_equity": "281/100",
+          "new_pledged_units": "0",
+          "state": {
+            "cash": "781/100",
+            "deposits": "129",
+            "equity": "2681/100",
+            "initial_margin": "0",
+            "legacy_interest_payable": "0",
+            "legacy_principal": "0",
+            "loans": "92",
+            "new_interest_payable": "0",
+            "other_liabilities": "24",
+            "rollover_principal": "0",
+            "secured_principal": "0",
+            "securities_book": "80"
+          },
+          "total_assets": "17981/100",
+          "total_liabilities": "153"
+        }
+      ],
+      "secured_draw": "30",
+      "secured_interest_total": "79/100"
+    }
+  ],
+  "schema_version": 1,
+  "units": "CU except security units, FU and rates explicitly named",
+  "upfront_cash_equity": "0"
+}

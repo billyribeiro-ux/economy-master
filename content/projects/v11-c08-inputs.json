@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "units": "Synthetic nominal currency units; annual dates; physical probabilities",
+  "insurance": {
+    "wealth": "100", "loss": "64",
+    "types": [
+      {"id": "low", "probability": "0.1", "share": "0.5"},
+      {"id": "high", "probability": "0.4", "share": "0.5"}
+    ],
+    "contracts": [
+      {"id": "partial", "premium": "0.8", "indemnity": "8"},
+      {"id": "full", "premium": "25.6", "indemnity": "64"}
+    ]
+  },
+  "pool": {
+    "members": 100, "benefit": "64", "premium": "18", "capital": "0",
+    "regimes": [
+      {"id": "calm", "weight": "0.5", "claim_probability": "0.1"},
+      {"id": "severe", "weight": "0.5", "claim_probability": "0.4"}
+    ]
+  },
+  "annuity": {
+    "members": 100, "benefit": "20", "discounts": ["0.96", "0.92", "0.88"],
+    "survival": ["0.9", "0.75", "0.6"],
+    "stress_survival": ["0.95", "0.85", "0.75"],
+    "regimes": [
+      {"id": "shorter", "weight": "0.5", "survival": ["0.85", "0.65", "0.45"]},
+      {"id": "longer", "weight": "0.5", "survival": ["0.95", "0.85", "0.75"]}
+    ],
+    "death_benefit": "100"
+  },
+  "pension": {
+    "money_account": "200", "zero_faces": ["1000", "1500", "2000"],
+    "parallel_continuous_rate_shift": "0.01",
+    "paths": [
+      {"id": "baseline_counts", "survivors": [90, 75, 60]},
+      {"id": "longer_lives", "survivors": [95, 85, 75]}
+    ]
+  },
+  "guarantee": {
+    "promised_benefit": "100",
+    "states": [
+      {"id": "weak_sponsor", "probability": "0.25", "assets": "60", "sponsor_capacity": "5", "guarantor_capacity": "0"},
+      {"id": "strong_assets", "probability": "0.75", "assets": "120", "sponsor_capacity": "5", "guarantor_capacity": "0"}
+    ]
+  },
+  "household": {
+    "initial_liquid": "6", "initial_pension": "30", "liquid_floor": "2",
+    "income": ["38", "34", "36"], "consumption": ["24", "25", "26"],
+    "contributions": ["3", "3", "3"], "pension_gross_returns": ["1.04", "0.9", "1.1"],
+    "debt": "24",
+    "loans": [
+      {"id": "amortizing", "rate": "0.1", "principal_payments": ["8", "8", "8"]},
+      {"id": "bullet", "rate": "0.08", "principal_payments": ["0", "0", "24"]}
+    ]
+  }
+}

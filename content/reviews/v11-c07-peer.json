@@ -1,0 +1,212 @@
+{
+  "chapter": "v11-c07",
+  "date": "2026-10-09",
+  "reviewer": "bs_author, separate from ito_author",
+  "status": "separate-peer-review-passed; coordinator acceptance and shared integration pending",
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c07.html",
+      "bytes": 40248,
+      "sha256": "28a71de8fc7c55a496dd645c372a4fa9c3462a320900074348ba1fade3b7bc11"
+    },
+    {
+      "path": "content/projects/v11-c07-inputs.json",
+      "bytes": 1826,
+      "sha256": "5b4d2f67fc163c9e8428e932f6aa603cdb702948de1f47decf3da186a41c3e07"
+    },
+    {
+      "path": "content/projects/v11-c07-analysis.py",
+      "bytes": 14803,
+      "sha256": "3bdbc61bda4e339b113c4e4ce39eb446827141ec328dce0647da2203d2392a2e"
+    },
+    {
+      "path": "content/projects/v11-c07-output.json",
+      "bytes": 24794,
+      "sha256": "06ec3395252393e19aafd8b696666c08142b69b76636b2cf1d1faf682c21a2aa"
+    },
+    {
+      "path": "content/projects/v11-c07-manifest.json",
+      "bytes": 672,
+      "sha256": "26976ac2fe3444f1fa642287e4d49d326aa8f53adf2bfda9cb31963b167e2ca9"
+    },
+    {
+      "path": "content/projects/v11-c07-README.txt",
+      "bytes": 14143,
+      "sha256": "e52ab75db124be996e809ca97003ddcbd597f310690f4c88d88832f61b0a5f63"
+    },
+    {
+      "path": "scripts/check_v11_c07.py",
+      "bytes": 23791,
+      "sha256": "f627344bdcb7acdfaf75dec62a28d5ed9d6ab86677894819125dfde60b016373"
+    },
+    {
+      "path": "content/reviews/v11-c07-author.json",
+      "bytes": 20675,
+      "sha256": "e745fe185dff2b09a69b7c6c71bf36359e73cce9d96a153d5b6a5ba7be971f99"
+    },
+    {
+      "path": "content/reviews/v11-c07-sources.json",
+      "bytes": 1218,
+      "sha256": "715727c22c57b74476f40a5b89c09cc190a682fd93b7190a6de9c007ff34b78d"
+    }
+  ],
+  "peer_checker": {
+    "path": "scripts/check_v11_c07_peer.py",
+    "bytes": 24170,
+    "sha256": "d6a1b77472d63fd2d947206e33c78ed9f36d47675db6fd6487fa07f80f9afd32"
+  },
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "independence": "bs_author is separate from ito_author. Read all nine frozen author files, complete manuscript, every proof and all eight exact prompts/solutions. Independent calculations call only public run(data), never model helpers or the author checker as oracle. The author checker was read to assess coverage. This is another agent review, not independent human academic or professional certification.",
+  "proof_audit": [
+    {
+      "topic": "Common inventory and revaluation",
+      "result": "The opening inventory has four asset accounts and two principal liabilities, with explicit current, next-day, year1 and bond-maturity clocks. P and Q are jointly revalued once under stated conditional cash/discount assumptions. Exact rate-first credit attribution includes the changed denominator; a separate default charge would duplicate it. Positive bond convexity gives the correct direction of tangent-price error. The adopted asset-mark/par-liability stress measurement is expressly distinguished from a general accounting or pricing standard."
+    },
+    {
+      "topic": "Two-node fixed point",
+      "result": "A closed-square self-map and max-norm contraction with a<1 yield a geometric Cauchy sequence; continuity identifies its limit and the distance inequality proves uniqueness. The four saturation regimes cover every solution, including coincident candidate vectors at boundaries. The simultaneous enforceable batch, pari passu fractions, nonnegative external resources, limited liability, no additional funding and no I-to-network obligations are explicit. At a1,b=c0, multiple equal payment vectors are correctly exhibited as outside the result."
+    },
+    {
+      "topic": "Network resources, continuity and monotonicity",
+      "result": "Retained values are nonnegative and the summed identities eliminate internal B/C transfers exactly. Monotone iteration from zero proves comparative statics, and the fixed-point perturbation bound1/(1-a) proves continuity. The final marked claim already includes feedback. The peer separately solves one eliminated scalar payment equation by deciding the cap cases; exact substitution and full cash distribution conserve external resources."
+    },
+    {
+      "topic": "Actual partial-payment journal and collateral",
+      "result": "Old quarter remains reserved after paydown; new borrowing uses only the disjoint three-quarter pool. Both actual availability and collateral limit the minimum draw aimed at the cash floor. Priority is old creditor then depositors, each paid only available cash; unpaid obligations remain liabilities. Signed maximum-funding slack is not executed negative cash. All seven journal stages preserve independently calculated equity and nonnegative cash. Future secured principal/interest is separately dated; later asset receipts do not prove next-day payment capacity."
+    },
+    {
+      "topic": "Aggregation and concentration",
+      "result": "The pointwise component upper bounds prove max(sum)<=sum(max) for a common finite menu, with gains retained. In this finite setting equality requires a common attaining set of maxima; different narrations need not be jointly admissible. Neither independence nor a confidence level follows. The90/202 credit cluster identifies common industrial exposure, and interbank transmission/common yield provide concrete additional dependence mechanisms."
+    },
+    {
+      "topic": "Reverse stress",
+      "result": "Nonnegative driver slopes and endpoint domain checks ensure a supported family. Positive discount factors, monotone network receipts and declining collateral capacity make both slacks continuous/nonincreasing. The closed trigger set in compact[0,1] has a first element if nonempty; reference trigger and absent boundary are distinguished. Exact safe-lower/triggering-upper signs and dyadic widths certify bisection without calling a midpoint an exact root. The first root lies in the derived x>=1/3 payment regime, where independent expanded cubics400GK=16317-20118x-2084x²-40x³ and800GH=19404-32739x-5024x²-240x³ agree exactly with rational slacks. Equality at reserve2 is an intervention point with payments still met; strict payment-shortage onset has a potentially unattained infimum. No probability or weakest-anywhere path is claimed."
+    },
+    {
+      "topic": "Cash financing comparison",
+      "result": "An actual5 cash-equity infusion raises assets and equity by5. A5 deposit-funded cash receipt raises assets/deposits, leaving equity unchanged. Both improve funding slack equally only with withdrawals and all other behavior fixed. The problem and solution expressly identify this assumption and require funds before the opening snapshot. New cash is not assumed available merely from a proposal."
+    }
+  ],
+  "worked_case_review": [
+    {
+      "case": 1,
+      "independent_values": "Opening assets202/equity45. Rate-rise bond44100/529,loan1680/23,loss12480/529 and equity11325/529; recession bond30625/289,loan840/17,loss9427/289,equity3578/289; joint loss24440/529 and equity-635/529. Outage unchanged marks/equity45. Derivatives, convexity approximation and exact rate-credit split checked separately."
+    },
+    {
+      "case": 2,
+      "independent_values": "Reference pB=pC20 retains2each; b2/c8 clears8/12, gives outside4/6,retains0, conserves10. Standalone receipt6 versus simultaneous4 embeds feedback2 in total impairment6. Distinct contract ownership and shared external factor are not confused."
+    },
+    {
+      "case": 3,
+      "independent_values": "After incident/receipt cash14; margin10135/1058; draw20; paid25837/1058,unpaid16483/1058,closing deposits119109/1058; old principal11025/1058,new20. Total liabilities143,assets75012/529,equity-635/529. New pledge1058/2205,free2383/8820,old1/4. Next-day principal32185/1058,interest6437/211600,total6443437/211600; borrower336/5 only year1. Outage pays22 of30 and leaves8 owed with positive equity45."
+    },
+    {
+      "case": 4,
+      "independent_values": "Network joins verified atx1/5 and1/3; pB24-16x,pC24-12x thereafter. Exact40-step brackets contain reserve.545784230258 and capital.751688814506, width2^-40. First-trigger equity19.650135 remains above10. Zero-floor cash boundary.596675093210 and funded interventions are independently recomputed from the original contracts."
+    }
+  ],
+  "exact_prompt_solution_review": [
+    {
+      "number": 1,
+      "checked": "All requested outputs supplied: P44100/529,Q1680/23,total12480/529,equity11325/529. Duration slope-4000/21 produces first-order loss400/21 versus exact8800/529. Joint Q1344/23 and loss496/23 split160/23+336/23; stale credit16 overstates by32/23. Convexity and changing-denominator interpretation are correct."
+    },
+    {
+      "number": 2,
+      "checked": "Existence/uniqueness and external-resource proof cover hypotheses, not just numerical iteration. At b4/c6,pB28/3,pC32/3,receipt14/3,impairment16/3,feedback7/3. Outside receipts sum10; a1 closed-cycle counterexample is correctly excluded from the validated domain."
+    },
+    {
+      "number": 3,
+      "checked": "All repaired exact cash/deposit fractions were recalculated independently from34-(20-P/8), not copied from the author output. Raising both contract and available ceiling40 permits33075/1058 draw,18876/529 deposit payment and2284/529 unpaid. The new3/4 and old1/4 exhaust collateral. Equity stays-635/529 and neither full payment nor positive capital is restored."
+    },
+    {
+      "number": 4,
+      "checked": "Mark reduces network claim/equity by6; receipt exchanges remaining4claim for4cash without a new loss. Principal cash/debt and sale-at-mark asset composition entries are correct. Additional fee, further price/recovery change, accrued interest or explicit default cost requires a distinct dated amount."
+    },
+    {
+      "number": 5,
+      "checked": "Pointwise finite-menu inequality proved. Four extrema8800/529,520/17,6,2 sum496624/8993; common largest24440/529 leaves3528/391 gap. Share45/101=90/202 and named common-factor/interbank mechanisms address concentration without assigning a probability law."
+    },
+    {
+      "number": 6,
+      "checked": "Full piecewise network derivation and both cubics follow from cap changes1/5,1/3. Monotone compact closed-trigger proof, safe/bracketing signs and2^-40 width are valid. Printed reserve/capital boundaries and19.650135 equity checked. Strict positive shortage and off-family outage are explicitly distinguished from the closed reserve trigger."
+    },
+    {
+      "number": 7,
+      "checked": "Equity-funded5 cash produces openingassets207/equity50, reserve.673395979956,capital.861274373503. Deposit-funded5 givesdeposits142/equity45,same reserve but originalcapital.751688814506. The held-fixed withdrawals/behavior assumption and actual receipt timing are stated."
+    },
+    {
+      "number": 8,
+      "checked": "All four erroneous claims are corrected. Three requested checks each have concrete scope and a limitation. Outage8unpaid is reconciled and remedy conditional on executable funds/agreement. Probability evidence requires a joint data-generating model and uncertainty validation. Twelve-point rubric covers fourcorrections,threechecks,tworesponse,twoprobability andoneauthority; critical funding/double-count errors require correction regardless of score."
+    }
+  ],
+  "printed_fraction_audit": {
+    "method": "Extracted all nontrivial integer numerical fractions from the final HTML, excluding integer fragments of decimal ratios; recomputed34 distinct result representations from original contracts. The remaining four exact fractions1/2,1/3,1/5,3/4 are the explicitly verified network shares/regime joins/collateral share. Source model/output agreement alone was not treated as manuscript proof.",
+    "repaired_values": {
+      "withdrawal_paid": "25837/1058",
+      "withdrawal_unpaid": "16483/1058",
+      "closing_deposits": "119109/1058",
+      "new_pledge_fraction": "1058/2205"
+    },
+    "prior_incorrect_strings_absent": [
+      "12919/529",
+      "8241/529",
+      "59554/529",
+      "529/1102"
+    ],
+    "scope": "Signs and economic roles are checked against the full prose and journals; e.g. equity is negative635/529 while the checked magnitude is635/529."
+  },
+  "instruction_and_source_scope": {
+    "instruction": "Definitions/rights/dates precede use. The network theorem, accounting treatment, aggregation inequality and reverse-boundary tools are taught before exercises. Four worked cases and eight grouped prompt/solution pairs parse correctly. Answered teach-back and six delayed checks revisit independent skill domains with remediation routes. Five assets use flat basenames.",
+    "primary_source": "Read the source proposal and recorded actual inspection: final official BCBS October2018PDF introduction and principles1-8, printed1 and3-10. Citation is limited to high-level methodological objectives/consistency/material risks/data/solvency-liquidity interaction/challenge. No current national rule, calibration or general-network theorem is attributed. This peer reused the precise recorded body-inspection scope rather than claiming a fresh whole-PDF retrieval. All financial proofs and numbers are original and independently checked."
+  },
+  "numerical_evidence": {
+    "methods": [
+      "Eliminated-variable capped two-node solution with exact fixed-point/resource certificates",
+      "Original-contract claim prices and independent event-by-event account deltas",
+      "All nontrivial printed fraction anchors from fresh cash/inventory algebra",
+      "Expanded integer polynomials plus independent full rational slack signs at all reverse endpoints",
+      "Funded cash/equity versus deposit comparison, actual partial-payment priority and future-cash timing"
+    ],
+    "summary": {
+      "chapter": "v11-c07",
+      "status": "passed",
+      "comparisons": 1406,
+      "financial_interventions": 12,
+      "invalid_api_cases": 25,
+      "invalid_cli_cases": 8,
+      "protected_alias_attempts": 16,
+      "portable_model_runs": 4,
+      "journal_rows": 119,
+      "reverse_certificates": 30,
+      "author_files_bound": 9
+    },
+    "interventions": "12targetedgroups: b4/c6;larger40facility;cash-equity5;deposit-fundedcash5;zeroreservefloor;referencecapitaltrigger;largecash/absentboundary;referencecashtrigger;upperinterbankshare.75;cashincident/all-network-loss with no facility and unpaid old margin;negative-yield/gain;zero old secured debt/pledge. These exercise meaningful economic branches rather than broad fuzzing.",
+    "validation": "Normal and optimized summaries agree. Quiet import/run/check APIs and nonmutation verified.25invalid API cases reject under explicit exceptions;8CLI duplicate/nonfinite/shape/oversize rejections preserve existing output.16direct/resolved/symlink/hardlink output guards across input/model and both modes preserve protected bytes. Four portable default/explicit CLI executions reproduce exact output. Final isolated11-file normal/-O execution checks only the nine author files plus these two peer files from another working directory.",
+    "integrity": "Nine frozen author hashes, author eight nonself bindings, exact four-payload manifest and own checker binding all verified."
+  },
+  "findings": [
+    {
+      "origin": "Coordinator and author pre-dispatch arithmetic review",
+      "status": "resolved before this peer; independently confirmed",
+      "finding": "Three exact payment/deposit fractions and one new-pledge fraction were incorrect in an earlier manuscript while original model/output was correct.",
+      "peer_resolution": "Final chapter/README corrected values independently recomputed from original contracts; prior wrong strings absent. No further author edit requested or performed."
+    }
+  ],
+  "open_findings": [],
+  "remaining_limits": [
+    "Synthetic scenarios have no estimated probabilities, empirical likelihood guarantee or missing-tail assurance.",
+    "Two-node simultaneous clearing, pari passu rights, positive external shares and stipulated resources bound the proof; arbitrary networks/gross settlement/fire-sale equilibrium are not established.",
+    "Current stressed asset marks against contractual liabilities are an instructional convention; actual regulatory/accounting/legal applicability is not certified.",
+    "Today’s funded partial payments do not prove next-day refinancing or later-maturity solvency. Operational availability and collateral rights require external evidence in practice.",
+    "The reverse minimum covers a specified monotone compact family and closed policy trigger; it is neither a probability nor the weakest imaginable strict-default path.",
+    "Coordinator acceptance, canonical integration/publication and whole-edition visual/offline evidence remain separate root-owned gates."
+  ],
+  "acceptance_recommendation": "Accept the frozen author package for dependency-ordered coordinator integration within its declared scope; no unresolved material peer finding."
+}

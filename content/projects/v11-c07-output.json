@@ -1,0 +1,862 @@
+{
+  "schema": "v11-c07-output-1",
+  "opening": {
+    "bond": "100",
+    "loan": "80",
+    "network_claim": "10",
+    "assets": "202",
+    "equity": "45"
+  },
+  "scenarios": [
+    {
+      "id": "reference",
+      "scenario": {
+        "yield": "1/20",
+        "loan_loss_fraction": "0",
+        "external_b": "12",
+        "external_c": "12",
+        "haircut": "1/5",
+        "withdrawal": "20",
+        "operating_cash_loss": "0",
+        "facility_limit": "20",
+        "id": "reference"
+      },
+      "loss_components": {
+        "bond": "0",
+        "loan": "0",
+        "network": "0",
+        "operating": "0"
+      },
+      "total_loss": "0",
+      "equity": "45",
+      "capital_slack": "35",
+      "funding_slack": "20",
+      "network": {
+        "payment_b": "20",
+        "payment_c": "20",
+        "interbank_b_receipt": "10",
+        "interbank_c_receipt": "10",
+        "institution_receipt": "10",
+        "other_outside_receipt": "10",
+        "retained_b": "2",
+        "retained_c": "2",
+        "unpaid_b": "0",
+        "unpaid_c": "0",
+        "external_resource_residual": "0",
+        "standalone_institution_receipt": "10",
+        "feedback_loss": "0"
+      },
+      "ledger": [
+        {
+          "event": "opening",
+          "cash": "12",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "10",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "202",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "joint_asset_marks",
+          "cash": "12",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "10",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "202",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "cash_incident",
+          "cash": "12",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "10",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "202",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "network_batch_settles",
+          "cash": "22",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "0",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "202",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "new_secured_funding",
+          "cash": "22",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "0",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "202",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "old_secured_principal_paydown",
+          "cash": "22",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "0",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "202",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "deposit_payment",
+          "cash": "2",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "0",
+          "deposits": "117",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "182",
+          "accounting_residual": "0"
+        }
+      ],
+      "funding": {
+        "margin_required": "0",
+        "margin_paid": "0",
+        "margin_unpaid": "0",
+        "facility_capacity": "20",
+        "draw_to_meet_cash_floor": "0",
+        "actual_draw": "0",
+        "cash_capacity_after_full_payments": "22",
+        "withdrawal_requested": "20",
+        "withdrawal_paid": "20",
+        "withdrawal_unpaid": "0",
+        "closing_cash": "2",
+        "all_payments_met": true,
+        "reserve_trigger": false,
+        "capital_trigger": false
+      },
+      "collateral": {
+        "original_fraction_reserved": "1/4",
+        "new_fraction_pledged": "0",
+        "fraction_remaining_free": "3/4",
+        "original_pool_capacity": "20"
+      },
+      "later_cash": {
+        "next_day_secured_principal": "20",
+        "next_day_secured_interest": "1/50",
+        "next_day_secured_total": "1001/50",
+        "year_one_loan_receipt": "84",
+        "bond_maturity_year": 2,
+        "bond_maturity_receipt": "441/4"
+      }
+    },
+    {
+      "id": "rate_rise",
+      "scenario": {
+        "yield": "3/20",
+        "loan_loss_fraction": "0",
+        "external_b": "12",
+        "external_c": "12",
+        "haircut": "3/10",
+        "withdrawal": "20",
+        "operating_cash_loss": "0",
+        "facility_limit": "20",
+        "id": "rate_rise"
+      },
+      "loss_components": {
+        "bond": "8800/529",
+        "loan": "160/23",
+        "network": "0",
+        "operating": "0"
+      },
+      "total_loss": "12480/529",
+      "equity": "11325/529",
+      "capital_slack": "6035/529",
+      "funding_slack": "15435/1058",
+      "network": {
+        "payment_b": "20",
+        "payment_c": "20",
+        "interbank_b_receipt": "10",
+        "interbank_c_receipt": "10",
+        "institution_receipt": "10",
+        "other_outside_receipt": "10",
+        "retained_b": "2",
+        "retained_c": "2",
+        "unpaid_b": "0",
+        "unpaid_c": "0",
+        "external_resource_residual": "0",
+        "standalone_institution_receipt": "10",
+        "feedback_loss": "0"
+      },
+      "ledger": [
+        {
+          "event": "opening",
+          "cash": "12",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "10",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "202",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "joint_asset_marks",
+          "cash": "12",
+          "bond": "44100/529",
+          "loan": "1680/23",
+          "network_claim": "10",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "11325/529",
+          "assets": "94378/529",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "cash_incident",
+          "cash": "12",
+          "bond": "44100/529",
+          "loan": "1680/23",
+          "network_claim": "10",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "11325/529",
+          "assets": "94378/529",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "network_batch_settles",
+          "cash": "22",
+          "bond": "44100/529",
+          "loan": "1680/23",
+          "network_claim": "0",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "11325/529",
+          "assets": "94378/529",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "new_secured_funding",
+          "cash": "29001/1058",
+          "bond": "44100/529",
+          "loan": "1680/23",
+          "network_claim": "0",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "5725/1058",
+          "equity": "11325/529",
+          "assets": "194481/1058",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "old_secured_principal_paydown",
+          "cash": "22",
+          "bond": "44100/529",
+          "loan": "1680/23",
+          "network_claim": "0",
+          "deposits": "137",
+          "secured_old": "15435/1058",
+          "secured_new": "5725/1058",
+          "equity": "11325/529",
+          "assets": "94378/529",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "deposit_payment",
+          "cash": "2",
+          "bond": "44100/529",
+          "loan": "1680/23",
+          "network_claim": "0",
+          "deposits": "117",
+          "secured_old": "15435/1058",
+          "secured_new": "5725/1058",
+          "equity": "11325/529",
+          "assets": "83798/529",
+          "accounting_residual": "0"
+        }
+      ],
+      "funding": {
+        "margin_required": "5725/1058",
+        "margin_paid": "5725/1058",
+        "margin_unpaid": "0",
+        "facility_capacity": "20",
+        "draw_to_meet_cash_floor": "5725/1058",
+        "actual_draw": "5725/1058",
+        "cash_capacity_after_full_payments": "17551/1058",
+        "withdrawal_requested": "20",
+        "withdrawal_paid": "20",
+        "withdrawal_unpaid": "0",
+        "closing_cash": "2",
+        "all_payments_met": true,
+        "reserve_trigger": false,
+        "capital_trigger": false
+      },
+      "collateral": {
+        "original_fraction_reserved": "1/4",
+        "new_fraction_pledged": "1145/12348",
+        "fraction_remaining_free": "2029/3087",
+        "original_pool_capacity": "15435/1058"
+      },
+      "later_cash": {
+        "next_day_secured_principal": "20",
+        "next_day_secured_interest": "1/50",
+        "next_day_secured_total": "1001/50",
+        "year_one_loan_receipt": "84",
+        "bond_maturity_year": 2,
+        "bond_maturity_receipt": "441/4"
+      }
+    },
+    {
+      "id": "sector_recession",
+      "scenario": {
+        "yield": "1/50",
+        "loan_loss_fraction": "2/5",
+        "external_b": "2",
+        "external_c": "8",
+        "haircut": "1/4",
+        "withdrawal": "30",
+        "operating_cash_loss": "2",
+        "facility_limit": "20",
+        "id": "sector_recession"
+      },
+      "loss_components": {
+        "bond": "-1725/289",
+        "loan": "520/17",
+        "network": "6",
+        "operating": "2"
+      },
+      "total_loss": "9427/289",
+      "equity": "3578/289",
+      "capital_slack": "688/289",
+      "funding_slack": "8643/4624",
+      "network": {
+        "payment_b": "8",
+        "payment_c": "12",
+        "interbank_b_receipt": "6",
+        "interbank_c_receipt": "4",
+        "institution_receipt": "4",
+        "other_outside_receipt": "6",
+        "retained_b": "0",
+        "retained_c": "0",
+        "unpaid_b": "12",
+        "unpaid_c": "8",
+        "external_resource_residual": "0",
+        "standalone_institution_receipt": "6",
+        "feedback_loss": "2"
+      },
+      "ledger": [
+        {
+          "event": "opening",
+          "cash": "12",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "10",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "202",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "joint_asset_marks",
+          "cash": "12",
+          "bond": "30625/289",
+          "loan": "840/17",
+          "network_claim": "4",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "4156/289",
+          "assets": "49529/289",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "cash_incident",
+          "cash": "10",
+          "bond": "30625/289",
+          "loan": "840/17",
+          "network_claim": "4",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "3578/289",
+          "assets": "48951/289",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "network_batch_settles",
+          "cash": "14",
+          "bond": "30625/289",
+          "loan": "840/17",
+          "network_claim": "0",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "3578/289",
+          "assets": "48951/289",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "new_secured_funding",
+          "cash": "148573/4624",
+          "bond": "30625/289",
+          "loan": "840/17",
+          "network_claim": "0",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "83837/4624",
+          "equity": "3578/289",
+          "assets": "867053/4624",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "old_secured_principal_paydown",
+          "cash": "32",
+          "bond": "30625/289",
+          "loan": "840/17",
+          "network_claim": "0",
+          "deposits": "137",
+          "secured_old": "91875/4624",
+          "secured_new": "83837/4624",
+          "equity": "3578/289",
+          "assets": "54153/289",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "deposit_payment",
+          "cash": "2",
+          "bond": "30625/289",
+          "loan": "840/17",
+          "network_claim": "0",
+          "deposits": "107",
+          "secured_old": "91875/4624",
+          "secured_new": "83837/4624",
+          "equity": "3578/289",
+          "assets": "45483/289",
+          "accounting_residual": "0"
+        }
+      ],
+      "funding": {
+        "margin_required": "605/4624",
+        "margin_paid": "605/4624",
+        "margin_unpaid": "0",
+        "facility_capacity": "20",
+        "draw_to_meet_cash_floor": "83837/4624",
+        "actual_draw": "83837/4624",
+        "cash_capacity_after_full_payments": "17891/4624",
+        "withdrawal_requested": "30",
+        "withdrawal_paid": "30",
+        "withdrawal_unpaid": "0",
+        "closing_cash": "2",
+        "all_payments_met": true,
+        "reserve_trigger": false,
+        "capital_trigger": false
+      },
+      "collateral": {
+        "original_fraction_reserved": "1/4",
+        "new_fraction_pledged": "83837/367500",
+        "fraction_remaining_free": "47947/91875",
+        "original_pool_capacity": "91875/4624"
+      },
+      "later_cash": {
+        "next_day_secured_principal": "38",
+        "next_day_secured_interest": "19/500",
+        "next_day_secured_total": "19019/500",
+        "year_one_loan_receipt": "252/5",
+        "bond_maturity_year": 2,
+        "bond_maturity_receipt": "441/4"
+      }
+    },
+    {
+      "id": "joint",
+      "scenario": {
+        "yield": "3/20",
+        "loan_loss_fraction": "1/5",
+        "external_b": "2",
+        "external_c": "8",
+        "haircut": "1/2",
+        "withdrawal": "40",
+        "operating_cash_loss": "2",
+        "facility_limit": "20",
+        "id": "joint"
+      },
+      "loss_components": {
+        "bond": "8800/529",
+        "loan": "496/23",
+        "network": "6",
+        "operating": "2"
+      },
+      "total_loss": "24440/529",
+      "equity": "-635/529",
+      "capital_slack": "-5925/529",
+      "funding_slack": "-18599/1058",
+      "network": {
+        "payment_b": "8",
+        "payment_c": "12",
+        "interbank_b_receipt": "6",
+        "interbank_c_receipt": "4",
+        "institution_receipt": "4",
+        "other_outside_receipt": "6",
+        "retained_b": "0",
+        "retained_c": "0",
+        "unpaid_b": "12",
+        "unpaid_c": "8",
+        "external_resource_residual": "0",
+        "standalone_institution_receipt": "6",
+        "feedback_loss": "2"
+      },
+      "ledger": [
+        {
+          "event": "opening",
+          "cash": "12",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "10",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "202",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "joint_asset_marks",
+          "cash": "12",
+          "bond": "44100/529",
+          "loan": "1344/23",
+          "network_claim": "4",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "423/529",
+          "assets": "83476/529",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "cash_incident",
+          "cash": "10",
+          "bond": "44100/529",
+          "loan": "1344/23",
+          "network_claim": "4",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "-635/529",
+          "assets": "82418/529",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "network_batch_settles",
+          "cash": "14",
+          "bond": "44100/529",
+          "loan": "1344/23",
+          "network_claim": "0",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "-635/529",
+          "assets": "82418/529",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "new_secured_funding",
+          "cash": "34",
+          "bond": "44100/529",
+          "loan": "1344/23",
+          "network_claim": "0",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "20",
+          "equity": "-635/529",
+          "assets": "92998/529",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "old_secured_principal_paydown",
+          "cash": "25837/1058",
+          "bond": "44100/529",
+          "loan": "1344/23",
+          "network_claim": "0",
+          "deposits": "137",
+          "secured_old": "11025/1058",
+          "secured_new": "20",
+          "equity": "-635/529",
+          "assets": "175861/1058",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "deposit_payment",
+          "cash": "0",
+          "bond": "44100/529",
+          "loan": "1344/23",
+          "network_claim": "0",
+          "deposits": "119109/1058",
+          "secured_old": "11025/1058",
+          "secured_new": "20",
+          "equity": "-635/529",
+          "assets": "75012/529",
+          "accounting_residual": "0"
+        }
+      ],
+      "funding": {
+        "margin_required": "10135/1058",
+        "margin_paid": "10135/1058",
+        "margin_unpaid": "0",
+        "facility_capacity": "20",
+        "draw_to_meet_cash_floor": "39759/1058",
+        "actual_draw": "20",
+        "cash_capacity_after_full_payments": "-16483/1058",
+        "withdrawal_requested": "40",
+        "withdrawal_paid": "25837/1058",
+        "withdrawal_unpaid": "16483/1058",
+        "closing_cash": "0",
+        "all_payments_met": false,
+        "reserve_trigger": true,
+        "capital_trigger": true
+      },
+      "collateral": {
+        "original_fraction_reserved": "1/4",
+        "new_fraction_pledged": "1058/2205",
+        "fraction_remaining_free": "2383/8820",
+        "original_pool_capacity": "11025/1058"
+      },
+      "later_cash": {
+        "next_day_secured_principal": "32185/1058",
+        "next_day_secured_interest": "6437/211600",
+        "next_day_secured_total": "6443437/211600",
+        "year_one_loan_receipt": "336/5",
+        "bond_maturity_year": 2,
+        "bond_maturity_receipt": "441/4"
+      }
+    },
+    {
+      "id": "funding_outage",
+      "scenario": {
+        "yield": "1/20",
+        "loan_loss_fraction": "0",
+        "external_b": "12",
+        "external_c": "12",
+        "haircut": "1/5",
+        "withdrawal": "30",
+        "operating_cash_loss": "0",
+        "facility_limit": "0",
+        "id": "funding_outage"
+      },
+      "loss_components": {
+        "bond": "0",
+        "loan": "0",
+        "network": "0",
+        "operating": "0"
+      },
+      "total_loss": "0",
+      "equity": "45",
+      "capital_slack": "35",
+      "funding_slack": "-10",
+      "network": {
+        "payment_b": "20",
+        "payment_c": "20",
+        "interbank_b_receipt": "10",
+        "interbank_c_receipt": "10",
+        "institution_receipt": "10",
+        "other_outside_receipt": "10",
+        "retained_b": "2",
+        "retained_c": "2",
+        "unpaid_b": "0",
+        "unpaid_c": "0",
+        "external_resource_residual": "0",
+        "standalone_institution_receipt": "10",
+        "feedback_loss": "0"
+      },
+      "ledger": [
+        {
+          "event": "opening",
+          "cash": "12",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "10",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "202",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "joint_asset_marks",
+          "cash": "12",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "10",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "202",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "cash_incident",
+          "cash": "12",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "10",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "202",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "network_batch_settles",
+          "cash": "22",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "0",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "202",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "new_secured_funding",
+          "cash": "22",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "0",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "202",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "old_secured_principal_paydown",
+          "cash": "22",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "0",
+          "deposits": "137",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "202",
+          "accounting_residual": "0"
+        },
+        {
+          "event": "deposit_payment",
+          "cash": "0",
+          "bond": "100",
+          "loan": "80",
+          "network_claim": "0",
+          "deposits": "115",
+          "secured_old": "20",
+          "secured_new": "0",
+          "equity": "45",
+          "assets": "180",
+          "accounting_residual": "0"
+        }
+      ],
+      "funding": {
+        "margin_required": "0",
+        "margin_paid": "0",
+        "margin_unpaid": "0",
+        "facility_capacity": "0",
+        "draw_to_meet_cash_floor": "10",
+        "actual_draw": "0",
+        "cash_capacity_after_full_payments": "-8",
+        "withdrawal_requested": "30",
+        "withdrawal_paid": "22",
+        "withdrawal_unpaid": "8",
+        "closing_cash": "0",
+        "all_payments_met": false,
+        "reserve_trigger": true,
+        "capital_trigger": false
+      },
+      "collateral": {
+        "original_fraction_reserved": "1/4",
+        "new_fraction_pledged": "0",
+        "fraction_remaining_free": "3/4",
+        "original_pool_capacity": "20"
+      },
+      "later_cash": {
+        "next_day_secured_principal": "20",
+        "next_day_secured_interest": "1/50",
+        "next_day_secured_total": "1001/50",
+        "year_one_loan_receipt": "84",
+        "bond_maturity_year": 2,
+        "bond_maturity_receipt": "441/4"
+      }
+    }
+  ],
+  "aggregation": {
+    "component_maxima": {
+      "bond": "8800/529",
+      "loan": "520/17",
+      "network": "6",
+      "operating": "2"
+    },
+    "sum_component_maxima": "496624/8993",
+    "largest_common_scenario_loss": "24440/529",
+    "overstatement": "3528/391",
+    "maximizing_scenarios": [
+      "joint"
+    ]
+  },
+  "reverse": {
+    "capital_slack": {
+      "status": "boundary_bracketed",
+      "lower": "413245296009/549755813888",
+      "upper": "826490592019/1099511627776",
+      "lower_slack": "381280832855768532227803/23849338215252607000760579340107776",
+      "upper_slack": "-2178685191466677146702783223/84140465223424799955805449329083154432",
+      "width": "1/1099511627776"
+    },
+    "funding_slack": {
+      "status": "boundary_bracketed",
+      "lower": "600096107425/1099511627776",
+      "upper": "300048053713/549755813888",
+      "lower_slack": "1691375026030374925770997969/81089121392881169482208257751386161152",
+      "upper_slack": "-151610175948570022988429983/10136140174111815376995263601323278336",
+      "width": "1/1099511627776"
+    },
+    "first": {
+      "status": "boundary_bracketed",
+      "lower": "600096107425/1099511627776",
+      "upper": "300048053713/549755813888",
+      "lower_slack": "1691375026030374925770997969/81089121392881169482208257751386161152",
+      "upper_slack": "-151610175948570022988429983/10136140174111815376995263601323278336",
+      "width": "1/1099511627776"
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "chapter": "v11-c05",
+  "date": "2026-10-09",
+  "status": "author-review-complete; separate peer/coordinator acceptance pending",
+  "reviewer": "bs_author (author self-review, not external certification)",
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c05.html",
+      "bytes": 40767,
+      "sha256": "7fb3bb32372308aa082d42deafe0b5ca8cfefd5443bae4d86d34b7333941fbc3"
+    },
+    {
+      "path": "content/projects/v11-c05-inputs.json",
+      "bytes": 2419,
+      "sha256": "ec341c6854b710420ed768071e1455e2e5101f080f805111df7cf951eed44444"
+    },
+    {
+      "path": "content/projects/v11-c05-analysis.py",
+      "bytes": 17110,
+      "sha256": "5b13f378124a8be5d895ca74b5ad0d6b9121fac8e2d7e496418de0507afc4c8a"
+    },
+    {
+      "path": "content/projects/v11-c05-output.json",
+      "bytes": 52921,
+      "sha256": "cc803c4c9809c6ec4bfaa73eef9bb2c4f32cf244f66287dabae3af5067c1671a"
+    },
+    {
+      "path": "content/projects/v11-c05-manifest.json",
+      "bytes": 672,
+      "sha256": "81423b0c3b3088256d172dd039e89add34da21ae8ba5359aac65e9e60239c920"
+    },
+    {
+      "path": "content/projects/v11-c05-README.txt",
+      "bytes": 15744,
+      "sha256": "8f60863428caec4f123a9f10a6d61b738924837e0ce1a0ba3d946a745f048253"
+    },
+    {
+      "path": "scripts/check_v11_c05.py",
+      "bytes": 27516,
+      "sha256": "b88b658863e1ceb5a3d8b2b3cd4395ac6e6f9c81c0e2157210e5f90f6367aec8"
+    },
+    {
+      "path": "content/reviews/v11-c05-sources.json",
+      "bytes": 2507,
+      "sha256": "612c9a871557a5057ddb0a89936d2966823421ea002820f389f1414025c503c2"
+    }
+  ],
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Four original worked cases and eight fully solved advanced exercises, fixed-policy minimum proof, exact funded journal and collateral inventory, ALM value/income counterexample, dated entity/currency transfer case, answered teach-back and delayed retention. Synthetic finite assumptions and historical method context; no current regulatory ratio, legal entitlement, stress probability or universal funding optimum.",
+  "prerequisite_and_adjacent_contract": {
+    "accepted_prerequisites": [
+      "v11-c04",
+      "v11-c02",
+      "v10-c01",
+      "v10-c05",
+      "v08-c06"
+    ],
+    "c06_c07_interface": "One legal entity, currency and settlement account; all receipts precede payments within each declared cutoff, or the grid must be refined. Restricted/encumbered/inaccessible assets remain book assets but do not provide unspecified cash. Principal, interest, collateral segregation and derivative cash/P&L are separate entries. No automatic facility, reuse or transfer. C07 author directly received these conventions.",
+    "root_manuscript_audit": "Root read all prose/proofs/prompts/solutions at SHA2560126e0097ea52d7177a40c27a99d5304328d82bb2ae077e7a74bbce47ac07d28. A later markup-only repair adds four worked containers and the established details.solutions wrapper. Reversing only these wrappers reproduces that exact earlier hash; no prose or mathematics changed."
+  },
+  "proof_audit": [
+    {
+      "claim": "Finite fixed-policy cash minimum",
+      "audit": "Defines usable initial cash, scenario/date-specific receipts and obligations, exact eligible receipt-before-payment order, no missing intermediate deadline or payment-dependent receipt, and a timely independent nonmaturing cash contribution without interest/cost/policy response. Induction proves H(b)=H(0)+b. A negative prefix proves necessity; nonnegative prefixes plus receipt order prove every intermediate payment can be paid. Finite maximum, equality and zero requirement are handled. Explicit limitations cover currency/entity restrictions, changed policy, late contributions and maturing bridges. No probability or least-cost conclusion."
+    },
+    {
+      "claim": "Funding stock and cash conservation",
+      "audit": "Old principal and already-accrued interest stay payable when new rollover disappears. New term and secured loans have exact draws, principal maturities and three interval-interest accruals. Secured interest for the first interval uses principal before the cutoff-2 paydown. All principal and margin transfers preserve equity; stipulated cash variation changes equity; accrued new interest changes equity/payable before payment. Customer advance becomes a loan. Full-payment diagnostic rows after a failed cash prefix are expressly hypothetical and may show negative total cash; no overdraft or default mechanism is silently invented."
+    },
+    {
+      "claim": "Collateral maintenance and inventory",
+      "audit": "Advance per unit (1-h)p is positive on the declared domain. Remaining principal=min(draw,eligible pool capacity), paydown=max(0,draw-capacity), and pledged units=remaining principal/advance prove nonnegative free inventory and the exact pool identity. Old encumbrance and inaccessible custody units are excluded. Principal-only coverage and separately payable interest are stipulated; no universal repo convention is claimed. Maturity releases new collateral after repayment, with no reuse to fund it."
+    },
+    {
+      "claim": "Finite ALM valuation and derivative",
+      "audit": "Finite discounted cash sums are differentiated termwise. Floating par follows a telescoping coupon identity including zero yield without dividing by yield; the lab supports negative flat yields greater than -1 within its bounded interval. Coupled coupon resetting and flat valuation rate, no credit spread/floor/default, unremunerated cash and fixed principal maturity are explicit. Positive EVE sensitivity and negative one-year NII sensitivity follow from separate horizon/contract effects, with correct percentage-point/basis-point units and exact-versus-local distinction."
+    },
+    {
+      "claim": "Maturing bridge feasibility",
+      "audit": "Keeping all other policy cash fixed, initial borrowing adds b to cutoffs1-3 while maturity repayment leaves terminal effect -gb. Early bound39.9 and terminal bound3.81/g imply exact [39.9,190.5] at g=.02 and incompatibility with38.1 at g=.10. This is conditional feasibility, not an optimal financing recommendation."
+    }
+  ],
+  "worked_example_audit": [
+    {
+      "case": 1,
+      "checked": "Opening assets255, liabilities230.4 and equity24.6; unrestricted cash16. Initial secured capacity40, draw30, pledged37.5/free12.5. Base headrooms33.6/38.6/48.6/27.1; new interest.9+.6; final cash31.1, loans80, securities80, deposits142, other24, equity25.1. Rollover-only headrooms-6.4/-1.4/8.6/27.7; reserve6.4 and diagnostic equity25.7. Extra final.6 is avoided new funding interest, not an erased old payment."
+    },
+    {
+      "case": 2,
+      "checked": "Joint maintenance capacity24.5, paydown5.5, pledged50, interest.79; line advance12 is new loan asset, extra IM4 remains segregated, final IM9 returns as asset transfer. Headrooms-13.4/-39.9/-29.9/3.81 imply reserve39.9. Added reserve yields26.5/0/10/43.71. Diagnostic close cash7.81,loans92,securities80,deposits129,other24,equity26.81; mark proxy2.81. Feasible cash-equity version raises ending equity to66.71 and marked equity42.71."
+    },
+    {
+      "case": 3,
+      "checked": "At y=.05, fixed asset100,fixed liability80,floating20,EVE10,NII0. At y=.07, asset96.38396366494891,fixed liability73.43968410248385,EVE12.944279562465054,NII-.4. At5%, derivatives -185.94104308390024 and -346.35813365046556 give EVE slope160.41709056656532 CU/unit yield and NII slope-20. Local 200bp change3.208341811 differs from exact2.944279562. With only.2 usable before funding coupons5.4, morning gap5.2; later asset coupon and inaccessible9.8 do not settle it."
+    },
+    {
+      "case": 4,
+      "checked": "Affiliate8FU times1.25CU/FU gives potential10CU. Local4 minus due12 gives-8 without authorization or before a late transfer, versus+2 with authorized timely settlement. Quote, ownership and actual transfer right are distinct."
+    }
+  ],
+  "exact_exercise_audit": [
+    {
+      "number": 1,
+      "prompt_route": "Reconstruct all no-rollover prefixes, cash reserve, ending equity, interest difference and old obligation.",
+      "solution_checked": "-6.4,-1.4,8.6,27.7; reserve6.4; unbuffered full-payment equity25.7 and cash-equity version32.1; avoided new interest.6 only. All exact requested components answered."
+    },
+    {
+      "number": 2,
+      "prompt_route": "Haircut boundary, full versus late collateral delivery, paydown versus mark.",
+      "solution_checked": "h<=1/7; full-pool paydown5.5; deliverable37.5 capacity18.375/paydown11.625; difference6.125 from missing delivery. Cash/debt and quoted-price loss separated."
+    },
+    {
+      "number": 3,
+      "prompt_route": "Five cutoff-2 journal entries, equity, cash, balance identity and execution limitation.",
+      "solution_checked": "Line cash-12/loans+12; IM cash-4/asset+4; principal cash-5.5/debt-5.5; VM cash/equity-9; accrued interest payable+.3/equity-.3. Equity12.3,totalcash-35.9,loans150,securities80,IM9 imply assets203.1; liabilities190.8 plus equity12.3. The prior failed prefix is explicitly identified; no negative cash is presented as an authorized facility."
+    },
+    {
+      "number": 4,
+      "prompt_route": "Full minimum proof, three-scenario application, timing counterexample and late injection.",
+      "solution_checked": "Necessity/sufficiency, attained positive maximum and zero case supplied. Scenario minima0/6.4/39.9; common39.9 at joint cutoff2. Zero opening,5 due09:00,5 received16:00 disproves same-day-total sufficiency; cutoff3 funds cannot pay earlier deadlines."
+    },
+    {
+      "number": 5,
+      "prompt_route": "Floating par including zero, finite derivatives, basis-point conversion, exact two-percentage-point value, NII direction and morning cash.",
+      "solution_checked": "Telescoping proof; derivative formulas and160.417091/-20 slopes; 100bp local1.604171; exact EVE gain2.944280 at7%; NII-.4; morning gap5.2. Distinguishes fixed liability economic duration, float coupon reset and principal maturity."
+    },
+    {
+      "number": 6,
+      "prompt_route": "New FX amounts and no/timely/late transfer with evidence rights.",
+      "solution_checked": "7FU*1.2CU/FU=8.4CU; unavailable or late gap8, timely balance.4. Permissions, source cash, executable quote/fees, destination, settlement and prefunding requirements supplied without legal conclusions."
+    },
+    {
+      "number": 7,
+      "prompt_route": "Bridge loan feasible interval at2%, existence at10%, why cash-equity result differs.",
+      "solution_checked": "Earlier b>=39.9; finals27.1-gb,27.7-gb,3.81-gb. At2%,b<=190.5 and joint b39.9 leaves3.012. At10%,b<=38.1 conflicts with earlier bound. All other flows/policy fixed; no unproved optimum claimed."
+    },
+    {
+      "number": 8,
+      "prompt_route": "Critique equity-as-cash, collateral reuse, IM profit, probability and cost optimality; concrete evidence and recalculation.",
+      "solution_checked": "All five errors repaired, including infeasible unbuffered closing diagnostics. Custodian/lender eligibility-and-timing confirmation and dated usable settlement schedule are concrete examples. Maturing bridge, late margin, changed draw or sale requires revised cash/debt/income calculation. Explicit full-credit criteria and insufficient generic responses supplied."
+    }
+  ],
+  "instruction_audit": {
+    "definitions_and_units": "Definitions precede formulas. CU, FU, security units, interval versus annual rates, rational strings, reset date versus maturity and cash versus expense are explicit. Annual ALM and currency cases are separate from the main ledger.",
+    "teach_back": "Answered standard requires entity/currency/deadline, unavailable resources, principal versus variation entries, and fixed-policy reserve hypotheses.",
+    "retention": "Fully answered transferred anchors: prefixes-4/+5/-3 imply4; collateral25*.8*.6 implies12 capacity/3 paydown; 150bp on face30 implies NII-.45.",
+    "reader_structure": "Actual scripts.verify.Document reads the final fragment as4worked/8exercises/8solutions. Four entire cases use class=worked containers; all8prompts are in ol.exercises; matching8data-solution-for entries are inside details.solutions. Five flat asset hrefs and unchanged source/chapter routes verified."
+  },
+  "numerical_and_contract_review": {
+    "independent_oracles": "Author checker reconstructs every cutoff account from cumulative stock/cash equations rather than the model event loop, checks journal accounting and nonincome principal/margin rows, and compares exact baseline anchors. ALM valuation and derivatives use backward discounted recursions, distinct from model forward finite sums. Closed-form collateral and bridge boundaries are independently checked.",
+    "focused_interventions": "18 groups: exact and one-cent-below reserve; haircut; price; no secured access; full/no customer draw; higher initial margin; earlier margin release; delayed loan receipt; all cash restricted; above-capacity funding request; smaller deliverable pool; zero stocks; negative/zero/upper-bound ALM yields with maturity endpoints; changed FX amount/quote. No scenario probabilities or broad random fuzzing.",
+    "strict_api": "Exact dict keys/schema/types, bounded rational-string syntax/numerator/denominator, finite vector/scenario sizes, positive-price/haircut bounds, stock-flow limits, final margin release, nonnegative opening equity and clear permitted negative-yield ALM family. Financial cash failure is a valid output. Actual56 invalid cases reject quietly without mutation under normal and optimized checks.",
+    "portable_cli": "Quiet import/API; valid --input/--output and sibling-input stdout routes; exact saved bytes under normal and -O. Output aliases of input/model rejected before write for direct/resolved/symbolic/hard-link cases; duplicate/nonfinite/malformed/invalid/oversized JSON rejects preserving destination bytes. Normal and optimized summaries agree; isolated nine-file check and quiet check() completed in final freeze validation.",
+    "expected_final_checker_summary": {
+      "chapter": "v11-c05",
+      "status": "passed",
+      "comparisons": 6153,
+      "financial_interventions": 18,
+      "api_rejections": 56,
+      "cli_rejections": 26,
+      "valid_cli_runs": 4,
+      "journal_rows": 99,
+      "cutoff_rows": 12,
+      "author_bindings": 8
+    },
+    "manifest": "Exactly four portable payloads: input, model, output and README. Author record binds all eight nonself owned files. Self-hash is reported externally at freeze."
+  },
+  "resolved_findings": [
+    {
+      "finding": "Parent architecture review required precise receipt cutoffs, actual funding obligations and a fixed-policy boundary.",
+      "resolution": "Manuscript and model explicitly keep old repayments when refinancing fails, separate interest accrual from payment, exclude unavailable collateral, specify receipt-before-payment ordering and label every negative-cash continuation a hypothetical full-payment diagnostic. The cash contribution and maturing bridge have distinct proved constraints."
+    },
+    {
+      "finding": "Portable output must not clobber input or executing model through aliases.",
+      "resolution": "Path.resolve and samefile guards are implemented; normal/-O tests actually reject direct,resolved,symlink and hardlink outputs and preserve bytes. Strict parse/domain failures also preserve an existing output."
+    },
+    {
+      "finding": "Coordinator actual reader parser counted0worked/0solutions despite four complete cases and eight solutions, because the initial fragment omitted established structural containers.",
+      "resolution": "Added only four class=worked wrappers and details.solutions/summary/ol wrapper, preserving all IDs, prose and mathematical content. Reversed-wrapper SHA256 reproduces the root-read manuscript. Actual scripts.verify.Document now returns4/8/8. Portable author checker explicitly checks these reader markers."
+    }
+  ],
+  "remaining_limits": [
+    "All scenarios and contract rates are synthetic; there is no empirical validation or probability calibration.",
+    "Four-cutoff receipt ordering, collateral delivery, counterparty performance and legally available transfers are stipulated assumptions. Additional timing or legal constraints require a finer plan.",
+    "The book carrying amounts and marked-equity proxy do not implement full accounting rules, loan credit valuation or a regulatory capital/liquidity definition.",
+    "The cash minimum is conditional on a fixed policy and nonmaturing cash reserve. No minimum-cost optimization, automatic official support, endogenous run, sale feedback, default waterfall or infinite-horizon survival theorem is claimed.",
+    "Separate peer/coordinator acceptance and shared build/offline/UI/publication gates remain pending and are root-owned."
+  ],
+  "pending_acceptance": [
+    "Separate peer numerical/proof/exact-solution/portable review",
+    "Coordinator final source, manuscript and lab acceptance",
+    "Dependency-ordered canonical integration and whole-edition reader checks"
+  ]
+}

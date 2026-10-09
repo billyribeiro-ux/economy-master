@@ -1,0 +1,410 @@
+{
+  "schema": "v11-c06-cedar-1-output",
+  "provenance": "Original synthetic Cedar critical-payment operation; no observed incident, estimated control effectiveness, legal conclusion or real approval.",
+  "run_label": "incident_example",
+  "calibration": {
+    "rate_per_staff_cutoff": "2",
+    "training_errors": [
+      "0",
+      "0",
+      "0"
+    ],
+    "sum_squared_error": "0",
+    "max_absolute_error": "0"
+  },
+  "capacity": {
+    "staff_only": [
+      2,
+      2,
+      8,
+      6
+    ],
+    "constrained": [
+      2,
+      2,
+      4,
+      6
+    ],
+    "deployed": [
+      2,
+      2,
+      8,
+      6
+    ]
+  },
+  "deployed_forecast": {
+    "rows": [
+      {
+        "cutoff": 1,
+        "arrivals": [
+          "A01",
+          "A02",
+          "A03",
+          "A04"
+        ],
+        "available_before_service": 4,
+        "capacity": 2,
+        "completed_ids": [
+          "A01",
+          "A02"
+        ],
+        "unused_slots": 0,
+        "backlog_after": 2,
+        "due_and_unfinished_ids": [],
+        "planned_cash_after": "180",
+        "planned_payment_liability_after": "120"
+      },
+      {
+        "cutoff": 2,
+        "arrivals": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05"
+        ],
+        "available_before_service": 7,
+        "capacity": 2,
+        "completed_ids": [
+          "A03",
+          "A04"
+        ],
+        "unused_slots": 0,
+        "backlog_after": 5,
+        "due_and_unfinished_ids": [],
+        "planned_cash_after": "160",
+        "planned_payment_liability_after": "100"
+      },
+      {
+        "cutoff": 3,
+        "arrivals": [
+          "C01",
+          "C02",
+          "C03"
+        ],
+        "available_before_service": 8,
+        "capacity": 8,
+        "completed_ids": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "C01",
+          "C02",
+          "C03"
+        ],
+        "unused_slots": 0,
+        "backlog_after": 0,
+        "due_and_unfinished_ids": [],
+        "planned_cash_after": "80",
+        "planned_payment_liability_after": "20"
+      },
+      {
+        "cutoff": 4,
+        "arrivals": [
+          "D01",
+          "D02"
+        ],
+        "available_before_service": 2,
+        "capacity": 6,
+        "completed_ids": [
+          "D01",
+          "D02"
+        ],
+        "unused_slots": 4,
+        "backlog_after": 0,
+        "due_and_unfinished_ids": [],
+        "planned_cash_after": "60",
+        "planned_payment_liability_after": "0"
+      }
+    ],
+    "completion_cutoffs": {
+      "A01": 1,
+      "A02": 1,
+      "A03": 2,
+      "A04": 2,
+      "B01": 3,
+      "B02": 3,
+      "B03": 3,
+      "B04": 3,
+      "B05": 3,
+      "C01": 3,
+      "C02": 3,
+      "C03": 3,
+      "D01": 4,
+      "D02": 4
+    },
+    "deadline_missed_ids": [],
+    "completed_late_ids": [],
+    "unfinished_ids": [],
+    "on_time_count": 14,
+    "all_deadlines_met": true
+  },
+  "constrained_plan": {
+    "rows": [
+      {
+        "cutoff": 1,
+        "arrivals": [
+          "A01",
+          "A02",
+          "A03",
+          "A04"
+        ],
+        "available_before_service": 4,
+        "capacity": 2,
+        "completed_ids": [
+          "A01",
+          "A02"
+        ],
+        "unused_slots": 0,
+        "backlog_after": 2,
+        "due_and_unfinished_ids": [],
+        "planned_cash_after": "180",
+        "planned_payment_liability_after": "120"
+      },
+      {
+        "cutoff": 2,
+        "arrivals": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05"
+        ],
+        "available_before_service": 7,
+        "capacity": 2,
+        "completed_ids": [
+          "A03",
+          "A04"
+        ],
+        "unused_slots": 0,
+        "backlog_after": 5,
+        "due_and_unfinished_ids": [],
+        "planned_cash_after": "160",
+        "planned_payment_liability_after": "100"
+      },
+      {
+        "cutoff": 3,
+        "arrivals": [
+          "C01",
+          "C02",
+          "C03"
+        ],
+        "available_before_service": 8,
+        "capacity": 4,
+        "completed_ids": [
+          "B01",
+          "B02",
+          "B03",
+          "B04"
+        ],
+        "unused_slots": 0,
+        "backlog_after": 4,
+        "due_and_unfinished_ids": [
+          "B05",
+          "C01",
+          "C02",
+          "C03"
+        ],
+        "planned_cash_after": "120",
+        "planned_payment_liability_after": "60"
+      },
+      {
+        "cutoff": 4,
+        "arrivals": [
+          "D01",
+          "D02"
+        ],
+        "available_before_service": 6,
+        "capacity": 6,
+        "completed_ids": [
+          "B05",
+          "C01",
+          "C02",
+          "C03",
+          "D01",
+          "D02"
+        ],
+        "unused_slots": 0,
+        "backlog_after": 0,
+        "due_and_unfinished_ids": [],
+        "planned_cash_after": "60",
+        "planned_payment_liability_after": "0"
+      }
+    ],
+    "completion_cutoffs": {
+      "A01": 1,
+      "A02": 1,
+      "A03": 2,
+      "A04": 2,
+      "B01": 3,
+      "B02": 3,
+      "B03": 3,
+      "B04": 3,
+      "B05": 4,
+      "C01": 4,
+      "C02": 4,
+      "C03": 4,
+      "D01": 4,
+      "D02": 4
+    },
+    "deadline_missed_ids": [
+      "B05",
+      "C01",
+      "C02",
+      "C03"
+    ],
+    "completed_late_ids": [
+      "B05",
+      "C01",
+      "C02",
+      "C03"
+    ],
+    "unfinished_ids": [],
+    "on_time_count": 10,
+    "all_deadlines_met": false
+  },
+  "observed_reconciliation": {
+    "rows": [
+      {
+        "id": "A01",
+        "cutoff": 1,
+        "classification": "authorized_on_time"
+      },
+      {
+        "id": "A02",
+        "cutoff": 1,
+        "classification": "authorized_on_time"
+      },
+      {
+        "id": "A03",
+        "cutoff": 2,
+        "classification": "authorized_on_time"
+      },
+      {
+        "id": "A04",
+        "cutoff": 2,
+        "classification": "authorized_on_time"
+      },
+      {
+        "id": "B01",
+        "cutoff": 3,
+        "classification": "authorized_on_time"
+      },
+      {
+        "id": "B02",
+        "cutoff": 3,
+        "classification": "authorized_on_time"
+      },
+      {
+        "id": "B03",
+        "cutoff": 3,
+        "classification": "authorized_on_time"
+      },
+      {
+        "id": "B04",
+        "cutoff": 3,
+        "classification": "authorized_on_time"
+      },
+      {
+        "id": "B05",
+        "cutoff": 4,
+        "classification": "authorized_late"
+      },
+      {
+        "id": "C01",
+        "cutoff": 4,
+        "classification": "authorized_late"
+      },
+      {
+        "id": "C02",
+        "cutoff": 4,
+        "classification": "authorized_late"
+      },
+      {
+        "id": "B02",
+        "cutoff": 4,
+        "classification": "duplicate_settlement"
+      },
+      {
+        "id": "D01",
+        "cutoff": 4,
+        "classification": "authorized_on_time"
+      },
+      {
+        "id": "D02",
+        "cutoff": 4,
+        "classification": "authorized_on_time"
+      }
+    ],
+    "slot_counts": [
+      2,
+      2,
+      4,
+      6
+    ],
+    "acknowledgment_count": 14,
+    "unique_authorized_settlements": 13,
+    "missing_instruction_ids": [
+      "C03"
+    ],
+    "authorized_late_ids": [
+      "B05",
+      "C01",
+      "C02"
+    ],
+    "anomalies": [
+      {
+        "id": "B02",
+        "cutoff": 4,
+        "reason": "duplicate_settlement"
+      }
+    ],
+    "on_time_count": 10,
+    "cash_debits": "140",
+    "authorized_liability_discharged": "130",
+    "bank_borne_exception_loss": "10",
+    "closing_cash": "60",
+    "closing_payment_liability": "10",
+    "closing_equity": "50",
+    "identity_residual": "0",
+    "within_stipulated_capacity": true
+  },
+  "separate_control_experiment": {
+    "first_control_marginal_miss": "29/200",
+    "second_control_marginal_miss": "6/25",
+    "joint_miss_when_both_applied": "69/1000",
+    "incorrect_product_of_marginal_misses": "87/2500",
+    "escape_given_unauthorized_attempt": "421/5000",
+    "escape_per_request": "421/250000",
+    "expected_escapes": "421/250",
+    "expected_loss": "421/10",
+    "scope": "Separate stipulated control experiment, not an estimated probability law for the observed payment log. Expectation does not determine a tail probability or guarantee control effectiveness."
+  },
+  "closure_gates": {
+    "training_error_within_stated_tolerance": true,
+    "runtime_bottleneck_included": false,
+    "constrained_plan_meets_all_deadlines": false,
+    "observed_instruction_identity_complete": false,
+    "observed_all_authorized_payments_on_time": false,
+    "observed_records_within_stated_capacity": true,
+    "distinct_preparer_and_approver_declared": true,
+    "independent_model_challenger_declared": true,
+    "reviewed_version_matches_deployment": true,
+    "expected_loss_within_fictional_bound": false,
+    "legal_basis_evidence_declared": false,
+    "restore_replay_external_evidence_declared": false
+  },
+  "failed_closure_gates": [
+    "runtime_bottleneck_included",
+    "constrained_plan_meets_all_deadlines",
+    "observed_instruction_identity_complete",
+    "observed_all_authorized_payments_on_time",
+    "expected_loss_within_fictional_bound",
+    "legal_basis_evidence_declared",
+    "restore_replay_external_evidence_declared"
+  ],
+  "disposition": "keep_incident_open_or_restrict_use",
+  "limits": "Queue capacities are stipulated consequences of a fitted rate and gateway limit, not empirical certainty. Historical late or wrong payments cannot be relabeled by a successful later test. Metadata flags/version labels do not authenticate documents or artifacts. One first authorized settlement discharges each instruction; duplicate, unknown and premature debits are assumed irreversible bank-borne losses without recovery, not a general legal/accounting rule."
+}

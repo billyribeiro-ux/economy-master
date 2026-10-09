@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "opening": {
+    "cash": "20", "restricted_cash": "4", "loans": "150",
+    "security_book_per_unit": "1", "eligible_units": "50",
+    "already_pledged_units": "20", "inaccessible_units": "10",
+    "initial_margin": "5", "deposits": "160",
+    "legacy_principal": "40", "legacy_interest_payable": "0.4",
+    "other_liabilities": "30"
+  },
+  "policy": {
+    "upfront_cash_equity": "0", "secured_target": "30",
+    "initial_security_price": "1", "initial_haircut": "0.2",
+    "secured_interval_rate": "0.01", "rollover_interval_rate": "0.005",
+    "customer_line_limit": "15"
+  },
+  "scenarios": [
+    {
+      "name": "base", "rollover_fraction": "1", "secured_offer_fraction": "1",
+      "maintenance_price": "1", "maintenance_haircut": "0.2",
+      "loan_principal_receipts": ["0", "12", "18", "40"],
+      "deposit_withdrawals": ["10", "3", "5", "0"],
+      "other_liability_payments": ["0", "0", "6", "0"],
+      "customer_line_draw": "0",
+      "variation_settlements": ["-2", "-4", "3", "5"],
+      "initial_margin_targets": ["5", "5", "5", "0"]
+    },
+    {
+      "name": "rollover_failure", "rollover_fraction": "0", "secured_offer_fraction": "1",
+      "maintenance_price": "1", "maintenance_haircut": "0.2",
+      "loan_principal_receipts": ["0", "12", "18", "40"],
+      "deposit_withdrawals": ["10", "3", "5", "0"],
+      "other_liability_payments": ["0", "0", "6", "0"],
+      "customer_line_draw": "0",
+      "variation_settlements": ["-2", "-4", "3", "5"],
+      "initial_margin_targets": ["5", "5", "5", "0"]
+    },
+    {
+      "name": "joint_stress", "rollover_fraction": "0", "secured_offer_fraction": "1",
+      "maintenance_price": "0.7", "maintenance_haircut": "0.3",
+      "loan_principal_receipts": ["0", "12", "18", "40"],
+      "deposit_withdrawals": ["16", "8", "7", "0"],
+      "other_liability_payments": ["0", "0", "6", "0"],
+      "customer_line_draw": "12",
+      "variation_settlements": ["-3", "-9", "5", "10"],
+      "initial_margin_targets": ["5", "9", "9", "0"]
+    }
+  ],
+  "alm": {
+    "asset_face": "100", "asset_coupon_rate": "0.05", "asset_years": 2,
+    "fixed_liability_face": "80", "fixed_liability_coupon_rate": "0.05",
+    "liability_years": 5, "floating_liability_face": "20", "cash": "10",
+    "base_yield": "0.05", "shock_yield": "0.07"
+  },
+  "currency_case": {"local_cash": "4", "payment_due": "12", "foreign_cash": "8", "cu_per_fu": "1.25"}
+}

@@ -1,0 +1,93 @@
+{
+  "chapter": "v11-c07",
+  "date": "2026-10-09",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating author, scoped author and separate specialist peer; no independent human certification",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Complete advanced chapter: 4 original worked examples, 8 fully solved exercises, answered teaching/retention, explicit proof/source limits and portable standard-library laboratory.",
+  "author_review": "reviews/v11-c07-author.json",
+  "peer_review": "reviews/v11-c07-peer.json",
+  "detailed_review": "production/v11-middle-root-review-notes.json",
+  "root_numerical_evidence": "production/v11-middle-root-numerical-audit.json",
+  "structural_evidence": "production/v11-middle-structural-review.json",
+  "final_execution_evidence": "production/v11-middle-peer-validation.json",
+  "verified_payload_hashes": 11,
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c07.html",
+      "bytes": 40248,
+      "sha256": "28a71de8fc7c55a496dd645c372a4fa9c3462a320900074348ba1fade3b7bc11"
+    },
+    {
+      "path": "content/projects/v11-c07-inputs.json",
+      "bytes": 1826,
+      "sha256": "5b4d2f67fc163c9e8428e932f6aa603cdb702948de1f47decf3da186a41c3e07"
+    },
+    {
+      "path": "content/projects/v11-c07-analysis.py",
+      "bytes": 14803,
+      "sha256": "3bdbc61bda4e339b113c4e4ce39eb446827141ec328dce0647da2203d2392a2e"
+    },
+    {
+      "path": "content/projects/v11-c07-output.json",
+      "bytes": 24794,
+      "sha256": "06ec3395252393e19aafd8b696666c08142b69b76636b2cf1d1faf682c21a2aa"
+    },
+    {
+      "path": "content/projects/v11-c07-manifest.json",
+      "bytes": 672,
+      "sha256": "26976ac2fe3444f1fa642287e4d49d326aa8f53adf2bfda9cb31963b167e2ca9"
+    },
+    {
+      "path": "content/projects/v11-c07-README.txt",
+      "bytes": 14143,
+      "sha256": "e52ab75db124be996e809ca97003ddcbd597f310690f4c88d88832f61b0a5f63"
+    },
+    {
+      "path": "scripts/check_v11_c07.py",
+      "bytes": 23791,
+      "sha256": "f627344bdcb7acdfaf75dec62a28d5ed9d6ab86677894819125dfde60b016373"
+    },
+    {
+      "path": "content/reviews/v11-c07-author.json",
+      "bytes": 20675,
+      "sha256": "e745fe185dff2b09a69b7c6c71bf36359e73cce9d96a153d5b6a5ba7be971f99"
+    },
+    {
+      "path": "content/reviews/v11-c07-sources.json",
+      "bytes": 1218,
+      "sha256": "715727c22c57b74476f40a5b89c09cc190a682fd93b7190a6de9c007ff34b78d"
+    },
+    {
+      "path": "scripts/check_v11_c07_peer.py",
+      "bytes": 24170,
+      "sha256": "d6a1b77472d63fd2d947206e33c78ed9f36d47675db6fd6487fa07f80f9afd32"
+    },
+    {
+      "path": "content/reviews/v11-c07-peer.json",
+      "bytes": 17091,
+      "sha256": "a147bb941341745e0844147b8acf592367905ffd613d3393573edb14d0b01757"
+    }
+  ],
+  "resolved_findings": [
+    {
+      "status": "resolved before separate peer and independently recomputed",
+      "issue": "Three printed payment/deposit fractions and one new-pledge fraction were incorrect while the model and output were correct.",
+      "resolution": "Corrected exact values25837/1058,16483/1058,119109/1058 and1058/2205. Root re-read complete final manuscript; independent peer checks all printed result fractions and original-contract equations.",
+      "evidence": "production/v11-c07-root-fraction-finding.json"
+    }
+  ],
+  "open_content_findings": [],
+  "limitations": [
+    "Synthetic calculations and scoped primary sources do not establish empirical calibration, actual legal enforceability or real institutional authorization.",
+    "Machine-assisted author/coordinator/separate-agent review is not external human certification.",
+    "Whole-edition browser/mobile/keyboard/print visual QA remains pending under the recorded access limitation."
+  ]
+}

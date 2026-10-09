@@ -1,0 +1,192 @@
+{
+  "schema": "v11-c06-cedar-1",
+  "provenance": "Original synthetic Cedar critical-payment operation; no observed incident, estimated control effectiveness, legal conclusion or real approval.",
+  "run_label": "incident_example",
+  "horizon": 4,
+  "unit_amount": "10",
+  "opening_cash": "200",
+  "opening_payment_liability": "140",
+  "opening_equity": "60",
+  "payments": [
+    {
+      "id": "A01",
+      "release": 1,
+      "deadline": 2
+    },
+    {
+      "id": "A02",
+      "release": 1,
+      "deadline": 2
+    },
+    {
+      "id": "A03",
+      "release": 1,
+      "deadline": 2
+    },
+    {
+      "id": "A04",
+      "release": 1,
+      "deadline": 2
+    },
+    {
+      "id": "B01",
+      "release": 2,
+      "deadline": 3
+    },
+    {
+      "id": "B02",
+      "release": 2,
+      "deadline": 3
+    },
+    {
+      "id": "B03",
+      "release": 2,
+      "deadline": 3
+    },
+    {
+      "id": "B04",
+      "release": 2,
+      "deadline": 3
+    },
+    {
+      "id": "B05",
+      "release": 2,
+      "deadline": 3
+    },
+    {
+      "id": "C01",
+      "release": 3,
+      "deadline": 3
+    },
+    {
+      "id": "C02",
+      "release": 3,
+      "deadline": 3
+    },
+    {
+      "id": "C03",
+      "release": 3,
+      "deadline": 3
+    },
+    {
+      "id": "D01",
+      "release": 4,
+      "deadline": 4
+    },
+    {
+      "id": "D02",
+      "release": 4,
+      "deadline": 4
+    }
+  ],
+  "training": [
+    {
+      "staff": 1,
+      "throughput": 2
+    },
+    {
+      "staff": 2,
+      "throughput": 4
+    },
+    {
+      "staff": 4,
+      "throughput": 8
+    }
+  ],
+  "operation": {
+    "staff": [
+      1,
+      1,
+      4,
+      3
+    ],
+    "gateway_capacity": [
+      2,
+      2,
+      4,
+      6
+    ],
+    "deployed_rule": "staff_only"
+  },
+  "observed_settlements": [
+    {
+      "id": "A01",
+      "cutoff": 1
+    },
+    {
+      "id": "A02",
+      "cutoff": 1
+    },
+    {
+      "id": "A03",
+      "cutoff": 2
+    },
+    {
+      "id": "A04",
+      "cutoff": 2
+    },
+    {
+      "id": "B01",
+      "cutoff": 3
+    },
+    {
+      "id": "B02",
+      "cutoff": 3
+    },
+    {
+      "id": "B03",
+      "cutoff": 3
+    },
+    {
+      "id": "B04",
+      "cutoff": 3
+    },
+    {
+      "id": "B05",
+      "cutoff": 4
+    },
+    {
+      "id": "C01",
+      "cutoff": 4
+    },
+    {
+      "id": "C02",
+      "cutoff": 4
+    },
+    {
+      "id": "B02",
+      "cutoff": 4
+    },
+    {
+      "id": "D01",
+      "cutoff": 4
+    },
+    {
+      "id": "D02",
+      "cutoff": 4
+    }
+  ],
+  "control_risk": {
+    "requests": 1000,
+    "unauthorized_attempt_probability": "0.02",
+    "common_failure_probability": "0.05",
+    "first_miss_given_no_common": "0.10",
+    "second_miss_given_no_common": "0.20",
+    "second_control_coverage": "0.80",
+    "loss_per_escape": "25"
+  },
+  "closure": {
+    "preparer": "operator_a",
+    "approver": "operator_b",
+    "developer": "ops_model_team",
+    "reviewer": "risk_validation",
+    "reviewed_version": "capacity_v1",
+    "deployed_version": "capacity_v1",
+    "legal_basis_verified": false,
+    "restore_evidence_verified": false,
+    "replay_evidence_verified": false,
+    "external_confirmation_verified": false,
+    "maximum_expected_loss": "20",
+    "maximum_fit_error": "0"
+  }
+}

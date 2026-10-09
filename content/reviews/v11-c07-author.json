@@ -1,0 +1,204 @@
+{
+  "chapter": "v11-c07",
+  "date": "2026-10-09",
+  "status": "author-review-complete; separate peer/coordinator acceptance pending",
+  "reviewer": "ito_author; machine-assisted author review, not independent peer or external academic certification",
+  "scope": "Original advanced stress-testing chapter with four complete worked cases and eight fully solved exercises, a coherent integrated institution, nonlinear revaluation, explicitly specified two-node contagion, funded partial-payment journals, finite-menu aggregation and proved reverse-stress brackets. Only the exact nine assigned author paths are owned; shared integration and publication remain with the coordinator.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "prerequisite_and_adjacent_contract": {
+    "c01_to_c04": "Uses accepted accounting, capital/cash and joint-law distinctions. The screening/run contracts of c01 are not imported into the new institution. Deterministic scenario maxima are kept separate from c04 VaR/ES probabilities.",
+    "c05": "Directly coordinated dated operationally available cash, distinct encumbered pools, principal-versus-interest and no automatic funding with bs_author. The new cutoff has its own explicit order and contracts; c05's separate fixed-policy buffer theorem is not misapplied to endogenous drawing.",
+    "c06": "Directly coordinated that an operational cutoff failure is a stipulated scenario, not a measured control probability or proven legal result. Aggregate resources do not by themselves prove executable individual payments.",
+    "acceptance_order": "Drafts rely on the agreed c05/c06 specifications. Actual dependency acceptance, source integration and reader build remain root-owned and are not performed by this record."
+  },
+  "proof_audit": [
+    {
+      "topic": "Nonlinear claims and nonduplicated loss attribution",
+      "audit": "The bond and borrower claim have explicit future cash dates and positive discount factors. Differentiation gives negative duration and positive bond convexity. The joint loan mark includes the rate-credit interaction exactly; rate-first plus credit-at-new-yield is an identity. Mark loss, a later receipt or sale at that mark, principal paydown and deposit withdrawal are distinguished transaction by transaction. Tomorrow's interest is reported separately from the current-instant accounting convention."
+    },
+    {
+      "topic": "Two-node clearing existence and uniqueness",
+      "audit": "Common total obligation, fixed pari passu shares, limited liability, external cash, no other realizable resources and simultaneous enforceable batch settlement are specified. For interbank share a<1 the min map is a self-map of the compact square and is a contraction in maximum norm. A geometric Cauchy bound proves existence and continuity yields a fixed point; the contraction inequality proves uniqueness. Every solution is in one of four capped/uncapped regimes. Candidate labels can coincide at a boundary without creating multiple payment vectors. The a=1 closed-cycle counterexample explicitly limits the result."
+    },
+    {
+      "topic": "Network resource conservation, monotonicity and continuity",
+      "audit": "Retained balances are nonnegative; summing them cancels internal transfers and yields external cash equal to outside payments plus retained cash. Monotone iterations from zero prove payments cannot decrease when external cash increases. The fixed-point perturbation bound 1/(1-a) proves continuity in external cash. The loss transmitted through the second node is already included in I's final mark and is not a separate added impairment."
+    },
+    {
+      "topic": "Funded cutoff and collateral conservation",
+      "audit": "Old and new collateral use disjoint inventory fractions. The old pool stays reserved even after principal paydown, so there is no collateral recycling. A minimum planned draw targets the cash floor but is capped by both the actually available facility and free collateral. Actual payments follow a specified old-creditor-then-depositor priority; each is limited to remaining cash and unpaid amounts stay in the liability. The signed full-payment budget is a feasibility certificate, not an executed negative cash balance. Every current journal balances independently calculated equity. Later principal and interest cannot be financed by simply pointing to one- and two-year receipts."
+    },
+    {
+      "topic": "Common-scenario aggregation and concentration",
+      "audit": "For a fixed scenario, each component loss is bounded by its menu maximum; summing and taking a maximum proves max(sum)<=sum(max). Gains remain in the totals. The supplied menu has incompatible component extrema and an exact positive gap; no independence or confidence level is asserted. Contract identifiers, institution versus consolidated perimeter and the common industrial/rate factors explain why nominal debtor counts do not prove diversification."
+    },
+    {
+      "topic": "Reverse-stress boundary and equality",
+      "audit": "The supported severity set is the compact interval [0,1], with nonnegative driver slopes and endpoint domain tests. Asset marks, network receipts and collateral capacity are continuous/nonincreasing; losses, required paydown and requests are nondecreasing. Both slacks and their minimum are continuous/nonincreasing. The closed trigger set is either empty, contains zero, or has an attained first boundary. Bisection preserves a strictly safe lower endpoint and a weakly triggering upper endpoint with exact width 2^-n, even under plateaus. Capacity uses maximum available drawing, not the minimum-draw policy's chosen closing cash. Strict positive shortage is explicitly distinguished from the zero-cash infimum. The one-dimensional family does not contain the separately tested operational outage."
+    }
+  ],
+  "worked_case_audit": [
+    {
+      "number": 1,
+      "result": "Opening assets 202 and equity 45 reconcile. All five joint driver rows revalue the same contracts. Rate rise gives loss 12480/529 and equity 21.408318; sector recession gives 32.619377 loss; joint stress gives 24440/529 and equity -635/529. The outage preserves equity 45. Exact derivative, nonlinear bond mark and rate-credit attribution are checked."
+    },
+    {
+      "number": 2,
+      "result": "Reference B/C payments 20/20 leave retained cash 2/2. At external cash 2/8, payments 8/12 yield outside receipts 4/6 and no retention. I's mark loss 6 includes the extra feedback loss 2 relative to a full-C-payment benchmark; outside resources conserve exactly."
+    },
+    {
+      "number": 3,
+      "result": "Joint old paydown 10135/1058, new draw 20, deposit payment 25837/1058, unpaid 16483/1058 and closing deposits 119109/1058 reconcile. Assets 75012/529, liabilities 143 and equity -635/529 close. The new pledge fraction is 1058/2205. Next-day principal plus specified interest is separately reported. The outage leaves 8 unpaid with equity 45."
+    },
+    {
+      "number": 4,
+      "result": "Hand-solved payment regimes switch at 1/5 and 1/3. Above 1/3, independent cubic equations reproduce the exact reverse brackets. Funding boundary approximately .545784230258 precedes capital .751688814506, while equity at the first trigger is about 19.650135 and all payments remain possible. Zero-reserve threshold approximately .596675093210 is the infimum of strict payment shortage, not itself a shortage."
+    }
+  ],
+  "exact_prompt_solution_audit": [
+    {
+      "number": 1,
+      "prompt": "Revalue rate-rise assets/equity, derive duration loss and compare with exact loss, reconcile joint credit-rate attribution and quantify the reference-yield attribution error.",
+      "solution": "P=44100/529; Q=1680/23; total loss=12480/529. Duration magnitude 4000/21 gives first-order loss 400/21, exceeding exact 8800/529 by 26800/11109. Joint loan 1344/23 has loss 496/23=160/23+336/23. Using credit 16 instead produces an excess 32/23. All requested results are independently certified and printed anchors checked."
+    },
+    {
+      "number": 2,
+      "prompt": "Prove clearing uniqueness/existence and resources; transfer to b4/c6; identify feedback and an a1 counterexample.",
+      "solution": "Geometric iteration and uniqueness arguments are complete under a<1. The resource identity cancels interbank flows. Changed payments are 28/3 and 32/3, I receipt 14/3, impairment 16/3 and feedback 7/3. At a1 with zero external cash every equal payment pair from 0 to T is fixed. The unsupported boundary is not passed to the validated model."
+    },
+    {
+      "number": 3,
+      "prompt": "Reconstruct joint funding and closing accounts, then increase both contract and available ceiling to 40 while retaining collateral; compute draw, unpaid withdrawals and pledged inventory, and assess capital/payment consequences.",
+      "solution": "The corrected exact paid/unpaid/deposit fractions are 25837/1058, 16483/1058 and 119109/1058. With ceiling 40, free collateral caps drawing at 33075/1058; deposit payment is 18876/529 and unpaid 2284/529. All bond units are then reserved. Equity remains -635/529; debt funding does not eliminate the asset loss and is still insufficient for all requests. Root's initially identified manual fraction typo is recorded below, not hidden."
+    },
+    {
+      "number": 4,
+      "prompt": "Post a network mark and receipt; distinguish duplicate impairment, secured principal expense and realization at an existing mark; identify a genuine incremental loss.",
+      "solution": "Reduce claim/equity by 6, then exchange the remaining claim 4 for cash 4. No second loss occurs on receipt. Secured principal changes cash/debt and a sale at the mark changes asset composition. A distinct price decline, fee, revised recovery, accrued interest or explicit default cost can create an additional loss if amount and date are supplied."
+    },
+    {
+      "number": 5,
+      "prompt": "Prove the menu maximum inequality, compute all extrema and gap, explain probability/independence limits and calculate common-sector concentration.",
+      "solution": "The inequality follows pointwise. Component maxima 8800/529, 520/17, 6 and 2 sum to 496624/8993, versus maximum common loss 24440/529, gap 3528/391. Industrial credit 90 of 202 gives share 45/101. A common external factor and contractual interbank transmission defeat a name-count diversification argument; a common yield is another overlapping factor. No probability law is assigned."
+    },
+    {
+      "number": 6,
+      "prompt": "Derive the network path and cubic boundaries, justify attainment and bisection, identify first-trigger capital and distinguish reserve/strict payment failure, and address the off-family outage.",
+      "solution": "B first becomes partial at x=1/5; C remains full until x=1/3; thereafter payments are 24-16x and 24-12x. Substitution yields the printed capital and funding cubics. Exact sign certificates at both rational endpoints support the two reported boundaries and width 2^-40. First-trigger equity 19.650135 exceeds 10. Closed reserve equality is a policy intervention, while strict shortages arise beyond the separate zero-cash boundary. The outage changes a driver outside the searched family."
+    },
+    {
+      "number": 7,
+      "prompt": "Fund 5 additional opening cash by equity and then by deposits, recompute both reverse thresholds and identify the behavioral assumption.",
+      "solution": "Equity financing raises assets to 207 and equity to 50; both slacks increase 5. Funding/capital boundaries become about .673395979956/.861274373503. Deposit financing raises assets and deposits by 5 but leaves equity 45; funding improves identically only under frozen requests, while capital boundary remains .751688814506. New withdrawal/interest/confidence behavior requires a different scenario. Timing of actual funding receipt is explicit."
+    },
+    {
+      "number": 8,
+      "prompt": "Correct four committee assertions; give three operational validation actions with limits, a funded outage response, and evidence needed for probabilities.",
+      "solution": "The exemplar rejects an unsupported quantile, duplicate feedback charge, unspecified common sale prices and use of later receipts for earlier payments. It supplies exposure reconciliation, independent numerical/resource challenge and dated legal/operational facility validation, each with a stated limit. It reconciles 8 unpaid and makes a remedy conditional on actual timely execution. Probability assignment needs a defended joint model and uncertainty evidence beyond the scenario menu. The 12-point rubric covers all requested elements and identifies critical funding/integrity errors."
+    }
+  ],
+  "instruction_and_structure": {
+    "method_before_problem": "Definitions, exposure dates, nonlinear derivatives, complete clearing proof, journal priority, aggregation inequality and reverse-boundary derivation precede their exercises. The novel finite network theorem is proved instead of imported as unexplained machinery.",
+    "teach_back": "The answered prompt separately reconciles stress loss, the network fixed point, funding movements and the restricted reserve boundary.",
+    "retention": "Six answered questions revisit unused funding headroom, the a<1 uniqueness condition, one-time impairment, collateral caps, strict-shortage infima and unsupported quantiles, with explicit section remediation.",
+    "reader": "Four worked asides, eight exact exercise prompts and eight grouped solutions; unique section IDs and flat five-asset links. The executable command is explicitly protected by the checker after the prose-spacing pass. No shared reader or canonical file was changed."
+  },
+  "source_scope": "Actually read the final 2018 official BCBS PDF's introduction and substantive principles 1–8. The proposed record identifies exact pages and historical method scope. All numerical mechanisms are original; no current national rule or estimated likelihood is inferred.",
+  "numerical_and_portable_evidence": {
+    "independent_methods": "The candidate is executed only through public run(data)/CLI. Monotone lower/upper payment iterates and exact resource/complementarity certificates independently validate the model's four-regime network solver. Closed-form independent account vectors verify every journal. Separate analytic network pieces and cubic sign oracles validate reverse endpoints. Thirty-three printed numerical fraction anchors are recomputed directly from original contracts, so manuscript transcription is checked separately from saved outputs.",
+    "interventions": "Fifteen targeted transfers: b4/c6, larger facility, equity-funded cash, deposit-funded cash, zero cash floor, capital already at threshold, no supported failure with large cash, reserve already triggered, zero and upper supported interbank shares, changed original pledge, zero external resources/full credit loss, inability to pay old margin, negative-yield/gain scenario and no old secured debt. No broad fuzzing or redundant giant state enumeration.",
+    "api": "Strict exact keys/schema and bounded rational strings, no booleans as numbers, explicit probability-like fractions and financial constraints, unique scenario IDs and bounded runtime. Fifty-five invalid API inputs reject quietly without mutation. Adverse results remain valid outputs where the contract specifies partial payment.",
+    "portable": "Six isolated API/default CLI/explicit CLI successes across normal and optimized Python, from an unrelated working directory using only the five portable files. Twenty CLI rejections cover duplicate keys, nonfinite tokens, boolean numerics, oversized input and direct/symbolic/hard-link output aliases of input/model; prior output and protected bytes remain unchanged.",
+    "manifest": "Exactly four portable payload hashes: input, model, saved output and README. This author review binds all eight nonself owned files and does not hash itself.",
+    "final_summary": {
+      "chapter": "v11-c07",
+      "status": "passed",
+      "comparisons": 1329,
+      "financial_interventions": 15,
+      "invalid_api_inputs": 55,
+      "journal_rows": 140,
+      "portable_runs": 6,
+      "cli_rejections": 20,
+      "bound_author_payloads": 8
+    },
+    "quiet_normal_optimized_check_summaries_identical": true
+  },
+  "resolved_findings": [
+    {
+      "origin": "Coordinator independent arithmetic review before freeze",
+      "severity": "material manuscript arithmetic transcription",
+      "finding": "Exercise 3 initially printed three exact paid/unpaid/deposit fractions off by 1/1058 although its model and rounded values were correct.",
+      "resolution": "Replaced them by 25837/1058, 16483/1058 and 119109/1058 and corrected the repeated unpaid anchor in README. Added explicit independent printed-fraction certificates and absence checks for the incorrect strings. Current model/output did not need a financial calculation change."
+    },
+    {
+      "origin": "Author extended printed-fraction checker after the coordinator finding",
+      "severity": "material manuscript arithmetic transcription",
+      "finding": "The newly added direct fraction certificates exposed the worked-case new pledge fraction 529/1102 as incorrect.",
+      "resolution": "Corrected it to 1058/2205=20/(P/2), preserving the model's already-correct collateral amount. The repaired exact fraction and old-string absence are now checked."
+    },
+    {
+      "origin": "Coordinator complete manuscript review before freeze",
+      "severity": "instructional readability",
+      "finding": "Several solution and retention phrases joined prose and numerical tokens without ordinary spaces.",
+      "resolution": "Added ordinary prose/number/list spacing throughout the chapter, retained executable code spacing, and replaced the repeated title heading with Reconcile stressed values with executable payments. Apart from the explicitly recorded fraction repairs, financial content and proofs were preserved."
+    }
+  ],
+  "open_findings": [],
+  "remaining_limits": [
+    "Scenarios are conditional synthetic assumptions without calibrated probabilities, empirical plausibility certification or a missing-tail guarantee.",
+    "The clearing proof requires the specified simultaneous batch, pari passu shares, no extra resources/default costs and a<1. It does not solve arbitrary financial networks or gross-settlement liquidity.",
+    "The stress equity convention marks assets against par principal liabilities; it is not a complete fair-value account, regulatory ratio or statutory accounting implementation.",
+    "Current cutoff execution does not prove next-day refinancing, legal enforceability, future asset-sale prices or survival to asset maturity. Prices and haircuts remain exogenous; fire-sale endogeneity needs a new explicit mechanism.",
+    "The reverse minimum covers only the supported one-dimensional monotone family and closed intervention thresholds, not the weakest conceivable route to strict default.",
+    "Separate peer/coordinator acceptance, dependency acceptance, shared reader/offline/UI checks and publication remain pending."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c07.html",
+      "bytes": 40248,
+      "sha256": "28a71de8fc7c55a496dd645c372a4fa9c3462a320900074348ba1fade3b7bc11"
+    },
+    {
+      "path": "content/projects/v11-c07-inputs.json",
+      "bytes": 1826,
+      "sha256": "5b4d2f67fc163c9e8428e932f6aa603cdb702948de1f47decf3da186a41c3e07"
+    },
+    {
+      "path": "content/projects/v11-c07-analysis.py",
+      "bytes": 14803,
+      "sha256": "3bdbc61bda4e339b113c4e4ce39eb446827141ec328dce0647da2203d2392a2e"
+    },
+    {
+      "path": "content/projects/v11-c07-output.json",
+      "bytes": 24794,
+      "sha256": "06ec3395252393e19aafd8b696666c08142b69b76636b2cf1d1faf682c21a2aa"
+    },
+    {
+      "path": "content/projects/v11-c07-manifest.json",
+      "bytes": 672,
+      "sha256": "26976ac2fe3444f1fa642287e4d49d326aa8f53adf2bfda9cb31963b167e2ca9"
+    },
+    {
+      "path": "content/projects/v11-c07-README.txt",
+      "bytes": 14143,
+      "sha256": "e52ab75db124be996e809ca97003ddcbd597f310690f4c88d88832f61b0a5f63"
+    },
+    {
+      "path": "scripts/check_v11_c07.py",
+      "bytes": 23791,
+      "sha256": "f627344bdcb7acdfaf75dec62a28d5ed9d6ab86677894819125dfde60b016373"
+    },
+    {
+      "path": "content/reviews/v11-c07-sources.json",
+      "bytes": 1218,
+      "sha256": "715727c22c57b74476f40a5b89c09cc190a682fd93b7190a6de9c007ff34b78d"
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "chapter": "v11-c08",
+  "date": "2026-10-09",
+  "reviewer": "bs_author, separate from root author",
+  "status": "separate-peer-review-passed; coordinator acceptance and shared integration pending",
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c08.html",
+      "bytes": 47550,
+      "sha256": "468369a7bb5a6bab564364bee32ad486e0e69ac8c3cbb745dcd35decc4d5412f"
+    },
+    {
+      "path": "content/projects/v11-c08-inputs.json",
+      "bytes": 2124,
+      "sha256": "e684e994b4c87fe5d5189d5f1dcb5501b628cb1da2bd3fc8a747ceb26e204537"
+    },
+    {
+      "path": "content/projects/v11-c08-analysis.py",
+      "bytes": 22362,
+      "sha256": "bb7949541a6612e830323d3b7a408c5e3d15e5f038564f7e01fbd3bad1d55b6c"
+    },
+    {
+      "path": "content/projects/v11-c08-output.json",
+      "bytes": 19153,
+      "sha256": "5ae5892fcc48d10248f266b16c13387e7e2654bc552e78daed3b261dba24ec93"
+    },
+    {
+      "path": "content/projects/v11-c08-manifest.json",
+      "bytes": 978,
+      "sha256": "da4e1636494372567623febd805e3ce6d1bf2a9d865937a4c043f3f390ce9fd3"
+    },
+    {
+      "path": "content/projects/v11-c08-README.txt",
+      "bytes": 9112,
+      "sha256": "d7631d7206679647f9967ba54df427091f05950310a7de0f89beb47b1dc2006c"
+    },
+    {
+      "path": "scripts/check_v11_c08.py",
+      "bytes": 26664,
+      "sha256": "e0f188449ba1f1f1f75c84886a10c1bbbcf29f6a2066d8eb6a3919a9397cec07"
+    },
+    {
+      "path": "content/reviews/v11-c08-author.json",
+      "bytes": 8737,
+      "sha256": "689c9085d77bf876f9e8ace9dc1ca5bbca3d6edea75d561d370b958e3a28a0d5"
+    },
+    {
+      "path": "content/reviews/v11-c08-sources.json",
+      "bytes": 1921,
+      "sha256": "c9691c1ae0b03b774197007a975bcc7cb05df90ed6178d0066b0ac607257eb2c"
+    }
+  ],
+  "peer_checker": {
+    "path": "scripts/check_v11_c08_peer.py",
+    "bytes": 29069,
+    "sha256": "55e093b833d31e1b06f52413e5786c5e34ecd6f9f6496d8f2ce33f2bb82f0ed0"
+  },
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "independence": "The reviewer is bs_author, separate from root author. All nine final author payloads were read/inspected. The peer checker calls only the public model run(data), never model math helpers or the author checker as an oracle. Author checker code was read for audit scope, not imported to supply expected answers. Another agent calculation/evidence review is not independent human certification.",
+  "scope_read": [
+    "Complete47,550-byte manuscript: all six worked cases, seven proof/derivation routes, all ten exact exercise prompts and complete solutions, teach-back and delayed retention.",
+    "Complete model22,362bytes, input2,124bytes, saved output19,153bytes, README9,112bytes, manifest978bytes, author checker26,664bytes, author review8,737bytes and sources1,921bytes. Exact author file lengths/hashes are bound below.",
+    "Reader structure, flat asset links, two precise source IDs, finite domain and approximate-versus-exact labeling."
+  ],
+  "proof_audit": [
+    {
+      "claim": "Square-root insurance risk premium and menu boundary",
+      "finding": "Sound within full-performance and fixed-p preferences. Squaring nonnegative utility equality gives the stated maximum premium; expansion yields p(1-p)(sqrt(W)-sqrt(W-L))^2 and zero-risk boundaries. Both type participation and all offered-contract deviations are checked. The derivative sign proof reduces to36(100-.1a)>36+.9a on[0,64]; endpoint ordering plus continuity proves one high-type crossing. Numerical bisection independently locates8.846193408. No entry equilibrium or effort incentive theorem is inferred."
+    },
+    {
+      "claim": "Insurance common dependence and finite tails",
+      "finding": "Conditional residual orthogonality derives total variance; common regime variance persists. Independent and mixture laws have the same marginal mean but distinct tails. Strict shortfall uses claims>resources, not>=. Premium margin is not counted a second time. The n2 counterexample correctly gives lower frequency and greater expected unpaid under common dependence, so no universal monotone-frequency claim is made. Solvent menu choices are explicitly separated from an insolvent pool without a modeled recovery contract."
+    },
+    {
+      "claim": "Nested life-contingent payments and common longevity",
+      "finding": "For i<=j the indicator product equals the later indicator. Covariance formula, disjoint lifetime states and year-end death timing are valid. A temporary horizon has no invented lifetime tail. Independent lives versus common regime use distinct probability structures; deterministic planning-law revision changes the mean and is not merely dispersion. Deterministic-discount physical expectation is not a traded price; random correlated discounts cannot be factorized without another assumption."
+    },
+    {
+      "claim": "Pension fixed-path support minimum",
+      "finding": "Executable D_j/D_t zero prices, money growth D_previous/D_t, nonnegative benefits/inventory, no costs/borrowing, and predeadline access justify discounted-wealth conservation and sufficiency by liquidation induction. Minimum initial contribution is positive part of path PV less initial assets. Removing first-date sale access preserves PV necessity but destroys that sufficiency step; the exact revised568 timing requirement is necessary and sufficient. Returned sale cash consumes later face exactly once. Unsupported paths stop at first unpaid benefit rather than invent negative funding."
+    },
+    {
+      "claim": "Rate-surplus sensitivity and guarantee resources",
+      "finding": "The common exponential curve shift prices assets and expected liabilities on the same basis; initial cash has zero duration. The derivative-1344 is per unit continuous rate, and full1% repricing differs from a local approximation. Statewise positive-part sponsor exposure must be averaged before replacing state resources by means. Separate capacity limits, sponsor-first priority, participant payment cap and assigned sponsor residual conserve resources. Physical support expectation is not a market price or capital requirement."
+    },
+    {
+      "claim": "Household dated cash and floor minimum",
+      "finding": "Original purchase debt produces no new cash. Opening-principal interest and exact principal retirement are separate from a lower coupon claim. Income arrives before obligations; return precedes each end-date contribution; locked pension is excluded from liquid cash. Extra fixed-plan zero-interest initial cash translates every balance, including date0; the minimum floor proof is necessary and sufficient on that unchanged plan. Negative projected cash signals failure, while a positive balance below the chosen floor is only a reserve breach."
+    }
+  ],
+  "worked_case_audit": [
+    {
+      "case": 1,
+      "independent_results": "W100/L64/p.25 gives utility9, CE81 and maximum premium19. Type maxima7.84/29.44; pooled premium16 selects high risks and margin-9.6. At partial8/.8, low chooses partial and high chooses full64/25.6. Float state-utility calculation independently matches40-digit output; strict choice gaps are much larger than the disclosed1e-30 numerical tie threshold."
+    },
+    {
+      "case": 2,
+      "independent_results": "Polynomial convolution, separate from model ratio recurrence and author combinatorial sum, reconstructs every count mass. All twelve rounded table entries for capital0,200,600 match. Average variances7.68 and98.9184, common limit92.16; resource conservation reconciles signed surplus with positive unpaid claims."
+    },
+    {
+      "case": 3,
+      "independent_results": "Sequential survival hazards give states0/19.2/37.6/55.2 with probabilities.1/.15/.15/.6; mean41.64,var361.6944. Two distinct lives sharing one regime independently produce common covariance29.5936 and average variance32.914608 at n100. Conditional mean36.2/47.08 and variance417.208/246.9936 match; deterministic longer-law liability4708 and increment544; death expectation36.6."
+    },
+    {
+      "case": 4,
+      "independent_results": "Initial asset value4300 versus expected4164. Discounted-amount inventory allocation reconstructs all sales and payments: baseline first sale7100/11, terminal1700/11, PV136. Longer path first8300/11 then2300/11, terminal unpaid5100/11, initial deficit408. Explicit408 support clears exactly;407.99 leaves1/88 unpaid at date3. Zero assets stop at date1; increasing discount factors remain valid with the specified money growth. Shifted surplus122.8353832988 and derivative-1344 agree."
+    },
+    {
+      "case": 5,
+      "independent_results": "Expected assets105 do not erase weak-state required40. Sponsor5 gives weak pay65 and expected91.25, short8.75, sponsor1.25,residual15. Actual support capacity20/35 interventions obey priority, participant cap and resource conservation."
+    },
+    {
+      "case": 6,
+      "independent_results": "Amortizing service10.4/9.6/8.8, interest4.8, cash6.6/3/1.2; bullet1.92/1.92/25.92,interest5.76,cash15.08/19.16/.24. Contribution-vintage valuation matches34.2/33.78/40.158. Floor2 needs.8/1.76; date0 floor comparison is retained under a floor10 intervention."
+    }
+  ],
+  "exact_exercise_audit": [
+    {
+      "number": 1,
+      "checked": "All requested objects solved: utility11,CE121,max premium23,fair20,excess3; price22 accepted; algebraic general identity and boundary interpretation are taught beforehand."
+    },
+    {
+      "number": 2,
+      "checked": "Partial10/premium1 gives both types higher utility than outside/full. High utility8.653206 exceeds8.625543; margin-3. The solution explicitly identifies missing entrant deviations and market-game structure."
+    },
+    {
+      "number": 3,
+      "checked": "At400 lives average variances1.92 and93.8496, common limit92.16. Total variance is n^2 times average variance; moments alone do not select a threshold-tail probability."
+    },
+    {
+      "number": 4,
+      "checked": "Independent masses9/16,6/16,1/16; regime masses5/8,1/4,1/8. Six resources imply shortfall7/16 versus3/8 and unpaid19/8 versus11/4. Both requested metrics and the direction counterexample are correct."
+    },
+    {
+      "number": 5,
+      "checked": "Law0(.2),9.5(.3),18.5(.5); mean12.1,var51.79. Positive nested covariance term17.1 is omitted by false independence34.69. End-year temporary death value23; no later benefit is counted."
+    },
+    {
+      "number": 6,
+      "checked": "At1000 lives, independent average.3616944,common29.9257008,limit29.5936; changing to longer planning law increases total expectation5440. These hand calculations correctly remain outside the lab member cap200 rather than weakening validation."
+    },
+    {
+      "number": 7,
+      "checked": "First cash gap1775/3; date0 amount.96*(1775/3)=568. With568, first benefit clears and unchanged later maturities suffice. The failed proof step is the now-forbidden current sale, not a valuation algebra error."
+    },
+    {
+      "number": 8,
+      "checked": "Weak benefit85/short15, strong100/short0; expected96.25/3.75, sponsor1.25,guarantor5; separate capacity35 closes weak gap. Expected-resource identity and nonpricing limitation stated."
+    },
+    {
+      "number": 9,
+      "checked": "Income34 yields final-.8/-1.76, first negative date3, floor repair2.8/3.76. Separate contribution intervention yields liquid7.6/4/2.2 and pension39.168, forgone compound value.99. Inputs are reset between interventions; no optimality claim."
+    },
+    {
+      "number": 10,
+      "checked": "All four proposals are addressed with chapter anchors, specified evidence and measurable follow-up. Four25point criteria split10mechanism/8evidence/7followup; essential reasoning gate forbids fictitious support, locked cash and expected-state guarantees. Open-ended evaluation is explicit and does not require one unsupported policy opinion."
+    }
+  ],
+  "instruction_and_source_audit": {
+    "instruction": "Definitions precede their use; physical expectations, contract promises and executable resources are differentiated throughout. Methods required by proof/derivation exercises are taught. Six complete worked containers and ten exercise/paired-solution entries parse correctly; all five reader attachments are flat. Teach-back has an explicit answer standard and delayed retention is answered33.44,25,1.8 with scope interpretation.",
+    "primary_sources": "Read the exact two source proposal records and their inspected-scope evidence. Root records actual SSA1998printed1-3 for survivor-contingent end-year discounting/conditional survival/death timing and official DoL definitions for DB/DC/cash-balance contract distinction. Chapter citations remain within those scopes. No historical table entries, current-law/tax/guarantee limits or whole-PDF audit are inferred. This peer did not newly retrieve or claim to read the remaining primary-source bodies; original math and current frozen content were independently reviewed.",
+    "source_and_format_repair": "The pre-dispatch delayed-retention heading repair is bound in the current frozen chapter and author checker/record. No content repair was needed by this peer."
+  },
+  "numerical_validation": {
+    "independent_methods": [
+      "Repeated Bernoulli polynomial convolution for exact claim counts/tails rather than model ratio recurrence",
+      "Conditional-survival hazard states and explicit two-life shared-regime joint moments",
+      "Discounted-benefit gaps and latest-maturity inventory allocation with per-row resource conservation",
+      "Statewise support waterfall and physical weighted resource identities",
+      "Closed prefix cash and contribution-vintage pension accumulation",
+      "Exact textbook transfer anchors and full proof/hypothesis reading"
+    ],
+    "targeted_interventions": "17groups: changed menu; W144/L80 full-cover transfer; capital200/600; two-member dependence; certain-claim equality; exact408/one-cent-less funding; zero pension assets; increasing discount factors; guarantee20/35; income shock; first contribution timing; date0 floor10; certain survival0/1.",
+    "strict_and_portable": "24actual quiet nonmutating API rejections;8actual duplicate/nonfinite/shape/syntax CLI rejections preserve destination;16direct/resolved/symlink/hardlink alias attempts across input/model and normal/-O preserve both protected payloads.4valid portable model routes cover sibling default input and explicit input/output under normal/-O. Every byte of the saved output is reproduced. No blanket robustness claim outside the declared finite contract.",
+    "summary": {
+      "chapter": "v11-c08",
+      "status": "passed",
+      "comparisons": 1235,
+      "financial_interventions": 17,
+      "invalid_api_cases": 24,
+      "invalid_cli_cases": 8,
+      "protected_alias_attempts": 16,
+      "portable_model_runs": 4,
+      "pension_rows": 56,
+      "author_files_bound": 9
+    },
+    "normal_optimized_quiet": "Final check() is quiet; normal and -O summaries agree. Exact11-file isolated copy (nine author plus two peer files) is checked in both modes from a different working directory."
+  },
+  "findings": [],
+  "remaining_limits": [
+    "The review verifies a bounded synthetic contract and algebraic resource claims, not observed probabilities, calibration, real legal rights, actuarial professional certification or optimal household policy.",
+    "All pension-sale and money-accrual rights, physical survival laws, conditional independence and external support capacities remain stipulated assumptions.",
+    "Utility values/tie decisions and exponential curve shifts are explicitly labeled numerical approximations; exact rational financial cash calculations are distinct.",
+    "Coordinator dependency-ordered acceptance, canonical changes, publication and whole-edition browser/mobile/keyboard/print evidence remain separate root-owned gates."
+  ],
+  "acceptance_recommendation": "Accept the complete author package for coordinator integration within its stated mathematical and computational scope; no unresolved material peer finding."
+}

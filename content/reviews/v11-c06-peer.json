@@ -1,0 +1,279 @@
+{
+  "chapter": "v11-c06",
+  "status": "peer-review-passed",
+  "date": "2026-10-09",
+  "reviewer": "ito_author, separate specialist",
+  "author": "c05_review, separately scoped author",
+  "assignment": "production/v11-c06-peer-assignment.json",
+  "scope": "Read the entire manuscript, four worked cases, every exact eight prompt/solution pair, proofs, teach-back and retention; full original input/model/output/README/manifest, author checker and author/source reviews. Read canonical requirements and common contract. This peer owns only its checker and review; no frozen author/shared file was edited.",
+  "independence": "Only the candidate public run(data) and CLI are executed. The author checker was read for scope but never executed or used as an oracle. Independent peer calculations use complete timely-subset reachability for eight small schedules (no greedy scheduler or matching routine), 32 latent Boolean states for request/common/idiosyncratic/coverage events, per-instruction debit journals, exact least-squares and inequality algebra. Schedule-row certificates additionally test release/priority/conservation without calling any candidate helper. Saved-output reproduction occurs after independent checks and is not the correctness oracle.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "worked_examples": 4,
+  "solved_exercises": 8,
+  "worked_example_audit": [
+    {
+      "number": 1,
+      "verdict": "passed",
+      "independent_result": "Stressed backlogs 2,5,4,0; four exact missed IDs B05/C01/C02/C03; ten timely and fourteen eventually complete. The deadline-3 cut proves four misses necessary and the displayed schedule attains it. Four shifted slots are necessary and sufficient in this case; late authority cannot provide them retrospectively. The 40-CU late amount is not automatically an expense."
+    },
+    {
+      "number": 2,
+      "verdict": "passed",
+      "independent_result": "The first thirteen distinct valid obligations discharge 130 despite fourteen debits of 140. B02 duplicate consumes 10 equity under the explicit no-recovery assumption; C03 remains a liability. Closing 60=10+50. Ten timely, three late, one missing give four deadline failures. Every observed debit is preserved, including exceptions."
+    },
+    {
+      "number": 3,
+      "verdict": "passed",
+      "independent_result": "Latent-state enumeration gives marginals 29/200 and 6/25, joint 69/1000, product 87/2500, conditional escape 421/5000, per-request escape 421/250000, expected escapes 421/250 and expected loss 421/10. Full coverage leaves 69/2. Exact common-cause ceiling at full coverage is 1/49; coverage cannot remove the stated common branch."
+    },
+    {
+      "number": 4,
+      "verdict": "passed",
+      "independent_result": "The fit coefficient 42/21=2 and zero residuals say nothing about an omitted downstream constraint. Staff-only 2,2,8,6 versus constrained 2,2,4,6 changes predicted timely count from fourteen to ten. Resource repair, software mapping repair and observed identity-safe retest are separate interventions."
+    }
+  ],
+  "proof_audit": [
+    {
+      "topic": "Unit-job EDF feasibility",
+      "verdict": "passed",
+      "reason": "Compare any feasible schedule with EDF at the earliest differing service slot. Its selected available job a must appear later by its deadline; move it forward or exchange it with the current available b. Because d_b>=d_a and b was already available, both releases/deadlines remain feasible. An idle slot permits a simple move. Finite repeated exchanges align the schedule. Equal single-slot work, simultaneous release before a window and absence of routing/precedence restrictions are essential. The theorem concerns all-on-time feasibility, not best timely count on infeasible inputs. A separate peer three-job case has EDF one timely while an alternative attains two, confirming that explicit limit."
+    },
+    {
+      "topic": "Conservation, cut and capacity timing",
+      "verdict": "passed",
+      "reason": "Released inventory minus unique completions equals unfinished work at each cutoff. Any timely job due by cutoff 3 consumes an earlier or current slot, so twelve due against eight slots yields a lower bound of four misses independently of the chosen priority. The repaired release-respecting schedule demonstrates sufficiency only for Cedar. A release-2 job cannot consume a sole date-1 slot; total capacity alone is insufficient."
+    },
+    {
+      "topic": "Accounting and identity",
+      "verdict": "passed",
+      "reason": "Each actual debit reduces cash. Only the first matching properly authorized row for an obligation reduces its liability; every other debit reduces equity under the stipulated bank-borne irrecoverable-loss convention. The per-row vectors preserve C-L-E=0, so final M-debit/U-discharge balance is rigorous without inferring identities from totals. Premature debit does not discharge a future authorization or block a later valid one. Actual rights, finality, recovery and loss allocation are explicitly not generalized."
+    },
+    {
+      "topic": "Conditional law and expected loss",
+      "verdict": "passed",
+      "reason": "Conditioning on common failure yields marginal and joint misses; conditional independence is used only outside that branch. Independent coverage gives the mixture. Expansion verifies nonnegative covariance c(1-c)(1-q1)(1-q2). Linearity of expectation across requests does not require their independence, but no tail distribution follows. Risk-selected bypass, adaptive behavior and changing severity require a different conditional experiment."
+    },
+    {
+      "topic": "Loss ceilings and cost comparison",
+      "verdict": "passed",
+      "reason": "The three affine forms 72.5-38f, 10+490c and 50-40f give the exact compact-domain minima/boundaries. Equality at c=1/49 or f=.75 passes; representable values just above/below fail. The redesign comparison is 42.1-10-12=20.1 on the same stated horizon. Changing an input is not proof of attained effectiveness."
+    },
+    {
+      "topic": "Fitted rate and intended use",
+      "verdict": "passed",
+      "reason": "Expanding the squared-error objective yields positive quadratic coefficient sum x^2, so its stationary solution is the unique global minimum. The implementation floors the nonnegative predicted count and takes the declared gateway minimum. The deterministic rule does not identify causal productivity or predictive coverage; zero error at the same staffing level can coexist with deployment error."
+    }
+  ],
+  "exact_prompt_solution_audit": [
+    {
+      "exercise": 1,
+      "topic": "Deadline conservation",
+      "verdict": "passed",
+      "prompt_sha256": "66cbb1b1276bc52eded9cfcfb1d4dfe19173f9e6176479ecc87d44a5867afd47",
+      "solution_sha256": "2db2d833c503bd658628688e9852ef5704579e5dde11adcdf0ea0cada8ac09b5",
+      "independent_resolution": "The queue inventories are 2, 5, 4, 0. B05, C01, C02 and C03 miss. By cutoff 3 twelve obligations are due against eight available slots, so any policy misses at least four; the exhibited EDF plan attains this bound. Moving four slots gives (2,2,8,2), serving A in the first two windows, all B/C in window 3 and D in window 4. Fewer than four moved slots cannot repair the cut. Zero final backlog does not erase timing."
+    },
+    {
+      "exercise": 2,
+      "topic": "Identity and accounting",
+      "verdict": "passed",
+      "prompt_sha256": "8603851d244f3ac7e08587c1bee2382e48c13f171d29f69d9a2cb2d253760f2a",
+      "solution_sha256": "07ebc0fe5890ae0b4695c74167eb3aef5d844aede85552711c1de63f5da38e6e",
+      "independent_resolution": "Delete only the duplicate: 130 debited and discharged, zero exception loss, closing cash/liability/equity 70/10/60, ten timely, three late and C03 missing. Replace the duplicate with C03 at cutoff 4: 140 debited/discharged, zero exception loss, closing 60/0/60, ten timely and four late, no missing ID. Both remove the stipulated duplicate loss; only replacement discharges C03, and it remains historically late. Both are distinct counterfactual logs, not evidence-editing instructions."
+    },
+    {
+      "exercise": 3,
+      "topic": "Dependent controls",
+      "verdict": "passed",
+      "prompt_sha256": "f3bb7a358e7e1e8ad97b34466cf6a70b092a7d472015983b9489dc5b005c6f71",
+      "solution_sha256": "9273c806c0eb81a55a2cf9c8fa96e5a587b1b80db402361c197fd1fee8176157",
+      "independent_resolution": "Partition on common failure and independent coverage. Joint miss c+(1-c)q1q2 is .069; marginals .145 and .24 have product .0348, gap .0342. Expansion gives c(1-c)(1-q1)(1-q2). The covered/uncovered mixture is .0842; request probability .001684 and 1000-request fixed-severity expected loss 42.1. If high-risk urgent or suspicious requests bypass the second check, its coverage is no longer independent of the stated failure populations; additional conditional laws are required."
+    },
+    {
+      "exercise": 4,
+      "topic": "Control-budget boundary",
+      "verdict": "passed",
+      "prompt_sha256": "77695978a336f35a22cec79a7ff41ecc13ad9301cd9cfbf6519a966ea38f698c",
+      "solution_sha256": "683acc84544de566039c427ac512abc244162925e6d3a9c995cef2e5f45bc551",
+      "independent_resolution": "With c=.05, loss equals 72.5-38f, whose minimum on [0,1] is 34.5, above 20. With f=1 it is 10+490c, so c<=1/49. With c=0 it is 50-40f, so f>=3/4. Redesign from baseline to c=0, f=1 gives expected loss 10 and net benefit 42.1-10-12=20.1 CU over the same population/horizon. Algebra cannot establish that the architecture actually attains the new probabilities, severity or independence; tail and deadline tests remain separate."
+    },
+    {
+      "exercise": 5,
+      "topic": "Fit versus use",
+      "verdict": "passed",
+      "prompt_sha256": "7138900d2694f62833a40ec588ee58ffb5dfe8f0afb6dd971734d5d5d7120690",
+      "solution_sha256": "73cde6c3101308da7d973253db18762c9323343c600fd651cc77f55a36a9ef3e",
+      "independent_resolution": "Positive design curvature 21 and cross product 42 give unique rate 2 and residuals (0,0,0). Staff capacities (2,2,8,6) predict fourteen timely; the gateway minimum (2,2,4,6) permits ten timely and four late. Correcting the deployed rule supplies no physical slot. Hold or restrict an unreviewed version until appropriate independent review binds the artifact, inputs and intended use; one equal output or version label is not that evidence."
+    },
+    {
+      "exercise": 6,
+      "topic": "Recovery without blind replay",
+      "verdict": "passed",
+      "prompt_sha256": "492592f9e1b5f5d810666dd6fdbf1622f0b0cb1239e9ecb8316c0a81b35811b3",
+      "solution_sha256": "a5505e0573baa2285851e162c5397dad8ab8b205f8736bbf7dd5794c1029a767",
+      "independent_resolution": "After external E01/E02 settlements the actual balance is cash 20, liabilities 10, equity 10. Blind replay of E02/E03 uses 20 cash, discharges only 10 and recognizes duplicate loss 10: final 0/0/0. Confirmed-unpaid E03 alone gives 10/0/10. Preserve restored records and external references, reconcile identities/mandates, hold uncertain items and test retry protection in an authorized isolated environment before release. Restored state does not refute subsequent external events."
+    },
+    {
+      "exercise": 7,
+      "topic": "Legal authority and time",
+      "verdict": "passed",
+      "prompt_sha256": "ffae03453076f70365721ebe1e5bc5b4f57cf7585535652b50631b02eb1384b9",
+      "solution_sha256": "615e159d64fc0d0de37b8247ac3d26303273a2878f29c7d829d3a9f6c4c75a3e",
+      "independent_resolution": "Confirmation after cutoff 3 does not add usable earlier capacity: twelve due jobs and eight slots imply at least four misses. A timely effective (2,2,8,2) reservation instead permits zero. A defensible record identifies entity, instructions/mandate/provider terms, required authority, evidence and effective date, owner and last useful cutoff, interim permitted scope and escalation. The later contract/test only changes future capability; no national-law determination or retrospective erasure is justified."
+    },
+    {
+      "exercise": 8,
+      "topic": "Referee the closure memo",
+      "verdict": "passed",
+      "prompt_sha256": "8723eafcd5fd4a56b397780cafd2ec56b83b6a759d381751e577b58cc24f17ac",
+      "solution_sha256": "28badffbfcec0231e814603303c23e09fd5d50e1c7286528f68c63bec1b3a687",
+      "independent_resolution": "Correct every claimed shortcut: perfect fit omitted the gateway; fourteen debits totaling 140 include duplicate B02 and omit C03; actual unpaid liability 10 and exception loss 10 remain. Two names do not show authority separation; a booted backup does not show integrity or settlement reconciliation. Joint miss .069, not .0348, and baseline expected loss 42.1 exceeds 20; even full coverage leaves 34.5. The dated SR26-2 guidance superseded SR11-7 and does not prescribe an enforceable rule for every calculator. Assign operations, treasury, technology, legal/compliance and independent risk concrete ID, cash, capacity, artifact, retry and authority evidence; preserve original timestamps and separate retests. The five two-point rubric domains total ten and reward defensible evidence-based alternatives, not a predetermined generic checklist. Intrawindow timing, rare-event effectiveness and unresolved rights are valid residual limits."
+    }
+  ],
+  "instruction_and_administration": {
+    "verdict": "passed",
+    "coverage": "Definitions, original timeline, monetary units and release/deadline convention precede calculations. Process controls, defensive cyber concepts, fraud/approval separation, shared dependencies, legal uncertainty, model validation and incident learning all act on the same coherent case rather than disconnected lists.",
+    "teach_back": "The supplied answer correctly distinguishes cash from capacity, fitting from intended use, ending inventory from historical deadline compliance, and aggregate totals from exact obligation identities. It separates the 40-CU late amount from the 10-CU stipulated duplicate expense.",
+    "retention": "Independent small-subset/schedule checks give backlogs (1,0), four timely and one late; the exact risk law gives joint .109 versus marginal product .0361. The third answer preserves historical evidence and attaches a separate future retest.",
+    "open_scoring": "Exercises 6 and 7 specify concrete defensive/evidence elements; exercise 8 provides a ten-point rubric with five distinct two-point domains and permits supported alternative designs. No actual operational access, unapproved transaction or legal conclusion is required.",
+    "reader_structure": "Four worked asides, eight ordered prompts and eight complete answers in a grouped solutions disclosure; unique local IDs, balanced fragment and all five flat asset links. Whole-edition browser/keyboard/print QA remains separate."
+  },
+  "source_audit": [
+    {
+      "id": "v11-c06-bcbs-resilience2021",
+      "verdict": "passed within recorded scope",
+      "url": "https://www.bis.org/publications/202103-guidelines-principles-operational-resilience.pdf",
+      "evidence_used": "Reused the author source record and coordinator actual-body retrieval documented in production/v11-middle-root-review-notes.json. These identify the final March 2021 twelve-page publication, printed pages 3-8 and ICT paragraphs 37-38, not the earlier consultation. This peer read the full manuscript claims and scoped records; it does not claim a fresh independent PDF retrieval.",
+      "scope": "Critical-operation definition, dependency mapping, response/recovery/testing and incident learning support method context. No national enforceability, invented Cedar calibration or certified defense is inferred."
+    },
+    {
+      "id": "v10-c12-fed-letter",
+      "verdict": "passed within recorded scope",
+      "url": "https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm",
+      "evidence_used": "Existing accepted primary-source record plus coordinator actual letter reread, dated 17 April 2026; prior SR11-7/SR21-8 supersession explicitly recorded. No stale earlier-rule premise retained.",
+      "scope": "Dated US supervisory context predates the 6 October 2026 edition boundary. No institution-specific legal applicability is claimed."
+    },
+    {
+      "id": "v10-c12-fed-guidance",
+      "verdict": "passed within recorded scope",
+      "url": "https://www.federalreserve.gov/supervisionreg/srletters/SR2602a1.pdf",
+      "evidence_used": "Existing accepted actual twelve-page attachment inspection and coordinator reread, including scope/exclusions and Sections I-VII. The peer reuses that primary evidence rather than reporting unperformed new retrieval.",
+      "scope": "Effective challenge, model use/validation/monitoring and governance; guidance is not a prescriptive enforceable standard and excludes some simple/deterministic tools. Cedar is not automatically a regulatory model, and its fictional risk limit is not prescribed by an agency."
+    }
+  ],
+  "implementation_audit": {
+    "verdict": "passed",
+    "domain": "Exact schemas at every level; bounded list sizes, identifier grammar, rational-string grammar/ranges, actual integer and boolean types, positive unit value, complete liability inventory, funded cash-only opening identity and observed debits, release/deadline bounds, chronological evidence and identifiable training slope. Unknown/duplicate/premature observed IDs remain legitimate anomaly inputs rather than being discarded.",
+    "decision_effects": "Separately tested honest bottleneck mapping, changed reservation against unchanged historical log, a complete new rehearsal, isolated evidence gates, delete/replace duplicate, premature-then-valid and unknown debits, fractional-currency scaling, safe/blind replay, nonzero fit/tolerance equality, common-cause/coverage ceilings and degenerate risk endpoints.",
+    "separation": "No model helper or author-checker execution; no network, transaction, filesystem action or printing from run(data). Source review/metadata flags do not become real authority or closure.",
+    "portability": "Normal and optimized isolated interpreter executions from an unrelated directory test default sibling input, explicit paths and quiet API import/run. Direct, symbolic and hard-link aliases of both input and implementation reject before writing. Duplicate keys, nonfinite JSON, invalid domain and oversize CLI inputs preserve an existing output."
+  },
+  "findings": [],
+  "necessary_repairs": [],
+  "unresolved_findings": [],
+  "limitations": [
+    "Machine-assisted separate peer review, not independent human certification, actual control effectiveness or a real incident decision.",
+    "All operating data, probabilities, loss severities, thresholds and evidence declarations are original synthetic inputs; neither request-tail probabilities nor empirical calibration is established.",
+    "Window-level equal one-slot jobs omit intrawindow phases, routing/precedence, variable durations, inaccessible funds and adaptive behavior. EDF maximum-timely-count optimality on infeasible schedules is deliberately not asserted.",
+    "Duplicate/unknown/premature debits are irrecoverable bank-borne losses only by explicit case convention. Real rights, accounting, recoveries, mandates and settlements require their own facts and qualified review.",
+    "All-green declarations produce eligibility for independent closure review, not authenticated documents, artifact identity, staff independence or legal permission.",
+    "Actual primary-source retrieval is reused from the recorded author/coordinator bodies within the explicit assignment; this peer independently checked claim scope but does not label reused evidence as a new source retrieval.",
+    "Whole-edition rendered UI, canonical acceptance, dependency order and publication remain coordinator responsibilities."
+  ],
+  "validation": {
+    "state": "passed; both peer-owned files frozen for coordinator review",
+    "executed_summary": {
+      "chapter": "v11-c06",
+      "status": "peer-check-passed",
+      "comparisons": 1200,
+      "cases": 34,
+      "api_rejections": 35,
+      "cli_rejections": 8,
+      "alias_rejections": 12,
+      "portable_successes": 6,
+      "small_schedule_cases": 8,
+      "journal_rows": 91,
+      "worked_examples": 4,
+      "solved_exercises": 8,
+      "methods": [
+        "feasible timely subsets for eight small dated schedules",
+        "32-state control-risk truth table",
+        "instruction-level journal and release/deadline certificates",
+        "exact least-squares and boundary arithmetic"
+      ],
+      "limits": "Synthetic bounded machine-assisted peer audit, not real control effectiveness, legal advice, actual closure or human certification."
+    },
+    "quiet_check_api": true,
+    "strict_json_roundtrip": true,
+    "normal_and_optimized_summaries_identical": true,
+    "portable_model_api_and_cli": "Six successful isolated-interpreter executions in normal and optimized modes from an unrelated working directory; default sibling and explicit paths.",
+    "output_protection": "Twelve rejected attempts: input and implementation through direct, symbolic and hard-link paths in both modes; all protected bytes unchanged.",
+    "invalid_input_preserves_output": "Eight CLI failures across both modes for duplicate keys, NaN, invalid boolean domain and oversize input; preexisting output preserved.",
+    "isolated_peer_layout": "All eleven required files copied to a temporary source-layout directory; standalone peer CLI passed under -I and -I -O from an unrelated directory with identical JSON summaries.",
+    "binding_probe": "Appending only a newline to the saved output in the temporary layout caused the optimized checker to reject the exact byte binding.",
+    "author_checker_not_executed": true,
+    "author_files_unchanged": true,
+    "exact_nine_author_files_bound": true,
+    "peer_checker_bound": true
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c06.html",
+      "bytes": 41115,
+      "sha256": "ec9f57289a6505bf9c19de0a76d8b7528e193dea202bc100ede400f7203fc8e6"
+    },
+    {
+      "path": "content/projects/v11-c06-inputs.json",
+      "bytes": 3219,
+      "sha256": "d2a6d7889fede088376927dc79fb69063dbe0b1a3e93ae16544ef4e092b4edd1"
+    },
+    {
+      "path": "content/projects/v11-c06-analysis.py",
+      "bytes": 16123,
+      "sha256": "9b7dedf3cc16616a89571f376230810f180c54d3aa1c22ed6b0a0a329acf38c3"
+    },
+    {
+      "path": "content/projects/v11-c06-output.json",
+      "bytes": 9753,
+      "sha256": "a0fd5377d33094939affed847bf0707ba69be751cd912e48cbe3d0316bf3b26a"
+    },
+    {
+      "path": "content/projects/v11-c06-manifest.json",
+      "bytes": 1036,
+      "sha256": "40974a275f9fe5b8d862f4f4b8f296d697a48dcf68d5b8e976e4e3d406ae4c98"
+    },
+    {
+      "path": "content/projects/v11-c06-README.txt",
+      "bytes": 13608,
+      "sha256": "709ab4a4954846531fd2d45a7ca281acb079ba82a94b04dce1e9e324eb48cf00"
+    },
+    {
+      "path": "scripts/check_v11_c06.py",
+      "bytes": 33354,
+      "sha256": "3dd9f8fd3490ff3d1cf99c224dd0c699b74e46bbc50f4f06de8ebe82531af0d0"
+    },
+    {
+      "path": "content/reviews/v11-c06-author.json",
+      "bytes": 18077,
+      "sha256": "4f4c1a5acb4876c3b5ea9e10f4e8101cdf77439be988daea04e245a36513fc9b"
+    },
+    {
+      "path": "content/reviews/v11-c06-sources.json",
+      "bytes": 1874,
+      "sha256": "73ae892487eae0d016b0b9f33e78babc24e48992d5c862ba2a6c694af4dc9255"
+    },
+    {
+      "path": "scripts/check_v11_c06_peer.py",
+      "bytes": 35159,
+      "sha256": "9a261a25746d3939c07e61b1b9a283024f05aeb7b691c4dc2309cb2612ad95ec"
+    }
+  ],
+  "acceptance": "Separate peer passed; dependency-ordered canonical acceptance and publication remain with the coordinator."
+}

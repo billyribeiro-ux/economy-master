@@ -1,0 +1,175 @@
+{
+  "chapter": "v11-c08",
+  "title": "Insurance, pensions and household finance",
+  "author": "root coordinating author",
+  "date": "2026-10-09",
+  "assignment": "production/v11-middle-assignments.json",
+  "status": "author-review-passed; separate peer review and dependency-ordered coordinator acceptance pending",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Six original worked cases, ten fully solved exercises, one temporary finite lab with exact rational financial arithmetic and separately labeled utility/rate-shift approximations. No real life table, actual legal advice, personal recommendation, market equilibrium, empirical calibration or institutional guarantee.",
+  "proof_audit": [
+    {
+      "topic": "Insurance risk premium",
+      "reason": "Equalize nonnegative square-root utilities, square and expand. The exact risk-premium identity gives all zero-risk boundary cases; performance assumed separately."
+    },
+    {
+      "topic": "Menu IC/IR and cutoff",
+      "reason": "Compare each type against both contracts and outside option. Derivative sign, endpoint inequalities and continuity prove unique high-type mimicry boundary; no competition/entry equilibrium imported."
+    },
+    {
+      "topic": "Common-claim variance",
+      "reason": "Expand conditional residual and mean-deviation squares; orthogonality derives total variance. Finite binomial mixture retains marginal probability while conditional common component persists."
+    },
+    {
+      "topic": "Nested survival",
+      "reason": "For i<=j, indicator product equals later indicator. Double covariance sum agrees with disjoint lifetime states. Per-life versus cohort-total/average, deterministic mean shift versus shared random regime, and temporary death timing are explicit."
+    },
+    {
+      "topic": "Funding minimum",
+      "reason": "Executable deterministic zero prices and money accrual preserve discounted wealth. PV necessity plus nonnegative future payments and full predeadline sale access give sufficiency by induction; sale restrictions counterexample states failed step."
+    },
+    {
+      "topic": "Interest and support",
+      "reason": "Reprice assets and liabilities on same exponential curve shift; derivative includes zero duration initial cash. Statewise positive-part topup, limited support priority, participant pay and sponsor residual conserve resources."
+    },
+    {
+      "topic": "Household minimum",
+      "reason": "Existing-debt principal, income before obligations and end-year pension contributions define two distinct recurrences. Fixed zero-interest plan implies initial added cash translates every balance; including date zero proves exact nonnegative floor minimum."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "number": 1,
+      "resolution": "W144/L80/p.25: utility11, CE121, maximum premium23, fair20, excess3; price22 accepted; algebraic identity derived."
+    },
+    {
+      "number": 2,
+      "resolution": "Partial10/premium1 attracts both types; high utility about8.653206 exceeds full8.625543; high contract margin -3. Fixed menu versus entry deviations distinguished."
+    },
+    {
+      "number": 3,
+      "resolution": "n400 average variances1.92 and93.8496; limit92.16. Distribution, not variance alone, determines resource tails; total scales with n squared."
+    },
+    {
+      "number": 4,
+      "resolution": "n2 exact laws9/16,6/16,1/16 versus5/8,1/4,1/8; shortfall7/16 vs3/8 and unpaid19/8 vs11/4: frequency decreases while severity rises."
+    },
+    {
+      "number": 5,
+      "resolution": "Two-year nested state law gives mean12.1 and variance51.79, including covariance17.1; false independence34.69. Temporary death benefit23."
+    },
+    {
+      "number": 6,
+      "resolution": "n1000 average variances.3616944 and29.9257008, limit29.5936; changed survival law raises expected total liability5440."
+    },
+    {
+      "number": 7,
+      "resolution": "No first-date sale yields cash gap1775/3, but date0 extra cash568 after accrual; later unchanged maturities suffice. Market-execution step in previous sufficiency proof fails."
+    },
+    {
+      "number": 8,
+      "resolution": "Guarantor20 yields weak benefit85/short15; expectedbenefit96.25/short3.75/sponsor1.25/guarantor5; capacity35 closes weak gap, no pricing implication."
+    },
+    {
+      "number": 9,
+      "resolution": "Income shock yields date3 -.8/-1.76 and floor repair2.8/3.76; separate contribution intervention liquid7.6/4/2.2, pension39.168 with lost compounded .99."
+    },
+    {
+      "number": 10,
+      "resolution": "Four separate25-point criteria: mechanism/computed anchor10, specific evidence8, measurable followup7 each. Essential gate forbids fictitious resources, expected-state guarantee or locked cash. Illustrative memo addresses every requested proposal."
+    }
+  ],
+  "worked_examples": 6,
+  "solved_exercises": 10,
+  "calculation_independence": "Direct combinatorial masses versus recurrence; nested covariance versus disjoint life-state moments; discounted inventory/cash conservation versus sequential policy; contribution-vintage closed form versus recurrence; exact transfer cases and statewise support certificates.",
+  "source_audit": "Actual official SSA printed1\u20133 and DoL contract-definition paragraphs read; precise exclusions and method scope in proposed source records. Own numerical cases and derivations, no copied exercise bank.",
+  "findings": [
+    {
+      "origin": "coordinator shared reader structural check",
+      "status": "resolved before peer dispatch",
+      "finding": "Retention content existed but heading lacked shared verifier label delayed check/retention.",
+      "repair": "Heading now says Teach-back and delayed retention; author checker requires the full label. No mathematical or computational result changed."
+    }
+  ],
+  "limitations": [
+    "Conditional independence, survival laws, execution rights and capacities are stipulated rather than estimated.",
+    "Author numerical/proof checks are not independent human expertise; separate peer/coordinator gates pending.",
+    "Whole-edition browser/mobile/keyboard/print checks remain pending as recorded in STATUS.json."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c08.html",
+      "bytes": 47550,
+      "sha256": "468369a7bb5a6bab564364bee32ad486e0e69ac8c3cbb745dcd35decc4d5412f"
+    },
+    {
+      "path": "content/projects/v11-c08-inputs.json",
+      "bytes": 2124,
+      "sha256": "e684e994b4c87fe5d5189d5f1dcb5501b628cb1da2bd3fc8a747ceb26e204537"
+    },
+    {
+      "path": "content/projects/v11-c08-analysis.py",
+      "bytes": 22362,
+      "sha256": "bb7949541a6612e830323d3b7a408c5e3d15e5f038564f7e01fbd3bad1d55b6c"
+    },
+    {
+      "path": "content/projects/v11-c08-output.json",
+      "bytes": 19153,
+      "sha256": "5ae5892fcc48d10248f266b16c13387e7e2654bc552e78daed3b261dba24ec93"
+    },
+    {
+      "path": "content/projects/v11-c08-README.txt",
+      "bytes": 9112,
+      "sha256": "d7631d7206679647f9967ba54df427091f05950310a7de0f89beb47b1dc2006c"
+    },
+    {
+      "path": "content/projects/v11-c08-manifest.json",
+      "bytes": 978,
+      "sha256": "da4e1636494372567623febd805e3ce6d1bf2a9d865937a4c043f3f390ce9fd3"
+    },
+    {
+      "path": "scripts/check_v11_c08.py",
+      "bytes": 26664,
+      "sha256": "e0f188449ba1f1f1f75c84886a10c1bbbcf29f6a2066d8eb6a3919a9397cec07"
+    },
+    {
+      "path": "content/reviews/v11-c08-sources.json",
+      "bytes": 1921,
+      "sha256": "c9691c1ae0b03b774197007a975bcc7cb05df90ed6178d0066b0ac607257eb2c"
+    }
+  ],
+  "validation": {
+    "date": "2026-10-09",
+    "status": "passed",
+    "quiet_normal_optimized_identical": true,
+    "different_cwd": "/",
+    "summary": {
+      "chapter": "v11-c08",
+      "status": "passed",
+      "comparisons": 4701,
+      "financial_interventions": 16,
+      "invalid_api_inputs_rejected": 30,
+      "invalid_cli_inputs_rejected": 6,
+      "protected_output_attempts": 12,
+      "worked_examples": 6,
+      "solved_exercises": 10,
+      "author_payload_hashes_verified": 8,
+      "independent_methods": [
+        "direct combinatorial claim-count probabilities",
+        "nested survival covariance",
+        "discounted cash and bond-inventory conservation",
+        "support priority and resource certificates",
+        "closed-form contribution-vintage and household cash sums",
+        "exact exercise transfers and analytical proof review"
+      ],
+      "limits": "Author calculation and scoped evidence audit only; separate peer/coordinator acceptance and actual-law/calibration/whole-edition UI review remain distinct."
+    }
+  }
+}
