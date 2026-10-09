@@ -1,0 +1,34 @@
+{
+  "schema": "v11-c11-alder-beacon-1",
+  "provenance": "Original synthetic Alder-Beacon crisis game; no observed institution, empirical probability, national legal power or real intervention.",
+  "bank": {
+    "cash": "20",
+    "asset_units": "100",
+    "retail_due": "18",
+    "funder_principal": "31",
+    "wait_multiplier": "1.1",
+    "network_due": "20",
+    "opening_equity": "20"
+  },
+  "beacon": {
+    "cash": "0",
+    "customer_due": "10",
+    "opening_equity": "10"
+  },
+  "market": {
+    "intercept": "1",
+    "impact": "0.005",
+    "benchmark_terminal_value": "1"
+  },
+  "policy": {
+    "public_cash": "80",
+    "advance_fraction": "0.8",
+    "line_caps": ["0", "20", "80"],
+    "resolution_bridge_cap": "10"
+  },
+  "terminal_states": [
+    {"label": "benchmark", "unit_payoff": "1"},
+    {"label": "asset_downside", "unit_payoff": "0.6"},
+    {"label": "deep_downside", "unit_payoff": "0.1"}
+  ]
+}

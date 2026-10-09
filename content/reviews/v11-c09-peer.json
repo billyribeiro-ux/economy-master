@@ -1,0 +1,244 @@
+{
+  "chapter": "v11-c09",
+  "date": "2026-10-09",
+  "reviewer": "c05_review, separately scoped peer agent; not chapter author",
+  "assignment": "production/v11-c09-peer-assignment.json",
+  "status": "separate machine-assisted peer review passed; coordinator acceptance pending",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Full final manuscript, all four worked cases, all eight exact prompts and complete solutions/proofs, model, input, complete saved output, README, manifest, source record, author review and author checker. Only this peer record and its independent checker were written; no author/shared/canonical or hosting changes.",
+  "independence": {
+    "public_interface": "The peer checker imports the implementation quietly and calls only run(data). It never uses the author checker, validation or numerical helpers as an oracle. Saved-output equality occurs after original-contract recomputation.",
+    "exporter": "A separate dictionary of offshore cash, segregated collateral, onshore H, onshore F and delayed F claims is posted event by event. Negative derivative and loan claims are separately reduced only by funded payments. The entire five-event trail and all terminal fields are reconstructed.",
+    "hedge": "Full-payment prefix requirements at h=0 and h=1 recover each affine constraint. Eliminate h by bounding its feasible interval: positive slopes impose upper bounds, negative slopes lower bounds, constants directly bound x. The maximum of all endpoint and lower/upper compatibility bounds gives minimum x; the leftmost feasible h implements the stated smallest-hedge tie. This is different from the implementation intersection search and the author checker supporting-slope certificate.",
+    "sovereign": "Use separate H and F pockets, actual dealer exchange, priority payments above the usable floor and named surviving principal components: arrears, old future principal and new loan. Reconcile the stock bridge independently from those components.",
+    "other": "Two funded borrowing/deposit trades, reciprocal quote changes, physical first/second moments, capacity-filtered preferences and dated deterministic claim values are independently calculated. Every nontrivial displayed fraction and all five rounded figures are checked."
+  },
+  "worked_audit": [
+    {
+      "number": 1,
+      "result": "The two-loan proof gives K=106/85 H/F. Fixed 120 F gross less matched 40 F costs leaves one net 80 F claim. Full ideal receipt is 1696/17 H; the separate physical distribution has mean 96 H and variance 768 H squared, with expected hedge-minus-unhedged difference 64/17 and a standalone loan gap 4/17. All five stated six-place approximations across the chapter are within half a final decimal unit.",
+      "reasoning": "No physical expectation enters the funded parity proof. Positive gross factors permit negative net rates. The constant hedge identity requires fixed matching quantity, matching fixing, full performance and executable conversion; the restricted risky NDF is an existing synthetic strike convention, not asserted fair pricing."
+    },
+    {
+      "number": 2,
+      "result": "Complete five-event currency-pocket journals reproduce all seven states. Clear/weak close the cutoff with 132/17 H and later value 200/17. Transfer and conversion locks each leave 276/17 H unpaid but retain 24 H versus 30 F onshore. Joint collateral 6, transfer 32, actual NDF receipt 236/17, loan arrears 818/17 and later value -172/17 reconcile. Margin squeeze posts 12 of 18, leaves 6 unposted, pays NDF 344/17 and leaves debt 4/17; full initial contribution is 106/17. Delay requires 956/17.",
+      "reasoning": "Unposted collateral is a breach rather than financial borrowing; only actually posted collateral returns. Positive counterparty loss is written off rather than retained as a receivable. Negative NDF/debt arrears survive. Post-breach continuation is expressly conditional on no termination/acceleration/penalty. Later releases do not repair earlier deadlines."
+    },
+    {
+      "number": 3,
+      "result": "Reference buys 12 F for 24 H and leaves 40 H; 64 F resources pay 12 imports and 40 debt, leaving 12 usable plus 8 blocked F. Depreciation costs 36 H at the dealer and leaves 28 H with unchanged F uses. Stop buys 6 F for 18 H, leaves 46 H, pays 12 imports and 20 debt and keeps the 4 F floor plus blocked 8. The same closing 80 F principal has different maturity composition. Reported H change is -40 in reference and +40 under depreciation, with +100 old-principal revaluation and -60 transactions.",
+      "reasoning": "F fiscal receipts are stipulated treasury resources, not all private export income. New settled borrowing is a funded inflow and distinct future principal; it does not erase old dues. Local H, usable F and blocked F remain separate. A foreign top-up cannot reverse a prior local-H failure under the one-way purchase policy."
+    },
+    {
+      "number": 4,
+      "result": "With F capacity 50 and due 40, scores are 120 versus 110 at S=2 and 80 versus 110 at S=3. The feasible tie S=9/4 repays by the stated rule. Capacity 39 excludes repayment even with default consequence 200. Deterministic claim PVs are 38 and 198/5 F, change 8/5; PV preservation requires 380/9 F at date 2.",
+      "reasoning": "Preference scores are H-equivalent welfare units, not cash balances; no extra accounting constraint on the score is implied. This menu is separate from the conditional capacity ledger. Maturity relief neither guarantees creditor loss nor establishes future solvency, consent or legal enforcement."
+    }
+  ],
+  "proof_audit": [
+    {
+      "topic": "Funded covered parity and quotation",
+      "assessment": "Both directions finance every spot/deposit/forward leg and cover the foreign repayment. No-arbitrage forces K R_F=S0 R_H only under common maturity/credit, two-way executable trades, zero initial forward price and no omitted costs or restrictions. Finite reciprocal quote changes are 25% and -20%, not sign reversals."
+    },
+    {
+      "topic": "Prefix minimum and conservation",
+      "assessment": "Full margin needs u+x-m>=0. All positive receipts arrive before negative NDF then debt; u+x-m+t+rho Gpositive-Gnegative-D>=0 therefore also funds every intermediate payment. The maximum with zero is necessary and sufficient because the contribution adds no repayment or altered flows. Actual insufficient-funding journals retain nonnegative cash and outstanding claims; the translated conservation identity includes late assets without treating them as early cash."
+    },
+    {
+      "topic": "Exact finite hedge optimum",
+      "assessment": "The five original affine constraints follow from dated cash. Weights 30/47 on squeeze early and 17/47 on weak late cancel h and give lower bound 48/47. Hedge 2720/47 attains it, other requirements -428/47, -204/47 and zero lie below; residual notional is 1040/47. General candidate completeness follows from affine-order intervals on the compact domain. Separate interval elimination verifies the global minimum and leftmost tie in eight bounded designs without copying that search."
+    },
+    {
+      "topic": "Sovereign currency/source identities",
+      "assessment": "H service is paid first, only remaining H buys actual F, and F imports precede debt above the usable floor. Adding required uses proves the minimum extra timely F receipt, conditional on earlier H payment and unchanged purchase behavior. Closing principal is named arrears plus old future debt plus actual new principal. Expanding translated opening/closing stocks proves the revaluation/transaction bridge; it is not a cash source."
+    },
+    {
+      "topic": "Capacity and willingness",
+      "assessment": "The action is eligible only if F capacity covers the full promise. Given eligibility, the repayment-score advantage is C-SD; the tie rule is explicit. The model does not infer preferences from capacity or predict a sovereign equilibrium. Date-specific positive discount factors value the separate creditor claims, without pricing default risk or proving future repayment."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "number": 1,
+      "exact_solution": "The 120 H loan buys 100 F and matures at 102 F; forward proceeds 663/5 minus home repayment 636/5 give 27/5 H. Reverse borrowing 100 F produces 636/5 H and costs 612/5 to acquire its 102 F repayment, profit 24/5 H. Reciprocal quote change -1/5 accompanies direct change 1/4. Hypotheses and asymmetric executable-rate caveat are complete."
+    },
+    {
+      "number": 2,
+      "exact_solution": "Receipts 80 and 144 under physical probabilities 3/4 and 1/4 give first moment 96 and variance 768 by the independently calculated second moment. Full ideal receipt 1696/17 exceeds 96 by 64/17. The statewise decomposition separates residual notional and fixing basis. All conditions for constant nK and the absence of an inferred physical law are explained."
+    },
+    {
+      "number": 3,
+      "exact_solution": "Transfer-lock trail posts 4 from 12, transfers 40 from converted 64, then receives 608/17 to give debt cash 1424/17 and arrears 276/17. Later 4 H plus onshore 24 H less arrears gives 200/17. Conversion lock instead retains 30 F with value 24 H. Prefix sufficiency and exact required contribution are proved. Later collateral 4 alone would leave 208/17 even if then applied; no automatic late repayment is in the saved trail."
+    },
+    {
+      "number": 4,
+      "exact_solution": "Joint gross NDF 472/17 is only half received; positive loss 236/17 and fixing loss 8 are separated from inaccessible assets. Actual offshore debt cash 882/17, debt owed 818/17, onshore 8 H plus 30 F and later 6 H reconcile -172/17. Delayed foreign receipt gives debt cash 744/17, arrears/minimum contribution 956/17. Deliverable F access and realized payment fraction versus probability are distinguished."
+    },
+    {
+      "number": 5,
+      "exact_solution": "Weak late constraint 24-27h/68 and squeeze early 9h/40-12 yield the stated lower-bound certificate and h=2720/47, x=48/47. Remaining constraints, residual 1040/47 F and h=0/80 required contributions 24 and 106/17 are checked. Finite candidate proof handles boundaries, duplicate/parallel lines and flat segments; scope is the selected cash objective, not every state or risk measure."
+    },
+    {
+      "number": 6,
+      "exact_solution": "All reference/stop currency balances and dealer receipts are reproduced. Principal value bridge is derived and checked using S0=2. Moving blocked 8 F before cutoff pays 28 of 40 and leaves 12 arrears. A funded 20 F grant received before the counterfactual opening increases accessible owned reserves and pays all old dues with closing principal 60; a settled 20 F loan pays all but leaves 80 principal and later 22 due. No top-up establishes future service or willingness."
+    },
+    {
+      "number": 7,
+      "exact_solution": "Eligibility capacity>=D plus advantage C-SD gives the full decision condition. Repay at S2, choose the alternative at S3, repay at the feasible S9/4 tie; capacity39 removes full repayment even when cost is 200. PV 38 versus 198/5 and equal-PV replacement 380/9 are recomputed. Maturity extension is neither necessarily forgiveness nor sufficient evidence of solvency restoration."
+    },
+    {
+      "number": 8,
+      "exact_solution": "All five board claims are corrected. Residence, denomination, legal recovery, hedge performance and the currency/location/deadline each receive a separate evidence requirement. Three proposed checks are independently executable if their responsible owners and dated confirmations exist. The contingency is conditional on an identified provider actually funding 20 F before cutoff; loan versus contribution affects later liabilities. The 12-point rubric sums correctly and retains critical timing/double-counting remediation rather than claiming a universal recommendation."
+    }
+  ],
+  "source_audit": {
+    "retrieval_honesty": "This peer read all six source proposals and their precise inspection/failed-route disclosures, and audited each manuscript claim against those supplied scopes and stable accepted records. No fresh primary-body retrieval or whole-document inspection is claimed by this peer. Root separately reported actual primary-source inspection. No unresolved specialist claim required another retrieval.",
+    "routes": [
+      {
+        "id": "v06-c11-bpm7",
+        "scope": "March 2025 pre-edited residence-based external-account framework only. The manuscript does not claim country adoption or equate currency with creditor residence."
+      },
+      {
+        "id": "v06-c11-parity",
+        "scope": "Original author slides support covered financed trades and their distinction from expected uncovered returns; the chapter supplies its own elementary proof and numbers."
+      },
+      {
+        "id": "v06-c11-bis",
+        "scope": "September 2016 method context for actual funding/credit/liquidity/balance-sheet constraints. No present basis quotation or causal coefficient is imported."
+      },
+      {
+        "id": "v06-c09-debt",
+        "scope": "January 2010 author technical note supports stock/flow and terminal-financing cautions, not an IMF institutional policy threshold. Currency and account restrictions are original."
+      },
+      {
+        "id": "v06-c12-korea-case",
+        "scope": "IEO 2003 Korea retrospective usable-reserve discussion, with no reproduced historical numerical series, current Korean rule or claimed causal rescue effect."
+      },
+      {
+        "id": "v11-c09-miga-transfer2023",
+        "scope": "Historical 2023 presentation, title/contents and slide 49 as documented. Conversion/transfer versus depreciation is described as that product distinction; Cedar is not claimed insured, and no current national right or current coverage is inferred. Failed MIGA/IMF routes are disclosed and unused."
+      }
+    ],
+    "conclusion": "All six data-source routes match the proposed/reused records. Legal rights, caps, margin continuation, sovereign deployment authority and priorities are expressly synthetic; current applicability and enforcement remain outside scope."
+  },
+  "implementation_audit": {
+    "read_complete": "Full implementation, input, every saved output row, all README contract sections, four-file manifest, eight author bindings, author checker and author review were read. The author checker itself is bound, but is not invoked as this peer numerical oracle.",
+    "domain": "Exact object shapes, bounded list/ID/numeric grammar, scalar intervals, true Boolean timing, hedge not exceeding net receivable, valid selected IDs, usable-reserve floor/inventory and positive quote/discount domains are enforced explicitly. Zero balances, zero notional and negative net rates are meaningfully supported.",
+    "failure_semantics": "No negative actual cash. Unposted collateral is distinct from debt. Positive unpaid NDF is an irreversible write-off while negative NDF remains fully owed, with priority over debt. Sovereign local/import/external arrears and later new-loan service remain distinct. Valid stress inputs may fail payment feasibility without being rejected.",
+    "finite_search": "The implementation examines at most 38 candidate hedges for at most nine affine lines, including domain endpoints; smallest-h tie is deterministic. The peer independent elimination certificate checks the optimum and all funded selected trails.",
+    "portable_contract": "Pure quiet public API, input nonmutation, strict JSON-safe output, quiet default/explicit CLI independent of cwd. Actual duplicate/nonfinite/shape/oversize/invalid-encoding attempts preserve the destination. Direct/resolved/symbolic/hard aliases of both input and model are rejected in both modes with protected bytes unchanged.",
+    "structure": "Actual shared verify.Document parser gives four worked, eight exercises, eight solutions and 23 unique IDs. Eight exact paired targets and five flat attachment links; answered teach-back and six delayed-retention questions. No visual/rendered QA claim."
+  },
+  "execution": {
+    "state": "passed final author-independent normal/-O, quiet and isolated eleven-file gates",
+    "summary": {
+      "cases": 24,
+      "chapter": "v11-c09",
+      "comparisons": 1116,
+      "design_certificates": 8,
+      "exporter_journals": 40,
+      "financial_interventions": 23,
+      "independent_methods": [
+        "currency-pocket journals with explicit surviving claims",
+        "exact interval elimination for all finite hedge constraints and smallest-hedge ties",
+        "separate sovereign source/use and surviving-principal inventory",
+        "funded two-loan parity and physical second-moment calculation",
+        "capacity-filtered preference and dated claim PV"
+      ],
+      "invalid_api_rejections": 35,
+      "invalid_cli_rejections": 10,
+      "limits": "Bounded synthetic contract review; no current legal applicability, empirical behavioral calibration, human academic certification or rendered QA claim.",
+      "portable": {
+        "direct_resolved_symbolic_hard_aliases": true,
+        "independent_working_directory": true,
+        "normal_and_optimized": true,
+        "quiet_default_and_explicit": true
+      },
+      "protected_output_rejections": 16,
+      "review_type": "separate machine-assisted peer",
+      "solved_exercises": 8,
+      "sovereign_journals": 9,
+      "status": "passed",
+      "worked_examples": 4
+    },
+    "quiet_check_API": true,
+    "normal_and_optimized_summaries_identical": true,
+    "actual_shared_Document": {
+      "worked": 4,
+      "exercises": 8,
+      "solutions": 8,
+      "unique_ids": 23
+    },
+    "author_helpers_or_checker_used_as_oracle": false,
+    "portable_exact_eleven_files_normal_and_optimized": true,
+    "evidence": "Public check() imports and runs with stdout/stderr captured and empty, strict JSON serialization and identical summaries under normal/-O. Exact eleven author-plus-peer files are copied into an isolated tree and rechecked from cwd / in both modes immediately after this record is finalized. Actual invalid API35, CLI5*2=10 and protected-output4alias*2payload*2mode=16 cases execute, preserving bytes. No author file is changed."
+  },
+  "open_findings": [],
+  "author_changes_requested": [],
+  "limitations": [
+    "Machine-assisted separately scoped peer review, not external human academic or professional certification.",
+    "Original finite contracts and preferences; no empirical calibration, sovereign prediction, current legal applicability or insurance coverage finding.",
+    "Conditional margin-breach continuation and zero-repayment equity contribution are explicit restrictions; changed rights require a new cash ledger.",
+    "Hedge certificate covers only its selected states and affine fixed-volume assumptions; terminal translated value is not earlier liquidity.",
+    "No browser, mobile, keyboard or print rendering pass is claimed; canonical acceptance and publication remain with root."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c09.html",
+      "bytes": 50078,
+      "sha256": "a5ebe81badd2dea8fcaaf1ceb5bcd91676ce89f4dac49cb4eb7946a65cdcd8d1"
+    },
+    {
+      "path": "content/projects/v11-c09-inputs.json",
+      "bytes": 2910,
+      "sha256": "819fea651b29ceee4c43850551b12d3e6d3ebb470cd93c262ab13c388d1ec61e"
+    },
+    {
+      "path": "content/projects/v11-c09-analysis.py",
+      "bytes": 15712,
+      "sha256": "93cff12353694179040898d8777e3bb0ec3f7436c40ad1de960f761ed6da894f"
+    },
+    {
+      "path": "content/projects/v11-c09-output.json",
+      "bytes": 20528,
+      "sha256": "9d082a6485e698dd7cc38bccd5f8d73af65163919ce059714a1a8bc2407e95ba"
+    },
+    {
+      "path": "content/projects/v11-c09-manifest.json",
+      "bytes": 672,
+      "sha256": "6840c2aa78a6a996a25e457f52b51e95d53bd0eeb904e9704f8e451fafda0de6"
+    },
+    {
+      "path": "content/projects/v11-c09-README.txt",
+      "bytes": 18696,
+      "sha256": "2ff089865462e5bdfe24f9fa6196a8c2f8945bdd59bceffa81ed7cea7c8c8500"
+    },
+    {
+      "path": "scripts/check_v11_c09.py",
+      "bytes": 27275,
+      "sha256": "e43b362d0e4c2118292333f1ecf7ee53c0495fe1202fa24964244d66d200a2be"
+    },
+    {
+      "path": "content/reviews/v11-c09-author.json",
+      "bytes": 18848,
+      "sha256": "a7488828f1ae21fa9a16ea9dfd44701a64808d5fe2115e08d45c908ec32e1ace"
+    },
+    {
+      "path": "content/reviews/v11-c09-sources.json",
+      "bytes": 7741,
+      "sha256": "63fc3f0ad0d2753828000e8b5df751875e00387cf505d5560437511197e1fe50"
+    },
+    {
+      "path": "scripts/check_v11_c09_peer.py",
+      "bytes": 37085,
+      "sha256": "4da3c27b38a02302c1d7d07c37ea46ba9402cbbf6cd5e42dd343baf77186aff8"
+    }
+  ]
+}

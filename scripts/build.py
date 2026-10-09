@@ -62,9 +62,11 @@ def main():
         if path.is_file():
             # Partial labs can precede their manuscripts during production.
             # Keep them in source, but do not distribute an unwritten chapter's
-            # unfinished attachments as part of the reading edition.
+            # or volume assessment's unfinished attachments in the reader.
             chapter_asset = re.match(r'^(v\d{2}-c\d{2})-', path.name)
-            if chapter_asset and chapter_asset[1] not in manuscripts:
+            assessment_asset = re.match(r'^(v\d{2})-assessment-', path.name)
+            if ((chapter_asset and chapter_asset[1] not in manuscripts)
+                    or (assessment_asset and assessment_asset[1] not in packages)):
                 generated = DIST/path.name
                 if generated.is_file():
                     generated.unlink()

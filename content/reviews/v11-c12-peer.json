@@ -1,0 +1,263 @@
+{
+  "chapter": "v11-c12",
+  "title": "Risk governance and institutional integration",
+  "reviewer": "ito_author, separate specialist peer; did not author this chapter",
+  "date": "2026-10-09",
+  "assignment": "production/v11-c12-peer-assignment.json",
+  "status": "passed separate peer review; final two peer files frozen, coordinator acceptance pending",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Entire final manuscript, all four worked cases, all ten exact exercise prompts and complete solutions, answered teach-back and four delayed retention items; complete model, input, saved output, README, manifest, source and author records. The author checker was read for audit but never executed or used as an oracle.",
+  "independence": {
+    "financial_oracle": "Independently posts the original opening, funding, asset/debt, impairment, interest, collateral and withdrawal transactions. Equity is derived from assets minus liabilities after every event rather than imported from the model equity recurrence. No author projection/execution/validation helper is used.",
+    "draw_oracle": "Construct zero-draw and unit-draw books; intersect all six affine closing cash/equity inequalities with the original capacity interval. Independently verifies existence over every admissible draw and agreement with the minimum-draw choice. This is separate from copying the author minimum-draw formula as a feasibility oracle.",
+    "selection_oracle": "Independently enumerate the bounded policy set; check each scenario and concentration; rank feasible policies by maximum lending, commitment score, then exact equity/term ties. Rebuild every selected journal event from contracts without trusting reported changes.",
+    "incentive_oracle": "Enumerate three disjoint concealment outcomes (common outage, available miss, available detection) and two honest-report false-sanction outcomes; compare expected utilities, ties and strict inequalities.",
+    "printed_results": "Exact Fraction arithmetic checks literal printed decimals and fractions, all intervention answers, initial and terminal accounts, marginal policy bounds and detection thresholds. Separate manuscript and mathematical review supplies the proofs and open-decision evaluation; the count of code comparisons is not a claim of independent human certification."
+  },
+  "proof_audit": [
+    {
+      "topic": "Funded date-0 and dated accounting",
+      "independent_result": "Opening assets 200 and liabilities 170 imply equity 30. Receive growth deposits before advancing the same new loans; receive equity before operations; receive term principal before retiring exactly the replaced old debt. Fee is an expense. Write down securities and loans once, then collect surviving loan principal by exchanging loans for cash. Security collateral remains an owned marked asset; draw adds cash and debt, principal repayment removes both, and interest reduces equity. All receipts precede payments within a cutoff; the validator ensures the opening operating expense is payable. A feasible closing cash path therefore has an executable nonnegative-cash journal under the stipulated sequence."
+    },
+    {
+      "topic": "Minimum secured draw and its limits",
+      "independent_result": "For fixed scenario/policy, the independent zero/unit books give cash slopes (1,-r_s,-r_s) and equity slopes (0,-r_s,-r_s). Intersecting the six half-lines with [0,F] shows that g*=max(0,cash_floor-C1(0)) suffices if it fits capacity and later constraints. More than g* cannot cure later failure for r_s>=0. At r_s=0 later values tie; a negative rate, profitable intervening investment, later borrowing or changed withdrawals would change the result. This proof does not assert a universal least-cost funding plan."
+    },
+    {
+      "topic": "Complete finite decision and ranking",
+      "independent_result": "Joint first cash is b+0.97t-41-0.30x+g. Since F=13.5, b+0.97t-0.30x>=32.5. If b<=10 or t<=10, the maximum left sides are 29.4 and 29.7. Thus b=t=20. Cash then requires x<=23 and first closing equity requires x<=22. Only grid x=0,10,20 remain; independent later paths and other stresses accept all three. Concentration (36+x)/(116+x) has positive derivative 80/(116+x)^2 and is 7/17 at x=20. Hence the finite rule selects (20,20,20), score 13/5. The score counts the equity opportunity metric and fee/three term coupons, explicitly excludes variable debt interest from ranking, and still includes that interest in every cash/equity constraint."
+    },
+    {
+      "topic": "Projection, execution and measurement times",
+      "independent_result": "Rejected capped-draw rows are hypothetical full-payment schedules, including negative missing financing. They are not posted defaults and do not extinguish claims. Only a selected feasible plan has an actual journal. The selected joint event minimum equity is 18.6; the contractual 20 floor applies only at cutoff closings 1,2,3. All-event capital is a distinct exercise-6 transfer, requiring 1.4 more funded equity for the fixed plan. Residual deposits of 81 remain after cutoff 3; no fourth-date runoff conclusion follows."
+    },
+    {
+      "topic": "Concentration and changed information",
+      "independent_result": "For nonnegative x and r<1, the positive denominator yields x<=(116r-36)/(1-r); no nonnegative choice exists for r<9/29. A late facility has zero timely capacity even if contractually committed. Advancing withdrawals changes the cash prefix without changing total claims; increased borrowing interest changes subsequent resource needs. Recompute the full dated contract, not a dashboard threshold alone."
+    },
+    {
+      "topic": "Truthful escalation with funded sanctions",
+      "independent_result": "Concealment has outcomes g,g,-f with probabilities z,(1-z)(1-d),(1-z)d. Honest reporting pays -alpha*f. Therefore truth is weakly preferred iff p(g+f)>=g+alpha*f, where p=(1-z)d; strict preference requires >. The positive denominator uses g>0 and f>=0. Baseline equality does not select honesty. The incentive escrow is the manager’s separate funded resource, not bank capital or a source for institutional obligations. Robust preference over a closed detection interval is controlled by its lower endpoint. No actual collectibility, calibration or cultural guarantee is implied."
+    }
+  ],
+  "worked_case_audit": [
+    {
+      "case": 1,
+      "result": "Reconstructed all 27 joint events. Date-0 cash 43.6, securities 60, loans 136, liabilities 190, equity 49.6. Security/loan/operating losses 15/14/2 imply event equity 18.6. A1=-38/5; capacity 27/2; draw 63/5 pledges 28 units. First assets 167 and liabilities 146.6 imply equity 20.4. Cash (5,8911/500,4311/500), equity (102/5,11411/500,12311/500); final assets 105.622 and deposits 81 reconcile. The 12.978 repayment includes exactly principal 12.6 and interest .378."
+    },
+    {
+      "case": 2,
+      "result": "All 36 policies independently checked; exactly three feasible. Cash and equity affine coefficients, concentration 7/17 and commitment score 13/5 agree. Calm cash (36.4,72,62.8), equity (51.4,54,55.8); moderate cash (15.4,46.1,36.9), equity (37.4,40.1,41.9). Rejected (20,20,10) has first equity 20.7 but capped full-payment cash -3.8, payment gap 3.8 and reserve gap 8.8."
+    },
+    {
+      "case": 3,
+      "result": "Concentration .4 yields continuous x<=52/3, two feasible grid plans and selected (10,20,20), draw 9.6, joint cash (5,21.912,13.212), first equity 22.4. Late original facility yields no plan. Adding actually received equity choice 30 with lateness selects (10,30,20), zero joint draw and cash (5.4,32.2,23.5). Secured interest .4 leaves first funding unchanged but old-plan last cash 3.96 and second equity 18.16; recomputation selects (10,20,20)."
+    },
+    {
+      "case": 4,
+      "result": "Baseline p=.4, honest and concealment payoffs both zero: weak tie only. Conditional detection .75 gives p=.6, concealment -2 and truthful advantage 2. False sanctions alpha=.05 raise the threshold to .43; with outage .2, d>=43/80=.5375 is necessary for weak preference. Separate case probabilities are stipulated, not estimates or claims about two independent controls."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "number": 1,
+      "prompt_match": "Opening rights and accounts for (20,20,20), each cash event and the mistaken principal-as-revenue treatment.",
+      "independent_solution": "Equity receipt +20 cash/+20 equity; deposit receipt +20 cash/+20 deposits; loan funding -20 cash/+20 loans; term receipt +20 cash/+20 debt; retirement -20 cash/-20 old debt; fee -.4 cash/-.4 equity. Closing cash 43.6, securities 60, loans 136, deposits 160, old short 10, term 20, equity 49.6. Assets 239.6 equal liabilities 190 plus equity. Term funding cannot be revenue while its repayment liability remains."
+    },
+    {
+      "number": 2,
+      "prompt_match": "All three joint balances, pledge, residual deposits, final identity and intraday/fourth-cutoff scope.",
+      "independent_solution": "Cash (5,17.822,8.622); equity (20.4,22.822,24.622). Draw 12.6 pledges 28/30 eligible units; two remain unused and the 28 release upon date-2 repayment. Deposits 160-46-22-11=81. Final cash 8.622+securities45+loans52=105.622=81+24.622. Pre-interest equity18.6 disproves all-event20; unmodeled future claim dates prevent a full-runoff conclusion."
+    },
+    {
+      "number": 3,
+      "prompt_match": "Prove minimum-draw dominance, derive first inequalities, identify exactly three of 36 policies, score, and late-receipt boundary.",
+      "independent_solution": "Draw-unit cash slopes (1,-.03,-.03), equity slopes (0,-.03,-.03), with bounded capacity and nonnegative interest prove the stated dominance. Joint inequalities b+.97t-.30x>=32.5 and 5+b-.03t-.20x>=20 force b=t20 and x in{0,10,20}; all later constraints independently pass. Concentration derivative80/(116+x)^2>0 and value7/17 at20. Select20,20,20 at2.6. A receipt after its funded payment requires a different prefix test; closing sums cannot certify the original sequence."
+    },
+    {
+      "number": 4,
+      "prompt_match": "General concentration r<1 and no-feasible-x region, r=.4, then a separate timely b=30 grid expansion.",
+      "independent_solution": "x<=(116r-36)/(1-r); r<9/29 excludes nonnegative x. At .4 upper bound52/3 selects10,20,20. Restoring .5 and adding b30 selects30,30,20: A1=-.6, draw28/5, cash (5,3004/125,3583/250), E1=28.4, score3.4. At x30, b<=20 and t<=10 each fail first cash, so the maximum-lending policy is unique on that expanded grid. The new equity must actually be received."
+    },
+    {
+      "number": 5,
+      "prompt_match": "Late original facility, separate expansion to b30, then original contract with five withdrawals advanced and fixed-plan extra timely cash.",
+      "independent_solution": "Original late case has maximum A1=-1.6<5 even at x0,b=t20, hence no policy. Expanded late grid selects10,30,20, first cash5.4 and equity32.4. Moving five from withdrawal2 to1 yields first maximum cash6.9-.3x, so x<=19/3 and grid x0 with draw11.6. Old x20 cash .9 is 4.1 below the reserve floor; exact received equity4.1 restores it and later constraints pass. A late receipt or unexecuted proposal cannot do this; a loan alternative requires its own service and rights."
+    },
+    {
+      "number": 6,
+      "prompt_match": "Interest .40 transfer, old-plan later cash/equity and new selection, then distinct all-event equity20 for the fixed original plan.",
+      "independent_solution": "Extra interest(.40-.03)*12.6=4.662. Old-plan C3=3.96 and E2=18.16 fail. New (10,20,20) draw9.6 gives C3=9.66,E2=21.36. Original-rate event minimum18.6 implies exact minimum extra equity1.4; rerun fixed x=t20,b21.4 produces event minimum20 and draw11.2. This received amount is a continuous contract change outside the original grid; no model failure or unsupported intraday rule is claimed."
+    },
+    {
+      "number": 7,
+      "prompt_match": "General false-sanction inequality; g4,f3,alpha0,z.2 conditional bound; common outage .5 impossibility; actual collectibility.",
+      "independent_solution": "Truth -alpha*f versus conceal g-p(g+f) gives p>=(g+alpha*f)/(g+f). With4,3,0, p>=4/7 and d>=5/7 atz1/5. Withz1/2 even d1 gives p1/2<4/7. A nominal fine6 cannot replace collectible3; resources, contractual rights and collection mechanism are premises, not model outputs."
+    },
+    {
+      "number": 8,
+      "prompt_match": "f6,g4,alpha.05, p in[.30,.60]; robust weak/strict preference, worst concealment advantage, strict bound and midpoint critique.",
+      "independent_solution": "Truthful advantage10p-4.3 ranges[-1.3,1.7]. Neither weak nor strict preference holds uniformly; worst concealment advantage is1.3 at.30. Need p_min>.43 for uniform strict preference; equality provides only weak preference at the endpoint. Midpoint.45 gives conditional advantage.2 but is neither a lower bound nor a justified posterior mean. Exact .43 tie is exercised in the public API."
+    },
+    {
+      "number": 9,
+      "prompt_match": "Correct all five memo claims, conditional approval and a withdrawal-of-applicability trigger without canceling obligations.",
+      "independent_solution": "A finite model pass has a defined scope; hashes bind bytes; an internal exception cannot finance an external payment; extra debt worsens later interest; grid20 is not a global economic optimum. A sufficient conditional approval identifies the exact policy/input versions/scenarios/closing limits, verified equity and term receipts, timely unencumbered collateral/facility, responsible officers, true authority, expiry and unresolved assumptions. Changed timing/price/credit/withdrawals/authority stops uncommitted new lending and triggers a new decision. Existing creditors retain claims. The supplied solution meets each part; equivalent evidence-grounded decisions should receive credit."
+    },
+    {
+      "number": 10,
+      "prompt_match": "09:00 decision with10:00 funding/11:00 withdrawals;10:15 evidence of12:00 settlement; CFO requests green status until noon; evidence-preserving escalation and two contingencies with criteria.",
+      "independent_solution": "Retain09:00 evidence; append10:15 superseding incident with provenance,12:00 forecast and explicit11:00 funding failure. Preserve CFO request, use independent reporting route and notify authorized roles before11:00; stop only uncommitted lending. Distinct contingent responses are genuinely funded and authorized timely equity/bridge with later costs/collateral, or an actual creditor agreement/available legal process changing the obligation date. Neither is presumed available. The12-point rubric (2 chronology,2 truthful status/escalation,2 obligation/stop boundary,4 concrete conditional responses,2 retest/closure) covers the prompt. Late-noon cure or rewriting the old record is a critical integrity/timing error."
+    }
+  ],
+  "teach_back_and_retention": {
+    "teach_back": "A complete explanation links joint reserve inequality32.5 and the closing equity20 floor to the need for b20/t20, distinguishes loan principal from interest and collateral from cash, follows date-2 debt service, and names evidence, mandate and an omitted risk. The chapter supplies an evaluable answer outline rather than an ungraded invitation.",
+    "a": "At x10, b+.97t>=35.5.",
+    "b": "Eligible units20 imply capacity9; A1=-7.6 gives capped projected cash1.4 and reserve deficit3.6.",
+    "c": "With g4,f6,alpha0,p.45, truthful advantage .5; probability and collectibility remain stipulated.",
+    "d": "Closing equity20.4 does not constrain pre-interest equity18.6. Monitoring times are part of the requirement.",
+    "remediation": "Each delayed item points to the failed method: dated cash/principal versus coupon, collateral ownership/minimum draw, bonus-forfeiture payoff comparison, or event measurement times."
+  },
+  "source_audit": {
+    "reviewed_claims": "Only the short dated-source paragraph relies on governance sources: capacity/appetite, board/risk-function roles, risk communication, incentives and informed independent review. Financial examples, institutions, powers, rules, thresholds, probabilities and procedures are original stipulated teaching content.",
+    "bcbs": "Reused root’s recorded actual final July2015 official43-page PDF body inspection, not merely a live link or a new peer retrieval claim: glossary printed1–2; principle1 paragraphs23–28 pp8–9; principle6 paragraphs105–110 pp25–26; principle7 paragraphs120–125 pp28–29; principle8 opening paragraphs126–128 p30; principle11 paragraphs143–150 pp34–35. The final text is distinguished from2014 consultation. Chapter claim breadth fits those recorded passages.",
+    "oecd": "Reused accepted actual official2023HTML inspection of V.A, V.D.1–2, V.D.7–9,V.E.1 for informed oversight/conflicts/independent judgment, and the About-the-Principles passage for nonbinding status. No whole-document, fresh retrieval or domestic legal-power verification is claimed.",
+    "limits": "Guidance is not national law or actual authority; original probabilities are not empirical control-effectiveness estimates. No new current observations, universal ratios or source-derived calibration appear. All three data-source IDs agree with the proposal/reuse record."
+  },
+  "implementation_review": {
+    "domain": "Read every validation branch and its explicit bounded decimal-string, integer/boolean, exact-key, inventory, choice, scenario, vector, claim-collection, opening-cost and incentive restrictions. Targeted invalid inputs exercise wrong types, bool-as-number, nonfinite/exponent/fraction syntax, precision/range, duplicate numerical choices/IDs, overpledge, overcollection and unfunded opening expense. Constraints are implementation scope, not financial generality.",
+    "pure_api": "Public run(data) is imported quietly; checked for silent success/rejection, input preservation, fresh result isolation and strict-JSON serialization. No randomness/network/nonstandard import or author helper is needed by the model.",
+    "financial_changes": "Fourteen bounded cases cover baseline, tighter concentration, actual extra equity with timely/late funding, late original facility, earlier withdrawals and exact funded cure, higher secured interest, all-event capital injection, reduced collateral, zero interest, exact score ties and exact/below facility-capacity boundary. These are economic interventions, not broad fuzzing.",
+    "journals": "All selected event quantities, changes, positions, pledge creation/release and closing residual claims are independently rebuilt. Nonnegative executed asset/debt accounts and no overpledge are checked. Rejected signed projections are never interpreted as actual journals.",
+    "cli": "Normal and optimized default/explicit generation from foreign cwd; duplicate/nonfinite/malformed/oversized/domain-invalid input preserves an existing destination. Actual direct, resolved-parent, symbolic and hard links to input/model and default-output symlink aliases are attempted under both modes. The guard precedes file writing.",
+    "provenance": "Manifest contains exactly input/model/output/README, each byte-bound. Author record binds exactly eight nonself payloads. Peer binds the exact nine final author payloads and this independent checker; peer record does not self-hash. The isolated portable test copies exactly these eleven files, without production assignments or shared verifier.",
+    "reviewed_author_checker": "Read all code and its comparison/invalid/alias/portable scope. Did not invoke it, import its helpers or treat its output as an independent oracle. Parent acceptance and publication remain separate."
+  },
+  "reader_audit": {
+    "actual_shared_Document": {
+      "worked": 4,
+      "exercises": 10,
+      "solutions": 10,
+      "unique_ids": true
+    },
+    "flat_asset_links": 5,
+    "result": "Actual shared verify.Document run read-only before peer freeze. Four aside.worked blocks and ten grouped ol.exercises/details.solutions answers; retention remains separate. Independent portable parser agrees. No shared file was changed; visual/mobile/keyboard/print rendering was not tested."
+  },
+  "findings": [
+    {
+      "id": "c12-peer-cli-preservation-scope",
+      "origin": "this independent peer",
+      "severity": "scope wording",
+      "status": "resolved by author before peer freeze",
+      "finding": "Original manuscript claimed all CLI failures preserve an existing destination; ordinary Path.write_text is not a general atomic-write guarantee. README already limited the promise to invalid input.",
+      "repair": "Author changed only the manuscript statement to invalid-input and protected-output failures and refreshed its eight nonself bindings. No model, financial result, proof or solution changed.",
+      "verification": "Reread the exact final sentence and resolved author finding. CLI invalid-input and real alias tests verify the narrower promise. Do not infer crash/disk-write transactional durability.",
+      "final_manuscript_sha256": "1ecd77a976aaee59389899194df9ee7df5424c5c9968fe6e807b3789ba883503"
+    }
+  ],
+  "unresolved_findings": [],
+  "limitations": [
+    "Finite original scenario/menu/three-cutoff contract, not an empirical optimum, complete runoff or exhaustive risk assessment.",
+    "Closing equity limits intentionally differ from intraday limits; negative rejected cash is hypothetical missing finance, not executed settlement.",
+    "Commitment score is explicitly limited; variable interest enters cash/equity without becoming part of that score.",
+    "Stipulated receipts, audit probabilities, collectible sanctions, external evidence and true authority require independent real-world substantiation.",
+    "Byte hashes establish correspondence, not truth, identity authentication, legal powers or availability of funds.",
+    "Independent agent mathematical review is not external human certification or browser visual/mobile/keyboard/print approval."
+  ],
+  "validation": {
+    "date": "2026-10-09T07:51:44.699632+00:00",
+    "status": "passed",
+    "quiet_normal_optimized_check_identical": true,
+    "normal_optimized_cwd": "/",
+    "isolated_package_files": 11,
+    "isolated_check_normal_optimized_identical": true,
+    "model_default_and_explicit_CLI_normal_optimized_quiet": true,
+    "summary": {
+      "chapter": "v11-c12",
+      "status": "passed",
+      "comparisons": 104717,
+      "financial_cases": 14,
+      "candidate_policies": 458,
+      "independent_draw_intervals": 1302,
+      "actual_journal_rows": 999,
+      "printed_exact_anchors": 136,
+      "incentive_outcome_cases": 24,
+      "invalid_api_cases": 39,
+      "invalid_cli_cases": 16,
+      "protected_alias_attempts": 20,
+      "portable_runs": 6,
+      "author_payloads_bound": 9,
+      "own_checker_bound": true,
+      "worked_examples": 4,
+      "solved_exercises": 10,
+      "limits": "Finite synthetic contracts; no empirical calibration, national legal authority, full runoff, external human certification or visual QA."
+    },
+    "actual_shared_reader_Document": {
+      "worked": 4,
+      "exercises": 10,
+      "solutions": 10,
+      "unique_ids": true
+    },
+    "result": "No unresolved mathematical, financial, exercise, source-scope or tested-domain defect. One narrowed CLI wording claim was repaired by the author and reread. Exact normal and optimized summaries match; portable input/model and both isolated eleven-file runs passed. Final record metadata does not alter the checker or its payload bindings.",
+    "limits": "This completes the assigned separate peer gates. Dependency-order canonical acceptance, shared regression, offline build and publication remain coordinator responsibilities."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c12.html",
+      "bytes": 39122,
+      "sha256": "1ecd77a976aaee59389899194df9ee7df5424c5c9968fe6e807b3789ba883503"
+    },
+    {
+      "path": "content/projects/v11-c12-inputs.json",
+      "bytes": 1928,
+      "sha256": "7bd238e050e806b23968b6c3cd0755413551625a898a2583a9e94af84854057d"
+    },
+    {
+      "path": "content/projects/v11-c12-analysis.py",
+      "bytes": 15168,
+      "sha256": "c61eb6d7c460c3cdda7df7ad40cfca8b6b174fb664e0088f7d804a37b80f9362"
+    },
+    {
+      "path": "content/projects/v11-c12-output.json",
+      "bytes": 248598,
+      "sha256": "017f9d24aef50ece68ac9b9191e3c51e7e524c013069bfc09d746ddc31a8e39a"
+    },
+    {
+      "path": "content/projects/v11-c12-manifest.json",
+      "bytes": 792,
+      "sha256": "e74089a27f04711c2d52d9e933420f5f5b6233138ce7e5528ba873dbbafa0678"
+    },
+    {
+      "path": "content/projects/v11-c12-README.txt",
+      "bytes": 7586,
+      "sha256": "3dea94bc91227a735f07bec01d2fd1aab7ba55a0669f833bb501c15971d03487"
+    },
+    {
+      "path": "scripts/check_v11_c12.py",
+      "bytes": 17527,
+      "sha256": "eb0549d4f42846056a05f9dc39a9dc79b522e5252128192898c80be893e51fb4"
+    },
+    {
+      "path": "content/reviews/v11-c12-author.json",
+      "bytes": 10641,
+      "sha256": "e26cef29e754c11246e9f5febbb1087d63dab3756f6e49adf74f33c2725d6deb"
+    },
+    {
+      "path": "content/reviews/v11-c12-sources.json",
+      "bytes": 2017,
+      "sha256": "fcef51dfdae145a50aa2c1d12301ccbbb5b57e60119bef9c06564655a9395753"
+    },
+    {
+      "path": "scripts/check_v11_c12_peer.py",
+      "bytes": 44820,
+      "sha256": "a98ebd4445979b647d6634238b46be111262f27af8d5c01e30f068ab5fbfe68e"
+    }
+  ]
+}

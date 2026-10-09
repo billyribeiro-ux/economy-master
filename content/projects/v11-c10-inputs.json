@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "provenance": "Original synthetic Rowan portfolio, conduct and resolution cases. CU is an arbitrary currency unit; dates are stipulated cutoffs. No observation, actual capital rule, legal priority or estimated probability.",
+  "portfolio": {
+    "initial_assets": "100",
+    "capital": "15",
+    "insurer_reserve": "40",
+    "harm_if_default": "20",
+    "probabilities": ["3/4", "1/4"],
+    "options": [
+      {"id": "C", "assets": ["108", "108"], "reported_exposure": "50", "lookthrough_exposure": "50"},
+      {"id": "H", "assets": ["130", "50"], "reported_exposure": "100", "lookthrough_exposure": "100"},
+      {"id": "routed_H", "assets": ["129", "49"], "reported_exposure": "40", "lookthrough_exposure": "100"}
+    ],
+    "policies": [
+      {"id": "none", "basis": "reported", "ratio": "0", "resource_cost": "0"},
+      {"id": "narrow", "basis": "reported", "ratio": "1/5", "resource_cost": "1/2"},
+      {"id": "broad", "basis": "lookthrough", "ratio": "1/5", "resource_cost": "2"}
+    ],
+    "capture_weight": "0"
+  },
+  "conduct": {
+    "fee": "6", "gross_benefit": "12", "care_cost": "2", "harm": "30",
+    "care_harm_probability": "1/20", "shortcut_harm_probability": "3/10",
+    "inspection_probability": "1/4", "fine": "10", "pledged_funds": "10",
+    "inspection_cost": "1", "authority_budget": "1"
+  },
+  "resolution": {
+    "cash": "6", "long_assets": "94", "asset_loss": "30",
+    "deposits": "60", "senior": "20", "junior": "10",
+    "conversion": "5", "capital_floor": "5", "due_first": "10",
+    "bridge_capacity": "4", "lender_cash": "4", "bridge_rate": "1/20",
+    "liquidation_cost": "8"
+  }
+}

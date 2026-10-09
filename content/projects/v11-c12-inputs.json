@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "units": "Original synthetic Meridian institution; CU and three contract cutoffs, not calendar years or observed data.",
+  "institution": {"cash": "24", "security_units": "60", "eligible_units": "30", "loans": "116", "deposits": "140", "short_debt": "30", "cluster_loans": "36"},
+  "choices": {"lending": ["0", "10", "20", "30"], "cash_equity": ["0", "10", "20"], "term_replacement": ["0", "10", "20"]},
+  "terms": {"term_fee": "0.02", "term_coupon": "0.01", "roll_interest": "0.02", "secured_interest": "0.03", "equity_charge": "0.08"},
+  "limits": {"cash_floor": "5", "equity_floor": "20", "concentration": "0.5"},
+  "scenarios": [
+    {"id": "calm", "security_price": "1", "haircut": "0.2", "loan_loss_fixed": "0", "loan_loss_per_new": "0", "operating_loss": "0", "rollover": "1", "facility_open": true, "facility_ceiling": "100", "principal_receipts": ["15", "55", "20"], "interest_receipts": ["2", "3", "2"], "withdrawal_fixed": ["20", "10", "10"], "withdrawal_per_new": ["0.2", "0.1", "0.05"]},
+    {"id": "moderate", "security_price": "0.9", "haircut": "0.3", "loan_loss_fixed": "5", "loan_loss_per_new": "0.1", "operating_loss": "1", "rollover": "0.5", "facility_open": true, "facility_ceiling": "100", "principal_receipts": ["10", "50", "20"], "interest_receipts": ["2", "3", "2"], "withdrawal_fixed": ["30", "15", "10"], "withdrawal_per_new": ["0.2", "0.1", "0.05"]},
+    {"id": "joint", "security_price": "0.75", "haircut": "0.4", "loan_loss_fixed": "10", "loan_loss_per_new": "0.2", "operating_loss": "2", "rollover": "0", "facility_open": true, "facility_ceiling": "100", "principal_receipts": ["5", "45", "20"], "interest_receipts": ["2", "3", "2"], "withdrawal_fixed": ["40", "20", "10"], "withdrawal_per_new": ["0.3", "0.1", "0.05"]}
+  ],
+  "incentives": {"concealment_bonus": "4", "funded_penalty": "6", "common_audit_failure": "0.2", "conditional_detection": "0.5", "false_positive": "0"}
+}

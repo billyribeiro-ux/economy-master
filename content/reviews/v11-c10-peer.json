@@ -1,0 +1,206 @@
+{
+  "chapter": "v11-c10",
+  "title": "Financial regulation and incentives",
+  "date": "2026-10-09",
+  "reviewer": "bs_author, separate from c05_review author",
+  "status": "complete separate peer audit; passed final quiet normal/-O and isolated-package checks",
+  "scope": "Exact nine author payloads frozen under production/v11-c10-peer-assignment.json. Read the entire manuscript, four worked cases, all ten exact exercises and solutions, teach-back and retention, full implementation, inputs/output, README, author checker, author review, manifest and proposed/reused source scopes. Only this peer record and its separate checker were edited.",
+  "independence": "Public run(data) is the only model function used by the numerical checker. Expectations come from the original financial contracts, pairwise private deviations, explicit joint state tables and semantic journal transactions. The author checker was read for implementation/review coverage but neither imported nor used as an oracle. Its reported test count is not evidence of correctness here.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true,
+    "strict_domain": true,
+    "portable_execution": true
+  },
+  "artifact_bindings": [
+    {
+      "path": "content/chapters/v11-c10.html",
+      "bytes": 45457,
+      "sha256": "b92256cb5c81c79240c6d098be34ef7159800f8d7c6df7e9590f4282a3e66d26"
+    },
+    {
+      "path": "content/projects/v11-c10-inputs.json",
+      "bytes": 1637,
+      "sha256": "2f88ad236d807b20cda137c3ea9da80fbe93260d7ece5b02d35eb350ba2a11ae"
+    },
+    {
+      "path": "content/projects/v11-c10-analysis.py",
+      "bytes": 14665,
+      "sha256": "b1782fed597d9c6ac78f9f3a990aba0227681fab67d24b293d9bc96deea2f3d9"
+    },
+    {
+      "path": "content/projects/v11-c10-output.json",
+      "bytes": 8370,
+      "sha256": "c2f3baab871c7d1452461b6f58410ccd72e287a33bdaf2f995113a4940b0772f"
+    },
+    {
+      "path": "content/projects/v11-c10-manifest.json",
+      "bytes": 1051,
+      "sha256": "8ade7f2a54b6b8768589b7271171b993bacbaee07660c977ddd47677da77eb7c"
+    },
+    {
+      "path": "content/projects/v11-c10-README.txt",
+      "bytes": 12782,
+      "sha256": "6099d6b834d55fd2329409c585b3f0ccdd70331f3e554b8fd5163201a3c31b23"
+    },
+    {
+      "path": "scripts/check_v11_c10.py",
+      "bytes": 38377,
+      "sha256": "ea2106d3ff36d32406bc4c9de22e6c29a89f3fe4bc89fd1961a199be0910630b"
+    },
+    {
+      "path": "content/reviews/v11-c10-author.json",
+      "bytes": 16369,
+      "sha256": "f0bf6b5e446bfb099487883409065f70064554d7939919080e778888fc3ff473"
+    },
+    {
+      "path": "content/reviews/v11-c10-sources.json",
+      "bytes": 3651,
+      "sha256": "aa60707b0f9824c6041194829b8cb0ad24e8acc7e7631684b286bd13546a9972"
+    },
+    {
+      "path": "scripts/check_v11_c10_peer.py",
+      "bytes": 30516,
+      "sha256": "1f84bd68c3d765f0e2845c1b6e57e8b4a43fd2e0f635f5c3b63a2a74275c24eb"
+    }
+  ],
+  "proof_audit": [
+    {
+      "claim": "Endowed guarantee and aggregate resource identity",
+      "result": "Statewise deposits paid from assets plus guarantor equal D, and owner residual plus bank deposit payment equal A. Their difference gives residual minus insurance=A-D; expectation minus K gives profit-I=EA-A0. Initial insurer reserve cancels only in a wealth-change ledger; every supported payout is actually within reserve, even if its listed probability is zero. Routing cost is already deducted from terminal assets. Equal monetary welfare weights and separate real default harm justify W=EA-A0-L Pr(A<D); insurance is not subtracted a second time from asset surplus."
+    },
+    {
+      "claim": "Regulatory incentives, endogenous migration and ties",
+      "result": "Each screen is applied before the bank compares private profits. Pairwise deviations reproduce all feasible best responses, including the routed portfolio. At K=15, W_none=10-L/4, W_narrow=17/2-L/4, W_broad=6, so the broad/no-rule threshold is L=16. The additional incumbent weight gives broad-minus-none=1-43 lambda/4 and none-minus-narrow=3/2+3 lambda/4. The tie example correctly retains both C and H and refuses a unique social ranking. Empty menus do not acquire a fabricated safe option. None of these synthetic incentives identifies actual capture or proves causal policy effectiveness."
+    },
+    {
+      "claim": "Conduct detection, collection and state funding",
+      "result": "An inspection detects a chosen shortcut, including no-harm states; a careful seller is never fined. Under these assumptions seller care-minus-shortcut profit is a min(F,M)-c. The fee funds care, the pledged reserve funds collection and the authority budget funds the full inspection event. Weak equality retains both actions. Explicit harm/inspection joint tables show no independence of those two events is needed, and fine probability must not be multiplied by harm probability. Fee and fine cancel across parties while real care, harm and inspection costs remain. A separate false-sanction counterfactual reverses baseline deterrence, verifying that care-never-fined is a substantive assumption rather than an innocuous simplification; the target rejects that unsupported extra input."
+    },
+    {
+      "claim": "Resolution loss priority, cash and continuing capital",
+      "result": "Within the declared loss region, surviving assets cover deposits but not all senior debt, and old equity/junior are exhausted. Write-down absorbs existing loss; conversion reallocates surviving senior debt into creditor-owned equity and creates no asset. The explicit external lender supplies the early gap g and receives its principal back. Only gr is interest expense. Terminal equity x-gr and old senior value Sprime-gr follow from the dated transactions, conditional on funded solvent continuation. An x in [0,Sprime] meeting floor k exists iff k+gr<=Sprime, with the distinct timely funded-capacity condition g<=capacity. The proof supplies necessity from x<=Sprime and sufficiency by choosing x=k+gr; it does not claim a general resolution or legal safeguard theorem."
+    },
+    {
+      "claim": "Failure branches and liquidation comparison",
+      "result": "A capacity below the first gap stops the continuation ledger after conversion; no unpaid deposit is silently postponed or partly financed. A funded bridge with insufficient conversion records negative maturity equity and leaves terminal allocation absent rather than inventing a second waterfall. Liquidation consumes its real cost and allocates the remaining pool by the stipulated priority. The baseline known-value, zero-discount comparison preserves eight real resources, with one fifth going to lender net interest; it cannot establish actual national creditor safeguards without the omitted rights and valuation evidence."
+    }
+  ],
+  "worked_case_audit": [
+    {
+      "case": 1,
+      "independent_results": "State allocation yields expected assets 108, 110, 109; private profits 8, 75/4, 18; expected guarantee transfers 0, 35/4, 9; and pre-policy surplus 8, 5, 4. The routed bad-state payout is 36 from reserve 40, leaving 4. All state resource identities and strict default indicators agree."
+    },
+    {
+      "case": 2,
+      "independent_results": "Required capital under narrow is 10/20/8 and broad 10/20/20. K=15 induces H, routed_H, C with after-cost surplus 5,7/2,6. At lambda=1/10 scores are 55/8,53/10,34/5, so no rule beats broad by 3/40. Changing capital replaces deposits while keeping assets fixed; it is not an asset-creation experiment."
+    },
+    {
+      "case": 3,
+      "independent_results": "Collectible fine 10 and inspection probability 1/4 give seller profits 4 and 7/2, customer 9/2 and -3, authority -1/4 and 9/4, and total surplus 33/4 and 11/4. At a=0 the shortcut surplus is 3. Joint tables with the same event marginals give exactly the same expectations at extreme dependence as at independent harm/inspection."
+    },
+    {
+      "case": 4,
+      "independent_results": "All eight baseline journal vectors agree with independent asset/liability/equity event deltas and balance. The first advance is 4; final equity is 24/5; original senior debt plus new equity is 49/5; lender repayment 21/5 includes only 1/5 net income. Minimum conversion 26/5 leaves final equity 5 with the same early gap. Liquidation allocates 62 as 60 to deposits and 2 to senior; continuation adds 39/5 for old creditors and 1/5 for the lender."
+    }
+  ],
+  "exact_exercise_audit": [
+    {
+      "prompt": "v11-c10-e1",
+      "result": "Each of the three erroneous authority/time claims is corrected: enacted text does not establish universal commencement, an international standard does not confer domestic conversion power, and the cited dated US letter is SR 26-2. The solution supplies a concrete entity/jurisdiction/authority/eligibility/priority/valuation/commencement/recognition and funded-cash evidence route, without inventing current rights."
+    },
+    {
+      "prompt": "v11-c10-e2",
+      "result": "The proof covers A>=D and A<D, uses bounded finite expectations and subtracts K exactly once. All three profits, transfers and pre-policy surplus values are recomputed. It distinguishes removing the subsidy from private profit from wrongly treating a transfer as an additional loss after starting with asset surplus."
+    },
+    {
+      "prompt": "v11-c10-e3",
+      "result": "K20/D80 gives profits 8,35/2,67/4 and insurance 0,15/2,31/4; all policies choose H, with net welfare 5,9/2,3. K50/D50 gives profits 8,10,37/4 and insurance 0,0,1/4. H is exactly solvent in its bad state, whereas routed_H still defaults; after-policy welfare is 10,19/2,8. All financing and policy-cost parts are answered."
+    },
+    {
+      "prompt": "v11-c10-e4",
+      "result": "L16 and lambda4/43 follow from exact score differences, including equality and narrow dominance for every nonnegative lambda. At lambda1/10 the exact score vector is 55/8,53/10,34/5. The solution explains why an assumed weight is not an empirical capture diagnosis."
+    },
+    {
+      "prompt": "v11-c10-e5",
+      "result": "C payoff 475/4 gives profit and pre-policy surplus 75/4. No-rule best responses C,H yield 75/4 or 5; broad admits only C with 67/4 surplus. The conditional ordering reverses with the private tie selection, so the requested honest report includes both outcomes."
+    },
+    {
+      "prompt": "v11-c10-e6",
+      "result": "At paper fine100/reserve7/a1/10, collectible fine is7 and seller profits are4 versus53/10. Weak care begins at a2/7 and retains both actions; strict care needs larger a. Care surplus at equality is115/14. An inspection cap1/5 limits expected collectible sanction to7/5<2, so a larger uncollectible fine cannot solve it."
+    },
+    {
+      "prompt": "v11-c10-e7",
+      "result": "All eight requested balance sheets include bridge principal and the later1/5 interest expense. Deposit total60, senior value49/5 and lender net1/5 conserve surviving70. Minimum conversion26/5 is proved and the unchanged required advance4 is explained; no claim that capital is cash."
+    },
+    {
+      "prompt": "v11-c10-e8",
+      "result": "Capacity3 leaves6+3<10 and gap1 at the first cutoff, including after full surviving-senior conversion10. The solution gives liquidation deposit60/senior2 versus funded continuation60/49/5, gain39/5 to old creditors, and the extra evidence required for a legal safeguard conclusion."
+    },
+    {
+      "prompt": "v11-c10-e9",
+      "result": "With rate3/20 on advance4, interest3/5 implies minimum conversion28/5, senior debt22/5, terminal equity5, original senior value47/5 and lender repayment23/5. The general feasible-conversion proof and old-claims-plus-net-interest identity are complete within the stated loss region, with cash funding separately required."
+    },
+    {
+      "prompt": "v11-c10-e10",
+      "result": "The open solution covers all requested evidence distinctions: causal welfare versus observed failure counts; perimeter/recording migration; legitimate information versus preferential influence; actual legal scope; and numerical implementation versus assumptions/use. It specifies confounders, defensible identification needs and a measurable harm/cost revision trigger. Evaluation criteria reward evidence and limits rather than a prescribed political conclusion or invented estimate."
+    }
+  ],
+  "instruction_and_structure": {
+    "instruction": "Definitions and units precede their use; all expected values use a stipulated physical law. The three financial experiments are explicitly separate. Required proof methods and limiting assumptions are taught before the exercises. Fee, premium, cash, principal, loss, transfer, horizon interest, equity and welfare are kept distinct. Teach-back and delayed retention both have complete answers.",
+    "shared_reader": "Actually imported scripts.verify.Document and parsed the frozen fragment: four worked containers, ten exercises and ten counted solutions. The separate peer parser also verifies the ten exact prompt/answer targets, unique IDs, five flat attachment links and all five scoped source IDs. This is structural evidence, not visual/browser/print certification."
+  },
+  "source_audit": {
+    "read_records": "Read both proposed source records, the cited reuse scope, author audit and production/v11-c10-source-preparation.json. No source catalogue or author source file was changed.",
+    "uk2012": {
+      "url": "https://www.legislation.gov.uk/ukpga/2012/21/pdfs/ukpga_20120021_en.pdf",
+      "peer_retrieval": "Fresh official 385-page PDF through web retrieval. Inspected assent, the cited inserted FCA/PRA objective and principles passages, and sections121-122; the chapter uses the enacted historical text, not a current consolidation.",
+      "boundary": "The objectives, proportionality and no-zero-failure passages support the narrow institutional discussion. Section122 prevents assuming that every provision commenced on assent. No commencement orders, later amendments or current domestic conversion power were verified or inferred."
+    },
+    "fsb2024": {
+      "url": "https://www.fsb.org/uploads/P250424-3.pdf",
+      "peer_retrieval": "Web open failed; direct retrieval of the same official PDF succeeded. Independently read extracted foreword, preamble, the cited KA1-2 passages, KA3.5-3.6,5.1-5.2 and6.1-6.5. No whole-PDF or annex audit claimed.",
+      "boundary": "The dated revised document distinguishes the core standard and implementation annexes. Its loss-allocation, safeguard and funding discussion supports the chapter without supplying domestic powers. Its funding passages allow conditional temporary funding and discuss recovery; they do not establish a universal ban on public liquidity."
+    },
+    "reused_primary_records": "BCBS2008 liquidity and the17April2026 SR26-2 letter/attachment are reused within already accepted source scopes. This peer did not freshly retrieve those three complete bodies during this C10 review and does not imply it did. The chapter confines them to liquidity-execution principles, the dated supersession statement, and supervisory-guidance/model-definition boundaries.",
+    "originality_and_limits": "All portfolios, screens, probabilities, fine collection, loss priorities, lender resources and numerical exercises are original synthetic contracts. Source citations are not empirical calibration, a national capital rule or legal advice. No current market observations or institutional rights are fabricated."
+  },
+  "numerical_validation": {
+    "methods": [
+      "State-first priority allocation with complete owner/depositor/guarantor resource conservation",
+      "Pairwise private deviations and explicit outcome sets rather than arbitrary tie selection",
+      "Extreme and independent harm/inspection joint tables with party cash cancellation",
+      "Independent signed transaction vectors for every dated resolution journal row",
+      "Exact rational decision thresholds and restricted feasibility/minimality proofs"
+    ],
+    "interventions": "Nineteen focused valid changes: capital20/50; harm16/15; capture weight4/43 and1/10; cautious payoff475/4 tie; empty regulatory menu; fine100/reserve7 with inspection1/10,2/7,1/5; no inspection/no authority budget; conversion26/5; bridge capacity3 with conversion5/10; rate3/20 with conversion28/5 and1/5; exact first-cash sufficiency; deposit-covered loss boundary with zero rate/floor. A separate false-sanction counterfactual tests the substantive care-never-fined assumption without adding an unsupported target feature.",
+    "strict_and_alias": "Thirty-one actual API rejections include bad schema/type/number/probabilities/inventory/IDs/bases, inadequate guarantee even in a zero-probability listed state, insufficient event-funded inspection, unsupported loss region, overconversion, insufficient external lender resources and unsupported false-sanction inputs. Twelve normal/-O CLI rejections cover duplicate keys, nonfinite numbers, invalid UTF-8, malformed JSON and byte cap, preserving the preexisting output. Sixteen actual direct/resolved/symlink/hardlink destinations across input/model and normal/-O reject before overwriting either protected file.",
+    "summary": {
+      "chapter": "v11-c10",
+      "status": "passed",
+      "comparisons": 2569,
+      "financial_interventions": 19,
+      "portfolio_states": 54,
+      "resolution_rows": 55,
+      "conduct_joint_tables": 26,
+      "invalid_api_cases": 31,
+      "invalid_cli_cases": 12,
+      "protected_alias_attempts": 16,
+      "portable_model_runs": 4,
+      "author_files_bound": 9
+    },
+    "execution": "Quiet check() import and execution passed in normal and -O modes, with identical summaries. An isolated exact eleven-file package (nine frozen author files and the two peer files) passed both modes from an unrelated working directory; no production contract or shared verifier was needed by the portable checker. Each checker execution also exercised four portable model routes. Final nonself file sizes and hashes remain unchanged.",
+    "binding_scope": "Peer binds exactly nine final author payloads plus its own checker. The author record has exactly eight nonself bindings and the manifest exactly four payloads; all sizes, hashes and inventories are independently verified. Peer record self-hashing is deliberately excluded."
+  },
+  "findings": [],
+  "remaining_limits": [
+    "Synthetic bounded contracts do not establish causal regulatory effectiveness, empirical capture, operational performance or current legal applicability.",
+    "Resolution sufficiency assumes the stated loss region, effective priority, known terminal realization and actual funded bridge; no general uncertain-resolution theorem is claimed.",
+    "Independent computational and editorial review is not external human certification. Actual browser/mobile/keyboard/print QA and canonical acceptance/publication remain separate root-owned gates."
+  ],
+  "acceptance_recommendation": "Accept the complete author package for coordinator integration within its stated mathematical, source and computational scope; no unresolved material peer finding."
+}

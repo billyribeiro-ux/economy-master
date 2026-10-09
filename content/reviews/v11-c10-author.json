@@ -1,0 +1,210 @@
+{
+  "chapter": "v11-c10",
+  "title": "Financial regulation and incentives",
+  "author": "c05_review separately scoped author agent",
+  "date": "2026-10-09",
+  "assignment": "production/v11-closing-assignments.json",
+  "status": "author-review-passed; separate peer and dependency-ordered coordinator acceptance pending",
+  "scope": "Original finite Rowan portfolio policy/welfare case plus separate conduct and resolution ledgers; four fully worked examples, ten original solved exercises, answered teach-back/retention and bounded portable standard-library lab. Distinguishes historic enacted law, international standard and dated supervisory guidance from original numerical assumptions.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "worked_examples": 4,
+  "solved_exercises": 10,
+  "worked_audit": [
+    {
+      "id": "worked-1",
+      "result": "With assets100 and funding85deposits/15capital, C/H/routedH private profits are8/18.75/18, expected insurance0/8.75/9 and welfare8/5/4. Maximum guarantee payout36 is funded by reserve40; routed cost1 is already in its payoffs.",
+      "independence": "Ordered state asset distribution and separate owner/insurer wealth changes reconstruct all flows; their sum equals asset gain before outsider harm. Every listed state is checked, including zero-probability support in an intervention."
+    },
+    {
+      "id": "worked-2",
+      "result": "Narrow required capital10/20/8 induces routedH and welfare3.5; broad10/20/20 inducesC and welfare6, versus noneH and5. Harm threshold16, extra private-weight threshold4/43, strict narrow domination for all nonnegative weights.",
+      "independence": "Pairwise profit comparisons over feasible menus preserve all ties; exact rational perturbations below/at/above both thresholds and financing mixes20/50 verify induced behavior rather than assumed desired behavior."
+    },
+    {
+      "id": "worked-3",
+      "result": "At inspection.25 and collectible fine10, care profit4 exceeds shortcut3.5; stakeholder welfare8.25 versus2.75. Fine8 gives a tie. Paperfine100 with reserve7/inspection.1 is not equivalent to expected sanction10.",
+      "independence": "Four inspection/harm states at both Frechet endpoint couplings recover each stakeholder expectation and show the result uses marginals, not an unsupported independence assumption between harm and inspection. Fee/fine transfers cancel statewise."
+    },
+    {
+      "id": "worked-4",
+      "result": "Loss30 absorbs equity10/junior10/senior10; conversion5 raises equity without cash, leaving early gap4. Funded bridge4 costs.2, giving finalequity4.8 and original senior total9.8. Conversion5.2 meets continuing floor5 without reducing gap; liquidation62 pays deposits60/senior2.",
+      "independence": "An ordered loss-allocation oracle and additive seven-account journal vectors check every dated row, separate external lender net income and aggregate resource identity. Cash-capacity, terminal insolvency, rate and loss-region boundary interventions check failure behavior."
+    }
+  ],
+  "proof_audit": [
+    {
+      "topic": "Private profit, funded insurance and resource welfare",
+      "reason": "For each nonnegative asset realization, distribute assets first to deposits then owners. The funded guarantee fills only the shortfall. Difference of positive parts proves owner profit minus insurance equals expected asset gain. Initial insurer reserve cancels in its wealth change. Real harm is separate; guarantee payment is not deducted twice. Finite state support and exact physical probabilities make expectations well-defined."
+    },
+    {
+      "topic": "Finite policy choice and boundary migration",
+      "reason": "A policy induces the entire private argmax over its explicitly constrained menu. Costly routed payoffs already deduct1. Narrow and broad numerical eligibility differ only through stipulated measured exposure, with all other financing held fixed. Empty feasible sets and private ties are reported explicitly. No national risk-weight formula or lawful loophole is inferred."
+    },
+    {
+      "topic": "Welfare/capture decision inequalities",
+      "reason": "At baseline funding, Wnone=10-L/4, Wnarrow=8.5-L/4, Wbroad=6. Hence broad exceeds none iffL>16. AtL20, Jbroad-Jnone=1-10.75lambda, threshold4/43; Jnone-Jnarrow=1.5+.75lambda>0 forlambda>=0. An assumed extra owner weight illustrates a mechanism, not identification of actual capture."
+    },
+    {
+      "topic": "Conduct deterrence and transfer cancellation",
+      "reason": "An inspection detects a procedural shortcut regardless of realized harm; care is never fined. Actual collection is min(paperfine,pledgedfunds). The seller difference is aQ-carecost, with both best responses at equality. Fees/fines cancel in aggregate flows; care, harm and inspection are real costs. Inspection budget funds realized inspections, not merely their expectation."
+    },
+    {
+      "topic": "Resolution capital and cash conditions",
+      "reason": "Supported loss region exhausts old equity/junior while preserving deposits and surviving seniorSprime. Conversionx transfers the surviving senior claim into equity without an asset change. Financed advanceg returns principal and accruesgr, so finalequity=x-gr and original seniorvalue=Sprime-gr. Feasible floor requiresk+gr<=Sprime plus independent timely funded cashg. Unfunded early or insolvent terminal branches do not fabricate continuations or a second default waterfall."
+    },
+    {
+      "topic": "Legal and causal scope",
+      "reason": "UK2012 assent is distinguished from commencement and later/current law; precisely inspected sections establish historical objectives/principles only. FSB2024 standard and annex guidance do not supply national powers. SR26-2 supersession and guidance scope are dated. A before/after failure count, consultation or passing code cannot alone identify welfare improvement, capture or legal authority."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "exercise": 1,
+      "exact_prompt_coverage": "Corrects all three asserted legal/guidance claims; records assent19December2012 versus uninspected commencement orders, international standard versus domestic conversion power, and SR26-2 dated17April2026 superseding SR11-7/SR21-8. Gives entity/claim/date/authority/valuation/safeguard evidence route without inventing a jurisdiction answer."
+    },
+    {
+      "exercise": 2,
+      "exact_prompt_coverage": "Proves the state positive-part identity forA>=D andA<D, then all three expected-profit/insurance/welfare triples. Explains both routes and why double subtraction or omission of the guarantee transfer is wrong; verifies reserve40 covers36."
+    },
+    {
+      "exercise": 3,
+      "exact_prompt_coverage": "K20 replaces deposits withD80: profits8/17.5/16.75, insurance0/7.5/7.75, surplus8/5/4; all three policies induceH with aftercost5/4.5/3. K50,D50: profits8/10/9.25, insurance0/0/.25, surplus8/10/4; all policiesH and10/9.5/8. Exact solvency equality forH and remaining routeddefault are distinguished."
+    },
+    {
+      "exercise": 4,
+      "exact_prompt_coverage": "Derives both exact boundaries and strict narrow dominance; atlambda.1 scores6.875/5.3/6.8, none beats broad by.075. Explains why the assumed preference mechanism does not identify real capture."
+    },
+    {
+      "exercise": 5,
+      "exact_prompt_coverage": "Cpayoffs118.75 yield profit18.75, tyingH. No-rule possible surpluses18.75/5 versus broad16.75 reverse ordering with selection. Both best responses retained and tie-dependent ranking reported."
+    },
+    {
+      "exercise": 6,
+      "exact_prompt_coverage": "Paperfine100/reserve7 givesQ7, expected payment.7 atinspection.1 and seller4/5.3. Weak deterrence inspection2/7 with equalitytie, strict above; carewelfare115/14 rounded8.214286. Capacity.2 caps sanction1.4<2 so a larger nominal fine cannot repair it."
+    },
+    {
+      "exercise": 7,
+      "exact_prompt_coverage": "All eight exact balance sheets are displayed and independently checked; old senior9.8 and lendernet.2 plusdeposit60 reconcile70. Minimumconversion5.2 restoresfinalequity5 while borrowing remains4."
+    },
+    {
+      "exercise": 8,
+      "exact_prompt_coverage": "Capacity3 pluscash6 gives9 against10 due, shortfall1; fullconversion10 cannot produce cash. Liquidation62 paysdeposit60/senior2, fundedcontinuation oldclaims69.8; oldcreditorgain7.8 pluslender.2 equalsavoidedrealcost8. Actual safeguard applicability remains unproved."
+    },
+    {
+      "exercise": 9,
+      "exact_prompt_coverage": "Rate15% givesinterest.6, minimumconversion5.6, seniordebt4.4, finalequity5 and senior total9.4; lenderrepayment4.6/net.6. Necessity/sufficiency ofk+gr<=Sprime proved using interval feasibility, with separatecash condition; aggregateidentity70 independently recomputed."
+    },
+    {
+      "exercise": 10,
+      "exact_prompt_coverage": "Open solution and rubric require causal/counterfactual welfare identification, perimeter migration and reporting, consultation-versus-influence evidence, legal applicability, implementation validation, a measurable revision trigger and limits. No invented empirical effect or predetermined political conclusion."
+    }
+  ],
+  "instruction_audit": {
+    "prerequisites": "Existing ledger/liquidity, legal evidence and c09 entity/currency/jurisdiction distinctions are linked. All newly used finite payoff, argmax, transfer and journal methods are defined and derived before exercises.",
+    "teaching": "Answered teach-back combines screen8 versus capital15, collectiblefine.7 versuscarecost2, and conversion5/cashgap4/interest.2. Answered delayed check covers guarantee transfer, deterrence ties, capital/cash feasibility and legal status.",
+    "format": "Actual shared scripts/verify.py Document parser run:4worked,10exercises,10solutions,25unique IDs. Five flat asset links; no projects/ prefix. No browser/rendered/print QA claim."
+  },
+  "source_audit": {
+    "record": "production/v11-c10-source-preparation.json",
+    "new_primary_scopes": [
+      "Official UK385-page enacted PDF, scoped assentpage, inserted1B–1E/2B/2G/3B and121–122; no commencementorders/lateramendments/current consolidatedlaw.",
+      "Actual FSB94-page25April2024PDF:foreword,preamble,KA1–2,3.5–3.6,5.1–5.2,6.1–6.5; standardversusannexguidance/domesticpowers separated."
+    ],
+    "reused_scopes": [
+      "BCBSSeptember2008 availablecash/transferrestriction method context; no currentratio or guaranteedlenderaccess.",
+      "Actual17April2026SR26-2letter/12pageattachment previously inspected bythisagent duringc06; supersession,guidancelegalstatus and definitionexclusions only."
+    ],
+    "retrieval_honesty": "The preceding scoped preparation actually retrieved the two new official PDFs. This authoring pass reused that inspection and stable accepted records, without claiming fresh retrieval or whole-document legal verification.",
+    "unresolved": []
+  },
+  "implementation_review": {
+    "domain": "Strict exact rational strings and bounded finite lists; probabilitynormalization, fundedguarantee support, action/cost/probability bounds, inspectablefunding, initialbalancedresources, explicit resolutionlossregion, conversioncapacity and externallyfundedbridge. No assert-based guards.",
+    "decisions": "Allprivate ties retained; no feasiblemenu reported; policyranking null when private tie changes score. Earlyfundingfailure stopsafterconversion; fundedbutterminalinsolvency stopsbefore unstipulated finalallocation.",
+    "files": "CLI duplicate keys, nonfinite values, invalid encoding and byte size are rejected before writing. Default input/output are sibling files and successful execution is quiet; explicit output destinations are supported. Alias protection runs for every write and rejects direct, resolved, symbolic and hard-link aliases of input or implementation. The API is quiet and nonmutating.",
+    "independent_validation": "No implementationhelper used as numericaloracle. Statewise wealth, pairwise action comparisons, Frechetendpoint expectation invariance, orderedclaims and additivejournalvectors supply separate checks. Printed fractions/roundings and everyworked/solved numericalcase checked.",
+    "pre_freeze_repair": "The independent oracle caught a zero default probability serialized as integer 0 rather than exact rational string \"0\"; the Fraction initial value was repaired. Root requested quiet default CLI generation: it now writes the neighboring v11-c10-output.json, with unconditional alias protection. The only manuscript delta from initial read-ready SHA45927c1d0c35a544f63b4008e31007f3a1a7b78cebef6cabd8a40da4571531e0 is the lab execution sentence explaining the quiet default and explicit --output. All financial exposition, worked examples and solutions are unchanged."
+  },
+  "execution": {
+    "state": "passed on final payloads before author freeze",
+    "comparisons": 1165,
+    "cases": 27,
+    "financial_interventions": 26,
+    "invalid_data_rejections": 59,
+    "invalid_api_rejections": 49,
+    "invalid_cli_rejections": 10,
+    "protected_output_rejections": 16,
+    "quiet_check_API": true,
+    "normal_and_optimized_summaries_identical": true,
+    "isolated_exact_nine_file_normal_and_optimized": true,
+    "CLI_default_quiet_sibling_output": true,
+    "CLI_explicit_destination_quiet": true,
+    "actual_shared_Document_parser": {
+      "worked_examples": 4,
+      "exercises": 10,
+      "solutions": 10,
+      "unique_ids": 25
+    },
+    "commands": [
+      "PYTHONDONTWRITEBYTECODE=1 python3 scripts/check_v11_c10.py",
+      "PYTHONDONTWRITEBYTECODE=1 python3 -O scripts/check_v11_c10.py"
+    ],
+    "evidence": "Quiet check() captured both stdout/stderr in normal and -O modes from cwd /; strict JSON serialization succeeded and summaries matched. Exactly the nine owned files were copied into a temporary independent directory tree and the same checks passed in both modes. API invalid cases49 plus CLI cases5 per mode=59; protected direct/resolved/symbolic/hard aliases of both input and implementation4*2*2=16. No browser or rendered review claimed."
+  },
+  "limitations": [
+    "Synthetic finite probabilities, harm values and costs; no estimated welfare effect, actual capture finding or optimal universal rule.",
+    "Resolution family deliberately excludes depositprincipalimpairment and unspecified secondarydefault allocation; knownrealization/zero discount is a teachingassumption.",
+    "Actualcurrentnational thresholds,powers,commencement,legaleligibility and creditor safeguards are not established by this package.",
+    "Authorreview is machine-assisted and not a separate peer review, human academic certification or proof of learner mastery.",
+    "Shared build/source-catalogue integration, dependency-ordered acceptance and publication belong to root; separate peer is pending."
+  ],
+  "open_findings": [],
+  "artifact_bindings": [
+    {
+      "path": "content/chapters/v11-c10.html",
+      "bytes": 45457,
+      "sha256": "b92256cb5c81c79240c6d098be34ef7159800f8d7c6df7e9590f4282a3e66d26"
+    },
+    {
+      "path": "content/projects/v11-c10-inputs.json",
+      "bytes": 1637,
+      "sha256": "2f88ad236d807b20cda137c3ea9da80fbe93260d7ece5b02d35eb350ba2a11ae"
+    },
+    {
+      "path": "content/projects/v11-c10-analysis.py",
+      "bytes": 14665,
+      "sha256": "b1782fed597d9c6ac78f9f3a990aba0227681fab67d24b293d9bc96deea2f3d9"
+    },
+    {
+      "path": "content/projects/v11-c10-output.json",
+      "bytes": 8370,
+      "sha256": "c2f3baab871c7d1452461b6f58410ccd72e287a33bdaf2f995113a4940b0772f"
+    },
+    {
+      "path": "content/projects/v11-c10-manifest.json",
+      "bytes": 1051,
+      "sha256": "8ade7f2a54b6b8768589b7271171b993bacbaee07660c977ddd47677da77eb7c"
+    },
+    {
+      "path": "content/projects/v11-c10-README.txt",
+      "bytes": 12782,
+      "sha256": "6099d6b834d55fd2329409c585b3f0ccdd70331f3e554b8fd5163201a3c31b23"
+    },
+    {
+      "path": "scripts/check_v11_c10.py",
+      "bytes": 38377,
+      "sha256": "ea2106d3ff36d32406bc4c9de22e6c29a89f3fe4bc89fd1961a199be0910630b"
+    },
+    {
+      "path": "content/reviews/v11-c10-sources.json",
+      "bytes": 3651,
+      "sha256": "aa60707b0f9824c6041194829b8cb0ad24e8acc7e7631684b286bd13546a9972"
+    }
+  ]
+}

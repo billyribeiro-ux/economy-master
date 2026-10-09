@@ -1,0 +1,340 @@
+{
+  "schema": 1,
+  "chapter": "v11-c10",
+  "portfolio": {
+    "initial_deposits": "85",
+    "options": [
+      {
+        "id": "C",
+        "states": [
+          {
+            "probability": "3/4",
+            "assets": "108",
+            "deposit_from_bank": "85",
+            "insurance_payment": "0",
+            "deposit_total": "85",
+            "equity_residual": "23",
+            "insurer_closing_reserve": "40",
+            "real_harm": "0",
+            "default": false
+          },
+          {
+            "probability": "1/4",
+            "assets": "108",
+            "deposit_from_bank": "85",
+            "insurance_payment": "0",
+            "deposit_total": "85",
+            "equity_residual": "23",
+            "insurer_closing_reserve": "40",
+            "real_harm": "0",
+            "default": false
+          }
+        ],
+        "expected_assets": "108",
+        "asset_gain": "8",
+        "private_profit": "8",
+        "expected_insurance": "0",
+        "default_probability": "0",
+        "expected_real_harm": "0",
+        "welfare_before_policy_cost": "8"
+      },
+      {
+        "id": "H",
+        "states": [
+          {
+            "probability": "3/4",
+            "assets": "130",
+            "deposit_from_bank": "85",
+            "insurance_payment": "0",
+            "deposit_total": "85",
+            "equity_residual": "45",
+            "insurer_closing_reserve": "40",
+            "real_harm": "0",
+            "default": false
+          },
+          {
+            "probability": "1/4",
+            "assets": "50",
+            "deposit_from_bank": "50",
+            "insurance_payment": "35",
+            "deposit_total": "85",
+            "equity_residual": "0",
+            "insurer_closing_reserve": "5",
+            "real_harm": "20",
+            "default": true
+          }
+        ],
+        "expected_assets": "110",
+        "asset_gain": "10",
+        "private_profit": "75/4",
+        "expected_insurance": "35/4",
+        "default_probability": "1/4",
+        "expected_real_harm": "5",
+        "welfare_before_policy_cost": "5"
+      },
+      {
+        "id": "routed_H",
+        "states": [
+          {
+            "probability": "3/4",
+            "assets": "129",
+            "deposit_from_bank": "85",
+            "insurance_payment": "0",
+            "deposit_total": "85",
+            "equity_residual": "44",
+            "insurer_closing_reserve": "40",
+            "real_harm": "0",
+            "default": false
+          },
+          {
+            "probability": "1/4",
+            "assets": "49",
+            "deposit_from_bank": "49",
+            "insurance_payment": "36",
+            "deposit_total": "85",
+            "equity_residual": "0",
+            "insurer_closing_reserve": "4",
+            "real_harm": "20",
+            "default": true
+          }
+        ],
+        "expected_assets": "109",
+        "asset_gain": "9",
+        "private_profit": "18",
+        "expected_insurance": "9",
+        "default_probability": "1/4",
+        "expected_real_harm": "5",
+        "welfare_before_policy_cost": "4"
+      }
+    ],
+    "policies": [
+      {
+        "id": "none",
+        "required_capital": {
+          "C": "0",
+          "H": "0",
+          "routed_H": "0"
+        },
+        "feasible": [
+          "C",
+          "H",
+          "routed_H"
+        ],
+        "best_responses": [
+          "H"
+        ],
+        "status": "feasible",
+        "outcomes": [
+          {
+            "choice": "H",
+            "private_profit": "75/4",
+            "welfare": "5",
+            "score": "5"
+          }
+        ]
+      },
+      {
+        "id": "narrow",
+        "required_capital": {
+          "C": "10",
+          "H": "20",
+          "routed_H": "8"
+        },
+        "feasible": [
+          "C",
+          "routed_H"
+        ],
+        "best_responses": [
+          "routed_H"
+        ],
+        "status": "feasible",
+        "outcomes": [
+          {
+            "choice": "routed_H",
+            "private_profit": "18",
+            "welfare": "7/2",
+            "score": "7/2"
+          }
+        ]
+      },
+      {
+        "id": "broad",
+        "required_capital": {
+          "C": "10",
+          "H": "20",
+          "routed_H": "20"
+        },
+        "feasible": [
+          "C"
+        ],
+        "best_responses": [
+          "C"
+        ],
+        "status": "feasible",
+        "outcomes": [
+          {
+            "choice": "C",
+            "private_profit": "8",
+            "welfare": "6",
+            "score": "6"
+          }
+        ]
+      }
+    ],
+    "score_maximizers": [
+      "broad"
+    ],
+    "ranking_status": "determinate over feasible policies"
+  },
+  "conduct": {
+    "collectible_fine": "10",
+    "deterrence_margin": "1/2",
+    "best_responses": [
+      "care"
+    ],
+    "actions": [
+      {
+        "id": "care",
+        "seller_profit": "4",
+        "buyer_net": "9/2",
+        "authority_net": "-1/4",
+        "expected_fine": "0",
+        "expected_harm": "3/2",
+        "expected_real_care_cost": "2",
+        "expected_inspection_cost": "1/4",
+        "welfare": "33/4"
+      },
+      {
+        "id": "shortcut",
+        "seller_profit": "7/2",
+        "buyer_net": "-3",
+        "authority_net": "9/4",
+        "expected_fine": "5/2",
+        "expected_harm": "9",
+        "expected_real_care_cost": "0",
+        "expected_inspection_cost": "1/4",
+        "welfare": "11/4"
+      }
+    ]
+  },
+  "resolution": {
+    "original_equity": "10",
+    "remaining_assets": "70",
+    "loss_absorption": {
+      "old_equity": "10",
+      "junior": "10",
+      "senior": "10"
+    },
+    "surviving_senior_before_conversion": "10",
+    "first_cash_gap": "4",
+    "minimum_external_advance": "4",
+    "unfunded_first_gap": "0",
+    "bridge_interest_if_funded": "1/5",
+    "first_cutoff_funded": true,
+    "terminal_claims_funded_if_bridge": true,
+    "capital_after_conversion": "5",
+    "capital_after_interest_if_funded": "24/5",
+    "immediate_capital_pass": true,
+    "continuing_capital_pass": false,
+    "status": "funded continuation",
+    "snapshots": [
+      {
+        "stage": "opening",
+        "cash": "6",
+        "long_assets": "94",
+        "deposits": "60",
+        "senior": "20",
+        "junior": "10",
+        "bridge": "0",
+        "equity": "10"
+      },
+      {
+        "stage": "after_asset_loss",
+        "cash": "6",
+        "long_assets": "64",
+        "deposits": "60",
+        "senior": "20",
+        "junior": "10",
+        "bridge": "0",
+        "equity": "-20"
+      },
+      {
+        "stage": "after_write_down",
+        "cash": "6",
+        "long_assets": "64",
+        "deposits": "60",
+        "senior": "10",
+        "junior": "0",
+        "bridge": "0",
+        "equity": "0"
+      },
+      {
+        "stage": "after_conversion",
+        "cash": "6",
+        "long_assets": "64",
+        "deposits": "60",
+        "senior": "5",
+        "junior": "0",
+        "bridge": "0",
+        "equity": "5"
+      },
+      {
+        "stage": "after_bridge",
+        "cash": "10",
+        "long_assets": "64",
+        "deposits": "60",
+        "senior": "5",
+        "junior": "0",
+        "bridge": "4",
+        "equity": "5"
+      },
+      {
+        "stage": "after_first_payment",
+        "cash": "0",
+        "long_assets": "64",
+        "deposits": "50",
+        "senior": "5",
+        "junior": "0",
+        "bridge": "4",
+        "equity": "5"
+      },
+      {
+        "stage": "maturity_before_payments",
+        "cash": "64",
+        "long_assets": "0",
+        "deposits": "50",
+        "senior": "5",
+        "junior": "0",
+        "bridge": "21/5",
+        "equity": "24/5"
+      },
+      {
+        "stage": "after_final_payments",
+        "cash": "24/5",
+        "long_assets": "0",
+        "deposits": "0",
+        "senior": "0",
+        "junior": "0",
+        "bridge": "0",
+        "equity": "24/5"
+      }
+    ],
+    "final": {
+      "cash_and_equity": "24/5",
+      "deposit_receipts_total": "60",
+      "old_senior_debt_receipts": "5",
+      "old_senior_new_equity_value": "24/5",
+      "old_senior_total_value": "49/5",
+      "lender_repayment": "21/5",
+      "lender_net_interest": "1/5",
+      "old_claims_total_value": "349/5"
+    },
+    "liquidation": {
+      "net_assets": "62",
+      "deposit_receipts": "60",
+      "senior_receipts": "2",
+      "junior_receipts": "0",
+      "old_equity_receipts": "0"
+    }
+  }
+}

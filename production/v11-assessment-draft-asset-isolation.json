@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-09",
+  "status": "passed in integrated132chapter edition",
+  "problem": "Project authoring can create v11-assessment payloads before the complete assessment manuscript exists; the earlier asset copy rule excluded only unwritten chapter labs.",
+  "change": "The existing builder now also excludes/removes volume-assessment-prefixed reader payloads until that volume assessment manuscript exists. Source drafts are preserved; accepted older volume packages still copy normally.",
+  "paths": [
+    "scripts/build.py"
+  ],
+  "verification_plan": "Closing132edition must contain all referenced accepted attachments and no v11-assessment payload while content/assessments/v11.html is absent. Structural checks, exact offline membership/bytes and archive counts provide integration evidence.",
+  "limits": "This is a distribution filter for the current filename convention, not a validation or acceptance substitute.",
+  "evidence": "All151HTML pages and local links pass; exact547file archive matchesdist byte-for-byte; no unassembled v11-assessment reader attachment is present."
+}

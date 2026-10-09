@@ -1,0 +1,325 @@
+{
+  "chapter": "v11-c11",
+  "date": "2026-10-09",
+  "reviewer": "c05_review, separately scoped machine-assisted peer",
+  "assignment": "production/v11-c11-peer-assignment.json",
+  "status": "Peer review complete with no material findings; coordinator acceptance and publication are separate.",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": {
+    "read": "Read all nine final frozen author payloads in full: manuscript, inputs, model, saved output, README, manifest, author checker, source reuse record and author review. Read the active peer contract and canonical V11-C11 outcome/coverage. Independently solved all eight exact prompts, checked all four worked cases, all stated mathematical arguments, teach-back and delayed-retention answers.",
+    "owned_paths": [
+      "scripts/check_v11_c11_peer.py",
+      "content/reviews/v11-c11-peer.json"
+    ],
+    "frozen_author_changes": "None. All nine final author bytes match the coordinator contract and the exact bindings below.",
+    "chapter_outcome": "Trace runs, liquidation prices, leverage, a contracted creditor network, bounded funded public lending and resolution timing from a consistent two-cutoff balance sheet."
+  },
+  "independence": {
+    "model_access": "Only public run(data) is called for numerical comparison. No model helper or author checker is called as an oracle. Reading the full author checker was an implementation/review-scope audit, not reuse of its expected values.",
+    "auction": "For rational discriminant d, compute floor(sqrt(floor(d*10^120))) with integer isqrt, producing rational endpoints l,u with l^2<=d<=u^2. Substitute these into 2z/(p0+sqrt(d)) with reversed endpoint order. Check inventory membership, endpoint revenue inequalities and interval width. Exact square discriminants, zero target, constant price, capacity equality and insufficient capacity have separate branches. This uses neither Decimal sqrt nor the author checker's 160-step bisection. Midpoint error is below 10^-54 sale units in the checked interior cases; rounded model sale must lie within the rational enclosure expanded by 10^-39.",
+    "dated_cash": "A wallet ledger starts with separate Alder, Beacon, public and buyer cash endowments and zero recipient pockets. Every payment debits funded cash and credits the actual recipient. Run funders are individual creditors, not a single residual deficit; each waiting or unpaid principal claim survives to the appropriate late waterfall. Terminal asset cash is added once across retained and sold units. Recipient sums and institution-level loss allocations are then derived from those transfers.",
+    "game": "Enumerate individual unilateral deviations across WW, RR, RW and WR using the independent payoff wallets; WR follows by the explicit symmetry of the two original funder contracts. Compute the affine indifference zero only when opposite payoff-gap signs are resolved outside the stated numerical band. Cases with zero premium and complete indifference exercise the distinction between strict equilibria, weak numerical candidates and null mixed output.",
+    "comparison_scope": "Compare every field of each cutoff ledger, terminal recovery, Beacon allocation, funded buyer/public balance, resolution result and game output in the chosen cases. Financial strings are checked as finite decimal syntax then rational values within 10^-34 relative-to-max(1,abs(expected)) tolerance. Counted comparisons include serialization, structure, hashes and repeated printed-value ledgers; they are not a count of independent theorems or distinct economic cases.",
+    "saved_output": "The saved output is compared to a fresh model result only after the fresh result is checked against the peer oracles. It is not the source of expected financial outcomes."
+  },
+  "worked_audit": [
+    {
+      "case": 1,
+      "verdict": "passed",
+      "independent_result": "Without a line, cutoff-one cash deficits are 18,49,80. Revenue s-s^2/200 has maximum 50 on [0,100]. Peer sale enclosures give 20,100-10sqrt(2),100; prices .9,.5+sqrt(2)/20,.5. Cash payments are retail/runners/Beacon = 18/0/20,18/31/20,18/52/0. WW retains 80, pays two 34.1 promises and equity 11.8. RW pays its waiter 10sqrt(2). RR pays each runner 26 and leaves runner arrears 10 plus the network claim 20 with no terminal estate; Beacon loses its equity 10 and its customer loses 10."
+    },
+    {
+      "case": 2,
+      "verdict": "passed",
+      "independent_result": "Full payoff pairs are WW(34.1,34.1), RW(31,10sqrt(2)), WR(10sqrt(2),31), RR(26,26). WW and RR are the only pure equilibria. The unique interior mixing probability is 3.1/(29.1-10sqrt(2))=0.207248837268... . At belief .1, R pays 30.5 while W pays 30.69+sqrt(2)=32.104213562... . These are conditional strategic calculations, with no observed frequency or equilibrium selection implied."
+    },
+    {
+      "case": 3,
+      "verdict": "passed",
+      "independent_result": "Cap20/RR borrows 20, reserves 25 units and sells only 75. Price 5/8 produces 375/8. After retail18 and runners62, Beacon gets55/8 and misses its customer by25/8. At v=1 the retained25 pays public20 then network5; total network recovery95/8 allows late customer completion and Beacon equity15/8. Buyer gain225/8 equals Alder equity loss20 plus network impairment65/8. Cap20 makes waiting strictly dominant at the benchmark, so this RR contingency is explicitly off equilibrium. The manuscript does not confuse contingency performance with equilibrium selection."
+    },
+    {
+      "case": 4,
+      "verdict": "passed",
+      "independent_result": "Resolution pays retail18 from cash20, retains cash2 and all100 assets, and replaces nonretail rights with principal82. At v1 estate102 pays funders62/network20/equity20. The separately funded bridge10 pays Beacon's customer at cutoff1 and is later repaid. At v.6 estate62 gives rate31/41, funders1922/41, network620/41 and Beacon equity210/41 after bridge repayment. At v.1 estate12 gives network120/41 and bridge loss290/41. In the zero-bridge intervention, eventual complete recovery at v1 coexists with an early customer miss10."
+    }
+  ],
+  "proof_audit": [
+    {
+      "topic": "Auction existence, uniqueness and smallest sufficient sale",
+      "verdict": "passed",
+      "reason": "On [0,S] subset [0,N], p0>0 and 2*lambda*N<=p0 imply continuous strictly increasing R(s)=p0*s-lambda*s^2 whenever S>0. A derivative of zero at the final point does not create a flat interval; integrating the derivative over any positive-length subinterval is positive. For S=0 the only feasible sale and target are both zero. Continuity and R(0)=0 give a unique sufficient sale exactly for 0<=z<=R(S). The rationalized smaller quadratic root equals the usual smaller root; lambda=0 gives z/p0. Equality at capacity is feasible; beyond capacity selling all free inventory is the maximum feasible funding action on this domain. Uniform-price proceeds are s*p(s), not the integral of the price schedule."
+    },
+    {
+      "topic": "Equilibria and selection",
+      "verdict": "passed",
+      "reason": "Independent deviation wallets give d0=-3.1 and d1=26-10sqrt(2)>0 for run minus wait. This proves exactly WW/RR pure equilibria. The affine gap has one interior zero, so both mixing players must use the same probability; a player facing a pure opponent has a strict best response, excluding one-mixer equilibria. None of this selects among equilibria or calibrates a crisis probability. At complete-indifference inputs all four profiles are weak candidates and no strict profile is returned; null mixed output is correctly not treated as a theorem denying a continuum of mixtures."
+    },
+    {
+      "topic": "Leverage timing and equity concepts",
+      "verdict": "passed",
+      "reason": "A=20+100q and E=100q-80 give d(A/E)/dq=(100E-100A)/E^2=-10000/E^2 for E>0. Retiring principal at the same mark preserves equity; borrowing cash with an equal liability also preserves it. At q=.9 prepayment A/E=110/10, then principal retirement38 gives72/10. Fundamental retained payoff80 minus remaining principal62 gives18 before the6.2 wait premium; terminal shareholder cash is11.8. These do not equal principal marked equity10. E=0 atq=.8, sale40 and revenue32. The lab gives no finite positive leverage ratio for nonpositive principal marked equity."
+    },
+    {
+      "topic": "Collateral, senior recourse and distinct funding",
+      "verdict": "passed",
+      "reason": "The line draw is bounded jointly by cash deficit, committed cap and advance*p0*N. Reserved draw/(advance*p0) units are not saleable. The initial public cash80 and buyer cashp0*N=100 are separate actual endowments, each debited on transfer. The public claim is explicitly senior on Alder's entire retained estate, not a nonrecourse recovery capped at pledged units. The lower-advance intervention reserves all100 units against a50 loan, leaves an early private cash gap, and later repays the senior loan and private arrears from the retained estate. No pledged inventory or public cash is used twice."
+    },
+    {
+      "topic": "Two-cutoff payment priority and credit transmission",
+      "verdict": "passed",
+      "reason": "Early retail, requested funder payments and Beacon consume only current Alder cash. Surviving runner principal, waiting promises and network arrears share the late private residual after public repayment. Beacon's early customer uses only its own usable cash, early network receipts and a timely bridge; a later receipt can pay arrears but cannot erase a recorded missed deadline. The own-cash, partial-bridge and no-bridge interventions verify those distinct mechanisms."
+    },
+    {
+      "topic": "Loss attribution and consolidation",
+      "verdict": "passed",
+      "reason": "Summing the actual Alder transfers yields E0-H+private_claim_loss+public_loss=N(p0-v)+waiting_interest+buyer_gain. Independently, Beacon's network impairment equals its lost opening equity plus residual customer loss plus bridge loss. The network impairment is not added again after allocation to these bearers. Across the whole ledger, retail, individual funders, customer, both shareholders, public cash and buyer wealth equal all four original cash endowments plusvN. The network receipt cancels internally. Sale gains are transfers; the model has no real output destruction or tax cost from which to derive a general welfare loss."
+    },
+    {
+      "topic": "Funded policy cases and known versus later downside",
+      "verdict": "passed",
+      "reason": "Both cap20 and cap80 yield strict WW atv1 and draw18 on that equilibrium path. Cap80 additionally funds all stated cutoff1 claims in every profile with draws18/49/80, so it provides stronger off-equilibrium payment coverage without being proved minimal or optimal. Holding cap80/RR cash history fixed, v.6 makes the public80 claim recover60 and lose20; the public vehicle ends with60. Replacing the known benchmark payoff with.6 instead changes best replies: the bounded peer intervention makes RR the strict equilibrium for all three tested caps. A known downside and an unanticipated fixed-history stress cannot be silently interchanged."
+    },
+    {
+      "topic": "Resolution rights and continuity",
+      "verdict": "passed",
+      "reason": "The stated timely stay, pari-passu restructured principal, cancellation of the6.2 aggregate WW premium and public priority over Beacon are original assumed rights. The stay neither creates usable cash nor increasesvN. The bridge comes from the stated public endowment; its deep-downside loss follows from the debtor's actual estate. The comparison honestly separates changed private rights, cash timing, principal losses and unsupported implementation/current-law claims."
+    },
+    {
+      "topic": "Boundaries of numerical and economic claims",
+      "verdict": "passed",
+      "reason": "Exact input Fractions choose sale regimes; finite-precision irrational values and the1e-24 game band are disclosed. Exact baseline proofs support the printed equilibrium claims. The lab rejects an inverse-price law that is not monotone over its whole free-inventory domain instead of calling full liquidation maximum funding there. Endogenous collateral appraisal, strategic buyers, tax distortion, information, ex ante risk-taking, legal disputes and general equilibrium are extensions, not silently established results."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "number": 1,
+      "verdict": "passed",
+      "exact_prompt_resolution": "Solve s-s^2/200=49: (s-100)^2=200, so s=100-10sqrt(2), p=.5+sqrt(2)/20 and retained units10sqrt(2). Early cash69 pays18+31+20. The waiting claim34.1 exceeds the entire late estate10sqrt(2); equity receives0. Principal marked equity100p-80=-30+5sqrt(2)=-22.928932188... . Full early network payment is a priority/timing result, not evidence of late solvency."
+    },
+    {
+      "number": 2,
+      "verdict": "passed",
+      "exact_prompt_resolution": "Recomputed all four pairs and all unilateral deviations. Exactly WW/RR are pure; symmetric interior x*=3.1/(29.1-10sqrt(2)). Each pure opposing action induces a strict preference, which excludes exactly one mixing player. At x=.1, R30.5<W32.104213562... . No model-implied empirical frequency, repeated sampling population or selection rule was provided. The solution addresses every requested part."
+    },
+    {
+      "number": 3,
+      "verdict": "passed",
+      "exact_prompt_resolution": "Derivative -10000/E^2 whileE>0. Leverage initially6, prepayment atq.9 is11, postpayment7.2. Zero-equity boundaryq.8 corresponds tos40/proceeds32. Marked equity10 differs from retained fundamental80-principal62=18 and terminal18-wait premium6.2=11.8. Dates, principal versus promised interest, and denominator validity are explicit."
+    },
+    {
+      "number": 4,
+      "verdict": "passed",
+      "exact_prompt_resolution": "Draw20 pledges25, leaving75 saleable. Proceeds375/8 leave network55/8 early; customer miss25/8. Retained25 pays public20 then network5; Beacon equity15/8. Buyer gain225/8 equals Alder equity20 plus one network loss65/8; its allocation to Beacon equity is not an extra loss. One-runner retained10sqrt(42) minus public20 exceeds34.1, soW pays34.1 against either action whileR pays31. RR is not a benchmark equilibrium."
+    },
+    {
+      "number": 5,
+      "verdict": "passed",
+      "exact_prompt_resolution": "The80 cap and collateral support all targets18/49/80 without selling;W pays34.1 against either action, R31. Both positive caps draw18 underWW. Fixed full-lineRR atv.6 retains60, all of which repays public80: loss20/publiccash60. Earlier retail18, funders31 each and network20 remain paid; final equity0. If known before action, recompute recoveries and best replies; the peer known-downside case does so and obtains strictRR rather than reusing thev1 game."
+    },
+    {
+      "number": 6,
+      "verdict": "passed",
+      "exact_prompt_resolution": "Resolution atv.6: estate62/claims82, rate31/41, funders1922/41, network620/41, publicbridge10 recovered, Beacon equity210/41. Atv.1: estate12, rate6/41, funders372/41, network120/41, bridge loss290/41, Beacon equity0; customer10 remains paid early. Aggregate cancelled wait premium6.2 is a changed private right. With no bridge atv1 the customer misses10 early but receives it later, so the stay does not finance continuity."
+    },
+    {
+      "number": 7,
+      "verdict": "passed",
+      "exact_prompt_resolution": "Proved strict monotonicity including a zero endpoint derivative, existence by continuity, exact free-inventory equality, andlambda0. For excludedlambda.01, N100,p01,z20, both roots50+-10sqrt(5) are within inventory, while maximum receipts25 occur ats50 and sale100 raises0. Both six-decimal roots and the capacity are independently checked. A new domain/selection rule would be needed; applying the existing monotone full-sale fallback would be wrong."
+    },
+    {
+      "number": 8,
+      "verdict": "passed",
+      "exact_prompt_resolution": "The illustrative referee response corrects selection-versus-estimation, double-counted network loss, unfunded stay and unsupported policy optimality. Its evidence plan asks for dated positions/encumbrances, contracts, actions, disbursements, sales and recipient selection, with horizon/outcome definitions and reverse-causality/nonrandom-support concerns. An instrument/discontinuity is not assumed valid by name. Anticipated support and lost operating output are examples of omitted mechanisms that can change rankings. Ten-point rubric assigns two each to the five stated reasoning domains and permits different supported proposals; no determinate causal estimate is fabricated."
+    }
+  ],
+  "instruction_audit": {
+    "prerequisites": "Uses the earlier balance-sheet/capital/cash distinction, collateral/ALM, scenario aggregation and explicitly stipulated resolution-rights boundary. Definitions, dates and one-currency CU units precede their use. The methods in the eight prompts are demonstrated or derived before assessment.",
+    "coverage": "All canonical topics are substantive: runs through a complete finite game; fire sales through a uniform auction with a proved domain; leverage through a derivative and dated values; networks through Beacon cash and loss allocation; public liquidity through capped, collateralized, funded alternatives; resolution through changed rights, dated customer continuity and loss bearers.",
+    "teach_back": "The answer correctly requires changed deviation payoffs, committed versus drawn support, unsold pledged assets, adverse terminal repayment and the limits of inferred legal powers, welfare and implementation.",
+    "retention": "Independent flat-price case funds deficits18/49/80, retains82/51/20 and givesW34.1 versusR31. UnsupportedRR network20 is allocated as Beacon equity10 plus customer10, not added to them. A late remedy cannot convert the recorded early miss into a timely payment.",
+    "reader": "The actual shared verify.Document parser was executed read-only on the frozen manuscript and returned4worked/8exercises/8solutions,16uniqueIDs,0duplicateIDs. The separate portable parser checks balanced fragment tags, exact source routes,55unique calculation anchors and all five flat downloadable asset links. No browser rendering was claimed."
+  },
+  "source_audit": [
+    {
+      "id": "v11-c01-diamond-dybvig",
+      "verdict": "passed within reused scope",
+      "evidence": "Read the existing canonical source record, c11 reuse proposal and manuscript attribution. The accepted record describes actual primary PDF inspection of printed404-410 and the original source metadata. No new retrieval or full-paper audit is claimed in this peer pass.",
+      "claim_boundary": "Used only as a further route on liquidity needs, sequential service and run incentives. C11's two observable funders, auction, priority network and policy proofs are original; later optimal-insurance, suspension and government-guarantee theorems are not imported."
+    },
+    {
+      "id": "v06-c12-us-crisis",
+      "verdict": "passed within historical scope",
+      "evidence": "Read the canonical primary-source record, c11 author's actual-body reuse evidence and all associated manuscript claims. The official URL is Bernanke's dated2September2010 FCIC testimony; the source record preserves the own-views and historical-context qualifications. No fresh body retrieval is claimed by this peer.",
+      "claim_boundary": "Supports brief participant context on funding fragility, haircuts, leverage and crisis-management instruments. It is not an identified causal intervention estimate, an empirical calibration of this game, or a current national legal-power source."
+    }
+  ],
+  "implementation_audit": {
+    "domain": "Full model/README validation read. Exact object keys, provenance, unsigned plain decimal strings up to six decimal places, finite numeric ranges, reconciled opening balance sheets, cash-funded retail, monotone whole-inventory auction, distinct caps bounded by actual public cash, positive advances and bounded unique terminal states are enforced before run. This is a deliberately restricted instructional contract, not a general banking simulator.",
+    "numeric": "Model80-digit Decimal square roots/40-place outputs are checked with separate exact-Fraction wallet arithmetic and60-place rational square-root enclosures. Funding regimes are chosen rationally. Public/private/buyer allocations stay within actual budgets; counterparties receive only actual transferred cash. The declared near-indifference band is retained rather than declaring numerical equality exact.",
+    "quiet_API": "Each valid and invalid intervention checks run nonmutation and captured empty stdout/stderr. The import is also quiet. Fresh outputs round-trip through strict JSON with allow_nan=False; recursive comparisons enforce decimal amount syntax, null applicability, exact metadata types and exact nested key sets.",
+    "invalids": "36 actual API rejections cover wrong schema/provenance, numeric JSON/bool/null, signed/whitespace/leading-zero/scientific/nonfinite/overprecision strings, invalid ranges and identities, insufficient initial retail cash, nonmonotone auctions, invalid/duplicate/overbudget caps, bridge funding, labels/states and exact-field violations. Ten CLI rejections across both modes cover duplicate JSON keys, nonfinite constants, invalid UTF-8, oversize input and a financial-domain violation, preserving pre-existing destination bytes.",
+    "output_guards": "18 real attempts: direct, normalized .. path, symbolic and hard-link aliases to input and model in normal and-O modes, plus a default-output symbolic alias to the input in both modes. All reject before writes, produce no stdout, and preserve input/model bytes. Tests use temporary copies only.",
+    "portable": "The model plus inputs run from a temporary directory with process cwd=/, explicit and neighboring default output, under normal and-O modes; four successful quiet CLI generations agree with the peer-audited baseline. Then the exact nine author files plus peer checker and peer record are copied to an otherwise empty11-file tree; quiet check() succeeds in normal and-O fromcwd=/ without shared modules or production records and leaves the exact file inventory unchanged.",
+    "hashes": "The portable checker verifies the manifest's exact4files, author's exact8nonself bindings and peer's exact9author+ownchecker bindings, including byte counts. No missing or duplicate bindings accepted.",
+    "author_checker_review": "Read the complete frozen author checker and review. Its rational bisection and independent aggregate waterfalls, game/exercise cases, invalid contracts and portable guards are consistent with the stated contracts. Its reported execution counts were not used as numerical expected values or rebranded as peer evidence."
+  },
+  "financial_interventions": [
+    {
+      "name": "flat_price",
+      "purpose": "Remove price impact while holding contracts and asset value fixed; waiting becomes strictly dominant without support."
+    },
+    {
+      "name": "all_actions_indifferent",
+      "purpose": "Flat price plus multiplier1 makes all actions payoff-indifferent; verify strict/weak/mixed-limit distinctions."
+    },
+    {
+      "name": "zero_wait_premium",
+      "purpose": "Retain nonlinear liquidation but remove the premium; RR remains strict while WW is only a near-band weak candidate."
+    },
+    {
+      "name": "known_downside_changes_game",
+      "purpose": "Set the known benchmark and terminal payoff to.6 across all three caps; recalculate action incentives instead of treating the downside only as a frozen-history stress."
+    },
+    {
+      "name": "lower_advance",
+      "purpose": "At advance.5 and cap80, reserve all assets against only50 cash; test early private arrears, no double sale, full senior-estate recourse and later recovery."
+    },
+    {
+      "name": "funded_A_equity",
+      "purpose": "Increase opening Alder cash and matching equity by10; rebuild liquidation needs from an actually funded balance sheet."
+    },
+    {
+      "name": "Beacon_own_cash",
+      "purpose": "Increase Beacon cash and equity by5 under cap20; change its deadline resilience without changing the upstream debt or receipts."
+    },
+    {
+      "name": "partial_bridge",
+      "purpose": "Bridge only3 against customer10; separate early missed7 from full later recovery."
+    },
+    {
+      "name": "no_bridge",
+      "purpose": "A stay with no new cash leaves the full early miss despite a sound later estate."
+    },
+    {
+      "name": "zero_public_budget",
+      "purpose": "Remove public cash, line cap and bridge consistently; no support can be created by promise alone."
+    },
+    {
+      "name": "zero_terminal_assets",
+      "purpose": "Apply a zero-payoff state to fixed cap20/cap80 histories; test public/customer losses and wealth conservation at a zero estate."
+    },
+    {
+      "name": "exact_sale_capacity",
+      "purpose": "Reduce each funder principal to16 and increase matching opening equity to50; RR target50 exactly reaches full-inventory revenue, distinct from a funding failure."
+    },
+    {
+      "name": "funded_no_sale",
+      "purpose": "Opening cash38 and matching equity38 cover the no-run early payments; exercise a true zero-sale branch with conserved resources."
+    }
+  ],
+  "execution": {
+    "peer_summary": {
+      "chapter": "v11-c11",
+      "review": "separate machine-assisted peer",
+      "status": "passed",
+      "comparisons": 10779,
+      "cases": 14,
+      "root_certificates": 30,
+      "funded_transfers": 1510,
+      "line_journals": 88,
+      "resolution_journals": 19,
+      "printed_values": 55,
+      "api_invalid_rejections": 36,
+      "portable_cli_successes": 4,
+      "cli_invalid_rejections": 10,
+      "protected_output_attempts": 18,
+      "financial_interventions": 13,
+      "worked_examples": 4,
+      "solved_exercises": 8,
+      "author_bindings": 9,
+      "peer_checker_bindings": 1,
+      "limits": "Finite original contracts and bounded deterministic interventions; no empirical frequency, current legal power, global welfare optimum, rendered UI or human academic certification."
+    },
+    "normal_and_optimized": "Quiet import/check() captured with no stdout/stderr; normal and-O returned identical strict JSON-safe summaries.",
+    "isolated_exact11": "Normal and-O quiet checks fromcwd=/ returned the same summary after copying only the9author files and2peer files. Exact11-file inventory remained unchanged.",
+    "actual_reader": {
+      "worked_examples": 4,
+      "exercises": 8,
+      "solutions": 8,
+      "unique_ids": 16,
+      "duplicate_ids": 0
+    },
+    "checker_count_interpretation": "14 economic input cases include one full baseline and13 targeted interventions. 88 line and19resolution wallet evaluations and30root certificates include reruns to verify printed numerical anchors; these are bounded computations, not distinct calibrations or empirical observations. 10,779 counted comparisons include validation/type/structure/hash checks. 1,510 debited-and-credited transfers occurred in those ledgers."
+  },
+  "open_findings": [],
+  "author_changes_requested": [],
+  "limitations": [
+    "Separate machine-assisted review, not external human academic certification or a guarantee of no errors.",
+    "Original synthetic two-funder, two-cutoff contracts. No observed institution, empirical run frequency, support-selection effect, national legal authority or current regulatory power is established.",
+    "The tested deterministic intervention set covers specified economically material branches; it is not exhaustive verification over every allowed real input or a proof of all floating-point/near-indifference cases.",
+    "The baseline exact mathematical arguments and rational enclosures support the printed results; rounded lab values remain approximations and near-band weak game candidates are expressly unresolved.",
+    "Future asset payoff is not destroyed by sales; buyers and public cash are funded. Real output, taxation, political incentives, information acquisition, strategic price setting and endogenous collateral prices are omitted. No globally optimal policy is inferred.",
+    "Reused accepted primary-source scopes were read and checked against attribution. This peer pass did not freshly retrieve the two primary bodies or audit material outside their recorded scopes.",
+    "Actual parser and portable execution passed. No rendered browser, visual/mobile, keyboard or print assessment was performed by this peer; coordinator integration and publication remain separate."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v11-c11.html",
+      "bytes": 37772,
+      "sha256": "c37573355f6d7b5bdcada9bc1ffac53a1c1c2f31d62521085ff9a7435b61dec6"
+    },
+    {
+      "path": "content/projects/v11-c11-inputs.json",
+      "bytes": 911,
+      "sha256": "a5a2f05a02211ecb85c2b0fc7c6a7e6fe80f4cfbd8c5bb4e9211c9e0f6bea9e4"
+    },
+    {
+      "path": "content/projects/v11-c11-analysis.py",
+      "bytes": 18521,
+      "sha256": "7ab7b8df12200e8f3fd91f0b2fa62193c19415e4638636ec2cc879d4922bed39"
+    },
+    {
+      "path": "content/projects/v11-c11-output.json",
+      "bytes": 62644,
+      "sha256": "1a39e74cf3a08ec37ebd1bb8b4051cd7e3d73d279909debdb395c5ba9d6bbb3a"
+    },
+    {
+      "path": "content/projects/v11-c11-manifest.json",
+      "bytes": 998,
+      "sha256": "fcd8dead1953ca335ee32996b7ed146287041e275b74eec3b0e5e75af91f3e5d"
+    },
+    {
+      "path": "content/projects/v11-c11-README.txt",
+      "bytes": 17087,
+      "sha256": "1ceee5dd33102749b414dd7e6e0bb23b03ad8eba390d1c37b12bc83d2d599fa0"
+    },
+    {
+      "path": "scripts/check_v11_c11.py",
+      "bytes": 28732,
+      "sha256": "04037b4eee883a2b158249bcb7d6d8062e89859527161d5f76fb95b58589a139"
+    },
+    {
+      "path": "content/reviews/v11-c11-author.json",
+      "bytes": 18798,
+      "sha256": "8f08ce66e74daff8f934cbdf5dc3e55a779e9d3ca2b2887565e98e1fb1debddc"
+    },
+    {
+      "path": "content/reviews/v11-c11-sources.json",
+      "bytes": 2105,
+      "sha256": "6d4b1c106da54233e5bdce400375c7dbf8a565c61cc009013d295361ff07dae5"
+    },
+    {
+      "path": "scripts/check_v11_c11_peer.py",
+      "bytes": 36190,
+      "sha256": "6e76024f0b6f5c1b542aa85f71d6b157d22760ed26514e0ab6cb3fbcb1a57d40"
+    }
+  ]
+}

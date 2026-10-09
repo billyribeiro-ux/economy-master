@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "parity": {"spot_H_per_F": "6/5", "home_gross": "53/50", "foreign_gross": "51/50"},
+  "exporter": {"offshore_cash_H": "12", "net_receivable_F": "80", "debt_H": "100", "hedge_F": "80"},
+  "export_scenarios": [
+    {"id": "clear", "spot_H_per_F": "11/10", "fixing_H_per_F": "11/10", "conversion_cap_F": "80", "transfer_cap_H": "200", "margin_H_per_hedged_F": "1/20", "positive_settlement_fraction": "1", "receipt_before_cutoff": true},
+    {"id": "weak_currency", "spot_H_per_F": "4/5", "fixing_H_per_F": "4/5", "conversion_cap_F": "80", "transfer_cap_H": "200", "margin_H_per_hedged_F": "1/20", "positive_settlement_fraction": "1", "receipt_before_cutoff": true},
+    {"id": "margin_squeeze", "spot_H_per_F": "3/2", "fixing_H_per_F": "3/2", "conversion_cap_F": "80", "transfer_cap_H": "200", "margin_H_per_hedged_F": "9/40", "positive_settlement_fraction": "1", "receipt_before_cutoff": true},
+    {"id": "transfer_lock", "spot_H_per_F": "4/5", "fixing_H_per_F": "4/5", "conversion_cap_F": "80", "transfer_cap_H": "40", "margin_H_per_hedged_F": "1/20", "positive_settlement_fraction": "1", "receipt_before_cutoff": true},
+    {"id": "conversion_lock", "spot_H_per_F": "4/5", "fixing_H_per_F": "4/5", "conversion_cap_F": "50", "transfer_cap_H": "200", "margin_H_per_hedged_F": "1/20", "positive_settlement_fraction": "1", "receipt_before_cutoff": true},
+    {"id": "joint", "spot_H_per_F": "4/5", "fixing_H_per_F": "9/10", "conversion_cap_F": "50", "transfer_cap_H": "32", "margin_H_per_hedged_F": "3/40", "positive_settlement_fraction": "1/2", "receipt_before_cutoff": true},
+    {"id": "receipt_delay", "spot_H_per_F": "4/5", "fixing_H_per_F": "4/5", "conversion_cap_F": "80", "transfer_cap_H": "200", "margin_H_per_hedged_F": "1/20", "positive_settlement_fraction": "1", "receipt_before_cutoff": false}
+  ],
+  "hedge_design_scenarios": ["weak_currency", "margin_squeeze"],
+  "sovereign": {"opening_spot_H_per_F": "2", "reserves_F": "30", "blocked_reserves_F": "8", "reserve_floor_F": "4", "cash_after_primary_spending_H": "100", "local_due_H": "36", "foreign_due_F": "40", "other_foreign_principal_F": "60", "new_loan_gross": "11/10"},
+  "sovereign_scenarios": [
+    {"id": "reference", "spot_H_per_F": "2", "export_fiscal_receipt_F": "10", "essential_imports_F": "12", "new_borrowing_F": "20", "conversion_cap_F": "12"},
+    {"id": "depreciation", "spot_H_per_F": "3", "export_fiscal_receipt_F": "10", "essential_imports_F": "12", "new_borrowing_F": "20", "conversion_cap_F": "12"},
+    {"id": "rollover_stop", "spot_H_per_F": "3", "export_fiscal_receipt_F": "8", "essential_imports_F": "12", "new_borrowing_F": "0", "conversion_cap_F": "6"}
+  ],
+  "willingness": {"resources_H": "200", "capacity_F": "50", "promised_F": "40", "default_cost_H": "90", "spots_H_per_F": ["2", "3"]},
+  "rescheduling": {"due_F": "40", "replacement_F": "44", "discount_one": "19/20", "discount_two": "9/10"}
+}
