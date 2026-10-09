@@ -1,0 +1,968 @@
+{
+  "component": "v12-integrative-project",
+  "title": "Harbor Skills Outreach: replication, identification and exact inference",
+  "author": "ito_author",
+  "date": "2026-10-09",
+  "status": "Frozen design proposal for independent coordinator audit; final nine-file authoring is not yet authorized or completed.",
+  "assignment": "production/v12-assessment-project-blueprint-assignment.json",
+  "owned_path": "production/v12-assessment-project-blueprint-proposal.json",
+  "objective": "Reproduce a fictional randomized-encouragement research brief, separate assignment effects from receipt effects, audit finite-cluster inference, and extend the same design under weak relevance and a declared exclusion violation. Then transfer the audit protocol to an actual external empirical paper without claiming an unperformed replication.",
+  "design_decisions": {
+    "coherence": "One original cohort, one actual complete-randomization law, one prespecified primary contrast, two substantive changes to that mechanism. No forced application of every chapter method and no large simulation.",
+    "originality": "All names, observations, population potential records, flawed draft claims, calculations and extensions are original synthetic teaching material. No real programme, empirical effect or external-paper replication is claimed.",
+    "target_population": "The fixed twelve workers in six equal-sized centres. There is no population sampling or superpopulation law. Assignment randomness is the only probability law in the benchmark.",
+    "clock": "Baseline B is measured before centre assignment Z. Course receipt D occurs after assignment. Follow-up Y is observed afterwards; W=Y-B. These are measurement occasions, not calendar years.",
+    "assignment": "Choose exactly three of six centres uniformly. All C(6,3)=20 assignments have probability 1/20; both workers in a centre share Z. The actual baseline assignment is {1,3,5}.",
+    "dependence": "Six assignment units; twelve individual outcomes do not create twelve independent assignments. Potential records are fixed and outcomes have a shared centre trend. There are no spillovers between workers, within or across centres: each outcome depends only on that worker's D and own centre Z.",
+    "information": "The observed table is the analyst dataset. Types, untreated changes and receipt effects are separate teaching-oracle records, disclosed to validate design expectations and counterexamples, not estimated from the observed table. Observed-data analysis must not use oracle types or missing potential outcomes.",
+    "prespecification": "Change ITT is the primary contrast. Post-only ITT, baseline-adjusted change and receipt regressions are disclosed secondary specifications. The project does not select a statistic by its realized p-value. Their separate sharp-null p-values do not provide a multiplicity-adjusted joint claim.",
+    "estimands": "Finite participant-average encouragement effect, finite participant-average first stage, complier-average receipt effect under exclusion/monotonicity, descriptive receipt slope, and the explicit common adjusted-outcome sharp null are distinct targets.",
+    "finite_scope": "Randomization identification refers to the assignment law and fixed potential outcomes; one realized estimate need not equal its estimand. No six-cluster asymptotic normal approximation or generic external-validity claim is supplied."
+  },
+  "inputs": {
+    "centre_table_columns": [
+      "centre",
+      "common_untreated_change_g",
+      "types_worker_1_2",
+      "receipt_effects_tau_1_2",
+      "baselines_B_1_2"
+    ],
+    "centre_table": [
+      [
+        1,
+        -2,
+        [
+          "C",
+          "C"
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          40,
+          42
+        ]
+      ],
+      [
+        2,
+        1,
+        [
+          "C",
+          "N"
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          44,
+          46
+        ]
+      ],
+      [
+        3,
+        3,
+        [
+          "A",
+          "C"
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          48,
+          50
+        ]
+      ],
+      [
+        4,
+        -1,
+        [
+          "N",
+          "N"
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          52,
+          54
+        ]
+      ],
+      [
+        5,
+        2,
+        [
+          "A",
+          "N"
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          56,
+          58
+        ]
+      ],
+      [
+        6,
+        0,
+        [
+          "C",
+          "C"
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          60,
+          62
+        ]
+      ]
+    ],
+    "worker_offsets": [
+      -1,
+      1
+    ],
+    "potential_law": [
+      "v_jr=g_j+e_r, with e_1=-1 and e_2=1.",
+      "D_jr(z)=1 for always-taker A, z for complier C, and 0 for never-taker N.",
+      "Baseline potential change W_jr(d,z)=v_jr+tau_jr*d; no direct z term. Observed W_jr=W_jr(D_jr(Z_j),Z_j), Y_jr=B_jr+W_jr.",
+      "Consistency, no interference, binary receipt, monotonicity D(1)>=D(0) and exclusion are stipulated separately. Randomization alone does not imply the latter three."
+    ],
+    "actual_encouraged_centres": [
+      1,
+      3,
+      5
+    ],
+    "observed_columns": [
+      "centre",
+      "worker",
+      "Z",
+      "D",
+      "B",
+      "Y",
+      "W"
+    ],
+    "observed_rows": [
+      [
+        1,
+        1,
+        1,
+        1,
+        40,
+        39,
+        -1
+      ],
+      [
+        1,
+        2,
+        1,
+        1,
+        42,
+        45,
+        3
+      ],
+      [
+        2,
+        1,
+        0,
+        0,
+        44,
+        44,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        0,
+        46,
+        48,
+        2
+      ],
+      [
+        3,
+        1,
+        1,
+        1,
+        48,
+        53,
+        5
+      ],
+      [
+        3,
+        2,
+        1,
+        1,
+        50,
+        56,
+        6
+      ],
+      [
+        4,
+        1,
+        0,
+        0,
+        52,
+        50,
+        -2
+      ],
+      [
+        4,
+        2,
+        0,
+        0,
+        54,
+        54,
+        0
+      ],
+      [
+        5,
+        1,
+        1,
+        1,
+        56,
+        62,
+        6
+      ],
+      [
+        5,
+        2,
+        1,
+        0,
+        58,
+        61,
+        3
+      ],
+      [
+        6,
+        1,
+        0,
+        0,
+        60,
+        59,
+        -1
+      ],
+      [
+        6,
+        2,
+        0,
+        0,
+        62,
+        63,
+        1
+      ]
+    ],
+    "dictionary": [
+      [
+        "centre",
+        "integer 1..6",
+        "Assignment unit and record-group key."
+      ],
+      [
+        "worker",
+        "integer 1 or 2 within centre",
+        "Together with centre, unique worker key."
+      ],
+      [
+        "Z",
+        "0 or 1",
+        "Centre encouragement, assigned after B and before D."
+      ],
+      [
+        "D",
+        "0 or 1",
+        "Observed course receipt, not randomly assigned."
+      ],
+      [
+        "B",
+        "readiness-score points",
+        "Predetermined individual baseline."
+      ],
+      [
+        "Y",
+        "readiness-score points",
+        "Follow-up outcome."
+      ],
+      [
+        "W",
+        "readiness-score points",
+        "Change Y-B; subtraction is a transformation, not an identifying assumption."
+      ],
+      [
+        "type",
+        "A, C or N; teaching oracle only",
+        "Potential receipt rule; unobserved in the analyst dataset."
+      ],
+      [
+        "g and e",
+        "score-change points; teaching oracle only",
+        "Centre component and fixed worker offset of untreated change."
+      ],
+      [
+        "tau",
+        "score-change points; teaching oracle only",
+        "Receipt effect at fixed assignment under the baseline exclusion model."
+      ]
+    ],
+    "provenance": "Deterministic original finite population written by the author. No sampling, empirical import, real participant information, external license or random seed is required. Supply both the analysis-ready observed table and the separate oracle with their distinct purposes.",
+    "transformations": "Validate unique keys, two workers per centre, constant Z within centre, exactly three encouraged centres, binary D and Y=B+W. Calculate equal-weight centre means; equal centre sizes make the resulting assignment contrast also the participant-average contrast."
+  },
+  "fictional_research_brief": {
+    "question": "What does encouraging half the centres change, which receipt effect is identified under which assumptions, and which inference claims survive six randomized centres?",
+    "supplied_tables": "The published-in-the-fiction estimates are the observed benchmark table below. Learners reproduce them, then distinguish arithmetic agreement from valid interpretation.",
+    "deliberately_flawed_claims": [
+      "Because encouragement is random, receipt is random; the receipt slope is the causal effect for all twelve workers.",
+      "There are twelve independent assignment observations, so individual-level iid uncertainty is appropriate.",
+      "The Wald ratio is finite-sample unbiased, and the constant adjusted-outcome randomization inversion is a confidence interval for any heterogeneous complier-average effect.",
+      "Randomizing the invitation itself proves that invitations have no direct route to the outcome."
+    ],
+    "instructor_verdict": "All four claims are false. Correct computation can reproduce every displayed coefficient while the claims remain invalid. The repaired conclusion conditions the receipt interpretation on exclusion and monotonicity, separates finite-law expectations from realized estimates, and limits exact randomization statements to their declared sharp nulls."
+  },
+  "benchmark": {
+    "population": {
+      "worker_counts": {
+        "compliers": 6,
+        "always_takers": 2,
+        "never_takers": 4
+      },
+      "centre_change_without_encouragement": [
+        "-2",
+        "1",
+        "9/2",
+        "-1",
+        "9/2",
+        "0"
+      ],
+      "centre_change_with_encouragement": [
+        "1",
+        "4",
+        "11/2",
+        "-1",
+        "9/2",
+        "5"
+      ],
+      "centre_encouragement_effects": [
+        "3",
+        "3",
+        "1",
+        "0",
+        "0",
+        "5"
+      ],
+      "encouragement_ATE": "2",
+      "first_stage": "1/2",
+      "complier_receipt_ATE": "4",
+      "identification_identity": "ITT_Y = (6/12)*(24/6) = 2, ITT_D = 6/12 = 1/2, so the ratio of the two finite-population assignment effects is 4. This identity does not assert that a sample ratio is unbiased."
+    },
+    "observed": {
+      "centre_baseline": [
+        "41",
+        "45",
+        "49",
+        "53",
+        "57",
+        "61"
+      ],
+      "centre_receipt": [
+        "1",
+        "0",
+        "1",
+        "0",
+        "1/2",
+        "0"
+      ],
+      "centre_change": [
+        "1",
+        "1",
+        "11/2",
+        "-1",
+        "9/2",
+        "0"
+      ],
+      "change_ITT": "11/3",
+      "post_only_ITT": "-1/3",
+      "baseline_group_difference": "-4",
+      "first_stage": "5/6",
+      "Wald": "22/5",
+      "individual_receipt_OLS": "118/35",
+      "receipt_group_means": [
+        "19/5",
+        "3/7"
+      ],
+      "centre_ANCOVA_regressors": [
+        "intercept",
+        "Z",
+        "centre_B-51"
+      ],
+      "centre_ANCOVA_coefficients": [
+        "-5/32",
+        "191/48",
+        "5/64"
+      ],
+      "sharp_encouragement_null_change_p": "1/5",
+      "sharp_encouragement_null_refitted_ANCOVA_p": "3/10",
+      "cluster_Neyman_variance_estimate": "79/36",
+      "incorrectly_iid_individual_variance_estimate": "68/45",
+      "variance_warning": "Neither variance number is accompanied by a claim of exact normal coverage. The individual iid calculation ignores the actual assignment units."
+    },
+    "twenty_assignment_law": {
+      "expected_change_ITT": "2",
+      "expected_post_only_ITT": "2",
+      "expected_first_stage": "1/2",
+      "expected_refitted_ANCOVA_Z_coefficient": "6057/4160",
+      "expected_Wald": "133/40",
+      "Wald_bias_relative_to_CACE": "-27/40",
+      "ANCOVA_bias_relative_to_assignment_ATE": "-2263/4160",
+      "realized_first_stage_range": [
+        "1/6",
+        "5/6"
+      ],
+      "zero_first_stage_assignments": 0,
+      "true_change_ITT_variance": "37/9",
+      "expected_cluster_Neyman_variance_estimate": "43/9",
+      "finite_sample_variance_of_centre_effects": "4",
+      "expectation_gap": "2/3",
+      "realized_variance_caution": "79/36 is below 37/9. Conservative in expectation means E[Vhat]-Var(ITT)=S_effect^2/6=2/3; it does not make every realized Vhat an upper bound."
+    }
+  },
+  "proof_and_oracle_contract": [
+    {
+      "id": "P1",
+      "target": "Assignment effects and compliance identity",
+      "proof": "Average the twelve receipt differences D(1)-D(0), then the twelve realized encouragement effects W(D(1),1)-W(D(0),0). Under exclusion the latter vanishes for A/N and equals tau for C. Equal-sized centre aggregation preserves the participant mean. Complete randomization gives each centre probability 1/2, so the difference-in-means estimator is unbiased for the centre/participant assignment effect.",
+      "numerical_anchor": "Assignment effects 2 and 1/2; ratio 4; sample ratio 22/5."
+    },
+    {
+      "id": "P2",
+      "target": "Alternative regressions and design expectations",
+      "proof": "Post-only contrast equals change contrast plus the baseline contrast. Binary-receipt OLS with intercept equals receipt-group mean difference. Solve centre ANCOVA normal equations and independently partial out centred B and the intercept by Frisch-Waugh-Lovell. Enumerate all 20 assignments while regenerating D and W from fixed potential records to obtain finite expectations. A randomized regressor does not make the finite ANCOVA coefficient or ratio exactly unbiased under this design.",
+      "numerical_anchor": "Post-only -1/3=11/3-4; receipt slope 118/35; ANCOVA Z coefficient 191/48; its assignment expectation 6057/4160."
+    },
+    {
+      "id": "P3",
+      "target": "Finite cluster variance and its observable estimator",
+      "proof": "Use E[Z_j]=1/2, Var(Z_j)=1/4 and Cov(Z_j,Z_k)=-1/20 for j!=k under three-of-six complete randomization. Expand the variance of the linear assignment contrast to obtain S_1^2/3+S_0^2/3-S_effect^2/6. The two within-arm sample variances are unbiased for S_1^2 and S_0^2, yielding the nonnegative expectation gap S_effect^2/6. Independently sum all 20 squared deviations to check 37/9.",
+      "numerical_anchor": "Var(ITT)=37/9; E[Vhat]=43/9; S_effect^2=4; observed Vhat=79/36."
+    },
+    {
+      "id": "P4",
+      "target": "Two distinct permutation calculations",
+      "proof": "For the teaching alternative-law audit, regenerate all outcomes and receipts for every assignment. For the sharp null reference, hold the actual observed outcome vector fixed and permute only Z. For ANCOVA refit every coefficient for every permuted Z. Under the sharp encouragement-outcome null the fixed-vector rank is super-uniform, using inclusive ties. Show this from the finite counting/rank argument rather than asserting an asymptotic approximation.",
+      "numerical_anchor": "Change p=1/5 and refitted ANCOVA p=3/10. These are individual prespecified-statistic reference p-values, not the distribution of outcomes regenerated under the alternative."
+    },
+    {
+      "id": "P5",
+      "target": "Exact adjusted-outcome null inversion",
+      "proof": "H_tau requires W_jr(z)-tau*D_jr(z) invariant across assignments for every worker. Then observed adjusted residuals can be held fixed for a sharp test even though unobserved receipt responses need not be imputed. The centre contrast is a_S-b_S*tau. Enumerate roots of the two factors in (a_S-b_S*tau)^2-(a_0-b_0*tau)^2; p is constant on each open cell. Check each breakpoint separately with inclusive ties and merge accepted cells. There are at most 40 candidate roots from 20 assignments; identically zero factors create no isolated boundary.",
+      "numerical_anchor": "At alpha=1/5, accept p>alpha: baseline [1,9], weak world (-infinity,1] union [7,infinity)."
+    },
+    {
+      "id": "P6",
+      "target": "Finite confidence scope and precision",
+      "proof": "For a true common adjusted-outcome null, super-uniformity makes the inverted set cover its true scalar with probability at least 1-alpha under the actual assignment law. Heterogeneous baseline complier effects do not satisfy any such scalar null, so the inversion is not a generic CACE confidence procedure. Complementary three-of-six assignments give opposite contrasts and equal absolute statistics; hence p>=2/20. Inversion at alpha=1/20 is the whole real line. A separate homogeneous-complier-effect-4 validation population satisfies H_4 and has rejection probability exactly 1/5 at alpha=1/5 and 0 at alpha=1/20.",
+      "numerical_anchor": "No 5% two-sided rejection is possible with this complete complement-paired reference and inclusive ties."
+    },
+    {
+      "id": "P7",
+      "target": "Observational equivalence and sharp direct-effect bounds",
+      "proof": "For a complier replace W(d,z)=v+tau*d by W_delta(d,z)=v+(tau-delta)*d+delta*z. Since D(z)=z, each observable equals v+tau*z for both assignments. A/N potential laws remain unchanged. Thus every assignment-observable law is identical for each delta in [-1,1], while the complier receipt effect at fixed z averages 4-delta. The map delta=4-target supplies a witness for every target in [3,5]; no point outside can arise in this declared class.",
+      "numerical_anchor": "Sharp receipt-effect set [3,5], while assignment effects remain 2 and 1/2."
+    }
+  ],
+  "inversion": {
+    "null": "For every worker, adjusted outcome W(z)-tau*D(z) is invariant across allowed centre assignments. This is a sharp assignment-invariance null; it is not merely that the average complier receipt effect equals tau.",
+    "baseline_null_truth": "Complier receipt effects are 2,4,6,2,4,6. Therefore no common tau makes the baseline population satisfy H_tau.",
+    "p_value": "p(tau)=(1/20)*sum_S 1{|a_S-b_S*tau|>=|a_actual-b_actual*tau|}; a is the observed change contrast and b the observed receipt contrast under permuted Z labels.",
+    "reject_if": "p(tau)<=alpha",
+    "alpha": "1/5",
+    "baseline_set": {
+      "intervals": [
+        {
+          "lower": "1",
+          "upper": "9",
+          "lower_closed": true,
+          "upper_closed": true
+        }
+      ]
+    },
+    "baseline_breakpoints": [
+      "0",
+      "1",
+      "2",
+      "11/4",
+      "3",
+      "13/4",
+      "11/3",
+      "15/4",
+      "13/3",
+      "22/5",
+      "9/2",
+      "11/2",
+      "6",
+      "13/2",
+      "20/3",
+      "7",
+      "22/3",
+      "9",
+      "11"
+    ],
+    "baseline_boundary_checks": [
+      [
+        "0",
+        "1/5"
+      ],
+      [
+        "1",
+        "3/10"
+      ],
+      [
+        "4",
+        "9/10"
+      ],
+      [
+        "9",
+        "3/10"
+      ],
+      [
+        "10",
+        "1/5"
+      ]
+    ],
+    "alpha_one_twentieth_set": "All real numbers",
+    "homogeneous_validation": {
+      "tau": 4,
+      "reject_probability_at_one_fifth": "1/5",
+      "reject_probability_at_one_twentieth": "0"
+    },
+    "infinity_representation": "Use JSON null endpoints plus explicit unbounded flags, never Infinity/NaN. Open and closed endpoint flags must be retained.",
+    "no_grid": "Exact rational crossing points and both unbounded tails are required; a finite grid or arbitrary plotting range cannot certify the complete set."
+  },
+  "substantive_extensions": [
+    {
+      "id": "X1",
+      "title": "Access loss and an observed zero first stage",
+      "information_contract": "A separately defined prospective teaching world changes centre 2 worker 1 from complier to never-taker; all other potential primitives are unchanged. Its actual assignment is {1,2,4}. This is not a post hoc alteration of the baseline observed records.",
+      "transformation": {
+        "centre": 2,
+        "worker": 1,
+        "type_before": "C",
+        "type_after": "N",
+        "actual_encouraged_centres": [
+          1,
+          2,
+          4
+        ]
+      },
+      "truth": {
+        "encouragement_ATE": "3/2",
+        "first_stage": "5/12",
+        "complier_receipt_ATE": "18/5"
+      },
+      "observed": {
+        "change_ITT": "-8/3",
+        "first_stage": "0",
+        "Wald": null,
+        "Wald_status": "undefined_zero_first_stage"
+      },
+      "law": {
+        "zero_first_stage_assignments": 3,
+        "total_assignments": 20
+      },
+      "inversion_at_alpha_one_fifth": {
+        "intervals": [
+          {
+            "lower": null,
+            "upper": "1",
+            "lower_unbounded": true,
+            "upper_unbounded": false,
+            "lower_closed": false,
+            "upper_closed": true
+          },
+          {
+            "lower": "7",
+            "upper": null,
+            "lower_unbounded": false,
+            "upper_unbounded": true,
+            "lower_closed": true,
+            "upper_closed": false
+          }
+        ]
+      },
+      "breakpoints": [
+        "-9",
+        "-7",
+        "-5",
+        "1",
+        "7",
+        "9",
+        "11"
+      ],
+      "boundary_checks": [
+        [
+          "0",
+          "3/10"
+        ],
+        [
+          "1",
+          "3/10"
+        ],
+        [
+          "4",
+          "1/5"
+        ],
+        [
+          "7",
+          "2/5"
+        ],
+        [
+          "8",
+          "2/5"
+        ]
+      ],
+      "lesson": "A zero denominator does not imply zero effect. Do not discard the three undefined ratios and label the remaining average unconditional. A valid sharp-null inversion can be unbounded and disconnected, and it still does not become a heterogeneous-CACE confidence interval."
+    },
+    {
+      "id": "X2",
+      "title": "A direct invitation effect that the observed law cannot detect",
+      "declared_class": "For compliers only, add delta*z and subtract delta from the receipt coefficient, with one common delta in [-1,1]. Keep every baseline, type, untreated change and A/N law fixed.",
+      "observed_law": "Exactly the same data and complete assignment distribution for every admitted delta.",
+      "receipt_target": "4-delta",
+      "sharp_bound": [
+        "3",
+        "5"
+      ],
+      "attainability": "delta=1 attains 3; delta=-1 attains 5; delta=4-target attains every intermediate target while preserving observables.",
+      "unchanged_targets": {
+        "assignment_ATE": "2",
+        "first_stage": "1/2",
+        "ratio_of_assignment_effects": "4"
+      },
+      "scope": "The ratio 4 now combines receipt-mediated and direct invitation effects. These bounds hold for this declared complier-specific direct-effect class only; arbitrary exclusion violations require a different class and can give different bounds."
+    }
+  ],
+  "learner_package": {
+    "administration": "Open-resource individual research project. Supply deterministic original inputs and a benchmark implementation. Learner code must reproduce the tables from the observed records and separately label every oracle validation. An oral defence asks the learner to explain one null, one undefined estimate and one observational-equivalence witness.",
+    "deliverables": [
+      {
+        "id": "D1",
+        "name": "Reproduction package",
+        "content": "Readable code, data dictionary, immutable input provenance, commands/environment, deterministic outputs, discrepancy table matching each fictional published estimate, and a compact README. Explicitly identify the six assignment units and the two distinct orbit calculations."
+      },
+      {
+        "id": "D2",
+        "name": "Identification memo",
+        "content": "About 1,200–1,800 words: define each estimand, graph or verbal causal paths, consistency/no-interference/randomization/monotonicity/exclusion/support conditions, analyst versus oracle information, and the revised conclusion."
+      },
+      {
+        "id": "D3",
+        "name": "Specification and inference audit",
+        "content": "Compare change ITT, post-only ITT, centre ANCOVA, Wald and receipt OLS. Derive the finite variance identity, compute two exact sharp-null p-values, and explain finite coefficient/ratio bias, few-assignment resolution and absence of a generic normal or LATE interval claim."
+      },
+      {
+        "id": "D4",
+        "name": "Two extension reports",
+        "content": "Implement X1 with explicit undefined ratio and complete disconnected inversion, and prove X2 observational equivalence plus sharp [3,5] bounds with witnesses. State what each changes and what remains fixed."
+      },
+      {
+        "id": "D5",
+        "name": "Referee report and external-paper transfer dossier",
+        "content": "A concise referee report on the fictional brief, followed by the mandatory separate actual-paper audit described below. Neither report may represent synthetic arithmetic as empirical replication."
+      }
+    ],
+    "instructor_guide": "Provide complete P1–P7 derivations, every benchmark above, all extension endpoints and undefined-value conventions, corrected interpretations of the four flawed claims, accepted alternative implementations, scoring rationale and external-dossier evidence criteria."
+  },
+  "external_paper_transfer": {
+    "purpose": "Apply the audit discipline to one actual primary empirical paper; external replication is a learner action requiring actual access and execution, not a result preclaimed by this teaching package.",
+    "selection": "Choose an empirical primary paper with a clearly stated causal or descriptive target, readable primary methods/results and identifiable data/code provenance. Prefer lawfully accessible data/code and a bounded table suitable for available software; novelty or prestigious placement is not a validity criterion.",
+    "dossier_fields": [
+      "Canonical citation and primary-body URL, version/release and access dates, precise audited table/claim/page, and what was actually read.",
+      "Target population, treatment/exposure, estimand, sampling/assignment law, dependence unit, identifying assumptions, measurement choices and support limits.",
+      "Data and code owners, versions, hashes where obtained, lawful access/licensing restrictions, software and execution requirements; distinguish public metadata from acquired data.",
+      "A claim-to-input/code/exhibit map and discrepancy log; separate successful execution, matching output, identification validity and external validity.",
+      "Two feasible extensions: one identification/mechanism/sensitivity extension and one inference/measurement/support extension, each with required inputs, changed assumptions, estimand, diagnostic and a decision rule for interpreting results.",
+      "A referee report distinguishing major identification/inference/integrity issues from minor presentation issues and giving a conclusion justified by the inspected evidence."
+    ],
+    "execution_branch": "When the required data and compatible code/software are lawfully available, execute a bounded selected result and record commands, environment, exact inputs, output and discrepancies. Do not call output matching proof of causal validity.",
+    "access_limitation_branch": "If required data/software are unavailable or restricted, document the actual inspected access evidence and attempted permitted route, mark the selected reproduction not executed, and supply a concrete claim-to-input map and testable execution protocol. Do not obtain restricted data through workarounds, invent results, or imply that writing a protocol is empirical replication.",
+    "scoring_distinction": "The dossier's audit and integrity points may be earned with a well-evidenced access limitation. The completion record must still separately state external reproduction not performed; no numerical external replication credit or empirical achievement is invented.",
+    "illustrative_answer": "The fully solved Harbor Skills audit demonstrates the expected logic and documentation. It is an illustrative synthetic benchmark, not an answer key or fabricated outcome for an unspecified real paper."
+  },
+  "rubric": {
+    "total": 100,
+    "overall_threshold": 85,
+    "essential_domain_floor": 15,
+    "domains": [
+      {
+        "id": "R1",
+        "points": 20,
+        "name": "Data, provenance and reproducibility",
+        "allocation": [
+          [
+            "Keys, timing, units and dictionary",
+            4
+          ],
+          [
+            "Observed versus oracle separation and actual assignment law",
+            5
+          ],
+          [
+            "Reproduce all observed coefficients and tables",
+            7
+          ],
+          [
+            "Executable log, discrepancies and input/output integrity",
+            4
+          ]
+        ],
+        "full_credit": "Reproduce benchmark.observed from the twelve observed records; use the separate oracle only for the labelled full-assignment validation."
+      },
+      {
+        "id": "R2",
+        "points": 20,
+        "name": "Estimands and identification",
+        "allocation": [
+          [
+            "Explicit assignment, first-stage, receipt and descriptive targets",
+            6
+          ],
+          [
+            "Complete compliance identity and assumptions",
+            6
+          ],
+          [
+            "Finite estimator versus target and finite bias",
+            4
+          ],
+          [
+            "Corrected claims and conditional conclusion",
+            4
+          ]
+        ],
+        "full_credit": "Derive 2/(1/2)=4 while distinguishing 22/5 and 118/35, explain why receipt is not randomized, and state exclusion independently."
+      },
+      {
+        "id": "R3",
+        "points": 20,
+        "name": "Inference and alternative specifications",
+        "allocation": [
+          [
+            "Regressions and exact refitting",
+            5
+          ],
+          [
+            "Finite cluster variance derivation",
+            6
+          ],
+          [
+            "Separate teaching and sharp-null orbits",
+            5
+          ],
+          [
+            "Resolution, ties and confidence-scope limits",
+            4
+          ]
+        ],
+        "full_credit": "Obtain 37/9, 43/9, 79/36, p=1/5 and p=3/10; reject the individual iid and generic normal/LATE interpretations."
+      },
+      {
+        "id": "R4",
+        "points": 20,
+        "name": "Extensions and complete proof",
+        "allocation": [
+          [
+            "Weak-world truth and explicit undefined ratio",
+            5
+          ],
+          [
+            "Exact disconnected inversion including tails/endpoints",
+            5
+          ],
+          [
+            "Direct-effect observational equivalence",
+            6
+          ],
+          [
+            "Sharp endpoints, witnesses and scope",
+            4
+          ]
+        ],
+        "full_credit": "Return null with reason for the weak ratio; prove (-infinity,1] union [7,infinity) for the declared test and [3,5] for the direct-effect class."
+      },
+      {
+        "id": "R5",
+        "points": 20,
+        "name": "External-paper transfer and research judgment",
+        "allocation": [
+          [
+            "Selection, primary scope and access/provenance evidence",
+            4
+          ],
+          [
+            "Identification and inference audit",
+            5
+          ],
+          [
+            "Actual reproduction log or honestly bounded access-limitation protocol",
+            4
+          ],
+          [
+            "Two feasible extensions",
+            4
+          ],
+          [
+            "Concise referee report and accurate completion status",
+            3
+          ]
+        ],
+        "full_credit": "Evidence must match what the learner actually accessed and executed. An honest access-limitation dossier can satisfy audit criteria without being described as executed external replication."
+      }
+    ],
+    "critical_errors": [
+      "Treating random encouragement as random receipt or invoking exclusion without an assumption.",
+      "Treating twelve workers as twelve independently assigned units.",
+      "Calling a sharp adjusted-outcome inversion a generic heterogeneous LATE confidence interval.",
+      "Replacing, silently dropping or dividing by a zero first stage.",
+      "Using oracle potential outcomes inside the observed-data estimator or null reference without disclosure.",
+      "Replacing the exact assignment law by an unmentioned iid, bootstrap, asymptotic or simulation law.",
+      "Claiming access, execution, data rights, empirical replication or source inspection that did not occur.",
+      "Reporting only a favourable selected p-value while describing it as the prespecified primary test."
+    ],
+    "remediation": "Any unresolved critical error prevents mastery regardless of total points. Reproduce the failed mechanism, explain the corrected claim and complete a changed-assignment or changed-direct-effect oral transfer. The numeric thresholds are instructional choices, not institutional certification.",
+    "accepted_alternatives": "Exact integer/rational enumeration, closed-form identities or independently equivalent finite matrix algebra may earn full credit. Numerical methods must retain all assignments, inclusive ties, rank/undefined statuses and complete inversion endpoints; a graph or grid alone is insufficient."
+  },
+  "planned_runtime": {
+    "status": "Design only; final implementation and final input schema will be written only after coordinator authorization.",
+    "files": [
+      "content/assessments/parts/v12-project.html",
+      "content/projects/v12-assessment-inputs.json",
+      "content/projects/v12-assessment-analysis.py",
+      "content/projects/v12-assessment-output.json",
+      "content/projects/v12-assessment-manifest.json",
+      "content/projects/v12-assessment-README.txt",
+      "scripts/check_v12_project.py",
+      "content/reviews/v12-project-author.json",
+      "content/reviews/v12-project-sources.json"
+    ],
+    "domain": "A purposeful six-centre/two-worker laboratory for the supplied original population and the two declared transformations; permit the twenty valid observed assignments, alpha in {1/20,1/5}, and the declared delta in [-1,1]. A homogeneous-complier-effect validation is checker evidence for sharp-null truth, not another empirical feature. Do not expand into a general causal-inference engine.",
+    "calculations": "Exact fractions from bounded explicit inputs, small linear systems and deterministic enumeration. Maximum twenty assignments, twelve worker records and forty candidate inversion crossings; no Monte Carlo or external services.",
+    "outputs": "Compact observed estimates and statuses, labelled finite-law oracle moments, exact null probabilities, interval endpoints with inclusion/unbounded flags, extension results and interpretation. Avoid dumping redundant full worker histories for each assignment unless needed for a discrepancy.",
+    "validation": "Strict object/array schema, unique worker keys, valid class and binary fields, complete centre membership, assignment count, recorded-data/potential-law coherence, finite bounded numeric input, alpha/delta domains, rank and zero-denominator handling. Explicitly reject bool-as-number, NaN/Infinity, duplicate/unknown keys where applicable, malformed rational values and unsupported transformations.",
+    "numeric_contract": "Use exact rational serialization; a reduced-denominator bound, if used for decimal inputs, must be described as such rather than as a decimal-place bound.",
+    "API": "Quiet deterministic run(data), no input mutation, no filesystem/network/subprocess side effects. Strict JSON result with no nonfinite values. CLI has a quiet default neighbouring v12-assessment-output.json and explicit --input/--output options.",
+    "write_protection": "Before opening any output, reject direct, symlink or hardlink aliases of protected inputs, analysis, README and manifest; exercise actual filesystem aliases in focused tests.",
+    "evidence": "Independent checker reconstructs the finite population, simple contrasts, small regressions, finite variance identity, null-rank counts, crossing-point inversion and direct-effect witnesses without using author helpers as oracles. Focus on meaningful assignments, endpoints and domain failures.",
+    "final_gates": "Required normal and optimized portable API/CLI checks, protected-output cases and strict JSON. Bind four payloads in manifest and eight nonself files in the author record; independent peer and root acceptance remain separate.",
+    "preservation": "No current Form A, C11, canonical/shared, hosting or other frozen payload is edited by this blueprint task."
+  },
+  "curricular_connections": {
+    "substantive": [
+      "v12-c01: estimands, identification and finite versus asymptotic claims",
+      "v12-c02: OLS/FWL and dependence-appropriate uncertainty",
+      "v12-c03: compliance, exclusion, weak relevance and ratio limitations",
+      "v12-c05: before/after records without automatic within-unit identification",
+      "v12-c06: complete randomization, finite inference and sharp nulls",
+      "v12-c07: changes as outcomes do not themselves justify observational parallel trends",
+      "v12-c11: learned adjustment would still need assignment-effect identification and honest inference; it is not needed for this small exact design",
+      "v12-c12: specification discipline, reproducibility, source/access scope and referee judgment"
+    ],
+    "deliberate_omissions": "No forced likelihood, RD, synthetic-control, persistent-time-series, structural-equilibrium or machine-learning estimator. These methods remain taught in their chapters; their inclusion would not improve this particular six-centre experiment."
+  },
+  "reused_sources": [
+    {
+      "id": "v12-c03-imbens-angrist1994",
+      "record": "content/reviews/v12-c03-sources.json",
+      "bytes": 10219,
+      "sha256": "ed46fe4af4920a7c831c974942d56568bc44ce42bde9873db3d353e22218d837",
+      "actual_prior_inspector": "c05_review",
+      "inspected_scope": "Physical pages 1–9 / printed 467–475, including Conditions 1–3, Theorem 1 and proof, Theorems 2–3 and appendix proofs. Prior preparation records all nine image pages read.",
+      "use": "Binary compliance identity and the distinction between assignment randomization and exclusion. The finite population, numerical examples and proofs here are original.",
+      "limits": "No automatic ATE, treatment-on-treated, transport or finite-unbiased ratio claim; no fresh primary-body retrieval for this project."
+    },
+    {
+      "id": "v12-c06-ding-experiments",
+      "record": "content/reviews/v12-c06-sources.json",
+      "bytes": 13255,
+      "sha256": "198d3ea06a366a1144d98b06cf3529887a2e8e01bb13fac60c52b3a544521f3a",
+      "actual_prior_inspector": "root",
+      "inspected_scope": "arXiv 2305.18793v2 (3 October 2023), text physical pages 69–75, 92, 156–157 and actual equation images 70, 73, 74, 92; printed offset physical minus 26. The record separately reuses accepted v05-c12 sharp-null rank pages 51–55 / printed 25–29.",
+      "use": "Complete-randomization covariance/variance, expected Neyman estimate and exact-rank context; separately derive the project's finite identities.",
+      "limits": "No inherited proof of a finite-population CLT or exact normal coverage; conservative expectation is not a realized bound. No new whole-source reading."
+    },
+    {
+      "id": "asa-pvalues-2016",
+      "record": "production/v12-c12-source-preparation.json",
+      "bytes": 41024,
+      "sha256": "a356a508ad46a7cbcaebdfa5286e87048d91898b243a50818df1247493e2c593",
+      "actual_prior_inspector": "Historical primary-body inspector is not named in the retained catalogue. ito_author read the catalogue/provenance record during C12 source preparation.",
+      "inspected_scope": "Prior 7 October 2026 record describes a six-page paper and principles/reporting sections; no precise physical/printed page mapping was retained.",
+      "use": "A p-value is conditional on a specified model and is not a posterior probability of the null; threshold crossing does not establish importance.",
+      "limits": "Reuse only that recorded scope. No new ASA primary-body reading, page-specific quote or endorsement."
+    },
+    {
+      "id": "v04-c01-aea-data-faq",
+      "record": "production/v12-c12-source-preparation.json",
+      "bytes": 41024,
+      "sha256": "a356a508ad46a7cbcaebdfa5286e87048d91898b243a50818df1247493e2c593",
+      "actual_prior_inspector": "ito_author, during the earlier C12 source-only task",
+      "inspected_scope": "Official FAQ licensing/checking/upload/execution/restricted-access sections and February 2026 policy data/code/README/archive/version sections, actually read on 9 October 2026. Retained normalized text locators and exact HTML/text hashes are in the reused record.",
+      "use": "Dated context for provenance, reproducible execution, access restrictions and honest completion records.",
+      "limits": "Journal policy/guidance is not general law, legal permission or certification. No AEA submission or review, and no fresh retrieval for this project."
+    }
+  ],
+  "validation": {
+    "scope": "All printed numerical anchors above were calculated before freezing the proposal.",
+    "method": "Exact rational primitive reconstruction; finite expectations and innovation-free complete assignment laws. Inversion exhausts all rational crossing points/open cells. No simulation, external dataset or source numerical oracle.",
+    "exact_checks": 128,
+    "categories": [
+      "ANCOVA FWL route",
+      "Neyman expectation gap",
+      "actual law and variance-estimator anchors",
+      "actual sharp-null size",
+      "baseline accepted-cell extent",
+      "baseline inclusive inversion breakpoints",
+      "baseline ratio denominator support",
+      "direct-effect observational equivalence",
+      "finite variance formula and expectation",
+      "full randomization expectations",
+      "observed specification anchors",
+      "receipt target under direct-effect class",
+      "two-sided finite resolution",
+      "weak inclusive inversion breakpoints",
+      "weak-world true targets",
+      "zero observed first stage"
+    ],
+    "independent_routes": [
+      "Direct complete-assignment sums versus covariance variance formula",
+      "OLS normal equations versus FWL",
+      "Complete rational crossing cells plus inclusive breakpoint/tail checks",
+      "Direct-effect algebra plus all 12 workers at both assignments for delta=-1,0,1",
+      "Homogeneous-effect truth population to check actual sharp-null rejection size"
+    ],
+    "no_claim": "This author calculation is not independent peer acceptance or an external empirical replication.",
+    "final_integrity_gate": "Parse strict JSON, verify all three reused record hashes, compare embedded anchors to the retained exact calculation results, verify rubric totals and domain floors, and report the single owned file's bytes/SHA256.",
+    "final_integrity": {
+      "strict_JSON": true,
+      "verified_distinct_source_records": 3,
+      "verified_embedded_anchor_groups": 23,
+      "exact_calculation_checks_rerun": 128,
+      "rubric_total": 100,
+      "domain_count": 5,
+      "essential_domain_floor": 15,
+      "result": "passed; proposal only, not final project acceptance"
+    }
+  },
+  "unresolved_limits": [
+    "The external empirical paper is selected and audited by the learner; no actual external reproduction has been executed or fabricated in this proposal.",
+    "The supplied baseline population violates every scalar common-complier-effect sharp null, so the toy inversion cannot be sold as a confidence set for its heterogeneous CACE.",
+    "Six clusters and twenty assignments impose coarse exact inference; no superpopulation or general large-sample result is derived.",
+    "The direct-effect identified set is conditional on the specified one-parameter complier-specific class, not on unrestricted exclusion failure.",
+    "Final project authoring, implementation, portable gates and separate review await coordinator authorization."
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "chapter": "v13-c01",
+  "date": "2026-10-09",
+  "status": "Scoped source proposals for working author package; coordinator owns canonical merge",
+  "author": "c05_review",
+  "evidence": [
+    {
+      "path": "production/v13-c01-source-preparation.json",
+      "bytes": 45177,
+      "sha256": "0978f7ea0dc5dbc222c9055aab990766020640e988458db2fc1cfabb75c37994",
+      "runtime_dependency": false
+    },
+    {
+      "path": "production/v13-c01-source-root-reading.json",
+      "bytes": 6048,
+      "sha256": "10d7504f9e5367f03fbd319ef32705f0a8e24074e1b923c11213117592c23ef9",
+      "runtime_dependency": false
+    },
+    {
+      "path": "production/v13-c01-blueprint-root.json",
+      "bytes": 30816,
+      "sha256": "1aae2c223d0ff9eb773923cb9681398cb0432cdb06be44655a675befdf1eadfc",
+      "runtime_dependency": false
+    }
+  ],
+  "attribution": {
+    "primary_source_preparation": "ito_author",
+    "root_role": "Full preparation reading and 18 artifact integrity checks; no new body/image claim",
+    "chapter_author_role": "Full preparation, blueprint and root-reading review; original proof/case reconstruction; no new primary fetch or image view",
+    "new_body_count_in_preparation": 2,
+    "prior_only_source_count": 1,
+    "substantive_pages_inspected_in_preparation": 31,
+    "metadata_pages_inspected_in_preparation": 3,
+    "equation_images_inspected_in_preparation": 9
+  },
+  "proposals": [
+    {
+      "id": "v05-c01-mit-preferences",
+      "disposition": "Reuse the existing canonical source ID; the current source preparation extends its actual inspected scope without editing the catalogue.",
+      "title": "Alexander Wolitzky, MIT 14.121: Lectures 1–2, Choice, Preference, and Utility (2015)",
+      "url": "https://ocw.mit.edu/courses/14-121-microeconomic-theory-i-fall-2015/b89cf6eb8d2118d015d4e41278ede14a_MIT14_121F15_1S.pdf",
+      "use": "Complete choice correspondence WARP on a rich domain, finite ordinal representation, lexicographic obstruction, closed-graph and monotonicity/shape definitions; original sufficient orthant proof is explicitly narrower than a general continuous-representation theorem.",
+      "checked": "2026-10-09",
+      "verification": "Actual scoped primary text and selected equation images inspected by ito_author in the frozen source preparation. Root read that full record and verified all 18 artifacts. Chapter author c05_review read the full source-preparation and root-reading records, but makes no fresh PDF/image inspection claim. Only the listed substantive page scopes support this chapter.",
+      "publication_version": "MIT 14.121, Fall 2015, Lectures 1-2. The final OCW page explicitly identifies Fall 2015; the PDF metadata creation date is 14 September 2015 and modification date 29 April 2016. HTTP last-modified 2026 is server metadata, not a new lecture edition.",
+      "artifact": {
+        "path": "../tmp/pdfs/v13-c01/mit-preferences2015.pdf",
+        "bytes": 877280,
+        "sha256": "8e01cabb7a5853c627f3af5ab1064325a487538ed650440ee7b11a4826bb6bf6"
+      },
+      "inspection": {
+        "actual_primary_inspector": "ito_author",
+        "chapter_author_role": "Preparation and root evidence reader; original theorem/case author",
+        "read_physical_pages": [
+          1,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          33
+        ],
+        "metadata_only_pages": [
+          1,
+          33
+        ],
+        "substantive_pages": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ],
+        "images_actually_viewed_by_inspector": [
+          {
+            "physical_page": 11,
+            "printed_page": 11
+          },
+          {
+            "physical_page": 13,
+            "printed_page": 13
+          },
+          {
+            "physical_page": 16,
+            "printed_page": 16
+          },
+          {
+            "physical_page": 17,
+            "printed_page": 17
+          }
+        ],
+        "mapping": "Physical pages 1-32 carry the same numbered lecture slides; physical page 33 is the unnumbered OCW course/terms footer."
+      },
+      "supported_scopes": [
+        {
+          "pages": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "topic": "Choice data, nonempty feasible correspondences, complete/transitive preferences, exact maximal-set rationalization, direct weak/strict revelation, correspondence WARP and the all-pairs/all-triples theorem."
+        },
+        {
+          "pages": [
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "topic": "Ordinal representation, strictly increasing transformations, finite weak orders, lexicographic nonrepresentability, sequential closed-graph continuity and a representation existence statement."
+        },
+        {
+          "pages": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28
+          ],
+          "topic": "Regularity definitions and distinctions: weak/strict coordinate monotonicity, local nonsatiation, convex/strictly convex preferences, convex maximal sets, and quasiconcavity rather than concavity."
+        }
+      ],
+      "cautions": [
+        "The text extractor renders the weak preference symbol as t and sometimes loses the nonmembership stroke in WARP. The actual images of slides 11 and 13 confirm the quantifiers and nonmembership condition.",
+        "The short summary on slide 18 does not repeat the menu-richness assumption. The eventual chapter must carry the full slide-13 hypothesis, not repeat the summary as a theorem on arbitrary observed menus.",
+        "The slide-17 result must not be described as a supplied constructive proof of a continuous utility representation. The proposed orthant/strict-monotonicity route below is an original sufficient construction with stronger stated assumptions.",
+        "Convex preferences imply quasiconcavity of a representing utility. Concavity of a particular ordinal representation is a stronger property and is not invariant under every increasing transformation.",
+        "The lecture theorem statements are source support, not evidence that the planned chapter has already supplied their proofs. Separability on slides 29-32 was excluded."
+      ],
+      "excluded": "MIT slides 2–5 and 29–32 excluded; no general arbitrary-Euclidean continuous-utility theorem proved from slide 17."
+    },
+    {
+      "id": "v13-c01-varian-demand1982",
+      "disposition": "New proposal only; coordinator owns any eventual canonical source entry.",
+      "title": "Hal R. Varian, The Nonparametric Approach to Demand Analysis, Econometrica 50(4), 945-973 (July 1982)",
+      "url": "https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/c/13885/files/2014/07/Varian1982_Nonparametric-Approach-to-Demand-Analysis.pdf",
+      "use": "Finite selected-budget rationalization, GARP, local-nonsatiation necessity, positive constructive Afriat induction and affine-envelope sufficiency, with independently proved indices and signs.",
+      "checked": "2026-10-09",
+      "verification": "Actual scoped primary text and selected equation images inspected by ito_author in the frozen source preparation. Root read that full record and verified all 18 artifacts. Chapter author c05_review read the full source-preparation and root-reading records, but makes no fresh PDF/image inspection claim. Only the listed substantive page scopes support this chapter.",
+      "publication_version": "Original 1982 journal article reproduced in a public university-hosted PDF. The JSTOR cover identifies July 1982, volume 50, number 4 and pages 945-973. The PDF creation date 27 February 2008 is an archive-generation date, not publication. The 2014 URL path and 2016 HTTP last-modified are host provenance, not article versions.",
+      "artifact": {
+        "path": "../tmp/pdfs/v13-c01/varian-demand1982.pdf",
+        "bytes": 624836,
+        "sha256": "bb9a4f743546f913205a0d259502202950daf68d35a02e792c12fca388eb6124"
+      },
+      "inspection": {
+        "actual_primary_inspector": "ito_author",
+        "chapter_author_role": "Preparation and root evidence reader; original theorem/case author",
+        "read_physical_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          25,
+          26,
+          27
+        ],
+        "metadata_only_pages": [
+          1
+        ],
+        "substantive_pages": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          25,
+          26,
+          27
+        ],
+        "images_actually_viewed_by_inspector": [
+          {
+            "physical_page": 3,
+            "printed_page": 946
+          },
+          {
+            "physical_page": 4,
+            "printed_page": 947
+          },
+          {
+            "physical_page": 25,
+            "printed_page": 968
+          },
+          {
+            "physical_page": 26,
+            "printed_page": 969
+          },
+          {
+            "physical_page": 27,
+            "printed_page": 970
+          }
+        ],
+        "mapping": "Physical page 1 is the JSTOR bibliographic/copyright cover. Physical pages 2-30 correspond to printed journal pages 945-973 by printed=physical+943. Physical pages 31-34 are later linked-citation pages, not the original article body."
+      },
+      "supported_scopes": [
+        {
+          "physical_pages": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "printed_pages": [
+            945,
+            946,
+            947,
+            948,
+            949
+          ],
+          "topic": "Finite observed budgets; rationalization as optimality of each selected bundle; trivial constant-utility warning; cyclical consistency/GARP and SARP distinctions; transitive-closure test and the beginning of the recoverability motivation."
+        },
+        {
+          "physical_pages": [
+            25,
+            26,
+            27
+          ],
+          "printed_pages": [
+            968,
+            969,
+            970
+          ],
+          "topic": "Appendix I: finite reflexive/transitive maximal-element procedure, constructive Afriat numbers, the three induction cases, local-nonsatiation necessity, lower-envelope utility and budget optimality. Page 970 also contains an explicitly heuristic differentiable interpretation and the heading/introduction of Appendix II."
+        }
+      ],
+      "cautions": [
+        "The extraction confuses lambda with X and the weak inequalities with digits, and can reverse superscripts. Images of printed pages 946-947 and 968-970 were inspected to fix the actual quantifiers and indices.",
+        "Printed page 970 first displayed evaluation of U(x^i) uses the reversed difference x^m-x^i in the affine term. The envelope defined on page 969 instead evaluates U_m+lambda_m*p^m dot (x^i-x^m). Avoid copying the problematic line: the Afriat inequalities give each affine term at x^i at least U_i, while the self-index term equals U_i, proving equality directly.",
+        "Printed page 968 Algorithm 3 has step-5 denominator p^i dot (x^j-x^i), not the reverse. Its positivity requires the previously selected classes and maximality argument; it is not a generic assumption that all cross-expenditure differences are positive.",
+        "The source theorem says nonsatiated, but its necessity argument explicitly uses local nonsatiation to improve a strictly interior affordable comparison. Preserve the local condition instead of weakening it through shorthand.",
+        "The page-946 informal description of a nonnegative linear system must not be implemented with only lambda>=0: the all-zero solution would accept arbitrary data. Strict multipliers can be normalized to lambda_t>=1 by a common positive rescaling in a finite dataset; utility levels remain freely shiftable.",
+        "The differentiable heuristic on page 970 writes Du(x^j)=lambda_j*p^j. On R_+^L this needs interior choices or suitable additional conditions; at a corner there are nonnegativity multipliers. The actual finite Afriat construction does not require or use this heuristic.",
+        "Passing GARP establishes existence of a regular rationalizer under these budgets. It neither identifies the true utility nor establishes that all observationally equivalent true preferences are concave. The source SARP discussion must not be interpreted as proving empirical global uniqueness of an unobserved demand correspondence."
+      ],
+      "excluded": "Afriat 1967 itself, the other cited proofs, Appendix II beyond its introductory paragraph, empirical tables, recoverability/welfare bounds and later cited literature were not read. Cite Varian for the actually inspected exposition; do not present its bibliography as additional verified bodies."
+    },
+    {
+      "id": "v05-c01-bergstrom-revealed",
+      "title": "Ted Bergstrom, UCSB Economics 210A: Notes on Revealed Preference (17 November 2016)",
+      "url": "https://faculty.econ.ucsb.edu/~tedb/Courses/GraduateTheoryUCSB/RevealedPrefeenceNotes.pdf",
+      "use": "Author-hosted primary notes on conventional budget WARP, the problem of tied choices, strict affordability under local nonsatiation and longer revealed-preference chains.",
+      "checked": "2026-10-07",
+      "verification": "Retrieved and read the actual three-page PDF text. Page1 gives the traditional no-reversal condition; page2 explicitly discusses ties and defines strict direct revealed preference using strict affordability; page3 distinguishes the pairwise tie-permitting condition from longer-chain restrictions. The manuscript states both conventions through precise inequalities and proves its necessary implications independently. It does not repeat the note's apparent final-clause typo in the strict-affordability explanation, copy its referenced workbook exercise, or invoke its broad finite-data rationalization claim as an unproved chapter theorem. A screenshot fetch of this PDF later returned a cache miss; the full text retrieval was successful and is the basis of the scoped source inspection.",
+      "disposition": "Honest prior-record reuse only; no new HTTP retrieval, PDF text reading or image viewing in this task.",
+      "inspection": {
+        "actual_primary_inspector": "Prior catalogue review on 2026-10-07; no new body inspection by this team member",
+        "chapter_author_role": "Prior-record reuse only",
+        "prior_text_pages": [
+          1,
+          2,
+          3
+        ],
+        "new_images": []
+      },
+      "supported_scope": "The already verified distinction between selected tied choices, strict affordability under local nonsatiation and longer revealed chains. It supplies no newly inspected Afriat proof here.",
+      "cautions": [
+        "The prior review reports a screenshot cache miss after successful three-page text reading and an apparent typo in the strict-affordability explanation. That limitation is retained; no new image success is claimed."
+      ]
+    }
+  ],
+  "proof_limits": [
+    "The closed-graph representation result proved here additionally assumes the entire finite-dimensional nonnegative orthant and strict coordinate monotonicity.",
+    "Exact full menu choices and selected budget observations are different observation contracts; only the former makes exclusions strict information.",
+    "Finite positive prices and local nonsatiation are retained in the budget theorem; all multipliers are strictly positive.",
+    "The envelope is derived directly with x^s-x^t; no corner-invalid derivative identity or apparently reversed source display is inherited.",
+    "Finite GARP establishes existence, not uniqueness, identification, measurement validity or statistical confidence.",
+    "No Afriat 1967 body, statistical revealed-preference extension, empirical application, source problem copying or distribution of source PDFs is claimed."
+  ],
+  "runtime": "This JSON is self-contained metadata. The checker reads its contents only and never accesses the referenced preparation or scratch artifacts."
+}

@@ -1,0 +1,593 @@
+{
+  "chapter": "v12-c11",
+  "author": "c05_review",
+  "date": "2026-10-09",
+  "assignment": "production/v12-c11-author-assignment.json",
+  "status": "Full working author package complete and frozen for separate peer and coordinator review; no unresolved author findings.",
+  "owned_paths": [
+    "production/v12-c11-working.html",
+    "production/check_v12_c11_working.py",
+    "production/v12-c11-sources-working.json",
+    "production/v12-c11-author-review-working.json"
+  ],
+  "canonical_status": "Working author package only. Coordinator promotion, separate peer review, dependency-ordered acceptance and publication remain pending.",
+  "architecture": {
+    "worked_cases": 6,
+    "exact_exercises": 12,
+    "full_solutions": 12,
+    "research_audit_points": 12,
+    "displayed_calculation_markers": 79,
+    "method_distinctions": [
+      "posterior uncertainty",
+      "Monte Carlo error and initialization",
+      "regularization bias and identification",
+      "causal identifying restrictions",
+      "nuisance estimation and inference-scale remainder",
+      "family-level multiplicity"
+    ],
+    "successor": "v12-c12 Econometric research audit"
+  },
+  "first_gate": {
+    "author_independent_comparisons": 349,
+    "result": "All original root contracts matched; no numerical discrepancy.",
+    "coordinator_record": "production/v12-c11-author-confirmation.json",
+    "exercise_transfer_record": "production/v12-c11-exercise-transfer-confirmation.json",
+    "approved_refinements": [
+      "All lasso coefficients including constant column penalized.",
+      "Fold assignment fixed in advance or randomized independently of records.",
+      "Condition separately on each training fold and use conditional variance inequalities plus bounded probability arguments; do not condition jointly on all fits.",
+      "Prove both directions of zeroed-p BH identity including ties.",
+      "Weighted duplicate transfer explicitly uses weights (1,2) and lambda=1/2."
+    ]
+  },
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "proof_audit": [
+    {
+      "id": "finite-bayes-and-loss",
+      "claim": "Finite posterior, predictive dependence and Bayes action",
+      "argument": "Normalize prior times likelihood only when the marginal is positive. Conditional binary future records are integrated over the posterior; their joint success probability is the second parameter moment and covariance is posterior parameter variance. Explicit utility 3 for the high state and -2 otherwise yields threshold 2/5. The alternative proper prior changes the action.",
+      "hypotheses": "Proper finite prior, likelihood for the specified ordered three-success/one-failure record, conditional iid future Bernoulli draws and the stated utility.",
+      "limits": "Conditional posterior probability is not a frequentist coverage or causal identification theorem."
+    },
+    {
+      "id": "mh-invariance-and-convergence",
+      "claim": "Finite Hastings flow, invariance, minorization, TV convergence and stationary uniqueness",
+      "argument": "Off-diagonal accepted flows equal the minimum of forward/reverse target-proposal flows, including zero reverse support. Diagonals retain rejected/self proposals. Summing balance yields invariance. P=delta Pi+(1-delta)R with R stochastic gives TV contraction by the triangle inequality; comparison with the invariant target yields uniqueness and convergence. Delta=1 is the iid-target case.",
+      "hypotheses": "Finite positive target, stochastic proposal, explicit acceptance and 0<delta<=1 minorization for the convergence claim.",
+      "limits": "Invariance alone permits a periodic example; no generic state-space ergodic or CLT theorem is claimed."
+    },
+    {
+      "id": "stationary-precision-versus-initialization",
+      "claim": "Exact covariance law, average variance and L2 law for the selected observable; separate low-start mean",
+      "argument": "The centered high-state indicator is an eigenfunction with lambda=50/81. Iterated conditional expectations under stationarity give gamma_k=gamma_0 lambda^k. Expanding the sum counts n-k covariance pairs, yielding exact n=4 variance. Geometric domination bounds n times the variance and controls its tail for the limit. Low-start means instead follow the initial eigenfunction value and are checked by state-law multiplication; that initial run does not inherit stationary finite covariance.",
+      "hypotheses": "Stationary initialization for covariance/variance; separately stipulated low initialization for its bias; 0<lambda<1 for the nonnegative geometric bound used.",
+      "limits": "No Markov-chain CLT, arbitrary effective sample-size formula or estimated long-run variance consistency is proved."
+    },
+    {
+      "id": "lasso-existence-kkt-and-fit",
+      "claim": "Attainment, necessary and sufficient KKT, orthogonal soft threshold and fit uniqueness",
+      "argument": "Positive lambda makes sublevel sets compact through the l1 norm. Nonzero coordinate derivatives and both one-sided zero-coordinate derivatives give the exact score conditions. A chosen l1 subgradient plus convexity proves sufficiency. Orthonormal Gram completes squares and separates scalar minimizations. Strict convexity in fitted values and convexity of the penalty rule out two distinct optimal fits by a midpoint argument.",
+      "hypotheses": "Fixed finite X,y, loss ||y-Xb||^2/(2n)+lambda||b||1, lambda>0 and every coefficient penalized, including the constant column.",
+      "limits": "Coefficient uniqueness requires more than fit uniqueness; the orthogonal numerical solver is not applied to general X."
+    },
+    {
+      "id": "lasso-cone-curvature-and-noise",
+      "claim": "Sparse event-conditional bounds with explicit constants and separate Gaussian event probability",
+      "argument": "Comparing to the exact-sparse reference and cancelling the noise square yields the basic inequality. Dual Holder with score norm <=lambda/2 and support decomposition gives prediction/(2n)+(lambda/2)||Delta_Sc||1 <=(3lambda/2)||Delta_S||1. This implies the cone. The stated full-vector unsquared curvature supplies kappa^2||Delta||2^2 <=3lambda sqrt(s)||Delta||2; zero error is handled separately. Substitution and the cone give coefficient l2, prediction and l1 bounds. Gaussian mgf/Chernoff gives each score tail and a union bound gives the tuning value without score independence.",
+      "hypotheses": "Exact support s>=1, noise event, and ||Xv||/sqrt(n)>=kappa||v||2 for every cone vector, kappa>0. The separate probability result assumes fixed column norms <=sqrt(n), iid Gaussian errors with positive variance.",
+      "limits": "No support-only norm substitution, arbitrary random-design curvature, support recovery, adaptive-lambda theorem or post-selection inference. Source display constants were not copied."
+    },
+    {
+      "id": "duplicate-column-identification",
+      "claim": "Entire unweighted minimizer set and weighted unique selection",
+      "argument": "Set t=b1+b2 and use |b1|+|b2|>=|t|. The reduced strict convex scalar optimum t=3/2 is attained only by nonnegative splits. The cone contains the null direction (a,-a), refuting positive full-vector curvature. With exact weights (1,2), |b1|+2|b2|>=|t|+|b2| makes the reduced lower bound attainable only with b2=0.",
+      "hypotheses": "n=1, X=(1,1), y=2, lambda=1/2; weights (1,2) only in the transfer.",
+      "limits": "Penalty asymmetry selects coefficients without supplying new data identification."
+    },
+    {
+      "id": "ate-remainder-and-orthogonality",
+      "claim": "Causal ATE identity, exact double-robust remainder and product norm bound",
+      "argument": "Consistency/exchangeability/overlap identify m_d. Condition on X and collect regression errors to obtain (e-e0){(g1-m1)/e+(g0-m0)/(1-e)}. Correct propensity or both correct regressions suffice for zero mean bias; a both-wrong cancellation shows necessity does not follow. Bounded paths preserving overlap make the remainder second order, and Cauchy-Schwarz gives its L2 product bound. The oracle variance decomposes into conditional-effect variance plus conditional residual variance, with cross terms zero.",
+      "hypotheses": "Specified potential-outcome iid construction, no interference, conditional independence of treatment, positivity; candidate propensity clipped away from endpoints for norm control.",
+      "limits": "Predictive accuracy does not establish these identifying restrictions. One correct nuisance alone does not force the joint-truth influence variance."
+    },
+    {
+      "id": "fixed-fold-expansion",
+      "claim": "Bounded iid cross-fitted ATE root-N expansion",
+      "argument": "Condition separately on one outside training sample and the independently chosen/fixed partition. Score-difference expansion bounds its L2 norm by b/c+2Ba/c^2. Exact mean is at most ab/c=o_p(N^-1/2). Conditional variance of the held-out mean is at most Pr^2/n_k. Conditional Chebyshev truncated at one tends to zero in probability; bounded splitting shows its expectation tends to zero, establishing unconditional negligible centered error. Repeat for fixed K and sum weighted errors without assuming fit independence. Apply only the inherited iid CLT to the oracle sum.",
+      "hypotheses": "Fixed K>=2, n_k/N to positive fractions below one, all fitting/tuning/preprocessing outside the fold, bounded outcomes/regressions, true/fitted overlap, foldwise L2 consistency, sqrt(N)ab=o_p(1), positive finite oracle variance.",
+      "limits": "No joint conditional iid assertion given all fits; no generic DML theorem, data-adaptive fold guarantee, growing-fold or dependent-data result."
+    },
+    {
+      "id": "crossfit-variance",
+      "claim": "Consistency of pooled score variance and studentization",
+      "argument": "Conditional Markov and the same bounded conditional-probability argument imply empirical squared score differences tend to zero foldwise and hence after fixed-K pooling. Cauchy-Schwarz bounds the difference of score second moments, using bounded actual/fitted scores. Oracle square LLN and estimate consistency yield Vhat to V. Positive V and Slutsky justify standard error sqrt(Vhat/N).",
+      "hypotheses": "Exactly the bounded fixed-fold theorem conditions and iid oracle law.",
+      "limits": "Asymptotic normal inference is not exact finite-table coverage or semiparametric efficiency."
+    },
+    {
+      "id": "cell-rates-quarter-boundary-and-leakage",
+      "claim": "Actual finite-cell learner rates; insufficient quarter-rate sequence; conditional-population L2 leakage counterexample",
+      "argument": "Each cell has mass >=1/8. Bounded cell numerator/denominator averages have root-n errors by Chebyshev; denominator is bounded below with probability tending to one. Centered ratio numerator yields root-n cell means, with exponentially unlikely empty-cell exceptions. Laplace terms are O(1/n), clipping is nonexpansive relative to truth, finite cells and fixed folds give the required product rate. The explicit joint-truth perturbation has scaled bias tending to 1/3 despite both O(N^-1/4) rates. A continuous independent identifier assigns zero fresh-population mass to finite training overwrites while own-row scoring collapses to zero.",
+      "hypotheses": "The specific bounded finite law and learner, training sample sizes proportional to N, independent continuous identifiers for the leakage construction.",
+      "limits": "No arbitrary learner rate or finite-sample coverage assertion; the quarter-rate example deliberately uses true nuisance functions to demonstrate a theoretical boundary."
+    },
+    {
+      "id": "bh-step-up-and-leave-one-out",
+      "claim": "Exact rejection count with ties and independent super-uniform FDR bound",
+      "argument": "Largest passing rank implies exactly R values at the inclusive threshold. Zeroing p_i cannot reduce R. If i was rejected, ranks above R are unchanged, so R_i=R. Conversely if p_i<=qR_i/m, restoring it leaves at least R_i passing values, giving R>=R_i and equality. The indicator identity follows. Condition on the full other-p vector; independence plus super-uniformity bounds each true-null contribution by q/m. Sum over true nulls.",
+      "hypotheses": "Fixed family and q in (0,1); each true-null p-value is independent of the entire vector of all other p-values and is super-uniform. False-null values may depend among themselves.",
+      "limits": "The proof extends to discrete valid nulls independently of the original source uniform-order-statistics argument. It gives no arbitrary-dependence control."
+    },
+    {
+      "id": "multiplicity-interpretation-and-dependent-law",
+      "claim": "FDR, FWER and count-ratio distinction; exact dependence failure",
+      "argument": "Complete 144-state law counts all R values and computes expected FDP directly. Each discrete null CDF is floor(12u)/12. In the four-state complete-null transfer, each marginal CDF meets super-uniformity at all jumps and between them, but BH rejects in three states with total mass 3/20. Bonferroni/Holm reject in two states with mass 1/10. Under a complete null a nonempty list always has FDP one.",
+      "hypotheses": "The two separate fully specified finite joint laws, inclusive thresholds and FDP denominator max(R,1).",
+      "limits": "Neither a controlled unconditional FDR nor marginal p-value validity controls every realized list; no uninspected dependence-extension theorem is claimed."
+    }
+  ],
+  "worked_case_audit": [
+    {
+      "case": 1,
+      "scope": "Finite Bayes and decision",
+      "method": "Exact likelihood/prior products, explicit enumeration of two future binary outcomes, posterior moment variance and alternative-prior action.",
+      "anchors": [
+        "posterior (3/62,16/31,27/62)",
+        "predictive (91/496,109/248,187/496)",
+        "future covariance 321/15376",
+        "utilities 11/62 and -143/139"
+      ],
+      "result": "All printed markers and the ordered/count-likelihood distinction reconcile."
+    },
+    {
+      "case": 2,
+      "scope": "Finite Markov computation",
+      "method": "Accepted flow construction, stochastic residual, matrix-power covariance, 81 stationary paths, independent low-start law propagation and separate initialized path moments.",
+      "anchors": [
+        "delta 31/81",
+        "wrong invariant (9/100,16/25,27/100)",
+        "stationary mean variance 11274515/75661452",
+        "low-start bias -29674775/197696052"
+      ],
+      "result": "Target, convergence, dependence and initialization are treated as different claims."
+    },
+    {
+      "case": 3,
+      "scope": "Lasso criterion and conditional bounds",
+      "method": "Full Gram, normal score, scalar minimization, residual/KKT/objective, exact noise/cone witnesses; duplicate reduced scalar criterion and Gaussian mgf substitution.",
+      "anchors": [
+        "estimate (13/8,0,-3/8)",
+        "objective 161/128",
+        "squared error 17/32",
+        "duplicate fit 3/2, objective 7/8"
+      ],
+      "result": "The constant column is penalized, all constants follow the declared 2n scaling and full-vector curvature."
+    },
+    {
+      "case": 4,
+      "scope": "Finite potential-outcome and observed law",
+      "method": "Enumerate both potential noises and treatment, integrate unused noise into eight atoms; compute AIPW means and oracle variance independently of the printed factorization.",
+      "anchors": [
+        "four means (5/2,5/2,5/2,11/4)",
+        "oracle variance 67/12",
+        "oracle mean variance at N=400: 67/4800"
+      ],
+      "result": "Identification assumptions are explicitly supplied by the synthetic law, not inferred from fit."
+    },
+    {
+      "case": 5,
+      "scope": "Actual held-out learner, rates and leakage",
+      "method": "Fit each training fold by cell means/smoothed propensity, score held-out rows, recompute variance; atom-sum quarter-rate bias, sparse-cell/active-clip boundaries and own-identifier score evaluation.",
+      "anchors": [
+        "scores (4,4,5,5,0,0,1,1)",
+        "mean 5/2, mean variance estimate 17/32",
+        "N=256 bias 17/900, scaled 68/225",
+        "own-row leakage scores all zero"
+      ],
+      "result": "Finite demonstration, proved population learner rates and asymptotic theorem remain distinct."
+    },
+    {
+      "case": 6,
+      "scope": "Testing-family law",
+      "method": "Rank-based BH/Bonferroni/Holm implementation and full 144-state enumeration; 288 leave-one-out identities; four-state dependent law and exact marginal CDF checks.",
+      "anchors": [
+        "counts (99,36,9)",
+        "FDR 1/6, FWER 5/16",
+        "E[V]/E[R]=3/11",
+        "dependent FDR 3/20"
+      ],
+      "result": "Tie handling and the step-up maximum are explicit; source/proof dependence scope is preserved."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "id": "v12-c11-e01",
+      "exact_prompt_scope": "Derive both posteriors, decisions, predictive count and pair correlation.",
+      "complete_solution_audit": "Both normalized products and threshold 2/5 are solved; correlation is 321/3700, with conditional dependence/coverage distinctions.",
+      "independent_evidence": "Independent future-record enumeration and posterior moments.",
+      "result": "passed author audit"
+    },
+    {
+      "id": "v12-c11-e02",
+      "exact_prompt_scope": "Derive every MH transition, wrong invariant law and exact-target proposal transfer.",
+      "complete_solution_audit": "Off-diagonal acceptance ratios 1/16,1/27,16/27 and diagonal complements produce all entries; q=pi gives iid variance 945/15376.",
+      "independent_evidence": "All nine balance identities, stationary multiplication and exhaustive iid-target paths.",
+      "result": "passed author audit"
+    },
+    {
+      "id": "v12-c11-e03",
+      "exact_prompt_scope": "Prove TV/covariance/variance/L2 convergence and initialized means; analyze lazy chain.",
+      "complete_solution_audit": "Both initial laws remain separate; lazy eigenvalue 131/162 and long inflation 293/31 exceed baseline.",
+      "independent_evidence": "Matrix powers, 81 paths, iterative state laws and lazy eigenfunction.",
+      "result": "passed author audit"
+    },
+    {
+      "id": "v12-c11-e04",
+      "exact_prompt_scope": "Prove lasso existence/KKT/soft threshold/fit uniqueness and refit at lambda=1/8.",
+      "complete_solution_audit": "Estimate (2,0,-3/4), inclusive zero coordinate and score norm 1/8 greater than lambda/2=1/16; optimization remains valid.",
+      "independent_evidence": "Actual smaller-penalty solve and KKT for every coordinate.",
+      "result": "passed author audit"
+    },
+    {
+      "id": "v12-c11-e05",
+      "exact_prompt_scope": "Derive the sparse basic inequality, cone, three bounds and Gaussian tuning.",
+      "complete_solution_audit": "Each constant follows the 2n loss and unsquared full-vector kappa; lambda approximately 0.731278974273 at the stated Gaussian inputs.",
+      "independent_evidence": "Full algebra reading plus exact baseline witnesses and mgf-tail substitution.",
+      "result": "passed author audit"
+    },
+    {
+      "id": "v12-c11-e06",
+      "exact_prompt_scope": "Prove the entire duplicate family and weighted (1,2), lambda=1/2 transfer.",
+      "complete_solution_audit": "Nonnegative splits sum to 3/2; weighted inequality forces unique (3/2,0), objective 7/8. No new identifying variation.",
+      "independent_evidence": "Scalar reduced optimum, original objective evaluations, nonoptimal mixed-sign split and weighted comparisons.",
+      "result": "passed author audit"
+    },
+    {
+      "id": "v12-c11-e07",
+      "exact_prompt_scope": "Prove remainder/norm bound, four means/variance and both-wrong cancellation.",
+      "complete_solution_audit": "New candidate errors +1 and -1 at e=1/2 cancel pointwise; mean 5/2 but influence variance differs from truth.",
+      "independent_evidence": "Full observed-law score means, factorization and conditional variance decomposition.",
+      "result": "passed author audit"
+    },
+    {
+      "id": "v12-c11-e08",
+      "exact_prompt_scope": "Prove fixed-fold expansion and variance consistency, including conditional-to-unconditional control.",
+      "complete_solution_audit": "Complete solution gives one-fold conditioning, truncated conditional Chebyshev/Markov, fixed-K sum, oracle CLT/LLN and Slutsky; it rejects joint-fit conditional independence.",
+      "independent_evidence": "Full analytic proof reading; finite numerical evidence is explicitly not a theorem proof.",
+      "result": "passed author audit"
+    },
+    {
+      "id": "v12-c11-e09",
+      "exact_prompt_scope": "Actually fit both folds, change only first outcome and refit.",
+      "complete_solution_audit": "Changed scores (0,4,5,5,2,-2,1,1), mean 2, score variance 11/2 and mean variance 11/16; the two other-fold scores change through training.",
+      "independent_evidence": "Refits executed from the changed row; exact propagation vector (-4,0,0,0,2,-2,0,0).",
+      "result": "passed author audit"
+    },
+    {
+      "id": "v12-c11-e10",
+      "exact_prompt_scope": "Prove finite-cell rates/empty cells/smoothing/clipping, quarter-rate boundary and leakage.",
+      "complete_solution_audit": "Ratio proof, positive cell masses and nonexpansive clipping establish the specific learner rate. Quarter rates give nonzero scaled limit 1/3; finite training identifiers have zero fresh mass but all reused scores zero.",
+      "independent_evidence": "Analytic rates/zero-measure proof plus exact atom bias and explicit score overwrites.",
+      "result": "passed author audit"
+    },
+    {
+      "id": "v12-c11-e11",
+      "exact_prompt_scope": "Prove both leave-one-out directions and FDR bound; reconstruct independent/dependent laws.",
+      "complete_solution_audit": "The proof handles ties and empty rejection; exact expected FDP is not ratio of means. All dependent marginal jumps are valid and BH failure is caused by joint dependence.",
+      "independent_evidence": "Complete joint-law enumeration, all 288 true-null identity comparisons and exact CDF checks.",
+      "result": "passed author audit"
+    },
+    {
+      "id": "v12-c11-e12",
+      "exact_prompt_scope": "Audit six false research claims with an explicit 12-point open rubric.",
+      "complete_solution_audit": "Six domains each award one distinction point and one concrete evidence/qualified-claim point, with benchmark responses and caps for generic warnings. Alternative valid arguments accepted.",
+      "independent_evidence": "Full rubric/readability review; no numerical research quality certificate or unique-opinion grading.",
+      "result": "passed author audit"
+    }
+  ],
+  "source_audit": {
+    "source_count": 4,
+    "all_source_preparation_fields_read": true,
+    "primary_inspector": "bs_author",
+    "author_role": "Read complete source preparation, all four records and every claim-to-page/assumption/caution field. No new original body/image inspection claimed.",
+    "root_role": "Complete preparation reader and verifier of all 31 PDF/image artifact bindings; no new image reading claimed.",
+    "attributed_visual_pages": 27,
+    "normalization_cautions": "Lasso Taylor-loss factor and displayed norm/tail notation from the inspected paper are not imported; original derivations state exact constants.",
+    "DML_cautions": "Selected body is arXiv v7. Its conditional variance display is treated as an inequality in the original proof; the chapter uses bounded scores and explicit fixed-fold arguments rather than importing the flagged rate shortcut.",
+    "BH_cautions": "Original inspected proof uses continuous uniform order statistics; this chapter supplies its own super-uniform leave-one-out proof. No arbitrary-dependence extension read or claimed.",
+    "runtime_sources": "Source record only; PDFs/images and preparation records are provenance rather than runtime dependencies."
+  },
+  "computation": {
+    "method": "Exact Fractions for laws, matrices, objective/KKT, score and finite tests; independent path/conditional variance routes and actual nuisance fitting. Only the Gaussian tuning decimal requires floating logarithm/exponential/square root.",
+    "generic_utility_reuse": "The strict JSON parser, restricted displayed-expression parser, static HTML parser and audit-count utility were copied from the frozen C10 checker with namespace changed. No C10/root numerical routine, saved result or runtime import is reused.",
+    "finite_scope": "81 stationary four-state paths; complete 144-state testing law with 288 leave-one-out identities; bounded model-specific domain and intervention checks.",
+    "actual_input_tables": "The printed eight-atom potential-outcome/observed table and eight-row learner table were manually reconciled with the primitive laws and actual fits. Every one of 79 displayed calculation markers is compared to recomputed output.",
+    "no_random_validation": "No random simulation is used as a truth oracle."
+  },
+  "validation": {
+    "status": "Passed eight quiet normal/optimized API/CLI executions in workspace and an exact-four tree; all gates replayed on final unchanged frozen bytes before handoff.",
+    "executions": [
+      {
+        "tree": "workspace",
+        "mode": "normal",
+        "interface": "API",
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "stderr_bytes": 0,
+        "strict_JSON_summary": true,
+        "stdout_note": "Harness alone serializes returned summary"
+      },
+      {
+        "tree": "workspace",
+        "mode": "normal",
+        "interface": "CLI",
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "stderr_bytes": 0,
+        "strict_JSON_summary": false,
+        "stdout_note": "Silent successful default CLI"
+      },
+      {
+        "tree": "workspace",
+        "mode": "optimized",
+        "interface": "API",
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "stderr_bytes": 0,
+        "strict_JSON_summary": true,
+        "stdout_note": "Harness alone serializes returned summary"
+      },
+      {
+        "tree": "workspace",
+        "mode": "optimized",
+        "interface": "CLI",
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "stderr_bytes": 0,
+        "strict_JSON_summary": false,
+        "stdout_note": "Silent successful default CLI"
+      },
+      {
+        "tree": "exact-four isolated",
+        "mode": "normal",
+        "interface": "API",
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "stderr_bytes": 0,
+        "strict_JSON_summary": true,
+        "stdout_note": "Harness alone serializes returned summary"
+      },
+      {
+        "tree": "exact-four isolated",
+        "mode": "normal",
+        "interface": "CLI",
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "stderr_bytes": 0,
+        "strict_JSON_summary": false,
+        "stdout_note": "Silent successful default CLI"
+      },
+      {
+        "tree": "exact-four isolated",
+        "mode": "optimized",
+        "interface": "API",
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "stderr_bytes": 0,
+        "strict_JSON_summary": true,
+        "stdout_note": "Harness alone serializes returned summary"
+      },
+      {
+        "tree": "exact-four isolated",
+        "mode": "optimized",
+        "interface": "CLI",
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "stderr_bytes": 0,
+        "strict_JSON_summary": false,
+        "stdout_note": "Silent successful default CLI"
+      }
+    ],
+    "modes_agree": true,
+    "quiet_import_and_check": true,
+    "silent_successful_CLI": true,
+    "strict_JSON_safe_return": true,
+    "actual_shared_Document": {
+      "worked": 6,
+      "exercises": 12,
+      "solutions": 12,
+      "IDs": 27,
+      "links": 10,
+      "unique_IDs": 27
+    },
+    "runtime_members": [
+      "production/v12-c11-working.html",
+      "production/check_v12_c11_working.py",
+      "production/v12-c11-sources-working.json",
+      "production/v12-c11-author-review-working.json"
+    ],
+    "runtime_root": "Default root derived from checker __file__; check(root=None) is supported. All runs used cwd=/ and disabled bytecode.",
+    "exact_four_membership_verified": true,
+    "workspace_and_isolated_payloads_unchanged": true,
+    "readonly_evidence_matches_contract": true,
+    "summary": {
+      "chapter": "v12-c11",
+      "comparisons": 668,
+      "exact_stationary_paths": 81,
+      "executed_rejections": 45,
+      "exercises": 12,
+      "independent_testing_states": 144,
+      "intervention_scopes": [
+        "Alternative prior changes decision; no-data and parameter-endpoint likelihoods",
+        "Omitted proposal ratio, low initialization, exact-target proposal, laziness and zero reverse support",
+        "Penalty threshold and noise-event boundary, duplicate null direction and (1,2) weighted penalty",
+        "All four nuisance truth combinations and both-wrong cancellation with changed variance",
+        "Actually refitted outcome transfer, empty training cells and active propensity clipping",
+        "Quarter-rate inference-scale bias and own-identifier leakage versus held-out oracle",
+        "Early-failure/later-pass and tied thresholds; complete independent and dependent testing laws"
+      ],
+      "leave_one_out_state_identities": 288,
+      "limits": "Finite original laws and bounded exact procedures. Analytic proofs are separately author-reviewed; no generic MCMC CLT, arbitrary learner rates, empirical causal validity, human certification, reader UI check or chapter acceptance implied.",
+      "nonself_author_bindings": 3,
+      "primary_inspection_scopes": 4,
+      "purposeful_interventions": 7,
+      "rejection_scopes": [
+        "boolean numerical input",
+        "nonfinite parameter",
+        "infinite parameter",
+        "unnormalized law",
+        "signed probability law",
+        "fractional success count",
+        "negative failure count",
+        "prior dimension mismatch",
+        "zero observation marginal",
+        "zero target state outside positive-target scope",
+        "proposal target size mismatch",
+        "nonsquare proposal",
+        "proposal row mass exceeds one",
+        "ambiguous ratio flag",
+        "nonstationary law in stationary covariance routine",
+        "path enumeration outside bounded scope",
+        "zero penalty excluded by coercivity contract",
+        "negative penalty",
+        "duplicate design in orthogonal-only solver",
+        "response shape mismatch",
+        "nonpositive penalty weight",
+        "zero tuning sample size",
+        "degenerate Gaussian variance outside tuning scope",
+        "noninterior tail target",
+        "boolean treatment indicator",
+        "nonbinary treatment indicator",
+        "zero fitted overlap",
+        "unit fitted propensity",
+        "true overlap failure",
+        "empty held-out/training fold",
+        "covariate outside binary learner scope",
+        "outcome outside bounded theorem experiment",
+        "malformed learner row",
+        "empty testing family",
+        "p-value exceeds one",
+        "zero testing target outside specified domain",
+        "ambiguous familywise rule",
+        "incomplete null-law mass",
+        "duplicate JSON key",
+        "nonstandard nonfinite JSON token",
+        "overflowed JSON number",
+        "unsupported displayed code",
+        "displayed square-root domain",
+        "stray top-level delimiter",
+        "unbalanced reader markup"
+      ],
+      "solutions": 12,
+      "status": "passed",
+      "visible_calculation_markers": 79,
+      "worked_cases": 6,
+      "working_only": true
+    },
+    "limits": "No shared build, canonical mutation, publication or rendered UI test in author scope."
+  },
+  "instruction_review": {
+    "prerequisites": "Flat accepted prerequisite links and the dependency C10 link; every new finite-chain, regularization, cross-fit and testing lemma is derived locally. Dependency acceptance remains root-owned.",
+    "definitions": "State spaces, losses, normalization, folds, training information, true/fitted nuisances, stochastic norms, FDR/FWER and empty rejection defined before use.",
+    "teaching": "Answered teach-back connects target, optimization and causal claims; answered delayed retention asks for basic inequality, omitted MCMC covariance, ATE remainder and BH step-up rule.",
+    "open_rubric": "Six parallel two-point domains total twelve; full-credit answer requires both distinction and concrete evidence, allowing alternate correct arguments.",
+    "scope": "Original synthetic instructional laws, no observed data claim, empirical policy conclusion or credential guarantee."
+  },
+  "revision_notes_for_root": [
+    {
+      "stage": "before first complete draft notification",
+      "change": "Top-level section insertion order was corrected immediately so Bayes, chain, lasso, ATE, cross-fitting, multiplicity, audit, exercises and teaching occur in the intended order. No mathematical content changed; no intermediate out-of-order draft was offered as frozen."
+    },
+    {
+      "stage": "complete draft",
+      "change": "The complete 63,409-byte manuscript reported to root includes all approved first-gate and exercise-transfer conditions. No post-notification mathematical or manuscript change has been needed during checker construction."
+    },
+    {
+      "stage": "checker construction before freeze",
+      "change": "A rubric-count gate initially counted numeral-2 table cells outside the rubric. It was scoped to the research-audit table and rerun successfully; no manuscript or mathematical change."
+    }
+  ],
+  "open_findings": [],
+  "limitations": [
+    "This is machine-assisted author review, not independent human academic certification. Separate substantive peer and coordinator review remain required.",
+    "Finite exact computation does not prove a generic MCMC CLT, arbitrary sparse-design curvature, arbitrary learner rates, empirical causal validity or a broad dependence theorem.",
+    "The cross-fit normal law is asymptotic under the stated bounded iid, fixed-fold, overlap and rate conditions; the finite eight-row example does not establish finite-sample coverage.",
+    "No new primary source PDF/image inspection is claimed by this author; original specialist and root provenance roles are preserved.",
+    "No rendered browser/mobile/keyboard/print review or canonical build/publication was performed in this exact author scope."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "production/v12-c11-working.html",
+      "bytes": 63409,
+      "sha256": "5be5d4d162a7f6b7a86fb9d959997162a43d06324f3565c227699da175ba13f5"
+    },
+    {
+      "path": "production/check_v12_c11_working.py",
+      "bytes": 41817,
+      "sha256": "828d4df7f5d34fd79874d1c77aaa3f3636e9161206f198e386fd020384a4773d"
+    },
+    {
+      "path": "production/v12-c11-sources-working.json",
+      "bytes": 42548,
+      "sha256": "0c5ac89d8a9f568c8ecf4cb53e167b33ac25a9d7334cea92ac93589e9db484ea"
+    }
+  ],
+  "frozen_evidence_preservation": {
+    "readonly_source_inputs": [
+      {
+        "path": "production/v12-c11-source-preparation.json",
+        "bytes": 46321,
+        "sha256": "0f6f9dcd665ca0bd934c521cabe3996c8968b3ca17205791d2f5f7745d6c399c"
+      },
+      {
+        "path": "production/v12-c11-source-root-reading.json",
+        "bytes": 2270,
+        "sha256": "381b4f5fd649b9b5300be2a786adbf35bec5a692b4b40196f47bcf52336149bc"
+      },
+      {
+        "path": "production/v12-c11-blueprint-root-audit.json",
+        "bytes": 23377,
+        "sha256": "81d5e021d7762339a7bd46598e439c97ae0b50bf990150aefe28829e6c235e58"
+      }
+    ],
+    "previous_C10_working_inputs": [
+      {
+        "path": "production/v12-c10-working.html",
+        "bytes": 55805,
+        "sha256": "17283b8d68e8e59aaaaaad81079b352ab42dceb46de3aa5758d43c0d09f772c9"
+      },
+      {
+        "path": "production/check_v12_c10_working.py",
+        "bytes": 38301,
+        "sha256": "40076cbf7a8494287614d5319945c9cbc0fca4a298d1e625c93f938dd2c78792"
+      },
+      {
+        "path": "production/v12-c10-sources-working.json",
+        "bytes": 36223,
+        "sha256": "5b45eefe38582eaf89a405f27b3beecaaabf845d4989e9d3830817899ba2bc75"
+      },
+      {
+        "path": "production/v12-c10-author-review-working.json",
+        "bytes": 24090,
+        "sha256": "7359a2b99f3e434804a519ef4d8050009fce9288b29c6cdbfd23ae84c4594f53"
+      }
+    ],
+    "scope": "Only the four C11 owned runtime paths were written; the preceding source and author freezes remain read-only."
+  }
+}

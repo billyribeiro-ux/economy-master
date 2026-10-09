@@ -1,0 +1,251 @@
+{
+  "schema": 1,
+  "project": "v12-project",
+  "provenance": "Original fictional Harbor Skills Outreach population; no external data or real participants.",
+  "design": {
+    "centres": 6,
+    "workers_per_centre": 2,
+    "encouraged_count": 3,
+    "actual_encouraged_centres": [
+      1,
+      3,
+      5
+    ],
+    "alpha": "1/5",
+    "direct_effect_delta": "0"
+  },
+  "observed_columns": [
+    "centre",
+    "worker",
+    "Z",
+    "D",
+    "B",
+    "Y",
+    "W"
+  ],
+  "observed_rows": [
+    [
+      1,
+      1,
+      1,
+      1,
+      40,
+      39,
+      -1
+    ],
+    [
+      1,
+      2,
+      1,
+      1,
+      42,
+      45,
+      3
+    ],
+    [
+      2,
+      1,
+      0,
+      0,
+      44,
+      44,
+      0
+    ],
+    [
+      2,
+      2,
+      0,
+      0,
+      46,
+      48,
+      2
+    ],
+    [
+      3,
+      1,
+      1,
+      1,
+      48,
+      53,
+      5
+    ],
+    [
+      3,
+      2,
+      1,
+      1,
+      50,
+      56,
+      6
+    ],
+    [
+      4,
+      1,
+      0,
+      0,
+      52,
+      50,
+      -2
+    ],
+    [
+      4,
+      2,
+      0,
+      0,
+      54,
+      54,
+      0
+    ],
+    [
+      5,
+      1,
+      1,
+      1,
+      56,
+      62,
+      6
+    ],
+    [
+      5,
+      2,
+      1,
+      0,
+      58,
+      61,
+      3
+    ],
+    [
+      6,
+      1,
+      0,
+      0,
+      60,
+      59,
+      -1
+    ],
+    [
+      6,
+      2,
+      0,
+      0,
+      62,
+      63,
+      1
+    ]
+  ],
+  "teaching_oracle": {
+    "worker_offsets": [
+      -1,
+      1
+    ],
+    "centres": [
+      {
+        "id": 1,
+        "g": -2,
+        "types": [
+          "C",
+          "C"
+        ],
+        "tau": [
+          2,
+          4
+        ],
+        "B": [
+          40,
+          42
+        ]
+      },
+      {
+        "id": 2,
+        "g": 1,
+        "types": [
+          "C",
+          "N"
+        ],
+        "tau": [
+          6,
+          1
+        ],
+        "B": [
+          44,
+          46
+        ]
+      },
+      {
+        "id": 3,
+        "g": 3,
+        "types": [
+          "A",
+          "C"
+        ],
+        "tau": [
+          3,
+          2
+        ],
+        "B": [
+          48,
+          50
+        ]
+      },
+      {
+        "id": 4,
+        "g": -1,
+        "types": [
+          "N",
+          "N"
+        ],
+        "tau": [
+          8,
+          0
+        ],
+        "B": [
+          52,
+          54
+        ]
+      },
+      {
+        "id": 5,
+        "g": 2,
+        "types": [
+          "A",
+          "N"
+        ],
+        "tau": [
+          5,
+          1
+        ],
+        "B": [
+          56,
+          58
+        ]
+      },
+      {
+        "id": 6,
+        "g": 0,
+        "types": [
+          "C",
+          "C"
+        ],
+        "tau": [
+          4,
+          6
+        ],
+        "B": [
+          60,
+          62
+        ]
+      }
+    ],
+    "weak_override": {
+      "centre": 2,
+      "worker": 1,
+      "from": "C",
+      "to": "N",
+      "actual_encouraged_centres": [
+        1,
+        2,
+        4
+      ]
+    }
+  }
+}

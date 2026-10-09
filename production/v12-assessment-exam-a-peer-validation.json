@@ -1,0 +1,74 @@
+{
+  "volume": "v12",
+  "component": "exam-a",
+  "date": "2026-10-09",
+  "status": "accepted-by-author",
+  "reviewer": "root",
+  "peer": "bs_author",
+  "scope": "Complete independent peer checker and every exact-prompt/source/proof judgment read after root full final manuscript/author review. Final six files unchanged; root quiet API validates original numerical laws and exact bindings.",
+  "root_gate": {
+    "component": "v12-exam-a-peer",
+    "status": "separate peer checks passed",
+    "comparisons": 197,
+    "executed_rejections": 23,
+    "scored_parts": 16,
+    "domains": 5,
+    "points": 100,
+    "input_tables": 4,
+    "displayed_markers": 36,
+    "panel_atoms": 16,
+    "pilot_assignments": 4,
+    "complete_cutoff_worlds": 2,
+    "oracle_atoms": 18,
+    "selection_assignments": 6,
+    "target_completions": 7,
+    "author_checker_executed_as_oracle": false,
+    "runtime_payloads": 6
+  },
+  "frozen_files": [
+    {
+      "path": "content/assessments/parts/v12-exam-a.html",
+      "bytes": 40572,
+      "sha256": "fad9688fdc4e897c81bcd6bf6eb7d5719c87137773d7c985066acb6adfa52588"
+    },
+    {
+      "path": "scripts/check_v12_exam_a.py",
+      "bytes": 28601,
+      "sha256": "afa8024a4a26f44a71422374009469f9f4b13a651b62684a1fdfaad3f9111a95"
+    },
+    {
+      "path": "content/reviews/v12-exam-a-sources.json",
+      "bytes": 8520,
+      "sha256": "4c05e205384ae11a08de03388503742a74629915d09bffccab70407459e76faa"
+    },
+    {
+      "path": "content/reviews/v12-exam-a-author.json",
+      "bytes": 15228,
+      "sha256": "558940b8ace34005d05aa69465b68984ef5377ba5328dfb42e160108b4cd261c"
+    },
+    {
+      "path": "scripts/check_v12_exam_a_peer.py",
+      "bytes": 23978,
+      "sha256": "3d7930b0fcd3108246d8321890137ef715d93bda12747eacbba4624190d0feab"
+    },
+    {
+      "path": "content/reviews/v12-exam-a-peer.json",
+      "bytes": 9001,
+      "sha256": "d56aeb2e3a3e2952fdc4bb60665e02d7edd9abe6259ca1d314603b01df8d6e00"
+    }
+  ],
+  "author_evidence": "production/v12-assessment-exam-a-author-validation.json",
+  "peer_evidence_reused": {
+    "executions": [
+      "normal workspace quiet API",
+      "optimized exact-six quiet API from /",
+      "optimized exact-six silent CLI from /"
+    ],
+    "comparisons": 197,
+    "domain_rejections": 23,
+    "strict_JSON_quiet_and_unchanged_membership_bytes": true,
+    "source": "bs_author final freeze handoff2026-10-09"
+  },
+  "unresolved_findings": [],
+  "limits": "Finite calculations accompany the full proofs and exact prompt review. Timing/equating, learner outcomes and rendered-reader QA unverified."
+}

@@ -1,0 +1,675 @@
+{
+  "chapter": "v12-c11",
+  "date": "2026-10-09",
+  "reviewer": "ito_author",
+  "author": "c05_review",
+  "coordinator": "root",
+  "status": "passed; frozen for coordinator acceptance",
+  "scope": {
+    "owned_paths": [
+      "scripts/check_v12_c11_peer.py",
+      "content/reviews/v12-c11-peer.json"
+    ],
+    "task": "Separate substantive review of all proofs, six original worked cases, twelve exact prompts and full solutions, source scopes and the portable code contract.",
+    "independence": "No author numerical routine, author/root saved numerical result or source artifact is an oracle or runtime input. Reconstruction starts from the manuscript primitive laws, design, training records and definitions. Author executions are labeled integration evidence only.",
+    "generic_reuse": "Strict JSON, restricted expression parsing, static HTML, binding and comparison helpers adapt the frozen C10 peer pattern. All C11 numerical reconstruction and interventions were independently written.",
+    "ownership": "No author, shared, prior-freeze or source-preparation file was changed. Acceptance, shared Document/build, source catalogue, checkpoint and publication remain coordinator-owned.",
+    "six_runtime_files": [
+      "content/chapters/v12-c11.html",
+      "scripts/check_v12_c11.py",
+      "content/reviews/v12-c11-sources.json",
+      "content/reviews/v12-c11-author.json",
+      "scripts/check_v12_c11_peer.py",
+      "content/reviews/v12-c11-peer.json"
+    ]
+  },
+  "complete_reading": {
+    "manuscript": "Read all 226 working HTML lines, every proof, all six cases and twelve exact prompts/full answers, the research rubric and answered teaching/retention sections.",
+    "checker": "Read all 814 working checker lines, including numerical procedures, parsers, budgets, exercised rejections, bindings and quiet entry point.",
+    "sources": "Read the entire 816-line working source record. Reread the initially truncated DML opening segment separately. Every version, mapping, actual-inspector, display caution, claim-to-page and uninspected-scope field was reviewed.",
+    "author": "Read all 593 working author-record lines and every canonical addition/changed field. Historical working execution is not relabeled canonical execution.",
+    "canonical_delta": "Independently applied the three exact HTML replacements and obtained the complete canonical HTML byte-for-byte. Applied all listed checker replacements and obtained its canonical text byte-for-byte. Inspected every changed source/author metadata field; prompts, solutions and numbers are unchanged.",
+    "refinement": "Canonical section 4 now requires integrable potential outcomes and absolute integrability of expected-score terms, states sufficient uniform candidate clipping plus integrable regressions, and uses a common overlap constant along bounded perturbation paths.",
+    "actual_primary_inspector": "bs_author; this peer reviewed the complete source record and original chapter proofs but did not newly inspect PDF bodies or images.",
+    "working_quartet": [
+      {
+        "path": "production/v12-c11-working.html",
+        "bytes": 63409,
+        "sha256": "5be5d4d162a7f6b7a86fb9d959997162a43d06324f3565c227699da175ba13f5"
+      },
+      {
+        "path": "production/check_v12_c11_working.py",
+        "bytes": 41817,
+        "sha256": "828d4df7f5d34fd79874d1c77aaa3f3636e9161206f198e386fd020384a4773d"
+      },
+      {
+        "path": "production/v12-c11-sources-working.json",
+        "bytes": 42548,
+        "sha256": "0c5ac89d8a9f568c8ecf4cb53e167b33ac25a9d7334cea92ac93589e9db484ea"
+      },
+      {
+        "path": "production/v12-c11-author-review-working.json",
+        "bytes": 36916,
+        "sha256": "4c9b5f53521fa9885af0b123fe60c597289b665dd9e978a9194dce65c58b0d79"
+      }
+    ],
+    "canonical_source_fields_changed": [
+      "status",
+      "working_source_binding",
+      "canonical_root_refinement"
+    ],
+    "canonical_author_fields_changed": [
+      "status",
+      "canonical_status",
+      "reviewed_hashes",
+      "promotion_provenance",
+      "root_additional_proof_audit"
+    ],
+    "canonical_prompts_solutions_results_preserved": true
+  },
+  "proof_audit": [
+    {
+      "topic": "Finite Bayes normalization, prediction and decision",
+      "assumptions": "Proper finite prior, positive observation marginal, ordered Bernoulli likelihood; future records iid conditional on the shared parameter.",
+      "argument": "Sequential conditioning multiplies observation probabilities into evidence. Summing the four future records gives the predictive count distribution. E[Y1Y2|data]=E[theta²|data], so covariance is posterior Var(theta), generally positive despite conditional independence. Launch utility 3p_high-2(1-p_high)=5p_high-2 gives indifference at 2/5.",
+      "scope": "Proper-prior sensitivity is real decision sensitivity. Posterior probabilities do not establish frequentist coverage or robustness to an incorrect likelihood.",
+      "judgment": "Valid finite proof and correctly separated uncertainty interpretations."
+    },
+    {
+      "topic": "MH balance, minorization and Monte Carlo precision",
+      "assumptions": "Finite positive target, stochastic proposal with reverse support; the convergence result additionally has the displayed positive minorization. Stationary variance and a low initial state at time 0 are separate sampling laws.",
+      "argument": "Accepted off-diagonal target flow is min(pi_i q_ij,pi_j q_ji). Symmetry yields balance, and row complements yield stochasticity; summing gives invariance. For P=delta Pi+(1-delta)R, stochastic R contracts total variation of signed zero-mass differences, proving convergence and unique stationarity when delta>0. Delta=1 means independent target rows. The high indicator is lumpable because both non-high rows have equal high-transition probability. Its centered eigenfunction has lambda=50/81; stationary covariance gamma_k=gamma_0 lambda^k follows by conditional expectation. Counting lag pairs yields exact finite variance; geometric summability gives an O(1/n) bound and L2 convergence. The long variance multiplier is (1+lambda)/(1-lambda).",
+      "initialized_and_changed_laws": "From low time 0, E[f(X_t)]=pi_high(1-lambda^t), sampled at t=1,...,4. Its finite variance differs from stationary variance. q=pi produces independent draws after the first transition. Laziness gives (1+lambda)/2 and increases positive-correlation inflation here. Zero reverse proposal support rejects a one-way move.",
+      "scope": "Balance alone is not convergence. The finite covariance/variance argument is not an unstated general MCMC CLT or a consistent practical variance estimator.",
+      "judgment": "Complete scoped finite proof with correct target, initialization and covariance distinctions."
+    },
+    {
+      "topic": "Lasso optimization, sparse constants and duplicate coefficients",
+      "assumptions": "Loss ||y-Xb||²/(2n), lambda>0, every coefficient including the constant penalized. Exact support size s>=1, noise-score infinity norm<=lambda/2, full-vector unsquared cone condition ||Xv||/sqrt(n)>=kappa||v||2.",
+      "argument": "Positive lambda makes the objective coercive; continuity gives attainment on a compact sublevel. Derivatives off zero and both one-sided derivatives at zero give KKT necessity. Convexity plus an l1 subgradient proves sufficiency. Orthonormal Gram completion of squares gives soft thresholding. Strict convexity in fits and convexity of the penalty give unique fitted values without unique coefficients. Comparing the optimum to beta* gives prediction/(2n)+(lambda/2)||Delta_Sc||1<=(3lambda/2)||Delta_S||1, hence cone ratio 3. With t=||XDelta||/sqrt(n), t²<=3lambda sqrt(s)||Delta||2 and t>=kappa||Delta||2 imply l2<=3lambda sqrt(s)/kappa², prediction/n<=9lambda²s/kappa² and l1<=12lambda s/kappa²; Delta=0 is immediate.",
+      "gaussian_event": "Fixed columns with norms<=sqrt(n) and Gaussian errors give score variance<=sigma²/n. Two Chernoff tails and a p-column union bound yield 2p exp(-nt²/(2sigma²)); set t=lambda/2. Column-score independence is unnecessary. This proves neither curvature nor support recovery.",
+      "duplicate_proof": "For t=b1+b2, |b1|+|b2|>=|t| reduces the scalar objective to (2-t)²/2+|t|/2 with unique t=3/2. Equality requires the entire nonnegative split segment. Opposite coefficients give a nonzero null direction inside the support-{1} cone, so positive full-vector curvature fails. Weighted penalty (1,2) obeys |b1|+2|b2|>=|t|+|b2|, forcing (3/2,0) at the same lower bound. This is penalty selection without new identifying data.",
+      "judgment": "Constants, norm, all-coefficient penalty, whole minimizer set and scope of statistical claims are correct."
+    },
+    {
+      "topic": "AIPW identity, integrability and orthogonality",
+      "assumptions": "Consistency, no interference, exchangeability given X, true overlap, integrable potential outcomes. Expected-score identities require absolute integrability of their terms. Uniformly clipped candidate e and integrable candidate regressions suffice. Orthogonality uses bounded perturbations and a common c>0 for true and path propensities.",
+      "argument": "Conditional score expectation replaces residual numerators by e0(m1-g1) and (1-e0)(m0-g0). Subtracting m1-m0 yields (e-e0)[(g1-m1)/e+(g0-m0)/(1-e)]. Under qualified integrability the tower step gives the population remainder. Clipping and Cauchy-Schwarz give the c^-1 L2 product bound. On e=e0+t a and gd=md+t bd, remainder is t² E[a(b1/e+b0/(1-e))]. Common c and bounded perturbations bound the expectation uniformly; division by t gives zero derivative.",
+      "variance_and_cancellation": "At truth, conditional-effect variance 1/4 plus conditional residual variance 16/3 yields V=67/12. Cross terms vanish by zero conditional residual means and disjoint treatment indicators. At e=1/2, regression errors +1,-1 cancel the bracket pointwise, but their score variance changes. Double robustness gives sufficient rather than necessary zero-bias conditions.",
+      "judgment": "Valid after canonical refinement. The independent integrability counterexample below explains why the qualification is substantive."
+    },
+    {
+      "topic": "Fixed-fold expansion and consistent variance",
+      "assumptions": "Iid data; fixed K and predetermined/independent partition with positive limiting proportions; each fit, tuning and preprocessing uses only the outside sample. Bounded outcome/regressions, true and fitted overlap c, a,b=o_p(1), sqrt(N)ab=o_p(1), positive oracle variance.",
+      "argument": "Condition on one outside training sample and the partition at a time. Its held-out records remain iid independent of its fit. Exact remainder gives |Pr|<=ab/c; score expansion gives ||r||2<=b/c+2Ba/c². Conditional variance of the held-out mean is at most Pr²/n_k. Conditional Chebyshev at root-N scale bounds error probability by min(1,(N/n_k)Pr²/epsilon²). This converges in probability to zero and is bounded by one; splitting at a fixed threshold gives convergence of its expectation. Repeat separately for finitely many folds, without asserting joint independence of fitted functions. The remainder sum is negligible and the original iid oracle CLT applies.",
+      "variance": "Conditional Markov, truncated at one, makes pooled empirical r² vanish. Uniform bounded scores and Cauchy-Schwarz transfer second moments. Oracle LLN and mean consistency give Vhat->V, then Slutsky gives standard error sqrt(Vhat/N).",
+      "scope": "The finite eight-row example does not prove coverage. Cross-fitting alone supplies neither causal identification nor learner consistency/product rates. No general unbounded-score, dependent-data, growing-fold or efficiency theorem is claimed.",
+      "judgment": "Complete conditioning, conditional-to-unconditional and variance-consistency arguments."
+    },
+    {
+      "topic": "Finite-cell rates, quarter-rate bias and leakage",
+      "assumptions": "Case-4 bounded iid law with positive cell probabilities>=1/8; training sizes proportional to N. The rate counterexample uses true nuisances plus deterministic perturbations. The identifier is an independent continuous random variable.",
+      "argument": "Bounded numerator/denominator cell averages have root-n error. On Bn>=b/2, (An-mBn)/Bn has root-n error; the complement tends to zero. Empty cells occur with probability (1-b)^n. Laplace smoothing adds O(1/n); clipping is nonexpansive relative to truths in the intervals. Finite cells/folds give L2 O_p(N^-1/2). Exponents 1/5+1/3 give root-N product N^-1/30; two big-O quarter rates yield only O_p(1). For t=N^-1/4, e=e0+t/8, g1=m1+t, g0=m0, exact bias=t²[1/(2+t)+1/(6+t)]/2 and scaled limit=1/3.",
+      "leakage": "Conditional on a finite training sample, a fresh continuous identifier hits none of its IDs almost surely. Overwriting both regressions with each own-row Y only on that set leaves fresh-population L2 errors zero. Reused scores nevertheless vanish pointwise. Proper held-out identifiers avoid this exceptional set, recovering the oracle score but not supplying all other assumptions.",
+      "judgment": "Actual trained learner, theoretical rate sequence and invalid own-sample reuse are properly distinguished."
+    },
+    {
+      "topic": "BH leave-one-out and independent super-uniform nulls",
+      "assumptions": "Finite fixed family, q in (0,1), inclusive thresholds, and each true-null p independent of the entire other-p vector and super-uniform. False-null p-values may depend mutually.",
+      "argument": "At the largest passing index R exactly R values lie below qR/m, else a larger index would pass. Replacing p_i by zero gives R_i>=1 and R_i>=R. If i was rejected, ordered values above R are unchanged and R_i=R. Conversely, restoring p_i<=qR_i/m leaves at least R_i passing values, forcing R>=R_i; thus equality and rejection. Therefore its FDP contribution is 1{p_i<=qR_i/m}/R_i. Conditional on all other p-values, super-uniformity plus independence bounds expectation by q/m. Summing gives FDR<=m0 q/m.",
+      "laws_and_scope": "The discrete uniform grid CDF floor(12u)/12 is super-uniform and attains equality at relevant thresholds, yielding exact FDR 1/6. The four-point dependent complete-null law has valid marginal jumps but BH rejection probability 3/20 at q=1/10. Complete-null FDR=FWER while every nonempty list has FDP=1. In the independent mixed-null example E[V]/E[R]=3/11 differs from E[FDP]=1/6.",
+      "judgment": "Both directions, ties, zero rejections and expectation/realized-list limits are correct. Marginal validity alone is expressly insufficient."
+    }
+  ],
+  "case_reconstruction": [
+    {
+      "case": 1,
+      "method": "Sequential posterior updates and four future records.",
+      "results": "Evidence 31/512; posterior (3/62,16/31,27/62); mean 37/62; second moment 187/496; variance 321/15376. Predictive counts (91/496,109/248,187/496), correlation 321/3700. Alternative posterior (48/139,64/139,27/139); launch utilities 11/62 and -143/139.",
+      "interventions": "No data, observation permutation, Bernoulli endpoint and decision equality."
+    },
+    {
+      "case": 2,
+      "method": "Symmetric accepted flows, exact stationary equations, then lumped occupation-count recursion.",
+      "results": "Rows (1/2,1/3,1/6), (1/32,77/96,1/6), (1/54,16/81,127/162); delta 31/81, lambda 50/81. Wrong target (9/100,16/25,27/100). Four-mean variance 11274515/75661452 versus iid 945/15376; finite inflation 1288516/531441 and long inflation 131/31. Low-start means (1/6,131/486,13111/39366,1186991/3188646), bias -29674775/197696052.",
+      "interventions": "Different initialized variance, q=pi, lazy eigenvalue 131/162/inflation 293/31, zero reverse support."
+    },
+    {
+      "case": 3,
+      "method": "Enumerate 27 active/sign KKT faces per fit; solve exact normal equations. Analyze duplicates separately by scalar lower bound.",
+      "results": "y=(9/8,11/8,23/8,25/8); z=(17/8,-1/8,-7/8); fit coefficients (13/8,0,-3/8), scores (1/2,-1/8,-1/2), error (-3/8,0,5/8). Squared error/prediction 17/32, l1 error 1, objective 161/128. Noise scores (1/8,-1/8,1/8); bounds (9/2,3sqrt(2)/2,12). Gaussian lambda .731278974273 and tail 1/20.",
+      "interventions": "Lambda 1/8 gives (2,0,-3/4) but fails noise event; duplicate fit 3/2/objective 7/8; weights (1,2) select (3/2,0)."
+    },
+    {
+      "case": 4,
+      "method": "Analytically integrate fair noise first/second moments, then X,D; reconstruct observed atom masses separately.",
+      "results": "ATE 5/2; means (5/2,5/2,5/2,11/4), last bias 1/4. Oracle influence variance 67/12; N=400 mean variance 67/4800.",
+      "interventions": "Both-wrong conditional cancellation with changed variance; analytical integrability counterexample."
+    },
+    {
+      "case": 5,
+      "method": "One-pass fold/cell sufficient statistics and actual other-fold scoring/refitting.",
+      "results": "Fits ((1/2,1/2),(1,2),(1,3)) and ((1/2,1/2),(-1,0),(3,5)); scores (4,4,5,5,0,0,1,1), fold means (9/2,1/2), estimate 5/2, score variance 17/4, mean variance 17/32. N=256 shifts 1/32,1/4 give bias 17/900 and scaled bias 68/225.",
+      "interventions": "Changed first Y gives (0,4,5,5,2,-2,1,1), mean 2, variance 11/2, mean variance 11/16; row reorder, empty cells, both active clipping endpoints and own-row leakage."
+    },
+    {
+      "case": 6,
+      "method": "Threshold-count BH fixed point, 144-state enumeration, independent rectangle counts and conditional null contributions.",
+      "results": "Fixed p-list BH rejects (1,2,3), Bonferroni/Holm (1). Rejection-count totals (99,36,9), FDR 1/6, FWER 5/16, EV 3/8, ER 11/8, ratio 3/11. Dependent complete-null BH FDR 3/20 versus familywise 1/10.",
+      "interventions": "Inclusive ties, no rejections, all zero p-values, early failure/later pass, marginal CDF jumps and leave-one-out boundaries."
+    }
+  ],
+  "prompt_solution_audit": [
+    {
+      "id": "v12-c11-e01",
+      "independent_solution": "Both posteriors are (3/62,16/31,27/62) and (48/139,64/139,27/139). Launch requires 5p_high-2>=0, with indifference at 2/5. Utilities 11/62 and -143/139 imply launch and no launch. The four future pairs give counts (91/496,109/248,187/496). Covariance is 321/15376; dividing by mu(1-mu), mu=37/62, yields 321/3700. Shared-parameter mixing destroys predictive independence; no coverage theorem follows.",
+      "answer_comparison": "Both priors/decisions, full predictive law, correlation and interpretation cautions solved.",
+      "exact_prompt": "Derive case 1's two posterior distributions and launch decisions, including the threshold probability for launching. Derive the two-future count law and the correlation of the two future Bernoulli outcomes. Explain why conditional iid sampling does not imply posterior predictive independence or a frequentist coverage guarantee.",
+      "prompt_sha256": "1b5e9549f43e6a1c643e8522e03e35feb7dab300781ae7c2859cba6a843a0440",
+      "result": "passed"
+    },
+    {
+      "id": "v12-c11-e02",
+      "independent_solution": "Accepted flows give all transition rows (1/2,1/3,1/6), (1/32,77/96,1/6), (1/54,16/81,127/162), each balancing under pi. Dropping the proposal ratio changes the invariant law: solving stationary equations yields (9/100,16/25,27/100), proportional to pi_i q_i. With q=pi every proposal accepts and every row equals pi. After the first transition draws are independent, and the four-mean high-indicator variance is (27/62)(35/62)/4=945/15376.",
+      "answer_comparison": "Every matrix entry, balance identity, changed invariant law and iid-target transfer answered.",
+      "exact_prompt": "Derive every entry of case 2's correct transition matrix and verify detailed balance. Derive the invariant law when the proposal ratio is omitted. What happens if the independence proposal is exactly the normalized target? Compute the variance of four high-state indicators in that independent-target case.",
+      "prompt_sha256": "ac507318400be04aba7535d1afb740b800fdc71a61604ceb4ef6a665fb3d92d4",
+      "result": "passed"
+    },
+    {
+      "id": "v12-c11-e03",
+      "independent_solution": "Nonnegative stochastic residual and delta=31/81 yield TV contraction 50/81. The centered high observable has that eigenvalue, giving gamma_k=(945/3844)(50/81)^k. Lag counting gives variance 11274515/75661452 and finite inflation 1288516/531441; geometric covariance summability proves O(1/n) variance and L2 convergence, with long multiplier 131/31. Low-start times 1-4 have means (1/6,131/486,13111/39366,1186991/3188646), bias -29674775/197696052. Lazy lambda=131/162 gives inflation 293/31, larger here. Initialized and stationary variances are distinct; no MCMC CLT is silently inferred.",
+      "answer_comparison": "All proof steps, finite precision, initialization and lazy transfer supplied.",
+      "exact_prompt": "Prove the minorization contraction, observable eigenfunction covariance law, finite stationary average variance and L² law of large numbers for case 2. Derive its separate low-start expectations and bias. Now replace P by the lazy kernel (I+P)/2: compute its observable eigenvalue and limiting covariance inflation, and explain why laziness is not a universal precision improvement.",
+      "prompt_sha256": "79be34a6dfa8e36e2d07d4ae420b9a3bc387bd379c2980396e09b880930a9a52",
+      "result": "passed"
+    },
+    {
+      "id": "v12-c11-e04",
+      "independent_solution": "Coercivity plus continuity gives existence for positive lambda. At nonzero coordinates, score=lambda sign; at zero both one-sided conditions give absolute score<=lambda. A matching subgradient proves sufficiency. Orthonormal completion of squares gives soft thresholding. Strict convexity in Xb proves uniqueness of fitted values, not necessarily coefficients. At lambda=1/8, including the constant penalty, the active-face solution is (2,0,-3/4). Noise norm 1/8 exceeds lambda/2=1/16, so the stated error-bound event fails while optimization remains correct.",
+      "answer_comparison": "All four optimization proofs and the lower-penalty transfer solved, including threshold equality.",
+      "exact_prompt": "Prove lasso existence, coordinate KKT necessity and sufficiency, orthogonal-design soft thresholding and uniqueness of fitted values. Recompute the orthogonal example at λ=1/8, penalizing the constant column too. Does the original λ/2 noise-event assumption hold at this smaller penalty?",
+      "prompt_sha256": "dfb8ea6644b8052cff860baa504d818766c54f9299edde8ee8a9015278e724dc",
+      "result": "passed"
+    },
+    {
+      "id": "v12-c11-e05",
+      "independent_solution": "Expand the optimum comparison around y=Xbeta*+epsilon. The noise event and support inequality yield prediction/(2n)+(lambda/2)||Delta_Sc||1<=(3lambda/2)||Delta_S||1, hence cone ratio 3. Let t=||XDelta||/sqrt(n). From t²<=3lambda sqrt(s)||Delta||2 and t>=kappa||Delta||2 obtain l2<=3lambda sqrt(s)/kappa², prediction/n<=9lambda²s/kappa² and l1<=12lambda s/kappa²; Delta=0 is direct. Support-only curvature does not supply this full-vector bound without more argument. Gaussian variance<=sigma²/n and a two-tail p-column union give 2p exp(-nt²/(2sigma²)); setting t=lambda/2 at n=100,p=20,sigma=1,alpha=.05 gives .731278974273. It does not prove curvature.",
+      "answer_comparison": "Constants and scope follow the specified normalization and curvature; no hidden design theorem.",
+      "exact_prompt": "Starting from the objective divided by 2n, derive the exact-sparse basic inequality, cone and all three error bounds under the stated full-vector curvature condition. Explain the meaning of κ and why a support-only norm cannot silently replace the full norm. Derive the fixed-design Gaussian union bound and tuning value in case 3, stating which part does not prove curvature.",
+      "prompt_sha256": "1a4449ae6edeb7d50b324cbe37ebaa05e1d7c63ed2b5a7b2fa51a80698c8981b",
+      "result": "passed"
+    },
+    {
+      "id": "v12-c11-e06",
+      "independent_solution": "For t=b1+b2, the scalar lower bound (2-t)²/2+|t|/2 is minimized at t=3/2. Equality in |b1|+|b2|>=|t| requires nonnegative coefficients, giving the whole closed split segment. Fit 3/2 and objective 7/8 are common. Opposite coefficients are a nonzero null direction within the declared support cone. With weights (1,2), |b1|+2|b2|>=|t|+|b2| forces b2=0 at the bound, hence unique (3/2,0). This asymmetry selects an allocation without new data information.",
+      "answer_comparison": "Complete set, objective and changed-weight uniqueness are proved; identifying information remains unchanged.",
+      "exact_prompt": "Prove the complete duplicate-column minimizer set in case 3 and its common fit/objective. Replace its penalty by λ(|b₁|+2|b₂|), with weights (1,2) and λ=1/2. Derive the unique minimizing coefficient vector and explain whether this new uniqueness comes from additional identifying information in the data.",
+      "prompt_sha256": "e7bc4fb89bda60ade4c047356d260f699e495aeb846dfe3f569d8a200173c4ff",
+      "result": "passed"
+    },
+    {
+      "id": "v12-c11-e07",
+      "independent_solution": "Qualified conditional expectation gives remainder (e-e0)[(g1-m1)/e+(g0-m0)/(1-e)]. Uniform clipping and Cauchy-Schwarz give its product norm bound. Conditional moments give means (5/2,5/2,5/2,11/4); last conditional biases 3/4,-1/4 average to 1/4. At truth variance is 1/4+16/3=67/12. At e=1/2 with regression errors +1,-1 the bracket is zero at each X, so mean remains 5/2 while score variance differs. Accidental cancellation neither identifies nuisances nor supplies inference rates.",
+      "answer_comparison": "All means, variance, norm bound and sufficient-versus-necessary distinction answered under repaired hypotheses.",
+      "exact_prompt": "Derive the exact AIPW remainder and its norm bound, and verify case 4's four population means and oracle influence variance. Then use the candidates e=1/2, g₁=m₁+1, g₀=m₀−1 at both X values. Compute the mean score and explain what this both-wrong cancellation does and does not establish.",
+      "prompt_sha256": "58b8653783c2e34a871baeb46571cb315d0326301eaa7f9cc4a21541aec905d7",
+      "result": "passed"
+    },
+    {
+      "id": "v12-c11-e08",
+      "independent_solution": "Condition separately on one outside sample and the independent partition. Held-out data remain iid independent of that fit. Boundedness/overlap and a,b=o_p(1), sqrt(N)ab=o_p(1) yield |Pr|<=ab/c and ||r||2<=b/c+2Ba/c². Conditional Chebyshev uses Var(r)/n_k<=Pr²/n_k and min(1,...) to upgrade random conditional bounds to unconditional convergence. Finite fold summation gives the iid oracle expansion without joint fit independence. Conditional Markov makes empirical r² vanish; Cauchy-Schwarz transfers second moments; oracle LLN and mean consistency give Vhat->V. Positive V and Slutsky use sqrt(Vhat/N). Double robustness alone is insufficient.",
+      "answer_comparison": "Full conditioning, rate, conditional-to-unconditional and consistent-variance proof supplied.",
+      "exact_prompt": "Prove the bounded iid fixed-fold expansion and variance consistency in section 5. Specify the information being conditioned on at each step, state the nuisance rates and overlap requirements, and justify the passage from random conditional bounds to unconditional convergence. Explain why conditioning jointly on all fits or citing double robustness alone is insufficient.",
+      "prompt_sha256": "c50b189fa59aca66c0c6e7217ac76d64046844fe8656f19c27cfd2a37016197d",
+      "result": "passed"
+    },
+    {
+      "id": "v12-c11-e09",
+      "independent_solution": "Fold-0 fit is e=(1/2,1/2),g0=(1,2),g1=(1,3); fold-1 fit e=(1/2,1/2),g0=(-1,0),g1=(3,5). Scores (4,4,5,5,0,0,1,1) have mean 5/2, divisor-8 variance 17/4 and mean variance 17/32. Changing first Y to 1 leaves the fit used for that fold unchanged and changes its score by -4. The other fit changes X=0 control mean from -1 to 1, changing its two X=0 scores by +2,-2. New scores (0,4,5,5,2,-2,1,1), mean 2, variance 11/2 and mean variance 11/16.",
+      "answer_comparison": "Actual refitting and other-row propagation correctly computed, with no stale nuisance fit.",
+      "exact_prompt": "Execute the two-fold training rule and reproduce all eight scores and the reported variance. Then change only the first row's control outcome from −1 to 1, keep its fold and all other inputs fixed, and refit both training folds. Report the eight new scores, pooled estimate, score variance with divisor 8 and estimated mean variance. Explain which other held-out scores change through training.",
+      "prompt_sha256": "679ed558661b808360fcb5ecd2b7bb124cf87b3fa0a984dc41ec6b5646517780",
+      "result": "passed"
+    },
+    {
+      "id": "v12-c11-e10",
+      "independent_solution": "Bounded finite-cell numerator/denominator averages have root-n error; with high probability denominator>=b/2, so the ratio identity yields root-n error. Empty-cell probabilities vanish geometrically, smoothing is order 1/n, clipping is nonexpansive relative to truth, and fixed cell/fold counts give L2 root-N nuisance rates. Exponents 1/5+1/3 give scaled product N^-1/30; two big-O quarter rates only O_p(1). For t=N^-1/4, exact bias is t²[1/(2+t)+1/(6+t)]/2 with scaled limit 1/3. At N=256 shifts 1/32,1/4 give bias 17/900 and scaled 68/225. Overwriting both regressions by Y at finite continuous training IDs leaves fresh L2 errors zero but makes all reused scores zero; held-out IDs avoid that exceptional set.",
+      "answer_comparison": "Empty cells, smoothing, clipping, explicit rate boundary and zero-measure leakage all proved.",
+      "exact_prompt": "Prove the finite-cell learner's root-N nuisance rates under case 4's iid law, including empty cells, smoothing and clipping. Contrast the exponents 1/5 and 1/3 with two quarter rates, and derive the stated nonvanishing bias sequence at N=256 and its limit. Finally prove the continuous-identifier leakage counterexample and explain why its population L² errors are nevertheless zero.",
+      "prompt_sha256": "b2cce0b4d792c7cf02fca5b352fec237b6135fbbb72a99c9377d560d0d5448bd",
+      "result": "passed"
+    },
+    {
+      "id": "v12-c11-e11",
+      "independent_solution": "Replacing p_i by zero gives R_i>=R. If i was rejected, ordered values beyond R are unchanged, giving equality. Conversely p_i<=qR_i/m preserves at least R_i passing values on restoration, forcing R=R_i and rejection. Inclusive ties are valid. Independence from the entire other-p vector and super-uniformity bound each conditional contribution by q/m. Joint counts (99,36,9) yield FDR 1/6, FWER 5/16, EV 3/8, ER 11/8 and ratio 3/11. The grid CDF floor(12u)/12 is valid. The dependent marginal CDF jumps .05 at .05, .10 at .10 and 1 at 1, yet BH rejects in three events totaling .15. Marginal validity alone is insufficient; every nonempty complete-null list has FDP 1.",
+      "answer_comparison": "Both lemma directions, exact-law probabilities, marginals, ties and realized-list distinction answered.",
+      "exact_prompt": "Prove both directions of the BH leave-one-out identity with ties, then independent super-uniform FDR control. Reconstruct the 144-state testing law's FDR, FWER and ratio of expected counts. Verify every marginal p-value condition and rejection event in the dependent complete-null law; explain why neither marginal validity nor a controlled FDR guarantees each realized list's false-discovery proportion.",
+      "prompt_sha256": "aedc6e2c4d38eab11c37d4fc7d78ba61da2fd317596d2b5171a7ce9d58f39b66",
+      "result": "passed"
+    },
+    {
+      "id": "v12-c11-e12",
+      "independent_solution": "Audit six distinct claims: conditional posterior belief versus sampling coverage; correctly targeted correlated MCMC versus iid evidence; KKT optimum versus true support/identification; predictive performance versus causal assumptions; held-out scoring versus learner consistency/product rate and variance; and expected FDP under a specified joint law versus a guarantee for every list. Concrete evidence includes the changed prior, wrong chain target/covariance, duplicate minimizers, stated exchangeability/overlap target, quarter-rate or ID leakage, and independent/dependent BH laws. Six domains total 12 points, one distinction point and one evidence/qualified-replacement point each. Alternative correct arguments are accepted; generic warnings alone earn at most one per domain.",
+      "answer_comparison": "All six false claims have specific benchmark corrections and transparent argument-based scoring.",
+      "exact_prompt": "A report claims: “Our posterior is a confidence guarantee; a million MCMC steps are iid evidence; lasso selected the true variables because its solver converged; predictive accuracy establishes causality; cross-fitting automatically gives root-N inference; and BH ensures at most q of every discovery list is false.” Write a research audit using the chapter's evidence. Score the response out of 12 using the six-domain rubric below; each domain must state the correct distinction and a concrete check, counterexample or qualified replacement claim.",
+      "prompt_sha256": "fc4bc58bae66468592c368005c950f5fc4a316936e393e659a899a1d5f31ff93",
+      "result": "passed"
+    }
+  ],
+  "instruction_and_assessment": {
+    "coverage": "Canonical objective and all six coverage strands taught; every new finite-chain, regularization, cross-fit and testing lemma required by exercises is derived locally.",
+    "prerequisites": "Six flat links to established Bayes, testing, limit, linear algebra, causal and structural chapters. Runtime validates permitted syntax rather than requiring extra files in isolation.",
+    "definitions": "Targets, prior/likelihood, initialization, full-vector curvature, training information, true/fitted nuisances, stochastic rates, FDR/FWER and empty rejection are defined before principal use.",
+    "rubric": "Six domains at two points each total twelve. Each awards one distinction point and one concrete evidence or qualified replacement point. Generic correct warnings capped at one; false claims zero; alternative valid arguments allowed.",
+    "teach_back": "Answered benchmark uses wrong MH target, duplicate design and quarter-rate counterexamples to separate computation, identifying variation, training reuse, causal assumptions and rates.",
+    "retention": "Answered delayed prompt gives basic inequality constants, omitted stationary covariance sum, AIPW product remainder and largest inclusive BH passing index.",
+    "reader_scope": "Six worked articles, twelve stable prompts and twelve paired full solutions, 27 unique IDs and ten flat/scoped links. Structural checks do not certify rendered mobile, print or keyboard behavior.",
+    "originality": "Original finite laws, designs, training records and interventions are instructional, not observed data or reproduced published empirical findings."
+  },
+  "source_scope_audit": {
+    "role": "Complete canonical provenance reading; bs_author remains actual original body/image inspector. No new PDF/image inspection claimed.",
+    "sources": [
+      {
+        "id": "v12-c11-hastings1970",
+        "version": "Original 1970 Biometrika article, public Penn State scan with cover, 14 physical pages.",
+        "read_scope": "Text physical 1,2; images 3,4,5. Physical 2-14 map to printed 97-109 (+95).",
+        "use": "Acceptance ratio with reverse proposal and dependence context; chapter supplies finite balance/minorization/covariance proofs.",
+        "limits": "No physical 6-14 or general-state-space theorem inspection. Invariance is not a convergence/CLT claim."
+      },
+      {
+        "id": "v12-c11-negahban2012",
+        "version": "Coauthor-hosted 2012 Statistical Science article plus supplement, 32 physical pages.",
+        "read_scope": "Text 1,3,4,5,6,8,9,10,11,12,13,21,22,23,24; page 7 initially partial text but fully imaged. Images 6,7,10,11,12,22. Journal physical 1-20 uses +537; inspected supplement 21-24 uses +5.",
+        "use": "Decomposability/cone framework. Original chapter derives its exact 2n loss and full-vector unsquared-kappa constants.",
+        "limits": "Recorded norm, Taylor-loss and tail display cautions preserved; no random-design curvature, broad sparsity, support-recovery or post-selection result imported."
+      },
+      {
+        "id": "v12-c11-dml-v7",
+        "version": "Explicit arXiv v7, 71 pages; not a claim to have read the related 2018 68-page typeset body.",
+        "read_scope": "Text 1,11,12,23-28,35-37,55-62,68-71; partial 2. Images 12,24,25,27,35,36,58,61,68,70,71. Physical/printed numbering coincide.",
+        "use": "Orthogonal score and cross-fit context; chapter proves bounded fixed-K result using conditional variance inequality and explicit probability upgrade.",
+        "limits": "No full-paper, general nonlinear-score, arbitrary learner-rate or efficiency theorem adopted. Version/title distinction and conditional-moment caution retained."
+      },
+      {
+        "id": "v12-c11-bh1995",
+        "version": "Original coauthor-hosted article scan, 13 physical pages including cover.",
+        "read_scope": "Visual only, physical 2-6 and 12-13; text extraction blank. Physical 2-13 map to printed 289-300 (+287).",
+        "use": "Original FDR/step-up and continuous-uniform independence context; chapter supplies its own super-uniform leave-one-out proof.",
+        "limits": "No OCR body reading, physical 7-11 applications, or BY/arbitrary-dependence theorem inspection."
+      }
+    ],
+    "attributed_images": 27,
+    "runtime_boundary": "Four PDFs and 27 images remain provenance only, not portable runtime dependencies. The entire canonical source record is bound. Citation presence is not substituted for proof review."
+  },
+  "findings": [
+    {
+      "id": "c11-root-01",
+      "origin": "Coordinator manuscript review",
+      "severity": "Substantive proof-domain clarification",
+      "issue": "Pointwise positivity alone does not justify a uniformly bounded expectation along the orthogonality path; initial population identities also need integrability.",
+      "resolution": "Canonical additions require integrable potential outcomes, absolute integrability of expected-score terms with sufficient clipped candidate/integrable-regression conditions, and a common c for bounded perturbation paths.",
+      "peer_assessment": "Every exact replacement read and reconstructed. These conditions justify tower expectations and bounded path remainders without changing finite answers.",
+      "status": "resolved"
+    },
+    {
+      "id": "c11-peer-01",
+      "origin": "Independent peer analytic counterexample communicated before final binding",
+      "severity": "Independent support for the integrability refinement",
+      "issue": "Correct regressions with an arbitrary merely pointwise-positive candidate e need not yield a defined unconditional AIPW mean.",
+      "construction": "Let X~Uniform(0,1), D independent Bernoulli(1/2), and both potential outcomes independent fair signs, independent of X,D. Then m0=m1=0, e0=1/2, with bounded outcomes and the causal assumptions. Choose g0=g1=0 but e(X)=X. Score is D epsilon1/X-(1-D)epsilon0/(1-X). Conditional mean is zero for each X, yet E|psi|=(1/2) integral_0^1 [1/x+1/(1-x)] dx=infinity. Symmetry makes both positive and negative parts have infinite expectation, so E psi is undefined.",
+      "resolution": "Final expected-score identities require absolute integrability; the explicit uniformly clipped sufficient condition excludes this case.",
+      "status": "resolved by the same canonical promotion"
+    }
+  ],
+  "open_findings": [],
+  "computation_and_domains": {
+    "arithmetic": "Exact fractions for laws, accepted flows, stationary systems, occupation counts, active KKT faces, conditional moments, fits and testing. Floating log/exp/sqrt only for Gaussian tuning and its tail check. Parsed exact fractions compare exactly.",
+    "budget": "At most 12 probability states/linear-system dimension, 16 ordered observations, binary occupancy horizon 32, lasso four columns/16 rows, two-fold data 32 rows, testing family 12. Actual lasso fits use 27 faces; original testing law has 144 states. No random grid or unbounded simulation.",
+    "failures": "Boolean/nonfinite/oversized scalars; signed/unnormalized probabilities; zero evidence; Bernoulli domain/budget; target/proposal shape; occupancy budget; zero penalty/singular oracle design/response shape; treatment/overlap; fold/covariate/outcome bounds; family/p-value/q/rule; duplicate-key/nonfinite/overflow JSON; unsafe visible expression.",
+    "domain_scope": "The full-rank active-face oracle is deliberately distinct from the analytic duplicate-column proof. Its singular-design rejection does not assert that lasso lacks a minimizer.",
+    "proof_scope": "Finite checks support concrete results and boundaries. Asymptotic, integrability, cone, leakage and FDR proofs were reviewed analytically, not established by finite numerical testing."
+  },
+  "validation": {
+    "status": "Passed final quiet normal/optimized API/CLI runs in workspace and an exact-six isolated tree. After recording this evidence, the same gates are replayed against final unchanged frozen bytes.",
+    "executions": [
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "API",
+        "mode": "normal",
+        "role": "independent peer",
+        "silent_CLI": false,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": true,
+        "tree": "workspace"
+      },
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "CLI",
+        "mode": "normal",
+        "role": "independent peer",
+        "silent_CLI": true,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": false,
+        "tree": "workspace"
+      },
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "API",
+        "mode": "optimized",
+        "role": "independent peer",
+        "silent_CLI": false,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": true,
+        "tree": "workspace"
+      },
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "CLI",
+        "mode": "optimized",
+        "role": "independent peer",
+        "silent_CLI": true,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": false,
+        "tree": "workspace"
+      },
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "API",
+        "mode": "normal",
+        "role": "author integration only",
+        "silent_CLI": false,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": true,
+        "tree": "workspace"
+      },
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "CLI",
+        "mode": "normal",
+        "role": "author integration only",
+        "silent_CLI": true,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": false,
+        "tree": "workspace"
+      },
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "API",
+        "mode": "optimized",
+        "role": "author integration only",
+        "silent_CLI": false,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": true,
+        "tree": "workspace"
+      },
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "CLI",
+        "mode": "optimized",
+        "role": "author integration only",
+        "silent_CLI": true,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": false,
+        "tree": "workspace"
+      },
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "API",
+        "mode": "normal",
+        "role": "independent peer",
+        "silent_CLI": false,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": true,
+        "tree": "exact-six isolated"
+      },
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "CLI",
+        "mode": "normal",
+        "role": "independent peer",
+        "silent_CLI": true,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": false,
+        "tree": "exact-six isolated"
+      },
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "API",
+        "mode": "optimized",
+        "role": "independent peer",
+        "silent_CLI": false,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": true,
+        "tree": "exact-six isolated"
+      },
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "CLI",
+        "mode": "optimized",
+        "role": "independent peer",
+        "silent_CLI": true,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": false,
+        "tree": "exact-six isolated"
+      },
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "API",
+        "mode": "normal",
+        "role": "author integration only",
+        "silent_CLI": false,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": true,
+        "tree": "exact-six isolated"
+      },
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "CLI",
+        "mode": "normal",
+        "role": "author integration only",
+        "silent_CLI": true,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": false,
+        "tree": "exact-six isolated"
+      },
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "API",
+        "mode": "optimized",
+        "role": "author integration only",
+        "silent_CLI": false,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": true,
+        "tree": "exact-six isolated"
+      },
+      {
+        "cwd": "/",
+        "exit_code": 0,
+        "import_and_check_stdout_bytes": 0,
+        "interface": "CLI",
+        "mode": "optimized",
+        "role": "author integration only",
+        "silent_CLI": true,
+        "stderr_bytes": 0,
+        "summary_serialized_by_harness_only": false,
+        "tree": "exact-six isolated"
+      }
+    ],
+    "independent_summary": {
+      "author_files_bound": 4,
+      "chapter": "v12-c11",
+      "executed_rejections": 35,
+      "exercises": 12,
+      "independent_comparisons": 366,
+      "lasso_faces_per_fit": 27,
+      "limits": "Finite exact mechanisms accompany separately reviewed proofs and all solutions. No author helper is an oracle; no generic MCMC CLT, arbitrary learner rate, causal validity, rendered UI, human certification or chapter acceptance is certified.",
+      "oracle_methods": [
+        "sequential posterior updates and four predictive records",
+        "symmetric accepted flows, stationary equations and binary occupation-count recursion",
+        "active/sign-face KKT systems and duplicate-column objective bounds",
+        "conditional score first/second moments and actual observed-law cross-check",
+        "one-pass fold sufficient statistics, outcome refit and clipped-cell boundaries",
+        "threshold-count BH, rectangle counts and conditional null contributions"
+      ],
+      "peer_checker_bound": true,
+      "solutions": 12,
+      "status": "passed",
+      "testing_states": 144,
+      "visible_anchors": 79,
+      "worked_cases": 6
+    },
+    "author_integration_summary": {
+      "chapter": "v12-c11",
+      "comparisons": 668,
+      "exact_stationary_paths": 81,
+      "executed_rejections": 45,
+      "exercises": 12,
+      "independent_testing_states": 144,
+      "intervention_scopes": [
+        "Alternative prior changes decision; no-data and parameter-endpoint likelihoods",
+        "Omitted proposal ratio, low initialization, exact-target proposal, laziness and zero reverse support",
+        "Penalty threshold and noise-event boundary, duplicate null direction and (1,2) weighted penalty",
+        "All four nuisance truth combinations and both-wrong cancellation with changed variance",
+        "Actually refitted outcome transfer, empty training cells and active propensity clipping",
+        "Quarter-rate inference-scale bias and own-identifier leakage versus held-out oracle",
+        "Early-failure/later-pass and tied thresholds; complete independent and dependent testing laws"
+      ],
+      "leave_one_out_state_identities": 288,
+      "limits": "Finite original laws and bounded exact procedures. Analytic proofs are separately author-reviewed; no generic MCMC CLT, arbitrary learner rates, empirical causal validity, human certification, reader UI check or chapter acceptance implied.",
+      "nonself_author_bindings": 3,
+      "primary_inspection_scopes": 4,
+      "purposeful_interventions": 7,
+      "rejection_scopes": [
+        "boolean numerical input",
+        "nonfinite parameter",
+        "infinite parameter",
+        "unnormalized law",
+        "signed probability law",
+        "fractional success count",
+        "negative failure count",
+        "prior dimension mismatch",
+        "zero observation marginal",
+        "zero target state outside positive-target scope",
+        "proposal target size mismatch",
+        "nonsquare proposal",
+        "proposal row mass exceeds one",
+        "ambiguous ratio flag",
+        "nonstationary law in stationary covariance routine",
+        "path enumeration outside bounded scope",
+        "zero penalty excluded by coercivity contract",
+        "negative penalty",
+        "duplicate design in orthogonal-only solver",
+        "response shape mismatch",
+        "nonpositive penalty weight",
+        "zero tuning sample size",
+        "degenerate Gaussian variance outside tuning scope",
+        "noninterior tail target",
+        "boolean treatment indicator",
+        "nonbinary treatment indicator",
+        "zero fitted overlap",
+        "unit fitted propensity",
+        "true overlap failure",
+        "empty held-out/training fold",
+        "covariate outside binary learner scope",
+        "outcome outside bounded theorem experiment",
+        "malformed learner row",
+        "empty testing family",
+        "p-value exceeds one",
+        "zero testing target outside specified domain",
+        "ambiguous familywise rule",
+        "incomplete null-law mass",
+        "duplicate JSON key",
+        "nonstandard nonfinite JSON token",
+        "overflowed JSON number",
+        "unsupported displayed code",
+        "displayed square-root domain",
+        "stray top-level delimiter",
+        "unbalanced reader markup"
+      ],
+      "solutions": 12,
+      "status": "passed",
+      "visible_calculation_markers": 79,
+      "worked_cases": 6,
+      "working_only": false
+    },
+    "author_integration_boundary": "Author checker execution is integration evidence only and is never called or imported by the independent peer checker.",
+    "all_summaries_agree_by_role": true,
+    "all_payload_hashes_unchanged": true,
+    "exact_six_membership_unchanged": true,
+    "runtime_files": [
+      "content/chapters/v12-c11.html",
+      "scripts/check_v12_c11.py",
+      "content/reviews/v12-c11-sources.json",
+      "content/reviews/v12-c11-author.json",
+      "scripts/check_v12_c11_peer.py",
+      "content/reviews/v12-c11-peer.json"
+    ],
+    "invocation": "check(root=None) derives the book root from __file__; explicit root is supported. Every API/CLI execution uses cwd=/ with bytecode disabled. Successful import/check and CLI produce no output. Only the external harness serializes returned strict JSON.",
+    "acceptance": "Passed peer review is not chapter acceptance; root owns that decision."
+  },
+  "limitations": [
+    "Machine-assisted separate peer review is not independent human academic certification or an error-free guarantee.",
+    "No generic MCMC CLT, arbitrary-design curvature, arbitrary learner rate, unbounded-score theorem or arbitrary-dependence BH guarantee.",
+    "Synthetic causal assumptions are stipulated and need independent justification in empirical applications.",
+    "Eight-row demonstration has no claimed finite-sample coverage; inference is asymptotic under its explicit hypotheses.",
+    "No new primary PDF/image inspection, shared build, rendered UI check, canonical mutation or publication."
+  ],
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v12-c11.html",
+      "bytes": 63906,
+      "sha256": "bf96c74426fc300fa5d70fe9d7c6b2173fdbbccbe16095d309d88566945f08ef"
+    },
+    {
+      "path": "scripts/check_v12_c11.py",
+      "bytes": 41792,
+      "sha256": "f3c356b6b62eb3456962e8128cc284b67159645bf4d444310b78d7cd6ed5fefa"
+    },
+    {
+      "path": "content/reviews/v12-c11-sources.json",
+      "bytes": 43236,
+      "sha256": "95b52573a017719d1744ef82bc5e1af5bb794c1956c936a060af0041c95b78bd"
+    },
+    {
+      "path": "content/reviews/v12-c11-author.json",
+      "bytes": 38715,
+      "sha256": "1b711f7cea8e3ab51ba134477a62ea222cd222e97331e42d2ab3eeee99f08459"
+    },
+    {
+      "path": "scripts/check_v12_c11_peer.py",
+      "bytes": 34086,
+      "sha256": "8cff495e0ee77650b15c3378d10f1f28e838bc5763b1dea57764ec2d67804c65"
+    }
+  ]
+}

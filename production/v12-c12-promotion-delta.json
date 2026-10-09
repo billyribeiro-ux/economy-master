@@ -1,0 +1,111 @@
+{
+  "chapter": "v12-c12",
+  "date": "2026-10-09",
+  "working_files": [
+    {
+      "path": "production/v12-c12-working.html",
+      "bytes": 53549,
+      "sha256": "b5ceea490705a77e0013edd27b45eb73fd69a90df21710ad4bfd4742380102f0"
+    },
+    {
+      "path": "production/check_v12_c12_working.py",
+      "bytes": 30624,
+      "sha256": "33a64df328109f32b364e400cce1e577a797c0dbde6c7cb090f9e32d48b29faf"
+    },
+    {
+      "path": "production/v12-c12-sources-working.json",
+      "bytes": 14104,
+      "sha256": "bad31153c69af7eda6b11c12ea573324052923ba787d79b20f25fe80d3ad4589"
+    },
+    {
+      "path": "production/v12-c12-author-review-working.json",
+      "bytes": 16198,
+      "sha256": "452904a19a102c3d0b8d67cb97f1c54c8b5ee924d049e83ef4dad9327a2e6d2c"
+    }
+  ],
+  "canonical_files": [
+    {
+      "path": "content/chapters/v12-c12.html",
+      "bytes": 53355,
+      "sha256": "d4aaa65c4a90654a4f14568be1f509d6a18cdc3de7462c523418982e8f305294"
+    },
+    {
+      "path": "scripts/check_v12_c12.py",
+      "bytes": 30647,
+      "sha256": "270a31c577acc45c17ca4445537afcbea9252eec5999b220465ac3ad653b356f"
+    },
+    {
+      "path": "content/reviews/v12-c12-sources.json",
+      "bytes": 14291,
+      "sha256": "65772a8c67264475e0f8b142831c96eff9cb88cb90a76628531b2de3c2ba2317"
+    },
+    {
+      "path": "content/reviews/v12-c12-author.json",
+      "bytes": 17196,
+      "sha256": "bf99c01169b3e5d91becbc2a60bfd8c3cf7d6e960fb35c838812a8200f738bae"
+    }
+  ],
+  "exact_HTML_replacements": [
+    {
+      "from": "Subtract it from both baseline levels:",
+      "to": "Add that shift to both baseline levels:"
+    },
+    {
+      "from": "<p><strong>Working-package reproduction.</strong> The adjacent standard-library checker runs silently with <code>python3 -B check_v12_c12_working.py</code> and <code>python3 -B -O check_v12_c12_working.py</code>. Its quiet <code>check()</code> function returns a JSON-safe summary. It needs only this working HTML, the checker, the working source record and the working author record; it neither contacts a network nor reads a previous chapter. It reconstructs raw fixtures from independently encoded primitives, checks visible records, keeps actual-potential and sharp-null laws separate, and tests explicit invalid inputs. These checks support the stated finite calculations; the proofs and a separate peer review remain necessary.</p>",
+      "to": "<p><strong>Reproduce the dossier.</strong> Parse the six visible CSV blocks using their stated keys and units. Keep the teaching oracle separate from the analyst inputs. Reconstruct P0 from the eight unique trial IDs, enumerate the 36 assignments under each explicitly stated law, and compare the target and restricted-input calculations with their worked results. Record the inputs, transformations and commands actually used; label conditional completions as such. The exercises supply the required outputs and interpretation checks.</p>"
+    },
+    {
+      "from": "The working source record names the specialist who actually read the primary bodies and images.",
+      "to": "The source record identifies the actual primary-body readers and the limits of prior-record reuse."
+    }
+  ],
+  "exact_checker_replacements": [
+    {
+      "from": "HERE = Path(__file__).resolve().parent",
+      "to": "HERE = Path(__file__).resolve().parents[1]"
+    },
+    {
+      "from": "\"v12-c12-working.html\"",
+      "to": "\"content/chapters/v12-c12.html\""
+    },
+    {
+      "from": "\"v12-c12-sources-working.json\"",
+      "to": "\"content/reviews/v12-c12-sources.json\""
+    },
+    {
+      "from": "\"v12-c12-author-review-working.json\"",
+      "to": "\"content/reviews/v12-c12-author.json\""
+    },
+    {
+      "from": "\"check_v12_c12_working.py\"",
+      "to": "\"scripts/check_v12_c12.py\""
+    },
+    {
+      "from": "Validate exactly four adjacent payloads;",
+      "to": "Validate exactly four canonical payloads;"
+    }
+  ],
+  "source_metadata": "Canonical status/runtime description and explicit ASA prior-only inspector field. Other source evidence preserved.",
+  "author_metadata": "Canonical names, runtime paths, rebound three nonself payloads, historical execution label and root finding record.",
+  "resolved_findings": [
+    {
+      "id": "c12-root-01",
+      "issue": "Solution e9 says subtract a negative shift although its displayed arithmetic correctly adds that shift.",
+      "resolution": "Change to Add that shift to both baseline levels; all values unchanged.",
+      "status": "resolved"
+    },
+    {
+      "id": "c12-root-02",
+      "issue": "Working-package command paragraph refers to adjacent production files rather than the delivered reader.",
+      "resolution": "Replace with reader-facing reproduction steps using the six visible CSV blocks and exercises; remove the remaining working-source label.",
+      "status": "resolved"
+    },
+    {
+      "id": "c12-root-03",
+      "issue": "ASA actual-inspector field could imply a fresh primary-body inspection, despite the explicit prior-only reading boundary.",
+      "resolution": "Explicitly identify historical reader as unrecorded and ito_author as prior-record reviewer only.",
+      "status": "resolved"
+    }
+  ],
+  "numerical_logic_unchanged": true
+}

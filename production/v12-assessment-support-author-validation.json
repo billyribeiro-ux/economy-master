@@ -1,0 +1,87 @@
+{
+  "volume": "v12",
+  "component": "support",
+  "date": "2026-10-09",
+  "status": "passed author gates; independent peer pending",
+  "comparisons": 109,
+  "numeric_markers": 39,
+  "runs": [
+    {
+      "mode": "normal workspace API",
+      "result": "passed; quiet stdout/stderr; strict JSON summary from previous sequential call",
+      "comparisons": 109
+    },
+    {
+      "mode": "optimized exact-five API",
+      "result": "passed",
+      "cwd": "/",
+      "quiet": true,
+      "exact_members_and_bytes_unchanged": true
+    },
+    {
+      "mode": "optimized exact-five CLI",
+      "result": "passed",
+      "cwd": "/",
+      "quiet": true,
+      "exact_members_and_bytes_unchanged": true
+    }
+  ],
+  "frozen_files": [
+    {
+      "path": "content/assessments/parts/v12-support-opening.html",
+      "bytes": 13606,
+      "sha256": "db5731cb0c69bd149b6fbb5d69b0f605b8e773e49c9c1e4f1df19adf13c04ba5"
+    },
+    {
+      "path": "content/assessments/parts/v12-support-closing.html",
+      "bytes": 27465,
+      "sha256": "fb8dfe31c9ba0df1213fc1313e4a5827ca08ff6e637926f71ed0a9d9e60170c7"
+    },
+    {
+      "path": "scripts/check_v12_support.py",
+      "bytes": 10663,
+      "sha256": "b15a5ddf423958577f7910bc5dd53c08fe3290e6e86818e7d2616e66655a0f1b"
+    },
+    {
+      "path": "content/reviews/v12-support-sources.json",
+      "bytes": 1437,
+      "sha256": "ce5a970e87b7aea6d284fc303664e1b249da1bb0f2899ced0a4203b1601cc8b1"
+    },
+    {
+      "path": "content/reviews/v12-support-author.json",
+      "bytes": 2903,
+      "sha256": "2fa29fd8ff6c9e5ea1eb2887f84b4b8d4fee1f023d637aeeb07bc6bffa0d9ed7"
+    }
+  ],
+  "limits": "Original numeric/prompt/proof author review; no new primary source inspection, UI check or external human validation.",
+  "post_freeze_structural_delta": {
+    "description": "Added concept-index ID to existing table; updated author binding.",
+    "current_changed_files": [
+      {
+        "path": "content/assessments/parts/v12-support-closing.html",
+        "bytes": 27484,
+        "sha256": "ef36b11b2ffe7b321bda7f4366f2f57884529f0a990b205173953dc79025294b"
+      },
+      {
+        "path": "content/reviews/v12-support-author.json",
+        "bytes": 3057,
+        "sha256": "06f25a98c6c2799f49d3b65f278b44739b65dba17e93213499c6048fccd5d7d4"
+      }
+    ],
+    "root_API_after_delta": {
+      "status": "passed",
+      "comparisons": 109,
+      "numeric_markers": 39,
+      "diagnostic_questions": 8,
+      "oral_questions": 5,
+      "retention_questions": 5,
+      "scored_points": {
+        "diagnostic": 40,
+        "oral": 20,
+        "retention": 50
+      },
+      "limitations": "Numerical/structural checks; proof and exact-prompt judgments remain substantive review."
+    },
+    "portable_scope": "Original unchanged checker portable evidence reused; final peer will check new five-file author freeze in exact-seven integration."
+  }
+}

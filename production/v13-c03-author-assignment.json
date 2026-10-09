@@ -1,0 +1,69 @@
+{
+  "chapter": "v13-c03",
+  "date": "2026-10-09",
+  "author": "ito_author",
+  "status": "active_full_working_authoring_after_v12_project_freeze",
+  "specification": {
+    "id": "v13-c03",
+    "number": 3,
+    "title": "Uncertainty and information",
+    "outcome": "Analyze risk attitudes and the economic value of information formally.",
+    "coverage": [
+      "Expected utility",
+      "stochastic dominance",
+      "risk aversion",
+      "Bayesian information",
+      "Blackwell ordering"
+    ],
+    "prerequisites": [
+      "v13-c02"
+    ],
+    "level": "Graduate",
+    "status": "planned",
+    "manuscript": "chapters/v13-c03.html",
+    "sources": [
+      "harvard-economics-requirements",
+      "mit-economics-curriculum"
+    ],
+    "required_worked_examples": 3,
+    "required_exercises": 10,
+    "review": {
+      "arithmetic": false,
+      "reasoning": false,
+      "solutions": false,
+      "sources": false,
+      "instruction": false,
+      "structure": false
+    }
+  },
+  "owned_paths": [
+    "production/v13-c03-source-preparation.json",
+    "production/v13-c03-blueprint-proposal.json",
+    "production/v13-c03-working.html",
+    "production/check_v13_c03_working.py",
+    "production/v13-c03-sources-working.json",
+    "production/v13-c03-author-review-working.json"
+  ],
+  "prerequisite_evidence": [
+    "production/v13-c01-working.html",
+    "production/v13-c02-blueprint-root.json"
+  ],
+  "scope": "Complete graduate chapter on uncertainty and information. Use six substantive original worked cases and twelve original solved exercises, explicit assumptions and finite-dimensional proofs. Source preparation and a compact internal blueprint are evidence, not extra approval stages: independently resolve routine choices, proceed to full working manuscript, and report material findings promptly. Root must independently review and separate peer must pass before canonical acceptance; C01/C02 acceptance precedes C03.",
+  "required_treatment": [
+    "Finite-lottery expected utility: state complete/transitive mixture-continuous independent preferences, construct a cardinal affine representation with degenerate/equivalent outcomes handled, distinguish ordinal changes from positive affine changes. Give an independence violation and its exact consequence.",
+    "Increasing concave utility and risk aversion; certainty equivalents and risk premiums under explicit support/domain and strictness; Arrow-Pratt comparison under regularity, and local small-risk expansion with its approximation status.",
+    "First- and second-order stochastic dominance on finite bounded supports: complete quantifiers, correct CDF/integrated-CDF directions, proof or finite constructive argument, and equal-mean mean-preserving-spread distinction. Show incomparability using utilities or distributions.",
+    "Finite Bayesian experiments with declared prior, signals, posterior probabilities, feasible actions and payoffs. Compute optimal prior/posterior action values; distinguish weakly valuable free information from strict value, acquisition cost and changed constraints.",
+    "Finite Blackwell ordering with row/column conventions declared: garbling proof of value inequality for every finite decision problem and priors. Prove the finite converse through a carefully stated separating-hyperplane argument, or provide a complete justified equivalent finite theorem. No unsupported claim that one payoff comparison or one posterior dispersion statistic proves dominance.",
+    "Original numerical garbling and non-comparable experiments with explicit payoff witnesses; information value across different decision problems, and a research/referee case separating experiment dominance, risk attitudes, costs, empirical measurement and behavioral assumptions."
+  ],
+  "reader_deliverables": [
+    "Capability/prerequisites, motivation, definitions before use, substantive intuition and derivations/proofs, six worked cases, twelve full prompt/solution pairs, boundary/counterexamples, answered teach-back and retention, source limits and deeper-study path.",
+    "Use existing chapter HTML conventions, namespace v13-c03; no canonical chapter or shared files until root promotion.",
+    "Standard-library quiet deterministic checker with independent arithmetic/proof witnesses, meaningful invalid-domain checks, strict JSON summary and no mutation. Normal workspace API plus optimized exact-four working-runtime API and CLI from unrelated cwd; keep membership/bytes unchanged. Four runtime files are manuscript/checker/source-record/author-record; source-preparation/blueprint are provenance only.",
+    "Compact source and author records with actual inspector/scope, exact bindings and unresolved issues. Do not duplicate solutions in logs."
+  ],
+  "source_policy": "Browse primary official course or author sources for new specialist claims; reuse any actually inspected stable source within its scope. Record exact source URLs, dates, physical/printed pages and actual text/image inspections. Do not attribute unseen body reading. Source artifacts may be held under ../tmp/pdfs/v13-c03/; only compact provenance/proposals in assigned production records. No sources.json mutation.",
+  "ownership": "No canonical curriculum/source/status/build/hosting edits, no other chapter or frozen package edits, no child agents, no paid tools/installations. All mathematics/prose/problems original; no empirical/accreditation/career guarantees.",
+  "efficiency": "One focused source pass and three final gates; reuse unchanged evidence, no redundant simulation grids or verbose gate matrices."
+}

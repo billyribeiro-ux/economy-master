@@ -1,0 +1,65 @@
+{
+  "chapter": "v12-c12",
+  "date": "2026-10-09",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating author with separate substantive machine-assisted peer evidence",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Six complete research-audit cases and12 solved exercises: finite design, data grain/units, sharp versus weak null, selected-rule calibration, finite transport, sharp assumption bounds and restricted reproduction information.",
+  "author_review": "reviews/v12-c12-author.json",
+  "peer_review": "reviews/v12-c12-peer.json",
+  "root_numerical_evidence": "production/v12-c12-author-validation.json",
+  "final_execution_evidence": "production/v12-c12-peer-validation.json",
+  "promotion_evidence": "production/v12-c12-promotion-delta.json",
+  "verified_payload_hashes": 6,
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v12-c12.html",
+      "bytes": 53355,
+      "sha256": "d4aaa65c4a90654a4f14568be1f509d6a18cdc3de7462c523418982e8f305294"
+    },
+    {
+      "path": "scripts/check_v12_c12.py",
+      "bytes": 30647,
+      "sha256": "270a31c577acc45c17ca4445537afcbea9252eec5999b220465ac3ad653b356f"
+    },
+    {
+      "path": "content/reviews/v12-c12-sources.json",
+      "bytes": 14291,
+      "sha256": "65772a8c67264475e0f8b142831c96eff9cb88cb90a76628531b2de3c2ba2317"
+    },
+    {
+      "path": "content/reviews/v12-c12-author.json",
+      "bytes": 17196,
+      "sha256": "bf99c01169b3e5d91becbc2a60bfd8c3cf7d6e960fb35c838812a8200f738bae"
+    },
+    {
+      "path": "scripts/check_v12_c12_peer.py",
+      "bytes": 35913,
+      "sha256": "0de363daaf57264e70380bb2bd387fb2697306dbfcb692910950b6e1cc5d762b"
+    },
+    {
+      "path": "content/reviews/v12-c12-peer.json",
+      "bytes": 10960,
+      "sha256": "b1d1762184baef5b53add49ddfe3c730ea49f657c15b020548f6f7d88e995af0"
+    }
+  ],
+  "resolved_findings": [
+    "Corrected add-negative-shift wording without changing arithmetic.",
+    "Replaced working-checker instructions with reader-facing fixture reproduction guidance.",
+    "Made ASA historical inspector limits explicit.",
+    "Corrected peer variance wording: unbiased arm sample variances do not require constant effects; Neyman equality here uses that restriction."
+  ],
+  "open_content_findings": [],
+  "limitations": [
+    "Synthetic research audit, not executed external-paper replication.",
+    "Finite inference and transport retain stated restrictions.",
+    "Source inspection attributed and scoped; rendered reader/mobile/keyboard/print QA remains pending."
+  ]
+}

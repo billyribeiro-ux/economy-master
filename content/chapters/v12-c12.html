@@ -1,0 +1,285 @@
+<section class="chapter-intro">
+<p class="eyebrow">Volume 12 · Chapter 12</p>
+<h2>Econometric research audit</h2>
+<p>A program can reproduce a number that estimates the wrong object. A correct estimate can receive a p-value from the wrong testing rule. A valid trial result can fail to describe the people who will receive the policy. This chapter follows one original fictional study through those distinct questions, retaining the data, assignments and information available at each decision.</p>
+<p><strong>Capability.</strong> Reconstruct a paper's estimand and data lineage; prove finite-design inference under its actual assignment law; replay a result-informed testing choice; derive a target-population calculation and its limits; and write an evidence-ranked referee report that distinguishes executed calculations from unavailable evidence.</p>
+<p><strong>Prerequisites.</strong> <a href="v04-c03.html">Data transformations</a> and <a href="v04-c12.html">The empirical audit</a> supply pipeline habits. <a href="v12-c06.html">Randomization and potential outcomes</a> supplies finite causal targets; <a href="v12-c11.html">Modern methods and multiple testing</a> separates a fitted model, an identifying assumption and an error criterion. We prove the finite selection and transport results needed here. There is no new large-sample, machine-learning or dependent-data limit theorem.</p>
+<p>The Harbor short-course dossier is entirely synthetic. Currency units (CU), persons and relative study days are stipulated. Potential outcomes shown for teaching are not information the fictional analysts observed. Author calculations and a reproducibility exercise do not constitute an independently validated empirical paper or a demonstration of a learner's research competence.</p>
+</section>
+
+<section id="v12-c12-study">
+<h2>1. State the experiment before reading the conclusion</h2>
+<p>There are eight fixed trial participants. Baseline stratum X is zero for IDs 1–4 and one for IDs 5–8. Treatment A means receipt of one standardized short course, with full compliance. Y is four-week earnings measured at a common endpoint. For person i, Yᵢ(a) is the outcome under course status a. Consistency Yᵢ=Yᵢ(Aᵢ), no interference between people, and no direct participation effect apart from treatment are stipulated. The target of the primary analysis is the finite trial average τ<sub>tr</sub>=(1/8)Σᵢ[Yᵢ(1)−Yᵢ(0)]. A different course, outcome date or population would define a different target.</p>
+<p>Within each stratum, choose exactly two of its four people uniformly for treatment. The two stratum draws are independent. Let Z=(A₁,…,A₈) denote the whole assignment. Its sample space Ω contains (4 choose 2)²=<span data-calc="assignment-count">36</span> vectors of equal probability. Individual treatment indicators within a stratum are dependent: learning that two particular people were treated forces the others to be controls. The actual treated IDs are 3, 4, 7 and 8.</p>
+<article class="worked" id="v12-c12-case1">
+<h3>Worked case 1: a finite study and three information sets</h3>
+<p>The teaching oracle specifies control outcomes b=(1,2,3,4,2,4,6,8) and additive effects τᵢ=1 in X=0 and τᵢ=3 in X=1. Thus Yᵢ(a)=bᵢ+aτᵢ. These fixed pairs let us verify a method's repeated-assignment properties; they are not eight observed treatment effects.</p>
+<table><caption>Teaching law and actual observed record, in CU</caption><thead><tr><th>ID</th><th>X</th><th>Y(0), Y(1), teaching only</th><th>Actual A</th><th>Observed Y</th></tr></thead><tbody>
+<tr><td>1</td><td>0</td><td>1, 2</td><td>0</td><td>1</td></tr><tr><td>2</td><td>0</td><td>2, 3</td><td>0</td><td>2</td></tr><tr><td>3</td><td>0</td><td>3, 4</td><td>1</td><td>4</td></tr><tr><td>4</td><td>0</td><td>4, 5</td><td>1</td><td>5</td></tr><tr><td>5</td><td>1</td><td>2, 5</td><td>0</td><td>2</td></tr><tr><td>6</td><td>1</td><td>4, 7</td><td>0</td><td>4</td></tr><tr><td>7</td><td>1</td><td>6, 9</td><td>1</td><td>9</td></tr><tr><td>8</td><td>1</td><td>8, 11</td><td>1</td><td>11</td></tr>
+</tbody></table>
+<p>Write Δ̂ₓ=Ȳ<sub>1x</sub>−Ȳ<sub>0x</sub>, where each mean divides by two people. The primary statistic is T=(Δ̂₀+Δ̂₁)/2. The actual cell contrasts are <span data-calc="observed-contrasts">(3,7)</span>, hence T=<span data-calc="observed-primary">5</span>. The oracle trial effect is <span data-calc="trial-effect">2</span>. Their difference is possible under valid random assignment: the realized treated groups happened to contain people with higher control outcomes.</p>
+<p>The full-data analyst observes IDs, X, assignments and one outcome per trial person, plus the frame's participation/baseline records and logs. The instructor additionally sees both potential outcomes and stipulated target counterfactual means. The restricted auditor introduced in section 6 is a separate fictional observer with a smaller information set. None of these perspectives may borrow unobserved information from another while claiming an executed empirical result.</p>
+</article>
+</section>
+
+<section id="v12-c12-data">
+<h2>2. Recover the statistical unit from the raw records</h2>
+<p>The following CSV blocks are the raw input contract. All files are UTF-8 with a header, comma separators and LF line endings. The visible blocks are the data: no external download is required. A <em>key</em> is the stated set of columns that uniquely identifies a row. Joining tables changes the unit of analysis if a one-to-many relation is mistaken for a one-to-one relation.</p>
+<p><strong>frame-baseline.csv.</strong> This fixed roster contains eight participants and 24 nonparticipants. Only S (trial participation) and X are observed for nonparticipants. Their outcomes are not in the table.</p>
+<pre data-fixture="frame-baseline.csv"><code>unit_id,trial_participant,x_stratum
+1,1,0
+2,1,0
+3,1,0
+4,1,0
+5,1,1
+6,1,1
+7,1,1
+8,1,1
+9,0,0
+10,0,0
+11,0,0
+12,0,0
+13,0,0
+14,0,0
+15,0,1
+16,0,1
+17,0,1
+18,0,1
+19,0,1
+20,0,1
+21,0,1
+22,0,1
+23,0,1
+24,0,1
+25,0,1
+26,0,1
+27,0,1
+28,0,1
+29,0,1
+30,0,1
+31,0,1
+32,0,1
+</code></pre>
+<p><strong>trial-assignment.csv.</strong> The unit_id key is unique; the complete set must equal the eight S=1 IDs. Balance is a property of the declared design, not a reason to discard inconvenient observations.</p>
+<pre data-fixture="trial-assignment.csv"><code>unit_id,a
+1,0
+2,0
+3,1
+4,1
+5,0
+6,0
+7,1
+8,1
+</code></pre>
+<p><strong>trial-followup-cents.csv.</strong> Each amount is an integer number of cents. Divide by exactly 100 to obtain CU. Missing, malformed and zero are distinct states. For this bounded teaching dataset the permitted amounts are 0 through 1,200 cents.</p>
+<pre data-fixture="trial-followup-cents.csv"><code>unit_id,outcome_cents
+1,100
+2,200
+3,400
+4,500
+5,200
+6,400
+7,900
+8,1100
+</code></pre>
+<p><strong>auxiliary-notes.csv.</strong> The key is (unit_id,note_id). Two distinct notes for person 8 are valid records about one person. They are not two outcome observations.</p>
+<pre data-fixture="auxiliary-notes.csv"><code>unit_id,note_id
+1,note-1
+2,note-2
+3,note-3
+4,note-4
+5,note-5
+6,note-6
+7,note-7
+8,note-8a
+8,note-8b
+</code></pre>
+<p><strong>teaching-only-potential-outcomes.csv.</strong> This oracle is separated from the analyst's raw data. It is used only for teaching the design law and checking method properties. Neither its values nor constraints derived from them are available in the restricted scenario.</p>
+<pre data-fixture="teaching-only-potential-outcomes.csv"><code>unit_id,y0_cents,y1_cents
+1,100,200
+2,200,300
+3,300,400
+4,400,500
+5,200,500
+6,400,700
+7,600,900
+8,800,1100
+</code></pre>
+<article class="worked" id="v12-c12-case2">
+<h3>Worked case 2: an exactly reproducible join error</h3>
+<p>First validate the primary IDs and join baseline, assignment and follow-up one-to-one. There are eight analysis rows. The correct pooled treated mean is 29/4 and the control mean is 9/4, giving 5. It equals the half-stratum statistic here because both strata have equal sizes and exact balance; that coincidence is not a general permission to change estimands.</p>
+<p>Now expand those rows through the note table before estimating. Person 8 appears twice. The treated values become 4,5,9,11,11, with total 40 and count five; the four control values still sum to nine. The faulty pooled difference is</p>
+<div class="equation">40/5−9/4=<span data-calc="duplicate-pooled">23/4</span>.</div>
+<p>Retaining the intended half-half stratum weighting after the bad join does not fix the row multiplication. The low contrast stays 3, but the high contrast becomes (9+11+11)/3−(2+4)/2=<span data-calc="duplicate-high">22/3</span>. Its half-stratum result is <span data-calc="duplicate-stratified">31/6</span>. Repair the key/cardinality error before computing an estimator; do not silently average arbitrary duplicates that might disagree.</p>
+<p>A checksum can establish that two executions used identical bytes. Matching table output can establish that the same erroneous calculation ran again. Neither fact proves that rows represent people, that the currency conversion is correct, or that the estimator answers the stated causal question.</p>
+</article>
+<table><caption>Keep these analysis branches distinct in every run log</caption><thead><tr><th>Branch</th><th>Inputs and decision</th><th>Result and scope</th></tr></thead><tbody>
+<tr><td>P0</td><td>Eight unique people; half-stratum primary statistic; prospective two-sided test.</td><td>T=5; sharp-zero p=1/18.</td></tr>
+<tr><td>P1</td><td>Auxiliary join duplicates ID 8.</td><td>Pooled 23/4, or half-stratum 31/6. No P0 p-value belongs to either statistic.</td></tr>
+<tr><td>P2</td><td>P0's correct eight-row data, but choose the favorable one-sided direction after observing the result.</td><td>Raw p=1/36; full-rule calibration gives 1/18.</td></tr>
+<tr><td>P3</td><td>P0's two cell contrasts, weighted to the pooled frame rather than the nonparticipant target.</td><td>23/4 for a different target; numerical agreement with P1 is accidental.</td></tr>
+<tr><td>P4</td><td>Separate restricted-input auditor, with no earlier full-data numbers.</td><td>A completion set and conditional p-values, not an executed full-data replication.</td></tr>
+</tbody></table>
+</section>
+
+<section id="v12-c12-design">
+<h2>3. Prove the design expectation and its uncertainty</h2>
+<p>Consider a single four-person stratum and let Dᵢ indicate treatment. Symmetry gives E(Dᵢ)=1/2. Two specified different people are jointly treated in one of the six two-person selections, so E(DᵢDⱼ)=1/6. Consequently Var(Dᵢ)=1/4 and Cov(Dᵢ,Dⱼ)=−1/12 for i≠j. Indicators in different strata have zero covariance by independence of the two draws.</p>
+<p>Under the stipulated stratum-constant effect τₓ, the difference of the two sample means can be written exactly as</p>
+<div class="equation">Δ̂ₓ=τₓ+Σ<sub>i:Xᵢ=x</sub>(Dᵢ−1/2)bᵢ.</div>
+<p>Its expectation is τₓ. Expanding the quadratic form using those covariances yields</p>
+<div class="equation">Var(Δ̂ₓ)=(1/4)Σbᵢ²−(1/6)Σ<sub>i&lt;j</sub>bᵢbⱼ<br>=(1/3)Σbᵢ²−(1/12)(Σbᵢ)²=(1/3)Σ(bᵢ−b̄ₓ)²≡S²<sub>bx</sub>.</div>
+<p>For predetermined stratum weights q₀+q₁=1, independence now proves E(ΣqₓΔ̂ₓ)=Σqₓτₓ and Var(ΣqₓΔ̂ₓ)=Σqₓ²S²<sub>bx</sub>. This is randomization uncertainty over Z for fixed people and potentials. No sampling of independent persons is assumed.</p>
+<h3>What the observed variance estimate means</h3>
+<p>Within each observed treatment/stratum cell, define s² using the sample divisor 2−1=1. The Neyman estimate for a weighted contrast is V̂(q)=Σqₓ²(s²<sub>1x</sub>/2+s²<sub>0x</sub>/2). For a uniformly selected pair i,j, its sample variance is (bᵢ−bⱼ)²/2. Averaging the six pairs gives (1/12)Σ<sub>i&lt;j</sub>(bᵢ−bⱼ)²=(1/3)Σ(bᵢ−b̄)²=S²<sub>b</sub>; the identity Σ<sub>i&lt;j</sub>(bᵢ−bⱼ)²=4Σ(bᵢ−b̄)² follows by expansion. A constant treatment shift leaves sample variance unchanged. Thus E[V̂(q)]=Var(ΣqₓΔ̂ₓ) in this particular law. The equality used constant within-stratum effects; it is not a general proof of exact variance estimation under heterogeneous effects.</p>
+<article class="worked" id="v12-c12-case3">
+<h3>Worked case 3: three variances that answer different questions</h3>
+<p>The control-potential stratum variances are <span data-calc="baseline-stratum-variances">(5/3,20/3)</span>. With q=(1/2,1/2), the trial statistic has mean 2 and randomization variance <span data-calc="trial-variance">25/12</span>. At the actual assignment the low treatment and control variances are both 1/2; the high treatment and control variances are both 2. Therefore</p>
+<div class="equation">V̂(1/2,1/2)=(1/4)[(1/2)/2+(1/2)/2+2/2+2/2]=<span data-calc="observed-neyman">5/8</span>.</div>
+<p>Averaging this estimate over all 36 actual-potential assignments returns <span data-calc="mean-neyman">25/12</span>. The observed 5/8 is a possible realization of an unbiased estimate, not evidence of a software fault. With eight people there is no exact normal reference supplied by this computation.</p>
+<p>A sharp-zero test makes a different calculation: hold the eight actual observed outcomes fixed and assign them repeatedly under Ω. In that hypothetical null law the fixed low/high outcome variances are 10/3 and 53/3, so the variance of T is <span data-calc="null-variance">21/4</span> and its mean is zero. This 21/4 is neither the alternative-law variance 25/12 nor the observed estimator 5/8. Swapping the laws while retaining a familiar standard-error label changes the question.</p>
+</article>
+</section>
+
+<section id="v12-c12-inference">
+<h2>4. Calibrate the test actually selected</h2>
+<p>The Fisher sharp-zero null asserts Yᵢ(1)=Yᵢ(0) for every trial person. Under that null, each missing potential outcome is the person's observed value, so the entire fixed outcome vector y is known. For any z∈Ω, balance gives T<sub>z</sub>=(1/4)Σᵢ(2zᵢ−1)yᵢ. A weak null Σ[Yᵢ(1)−Yᵢ(0)]/8=0 does not identify those missing outcomes; this fixed-y orbit is not automatically a test of that weaker claim.</p>
+<h3>Finite validity with ties included</h3>
+<p>Let g(z) be any fixed extremeness score and define p(z)=Σ<sub>u:g(u)≥g(z)</sub>P(Z=u). Order its distinct score groups from largest to smallest. All points in a tied group have p equal to the accumulated probability of that group and all groups above it. For any α∈[0,1], the event p(Z)≤α consists of an initial collection of complete groups whose total probability is at most α, or is empty. Hence P[p(Z)≤α]≤α. This proof uses the declared finite assignment probabilities and an inclusive tail; an arbitrary continuous approximation or omission of ties is a different procedure.</p>
+<p>For the prospective two-sided test set g(z)=|T<sub>z</sub>|. The complement assignment 1−z also belongs to Ω, has equal probability and gives −T<sub>z</sub>. Every nonzero observed |T| therefore has at least two assignments in its tail. If T=0 every assignment qualifies. The minimum possible inclusive two-sided p is at least 2/36=1/18, above 5%=1/20. This nonrandomized test cannot reject at that nominal level on this design; auxiliary randomized rejection at boundary ties was not specified.</p>
+<article class="worked" id="v12-c12-case4">
+<h3>Worked case 4: the planned test and an outcome-informed direction</h3>
+<p>The sharp-zero orbit from y=(1,2,4,5,2,4,9,11) has the following exact counts. Reflection supplies the negative side; the count at zero is listed once.</p>
+<table><caption>Inclusive sharp-zero reference, 36 equally likely assignments</caption><thead><tr><th>Positive |T|</th><th>Count at +T</th><th>Count at −T</th></tr></thead><tbody><tr><td>1/2</td><td>4</td><td>4</td></tr><tr><td>1</td><td>2</td><td>2</td></tr><tr><td>3/2</td><td>3</td><td>3</td></tr><tr><td>2</td><td>1</td><td>1</td></tr><tr><td>5/2</td><td>1</td><td>1</td></tr><tr><td>3</td><td>1</td><td>1</td></tr><tr><td>7/2</td><td>2</td><td>2</td></tr><tr><td>4</td><td>1</td><td>1</td></tr><tr><td>5</td><td>1</td><td>1</td></tr><tr><td>0</td><td colspan="2">4 total</td></tr></tbody></table>
+<p>The actual T=5 is the unique maximum; −5 is the unique minimum. The planned p is <span data-calc="two-sided-p">1/18</span>. A positive one-sided tail would be <span data-calc="selected-p">1/36</span>. Those numbers use P0's eight-person statistic, not P1's duplicated estimate.</p>
+<table><caption>Fictional information chronology; days are relative to assignment</caption><thead><tr><th>Day</th><th>Decision or event</th><th>Available information</th></tr></thead><tbody>
+<tr><td>−14</td><td>Freeze roster, strata, course and four-week outcome.</td><td>Baseline records; no follow-up outcomes.</td></tr>
+<tr><td>−7</td><td>Plan v1 specifies unique-ID joins, half-stratum T and the inclusive two-sided test.</td><td>No outcome access is a stipulated fact of this dossier.</td></tr>
+<tr><td>0</td><td>Run the two balanced random assignments.</td><td>Baseline and assignments.</td></tr>
+<tr><td>28</td><td>Measure outcomes.</td><td>Measurement staff have the raw amounts.</td></tr>
+<tr><td>29</td><td>Analyst opens the eight outcomes; P0 returns 5.</td><td>Primary direction is known.</td></tr>
+<tr><td>30</td><td>The note merge creates P1 and its pooled 23/4.</td><td>Branch and row multiplicity are recorded.</td></tr>
+<tr><td>31</td><td>Plan v2 selects the positive one-sided test; P2 returns 1/36.</td><td>This is after viewing P0, not a prospective choice.</td></tr>
+<tr><td>32</td><td>A flawed report places P1's estimate beside P2's p-value.</td><td>The log exposes both the branch mismatch and the testing choice.</td></tr>
+</tbody></table>
+<p>To evaluate the selected rule, define it for every possible assignment: choose the positive tail when T≥0 and the negative tail when T&lt;0, using the inclusive tail in each case. At nominal 1/20, its raw p rejects at T=5 and at T=−5. Its sharp-null rejection probability is <span data-calc="selected-size">1/18</span>, which exceeds the stated level. Selecting the sign has doubled the opportunities for a favorable tail.</p>
+<p>Calibration must replay the entire choice. Define p<sub>sel</sub>(z) by that rule and p<sub>cal</sub>(z)=P[p<sub>sel</sub>(Z)≤p<sub>sel</sub>(z)]. Apply the preceding finite-tail argument to the score −p<sub>sel</sub>. For any positive magnitude t, reflection gives p<sub>sel</sub>=P(T≥t) at both ±t; smaller selected p corresponds exactly to larger |T|. Thus the calibrated p equals the two-sided |T| tail. At T=0 the chosen positive tail is <span data-calc="selected-zero">5/9</span>, while calibration gives 1. At the actual result the calibrated value is <span data-calc="calibrated-p">1/18</span>. Equivalently here p<sub>cal</sub>=min(1,2p<sub>sel</sub>), including the zero tie. This equality relies on this symmetric orbit; it is not a general selection adjustment for arbitrary searches.</p>
+</article>
+<p><a href="sources.html#v12-c12-olken-preanalysis2015" data-source="v12-c12-olken-preanalysis2015">Olken's discussion of pre-analysis plans</a> motivates separating prior commitments from exploration. A timestamp establishes a dated record of bytes; it does not establish that the author lacked earlier outcome access or executed the registered plan. Exploratory changes can be informative when disclosed. They do not become prospective because a later file reproduces. The <a href="sources.html#asa-pvalues-2016" data-source="asa-pvalues-2016">ASA statement</a> supports reporting the statistical model and complete analysis context: neither a small p nor nonrejection is a posterior probability that the null is true.</p>
+</section>
+
+<section id="v12-c12-transport">
+<h2>5. Define whose effect is being transported</h2>
+<p>The full fixed frame has 32 people: eight trial participants S=1 and 24 nonparticipants S=0. Among nonparticipants there are six with X=0 and eighteen with X=1. The external target is these 24 people. Introduce a conceptual person index I uniform on the 32-person roster, independent of the <em>whole</em> randomized vector Z. Expectations below are defined over the finite joint law (I,Z). This device defines one-person probabilities without pretending that the 32 observed records are an iid sample or that assignments within a stratum are independent.</p>
+<p>In the order (S=1,X=0), (1,1), (0,0), (0,1), the joint masses are (1/8,1/8,3/16,9/16). Therefore p(x)=P(S=1|X=x) is <span data-calc="participation">(2/5,2/11)</span>; target weights q(x)=P(X=x|S=0) are (1/4,3/4); and eₐ(x)=P(A=a|S=1,X=x)=1/2 for each a. Let mₐ(x)=E[Y(a)|S=1,X=x]. Randomization and consistency make this equal E[Y|A=a,S=1,X=x], with expectation over the stated joint law.</p>
+<h3>Level-mean transport and the weighting identity</h3>
+<p>Assume, separately from random assignment, that E[Y(a)|S=0,X=x]=mₐ(x) for both a=0,1 in every target cell. Require finite outcomes, a common treatment and outcome definition, no direct participation effect, and positive trial/treatment probabilities in every target-supported cell. These restrictions identify the target level μₐ=Σₓq(x)mₐ(x). Equality only of the conditional treatment effects identifies their target weighted difference, but generally not both levels.</p>
+<p>For the weighting formula, define A and Y arbitrarily outside the trial, since the factor S removes them. Conditional expectation within X gives E[S1{A=a}Y|X=x]=p(x)eₐ(x)mₐ(x). Multiplying by (1−p)/(peₐ), taking the finite sum over X, and dividing by P(S=0) proves</p>
+<div class="equation">E[S1{A=a}Y(1−p(X))/(p(X)eₐ(X))]/P(S=0)<br>=Σₓ P(X=x)(1−p(x))mₐ(x)/P(S=0)=μₐ.</div>
+<p>The last equality uses level-mean transport. Treatment randomization alone did not establish it. Target-only cells with p=0 break this construction; weighting cannot create missing outcomes. The inspected <a href="sources.html#v12-c12-dahabreh-target2019" data-source="v12-c12-dahabreh-target2019">Dahabreh and coauthors' 2019 preprint</a> supplies the target and assumption distinctions. The finite proof here does not import its uninspected appendix or a general asymptotic theory.</p>
+<article class="worked" id="v12-c12-case5">
+<h3>Worked case 5: standardization, normalization and two kinds of sensitivity</h3>
+<p>The trial cell means of the oracle potentials are m₀=(5/2,5), m₁=(7/2,8). Stipulate a baseline target law in which every low-X nonparticipant has potentials (5/2,7/2) and every high-X nonparticipant has (5,8). This supplies level-mean transport by construction, not by observing target outcomes. It yields target levels <span data-calc="target-levels">(35/8,55/8)</span> and effect <span data-calc="target-effect">5/2</span>.</p>
+<p>Inverse participation odds (1−p)/p are <span data-calc="inverse-odds">(3/2,9/2)</span>. After division by eₐ=1/2, each contributing trial observation receives weight 3 or 9. The finite level estimator divides the weighted total by the number of nonparticipants, 24. Every balanced assignment contains exactly two low and two high people at each treatment level, so its treatment-specific weight total is 2·3+2·9=<span data-calc="treatment-weight-total">24</span>. Here the ratio estimator that divides by the weight total coincides with the fixed-denominator estimator. In other designs the denominator can vary, so the two are different estimators.</p>
+<p>At the actual assignment, the weighted outcome totals for controls and treated people are <span data-calc="weighted-outcome-totals">(63,207)</span>. Thus the sample levels are <span data-calc="target-sample-levels">(21/8,69/8)</span>, and their difference is <span data-calc="target-sample-effect">6</span>. It is also (1/4)·3+(3/4)·7. Its design expectation is 5/2, not 6. From section 3, its variance is (1/16)(5/3)+(9/16)(20/3)=<span data-calc="target-variance">185/48</span>. The observed weighted Neyman estimate is <span data-calc="target-neyman">37/32</span>, whose randomization expectation equals 185/48 under this law.</p>
+<p>The participant-only weight diagnostic is Σᵢ Sᵢ(1−pᵢ)/pᵢ divided by Σᵢ(1−Sᵢ). Here it is [4·(3/2)+4·(9/2)]/24=<span data-calc="weight-diagnostic">1</span>. It reconciles counts under the stipulated participation law. It cannot test equality of unobserved potential means across participants and nonparticipants. Keeping the same S and X while changing every target outcome leaves this diagnostic unchanged.</p>
+<h4>A different target can accidentally mimic a data error</h4>
+<p>The pooled frame has X weights (5/16,11/16), not (1/4,3/4). With the baseline cell effects 1 and 3 it has mean effect <span data-calc="pooled-population-effect">19/8</span>. Weighting the observed cell contrasts 3 and 7 by the pooled proportions gives <span data-calc="pooled-sample-effect">23/4</span>. This P3 number equals P1's duplicate-pooled result, but P3 changes the target while P1 changes person weights through a bad join. Equality of output does not identify a common cause.</p>
+<h4>Effect transport need not transport both levels</h4>
+<p>Give both target potentials a common shift κ₀=1 in the low cell and κ₁=−2 in the high cell. The target levels become <span data-calc="shifted-levels">(25/8,45/8)</span>; their difference remains 5/2. Level-mean transport is now false, yet conditional effects still transport. These new potentials are a distinct assumption variant, not changes to observed trial data.</p>
+<p>For a separate effect sensitivity model, let the target cell effects equal the trial effects plus δ₀∈[−1/2,1/2] and δ₁∈[−1,1]. Then</p>
+<div class="equation">τ<sub>target</sub>=5/2+δ₀/4+3δ₁/4 ∈ <span data-calc="effect-sensitivity">[13/8,27/8]</span>.</div>
+<p>Both coefficients are positive, so the lower and upper corners attain the endpoints. Interpolating along the line between those corners attains every intermediate value. The set is sharp within this model of population cell means. It is not a sampling confidence interval around the observed estimate 6; that would require a separate uncertainty procedure for the estimated cell effects.</p>
+<h4>A new cell with no trial support</h4>
+<p>Now define a different finite-support target law with X probabilities (1/5,3/5,1/5) on 0,1,2. Retain the known effects 1 and 3 on the supported cells; there are no trial people with X=2. Assume only that both potential outcomes in that new cell lie in [0,12] CU. Their mean difference can be any value in [−12,12]. The supported contribution is (1/5)·1+(3/5)·3=2, so the target effect belongs to</p>
+<div class="equation">2+(1/5)[−12,12]=<span data-calc="unsupported-bound">[−2/5,22/5]</span>.</div>
+<p>Put all unsupported-cell mass on (Y(0),Y(1))=(12,0) for the lower endpoint, or (0,12) for the upper endpoint. Mixtures of these two pairs give every intermediate mean. This is a separate target law, not a claim that the original 24-person target contains a new stratum. No participation-weight denominator can supply an effect for a cell absent from the trial.</p>
+</article>
+</section>
+
+<section id="v12-c12-restricted">
+<h2>6. Audit an unavailable input without pretending to observe it</h2>
+<p><strong>Separate information-world contract.</strong> A different fictional auditor receives the baseline strata, eight IDs and assignments, the seven retained outcomes below, and the fact that the missing amount is an integer k between 0 and 1,200 cents. This auditor does not receive the teaching potential-outcome table, the original effect schedule or target counterfactual means, the earlier disclosure y₈=11, or any earlier full-data estimate or report number that reveals it. A nonnumeric run-log skeleton may be supplied. This is not a person who saw a value and then forgot it. Day 40 labels this alternative audit cutoff, not a grant of access to days 29–32's numeric outputs.</p>
+<p>Candidate completions must satisfy only these retained records and bounds. They need not preserve the complete dossier's hidden oracle. This information restriction is essential: withholding a cell while publishing a total that determines it does not leave it unknown.</p>
+<p><strong>restricted-followup-cents.csv.</strong> The empty amount and the explicit status jointly mean withheld; a full-data routine must reject this input unless the caller deliberately supplies a labeled completion.</p>
+<pre data-fixture="restricted-followup-cents.csv"><code>unit_id,outcome_cents,access_status
+1,100,observed
+2,200,observed
+3,400,observed
+4,500,observed
+5,200,observed
+6,400,observed
+7,900,observed
+8,,withheld
+</code></pre>
+<article class="worked" id="v12-c12-case6">
+<h3>Worked case 6: an exact completion lattice and five p-values</h3>
+<p>Write w=k/100 CU. The low contrast remains 3. The high contrast is (9+w)/2−3. Consequently the full eight-person primary statistic is</p>
+<div class="equation">T(w)=(9+w)/4=9/4+k/400.</div>
+<p>Its exact feasible completion set is <span data-calc="completion-lattice">{9/4+k/400:k=0,...,1200}</span>. There are <span data-calc="completion-count">1201</span> distinct points. The sharp lower and upper envelope is <span data-calc="completion-envelope">[9/4,21/4]</span>; not every real point in that interval is an integer-cent completion. The explicitly continuous relaxation w∈[0,12] fills the interval.</p>
+<p>Replacing the missing amount by zero returns <span data-calc="zero-imputation">9/4</span>. Dropping the row and recomputing the half-stratum statistic gives [3+(9−3)]/2=<span data-calc="complete-case">9/2</span>. That complete-case result equals imputing w=9, the other treated outcome in the high stratum. Neither convention follows from the bounds. A pooled seven-person calculation would be another statistic, not the requested half-stratum one.</p>
+<h4>Derive the p-value regions before enumerating the grid</h4>
+<p>For each completed vector, the sharp-zero reference freezes that completion and replays all 36 assignments. The actual completed T(w) is positive. Write 4T<sub>z</sub>(w)=m<sub>z</sub>+s<sub>z</sub>w, where m is the signed sum of the seven known outcomes and s=2z₈−1∈{−1,1}. The inclusive tail comparison is</p>
+<div class="equation">|m+sw|≥9+w ⇔ |w+ms|≥9+w.</div>
+<p>Put c=ms. The positive branch holds for every w≥0 when c≥9. The negative branch holds when w≤(−c−9)/2, and has any solution w≥0 only if c≤−9. Values −9&lt;c&lt;9 never qualify. Counting the fixed assignments gives c=9 twice, c=−17 twice, c=−13 four times, c=−11 four times, c=−9 four times, and twenty other values in (−9,9). Thus</p>
+<div class="equation">36p(w)=2+4·1{w≤0}+4·1{w≤1}+4·1{w≤2}+2·1{w≤4}, &emsp; 0≤w≤12.</div>
+<table><caption>Exact inclusive p-value partition</caption><thead><tr><th>CU completion</th><th>Integer cents</th><th>p</th><th>Number of allowed cent values</th></tr></thead><tbody><tr><td>w=0</td><td>k=0</td><td>4/9</td><td>1</td></tr><tr><td>0&lt;w≤1</td><td>1≤k≤100</td><td>1/3</td><td>100</td></tr><tr><td>1&lt;w≤2</td><td>101≤k≤200</td><td>2/9</td><td>100</td></tr><tr><td>2&lt;w≤4</td><td>201≤k≤400</td><td>1/9</td><td>200</td></tr><tr><td>4&lt;w≤12</td><td>401≤k≤1200</td><td>1/18</td><td>800</td></tr></tbody></table>
+<p>The five attainable p-values are <span data-calc="completion-p-set">{1/18,1/9,2/9,1/3,4/9}</span>. The envelope [1/18,4/9] does not mean every p in that real interval is possible. Inclusive inequalities put the breakpoints 0,1,2,4 in the higher-tail region. The formula proves the partition over the continuous interval; enumeration of all 1,201 cent values verifies the implemented discrete contract.</p>
+<p>Every allowed completion fails to reject under the specified 5 percent two-sided test. This is a conclusion about that procedure over available inputs, not evidence that the sharp null is true. T(w)'s completion set is <em>missing-input sensitivity of a reported statistic</em>, not a causal identified set or a confidence interval. The auditor can execute these conditional calculations, inspect code and check metadata. Without authorized access the auditor cannot report an executed full-data replication.</p>
+</article>
+</section>
+
+<section id="v12-c12-referee">
+<h2>7. Turn the audit into a defensible report</h2>
+<p><strong>Intentionally flawed report for audit:</strong> “The effect is 23/4 CU with one-sided p=1/36. The timestamped amendment proves the test was prospective. Repeated output and a weight diagnostic of one establish causal validity for nonparticipants. Replacing the restricted amount by zero completes replication.” These are claims to assess, not this chapter's conclusions.</p>
+<p>A defensible response identifies the claimed object before recommending more computation. First correct P1's unit duplication and restore P0's 5 CU trial estimate. Then trace the claimed p to P2: its favorable direction was chosen after P0, and full-rule calibration gives 1/18. Neither the finite two-sided nonrejection nor the positive point estimate settles the existence or substantive importance of a causal effect. The trial effect and the nonparticipant effect differ even in the stipulated teaching law. Report the transport assumptions and the supported/unsupported target separately. In the restricted variant, provide conditional completion results and identify the inaccessible calculation explicitly.</p>
+<p>A useful reproduction log records raw-input provenance, units, keys, access conditions, code versions, commands, environment, output mappings and actual execution outcomes. Keep computation errors, identifying assumptions, uncertainty statements and unexecuted evidence in distinct sentences. Exact hashes identify payloads; they do not prove lawful access, prospective information, truthful provenance or substantive validity.</p>
+<p>The <a href="sources.html#v04-c01-aea-data-faq" data-source="v04-c01-aea-data-faq">AEA FAQ and data/code policy</a> provide professional context for documenting code, inputs, access restrictions and reproductions. The inspected policy is the February 2026 version, accessed 9 October 2026. This chapter does not claim an AEA submission, permission determination or compliance certification. The synthetic exercise grants no rights to an unrelated restricted dataset.</p>
+<p><strong>Reproduce the dossier.</strong> Parse the six visible CSV blocks using their stated keys and units. Keep the teaching oracle separate from the analyst inputs. Reconstruct P0 from the eight unique trial IDs, enumerate the 36 assignments under each explicitly stated law, and compare the target and restricted-input calculations with their worked results. Record the inputs, transformations and commands actually used; label conditional completions as such. The exercises supply the required outputs and interpretation checks.</p>
+</section>
+
+<section id="v12-c12-exercises">
+<h2>8. Exercises</h2>
+<p>Use exact fractions and the stated information set. Unless a question names a variant, use the complete eight-person teaching dossier. Explain what is fixed, what is randomized and which object your number describes.</p>
+<ol class="exercises">
+<li id="v12-c12-e1"><strong>Study law.</strong> Derive the number and probability of balanced assignments. Recover the actual observed outcome vector, both cell contrasts, the primary statistic and the teacher's trial effect. Explain why the last quantity is unavailable to the full-data analyst even though that analyst sees every observed outcome.</li>
+<li id="v12-c12-e2"><strong>Keys, cents and a duplicated person.</strong> Starting with the visible raw records, state the valid primary and auxiliary keys. Compute the pooled and half-stratum contrasts after the note join duplicates ID 8. Repair the analysis. Explain why neither multiplying cents by one nor merely rerunning the code is an adequate audit.</li>
+<li id="v12-c12-e3"><strong>Design proof.</strong> Derive the within-stratum inclusion covariance and the variance of Δ̂ₓ directly from the four baseline potentials. Obtain Var(T), the observed Neyman estimate and its assignment expectation. Explain why these do not supply an exact normal test.</li>
+<li id="v12-c12-e4"><strong>Exact inference.</strong> Prove inclusive finite p-value validity using tied score groups. Apply it to the full fixed-y orbit: calculate the actual two-sided p and its null variance; prove that the specified nonrandomized 5 percent two-sided test has rejection probability zero. Distinguish its sharp null from a zero-average-effect null.</li>
+<li id="v12-c12-e5"><strong>Search replay.</strong> For every assignment choose the positive one-sided tail if T≥0 and the negative tail if T&lt;0. Compute the actual raw selected p, its rejection probability at 1/20, and the calibrated p obtained by replaying the whole rule. Treat T=0 explicitly and justify the calibration rather than citing a generic “double it” rule.</li>
+<li id="v12-c12-e6"><strong>Information chronology.</strong> Audit the day-32 report that pairs P1's estimate with P2's p. Classify the day −7 and day 31 decisions, identify the branch mismatch, and name two kinds of evidence a real auditor would need beyond a timestamp. Give a defensible description of the late change without banning exploration.</li>
+<li id="v12-c12-e7"><strong>Target levels.</strong> Construct the conceptual (I,Z) law for the 32-person frame. Derive p(x), eₐ(x), inverse odds, and the fixed 24-person normalization. Under level-mean transport compute population and sample target outcome levels. Prove why the ratio and fixed denominators coincide here, without using an iid-person argument.</li>
+<li id="v12-c12-e8"><strong>Targets and variances.</strong> Calculate the nonparticipant effect estimate, its exact design variance and observed Neyman estimate. Then use pooled-frame X weights: calculate the population effect and sample contrast. Explain why its agreement with the duplicate-pooled value is not evidence that either analysis targets the nonparticipants correctly.</li>
+<li id="v12-c12-e9"><strong>Assumption sensitivity.</strong> Apply common target potential-level shifts κ=(1,−2). Compute both new levels and their difference. Separately allow effect shifts δ₀∈[−1/2,1/2], δ₁∈[−1,1]; derive the sharp effect set and construct its endpoints and intermediate means. Explain why it is not a confidence interval around 6.</li>
+<li id="v12-c12-e10"><strong>Missing support.</strong> Replace the target with X masses (1/5,3/5,1/5) on 0,1,2. Retain known supported-cell effects 1 and 3, with no trial support at 2, and bound both new-cell potentials in [0,12]. Derive the sharp target effect set, construct endpoint laws, and explain why the original inverse-odds formula cannot fill the gap.</li>
+<li id="v12-c12-e11"><strong>Restricted inputs.</strong> Work only in the separate information-world variant. Explicitly list the excluded teaching/full-data information. Derive the exact integer-cent completion set, its real envelope, zero imputation and complete-case half-stratum result. Derive the affine-comparison classes and all five inclusive p regions. State what is executable, which 5 percent decision is invariant, and what causal conclusion does not follow.</li>
+<li id="v12-c12-e12"><strong>Referee memo, 12 points.</strong> Write at most 450 words assessing the intentionally flawed report. Earn two points each for: (i) trial target and assignment law; (ii) raw pipeline and branch integrity; (iii) sharp-null versus selected-rule inference; (iv) transport assumptions and support; (v) executed versus unexecuted reproducibility; and (vi) a proportionate conclusion with concrete next steps. A preferred effect sign earns no points; unsupported certainty loses the relevant reasoning credit.</li>
+</ol>
+<details class="solutions"><summary>Complete solutions and evaluation criteria</summary><ol>
+<li data-solution-for="v12-c12-e1"><strong>Study law.</strong> Each stratum has six two-person subsets; independent uniform selection gives 36 vectors, each with probability 1/36. For treated IDs 3,4,7,8, substitute A into b+Aτ to obtain (1,2,4,5,2,4,9,11). The contrasts are (4+5)/2−(1+2)/2=3 and (9+11)/2−(2+4)/2=7, so T=5. The teacher's effect is (4·1+4·3)/8=2. The analyst observes only one potential per person; seeing every realized outcome does not reveal the eight missing counterfactual outcomes. Randomization establishes an expectation property, not equality of an estimate with its target in every realization.</li>
+<li data-solution-for="v12-c12-e2"><strong>Keys and conversion.</strong> unit_id uniquely identifies a frame, assignment or follow-up row; (unit_id,note_id) identifies notes. Division by 100 converts integer cents to CU. The note join has five treated rows with total 40 CU, four controls totaling 9 CU, and faulty pooled contrast 40/5−9/4=23/4. Within X=1, treated mean is 31/3 and control mean 3, giving 22/3; half-stratum contrast is (3+22/3)/2=31/6. Validate the core one-to-one joins, keep notes separate or aggregate a deliberately defined note feature without multiplying outcomes, and recover T=5 on eight people. Treating cents as CU multiplies all amounts and estimates by 100. Repeated execution can preserve the very mistake being audited.</li>
+<li data-solution-for="v12-c12-e3"><strong>Design calculation.</strong> A given person is in three of six pairs, and a given pair in one of six, so E(Dᵢ)=1/2 and Cov(Dᵢ,Dⱼ)=1/6−1/4=−1/12. Expand Δ̂ₓ=τₓ+Σ(Dᵢ−1/2)bᵢ. Its variance simplifies to Σ(bᵢ−b̄)²/3. For b=(1,2,3,4) it is 5/3; doubling those b values in the high stratum makes it 20/3. Independent half weights yield (5/3+20/3)/4=25/12. The observed sample variances (1/2,1/2,2,2) give 5/8. The pair-variance identity in section 3 proves each cell sample variance unbiased for S²<sub>b</sub> under constant effects; averaging V̂ therefore gives 25/12. Its observed value need not equal its expectation. Neither this expectation identity nor eight observed rows proves a Gaussian studentized law.</li>
+<li data-solution-for="v12-c12-e4"><strong>Finite test.</strong> Group assignments by equal extremeness; each inclusive p is the cumulative probability through its whole group. The event p≤α is an initial collection whose mass is at most α, proving validity. The actual orbit has one +5 and one −5, so p=2/36=1/18. Low fixed-y variance is [(1−3)²+(2−3)²+(4−3)²+(5−3)²]/3=10/3. High fixed-y variance is [(2−13/2)²+(4−13/2)²+(9−13/2)²+(11−13/2)²]/3=53/3. Their half-weight variance is 21/4. Complement assignments always supply a reflected tail member; zero includes all 36. Thus p≥1/18&gt;1/20 and rejection probability is zero. The sharp null imputes both potentials from observed outcomes; the weak average null permits offsetting individual effects and cannot support that imputation.</li>
+<li data-solution-for="v12-c12-e5"><strong>Selection.</strong> At +5 the chosen upper tail is 1/36. At −5 the rule instead chooses the lower tail, also 1/36; all other selected p-values exceed 1/20. Its rejection probability is 2/36=1/18. Calibrate by counting assignments whose selected p is at most the observed selected p, again obtaining 1/18. More generally, reflection pairs equal-magnitude scores with equal selected tails, ordered inversely by magnitude. Therefore this replay agrees with the |T| test. At zero the upper tail includes the 16 positive and four zero assignments, giving 20/36=5/9; every assignment has selected p≤5/9, so calibration is one. The formula min(1,2p<sub>sel</sub>) follows from this symmetry and ordering, not from a rule that corrects every adaptive analysis.</li>
+<li data-solution-for="v12-c12-e6"><strong>Chronology.</strong> Day −7 is prospective only because lack of outcome access is an explicit fact of the dossier. Day 31 is an outcome-informed amendment after the sign of P0 was seen. P1's 23/4 uses nine rows, whereas P2's 1/36 uses the correct eight-row randomization statistic; the report pairs incompatible objects. A real audit could inspect access-control or data-release records and contemporaneous analysis/version logs, and compare actual commands with the registered specification. A timestamp alone establishes neither actual access nor execution. Describe v2 as an exploratory, disclosed one-sided analysis, keep the original result visible, and replay or otherwise justify inference for the actual search rule.</li>
+<li data-solution-for="v12-c12-e7"><strong>Target levels.</strong> Draw I uniformly from the fixed frame independently of Z. The S-X masses are 4/32,4/32,6/32,18/32; conditional participation is 4/10=2/5 and 4/22=2/11. Treatment inclusion is 1/2; inverse odds are 6/4=3/2 and 18/4=9/2. Divide these by 1/2 to obtain weights 3 and 9. Conditional expectation cancels p·e from the weighted observed outcome; dividing by P(S=0)=24/32 standardizes mₐ to q=(1/4,3/4), provided both potential-level means transport. Population levels are (1/4)(5/2)+(3/4)5=35/8 and (1/4)(7/2)+(3/4)8=55/8. Observed weighted totals are 3(1+2)+9(2+4)=63 and 3(4+5)+9(9+11)=207, giving 21/8 and 69/8 after division by 24. Each treatment contains two people of each stratum, making the weight sum exactly 24 at every assignment. This fixed count, not an iid limit, makes the ratio and fixed-denominator estimators equal.</li>
+<li data-solution-for="v12-c12-e8"><strong>Targets.</strong> The nonparticipant estimate is (1/4)3+(3/4)7=6. The squared-weight variance is (1/16)(5/3)+(9/16)(20/3)=185/48. Observed stratum Neyman estimates are 1/2 and 2, giving (1/16)(1/2)+(9/16)2=37/32. Pooled-frame weights 10/32 and 22/32 give population effect (5/16)1+(11/16)3=19/8 and sample contrast (5/16)3+(11/16)7=23/4. These weights describe the entire 32-person frame. P1's identical 23/4 arose from extra person weight due to a join. Neither equality restores the nonparticipant target or licenses attaching the eight-row inference to nine duplicated rows.</li>
+<li data-solution-for="v12-c12-e9"><strong>Levels and effects.</strong> The target average shift is (1/4)1+(3/4)(−2)=−5/4. Add that shift to both baseline levels: 35/8−10/8=25/8 and 55/8−10/8=45/8; their difference remains 20/8=5/2. Thus effect-only transport permits failure of both level equalities. For independent effect shifts, the weighted change lies between −(1/4)(1/2)−(3/4)1=−7/8 and +7/8. Add 5/2 to get [13/8,27/8]. The two corners attain the endpoints, and convex interpolation attains every intervening mean. These are ranges for stipulated population means. Sampling variation in the observed 6 remains a different problem.</li>
+<li data-solution-for="v12-c12-e10"><strong>Support failure.</strong> Supported cells contribute 1/5+9/5=2. The difference of two [0,12] potentials lies in [−12,12], so the extra cell contributes [−12/5,12/5] and the target set is [−2/5,22/5]. Hold all supported laws fixed. In X=2 place all mass on (12,0) or (0,12) to attain the two endpoints; mix those finite endpoint pairs for intermediate values. Here p(2)=0 while target mass is positive. The inverse-odds expression would divide by zero and trial observations contain no information about this cell's effect. The new law is not the original 24-person target.</li>
+<li data-solution-for="v12-c12-e11"><strong>Available-input audit.</strong> Exclude the teacher potential table, its original effects/target means, y₈=11 and all earlier full-data numerical disclosures. Retain seven outcomes, the eight assignments/strata/IDs and integer k∈{0,…,1200}. Then T=9/4+k/400: 1,201 points with sharp envelope [9/4,21/4]. Zero imputation gives 9/4. Complete-case half-stratum analysis gives [3+(9−3)]/2=9/2 and implicitly agrees with w=9, which is not identified. For each of the 36 assignments compute m and s from the retained records; c=ms reduces its comparison to |w+c|≥9+w. The c classes are two at 9, two at −17, four each at −13,−11,−9, and twenty strictly between −9 and 9. They give 36p=2+4·1{w≤0}+4·1{w≤1}+4·1{w≤2}+2·1{w≤4}. Hence p is 4/9 at zero, 1/3 through one, 2/9 through two, 1/9 through four, and 1/18 above four through twelve, with lower endpoints open except zero. Those five values and the statistic lattice are executable conditional results. Every completion nonrejects at 5 percent. This neither proves a zero effect nor constitutes executed full-data replication, a causal identified set or a confidence interval.</li>
+<li data-solution-for="v12-c12-e12"><strong>Illustrative memo and rubric.</strong> “The report's primary causal target is the finite eight-person trial mean under independent balanced stratum draws. Its duplicated join produces 23/4 rather than the correct unique-person estimate 5. The p-value 1/36 comes from a different eight-person branch and a favorable direction selected after viewing the result. Replaying that rule gives 1/18; the sharp-null test does not test every weak-zero-average alternative. Transport to the 24 nonparticipants additionally requires the stated participation mean and support assumptions. A weight total of one checks a count identity, not those unobserved means. Under the baseline model the target estimate is 6, but changing the target or assumptions changes its interpretation. In the separate restricted scenario, only completion calculations are executable; zero imputation is an assumption, not full-data reproduction. I recommend repairing and documenting joins, reporting the prospective and exploratory analyses separately, making the target assumptions explicit, and limiting claims to accessible evidence. The current record supports neither the report's claimed significance nor a conclusion that the policy has no effect.” Award two points in each of the six requested domains only when both a correct claim and its reason appear; one for a correct but incomplete point and zero for a missing or false one. Accept alternative priorities or wording that preserve the laws and information boundaries. A memo can reject overclaiming without pretending to establish the opposite substantive conclusion.</li>
+</ol></details>
+</section>
+
+<section id="v12-c12-retention">
+<h2>9. Teach-back and delayed retention</h2>
+<p><strong>Teach-back.</strong> In three minutes explain why a reproducible 23/4, a valid p-value, and a target effect are three separate claims. A complete answer identifies the person/key error in P1, the conditioning and selection rule behind inference, and participation/support assumptions behind transport. Mention that identical numbers may arise from different failures, as P1 and P3 demonstrate. Evaluate whether a listener can identify the input, random mechanism and population for each claim, not whether the explanation uses technical vocabulary.</p>
+<p><strong>Delayed retention, after at least one week.</strong> Without rereading the solutions: (a) Can the inclusive two-sided 36-assignment test reject at 5 percent? (b) Does adding the same target-cell shift to both potential outcomes preserve transported levels or only effects? (c) In the restricted variant, what changes when the missing amount is 100 rather than 101 cents? (d) What may a successful code-only review claim?</p>
+<p><strong>Answers.</strong> (a) No: complement pairing gives minimum p=1/18&gt;1/20. (b) It preserves effects while generally moving both levels; the example moves them by −5/4. (c) At 100 cents p=1/3; at 101 cents p=2/9, because the inclusive w≤1 comparisons cease to hold, although T changes only by 1/400 CU. (d) It may report code/metadata findings and any calculations actually executed with accessible inputs, while identifying the unexecuted full-data run. It cannot infer identification, access permission or successful empirical replication from code inspection alone.</p>
+</section>
+
+<section id="v12-c12-sources">
+<h2>10. Sources, scope and the next research task</h2>
+<p>This original dossier uses no source study's observations or results. ASA principles are reused within their earlier verified reporting scope; no fresh ASA page inspection is claimed. The AEA snapshot is explicitly dated. Olken's published 2015 discussion supports the planning/exploration distinction. The inspected transport body is Dahabreh et al., arXiv:1805.00550v3 dated 28 October 2019, with identification and weighting pages and selected practical cautions; the later 2020 journal body, separate appendix and general inference results are not claimed as inspected. The source record identifies the actual primary-body readers and the limits of prior-record reuse.</p>
+<p>The next task is an audit of an independently chosen empirical paper with its real access and identification constraints. The learner must supply a defensible target, trace outputs to actual inputs, scrutinize the design and search history, assess a stated external population, and present an evidence-ranked report for human review. This chapter supplies an auditable method and original finite practice, not a certificate that that research work has been completed. Volume 12's cumulative assessment and project integrate these capabilities before the graduate theory sequence.</p>
+</section>

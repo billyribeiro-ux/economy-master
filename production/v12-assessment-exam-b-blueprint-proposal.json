@@ -1,0 +1,508 @@
+{
+  "volume": "v12",
+  "form": "B",
+  "date": "2026-10-09",
+  "author": "bs_author",
+  "status": "Frozen design-only proposal; no exam authoring or acceptance claim",
+  "assignment": "production/v12-assessment-exam-b-blueprint-assignment.json",
+  "owned_path": "production/v12-assessment-exam-b-blueprint-proposal.json",
+  "architecture": {
+    "total_points": 100,
+    "points_per_domain": 20,
+    "scored_parts": 16,
+    "mode": "Closed book; nonprogrammable calculator; all inputs and the one normal-CDF value supplied.",
+    "suggested_minutes": 300,
+    "time_allocation_minutes": [
+      60,
+      65,
+      60,
+      65,
+      50
+    ],
+    "timing_limit": "Uncalibrated allowance; no empirical timing or form-equating claim.",
+    "advancement": "Author-created threshold: at least 85 overall, at least 15/20 in each domain, no unresolved critical error, then transfer and teach-back."
+  },
+  "cases": [
+    {
+      "domain": "identification_inference",
+      "case": 1,
+      "title": "Repeated cluster readings and a weakly identified squared response",
+      "points": 20,
+      "inputs": {
+        "law": "Four independent whole clusters g. Each supplies (A_g,B_g) jointly Gaussian with mean (pi,beta*pi) and known covariance 4 I_2; within a cluster two recorded readings repeat that same pair exactly. Both pi and beta range over R. The eight-row means R_X,R_Y therefore equal the means of the four distinct cluster pairs. No conditioning on a random regressor is asserted.",
+        "observed_cluster_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "supplied_reference": "Phi(2)=0.9772498680; use the exact symbolic confidence coefficient 2 Phi(2)-1, approximately 95.4499736%, not an exact 95% label.",
+        "target": "theta=beta^2; the sample ratio R_Y/R_X is a diagnostic point estimate only."
+      },
+      "parts": [
+        {
+          "id": "v12-b-q1a",
+          "points": 6,
+          "task": "Compute the two observed means and their true covariance. Compare treating all eight rows as independent. State when the population law identifies beta and theta.",
+          "solution": "(R_X,R_Y)=(1,3), Cov(R)=I_2; fictitious row independence gives I_2/2. If pi is nonzero, beta=E(R_Y)/E(R_X); at pi=0 every beta generates N(0,I_2), so beta has identified set R and theta has [0,infinity).",
+          "proof_route": "Sum all within-cluster covariance terms; use the Gaussian mean map (pi,beta*pi), whose derivative has determinant pi.",
+          "scoring": "2 covariance/independent unit; 1 observed means; 1 false covariance; 2 identification including zero relevance."
+        },
+        {
+          "id": "v12-b-q1b",
+          "points": 8,
+          "task": "Construct and invert the known-law candidate test |R_Y-b R_X|/sqrt(1+b^2)<=2 over the whole real line. Prove its confidence coefficient without a normal approximation for the ratio.",
+          "solution": "At the true b the numerator is centered Gaussian with variance 1+b^2 for every pi. At the observed means, acceptance is 3b^2+6b-5>=0, hence C=(-infinity,-1-2sqrt(6)/3] union [-1+2sqrt(6)/3,infinity). Zero is rejected, 3 and -4 accepted. Coverage is exactly 2 Phi(2)-1 for each indexed true beta, including pi=0.",
+          "proof_route": "Known joint Gaussian linear transformation and test inversion; solve the indefinite quadratic rather than truncating a grid. This is a new explicitly derived finite covariance contract, not inherited generic clustered-IV inference.",
+          "scoring": "3 null law and exact coefficient; 3 algebra and both unbounded branches; 2 candidate decisions/weak-relevance distinction."
+        },
+        {
+          "id": "v12-b-q1c",
+          "points": 6,
+          "task": "Project C onto theta=beta^2, prove at-least coverage, and distinguish this random confidence set from population identification.",
+          "solution": "C_theta=[(11-4sqrt(6))/3,infinity). The positive branch starts at b_+=-1+2sqrt(6)/3>0 and supplies every square above b_+^2; the negative branch adds only larger squares. The event beta_true in C implies theta_true in C_theta, so coverage is at least the stated coefficient. At pi=0 the population identified set remains [0,infinity); projection does not create relevance.",
+          "proof_route": "Monotonicity of squaring separately on signs and event inclusion; no delta method at beta=0 and no finite-grid substitution.",
+          "scoring": "3 exact image and attainment; 2 coverage implication; 1 identification versus confidence distinction."
+        }
+      ],
+      "scope": "Known Gaussian covariance, finite clusters, no estimated cluster sandwich or uniform asymptotic IV theorem."
+    },
+    {
+      "domain": "causal_design",
+      "case": 2,
+      "title": "Staggered cohorts and a nonunique donor counterfactual",
+      "points": 20,
+      "inputs": {
+        "dates": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "cohorts": [
+          "E",
+          "L",
+          "N"
+        ],
+        "observed_population_means": [
+          [
+            1,
+            2,
+            5,
+            14
+          ],
+          [
+            3,
+            4,
+            5,
+            10
+          ],
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "treatment": [
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "DID_contract": "Equal weight per cohort/date cell. E adopts at 2, L at 3, N never. No anticipation or spillovers; for clean DID maintain untreated means a_g+lambda_t for E,L,N. These are exact population means, not a sampling experiment.",
+        "donor_transfer": "Use E preperiods 0,1 and post date 3. Donor order (N,B,C). N comes from the table. Extra donor B has outcomes (2,3,7), C has (1,2,4) at those dates; both remain untreated and unaffected. Drop the common-trend restriction on E at post date 3 for this separate analysis. Instead require its untreated post mean to arise from some single nonnegative donor mixture summing to one that exactly matches its two pre outcomes; predictor loss uses V=I_2. No latent-factor rank condition beyond this explicit mixture assumption is granted."
+      },
+      "parts": [
+        {
+          "id": "v12-b-q2a",
+          "points": 6,
+          "task": "Residualize D on cohort and date effects and compute its TWFE coefficient and treated-cell effect weights.",
+          "solution": "Residual rows are (-1/4,-1/4,5/12,1/12), (0,0,-1/3,1/3), (1/4,1/4,-1/12,-5/12); squared norm 5/6. Weights on (E2,E3,L3) are (1/2,1/10,2/5), giving beta_TWFE=18/5.",
+          "proof_route": "Balanced-table double demeaning, FWL, orthogonality to additive untreated means and sum of treated weights equal one.",
+          "scoring": "2 residualization; 2 norm/coefficient; 2 causal-weight interpretation under the given untreated law."
+        },
+        {
+          "id": "v12-b-q2b",
+          "points": 6,
+          "task": "Use N and each cohort’s last unaffected baseline to recover supported effects. Compare the equal-cohort impact target, equal-treated-cell target and TWFE.",
+          "solution": "Clean effects (E2,E3,L3)=(2,10,4), using baselines 1 for E and 2 for L. Equal-cohort impact is 3; equal weight over the three treated cells is 16/3; TWFE is 18/5. These differ because their declared weights differ. No unsupported L event-one effect is filled with zero.",
+          "proof_route": "Subtract the same untreated time change; aggregate only supported effects with specified weights.",
+          "scoring": "3 effects and unaffected baselines; 2 both target averages; 1 support/weight distinction."
+        },
+        {
+          "id": "v12-b-q2c",
+          "points": 8,
+          "task": "Solve the entire optimal donor-weight set, post counterfactual and effect ranges in the separate mixture analysis. Establish sharpness and explain which extra restriction recovers the clean-DID value.",
+          "solution": "All optimal weights are (t,t,1-2t), 0<=t<=1/2, with zero prefit loss and unique fitted prevector (1,2). Counterfactual is 4+2t in [4,5]; effect is 14-(4+2t) in [9,10]. Every t is feasible and realizes its post mean under the fixed-mixture restriction. Without that substantive restriction this is only an algorithmic forecast range. The additional clean-DID restriction selects counterfactual 4/effect 10, at t=0.",
+          "proof_route": "Solve the augmented prefit linear equations, simplex feasibility and affine extrema; distinguish fit uniqueness from weight/counterfactual uniqueness and alternative identifying assumptions.",
+          "scoring": "3 full weight set; 2 ranges; 2 sharpness/assumption limit; 1 relation to DID."
+        }
+      ],
+      "scope": "No sampling standard errors, generic event-study lead interpretation, stochastic synthetic-control consistency or placebo guarantee."
+    },
+    {
+      "domain": "dynamic_structural",
+      "case": 3,
+      "title": "A common stochastic trend and a finite option to wait",
+      "points": 20,
+      "inputs": {
+        "trend": "X_0=0, X_t=X_(t-1)+U_t, with independent signs U_t=+/-1, each probability 1/2.",
+        "spread": "V_t takes values 0,2, starts with probabilities (1/2,1/2), and has transition matrix ((1-p,p),(p,1-p)), 0<p<1. Its entire history is independent of the trend. Y_t=X_t+V_t. The exact population turnover moment P(V_(t+1)!=V_t)=1/4 is supplied; it is not a noisy sample frequency.",
+        "decision": "At dates 0,1,2 an agent can exercise once for V_t-1 CU or abstain, with zero payoff if never exercised. Discount one date by 1/2; observe V before deciding. Exercise does not change the transition law. Condition on V_0=0 for the requested value. These are physical expected discounted payoffs, not arbitrage prices.",
+        "deterministic_integration_nodes": [
+          [
+            "1/8",
+            "1/8"
+          ],
+          [
+            "1/8",
+            "7/8"
+          ],
+          [
+            "7/8",
+            "1/8"
+          ],
+          [
+            "7/8",
+            "7/8"
+          ]
+        ],
+        "node_rule": "Each node is equally weighted; at a step flip the spread state if that node coordinate is below p, otherwise stay. Stop at exercise. These four fixed integration nodes are distinct from the trend innovations U_t and are not a claim of an iid Monte Carlo sample."
+      },
+      "parts": [
+        {
+          "id": "v12-b-q3a",
+          "points": 7,
+          "task": "Prove that Y and X have a unique normalized stationary difference Y-aX. Determine what the spread mean and turnover identify about p.",
+          "solution": "Uniform spread probabilities are invariant, so V is stationary with mean 1, variance 1 and lag-h covariance (1-2p)^h. Var(X_t)=t and Var(Y_t-aX_t)=(1-a)^2 t+1 by independence. Thus only a=1 gives a stationary difference, while the levels are nonstationary. E(V)=1 does not identify p; the turnover moment equals p and identifies p=1/4.",
+          "proof_route": "Stationary finite-chain initialization, eigenfunction V-1 and covariance expansion; the complete law, not a generic residual unit-root test, establishes cointegration.",
+          "scoring": "3 stationarity/variance and unique slope; 2 covariance mechanism; 2 mean versus turnover identification."
+        },
+        {
+          "id": "v12-b-q3b",
+          "points": 8,
+          "task": "Solve the finite-horizon optimal decision by backward induction. Give both-state values at all dates, the policy and the starting value; compare commitment to exercise only at date 2.",
+          "solution": "Terminal values J2=(0,1). J1=(1/8,1), J0=(11/64,1). Exercise immediately in state 2 and wait in state 0 before the terminal date; at terminal abstain in state 0. Starting value is 11/64. Terminal-only value is (1/4)P(V2=2|V0=0)=3/32.",
+          "proof_route": "At each state compare current exercise/abstention with discounted conditional continuation. Induction proves optimality over all history-dependent feasible policies in this two-step horizon; verify by the four possible state paths.",
+          "scoring": "2 terminal/recursion; 3 continuation values; 1 policy; 2 starting/committed comparison and optimality."
+        },
+        {
+          "id": "v12-b-q3c",
+          "points": 5,
+          "task": "Execute the four supplied integration nodes under the optimal policy and diagnose repeated-node claims of improved accuracy.",
+          "solution": "Discounted payoffs are (1/2,1/2,1/4,0), averaging 5/16; the error relative to exact integration is 9/64. Repeating the same node block leaves its average unchanged. A claim of iid simulation uncertainty would need independently drawn uniforms and a stated sampling argument; these nodes alone provide neither.",
+          "proof_route": "Trace transitions/stop times and compare the deterministic quadrature with the exact finite path sum, keeping simulation error separate from identification and decision optimality.",
+          "scoring": "2 path payoffs; 1 estimate/error; 2 repeated-node and sampling-scope reasoning."
+        }
+      ],
+      "scope": "No unit-root critical value, superconsistent slope distribution, GARCH estimation, infinite-horizon structural likelihood or Monte Carlo CLT is requested."
+    },
+    {
+      "domain": "modern_methods",
+      "case": 4,
+      "title": "Posterior decisions, rejected chain steps and coefficient units",
+      "points": 20,
+      "inputs": {
+        "Bayes": "Three conditionally iid Bernoulli observations are the ordered record (1,1,0). Candidate theta values (1/4,3/4) have prior (1/2,1/2). A separate comparison maximizes the same likelihood over the continuous parameter interval (0,1).",
+        "decision": "Decline gives utility zero; launch gives utility +1 at theta=3/4 and -4 at theta=1/4.",
+        "MCMC": "Target the computed two-point posterior. The proposal always switches state. Apply Metropolis-Hastings and retain rejected repeats. For the precision calculation initialize in the posterior law and average the high-state indicators at two consecutive draws.",
+        "lasso": "A separate fixed regression has n=2, rows X=(1,1),(1,-1), y=(3,1). Minimize ||y-Xb||^2/(2n)+(1/2)(|b1|+|b2|), penalizing both columns. Then multiply only the first design column by two, initially retaining the same unweighted penalty."
+      },
+      "parts": [
+        {
+          "id": "v12-b-q4a",
+          "points": 6,
+          "task": "Compute likelihoods, the continuous MLE, posterior/predictive probability and optimal launch choice.",
+          "solution": "Discrete likelihoods are (3/64,9/64); posterior (1/4,3/4), predictive success probability 5/8. The continuous score 2/theta-1/(1-theta) vanishes at 2/3 and strict concavity gives its unique MLE; this point is outside the two-point prior support. Expected launch utility is -1/4, so decline.",
+          "proof_route": "Bayes normalization, Bernoulli score/curvature and posterior expected utility under the stated loss, without treating posterior uncertainty as a confidence interval.",
+          "scoring": "1 likelihoods; 1 continuous MLE/uniqueness; 2 posterior/predictive; 2 decision and loss interpretation."
+        },
+        {
+          "id": "v12-b-q4b",
+          "points": 5,
+          "task": "Derive the transition matrix, verify the target, and diagnose discarding all repeated states.",
+          "solution": "P=((0,1),(1/3,2/3)); off-diagonal posterior flows both equal 1/4, proving invariance. Removing rejected repeats creates deterministic alternation with long-run state frequencies (1/2,1/2), not the posterior; its average theta tends to 1/2 instead of 5/8. Periodic alternation need not converge in distribution from a fixed start.",
+          "proof_route": "MH acceptance with the symmetric switching proposal, detailed balance, and direct counts of alternating states; no general chain CLT is invoked.",
+          "scoring": "2 transition; 1 balance/invariance; 2 wrong retained law and target mean."
+        },
+        {
+          "id": "v12-b-q4c",
+          "points": 3,
+          "task": "Compute the exact two-draw high-indicator mean variance under stationary initialization and compare an iid calculation.",
+          "solution": "Indicator variance is 3/16 and adjacent covariance is (3/4)(2/3)-(3/4)^2=-1/16. The average variance is 1/16, compared with iid 3/32. Negative serial covariance improves this specific two-draw precision; neither formula is automatically a nonstationary-start variance.",
+          "proof_route": "Expand the variance of the two-term average; independently enumerate the four stationary two-state paths.",
+          "scoring": "1 covariance; 1 exact versus iid variance; 1 initialization and limited interpretation."
+        },
+        {
+          "id": "v12-b-q4d",
+          "points": 6,
+          "task": "Solve the original and rescaled lasso problems, justify global optimality, and specify a weighted penalty restoring the original fitted values after rescaling.",
+          "solution": "Original b=(3/2,1/2), fit (2,1), objective 5/4. Rescaled unweighted b=(7/8,1/2), fit (9/4,5/4), objective 27/32. With penalty (1/2)(2|b1|+|b2|), rescaled b=(3/4,1/2) restores fit (2,1). Multiplying a column while retaining an unweighted coefficient penalty changes the optimization problem.",
+          "proof_route": "Use X prime X/n=I for the first soft threshold, then the diagonal Gram (4,1) and positive-coordinate KKT scores; positive definiteness gives unique global coefficients. Restore the original penalty by substituting the physical coefficient 2b1.",
+          "scoring": "2 original estimate and criterion normalization; 2 rescaled optimum/KKT; 2 restoring penalty and fit interpretation."
+        }
+      ],
+      "scope": "No posterior frequentist coverage, arbitrary-chain convergence/ESS, support recovery, post-lasso inference or cross-fitting theorem is asserted."
+    },
+    {
+      "domain": "research_audit",
+      "case": 5,
+      "title": "Eight valid records are only four randomization units",
+      "points": 20,
+      "inputs": {
+        "raw_columns": [
+          "person_id",
+          "site",
+          "treated",
+          "output_grams"
+        ],
+        "raw_rows": [
+          [
+            1,
+            "A",
+            0,
+            0
+          ],
+          [
+            2,
+            "A",
+            0,
+            0
+          ],
+          [
+            3,
+            "B",
+            0,
+            1000
+          ],
+          [
+            4,
+            "B",
+            0,
+            1000
+          ],
+          [
+            5,
+            "C",
+            0,
+            2000
+          ],
+          [
+            6,
+            "C",
+            0,
+            2000
+          ],
+          [
+            7,
+            "D",
+            1,
+            7000
+          ],
+          [
+            8,
+            "D",
+            1,
+            7000
+          ]
+        ],
+        "design": "Sites A,B,C,D each contain two fixed people. Exactly one whole site is treated, uniformly among four sites; actual treated site D. Treatment labels within each site are identical by protocol. All eight person IDs are unique and all records are valid. Convert grams to kilograms by dividing by 1000.",
+        "statistic": "Mean output of the two treated people minus mean output of the six controls. For inference test the sharp global null Y_i(z)=Y_i(z_observed) for every joint site-assignment vector; only four one-site assignments are possible under the experiment.",
+        "flawed_report": "The report treats any two of eight individuals as a permissible randomized treated pair, reports an inclusive two-sided p from those 28 pairs, and interprets the observed contrast as the effect of treating all sites.",
+        "external_policy": "The target is the mean outcome if all four sites are treated minus the mean if none is treated. For the nonidentification construction permit interference between sites, keep all person outcomes in [0,10] kg, and complete the entire potential-outcome map on {0,1}^4. The complete maps requested are teaching constructions, not observed extra data."
+      },
+      "parts": [
+        {
+          "id": "v12-b-q5a",
+          "points": 5,
+          "task": "Reconstruct the site/person units and actual contrast. State the actual assignment support and two concrete input/design integrity checks.",
+          "solution": "Site output levels are (0,1,2,7) kg, twice each. Actual contrast is 7-(0+1+2)/3=6 kg. The experiment has four equally likely site labels, not 28 equally likely person pairs. Check unique person IDs/unit conversion and that treatment is constant within each of four two-person sites with exactly one treated site. Equal outcomes within a site are not duplicate records to delete.",
+          "proof_route": "Raw unit conversion and design-based grouping before selecting a reference distribution.",
+          "scoring": "2 conversion/contrast; 1 assignment unit/support; 2 explicit integrity checks."
+        },
+        {
+          "id": "v12-b-q5b",
+          "points": 7,
+          "task": "Calculate the actual and false-reference inclusive p-values, then evaluate both 5 percent rejection probabilities under the actual sharp-null randomization law.",
+          "solution": "Actual site contrasts are (-10/3,-2,-2/3,6), with p-values (1/2,3/4,1,1/4); the observed p is 1/4. Under the false 28-person-pair orbit, the p-values at those four actual assignments are (1/14,19/28,1,1/28). Only site D then rejects at 1/20, so the false-reference procedure has actual null rejection probability 1/4; the correct procedure rejects with probability zero.",
+          "proof_route": "Enumerate the four actual labels and all 28 false pairs; inclusive tail validity applies only with probabilities from the real assignment mechanism. Reproducing a wrong-reference p does not calibrate it.",
+          "scoring": "2 correct orbit/p; 2 false observed p and its support; 2 actual-law sizes; 1 model/design integrity explanation."
+        },
+        {
+          "id": "v12-b-q5c",
+          "points": 8,
+          "task": "Construct two complete bounded potential-outcome laws with identical observed experimental laws but different all-site policy effects. Give a proportionate audit conclusion and a feasible next evidence requirement.",
+          "solution": "Let b_g be each observed site level. World I: every person at g has Y_i(z)=b_g for all z. World II: Y_i(z)=b_g+3*1{all four sites treated}. Both maps lie in [0,10], coincide at every supported one-site assignment, and have the same all-zero outcomes. All-on versus all-off effects are 0 and 3 kg. Thus the experiment cannot identify that policy contrast under allowed cross-site interference; a nonrejected or rejected sharp-null test does not repair intervention support. Repair the randomization reference, limit the causal claim, and seek randomized saturation variation or a separately justified exposure/invariance restriction.",
+          "proof_route": "Explicit global potential maps prove observed-law equivalence while changing the counterfactual target. Distinguish the global sharp null from what the supported design can detect.",
+          "scoring": "4 complete maps/bounds/equivalence; 2 policy effects and nonidentification; 2 appropriately limited conclusion plus a specific additional design or assumption."
+        }
+      ],
+      "scope": "No version filter, endpoint/direction search or withheld amount/composition; all raw records are available. The failure is the wrong randomization unit and unsupported joint intervention."
+    }
+  ],
+  "outcome_map": [
+    {
+      "chapter": "v12-c01",
+      "parts": [
+        "q1a",
+        "q1c",
+        "q3a",
+        "q5c"
+      ],
+      "evidence": "Global identification, nonlinear image/coverage and observational equivalence; no asymptotic theorem claim."
+    },
+    {
+      "chapter": "v12-c02",
+      "parts": [
+        "q1a",
+        "q2a"
+      ],
+      "evidence": "Whole-cluster covariance, row pseudo-replication and finite FWL projection; no estimated cluster/HAC asymptotics."
+    },
+    {
+      "chapter": "v12-c03",
+      "parts": [
+        "q1a",
+        "q1b"
+      ],
+      "evidence": "Zero/weak relevance and a newly proved known-Gaussian candidate inversion; no generic clustered AR result borrowed."
+    },
+    {
+      "chapter": "v12-c04",
+      "parts": [
+        "q4a"
+      ],
+      "evidence": "Bernoulli likelihood, score/curvature and parameter-support distinctions; selection/count/APE depth remains elsewhere."
+    },
+    {
+      "chapter": "v12-c05",
+      "parts": [
+        "q2a",
+        "q2b"
+      ],
+      "evidence": "Additive cohort/time heterogeneity and clean longitudinal contrasts; no dynamic-panel or attrition estimator."
+    },
+    {
+      "chapter": "v12-c06",
+      "parts": [
+        "q5a",
+        "q5b",
+        "q5c"
+      ],
+      "evidence": "Cluster randomization, sharp-null reference, interference and missing intervention support."
+    },
+    {
+      "chapter": "v12-c07",
+      "parts": [
+        "q2a",
+        "q2b"
+      ],
+      "evidence": "Staggered timing, supported cohort-time effects and design-dependent aggregation weights."
+    },
+    {
+      "chapter": "v12-c08",
+      "parts": [
+        "q2c"
+      ],
+      "evidence": "Synthetic-control simplex geometry, nonunique weights and assumption-dependent sharp range; no RD inference."
+    },
+    {
+      "chapter": "v12-c09",
+      "parts": [
+        "q3a"
+      ],
+      "evidence": "Nonstationary levels, stationary common-trend spread and uniqueness under the exact finite-chain law; no unit-root/cointegration critical values."
+    },
+    {
+      "chapter": "v12-c10",
+      "parts": [
+        "q3a",
+        "q3b",
+        "q3c"
+      ],
+      "evidence": "Transition-moment identification, finite-horizon optimal decisions and deterministic integration error."
+    },
+    {
+      "chapter": "v12-c11",
+      "parts": [
+        "q4a",
+        "q4b",
+        "q4c",
+        "q4d"
+      ],
+      "evidence": "Bayesian decision, MH target/retained repeats, exact correlated precision and lasso normalization."
+    },
+    {
+      "chapter": "v12-c12",
+      "parts": [
+        "q5a",
+        "q5b",
+        "q5c"
+      ],
+      "evidence": "Original raw-record/design audit, false-reference type-I error and unsupported policy claim."
+    }
+  ],
+  "cross_form_distinction": "B does not reuse A’s two-date count panel, unequal folds/BH trimming, forecast-overlap product mechanism, version filtering, maximum-endpoint replay or missing target composition. It also avoids C12’s duplicate join, selected direction and withheld-outcome completion. D5 interference support is an observational-equivalence audit with unknown all-on behavior, rather than A’s supplied full two-person direct-effect law.",
+  "gaps_for_project_or_support": [
+    "Efficient overidentified GMM/J and general nonlinear estimating-equation implementation; GLS/HAC and estimated many-cluster uncertainty.",
+    "Dynamic-panel/attrition moments, binary APE/selection, quantitative power and full RD inference; A supplies count-QMLE and local-complier depth but does not remove every gap.",
+    "Unit-root/statistical cointegration inference, volatility estimation, shared stochastic simulation/indirect inference and infinite-horizon structural likelihood.",
+    "A assesses cross-fitting and family selection; broader implementation, robustness choices, written research synthesis and human oral defense remain project/support tasks."
+  ],
+  "method_scope": {
+    "primary_reads": "No new browsing or primary-body reading; accepted chapter scopes and the frozen C12 proofs are reused. All cases, laws, records and solutions are original.",
+    "routes": [
+      "v12-c01 identification/projection principles",
+      "v12-c02 cluster covariance and FWL",
+      "v12-c03 candidate-null inversion principle with an explicitly new finite Gaussian covariance derivation",
+      "v12-c04 Bernoulli likelihood",
+      "v12-c05 additive panel heterogeneity",
+      "v12-c06 finite assignment and interference",
+      "v12-c07 staggered group-time effects",
+      "v12-c08 donor convex geometry",
+      "v12-c09 trend/spread distinctions",
+      "v12-c10 finite conditional Bellman reasoning and simulation-versus-model error",
+      "v12-c11 Hastings and normalized lasso proofs",
+      "v12-c12 actual-law finite p calibration and audit boundaries"
+    ],
+    "limits": "No empirical, institutional or professional-compliance claim; no new unstated asymptotic or algorithmic theorem."
+  },
+  "validation": {
+    "comparisons": 99,
+    "method": "Independent standard-library Fraction reconstruction, symbolic Q(sqrt(6)) roots, covariance sums, exact FWL, affine donor witnesses, backward recursion versus path probabilities, deterministic node execution, Bayes/MH path moments, lasso KKT and all four/28 assignment tails. No saved result imported as an oracle and no random simulation replaces finite truth.",
+    "C12_four_payloads_preserved": true,
+    "Form_A_binding_verified": {
+      "bytes": 59438,
+      "sha256": "bf0eab1f2d772410a67f5363180089ed8eb02f079a5a74c6cdbf133447852ef8"
+    },
+    "open_numerical_findings": [],
+    "next_gate": "Stop at this one-file design freeze. Root independently reviews laws, coverage, feasibility and scoring before issuing any Form B author assignment."
+  }
+}

@@ -1,0 +1,417 @@
+{
+  "project": "v12-project",
+  "arithmetic": "exact rational strings",
+  "interpretation": "Original synthetic fixed population; no empirical replication or superpopulation claim.",
+  "observed_analysis": {
+    "assignment": [
+      1,
+      3,
+      5
+    ],
+    "centre_baseline": [
+      "41",
+      "45",
+      "49",
+      "53",
+      "57",
+      "61"
+    ],
+    "centre_change": [
+      "1",
+      "1",
+      "11/2",
+      "-1",
+      "9/2",
+      "0"
+    ],
+    "centre_receipt": [
+      "1",
+      "0",
+      "1",
+      "0",
+      "1/2",
+      "0"
+    ],
+    "change_ITT": "11/3",
+    "post_only_ITT": "-1/3",
+    "baseline_difference": "-4",
+    "first_stage": "5/6",
+    "Wald": "22/5",
+    "Wald_status": "defined",
+    "receipt_OLS": "118/35",
+    "receipt_OLS_status": "descriptive",
+    "ANCOVA_coefficients": [
+      "-5/32",
+      "191/48",
+      "5/64"
+    ],
+    "ANCOVA_regressors": [
+      "intercept",
+      "Z",
+      "centre_B-mean_B"
+    ],
+    "cluster_Neyman": "79/36",
+    "incorrect_individual_iid_variance": "68/45",
+    "sharp_outcome_null_p_change": "1/5",
+    "sharp_outcome_null_p_ANCOVA": "3/10",
+    "sharp_adjusted_outcome_inversion": {
+      "alpha": "1/5",
+      "reject_if": "p <= alpha",
+      "null": "sharp_adjusted_outcome_invariance",
+      "intervals": [
+        {
+          "lower": "1",
+          "upper": "9",
+          "lower_unbounded": false,
+          "upper_unbounded": false,
+          "lower_closed": true,
+          "upper_closed": true
+        }
+      ],
+      "breakpoints": [
+        "0",
+        "1",
+        "2",
+        "11/4",
+        "3",
+        "13/4",
+        "11/3",
+        "15/4",
+        "13/3",
+        "9/2",
+        "11/2",
+        "6",
+        "13/2",
+        "20/3",
+        "7",
+        "22/3",
+        "9",
+        "11"
+      ],
+      "probe_p": {
+        "0": "1/5",
+        "1": "3/10",
+        "4": "9/10",
+        "7": "1/2",
+        "8": "3/10",
+        "9": "3/10",
+        "10": "1/5"
+      },
+      "scope": "Coverage applies when the common sharp invariance null is true; not a generic heterogeneous CACE interval."
+    }
+  },
+  "teaching_oracle": {
+    "assignment_count": 20,
+    "centre_change_z0": [
+      "-2",
+      "1",
+      "9/2",
+      "-1",
+      "9/2",
+      "0"
+    ],
+    "centre_change_z1": [
+      "1",
+      "4",
+      "11/2",
+      "-1",
+      "9/2",
+      "5"
+    ],
+    "centre_encouragement_effects": [
+      "3",
+      "3",
+      "1",
+      "0",
+      "0",
+      "5"
+    ],
+    "encouragement_ATE": "2",
+    "first_stage": "1/2",
+    "complier_receipt_ATE_under_exclusion": "4",
+    "expected_change_ITT": "2",
+    "expected_post_only_ITT": "2",
+    "expected_first_stage": "1/2",
+    "expected_ANCOVA": "6057/4160",
+    "expected_Wald": "133/40",
+    "expected_Wald_status": "unconditional_defined",
+    "zero_first_stage_assignments": 0,
+    "first_stage_range": [
+      "1/6",
+      "5/6"
+    ],
+    "true_ITT_variance": "37/9",
+    "variance_formula": "37/9",
+    "expected_Neyman": "43/9",
+    "centre_effect_sample_variance": "4",
+    "Neyman_expectation_gap": "2/3"
+  },
+  "weak_extension": {
+    "information": "Separate prospective C-to-N world and newly assigned trial; not an edit to observed baseline evidence.",
+    "observed_rows": [
+      [
+        1,
+        1,
+        1,
+        1,
+        40,
+        39,
+        -1
+      ],
+      [
+        1,
+        2,
+        1,
+        1,
+        42,
+        45,
+        3
+      ],
+      [
+        2,
+        1,
+        1,
+        0,
+        44,
+        44,
+        0
+      ],
+      [
+        2,
+        2,
+        1,
+        0,
+        46,
+        48,
+        2
+      ],
+      [
+        3,
+        1,
+        0,
+        1,
+        48,
+        53,
+        5
+      ],
+      [
+        3,
+        2,
+        0,
+        0,
+        50,
+        54,
+        4
+      ],
+      [
+        4,
+        1,
+        1,
+        0,
+        52,
+        50,
+        -2
+      ],
+      [
+        4,
+        2,
+        1,
+        0,
+        54,
+        54,
+        0
+      ],
+      [
+        5,
+        1,
+        0,
+        1,
+        56,
+        62,
+        6
+      ],
+      [
+        5,
+        2,
+        0,
+        0,
+        58,
+        61,
+        3
+      ],
+      [
+        6,
+        1,
+        0,
+        0,
+        60,
+        59,
+        -1
+      ],
+      [
+        6,
+        2,
+        0,
+        0,
+        62,
+        63,
+        1
+      ]
+    ],
+    "observed_analysis": {
+      "assignment": [
+        1,
+        2,
+        4
+      ],
+      "centre_baseline": [
+        "41",
+        "45",
+        "49",
+        "53",
+        "57",
+        "61"
+      ],
+      "centre_change": [
+        "1",
+        "1",
+        "9/2",
+        "-1",
+        "9/2",
+        "0"
+      ],
+      "centre_receipt": [
+        "1",
+        "0",
+        "1/2",
+        "0",
+        "1/2",
+        "0"
+      ],
+      "change_ITT": "-8/3",
+      "post_only_ITT": "-12",
+      "baseline_difference": "-28/3",
+      "first_stage": "0",
+      "Wald": null,
+      "Wald_status": "undefined_zero_first_stage",
+      "receipt_OLS": "19/8",
+      "receipt_OLS_status": "descriptive",
+      "ANCOVA_coefficients": [
+        "25/6",
+        "-5",
+        "-1/4"
+      ],
+      "ANCOVA_regressors": [
+        "intercept",
+        "Z",
+        "centre_B-mean_B"
+      ],
+      "cluster_Neyman": "97/36",
+      "incorrect_individual_iid_variance": "77/45",
+      "sharp_outcome_null_p_change": "3/10",
+      "sharp_outcome_null_p_ANCOVA": "1/10",
+      "sharp_adjusted_outcome_inversion": {
+        "alpha": "1/5",
+        "reject_if": "p <= alpha",
+        "null": "sharp_adjusted_outcome_invariance",
+        "intervals": [
+          {
+            "lower": null,
+            "upper": "1",
+            "lower_unbounded": true,
+            "upper_unbounded": false,
+            "lower_closed": false,
+            "upper_closed": true
+          },
+          {
+            "lower": "7",
+            "upper": null,
+            "lower_unbounded": false,
+            "upper_unbounded": true,
+            "lower_closed": true,
+            "upper_closed": false
+          }
+        ],
+        "breakpoints": [
+          "-9",
+          "-7",
+          "-5",
+          "1",
+          "7",
+          "9",
+          "11"
+        ],
+        "probe_p": {
+          "0": "3/10",
+          "1": "3/10",
+          "4": "1/5",
+          "7": "2/5",
+          "8": "2/5",
+          "9": "7/10",
+          "10": "7/10"
+        },
+        "scope": "Coverage applies when the common sharp invariance null is true; not a generic heterogeneous CACE interval."
+      }
+    },
+    "teaching_oracle": {
+      "assignment_count": 20,
+      "centre_change_z0": [
+        "-2",
+        "1",
+        "9/2",
+        "-1",
+        "9/2",
+        "0"
+      ],
+      "centre_change_z1": [
+        "1",
+        "1",
+        "11/2",
+        "-1",
+        "9/2",
+        "5"
+      ],
+      "centre_encouragement_effects": [
+        "3",
+        "0",
+        "1",
+        "0",
+        "0",
+        "5"
+      ],
+      "encouragement_ATE": "3/2",
+      "first_stage": "5/12",
+      "complier_receipt_ATE_under_exclusion": "18/5",
+      "expected_change_ITT": "3/2",
+      "expected_post_only_ITT": "3/2",
+      "expected_first_stage": "5/12",
+      "expected_ANCOVA": "775/832",
+      "expected_Wald": null,
+      "expected_Wald_status": "undefined_on_assignment_support",
+      "zero_first_stage_assignments": 3,
+      "first_stage_range": [
+        "0",
+        "5/6"
+      ],
+      "true_ITT_variance": "761/180",
+      "variance_formula": "761/180",
+      "expected_Neyman": "89/18",
+      "centre_effect_sample_variance": "43/10",
+      "Neyman_expectation_gap": "43/60"
+    }
+  },
+  "direct_effect_extension": {
+    "delta": "0",
+    "class": "Common direct encouragement effect for compliers only; receipt coefficient reduced by delta.",
+    "all_worker_assignment_observables_unchanged": true,
+    "complier_receipt_ATE_at_fixed_assignment": "4",
+    "sharp_receipt_effect_bounds": [
+      "3",
+      "5"
+    ],
+    "assignment_ATE": "2",
+    "first_stage": "1/2",
+    "ratio_of_assignment_effects": "4",
+    "scope": "Bounds apply only to the declared delta in [-1,1] class; randomization does not prove exclusion."
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "chapter": "v12-c11",
+  "date": "2026-10-09",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating author with separate substantive machine-assisted peer evidence",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Six complete cases and twelve solved exercises: finite Bayes/prediction/decisions, MH target/convergence/precision, lasso optimization/error conditions, integrable AIPW identities, bounded honest cross-fitting and its rate/leakage failures, and independent versus dependent multiple testing.",
+  "author_review": "reviews/v12-c11-author.json",
+  "peer_review": "reviews/v12-c11-peer.json",
+  "root_numerical_evidence": "production/v12-c11-author-validation.json",
+  "final_execution_evidence": "production/v12-c11-peer-validation.json",
+  "promotion_evidence": "production/v12-c11-promotion-delta.json",
+  "verified_payload_hashes": 6,
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v12-c11.html",
+      "bytes": 63906,
+      "sha256": "bf96c74426fc300fa5d70fe9d7c6b2173fdbbccbe16095d309d88566945f08ef"
+    },
+    {
+      "path": "scripts/check_v12_c11.py",
+      "bytes": 41792,
+      "sha256": "f3c356b6b62eb3456962e8128cc284b67159645bf4d444310b78d7cd6ed5fefa"
+    },
+    {
+      "path": "content/reviews/v12-c11-sources.json",
+      "bytes": 43236,
+      "sha256": "95b52573a017719d1744ef82bc5e1af5bb794c1956c936a060af0041c95b78bd"
+    },
+    {
+      "path": "content/reviews/v12-c11-author.json",
+      "bytes": 38715,
+      "sha256": "1b711f7cea8e3ab51ba134477a62ea222cd222e97331e42d2ab3eeee99f08459"
+    },
+    {
+      "path": "scripts/check_v12_c11_peer.py",
+      "bytes": 34086,
+      "sha256": "8cff495e0ee77650b15c3378d10f1f28e838bc5763b1dea57764ec2d67804c65"
+    },
+    {
+      "path": "content/reviews/v12-c11-peer.json",
+      "bytes": 53754,
+      "sha256": "9f7d0da6fe920fbc4bf5f0efac152bcc6636254fcb6c2a89abd2567213be9efc"
+    }
+  ],
+  "resolved_findings": [
+    {
+      "id": "c11-root-01",
+      "origin": "Coordinator manuscript review",
+      "severity": "Substantive proof-domain clarification",
+      "issue": "Pointwise positivity alone does not justify a uniformly bounded expectation along the orthogonality path; initial population identities also need integrability.",
+      "resolution": "Canonical additions require integrable potential outcomes, absolute integrability of expected-score terms with sufficient clipped candidate/integrable-regression conditions, and a common c for bounded perturbation paths.",
+      "peer_assessment": "Every exact replacement read and reconstructed. These conditions justify tower expectations and bounded path remainders without changing finite answers.",
+      "status": "resolved"
+    },
+    {
+      "id": "c11-peer-01",
+      "origin": "Independent peer analytic counterexample communicated before final binding",
+      "severity": "Independent support for the integrability refinement",
+      "issue": "Correct regressions with an arbitrary merely pointwise-positive candidate e need not yield a defined unconditional AIPW mean.",
+      "construction": "Let X~Uniform(0,1), D independent Bernoulli(1/2), and both potential outcomes independent fair signs, independent of X,D. Then m0=m1=0, e0=1/2, with bounded outcomes and the causal assumptions. Choose g0=g1=0 but e(X)=X. Score is D epsilon1/X-(1-D)epsilon0/(1-X). Conditional mean is zero for each X, yet E|psi|=(1/2) integral_0^1 [1/x+1/(1-x)] dx=infinity. Symmetry makes both positive and negative parts have infinite expectation, so E psi is undefined.",
+      "resolution": "Final expected-score identities require absolute integrability; the explicit uniformly clipped sufficient condition excludes this case.",
+      "status": "resolved by the same canonical promotion"
+    }
+  ],
+  "open_content_findings": [],
+  "limitations": [
+    "Finite and bounded theorem scopes are explicit; no generic MCMC CLT, arbitrary learner-rate guarantee or empirical causal validity.",
+    "Source inspection is attributed and scoped; machine review is not independent human certification.",
+    "Rendered reader/mobile/keyboard/print QA remains pending."
+  ]
+}

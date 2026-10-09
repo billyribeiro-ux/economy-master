@@ -1,0 +1,102 @@
+{
+  "chapter": "v12-c11",
+  "date": "2026-10-09",
+  "working_inputs": [
+    {
+      "path": "production/v12-c11-working.html",
+      "bytes": 63409,
+      "sha256": "5be5d4d162a7f6b7a86fb9d959997162a43d06324f3565c227699da175ba13f5"
+    },
+    {
+      "path": "production/check_v12_c11_working.py",
+      "bytes": 41817,
+      "sha256": "828d4df7f5d34fd79874d1c77aaa3f3636e9161206f198e386fd020384a4773d"
+    },
+    {
+      "path": "production/v12-c11-sources-working.json",
+      "bytes": 42548,
+      "sha256": "0c5ac89d8a9f568c8ecf4cb53e167b33ac25a9d7334cea92ac93589e9db484ea"
+    },
+    {
+      "path": "production/v12-c11-author-review-working.json",
+      "bytes": 36916,
+      "sha256": "4c9b5f53521fa9885af0b123fe60c597289b665dd9e978a9194dce65c58b0d79"
+    }
+  ],
+  "canonical_inputs": [
+    {
+      "path": "content/chapters/v12-c11.html",
+      "bytes": 63906,
+      "sha256": "bf96c74426fc300fa5d70fe9d7c6b2173fdbbccbe16095d309d88566945f08ef"
+    },
+    {
+      "path": "scripts/check_v12_c11.py",
+      "bytes": 41792,
+      "sha256": "f3c356b6b62eb3456962e8128cc284b67159645bf4d444310b78d7cd6ed5fefa"
+    },
+    {
+      "path": "content/reviews/v12-c11-sources.json",
+      "bytes": 43236,
+      "sha256": "95b52573a017719d1744ef82bc5e1af5bb794c1956c936a060af0041c95b78bd"
+    },
+    {
+      "path": "content/reviews/v12-c11-author.json",
+      "bytes": 38715,
+      "sha256": "1b711f7cea8e3ab51ba134477a62ea222cd222e97331e42d2ab3eeee99f08459"
+    }
+  ],
+  "HTML_exact_replacements": [
+    {
+      "old": "Let potential outcomes Y(0),Y(1) obey consistency",
+      "new": "Let integrable potential outcomes Y(0),Y(1) obey consistency"
+    },
+    {
+      "old": "For candidate regressions g₀,g₁ and a candidate propensity e∈(0,1), define the augmented inverse-probability score",
+      "new": "For candidate regressions g₀,g₁ and a candidate propensity e∈(0,1), define the augmented inverse-probability score below. Expected-score identities are asserted when their terms are absolutely integrable; clipping e uniformly away from zero and one, together with integrable candidate regressions, is sufficient"
+    },
+    {
+      "old": "Along admissible bounded paths e=e₀+ta and g<sub>d</sub>=m<sub>d</sub>+tb<sub>d</sub> that preserve overlap, the remainder is t² times a bounded expectation. Its derivative at zero is therefore zero:",
+      "new": "For the orthogonality claim, additionally take bounded perturbations a,b<sub>d</sub> and require a common constant c&gt;0 such that e₀ and every e₀+ta for all sufficiently small |t| lie in [c,1−c]. Along these paths e=e₀+ta and g<sub>d</sub>=m<sub>d</sub>+tb<sub>d</sub>, the remainder is t² times a uniformly bounded expectation: the bracket contains a(b₁/e+b₀/(1−e)), bounded by the perturbation bounds and c. Dividing by t and letting t→0 therefore gives derivative zero:"
+    }
+  ],
+  "checker_exact_replacements": [
+    {
+      "old": "production/v12-c11-working.html",
+      "new": "content/chapters/v12-c11.html"
+    },
+    {
+      "old": "production/check_v12_c11_working.py",
+      "new": "scripts/check_v12_c11.py"
+    },
+    {
+      "old": "production/v12-c11-sources-working.json",
+      "new": "content/reviews/v12-c11-sources.json"
+    },
+    {
+      "old": "production/v12-c11-author-review-working.json",
+      "new": "content/reviews/v12-c11-author.json"
+    },
+    {
+      "old": "Only the four adjacent working payloads are runtime inputs.",
+      "new": "Only the four canonical author payloads are runtime inputs."
+    },
+    {
+      "old": "working_only=True",
+      "new": "working_only=False"
+    }
+  ],
+  "source_metadata_changes": [
+    "status",
+    "working_source_binding",
+    "canonical_root_refinement"
+  ],
+  "author_metadata_changes": [
+    "status",
+    "canonical_status",
+    "reviewed_hashes",
+    "promotion_provenance",
+    "root_additional_proof_audit"
+  ],
+  "preserved": "All original four working files, numeric routines, displayed calculation markers, exercise prompts and full solutions unchanged.",
+  "source_artifact_bindings_rechecked": 31
+}

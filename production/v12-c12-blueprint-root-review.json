@@ -1,0 +1,64 @@
+{
+  "chapter": "v12-c12",
+  "date": "2026-10-09",
+  "reviewer": "root",
+  "status": "Approved design for full authoring; not chapter acceptance",
+  "proposal": {
+    "path": "production/v12-c12-blueprint-proposal.json",
+    "bytes": 43001,
+    "sha256": "23d66b431ead510bf53afa861e6d3eb11f7f7c3aabe2e708cce5e6ab46455377"
+  },
+  "full_reading": {
+    "lines": "1\u2013794",
+    "all_fields": true,
+    "six_proof_routes": true,
+    "twelve_exercise_answer_contracts": true,
+    "six_embedded_csv_fixtures": true
+  },
+  "prior_independent_arithmetic": {
+    "path": "production/v12-c12-blueprint-root-arithmetic.json",
+    "bytes": 6854,
+    "sha256": "38334f48f067a8326d81c54333ce7b7fe6eed08473cbcfec9309ac50f3b965ff"
+  },
+  "additional_checks": 27,
+  "comparison_labels": [
+    "frozen proposal",
+    "frame-baseline.csv bytes",
+    "frame-baseline.csv schema/count",
+    "frame-baseline.csv stated key",
+    "trial-assignment.csv bytes",
+    "trial-assignment.csv schema/count",
+    "trial-assignment.csv stated key",
+    "trial-followup-cents.csv bytes",
+    "trial-followup-cents.csv schema/count",
+    "trial-followup-cents.csv stated key",
+    "auxiliary-notes.csv bytes",
+    "auxiliary-notes.csv schema/count",
+    "auxiliary-notes.csv stated key",
+    "teaching-only-potential-outcomes.csv bytes",
+    "teaching-only-potential-outcomes.csv schema/count",
+    "teaching-only-potential-outcomes.csv stated key",
+    "restricted-followup-cents.csv bytes",
+    "restricted-followup-cents.csv schema/count",
+    "restricted-followup-cents.csv stated key",
+    "full proposed sharp-null PMF",
+    "sharp-null variance distinct from design",
+    "observed target Neyman variance",
+    "target variance estimator assignment expectation",
+    "exact 1201-cent p multiplicities",
+    "six_worked_case_contracts count",
+    "proof_routes count",
+    "suggested_exercise_types count"
+  ],
+  "proof_judgments": {
+    "design": "Two-of-four inclusion covariances yield stratum baseline sample variance; independent strata and squared weights yield both design variances. Constant stratum effects justify unbiased Neyman variance estimation here.",
+    "finite_p": "Tie groups and their cumulative masses prove inclusive finite p validity; complement pairing sets minimum 1/18. Sharp-zero and weak-average nulls remain distinct.",
+    "direction_search": "Symmetry makes the direction-selected tail statistic a monotone function of absolute contrast; replay restores its finite null calibration, with the zero tie explicitly handled.",
+    "transport": "Uniform conceptual I independent of whole Z yields one-person probabilities without iid assignment claims. Conditional mean equality and support are substantive assumptions. Fixed and ratio denominators coincide because balanced counts make both treatment weight sums deterministic.",
+    "transport_bounds": "Positive linear weights yield rectangular extrema, with endpoint/mixture witnesses; common level shifts preserve effects. Unsupported-cell target is a separate law.",
+    "restricted_input": "Finite-cent completions form a lattice, not every real point of its envelope. Absolute affine inequalities establish all real breakpoints and inclusive boundaries before grid enumeration. Earlier oracle/results are excluded from the alternative auditor information set."
+  },
+  "exercise_judgment": "All twelve are determinate or have explicit open-response criteria; counterfactual target, selection, unsupported-cell and withheld-input variants provide transfer. Full teaching and complete solutions remain author deliverables.",
+  "open_design_findings": [],
+  "limits": "Source preparation already fully reviewed; no new primary-body reading claimed here. All data synthetic. Design approval is not written content, accepted review, empirical replication or rendered-reader QA."
+}

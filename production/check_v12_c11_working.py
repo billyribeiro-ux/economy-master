@@ -766,7 +766,8 @@ def check(root=None):
     a.eq(all(x.startswith('v12-c11-') for x in page.ids), True, 'owned reader namespace')
     a.eq(raw.count('<details class="solutions"'), 1, 'one standard solutions disclosure')
     a.eq('Benchmark answer.' in raw and '<strong>Answers.</strong>' in raw, True, 'answered teaching and retention')
-    a.eq('Scored benchmark, 12 points.' in raw and raw.count('<td>2</td>') == 6, True, 'six-domain twelve-point research audit')
+    rubric = raw.split('<caption>Research-audit rubric</caption>')[-1].split('</table>')[0]
+    a.eq('Scored benchmark, 12 points.' in raw and rubric.count('<td>2</td>') == 6, True, 'six-domain twelve-point research audit')
     for target in ids:
         a.eq(len(page.answers[target]) > 700, True, 'substantive complete solution '+target)
     calculated = calculate(a)

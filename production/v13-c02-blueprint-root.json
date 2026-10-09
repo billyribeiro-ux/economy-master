@@ -1,0 +1,367 @@
+{
+  "chapter": "v13-c02",
+  "title": "Consumer and producer duality",
+  "date": "2026-10-09",
+  "designer": "root",
+  "status": "Original mathematically audited blueprint; no manuscript written or accepted. V12 final package retains production priority.",
+  "canonical_scope": [
+    "Expenditure",
+    "profit",
+    "integrability",
+    "Slutsky symmetry",
+    "homogeneity",
+    "envelope identities"
+  ],
+  "prerequisite": "v13-c01, supported by acceptedv02c09 separation andv05c02/c03 elementary dual methods; canonical acceptance follows C01.",
+  "source_preparation": "production/v13-c02-source-preparation.json",
+  "source_ids": [
+    "v05-c02-consumer",
+    "v05-c03-condie-supply"
+  ],
+  "instructional_objective": "Prove dual identities with their actual domains, diagnose admissibility of smooth demand/cost/profit functions, and distinguish differentiability/convex reconstruction from claims about unsupported technologies.",
+  "proof_contracts": [
+    {
+      "id": "P1",
+      "claim": "Positive-price existence and exact consumer duality",
+      "proof": "For continuous u on R_+^L, positive p, m>=0, compact budgets attain v. For an attainable target ubar>=u(0), a feasible witness bounds expenditure minimizers inside a compact positive-price sublevel; closed upper contour gives attainment. No-excess follows by a continuous radial path from0. Under LNS, cheaper attainment of v would leave room for a strict improvement; hence e(p,v(p,m))=m and both correspondence identities. For v(p,e)=ubar, a strictly better bundle could be scaled slightly down to beat the minimum. Unattainable targets and targets belowu(0) are excluded explicitly."
+    },
+    {
+      "id": "P2",
+      "claim": "Price envelopes and Roy without unjustified division",
+      "proof": "At fixed attainable target, e is an infimum of linear price functions, hence concave, homogeneous1 and monotone; any minimizing h is a supporting supergradient. Under uniqueness at p, positive prices bound nearby optimizers; their subsequential limits minimize at p, hence converge to h. Two optimality inequalities sandwich e(p+dp)-e(p) between dp.h(p+dp) and dp.h(p), proving differentiability with gradient h. For differentiable v, any demanded x stays feasible along (p+td,m+t d.x); both signs of t imply v_p=-v_m x. Divide only when v_m>0. With nonunique Hicksian demand, prove the directional derivative min_{h in H}d.h under the same local compactness."
+    },
+    {
+      "id": "P3",
+      "claim": "Smooth Slutsky restrictions and a precise integrability boundary",
+      "proof": "Differentiate h(p,u)=x(p,e(p,u)): S_ij=partial x_i/partial p_j+(partial x_i/partial m)x_j. Since h=gradient_p e, C1 h gives symmetric negative-semidefinite S; homogeneity gives Sp=0, and symmetry gives p^TS=0. These necessary restrictions do not follow from budget balance, homogeneity or own-price signs alone. Do not claim a general global Marshallian integrability theorem from pointwise restrictions."
+    },
+    {
+      "id": "P4",
+      "claim": "Constructive sufficient integrability for a specified homothetic class",
+      "proof": "Let c be positive C1, concave and homogeneous1 on all strictly positive prices with gradient c>=0. Define U(x)=inf_{q>>0}q.x/c(q) for x>=0. It is finite nonnegative, concave, monotone and homogeneous1; no unproved global boundary-continuity theorem is needed. Euler and concavity give q.gradient c(p)>=c(q). Hence x=ubar gradient c(p) attains U=ubar, and every U>=ubar bundle costs at least ubar c(p). Thus e(p,ubar)=ubar c(p), h contains ubar gradient c(p), v=m/c(p) and this constructed demand is m gradient c(p)/c(p). Give the explicit example whose full Hicksian solution is unique; do not assert uniqueness for arbitrary c without proof."
+    },
+    {
+      "id": "P5",
+      "claim": "Producer duality and correct envelope signs",
+      "proof": "Profit is a supremum of linear functions over a price-independent production set, hence convex and homogeneous1 where finite; two optimality inequalities give a nonnegative supply monotonicity inner product. Under local bounded attained choices and uniqueness, the same sandwich gives gradient profit=net supply. Conditional cost is an infimum of input-price linear functions, hence concave and homogeneous1, with positive factor-demand derivatives when differentiable. Smooth profit Hessian is symmetric PSD and annihilates the full price vector; cost price Hessian is NSD. Derive output convexity only under an appropriate convex/concave technology, not from price concavity."
+    },
+    {
+      "id": "P6",
+      "claim": "Exactly what profits reconstruct",
+      "proof": "For a compact nonempty generating set K, Y=co(K)-R_+^L is closed convex and free-disposal. It equals the intersection p.y<=max_K p.k for all p>>0: strict separation supplies a nonnegative normal (free disposal forbids negative components); add epsilon times the all-ones vector, use bounded K and a sufficiently small epsilon to preserve the strict violation. For a possibly nonconvex K-R_+^L, linear support values are unchanged by closed convexification and cannot recover the missing feasible combinations. Explicitly distinguish value equality from equality of supply correspondences at a tie."
+    }
+  ],
+  "worked_cases": [
+    {
+      "id": "W1",
+      "name": "Subsistence, compensated derivatives and two money metrics",
+      "model": "X=(1,2)+R_+^2, u=sqrt((x1-1)(x2-2)), p>>0, m>=p1+2p2. Declare this shifted consumption domain separately from P1. e=p1+2p2+2u sqrt(p1p2); x=gamma+(m-p.gamma)(1/(2p1),1/(2p2)); h=gamma+u(sqrt(p2/p1),sqrt(p1/p2)). Prove global optima by AM-GM, including zero surplus.",
+      "anchors": {
+        "p": [
+          4,
+          1
+        ],
+        "m": 14,
+        "x": [
+          "2",
+          "6"
+        ],
+        "u": "2",
+        "Dx": [
+          [
+            "-3/8",
+            "-1/4"
+          ],
+          [
+            "-1/2",
+            "-5"
+          ]
+        ],
+        "Dx_m": [
+          "1/8",
+          "1/2"
+        ],
+        "S": [
+          [
+            "-1/8",
+            "1/2"
+          ],
+          [
+            "1/2",
+            "-2"
+          ]
+        ],
+        "price_change": [
+          9,
+          1
+        ],
+        "new_x": [
+          "7/6",
+          "7/2"
+        ],
+        "new_u": "1/2",
+        "positive_CV_loss": "9",
+        "positive_EV_loss": "6"
+      },
+      "lesson": "Marshallian cross effects differ; compensated effects are symmetric, NSD and annihilate p. State welfare-loss sign conventions."
+    },
+    {
+      "id": "W2",
+      "name": "A kink and a zero derivative are different envelope boundaries",
+      "models": [
+        "u=x1+2x2, target6, p=(2,4): e=6min(p1,p2/2)=12, H={x>=0:x1+2x2=6}; price1 one-sided slopes6 from left and0 from right. Directional derivative=min(6d1,3d2).",
+        "Separate u=(x1+x2-3)^3, p=(1,2), m=3. Unique demand(3,0); on p1<p2, v=(m/p1-3)^3. All Roy numerator/denominator derivatives vanish at this point though preferences strictly increase in total goods. Original total-goods index supplies a valid nonzero-denominator Roy representation."
+      ],
+      "lesson": "Correspondences and directional envelopes remain meaningful at price kinks; ordinal utility changes can destroy a derivative ratio while preserving demand."
+    },
+    {
+      "id": "W3",
+      "name": "A plausible smooth demand system fails integrability",
+      "model": "On a scale-invariant neighborhood of equal positive prices where all shares are positive, s_i=1/3+(1/12)(log(p_{i+1})-log(p_{i+2})) with cyclic indices; x_i=m s_i/p_i. Sum shares1, homogeneous0 in(p,m), positive demand and strictly negative own-price derivatives.",
+      "anchors": {
+        "p": [
+          1,
+          1,
+          1
+        ],
+        "m": 3,
+        "x": [
+          1,
+          1,
+          1
+        ],
+        "S": [
+          [
+            "-2/3",
+            "7/12",
+            "1/12"
+          ],
+          [
+            "1/12",
+            "-2/3",
+            "7/12"
+          ],
+          [
+            "7/12",
+            "1/12",
+            "-2/3"
+          ]
+        ]
+      },
+      "proof": "At the anchor S=-P+(1/4)A, P=I-11^T/3 and A=[[0,1,-1],[-1,0,1],[1,-1,0]]. Its rows/columns sum0 and z^TSz=-norm(Pz)^2, yet S12!=S21, so it is incompatible with smooth expenditure rationalization on that neighborhood. A condition on quadratic forms alone does not impose symmetry on a nonsymmetric matrix."
+    },
+    {
+      "id": "W4",
+      "name": "Build preferences from a valid unit-cost function",
+      "model": "c(p)=2sqrt(p1p2)+p3, e(p,u)=u c(p); U(x)=min(sqrt(x1x2),x3). Prove the P4 infimum formula equals this U, or directly derive the same e via AM-GM and x3>=u.",
+      "anchors": {
+        "p": [
+          1,
+          4,
+          2
+        ],
+        "u": 3,
+        "m": 18,
+        "h": [
+          "6",
+          "3/2",
+          "3"
+        ],
+        "changed_p": [
+          4,
+          1,
+          2
+        ],
+        "changed_h": [
+          "3/2",
+          "6",
+          "3"
+        ],
+        "two_price_paths": [
+          [
+            "12",
+            "-12"
+          ],
+          [
+            "-6",
+            "6"
+          ]
+        ]
+      },
+      "lesson": "Full-domain concavity, homogeneity and nonnegative gradient deliver a constructive sufficient result for this class. Exact compensated line integrals agree because a global potential exists; adding a price-independent constant keeps gradients but violates Euler/price homogeneity."
+    },
+    {
+      "id": "W5",
+      "name": "Two inputs, diminishing returns and net-supply signs",
+      "model": "f(k,l)=(kl)^(1/4), k,l>=0; target q>=0; w1,w2>0. Conditional c=2q^2sqrt(w1w2), k=q^2sqrt(w2/w1), l=q^2sqrt(w1/w2). With output price r>=0, q*=r/(4sqrt(w1w2)), pi=r^2/(8sqrt(w1w2)). Complete the output square for global optimality and prove conditional AM-GM bound.",
+      "anchors": {
+        "w": [
+          1,
+          4
+        ],
+        "r": 8,
+        "q": 1,
+        "k": 2,
+        "l": "1/2",
+        "cost": 4,
+        "profit": 4,
+        "gradient_profit_w1_w2_r": [
+          "-2",
+          "-1/2",
+          "1"
+        ],
+        "Hessian": [
+          [
+            "3",
+            "1/4",
+            "-1/2"
+          ],
+          [
+            "1/4",
+            "3/16",
+            "-1/8"
+          ],
+          [
+            "-1/2",
+            "-1/8",
+            "1/8"
+          ]
+        ]
+      },
+      "proof": "For perturbations a=dw1/w1,b=dw2/w2,rho=dr/r at r>0, quadratic profit curvature equals pi[2(rho-(a+b)/2)^2+(a-b)^2/4]. This gives PSD and the common-scale null direction. Conditional input derivatives have positive sign; profit net-input derivatives have negative sign."
+    },
+    {
+      "id": "W6",
+      "name": "Entry, capacity and the technology hidden by profits",
+      "model": "One input with price w>0 and output with price r>0. Compact generating set K={(0,0)} union {(-4-q^2,q):0<=q<=3}; Y=K-R_+^2. Inactivity is feasible. Conditional cost in input units is0 atq0,4+q^2 for0<q<=3, and infinity above3.",
+      "branches": "If r/w<4 choose0; at4 choose inactive orq2; for4<r/w<6 chooseq=r/(2w); forr/w>=6 chooseq3 (same uniqueq at6). Profit branches0, r^2/(4w)-4w, 3r-13w with the corresponding thresholds.",
+      "anchors": {
+        "w": 1,
+        "r_values": [
+          3,
+          4,
+          5,
+          7
+        ],
+        "profits": [
+          "0",
+          "0",
+          "9/4",
+          "8"
+        ],
+        "positive_stationary_candidate_at_r3": [
+          "3/2",
+          "-7/4"
+        ],
+        "nonconvex_hole": [
+          "-4",
+          "1"
+        ],
+        "attaining_convex_mixture": "half inactive plus half(-8,2)"
+      },
+      "proof": "At entry r=4,w=1, net supply is{(0,0),(-8,2)}, while convexification includes every connecting mixture. The point(-4,1) is infeasible in the original technology since one output requires5 inputs. Both technologies have identical profit at every positive price. Price1-sided output derivatives at entry are0 and2; at capacity the value is differentiable but second derivatives change."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "E1",
+      "task": "Prove P1 with complete target/attainment restrictions and diagnose target1 under u(x)=1-exp(-sum x).",
+      "answer": "Target1 is unattainable at every finite bundle; expenditure infimum over empty feasible set is+infinity with no Hicksian demand. Finite dual identities require an attainable target, not merely target>=u(0)."
+    },
+    {
+      "id": "E2",
+      "task": "Derive W1 demand/Hicksian/Jacobians at original prices, then p changes to(9,1) with m14; calculate both positive money losses.",
+      "answer": "Use W1 exact matrices, new(7/6,7/2), utility1/2, CV9 andEV6 with their respective old/new reference utility/price equations."
+    },
+    {
+      "id": "E3",
+      "task": "Derive every W2 linear-utility minimizer and the directional price derivative for arbitraryd; explain why a single smooth gradient is invalid.",
+      "answer": "Full x1+2x2=6 segment; min(6d1,3d2); each h is a concave supporting supergradient; coordinate price1 slopes6/0 disagree."
+    },
+    {
+      "id": "E4",
+      "task": "Prove the cubic-utility Roy failure, identify all zero derivatives and recover the unchanged demand from a valid ordinal representation.",
+      "answer": "In p1<p2, x=(m/p1,0), cube indirect derivative factor3(m/p1-3)^2 vanishes at(1,2,3). Total-goods indirectm/p1 has vm=1/p1 and gives Roy(3,0)."
+    },
+    {
+      "id": "E5",
+      "task": "Derive W3 derivatives from the share law, check every budget/homogeneity/own-sign condition and exhibit the precise integrability violation.",
+      "answer": "Anchor S=-P+A/4, S12=7/12,S21=1/12; quadratic negativity cannot replace symmetry. Work on a specified open neighborhood with all shares positive; do not claim global positivity of logarithmic shares."
+    },
+    {
+      "id": "E6",
+      "task": "Apply P4 to c_alpha=alpha sqrt(p1p2)+p3 with alpha>0; recover an explicit direct index and exact witness atalpha1,p(9,1,2),u4.",
+      "answer": "U=min(2sqrt(x1x2)/alpha,x3); h=(alpha u/2 sqrt(p2/p1),alpha u/2 sqrt(p1/p2),u). For the numbers h=(2/3,6,4), expenditure20."
+    },
+    {
+      "id": "E7",
+      "task": "Integrate W4 compensated demand along both coordinate paths from(1,4,2) to(4,1,2); assess c+1 as an expenditure primitive with unchanged gradients.",
+      "answer": "Path increments12,-12 and-6,6; both zero. c+1 fails degree1 and Euler p.grad c=c, so an arbitrary integration constant is not economically free."
+    },
+    {
+      "id": "E8",
+      "task": "Derive W5 conditional inputs/cost for everyq>=0, prove concavity in input prices and convexity in output, then swap input prices.",
+      "answer": "AM-GM global bound and equality as inW5; afterw(4,1),r8,q1,k1/2,l2,c4,pi4. Price and output curvature concern different arguments."
+    },
+    {
+      "id": "E9",
+      "task": "Derive W5 profit/net supply and the displayed full Hessian; prove PSD and Euler kernel without decimal eigenvalue guesses.",
+      "answer": "Net(-2,-1/2,1); Hessian above; square certificate proves global PSD for positive output price and annihilates(w1,w2,r). Explain finite attained optimum rather than infer it from closedness alone."
+    },
+    {
+      "id": "E10",
+      "task": "Solve every entry/capacity branch of W6 and compute four suppliedprice cases; diagnose FOC-only use atr3 and Hotelling at entry/capacity.",
+      "answer": "Stationaryq1.5 yields-7/4 atr3, so choose0. Atentrytwo slopes0/2 prevent differentiability; atcapacityq3 both neighboring first derivatives agree. Off,interior,cap profit formulas as stated."
+    },
+    {
+      "id": "E11",
+      "task": "Prove P6 with compactK, separation and perturbation to strictly positive prices. Exhibit a missing feasible point that all profit observations fail to reveal.",
+      "answer": "Free disposal forces separating normal>=0; compact support gives continuity for a small positive perturbation. Point(-4,1) belongs toconvexification butnotoriginalY; all linear support values nevertheless coincide."
+    },
+    {
+      "id": "E12",
+      "task": "Referee a claim that budget/homogeneity/own-price signs prove global rationality, every monotone utility supports Roy division, and all observed profit values uniquely recover a nonconvex technology.",
+      "answer": "Three major errors need explicit counterexamples W3,W2,W6; give corrected theorem hypotheses, identify which empirical support or extra convexity assumption could change each conclusion, and separate finite observed-price agreement from a proved full-price identity. Grade specific law/derivation/evidence and a defensible revised claim, not agreement with an opinion."
+    }
+  ],
+  "independent_numeric_audit": {
+    "grouped_comparisons": 32,
+    "labels": [
+      "Stone-Geary demand",
+      "budget",
+      "squared utility",
+      "Marshallian Jacobian",
+      "Slutsky matrix",
+      "Slutsky price kernel",
+      "negative rank-one certificate",
+      "changed-price demand",
+      "changed squared utility",
+      "CV EV",
+      "rotational Slutsky field",
+      "rotational row sums",
+      "rotational column sums",
+      "symmetric-part quadratic (1, -1, 0)",
+      "symmetric-part quadratic (2, 0, -1)",
+      "symmetric-part quadratic (1, 1, 1)",
+      "constructive expenditure witness",
+      "constructive utility square",
+      "first integration path",
+      "second integration path",
+      "alpha transfer expenditure",
+      "alpha transfer utility",
+      "producer q inputs cost profit",
+      "profit Euler",
+      "profit Hessian kernel",
+      "profit Hessian square certificate (1, 0, 0)",
+      "profit Hessian square certificate (0, 1, 1)",
+      "profit Hessian square certificate (2, -1, 3)",
+      "profit Hessian square certificate (1, 4, 8)",
+      "capacity and entry branches",
+      "convexification witness",
+      "original one-output resource cost"
+    ],
+    "method": "Root exact Fraction reconstructions from original primitive cases, analytic AM-GM/completed-square/Hessian and separation proofs; no source numerical oracle.",
+    "result": "passed prospective design only"
+  },
+  "production_requirements": "At least six fully worked cases and all twelve complete solutions, definitions/prerequisites, intuition plus proofs, explicit counterexamples, answered teach-back/retention, sources and truthful source scope. Four-file working manuscript/checker/source/author format; new author must independently rederive original anchors. No canonical promotion before C01 acceptance or V12 complete-volume publication."
+}

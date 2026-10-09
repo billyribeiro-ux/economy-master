@@ -1,0 +1,330 @@
+{
+  "chapter": "v12-c12",
+  "title": "Econometric research audit",
+  "date": "2026-10-09",
+  "author": "bs_author",
+  "status": "Complete working author package; separate coordinator and peer acceptance pending",
+  "assignment": "production/v12-c12-author-assignment.json",
+  "owned_paths": [
+    "production/v12-c12-working.html",
+    "production/check_v12_c12_working.py",
+    "production/v12-c12-sources-working.json",
+    "production/v12-c12-author-review-working.json"
+  ],
+  "payload_bindings": [
+    {
+      "path": "v12-c12-working.html",
+      "bytes": 53549,
+      "sha256": "b5ceea490705a77e0013edd27b45eb73fd69a90df21710ad4bfd4742380102f0"
+    },
+    {
+      "path": "check_v12_c12_working.py",
+      "bytes": 30624,
+      "sha256": "33a64df328109f32b364e400cce1e577a797c0dbde6c7cb090f9e32d48b29faf"
+    },
+    {
+      "path": "v12-c12-sources-working.json",
+      "bytes": 14104,
+      "sha256": "bad31153c69af7eda6b11c12ea573324052923ba787d79b20f25fe80d3ad4589"
+    }
+  ],
+  "runtime_contract": {
+    "location": "All four working payloads adjacent to the checker; paths derived from __file__, independent of cwd.",
+    "inputs": [
+      "v12-c12-working.html",
+      "check_v12_c12_working.py",
+      "v12-c12-sources-working.json",
+      "v12-c12-author-review-working.json"
+    ],
+    "external_runtime_inputs": [],
+    "quiet_import_and_check": "No printing on import or successful check/CLI; check returns JSON-safe summary.",
+    "bounded_domain": "Exactly the declared six finite fixture schemas; 32-person roster, eight trial units, two treatments per four-person stratum, canonical integer cents 0..1200, one explicit withheld cell only in its separate mode.",
+    "information_guard": "Analyst API admits only frame, assignment, notes and one complete or restricted follow-up table; it rejects any oracle table. Restricted completion must be explicitly supplied and cannot be a bool, float or string.",
+    "read_only": "Checker writes no payload, bytecode or output file when invoked with -B as documented."
+  },
+  "complete_content_review": {
+    "worked_cases": 6,
+    "exercises": 12,
+    "complete_solutions": 12,
+    "proof_routes": 6,
+    "raw_csv_blocks": 6,
+    "independent_numeric_anchors": 39,
+    "referee_rubric": "Twelve points, two each for six explicitly stated evidence/reasoning domains, with illustrative response and partial-credit rules.",
+    "teach_back": "Answered and evaluated by ability to distinguish statistical unit, random mechanism and target.",
+    "delayed_retention": "Four answered prompts after at least one week, including the 100/101-cent inclusive boundary.",
+    "all_data_synthetic": true,
+    "all_proofs_prompts_solutions_read_by_author": true
+  },
+  "proof_audit": [
+    {
+      "id": "design",
+      "section": "v12-c12-design",
+      "review": "Complete indicator proof: marginal inclusion 1/2, pair inclusion 1/6, covariance -1/12, independent strata, full expansion to finite baseline sample variance. Two-person pair-variance averaging proves the stated Neyman expectation under constant within-stratum effects. The manuscript does not claim exact Gaussian studentization or extend that equality proof to general heterogeneous effects."
+    },
+    {
+      "id": "finite_p",
+      "section": "v12-c12-inference",
+      "review": "Tied extremeness groups prove P(p<=alpha)<=alpha for the declared finite law. The sharp zero null imputes each missing potential; a weak average null does not. Complement reflection implies minimum inclusive two-sided p 1/18 and zero rejection probability at 1/20 without unassigned randomized tie-breaking."
+    },
+    {
+      "id": "direction_search",
+      "section": "v12-c12-inference",
+      "review": "The selected direction is defined for every assignment, including positive at zero. Calibrating the lower tail of the selected p replays the full rule. Complement symmetry and monotonicity in magnitude establish equality with the absolute-score test in this orbit, including truncation at one for the zero tie. No universal two-times correction is asserted."
+    },
+    {
+      "id": "transport",
+      "section": "v12-c12-transport",
+      "review": "An independent conceptual uniform frame index I and whole balanced assignment Z define finite one-person expectations. Conditional expectation cancels participation and treatment factors; identification of levels uses two separate potential-level mean assumptions plus support. Balanced counts prove both treatment denominators exactly 24; the ratio identity is not generalized to random denominators."
+    },
+    {
+      "id": "transport_bounds",
+      "section": "v12-c12-transport",
+      "review": "Common shifts move both target levels while preserving effects. Positive-weight rectangular extrema are attained at corners; interpolation proves sharpness. The unsupported-cell target is a separate finite-support law, with explicit endpoint potential pairs and their mixtures. These are population assumption sets, not sample confidence intervals."
+    },
+    {
+      "id": "restricted_input",
+      "section": "v12-c12-restricted",
+      "review": "A different auditor receives only retained records and bounded integer cents, excluding all prior values, derived full-data outputs and teacher restrictions. The statistic is affine in cents. Each absolute comparison reduces to c>=9 or a threshold w<=(-c-9)/2. All classes and inclusive boundaries are enumerated after the algebra, yielding a 1201-point statistic lattice and five p-values. Continuous relaxation, discrete completion and causal identification remain distinct."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "prompt_id": "v12-c12-e1",
+      "solution_ref": "paired data-solution-for=v12-c12-e1",
+      "audit": "Exact prompt, method availability, answer and interpretation reconciled; open memo uses the six-domain 12-point rubric."
+    },
+    {
+      "prompt_id": "v12-c12-e2",
+      "solution_ref": "paired data-solution-for=v12-c12-e2",
+      "audit": "Exact prompt, method availability, answer and interpretation reconciled; open memo uses the six-domain 12-point rubric."
+    },
+    {
+      "prompt_id": "v12-c12-e3",
+      "solution_ref": "paired data-solution-for=v12-c12-e3",
+      "audit": "Exact prompt, method availability, answer and interpretation reconciled; open memo uses the six-domain 12-point rubric."
+    },
+    {
+      "prompt_id": "v12-c12-e4",
+      "solution_ref": "paired data-solution-for=v12-c12-e4",
+      "audit": "Exact prompt, method availability, answer and interpretation reconciled; open memo uses the six-domain 12-point rubric."
+    },
+    {
+      "prompt_id": "v12-c12-e5",
+      "solution_ref": "paired data-solution-for=v12-c12-e5",
+      "audit": "Exact prompt, method availability, answer and interpretation reconciled; open memo uses the six-domain 12-point rubric."
+    },
+    {
+      "prompt_id": "v12-c12-e6",
+      "solution_ref": "paired data-solution-for=v12-c12-e6",
+      "audit": "Exact prompt, method availability, answer and interpretation reconciled; open memo uses the six-domain 12-point rubric."
+    },
+    {
+      "prompt_id": "v12-c12-e7",
+      "solution_ref": "paired data-solution-for=v12-c12-e7",
+      "audit": "Exact prompt, method availability, answer and interpretation reconciled; open memo uses the six-domain 12-point rubric."
+    },
+    {
+      "prompt_id": "v12-c12-e8",
+      "solution_ref": "paired data-solution-for=v12-c12-e8",
+      "audit": "Exact prompt, method availability, answer and interpretation reconciled; open memo uses the six-domain 12-point rubric."
+    },
+    {
+      "prompt_id": "v12-c12-e9",
+      "solution_ref": "paired data-solution-for=v12-c12-e9",
+      "audit": "Exact prompt, method availability, answer and interpretation reconciled; open memo uses the six-domain 12-point rubric."
+    },
+    {
+      "prompt_id": "v12-c12-e10",
+      "solution_ref": "paired data-solution-for=v12-c12-e10",
+      "audit": "Exact prompt, method availability, answer and interpretation reconciled; open memo uses the six-domain 12-point rubric."
+    },
+    {
+      "prompt_id": "v12-c12-e11",
+      "solution_ref": "paired data-solution-for=v12-c12-e11",
+      "audit": "Exact prompt, method availability, answer and interpretation reconciled; open memo uses the six-domain 12-point rubric."
+    },
+    {
+      "prompt_id": "v12-c12-e12",
+      "solution_ref": "paired data-solution-for=v12-c12-e12",
+      "audit": "Exact prompt, method availability, answer and interpretation reconciled; open memo uses the six-domain 12-point rubric."
+    }
+  ],
+  "numerical_methods": {
+    "independence": "Checker encodes original b/effect/assignment/roster primitives itself; it does not import proposal, root output, source artifacts or another checker as oracle.",
+    "methods": [
+      "Exact Fraction design moments by all 36 actual-potential assignments compared with indicator covariance algebra.",
+      "Separate fixed-observed-outcome sharp-null orbit, complement pairs, full selected-rule replay and inclusive finite p calibration.",
+      "Raw cents and keyed joins, explicit note multiplicities, independent visible CSV reconstruction.",
+      "Finite-frame direct joint sums over conceptual I and all Z versus standardization; deterministic denominator and variance identities.",
+      "Corner and mixture constructions for effect shifts and unsupported cells.",
+      "Integer affine comparison classes, all 1201 cent completions, inclusive boundary regions and lattice increments."
+    ],
+    "focused_transfer_groups": [
+      "Keyed row-order invariance",
+      "Positive amount scaling",
+      "Common amount translation",
+      "All-constant outcomes and complete ties",
+      "Stratum-only target endpoints",
+      "Common target-level shifts with unchanged effects",
+      "Assumption-bound corner/interpolation witnesses",
+      "Explicit restricted completions and forbidden oracle access"
+    ]
+  },
+  "resolved_design_findings": [
+    {
+      "id": "c12-blueprint-precision",
+      "resolution": "Use the exact lattice and call [9/4,21/4] its sharp envelope; the explicitly continuous relaxation fills that interval. Root confirmed this refinement. The five p-value regions are the same under both domains."
+    },
+    {
+      "id": "c12-blueprint-pipeline",
+      "resolution": "Named P0–P4 branch contracts and relative-day run log explicitly prevent attaching P0/P2 inference to P1’s statistic. Root required this separation."
+    },
+    {
+      "id": "c12-blueprint-probability-law",
+      "resolution": "Define conceptual independent I and whole randomized Z explicitly. Transport expectation is over (I,Z); trial-estimator uncertainty is over the dependent balanced vector Z."
+    },
+    {
+      "id": "c12-blueprint-null-contrast",
+      "resolution": "Keep 25/12 and 21/4 in distinct laws; observed Neyman 5/8 is legitimate but does not supply an exact normal tail. The Fisher p tests sharp zero, not a weak average null."
+    },
+    {
+      "id": "c12-blueprint-p-partition",
+      "resolution": "Record all five exact regions and the comparison-class formula; do not claim all real p values between 1/18 and 4/9 occur."
+    },
+    {
+      "id": "c12-blueprint-restricted-information",
+      "resolution": "Define a separate access-world auditor and expressly exclude those records and numerical disclosures. Every candidate completion uses only retained records and stated bounds and need not preserve the complete dossier’s hidden oracle. This implements the coordinator’s information-boundary clarification without changing any numerical result."
+    }
+  ],
+  "source_review": {
+    "source_record": "v12-c12-sources-working.json",
+    "source_ids": [
+      "asa-pvalues-2016",
+      "v04-c01-aea-data-faq",
+      "v12-c12-olken-preanalysis2015",
+      "v12-c12-dahabreh-target2019"
+    ],
+    "actual_new_primary_inspector": "ito_author; this author read the complete source preparation and scoped records but did not newly inspect primary bodies/images.",
+    "ASA_attribution_limit": "Earlier historical body inspector and exact page locators not retained; principles/reporting scope reused only.",
+    "dated_scopes": "AEA February 2026 policy accessed 9 October 2026; Olken 2015 published PDF; Dahabreh arXiv v3 dated 28 October 2019, not later journal body or uninspected appendix.",
+    "originality": "No source empirical case, numerical result or substantial copied prose."
+  },
+  "execution": {
+    "status": "All eight required workspace/exact-four API/CLI normal/-O gates passed; quietness, strict JSON-safe summary and immutable exact-four payload membership verified.",
+    "author_numerical_summary": {
+      "actual_assignments": 36,
+      "chapter": "v12-c12",
+      "comparisons": 1546,
+      "domain_rejections": 43,
+      "focused_transfer_groups": 8,
+      "null_assignments": 36,
+      "numeric_anchors": 39,
+      "restricted_cent_completions": 1201,
+      "restricted_p_counts": {
+        "1/18": 800,
+        "1/3": 100,
+        "1/9": 200,
+        "2/9": 100,
+        "4/9": 1
+      },
+      "runtime_payloads": 4,
+      "sharp_zero_p": "1/18",
+      "solved_exercises": 12,
+      "status": "author checks passed; independent peer pending",
+      "target_effect_mean": "5/2",
+      "trial_mean": "2",
+      "trial_variance": "25/12",
+      "visible_csv_fixtures": 6,
+      "worked_cases": 6
+    },
+    "shared_document": {
+      "method": "Actual scripts/verify.py Document class extracted by AST and executed read-only, without importing shared numerical checkers.",
+      "worked_cases": 6,
+      "exercises": 12,
+      "solutions": 12,
+      "unique_ids": 28,
+      "flat_reader_routes": "Existing chapter targets verified; new source IDs remain coordinator integration scope."
+    },
+    "eight_final_gates": [
+      {
+        "tree": "workspace",
+        "mode": "API",
+        "optimized": false,
+        "cwd": "/",
+        "quiet": true,
+        "payload_bytes_unchanged": true,
+        "status": "passed"
+      },
+      {
+        "tree": "workspace",
+        "mode": "CLI",
+        "optimized": false,
+        "cwd": "/",
+        "quiet": true,
+        "payload_bytes_unchanged": true,
+        "status": "passed"
+      },
+      {
+        "tree": "workspace",
+        "mode": "API",
+        "optimized": true,
+        "cwd": "/",
+        "quiet": true,
+        "payload_bytes_unchanged": true,
+        "status": "passed"
+      },
+      {
+        "tree": "workspace",
+        "mode": "CLI",
+        "optimized": true,
+        "cwd": "/",
+        "quiet": true,
+        "payload_bytes_unchanged": true,
+        "status": "passed"
+      },
+      {
+        "tree": "exact-four",
+        "mode": "API",
+        "optimized": false,
+        "cwd": "/",
+        "quiet": true,
+        "payload_bytes_unchanged": true,
+        "status": "passed"
+      },
+      {
+        "tree": "exact-four",
+        "mode": "CLI",
+        "optimized": false,
+        "cwd": "/",
+        "quiet": true,
+        "payload_bytes_unchanged": true,
+        "status": "passed"
+      },
+      {
+        "tree": "exact-four",
+        "mode": "API",
+        "optimized": true,
+        "cwd": "/",
+        "quiet": true,
+        "payload_bytes_unchanged": true,
+        "status": "passed"
+      },
+      {
+        "tree": "exact-four",
+        "mode": "CLI",
+        "optimized": true,
+        "cwd": "/",
+        "quiet": true,
+        "payload_bytes_unchanged": true,
+        "status": "passed"
+      }
+    ],
+    "final_binding_recheck": "The same eight gates are rerun after saving this compact evidence record; the final four payload hashes are reported separately to the coordinator, avoiding a self-hash."
+  },
+  "open_issues": [
+    "Root full author audit, canonical promotion and separate independent peer review remain pending.",
+    "Rendered canonical reader/mobile/print QA is coordinator scope; no working-file rendering pass is claimed.",
+    "No empirical replication or learner-specific research competence is established by synthetic finite checks."
+  ],
+  "approval_boundary": "Author self-review and successful numerical checks are not chapter acceptance; root owns canonical status, shared integration and publication."
+}

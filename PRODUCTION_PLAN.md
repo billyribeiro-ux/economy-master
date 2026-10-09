@@ -118,7 +118,7 @@ Publish meaningful intermediate editions only after coherent material exists; cl
 
 ## Efficient implementation
 
-Use plain HTML, local CSS/JavaScript, and standard-library Python to generate navigation, indexing and the print edition. Search must work from `file://` without network requests. Avoid frameworks, generated decorative imagery, paid APIs, dependency churn, redundant rewriting and repetitive browsing. This reduces overhead; it does not remove necessary derivations, practice or review. Do not use repeated boilerplate to inflate apparent coverage.
+Use plain HTML, local CSS/JavaScript, and standard-library Python to generate navigation, indexing and the print edition. Search must work from `file://` without network requests. Avoid frameworks, generated decorative imagery, paid APIs, dependency churn, redundant rewriting and repetitive browsing. Keep review records compact: reference exact manuscript IDs and retained evidence instead of duplicating entire prompts, solutions or source records. Reuse unchanged verified freezes and run one final integration pass per coherent batch; repeat checks only for changes, failures or unresolved concerns. This reduces overhead; it does not remove necessary derivations, practice or review. Do not use repeated boilerplate to inflate apparent coverage.
 
 ## Parallel production
 
