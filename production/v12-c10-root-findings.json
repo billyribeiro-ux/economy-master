@@ -1,0 +1,42 @@
+{
+  "chapter": "v12-c10",
+  "date": "2026-10-09",
+  "frozen_inputs": [
+    {
+      "path": "production/v12-c10-working.html",
+      "bytes": 55805,
+      "sha256": "17283b8d68e8e59aaaaaad81079b352ab42dceb46de3aa5758d43c0d09f772c9"
+    },
+    {
+      "path": "production/check_v12_c10_working.py",
+      "bytes": 38301,
+      "sha256": "40076cbf7a8494287614d5319945c9cbc0fca4a298d1e625c93f938dd2c78792"
+    },
+    {
+      "path": "production/v12-c10-sources-working.json",
+      "bytes": 36223,
+      "sha256": "5b45eefe38582eaf89a405f27b3beecaaabf845d4989e9d3830817899ba2bc75"
+    },
+    {
+      "path": "production/v12-c10-author-review-working.json",
+      "bytes": 24090,
+      "sha256": "7359a2b99f3e434804a519ef4d8050009fce9288b29c6cdbfd23ae84c4594f53"
+    }
+  ],
+  "findings": [
+    {
+      "id": "c10-root-01",
+      "location": "case5 model paragraph, working line103",
+      "issue": "The phrase independently of future transitions can assert false independence: the current shock affects choice, which determines the next state. Current-shock observation and future-shock nonanticipation are not fully stated.",
+      "resolution_plan": "Replace with a fresh shock vector independent of the past/predetermined current state, observed together with current state before choosing; future shocks are unobserved, and the chosen action determines the next state."
+    },
+    {
+      "id": "c10-root-02",
+      "location": "section6 Bellman contraction versus the stated optimization problem",
+      "issue": "Contraction proves a unique mathematical fixed point, but the text does not explicitly connect it to the infinite-horizon discounted optimum.",
+      "resolution_plan": "Supply finite-horizon backward induction, a uniform integrable-stage discounted-tail bound, and a telescoping verification for the stationary maximizing rule. The finite Gumbel absolute moment and finite state/action utilities supply the bound."
+    }
+  ],
+  "state": "Both findings resolved by explicit root canonical promotion; separate peer inspection pending.",
+  "resolution_record": "production/v12-c10-promotion-delta.json"
+}

@@ -1,0 +1,87 @@
+{
+  "chapter": "v12-c10",
+  "date": "2026-10-09",
+  "working_inputs": [
+    {
+      "path": "production/v12-c10-working.html",
+      "bytes": 55805,
+      "sha256": "17283b8d68e8e59aaaaaad81079b352ab42dceb46de3aa5758d43c0d09f772c9"
+    },
+    {
+      "path": "production/check_v12_c10_working.py",
+      "bytes": 38301,
+      "sha256": "40076cbf7a8494287614d5319945c9cbc0fca4a298d1e625c93f938dd2c78792"
+    },
+    {
+      "path": "production/v12-c10-sources-working.json",
+      "bytes": 36223,
+      "sha256": "5b45eefe38582eaf89a405f27b3beecaaabf845d4989e9d3830817899ba2bc75"
+    },
+    {
+      "path": "production/v12-c10-author-review-working.json",
+      "bytes": 24090,
+      "sha256": "7359a2b99f3e434804a519ef4d8050009fce9288b29c6cdbfd23ae84c4594f53"
+    }
+  ],
+  "canonical_inputs": [
+    {
+      "path": "content/chapters/v12-c10.html",
+      "bytes": 57732,
+      "sha256": "85c4aa2a156cd306db4746ae0bed7eb0cb2dec225c5a792ea05b22fee5c3c356"
+    },
+    {
+      "path": "scripts/check_v12_c10.py",
+      "bytes": 38276,
+      "sha256": "40ac8d32225e07ebb86f587852577a931061266dddba18c4994b98b32e98357c"
+    },
+    {
+      "path": "content/reviews/v12-c10-sources.json",
+      "bytes": 36695,
+      "sha256": "6de657aa374ad2fc70ca8c1596bf59e8136316cb30df420269fa5dce64e3fbb4"
+    },
+    {
+      "path": "content/reviews/v12-c10-author.json",
+      "bytes": 26100,
+      "sha256": "db678c166e10a289da3587d42e137fc5669e4f5fa484f983e212e9741f6c79ff"
+    }
+  ],
+  "HTML_exact_replacements": [
+    {
+      "old": "<p>The state s is 0 or 1. Keeping the asset gives deterministic utility −cs and moves to state 1 with probability one. Replacing gives utility −r and moves to state 0. Shocks ε to the two choices have the centered law above and are independent across alternatives and dates, independently of future transitions. The decision maker maximizes expected discounted utility with known β. Before the current shocks are realized,</p>",
+      "new": "<p>The state s is 0 or 1. Keeping the asset gives deterministic utility −cs and moves to state 1 with probability one. Replacing gives utility −r and moves to state 0. The two centered choice shocks have the law above, independent across alternatives and dates. Each fresh shock vector is independent of past information and the predetermined current state. The decision maker observes the current state and both current shocks before choosing; future shocks are unobserved. The current choice determines the next state. The objective is expected discounted utility with known 0≤β&lt;1. Before the current shocks are realized,</p>"
+    },
+    {
+      "old": "<div class=\"equation\">(TV)<sub>s</sub>=log[exp(−cs+βV₁)+exp(−r+βV₀)],<br>p<sub>s</sub>=P(replace|s)=exp(−r+βV₀)/(exp(−cs+βV₁)+exp(−r+βV₀)).</div>",
+      "new": "<div class=\"equation\">(TV)<sub>s</sub>=log[exp(−cs+βV₁)+exp(−r+βV₀)],<br>p<sub>s</sub>=P(replace|s)=exp(−r+βV₀)/(exp(−cs+βV₁)+exp(−r+βV₀)).</div>\n<p><strong>Why this fixed point is the optimization value.</strong> An admissible policy uses past information, the current state and current shocks, but not future shocks. Let u(s,a) denote the deterministic payoff and let C=max<sub>s,a</sub>|u(s,a)|+E[max<sub>a</sub>|ε<sub>a</sub>|], which is finite by the finite state/action sets and the Gumbel tail bounds. Under every such policy, the expected absolute discounted payoff after period H−1 is at most Cβ<sup>H</sup>/(1−β), uniformly over initial states. With zero terminal continuation, backward induction gives the H-period optimal value T<sup>H</sup>0: after observing the current shocks one chooses the larger payoff-plus-continuation index, and independent future shocks give the next pre-shock value. Truncating any infinite policy, or extending any finite policy, changes its expected value by at most this tail bound. Thus finite-horizon optimal values converge uniformly to the infinite-horizon supremum. Contraction also gives T<sup>H</sup>0→V*, so this supremum equals the fixed point.</p>\n<p>Choose at each date the action maximizing u(s,a)+ε<sub>a</sub>+βV*(next state). This is a measurable stationary rule, with ties of probability zero. Iterating its conditional Bellman equality for H periods yields V*(s₀)=E[Σ<sub>t=0</sub><sup>H−1</sup>β<sup>t</sup>(u(s<sub>t</sub>,a<sub>t</sub>)+ε<sub>t,a_t</sub>)+β<sup>H</sup>V*(s<sub>H</sub>)]. The terminal term tends to zero because V* is bounded on the finite state space; the same absolute-tail bound justifies passage to the infinite payoff sum. This rule therefore attains the stated optimum. The conclusion uses the information and shock law just specified, not contraction alone.</p>"
+    }
+  ],
+  "checker_exact_replacements": [
+    {
+      "old": "production/v12-c10-working.html",
+      "new": "content/chapters/v12-c10.html"
+    },
+    {
+      "old": "production/check_v12_c10_working.py",
+      "new": "scripts/check_v12_c10.py"
+    },
+    {
+      "old": "production/v12-c10-sources-working.json",
+      "new": "content/reviews/v12-c10-sources.json"
+    },
+    {
+      "old": "production/v12-c10-author-review-working.json",
+      "new": "content/reviews/v12-c10-author.json"
+    },
+    {
+      "old": "working_only=True",
+      "new": "working_only=False"
+    }
+  ],
+  "root_reading": "production/v12-c10-root-reading.json",
+  "resolved_root_findings": [
+    "c10-root-01",
+    "c10-root-02"
+  ],
+  "open_root_findings": [],
+  "state": "Canonical review; two analytic refinements fully specified, all eight root author gates passed; separate peer and C09 prerequisite acceptance pending."
+}

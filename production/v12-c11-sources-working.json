@@ -1,0 +1,816 @@
+{
+  "chapter": "v12-c11",
+  "date": "2026-10-09",
+  "status": "Frozen-scope source proposals for the working chapter; canonical integration and acceptance belong to the coordinator.",
+  "scope": "Four inspected primary bodies. Original examples and proofs are not attributed to the sources as copied results. Only the bounded reading scopes below are claimed.",
+  "source_preparation_binding": {
+    "path": "production/v12-c11-source-preparation.json",
+    "bytes": 46321,
+    "sha256": "0f6f9dcd665ca0bd934c521cabe3996c8968b3ca17205791d2f5f7745d6c399c"
+  },
+  "root_reading_binding": {
+    "path": "production/v12-c11-source-root-reading.json",
+    "bytes": 2270,
+    "sha256": "381b4f5fd649b9b5300be2a786adbf35bec5a692b4b40196f47bcf52336149bc"
+  },
+  "proposals": [
+    {
+      "id": "v12-c11-hastings1970",
+      "title": "Monte Carlo Sampling Methods Using Markov Chains and Their Applications",
+      "authors": [
+        "W. K. Hastings"
+      ],
+      "bibliography": "Biometrika 57(1), April 1970, pages 97–109.",
+      "url": "https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/d/175237/files/2023/12/Hastings1970_Murali-Haran.pdf",
+      "publisher_landing_url": "https://academic.oup.com/biomet/article-abstract/57/1/97/284580",
+      "use": "Scoped context for detailed balance and accepted proposal flows. The chapter independently proves finite minorization, an explicit eigenfunction covariance law, stationary variance and initialization bias; no chain CLT is imported.",
+      "checked": "2026-10-09",
+      "verification": "The actual 14-page PDF was retrieved. bs_author read the archive cover and first article page in extracted text and visually read physical pages 3–5, journal pages 98–100, including equations (1)–(6) and the Metropolis/Barker choices. Only this scope was inspected; the rest of the article and cited chain limit theory were not audited.",
+      "inspection": {
+        "reader": "bs_author",
+        "date": "2026-10-09",
+        "version": "Scan of the original published article, preceded by a JSTOR cover sheet; no later revision adopted.",
+        "host_status": "Public Penn State course-hosted scan of the original primary article; not an author-hosted manuscript and not a third-party exposition.",
+        "primary_body": {
+          "path": "../tmp/pdfs/v12-c11/hastings1970.pdf",
+          "bytes": 1387179,
+          "sha256": "f3808031690aacc1798b7c7a360f0afcaa23b14e5a9df560bd518e2b012868c9"
+        },
+        "physical_page_count": 14,
+        "physical_printed_mapping": "Physical page 1 is the archive cover; physical pages 2–14 correspond to journal pages 97–109 (printed = physical + 95).",
+        "read_pages": {
+          "inspector": "bs_author",
+          "full_extracted_text_physical_pages": [
+            1,
+            2
+          ],
+          "full_visual_physical_pages": [
+            3,
+            4,
+            5
+          ],
+          "images": [
+            "../tmp/pdfs/v12-c11/hastings1970-p3.png",
+            "../tmp/pdfs/v12-c11/hastings1970-p4.png",
+            "../tmp/pdfs/v12-c11/hastings1970-p5.png"
+          ],
+          "not_claimed": "No reading of physical pages 6–14, no general-state-space proof inspection, and no independent validation of the cited Chung limit theorems."
+        },
+        "rendered_pages": [
+          {
+            "path": "../tmp/pdfs/v12-c11/hastings1970-p3.png",
+            "bytes": 331107,
+            "sha256": "7974e3f647b383b2838ab0fa91d7da410ae60b73f08563f23c55ac9be87a8e43",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1096,
+              1600
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/hastings1970-p4.png",
+            "bytes": 273749,
+            "sha256": "7cc740d4e2de1157143739608ddbb6781dad9b5963dd9b68ded0007ad65b2950",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1096,
+              1600
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/hastings1970-p5.png",
+            "bytes": 332271,
+            "sha256": "c3701903263495d5b0d8763554def872d5f50192a151146c2d21e9251fe189a9",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1096,
+              1600
+            ],
+            "actual_inspector": "bs_author"
+          }
+        ],
+        "claim_to_page_mapping": [
+          {
+            "physical_pages": [
+              3
+            ],
+            "printed_pages": "98",
+            "location": "Section 2.1, finite-state setup and stationary variance formula",
+            "scope": "A strictly positive target on a finite state space, an irreducible transition matrix, invariance and stationary autocorrelation enter the sampling discussion. The exact variance of a stationary sample mean contains all lag covariances, with finite-sample triangular weights."
+          },
+          {
+            "physical_pages": [
+              4
+            ],
+            "printed_pages": "99",
+            "location": "Equations (4)–(6), detailed balance and acceptance family",
+            "scope": "Pairwise detailed balance implies invariance by summing transition flows. Off-diagonal proposal probabilities are multiplied by acceptance probabilities and the unused row mass becomes a self-transition."
+          },
+          {
+            "physical_pages": [
+              5
+            ],
+            "printed_pages": "100",
+            "location": "Metropolis and Barker special choices; rejection step",
+            "scope": "The Metropolis ratio contains both the target ratio and reverse/forward proposal probabilities. The unknown target normalizer cancels. Symmetric proposals are a special case, not permission to drop proposal ratios generally."
+          }
+        ],
+        "assumptions_and_boundaries": [
+          "Keep the adopted state space finite and target masses positive; define every transition row, including zero proposal/reverse-proposal cases. A proposal with no reverse route cannot produce positive accepted reverse-balanced flow.",
+          "Invariance, convergence of state laws, ergodic averages and a central limit theorem are different claims. Detailed balance alone proves only invariance. Irreducibility alone does not exclude periodic state-law oscillation.",
+          "The inspected source refers the finite-chain mean-square/CLT claims to other literature. Its use of asymptotic-stationarity language must not be imported as a proof without an aperiodicity condition.",
+          "A stationary variance formula is not a proof that a batch-means or spectral variance estimate is consistent. Nonstationary initialization introduces bias and changes finite-sample covariance calculations."
+        ],
+        "historical_preparation_proof_obligations": [
+          "If convergence is taught, prove a bounded finite-state minorization/contraction result under explicit positive common transition mass or a positive power of the transition matrix; make the extra laziness/communication condition explicit.",
+          "Derive the finite stationary covariance-sum precision identity and separate it from initialization bias. Do not claim a general MCMC CLT, universal effective sample size or iid standard error for serially correlated draws."
+        ]
+      },
+      "chapter_proof_boundary": "Scoped context for detailed balance and accepted proposal flows. The chapter independently proves finite minorization, an explicit eigenfunction covariance law, stationary variance and initialization bias; no chain CLT is imported."
+    },
+    {
+      "id": "v12-c11-negahban2012",
+      "title": "A Unified Framework for High-Dimensional Analysis of M-Estimators with Decomposable Regularizers",
+      "authors": [
+        "Sahand N. Negahban",
+        "Pradeep Ravikumar",
+        "Martin J. Wainwright",
+        "Bin Yu"
+      ],
+      "bibliography": "Statistical Science 27(4), 2012, pages 538–557; DOI 10.1214/12-STS400.",
+      "url": "https://www.cs.cmu.edu/~pradeepr/paperz/unified_ss.pdf",
+      "publisher_landing_url": null,
+      "use": "Scoped decomposability, dual-norm basic inequality and cone framework. All KKT and sparse bounds are independently derived with loss divided by 2n and unsquared full-vector curvature kappa, avoiding the recorded inconsistent displays.",
+      "checked": "2026-10-09",
+      "verification": "The actual 32-page body was retrieved and its title, authors, journal, DOI and supplementary-page boundary checked. bs_author read the specified main-text and supplement pages below and visually inspected six equation pages, including the cone proof. Several literal displays have normalization or notation inconsistencies; this is a scoped methods inspection, not certification of all printed bounds.",
+      "inspection": {
+        "reader": "bs_author",
+        "date": "2026-10-09",
+        "version": "Coauthor-hosted 32-page PDF containing the 20-page published article and a 12-page supplement. The supplement has a May 25, 2012 submitted-manuscript footer; it is not numbered as an additional final journal issue section.",
+        "host_status": "Coauthor Pradeep Ravikumar university-hosted primary paper; used as the expressly permitted Wainwright-primary alternative to the inaccessible sparsity book.",
+        "primary_body": {
+          "path": "../tmp/pdfs/v12-c11/negahban-ravikumar-wainwright-yu2012.pdf",
+          "bytes": 517942,
+          "sha256": "5dfda7c3a12da84d26c063bdeb91dceb4e426a42765476701f2a89887d748b85"
+        },
+        "physical_page_count": 32,
+        "physical_printed_mapping": "Physical pages 1–20 are journal pages 538–557 (printed = physical + 537). In the inspected supplement, physical pages 21–24 are supplement pages 26–29 (printed = physical + 5). Do not use the journal offset for the supplement.",
+        "read_pages": {
+          "inspector": "bs_author",
+          "full_extracted_text_physical_pages": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            21,
+            22,
+            23,
+            24
+          ],
+          "full_visual_physical_pages": [
+            6,
+            7,
+            10,
+            11,
+            12,
+            22
+          ],
+          "images": [
+            "../tmp/pdfs/v12-c11/negahban-ravikumar-wainwright-yu2012-p6.png",
+            "../tmp/pdfs/v12-c11/negahban-ravikumar-wainwright-yu2012-p7.png",
+            "../tmp/pdfs/v12-c11/negahban-ravikumar-wainwright-yu2012-p10.png",
+            "../tmp/pdfs/v12-c11/negahban-ravikumar-wainwright-yu2012-p11.png",
+            "../tmp/pdfs/v12-c11/negahban-ravikumar-wainwright-yu2012-p12.png",
+            "../tmp/pdfs/v12-c11/negahban-ravikumar-wainwright-yu2012-p22.png"
+          ],
+          "reading_limit": "The initially shortened page-7 text output was completed by viewing the full page image. Unlisted pages and the general group/nuclear-norm probability theory are not claimed fully audited.",
+          "partial_extracted_text_physical_pages": [
+            7
+          ]
+        },
+        "rendered_pages": [
+          {
+            "path": "../tmp/pdfs/v12-c11/negahban-ravikumar-wainwright-yu2012-p6.png",
+            "bytes": 532627,
+            "sha256": "5188ed5cb2c6659c14d2f3eb4792d35fb6528df343cd233e186826bf18a88bb4",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1295,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/negahban-ravikumar-wainwright-yu2012-p7.png",
+            "bytes": 490872,
+            "sha256": "db34e8cc4358f18525ee7ebabae436aaf6af5978605b744767bea68bf4efb8d7",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1295,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/negahban-ravikumar-wainwright-yu2012-p10.png",
+            "bytes": 567127,
+            "sha256": "eadcccaebe127ad592b35bcbe0fa10df8ca599ff1d376e9ecd32e9f116daeb52",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1295,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/negahban-ravikumar-wainwright-yu2012-p11.png",
+            "bytes": 583508,
+            "sha256": "bc13bc178b28de02b583b18ccb24536ca933df0f050f4a08768e342fa99e032b",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1295,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/negahban-ravikumar-wainwright-yu2012-p12.png",
+            "bytes": 597909,
+            "sha256": "7739fc1a961871bb3997432947df63babed48f3984627dd6735c49c43bf962ed",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1295,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/negahban-ravikumar-wainwright-yu2012-p22.png",
+            "bytes": 290112,
+            "sha256": "63ce4b74f682c6eb2fceba95e362326e6f2cad15c965f21639466838f073b5a2",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1314,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          }
+        ],
+        "claim_to_page_mapping": [
+          {
+            "physical_pages": [
+              3,
+              4
+            ],
+            "printed_pages": "540–541",
+            "location": "Equation (1), loss-plus-penalty optimization; equations (3), (5), (6)",
+            "scope": "The regularized convex problem uses a norm penalty; sparse coordinate subspaces make the l1 penalty decomposable."
+          },
+          {
+            "physical_pages": [
+              6,
+              7
+            ],
+            "printed_pages": "543–544",
+            "location": "Equation (14), Lemma 1, equations (16)–(18)",
+            "scope": "The dual norm controls the loss gradient. A penalty at least twice that dual norm and decomposability force any optimal error into a cone; approximate sparsity adds an explicit tail term. The Taylor remainder is defined by subtracting the loss value and first derivative."
+          },
+          {
+            "physical_pages": [
+              8,
+              9,
+              10
+            ],
+            "printed_pages": "545–547",
+            "location": "Restricted strong convexity, subspace compatibility and Theorem 1",
+            "scope": "Curvature is required on the error cone, not on all directions. The deterministic optimization argument is distinct from proving a stochastic noise event or a random-design curvature condition."
+          },
+          {
+            "physical_pages": [
+              11,
+              12,
+              13
+            ],
+            "printed_pages": "548–550",
+            "location": "Lasso equations (27)–(29), noise/column normalization, Corollary 2 and union-bound discussion",
+            "scope": "The lasso objective is written with squared error divided by 2n; the exact-sparsity cone has coefficient 3. Fixed-design column normalization and a noise-tail bound are separate ingredients for selecting a penalty."
+          },
+          {
+            "physical_pages": [
+              21,
+              22,
+              23,
+              24
+            ],
+            "printed_pages": "Supplement 26–29",
+            "location": "Supplement Lemma 1 proof, equations (51)–(54), subsequent convexity argument",
+            "scope": "Optimality, convexity, dual Holder inequality and decomposability give the cone. The supplement also supplies the sphere/convexity reasoning used by its general theorem; this need not replace a simpler direct exact-sparse lasso proof."
+          }
+        ],
+        "assumptions_and_boundaries": [
+          "Specify fixed X, the observation/noise law, loss scaling, lambda > 0, existence of an optimum, a sparse reference coefficient and its support. When p exceeds n, the loss need not be strictly convex and minimizers need not be unique.",
+          "An l1 cone, prediction error, coefficient error and support recovery are distinct conclusions. Coefficient bounds need a declared restricted-eigenvalue/compatibility condition; good prediction alone does not identify coefficients.",
+          "The paper’s random-design restricted-eigenvalue facts invoke other results. This preparation does not import those theorems, arbitrary learner rates, oracle selection, debiased-lasso inference or valid naive post-selection t tests.",
+          "Coordinate KKT conditions are not claimed read from a displayed theorem in these inspected pages. They can be derived from convexity and the one-sided derivatives of absolute value in the future chapter."
+        ],
+        "historical_preparation_proof_obligations": [
+          "Prove coordinate KKT necessity and sufficiency, then the basic inequality and cone under the chosen 1/(2n) objective. Declare whether the restricted-eigenvalue constant is denoted kappa or kappa squared before deriving all constants.",
+          "If a probability guarantee is wanted, prove a fixed-design Gaussian/sub-Gaussian maximum-score bound separately. Distinguish the optimization theorem conditional on that event from the probability that the event holds."
+        ]
+      },
+      "chapter_proof_boundary": "Scoped decomposability, dual-norm basic inequality and cone framework. All KKT and sparse bounds are independently derived with loss divided by 2n and unsquared full-vector curvature kappa, avoiding the recorded inconsistent displays."
+    },
+    {
+      "id": "v12-c11-dml-v7",
+      "title": "Double/Debiased Machine Learning for Treatment and Structural Parameters",
+      "authors": [
+        "Victor Chernozhukov",
+        "Denis Chetverikov",
+        "Mert Demirer",
+        "Esther Duflo",
+        "Christian Hansen",
+        "Whitney Newey",
+        "James Robins"
+      ],
+      "bibliography": "Selected body: arXiv:1608.00060v7, posted 3 November 2024, 71 pages. Related published article: The Econometrics Journal 21(1), 2018, C1–C68, DOI 10.1111/ectj.12097.",
+      "url": "https://arxiv.org/pdf/1608.00060v7",
+      "publisher_landing_url": null,
+      "use": "Versioned orthogonality, sample-splitting and ATE-score context. The chapter proves its own bounded iid fixed-fold expansion, consistent variance and finite-cell rates; it does not infer arbitrary learner rates or efficiency.",
+      "checked": "2026-10-09",
+      "verification": "The exact v7 71-page PDF was retrieved. bs_author read the selected definitions, algorithms, assumptions, asymptotic statements and general-linear/ATE proof pages listed below, and visually inspected eleven equation pages. The arXiv listing currently says Treatment and Causal Parameters while the retained PDF title says Treatment and Structural Parameters; this record preserves the body title and exact version. The publisher landing was used for publication metadata only.",
+      "inspection": {
+        "reader": "bs_author",
+        "date": "2026-10-09",
+        "version": "The retained and inspected body is explicitly v7, not a claim to have inspected the 2018 68-page typeset published body.",
+        "host_status": "Author-deposited, versioned arXiv primary manuscript.",
+        "primary_body": {
+          "path": "../tmp/pdfs/v12-c11/dml-v7.pdf",
+          "bytes": 1120996,
+          "sha256": "3186133dacb9f4a31c004a00150627de1e5cf26e203d1522a25a5444c7dbdf78"
+        },
+        "physical_page_count": 71,
+        "physical_printed_mapping": "Physical and printed page numbers coincide throughout the inspected body (the title page is physical page 1). References to pages 68–71 are manuscript pages, not journal C-pages.",
+        "read_pages": {
+          "inspector": "bs_author",
+          "full_extracted_text_physical_pages": [
+            1,
+            11,
+            12,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            35,
+            36,
+            37,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            68,
+            69,
+            70,
+            71
+          ],
+          "partial_extracted_text_physical_pages": [
+            2
+          ],
+          "full_visual_physical_pages": [
+            12,
+            24,
+            25,
+            27,
+            35,
+            36,
+            58,
+            61,
+            68,
+            70,
+            71
+          ],
+          "images": [
+            "../tmp/pdfs/v12-c11/dml-v7-p12.png",
+            "../tmp/pdfs/v12-c11/dml-v7-p24.png",
+            "../tmp/pdfs/v12-c11/dml-v7-p25.png",
+            "../tmp/pdfs/v12-c11/dml-v7-p27.png",
+            "../tmp/pdfs/v12-c11/dml-v7-p35.png",
+            "../tmp/pdfs/v12-c11/dml-v7-p36.png",
+            "../tmp/pdfs/v12-c11/dml-v7-p58.png",
+            "../tmp/pdfs/v12-c11/dml-v7-p61.png",
+            "../tmp/pdfs/v12-c11/dml-v7-p68.png",
+            "../tmp/pdfs/v12-c11/dml-v7-p70.png",
+            "../tmp/pdfs/v12-c11/dml-v7-p71.png"
+          ],
+          "not_claimed": "No full-paper reading, general nonlinear-score proof audit, semiparametric-efficiency proof, empirical replication or verification of all cited machine-learning rates."
+        },
+        "rendered_pages": [
+          {
+            "path": "../tmp/pdfs/v12-c11/dml-v7-p12.png",
+            "bytes": 318907,
+            "sha256": "0755f98800f54221e0057879473073cd862634f2469772b8cf2c6146af5afe58",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1203,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/dml-v7-p24.png",
+            "bytes": 264636,
+            "sha256": "c5bdb2d84731050705a2b961cdf090fb021ad68529013cb6688af16d3e49ab04",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1203,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/dml-v7-p25.png",
+            "bytes": 290140,
+            "sha256": "3431bc6633ce5b2ef1f344941e43ef2e79500fbcb03e479501dd02eaa76a8144",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1203,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/dml-v7-p27.png",
+            "bytes": 295773,
+            "sha256": "d6dcc24a61f72f7a5b08b139aa85cc152a5bce7d687bba5d44aab3163529ccf6",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1203,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/dml-v7-p35.png",
+            "bytes": 317217,
+            "sha256": "269a1bbec41fd291a4e9c6930c01c8511d5a2069733c8b0e6a59000a669b39b2",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1203,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/dml-v7-p36.png",
+            "bytes": 347784,
+            "sha256": "5028ab424208f2551eb6ac0be7d4a5e047a0cfc49ec59487ffc216e70e3a7ac2",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1203,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/dml-v7-p58.png",
+            "bytes": 204822,
+            "sha256": "886b440bc048ed6ff8fa4ec8d55480094610c37c9f97e2c50df2c6fc03e47ed3",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1203,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/dml-v7-p61.png",
+            "bytes": 169370,
+            "sha256": "cd076a881efba07684953011b66b3280344eee811abf1aeaa5894e50d7ac2558",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1203,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/dml-v7-p68.png",
+            "bytes": 273565,
+            "sha256": "9ffdc2312c8043d3eea6f027f5f7d74b64266202853f8c549938c70f90db7623",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1203,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/dml-v7-p70.png",
+            "bytes": 237469,
+            "sha256": "20d2d8c8081efbb7fb285f9d688b6788bfd2fb8f196526efd89c2a91ff1d165d",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1203,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/dml-v7-p71.png",
+            "bytes": 152052,
+            "sha256": "b76c788c38e79c9133a782dcbbb6a2559b5953ef3d172acd0a5f8b9a23b6434b",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1203,
+              1700
+            ],
+            "actual_inspector": "bs_author"
+          }
+        ],
+        "claim_to_page_mapping": [
+          {
+            "physical_pages": [
+              11,
+              12
+            ],
+            "printed_pages": "11–12",
+            "location": "Definitions 2.1–2.2",
+            "scope": "Neyman orthogonality is a vanishing derivative of the expected score in admissible nuisance directions. It is not merely a sample residual covariance condition."
+          },
+          {
+            "physical_pages": [
+              23,
+              24
+            ],
+            "printed_pages": "23–24",
+            "location": "Definitions 3.1–3.2, DML1 and DML2",
+            "scope": "Each nuisance estimate is fit outside the fold on which its score is evaluated. The fold count is fixed. DML2 pools held-out moments; DML1 averages fold estimates."
+          },
+          {
+            "physical_pages": [
+              25,
+              26,
+              27,
+              28
+            ],
+            "printed_pages": "25–28",
+            "location": "Assumptions 3.1–3.2, Theorems 3.1–3.2, Corollary 3.1",
+            "scope": "Identification, moment bounds, nuisance consistency, orthogonality/remainder rates and nondegenerate score variance accompany cross-fitting. The variance statement is for the root-N scaled estimator; its estimated variance must be divided by N for an estimator standard error. The reported normal intervals are asymptotic."
+          },
+          {
+            "physical_pages": [
+              35,
+              36,
+              37
+            ],
+            "printed_pages": "35–37",
+            "location": "ATE score (5.3), Assumption 5.1, Theorem 5.1 and accompanying discussion",
+            "scope": "The ATE score combines outcome regression and inverse propensity residuals. The setup includes iid sampling, overlap, moments, consistent nuisances, estimated propensities bounded away from 0 and 1, and a nuisance-error product smaller than N to the minus one-half. A causal interpretation additionally requires the stated exogeneity/identification assumptions."
+          },
+          {
+            "physical_pages": [
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62
+            ],
+            "printed_pages": "55–62",
+            "location": "Proofs of general linear DML2/DML1 representation and variance consistency",
+            "scope": "Foldwise conditioning bounds validation-score remainders. The oracle iid sum is exposed before applying its central limit theorem. Different folds share training observations, so their fitted estimators are not asserted finitely independent. The general variance proof also uses moment inequalities not automatically supplied by a cross-fitting recipe."
+          },
+          {
+            "physical_pages": [
+              68,
+              69,
+              70,
+              71
+            ],
+            "printed_pages": "68–71",
+            "location": "Proof of Theorem 5.1 for ATE",
+            "scope": "Iterated expectations establish orthogonality. Overlap and conditional outcome moments bound score errors, and the final remainder depends on a product of propensity and outcome-regression errors. This proof is separate from merely stating double robustness."
+          }
+        ],
+        "assumptions_and_boundaries": [
+          "Keep potential-outcome consistency, the specified no-confounding condition, overlap and the statistical target explicit. A well-predicted regression does not establish a causal interpretation.",
+          "Nuisance fits, hyperparameter choice and data-dependent preprocessing must respect the training/validation separation. Conditioning on all fitted nuisances together does not make the validation rows across folds conditionally independent.",
+          "Double-robust population identification or consistency is distinct from root-N inference. A single correct nuisance alone does not automatically make the product remainder negligible at the root-N scale.",
+          "For the intended narrow iid proof, bounded outcomes and fitted regressions, clipped propensities, fixed fold count, L2 consistency, a vanishing root-N-scaled product error and positive influence variance are sufficient conditions to derive explicitly; they are not claims that every black-box learner satisfies them.",
+          "No general dependent-data DML theorem, arbitrary overlap failure, uniform conditional-effect bands, adaptive target selection, automatic efficiency or current empirical result is adopted. Semiparametric efficiency statements depend on the model and are not proved merely by using an orthogonal score."
+        ],
+        "historical_preparation_proof_obligations": [
+          "Derive the ATE bias factorization directly, prove orthogonality and the separate double-robust identity, then control each held-out mean by conditional expectation/variance and Cauchy–Schwarz under declared boundedness.",
+          "Prove empirical influence-score variance consistency and invoke only the already taught iid CLT for the oracle sum. State precisely which nuisance rates are assumed, rather than attributing them to cross-fitting itself."
+        ]
+      },
+      "chapter_proof_boundary": "Versioned orthogonality, sample-splitting and ATE-score context. The chapter proves its own bounded iid fixed-fold expansion, consistent variance and finite-cell rates; it does not infer arbitrary learner rates or efficiency."
+    },
+    {
+      "id": "v12-c11-bh1995",
+      "title": "Controlling the False Discovery Rate: a Practical and Powerful Approach to Multiple Testing",
+      "authors": [
+        "Yoav Benjamini",
+        "Yosef Hochberg"
+      ],
+      "bibliography": "Journal of the Royal Statistical Society, Series B 57(1), 1995, pages 289–300.",
+      "url": "https://www.math.tau.ac.il/~ybenja/MyPapers/benjamini_hochberg1995.pdf",
+      "publisher_landing_url": null,
+      "use": "Original FDR definition, step-up rule and independent-uniform theorem context. The chapter separately proves its super-uniform/discrete leave-one-out extension and gives an exact dependent-null counterexample.",
+      "checked": "2026-10-09",
+      "verification": "The actual author-hosted 13-page scan was downloaded. Text extraction was blank, so no extracted-text reading is claimed. bs_author visually read physical pages 2–6 and 12–13, including the definitions, procedure, Theorem 1 and complete Appendix A proof. No arbitrary-dependence extension is adopted and BY 2001 was not retrieved.",
+      "inspection": {
+        "reader": "bs_author",
+        "date": "2026-10-09",
+        "version": "Original published article scan with an archive cover; 13 physical pages.",
+        "host_status": "Original primary paper hosted on coauthor Yoav Benjamini’s Tel Aviv University site.",
+        "primary_body": {
+          "path": "../tmp/pdfs/v12-c11/benjamini-hochberg1995.pdf",
+          "bytes": 1358125,
+          "sha256": "f3f7e2352a941403e812b7b5afee6094c9a31002d725dfcc25fc60ca3c240eab"
+        },
+        "physical_page_count": 13,
+        "physical_printed_mapping": "Physical page 1 is an archive cover; physical pages 2–13 correspond to journal pages 289–300 (printed = physical + 287).",
+        "read_pages": {
+          "inspector": "bs_author",
+          "full_extracted_text_physical_pages": [],
+          "full_visual_physical_pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            12,
+            13
+          ],
+          "images": [
+            "../tmp/pdfs/v12-c11/benjamini-hochberg1995-p2.png",
+            "../tmp/pdfs/v12-c11/benjamini-hochberg1995-p3.png",
+            "../tmp/pdfs/v12-c11/benjamini-hochberg1995-p4.png",
+            "../tmp/pdfs/v12-c11/benjamini-hochberg1995-p5.png",
+            "../tmp/pdfs/v12-c11/benjamini-hochberg1995-p6.png",
+            "../tmp/pdfs/v12-c11/benjamini-hochberg1995-p12.png",
+            "../tmp/pdfs/v12-c11/benjamini-hochberg1995-p13.png"
+          ],
+          "not_claimed": "No body OCR/text reading, inspection of physical pages 7–11, independent audit of the reported applications, or BY dependence theorem inspection."
+        },
+        "rendered_pages": [
+          {
+            "path": "../tmp/pdfs/v12-c11/benjamini-hochberg1995-p2.png",
+            "bytes": 320940,
+            "sha256": "99e2e9989d8580c75377185a01bd84080c46fc99bedf066602eba8599a86f7d6",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1093,
+              1600
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/benjamini-hochberg1995-p3.png",
+            "bytes": 400713,
+            "sha256": "1785c88e7d921b591faf536835d6beaa6eb231ab5591ae41079418fe2e38c463",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1093,
+              1600
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/benjamini-hochberg1995-p4.png",
+            "bytes": 288313,
+            "sha256": "a608b3a16bff5be5eb279efac791e30ff197277dc9efba4ae34050549a2871ed",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1064,
+              1600
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/benjamini-hochberg1995-p5.png",
+            "bytes": 413948,
+            "sha256": "309eda76ad2186f166f2542573762a018d698c4d8bd1c528814607110cc99f71",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1093,
+              1600
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/benjamini-hochberg1995-p6.png",
+            "bytes": 310561,
+            "sha256": "34b1db9c9a728c39fd9d17ed826f1ed15e08ad6dd41db11dc7247cc975b870f7",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1064,
+              1600
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/benjamini-hochberg1995-p12.png",
+            "bytes": 265645,
+            "sha256": "9250def7ba6ec4de8ee9146232312a172b69016a61129fd2151fcff3ffaa1c6c",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1093,
+              1600
+            ],
+            "actual_inspector": "bs_author"
+          },
+          {
+            "path": "../tmp/pdfs/v12-c11/benjamini-hochberg1995-p13.png",
+            "bytes": 289701,
+            "sha256": "313395c83b6ad41627d727c9fbc09019384d25e23ccf01315968253c1ceca694",
+            "kind": "rendered equation-page image actually viewed",
+            "pixels": [
+              1093,
+              1600
+            ],
+            "actual_inspector": "bs_author"
+          }
+        ],
+        "claim_to_page_mapping": [
+          {
+            "physical_pages": [
+              4
+            ],
+            "printed_pages": "291",
+            "location": "Definition of Q and FDR; comparison with FWER",
+            "scope": "False-discovery proportion is the false-rejection count divided by total rejections, defined as zero with no rejections. FDR is its expectation, not a ratio of expectations or a realized bound. FDR equals FWER under the complete null and is at most FWER generally."
+          },
+          {
+            "physical_pages": [
+              6
+            ],
+            "printed_pages": "293",
+            "location": "Section 3 procedure and Theorem 1",
+            "scope": "Use the largest ordered index passing its BH threshold; an earlier failed comparison does not require stopping. The theorem states control for independent test statistics."
+          },
+          {
+            "physical_pages": [
+              12,
+              13
+            ],
+            "printed_pages": "299–300",
+            "location": "Appendix A lemma, induction proof and concluding remark",
+            "scope": "The proof conditions on false-null p-values and uses mutually independent continuous Uniform(0,1) true-null p-values, independent of the false-null vector. The false-null p-values may be dependent among themselves. Conditional order-statistic integration gives the false-discovery bound."
+          }
+        ],
+        "assumptions_and_boundaries": [
+          "Declare the fixed tested family, m, true-null count m0, p-value law, ties and empty-rejection convention. The original inspected proof uses continuous exact-uniform nulls.",
+          "An extension to independent super-uniform/discrete null p-values needs its own argument; it is not claimed to have been proved by the inspected uniform-order-statistic proof.",
+          "FDR control is not strong familywise control, control of each realized discovery list, or control of the false-discovery proportion conditional on at least one rejection.",
+          "No arbitrary-dependence or broad positive-dependence BH guarantee is asserted. Existing Bonferroni/Holm material supplies a different arbitrary-dependence familywise guarantee under valid individual p-values.",
+          "Benjamini–Yekutieli 2001 is unnecessary for the selected independence scope and was neither retrieved nor claimed inspected."
+        ],
+        "historical_preparation_proof_obligations": [
+          "If the chapter uses a shorter independent-null leave-one-out proof or extends to super-uniform nulls, teach and check that proof explicitly, including the maximal step-up index and ties.",
+          "Construct only original finite test configurations and label exact expected FDR separately from any asymptotic data-analysis application or selective reporting claim."
+        ]
+      },
+      "chapter_proof_boundary": "Original FDR definition, step-up rule and independent-uniform theorem context. The chapter separately proves its super-uniform/discrete leave-one-out extension and gives an exact dependent-null counterexample."
+    }
+  ],
+  "prerequisite_routes": [
+    "v03-c08.html",
+    "v03-c09.html",
+    "v12-c01.html",
+    "v12-c02.html",
+    "v12-c07.html",
+    "v12-c10.html"
+  ],
+  "inspection_attribution": {
+    "primary_body_and_equation_images": "bs_author actually inspected the recorded selected source text/pages and 27 images.",
+    "preparation_reader": "c05_review read the complete frozen preparation, its four full records, claim/page mappings, cautions and artifact inventory; no new direct primary PDF/image inspection is claimed.",
+    "coordinator": "Root read the entire preparation and validated all 31 retained artifacts; its record explicitly does not claim new body/image inspection."
+  },
+  "provenance_runtime_boundary": "The four-file checker reads only the working HTML, checker, this source record and author review. It does not open source PDFs/images, preparation records, blueprints, earlier chapters or shared verification code. Historical proof-obligation fields preserve the preparation state; completed chapter proofs are audited in the separate author review.",
+  "access_scope": "The inaccessible sparsity book was replaced by the inspected original regularization paper. The selected DML body is arXiv v7 posted 3 November 2024, not an inspection claim for the related 2018 typeset version. BH text extraction was blank and its source reading was visual only.",
+  "scope_limits": [
+    "No generic MCMC CLT or estimated spectral-variance consistency is adopted.",
+    "No arbitrary-design restricted-eigenvalue theorem, support recovery or post-selection normality is inherited.",
+    "No general dependent-data DML, black-box nuisance rates or semiparametric efficiency is claimed.",
+    "No BH arbitrary-dependence or BY theorem is adopted; the dependent law is an independently computed counterexample.",
+    "Scoped machine-assisted reading and proofs are not external human academic certification."
+  ]
+}

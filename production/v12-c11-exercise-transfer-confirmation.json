@@ -1,0 +1,28 @@
+{
+  "chapter": "v12-c11",
+  "date": "2026-10-09",
+  "root_decision": "Proposed bounded exercise transfers approved; original six-case contracts unchanged.",
+  "independently_checked": {
+    "posterior_predictive_correlation": "321/3700",
+    "lazy_observable_eigenvalue": "131/162",
+    "lazy_limiting_covariance_inflation": "293/31",
+    "changed_first_control_refitted_scores": [
+      "0",
+      "4",
+      "5",
+      "5",
+      "2",
+      "-2",
+      "1",
+      "1"
+    ],
+    "refitted_mean": "2",
+    "refitted_score_variance": "11/2",
+    "refitted_mean_variance": "11/16"
+  },
+  "analytic_checks": [
+    "At lambda=1/8, soft thresholding of (17/8,-1/8,-7/8) gives (2,0,-3/4); the original sufficient noise-event inequality fails because 1/8<2*(1/8).",
+    "For duplicate columns and penalties lambda*(|b1|+2|b2|), the cheaper coordinate uniquely receives total 3/2; this is a penalty preference, not new identifying variation. Explicitly state those weights.",
+    "With both-wrong shifts g1=m1+1,g0=m0-1,e=1/2, the exact AIPW product bracket is zero; double-robust correctness is sufficient, not necessary for one population mean equality."
+  ]
+}

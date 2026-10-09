@@ -1,0 +1,503 @@
+{
+  "chapter": "v12-c09",
+  "title": "Time series, forecasting and financial econometrics",
+  "date": "2026-10-09",
+  "peer": "bs_author",
+  "author": "ito_author",
+  "assignment": "production/v12-c09-peer-assignment.json",
+  "status": "Frozen separate peer review passed within the declared scope; coordinator acceptance pending.",
+  "owned_paths": [
+    "scripts/check_v12_c09_peer.py",
+    "content/reviews/v12-c09-peer.json"
+  ],
+  "review_type": "Separate machine-assisted analytic, exact-prompt, source-scope and independent numerical review; not external human certification.",
+  "full_reading": {
+    "payloads": [
+      "content/chapters/v12-c09.html",
+      "scripts/check_v12_c09.py",
+      "content/reviews/v12-c09-sources.json",
+      "content/reviews/v12-c09-author.json"
+    ],
+    "manuscript_lines": 182,
+    "author_checker_lines": 559,
+    "source_record_lines": 371,
+    "author_record_lines": 452,
+    "worked_cases": 6,
+    "exact_prompts": 12,
+    "complete_solutions": 12,
+    "teach_back_and_retention": "Both answered sections read completely.",
+    "method": "Read every mathematical claim, assumption, proof step, worked value, exact prompt and answer, complete implementation, source record and author audit. Root reading and promotion-delta records are contextual evidence, not the numerical oracle."
+  },
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v12-c09.html",
+      "bytes": 56629,
+      "sha256": "c809929afde736f4dc1327bcb1431d5e1b4232dc0a4b7fdce711ab9391315866"
+    },
+    {
+      "path": "scripts/check_v12_c09.py",
+      "bytes": 33013,
+      "sha256": "80eeded6d3ede65c8a69edf064c82bb3c2d556c7c12df2a3c482750fa9644270"
+    },
+    {
+      "path": "content/reviews/v12-c09-sources.json",
+      "bytes": 27039,
+      "sha256": "d8bbf09bcda9d10f4d421af4b59affadf95947267d1b046f61d89209868a8cfe"
+    },
+    {
+      "path": "content/reviews/v12-c09-author.json",
+      "bytes": 39335,
+      "sha256": "a7764ad9c79f85b2c3cc4a8359c5dfcc017f29eb6e9fa108c3777bae9c59604d"
+    },
+    {
+      "path": "scripts/check_v12_c09_peer.py",
+      "bytes": 34673,
+      "sha256": "1bc27e9e4935581279113a630fef53aefa6576c1e77b2877ff33312bfc03e123"
+    }
+  ],
+  "proof_audit": [
+    {
+      "topic": "Filter existence and stationary construction",
+      "independent_reasoning": "For each fixed date, the variance of a truncation tail is sigma² times its squared-coefficient tail, which tends to zero. L2 completeness defines the limit; Cauchy–Schwarz passes finite covariance sums to the infinite limit. Absolute summability makes the absolute random series integrable, hence finite almost surely. A countable intersection handles all integer dates; a common shifted iid-history functional establishes strict stationarity.",
+      "conditions_and_limits": "The sufficient absolute-summability route is not conflated with a necessary characterization. White noise alone only supplies orthogonality; conditional-mean forecasts use the explicitly stronger iid/future-independence contract.",
+      "judgment": "Pass within the stated scope."
+    },
+    {
+      "topic": "Repeated roots, recovery and prediction information",
+      "independent_reasoning": "Multiplying m geometric series counts weak compositions and produces the repeated-root coefficients. Polynomial growth times a strict geometric factor is absolutely summable, as is a finite convolution. Cancelling common factors before inversion is valid. Reversing the two polynomials produces the separate innovation-recovery condition. Direct ARMA recursion in independent future shocks gives the horizon means and error variances.",
+      "conditions_and_limits": "Finite observation histories do not reveal an infinite inverse filter. My finite initialization check retains a nonzero error after three observations. The Gaussian MA covariance equivalence identifies an observed law, not a uniquely named economic shock.",
+      "judgment": "Pass within the stated scope."
+    },
+    {
+      "topic": "VAR covariance, likelihood and rotation",
+      "independent_reasoning": "The geometric power bound makes the independent-vector series L2-Cauchy and its covariance series absolutely convergent. Shifting that series gives the Lyapunov equation; a difference H=A^n H(A-prime)^n tends to zero and proves uniqueness. For the given triangular A I derived every stationary covariance by closed geometric impulse sums, without solving the author’s covariance equations. For fixed positive-definite Omega, the conditional Gaussian residual objective differs from its OLS minimum by a nonnegative quadratic in the coefficient error; full-rank common regressors give uniqueness.",
+      "conditions_and_limits": "This is conditional likelihood given initial lags with Omega held fixed. An unconditional stationary initial density can depend on parameters. Orthogonal Gaussian shock rotation preserves the reduced-form law and changes named impulses, without a structural interpretation or general VAR inference theorem.",
+      "judgment": "Pass within the stated scope."
+    },
+    {
+      "topic": "Stable Gaussian denominator and score",
+      "independent_reasoning": "The Gaussian square-covariance identity follows from a regression of one centered Gaussian variable on the other and an independent Gaussian remainder. Summing the geometrically decaying squared covariances gives the denominator L2 law. Each later score innovation is independent and centered conditional on its own past, so distinct score terms are orthogonal and Var S=T gamma0 sigma².",
+      "conditions_and_limits": "Conditioning on the entire lagged vector fixes all but the last innovation. I separately reconstructed a three-lag example with conditional score mean -5/2 and variance 3/4, compared with the false fixed-design variance 9/2.",
+      "judgment": "Pass within the stated scope."
+    },
+    {
+      "topic": "Stable Gaussian quadratic form, replacement and studentization",
+      "independent_reasoning": "Expansion in independent standardized Gaussian initial/innovation coordinates yields a symmetric zero-diagonal quadratic form. Absolute row sums are bounded uniformly in T for fixed |phi|<1; the maximal eigenvector coordinate bounds each eigenvalue. Orthogonal diagonalization preserves the independent standard-normal density, and trace zero gives centered chi-square summands. Total variance one and a vanishing maximal normalized weight control the third-absolute-moment sum by the finite bound 28 and its Gaussian counterpart. Telescoping second-order Taylor replacements cancels matched moments. Integrating the nonnegative beta(4,4) polynomial independently reconstructs the printed C3 monotone cutoff, whose endpoint derivatives support the CDF squeeze. The exact residual identity and iid variance law give feasible studentization.",
+      "conditions_and_limits": "The proof is a triangular independent-row normal limit after spectral rotation, not a generic dependent-data CLT. Its constants depend on fixed stable parameters; no local-to-unity uniformity or finite-sample normal slope law is asserted.",
+      "judgment": "Pass within the stated scope."
+    },
+    {
+      "topic": "Restricted Gaussian unit-root limits",
+      "independent_reasoning": "Normalized Gaussian random-walk levels have exactly the Brownian-grid law for each T. Continuity gives the left-grid squared-path Riemann limit; the exact score telescope and the quadratic-sum mean 1/variance 2/T give a joint limit on that Brownian construction. A zero squared-path integral forces an identically zero continuous path, a subset of the zero-probability terminal-zero event. Dividing by this positive limit yields the T-normalized slope. The residual correction is O_P(1)/T and vanishes, establishing the stated studentized functional.",
+      "conditions_and_limits": "The proof requires zero start, no deterministic regressors and iid Gaussian increments. It provides no general functional CLT, intercept/trend or lag-augmentation limit, residual-cointegration critical values, or finite-T Brownian approximation guarantee.",
+      "judgment": "Pass within the stated scope."
+    },
+    {
+      "topic": "Cointegration, information and T rate",
+      "independent_reasoning": "The spread is stationary under its explicitly iid Gaussian innovations, stationary Gaussian initial value and complete independence from the random-walk history. A wrongly normalized slope leaves a variance growing linearly with time. Differencing gives the error-correction identity. Conditional on x alone, the entire spread remains centered Gaussian; my innovation-loading expansion reconstructs its full covariance contribution, including v0. The absolute covariance row sum bounds slope variance by C/D. Splitting at D/T²<delta and using conditional Chebyshev, followed by positivity of the Brownian denominator, proves T times the error is tight and hence consistency.",
+      "conditions_and_limits": "This is an O_P(1) rate, not convergence to zero of the T-scaled error or an unrestricted normal limit. Current-spread forecasting and x-path-only sampling uncertainty use different conditioning. No value of v0 or eta1 is invented.",
+      "judgment": "Pass within the stated scope."
+    },
+    {
+      "topic": "Positive GARCH product existence and uniqueness",
+      "independent_reasoning": "The integrable negative log mean implies exponentially decreasing past products by the iid strong law, so their nonnegative sum is finite almost surely, causal and shift stationary. Backward iteration expresses the difference of two finite stationary solutions as the same vanishing product times a lagged difference. Separate marginal stationarity bounds the lagged difference uniformly in probability; a probability split proves zero difference without independence between those factors.",
+      "conditions_and_limits": "The construction is sufficient under positive multipliers and integrable logs. It is not a general necessity theorem. The separate finite-mean series argument handles the zero-multiplier boundary without taking log zero.",
+      "judgment": "Pass within the stated scope."
+    },
+    {
+      "topic": "GARCH moment regions and squared covariance",
+      "independent_reasoning": "Tonelli and independent multipliers make the variance-process mean a geometric sum, finite when rho<1. L2 norms of product terms establish a finite second moment of h when E A²<1; that condition implies rho<1. A hypothetical finite second moment when E A²>=1 contradicts the positive-intercept squared recursion. Current-z independence converts h moments into return moments using the actual innovation fourth moment. After finite return fourth moment is established, nu=epsilon²-h is an L2 martingale difference, and substitution gives the squared ARMA covariance representation. The conditional variance tower sums future expected h because return cross moments vanish.",
+      "conditions_and_limits": "The Gaussian fourth-moment constant is not reused for the discrete transfer. I also checked E sqrt(A)<1 in that particular infinite-second-moment example, so its return has a finite first moment and zero mean while its variance is infinite. This supplements the audit; it is not a new manuscript theorem. Conditional Gaussian one-period returns do not imply Gaussian aggregate returns.",
+      "judgment": "Pass within the stated scope."
+    },
+    {
+      "topic": "Overlap and fixed-comparison law",
+      "independent_reasoning": "Each error is a linear polynomial in dated iid Gaussian increments. Independent Gaussian moments give both the full error covariance and the squared-loss covariance without assuming the latter is Gaussian. For prespecified c, the squared-loss difference is affine in the error, hence exactly Gaussian with its full overlap covariance. The c=0 comparison is degenerate. A common non-Gaussian shock repeated at every date is stationary and never averages away.",
+      "conditions_and_limits": "No covariance-stationarity-only CLT or generic HAC, recursive-estimation, nested-model or loss-normality statement is imported.",
+      "judgment": "Pass within the stated scope."
+    },
+    {
+      "topic": "Evaluation selection and new-block law",
+      "independent_reasoning": "Completing the square gives the unique fitted offset equal to the evaluation error mean and fitted average difference minus its square. For a genuinely disjoint block, its error mean is independent of that offset and centered, so expected new difference is the offset squared. The opposite unconditional expectations follow from the exact overlapping mean-error variance. My primitive-innovation calculation also shows the adjacent block shares covariance 1/16 and has expectation 3/4, rather than the independent-block 7/8.",
+      "conditions_and_limits": "The example’s origins 5–8 use innovations u6–u10 after the selection block’s u1–u5. Origin 4 is not independent. This is a specified selection experiment, not a universal model-selection performance theorem.",
+      "judgment": "Pass within the stated scope."
+    },
+    {
+      "topic": "Exercises, critique rubric and teaching",
+      "independent_reasoning": "All twelve exact prompts and their complete solutions were read and independently reconstructed. Each proof method appears in the chapter or in an explicit accepted prerequisite. The six research objections each identify a changed information set, probability law, moment requirement or evaluation design. Two defensible revised analyses have criteria and examples, and the conclusion properly limits empirical interpretation.",
+      "conditions_and_limits": "The rubric totals twelve points: six objections, four points for two revisions, and two for a conclusion. Teach-back and all five delayed answers are complete. Structural/source checking is not rendered reader UI, external human review or empirical model validation.",
+      "judgment": "Pass within the stated scope."
+    }
+  ],
+  "exercise_audit": [
+    {
+      "id": "v12-c09-e1",
+      "exact_prompt": "Construct the causal L² filter from iid finite-variance innovations and square-summable coefficients, and derive its covariance. Explain why absolute summability also supplies an almost-sure stationary construction. Prove the sufficient inverse-polynomial argument for a repeated factor (1−az)^m, |a|<1, and distinguish causality, invertibility, white noise and conditional-mean forecasting.",
+      "normalized_prompt_sha256": "9d877bd089953a6cfd66d276a4e1f4cfb72d589dfa5a448c043fe3f79b4903aa",
+      "topic": "Filter construction and repeated-root inverse",
+      "independent_answer_audit": "L2 tails, covariance limits, integrable absolute series, countable-date construction and geometric-convolution proof are all supplied. Triple-factor coefficients with negative root parameter were independently checked.",
+      "scope_and_instruction": "No necessary root theorem, anticipative-solution exclusion or conditional-mean claim from mere white noise.",
+      "judgment": "Pass; complete exact prompt and solution audited."
+    },
+    {
+      "id": "v12-c09-e2",
+      "exact_prompt": "Derive the ARMA(1,1) filter, recovery coefficients and h-step mean/error variance. Recompute every mean and variance in example 1. Prove observational equivalence of its two Gaussian MA representations and explain cancellation when θ=−φ.",
+      "normalized_prompt_sha256": "e5dd30024db6320117a8035c7a32808065568f51464b4e7167ab9e9179510346",
+      "topic": "ARMA forecasts and Gaussian representation",
+      "independent_answer_audit": "State-covariance equations give gamma0=13/3 and gamma1=35/12. Direct future-shock polynomials give means 1/2,1/4,1/8 and variances 9/4,61/16,269/64. Inverse polynomial division composes to identity. Both MA representations have covariance sequence 5,2,0,...; theta=-phi cancels all lagged impulses.",
+      "scope_and_instruction": "Recovery requires the stated inverse domain and infinite-past information. Gaussian finite-dimensional covariance equality supplies observational equivalence only.",
+      "judgment": "Pass; complete exact prompt and solution audited."
+    },
+    {
+      "id": "v12-c09-e3",
+      "exact_prompt": "Prove the VAR covariance-series and Lyapunov uniqueness result under the stated power bound. Recompute example 2's stationary covariance, two-step forecast and both first-shock responses at impact and one period. Explain exactly what the rotation does and does not identify.",
+      "normalized_prompt_sha256": "e0e2cc8460e2a30196b159f89cb53b6f1df4dcbc5d70dda4e7a79000180c5390",
+      "topic": "VAR covariance and rotated impulses",
+      "independent_answer_audit": "Closed triangular powers and infinite geometric inner products give Gamma=((479/240,57/40),(57/40,9/4)). Future independent shock loadings give mean (7/24,-1/9) and covariance ((13/8,4/3),(4/3,20/9)). Named impacts (1,1) and (3/5,7/5) lead to responses (3/4,1/3) and (13/20,7/15).",
+      "scope_and_instruction": "The supplied Frobenius norm squared 61/144 gives the power bound. All requested values and the nonidentification conclusion are correct.",
+      "judgment": "Pass; complete exact prompt and solution audited."
+    },
+    {
+      "id": "v12-c09-e4",
+      "exact_prompt": "For the fixed stable Gaussian AR(1), prove denominator convergence, score orthogonality, the quadratic-form eigenvalue bound, the independent-row smooth-replacement limit and feasible studentization. Calculate the limiting coefficient variance for φ=1/2, σ²=3/4. Why is conditioning on the entire lagged design not the offered proof?",
+      "normalized_prompt_sha256": "dcccb8420f3d5c28c35bb470273e2f26522809199747816945a9cef3b58e7421",
+      "topic": "Stable inference proof",
+      "independent_answer_audit": "Independent Gaussian polynomial expectations check the score mean/variance and lag-square bound for three small stable designs. The full written spectral, moment, Taylor-replacement, cutoff and studentization argument is valid. At phi=1/2 and sigma²=3/4 the initial variance is 1 and the limiting coefficient variance is 3/4.",
+      "scope_and_instruction": "The full-lag conditional score is Gaussian with a generally nonzero mean and only last-innovation variance. No centered fixed-design shortcut or local-to-unity extension is used.",
+      "judgment": "Pass; complete exact prompt and solution audited."
+    },
+    {
+      "id": "v12-c09-e5",
+      "exact_prompt": "Derive both stated Gaussian unit-root limits from the Brownian-grid law, including positive denominator and residual-variance consistency. Recompute all OLS quantities in the four-increment record in example 3. Identify three changes to the model that would require another limit argument.",
+      "normalized_prompt_sha256": "9c613d9497ed7f5e074ca43cac6590d7a25a24326c9c0ba913d557d2e1e6a4e0",
+      "topic": "Gaussian unit-root proof and record",
+      "independent_answer_audit": "The positive Brownian denominator and residual consistency justify both stated limits. Direct regression gives levels 0,1,0,2,3, D=5, cross=6, score=1, slope=6/5, residuals 1,-6/5,2,3/5, RSS=34/5, residual variance 17/10, scaled change 4/5, statistic squared 2/17 and statistic 0.342997170285 within its printed rounding.",
+      "scope_and_instruction": "The requested three model changes are answered with more than three valid alternatives. None is claimed covered by the existing proof.",
+      "judgment": "Pass; complete exact prompt and solution audited."
+    },
+    {
+      "id": "v12-c09-e6",
+      "exact_prompt": "Prove cointegration, uniqueness of the normalized slope, the error-correction identity, conditional slope variance and the T rate in the stated independent trend/spread model. Recompute example 4's outcomes, level slope, conditional variance and two-step forecast. Which spread innovations are actually recoverable, and what is conditioned on in each variance statement?",
+      "normalized_prompt_sha256": "108422e0b5d8823085e8e96387046302696650d5d285bf28ffe4b5c4eada7d7f",
+      "topic": "Cointegration and information",
+      "independent_answer_audit": "Observed y=(5/2,-1/2,5,5), slope 55/28, innovation-loading numerator variance 87/4 and conditional slope variance 87/784 are correct. The stationary initial-spread loading is 15/16; setting it to zero would change the variance to 5343/50176. Only eta2,eta3,eta4=-3/4,5/4,-3/2 are recoverable. Current-state forecast 23/4 has error variance 143/16.",
+      "scope_and_instruction": "The uniqueness, error-correction, covariance-operator and T-tightness arguments have the required full-history independence and Gaussian stationary initialization.",
+      "judgment": "Pass; complete exact prompt and solution audited."
+    },
+    {
+      "id": "v12-c09-e7",
+      "exact_prompt": "Prove the positive-product sufficient strict-stationarity result and its stated stationary-solution uniqueness. Separately derive the finite return-variance and fourth-moment criteria and formulas. Explain why finite moments must be established before taking squared-return covariances.",
+      "normalized_prompt_sha256": "8b74ed0223c0c0f812141f1d305b7660b754406b6f69d351dc5a4e9a37089508",
+      "topic": "GARCH existence, uniqueness and moments",
+      "independent_answer_audit": "Negative integrable expected log gives product existence; tightness handles the stationary uniqueness comparison without an independence shortcut. Tonelli, product L2 norms and the moment-recursion contradiction establish the separate second/fourth-return-moment conditions.",
+      "scope_and_instruction": "The fourth-moment condition precedes squared-return covariance. Strict stationarity alone is not a finite-moment claim.",
+      "judgment": "Pass; complete exact prompt and solution audited."
+    },
+    {
+      "id": "v12-c09-e8",
+      "exact_prompt": "For the baseline GARCH case, compute persistence, E[A²], unconditional variance, E[h²], return fourth moment, raw and excess kurtosis, all four conditional variance forecasts and their sum. Derive the squared-process representation, lag-one covariance/correlation and later-lag recurrence.",
+      "normalized_prompt_sha256": "c74e787874835e3f9dd0bee931391774968e199345caf39c6de031da9738118b",
+      "topic": "Baseline volatility and squared returns",
+      "independent_answer_audit": "The centered multiplier equation gives rho=9/10, E A²=83/100, E h=1, E h²=19/17 and return fourth moment 57/17. Excess kurtosis is 6/17. Gaussian shock polynomials yield forecasts 13/5,61/25,287/125,1354/625, sum 5939/625. The squared-filter route gives variance 40/17, lag-one covariance 28/85 and correlation 7/50; subsequent lags multiply by 9/10.",
+      "scope_and_instruction": "All requested moments, forecasts, recurrence and aggregate-variance interpretation are addressed under the actual Gaussian law.",
+      "judgment": "Pass; complete exact prompt and solution audited."
+    },
+    {
+      "id": "v12-c09-e9",
+      "exact_prompt": "Analyze both moment-failure transfers in example 5. For the discrete innovation law, verify standardization and the exact expected-log criterion. Contrast strict stationarity, finite return variance and finite fourth moment. What happens to Gaussian excess kurtosis and squared-return serial covariance at α=0, β<1?",
+      "normalized_prompt_sha256": "7d24590e64fc7985608e1cbb13b50a7064f2b8fd5cc3502341eecdcb97f12fd4",
+      "topic": "Moment-failure transfers and alpha-zero boundary",
+      "independent_answer_audit": "The Gaussian transfer has rho=9/10 but E A²=113/100, so a finite variance of 1 coexists with an infinite fourth moment. The discrete law is standardized with fourth moment 2; A is 1/5 or 2 with equal masses, mean 11/10 and expected log one-half log(2/5)=-0.458145365937. At alpha=0, beta<1, h is constant and Gaussian excess kurtosis and serial squared covariance are zero.",
+      "scope_and_instruction": "The distinct innovation law is explicit. The zero-multiplier boundary is covered by the separate finite-mean construction, not the positive-log theorem.",
+      "judgment": "Pass; complete exact prompt and solution audited."
+    },
+    {
+      "id": "v12-c09-e10",
+      "exact_prompt": "Derive the covariance matrices of the four overlapping errors and squared losses in example 6. Derive the exact fixed-c loss-difference law and calculate the correct and false iid variances for c=1/2. Explain the c=0 boundary and give a covariance-stationary counterexample to an automatic averaging CLT.",
+      "normalized_prompt_sha256": "ce86c45a60eb880d691c0f00693a1e4c02e706d13457fee9eaa3ed0ec5ef1703",
+      "topic": "Overlapping forecast law",
+      "independent_answer_audit": "Gaussian polynomial moments reproduce error diagonal 2/adjacent 1 and loss diagonal 8/adjacent 2. The average loss variance is 11/4 versus false iid 2. For fixed c=1/2, the comparison mean is 1/4 and average variance 7/8 versus false iid 1/2. At c=0 the difference vanishes.",
+      "scope_and_instruction": "The common non-Gaussian stationary counterexample is valid; neither squared-loss normality nor a general comparison CLT is assumed.",
+      "judgment": "Pass; complete exact prompt and solution audited."
+    },
+    {
+      "id": "v12-c09-e11",
+      "exact_prompt": "Derive the evaluation-selected offset and its expected in-sample loss difference. Calculate its expected difference on a genuinely independent new block, and recompute the synthetic selection record. Specify the information/timing condition that an adjacent overlapping block may fail.",
+      "normalized_prompt_sha256": "c760c55a72a05b10ba488aa1f5348a532e8b04fe08bc3ddd511f90601ba68fee",
+      "topic": "Selected offset and fresh block",
+      "independent_answer_audit": "Completing the square gives fitted offset ebar and expected fitted difference -7/8. A disjoint block gives +7/8. The synthetic errors are 1,2,1,0; fitted offset 1 gives fitted difference -1. The stated fresh indices avoid the selection innovations.",
+      "scope_and_instruction": "The adjacent block fails independence. Independent primitive weights give its different expectation 3/4, which corroborates the timing warning without changing the printed exercise.",
+      "judgment": "Pass; complete exact prompt and solution audited."
+    },
+    {
+      "id": "v12-c09-e12",
+      "exact_prompt": "A report (i) assigns the stable Gaussian autoregressive score the centered conditional law N(0,σ²D_T) given the entire lagged design; (ii) uses the stable normal slope reference at a unit root; (iii) uses iid standard errors for example 4's serial spread; (iv) rotates a VAR covariance factor and labels its first coordinate a causal policy shock; (v) computes finite squared-return autocovariances for α=2/5, β=1/2 solely because α+β<1; and (vi) selects an offset on its evaluation block and calls the negative fitted loss difference out-of-sample improvement. Give six precise objections, two feasible revised analyses with explicit assumptions, and a defensible conclusion. Use the 12-point solution rubric.",
+      "normalized_prompt_sha256": "a5553bf6c9644f6f4d624722134cfa01d819ba2f77ea8efd631b685230202f37",
+      "topic": "Research critique and explicit rubric",
+      "independent_answer_audit": "All six objections are correct: wrong centered conditional score, wrong unit-root normal reference, ignored spread covariance, unproved causal shock label, missing fourth moment and reused evaluation sample. Two revised analyses and a limited conclusion have precise criteria, with a 6+4+2=12-point allocation.",
+      "scope_and_instruction": "The open response is evaluated by declared targets, information, assumptions and justified inference, not by choosing a preferred model or empirical effect.",
+      "judgment": "Pass; complete exact prompt and solution audited."
+    }
+  ],
+  "independent_numerical_methods": {
+    "no_author_oracle": "The peer checker contains no import/call of the author implementation and uses no saved author output as expected truth. Author execution, if reported, is integration evidence only.",
+    "exact_finite_engine": "Small multivariate polynomials in independent centered Gaussian coordinates. Even moments are derived from the integration-by-parts double-factorial recurrence; means, variances and covariances are exact Fractions. The engine does not simulate an asymptotic theorem.",
+    "case_1": "Advance the actual ARMA recursion as future-shock polynomials; use stationary (X,epsilon) covariance identities for long-run moments and polynomial long division for inversion. Independently count weak compositions for a triple inverse factor.",
+    "case_2": "Derive closed powers of the triangular A and sum products of its exponential impulse loadings against independent primitive shocks. No Lyapunov-system solver is used as the covariance oracle. Forecast covariance comes from stacked independent future-shock loadings.",
+    "case_3": "Generate the score and lag-square denominator recursively as Gaussian polynomials, take exact moments, and recover off-diagonal quadratic-form entries. Construct the C3 cutoff by integrating a nonnegative polynomial. Independently use direct residual geometry and telescoping for the finite unit-root record, plus exact Brownian-grid quadratic moments.",
+    "case_4": "Expand the entire stationary spread into v0 and eta1–eta4, then calculate the weighted slope numerator variance from their independence. Separate current-state forecasts from sampling that averages over v0.",
+    "case_5": "Center the affine multiplier recurrence to obtain Var(h), then use the infinite squared-return filter for covariances. Conditional forecasts are Gaussian polynomial expectations of future multipliers. Check the actual finite-support multiplier law, its mean/log sign, and alpha-zero/zero-multiplier limits.",
+    "case_6": "Expand overlapping errors and squared losses in primitive Gaussian increments. Calculate covariance by exact Gaussian fourth moments; evaluate selection and both disjoint/adjacent new-block targets with explicit innovation coordinates.",
+    "floating_tolerances": "Only square roots for the uniform row bound/printed t value and logs for the printed expected-log decimal use binary float. Printed decimals are checked with 2e-12 relative/absolute tolerance; the negative log sign is separately certified by an exact product below one.",
+    "bounded_domain": "Exact nonboolean int/Fraction inputs have magnitude at most 10^6. Polynomial dimension <=10, degree <=12 and at most512 stored monomials; individual coefficients share that magnitude cap. Other helpers have explicit finite dimensions, stable/invertible filter conditions, valid covariance/variance quantities, nondegenerate finite regressions and supported horizon/coordinate bounds. They are finite audit helpers, not an unrestricted estimation API."
+  },
+  "source_scope_audit": {
+    "actual_new_primary_body_or_image_reads_by_peer": false,
+    "reuse": "Read the complete final author-source record, root source-provenance record, and the preparation’s method/artifact mapping. Reliance is on c05_review’s already recorded primary text and thirteen equation-image inspections, not an invented fresh body read by this peer.",
+    "preparation_binding": {
+      "path": "production/v12-c09-source-preparation.json",
+      "bytes": 36001,
+      "sha256": "5593643ada6b4fb20c814488a058d1f9ad774e4571d5e7e1dcac57ff28b5df43"
+    },
+    "retained_evidence_rehashed": {
+      "PDFs": 5,
+      "equation_images": 13,
+      "manifests": 2,
+      "total": 20,
+      "author_source_body_hashes_match_retained_PDFs": true,
+      "runtime_dependencies": false
+    },
+    "sources": [
+      {
+        "id": "v04-c10-mit-stationarity",
+        "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/4f2256b0a9c3157a2676806ed261eb8f_MIT14_384F13_lec1.pdf",
+        "checked_scope": "Definitions, causal lag filters, covariance algebra and the separate innovation/information condition. The chapter independently proves the repeated-factor sufficient construction and its original ARMA(1,1) case.",
+        "version_boundary": "The course route and later PDF modification date do not replace the body lecture/revision dates."
+      },
+      {
+        "id": "v12-c09-mit-vars",
+        "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/a0f9daa509414e993f12a9a070c83449_MIT14_384F13_lec11.pdf",
+        "checked_scope": "VAR companion/covariance and reduced-form versus structural response distinctions. The chapter independently proves its geometric series and Lyapunov uniqueness without importing the source vec/LR slips or general estimator inference.",
+        "version_boundary": "The PDF creation/TeX timestamps are technical metadata, not a newly verified edition."
+      },
+      {
+        "id": "v12-c09-mit-cointegration",
+        "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/4c0d665d324c565fb9b6d258538cb78e_MIT14_384F13_lec20.pdf",
+        "checked_scope": "Integrated levels with a stationary combination and model-dependent normalizations. The chapter proves a restricted Gaussian Brownian-grid limit and independent stationary-spread T rate, without adopting the source's unproved general functional limits or test laws.",
+        "version_boundary": "No revision date is stated in the body; PDF creation/modification metadata is not substituted."
+      },
+      {
+        "id": "v12-c09-bollerslev-garch1986",
+        "url": "https://public.econ.duke.edu/~boller/Published_Papers/joe_86.pdf",
+        "checked_scope": "Original GARCH recursion, second/fourth moment distinctions and squared-process covariance context. The positive-log product construction and finite-support infinite-variance transfer are independently derived.",
+        "version_boundary": "The original journal body is inspected; scan/creation timestamps are not publication dates."
+      },
+      {
+        "id": "v12-c09-diebold-forecast2012",
+        "url": "https://economics.sas.upenn.edu/sites/default/files/filevault/12-035.pdf",
+        "checked_scope": "Forecast target, serial loss dependence, estimation/selection arrangements and real-time information. The original finite Gaussian overlap/selection proof explicitly rejects stationarity alone as a CLT assumption.",
+        "version_boundary": "This is the dated working-paper body, not the later journal version. Search-engine crawl/publication labels are not used as version evidence."
+      }
+    ],
+    "not_inherited": "Source vec/LR/lag transcription issues, a stationarity-only comparison CLT, unrestricted VAR or cointegration inference, and GARCH QMLE claims are not inherited. Original finite constructions and complete narrow proofs carry the chapter’s substantive claims."
+  },
+  "instruction_and_structure": {
+    "actual_shared_Document": {
+      "worked": 6,
+      "exercises": 12,
+      "solutions": 12,
+      "unique_ids": 22,
+      "method": "Extracted and executed the actual Document class from scripts/verify.py read-only; no shared script or other chapter checker was imported."
+    },
+    "prerequisites": "Named spectral, smooth-replacement, iid strong-law and Brownian continuity/quadratic-variation prerequisites support the proofs. C09 explicitly separates known-parameter forecasts from coefficient-estimation uncertainty.",
+    "method_routes": "All source and prerequisite links are flat declared chapter/source routes. The successor remains a coordinator-controlled planned chapter until accepted.",
+    "teach_back": "Answered stable score/denominator orders versus the Gaussian unit-root Brownian orders, and three distinct GARCH moment questions.",
+    "retention_answers": [
+      "5/6 and 9/4",
+      "3/4",
+      "eta1 is not recoverable without v0",
+      "6/17 excess kurtosis",
+      "c=0 is a degenerate zero difference"
+    ],
+    "rendered_UI": "Not performed or claimed."
+  },
+  "findings": {
+    "new_material_findings": [],
+    "resolved_before_peer": [
+      {
+        "id": "c09-root-01",
+        "origin": "Coordinator pre-promotion review",
+        "independent_resolution_check": "The final section5 explicitly gives iid Gaussian spread innovations, positive variance, stationary Gaussian v0 independent of its future innovations, and whole-spread-input independence from the random walk. This is enough for the conditional normal slope covariance and forecast law."
+      },
+      {
+        "id": "c09-root-02",
+        "origin": "Coordinator pre-promotion review",
+        "independent_resolution_check": "The final manuscript/source/author records correctly assign actual primary-text/equation-image inspection to the source specialist and provenance reading/artifact hashing to the coordinator. The peer maintains that same distinction."
+      }
+    ],
+    "open_findings": [],
+    "author_repairs_requested_by_this_peer": []
+  },
+  "validation": {
+    "state": "passed",
+    "peer_summary": {
+      "author_code_used_as_oracle": false,
+      "chapter": "v12-c09",
+      "comparisons": 271,
+      "computed_solution_anchors": 78,
+      "domain_rejections": 26,
+      "exact_exercises_and_solutions": 12,
+      "finite_evidence": {
+        "ARMA_variances": [
+          "9/4",
+          "61/16",
+          "269/64"
+        ],
+        "GARCH_four_period_variance": "5939/625",
+        "GARCH_return_fourth_moment": "57/17",
+        "VAR_stationary_covariance": [
+          [
+            "479/240",
+            "57/40"
+          ],
+          [
+            "57/40",
+            "9/4"
+          ]
+        ],
+        "selected_fresh_adjacent_expected_losses": [
+          "-7/8",
+          "7/8",
+          "3/4"
+        ],
+        "spread_sampling_variance": "87/784",
+        "stable_Gaussian_polynomial_designs": 3,
+        "unit_root_slope": "6/5",
+        "unit_root_statistic_squared": "2/17"
+      },
+      "intervention_scopes": [
+        "Cancellation and finite recovery initialization are distinct from infinite-past recovery.",
+        "Orthogonal shock rotation preserves the observed law and changes named responses.",
+        "Negative and zero stable coefficients, and full-lag conditioning, retain the actual score law.",
+        "Stationary, fixed-zero-initial and iid spreads yield different slope variances; current-state forecasting has another information set.",
+        "Separate Gaussian fourth-moment failure, discrete strict-stationary infinite variance and alpha-zero/zero-multiplier boundaries.",
+        "Fixed-zero comparison, one-step horizon and adjacent versus disjoint evaluation blocks change the relevant law."
+      ],
+      "limits": "Finite independent evidence plus separate proof audit; no general dependent-data, unit-root, VAR, cointegration-rank, QMLE or selected-forecast theorem, empirical validation, rendered UI or acceptance claim.",
+      "nonself_peer_bindings": 5,
+      "purposeful_interventions": 6,
+      "rejection_scopes": [
+        "boolean numeric input",
+        "nonfinite numeric input",
+        "numeric magnitude bound",
+        "boolean dimension",
+        "unit-root stable filter",
+        "noninvertible recovery",
+        "forecast horizon bound",
+        "nondecaying impulse series",
+        "ragged matrix",
+        "matrix conformability",
+        "unit-root stable-score law",
+        "zero innovation variance",
+        "one-date zero-start regression",
+        "zero lagged design",
+        "zero GARCH intercept",
+        "negative GARCH coefficient",
+        "impossible standardized fourth moment",
+        "unsupported overlap horizon",
+        "unavailable future innovation",
+        "negative polynomial degree",
+        "polynomial degree bound",
+        "coordinate support",
+        "degenerate Gaussian input",
+        "duplicate JSON",
+        "nonfinite JSON",
+        "overflowed JSON"
+      ],
+      "status": "independent peer checks passed",
+      "worked_cases": 6
+    },
+    "workspace_and_exact_six_file_gates": [
+      {
+        "location": "workspace",
+        "optimized": false,
+        "API": true,
+        "CLI": true,
+        "cwd": "/",
+        "silent_import_API_and_CLI": true
+      },
+      {
+        "location": "workspace",
+        "optimized": true,
+        "API": true,
+        "CLI": true,
+        "cwd": "/",
+        "silent_import_API_and_CLI": true
+      },
+      {
+        "location": "isolated",
+        "optimized": false,
+        "API": true,
+        "CLI": true,
+        "cwd": "/",
+        "silent_import_API_and_CLI": true
+      },
+      {
+        "location": "isolated",
+        "optimized": true,
+        "API": true,
+        "CLI": true,
+        "cwd": "/",
+        "silent_import_API_and_CLI": true
+      }
+    ],
+    "API_CLI_executions": 8,
+    "all_API_summaries_identical": true,
+    "strict_JSON": true,
+    "runtime_files": [
+      "content/chapters/v12-c09.html",
+      "scripts/check_v12_c09.py",
+      "content/reviews/v12-c09-sources.json",
+      "content/reviews/v12-c09-author.json",
+      "scripts/check_v12_c09_peer.py",
+      "content/reviews/v12-c09-peer.json"
+    ],
+    "cwd": "/",
+    "silent_successful_import_check_and_CLI": true,
+    "unchanged_workspace_bytes": true,
+    "unchanged_isolated_bytes_and_exact_membership": true,
+    "normal_and_optimized_domain_rejections": 26,
+    "normal_and_optimized_tampered_temporary_copy_rejections": 10,
+    "tamper_targets": [
+      "content/chapters/v12-c09.html",
+      "scripts/check_v12_c09.py",
+      "content/reviews/v12-c09-sources.json",
+      "content/reviews/v12-c09-author.json",
+      "scripts/check_v12_c09_peer.py"
+    ],
+    "author_execution_integration_only": {
+      "normal_and_optimized_isolated_API": true,
+      "comparisons": 283,
+      "domain_rejections": 22,
+      "strict_JSON_rejections": 6,
+      "used_as_peer_oracle": false
+    },
+    "final_record_gate": "Final eight quiet normal/optimized API/CLI workspace and exact-six-file gates passed against the completed peer record; no circular self hash is embedded."
+  },
+  "limits": [
+    "Finite calculations corroborate separately audited proofs; no finite set of computations proves an asymptotic result.",
+    "Only the declared stationary Gaussian stable, zero-start Gaussian unit-root, independent stationary-spread and explicit GARCH/forecast laws are proved. Changing initialization, trends, dependence, estimation or selection can require new theory.",
+    "Primary-source reuse and machine-assisted review do not establish empirical financial model suitability, rendered reader UI, independent human competence or universal correctness.",
+    "This is a peer recommendation within a frozen four-author-file scope. The coordinator controls canonical acceptance and publication."
+  ],
+  "preservation": {
+    "C11_preparation": {
+      "path": "production/v12-c11-source-preparation.json",
+      "bytes": 46321,
+      "sha256": "0f6f9dcd665ca0bd934c521cabe3996c8968b3ca17205791d2f5f7745d6c399c"
+    },
+    "C11_scratch_files_unchanged": 31,
+    "previous_c06_c08_peer_payloads_unchanged": 4,
+    "writes": "Only the two exact peer-owned paths were created/updated. Temporary execution copies were deleted by TemporaryDirectory; source/author/shared payloads were not changed."
+  }
+}

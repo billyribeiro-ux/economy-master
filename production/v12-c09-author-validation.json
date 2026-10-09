@@ -1,0 +1,179 @@
+{
+  "chapter": "v12-c09",
+  "date": "2026-10-09",
+  "reviewer": "root",
+  "status": "passed",
+  "runs": [
+    {
+      "scope": "workspace",
+      "mode": "normal",
+      "entry": "API",
+      "cwd": "/",
+      "status": "passed",
+      "quiet": true
+    },
+    {
+      "scope": "workspace",
+      "mode": "normal",
+      "entry": "CLI",
+      "cwd": "/",
+      "status": "passed",
+      "quiet": true
+    },
+    {
+      "scope": "workspace",
+      "mode": "optimized",
+      "entry": "API",
+      "cwd": "/",
+      "status": "passed",
+      "quiet": true
+    },
+    {
+      "scope": "workspace",
+      "mode": "optimized",
+      "entry": "CLI",
+      "cwd": "/",
+      "status": "passed",
+      "quiet": true
+    },
+    {
+      "scope": "exact four canonical files",
+      "mode": "normal",
+      "entry": "API",
+      "cwd": "/",
+      "status": "passed",
+      "quiet": true
+    },
+    {
+      "scope": "exact four canonical files",
+      "mode": "normal",
+      "entry": "CLI",
+      "cwd": "/",
+      "status": "passed",
+      "quiet": true
+    },
+    {
+      "scope": "exact four canonical files",
+      "mode": "optimized",
+      "entry": "API",
+      "cwd": "/",
+      "status": "passed",
+      "quiet": true
+    },
+    {
+      "scope": "exact four canonical files",
+      "mode": "optimized",
+      "entry": "CLI",
+      "cwd": "/",
+      "status": "passed",
+      "quiet": true
+    }
+  ],
+  "summary": {
+    "chapter": "v12-c09",
+    "comparisons": 283,
+    "domain_rejections": 22,
+    "exact_prompts_and_solutions": 12,
+    "finite_evidence": {
+      "ARMA_forecast_variances": [
+        "9/4",
+        "61/16",
+        "269/64"
+      ],
+      "GARCH_moment_regions": 3,
+      "Gaussian_score_designs": 6,
+      "VAR_stationary_covariance": [
+        [
+          "479/240",
+          "57/40"
+        ],
+        [
+          "57/40",
+          "9/4"
+        ]
+      ],
+      "forecast_origin_count": 4,
+      "selected_and_fresh_expected_difference": [
+        "-7/8",
+        "7/8"
+      ],
+      "stationary_spread_conditional_variance": "87/784",
+      "unit_root_slope": "6/5"
+    },
+    "limits": "Finite original laws plus separate analytic proof audit; no general dependent-data, VAR, non-Gaussian unit-root, cointegration-rank, QMLE or reestimated-forecast inference theorem, empirical validation, rendered UI or human certification.",
+    "primary_scopes": 5,
+    "status": "author checks passed; separate review required",
+    "strict_JSON_rejections": 6,
+    "visible_anchors": 86,
+    "worked_examples": 6
+  },
+  "portable_helper": {
+    "status": "passed",
+    "files": 4,
+    "cwd": "/",
+    "normal_and_optimized_API_CLI": true,
+    "no_mutation": true,
+    "summary": {
+      "chapter": "v12-c09",
+      "comparisons": 283,
+      "domain_rejections": 22,
+      "exact_prompts_and_solutions": 12,
+      "finite_evidence": {
+        "ARMA_forecast_variances": [
+          "9/4",
+          "61/16",
+          "269/64"
+        ],
+        "GARCH_moment_regions": 3,
+        "Gaussian_score_designs": 6,
+        "VAR_stationary_covariance": [
+          [
+            "479/240",
+            "57/40"
+          ],
+          [
+            "57/40",
+            "9/4"
+          ]
+        ],
+        "forecast_origin_count": 4,
+        "selected_and_fresh_expected_difference": [
+          "-7/8",
+          "7/8"
+        ],
+        "stationary_spread_conditional_variance": "87/784",
+        "unit_root_slope": "6/5"
+      },
+      "limits": "Finite original laws plus separate analytic proof audit; no general dependent-data, VAR, non-Gaussian unit-root, cointegration-rank, QMLE or reestimated-forecast inference theorem, empirical validation, rendered UI or human certification.",
+      "primary_scopes": 5,
+      "status": "author checks passed; separate review required",
+      "strict_JSON_rejections": 6,
+      "visible_anchors": 86,
+      "worked_examples": 6
+    }
+  },
+  "frozen_payloads": [
+    {
+      "path": "content/chapters/v12-c09.html",
+      "bytes": 56629,
+      "sha256": "c809929afde736f4dc1327bcb1431d5e1b4232dc0a4b7fdce711ab9391315866"
+    },
+    {
+      "path": "scripts/check_v12_c09.py",
+      "bytes": 33013,
+      "sha256": "80eeded6d3ede65c8a69edf064c82bb3c2d556c7c12df2a3c482750fa9644270"
+    },
+    {
+      "path": "content/reviews/v12-c09-sources.json",
+      "bytes": 27039,
+      "sha256": "d8bbf09bcda9d10f4d421af4b59affadf95947267d1b046f61d89209868a8cfe"
+    },
+    {
+      "path": "content/reviews/v12-c09-author.json",
+      "bytes": 39335,
+      "sha256": "a7764ad9c79f85b2c3cc4a8359c5dfcc017f29eb6e9fa108c3777bae9c59604d"
+    }
+  ],
+  "unchanged_bytes_and_exact_membership": true,
+  "scope": "All eight normal/optimized quiet API/CLI gates plus the adapted portable helper. No reader rebuild or acceptance yet."
+}

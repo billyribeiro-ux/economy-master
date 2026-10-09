@@ -1,0 +1,186 @@
+{
+  "chapter": "v12-c09",
+  "date": "2026-10-09",
+  "status": "passed",
+  "summary": {
+    "author_code_used_as_oracle": false,
+    "chapter": "v12-c09",
+    "comparisons": 271,
+    "computed_solution_anchors": 78,
+    "domain_rejections": 26,
+    "exact_exercises_and_solutions": 12,
+    "finite_evidence": {
+      "ARMA_variances": [
+        "9/4",
+        "61/16",
+        "269/64"
+      ],
+      "GARCH_four_period_variance": "5939/625",
+      "GARCH_return_fourth_moment": "57/17",
+      "VAR_stationary_covariance": [
+        [
+          "479/240",
+          "57/40"
+        ],
+        [
+          "57/40",
+          "9/4"
+        ]
+      ],
+      "selected_fresh_adjacent_expected_losses": [
+        "-7/8",
+        "7/8",
+        "3/4"
+      ],
+      "spread_sampling_variance": "87/784",
+      "stable_Gaussian_polynomial_designs": 3,
+      "unit_root_slope": "6/5",
+      "unit_root_statistic_squared": "2/17"
+    },
+    "intervention_scopes": [
+      "Cancellation and finite recovery initialization are distinct from infinite-past recovery.",
+      "Orthogonal shock rotation preserves the observed law and changes named responses.",
+      "Negative and zero stable coefficients, and full-lag conditioning, retain the actual score law.",
+      "Stationary, fixed-zero-initial and iid spreads yield different slope variances; current-state forecasting has another information set.",
+      "Separate Gaussian fourth-moment failure, discrete strict-stationary infinite variance and alpha-zero/zero-multiplier boundaries.",
+      "Fixed-zero comparison, one-step horizon and adjacent versus disjoint evaluation blocks change the relevant law."
+    ],
+    "limits": "Finite independent evidence plus separate proof audit; no general dependent-data, unit-root, VAR, cointegration-rank, QMLE or selected-forecast theorem, empirical validation, rendered UI or acceptance claim.",
+    "nonself_peer_bindings": 5,
+    "purposeful_interventions": 6,
+    "rejection_scopes": [
+      "boolean numeric input",
+      "nonfinite numeric input",
+      "numeric magnitude bound",
+      "boolean dimension",
+      "unit-root stable filter",
+      "noninvertible recovery",
+      "forecast horizon bound",
+      "nondecaying impulse series",
+      "ragged matrix",
+      "matrix conformability",
+      "unit-root stable-score law",
+      "zero innovation variance",
+      "one-date zero-start regression",
+      "zero lagged design",
+      "zero GARCH intercept",
+      "negative GARCH coefficient",
+      "impossible standardized fourth moment",
+      "unsupported overlap horizon",
+      "unavailable future innovation",
+      "negative polynomial degree",
+      "polynomial degree bound",
+      "coordinate support",
+      "degenerate Gaussian input",
+      "duplicate JSON",
+      "nonfinite JSON",
+      "overflowed JSON"
+    ],
+    "status": "independent peer checks passed",
+    "worked_cases": 6
+  },
+  "executions": [
+    {
+      "context": "workspace",
+      "mode": "normal",
+      "entry": "API",
+      "status": "passed",
+      "quiet": true,
+      "cwd": "/"
+    },
+    {
+      "context": "workspace",
+      "mode": "normal",
+      "entry": "CLI",
+      "status": "passed",
+      "quiet": true,
+      "cwd": "/"
+    },
+    {
+      "context": "workspace",
+      "mode": "optimized",
+      "entry": "API",
+      "status": "passed",
+      "quiet": true,
+      "cwd": "/"
+    },
+    {
+      "context": "workspace",
+      "mode": "optimized",
+      "entry": "CLI",
+      "status": "passed",
+      "quiet": true,
+      "cwd": "/"
+    },
+    {
+      "context": "exact_six",
+      "mode": "normal",
+      "entry": "API",
+      "status": "passed",
+      "quiet": true,
+      "cwd": "/"
+    },
+    {
+      "context": "exact_six",
+      "mode": "normal",
+      "entry": "CLI",
+      "status": "passed",
+      "quiet": true,
+      "cwd": "/"
+    },
+    {
+      "context": "exact_six",
+      "mode": "optimized",
+      "entry": "API",
+      "status": "passed",
+      "quiet": true,
+      "cwd": "/"
+    },
+    {
+      "context": "exact_six",
+      "mode": "optimized",
+      "entry": "CLI",
+      "status": "passed",
+      "quiet": true,
+      "cwd": "/"
+    }
+  ],
+  "frozen_payloads": [
+    {
+      "path": "content/chapters/v12-c09.html",
+      "bytes": 56629,
+      "sha256": "c809929afde736f4dc1327bcb1431d5e1b4232dc0a4b7fdce711ab9391315866"
+    },
+    {
+      "path": "scripts/check_v12_c09.py",
+      "bytes": 33013,
+      "sha256": "80eeded6d3ede65c8a69edf064c82bb3c2d556c7c12df2a3c482750fa9644270"
+    },
+    {
+      "path": "content/reviews/v12-c09-sources.json",
+      "bytes": 27039,
+      "sha256": "d8bbf09bcda9d10f4d421af4b59affadf95947267d1b046f61d89209868a8cfe"
+    },
+    {
+      "path": "content/reviews/v12-c09-author.json",
+      "bytes": 39335,
+      "sha256": "a7764ad9c79f85b2c3cc4a8359c5dfcc017f29eb6e9fa108c3777bae9c59604d"
+    },
+    {
+      "path": "scripts/check_v12_c09_peer.py",
+      "bytes": 34673,
+      "sha256": "1bc27e9e4935581279113a630fef53aefa6576c1e77b2877ff33312bfc03e123"
+    },
+    {
+      "path": "content/reviews/v12-c09-peer.json",
+      "bytes": 43280,
+      "sha256": "f81d62d064d9ceab0bc1766ca64a02b3f664552aec22d3fb7a15da1f33ede362"
+    }
+  ],
+  "full_root_reading": "All six final files read completely: prior author/root reading and exact promotion delta, then all 680 peer-checker lines and every field of the final 503-line peer record, including all twelve exact prompt/solution audits, analytic proofs, source scope and execution evidence. Truncated displays were recovered. No new material finding.",
+  "author_prior_gates": "production/v12-c09-author-validation.json;283 comparisons; all four final author files unchanged and bound above.",
+  "independent_peer_methods": "Future-shock polynomials; closed triangular impulse sums; exact Gaussian polynomial moments; stationary spread innovation loadings; centered affine GARCH moments and squared-return filters; primitive innovation weights for overlap and selection.",
+  "unchanged_payloads": true,
+  "exact_six_file_membership": true,
+  "limits": "Independent machine-assisted finite evidence complements analytic proof and exact solution review; no rendered reader UI, empirical validation or human certification."
+}

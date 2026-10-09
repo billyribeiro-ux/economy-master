@@ -1,0 +1,88 @@
+{
+  "chapter": "v12-c10",
+  "date": "2026-10-09",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating author with complete separate machine-assisted peer evidence",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Six original worked cases and twelve fully solved exercises: structural supply-demand identification and invariant interventions, minimum-distance pseudo-truth and extrapolation, simulation coupling and finite-atom simulated likelihood, indirect inference with shared covariates and nonregular boundaries, verified infinite-horizon dynamic choice and numerical certificates, and complete equilibrium/selection sets.",
+  "author_review": "reviews/v12-c10-author.json",
+  "peer_review": "reviews/v12-c10-peer.json",
+  "root_numerical_evidence": "production/v12-c10-author-validation.json",
+  "final_execution_evidence": "production/v12-c10-peer-validation.json",
+  "promotion_evidence": "production/v12-c10-promotion-delta.json",
+  "verified_payload_hashes": 6,
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v12-c10.html",
+      "bytes": 57732,
+      "sha256": "85c4aa2a156cd306db4746ae0bed7eb0cb2dec225c5a792ea05b22fee5c3c356"
+    },
+    {
+      "path": "scripts/check_v12_c10.py",
+      "bytes": 38276,
+      "sha256": "40ac8d32225e07ebb86f587852577a931061266dddba18c4994b98b32e98357c"
+    },
+    {
+      "path": "content/reviews/v12-c10-sources.json",
+      "bytes": 36695,
+      "sha256": "6de657aa374ad2fc70ca8c1596bf59e8136316cb30df420269fa5dce64e3fbb4"
+    },
+    {
+      "path": "content/reviews/v12-c10-author.json",
+      "bytes": 26100,
+      "sha256": "db678c166e10a289da3587d42e137fc5669e4f5fa484f983e212e9741f6c79ff"
+    },
+    {
+      "path": "scripts/check_v12_c10_peer.py",
+      "bytes": 32483,
+      "sha256": "bca88b303491ff7d7126dc32cdaa1181d4c68963d8f6c783c01cd3112bea1065"
+    },
+    {
+      "path": "content/reviews/v12-c10-peer.json",
+      "bytes": 50573,
+      "sha256": "64055fbc170535ce7ad79305d0b6aec63e52898b20c889601fa9107cffba62b4"
+    }
+  ],
+  "resolved_findings": [
+    {
+      "id": "c10-root-01",
+      "origin": "Coordinator substantive review before canonical promotion",
+      "issue": "The old dynamic wording said current shocks were independent of future transitions, although the current action selected using those shocks determines the next state.",
+      "resolution": "The final contract specifies independent fresh shocks conditional on past information/current predetermined state, observation of both current shocks before action, unobserved future shocks and the deterministic action-to-next-state map.",
+      "peer_assessment": "Resolved; this is the correct information structure for the stated Bellman expectation and admissible policies."
+    },
+    {
+      "id": "c10-root-02",
+      "origin": "Coordinator substantive review before canonical promotion",
+      "issue": "Contraction established a numerical fixed point, but the manuscript did not explicitly verify that it was the infinite-horizon decision-maker optimum.",
+      "resolution": "Final proof adds finite-horizon backward induction, a policy-uniform integrable discounted-tail bound, convergence to the infinite-horizon supremum and stationary-policy attainment.",
+      "peer_assessment": "Resolved; I checked finiteness, nonanticipation, truncation/extension, terminal-value vanishing and passage to the infinite expected sum."
+    },
+    {
+      "id": "c10-peer-root-01",
+      "issue": "Peer e02 prose omitted d from the tax quantity numerator.",
+      "resolution": "Corrected to Q=4-2*d/(2+d); author manuscript, examples, checker and peer numeric oracle were already correct.",
+      "status": "resolved"
+    },
+    {
+      "id": "c10-peer-root-02",
+      "issue": "Peer e04 pronoun could attribute the derivative lower bound to the cubic perturbation alone.",
+      "resolution": "Explicitly attributes the bound to the full marginal-cost curve; author proof and calculations were already correct.",
+      "status": "resolved"
+    }
+  ],
+  "open_content_findings": [],
+  "limitations": [
+    "Identification and intervention invariance require the declared economic restrictions; fit and solver convergence alone do not establish them.",
+    "Only the explicit finite/Gaussian simulation laws and bounded model proofs are supplied; no generic simulation theorem, dollar welfare claim or empirical model validity is certified.",
+    "Sources are verified only for recorded scopes; machine-assisted review is not independent human certification.",
+    "Rendered reader/mobile/keyboard/print QA remains pending under the recorded access limitation."
+  ]
+}

@@ -1,0 +1,625 @@
+{
+  "chapter": "v12-c11",
+  "date": "2026-10-09",
+  "coordinator": "root",
+  "state": "Original six-case numerical/proof blueprint, ready for independent author confirmation. No manuscript acceptance is implied.",
+  "source_preparation": {
+    "path": "production/v12-c11-source-preparation.json",
+    "bytes": 46321,
+    "sha256": "0f6f9dcd665ca0bd934c521cabe3996c8968b3ca17205791d2f5f7745d6c399c"
+  },
+  "source_root_reading": "production/v12-c11-source-root-reading.json",
+  "comparisons": 81,
+  "calculation_methods": "Exact Fraction posterior sums, explicit detailed-balance transitions and 81-path stationary variance, direct lasso matrix/residual identities, complete eight-atom AIPW law, executed two-fold cell fitting, exact rate perturbation and 144-state BH enumeration; Gaussian event tuning checked numerically against its derived tail bound.",
+  "cases": [
+    {
+      "id": 1,
+      "topic": "Finite Bayesian posterior, prediction and loss",
+      "law": "Four conditionally iid Bernoulli observations with three successes and one failure; theta takes 1/4,1/2,3/4. Ordered-record likelihood theta^3(1-theta); the binomial coefficient would cancel in this posterior.",
+      "inputs": {
+        "theta": [
+          "1/4",
+          "1/2",
+          "3/4"
+        ],
+        "prior": [
+          "1/4",
+          "1/2",
+          "1/4"
+        ],
+        "alternative_prior": [
+          "16/21",
+          "4/21",
+          "1/21"
+        ]
+      },
+      "results": {
+        "ordered_likelihood": [
+          "3/256",
+          "1/16",
+          "27/256"
+        ],
+        "posterior": [
+          "3/62",
+          "16/31",
+          "27/62"
+        ],
+        "posterior_mean_and_one_step_prediction": "37/62",
+        "posterior_second_moment_and_two_success_probability": "187/496",
+        "two_future_success_count_probabilities_0_1_2": [
+          "91/496",
+          "109/248",
+          "187/496"
+        ],
+        "posterior_variance_and_future_Bernoulli_covariance": "321/15376",
+        "posterior_high_state_probability": "27/62",
+        "alternative_posterior": [
+          "48/139",
+          "64/139",
+          "27/139"
+        ],
+        "launch_expected_utility": "11/62",
+        "alternative_launch_expected_utility": "-143/139"
+      },
+      "decision": "Do nothing has utility zero. Launch has utility +3 if theta=3/4, -2 otherwise. Base prior chooses launch; the alternative prior chooses no launch. Units are original hypothetical utility, not observed investment returns.",
+      "proof_scope": "Derive Bayes normalization, posterior predictive dependence and posterior expected-loss minimization. A proper finite posterior and a posterior probability are not automatically a frequentist coverage or causal statement."
+    },
+    {
+      "id": 2,
+      "topic": "Metropolis-Hastings correctness and Monte Carlo precision",
+      "inputs": {
+        "target": [
+          "3/62",
+          "16/31",
+          "27/62"
+        ],
+        "independence_proposal_each_row": [
+          "1/2",
+          "1/3",
+          "1/6"
+        ],
+        "observable": "indicator of the high theta state",
+        "stationary_sample_size": 4,
+        "separate_nonstationary_initial_state": "theta=1/4, before transition 1"
+      },
+      "results": {
+        "transition_matrix": [
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ],
+          [
+            "1/32",
+            "77/96",
+            "1/6"
+          ],
+          [
+            "1/54",
+            "16/81",
+            "127/162"
+          ]
+        ],
+        "minorization_delta": "31/81",
+        "residual_kernel": [
+          [
+            "39/50",
+            "11/50",
+            "0"
+          ],
+          [
+            "33/1600",
+            "1567/1600",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "contraction_and_observable_eigenvalue": "50/81",
+        "wrong_proposal_ratio_omission_matrix": [
+          [
+            "1/2",
+            "1/3",
+            "1/6"
+          ],
+          [
+            "3/64",
+            "13/16",
+            "9/64"
+          ],
+          [
+            "1/18",
+            "1/3",
+            "11/18"
+          ]
+        ],
+        "wrong_stationary_distribution": [
+          "9/100",
+          "16/25",
+          "27/100"
+        ],
+        "stationary_observable_mean": "27/62",
+        "stationary_observable_variance": "945/3844",
+        "stationary_covariances_lags_0_to_4": [
+          "945/3844",
+          "875/5766",
+          "21875/233523",
+          "1093750/18915363",
+          "54687500/1532144403"
+        ],
+        "stationary_average_variance_n4": "11274515/75661452",
+        "false_iid_average_variance_n4": "945/15376",
+        "finite_variance_inflation_n4": "1288516/531441",
+        "limiting_variance_inflation_from_covariance_sum": "131/31",
+        "start_low_expectations_after_transitions_1_to_4": [
+          "1/6",
+          "131/486",
+          "13111/39366",
+          "1186991/3188646"
+        ],
+        "start_low_average_bias": "-29674775/197696052",
+        "stationary_path_enumeration_states": 81
+      },
+      "proof_scope": "Prove off-diagonal pi_i P_ij=min(pi_i q_ij,pi_j q_ji), invariance and the explicit P=delta*Pi+(1-delta)*R total-variation contraction. Derive Cov(f(X0),f(Xk))=Var_pi(f)*lambda^k from the eigenfunction, then the finite triangular covariance-sum variance and its L2 law of large numbers. Stationary precision is not applied to the separate low-state initialization. Keeping rejected steps is part of the chain; no general chain CLT, spectral estimator consistency or iid Monte Carlo standard error is claimed."
+    },
+    {
+      "id": 3,
+      "topic": "Lasso optimization, sparse error bounds and nonidentification",
+      "normalization": "Minimize ||y-Xb||_2^2/(2n)+lambda||b||_1 with lambda>0. KKT score X_j^T(y-Xb)/n=lambda sign(b_j) at nonzero coordinates, absolute score <=lambda at zero coordinates.",
+      "inputs": {
+        "X": [
+          [
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "1",
+            "-1",
+            "1"
+          ],
+          [
+            "1",
+            "1",
+            "-1"
+          ],
+          [
+            "1",
+            "-1",
+            "-1"
+          ]
+        ],
+        "beta_reference": [
+          "2",
+          "0",
+          "-1"
+        ],
+        "noise_vector": [
+          "1/8",
+          "3/8",
+          "-1/8",
+          "1/8"
+        ],
+        "lambda": "1/2",
+        "support": [
+          0,
+          2
+        ]
+      },
+      "results": {
+        "y": [
+          "9/8",
+          "11/8",
+          "23/8",
+          "25/8"
+        ],
+        "gram_XTX_over_n": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "z_XTy_over_n": [
+          "17/8",
+          "-1/8",
+          "-7/8"
+        ],
+        "estimate": [
+          "13/8",
+          "0",
+          "-3/8"
+        ],
+        "KKT_score": [
+          "1/2",
+          "-1/8",
+          "-1/2"
+        ],
+        "error": [
+          "-3/8",
+          "0",
+          "5/8"
+        ],
+        "squared_coefficient_and_prediction_error": "17/32",
+        "coefficient_l1_error": "1",
+        "objective_at_optimum": "161/128",
+        "noise_score": [
+          "1/8",
+          "-1/8",
+          "1/8"
+        ],
+        "kappa": 1,
+        "general_prediction_bound_for_this_design": "9/2",
+        "general_coefficient_l2_bound": "3*sqrt(2)/2",
+        "general_coefficient_l1_bound": 12,
+        "duplicate_design": "n=1, X=[1,1], y=2, lambda=1/2",
+        "duplicate_minimizer_set": "b1>=0,b2>=0,b1+b2=3/2",
+        "duplicate_examples": [
+          [
+            "0",
+            "3/2"
+          ],
+          [
+            "1/2",
+            "1"
+          ],
+          [
+            "3/2",
+            "0"
+          ]
+        ],
+        "duplicate_common_fit": "3/2",
+        "duplicate_common_objective": "7/8",
+        "separate_Gaussian_tuning_example": {
+          "n": 100,
+          "p": 20,
+          "sigma": 1,
+          "failure_probability_bound": 0.05,
+          "lambda": 0.7312789742727697,
+          "calculated_union_bound": 0.05000000000000005
+        }
+      },
+      "proof_scope": [
+        "Prove existence from coercivity when lambda>0, coordinate KKT necessity via one-sided derivatives and sufficiency via convexity/subgradients, then orthogonal-design soft thresholding. Fitted values are unique even when coefficients are not, by strict convexity of squared loss in fitted values.",
+        "For y=X beta*+epsilon, exact support S size s, on ||X^T epsilon/n||inf<=lambda/2, derive ||X Delta||²/(2n)+(lambda/2)||Delta_Sc||1 <=(3lambda/2)||Delta_S||1. This proves the cone ||Delta_Sc||1<=3||Delta_S||1.",
+        "Declare kappa as the unsquared constant in ||X Delta||/sqrt(n)>=kappa||Delta||2 on that cone. Then ||Delta||2<=3lambda sqrt(s)/kappa², prediction error<=9lambda²s/kappa² and ||Delta||1<=12lambda s/kappa². Do not silently replace this full-vector cone condition by a support-only norm condition.",
+        "For fixed columns with norm<=sqrt(n) and iid Gaussian noise variance sigma², derive the Chernoff/union bound P(||X^T epsilon/n||inf>t)<=2p exp(-nt²/(2sigma²)). Choosing lambda=2sigma sqrt(2log(2p/alpha)/n) ensures the noise event with probability at least 1-alpha. This is separate from deterministic optimization and from proving a design curvature condition.",
+        "The duplicate columns violate the stated cone curvature for support {1}; good prediction does not identify an allocation between identical columns. No support-recovery, oracle tuning or post-selection confidence theorem is claimed."
+      ]
+    },
+    {
+      "id": 4,
+      "topic": "Double robustness and orthogonality under a fully stated causal law",
+      "law": "X is Bernoulli(1/2). Given X, treatment is Bernoulli(e(X)), independent of two independent fair +/-1 potential-outcome noises. Y(d)=m_d(X)+epsilon_d, and Y=Y(D). State consistency/no interference, conditional exchangeability and positive overlap. The observed eight-atom law is below.",
+      "inputs": {
+        "propensity": [
+          "1/4",
+          "3/4"
+        ],
+        "m0": [
+          "0",
+          "1"
+        ],
+        "m1": [
+          "2",
+          "4"
+        ],
+        "misspecified_propensity": [
+          "1/2",
+          "1/2"
+        ],
+        "misspecified_m0": [
+          "1/2",
+          "1/2"
+        ],
+        "misspecified_m1": [
+          "3",
+          "5"
+        ],
+        "observed_atoms": [
+          {
+            "X": 0,
+            "D": 0,
+            "Y": "-1",
+            "mass": "3/16"
+          },
+          {
+            "X": 0,
+            "D": 0,
+            "Y": "1",
+            "mass": "3/16"
+          },
+          {
+            "X": 0,
+            "D": 1,
+            "Y": "1",
+            "mass": "1/16"
+          },
+          {
+            "X": 0,
+            "D": 1,
+            "Y": "3",
+            "mass": "1/16"
+          },
+          {
+            "X": 1,
+            "D": 0,
+            "Y": "0",
+            "mass": "1/16"
+          },
+          {
+            "X": 1,
+            "D": 0,
+            "Y": "2",
+            "mass": "1/16"
+          },
+          {
+            "X": 1,
+            "D": 1,
+            "Y": "3",
+            "mass": "3/16"
+          },
+          {
+            "X": 1,
+            "D": 1,
+            "Y": "5",
+            "mass": "3/16"
+          }
+        ]
+      },
+      "results": {
+        "ATE": "5/2",
+        "AIPW_population_means": {
+          "true_both": "5/2",
+          "true_e_only": "5/2",
+          "true_regressions_only": "5/2",
+          "both_wrong": "11/4"
+        },
+        "both_wrong_bias": "1/4",
+        "oracle_influence_variance": "67/12",
+        "oracle_estimator_variance_n400": "67/4800"
+      },
+      "proof_scope": "For psi(g,e)=g1-g0+D(Y-g1)/e-(1-D)(Y-g0)/(1-e), derive E psi-theta=E[(e-e0){(g1-m1)/e+(g0-m0)/(1-e)}]. Either correct component makes the expectation correct; differentiating this product at the joint truth gives Neyman orthogonality. Under clipped e in [c,1-c], bound the bias by c^-1 ||e-e0||2 (||g1-m1||2+||g0-m0||2). Correct causal identification, population double robustness and root-N inference are distinct claims. Do not infer regular inference from one nuisance being correct while the other is inconsistent."
+    },
+    {
+      "id": 5,
+      "topic": "Cross-fitted estimation, variance, product rates and leakage",
+      "inputs": {
+        "eight_observations_in_order": [
+          {
+            "fold": 0,
+            "X": 0,
+            "D": 0,
+            "Y": "-1"
+          },
+          {
+            "fold": 0,
+            "X": 0,
+            "D": 1,
+            "Y": "3"
+          },
+          {
+            "fold": 0,
+            "X": 1,
+            "D": 0,
+            "Y": "0"
+          },
+          {
+            "fold": 0,
+            "X": 1,
+            "D": 1,
+            "Y": "5"
+          },
+          {
+            "fold": 1,
+            "X": 0,
+            "D": 0,
+            "Y": "1"
+          },
+          {
+            "fold": 1,
+            "X": 0,
+            "D": 1,
+            "Y": "1"
+          },
+          {
+            "fold": 1,
+            "X": 1,
+            "D": 0,
+            "Y": "2"
+          },
+          {
+            "fold": 1,
+            "X": 1,
+            "D": 1,
+            "Y": "3"
+          }
+        ],
+        "training_rule": "For each held-out fold, fit each (X,D) cell mean from the other fold; use zero for an empty cell, clip fitted regressions to [-5,5]. Fit treatment probability as (treated_count+1)/(X_count+2), clipped to [1/8,7/8]. Every tuning/preprocessing step obeys the same separation.",
+        "fixed_fold_count": 2
+      },
+      "results": {
+        "fitted_functions": [
+          {
+            "held_out_fold": 0,
+            "fitted_e": [
+              "1/2",
+              "1/2"
+            ],
+            "fitted_m0": [
+              "1",
+              "2"
+            ],
+            "fitted_m1": [
+              "1",
+              "3"
+            ]
+          },
+          {
+            "held_out_fold": 1,
+            "fitted_e": [
+              "1/2",
+              "1/2"
+            ],
+            "fitted_m0": [
+              "-1",
+              "0"
+            ],
+            "fitted_m1": [
+              "3",
+              "5"
+            ]
+          }
+        ],
+        "held_out_scores_in_record_order": [
+          "4",
+          "4",
+          "5",
+          "5",
+          "0",
+          "0",
+          "1",
+          "1"
+        ],
+        "pooled_estimate": "5/2",
+        "fold_estimates": [
+          "9/2",
+          "1/2"
+        ],
+        "score_variance_divisor_N": "17/4",
+        "estimated_mean_variance": "17/32",
+        "rate_boundary_N": 256,
+        "rate_boundary_e_shift": "1/32",
+        "rate_boundary_m1_shift": "1/4",
+        "rate_boundary_exact_bias": "17/900",
+        "rate_boundary_sqrtN_bias": "68/225",
+        "rate_boundary_limit_sqrtN_bias": "1/3"
+      },
+      "proof_contract": [
+        "Use iid observations, fixed K with fold sizes proportional to N, bounded Y and fitted regressions, true and clipped fitted propensities bounded away from 0/1, foldwise L2 consistency, sqrt(N) times the propensity-error/outcome-error product o_P(1), and positive finite oracle influence variance. These are assumptions or separately justified learner facts, not consequences of the phrase machine learning.",
+        "Condition on one fold training sample at a time. Its held-out rows are iid and independent of that training sample. The conditional mean score error is the product remainder and the conditional variance is bounded by the score-difference second moment, itself controlled by L2 nuisance errors. Markov/Chebyshev and fixed-fold summation give an oracle iid average plus o_P(N^-1/2); the fits across folds are not jointly independent.",
+        "Prove empirical mean squared fitted-oracle score error tends to zero by foldwise conditional Markov and boundedness. Cauchy-Schwarz, consistency and the iid oracle square LLN give empirical score variance consistency. Apply only the already taught iid CLT to the oracle sum, then studentize. The finite eight-row estimated variance is a procedure demonstration, not a finite-sample coverage theorem.",
+        "For this finite-covariate cell-mean learner, positive population cells and training samples of order N permit elementary bounded-moment ratio arguments yielding O_P(N^-1/2) nuisance errors. If included, derive this fact explicitly rather than assign generic rates to arbitrary learners.",
+        "A rate n^-1/5 for propensity and n^-1/3 for outcome errors makes the root-N product vanish. Two O_P(n^-1/4) bounds alone need not. In the original law set fitted e=e0+(1/8)N^-1/4, fitted m1=m1+N^-1/4 and fitted m0=m0. The exact bias has sqrt(N) limit 1/3. At N=256 its value is 17/900 and scaled value 68/225.",
+        "Leakage counterexample: augment X by an independent continuously distributed identifier Z. Even grant correct nuisance regressions away from the finite training identifiers; overwrite both g0 and g1 at each training identifier by that row outcome. Retain the true propensity. Fresh-observation L2 errors are zero because the modified finite set has probability zero, but scores evaluated on their own training rows are all zero. Estimated ATE and score variance are zero despite the true ATE 5/2. Proper held-out scoring avoids those overwritten identifiers almost surely. This is a mathematical counterexample to replacing sample separation or empirical-process control by population L2 rates alone."
+      ]
+    },
+    {
+      "id": 6,
+      "topic": "Multiple testing and valid family-level conclusions",
+      "inputs": {
+        "fixed_configuration": [
+          "1/100",
+          "3/100",
+          "7/200",
+          "1/5"
+        ],
+        "fixed_configuration_q": "1/20",
+        "independent_law": "m=3, one false-null p-value identically zero, two independent true-null p-values each uniform on {1/12,2/12,...,1}; q=1/4. The discrete nulls are valid super-uniform.",
+        "dependent_complete_null_law": [
+          {
+            "p": [
+              "1/20",
+              "1"
+            ],
+            "mass": "1/20"
+          },
+          {
+            "p": [
+              "1",
+              "1/20"
+            ],
+            "mass": "1/20"
+          },
+          {
+            "p": [
+              "1/10",
+              "1/10"
+            ],
+            "mass": "1/20"
+          },
+          {
+            "p": [
+              "1",
+              "1"
+            ],
+            "mass": "17/20"
+          }
+        ],
+        "dependent_q": "1/10"
+      },
+      "results": {
+        "fixed_configuration_BH_rejected_one_based": [
+          1,
+          2,
+          3
+        ],
+        "fixed_configuration_Bonferroni_and_Holm_rejected_one_based": [
+          1
+        ],
+        "independent_complete_joint_states": 144,
+        "independent_rejection_count_distribution_counts": {
+          "1": 99,
+          "2": 36,
+          "3": 9
+        },
+        "independent_FDR": "1/6",
+        "independent_bound_m0_q_over_m": "1/6",
+        "independent_FWER": "5/16",
+        "independent_EV": "3/8",
+        "independent_ER": "11/8",
+        "incorrect_ratio_EV_over_ER": "3/11",
+        "dependent_complete_null_FDR_and_FWER": "3/20",
+        "dependent_Bonferroni_FWER": "1/10",
+        "dependent_Holm_FWER": "1/10"
+      },
+      "proof_contract": [
+        "Define FDP=V/max(R,1), FDR=E FDP and FWER=P(V>0). FDR is neither E(V)/E(R), a bound on every realized FDP nor the conditional expected FDP given a discovery. Under the complete null it equals FWER.",
+        "Use largest passing ordered index and inclusive thresholds, with ties handled. A failed earlier ordered comparison does not require stopping.",
+        "Prove the leave-one-out step-up lemma: set p_i to zero and call the resulting count R_i, which is measurable from the other p-values and at least 1. On i rejected, R_i=R; conversely p_i<=q R_i/m implies R=R_i and i rejected. Hence 1{i rejected}/max(R,1)=1{p_i<=q R_i/m}/R_i.",
+        "For each true null independent of the entire other-p-value vector and super-uniform, conditional expectation of that last quantity is at most q/m. Sum over the m0 nulls. False-null p-values can depend among themselves; independent true nulls must also be independent of them. Continuous exact uniforms give equality, while the original finite discrete law also attains equality at its aligned grid.",
+        "The dependent four-atom complete-null law has valid marginal p-values but violates independence, giving BH FDR 3/20 at q=1/10. Bonferroni/Holm still attain familywise error 1/10 there. This is an original computed counterexample, not an uninspected arbitrary-dependence extension theorem."
+      ]
+    }
+  ],
+  "required_full_proof_routes": [
+    "Finite posterior/predictive/decision calculations.",
+    "Finite-chain balance, explicit minorization contraction, stationary covariance precision and separate initialization.",
+    "Correctly normalized convex KKT, existence/unique fitted values, exact-sparse cone, explicit cone-curvature bounds and fixed-design Gaussian event.",
+    "ATE identification under the stated causal law, exact DR bias factorization and orthogonality.",
+    "Bounded iid fixed-fold root-N expansion and variance consistency, without conditioning on all fits jointly or attributing learner rates to cross-fitting.",
+    "BH leave-one-out lemma and independent super-uniform control including ties; precise dependence counterexample."
+  ],
+  "suggested_exercise_coverage": [
+    "Posterior/prediction and prior-sensitive loss decision",
+    "MH flow and wrong proposal ratio",
+    "Stationary precision, contraction and initialization",
+    "KKT/coercivity and unique fitted values",
+    "Basic inequality, cone, stated curvature and Gaussian probability event",
+    "Original orthogonal lasso and duplicate-column transfer",
+    "DR exact identity and finite-law calculations",
+    "Complete bounded cross-fit expansion and variance proof",
+    "Execute two-fold fitting and diagnose interpolation leakage",
+    "Quarter-rate nonvanishing bias versus a product rate that is sufficient",
+    "BH leave-one-out proof, finite enumeration and dependence failure",
+    "An exact 12-point research-audit rubric separating causality, posterior claims, optimization, nuisance rates, Monte Carlo precision and multiplicity"
+  ],
+  "boundaries": [
+    "All cases and data are original synthetic constructions. No current empirical or investment claim.",
+    "No general-state MCMC CLT, support-recovery/post-selection theorem, arbitrary learner-rate guarantee, semiparametric efficiency proof, conditional-effect bands, dependent DML theorem or arbitrary-dependence BH claim.",
+    "The manuscript must teach every argument required by its exact exercises and supply full solutions. Finite checks do not replace analytic proof or independent peer review."
+  ]
+}

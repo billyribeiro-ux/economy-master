@@ -1,0 +1,855 @@
+{
+  "chapter": "v12-c12",
+  "title": "Econometric research audit",
+  "date": "2026-10-09",
+  "status": "source preparation complete and frozen; not a chapter or blueprint",
+  "assignment": "production/v12-c12-source-assignment.json",
+  "specialist": "/root/ito_author",
+  "scope": "Source-only preparation for a later original empirical-paper dossier. No manuscript, original numerical case, model, checker, curriculum update or chapter acceptance is produced by this assignment.",
+  "ownership": {
+    "preparation_record": "production/v12-c12-source-preparation.json",
+    "scratch_subtree": "../tmp/pdfs/v12-c12/",
+    "all_written_payloads": "This preparation record and the exact eighteen artifacts listed below; no other files were written."
+  },
+  "inspection_summary": {
+    "source_records": 4,
+    "existing_catalogue_ids_reused": [
+      "asa-pvalues-2016",
+      "v04-c01-aea-data-faq"
+    ],
+    "new_primary_pdfs": 2,
+    "new_official_html_bodies": 2,
+    "prior_body_scopes_reused_without_new_body_reading": [
+      "asa-pvalues-2016"
+    ],
+    "new_pdf_text_pages_read": 27,
+    "new_rendered_pages_actually_viewed": 6,
+    "new_rendered_equation_or_assumption_pages": 5,
+    "new_rendered_table_pages": 1,
+    "pdf_pages_retained_but_not_all_claimed_read": 41,
+    "no_access_failures": true
+  },
+  "tools_and_methods": {
+    "skill": "/Users/billyribeiro/.codex/plugins/cache/openai-primary-runtime/pdf/26.1007.11041/skills/pdf/SKILL.md",
+    "retrieval": "Public web discovery followed by direct Python standard-library urllib.request retrieval; no credentials, altered access rights, proxy bypass or installation.",
+    "pdf_text": "Existing /opt/homebrew/bin/pdftotext -layout; page mapping confirmed from text headers/footers and selected rendered pages.",
+    "pdf_metadata": "Existing /opt/homebrew/bin/pdfinfo; metadata timestamps are not treated as article publication dates.",
+    "rendering": "Existing /opt/homebrew/bin/pdftoppm -f PAGE -l PAGE -scale-to 1800 -singlefile -png, followed by view_image of every retained PNG.",
+    "html_text": "Python standard-library HTMLParser, ignoring script/style contents, with normalized whitespace and line boundaries. Raw responses retained.",
+    "hashing": "SHA-256 of exact bytes; hash agreement establishes file identity, not methodological validity."
+  },
+  "sources": [
+    {
+      "id": "asa-pvalues-2016",
+      "catalogue_action": "reuse existing ID; no catalogue mutation",
+      "bibliography": {
+        "authors": [
+          "Ronald L. Wasserstein",
+          "Nicole A. Lazar"
+        ],
+        "title": "The ASA Statement on p-Values: Context, Process, and Purpose",
+        "year": 2016,
+        "canonical_url": "https://doi.org/10.1080/00031305.2016.1154108",
+        "prior_body_url": "https://www.stat.berkeley.edu/~aldous/Real_World/ASA_statement.pdf"
+      },
+      "inspection_kind": "reuse of retained prior verification; no new ASA body retrieval or reading",
+      "prior_catalogue_record": {
+        "id": "asa-pvalues-2016",
+        "title": "Wasserstein and Lazar — The ASA Statement on p-Values: Context, Process, and Purpose (2016)",
+        "url": "https://doi.org/10.1080/00031305.2016.1154108",
+        "use": "Model-conditional p-value interpretation, transparency and limits of significance thresholds.",
+        "checked": "2026-10-07",
+        "verification": "Original six-page paper retrieved in author-distributed form at https://www.stat.berkeley.edu/~aldous/Real_World/ASA_statement.pdf; principles and reporting sections inspected. DOI is the canonical publication route. Method source, not independent certification of this manuscript."
+      },
+      "current_inspection": {
+        "inspector": "/root/ito_author",
+        "date": "2026-10-09",
+        "actually_read": "Existing source catalogue entry and its stated principles/reporting scope.",
+        "historical_body_inspector": "Not named in the retained catalogue entry; do not attribute that earlier body inspection to this specialist.",
+        "page_mapping": "Prior record describes a six-page paper but records no precise physical/printed page mapping. None is reconstructed or newly claimed.",
+        "new_rendered_pages": []
+      },
+      "claim_to_source_support": [
+        {
+          "claim": "A p-value is interpreted under a specified statistical model; it is not the probability that the null is true.",
+          "locator": "Previously verified ASA principles scope; precise earlier page locator not retained."
+        },
+        {
+          "claim": "Threshold crossing alone does not establish scientific importance; complete reporting and transparency matter.",
+          "locator": "Previously verified principles and reporting sections."
+        }
+      ],
+      "assumptions_and_exclusions": [
+        "Reuse is sufficient for those established cautions only; a new page-specific quotation or additional ASA claim would need fresh inspection.",
+        "No assertion of ASA endorsement, chapter certification, or acceptance of a learner's work."
+      ],
+      "verification": "Existing asa-pvalues-2016 record read on 9 October 2026. Its 7 October 2026 verification reports retrieval of the six-page author-distributed paper and inspection of principles/reporting sections. This preparation reuses that scope and makes no new ASA body-reading claim."
+    },
+    {
+      "id": "v04-c01-aea-data-faq",
+      "catalogue_action": "reuse existing ID with a dated supplementary official-policy scope proposal; no catalogue mutation",
+      "bibliography": {
+        "institution": "American Economic Association",
+        "title": "Data and Code Availability Policy: Frequently Asked Questions",
+        "url": "https://www.aeaweb.org/journals/data/faq",
+        "supporting_title": "Data and Code Availability Policy",
+        "supporting_url": "https://www.aeaweb.org/journals/data/data-code-policy",
+        "policy_version_as_printed": "February 2026",
+        "faq_version": "No separate revision date found in the inspected body.",
+        "access_date": "2026-10-09"
+      },
+      "prior_catalogue_record": {
+        "id": "v04-c01-aea-data-faq",
+        "title": "AEA Data and Code Availability Policy: Frequently Asked Questions",
+        "url": "https://www.aeaweb.org/journals/data/faq",
+        "use": "Professional data/code availability, documentation, deposit licensing and restricted-data distinctions",
+        "checked": "2026-10-07",
+        "verification": "Retrieved official FAQ; inspected code/output checks, accessibility, license choices, archive versus repository and restricted-sharing sections. No claim that library passed AEA review."
+      },
+      "inspection_kind": "fresh official HTML body reading, following inspection of the existing catalogue and V04 source proposal",
+      "current_inspection": {
+        "inspector": "/root/ito_author",
+        "date": "2026-10-09",
+        "bodies": [
+          "../tmp/pdfs/v12-c12/aea-faq.html",
+          "../tmp/pdfs/v12-c12/aea-policy.html"
+        ],
+        "text_artifacts": [
+          "../tmp/pdfs/v12-c12/aea-faq.txt",
+          "../tmp/pdfs/v12-c12/aea-policy.txt"
+        ],
+        "page_mapping": "HTML pages have no physical/printed PDF pages. Line locators refer to the retained normalized local text, not browser line numbers.",
+        "selected_sections": [
+          {
+            "body": "aea-faq",
+            "local_text_lines": [
+              51,
+              90
+            ],
+            "sections": [
+              "Licensing",
+              "What to Expect",
+              "Uploading"
+            ]
+          },
+          {
+            "body": "aea-faq",
+            "local_text_lines": [
+              99,
+              103
+            ],
+            "sections": [
+              "Software execution instructions",
+              "Identifiable information"
+            ]
+          },
+          {
+            "body": "aea-faq",
+            "local_text_lines": [
+              122,
+              135
+            ],
+            "sections": [
+              "Restricted access and confidential sharing"
+            ]
+          },
+          {
+            "body": "aea-policy",
+            "local_text_lines": [
+              22,
+              54
+            ],
+            "sections": [
+              "Core requirements and constrained access",
+              "Data",
+              "Computer Code"
+            ]
+          },
+          {
+            "body": "aea-policy",
+            "local_text_lines": [
+              62,
+              80
+            ],
+            "sections": [
+              "Documentation (README)",
+              "Deposit location, license, format and version of record"
+            ]
+          },
+          {
+            "body": "aea-policy",
+            "local_text_lines": [
+              84,
+              84
+            ],
+            "sections": [
+              "Policy version statement"
+            ]
+          }
+        ],
+        "incidental_adjacent_text": "The surrounding policy/FAQ text was visible during extraction, including experimental-policy and PSID references; no specialist audit of those linked rules or dataset permissions is claimed.",
+        "rendered_equation_pages": "Not applicable; these are HTML policy bodies with no needed mathematical equation image."
+      },
+      "claim_to_source_support": [
+        {
+          "claim": "The current policy requires a documented path from raw/analysis data and code to the reported outputs.",
+          "locator": "Policy, Data and Computer Code; retained lines 29–54."
+        },
+        {
+          "claim": "The README records provenance, access conditions, resources, execution steps and program-to-exhibit mappings.",
+          "locator": "Policy, Data Availability Statement and Documentation; retained lines 30–31 and 62–71."
+        },
+        {
+          "claim": "Restricted access requires disclosure and appropriate preservation/access arrangements; sharing privately for a check is distinct from permission to publish.",
+          "locator": "Policy lines 22–25, 36–37; FAQ Restricted-Access Data lines 122–135."
+        },
+        {
+          "claim": "A reproducibility check depends on available data, software, code, time and compute; third-party assistance may be necessary.",
+          "locator": "FAQ What to Expect, lines 54–65."
+        },
+        {
+          "claim": "A live code repository or cloud folder is not automatically a suitable preserved archive.",
+          "locator": "FAQ Uploading, lines 69–84; policy Location, lines 73–74."
+        }
+      ],
+      "assumptions_and_exclusions": [
+        "These are dated AEA journal requirements/guidance, not a general law or certification of this library.",
+        "No restricted data were obtained, redistributed or requested. No contact with the AEA or third-party replicators occurred.",
+        "No AEA submission, deposit, acceptance, affiliation or compliance review is claimed.",
+        "The linked legal, experimental, IRB, registry, DCAS and third-party-protocol bodies were not separately inspected.",
+        "The February 2026 policy specifies a PDF README and generally unzipped deposits; these source-specific submission details do not impose an unassigned publishing change on the textbook.",
+        "If the FAQ's older ZIP workflow and current deposit-format instructions are compared, distinguish archive preparation from the final deposit format; do not use an older workflow illustration to override the versioned policy."
+      ],
+      "verification": "Official FAQ and February 2026 policy retrieved directly with HTTP 200 on 9 October 2026. The specialist read the retained data/code/README, checking, archive/licensing and restricted-access sections. Their exact HTML and text bytes are retained and hashed. Existing v04-c01-aea-data-faq ID is reused; no AEA review of this project is implied."
+    },
+    {
+      "id": "v12-c12-olken-preanalysis2015",
+      "catalogue_action": "new source proposal only",
+      "bibliography": {
+        "author": "Benjamin A. Olken",
+        "title": "Promises and Perils of Pre-Analysis Plans",
+        "journal": "Journal of Economic Perspectives",
+        "volume": 29,
+        "issue": 3,
+        "season": "Summer",
+        "year": 2015,
+        "printed_pages": "61–80",
+        "doi": "10.1257/jep.29.3.61",
+        "canonical_url": "https://doi.org/10.1257/jep.29.3.61",
+        "retrieval_url": "https://economics.mit.edu/research/publications/promises-and-perils-pre-analysis-plans",
+        "resolved_body_url": "https://economics.mit.edu/sites/default/files/publications/JEP%20Analysis%20Plans%20Final.pdf",
+        "version": "Published JEP body hosted by the author's MIT department; PDF title, journal header, DOI and permission line inspected."
+      },
+      "inspection_kind": "new primary PDF body text and table-page inspection",
+      "current_inspection": {
+        "inspector": "/root/ito_author",
+        "date": "2026-10-09",
+        "pdf": "../tmp/pdfs/v12-c12/olken2015.pdf",
+        "text": "../tmp/pdfs/v12-c12/olken2015.txt",
+        "physical_page_count": 20,
+        "physical_to_printed": "For every physical PDF page j=1,…,20, printed page is 60+j.",
+        "full_text_pages_read": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          18
+        ],
+        "corresponding_printed_pages_read": [
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          78
+        ],
+        "sections": [
+          {
+            "physical_pages": [
+              1,
+              2,
+              3
+            ],
+            "printed_pages": [
+              61,
+              62,
+              63
+            ],
+            "scope": "Opening motivation and the distinction between exploratory and confirmatory work; footnote distinguishes trial registration from analysis planning."
+          },
+          {
+            "physical_pages": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "printed_pages": [
+              64,
+              65,
+              66,
+              67,
+              68,
+              69
+            ],
+            "scope": "What Is a Pre-Analysis Plan? Contents, timing, blinded information and archiving."
+          },
+          {
+            "physical_pages": [
+              9,
+              10
+            ],
+            "printed_pages": [
+              69,
+              70
+            ],
+            "scope": "Benefits, including protection against partner pressure."
+          },
+          {
+            "physical_pages": [
+              11,
+              12,
+              13,
+              14
+            ],
+            "printed_pages": [
+              71,
+              72,
+              73,
+              74
+            ],
+            "scope": "Costs of exhaustive prespecification, exploration and implementation monitoring; adjacent opening of the empirical discussion read only as context."
+          },
+          {
+            "physical_pages": [
+              18
+            ],
+            "printed_pages": [
+              78
+            ],
+            "scope": "Thoughts on the Way Forward."
+          }
+        ],
+        "rendered_pages_actually_viewed": [
+          {
+            "physical_page": 5,
+            "printed_page": 65,
+            "artifact": "../tmp/pdfs/v12-c12/olken2015-p5.png",
+            "observed": "Table 1 and the adjacent multiple-testing discussion; verified the table columns and typeset Bonferroni expression."
+          }
+        ],
+        "excluded_pages": [
+          15,
+          16,
+          17,
+          19,
+          20
+        ],
+        "excluded_material": "The later empirical p-value audit, references and linked appendix/disclosures were not substantively inspected; no source empirical result is independently reproduced."
+      },
+      "claim_to_source_support": [
+        {
+          "claim": "Prespecification can constrain outcome, sample and specification choices before results are observed.",
+          "locator": "Printed pp. 62–69; Table 1 on p. 65."
+        },
+        {
+          "claim": "Plans should distinguish primary, secondary and exploratory analyses and describe the information available when choices were made.",
+          "locator": "Printed pp. 64–69 and 71–72."
+        },
+        {
+          "claim": "Exploration can be informative; requiring every contingent branch in advance has costs.",
+          "locator": "Printed pp. 71–74 and 78."
+        },
+        {
+          "claim": "A timestamped plan can document prior commitments, but the timing and information boundary still matter.",
+          "locator": "Printed pp. 67–69."
+        }
+      ],
+      "assumptions_and_exclusions": [
+        "Use the 2015 discussion as methodological argument, not a claim about current registry rules, FDA requirements, trial counts or research budgets.",
+        "A plan does not by itself establish assignment validity, causal identification, correct standard errors, honest execution or external validity; those must be audited separately.",
+        "No source example, checklist wording or empirical table is to be copied into the original dossier.",
+        "Preregistering a test does not repair a misspecified null distribution; any later chapter search correction must be proved under its declared law.",
+        "Prospective commitments and post-result amendments must be separated in the new dossier. Transparent exploratory deviations are not to be relabeled as original confirmatory choices."
+      ],
+      "verification": "The published 20-page JEP PDF was retrieved from Olken's MIT route on 9 October 2026. The specialist read physical pages 1–14 and 18 (printed 61–74 and 78), and actually viewed rendered physical page 5. Bibliography, precise sections and exclusions are retained. No uninspected appendix or empirical-audit result is claimed."
+    },
+    {
+      "id": "v12-c12-dahabreh-target2019",
+      "catalogue_action": "new source proposal only",
+      "bibliography": {
+        "authors": [
+          "Issa J. Dahabreh",
+          "Sarah E. Robertson",
+          "Jon A. Steingrimsson",
+          "Elizabeth A. Stuart",
+          "Miguel A. Hernán"
+        ],
+        "title": "Extending inferences from a randomized trial to a new target population",
+        "version": "Author-deposited arXiv:1805.00550v3 [stat.ME], 28 October 2019",
+        "year_of_inspected_version": 2019,
+        "url": "https://arxiv.org/abs/1805.00550v3",
+        "body_url": "https://arxiv.org/pdf/1805.00550v3",
+        "later_publication_metadata_only": {
+          "journal": "Statistics in Medicine",
+          "year": 2020,
+          "volume": 39,
+          "issue": 14,
+          "pages": "1999–2014",
+          "doi": "10.1002/sim.8426",
+          "metadata_url": "https://pubmed.ncbi.nlm.nih.gov/32253789/",
+          "limit": "The later journal body was not retrieved or represented as the inspected version."
+        }
+      },
+      "inspection_kind": "new author-deposited primary PDF body text and equation-page inspection",
+      "current_inspection": {
+        "inspector": "/root/ito_author",
+        "date": "2026-10-09",
+        "pdf": "../tmp/pdfs/v12-c12/dahabreh2019v3.pdf",
+        "text": "../tmp/pdfs/v12-c12/dahabreh2019v3.txt",
+        "physical_page_count": 21,
+        "physical_to_printed": "Physical PDF page j equals printed manuscript page j for j=1,…,21; these are not the later journal page numbers.",
+        "full_text_pages_read": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          14,
+          15,
+          16,
+          17
+        ],
+        "sections": [
+          {
+            "physical_pages": [
+              1,
+              2,
+              3
+            ],
+            "printed_pages": [
+              1,
+              2,
+              3
+            ],
+            "scope": "Title/version, Background, Basic concepts and terminology, and Study designs."
+          },
+          {
+            "physical_pages": [
+              3,
+              4,
+              5
+            ],
+            "printed_pages": [
+              3,
+              4,
+              5
+            ],
+            "scope": "Data and causal quantities: nested versus nonnested sampling and the target of nonparticipants."
+          },
+          {
+            "physical_pages": [
+              5,
+              6
+            ],
+            "printed_pages": [
+              5,
+              6
+            ],
+            "scope": "Identifiability conditions (1)–(5) and identification displays."
+          },
+          {
+            "physical_pages": [
+              6,
+              7,
+              8
+            ],
+            "printed_pages": [
+              6,
+              7,
+              8
+            ],
+            "scope": "Outcome model, inverse-odds and augmented estimators; equations (1)–(6)."
+          },
+          {
+            "physical_pages": [
+              14,
+              15,
+              16
+            ],
+            "printed_pages": [
+              14,
+              15,
+              16
+            ],
+            "scope": "Practical issues: exchangeability, covariates, model specification, positivity and weights."
+          },
+          {
+            "physical_pages": [
+              16,
+              17
+            ],
+            "printed_pages": [
+              16,
+              17
+            ],
+            "scope": "Discussion and scope limits; adjacent acknowledgments and opening references seen but not treated as separate inspected sources."
+          }
+        ],
+        "rendered_pages_actually_viewed": [
+          {
+            "physical_page": 5,
+            "printed_page": 5,
+            "artifact": "../tmp/pdfs/v12-c12/dahabreh2019v3-p5.png",
+            "observed": "The five identification assumptions and the nonnested mixture warning."
+          },
+          {
+            "physical_page": 6,
+            "printed_page": 6,
+            "artifact": "../tmp/pdfs/v12-c12/dahabreh2019v3-p6.png",
+            "observed": "Target-standardization displays and weaker effect-only assumption distinction."
+          },
+          {
+            "physical_page": 7,
+            "printed_page": 7,
+            "artifact": "../tmp/pdfs/v12-c12/dahabreh2019v3-p7.png",
+            "observed": "Equations (1)–(3), treatment-probability factor and the distinct normalizing denominators."
+          },
+          {
+            "physical_page": 8,
+            "printed_page": 8,
+            "artifact": "../tmp/pdfs/v12-c12/dahabreh2019v3-p8.png",
+            "observed": "Equations (4)–(6); outcome/weight residual augmentation and the canonical-link qualification for the third estimator."
+          },
+          {
+            "physical_page": 16,
+            "printed_page": 16,
+            "artifact": "../tmp/pdfs/v12-c12/dahabreh2019v3-p16.png",
+            "observed": "Exact weight-total display, supporting expectation identity and surrounding diagnostic prose."
+          }
+        ],
+        "excluded_pages": [
+          9,
+          10,
+          11,
+          12,
+          13,
+          18,
+          19,
+          20,
+          21
+        ],
+        "excluded_material": "Inference subsection, simulation study, CASS results, full reference list and separate appendix were not substantively inspected. No general asymptotic, efficient-influence-function, machine-learning or nonnested-sampling appendix proof is adopted."
+      },
+      "claim_to_source_support": [
+        {
+          "claim": "The target is the population of nonparticipants, with a specified sampling design.",
+          "locator": "Sections 2–3, pp. 2–5."
+        },
+        {
+          "claim": "Identification requires consistency, mean exchangeability and positivity for treatment and participation.",
+          "locator": "Section 4.1, pp. 5–6."
+        },
+        {
+          "claim": "Target covariate standardization and inverse-odds weighting use the observed trial conditional outcome means.",
+          "locator": "Section 4.2 and equations (1)–(3), pp. 6–7."
+        },
+        {
+          "claim": "Conditional mean transportability is a substantive assumption; weighting diagnostics do not establish it.",
+          "locator": "Sections 8.1 and 9, pp. 14 and 16–17."
+        },
+        {
+          "claim": "Unsupported target cells require extrapolation; extreme weights and incomplete measurements limit an audit.",
+          "locator": "Section 8.4 and Discussion, pp. 15–17."
+        }
+      ],
+      "notation_for_scope_only": {
+        "S": "Trial participation indicator, 1 for trial, 0 for the target nonparticipants.",
+        "A": "Finite treatment assignment.",
+        "X": "Baseline variables observed in trial and target sample.",
+        "p(x)": "P(S=1 | X=x) in the declared population law; do not silently substitute a different sampling law.",
+        "e_a(x)": "P(A=a | X=x,S=1).",
+        "m_a(x)": "E[Y | X=x,S=1,A=a].",
+        "target": "mu_a=E[Y^a | S=0], with P(S=0)>0."
+      },
+      "assumptions_and_exclusions": [
+        "Treatment randomization within S=1 does not randomize participation S; both links need separate justification.",
+        "Require integrable potential outcomes, well-defined treatment and outcome timing, consistency without a direct participation effect, and the stated mean assumptions.",
+        "For each target-supported cell, p(x)>0 and e_a(x)>0 are needed. Target-supported cells already have p(x)<1; trial-only cells need not be removed merely because p(x)=1.",
+        "The new finite-covariate proof must distinguish equality of each potential-outcome mean from equality only of conditional treatment effects. Effect transport alone does not identify both level means.",
+        "The inspected source allows separately sampled nonparticipants but delegates sampling proofs to an appendix not read here. An arbitrary concatenated trial/target sample fraction is not the original population participation probability or a target-population weight.",
+        "Doubly robust estimator formulas were inspected, but broad consistency, normality, efficiency and generic ML-rate claims are not imported from this reading.",
+        "No survival, nonadherence, missing-outcome, measurement-error, interference, multitrial or dynamic-treatment extension is certified.",
+        "No CASS data, code, numerical results or substantive medical conclusion are reused."
+      ],
+      "specialist_equation_cautions": [
+        {
+          "locator": "p. 7, equations (2) and (3)",
+          "finding": "The first estimator divides by the observed number of nonparticipants; the ratio estimator divides by the sum of treatment-specific weights. They are different finite-sample estimators.",
+          "handling": "Keep normalizations explicit and require a nonzero denominator. For nonnegative normalized weights, the estimate lies in the convex hull of contributing outcomes, not necessarily their discrete support. Do not infer exact unbiasedness or uniform risk dominance."
+        },
+        {
+          "locator": "p. 16, displayed diagnostic and preceding prose",
+          "finding": "The prose describes a ratio involving a participant-only average, but the displayed expression is sum_i S_i(1-p_i)/p_i divided by sum_i(1-S_i). The latter matches the next displayed population identity E[S(1-p(X))/p(X)]=P(S=0).",
+          "handling": "If used later, define the exact displayed ratio directly; do not repeat the ambiguous prose. A ratio near one does not prove exchangeability or rule out all positivity/misspecification problems."
+        },
+        {
+          "locator": "p. 15, discussion of flexible models",
+          "finding": "A generic root-n claim is not a substitute for explicit nuisance-rate and sampling assumptions.",
+          "handling": "Use only a separately proved finite-cell identification result in the planned dossier unless a later assignment supplies and verifies a stronger theorem."
+        }
+      ],
+      "verification": "Author-deposited arXiv v3 dated 28 October 2019 retrieved with HTTP 200 on 9 October 2026. The specialist read physical/printed pages 1–8 and 14–17 and actually viewed rendered pages 5, 6, 7, 8 and 16. The current record supports only the stated target/identification/weighting/caveat scope. The separate appendix and later 2020 journal body were not inspected."
+    }
+  ],
+  "catalogue_proposals": [
+    {
+      "id": "asa-pvalues-2016",
+      "action": "reuse",
+      "title": "Wasserstein and Lazar — The ASA Statement on p-Values: Context, Process, and Purpose (2016)",
+      "url": "https://doi.org/10.1080/00031305.2016.1154108",
+      "use": "Previously verified model-conditional p-value interpretation and complete-reporting limits.",
+      "checked": "2026-10-09",
+      "verification": "Existing asa-pvalues-2016 record read on 9 October 2026. Its 7 October 2026 verification reports retrieval of the six-page author-distributed paper and inspection of principles/reporting sections. This preparation reuses that scope and makes no new ASA body-reading claim."
+    },
+    {
+      "id": "v04-c01-aea-data-faq",
+      "action": "reuse",
+      "title": "AEA Data and Code Availability Policy: Frequently Asked Questions",
+      "url": "https://www.aeaweb.org/journals/data/faq",
+      "supporting_urls": [
+        "https://www.aeaweb.org/journals/data/data-code-policy"
+      ],
+      "use": "Dated professional reproducibility, README, data/code provenance, restricted-access and archive requirements.",
+      "checked": "2026-10-09",
+      "verification": "Official FAQ and February 2026 policy retrieved directly with HTTP 200 on 9 October 2026. The specialist read the retained data/code/README, checking, archive/licensing and restricted-access sections. Their exact HTML and text bytes are retained and hashed. Existing v04-c01-aea-data-faq ID is reused; no AEA review of this project is implied."
+    },
+    {
+      "id": "v12-c12-olken-preanalysis2015",
+      "action": "propose",
+      "title": "Olken — Promises and Perils of Pre-Analysis Plans (2015)",
+      "url": "https://doi.org/10.1257/jep.29.3.61",
+      "body_url": "https://economics.mit.edu/sites/default/files/publications/JEP%20Analysis%20Plans%20Final.pdf",
+      "use": "Prospective specification choices, timing, exploration and the limits of pre-analysis planning.",
+      "checked": "2026-10-09",
+      "verification": "The published 20-page JEP PDF was retrieved from Olken's MIT route on 9 October 2026. The specialist read physical pages 1–14 and 18 (printed 61–74 and 78), and actually viewed rendered physical page 5. Bibliography, precise sections and exclusions are retained. No uninspected appendix or empirical-audit result is claimed."
+    },
+    {
+      "id": "v12-c12-dahabreh-target2019",
+      "action": "propose",
+      "title": "Dahabreh et al. — Extending inferences from a randomized trial to a new target population (arXiv v3, 2019)",
+      "url": "https://arxiv.org/abs/1805.00550v3",
+      "body_url": "https://arxiv.org/pdf/1805.00550v3",
+      "use": "Explicit nonparticipant target, participation/treatment assumptions, standardization and weighting; finite-cell proof to be original.",
+      "checked": "2026-10-09",
+      "verification": "Author-deposited arXiv v3 dated 28 October 2019 retrieved with HTTP 200 on 9 October 2026. The specialist read physical/printed pages 1–8 and 14–17 and actually viewed rendered pages 5, 6, 7, 8 and 16. The current record supports only the stated target/identification/weighting/caveat scope. The separate appendix and later 2020 journal body were not inspected."
+    }
+  ],
+  "cross_source_scope_decisions": [
+    "Reproducibility is a claim about the supplied inputs, transformations and reported outputs. Identification, inference, specification search and target validity require distinct substantive arguments.",
+    "A timestamp is evidence of the registered bytes and date, not proof that analysts lacked prior outcome information or followed the plan. Preserve the later dossier's actual information chronology.",
+    "No copied source cases, medical estimates, empirical frequencies or historical/current regulatory claims are assigned. Root will design and independently check the original dossier separately.",
+    "A finite transport calculation must specify its population law and positive-support cells before applying either standardization or participation weights; means and effects are different identification targets.",
+    "Transparent post-plan changes may be reported as exploratory or amended analyses; they do not become prospective merely because their code reproduces.",
+    "Restricted-access claims remain unverified where execution cannot be performed with authorized data; metadata/code inspection is not an executed replication.",
+    "The source inspector for the newly read bodies and images is this specialist. Any later coordinator review of this JSON is a provenance-record review unless the coordinator separately opens the primary pages."
+  ],
+  "access_failures": [],
+  "unresolved_source_issues": [
+    {
+      "severity": "scope limitation, not blocker",
+      "source": "asa-pvalues-2016",
+      "issue": "The reused catalogue verification does not name the historical body inspector or record exact page locators/artifact hashes. No new ASA reading is claimed."
+    },
+    {
+      "severity": "scope limitation, not blocker",
+      "source": "v12-c12-dahabreh-target2019",
+      "issue": "The retained primary body is the October 2019 preprint, not the later 2020 journal version; the separate appendix and general asymptotic theory remain uninspected."
+    },
+    {
+      "severity": "scope limitation, not blocker",
+      "source": "v04-c01-aea-data-faq",
+      "issue": "Official policy snapshot is dated February 2026, accessed 9 October 2026; later changes would require fresh verification. No legal permission or actual AEA compliance determination is supplied."
+    }
+  ],
+  "next_work_boundary": "Stop here. The original chapter/dossier and numerical blueprint require a later exact parent assignment; nothing in this source preparation advances canonical status.",
+  "artifacts": [
+    {
+      "path": "../tmp/pdfs/v12-c12/aea-faq.html",
+      "bytes": 35954,
+      "sha256": "c59c3e4c64a6b07eef120f481114fc9175c6e144c0ef48be90c2348a9f214686",
+      "role": "new official FAQ response bytes"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/aea-faq.txt",
+      "bytes": 15506,
+      "sha256": "408c8adadc9a327a971240e65bdd06561ae01e1128c3190784d0a7f37fd0ced4",
+      "role": "HTMLParser-derived normalized local text; no pagination"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/aea-policy.html",
+      "bytes": 30417,
+      "sha256": "b29bb7dc0a9cf4578862b1b8be64bd473e0035c7dc5fabad557a4cf5abd732ff",
+      "role": "new official February 2026 policy response bytes"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/aea-policy.txt",
+      "bytes": 12434,
+      "sha256": "f3bbedd5eaa9a622d0ee0200cac69dc09315c5cd9815a3886adfedf9b0f4a3a5",
+      "role": "HTMLParser-derived normalized local text; no pagination"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/dahabreh2019v3-p16.png",
+      "bytes": 390286,
+      "sha256": "9af2bb983f961e585ff6ec9a6b4c14e2c4246b15771f3f14e4c497f232d144e1",
+      "role": "actually viewed rendered page"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/dahabreh2019v3-p5.png",
+      "bytes": 397776,
+      "sha256": "7b305a4ee33f08a7753ff90497318d64e34aca6a89d7646dddff80db3d369340",
+      "role": "actually viewed rendered page"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/dahabreh2019v3-p6.png",
+      "bytes": 304174,
+      "sha256": "7aaf5d40a941a39115ca6c5dd177903af548f0acefb195d0aa5fed1235567195",
+      "role": "actually viewed rendered page"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/dahabreh2019v3-p7.png",
+      "bytes": 318076,
+      "sha256": "20f752bab0ae4e9c450fc6d2f307285c92f1dd1a9210b158709392f6e38f745e",
+      "role": "actually viewed rendered page"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/dahabreh2019v3-p8.png",
+      "bytes": 323600,
+      "sha256": "2edf8e0c76ecd591b4c722d250a5dd8d0c0f9351830eecc3234507a769310629",
+      "role": "actually viewed rendered page"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/dahabreh2019v3-pdfinfo.txt",
+      "bytes": 553,
+      "sha256": "c09aa479e0ed4f65547a3966075ed9788df2f6674175feaa89eb59b949962ec1",
+      "role": "pdfinfo metadata, not proof of reading"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/dahabreh2019v3.pdf",
+      "bytes": 318616,
+      "sha256": "b4a2cc518128003286511e3b0ea0846bd24daa1bd6a037300ee7090f6aae54d9",
+      "role": "new primary author-deposited PDF body"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/dahabreh2019v3.txt",
+      "bytes": 89289,
+      "sha256": "eb31e80ef13900bc5c6ad8ae7fdcd3366604543b236dc8c41d8a94a074d8ec02",
+      "role": "complete pdftotext extraction; only listed pages inspected"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/existing-source-records.json",
+      "bytes": 1385,
+      "sha256": "378417884d420b66f9277b21f1233c93eb4ff3204ea7a4737c60990cc8c4d5fb",
+      "role": "retained exact existing ASA and AEA catalogue-entry snapshot"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/olken2015-p5.png",
+      "bytes": 414531,
+      "sha256": "34b5c8ac6465feee8517112ff775f5d26921f454bf9a4a2dfc7ee53a57f552c6",
+      "role": "actually viewed rendered page"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/olken2015-pdfinfo.txt",
+      "bytes": 557,
+      "sha256": "868146aaefb94ad02044c6d02993812fd9d2b444c9901624a8b0b0971b8471ce",
+      "role": "pdfinfo metadata, not proof of reading"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/olken2015.pdf",
+      "bytes": 667211,
+      "sha256": "56925baca32360943e9f27d885d5dfcdfca95cf231c7e778593f6c48b6d34521",
+      "role": "new author-hosted published PDF body"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/olken2015.txt",
+      "bytes": 69510,
+      "sha256": "8d62ee971f6ada90c19077bc6c4ff7fff9255485f6d3f1ba39be60770803b871",
+      "role": "complete pdftotext extraction; only listed pages inspected"
+    },
+    {
+      "path": "../tmp/pdfs/v12-c12/retrieval.json",
+      "bytes": 2102,
+      "sha256": "153cc6a6b6aa88cc1de10b7e11b5571f2cd1d3f9a2c8bf1a56ef298f91f16b81",
+      "role": "four direct public retrievals with timestamps, response metadata and body hashes"
+    }
+  ],
+  "read_only_reuse_record": {
+    "path": "content/reviews/v04-c01-sources.json",
+    "bytes": 1928,
+    "sha256": "26a8062a65617d68b6fcdf8903b9f3f27afb703433642882c5da001bad84d984",
+    "role": "existing V04 source proposal read without mutation"
+  },
+  "preserved_frozen_c09": [
+    {
+      "path": "production/v12-c09-working.html",
+      "bytes": 56647,
+      "sha256": "43aa882d46a8972bb191eca6dbd13735efe8e11d52b62e60850dd63201123998"
+    },
+    {
+      "path": "production/check_v12_c09_working.py",
+      "bytes": 32886,
+      "sha256": "fb48712421d2c47560eb4dc46adb9ee6a417b8528629b1cdd365a84b7a8f988a"
+    },
+    {
+      "path": "production/v12-c09-sources-working.json",
+      "bytes": 26857,
+      "sha256": "caa551f0ec649b66082c76887810669e54bf510b6b4f5a53827a6c3225ff6f34"
+    },
+    {
+      "path": "production/v12-c09-author-review-working.json",
+      "bytes": 38543,
+      "sha256": "146c6decd995a619aa21f6d30bcd5641409824e11bbb0d3626f3291e8fcfb77a"
+    }
+  ],
+  "validation": {
+    "strict_json": "Written with allow_nan=False; final parse, exact artifact inventory/hashes, PDF mappings, render inventory and frozen C09 identity verified separately before reporting.",
+    "access": "All four intended direct requests returned HTTP 200; no failed/restricted route was bypassed.",
+    "scope": "Only the declared pages/sections are claimed as read. Full text extraction and a saved file do not imply full-body inspection.",
+    "acceptance": "Source preparation only; no claim of accepted C12 content or independent human certification.",
+    "final_read_only_gate": {
+      "status": "passed",
+      "evidence_checks": 89,
+      "strict_JSON_with_duplicate_and_nonfinite_rejection": true,
+      "exact_scratch_inventory_and_all_artifact_hashes": true,
+      "read_and_excluded_page_mapping": true,
+      "all_six_rendered_images_viewed_and_manifested": true,
+      "four_frozen_C09_payloads_unchanged": true,
+      "new_body_access_failures": 0,
+      "limits": "This gate validates evidence identity and scope records; it does not establish scientific assumptions, reproduce source studies, or accept the future chapter."
+    }
+  }
+}

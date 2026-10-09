@@ -1,0 +1,107 @@
+{
+  "chapter": "v12-c12",
+  "date": "2026-10-09",
+  "status": "Preliminary original dossier design and numerical exploration only; not an assigned/final author blueprint.",
+  "law": "Eight fixed trial units, two four-unit strata, exactly two treated per stratum, all 36 assignments equally likely. Fixed potential control values 1,2,3,4 and 2,4,6,8; stratum-constant additive effects 1 and3. Actual treated IDs 3,4,7,8. A separate 24-person nonparticipant roster has6 low-X and18 high-X members; target potential means are an explicit transport assumption, not observed.",
+  "original_data": {
+    "base_control_potentials": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "effects": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "3",
+      "3",
+      "3",
+      "3"
+    ],
+    "actual_treated_one_based": [
+      3,
+      4,
+      7,
+      8
+    ],
+    "observed_y": [
+      "1",
+      "2",
+      "4",
+      "5",
+      "2",
+      "4",
+      "9",
+      "11"
+    ],
+    "raw_followup_cents": [
+      100,
+      200,
+      400,
+      500,
+      200,
+      400,
+      900,
+      1100
+    ]
+  },
+  "computed": {
+    "trial_true_ATE": "2",
+    "observed_stratum_effects": [
+      "3",
+      "7"
+    ],
+    "observed_primary_estimate": "5",
+    "true_randomization_expectation": "2",
+    "true_randomization_variance": "25/12",
+    "observed_Neyman_variance_estimate": "5/8",
+    "mean_Neyman_variance_estimate": "25/12",
+    "sharp_zero_null_two_sided_p": "1/18",
+    "postselected_positive_one_sided_p": "1/36",
+    "complete_null_direction_search_size_at_5percent": "1/18",
+    "target_weighted_estimate": "6",
+    "target_true_effect": "5/2",
+    "target_estimator_randomization_variance": "185/48",
+    "missing_y8_statistic_interval": [
+      "9/4",
+      "21/4"
+    ],
+    "missing_y8_pvalue_interval": [
+      "1/18",
+      "4/9"
+    ],
+    "missing_y8_rank_breakpoints": [
+      "0",
+      "1",
+      "2",
+      "4",
+      "12"
+    ],
+    "missing_y8_pvalues_at_breakpoints": [
+      "4/9",
+      "1/3",
+      "2/9",
+      "1/9",
+      "1/18"
+    ]
+  },
+  "six_case_directions": [
+    "Declared finite trial estimand, actual assignment and original study claims; distinguish observed data from a teaching-only potential-outcome oracle.",
+    "Raw cents and unique-ID joins: duplicating unit8 yields pooled difference23/4 instead of5; intended stratum-weighted duplicate calculation31/6; hashes and repeated output do not validate either target.",
+    "Complete 36-assignment sharp-null inference versus finite-population weak estimands and an inappropriate normal tail; contrast oracle variance25/12 with sample estimate5/8.",
+    "Dated fictional information chronology: primary two-sided plan versus post-result one-sided direction; replay the whole selection rule under the fixed null law; proof of inclusive finite-randomization p validity and complement-induced minimum two-sided p1/18.",
+    "Finite nonparticipant target standardization/inverse-odds proof, effect versus level transport, sensitivity shifts and a target-only unsupported third cell; sharp identified sets separated from sample uncertainty.",
+    "Restricted-data variant with y8 withheld: reproducible statistic interval and exact null-p range across bounded completions; complete-case/zero imputations are unproved conventions. End with a scored evidence-based referee response."
+  ],
+  "unresolved_design_work": [
+    "Complete the transport/sensitivity/support arithmetic and every raw join calculation independently.",
+    "Specify the exact embedded raw CSV/dossier reports and information chronology; no source empirical study is copied.",
+    "Turn the six directions into a full proof/exercise contract before assigning authoring."
+  ]
+}

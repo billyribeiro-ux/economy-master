@@ -1,0 +1,26 @@
+{
+  "chapter": "v12-c11",
+  "date": "2026-10-09",
+  "author": "c05_review",
+  "coordinator_decision": "Independent first gate accepted; continue authorized full author package.",
+  "reported_independent_comparisons": 349,
+  "methods": "Exact posterior/predictive sums, finite MH flow and residual kernel, separate 81-path variance, direct lasso normal/residual/KKT checks, eight-atom AIPW, actual two-fold fitting and 144-state BH enumeration including 288 leave-one-out identities.",
+  "confirmed_results": {
+    "MH_stationary_n4_variance": "11274515/75661452",
+    "MH_start_low_average_bias": "-29674775/197696052",
+    "lasso_objective": "161/128",
+    "oracle_ATE_score_variance": "67/12",
+    "cross_fitted_mean_variance_estimate": "17/32",
+    "quarter_rate_exact_bias": "17/900",
+    "independent_BH_FDR": "1/6",
+    "dependent_BH_FDR": "3/20"
+  },
+  "approved_clarifications": [
+    "The constant design column is penalized along with every other lasso coefficient.",
+    "Fold assignment is predetermined or randomized independently of observations.",
+    "Use foldwise conditional variance bounds and bounded conditional-probability arguments, then fixed-K summation; do not condition on all fits and assume joint independence.",
+    "The BH zeroed-p-value identity must be proved in both directions with inclusive ties."
+  ],
+  "numerical_discrepancies": [],
+  "evidence_limit": "Author-reported independent first gate; complete final author/checker and separate peer/root reviews remain required."
+}

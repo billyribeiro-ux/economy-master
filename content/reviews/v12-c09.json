@@ -1,0 +1,64 @@
+{
+  "chapter": "v12-c09",
+  "date": "2026-10-09",
+  "status": "accepted-by-author",
+  "reviewer": "Coordinating author with complete separate machine-assisted peer evidence",
+  "review": {
+    "arithmetic": true,
+    "reasoning": true,
+    "solutions": true,
+    "sources": true,
+    "instruction": true,
+    "structure": true
+  },
+  "scope": "Six original worked cases and twelve fully solved exercises: causal/invertible ARMA filters, VAR covariance and shock rotations, full restricted stable-Gaussian and Gaussian unit-root inference proofs, cointegration with explicit spread initialization and conditioning, GARCH existence and distinct moment regions, and overlapping/selected forecast evaluation.",
+  "author_review": "reviews/v12-c09-author.json",
+  "peer_review": "reviews/v12-c09-peer.json",
+  "root_numerical_evidence": "production/v12-c09-author-validation.json",
+  "final_execution_evidence": "production/v12-c09-peer-validation.json",
+  "promotion_evidence": "production/v12-c09-promotion-delta.json",
+  "verified_payload_hashes": 6,
+  "reviewed_hashes": [
+    {
+      "path": "content/chapters/v12-c09.html",
+      "bytes": 56629,
+      "sha256": "c809929afde736f4dc1327bcb1431d5e1b4232dc0a4b7fdce711ab9391315866"
+    },
+    {
+      "path": "scripts/check_v12_c09.py",
+      "bytes": 33013,
+      "sha256": "80eeded6d3ede65c8a69edf064c82bb3c2d556c7c12df2a3c482750fa9644270"
+    },
+    {
+      "path": "content/reviews/v12-c09-sources.json",
+      "bytes": 27039,
+      "sha256": "d8bbf09bcda9d10f4d421af4b59affadf95947267d1b046f61d89209868a8cfe"
+    },
+    {
+      "path": "content/reviews/v12-c09-author.json",
+      "bytes": 39335,
+      "sha256": "a7764ad9c79f85b2c3cc4a8359c5dfcc017f29eb6e9fa108c3777bae9c59604d"
+    },
+    {
+      "path": "scripts/check_v12_c09_peer.py",
+      "bytes": 34673,
+      "sha256": "1bc27e9e4935581279113a630fef53aefa6576c1e77b2877ff33312bfc03e123"
+    },
+    {
+      "path": "content/reviews/v12-c09-peer.json",
+      "bytes": 43280,
+      "sha256": "f81d62d064d9ceab0bc1766ca64a02b3f664552aec22d3fb7a15da1f33ede362"
+    }
+  ],
+  "resolved_findings": [
+    "c09-root-01: explicit iid Gaussian spread innovations, positive variance and stationary initial/future independence.",
+    "c09-root-02: actual specialist body/image inspection distinguished from coordinator provenance reading and artifact hashing."
+  ],
+  "open_content_findings": [],
+  "limitations": [
+    "The proved limits use the declared stationary Gaussian, zero-start Gaussian unit-root and independent stationary-spread models; changing these laws can require different theory.",
+    "GARCH strict stationarity, finite variance and finite fourth moment are distinct requirements; covariance-stationarity alone supplies no general inference theorem.",
+    "Sources are verified only for recorded scopes; machine-assisted review is not empirical validation or independent human certification.",
+    "Rendered reader/mobile/keyboard/print QA remains pending under the recorded access limitation."
+  ]
+}
