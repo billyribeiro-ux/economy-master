@@ -1,0 +1,8738 @@
+{
+  "evidence": {
+    "causal_interval": [
+      1,
+      3
+    ],
+    "fits": [
+      {
+        "effect": 1,
+        "holdout_error": 0,
+        "holdout_prediction": 14,
+        "inside_selection_bound": true,
+        "selection": 3,
+        "train_error": 0,
+        "train_prediction": 12
+      },
+      {
+        "effect": 2,
+        "holdout_error": 0,
+        "holdout_prediction": 14,
+        "inside_selection_bound": true,
+        "selection": 2,
+        "train_error": 0,
+        "train_prediction": 12
+      },
+      {
+        "effect": 3,
+        "holdout_error": 0,
+        "holdout_prediction": 14,
+        "inside_selection_bound": true,
+        "selection": 1,
+        "train_error": 0,
+        "train_prediction": 12
+      }
+    ],
+    "identified_sum": 4,
+    "wrong_slope_holdout_error": 2,
+    "wrong_slope_holdout_prediction": 16
+  },
+  "expected_resource_optimum": {
+    "policies": [
+      "K0F0S0A0"
+    ],
+    "value": 0
+  },
+  "expected_weighted_optimum": {
+    "policies": [
+      "K1F0S1A1"
+    ],
+    "value": "3/16"
+  },
+  "forecast_envelope": [
+    {
+      "intercept": 0,
+      "policy": "K0F0S0A0",
+      "q_interval": [
+        0,
+        "13/64"
+      ],
+      "slope": 0
+    },
+    {
+      "intercept": "-13/16",
+      "policy": "K1F0S1A1",
+      "q_interval": [
+        "13/64",
+        "21/64"
+      ],
+      "slope": 4
+    },
+    {
+      "intercept": "-17/8",
+      "policy": "K2F0S1A1",
+      "q_interval": [
+        "21/64",
+        1
+      ],
+      "slope": 8
+    }
+  ],
+  "minimax_regret": {
+    "policies": [
+      "K2F0S1A1"
+    ],
+    "value": 3
+  },
+  "policies": [
+    {
+      "action": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": 0,
+      "expected_weighted": 0,
+      "feasible": true,
+      "id": "K0F0S0A0",
+      "initial_cash": [
+        20,
+        20,
+        30,
+        30
+      ],
+      "levy": 0,
+      "max_regret": "27/4",
+      "regrets": [
+        0,
+        0,
+        "11/4",
+        1,
+        "27/4",
+        5
+      ],
+      "reserve": 0,
+      "states": [
+        {
+          "admitted": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            20,
+            20,
+            30,
+            30
+          ],
+          "damage_loss": 0,
+          "delta": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "diagnostics": [],
+          "emissions": 0,
+          "expenses": 0,
+          "feasible": true,
+          "fees": 0,
+          "participants": 0,
+          "production": 0,
+          "real_public_cost": 0,
+          "refund": 0,
+          "resource_gain": 0,
+          "state": "T1D2",
+          "travel": 0,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 0
+        },
+        {
+          "admitted": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            20,
+            20,
+            30,
+            30
+          ],
+          "damage_loss": 0,
+          "delta": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "diagnostics": [],
+          "emissions": 0,
+          "expenses": 0,
+          "feasible": true,
+          "fees": 0,
+          "participants": 0,
+          "production": 0,
+          "real_public_cost": 0,
+          "refund": 0,
+          "resource_gain": 0,
+          "state": "T1D4",
+          "travel": 0,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 0
+        },
+        {
+          "admitted": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            20,
+            20,
+            30,
+            30
+          ],
+          "damage_loss": 0,
+          "delta": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "diagnostics": [],
+          "emissions": 0,
+          "expenses": 0,
+          "feasible": true,
+          "fees": 0,
+          "participants": 0,
+          "production": 0,
+          "real_public_cost": 0,
+          "refund": 0,
+          "resource_gain": 0,
+          "state": "T2D2",
+          "travel": 0,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 0
+        },
+        {
+          "admitted": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            20,
+            20,
+            30,
+            30
+          ],
+          "damage_loss": 0,
+          "delta": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "diagnostics": [],
+          "emissions": 0,
+          "expenses": 0,
+          "feasible": true,
+          "fees": 0,
+          "participants": 0,
+          "production": 0,
+          "real_public_cost": 0,
+          "refund": 0,
+          "resource_gain": 0,
+          "state": "T2D4",
+          "travel": 0,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 0
+        },
+        {
+          "admitted": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            20,
+            20,
+            30,
+            30
+          ],
+          "damage_loss": 0,
+          "delta": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "diagnostics": [],
+          "emissions": 0,
+          "expenses": 0,
+          "feasible": true,
+          "fees": 0,
+          "participants": 0,
+          "production": 0,
+          "real_public_cost": 0,
+          "refund": 0,
+          "resource_gain": 0,
+          "state": "T3D2",
+          "travel": 0,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 0
+        },
+        {
+          "admitted": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            20,
+            20,
+            30,
+            30
+          ],
+          "damage_loss": 0,
+          "delta": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "diagnostics": [],
+          "emissions": 0,
+          "expenses": 0,
+          "feasible": true,
+          "fees": 0,
+          "participants": 0,
+          "production": 0,
+          "real_public_cost": 0,
+          "refund": 0,
+          "resource_gain": 0,
+          "state": "T3D4",
+          "travel": 0,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 0
+        }
+      ]
+    },
+    {
+      "action": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/2",
+      "expected_weighted": "-11/4",
+      "feasible": true,
+      "id": "K1F0S0A0",
+      "initial_cash": [
+        "77/4",
+        "77/4",
+        "117/4",
+        "117/4"
+      ],
+      "levy": "3/4",
+      "max_regret": "13/2",
+      "regrets": [
+        2,
+        "11/2",
+        "11/4",
+        "9/2",
+        "19/4",
+        "13/2"
+      ],
+      "reserve": 3,
+      "states": [
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "85/4",
+            "75/4",
+            29,
+            29
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "5/4",
+            "-5/4",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 3,
+          "refund": 0,
+          "resource_gain": -2,
+          "state": "T1D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -2
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "81/4",
+            "73/4",
+            "115/4",
+            "115/4"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "1/4",
+            "-7/4",
+            "-5/4",
+            "-5/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 3,
+          "refund": 0,
+          "resource_gain": -4,
+          "state": "T1D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-11/2"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "89/4",
+            "75/4",
+            29,
+            29
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "9/4",
+            "-5/4",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 3,
+          "refund": 0,
+          "resource_gain": -1,
+          "state": "T2D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 0
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "85/4",
+            "73/4",
+            "115/4",
+            "115/4"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "5/4",
+            "-7/4",
+            "-5/4",
+            "-5/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 3,
+          "refund": 0,
+          "resource_gain": -3,
+          "state": "T2D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-7/2"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "93/4",
+            "75/4",
+            29,
+            29
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "13/4",
+            "-5/4",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 3,
+          "refund": 0,
+          "resource_gain": 0,
+          "state": "T3D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 2
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "89/4",
+            "73/4",
+            "115/4",
+            "115/4"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "9/4",
+            "-7/4",
+            "-5/4",
+            "-5/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 3,
+          "refund": 0,
+          "resource_gain": -2,
+          "state": "T3D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-3/2"
+        }
+      ]
+    },
+    {
+      "action": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/4",
+      "expected_weighted": "-5/16",
+      "feasible": true,
+      "id": "K1F0S0A1",
+      "initial_cash": [
+        19,
+        19,
+        29,
+        29
+      ],
+      "levy": 1,
+      "max_regret": "29/8",
+      "regrets": [
+        "7/8",
+        "7/4",
+        "13/8",
+        "3/4",
+        "29/8",
+        "11/4"
+      ],
+      "reserve": 4,
+      "states": [
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "87/4",
+            "151/8",
+            "463/16",
+            "463/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            "7/4",
+            "-9/8",
+            "-17/16",
+            "-17/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 4,
+          "refund": 0,
+          "resource_gain": "-3/2",
+          "state": "T1D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-7/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "43/2",
+            "75/4",
+            "231/8",
+            "231/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "3/2",
+            "-5/4",
+            "-9/8",
+            "-9/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 4,
+          "refund": 0,
+          "resource_gain": -2,
+          "state": "T1D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-7/4"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "91/4",
+            "151/8",
+            "463/16",
+            "463/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            "11/4",
+            "-9/8",
+            "-17/16",
+            "-17/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 4,
+          "refund": 0,
+          "resource_gain": "-1/2",
+          "state": "T2D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "9/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "45/2",
+            "75/4",
+            "231/8",
+            "231/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "5/2",
+            "-5/4",
+            "-9/8",
+            "-9/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 4,
+          "refund": 0,
+          "resource_gain": -1,
+          "state": "T2D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "1/4"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "95/4",
+            "151/8",
+            "463/16",
+            "463/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            "15/4",
+            "-9/8",
+            "-17/16",
+            "-17/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 4,
+          "refund": 0,
+          "resource_gain": "1/2",
+          "state": "T3D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "25/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "47/2",
+            "75/4",
+            "231/8",
+            "231/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "7/2",
+            "-5/4",
+            "-9/8",
+            "-9/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 4,
+          "refund": 0,
+          "resource_gain": 0,
+          "state": "T3D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "9/4"
+        }
+      ]
+    },
+    {
+      "action": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/2",
+      "expected_weighted": "-9/4",
+      "feasible": true,
+      "id": "K1F0S1A0",
+      "initial_cash": [
+        19,
+        19,
+        29,
+        29
+      ],
+      "levy": 1,
+      "max_regret": 6,
+      "regrets": [
+        "3/2",
+        5,
+        "9/4",
+        4,
+        "17/4",
+        6
+      ],
+      "reserve": 4,
+      "states": [
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            22,
+            "37/2",
+            "115/4",
+            "115/4"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            2,
+            "-3/2",
+            "-5/4",
+            "-5/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 3,
+          "refund": 0,
+          "resource_gain": -2,
+          "state": "T1D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-3/2"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            21,
+            18,
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            1,
+            -2,
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 3,
+          "refund": 0,
+          "resource_gain": -4,
+          "state": "T1D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -5
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            23,
+            "37/2",
+            "115/4",
+            "115/4"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            3,
+            "-3/2",
+            "-5/4",
+            "-5/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 3,
+          "refund": 0,
+          "resource_gain": -1,
+          "state": "T2D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "1/2"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            22,
+            18,
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            2,
+            -2,
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 3,
+          "refund": 0,
+          "resource_gain": -3,
+          "state": "T2D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -3
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            24,
+            "37/2",
+            "115/4",
+            "115/4"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            4,
+            "-3/2",
+            "-5/4",
+            "-5/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 3,
+          "refund": 0,
+          "resource_gain": 0,
+          "state": "T3D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "5/2"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            23,
+            18,
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            3,
+            -2,
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 3,
+          "refund": 0,
+          "resource_gain": -2,
+          "state": "T3D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -1
+        }
+      ]
+    },
+    {
+      "action": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/4",
+      "expected_weighted": "3/16",
+      "feasible": true,
+      "id": "K1F0S1A1",
+      "initial_cash": [
+        "75/4",
+        "75/4",
+        "115/4",
+        "115/4"
+      ],
+      "levy": "5/4",
+      "max_regret": "25/8",
+      "regrets": [
+        "3/8",
+        "5/4",
+        "9/8",
+        "1/4",
+        "25/8",
+        "9/4"
+      ],
+      "reserve": 5,
+      "states": [
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "45/2",
+            "149/8",
+            "459/16",
+            "459/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            "5/2",
+            "-11/8",
+            "-21/16",
+            "-21/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 4,
+          "refund": 0,
+          "resource_gain": "-3/2",
+          "state": "T1D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-3/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "89/4",
+            "37/2",
+            "229/8",
+            "229/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "9/4",
+            "-3/2",
+            "-11/8",
+            "-11/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 4,
+          "refund": 0,
+          "resource_gain": -2,
+          "state": "T1D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-5/4"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "47/2",
+            "149/8",
+            "459/16",
+            "459/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            "7/2",
+            "-11/8",
+            "-21/16",
+            "-21/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 4,
+          "refund": 0,
+          "resource_gain": "-1/2",
+          "state": "T2D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "13/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "93/4",
+            "37/2",
+            "229/8",
+            "229/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "13/4",
+            "-3/2",
+            "-11/8",
+            "-11/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 4,
+          "refund": 0,
+          "resource_gain": -1,
+          "state": "T2D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "3/4"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "49/2",
+            "149/8",
+            "459/16",
+            "459/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            "9/2",
+            "-11/8",
+            "-21/16",
+            "-21/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 4,
+          "refund": 0,
+          "resource_gain": "1/2",
+          "state": "T3D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "29/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "97/4",
+            "37/2",
+            "229/8",
+            "229/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "17/4",
+            "-3/2",
+            "-11/8",
+            "-11/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 0,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 4,
+          "refund": 0,
+          "resource_gain": 0,
+          "state": "T3D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "11/4"
+        }
+      ]
+    },
+    {
+      "action": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/2",
+      "expected_weighted": "-13/4",
+      "feasible": true,
+      "id": "K1F1S0A0",
+      "initial_cash": [
+        "77/4",
+        "77/4",
+        "117/4",
+        "117/4"
+      ],
+      "levy": "3/4",
+      "max_regret": 7,
+      "regrets": [
+        "5/2",
+        6,
+        "13/4",
+        5,
+        "21/4",
+        7
+      ],
+      "reserve": 3,
+      "states": [
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "41/2",
+            19,
+            "117/4",
+            "117/4"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "1/2",
+            -1,
+            "-3/4",
+            "-3/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 3,
+          "refund": 1,
+          "resource_gain": -2,
+          "state": "T1D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-5/2"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "39/2",
+            "37/2",
+            29,
+            29
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "-1/2",
+            "-3/2",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 3,
+          "refund": 1,
+          "resource_gain": -4,
+          "state": "T1D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": -6
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "43/2",
+            19,
+            "117/4",
+            "117/4"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "3/2",
+            -1,
+            "-3/4",
+            "-3/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 3,
+          "refund": 1,
+          "resource_gain": -1,
+          "state": "T2D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-1/2"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "41/2",
+            "37/2",
+            29,
+            29
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "1/2",
+            "-3/2",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 3,
+          "refund": 1,
+          "resource_gain": -3,
+          "state": "T2D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -4
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "45/2",
+            19,
+            "117/4",
+            "117/4"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "5/2",
+            -1,
+            "-3/4",
+            "-3/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 3,
+          "refund": 1,
+          "resource_gain": 0,
+          "state": "T3D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "3/2"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "43/2",
+            "37/2",
+            29,
+            29
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "3/2",
+            "-3/2",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 3,
+          "refund": 1,
+          "resource_gain": -2,
+          "state": "T3D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -2
+        }
+      ]
+    },
+    {
+      "action": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/4",
+      "expected_weighted": "-13/16",
+      "feasible": true,
+      "id": "K1F1S0A1",
+      "initial_cash": [
+        19,
+        19,
+        29,
+        29
+      ],
+      "levy": 1,
+      "max_regret": "33/8",
+      "regrets": [
+        "11/8",
+        "9/4",
+        "17/8",
+        "5/4",
+        "33/8",
+        "13/4"
+      ],
+      "reserve": 4,
+      "states": [
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            21,
+            "153/8",
+            "467/16",
+            "467/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            1,
+            "-7/8",
+            "-13/16",
+            "-13/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 4,
+          "refund": 1,
+          "resource_gain": "-3/2",
+          "state": "T1D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-11/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "83/4",
+            19,
+            "233/8",
+            "233/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "3/4",
+            -1,
+            "-7/8",
+            "-7/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 4,
+          "refund": 1,
+          "resource_gain": -2,
+          "state": "T1D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-9/4"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            22,
+            "153/8",
+            "467/16",
+            "467/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            2,
+            "-7/8",
+            "-13/16",
+            "-13/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 4,
+          "refund": 1,
+          "resource_gain": "-1/2",
+          "state": "T2D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "5/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "87/4",
+            19,
+            "233/8",
+            "233/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "7/4",
+            -1,
+            "-7/8",
+            "-7/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 4,
+          "refund": 1,
+          "resource_gain": -1,
+          "state": "T2D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-1/4"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            23,
+            "153/8",
+            "467/16",
+            "467/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            3,
+            "-7/8",
+            "-13/16",
+            "-13/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 4,
+          "refund": 1,
+          "resource_gain": "1/2",
+          "state": "T3D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "21/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "91/4",
+            19,
+            "233/8",
+            "233/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "11/4",
+            -1,
+            "-7/8",
+            "-7/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 4,
+          "refund": 1,
+          "resource_gain": 0,
+          "state": "T3D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "7/4"
+        }
+      ]
+    },
+    {
+      "action": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/2",
+      "expected_weighted": "-11/4",
+      "feasible": true,
+      "id": "K1F1S1A0",
+      "initial_cash": [
+        19,
+        19,
+        29,
+        29
+      ],
+      "levy": 1,
+      "max_regret": "13/2",
+      "regrets": [
+        2,
+        "11/2",
+        "11/4",
+        "9/2",
+        "19/4",
+        "13/2"
+      ],
+      "reserve": 4,
+      "states": [
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "85/4",
+            "75/4",
+            29,
+            29
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "5/4",
+            "-5/4",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 3,
+          "refund": 1,
+          "resource_gain": -2,
+          "state": "T1D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -2
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "81/4",
+            "73/4",
+            "115/4",
+            "115/4"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "1/4",
+            "-7/4",
+            "-5/4",
+            "-5/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 3,
+          "refund": 1,
+          "resource_gain": -4,
+          "state": "T1D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-11/2"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "89/4",
+            "75/4",
+            29,
+            29
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "9/4",
+            "-5/4",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 3,
+          "refund": 1,
+          "resource_gain": -1,
+          "state": "T2D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 0
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "85/4",
+            "73/4",
+            "115/4",
+            "115/4"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "5/4",
+            "-7/4",
+            "-5/4",
+            "-5/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 3,
+          "refund": 1,
+          "resource_gain": -3,
+          "state": "T2D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-7/2"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "93/4",
+            "75/4",
+            29,
+            29
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "13/4",
+            "-5/4",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 3,
+          "refund": 1,
+          "resource_gain": 0,
+          "state": "T3D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 2
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "89/4",
+            "73/4",
+            "115/4",
+            "115/4"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "9/4",
+            "-7/4",
+            "-5/4",
+            "-5/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 3,
+          "refund": 1,
+          "resource_gain": -2,
+          "state": "T3D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-3/2"
+        }
+      ]
+    },
+    {
+      "action": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/4",
+      "expected_weighted": "-5/16",
+      "feasible": true,
+      "id": "K1F1S1A1",
+      "initial_cash": [
+        "75/4",
+        "75/4",
+        "115/4",
+        "115/4"
+      ],
+      "levy": "5/4",
+      "max_regret": "29/8",
+      "regrets": [
+        "7/8",
+        "7/4",
+        "13/8",
+        "3/4",
+        "29/8",
+        "11/4"
+      ],
+      "reserve": 5,
+      "states": [
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "87/4",
+            "151/8",
+            "463/16",
+            "463/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            "7/4",
+            "-9/8",
+            "-17/16",
+            "-17/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 4,
+          "refund": 1,
+          "resource_gain": "-3/2",
+          "state": "T1D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-7/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "43/2",
+            "75/4",
+            "231/8",
+            "231/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "3/2",
+            "-5/4",
+            "-9/8",
+            "-9/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 4,
+          "refund": 1,
+          "resource_gain": -2,
+          "state": "T1D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-7/4"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "91/4",
+            "151/8",
+            "463/16",
+            "463/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            "11/4",
+            "-9/8",
+            "-17/16",
+            "-17/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 4,
+          "refund": 1,
+          "resource_gain": "-1/2",
+          "state": "T2D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "9/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "45/2",
+            "75/4",
+            "231/8",
+            "231/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "5/2",
+            "-5/4",
+            "-9/8",
+            "-9/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 4,
+          "refund": 1,
+          "resource_gain": -1,
+          "state": "T2D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "1/4"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "95/4",
+            "151/8",
+            "463/16",
+            "463/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            "15/4",
+            "-9/8",
+            "-17/16",
+            "-17/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 4,
+          "refund": 1,
+          "resource_gain": "1/2",
+          "state": "T3D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "25/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "47/2",
+            "75/4",
+            "231/8",
+            "231/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "7/2",
+            "-5/4",
+            "-9/8",
+            "-9/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 1,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 4,
+          "refund": 1,
+          "resource_gain": 0,
+          "state": "T3D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "9/4"
+        }
+      ]
+    },
+    {
+      "action": [
+        1,
+        2,
+        0,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/2",
+      "expected_weighted": "-15/4",
+      "feasible": true,
+      "id": "K1F2S0A0",
+      "initial_cash": [
+        "77/4",
+        "77/4",
+        "117/4",
+        "117/4"
+      ],
+      "levy": "3/4",
+      "max_regret": "15/2",
+      "regrets": [
+        3,
+        "13/2",
+        "15/4",
+        "11/2",
+        "23/4",
+        "15/2"
+      ],
+      "reserve": 3,
+      "states": [
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "79/4",
+            "77/4",
+            "59/2",
+            "59/2"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "-1/4",
+            "-3/4",
+            "-1/2",
+            "-1/2"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 3,
+          "refund": 2,
+          "resource_gain": -2,
+          "state": "T1D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "weighted_gain": -3
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "75/4",
+            "75/4",
+            "117/4",
+            "117/4"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "-5/4",
+            "-5/4",
+            "-3/4",
+            "-3/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 3,
+          "refund": 2,
+          "resource_gain": -4,
+          "state": "T1D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "weighted_gain": "-13/2"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "83/4",
+            "77/4",
+            "59/2",
+            "59/2"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "3/4",
+            "-3/4",
+            "-1/2",
+            "-1/2"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 3,
+          "refund": 2,
+          "resource_gain": -1,
+          "state": "T2D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": -1
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "79/4",
+            "75/4",
+            "117/4",
+            "117/4"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "-1/4",
+            "-5/4",
+            "-3/4",
+            "-3/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 3,
+          "refund": 2,
+          "resource_gain": -3,
+          "state": "T2D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-9/2"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "87/4",
+            "77/4",
+            "59/2",
+            "59/2"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "7/4",
+            "-3/4",
+            "-1/2",
+            "-1/2"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 3,
+          "refund": 2,
+          "resource_gain": 0,
+          "state": "T3D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 1
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "83/4",
+            "75/4",
+            "117/4",
+            "117/4"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "3/4",
+            "-5/4",
+            "-3/4",
+            "-3/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 3,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 3,
+          "refund": 2,
+          "resource_gain": -2,
+          "state": "T3D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-5/2"
+        }
+      ]
+    },
+    {
+      "action": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/4",
+      "expected_weighted": "-21/16",
+      "feasible": true,
+      "id": "K1F2S0A1",
+      "initial_cash": [
+        19,
+        19,
+        29,
+        29
+      ],
+      "levy": 1,
+      "max_regret": "37/8",
+      "regrets": [
+        "15/8",
+        "11/4",
+        "21/8",
+        "7/4",
+        "37/8",
+        "15/4"
+      ],
+      "reserve": 4,
+      "states": [
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "81/4",
+            "155/8",
+            "471/16",
+            "471/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            "1/4",
+            "-5/8",
+            "-9/16",
+            "-9/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 4,
+          "refund": 2,
+          "resource_gain": "-3/2",
+          "state": "T1D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "weighted_gain": "-15/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            20,
+            "77/4",
+            "235/8",
+            "235/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            0,
+            "-3/4",
+            "-5/8",
+            "-5/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 4,
+          "refund": 2,
+          "resource_gain": -2,
+          "state": "T1D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "weighted_gain": "-11/4"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "85/4",
+            "155/8",
+            "471/16",
+            "471/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            "5/4",
+            "-5/8",
+            "-9/16",
+            "-9/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 4,
+          "refund": 2,
+          "resource_gain": "-1/2",
+          "state": "T2D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "1/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            21,
+            "77/4",
+            "235/8",
+            "235/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            1,
+            "-3/4",
+            "-5/8",
+            "-5/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 4,
+          "refund": 2,
+          "resource_gain": -1,
+          "state": "T2D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-3/4"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "89/4",
+            "155/8",
+            "471/16",
+            "471/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            "9/4",
+            "-5/8",
+            "-9/16",
+            "-9/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 4,
+          "refund": 2,
+          "resource_gain": "1/2",
+          "state": "T3D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "17/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            22,
+            "77/4",
+            "235/8",
+            "235/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            2,
+            "-3/4",
+            "-5/8",
+            "-5/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 4,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 4,
+          "refund": 2,
+          "resource_gain": 0,
+          "state": "T3D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "5/4"
+        }
+      ]
+    },
+    {
+      "action": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/2",
+      "expected_weighted": "-13/4",
+      "feasible": true,
+      "id": "K1F2S1A0",
+      "initial_cash": [
+        19,
+        19,
+        29,
+        29
+      ],
+      "levy": 1,
+      "max_regret": 7,
+      "regrets": [
+        "5/2",
+        6,
+        "13/4",
+        5,
+        "21/4",
+        7
+      ],
+      "reserve": 4,
+      "states": [
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "41/2",
+            19,
+            "117/4",
+            "117/4"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "1/2",
+            -1,
+            "-3/4",
+            "-3/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 3,
+          "refund": 2,
+          "resource_gain": -2,
+          "state": "T1D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-5/2"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "39/2",
+            "37/2",
+            29,
+            29
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "-1/2",
+            "-3/2",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 3,
+          "refund": 2,
+          "resource_gain": -4,
+          "state": "T1D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": -6
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "43/2",
+            19,
+            "117/4",
+            "117/4"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "3/2",
+            -1,
+            "-3/4",
+            "-3/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 3,
+          "refund": 2,
+          "resource_gain": -1,
+          "state": "T2D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-1/2"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "41/2",
+            "37/2",
+            29,
+            29
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "1/2",
+            "-3/2",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 3,
+          "refund": 2,
+          "resource_gain": -3,
+          "state": "T2D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -4
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "45/2",
+            19,
+            "117/4",
+            "117/4"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "5/2",
+            -1,
+            "-3/4",
+            "-3/4"
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 3,
+          "refund": 2,
+          "resource_gain": 0,
+          "state": "T3D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "3/2"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "43/2",
+            "37/2",
+            29,
+            29
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "3/2",
+            "-3/2",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": 1,
+          "expenses": 4,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 3,
+          "refund": 2,
+          "resource_gain": -2,
+          "state": "T3D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -2
+        }
+      ]
+    },
+    {
+      "action": [
+        1,
+        2,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/4",
+      "expected_weighted": "-13/16",
+      "feasible": true,
+      "id": "K1F2S1A1",
+      "initial_cash": [
+        "75/4",
+        "75/4",
+        "115/4",
+        "115/4"
+      ],
+      "levy": "5/4",
+      "max_regret": "33/8",
+      "regrets": [
+        "11/8",
+        "9/4",
+        "17/8",
+        "5/4",
+        "33/8",
+        "13/4"
+      ],
+      "reserve": 5,
+      "states": [
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            21,
+            "153/8",
+            "467/16",
+            "467/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            1,
+            "-7/8",
+            "-13/16",
+            "-13/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 4,
+          "refund": 2,
+          "resource_gain": "-3/2",
+          "state": "T1D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-11/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "83/4",
+            19,
+            "233/8",
+            "233/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "3/4",
+            -1,
+            "-7/8",
+            "-7/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 4,
+          "real_public_cost": 4,
+          "refund": 2,
+          "resource_gain": -2,
+          "state": "T1D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-9/4"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            22,
+            "153/8",
+            "467/16",
+            "467/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            2,
+            "-7/8",
+            "-13/16",
+            "-13/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 4,
+          "refund": 2,
+          "resource_gain": "-1/2",
+          "state": "T2D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "5/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "87/4",
+            19,
+            "233/8",
+            "233/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "7/4",
+            -1,
+            "-7/8",
+            "-7/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 5,
+          "real_public_cost": 4,
+          "refund": 2,
+          "resource_gain": -1,
+          "state": "T2D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-1/4"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            23,
+            "153/8",
+            "467/16",
+            "467/16"
+          ],
+          "damage_loss": "1/2",
+          "delta": [
+            3,
+            "-7/8",
+            "-13/16",
+            "-13/16"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 4,
+          "refund": 2,
+          "resource_gain": "1/2",
+          "state": "T3D2",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "21/8"
+        },
+        {
+          "admitted": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "consumption": [
+            "91/4",
+            19,
+            "233/8",
+            "233/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "11/4",
+            -1,
+            "-7/8",
+            "-7/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/4",
+          "expenses": 5,
+          "feasible": true,
+          "fees": 2,
+          "participants": 1,
+          "production": 6,
+          "real_public_cost": 4,
+          "refund": 2,
+          "resource_gain": 0,
+          "state": "T3D4",
+          "travel": 1,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "7/4"
+        }
+      ]
+    },
+    {
+      "action": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": -6,
+      "expected_weighted": "-15/2",
+      "feasible": true,
+      "id": "K2F0S0A0",
+      "initial_cash": [
+        "37/2",
+        "37/2",
+        "57/2",
+        "57/2"
+      ],
+      "levy": "3/2",
+      "max_regret": 13,
+      "regrets": [
+        6,
+        13,
+        "19/4",
+        10,
+        "19/4",
+        10
+      ],
+      "reserve": 6,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "39/2",
+            "39/2",
+            28,
+            28
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "-1/2",
+            "-1/2",
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 6,
+          "refund": 0,
+          "resource_gain": -5,
+          "state": "T1D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -6
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "35/2",
+            "37/2",
+            "55/2",
+            "55/2"
+          ],
+          "damage_loss": 8,
+          "delta": [
+            "-5/2",
+            "-3/2",
+            "-5/2",
+            "-5/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 6,
+          "refund": 0,
+          "resource_gain": -9,
+          "state": "T1D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -13
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "41/2",
+            "41/2",
+            28,
+            28
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "1/2",
+            "1/2",
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 6,
+          "refund": 0,
+          "resource_gain": -3,
+          "state": "T2D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -2
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "37/2",
+            "39/2",
+            "55/2",
+            "55/2"
+          ],
+          "damage_loss": 8,
+          "delta": [
+            "-3/2",
+            "-1/2",
+            "-5/2",
+            "-5/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 6,
+          "refund": 0,
+          "resource_gain": -7,
+          "state": "T2D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -9
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "43/2",
+            "43/2",
+            28,
+            28
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "3/2",
+            "3/2",
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 6,
+          "refund": 0,
+          "resource_gain": -1,
+          "state": "T3D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 2
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "39/2",
+            "41/2",
+            "55/2",
+            "55/2"
+          ],
+          "damage_loss": 8,
+          "delta": [
+            "-1/2",
+            "1/2",
+            "-5/2",
+            "-5/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 6,
+          "refund": 0,
+          "resource_gain": -5,
+          "state": "T3D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -5
+        }
+      ]
+    },
+    {
+      "action": [
+        2,
+        0,
+        0,
+        1
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/2",
+      "expected_weighted": "-9/8",
+      "feasible": true,
+      "id": "K2F0S0A1",
+      "initial_cash": [
+        "73/4",
+        "73/4",
+        "113/4",
+        "113/4"
+      ],
+      "levy": "7/4",
+      "max_regret": 4,
+      "regrets": [
+        "9/4",
+        4,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reserve": 7,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "83/4",
+            20,
+            "225/8",
+            "225/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "3/4",
+            0,
+            "-15/8",
+            "-15/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 7,
+          "refund": 0,
+          "resource_gain": -3,
+          "state": "T1D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-9/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "81/4",
+            "79/4",
+            28,
+            28
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "1/4",
+            "-1/4",
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 7,
+          "refund": 0,
+          "resource_gain": -4,
+          "state": "T1D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -4
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "87/4",
+            21,
+            "225/8",
+            "225/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "7/4",
+            1,
+            "-15/8",
+            "-15/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 7,
+          "refund": 0,
+          "resource_gain": -1,
+          "state": "T2D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "7/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "85/4",
+            "83/4",
+            28,
+            28
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "5/4",
+            "3/4",
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 7,
+          "refund": 0,
+          "resource_gain": -2,
+          "state": "T2D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 0
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "91/4",
+            22,
+            "225/8",
+            "225/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "11/4",
+            2,
+            "-15/8",
+            "-15/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 7,
+          "refund": 0,
+          "resource_gain": 1,
+          "state": "T3D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "23/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "89/4",
+            "87/4",
+            28,
+            28
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "9/4",
+            "7/4",
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 7,
+          "refund": 0,
+          "resource_gain": 0,
+          "state": "T3D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 4
+        }
+      ]
+    },
+    {
+      "action": [
+        2,
+        0,
+        1,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": -6,
+      "expected_weighted": "-13/2",
+      "feasible": true,
+      "id": "K2F0S1A0",
+      "initial_cash": [
+        18,
+        18,
+        28,
+        28
+      ],
+      "levy": 2,
+      "max_regret": 12,
+      "regrets": [
+        5,
+        12,
+        "15/4",
+        9,
+        "15/4",
+        9
+      ],
+      "reserve": 8,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            20,
+            20,
+            "55/2",
+            "55/2"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            0,
+            0,
+            "-5/2",
+            "-5/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 6,
+          "refund": 0,
+          "resource_gain": -5,
+          "state": "T1D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -5
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            18,
+            19,
+            27,
+            27
+          ],
+          "damage_loss": 8,
+          "delta": [
+            -2,
+            -1,
+            -3,
+            -3
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 6,
+          "refund": 0,
+          "resource_gain": -9,
+          "state": "T1D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -12
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            21,
+            21,
+            "55/2",
+            "55/2"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            1,
+            1,
+            "-5/2",
+            "-5/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 6,
+          "refund": 0,
+          "resource_gain": -3,
+          "state": "T2D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -1
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            19,
+            20,
+            27,
+            27
+          ],
+          "damage_loss": 8,
+          "delta": [
+            -1,
+            0,
+            -3,
+            -3
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 6,
+          "refund": 0,
+          "resource_gain": -7,
+          "state": "T2D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -8
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            22,
+            22,
+            "55/2",
+            "55/2"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            2,
+            2,
+            "-5/2",
+            "-5/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 6,
+          "refund": 0,
+          "resource_gain": -1,
+          "state": "T3D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 3
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            20,
+            21,
+            27,
+            27
+          ],
+          "damage_loss": 8,
+          "delta": [
+            0,
+            1,
+            -3,
+            -3
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 6,
+          "refund": 0,
+          "resource_gain": -5,
+          "state": "T3D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -4
+        }
+      ]
+    },
+    {
+      "action": [
+        2,
+        0,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/2",
+      "expected_weighted": "-1/8",
+      "feasible": true,
+      "id": "K2F0S1A1",
+      "initial_cash": [
+        "71/4",
+        "71/4",
+        "111/4",
+        "111/4"
+      ],
+      "levy": "9/4",
+      "max_regret": 3,
+      "regrets": [
+        "5/4",
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reserve": 9,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "85/4",
+            "41/2",
+            "221/8",
+            "221/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "5/4",
+            "1/2",
+            "-19/8",
+            "-19/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 7,
+          "refund": 0,
+          "resource_gain": -3,
+          "state": "T1D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-5/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "83/4",
+            "81/4",
+            "55/2",
+            "55/2"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "3/4",
+            "1/4",
+            "-5/2",
+            "-5/2"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 7,
+          "refund": 0,
+          "resource_gain": -4,
+          "state": "T1D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -3
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "89/4",
+            "43/2",
+            "221/8",
+            "221/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "9/4",
+            "3/2",
+            "-19/8",
+            "-19/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 7,
+          "refund": 0,
+          "resource_gain": -1,
+          "state": "T2D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "11/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "87/4",
+            "85/4",
+            "55/2",
+            "55/2"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "7/4",
+            "5/4",
+            "-5/2",
+            "-5/2"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 7,
+          "refund": 0,
+          "resource_gain": -2,
+          "state": "T2D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 1
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "93/4",
+            "45/2",
+            "221/8",
+            "221/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "13/4",
+            "5/2",
+            "-19/8",
+            "-19/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 7,
+          "refund": 0,
+          "resource_gain": 1,
+          "state": "T3D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "27/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "91/4",
+            "89/4",
+            "55/2",
+            "55/2"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "11/4",
+            "9/4",
+            "-5/2",
+            "-5/2"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 0,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 7,
+          "refund": 0,
+          "resource_gain": 0,
+          "state": "T3D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 5
+        }
+      ]
+    },
+    {
+      "action": [
+        2,
+        1,
+        0,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": -6,
+      "expected_weighted": "-17/2",
+      "feasible": true,
+      "id": "K2F1S0A0",
+      "initial_cash": [
+        "37/2",
+        "37/2",
+        "57/2",
+        "57/2"
+      ],
+      "levy": "3/2",
+      "max_regret": 14,
+      "regrets": [
+        7,
+        14,
+        "23/4",
+        11,
+        "23/4",
+        11
+      ],
+      "reserve": 6,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            19,
+            19,
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            -1,
+            -1,
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 6,
+          "refund": 2,
+          "resource_gain": -5,
+          "state": "T1D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": -7
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            17,
+            18,
+            28,
+            28
+          ],
+          "damage_loss": 8,
+          "delta": [
+            -3,
+            -2,
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 6,
+          "refund": 2,
+          "resource_gain": -9,
+          "state": "T1D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": -14
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            20,
+            20,
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            0,
+            0,
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 6,
+          "refund": 2,
+          "resource_gain": -3,
+          "state": "T2D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -3
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            18,
+            19,
+            28,
+            28
+          ],
+          "damage_loss": 8,
+          "delta": [
+            -2,
+            -1,
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 6,
+          "refund": 2,
+          "resource_gain": -7,
+          "state": "T2D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -10
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            21,
+            21,
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            1,
+            1,
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 6,
+          "refund": 2,
+          "resource_gain": -1,
+          "state": "T3D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 1
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            19,
+            20,
+            28,
+            28
+          ],
+          "damage_loss": 8,
+          "delta": [
+            -1,
+            0,
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 6,
+          "refund": 2,
+          "resource_gain": -5,
+          "state": "T3D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -6
+        }
+      ]
+    },
+    {
+      "action": [
+        2,
+        1,
+        0,
+        1
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/2",
+      "expected_weighted": "-17/8",
+      "feasible": true,
+      "id": "K2F1S0A1",
+      "initial_cash": [
+        "73/4",
+        "73/4",
+        "113/4",
+        "113/4"
+      ],
+      "levy": "7/4",
+      "max_regret": 5,
+      "regrets": [
+        "13/4",
+        5,
+        2,
+        2,
+        2,
+        2
+      ],
+      "reserve": 7,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "81/4",
+            "39/2",
+            "229/8",
+            "229/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "1/4",
+            "-1/2",
+            "-11/8",
+            "-11/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 7,
+          "refund": 2,
+          "resource_gain": -3,
+          "state": "T1D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-13/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "79/4",
+            "77/4",
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "-1/4",
+            "-3/4",
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 7,
+          "refund": 2,
+          "resource_gain": -4,
+          "state": "T1D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": -5
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "85/4",
+            "41/2",
+            "229/8",
+            "229/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "5/4",
+            "1/2",
+            "-11/8",
+            "-11/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 7,
+          "refund": 2,
+          "resource_gain": -1,
+          "state": "T2D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "3/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "83/4",
+            "81/4",
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "3/4",
+            "1/4",
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 7,
+          "refund": 2,
+          "resource_gain": -2,
+          "state": "T2D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -1
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "89/4",
+            "43/2",
+            "229/8",
+            "229/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "9/4",
+            "3/2",
+            "-11/8",
+            "-11/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 7,
+          "refund": 2,
+          "resource_gain": 1,
+          "state": "T3D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "19/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "87/4",
+            "85/4",
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "7/4",
+            "5/4",
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 7,
+          "refund": 2,
+          "resource_gain": 0,
+          "state": "T3D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 3
+        }
+      ]
+    },
+    {
+      "action": [
+        2,
+        1,
+        1,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": -6,
+      "expected_weighted": "-15/2",
+      "feasible": true,
+      "id": "K2F1S1A0",
+      "initial_cash": [
+        18,
+        18,
+        28,
+        28
+      ],
+      "levy": 2,
+      "max_regret": 13,
+      "regrets": [
+        6,
+        13,
+        "19/4",
+        10,
+        "19/4",
+        10
+      ],
+      "reserve": 8,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "39/2",
+            "39/2",
+            28,
+            28
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "-1/2",
+            "-1/2",
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 6,
+          "refund": 2,
+          "resource_gain": -5,
+          "state": "T1D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -6
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "35/2",
+            "37/2",
+            "55/2",
+            "55/2"
+          ],
+          "damage_loss": 8,
+          "delta": [
+            "-5/2",
+            "-3/2",
+            "-5/2",
+            "-5/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 6,
+          "refund": 2,
+          "resource_gain": -9,
+          "state": "T1D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -13
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "41/2",
+            "41/2",
+            28,
+            28
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "1/2",
+            "1/2",
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 6,
+          "refund": 2,
+          "resource_gain": -3,
+          "state": "T2D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -2
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "37/2",
+            "39/2",
+            "55/2",
+            "55/2"
+          ],
+          "damage_loss": 8,
+          "delta": [
+            "-3/2",
+            "-1/2",
+            "-5/2",
+            "-5/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 6,
+          "refund": 2,
+          "resource_gain": -7,
+          "state": "T2D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -9
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "43/2",
+            "43/2",
+            28,
+            28
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "3/2",
+            "3/2",
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 6,
+          "refund": 2,
+          "resource_gain": -1,
+          "state": "T3D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 2
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "39/2",
+            "41/2",
+            "55/2",
+            "55/2"
+          ],
+          "damage_loss": 8,
+          "delta": [
+            "-1/2",
+            "1/2",
+            "-5/2",
+            "-5/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 6,
+          "refund": 2,
+          "resource_gain": -5,
+          "state": "T3D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -5
+        }
+      ]
+    },
+    {
+      "action": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/2",
+      "expected_weighted": "-9/8",
+      "feasible": true,
+      "id": "K2F1S1A1",
+      "initial_cash": [
+        "71/4",
+        "71/4",
+        "111/4",
+        "111/4"
+      ],
+      "levy": "9/4",
+      "max_regret": 4,
+      "regrets": [
+        "9/4",
+        4,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reserve": 9,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "83/4",
+            20,
+            "225/8",
+            "225/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "3/4",
+            0,
+            "-15/8",
+            "-15/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 7,
+          "refund": 2,
+          "resource_gain": -3,
+          "state": "T1D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-9/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "81/4",
+            "79/4",
+            28,
+            28
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "1/4",
+            "-1/4",
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 7,
+          "refund": 2,
+          "resource_gain": -4,
+          "state": "T1D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -4
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "87/4",
+            21,
+            "225/8",
+            "225/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "7/4",
+            1,
+            "-15/8",
+            "-15/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 7,
+          "refund": 2,
+          "resource_gain": -1,
+          "state": "T2D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "7/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "85/4",
+            "83/4",
+            28,
+            28
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "5/4",
+            "3/4",
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 7,
+          "refund": 2,
+          "resource_gain": -2,
+          "state": "T2D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 0
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "91/4",
+            22,
+            "225/8",
+            "225/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "11/4",
+            2,
+            "-15/8",
+            "-15/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 7,
+          "refund": 2,
+          "resource_gain": 1,
+          "state": "T3D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "23/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "89/4",
+            "87/4",
+            28,
+            28
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "9/4",
+            "7/4",
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 2,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 7,
+          "refund": 2,
+          "resource_gain": 0,
+          "state": "T3D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 4
+        }
+      ]
+    },
+    {
+      "action": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": -6,
+      "expected_weighted": "-19/2",
+      "feasible": true,
+      "id": "K2F2S0A0",
+      "initial_cash": [
+        "37/2",
+        "37/2",
+        "57/2",
+        "57/2"
+      ],
+      "levy": "3/2",
+      "max_regret": 15,
+      "regrets": [
+        8,
+        15,
+        "27/4",
+        12,
+        "27/4",
+        12
+      ],
+      "reserve": 6,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "37/2",
+            "37/2",
+            29,
+            29
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "-3/2",
+            "-3/2",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 6,
+          "refund": 4,
+          "resource_gain": -5,
+          "state": "T1D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "weighted_gain": -8
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "33/2",
+            "35/2",
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 8,
+          "delta": [
+            "-7/2",
+            "-5/2",
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 6,
+          "refund": 4,
+          "resource_gain": -9,
+          "state": "T1D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "weighted_gain": -15
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "39/2",
+            "39/2",
+            29,
+            29
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "-1/2",
+            "-1/2",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 6,
+          "refund": 4,
+          "resource_gain": -3,
+          "state": "T2D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": -4
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "35/2",
+            "37/2",
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 8,
+          "delta": [
+            "-5/2",
+            "-3/2",
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 6,
+          "refund": 4,
+          "resource_gain": -7,
+          "state": "T2D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": -11
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "41/2",
+            "41/2",
+            29,
+            29
+          ],
+          "damage_loss": 4,
+          "delta": [
+            "1/2",
+            "1/2",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 6,
+          "refund": 4,
+          "resource_gain": -1,
+          "state": "T3D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 0
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "37/2",
+            "39/2",
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 8,
+          "delta": [
+            "-3/2",
+            "-1/2",
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 6,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 6,
+          "refund": 4,
+          "resource_gain": -5,
+          "state": "T3D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -7
+        }
+      ]
+    },
+    {
+      "action": [
+        2,
+        2,
+        0,
+        1
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/2",
+      "expected_weighted": "-25/8",
+      "feasible": true,
+      "id": "K2F2S0A1",
+      "initial_cash": [
+        "73/4",
+        "73/4",
+        "113/4",
+        "113/4"
+      ],
+      "levy": "7/4",
+      "max_regret": 6,
+      "regrets": [
+        "17/4",
+        6,
+        3,
+        3,
+        3,
+        3
+      ],
+      "reserve": 7,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "79/4",
+            19,
+            "233/8",
+            "233/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "-1/4",
+            -1,
+            "-7/8",
+            "-7/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 7,
+          "refund": 4,
+          "resource_gain": -3,
+          "state": "T1D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "weighted_gain": "-17/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "77/4",
+            "75/4",
+            29,
+            29
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "-3/4",
+            "-5/4",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 7,
+          "refund": 4,
+          "resource_gain": -4,
+          "state": "T1D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "weighted_gain": -6
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "83/4",
+            20,
+            "233/8",
+            "233/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "3/4",
+            0,
+            "-7/8",
+            "-7/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 7,
+          "refund": 4,
+          "resource_gain": -1,
+          "state": "T2D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-1/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "81/4",
+            "79/4",
+            29,
+            29
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "1/4",
+            "-1/4",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 7,
+          "refund": 4,
+          "resource_gain": -2,
+          "state": "T2D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": -2
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "87/4",
+            21,
+            "233/8",
+            "233/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "7/4",
+            1,
+            "-7/8",
+            "-7/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 7,
+          "refund": 4,
+          "resource_gain": 1,
+          "state": "T3D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "15/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "85/4",
+            "83/4",
+            29,
+            29
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "5/4",
+            "3/4",
+            -1,
+            -1
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 7,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 7,
+          "refund": 4,
+          "resource_gain": 0,
+          "state": "T3D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 2
+        }
+      ]
+    },
+    {
+      "action": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": -6,
+      "expected_weighted": "-17/2",
+      "feasible": true,
+      "id": "K2F2S1A0",
+      "initial_cash": [
+        18,
+        18,
+        28,
+        28
+      ],
+      "levy": 2,
+      "max_regret": 14,
+      "regrets": [
+        7,
+        14,
+        "23/4",
+        11,
+        "23/4",
+        11
+      ],
+      "reserve": 8,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            19,
+            19,
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            -1,
+            -1,
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 6,
+          "refund": 4,
+          "resource_gain": -5,
+          "state": "T1D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": -7
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            17,
+            18,
+            28,
+            28
+          ],
+          "damage_loss": 8,
+          "delta": [
+            -3,
+            -2,
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 6,
+          "refund": 4,
+          "resource_gain": -9,
+          "state": "T1D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": -14
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            20,
+            20,
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            0,
+            0,
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 6,
+          "refund": 4,
+          "resource_gain": -3,
+          "state": "T2D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -3
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            18,
+            19,
+            28,
+            28
+          ],
+          "damage_loss": 8,
+          "delta": [
+            -2,
+            -1,
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 6,
+          "refund": 4,
+          "resource_gain": -7,
+          "state": "T2D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -10
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            21,
+            21,
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            1,
+            1,
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 6,
+          "refund": 4,
+          "resource_gain": -1,
+          "state": "T3D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 1
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            19,
+            20,
+            28,
+            28
+          ],
+          "damage_loss": 8,
+          "delta": [
+            -1,
+            0,
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 6,
+          "refund": 4,
+          "resource_gain": -5,
+          "state": "T3D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -6
+        }
+      ]
+    },
+    {
+      "action": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "expected_resource": "-5/2",
+      "expected_weighted": "-17/8",
+      "feasible": true,
+      "id": "K2F2S1A1",
+      "initial_cash": [
+        "71/4",
+        "71/4",
+        "111/4",
+        "111/4"
+      ],
+      "levy": "9/4",
+      "max_regret": 5,
+      "regrets": [
+        "13/4",
+        5,
+        2,
+        2,
+        2,
+        2
+      ],
+      "reserve": 9,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "81/4",
+            "39/2",
+            "229/8",
+            "229/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "1/4",
+            "-1/2",
+            "-11/8",
+            "-11/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 7,
+          "refund": 4,
+          "resource_gain": -3,
+          "state": "T1D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-13/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "79/4",
+            "77/4",
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "-1/4",
+            "-3/4",
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 7,
+          "refund": 4,
+          "resource_gain": -4,
+          "state": "T1D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": -5
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "85/4",
+            "41/2",
+            "229/8",
+            "229/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "5/4",
+            "1/2",
+            "-11/8",
+            "-11/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 7,
+          "refund": 4,
+          "resource_gain": -1,
+          "state": "T2D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "3/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "83/4",
+            "81/4",
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "3/4",
+            "1/4",
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 9,
+          "real_public_cost": 7,
+          "refund": 4,
+          "resource_gain": -2,
+          "state": "T2D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -1
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "89/4",
+            "43/2",
+            "229/8",
+            "229/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "9/4",
+            "3/2",
+            "-11/8",
+            "-11/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 7,
+          "refund": 4,
+          "resource_gain": 1,
+          "state": "T3D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "19/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "87/4",
+            "85/4",
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "7/4",
+            "5/4",
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 11,
+          "real_public_cost": 7,
+          "refund": 4,
+          "resource_gain": 0,
+          "state": "T3D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": 3
+        }
+      ]
+    },
+    {
+      "action": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": "-21/2",
+      "expected_weighted": "-63/4",
+      "feasible": true,
+      "id": "K3F0S0A0",
+      "initial_cash": [
+        "71/4",
+        "71/4",
+        "111/4",
+        "111/4"
+      ],
+      "levy": "9/4",
+      "max_regret": "47/2",
+      "regrets": [
+        13,
+        "47/2",
+        "43/4",
+        "39/2",
+        "39/4",
+        "37/2"
+      ],
+      "reserve": 9,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "71/4",
+            "73/4",
+            28,
+            27
+          ],
+          "damage_loss": 6,
+          "delta": [
+            "-9/4",
+            "-7/4",
+            -2,
+            -3
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 0,
+          "participants": 3,
+          "production": 9,
+          "real_public_cost": 9,
+          "refund": 0,
+          "resource_gain": -9,
+          "state": "T1D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -13
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "59/4",
+            "67/4",
+            "109/4",
+            "105/4"
+          ],
+          "damage_loss": 12,
+          "delta": [
+            "-21/4",
+            "-13/4",
+            "-11/4",
+            "-15/4"
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 0,
+          "participants": 3,
+          "production": 9,
+          "real_public_cost": 9,
+          "refund": 0,
+          "resource_gain": -15,
+          "state": "T1D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-47/2"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "75/4",
+            "77/4",
+            29,
+            27
+          ],
+          "damage_loss": 6,
+          "delta": [
+            "-5/4",
+            "-3/4",
+            -1,
+            -3
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 0,
+          "participants": 3,
+          "production": 12,
+          "real_public_cost": 9,
+          "refund": 0,
+          "resource_gain": -6,
+          "state": "T2D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -8
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "63/4",
+            "71/4",
+            "113/4",
+            "105/4"
+          ],
+          "damage_loss": 12,
+          "delta": [
+            "-17/4",
+            "-9/4",
+            "-7/4",
+            "-15/4"
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 0,
+          "participants": 3,
+          "production": 12,
+          "real_public_cost": 9,
+          "refund": 0,
+          "resource_gain": -12,
+          "state": "T2D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-37/2"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "79/4",
+            "81/4",
+            30,
+            27
+          ],
+          "damage_loss": 6,
+          "delta": [
+            "-1/4",
+            "1/4",
+            0,
+            -3
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 0,
+          "participants": 3,
+          "production": 15,
+          "real_public_cost": 9,
+          "refund": 0,
+          "resource_gain": -3,
+          "state": "T3D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -3
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "67/4",
+            "75/4",
+            "117/4",
+            "105/4"
+          ],
+          "damage_loss": 12,
+          "delta": [
+            "-13/4",
+            "-5/4",
+            "-3/4",
+            "-15/4"
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 0,
+          "participants": 3,
+          "production": 15,
+          "real_public_cost": 9,
+          "refund": 0,
+          "resource_gain": -9,
+          "state": "T3D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-27/2"
+        }
+      ]
+    },
+    {
+      "action": [
+        3,
+        0,
+        0,
+        1
+      ],
+      "diagnostics": [],
+      "expected_resource": "-19/4",
+      "expected_weighted": "-87/16",
+      "feasible": true,
+      "id": "K3F0S0A1",
+      "initial_cash": [
+        "35/2",
+        "35/2",
+        "55/2",
+        "55/2"
+      ],
+      "levy": "5/2",
+      "max_regret": "37/4",
+      "regrets": [
+        "53/8",
+        "37/4",
+        "35/8",
+        "21/4",
+        "27/8",
+        "17/4"
+      ],
+      "reserve": 10,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "79/4",
+            "153/8",
+            "453/16",
+            "437/16"
+          ],
+          "damage_loss": "3/2",
+          "delta": [
+            "-1/4",
+            "-7/8",
+            "-27/16",
+            "-43/16"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 0,
+          "participants": 3,
+          "production": 9,
+          "real_public_cost": 10,
+          "refund": 0,
+          "resource_gain": "-11/2",
+          "state": "T1D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-53/8"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            19,
+            "75/4",
+            "225/8",
+            "217/8"
+          ],
+          "damage_loss": 3,
+          "delta": [
+            -1,
+            "-5/4",
+            "-15/8",
+            "-23/8"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 0,
+          "participants": 3,
+          "production": 9,
+          "real_public_cost": 10,
+          "refund": 0,
+          "resource_gain": -7,
+          "state": "T1D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-37/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "83/4",
+            "161/8",
+            "469/16",
+            "437/16"
+          ],
+          "damage_loss": "3/2",
+          "delta": [
+            "3/4",
+            "1/8",
+            "-11/16",
+            "-43/16"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 0,
+          "participants": 3,
+          "production": 12,
+          "real_public_cost": 10,
+          "refund": 0,
+          "resource_gain": "-5/2",
+          "state": "T2D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-13/8"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            20,
+            "79/4",
+            "233/8",
+            "217/8"
+          ],
+          "damage_loss": 3,
+          "delta": [
+            0,
+            "-1/4",
+            "-7/8",
+            "-23/8"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 0,
+          "participants": 3,
+          "production": 12,
+          "real_public_cost": 10,
+          "refund": 0,
+          "resource_gain": -4,
+          "state": "T2D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-17/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "87/4",
+            "169/8",
+            "485/16",
+            "437/16"
+          ],
+          "damage_loss": "3/2",
+          "delta": [
+            "7/4",
+            "9/8",
+            "5/16",
+            "-43/16"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 0,
+          "participants": 3,
+          "production": 15,
+          "real_public_cost": 10,
+          "refund": 0,
+          "resource_gain": "1/2",
+          "state": "T3D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "27/8"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            21,
+            "83/4",
+            "241/8",
+            "217/8"
+          ],
+          "damage_loss": 3,
+          "delta": [
+            1,
+            "3/4",
+            "1/8",
+            "-23/8"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 0,
+          "participants": 3,
+          "production": 15,
+          "real_public_cost": 10,
+          "refund": 0,
+          "resource_gain": -1,
+          "state": "T3D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "3/4"
+        }
+      ]
+    },
+    {
+      "action": [
+        3,
+        0,
+        1,
+        0
+      ],
+      "diagnostics": [
+        "reserve_limit"
+      ],
+      "feasible": false,
+      "id": "K3F0S1A0",
+      "initial_cash": [
+        17,
+        17,
+        27,
+        27
+      ],
+      "levy": 3,
+      "reserve": 12,
+      "states": []
+    },
+    {
+      "action": [
+        3,
+        0,
+        1,
+        1
+      ],
+      "diagnostics": [
+        "reserve_limit"
+      ],
+      "feasible": false,
+      "id": "K3F0S1A1",
+      "initial_cash": [
+        "67/4",
+        "67/4",
+        "107/4",
+        "107/4"
+      ],
+      "levy": "13/4",
+      "reserve": 13,
+      "states": []
+    },
+    {
+      "action": [
+        3,
+        1,
+        0,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": "-21/2",
+      "expected_weighted": "-65/4",
+      "feasible": true,
+      "id": "K3F1S0A0",
+      "initial_cash": [
+        "71/4",
+        "71/4",
+        "111/4",
+        "111/4"
+      ],
+      "levy": "9/4",
+      "max_regret": 24,
+      "regrets": [
+        "27/2",
+        24,
+        "45/4",
+        20,
+        "41/4",
+        19
+      ],
+      "reserve": 9,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "35/2",
+            18,
+            "111/4",
+            "111/4"
+          ],
+          "damage_loss": 6,
+          "delta": [
+            "-5/2",
+            -2,
+            "-9/4",
+            "-9/4"
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 3,
+          "participants": 3,
+          "production": 9,
+          "real_public_cost": 9,
+          "refund": 3,
+          "resource_gain": -9,
+          "state": "T1D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-27/2"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "29/2",
+            "33/2",
+            27,
+            27
+          ],
+          "damage_loss": 12,
+          "delta": [
+            "-11/2",
+            "-7/2",
+            -3,
+            -3
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 3,
+          "participants": 3,
+          "production": 9,
+          "real_public_cost": 9,
+          "refund": 3,
+          "resource_gain": -15,
+          "state": "T1D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": -24
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "37/2",
+            19,
+            "115/4",
+            "111/4"
+          ],
+          "damage_loss": 6,
+          "delta": [
+            "-3/2",
+            -1,
+            "-5/4",
+            "-9/4"
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 3,
+          "participants": 3,
+          "production": 12,
+          "real_public_cost": 9,
+          "refund": 3,
+          "resource_gain": -6,
+          "state": "T2D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-17/2"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "31/2",
+            "35/2",
+            28,
+            27
+          ],
+          "damage_loss": 12,
+          "delta": [
+            "-9/2",
+            "-5/2",
+            -2,
+            -3
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 3,
+          "participants": 3,
+          "production": 12,
+          "real_public_cost": 9,
+          "refund": 3,
+          "resource_gain": -12,
+          "state": "T2D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -19
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "39/2",
+            20,
+            "119/4",
+            "111/4"
+          ],
+          "damage_loss": 6,
+          "delta": [
+            "-1/2",
+            0,
+            "-1/4",
+            "-9/4"
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 3,
+          "participants": 3,
+          "production": 15,
+          "real_public_cost": 9,
+          "refund": 3,
+          "resource_gain": -3,
+          "state": "T3D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-7/2"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "33/2",
+            "37/2",
+            29,
+            27
+          ],
+          "damage_loss": 12,
+          "delta": [
+            "-7/2",
+            "-3/2",
+            -1,
+            -3
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 3,
+          "participants": 3,
+          "production": 15,
+          "real_public_cost": 9,
+          "refund": 3,
+          "resource_gain": -9,
+          "state": "T3D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -14
+        }
+      ]
+    },
+    {
+      "action": [
+        3,
+        1,
+        0,
+        1
+      ],
+      "diagnostics": [],
+      "expected_resource": "-19/4",
+      "expected_weighted": "-95/16",
+      "feasible": true,
+      "id": "K3F1S0A1",
+      "initial_cash": [
+        "35/2",
+        "35/2",
+        "55/2",
+        "55/2"
+      ],
+      "levy": "5/2",
+      "max_regret": "39/4",
+      "regrets": [
+        "57/8",
+        "39/4",
+        "39/8",
+        "23/4",
+        "31/8",
+        "19/4"
+      ],
+      "reserve": 10,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "39/2",
+            "151/8",
+            "449/16",
+            "449/16"
+          ],
+          "damage_loss": "3/2",
+          "delta": [
+            "-1/2",
+            "-9/8",
+            "-31/16",
+            "-31/16"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 3,
+          "participants": 3,
+          "production": 9,
+          "real_public_cost": 10,
+          "refund": 3,
+          "resource_gain": "-11/2",
+          "state": "T1D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-57/8"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "75/4",
+            "37/2",
+            "223/8",
+            "223/8"
+          ],
+          "damage_loss": 3,
+          "delta": [
+            "-5/4",
+            "-3/2",
+            "-17/8",
+            "-17/8"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 3,
+          "participants": 3,
+          "production": 9,
+          "real_public_cost": 10,
+          "refund": 3,
+          "resource_gain": -7,
+          "state": "T1D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-39/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "41/2",
+            "159/8",
+            "465/16",
+            "449/16"
+          ],
+          "damage_loss": "3/2",
+          "delta": [
+            "1/2",
+            "-1/8",
+            "-15/16",
+            "-31/16"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 3,
+          "participants": 3,
+          "production": 12,
+          "real_public_cost": 10,
+          "refund": 3,
+          "resource_gain": "-5/2",
+          "state": "T2D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-17/8"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "79/4",
+            "39/2",
+            "231/8",
+            "223/8"
+          ],
+          "damage_loss": 3,
+          "delta": [
+            "-1/4",
+            "-1/2",
+            "-9/8",
+            "-17/8"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 3,
+          "participants": 3,
+          "production": 12,
+          "real_public_cost": 10,
+          "refund": 3,
+          "resource_gain": -4,
+          "state": "T2D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-19/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "43/2",
+            "167/8",
+            "481/16",
+            "449/16"
+          ],
+          "damage_loss": "3/2",
+          "delta": [
+            "3/2",
+            "7/8",
+            "1/16",
+            "-31/16"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 3,
+          "participants": 3,
+          "production": 15,
+          "real_public_cost": 10,
+          "refund": 3,
+          "resource_gain": "1/2",
+          "state": "T3D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "23/8"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "83/4",
+            "41/2",
+            "239/8",
+            "223/8"
+          ],
+          "damage_loss": 3,
+          "delta": [
+            "3/4",
+            "1/2",
+            "-1/8",
+            "-17/8"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 3,
+          "participants": 3,
+          "production": 15,
+          "real_public_cost": 10,
+          "refund": 3,
+          "resource_gain": -1,
+          "state": "T3D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "1/4"
+        }
+      ]
+    },
+    {
+      "action": [
+        3,
+        1,
+        1,
+        0
+      ],
+      "diagnostics": [
+        "reserve_limit"
+      ],
+      "feasible": false,
+      "id": "K3F1S1A0",
+      "initial_cash": [
+        17,
+        17,
+        27,
+        27
+      ],
+      "levy": 3,
+      "reserve": 12,
+      "states": []
+    },
+    {
+      "action": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "diagnostics": [
+        "reserve_limit"
+      ],
+      "feasible": false,
+      "id": "K3F1S1A1",
+      "initial_cash": [
+        "67/4",
+        "67/4",
+        "107/4",
+        "107/4"
+      ],
+      "levy": "13/4",
+      "reserve": 13,
+      "states": []
+    },
+    {
+      "action": [
+        3,
+        2,
+        0,
+        0
+      ],
+      "diagnostics": [],
+      "expected_resource": "-69/8",
+      "expected_weighted": "-441/32",
+      "feasible": true,
+      "id": "K3F2S0A0",
+      "initial_cash": [
+        "71/4",
+        "71/4",
+        "111/4",
+        "111/4"
+      ],
+      "levy": "9/4",
+      "max_regret": "41/2",
+      "regrets": [
+        11,
+        18,
+        "47/4",
+        "41/2",
+        "43/4",
+        "39/2"
+      ],
+      "reserve": 9,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            18,
+            18,
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 4,
+          "delta": [
+            -2,
+            -2,
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 8,
+          "refund": 5,
+          "resource_gain": -7,
+          "state": "T1D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "weighted_gain": -11
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            16,
+            17,
+            28,
+            28
+          ],
+          "damage_loss": 8,
+          "delta": [
+            -4,
+            -3,
+            -2,
+            -2
+          ],
+          "diagnostics": [],
+          "emissions": 2,
+          "expenses": 8,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 8,
+          "refund": 5,
+          "resource_gain": -11,
+          "state": "T1D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "weighted_gain": -18
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "73/4",
+            "75/4",
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 6,
+          "delta": [
+            "-7/4",
+            "-5/4",
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 6,
+          "participants": 3,
+          "production": 12,
+          "real_public_cost": 9,
+          "refund": 6,
+          "resource_gain": -6,
+          "state": "T2D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": -9
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "61/4",
+            "69/4",
+            "111/4",
+            "111/4"
+          ],
+          "damage_loss": 12,
+          "delta": [
+            "-19/4",
+            "-11/4",
+            "-9/4",
+            "-9/4"
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 6,
+          "participants": 3,
+          "production": 12,
+          "real_public_cost": 9,
+          "refund": 6,
+          "resource_gain": -12,
+          "state": "T2D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-39/2"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "77/4",
+            "79/4",
+            "59/2",
+            "57/2"
+          ],
+          "damage_loss": 6,
+          "delta": [
+            "-3/4",
+            "-1/4",
+            "-1/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 6,
+          "participants": 3,
+          "production": 15,
+          "real_public_cost": 9,
+          "refund": 6,
+          "resource_gain": -3,
+          "state": "T3D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": -4
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "65/4",
+            "73/4",
+            "115/4",
+            "111/4"
+          ],
+          "damage_loss": 12,
+          "delta": [
+            "-15/4",
+            "-7/4",
+            "-5/4",
+            "-9/4"
+          ],
+          "diagnostics": [],
+          "emissions": 3,
+          "expenses": 9,
+          "feasible": true,
+          "fees": 6,
+          "participants": 3,
+          "production": 15,
+          "real_public_cost": 9,
+          "refund": 6,
+          "resource_gain": -9,
+          "state": "T3D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-29/2"
+        }
+      ]
+    },
+    {
+      "action": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "diagnostics": [],
+      "expected_resource": "-137/32",
+      "expected_weighted": "-759/128",
+      "feasible": true,
+      "id": "K3F2S0A1",
+      "initial_cash": [
+        "35/2",
+        "35/2",
+        "55/2",
+        "55/2"
+      ],
+      "levy": "5/2",
+      "max_regret": 9,
+      "regrets": [
+        "29/4",
+        9,
+        "43/8",
+        "25/4",
+        "35/8",
+        "21/4"
+      ],
+      "reserve": 10,
+      "states": [
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "77/4",
+            "37/2",
+            "229/8",
+            "229/8"
+          ],
+          "damage_loss": 1,
+          "delta": [
+            "-3/4",
+            "-3/2",
+            "-11/8",
+            "-11/8"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 9,
+          "refund": 5,
+          "resource_gain": -5,
+          "state": "T1D2",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "weighted_gain": "-29/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "consumption": [
+            "75/4",
+            "73/4",
+            "57/2",
+            "57/2"
+          ],
+          "damage_loss": 2,
+          "delta": [
+            "-5/4",
+            "-7/4",
+            "-3/2",
+            "-3/2"
+          ],
+          "diagnostics": [],
+          "emissions": "1/2",
+          "expenses": 9,
+          "feasible": true,
+          "fees": 4,
+          "participants": 2,
+          "production": 7,
+          "real_public_cost": 9,
+          "refund": 5,
+          "resource_gain": -6,
+          "state": "T1D4",
+          "travel": 2,
+          "wants": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "weighted_gain": -9
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "81/4",
+            "157/8",
+            "461/16",
+            "461/16"
+          ],
+          "damage_loss": "3/2",
+          "delta": [
+            "1/4",
+            "-3/8",
+            "-19/16",
+            "-19/16"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 6,
+          "participants": 3,
+          "production": 12,
+          "real_public_cost": 10,
+          "refund": 6,
+          "resource_gain": "-5/2",
+          "state": "T2D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-21/8"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "39/2",
+            "77/4",
+            "229/8",
+            "229/8"
+          ],
+          "damage_loss": 3,
+          "delta": [
+            "-1/2",
+            "-3/4",
+            "-11/8",
+            "-11/8"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 6,
+          "participants": 3,
+          "production": 12,
+          "real_public_cost": 10,
+          "refund": 6,
+          "resource_gain": -4,
+          "state": "T2D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "weighted_gain": "-21/4"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "85/4",
+            "165/8",
+            "477/16",
+            "461/16"
+          ],
+          "damage_loss": "3/2",
+          "delta": [
+            "5/4",
+            "5/8",
+            "-3/16",
+            "-19/16"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 6,
+          "participants": 3,
+          "production": 15,
+          "real_public_cost": 10,
+          "refund": 6,
+          "resource_gain": "1/2",
+          "state": "T3D2",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "19/8"
+        },
+        {
+          "admitted": [
+            true,
+            true,
+            true,
+            false
+          ],
+          "consumption": [
+            "41/2",
+            "81/4",
+            "237/8",
+            "229/8"
+          ],
+          "damage_loss": 3,
+          "delta": [
+            "1/2",
+            "1/4",
+            "-3/8",
+            "-11/8"
+          ],
+          "diagnostics": [],
+          "emissions": "3/4",
+          "expenses": 10,
+          "feasible": true,
+          "fees": 6,
+          "participants": 3,
+          "production": 15,
+          "real_public_cost": 10,
+          "refund": 6,
+          "resource_gain": -1,
+          "state": "T3D4",
+          "travel": 3,
+          "wants": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "weighted_gain": "-1/4"
+        }
+      ]
+    },
+    {
+      "action": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "diagnostics": [
+        "reserve_limit"
+      ],
+      "feasible": false,
+      "id": "K3F2S1A0",
+      "initial_cash": [
+        17,
+        17,
+        27,
+        27
+      ],
+      "levy": 3,
+      "reserve": 12,
+      "states": []
+    },
+    {
+      "action": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "diagnostics": [
+        "reserve_limit"
+      ],
+      "feasible": false,
+      "id": "K3F2S1A1",
+      "initial_cash": [
+        "67/4",
+        "67/4",
+        "107/4",
+        "107/4"
+      ],
+      "levy": "13/4",
+      "reserve": 13,
+      "states": []
+    }
+  ],
+  "policy_count": 37,
+  "schema": "v15-policy-output-1",
+  "state_frontiers": [
+    {
+      "best": 0,
+      "policies": [
+        "K0F0S0A0"
+      ],
+      "state": "T1D2"
+    },
+    {
+      "best": 0,
+      "policies": [
+        "K0F0S0A0"
+      ],
+      "state": "T1D4"
+    },
+    {
+      "best": "11/4",
+      "policies": [
+        "K2F0S1A1"
+      ],
+      "state": "T2D2"
+    },
+    {
+      "best": 1,
+      "policies": [
+        "K2F0S1A1"
+      ],
+      "state": "T2D4"
+    },
+    {
+      "best": "27/4",
+      "policies": [
+        "K2F0S1A1"
+      ],
+      "state": "T3D2"
+    },
+    {
+      "best": 5,
+      "policies": [
+        "K2F0S1A1"
+      ],
+      "state": "T3D4"
+    }
+  ],
+  "states": [
+    {
+      "damage": 2,
+      "effect": 1,
+      "id": "T1D2",
+      "weight": "5/16"
+    },
+    {
+      "damage": 4,
+      "effect": 1,
+      "id": "T1D4",
+      "weight": "5/16"
+    },
+    {
+      "damage": 2,
+      "effect": 2,
+      "id": "T2D2",
+      "weight": "1/8"
+    },
+    {
+      "damage": 4,
+      "effect": 2,
+      "id": "T2D4",
+      "weight": "1/8"
+    },
+    {
+      "damage": 2,
+      "effect": 3,
+      "id": "T3D2",
+      "weight": "1/16"
+    },
+    {
+      "damage": 4,
+      "effect": 3,
+      "id": "T3D4",
+      "weight": "1/16"
+    }
+  ],
+  "uniformly_feasible_count": 31
+}

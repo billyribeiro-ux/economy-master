@@ -198,8 +198,7 @@ from check_v12_c12_peer import check as check_v12_c12_peer
 from check_v12_assessment import check as check_v12_assessment
 from check_v13_assessment import check as check_v13_assessment
 from check_v14_assessment import check as check_v14_assessment
-from check_v15_exam_b import check as check_v15_exam_b
-from check_v15_exam_b_peer import check as check_v15_exam_b_peer
+from check_v15_assessment import check as check_v15_assessment
 from check_v15_c01 import check as check_v15_c01
 from check_v15_c01_peer import check as check_v15_c01_peer
 from check_v13_c01 import check as check_v13_c01
@@ -727,8 +726,7 @@ def main():
     v12_assessment_check = check_v12_assessment()
     v13_assessment_check = check_v13_assessment()
     v14_assessment_check = check_v14_assessment()
-    v15_exam_b_check = {'author': check_v15_exam_b(), 'coordinator': check_v15_exam_b_peer(),
-                        'scope': 'Form B component only; full V15 assessment remains in production.'}
+    v15_assessment_check = check_v15_assessment()
     v15_c01_check = {"author": check_v15_c01(), "peer": check_v15_c01_peer()}
     v14_opening_check = {'v14-c01': check_v14_c01(), 'v14-c02': check_v14_c02()}
     v14_opening_peer_check = {'v14-c01': check_v14_c01_peer(), 'v14-c02': check_v14_c02_peer()}
@@ -847,7 +845,7 @@ def main():
               'volume_12_assessment_check': v12_assessment_check,
               'volume_13_assessment_check': v13_assessment_check,
               'volume_14_assessment_check': v14_assessment_check,
-              'volume_15_exam_b_component_check': v15_exam_b_check,
+              'volume_15_assessment_check': v15_assessment_check,
               'v15-c01_check': v15_c01_check,
               'volume_14_opening_check': v14_opening_check,
               'volume_14_opening_peer_check': v14_opening_peer_check,

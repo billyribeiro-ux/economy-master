@@ -1,0 +1,111 @@
+{
+  "schema": "v15-policy-lab-1",
+  "synthetic": true,
+  "groups": [
+    {
+      "id": "P1",
+      "mass": 1,
+      "income": 20,
+      "productivity_offset": 3,
+      "damage_share": "1/2",
+      "welfare_weight": 2
+    },
+    {
+      "id": "P2",
+      "mass": 1,
+      "income": 20,
+      "productivity_offset": 2,
+      "damage_share": "1/4",
+      "welfare_weight": 2
+    },
+    {
+      "id": "R1",
+      "mass": 1,
+      "income": 30,
+      "productivity_offset": 1,
+      "damage_share": "1/8",
+      "welfare_weight": 1
+    },
+    {
+      "id": "R2",
+      "mass": 1,
+      "income": 30,
+      "productivity_offset": 0,
+      "damage_share": "1/8",
+      "welfare_weight": 1
+    }
+  ],
+  "technology": {
+    "travel": 1,
+    "capacity_cost": 2,
+    "administration": 1,
+    "abatement_cost": 1,
+    "emissions": 1,
+    "abatement_reduction": "3/4"
+  },
+  "menu": {
+    "capacity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "fee": [
+      0,
+      1,
+      2
+    ],
+    "subsidy": [
+      0,
+      1
+    ],
+    "abatement": [
+      0,
+      1
+    ]
+  },
+  "treasury": {
+    "reserve_limit": 10,
+    "refund_rule": "equal_per_person"
+  },
+  "uncertainty": {
+    "effects": [
+      1,
+      2,
+      3
+    ],
+    "effect_weights": [
+      "5/8",
+      "1/4",
+      "1/8"
+    ],
+    "damages": [
+      2,
+      4
+    ],
+    "damage_weights": [
+      "1/2",
+      "1/2"
+    ]
+  },
+  "evidence": {
+    "train_x": 0,
+    "train_untreated": 8,
+    "train_treated": 12,
+    "holdout_x": 2,
+    "holdout_untreated": 10,
+    "holdout_treated": 14,
+    "baseline_intercept": 8,
+    "baseline_slope": 1,
+    "selection_bound": [
+      1,
+      3
+    ]
+  },
+  "conventions": {
+    "participation": "weakly_nonnegative_net_gain_accepts",
+    "rationing": "listed_group_priority",
+    "policy_ties": "report_all_then_lexicographic_id",
+    "uncertainty": "finite_cartesian_sensitivity_states_not_identified_probabilities"
+  }
+}

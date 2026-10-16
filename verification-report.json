@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "chapter_packages_available": 180,
-  "html_pages_checked": 206,
+  "html_pages_checked": 207,
   "curriculum_chapters": 216,
   "cross_volume_packages_available": 4,
   "checks": [
@@ -9930,34 +9930,151 @@
     },
     "limits": "Internal editorial and numerical validation; no rendered UI or external human assessment claim."
   },
-  "volume_15_exam_b_component_check": {
-    "author": {
-      "volume": "v15",
-      "component": "exam_b",
-      "status": "passed",
-      "points": 100,
-      "domains": 5,
-      "scored_parts": 20,
-      "solutions": 20,
-      "input_groups": 11,
-      "result_groups": 20,
-      "comparisons": 350,
-      "rejected_inputs": 21,
-      "runtime_files": 4,
-      "open_findings": []
+  "volume_15_assessment_check": {
+    "status": "passed",
+    "assembly_parts": [
+      "v15-support-opening.html",
+      "v15-exam-a.html",
+      "v15-exam-b.html",
+      "v15-project.html",
+      "v15-policy-dossier.html",
+      "v15-support-closing.html"
+    ],
+    "unique_ids": 123,
+    "dossier_tasks": 5,
+    "dossier_points": 40,
+    "dossier_source_records": 4,
+    "component_checks": {
+      "support_author": {
+        "volume": "v15",
+        "component": "support",
+        "status": "passed",
+        "comparisons": 537,
+        "domain_rejections": 20,
+        "diagnostic_tasks": 8,
+        "oral_tasks": 5,
+        "retention_tasks": 5,
+        "score_totals": [
+          40,
+          20,
+          50
+        ],
+        "visible_result_markers": 25,
+        "runtime_files": 5,
+        "scope": "Original finite choices, all displayed outputs, global witnesses and all pilot policies; analytical proofs and qualitative answers reviewed separately."
+      },
+      "support_peer": {
+        "volume": "v15",
+        "component": "support",
+        "review": "independent-peer",
+        "status": "passed",
+        "runtime_files": 7,
+        "diagnostic_tasks": 8,
+        "oral_tasks": 5,
+        "retention_tasks": 5,
+        "score_totals": [
+          40,
+          20,
+          50
+        ],
+        "visible_result_markers": 25,
+        "displayed_scalar_results": 108,
+        "pilot_policies_enumerated": [
+          9,
+          4
+        ],
+        "invalid_domain_rejections": 6,
+        "source_routes": 3,
+        "scope": "Exact primitive reconstruction plus global proofs, complete prompts and additive rubrics; no external human or UI certification."
+      },
+      "exam_a_author": {
+        "volume": "v15",
+        "component": "exam_a",
+        "status": "passed",
+        "points": 100,
+        "domains": 5,
+        "solved_subparts": 20,
+        "chapter_routes": 12,
+        "input_groups": 6,
+        "result_groups": 20,
+        "comparisons": 1271,
+        "domain_rejections": 22,
+        "runtime_files": 4
+      },
+      "exam_a_peer": {
+        "volume": "v15",
+        "component": "exam_a",
+        "role": "separate-peer",
+        "status": "pass",
+        "comparisons": 477,
+        "domain_rejections": 20,
+        "parts": 20,
+        "points": 100,
+        "input_groups": 6,
+        "output_groups": 20,
+        "runtime_files": 6
+      },
+      "exam_b_author": {
+        "volume": "v15",
+        "component": "exam_b",
+        "status": "passed",
+        "points": 100,
+        "domains": 5,
+        "scored_parts": 20,
+        "solutions": 20,
+        "input_groups": 11,
+        "result_groups": 20,
+        "comparisons": 350,
+        "rejected_inputs": 21,
+        "runtime_files": 4,
+        "open_findings": []
+      },
+      "exam_b_coordinator": {
+        "volume": "v15",
+        "component": "exam_b_peer",
+        "status": "passed",
+        "questions": 20,
+        "points": 100,
+        "numeric_markers": 20,
+        "comparisons": 641,
+        "invalid_domain_rejections": 9,
+        "runtime_files": 6
+      },
+      "project_author": {
+        "volume": "v15",
+        "component": "project",
+        "status": "pass",
+        "comparisons": 24717,
+        "domain_rejections": 20,
+        "reader_cli_runs": 4,
+        "protected_alias_rejections": 32,
+        "tasks": 7,
+        "rubric_domains": 5,
+        "policies": 37,
+        "uniformly_feasible": 31,
+        "states": 6,
+        "input_result_markers": 13,
+        "runtime_files": 9
+      },
+      "project_peer": {
+        "volume": "v15",
+        "component": "project_peer",
+        "status": "passed",
+        "tasks": 7,
+        "points": 100,
+        "policies": 37,
+        "uniformly_feasible": 31,
+        "states": 6,
+        "comparisons": 36507,
+        "reader_input_rejections": 20,
+        "peer_parser_rejections": 5,
+        "reader_cli_runs": 4,
+        "protected_alias_rejections": 32,
+        "reader_cli_parser_rejections": 4,
+        "runtime_files": 11
+      }
     },
-    "coordinator": {
-      "volume": "v15",
-      "component": "exam_b_peer",
-      "status": "passed",
-      "questions": 20,
-      "points": 100,
-      "numeric_markers": 20,
-      "comparisons": 641,
-      "invalid_domain_rejections": 9,
-      "runtime_files": 6
-    },
-    "scope": "Form B component only; full V15 assessment remains in production."
+    "limits": "Internal author and agent review; no independent human certification, empirically calibrated exam timing or rendered UI claim."
   },
   "v15-c01_check": {
     "author": {
