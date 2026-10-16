@@ -148,6 +148,29 @@ from check_v11_c12_peer import check as check_v11_c12_peer
 from check_v11_assessment import check as check_v11_assessment
 from check_economics_core import check as check_economics_core
 from check_finance_core import check as check_finance_core
+from check_v15_c02_peer import check as check_v15_c02_peer
+from check_v15_c02 import check as check_v15_c02
+from check_v15_c12_peer import check as check_v15_c12_peer
+from check_v15_c12 import check as check_v15_c12
+from check_v15_c11_peer import check as check_v15_c11_peer
+from check_v15_c11 import check as check_v15_c11
+from check_v15_c10_peer import check as check_v15_c10_peer
+from check_v15_c10 import check as check_v15_c10
+from check_v15_c09_peer import check as check_v15_c09_peer
+from check_v15_c09 import check as check_v15_c09
+from check_v15_c08_peer import check as check_v15_c08_peer
+from check_v15_c08 import check as check_v15_c08
+from check_v15_c07_peer import check as check_v15_c07_peer
+from check_v15_c07 import check as check_v15_c07
+from check_v15_c06_peer import check as check_v15_c06_peer
+from check_v15_c06 import check as check_v15_c06
+from check_v15_c05_peer import check as check_v15_c05_peer
+from check_v15_c05 import check as check_v15_c05
+from check_v15_c04_peer import check as check_v15_c04_peer
+from check_v15_c04 import check as check_v15_c04
+from check_v15_c03_peer import check as check_v15_c03_peer
+from check_v15_c03 import check as check_v15_c03
+from check_graduate_qualifying import check as check_graduate_qualifying
 from check_v12_c01 import check as check_v12_c01
 from check_v12_c01_peer import check as check_v12_c01_peer
 from check_v12_c02 import check as check_v12_c02
@@ -175,6 +198,10 @@ from check_v12_c12_peer import check as check_v12_c12_peer
 from check_v12_assessment import check as check_v12_assessment
 from check_v13_assessment import check as check_v13_assessment
 from check_v14_assessment import check as check_v14_assessment
+from check_v15_exam_b import check as check_v15_exam_b
+from check_v15_exam_b_peer import check as check_v15_exam_b_peer
+from check_v15_c01 import check as check_v15_c01
+from check_v15_c01_peer import check as check_v15_c01_peer
 from check_v13_c01 import check as check_v13_c01
 from check_v13_c01_peer import check as check_v13_c01_peer
 from check_v13_c02 import check as check_v13_c02
@@ -633,6 +660,29 @@ def main():
     v06_assessment_check = check_v06_assessment()
     economics_core_check = check_economics_core()
     finance_core_check = check_finance_core()
+    graduate_qualifying_check = check_graduate_qualifying()
+    v15_c02_check = check_v15_c02()
+    v15_c12_peer_check = check_v15_c12_peer()
+    v15_c12_check = check_v15_c12()
+    v15_c11_peer_check = check_v15_c11_peer()
+    v15_c11_check = check_v15_c11()
+    v15_c10_peer_check = check_v15_c10_peer()
+    v15_c10_check = check_v15_c10()
+    v15_c09_peer_check = check_v15_c09_peer()
+    v15_c09_check = check_v15_c09()
+    v15_c08_peer_check = check_v15_c08_peer()
+    v15_c08_check = check_v15_c08()
+    v15_c07_peer_check = check_v15_c07_peer()
+    v15_c07_check = check_v15_c07()
+    v15_c06_peer_check = check_v15_c06_peer()
+    v15_c06_check = check_v15_c06()
+    v15_c05_peer_check = check_v15_c05_peer()
+    v15_c05_check = check_v15_c05()
+    v15_c04_peer_check = check_v15_c04_peer()
+    v15_c04_check = check_v15_c04()
+    v15_c03_peer_check = check_v15_c03_peer()
+    v15_c03_check = check_v15_c03()
+    v15_c02_peer_check = check_v15_c02_peer()
     v07_assessment_check = check_v07_assessment()
     v07_chapter_check = {'v07-c01': check_v07_c01(), 'v07-c02': check_v07_c02(),
                          'v07-c03': check_v07_c03(), 'v07-c04': check_v07_c04(),
@@ -677,6 +727,9 @@ def main():
     v12_assessment_check = check_v12_assessment()
     v13_assessment_check = check_v13_assessment()
     v14_assessment_check = check_v14_assessment()
+    v15_exam_b_check = {'author': check_v15_exam_b(), 'coordinator': check_v15_exam_b_peer(),
+                        'scope': 'Form B component only; full V15 assessment remains in production.'}
+    v15_c01_check = {"author": check_v15_c01(), "peer": check_v15_c01_peer()}
     v14_opening_check = {'v14-c01': check_v14_c01(), 'v14-c02': check_v14_c02()}
     v14_opening_peer_check = {'v14-c01': check_v14_c01_peer(), 'v14-c02': check_v14_c02_peer()}
     v14_c12_check = {'author': check_v14_c12(), 'peer': check_v14_c12_peer()}
@@ -727,6 +780,29 @@ def main():
               'foundation_assessment_check': foundation_check,
               'economics_core_assessment_check': economics_core_check,
               'finance_core_assessment_check': finance_core_check,
+              'graduate_qualifying_check': graduate_qualifying_check,
+              'v15_c02_check': v15_c02_check,
+              'v15_c12_peer_check': v15_c12_peer_check,
+              'v15_c12_check': v15_c12_check,
+              'v15_c11_peer_check': v15_c11_peer_check,
+              'v15_c11_check': v15_c11_check,
+              'v15_c10_peer_check': v15_c10_peer_check,
+              'v15_c10_check': v15_c10_check,
+              'v15_c09_peer_check': v15_c09_peer_check,
+              'v15_c09_check': v15_c09_check,
+              'v15_c08_peer_check': v15_c08_peer_check,
+              'v15_c08_check': v15_c08_check,
+              'v15_c07_peer_check': v15_c07_peer_check,
+              'v15_c07_check': v15_c07_check,
+              'v15_c06_peer_check': v15_c06_peer_check,
+              'v15_c06_check': v15_c06_check,
+              'v15_c05_peer_check': v15_c05_peer_check,
+              'v15_c05_check': v15_c05_check,
+              'v15_c04_peer_check': v15_c04_peer_check,
+              'v15_c04_check': v15_c04_check,
+              'v15_c03_peer_check': v15_c03_peer_check,
+              'v15_c03_check': v15_c03_check,
+              'v15_c02_peer_check': v15_c02_peer_check,
               'volume_5_opening_checks': v05_opening_check,
               'volume_5_middle_checks': v05_middle_check,
               'volume_5_closing_checks': v05_closing_check,
@@ -771,6 +847,8 @@ def main():
               'volume_12_assessment_check': v12_assessment_check,
               'volume_13_assessment_check': v13_assessment_check,
               'volume_14_assessment_check': v14_assessment_check,
+              'volume_15_exam_b_component_check': v15_exam_b_check,
+              'v15-c01_check': v15_c01_check,
               'volume_14_opening_check': v14_opening_check,
               'volume_14_opening_peer_check': v14_opening_peer_check,
               'v14-c12_check': v14_c12_check,

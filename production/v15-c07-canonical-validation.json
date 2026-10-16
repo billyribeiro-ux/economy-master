@@ -1,0 +1,81 @@
+{
+  "chapter": "v15-c07",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v15-c07.html",
+      "bytes": 34723,
+      "sha256": "c698e9784cb9dff55edfeae3ac30efa090ae3b8a330627cd0c84709d4656f8a5"
+    },
+    {
+      "path": "scripts/check_v15_c07.py",
+      "bytes": 9867,
+      "sha256": "12cae65af8fd29ef5fc8537aaaaa29dddefc0808811516ad648acf7c1fa9e7ff"
+    },
+    {
+      "path": "content/reviews/v15-c07-sources.json",
+      "bytes": 3775,
+      "sha256": "318ffcc60effcbdabb5317646a2148cfb2e014029635fcd63f87576731c1d4ac"
+    },
+    {
+      "path": "content/reviews/v15-c07-author.json",
+      "bytes": 2685,
+      "sha256": "e228fbb2dde66b8c931c9d265c5df2546b632f5300feb82b2a8e9115882f499e"
+    },
+    {
+      "path": "scripts/check_v15_c07_peer.py",
+      "bytes": 14476,
+      "sha256": "e528eab4ceb4d98952b5648050640dad1a85731a108787f9018999bda289a7f4"
+    },
+    {
+      "path": "content/reviews/v15-c07-peer.json",
+      "bytes": 7579,
+      "sha256": "821957197e3fbe44ccf07ed110ec2ee37b75c808a86f26f1178e0a7191cae282"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v15-c07",
+        "status": "passed",
+        "comparisons": 253,
+        "domain_rejections": 22,
+        "worked_cases": 5,
+        "solved_exercises": 10,
+        "primitive_markers": 5,
+        "result_markers": 16,
+        "runtime_files": 4,
+        "scope": "Exact prices, missingness, adoption, sensitivity endpoints, bank balance sheets and dependent historical evidence; universal arguments reviewed separately."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v15-c07",
+        "status": "passed",
+        "worked_cases": 5,
+        "solutions": 10,
+        "inputs": 5,
+        "results": 16,
+        "comparisons": 408,
+        "domain_rejections": 26,
+        "runtime_files": 6
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "content/reviews/v15-c07-author.json",
+  "peer_validation": "production/v15-c07-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

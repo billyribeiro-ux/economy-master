@@ -1,0 +1,81 @@
+{
+  "chapter": "v15-c08",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v15-c08.html",
+      "bytes": 39419,
+      "sha256": "17d112539a98e65d25208410d1aff77982dfa6ad7b48de14f80fe3cd27ff8c04"
+    },
+    {
+      "path": "scripts/check_v15_c08.py",
+      "bytes": 12079,
+      "sha256": "ff5395eeb307af75468d1c84974798d04fbe6c061f0384069e587e6ec98917b6"
+    },
+    {
+      "path": "content/reviews/v15-c08-sources.json",
+      "bytes": 4430,
+      "sha256": "1315b2cd031325d4eeebe50aa6496ebdfec94b5580452db3414d3d73a1ee7e05"
+    },
+    {
+      "path": "content/reviews/v15-c08-author.json",
+      "bytes": 6140,
+      "sha256": "f7500adc77e68d98c23d5be64b2cf16ad12c0b390ad51c4ebacdb261ccde986f"
+    },
+    {
+      "path": "scripts/check_v15_c08_peer.py",
+      "bytes": 14015,
+      "sha256": "7affb2f31b53811d6693697e4a9136d32ff34fcb8282b29444970c8738f2bce7"
+    },
+    {
+      "path": "content/reviews/v15-c08-peer.json",
+      "bytes": 5734,
+      "sha256": "e159617cd73d66b7f16427e4f94af57912ddbc2dcfdb7b66fdb114aca9e0131f"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v15-c08",
+        "status": "passed",
+        "worked_cases": 5,
+        "solutions": 10,
+        "comparisons": 877,
+        "domain_rejections": 20,
+        "input_groups": 9,
+        "result_groups": 20,
+        "runtime_files": 4
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v15-c08",
+        "status": "passed",
+        "worked_cases": 5,
+        "solutions": 10,
+        "input_groups": 9,
+        "result_groups": 20,
+        "comparisons": 599,
+        "rejected_inputs": 19,
+        "runtime_files": 6,
+        "open_findings": []
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "content/reviews/v15-c08-author.json",
+  "peer_validation": "production/v15-c08-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "chapter": "v15-c11",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v15-c11.html",
+      "bytes": 33563,
+      "sha256": "a434c1c89cd0fcffbb6af3524fdba95b886301c9ede5470cc04ef7ad791318ce"
+    },
+    {
+      "path": "scripts/check_v15_c11.py",
+      "bytes": 9340,
+      "sha256": "2c73c0d238232cb5dac5716c35f9fc908a2114dafc9949db37efb266a44f60fa"
+    },
+    {
+      "path": "content/reviews/v15-c11-sources.json",
+      "bytes": 2747,
+      "sha256": "72c8965f243ba2954f92cdc66109389f8a02e5e9d834c8f326eab3e62bdde937"
+    },
+    {
+      "path": "content/reviews/v15-c11-author.json",
+      "bytes": 2616,
+      "sha256": "60bd2baedc54d74801cd0410d88d3d1c4232ad5bb2c84faa0d5ec4edd72359b1"
+    },
+    {
+      "path": "scripts/check_v15_c11_peer.py",
+      "bytes": 10783,
+      "sha256": "65e030e918195f7dc2e0ce334d12a16995e3d09fe94c3ee92dec598346c76a5c"
+    },
+    {
+      "path": "content/reviews/v15-c11-peer.json",
+      "bytes": 4855,
+      "sha256": "b82df01a550d985ef611e9076c59a245e63cdd5eae039b398f887536e4964a8c"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v15-c11",
+        "status": "passed",
+        "comparisons": 338,
+        "domain_rejections": 18,
+        "worked_cases": 5,
+        "solved_exercises": 10,
+        "primitive_markers": 5,
+        "result_markers": 16,
+        "runtime_files": 4,
+        "scope": "Exact equilibrium/funding, cap global witnesses, sorting support, individual/aggregated Gini and type-assignment enumeration; full proofs separately reviewed."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v15-c11",
+        "role": "separate-peer",
+        "status": "pass",
+        "comparisons": 282,
+        "domain_rejections": 18,
+        "worked_cases": 5,
+        "solutions": 10,
+        "input_groups": 5,
+        "output_groups": 16,
+        "runtime_files": 6
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "content/reviews/v15-c11-author.json",
+  "peer_validation": "production/v15-c11-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

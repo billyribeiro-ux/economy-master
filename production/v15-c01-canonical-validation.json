@@ -1,0 +1,83 @@
+{
+  "chapter": "v15-c01",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v15-c01.html",
+      "bytes": 39779,
+      "sha256": "f58651b624f898f8295debeaa251063f80b6a1e8dd6e7adcb46cc2aff8070e51"
+    },
+    {
+      "path": "scripts/check_v15_c01.py",
+      "bytes": 8977,
+      "sha256": "97bfdd776ab60c012357a9a541215de5c72ed645241f38a080768a454c152676"
+    },
+    {
+      "path": "content/reviews/v15-c01-sources.json",
+      "bytes": 3415,
+      "sha256": "237ab178ccf71cc8bebac751da3c77dac88700566e5194f84cc393221dd3f17f"
+    },
+    {
+      "path": "content/reviews/v15-c01-author.json",
+      "bytes": 2838,
+      "sha256": "f913d952ab407d10d0424bbee2c5bd223c4e7aea29c657e788a30a2e5b7d40b8"
+    },
+    {
+      "path": "scripts/check_v15_c01_peer.py",
+      "bytes": 12587,
+      "sha256": "d142aa2bc03a930b1d70b1a3150725cc6b8a3dfea3e5b830f2159bd0a5ea3f32"
+    },
+    {
+      "path": "content/reviews/v15-c01-peer.json",
+      "bytes": 6319,
+      "sha256": "cb7ae771c1e6f7a12982aee5aaad3310f4da3c0c7f7ce8800edbdfefa4799f89"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v15-c01",
+        "status": "passed",
+        "comparisons": 219,
+        "domain_rejections": 18,
+        "worked_cases": 6,
+        "solved_exercises": 12,
+        "primitive_markers": 7,
+        "result_markers": 24,
+        "runtime_files": 4,
+        "scope": "Finite calculations and global witnesses supplement full proofs, instruction and source review."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v15-c01",
+        "review": "separate_peer",
+        "status": "passed",
+        "comparisons": 236,
+        "domain_rejections": 20,
+        "worked_cases": 6,
+        "exercises": 12,
+        "solutions": 12,
+        "input_markers": 7,
+        "result_markers": 24,
+        "runtime_files": 6
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "content/reviews/v15-c01-author.json",
+  "peer_validation": "production/v15-c01-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

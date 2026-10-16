@@ -1,0 +1,84 @@
+{
+  "chapter": "v15-c02",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v15-c02.html",
+      "bytes": 38204,
+      "sha256": "a4def925177eec2b989a9df2e09b69924bd32a366981eb6db2dc66c41845c31c"
+    },
+    {
+      "path": "scripts/check_v15_c02.py",
+      "bytes": 9671,
+      "sha256": "e99feecc5986d02e6deffaed334fff4fce4b870b2aa0173235c271946d8a6eaa"
+    },
+    {
+      "path": "content/reviews/v15-c02-sources.json",
+      "bytes": 4870,
+      "sha256": "84fbed5a216c5b86ae08b5a361f46dcb55e6cc590d3bdb41ee968cf7eb159364"
+    },
+    {
+      "path": "content/reviews/v15-c02-author.json",
+      "bytes": 2591,
+      "sha256": "5e2254f977a87987d97de27bc9d6b5c676627efbd87002f7aab94d2ccc95260b"
+    },
+    {
+      "path": "scripts/check_v15_c02_peer.py",
+      "bytes": 14198,
+      "sha256": "f27cce593c53703b221648556fcb68b973cf9bc160adebbb168cfd18f439fd8d"
+    },
+    {
+      "path": "content/reviews/v15-c02-peer.json",
+      "bytes": 8892,
+      "sha256": "1b74187d6e98ecebc7b7af75fc43f1a9e4796967e4347d1820b84565c232c4d7"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v15-c02",
+        "status": "passed",
+        "comparisons": 257,
+        "domain_rejections": 21,
+        "worked_cases": 5,
+        "solved_exercises": 10,
+        "primitive_markers": 9,
+        "result_markers": 17,
+        "runtime_files": 4,
+        "scope": "Exact population, budget, equilibrium, posterior and stationary calculations; global witnesses supplement full domain/proof review."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v15-c02",
+        "review": "separate-peer",
+        "status": "passed",
+        "worked_cases": 5,
+        "solutions": 10,
+        "input_groups": 9,
+        "result_groups": 17,
+        "comparisons": 824,
+        "rejected_inputs": 24,
+        "runtime_files": 6,
+        "resolved_findings": 1,
+        "open_findings": []
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "content/reviews/v15-c02-author.json",
+  "peer_validation": "production/v15-c02-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}

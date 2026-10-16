@@ -1,0 +1,41 @@
+{
+  "assessment": "graduate-qualifying",
+  "component": "support",
+  "date": "2026-10-09",
+  "sources": [
+    {
+      "id": "quantecon-discrete-dp",
+      "title": "Sargent and Stachurski \u2014 QuantEcon, Discrete State Dynamic Programming",
+      "url": "https://tools-techniques.quantecon.org/discrete_dp.html",
+      "use": "Author-led extension to stochastic finite-state Bellman problems; this library uses its own deterministic example and standard-library code.",
+      "checked": "2026-10-09",
+      "verification": "Author-led lecture retrieved; contraction and optimal-policy sections inspected, no external package installed Additional graduate inspection: Reuse accepted scoped primary inspection record; no fresh download or rendered-body inspection in this assignment. Limits: Source refers out for main proofs. No copied numerical example, source code, implementation benchmark or imported discretization error theorem; no dependency installation. Scoped full record: reviews/v14-c11-sources.json; separate review: reviews/v14-c11-peer.json."
+    },
+    {
+      "id": "v12-c03-mit-gmm2017",
+      "title": "Victor Chernozhukov, Ivan Fernandez-Val \u2014 Structural Equations Models and GMM (MIT OpenCourseWare, 14.382 Econometrics, Spring2017, Lecture3)",
+      "url": "https://ocw.mit.edu/courses/14-382-econometrics-spring-2017/f6b8cd36eee8df2b259c979a1fd2673e_MIT14_382S17_lec3.pdf",
+      "use": "Fixed-dimensional linear GMM, sample normal equations, covariance weighting and the 2SLS special case. Signed and dimensionally consistent formulas are independently derived.",
+      "checked": "2026-10-09",
+      "verification": "PDF/printed pages5\u201313: criterion, rank, weighting and efficiency, fixed-dimensional linear theorem/proof and 2SLS special case. Earlier model setup was read for notation; later system-estimation/application material is not needed. Rendered physical pages 5,10,11. Exact source-byte hash and cautions in reviews/v12-c03-sources.json. Additional graduate inspection: Reuse accepted scoped primary inspection record; no fresh download or rendered-body inspection in this assignment. Limits: The formal theorem fixes dimensions and population matrices and assumes the relevant LLN/CLT. Counting moments is not identification; nonlinear global uniqueness requires more. Efficiency is within the specified valid-moment estimator class. Scoped full record: reviews/v14-c11-sources.json; separate review: reviews/v14-c11-peer.json.",
+      "limits": "The formal theorem fixes dimensions and population matrices and assumes the relevant LLN/CLT. Counting moments is not identification; nonlinear global uniqueness requires more. Efficiency is within the specified valid-moment estimator class. Page5's positive Jacobian blocks conflict with differentiating its residual moment; page13 correctly gives the negative sign. Page11's signed expansion also has the necessary minus sign. A symmetric normal law does not license dropping that sign in a joint expansion. Page10's displayed L=G Omega^-1 has incompatible dimensions under G being m-by-d and transformed moments L' g. Use L=Omega^-1 G, or derive the equivalent properly oriented expression."
+    },
+    {
+      "id": "v13-c03-borgers-blackwell2023",
+      "title": "Tilman B\u00f6rgers, Notes on Blackwell Dominance (3 December 2023)",
+      "url": "https://websites.umich.edu/~tborgers/BlackwellDominance.pdf",
+      "use": "Finite state/signal decision matrices, row-stochastic experiments and garblings, Proposition 1 and its finite equivalences/proof, beginning of posterior representation.",
+      "checked": "2026-10-09",
+      "verification": "Actual primary inspector ito_author: physical text pages1,2,3,4,5,6,7; printed pages1,2,3,4,5,6,7; actual viewed equation images on physical pagesnone. Web-extracted physical pages 1\u20137 coincide with printed pages 1\u20137 of the 13-page PDF. Limits: Actual substantive web-extracted text was read. Direct PDF retrieval returned HTTP 403; no retained PDF bytes/hash or actual equation-image inspection is claimed. Screenshot requests did not return viewable image blocks. No access workaround attempted. Pages 8\u201313 and the original Blackwell 1951/1953 papers were not inspected. The extracted proof on page 6 says non-negative after ruling out a positive entry of PM\u2212Q; that step requires nonpositive. Without a viewed page image this is recorded as an extracted-text inconsistency, not a certified print typo. The manuscript uses an independent nearest-point separation proof, not that display. Root read these scoped records and verified all14retained artifact byte bindings; root did not claim a fresh primary-body or image inspection. Evidence: production/v13-c03-source-preparation.json."
+    },
+    {
+      "id": "v13-c10-roughgarden-revenue2013",
+      "title": "Tim Roughgarden, CS364A Lecture5: Revenue-Maximizing Auctions",
+      "url": "https://www.timroughgarden.org/f13/l/l5.pdf",
+      "use": "Known independent private-value distributions; expected virtual surplus; monotone regular virtual allocation and reserve interpretation.",
+      "checked": "2026-10-09",
+      "verification": "C10 actual primary inspector c05_review: All eight physical/printed pages read as text. Relied-on sections1.3/1.4,2 and3.1: independent distributions, virtual-revenue derivation, regular single-item pointwise maximization. Section3.2 read to mark unproved extensions. Images 5,7. Version: October7,2013 on actual first page; eight-page document. Limits: Web PDF open failed; HTTPS retrieval succeeded and actual local body/images were inspected. Retrieval failure is not misrepresented as body reading. Physical4 uses derivatives for payments and leaves nonsmooth justification to the reader. Reuse/rederive the C08 pairwise integral-envelope argument, including jumps and the boundary-utility constant. Physical8 states optimality against all BIC mechanisms without proving it. Supply the independent interim envelope plus feasible pointwise virtual upper bound to prove this extension in the declared single-item class. No irregular ironing, named-family regularity catalogue, multi-parameter optimal auction, computational-complexity or real-platform practice claim is adopted. Root read full scope records and verified16 retained artifact bindings; root actually viewed Levin p6 only. Evidence production/v13-c10-source-preparation.json."
+    }
+  ],
+  "review": "Root read all four canonical identities/URLs/verified scopes. Reuse attributed prior primary inspection only; no fresh body or image inspection. Six original two-part oral tasks; source prose short and no source problem reused."
+}

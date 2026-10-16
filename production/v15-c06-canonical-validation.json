@@ -1,0 +1,82 @@
+{
+  "chapter": "v15-c06",
+  "date": "2026-10-09",
+  "status": "passed",
+  "coordinator": "root",
+  "canonical_bindings": [
+    {
+      "path": "content/chapters/v15-c06.html",
+      "bytes": 36180,
+      "sha256": "50eefe3b71cedada469f6bca771bda2dde968037729b8e8c38dfb53f9e7b0d0a"
+    },
+    {
+      "path": "scripts/check_v15_c06.py",
+      "bytes": 8155,
+      "sha256": "a747a217c53fd2d57869efc24ef74fa2c4248472b64bbb7fb53f093615a9773b"
+    },
+    {
+      "path": "content/reviews/v15-c06-sources.json",
+      "bytes": 7059,
+      "sha256": "65f94564448bb72a646495c291eed21359c57aa49e1ddb4593c4db8016b0c966"
+    },
+    {
+      "path": "content/reviews/v15-c06-author.json",
+      "bytes": 2657,
+      "sha256": "b175fab66a1a314ac1e5a9a1bf7265fb0688dd18ffca91f82c22e5e01b82ecc4"
+    },
+    {
+      "path": "scripts/check_v15_c06_peer.py",
+      "bytes": 11202,
+      "sha256": "f0105f3df87282d8bef561660db8e6080af30b5d69ae1b19ad5cc83a80b23561"
+    },
+    {
+      "path": "content/reviews/v15-c06-peer.json",
+      "bytes": 4974,
+      "sha256": "d5475c807e8fc33ddc963e5ba04eb8dddeb5d6b7bc17955c2ccff1e4885977e9"
+    }
+  ],
+  "gates": {
+    "author": {
+      "normal_quiet_API": {
+        "chapter": "v15-c06",
+        "status": "passed",
+        "comparisons": 513,
+        "domain_rejections": 15,
+        "worked_cases": 5,
+        "solved_exercises": 10,
+        "primitive_markers": 4,
+        "result_markers": 12,
+        "runtime_files": 4,
+        "scope": "Full finite budgets, posterior/election incentives, global choice and salary/capacity witnesses; universal proofs reviewed separately."
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 4,
+      "exact_membership_and_unchanged_bytes": true
+    },
+    "peer": {
+      "normal_quiet_API": {
+        "chapter": "v15-c06",
+        "role": "separate-peer",
+        "status": "pass",
+        "comparisons": 256,
+        "domain_rejections": 19,
+        "worked_cases": 5,
+        "solutions": 10,
+        "input_groups": 4,
+        "output_groups": 12,
+        "runtime_files": 6
+      },
+      "optimized_isolated_API": "passed; identical summary",
+      "optimized_isolated_silent_CLI": "passed",
+      "runtime_files": 6,
+      "exact_membership_and_unchanged_bytes": true
+    }
+  },
+  "proof_review": "content/reviews/v15-c06-author.json",
+  "peer_validation": "production/v15-c06-peer-validation.json",
+  "limitations": [
+    "Machine-assisted review, not external human certification.",
+    "Reader visual/mobile/keyboard/print QA remains pending."
+  ]
+}
