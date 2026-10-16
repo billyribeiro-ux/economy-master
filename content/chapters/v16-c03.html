@@ -1,0 +1,169 @@
+<section><h2 id="v16-c03-objective">Reconstruct a result and explain exactly what did and did not match</h2>
+<p><strong>Capability.</strong> Reproduce a specified computation and write a discrepancy report whose claims match the evidence. The prerequisite is <a href="v16-c02.html">literature mapping and critical reading</a>: identify the precise work, version, result and assumptions before running code. This chapter executes a small original synthetic reconstruction. It does not reproduce either of the real papers discussed there, and it does not supply new empirical evidence about banking.</p>
+<p>We use <em>computational reproduction</em> for rerunning a specified analysis with its inputs and computational conditions; <em>independent reconstruction</em> for implementing its stated calculation again; and <em>replication with new data</em> for a new study addressing the same scientific question. Terminology varies. The <a data-source="v16-c03-nasem" href="https://www.nationalacademies.org/read/25303/chapter/3">National Academies' 2019 report</a> distinguishes reproduction using the original computational ingredients from replication across studies with their own data. State your operational task rather than relying on the label alone.</p>
+<p>Matching a number is not the same as establishing that it measures the intended quantity, that the data describe the world accurately or that the research design identifies a causal effect. Conversely, a different number is not evidence of misconduct. A changed data vintage, an undocumented sample rule, a software difference or a mistake in your own implementation can each produce a discrepancy. The task is to locate and document the difference before interpreting it.</p>
+</section>
+<section><h2 id="v16-c03-provenance">1. Freeze the target and trace the inputs</h2>
+<p>Write a reproduction contract before changing anything: exhibit and exact version, target quantity, data snapshot, code entry point, output fields, computational environment and comparison criterion. “Reproduce Table 3” is insufficient if the table contains several samples and specifications. Specify the cell, its units and denominator, and whether the target is an estimate, standard error, sample count or figure. Preserve the original inputs and code separately from your modifications.</p>
+<p><em>Provenance</em> is the trace from an observation's origin through transformations to the reported result. Record the producing organization or original generator, retrieval or creation date, release/version, units, identifiers, coverage and permitted access. A file hash helps identify exact bytes; it does not certify that those bytes are accurate or lawfully redistributable. Record the hash algorithm and what was hashed. A hash of a compressed archive is not a description of the variable definitions inside it.</p>
+<p>Keep raw inputs, analysis inputs and outputs conceptually separate even when a tiny example embeds them in one script. For a large project, document which operation creates each intermediate file. Common transformations—deflation, currency conversion, deduplication, winsorization and linking entities—can change the estimand. Record what was done and why, not only the name of the function that did it. Do not let a missing value become zero just because zero makes a program run.</p>
+<p>As a professional benchmark, the <a data-source="v16-c03-aea" href="https://www.aeaweb.org/journals/data/data-code-policy">AEA's data and code policy</a>, inspected on 16 October 2026 and labeled February 2026, calls for documented provenance, transformation and analysis code, and instructions linking code to research outputs. It also addresses restricted data. This chapter illustrates a transparent workflow; it does not claim compliance with every journal requirement or authorize release of restricted records.</p>
+</section>
+<section><h2 id="v16-c03-reconstruct">2. Reconstruct the computation before adding improvements</h2>
+<p>First run the supplied procedure as documented, preserving logs and failures. Then identify the smallest calculation behind the target and implement an independent check. Compare row counts, keys, units and intermediate totals before comparing the final coefficient. If the analysis fails at data access, record that boundary: you have tested availability, not numerical reproducibility. If only analysis data are available, you can inspect the remaining calculation but cannot verify the unobserved raw-data construction.</p>
+<p>A numerical comparison needs an explicit tolerance. Exact integer and rational arithmetic permits exact equality in this chapter. Floating-point solvers may require absolute and relative tolerances tied to numerical error and the scientific question. Do not choose a wide tolerance after seeing a mismatch. Randomized computation requires the generator, seed, draw order and relevant environment; repeated runs of one deterministic seed are not independent scientific replications. Separate numerical approximation, sampling uncertainty and uncertainty about the model or measurement.</p>
+<article class="worked" id="v16-c03-case1"><h3>Worked case 1. An executed reconstruction from mixed units</h3>
+<p><strong>Target contract.</strong> A fictional note reports that total loan stock for banks observed at both dates, with positive initial stock, grows by <span data-input="target">1/50</span>, or 2%, in data vintage <code>toy-v1</code>. The unit of observation is a bank, the dates are simply 0 and 1, and all amounts refer to the same fictional currency. The target is growth of the matched total, not the equally weighted mean of bank growth rates. Missing observations remain missing. No sampling model or causal assignment is supplied.</p>
+<table><caption>Complete original raw inputs; None means unobserved</caption><thead><tr><th scope="col">Bank</th><th scope="col">Reported unit</th><th scope="col">Date 0</th><th scope="col">Date 1</th></tr></thead><tbody>
+<tr><th scope="row">A</th><td>million</td><td>40</td><td>36</td></tr>
+<tr><th scope="row">B</th><td>thousand</td><td>60000</td><td>66000</td></tr>
+<tr><th scope="row">C</th><td>million</td><td>20</td><td>None</td></tr>
+<tr><th scope="row">D</th><td>million</td><td>None</td><td>50</td></tr>
+</tbody></table>
+<p><strong>Provenance and data dictionary.</strong> These four records were created for this chapter; no external dataset was downloaded to construct them. Bank identifiers are unique within a vintage. Amount fields accept nonnegative integers or <code>None</code>; the reported unit applies to both dates in a row. Normalize thousands to millions by multiplying by 1/1000. A positive initial amount is required for a bank's proportional change. A zero final amount is an observed zero and remains eligible. The row order is not substantive.</p>
+<p><strong>Independent hand reconstruction.</strong> B becomes (60,66) million. The matched set is A and B: initial total 100, final total 102, so growth is <span data-result="matched">(100,102,1/50)</span>. Individual growth is −1/10 for A and 1/10 for B, giving an equal-bank mean of <span data-result="mean">0</span>. Growth of a sum instead weights those individual growth rates by initial loan shares 2/5 and 3/5. C and D are excluded from the matched target for missing end and missing start, respectively. The observed-file totals, using whatever is observed at each date, are <span data-result="observed">(120,152,4/15)</span>. That last ratio compares changing observed coverage and is not the matched target.</p>
+<p><strong>Runnable artifact.</strong> Copy the entire program below into <code>reconstruct.py</code> and run <code>python3 -I -B reconstruct.py</code>. It uses only the Python standard library, reads no files, makes no network requests and prints the two version reports. The code is embedded here so it remains available offline. <code>Fraction</code> keeps the supplied calculations exact. Validation uses explicit exceptions, which also operate under Python's optimization flag. The report uses rational strings; <code>1/50</code> is a fraction, not a percentage number.</p>
+<pre><code id="v16-c03-program">from fractions import Fraction as F
+import json
+
+# Original fictional records: (bank, unit, date_0, date_1).
+V1 = (
+    (&quot;A&quot;, &quot;million&quot;, 40, 36),
+    (&quot;B&quot;, &quot;thousand&quot;, 60000, 66000),
+    (&quot;C&quot;, &quot;million&quot;, 20, None),
+    (&quot;D&quot;, &quot;million&quot;, None, 50),
+)
+# A documented correction to one cell, not a replacement of V1.
+V2 = tuple((b, u, s, 64000 if b == &quot;B&quot; else e) for b, u, s, e in V1)
+
+def analyze(rows):
+    factors = {&quot;million&quot;: F(1), &quot;thousand&quot;: F(1, 1000)}
+    seen, normalized = set(), []
+    for row in rows:
+        if not isinstance(row, (tuple, list)) or len(row) != 4:
+            raise ValueError(&quot;each row needs bank, unit, start, end&quot;)
+        bank, unit, start, end = row
+        if type(bank) is not str or not bank or bank in seen:
+            raise ValueError(&quot;bank IDs must be nonempty and unique&quot;)
+        if type(unit) is not str or unit not in factors:
+            raise ValueError(&quot;unit must be million or thousand&quot;)
+        for amount in (start, end):
+            if amount is not None and (type(amount) is not int or amount &lt; 0):
+                raise ValueError(&quot;amounts must be nonnegative integers or None&quot;)
+        seen.add(bank)
+        normalized.append((bank, None if start is None else start * factors[unit],
+                           None if end is None else end * factors[unit]))
+    normalized.sort()
+    matched, excluded = [], []
+    for bank, start, end in normalized:
+        if start is None:
+            excluded.append(bank + &quot;: missing start&quot;)
+        elif end is None:
+            excluded.append(bank + &quot;: missing end&quot;)
+        elif start == 0:
+            excluded.append(bank + &quot;: zero start&quot;)
+        else:
+            matched.append((bank, start, end))
+    if not matched:
+        raise ValueError(&quot;no matched bank with positive start&quot;)
+    start = sum(row[1] for row in matched)
+    end = sum(row[2] for row in matched)
+    observed_start = sum(s for _, s, _ in normalized if s is not None)
+    observed_end = sum(e for _, _, e in normalized if e is not None)
+    mean_growth = sum((e - s) / s for _, s, e in matched) / len(matched)
+    return {
+        &quot;excluded&quot;: excluded,
+        &quot;matched&quot;: [b for b, _, _ in matched],
+        &quot;matched_end_million&quot;: str(end),
+        &quot;matched_growth&quot;: str((end - start) / start),
+        &quot;matched_start_million&quot;: str(start),
+        &quot;mean_bank_growth&quot;: str(mean_growth),
+        &quot;observed_file_growth&quot;: str((observed_end - observed_start) / observed_start),
+    }
+
+if __name__ == &quot;__main__&quot;:
+    print(json.dumps({&quot;toy-v1&quot;: analyze(V1), &quot;toy-v2&quot;: analyze(V2)},
+                     indent=2, sort_keys=True))</code></pre>
+<p>The second vintage changes only B's final raw amount from 66000 to <span data-input="revision">64000</span> thousand. This is a stipulated correction in our fictional record, with both snapshots retained. It is not a claim about an actual data provider. The program was executed during chapter preparation, and the displayed output is the exact transcript:</p>
+<pre><code id="v16-c03-output">{
+  &quot;toy-v1&quot;: {
+    &quot;excluded&quot;: [
+      &quot;C: missing end&quot;,
+      &quot;D: missing start&quot;
+    ],
+    &quot;matched&quot;: [
+      &quot;A&quot;,
+      &quot;B&quot;
+    ],
+    &quot;matched_end_million&quot;: &quot;102&quot;,
+    &quot;matched_growth&quot;: &quot;1/50&quot;,
+    &quot;matched_start_million&quot;: &quot;100&quot;,
+    &quot;mean_bank_growth&quot;: &quot;0&quot;,
+    &quot;observed_file_growth&quot;: &quot;4/15&quot;
+  },
+  &quot;toy-v2&quot;: {
+    &quot;excluded&quot;: [
+      &quot;C: missing end&quot;,
+      &quot;D: missing start&quot;
+    ],
+    &quot;matched&quot;: [
+      &quot;A&quot;,
+      &quot;B&quot;
+    ],
+    &quot;matched_end_million&quot;: &quot;100&quot;,
+    &quot;matched_growth&quot;: &quot;0&quot;,
+    &quot;matched_start_million&quot;: &quot;100&quot;,
+    &quot;mean_bank_growth&quot;: &quot;-1/60&quot;,
+    &quot;observed_file_growth&quot;: &quot;1/4&quot;
+  }
+}</code></pre>
+<p><strong>Reconstruction verdict.</strong> The <code>toy-v1</code> matched total reproduces the stated 2% target exactly. The equally weighted mean answers a different question despite using the same matched banks. In <code>toy-v2</code>, the matched totals are both 100 and growth is zero. These are reproducible consequences of the declared inputs and definitions, not empirical validation of a financial mechanism.</p>
+</article></section>
+<section><h2 id="v16-c03-discrepancy">3. Change one ingredient and keep a discrepancy ledger</h2>
+<p>When a result differs, classify the first known divergence. Is the code unable to run, the input unavailable, an intermediate table different, or only the final rounding different? State what you observed and what is still a hypothesis. If possible, hold the original data fixed while changing code, then hold code fixed while changing data. This does not turn debugging into causal inference; it makes the computational source of a difference inspectable.</p>
+<p>A correction differs from an extension. Repairing a documented unit conversion can restore the original target. Replacing a loan-weighted aggregate with an equal-bank mean changes the estimand even if you prefer it. Adding new years changes the population and window. Useful extensions belong in separately labeled outputs, not in a silently overwritten benchmark. Preserve the original mismatch, the change, the reason and the resulting comparison.</p>
+<article class="worked" id="v16-c03-case2"><h3>Worked case 2. A complete discrepancy report</h3>
+<p>Mira initially adds A's and B's raw amounts without converting B's unit. Her initial and final raw sums are <span data-result="wrong-totals">(60040,66036)</span>, with ratio <span data-result="wrong-growth">1499/15010</span>. That number is not a valid loan-growth measure because the summands have different units. Its reproducibility would not repair its meaning. The following ledger compares distinct alternatives with the corrected <code>toy-v1</code> target; each row states its own change rather than pretending all rows are one sequential analysis.</p>
+<table><caption>Completed discrepancy ledger against the same target</caption><thead><tr><th scope="col">Run or comparison</th><th scope="col">What changed</th><th scope="col">Observed result and judgment</th></tr></thead><tbody>
+<tr><th scope="row">Raw-unit error</th><td>Normalization omitted, matched A/B retained.</td><td>1499/15010; invalid mixed-unit addition. Correct the conversion.</td></tr>
+<tr><th scope="row">Corrected benchmark</th><td>Declared units, vintage and matched-total definition used.</td><td>1/50; exact agreement with the target.</td></tr>
+<tr><th scope="row">Equal-bank statistic</th><td>Same normalized vintage and banks; weighting changes.</td><td>0; valid alternative estimand, not a failed implementation of the matched-total formula.</td></tr>
+<tr><th scope="row">Changing observed coverage</th><td>Each date uses all observed amounts, including unmatched records.</td><td>4/15; descriptive file-total growth, not matched-population growth.</td></tr>
+<tr><th scope="row">Corrected vintage</th><td>Only B's final value changes; code and matched definition fixed.</td><td>0; data-revision difference of −1/50 in growth, or −2 percentage points.</td></tr>
+</tbody></table>
+<p><strong>Completed report.</strong> “Target: the fictional note's matched-total growth in <code>toy-v1</code>. I reconstructed it using explicit unit normalization and an audited A/B matched set. The code and hand calculation agree exactly at 1/50. My first mismatch arose from mixing thousands with millions; it was an implementation error in my reconstruction. The equal-bank and observed-file statistics differ because they answer different questions. The retained <code>toy-v2</code> correction changes the matched target to zero; this does not make the frozen <code>toy-v1</code> computation unreproducible. Both vintages, definitions, exclusions and outputs are reported. I have not tested any actual paper, causal design or broader population claim.”</p>
+<p><strong>Evidence and limits.</strong> A complete execution log names the program bytes, input snapshot, interpreter and command, return status, output and any changes made. Here there is no dependency installation or randomized algorithm, and exact equality is appropriate. In a real study, successful execution would still leave data collection, selection and identification to audit. If a reported value remained unexplained, the report should name the first unresolved intermediate discrepancy and the information needed to resolve it. A neutral clarification request can be drafted with that evidence; a researcher should not publicly infer intent from an unexplained numerical gap.</p>
+</article></section>
+<section><h2 id="v16-c03-limits">4. Interpret success and failure at the right level</h2>
+<p>Use a result-specific status: reproduced within the stated criterion; reproduced after a documented correction; discrepant with a located cause; discrepant with cause unresolved; or not tested because a required input or environment is unavailable. An entire paper may contain several statuses. Report the number and identity of outputs attempted, rather than calling a package “reproducible” after checking its simplest table.</p>
+<p>Independent code can detect a programming mistake but can also repeat the same conceptual error. Check the formula against the question, not just against another implementation. In the worked case, two scripts could agree on mixed-unit totals. The independent unit ledger is what exposes the error. Likewise, reproducing an observational regression does not validate its counterfactual assumptions. New-data replication introduces sampling, measurement and context differences; agreement or disagreement requires interpretation relative to those differences.</p>
+<p>Restricted data require a different feasible task, not fabricated success. Document the access route and limits, inspect permitted code and metadata, and separate any synthetic test from the unavailable empirical run. Do not redistribute files merely because another researcher sent them. When suitable, a test with artificial records can verify program behavior while revealing nothing about whether the actual estimates reproduce. Say both things.</p>
+</section>
+<section><h2 id="v16-c03-exercises">5. Exercises</h2>
+<ol class="exercises">
+<li id="v16-c03-e1">Classify these tasks under the chapter's operational vocabulary: rerun the supplied program on V1; implement its formula independently from the data dictionary; collect a new banking sample to address the same substantive question; inspect the README without running code. State what each task can and cannot establish.</li>
+<li id="v16-c03-e2">Create a separate hypothetical vintage in which B's final raw amount is <span data-input="exercise-revision">63000</span> thousand, with all other V1 cells unchanged. Compute matched-total growth and equal-bank mean growth. State the normalized totals and explain why the two answers differ.</li>
+<li id="v16-c03-e3">A researcher replaces every missing amount in V1 with zero before running the displayed program. Which banks are matched, and what are matched-total growth and equal-bank mean growth? Is the program's successful execution evidence that the imputation is valid? Identify the newly false measurement statement.</li>
+<li id="v16-c03-e4">Using the two actual program reports, calculate the change from V1 to V2 in matched-total growth and equal-bank mean growth. Give both changes as fractions and percentage points. Explain why this is a vintage comparison rather than a new-data scientific replication.</li>
+<li id="v16-c03-e5">Define code K1 as the matched-total formula and code K2 as the equal-bank mean, both with correct units. Fill the two-by-two table for K1/K2 crossed with V1/V2. Which comparisons isolate a code-definition change at fixed data, and which isolate a vintage change at fixed definition? Explain why K2 is not simply a corrected K1.</li>
+<li id="v16-c03-e6">You can access a paper's code and dictionary but cannot obtain its restricted input records. Write a precise status report and a useful next action. Explain how artificial data could help without being represented as an empirical reproduction.</li>
+<li id="v16-c03-e7">Two programs return the same mixed-unit result in case 2, and repeated executions match it exactly. A colleague concludes that the original economic claim has been validated. Identify the error and propose one independent measurement check and one separate research-design check. Do not invent a causal assignment for the toy data.</li>
+<li id="v16-c03-e8">Write a complete short report for the V1/V2 exercise: target, provenance, execution, agreement, located discrepancies, unresolved substantive limits and next action. Include a sentence that prevents readers from mistaking this exercise for reproduction of the C02 papers. Evaluation rewards an auditable claim, not an accusation or a long log dump.</li>
+</ol>
+<details class="solutions"><summary>Complete solutions and evaluation criteria</summary>
+<div data-solution-for="v16-c03-e1"><h3>1. Name the task before claiming success</h3><p>The rerun is computational reproduction of this program's output; it tests execution agreement, not real-world measurement or causation. Implementing the stated formula independently is reconstruction; agreement helps check the implementation, but shared conceptual mistakes remain possible. A new sample addressing the same scientific question is a replication study under this vocabulary; comparison must consider its uncertainty and context. README inspection is a transparency or availability assessment, not a successful numerical reproduction. Full credit distinguishes all four and their evidence limits. Using another discipline's labels is acceptable if the actual tasks are made explicit.</p></div>
+<div data-solution-for="v16-c03-e2"><h3>2. Recompute both estimands</h3><p>B's normalized final amount becomes 63 million. The matched initial/final totals and aggregate growth are <span data-result="e2-total">(100,99,-1/100)</span>. Individual growth rates are −1/10 and 1/20, so their equal mean is <span data-result="e2-mean">-1/40</span>. Aggregate growth is −1%, whereas the equal-bank mean is −2.5%; the aggregate gives B greater baseline weight. This is a separate hypothetical vintage and must not overwrite V1 or V2.</p></div>
+<div data-solution-for="v16-c03-e3"><h3>3. A valid type is not a valid observation</h3><p>The matched set becomes A,B,C. D has zero initial stock and is excluded by the positive-baseline rule. Matched initial/final totals and growth are <span data-result="e3-total">(120,102,-3/20)</span>; the mean of −1/10,1/10 and −1 is <span data-result="e3-mean">-1/3</span>. The program correctly computes the supplied altered inputs. The newly false statement is that C's final loan stock was observed to be zero; V1 only says it was unobserved. D's missing start has also been falsely converted to an observed zero. A successful run validates neither substitution.</p></div>
+<div data-solution-for="v16-c03-e4"><h3>4. Separate a correction from new evidence</h3><p>The changes (aggregate,mean) are <span data-result="e4-changes">(-1/50,-1/60)</span>, or <span data-result="e4-points">(-2,-5/3)</span> percentage points. The old mean is zero; the new mean is (−1/10+1/15)/2=−1/60. The versions share almost all the same invented records and differ by a stipulated correction, so this is a controlled data-version comparison. It does not provide a new independently collected sample or test a scientific banking claim.</p></div>
+<div data-solution-for="v16-c03-e5"><h3>5. Cross data and definition explicitly</h3><p>Ordered (K1,V1;K1,V2;K2,V1;K2,V2), the table is <span data-result="e5-table">(1/50,0,0,-1/60)</span>. Within either vintage, comparing K1 with K2 isolates the definition/weighting change. Within either definition, comparing V1 with V2 isolates the one-cell vintage change. A diagonal comparison changes both ingredients and cannot attribute the discrepancy to only one. K2 answers an equal-bank question and K1 a loan-weighted aggregate question; each can be valid under its own contract. Prefer the one relevant to the stated question, and label the other as an additional statistic.</p></div>
+<div data-solution-for="v16-c03-e6"><h3>6. Report the access boundary</h3><p>“The code and dictionary were inspected, but the empirical output was not tested because the necessary restricted records were unavailable. I have recorded the access route, requirements and unresolved permission status. Next I will seek an authorized access arrangement or identify an approved independent verifier. Meanwhile, synthetic records can test unit conversions, missing-value handling and program interfaces; those tests do not show that the paper's estimates reproduce.” Full credit names what was done, what was not, why, and a feasible action without promising access or redistributing restricted information.</p></div>
+<div data-solution-for="v16-c03-e7"><h3>7. Agreement can preserve a shared error</h3><p>Both implementations can repeat the same invalid unit addition. Independently inspect each amount's unit and convert B's values to millions before summing; the corrected matched total then yields 1/50. A separate design check asks what counterfactual variation could justify an economic or causal interpretation and whether selection or borrower demand confounds it. The toy records supply no such assignment, so the supported statement remains an accounting description. Repetition with identical bytes adds execution evidence, not independent observations or a causal design.</p></div>
+<div data-solution-for="v16-c03-e8"><h3>8. A complete bounded report</h3><p>“I targeted V1 matched-total loan-stock growth with a positive initial stock and both dates observed. All records are original fictional inputs embedded in the displayed program, with explicit units and missing values. I executed that program and independently recomputed normalized totals; A/B totals 100 and 102 reproduce 1/50 exactly. An initial raw-unit mismatch was traced to mixing thousands and millions. Alternative equal-bank and changing-coverage statistics answer different questions; the one-cell V2 correction changes the matched result to zero. No actual data collection, sampling uncertainty or causal identification was tested. This exercise does not reproduce the real papers in C02. Preserve both vintages and use the measurement lesson to specify a feasible real reproduction target and access plan.” Full credit includes all requested components and a specific next action. A claim that every aspect of the research is validated would exceed the work.</p></div>
+</details></section>
+<section><h2 id="v16-c03-retention">6. Teach-back and delayed retention</h2>
+<p><strong>Teach-back.</strong> Explain to a colleague why the V1 result can be reproducible while V2 gives a different answer, and why two matching programs can still be wrong. Use the units, sample and target rather than saying only “versions matter.”</p>
+<details class="solutions"><summary>Answer guide</summary><p>The V1 contract fixes its data and matched-total formula. A correction to a recorded value creates a distinct V2 input and hence a different target result. Separately, matching programs can add incompatible units or implement the wrong estimand. Agreement must be supplemented by a measurement and question check. Neither the version difference nor the common programming error establishes intentional deception.</p></details>
+<p><strong>Delayed retention.</strong> After a week, a collaborator sends only a new spreadsheet with a familiar filename and a screenshot of a result. Draft a response plan containing the minimum information needed before declaring reproduction successful.</p>
+<details class="solutions"><summary>Criteria and illustrative plan</summary><p>Preserve the received bytes and record the source/date; identify the intended exhibit, data version, units, population and formula; request or locate the transformation and analysis steps and required environment; compare against the specified target using a declared criterion; retain logs and unexplained discrepancies. A screenshot alone is insufficient to establish the computation. If provenance or access remains unresolved, state “not yet tested” with the missing item, rather than guessing which vintage the filename represents.</p></details>
+<p><strong>Next step.</strong> Carry the target contract and discrepancy report into <a href="curriculum.html#v16-c04">referee reports and research judgment</a>. Evaluate which issue changes a paper's main claim, which is a repairable presentation or implementation defect, and which remains untested.</p>
+</section>
