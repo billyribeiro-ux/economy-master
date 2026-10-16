@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-16",
+  "finding": "Shared structural parser counted labeled section solutions but not equally valid div solutions inside disclosure; C01 has eight full div solutions independently read and paired.",
+  "repair": "Count explicit data-solution-for on either section or div within details.solutions. Do not count outside disclosure.",
+  "validation": {
+    "labeled_solution_tags": [
+      "div",
+      "section"
+    ],
+    "outside_disclosure_excluded": true,
+    "actual_C01_exercises": 8,
+    "actual_C01_solutions": 8
+  },
+  "status": "passed targeted tests, full181chapter209HTML regression and final182chapter210HTML full verifier"
+}

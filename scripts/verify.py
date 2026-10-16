@@ -171,6 +171,12 @@ from check_v15_c04 import check as check_v15_c04
 from check_v15_c03_peer import check as check_v15_c03_peer
 from check_v15_c03 import check as check_v15_c03
 from check_graduate_qualifying import check as check_graduate_qualifying
+from check_v16_c02 import check as check_v16_c02
+from check_v16_c02_peer import check as check_v16_c02_peer
+from check_v16_c01 import check as check_v16_c01
+from check_v16_c01_peer import check as check_v16_c01_peer
+from check_integrated_case import check as check_integrated_case
+from check_integrated_case_peer import check as check_integrated_case_peer
 from check_v12_c01 import check as check_v12_c01
 from check_v12_c01_peer import check as check_v12_c01_peer
 from check_v12_c02 import check as check_v12_c02
@@ -282,7 +288,7 @@ class Document(HTMLParser):
             self.exercise_count += 1
         if tag == 'li' and self.solution_depth:
             self.solution_count += 1
-        if tag == 'section' and self.solution_depth and a.get('data-solution-for'):
+        if tag in ('section', 'div') and self.solution_depth and a.get('data-solution-for'):
             self.solution_count += 1
             self.solution_targets.append(a['data-solution-for'])
         if tag in ('h1','h2','h3','h4'): self.headings.append(tag)
@@ -660,6 +666,12 @@ def main():
     economics_core_check = check_economics_core()
     finance_core_check = check_finance_core()
     graduate_qualifying_check = check_graduate_qualifying()
+    v16_c02_check = check_v16_c02()
+    v16_c02_peer_check = check_v16_c02_peer()
+    v16_c01_check = check_v16_c01()
+    v16_c01_peer_check = check_v16_c01_peer()
+    integrated_case_check = check_integrated_case()
+    integrated_case_peer_check = check_integrated_case_peer()
     v15_c02_check = check_v15_c02()
     v15_c12_peer_check = check_v15_c12_peer()
     v15_c12_check = check_v15_c12()
@@ -779,6 +791,12 @@ def main():
               'economics_core_assessment_check': economics_core_check,
               'finance_core_assessment_check': finance_core_check,
               'graduate_qualifying_check': graduate_qualifying_check,
+              'v16_c02_check': v16_c02_check,
+              'v16_c02_peer_check': v16_c02_peer_check,
+              'v16_c01_check': v16_c01_check,
+              'v16_c01_peer_check': v16_c01_peer_check,
+              'integrated_case_check': integrated_case_check,
+              'integrated_case_peer_check': integrated_case_peer_check,
               'v15_c02_check': v15_c02_check,
               'v15_c12_peer_check': v15_c12_peer_check,
               'v15_c12_check': v15_c12_check,

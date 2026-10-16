@@ -7107,7 +7107,7 @@
       ],
       "assessment": "Produce a defensible original contribution with a reproducible package, research ethics and an expert-facing defense.",
       "project": "Complete a research portfolio: literature map, replication, two referee reports, proposal, original paper, code/data package and oral-defense materials.",
-      "status": "planned",
+      "status": "writing",
       "chapters": [
         {
           "id": "v16-c01",
@@ -7129,7 +7129,7 @@
             "v15"
           ],
           "level": "Research",
-          "status": "planned",
+          "status": "accepted",
           "manuscript": "chapters/v16-c01.html",
           "sources": [
             "harvard-economics-requirements",
@@ -7139,13 +7139,14 @@
           "required_worked_examples": 2,
           "required_exercises": 8,
           "review": {
-            "arithmetic": false,
-            "reasoning": false,
-            "solutions": false,
-            "sources": false,
-            "instruction": false,
-            "structure": false
-          }
+            "arithmetic": true,
+            "reasoning": true,
+            "solutions": true,
+            "sources": true,
+            "instruction": true,
+            "structure": true
+          },
+          "review_record": "reviews/v16-c01.json"
         },
         {
           "id": "v16-c02",
@@ -7163,23 +7164,26 @@
             "v16-c01"
           ],
           "level": "Research",
-          "status": "planned",
+          "status": "accepted",
           "manuscript": "chapters/v16-c02.html",
           "sources": [
-            "harvard-economics-requirements",
-            "hbs-doctoral-requirements",
-            "wharton-finance-courses"
+            "v16-c02-km-draft",
+            "v16-c02-schnabl-draft",
+            "v16-c02-km-record",
+            "v16-c02-schnabl-record",
+            "v16-c02-prs-record"
           ],
           "required_worked_examples": 2,
           "required_exercises": 8,
           "review": {
-            "arithmetic": false,
-            "reasoning": false,
-            "solutions": false,
-            "sources": false,
-            "instruction": false,
-            "structure": false
-          }
+            "arithmetic": true,
+            "reasoning": true,
+            "solutions": true,
+            "sources": true,
+            "instruction": true,
+            "structure": true
+          },
+          "review_record": "reviews/v16-c02.json"
         },
         {
           "id": "v16-c03",
@@ -8545,9 +8549,17 @@
       "after_volume": 15,
       "outcome": "Connect mechanism, identification, valuation, distribution and institutional feasibility.",
       "deliverables": "Documented integrated case, scenario/model/data inputs, decision memo, benchmark and argument-specific evaluation.",
-      "status": "planned",
+      "status": "accepted",
       "manuscript": "cross-assessments/integrated-case.html",
-      "page": "integrated-case-assessment.html"
+      "page": "integrated-case-assessment.html",
+      "required_artifacts": [
+        "projects/integrated-case-inputs.json",
+        "projects/integrated-case-analysis.py",
+        "projects/integrated-case-output.json",
+        "projects/integrated-case-README.txt",
+        "projects/integrated-case-manifest.json"
+      ],
+      "review_record": "reviews/integrated-case.json"
     },
     {
       "id": "research-portfolio",

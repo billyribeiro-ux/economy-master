@@ -69,7 +69,17 @@
     "url": "https://www.economics.harvard.edu/graduate-program-requirements",
     "use": "Curricular benchmark: core theory, quantitative study, fields, research, teaching and dissertation.",
     "checked": "2026-10-06",
-    "verification": "Published requirements read"
+    "verification": "Published requirements read",
+    "additional_inspections": [
+      {
+        "date": "2026-10-16",
+        "inspector": "v16_c01_author",
+        "scope": "HTML lines 75–99: core and field preparation, research paper, workshops, proposal, dissertation and advising.",
+        "use": "Single bounded curricular benchmark statement in fields section.",
+        "limits": "No degree equivalence, exhaustive field definition, current personalized eligibility, syllabus-content or library endorsement claim. No institutional deadlines are taught.",
+        "record": "reviews/v16-c01-sources.json"
+      }
+    ]
   },
   {
     "id": "mit-economics-curriculum",
@@ -85,7 +95,17 @@
     "url": "https://www.hbs.edu/doctoral/phd-programs/business-economics/program-requirements",
     "use": "Benchmark for business economics research, case discussion, teaching and practitioner engagement.",
     "checked": "2026-10-06",
-    "verification": "Published requirements read, including Fall 2026 field changes"
+    "verification": "Published requirements read, including Fall 2026 field changes",
+    "additional_inspections": [
+      {
+        "date": "2026-10-16",
+        "inspector": "v16_c01_author",
+        "scope": "HTML lines 332–388, especially Field Research Requirement lines 370–382.",
+        "use": "Practitioner engagement is described as a research activity; no institutional hours, funding or deadlines reproduced.",
+        "limits": "No actual practitioner access, project approval, degree equivalence or endorsement inferred.",
+        "record": "reviews/v16-c01-sources.json"
+      }
+    ]
   },
   {
     "id": "hbs-finance-curriculum",
@@ -101,7 +121,17 @@
     "url": "https://fnce.wharton.upenn.edu/phd-course-descriptions/",
     "use": "Benchmark for doctoral asset pricing, corporate finance, empirical methods and macro-finance.",
     "checked": "2026-10-06",
-    "verification": "Published course descriptions read"
+    "verification": "Published course descriptions read",
+    "additional_inspections": [
+      {
+        "date": "2026-10-16",
+        "inspector": "v16_c01_author",
+        "scope": "HTML lines 55–114: FNCE9120,9210,9240,9260,9340,9370 in particular.",
+        "use": "Narrow curricular connection among financial institutions, empirical methods and macro-finance.",
+        "limits": "No linked syllabi inspected; no claim to enumerate the live research frontier or establish paper novelty.",
+        "record": "reviews/v16-c01-sources.json"
+      }
+    ]
   },
   {
     "id": "hbs-general-management",
@@ -4654,5 +4684,50 @@
     "checked": "2026-10-16",
     "verification": "Retained bounded primary-source inspection reused; see content/reviews/v15-project-sources.json",
     "limits": "Bounded text reading only; all chapter numbers and proofs original and synthetic. Reused bounded prior inspection; no new retrieval/rendering."
+  },
+  {
+    "id": "v16-c02-km-draft",
+    "title": "Asim Khwaja and Atif Mian — Tracing the Impact of Bank Liquidity Shocks: Evidence from an Emerging Market (author-hosted forthcoming-AER draft)",
+    "url": "https://atif.scholar.princeton.edu/document/23",
+    "use": "Evidence-table row and bounded method comparison.",
+    "checked": "2026-10-16",
+    "verification": "Web tool actual44page PDF text: title/abstract; introduction method passages printed2–3; data/§II passages printed8–12, especially §II.B and bank-specific demand paragraph. Selected passages read, not every page. Actual inspector: v16_c01_author; independent peer scope in reviews/v16-c02-peer.json.",
+    "limits": "Draft not certified identical to final article. No numerical result imported, no full-paper/appendix audit or reproduction. curl retrieval returned a Cloudflare HTML challenge, not a PDF; no usable local copy or local image inspection claimed. Web screenshot calls returned reference-only output, not a visually inspected image."
+  },
+  {
+    "id": "v16-c02-schnabl-draft",
+    "title": "Philipp Schnabl — The International Transmission of Bank Liquidity Shocks: Evidence from an Emerging Market (author-hosted forthcoming-JF draft)",
+    "url": "https://pages.stern.nyu.edu/~pschnabl/research/jf_schnabl_Paper_2011.pdf",
+    "use": "Evidence row, actual citation edge and bounded method comparison.",
+    "checked": "2026-10-16",
+    "verification": "Actual46page PDF. Read title/abstract, printed2–5 introduction and citation connection; §IV.C printed17–18 method and sample passages. Local physical18/printed18 rendered and image inspected. Actual inspector: v16_c01_author; independent peer scope in reviews/v16-c02-peer.json.",
+    "limits": "No numerical published estimate used. Not a full article, appendix, data-access or reproduction audit. No identity with final published version asserted."
+  },
+  {
+    "id": "v16-c02-km-record",
+    "title": "Atif Mian — publication record for Tracing the Impact of Bank Liquidity Shocks",
+    "url": "https://atif.scholar.princeton.edu/publications/tracing-impact-bank-liquidity-shocks",
+    "use": "Work identity/publication metadata only.",
+    "checked": "2026-10-16",
+    "verification": "Official author HTML lines12–43: metadata and linked document. Actual inspector: v16_c01_author; independent peer scope in reviews/v16-c02-peer.json.",
+    "limits": "Metadata does not verify draft-to-final equivalence. Direct publisher open failed; author record is the actual opened metadata evidence."
+  },
+  {
+    "id": "v16-c02-schnabl-record",
+    "title": "Journal of Finance — Schnabl publication record",
+    "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2012.01737.x",
+    "use": "Publication identity and date only.",
+    "checked": "2026-10-16",
+    "verification": "Publisher HTML lines15–38 and publication identity; abstract also returned, no full article opened. Actual inspector: v16_c01_author; independent peer scope in reviews/v16-c02-peer.json.",
+    "limits": "Does not substitute for the separately inspected draft or prove version equivalence."
+  },
+  {
+    "id": "v16-c02-prs-record",
+    "title": "Journal of Finance — Paravisini, Rappoport and Schnabl, Specialization in Bank Lending: Evidence from Exporting Firms",
+    "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.13254",
+    "use": "Actual screened update candidate and explicit pending-reading queue.",
+    "checked": "2026-10-16",
+    "verification": "Publisher HTML lines15–72 metadata and98–100 abstract; supporting-file links visible but not opened. Actual inspector: v16_c01_author; independent peer scope in reviews/v16-c02-peer.json.",
+    "limits": "No full text, numerical finding, appendix or replication-code verification. No current frontier completeness or overturning-old-work claim. NBER direct open returned403; no substantive use of that route."
   }
 ]
