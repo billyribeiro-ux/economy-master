@@ -177,6 +177,12 @@ from check_v16_c04 import check as check_v16_c04
 from check_v16_c04_peer import check as check_v16_c04_peer
 from check_v16_c05 import check as check_v16_c05
 from check_v16_c05_peer import check as check_v16_c05_peer
+from check_v16_c06 import check as check_v16_c06
+from check_v16_c06_peer import check as check_v16_c06_peer
+from check_v16_c07 import check as check_v16_c07
+from check_v16_c07_peer import check as check_v16_c07_peer
+from check_v16_c08 import check as check_v16_c08
+from check_v16_c08_peer import check as check_v16_c08_peer
 from check_v16_c02 import check as check_v16_c02
 from check_v16_c02_peer import check as check_v16_c02_peer
 from check_v16_c01 import check as check_v16_c01
@@ -678,6 +684,12 @@ def main():
     v16_c04_peer_check = check_v16_c04_peer()
     v16_c05_check = check_v16_c05()
     v16_c05_peer_check = check_v16_c05_peer()
+    v16_c06_check = check_v16_c06()
+    v16_c06_peer_check = check_v16_c06_peer()
+    v16_c07_check = check_v16_c07()
+    v16_c07_peer_check = check_v16_c07_peer()
+    v16_c08_check = check_v16_c08()
+    v16_c08_peer_check = check_v16_c08_peer()
     v16_c02_check = check_v16_c02()
     v16_c02_peer_check = check_v16_c02_peer()
     v16_c01_check = check_v16_c01()
@@ -809,6 +821,12 @@ def main():
               'v16_c04_peer_check': v16_c04_peer_check,
               'v16_c05_check': v16_c05_check,
               'v16_c05_peer_check': v16_c05_peer_check,
+              'v16_c06_check': v16_c06_check,
+              'v16_c06_peer_check': v16_c06_peer_check,
+              'v16_c07_check': v16_c07_check,
+              'v16_c07_peer_check': v16_c07_peer_check,
+              'v16_c08_check': v16_c08_check,
+              'v16_c08_peer_check': v16_c08_peer_check,
               'v16_c02_check': v16_c02_check,
               'v16_c02_peer_check': v16_c02_peer_check,
               'v16_c01_check': v16_c01_check,
