@@ -1,0 +1,69 @@
+{
+  "chapter": "v17-c01",
+  "date": "2026-10-16",
+  "status": "passed",
+  "normal_quiet_APIs": 2,
+  "normal_payload_bytes_unchanged": true,
+  "exact_runtime_files": 4,
+  "optimized_flags": [
+    "-I",
+    "-B",
+    "-O"
+  ],
+  "cwd": "/",
+  "gates": [
+    {
+      "mode": "default API",
+      "quiet": true,
+      "unchanged": true
+    },
+    {
+      "mode": "default CLI",
+      "silent": true,
+      "unchanged": true
+    },
+    {
+      "mode": "explicit API",
+      "quiet": true,
+      "unchanged": true
+    },
+    {
+      "mode": "explicit CLI",
+      "silent": true,
+      "unchanged": true
+    }
+  ],
+  "exact_files_and_directories": {
+    "production": "directory",
+    "production/check_v17_c01_working.py": {
+      "bytes": 8276,
+      "sha256": "25a9a40d50f3e3a8448e2deb6fb7ee8ea04f514e2696ac62f6c28433339a1c6c"
+    },
+    "production/v17-c01-author-review-working.json": {
+      "bytes": 4761,
+      "sha256": "e094f776693d22bad3f78ac651fadc7aac6d350b2f5fc3c42ca1422c897ef4e0"
+    },
+    "production/v17-c01-sources-working.json": {
+      "bytes": 4890,
+      "sha256": "008560628727fa7d56ba5499946972cd049773959601a6177d071efa42a35bb4"
+    },
+    "production/v17-c01-working.html": {
+      "bytes": 37467,
+      "sha256": "25ffb2940dd1bd185c10aeca4ab8f82ee2877b057a5fdd25a898b9305a19b97b"
+    }
+  },
+  "every_byte_and_membership_unchanged": true,
+  "summary": {
+    "chapter": "v17-c01",
+    "status": "passed",
+    "runtime_files": 4,
+    "worked_artifacts": 2,
+    "exercises": 8,
+    "inputs": 7,
+    "result_markers": 15,
+    "comparisons": 97,
+    "invalid_domains": 6,
+    "scope": "Arithmetic/structure/source bindings; complete qualitative design/proof review recorded separately, no measured teaching effect."
+  },
+  "scope": "Author local gates; peer/root acceptance separate. No learner observation or renderedUIclaim."
+}

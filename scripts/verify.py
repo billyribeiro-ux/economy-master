@@ -195,6 +195,22 @@ from check_v16_c02 import check as check_v16_c02
 from check_v16_c02_peer import check as check_v16_c02_peer
 from check_v16_c01 import check as check_v16_c01
 from check_v16_c01_peer import check as check_v16_c01_peer
+from check_research_portfolio import check as check_research_portfolio
+from check_research_portfolio_peer import check as check_research_portfolio_peer
+from check_v17_c01 import check as check_v17_c01
+from check_v17_c01_peer import check as check_v17_c01_peer
+from check_v17_c02 import check as check_v17_c02
+from check_v17_c02_peer import check as check_v17_c02_peer
+from check_v17_c03 import check as check_v17_c03
+from check_v17_c03_peer import check as check_v17_c03_peer
+from check_v17_c04 import check as check_v17_c04
+from check_v17_c04_peer import check as check_v17_c04_peer
+from check_v17_c05 import check as check_v17_c05
+from check_v17_c05_peer import check as check_v17_c05_peer
+from check_v17_c06 import check as check_v17_c06
+from check_v17_c06_peer import check as check_v17_c06_peer
+from check_v17_c07 import check as check_v17_c07
+from check_v17_c07_peer import check as check_v17_c07_peer
 from check_integrated_case import check as check_integrated_case
 from check_integrated_case_peer import check as check_integrated_case_peer
 from check_v12_c01 import check as check_v12_c01
@@ -711,6 +727,22 @@ def main():
     v16_c02_peer_check = check_v16_c02_peer()
     v16_c01_check = check_v16_c01()
     v16_c01_peer_check = check_v16_c01_peer()
+    research_portfolio_check = check_research_portfolio()
+    research_portfolio_peer_check = check_research_portfolio_peer()
+    v17_c01_check = check_v17_c01()
+    v17_c01_peer_check = check_v17_c01_peer()
+    v17_c02_check = check_v17_c02()
+    v17_c02_peer_check = check_v17_c02_peer()
+    v17_c03_check = check_v17_c03()
+    v17_c03_peer_check = check_v17_c03_peer()
+    v17_c04_check = check_v17_c04()
+    v17_c04_peer_check = check_v17_c04_peer()
+    v17_c05_check = check_v17_c05()
+    v17_c05_peer_check = check_v17_c05_peer()
+    v17_c06_check = check_v17_c06()
+    v17_c06_peer_check = check_v17_c06_peer()
+    v17_c07_check = check_v17_c07()
+    v17_c07_peer_check = check_v17_c07_peer()
     integrated_case_check = check_integrated_case()
     integrated_case_peer_check = check_integrated_case_peer()
     v15_c02_check = check_v15_c02()
@@ -857,6 +889,22 @@ def main():
               'v16_c02_peer_check': v16_c02_peer_check,
               'v16_c01_check': v16_c01_check,
               'v16_c01_peer_check': v16_c01_peer_check,
+              'research_portfolio_check': research_portfolio_check,
+              'research_portfolio_peer_check': research_portfolio_peer_check,
+              'v17_c01_check': v17_c01_check,
+              'v17_c01_peer_check': v17_c01_peer_check,
+              'v17_c02_check': v17_c02_check,
+              'v17_c02_peer_check': v17_c02_peer_check,
+              'v17_c03_check': v17_c03_check,
+              'v17_c03_peer_check': v17_c03_peer_check,
+              'v17_c04_check': v17_c04_check,
+              'v17_c04_peer_check': v17_c04_peer_check,
+              'v17_c05_check': v17_c05_check,
+              'v17_c05_peer_check': v17_c05_peer_check,
+              'v17_c06_check': v17_c06_check,
+              'v17_c06_peer_check': v17_c06_peer_check,
+              'v17_c07_check': v17_c07_check,
+              'v17_c07_peer_check': v17_c07_peer_check,
               'integrated_case_check': integrated_case_check,
               'integrated_case_peer_check': integrated_case_peer_check,
               'v15_c02_check': v15_c02_check,
