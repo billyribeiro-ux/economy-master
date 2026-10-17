@@ -12,10 +12,12 @@ Open mastery-library/index.html in a browser. No installation or server is neede
 Chapter navigation, search and print work offline. External further-reading links
 require internet access. To make a PDF, open print.html and use Print / Save as PDF.
 
-Working edition: {report['chapters_available']} readable chapters from an 18-volume,
-216-chapter production plan. {report['chapters_accepted']} chapter packages have author
+Content edition: {report['chapters_available']} readable chapters in the 18-volume,
+216-chapter curriculum. {report['chapters_accepted']} chapter packages have author
 editorial/numerical review. This is not independent academic certification.
-The whole library remains in production. Planned entries are not manuscripts.
+Volume assessment/project packages: {report['assessment_packages_available']}.
+Cross-volume assessments and portfolios: {report['cross_volume_assessments_accepted']}.
+Actual learner research, teaching and leadership require real work and human review.
 
 PRODUCTION_PLAN.md defines the scope and completion standards.
 Original synthetic teaching cases are labeled. Historical empirical extracts

@@ -30,6 +30,38 @@ def print_fragment(body, prefix):
     return re.sub(r'\bhref=(["\'])#([^"\']+)\1',
                   lambda m: 'href='+m[1]+'#'+(prefix+'--' if m[2] in ids else '')+m[2]+m[1], body)
 
+def responsive_tables(content):
+    """Wrap uncontained tables without rewriting reviewed manuscript bytes."""
+    class Tables(HTMLParser):
+        def __init__(self):
+            super().__init__(convert_charrefs=False)
+            self.divs = []; self.tables = []; self.insertions = []
+            self.lines = [0]
+            for match in re.finditer('\n', content):
+                self.lines.append(match.end())
+        def source_offset(self):
+            line, column = self.getpos()
+            return self.lines[line - 1] + column
+        def handle_starttag(self, tag, attrs):
+            if tag == 'div':
+                self.divs.append('table-wrap' in dict(attrs).get('class', '').split())
+            if tag == 'table':
+                wrap = not any(self.divs) and not self.tables
+                self.tables.append(wrap)
+                if wrap:
+                    self.insertions.append((self.source_offset(), '<div class="table-wrap" role="region" aria-label="Data table; scroll horizontally if needed" tabindex="0">'))
+        def handle_endtag(self, tag):
+            if tag == 'div' and self.divs:
+                self.divs.pop()
+            if tag == 'table' and self.tables:
+                if self.tables.pop():
+                    end = content.index('>', self.source_offset()) + 1
+                    self.insertions.append((end, '</div>'))
+    parser = Tables(); parser.feed(content)
+    for offset, markup in reversed(parser.insertions):
+        content = content[:offset] + markup + content[offset:]
+    return content
+
 def main():
     original_plan = ROOT.parent/'MASTER_PLAN.md'
     if original_plan.exists():
@@ -84,8 +116,17 @@ def main():
             result += f'<li><a href="{escape(s["url"], quote=True)}">{escape(s["title"])}</a> — {escape(s["use"])}</li>'
         return result + '</ul>'
 
+    complete_content = (accepted == 216 and len(packages) == 18 and len(cross_packages) == 8
+                        and all(v['status'] == 'accepted' for v in plan['volumes'])
+                        and all(a['status'] == 'accepted' for a in cross_specs)
+                        and glossary['status'] == 'accepted')
+    edition_label = 'Complete content edition' if complete_content else 'Working edition'
+    content_notice = ('All 216 chapters, 18 volume assessment/project packages and eight cumulative examinations or portfolios are available. '
+                      if complete_content else 'This is a growing manuscript. Unfinished material retains its production status. ')
+    content_notice += 'Author-reviewed means internal editorial and numerical checks, including distinct agent reviews where recorded, not independent academic certification. Reading and demonstrating mastery are separate steps.'
+
     def sidebar(current=''):
-        result = '<aside class="sidebar" id="book-navigation"><a class="brand" href="index.html"><span>Mastery Library</span>Economics<br>&amp; Finance</a><p class="edition">Working edition · 6 October 2026</p>'
+        result = f'<aside class="sidebar" id="book-navigation"><a class="brand" href="index.html"><span>Mastery Library</span>Economics<br>&amp; Finance</a><p class="edition">{edition_label} · 6 October 2026</p>'
         for url, label in [('index.html','Reading guide'), ('curriculum.html','Full curriculum'), ('assessments.html','Assessment standard'), ('glossary.html','Glossary &amp; notation'), ('sources.html','Sources &amp; further study'), ('print.html','Print reading edition')]:
             result += f'<a href="{url}"' + (' aria-current="page"' if current == url else '') + f'>{label}</a>'
         result += '<hr><nav aria-label="Volumes">'
@@ -112,14 +153,15 @@ def main():
         return result + '</aside>'
 
     def write_page(filename, title, content, wide=False):
+        content = responsive_tables(content)
         favicon = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%224%22 fill=%22%23111e31%22/%3E%3Cpath d=%22M7 8h8v17H7zm10 0h8v17h-8%22 fill=%22%23fff%22/%3E%3Cpath d=%22M15 8h2v17h-2%22 fill=%22%23ad253c%22/%3E%3C/svg%3E'
         html = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Original instruction in economics and finance, from foundations through research, teaching and leadership."><title>{escape(title)} · Economics &amp; Finance</title><link rel="icon" type="image/svg+xml" href="{favicon}"><link rel="stylesheet" href="book.css"><script defer src="search-index.js"></script><script defer src="book.js"></script></head>
-<body><a class="skip" href="#main">Skip to reading</a><div class="layout">{sidebar(filename)}<div class="workspace"><header class="toolbar"><button class="menu-toggle" aria-expanded="false" aria-controls="book-navigation">Contents</button><form class="search" role="search"><label class="skip" for="query">Search the book and curriculum</label><input id="query" name="query" type="search" placeholder="Search a concept or chapter" aria-label="Search the book and curriculum"><button type="submit">Search</button></form><button class="print-button" data-print>Print this page</button></header><section class="search-results" id="search-results" aria-live="polite" hidden></section><main id="main" class="reader{' wide' if wide else ''}">{content}<footer>Original instructional material · Edition boundary: 6 October 2026.<br>University curricula inform the benchmark. This independent library is not affiliated with or accredited by those institutions.</footer></main></div></div></body></html>'''
+<body><a class="skip" href="#main">Skip to reading</a><div class="layout">{sidebar(filename)}<div class="workspace"><header class="toolbar"><button class="menu-toggle" aria-expanded="false" aria-controls="book-navigation">Contents</button><form class="search" role="search"><label class="skip" for="query">Search the book and curriculum</label><input id="query" name="query" type="search" placeholder="Search a concept or chapter" aria-label="Search the book and curriculum"><button type="submit">Search</button></form><button class="print-button" data-print>Print this page</button></header><section class="search-results" id="search-results" aria-live="polite" hidden></section><main id="main" tabindex="-1" class="reader{' wide' if wide else ''}">{content}<footer>Original instructional material · Edition boundary: 6 October 2026.<br>University curricula inform the benchmark. This independent library is not affiliated with or accredited by those institutions.</footer></main></div></div></body></html>'''
         (DIST/filename).write_text(html)
 
     reading = '<ul>' + ''.join(f'<li><a href="{c["id"]}.html">{escape(c["title"])}</a> <span class="status">{escape(status_label(c["status"]))}</span></li>' for _, c in chapters if c['id'] in manuscripts) + '</ul>'
-    intro = f'''<p class="eyebrow">Reading guide</p><h1>Economics &amp; Finance</h1><p class="lead">Learn to reason, calculate, investigate, teach, and lead. Begin with the foundations; advance by demonstrating what you can do.</p><div class="stats"><div><strong>18</strong><span>Volumes specified</span></div><div><strong>216</strong><span>Chapter packages planned</span></div><div><strong>{written}</strong><span>Chapters available to read</span></div><div><strong>{accepted}</strong><span>Chapter packages author-reviewed</span></div></div><p class="notice">This is a growing manuscript. The complete production plan is defined; unfinished chapters are labeled Planned. Draft chapters remain subject to review. Author-reviewed means internal editorial and numerical checks, not independent academic certification. Reading a chapter and demonstrating mastery are separate steps.</p><h2>Read now</h2>{reading if written else '<p>The first chapter is being written. The complete curriculum and assessment standard are available below.</p>'}<h2>How to study</h2><div class="prose"><p>Read the objective and prerequisites first. Work through each example on paper, then close the explanation and reconstruct it. Attempt the exercises before opening the solutions. Explain the central mechanism in ordinary language and check the conditions under which it holds.</p><p>Use unfamiliar problems, cumulative examinations, reproducible projects, and teaching demonstrations to test transfer. A correct formula without an explanation of its assumptions is incomplete understanding.</p><p>The common core builds broad competence. The later research path develops depth in macro-finance and financial econometrics. Original research, observed teaching and real leadership require independent feedback and experience.</p></div><div class="toc-links"><a href="curriculum.html">Explore the full curriculum</a><a href="assessments.html">Read the assessment standard</a><a href="print.html">Open the printable reading edition</a></div><h2>The path</h2><ol class="volume-list">'''
+    intro = f'''<p class="eyebrow">Reading guide</p><h1>Economics &amp; Finance</h1><p class="lead">Learn to reason, calculate, investigate, teach, and lead. Begin with the foundations; advance by demonstrating what you can do.</p><div class="stats"><div><strong>18</strong><span>Volumes</span></div><div><strong>216</strong><span>Chapter specifications</span></div><div><strong>{written}</strong><span>Chapters available to read</span></div><div><strong>{accepted}</strong><span>Chapter packages author-reviewed</span></div></div><p class="notice">{content_notice}</p><h2>Read now</h2>{reading if written else '<p>The first chapter is being written. The complete curriculum and assessment standard are available below.</p>'}<h2>How to study</h2><div class="prose"><p>Read the objective and prerequisites first. Work through each example on paper, then close the explanation and reconstruct it. Attempt the exercises before opening the solutions. Explain the central mechanism in ordinary language and check the conditions under which it holds.</p><p>Use unfamiliar problems, cumulative examinations, reproducible projects, and teaching demonstrations to test transfer. A correct formula without an explanation of its assumptions is incomplete understanding.</p><p>The common core builds broad competence. The later research path develops depth in macro-finance and financial econometrics. Original research, observed teaching and real leadership require independent feedback and experience.</p></div><div class="toc-links"><a href="curriculum.html">Explore the full curriculum</a><a href="assessments.html">Read the assessment standard</a><a href="print.html">Open the printable reading edition</a></div><h2>The path</h2><ol class="volume-list">'''
     for v in plan['volumes']:
         intro += f'<li><p class="eyebrow">Volume {v["number"]:02d} · {v["level"]}</p><h2><a href="curriculum.html#{v["id"]}">{escape(v["title"])}</a></h2><p>{escape(v["assessment"])}</p></li>'
     write_page('index.html','Reading guide',intro+'</ol>')
@@ -136,7 +178,7 @@ def main():
         curriculum += '</section>'
     write_page('curriculum.html','Full curriculum',curriculum,True)
 
-    assessment = '''<p class="eyebrow">Assessment standard</p><h1>Demonstrate mastery</h1><div class="prose"><p>Progress is earned through correct reasoning, transfer to unfamiliar problems, credible empirical analysis, and clear explanation. Studying time and page counts are inputs; they do not establish competence.</p><h2>Every chapter</h2><p>Complete at least eight original exercises (ten in graduate technical chapters), reconstruct the worked examples, explain a mechanism without notes, and answer a later retention question. Determinate problems have complete solutions. Open questions have evaluation criteria and may admit several defensible answers.</p><h2>Every volume</h2><p>Complete a prerequisite diagnostic, cumulative examination, distinct reassessment form, integrative project, oral explanation, and delayed retention check. Projects specify inputs, outputs, assumptions, uncertainty, reproducibility and scoring. Volume-specific examination and project materials will appear when their packages are written.</p><h2>Advancement criteria</h2><p>Our proposed default for numerical/conceptual exams is at least 85% overall with no essential domain below 75%, plus a transfer problem and teach-back. These are design choices for this library, not university requirements. Critical errors in identification, units, budget balance, risk interpretation or integrity require correction regardless of the total.</p><h2>Graduate and research assessment</h2><p>Graduate work adds proofs, derivations, model critique, empirical identification and numerical diagnostics. The research portfolio includes replication, referee reports, a proposal, original work and an oral defense. Qualified researchers must evaluate its contribution and correctness; the book cannot award that judgment automatically.</p><h2>Teaching and leadership</h2><p>A teaching portfolio contains undergraduate and graduate syllabi, lessons, assessments, grading criteria, observed teaching and research-supervision plans. A leadership portfolio contains strategy, budgets, decision rights, hiring and incentives, risk and crisis decisions, and a retrospective on real responsibility. Independent observation and real experience are essential.</p><h2>Editorial acceptance</h2><p>A chapter package is accepted only after its instruction, worked examples, exercises, solutions, sources and review record satisfy the production contract. Source-link checks, numerical checks and subject-matter review are recorded separately. Draft is a transparent production state, not a mastery credential.</p></div>'''
+    assessment = '''<p class="eyebrow">Assessment standard</p><h1>Demonstrate mastery</h1><div class="prose"><p>Progress is earned through correct reasoning, transfer to unfamiliar problems, credible empirical analysis, and clear explanation. Studying time and page counts are inputs; they do not establish competence.</p><h2>Every chapter</h2><p>Complete at least eight original exercises (ten in graduate technical chapters), reconstruct the worked examples, explain a mechanism without notes, and answer a later retention question. Determinate problems have complete solutions. Open questions have evaluation criteria and may admit several defensible answers.</p><h2>Every volume</h2><p>Complete a prerequisite diagnostic, cumulative examination, distinct reassessment form, integrative project, oral explanation, and delayed retention check. Projects specify inputs, outputs, assumptions, uncertainty, reproducibility and scoring. The available volume examination and project packages are linked below; each supplies its own instructions and solutions.</p><h2>Advancement criteria</h2><p>Our proposed default for numerical/conceptual exams is at least 85% overall with no essential domain below 75%, plus a transfer problem and teach-back. These are design choices for this library, not university requirements. Critical errors in identification, units, budget balance, risk interpretation or integrity require correction regardless of the total.</p><h2>Graduate and research assessment</h2><p>Graduate work adds proofs, derivations, model critique, empirical identification and numerical diagnostics. The research portfolio includes replication, referee reports, a proposal, original work and an oral defense. Qualified researchers must evaluate its contribution and correctness; the book cannot award that judgment automatically.</p><h2>Teaching and leadership</h2><p>A teaching portfolio contains undergraduate and graduate syllabi, lessons, assessments, grading criteria, observed teaching and research-supervision plans. A leadership portfolio contains strategy, budgets, decision rights, hiring and incentives, risk and crisis decisions, and a retrospective on real responsibility. Independent observation and real experience are essential.</p><h2>Editorial acceptance</h2><p>A chapter package is accepted only after its instruction, worked examples, exercises, solutions, sources and review record satisfy the production contract. Source-link checks, numerical checks and subject-matter review are recorded separately. Draft is a transparent production state, not a mastery credential.</p></div>'''
     if packages:
         assessment += '<h2>Available volume packages</h2><ul>'
         for v in plan['volumes']:
@@ -144,7 +186,7 @@ def main():
                 assessment += f'<li><a href="{v["id"]}-assessment.html">Volume {v["number"]:02d}: {escape(v["title"])}</a></li>'
         assessment += '</ul>'
     if cross_specs:
-        assessment += '<h2>Cumulative examinations and portfolios</h2><p>Each assessment combines its prerequisite volumes. Planned entries specify future work; available links open written material.</p>'
+        assessment += '<h2>Cumulative examinations and portfolios</h2><p>Each assessment combines its prerequisite volumes. Its status and prerequisite requirements are shown below.</p>'
         for a in cross_specs:
             title = escape(a['title'])
             if a['id'] in cross_packages:
@@ -199,7 +241,7 @@ def main():
             'url':'glossary.html#'+entry['id'],'written':True,'status':status_label(glossary['status']),
             'text':entry['meaning']+' '+entry['qualification']})
     write_page('glossary.html','Glossary and notation',glossary_body)
-    print_content = f'<section class="print-cover"><p class="eyebrow">Reading edition · {plan["edition"]}</p><h1>Economics &amp; Finance</h1><p class="lead">{written} available chapters from a planned 18-volume mastery library.</p><p>Edition boundary: 6 October 2026.</p><p class="notice">This print edition contains the actual manuscripts currently available. It does not include planned chapters as if they were written. Draft status remains visible. Solutions are expanded when printing.</p><button class="no-print" data-print>Print or save as PDF</button></section>'
+    print_content = f'<section class="print-cover"><p class="eyebrow">Reading edition · {plan["edition"]}</p><h1>Economics &amp; Finance</h1><p class="lead">{written} available chapters in the 18-volume mastery library.</p><p>Edition boundary: 6 October 2026.</p><p class="notice">This print edition includes the available chapters, volume packages, cumulative assessments and reference guide. Status labels reflect editorial acceptance. Solutions are expanded when printing. For a smaller PDF, print an individual chapter or assessment page.</p><button class="no-print" data-print>Print or save as PDF</button></section>'
     for position, (v,c) in enumerate(chapters):
         body = manuscripts.get(c['id'])
         search_index.append({'title': f'{v["number"]:02d}.{c["number"]:02d} · {c["title"]}',
@@ -220,7 +262,7 @@ def main():
         if after:
             navigation += f'<a href="{after["id"]}.html">Next: {escape(after["title"])}</a>'
         else:
-            navigation += '<a href="curriculum.html">See the remaining curriculum</a>'
+            navigation += '<a href="curriculum.html">Return to the full curriculum</a>'
         navigation += '</nav>'
         write_page(c['id']+'.html',c['title'],header+'<article class="prose">'+body+'</article>'+further+navigation)
         print_content += f'<section class="print-chapter" id="{c["id"]}">{header}<article class="prose">{print_fragment(body,c["id"])}</article>{further}</section>'

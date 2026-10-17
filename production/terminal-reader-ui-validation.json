@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-17",
+  "status": "passed within stated representative scope",
+  "method": "Actual Chrome CUA browser at approved loopback HTTP preview of generated dist; normal security/authentication unchanged. Native print dialog attempt blocked command evaluation and was closed; supported browser CDP actual PDF rendering separately verified print pagination/content.",
+  "pages_observed": [
+    "index.html",
+    "v18-c05.html",
+    "v18-c11.html",
+    "v18-assessment.html",
+    "leadership-portfolio-assessment.html",
+    "glossary.html",
+    "v04-c05.html"
+  ],
+  "viewport_pixels": {
+    "mobile": [
+      390,
+      844
+    ],
+    "desktop": [
+      1280,
+      900
+    ]
+  },
+  "actual_checks": {
+    "desktop": "Reading guide and C11 screenshots inspected for readable text/navigation; final reader preview saved.",
+    "mobile": "All named sampled pages fit390viewport with375document width after scrollbar; wide tables and640pxcharts remain within local horizontal scroll regions.",
+    "keyboard": "Actual Enter search and result navigation; Space toggles Contents with aria-expanded; Enter expands full solutions; skip link focuses main; table ArrowRight changes scrollLeft and exposes visible3px focus outline.",
+    "offline_search": "After loading all static resources, actual CDP Network.emulateNetworkConditions offline=true, typed contingent policy and submitted via Enter.69matches/30displayed, focus search-results, no page overflow. Restored network immediately afterward. Earlier coalition search and result Enter navigation passed.",
+    "print": "Actual tagged A4 Chrome PDF from C11 includes expanded complete solutions,13pages after repair. Extracted text contains complete answer headings. Visual samples inspected at introductory page and table page breaks; repeated headers and intact rows, no clipping, no unnecessary entire-case forced break. Closed disclosures restored after print.",
+    "restoration": "Temporary viewport override reset, print media cleared, network condition restored; only owned preview tab/server remain pending final teardown."
+  },
+  "repairs": [
+    "Renderer wraps previously uncontained tables in focusable labelled scroll regions while preserving original manuscript bytes and existing wrappers; idempotence and existing-wrapper witnesses passed.",
+    "Reader wraps long inline formulas at necessary boundaries; table word wrapping retained separately.",
+    "Skip destination main now tabindex=-1 for real keyboard focus.",
+    "Print lets long worked cases continue across pages; avoids row splitting and repeats table headers."
+  ],
+  "whole_build_static_checks": {
+    "html_pages": 250,
+    "tables_including_print_repetition": 1348,
+    "uncontained_tables": 0,
+    "external_required_runtime_resources": 0,
+    "reader_code": "Search uses inline-loaded local search-index.js and local book.js, no fetch or remote request."
+  },
+  "bindings": {
+    "scripts/build.py": "94f7bf36d6b13599d53905e037efe1fd5f1160db974678434f1a3cfa0e0b8207",
+    "assets/book.css": "3d42b975294f9cf2a1c882a140c4608cfd487894fcb7b85bbfef672f4c0e3aac",
+    "assets/book.js": "4a7e8955f20706dc04c954f4ffeaca538d1d1c1b2254e844fb96538e57a4ebf1",
+    "dist/book.css": "3d42b975294f9cf2a1c882a140c4608cfd487894fcb7b85bbfef672f4c0e3aac",
+    "dist/book.js": "4a7e8955f20706dc04c954f4ffeaca538d1d1c1b2254e844fb96538e57a4ebf1",
+    "dist/search-index.js": "d24bb37550aa48be7f3f32a5a9ec3fa45e9007abb3108a8f754c17ec67ed009d"
+  },
+  "print_sample": {
+    "path": "/private/tmp/mastery-v18-c11-print.pdf",
+    "sha256": "514feb9ce84311b922deac3508c3928ba4187d0aa3053afcbe906e237c02c82f",
+    "purpose": "temporary QA only; not a separate deliverable"
+  },
+  "preview": "production/terminal-reader-preview.png",
+  "limitations": [
+    "Representative Chrome desktop/mobile and print samples, not exhaustive visual inspection of every printed page or browser.",
+    "Direct file:// browser preview remains unavailable under browser security policy; actual offline search was exercised with network disabled after local loading, supported by all-local asset paths and exact archive checks.",
+    "Private hosted reader previously required sign-in; deployment success uses native Sites evidence. No access or authentication changes made."
+  ]
+}

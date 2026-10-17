@@ -1,0 +1,715 @@
+{
+  "schema": "v18-leadership-rehearsal-1",
+  "academic": {
+    "options": [
+      {
+        "bundle": "none",
+        "cost": 0,
+        "staff": 0,
+        "score": 0,
+        "minimum_unrestricted": 20,
+        "closing_unrestricted": 20,
+        "closing_restricted": 10,
+        "feasible": true,
+        "diagnostics": [],
+        "timeline": [
+          {
+            "day": 0,
+            "event": "fixed",
+            "unrestricted": 20,
+            "restricted": 0
+          },
+          {
+            "day": 5,
+            "event": "grant",
+            "unrestricted": 20,
+            "restricted": 10
+          }
+        ]
+      },
+      {
+        "bundle": "R",
+        "cost": 10,
+        "staff": 8,
+        "score": 16,
+        "minimum_unrestricted": 20,
+        "closing_unrestricted": 20,
+        "closing_restricted": 0,
+        "feasible": true,
+        "diagnostics": [],
+        "timeline": [
+          {
+            "day": 0,
+            "event": "fixed",
+            "unrestricted": 20,
+            "restricted": 0
+          },
+          {
+            "day": 5,
+            "event": "grant",
+            "unrestricted": 20,
+            "restricted": 10
+          },
+          {
+            "day": 6,
+            "event": "R",
+            "unrestricted": 20,
+            "restricted": 0
+          }
+        ]
+      },
+      {
+        "bundle": "T",
+        "cost": 8,
+        "staff": 6,
+        "score": 12,
+        "minimum_unrestricted": 12,
+        "closing_unrestricted": 12,
+        "closing_restricted": 10,
+        "feasible": true,
+        "diagnostics": [],
+        "timeline": [
+          {
+            "day": 0,
+            "event": "fixed",
+            "unrestricted": 20,
+            "restricted": 0
+          },
+          {
+            "day": 2,
+            "event": "T",
+            "unrestricted": 12,
+            "restricted": 0
+          },
+          {
+            "day": 5,
+            "event": "grant",
+            "unrestricted": 12,
+            "restricted": 10
+          }
+        ]
+      },
+      {
+        "bundle": "R+T",
+        "cost": 18,
+        "staff": 14,
+        "score": 38,
+        "minimum_unrestricted": 12,
+        "closing_unrestricted": 12,
+        "closing_restricted": 0,
+        "feasible": true,
+        "diagnostics": [],
+        "timeline": [
+          {
+            "day": 0,
+            "event": "fixed",
+            "unrestricted": 20,
+            "restricted": 0
+          },
+          {
+            "day": 2,
+            "event": "T",
+            "unrestricted": 12,
+            "restricted": 0
+          },
+          {
+            "day": 5,
+            "event": "grant",
+            "unrestricted": 12,
+            "restricted": 10
+          },
+          {
+            "day": 6,
+            "event": "R",
+            "unrestricted": 12,
+            "restricted": 0
+          }
+        ]
+      },
+      {
+        "bundle": "L",
+        "cost": 6,
+        "staff": 5,
+        "score": 8,
+        "minimum_unrestricted": 14,
+        "closing_unrestricted": 14,
+        "closing_restricted": 10,
+        "feasible": true,
+        "diagnostics": [],
+        "timeline": [
+          {
+            "day": 0,
+            "event": "fixed",
+            "unrestricted": 20,
+            "restricted": 0
+          },
+          {
+            "day": 2,
+            "event": "L",
+            "unrestricted": 14,
+            "restricted": 0
+          },
+          {
+            "day": 5,
+            "event": "grant",
+            "unrestricted": 14,
+            "restricted": 10
+          }
+        ]
+      },
+      {
+        "bundle": "R+L",
+        "cost": 16,
+        "staff": 13,
+        "score": 24,
+        "minimum_unrestricted": 14,
+        "closing_unrestricted": 14,
+        "closing_restricted": 0,
+        "feasible": true,
+        "diagnostics": [],
+        "timeline": [
+          {
+            "day": 0,
+            "event": "fixed",
+            "unrestricted": 20,
+            "restricted": 0
+          },
+          {
+            "day": 2,
+            "event": "L",
+            "unrestricted": 14,
+            "restricted": 0
+          },
+          {
+            "day": 5,
+            "event": "grant",
+            "unrestricted": 14,
+            "restricted": 10
+          },
+          {
+            "day": 6,
+            "event": "R",
+            "unrestricted": 14,
+            "restricted": 0
+          }
+        ]
+      },
+      {
+        "bundle": "T+L",
+        "cost": 14,
+        "staff": 11,
+        "score": 20,
+        "minimum_unrestricted": 6,
+        "closing_unrestricted": 6,
+        "closing_restricted": 10,
+        "feasible": false,
+        "diagnostics": [
+          "dated_unrestricted_floor"
+        ],
+        "timeline": [
+          {
+            "day": 0,
+            "event": "fixed",
+            "unrestricted": 20,
+            "restricted": 0
+          },
+          {
+            "day": 2,
+            "event": "L",
+            "unrestricted": 14,
+            "restricted": 0
+          },
+          {
+            "day": 2,
+            "event": "T",
+            "unrestricted": 6,
+            "restricted": 0
+          },
+          {
+            "day": 5,
+            "event": "grant",
+            "unrestricted": 6,
+            "restricted": 10
+          }
+        ]
+      },
+      {
+        "bundle": "R+T+L",
+        "cost": 24,
+        "staff": 19,
+        "score": 46,
+        "minimum_unrestricted": 6,
+        "closing_unrestricted": 6,
+        "closing_restricted": 0,
+        "feasible": false,
+        "diagnostics": [
+          "staff_capacity",
+          "dated_unrestricted_floor"
+        ],
+        "timeline": [
+          {
+            "day": 0,
+            "event": "fixed",
+            "unrestricted": 20,
+            "restricted": 0
+          },
+          {
+            "day": 2,
+            "event": "L",
+            "unrestricted": 14,
+            "restricted": 0
+          },
+          {
+            "day": 2,
+            "event": "T",
+            "unrestricted": 6,
+            "restricted": 0
+          },
+          {
+            "day": 5,
+            "event": "grant",
+            "unrestricted": 6,
+            "restricted": 10
+          },
+          {
+            "day": 6,
+            "event": "R",
+            "unrestricted": 6,
+            "restricted": 0
+          }
+        ]
+      }
+    ],
+    "selected": "R+T",
+    "diagnostic": null
+  },
+  "people": {
+    "candidates": [
+      {
+        "id": "Ari",
+        "eligible": true,
+        "score": 5,
+        "possible_equal_weight_score": [
+          5,
+          5
+        ]
+      },
+      {
+        "id": "Bea",
+        "eligible": true,
+        "score": 7,
+        "possible_equal_weight_score": [
+          7,
+          7
+        ]
+      },
+      {
+        "id": "Cy",
+        "eligible": false,
+        "score": null,
+        "possible_equal_weight_score": [
+          "9/2",
+          "19/2"
+        ]
+      }
+    ],
+    "eligible_winners": [
+      "Bea"
+    ],
+    "contracts": [
+      {
+        "bonus": 0,
+        "effort": "1/4",
+        "quality": "3/4",
+        "utility": "65/16",
+        "actual_pay": 4,
+        "maximum_reserved_cost": "9/2",
+        "feasible": false,
+        "diagnostics": [
+          "minimum_output"
+        ]
+      },
+      {
+        "bonus": "1/2",
+        "effort": "1/2",
+        "quality": "1/2",
+        "utility": "17/4",
+        "actual_pay": "17/4",
+        "maximum_reserved_cost": 5,
+        "feasible": true,
+        "diagnostics": []
+      },
+      {
+        "bonus": "3/2",
+        "effort": 1,
+        "quality": 0,
+        "utility": 5,
+        "actual_pay": "11/2",
+        "maximum_reserved_cost": 6,
+        "feasible": false,
+        "diagnostics": [
+          "minimum_quality"
+        ]
+      }
+    ]
+  },
+  "governance": {
+    "eligible_members": 5,
+    "present": 4,
+    "yes": 3,
+    "required_yes": 3,
+    "quorum": 4,
+    "approved": true,
+    "scope": "Approve the R commitment after actual grant receipt and confirm the combined R/T plan, with T already separately approved1September and approve Bea subject to stated employment process. Gus absent; Ada is donor trustee, Bo owns an offered supplier."
+  },
+  "finance": {
+    "events": [
+      {
+        "id": "A1",
+        "status": "observed",
+        "booked_cash_effect": false,
+        "cash": 40,
+        "assets": 200,
+        "liabilities": 170,
+        "equity": 30,
+        "diagnostics": []
+      },
+      {
+        "id": "D1",
+        "status": "observed",
+        "booked_cash_effect": true,
+        "cash": 22,
+        "assets": 182,
+        "liabilities": 152,
+        "equity": 30,
+        "diagnostics": []
+      },
+      {
+        "id": "C1",
+        "status": "observed",
+        "booked_cash_effect": true,
+        "cash": 16,
+        "assets": 176,
+        "liabilities": 152,
+        "equity": 24,
+        "diagnostics": []
+      },
+      {
+        "id": "U1",
+        "status": "observed",
+        "booked_cash_effect": true,
+        "cash": 15,
+        "assets": 175,
+        "liabilities": 152,
+        "equity": 23,
+        "diagnostics": [
+          "expense_without_sufficient_prior_approval"
+        ]
+      },
+      {
+        "id": "P1",
+        "status": "forecast",
+        "booked_cash_effect": false,
+        "cash": 15,
+        "assets": 175,
+        "liabilities": 152,
+        "equity": 23,
+        "diagnostics": []
+      },
+      {
+        "id": "B0",
+        "status": "proposed",
+        "booked_cash_effect": false,
+        "cash": 15,
+        "assets": 175,
+        "liabilities": 152,
+        "equity": 23,
+        "diagnostics": []
+      },
+      {
+        "id": "N0",
+        "status": "forecast",
+        "booked_cash_effect": false,
+        "cash": 15,
+        "assets": 175,
+        "liabilities": 152,
+        "equity": 23,
+        "diagnostics": []
+      },
+      {
+        "id": "R1",
+        "status": "observed",
+        "booked_cash_effect": true,
+        "cash": 20,
+        "assets": 180,
+        "liabilities": 152,
+        "equity": 28,
+        "diagnostics": []
+      },
+      {
+        "id": "N1",
+        "status": "observed",
+        "booked_cash_effect": false,
+        "cash": 20,
+        "assets": 180,
+        "liabilities": 152,
+        "equity": 28,
+        "diagnostics": [
+          "duplicate_receipt_notice"
+        ]
+      },
+      {
+        "id": "A2",
+        "status": "observed",
+        "booked_cash_effect": false,
+        "cash": 20,
+        "assets": 180,
+        "liabilities": 152,
+        "equity": 28,
+        "diagnostics": []
+      },
+      {
+        "id": "B1",
+        "status": "observed",
+        "booked_cash_effect": true,
+        "cash": 12,
+        "assets": 172,
+        "liabilities": 152,
+        "equity": 20,
+        "diagnostics": []
+      },
+      {
+        "id": "O1",
+        "status": "observed",
+        "booked_cash_effect": false,
+        "cash": 12,
+        "assets": 172,
+        "liabilities": 152,
+        "equity": 20,
+        "diagnostics": []
+      }
+    ],
+    "closing": {
+      "cash": 12,
+      "securities": 60,
+      "loans": 100,
+      "assets": 172,
+      "liabilities": 152,
+      "equity": 20
+    },
+    "unique_receipts": 1,
+    "exceptions": [
+      {
+        "event": "U1",
+        "reason": "expense_without_sufficient_prior_approval"
+      }
+    ]
+  },
+  "crisis": [
+    {
+      "release": "r0",
+      "actions": [
+        {
+          "action": "H",
+          "loss": 30,
+          "cash_after": 15,
+          "equity_after": 23,
+          "feasible": true,
+          "diagnostics": []
+        },
+        {
+          "action": "M",
+          "loss": 12,
+          "cash_after": 11,
+          "equity_after": 19,
+          "feasible": false,
+          "diagnostics": [
+            "staff_capacity",
+            "approval_missing"
+          ]
+        },
+        {
+          "action": "B",
+          "loss": 8,
+          "cash_after": 7,
+          "equity_after": 15,
+          "feasible": false,
+          "diagnostics": [
+            "cash_floor",
+            "equity_floor",
+            "approval_missing"
+          ]
+        }
+      ],
+      "selected": "H"
+    },
+    {
+      "release": "r1",
+      "actions": [
+        {
+          "action": "H",
+          "loss": 30,
+          "cash_after": 20,
+          "equity_after": 28,
+          "feasible": true,
+          "diagnostics": []
+        },
+        {
+          "action": "M",
+          "loss": 12,
+          "cash_after": 16,
+          "equity_after": 24,
+          "feasible": false,
+          "diagnostics": [
+            "staff_capacity",
+            "approval_missing"
+          ]
+        },
+        {
+          "action": "B",
+          "loss": 8,
+          "cash_after": 12,
+          "equity_after": 20,
+          "feasible": false,
+          "diagnostics": [
+            "approval_missing"
+          ]
+        }
+      ],
+      "selected": "H"
+    },
+    {
+      "release": "r2",
+      "actions": [
+        {
+          "action": "H",
+          "loss": 30,
+          "cash_after": 20,
+          "equity_after": 28,
+          "feasible": true,
+          "diagnostics": []
+        },
+        {
+          "action": "M",
+          "loss": 12,
+          "cash_after": 16,
+          "equity_after": 24,
+          "feasible": false,
+          "diagnostics": [
+            "staff_capacity",
+            "approval_missing"
+          ]
+        },
+        {
+          "action": "B",
+          "loss": 8,
+          "cash_after": 12,
+          "equity_after": 20,
+          "feasible": true,
+          "diagnostics": []
+        }
+      ],
+      "selected": "B"
+    },
+    {
+      "release": "late",
+      "actions": [
+        {
+          "action": "H",
+          "loss": 30,
+          "cash_after": 20,
+          "equity_after": 28,
+          "feasible": true,
+          "diagnostics": []
+        },
+        {
+          "action": "M",
+          "loss": 12,
+          "cash_after": 16,
+          "equity_after": 24,
+          "feasible": false,
+          "diagnostics": [
+            "staff_capacity",
+            "approval_missing"
+          ]
+        },
+        {
+          "action": "B",
+          "loss": 8,
+          "cash_after": 12,
+          "equity_after": 20,
+          "feasible": false,
+          "diagnostics": [
+            "setup_deadline"
+          ]
+        }
+      ],
+      "selected": "H"
+    }
+  ],
+  "evidence": {
+    "observed_in_fiction": [
+      "AR1",
+      "AR2",
+      "AR3"
+    ],
+    "missing": [
+      "AR4"
+    ],
+    "proposed": [
+      "AR5"
+    ],
+    "actual_learner_achievement": "not supplied"
+  },
+  "scoring": {
+    "domains": [
+      {
+        "id": "strategy_resources",
+        "points": 20,
+        "tasks": {
+          "1": 10,
+          "2": 10
+        }
+      },
+      {
+        "id": "people_organization",
+        "points": 20,
+        "tasks": {
+          "3": 20
+        }
+      },
+      {
+        "id": "governance_academic",
+        "points": 20,
+        "tasks": {
+          "4": 20
+        }
+      },
+      {
+        "id": "finance_operations",
+        "points": 20,
+        "tasks": {
+          "5": 20
+        }
+      },
+      {
+        "id": "crisis_evidence_integration",
+        "points": 20,
+        "tasks": {
+          "6": 10,
+          "7": 10
+        }
+      }
+    ],
+    "tasks": {
+      "1": 10,
+      "2": 10,
+      "3": 20,
+      "4": 20,
+      "5": 20,
+      "6": 10,
+      "7": 10
+    },
+    "total": 100
+  }
+}
