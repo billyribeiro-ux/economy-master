@@ -183,6 +183,14 @@ from check_v16_c07 import check as check_v16_c07
 from check_v16_c07_peer import check as check_v16_c07_peer
 from check_v16_c08 import check as check_v16_c08
 from check_v16_c08_peer import check as check_v16_c08_peer
+from check_v16_c09 import check as check_v16_c09
+from check_v16_c09_peer import check as check_v16_c09_peer
+from check_v16_c10 import check as check_v16_c10
+from check_v16_c10_peer import check as check_v16_c10_peer
+from check_v16_c11 import check as check_v16_c11
+from check_v16_c11_peer import check as check_v16_c11_peer
+from check_v16_c12 import check as check_v16_c12
+from check_v16_c12_peer import check as check_v16_c12_peer
 from check_v16_c02 import check as check_v16_c02
 from check_v16_c02_peer import check as check_v16_c02_peer
 from check_v16_c01 import check as check_v16_c01
@@ -690,6 +698,14 @@ def main():
     v16_c07_peer_check = check_v16_c07_peer()
     v16_c08_check = check_v16_c08()
     v16_c08_peer_check = check_v16_c08_peer()
+    v16_c09_check = check_v16_c09()
+    v16_c09_peer_check = check_v16_c09_peer()
+    v16_c10_check = check_v16_c10()
+    v16_c10_peer_check = check_v16_c10_peer()
+    v16_c11_check = check_v16_c11()
+    v16_c11_peer_check = check_v16_c11_peer()
+    v16_c12_check = check_v16_c12()
+    v16_c12_peer_check = check_v16_c12_peer()
     v16_c02_check = check_v16_c02()
     v16_c02_peer_check = check_v16_c02_peer()
     v16_c01_check = check_v16_c01()
@@ -827,6 +843,14 @@ def main():
               'v16_c07_peer_check': v16_c07_peer_check,
               'v16_c08_check': v16_c08_check,
               'v16_c08_peer_check': v16_c08_peer_check,
+              'v16_c09_check': v16_c09_check,
+              'v16_c09_peer_check': v16_c09_peer_check,
+              'v16_c10_check': v16_c10_check,
+              'v16_c10_peer_check': v16_c10_peer_check,
+              'v16_c11_check': v16_c11_check,
+              'v16_c11_peer_check': v16_c11_peer_check,
+              'v16_c12_check': v16_c12_check,
+              'v16_c12_peer_check': v16_c12_peer_check,
               'v16_c02_check': v16_c02_check,
               'v16_c02_peer_check': v16_c02_peer_check,
               'v16_c01_check': v16_c01_check,
