@@ -1,0 +1,145 @@
+{
+  "volume": "v16",
+  "component": "project",
+  "date": "2026-10-16",
+  "status": "passed",
+  "reviewer": "v16_c01_author",
+  "normal_quiet_APIs": 2,
+  "normal_source_payloads_unchanged": true,
+  "optimized_exact_runtime_files": 11,
+  "optimized_gates": [
+    {
+      "mode": "optimized default API",
+      "quiet": true,
+      "unchanged": true
+    },
+    {
+      "mode": "optimized default CLI",
+      "silent": true,
+      "unchanged": true
+    },
+    {
+      "mode": "optimized explicit API",
+      "quiet": true,
+      "unchanged": true
+    },
+    {
+      "mode": "optimized explicit CLI",
+      "silent": true,
+      "unchanged": true
+    }
+  ],
+  "optimized_cwd": "/",
+  "optimized_flags": [
+    "-I",
+    "-B",
+    "-O"
+  ],
+  "exact_runtime_inventory": {
+    "content": "directory",
+    "content/assessments": "directory",
+    "content/assessments/parts": "directory",
+    "content/assessments/parts/v16-project.html": {
+      "bytes": 53129,
+      "sha256": "a002660482cdef5e64946c1007e5c029d58ac37197626ec832f0e55fdca0d75d"
+    },
+    "content/projects": "directory",
+    "content/projects/v16-assessment-README.txt": {
+      "bytes": 6242,
+      "sha256": "5402b0f14d2f581beda9b36be5822d00d3efe765930d3491d9d525a2cf0c1dec"
+    },
+    "content/projects/v16-assessment-analysis.py": {
+      "bytes": 10260,
+      "sha256": "473dfbef05f1680f98caff10084cf88410c97e59e10617338f173ead8dfc1ec9"
+    },
+    "content/projects/v16-assessment-inputs.json": {
+      "bytes": 6237,
+      "sha256": "a22f143b57d40740d883b6c142a02a603995d891713f5918ce3c44a73cc3e91a"
+    },
+    "content/projects/v16-assessment-manifest.json": {
+      "bytes": 780,
+      "sha256": "52613c54590c859c2fe0ab463a49068c5388801b496fbc405272667dfd6a9540"
+    },
+    "content/projects/v16-assessment-output.json": {
+      "bytes": 13516,
+      "sha256": "b7c1df13f4ee40b975e41f48c164b253696b52248bfc3215d8c71ef62909cc37"
+    },
+    "content/reviews": "directory",
+    "content/reviews/v16-project-author.json": {
+      "bytes": 6764,
+      "sha256": "2f11c8b3bd9d83aef44c87879d9acb03f1624aa802c162a671ff9f7ba1ce9487"
+    },
+    "content/reviews/v16-project-peer.json": {
+      "bytes": 7280,
+      "sha256": "0c3ea185c1d04a4cc89031bd77a510e03ee6698bfeb0b8d8ab60603a909eb122"
+    },
+    "content/reviews/v16-project-sources.json": {
+      "bytes": 9017,
+      "sha256": "add2cc69a42eb367d5231850842766bdd718c3369f7c3d7de803457972dd2385"
+    },
+    "scripts": "directory",
+    "scripts/check_v16_project.py": {
+      "bytes": 20666,
+      "sha256": "976ad3698a230036eb95e86e02967bafdfc5b72d534a4e2b84eaef865ae4ceb5"
+    },
+    "scripts/check_v16_project_peer.py": {
+      "bytes": 12886,
+      "sha256": "533a67d41483e97cc07745e042fc6b311447eca6c2a22ff7ec4807091b5676af"
+    }
+  },
+  "peer_summary": {
+    "volume": "v16",
+    "component": "project",
+    "status": "passed",
+    "runtime_files": 11,
+    "reader_files": 5,
+    "tasks": 7,
+    "domains": 5,
+    "points": 100,
+    "comparisons": 2193,
+    "primitive_scenarios": 4,
+    "invalid_inputs": 12,
+    "result_markers": 14,
+    "scope": "Independent internal prose/proof review and primitive oracle; no real research or external human certification."
+  },
+  "reader_five": {
+    "inventory": {
+      "v16-assessment-README.txt": {
+        "bytes": 6242,
+        "sha256": "5402b0f14d2f581beda9b36be5822d00d3efe765930d3491d9d525a2cf0c1dec"
+      },
+      "v16-assessment-analysis.py": {
+        "bytes": 10260,
+        "sha256": "473dfbef05f1680f98caff10084cf88410c97e59e10617338f173ead8dfc1ec9"
+      },
+      "v16-assessment-inputs.json": {
+        "bytes": 6237,
+        "sha256": "a22f143b57d40740d883b6c142a02a603995d891713f5918ce3c44a73cc3e91a"
+      },
+      "v16-assessment-manifest.json": {
+        "bytes": 780,
+        "sha256": "52613c54590c859c2fe0ab463a49068c5388801b496fbc405272667dfd6a9540"
+      },
+      "v16-assessment-output.json": {
+        "bytes": 13516,
+        "sha256": "b7c1df13f4ee40b975e41f48c164b253696b52248bfc3215d8c71ef62909cc37"
+      }
+    },
+    "normal_and_optimized_quiet_APIs": 2,
+    "actual_CLI_default_and_explicit_runs": 4,
+    "actual_protected_alias_rejections": 72,
+    "alias_modes": [
+      "direct",
+      "resolved",
+      "symbolic-link",
+      "existing-hardlink"
+    ],
+    "protected_targets": "Four canonical files beside program, four beside chosen input, chosen input itself; two interpreter modes.",
+    "all_bytes_and_membership_preserved": true
+  },
+  "provenance": "Independent peer oracle and actual subprocess executions; author checker neither read nor imported nor executed.",
+  "limits": [
+    "Internal machine-assisted review, no external human certification.",
+    "No rendered browser/mobile/keyboard/print QA."
+  ]
+}

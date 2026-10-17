@@ -1,0 +1,303 @@
+{
+  "schema": "v16-research-rehearsal-1",
+  "provenance": {
+    "kind": "original synthetic teaching data",
+    "raw_unit": "thousand currency units",
+    "analysis_unit": "million currency units",
+    "dates": {
+      "0": "pre-offer fixed-cohort baseline",
+      "1": "ninety days after offer"
+    },
+    "versions": {
+      "0": "first release used in Note A",
+      "1": "documented restatement; replaces CA/date1/other 26000 with 14000"
+    },
+    "missing_rule": "No implicit zero or unmatched join; an absent/None required cell is an error.",
+    "assignment": "One of each pair offered, independent fair pair lotteries; assumed design, no real experiment.",
+    "cohort_rule": "Each origin-bank cohort contains100 distinct original borrowers, fixed before assignment; cohorts disjoint; other includes all other lenders by construction.",
+    "known_fault": "Note A v0 contains an explicitly disclosed teaching ledger error; v1 corrects it.",
+    "scope": "No real persons, banks, restricted records, participant consent, novelty or completed human review."
+  },
+  "banks": [
+    {
+      "bank": "A",
+      "pair": "P1",
+      "offer": 1,
+      "cohort": "CA",
+      "borrowers": 100
+    },
+    {
+      "bank": "B",
+      "pair": "P1",
+      "offer": 0,
+      "cohort": "CB",
+      "borrowers": 100
+    },
+    {
+      "bank": "C",
+      "pair": "P2",
+      "offer": 1,
+      "cohort": "CC",
+      "borrowers": 100
+    },
+    {
+      "bank": "D",
+      "pair": "P2",
+      "offer": 0,
+      "cohort": "CD",
+      "borrowers": 100
+    },
+    {
+      "bank": "E",
+      "pair": "P3",
+      "offer": 1,
+      "cohort": "CE",
+      "borrowers": 100
+    },
+    {
+      "bank": "F",
+      "pair": "P3",
+      "offer": 0,
+      "cohort": "CF",
+      "borrowers": 100
+    }
+  ],
+  "ledger": [
+    {
+      "cohort": "CA",
+      "date": 0,
+      "component": "own",
+      "revision": 0,
+      "value_thousands": 80000
+    },
+    {
+      "cohort": "CA",
+      "date": 0,
+      "component": "other",
+      "revision": 0,
+      "value_thousands": 20000
+    },
+    {
+      "cohort": "CA",
+      "date": 1,
+      "component": "own",
+      "revision": 0,
+      "value_thousands": 90000
+    },
+    {
+      "cohort": "CA",
+      "date": 1,
+      "component": "other",
+      "revision": 0,
+      "value_thousands": 26000
+    },
+    {
+      "cohort": "CB",
+      "date": 0,
+      "component": "own",
+      "revision": 0,
+      "value_thousands": 80000
+    },
+    {
+      "cohort": "CB",
+      "date": 0,
+      "component": "other",
+      "revision": 0,
+      "value_thousands": 20000
+    },
+    {
+      "cohort": "CB",
+      "date": 1,
+      "component": "own",
+      "revision": 0,
+      "value_thousands": 82000
+    },
+    {
+      "cohort": "CB",
+      "date": 1,
+      "component": "other",
+      "revision": 0,
+      "value_thousands": 20000
+    },
+    {
+      "cohort": "CC",
+      "date": 0,
+      "component": "own",
+      "revision": 0,
+      "value_thousands": 100000
+    },
+    {
+      "cohort": "CC",
+      "date": 0,
+      "component": "other",
+      "revision": 0,
+      "value_thousands": 30000
+    },
+    {
+      "cohort": "CC",
+      "date": 1,
+      "component": "own",
+      "revision": 0,
+      "value_thousands": 114000
+    },
+    {
+      "cohort": "CC",
+      "date": 1,
+      "component": "other",
+      "revision": 0,
+      "value_thousands": 20000
+    },
+    {
+      "cohort": "CD",
+      "date": 0,
+      "component": "own",
+      "revision": 0,
+      "value_thousands": 100000
+    },
+    {
+      "cohort": "CD",
+      "date": 0,
+      "component": "other",
+      "revision": 0,
+      "value_thousands": 30000
+    },
+    {
+      "cohort": "CD",
+      "date": 1,
+      "component": "own",
+      "revision": 0,
+      "value_thousands": 102000
+    },
+    {
+      "cohort": "CD",
+      "date": 1,
+      "component": "other",
+      "revision": 0,
+      "value_thousands": 30000
+    },
+    {
+      "cohort": "CE",
+      "date": 0,
+      "component": "own",
+      "revision": 0,
+      "value_thousands": 120000
+    },
+    {
+      "cohort": "CE",
+      "date": 0,
+      "component": "other",
+      "revision": 0,
+      "value_thousands": 40000
+    },
+    {
+      "cohort": "CE",
+      "date": 1,
+      "component": "own",
+      "revision": 0,
+      "value_thousands": 138000
+    },
+    {
+      "cohort": "CE",
+      "date": 1,
+      "component": "other",
+      "revision": 0,
+      "value_thousands": 26000
+    },
+    {
+      "cohort": "CF",
+      "date": 0,
+      "component": "own",
+      "revision": 0,
+      "value_thousands": 120000
+    },
+    {
+      "cohort": "CF",
+      "date": 0,
+      "component": "other",
+      "revision": 0,
+      "value_thousands": 40000
+    },
+    {
+      "cohort": "CF",
+      "date": 1,
+      "component": "own",
+      "revision": 0,
+      "value_thousands": 122000
+    },
+    {
+      "cohort": "CF",
+      "date": 1,
+      "component": "other",
+      "revision": 0,
+      "value_thousands": 40000
+    },
+    {
+      "cohort": "CA",
+      "date": 1,
+      "component": "other",
+      "revision": 1,
+      "value_thousands": 14000
+    }
+  ],
+  "sensitivity": {
+    "unrecorded_contrast_bounds": [
+      "-3",
+      "1"
+    ],
+    "transport_displacement": "5/4"
+  },
+  "model": {
+    "a": "10",
+    "baseline_cost": "10",
+    "types": [
+      {
+        "pair": "P1",
+        "curvature": "1/2",
+        "capacity": "10",
+        "displacement": "3/4",
+        "other_baseline": "20"
+      },
+      {
+        "pair": "P2",
+        "curvature": "1/3",
+        "capacity": "14",
+        "displacement": "5/6",
+        "other_baseline": "30"
+      },
+      {
+        "pair": "P3",
+        "curvature": "1/4",
+        "capacity": "18",
+        "displacement": "7/8",
+        "other_baseline": "40"
+      }
+    ],
+    "policies": [
+      {
+        "name": "outside",
+        "subsidy": "0",
+        "budget": "150"
+      },
+      {
+        "name": "small",
+        "subsidy": "2",
+        "budget": "150"
+      },
+      {
+        "name": "main",
+        "subsidy": "4",
+        "budget": "150"
+      },
+      {
+        "name": "large",
+        "subsidy": "8",
+        "budget": "150"
+      },
+      {
+        "name": "main-tight-budget",
+        "subsidy": "4",
+        "budget": "100"
+      }
+    ]
+  }
+}

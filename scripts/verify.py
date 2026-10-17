@@ -225,6 +225,7 @@ from check_v12_assessment import check as check_v12_assessment
 from check_v13_assessment import check as check_v13_assessment
 from check_v14_assessment import check as check_v14_assessment
 from check_v15_assessment import check as check_v15_assessment
+from check_v16_assessment import check as check_v16_assessment
 from check_v15_c01 import check as check_v15_c01
 from check_v15_c01_peer import check as check_v15_c01_peer
 from check_v13_c01 import check as check_v13_c01
@@ -779,6 +780,7 @@ def main():
     v13_assessment_check = check_v13_assessment()
     v14_assessment_check = check_v14_assessment()
     v15_assessment_check = check_v15_assessment()
+    v16_assessment_check = check_v16_assessment()
     v15_c01_check = {"author": check_v15_c01(), "peer": check_v15_c01_peer()}
     v14_opening_check = {'v14-c01': check_v14_c01(), 'v14-c02': check_v14_c02()}
     v14_opening_peer_check = {'v14-c01': check_v14_c01_peer(), 'v14-c02': check_v14_c02_peer()}
@@ -924,6 +926,7 @@ def main():
               'volume_13_assessment_check': v13_assessment_check,
               'volume_14_assessment_check': v14_assessment_check,
               'volume_15_assessment_check': v15_assessment_check,
+              'volume_16_assessment_check': v16_assessment_check,
               'v15-c01_check': v15_c01_check,
               'volume_14_opening_check': v14_opening_check,
               'volume_14_opening_peer_check': v14_opening_peer_check,
