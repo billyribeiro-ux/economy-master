@@ -136,16 +136,20 @@ If a source, credential or deployment step is temporarily unavailable, continue 
 
 ## Terminal acceptance checklist
 
-- [ ] All 216 chapter specifications have complete accepted manuscripts.
-- [ ] All 18 volume packages contain diagnostic, two exams, project, solutions, rubrics and retention check.
-- [ ] All cross-volume assessments and research/teaching/leadership protocols exist.
-- [ ] The glossary, notation guide, citations and source catalogue are internally consistent.
-- [ ] All worked examples and determinate solutions have been checked; derivations/proofs have explicit assumptions.
-- [ ] All material editorial review issues are resolved or honestly identified as limitations requiring external expert review.
-- [ ] No planned or draft chapter is presented as accepted; coverage counts match real content.
-- [ ] All internal links, offline search, keyboard navigation, mobile reading and print layouts work.
-- [ ] Reproducible project code and supplied datasets have documented provenance and pass meaningful checks.
-- [ ] The final private deployment succeeds, and the complete offline edition is delivered.
-- [ ] The handoff reports the actual scope, verification and remaining limits without guaranteeing career outcomes.
+- [x] All 216 chapter specifications have complete accepted manuscripts.
+- [x] All 18 volume packages contain diagnostic, two exams, project, solutions, rubrics and retention check.
+- [x] All cross-volume assessments and research/teaching/leadership protocols exist.
+- [x] The glossary, notation guide, citations and source catalogue are internally consistent.
+- [x] All worked examples and determinate solutions have been checked; derivations/proofs have explicit assumptions.
+- [x] All material editorial review issues are resolved or honestly identified as limitations requiring external expert review.
+- [x] No planned or draft chapter is presented as accepted; coverage counts match real content.
+- [x] All internal links, offline search, keyboard navigation, mobile reading and print layouts work.
+- [x] Reproducible project code and supplied datasets have documented provenance and pass meaningful checks.
+- [x] The final private deployment succeeds, and the complete offline edition is delivered.
+- [x] The handoff reports the actual scope, verification and remaining limits without guaranteeing career outcomes.
 
 The author judges manuscript completion. Becoming an exceptional researcher, teacher or leader is demonstrated through the learner's work and independent evaluation over time.
+
+## Completed edition — 17 October 2026
+
+All terminal production gates are satisfied within the recorded internal-review and representative-browser scope. The accepted edition contains 216 chapters, 18 volume assessment/project packages, eight cross-volume assessments and portfolios, 144 glossary terms and 50 notation entries. Full structural/numerical validation passed for 250 HTML pages. Native Sites confirmed the final owner-private deployment. See `book/production/terminal-acceptance.json` in the enclosing workspace, or `production/terminal-acceptance.json` from the book repository, for actual evidence and limitations. Learner research, teaching, leadership and independent human evaluation remain work to be performed by learners and assessors; no credential is conferred.
