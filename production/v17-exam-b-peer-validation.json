@@ -1,0 +1,86 @@
+{
+  "chapter": "v17-exam-b",
+  "date": "2026-10-17",
+  "status": "passed",
+  "normal_quiet_APIs": 2,
+  "normal_payload_bytes_unchanged": true,
+  "exact_runtime_files": 6,
+  "optimized_flags": [
+    "-I",
+    "-B",
+    "-O"
+  ],
+  "cwd": "/",
+  "gates": [
+    {
+      "mode": "default API",
+      "quiet": true,
+      "unchanged": true
+    },
+    {
+      "mode": "default CLI",
+      "silent": true,
+      "unchanged": true
+    },
+    {
+      "mode": "explicit API",
+      "quiet": true,
+      "unchanged": true
+    },
+    {
+      "mode": "explicit CLI",
+      "silent": true,
+      "unchanged": true
+    }
+  ],
+  "exact_files_and_directories": {
+    "content": "directory",
+    "content/assessments": "directory",
+    "content/assessments/parts": "directory",
+    "content/assessments/parts/v17-exam-b.html": {
+      "bytes": 58534,
+      "sha256": "6e2576bd096a3622b9224eea4245f2e3dfb3de02897a66d15ebb933b3db21bc4"
+    },
+    "content/reviews": "directory",
+    "content/reviews/v17-exam-b-author.json": {
+      "bytes": 16701,
+      "sha256": "9da9684931534c507a4e1f4c62983315de0d4a0405d2b3b171cc46181b22e03b"
+    },
+    "content/reviews/v17-exam-b-peer.json": {
+      "bytes": 6400,
+      "sha256": "146b795b17d87b9a7dce293c6ace7db9fcc2ae0e64317d4237ebd11957101097"
+    },
+    "content/reviews/v17-exam-b-sources.json": {
+      "bytes": 2521,
+      "sha256": "4828fc3606dca1580c8a101a4f9b99d618b049a94ca2893268cd0da35c670830"
+    },
+    "scripts": "directory",
+    "scripts/check_v17_exam_b.py": {
+      "bytes": 15998,
+      "sha256": "a1777f4b24650ea6be2176ada41f2e614cbab7299fe57ab141c91d67d778e0fe"
+    },
+    "scripts/check_v17_exam_b_peer.py": {
+      "bytes": 12177,
+      "sha256": "ff1ad269d8de406263447e33870061581a2643469353ce78bf0c749933ce39ba"
+    }
+  },
+  "every_byte_and_membership_unchanged": true,
+  "summary": {
+    "volume": "v17",
+    "component": "exam_b",
+    "status": "passed",
+    "runtime_files": 6,
+    "prompts": 20,
+    "points": 100,
+    "domains": 5,
+    "chapters": 12,
+    "rubric_criteria": 100,
+    "result_groups": 16,
+    "comparisons": 304,
+    "learning_completions": 4,
+    "release2_completions": 32,
+    "invalid_domains": 14,
+    "scope": "Independent complete artifact/rubric/proof review and primitive reconstruction; no actual learner or external human evaluation."
+  },
+  "scope": "Independent peer gates; root acceptance separate. No learner observation or renderedUIclaim."
+}

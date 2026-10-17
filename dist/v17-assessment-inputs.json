@@ -1,0 +1,420 @@
+{
+  "schema": "v17-teaching-rehearsal-1",
+  "provenance": "Every economic input, learner response, status, scoring annotation and observation is authored synthetic calibration; no real delivery or learner is represented.",
+  "units": {
+    "quantity": "shared service units per period",
+    "benefit_cost": "currency units per period",
+    "scores": "uncalibrated rubric credit, not a validated ability measure"
+  },
+  "models": [
+    {
+      "id": "base",
+      "values": [
+        6,
+        4
+      ],
+      "unit_cost": 4,
+      "budget": 12,
+      "transfer": 2,
+      "transfer_authorized": true
+    },
+    {
+      "id": "delayed",
+      "values": [
+        7,
+        5
+      ],
+      "unit_cost": 4,
+      "budget": 16,
+      "transfer": 3,
+      "transfer_authorized": true
+    },
+    {
+      "id": "low_budget",
+      "values": [
+        6,
+        4
+      ],
+      "unit_cost": 4,
+      "budget": 10,
+      "transfer": 2,
+      "transfer_authorized": true
+    },
+    {
+      "id": "negative_price",
+      "values": [
+        10,
+        2
+      ],
+      "unit_cost": 4,
+      "budget": 16,
+      "transfer": 0,
+      "transfer_authorized": true
+    },
+    {
+      "id": "equal_values",
+      "values": [
+        5,
+        5
+      ],
+      "unit_cost": 4,
+      "budget": 12,
+      "transfer": 0,
+      "transfer_authorized": true
+    },
+    {
+      "id": "no_transfer_authority",
+      "values": [
+        6,
+        4
+      ],
+      "unit_cost": 4,
+      "budget": 12,
+      "transfer": 2,
+      "transfer_authorized": false
+    }
+  ],
+  "roster": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+  ],
+  "criteria": [
+    "private_scale",
+    "planner_scale",
+    "welfare",
+    "individual_interpretation"
+  ],
+  "points_per_criterion": 2,
+  "stages": [
+    {
+      "id": "baseline",
+      "model": "base",
+      "timing": "Before feedback; same administered eight-point task for all six roster members."
+    },
+    {
+      "id": "immediate",
+      "model": "base",
+      "timing": "After response-specific feedback; assistance differs and is recorded."
+    },
+    {
+      "id": "delayed",
+      "model": "delayed",
+      "timing": "Seven stipulated days later; changed values7/5, cost4, independent resources model statement and calculator, no supplied key."
+    }
+  ],
+  "responses": [
+    {
+      "stage": "baseline",
+      "learner": "A",
+      "status": "independent",
+      "criterion_credit": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "text": "Private contributions are (2,0), total2; planner total3. Welfare rises from8 to9. Everyone is better off because the total is higher."
+    },
+    {
+      "stage": "baseline",
+      "learner": "B",
+      "status": "independent",
+      "criterion_credit": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "text": "Private total2, planner3; welfare8 versus9. At prices3 and1, utilities are4.5 each, compared with2 and6 in private provision: household2 loses, so total gain is not universal gain."
+    },
+    {
+      "stage": "baseline",
+      "learner": "C",
+      "status": "independent",
+      "criterion_credit": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "text": "Private total3 because summed marginal benefits equal cost4. Planner also3; welfare9 in both. Both households must gain."
+    },
+    {
+      "stage": "baseline",
+      "learner": "D",
+      "status": "missing",
+      "criterion_credit": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "text": ""
+    },
+    {
+      "stage": "baseline",
+      "learner": "E",
+      "status": "assisted",
+      "criterion_credit": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "text": "After the supplied hints separating individual and summed marginal benefit: private2, planner3, welfare8/9. Household2 falls from6 to4.5 without a transfer; aggregate improvement is not enough."
+    },
+    {
+      "stage": "baseline",
+      "learner": "F",
+      "status": "independent",
+      "criterion_credit": [
+        2,
+        2,
+        0,
+        2
+      ],
+      "text": "Private2 and planner3. Spending is8 then12. I have not calculated benefits or welfare. A higher total does not prove both gain; compare individual net utilities."
+    },
+    {
+      "stage": "immediate",
+      "learner": "A",
+      "status": "assisted",
+      "criterion_credit": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "text": "With feedback showing the two household utility rows: private2/planner3, welfare8/9; the second household loses1.5 without compensation."
+    },
+    {
+      "stage": "immediate",
+      "learner": "B",
+      "status": "independent",
+      "criterion_credit": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "text": "Private2, planner3, welfare8/9. Personalized-price utility4.5 each is not a Pareto gain relative to2 and6."
+    },
+    {
+      "stage": "immediate",
+      "learner": "C",
+      "status": "assisted",
+      "criterion_credit": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "text": "Using the supplied equilibrium and welfare hints: private2, planner3, welfare8/9. Higher total means everyone wins."
+    },
+    {
+      "stage": "immediate",
+      "learner": "D",
+      "status": "missing",
+      "criterion_credit": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "text": ""
+    },
+    {
+      "stage": "immediate",
+      "learner": "E",
+      "status": "assisted",
+      "criterion_credit": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "text": "Following the worked household comparison, private2/planner3, welfare8/9; the second household loses without the transfer."
+    },
+    {
+      "stage": "immediate",
+      "learner": "F",
+      "status": "independent",
+      "criterion_credit": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "text": "Private2/planner3; benefits16 then21 and costs8 then12 give8 and9; household2 has6 versus4.5 without compensation."
+    },
+    {
+      "stage": "delayed",
+      "learner": "A",
+      "status": "independent",
+      "criterion_credit": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "text": "For values7/5 and cost4, private3 and planner4. Welfare15/16. At prices3/1, utilities8/8 versus4.5/10.5: household2 loses2.5 without compensation."
+    },
+    {
+      "stage": "delayed",
+      "learner": "B",
+      "status": "independent",
+      "criterion_credit": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "text": "Private3, planner4; (12-4)3-9=15 and (12-4)4-16=16. The second household falls from10.5 to8 without a transfer; total gain is not universal."
+    },
+    {
+      "stage": "delayed",
+      "learner": "C",
+      "status": "independent",
+      "criterion_credit": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "text": "Private3, planner4, welfare15 and16. Because16 exceeds15, every household benefits."
+    },
+    {
+      "stage": "delayed",
+      "learner": "D",
+      "status": "missing",
+      "criterion_credit": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "text": ""
+    },
+    {
+      "stage": "delayed",
+      "learner": "E",
+      "status": "missing",
+      "criterion_credit": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "text": ""
+    },
+    {
+      "stage": "delayed",
+      "learner": "F",
+      "status": "independent",
+      "criterion_credit": [
+        2,
+        2,
+        0,
+        2
+      ],
+      "text": "Private3 and planner4. I have not computed welfare. Check each household: the prices3/1 give utility8 each, so household2 loses relative to10.5 without compensation."
+    }
+  ],
+  "grading_versions": {
+    "old": "v1-total-implies-all-error",
+    "corrected": "v2-individual-comparison",
+    "corrections": [
+      {
+        "stage": "baseline",
+        "learner": "A",
+        "criterion": "individual_interpretation",
+        "old_credit": 2,
+        "corrected_credit": 0,
+        "reason": "The old marker credited aggregate welfare increase as evidence everyone benefits; actual text makes this false inference. Preserve original response, correct key and rescore all records under the corrected rule."
+      }
+    ]
+  },
+  "paired_stages": [
+    "baseline",
+    "delayed"
+  ],
+  "observation": {
+    "status": "synthetic_stipulated",
+    "focus": "Distinguish total welfare from household participation",
+    "events": [
+      {
+        "minutes": [
+          0,
+          5
+        ],
+        "note": "Instructor derives private total2 and asks which household pays."
+      },
+      {
+        "minutes": [
+          5,
+          11
+        ],
+        "note": "Instructor sums marginal benefits to derive planner3 and calculates welfare8/9."
+      },
+      {
+        "minutes": [
+          11,
+          14
+        ],
+        "note": "A learner asks whether both households gain. Instructor says the larger total answers that, without displaying individual net utilities."
+      },
+      {
+        "minutes": [
+          14,
+          20
+        ],
+        "note": "Six-person roster receives baseline task. Five submit; E receives recorded hints; D gives no response."
+      }
+    ],
+    "revision_status": "prepared_not_delivered",
+    "followup_observation": "absent"
+  },
+  "project_domains": [
+    {
+      "id": "alignment_explanation",
+      "points": 20,
+      "tasks": {
+        "1": 20
+      }
+    },
+    {
+      "id": "course_seminar_design",
+      "points": 20,
+      "tasks": {
+        "2": 20
+      }
+    },
+    {
+      "id": "assessment_feedback",
+      "points": 20,
+      "tasks": {
+        "3": 12,
+        "4": 8
+      }
+    },
+    {
+      "id": "communication_supervision",
+      "points": 20,
+      "tasks": {
+        "5": 20
+      }
+    },
+    {
+      "id": "observation_portfolio",
+      "points": 20,
+      "tasks": {
+        "6": 10,
+        "7": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "chapter": "v18-c04",
+  "date": "2026-10-17",
+  "status": "passed",
+  "normal_quiet_APIs": 2,
+  "normal_payload_bytes_unchanged": true,
+  "exact_runtime_files": 6,
+  "optimized_flags": [
+    "-I",
+    "-B",
+    "-O"
+  ],
+  "cwd": "/",
+  "gates": [
+    {
+      "mode": "default API",
+      "quiet": true,
+      "unchanged": true
+    },
+    {
+      "mode": "default CLI",
+      "silent": true,
+      "unchanged": true
+    },
+    {
+      "mode": "explicit API",
+      "quiet": true,
+      "unchanged": true
+    },
+    {
+      "mode": "explicit CLI",
+      "silent": true,
+      "unchanged": true
+    }
+  ],
+  "exact_files_and_directories": {
+    "production": "directory",
+    "production/check_v18_c04_peer_working.py": {
+      "bytes": 12894,
+      "sha256": "e1d33b7c56969bba0c709b338370b43edcf493a599b721670c52b534495105f3"
+    },
+    "production/check_v18_c04_working.py": {
+      "bytes": 11075,
+      "sha256": "398dcbd37ffa2a6620fb822b7fb6e7c16418c907378f5611a1935b993831fe83"
+    },
+    "production/v18-c04-author-review-working.json": {
+      "bytes": 4779,
+      "sha256": "6fa3b5022033dc6561dac07e999fb14b72513d5acf486fe7000095ef98031f49"
+    },
+    "production/v18-c04-peer-review-working.json": {
+      "bytes": 7450,
+      "sha256": "e6bb2a0203b35839d2fab4bb9f842b233fe161259dc683d6a7551c1ab5add149"
+    },
+    "production/v18-c04-sources-working.json": {
+      "bytes": 2720,
+      "sha256": "76d983fcbe4268513cfa238b4d83d58e7fde6597cf03970b27f87153c996f379"
+    },
+    "production/v18-c04-working.html": {
+      "bytes": 38898,
+      "sha256": "6262c770e8d9d35ceae83961a996bd83a52c741d6eab35a881c821fed71893f2"
+    }
+  },
+  "every_byte_and_membership_unchanged": true,
+  "summary": {
+    "chapter": "v18-c04",
+    "status": "passed",
+    "runtime_files": 6,
+    "worked_cases": 2,
+    "exercises": 8,
+    "result_groups": 14,
+    "comparisons": 626,
+    "population_worlds": 144,
+    "hedge_worlds": 36,
+    "invalid_domains": 14,
+    "scope": "Independent primitive records and residual-dispersion oracle; full qualitative/proof review separate. Author checker opaque."
+  },
+  "scope": "Independent peer gates; root acceptance separate. No learner observation or renderedUIclaim."
+}

@@ -188,12 +188,21 @@ def run(data):
             require(key not in tasks, 'task has one domain'); tasks[key] = value
     require(set(tasks) == set(map(str, range(1, 8))), 'seven mapped tasks')
     require(data['observation']['status'] == 'synthetic_stipulated' and data['observation']['revision_status'] == 'prepared_not_delivered' and data['observation']['followup_observation'] == 'absent', 'evidence status boundary')
+    events = data['observation']['events']
+    require(isinstance(events, list) and events, 'observation events')
+    end = 0
+    for event in events:
+        interval = event['minutes']
+        require(isinstance(interval, list) and len(interval) == 2 and all(type(x) is int for x in interval), 'event timing')
+        require(interval[0] == end and interval[1] > interval[0] and event['note'], 'ordered positive observation intervals')
+        end = interval[1]
+    require(end == 20, 'stipulated twenty-minute observation')
     result = {'schema': data['schema'], 'models': models, 'grading': outputs, 'corrections': corrections,
               'paired_independent': {'stages': [before, after], 'rows': pairs, 'n': len(pairs),
                     'mean_difference': Fraction(sum(x['difference'] for x in pairs), len(pairs)) if pairs else None,
                     'interpretation': 'Descriptive same-learner score contrast across changed tasks; no causal teaching-effect identification.'},
               'project_scoring': {'domains': domains, 'tasks': tasks, 'total': sum(tasks.values())},
-              'evidence_status': {'observations': 'synthetic only', 'revision': 'prepared, not delivered', 'actual_learner_evaluation': 'not supplied'}}
+              'evidence_status': {'observations': 'synthetic only', 'revision': 'prepared, not delivered', 'actual_learner_evaluation': 'not supplied', 'stipulated_observation_minutes': end}}
     result = packed(result)
     json.dumps(result, allow_nan=False)
     return result
