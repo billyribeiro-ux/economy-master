@@ -199,6 +199,14 @@ from check_research_portfolio import check as check_research_portfolio
 from check_teaching_portfolio import check as check_teaching_portfolio
 from check_research_portfolio_peer import check as check_research_portfolio_peer
 from check_teaching_portfolio_peer import check as check_teaching_portfolio_peer
+from check_v18_c01 import check as check_v18_c01
+from check_v18_c01_peer import check as check_v18_c01_peer
+from check_v18_c02 import check as check_v18_c02
+from check_v18_c02_peer import check as check_v18_c02_peer
+from check_v18_c03 import check as check_v18_c03
+from check_v18_c03_peer import check as check_v18_c03_peer
+from check_v18_c04 import check as check_v18_c04
+from check_v18_c04_peer import check as check_v18_c04_peer
 from check_v17_c01 import check as check_v17_c01
 from check_v17_c01_peer import check as check_v17_c01_peer
 from check_v17_c02 import check as check_v17_c02
@@ -744,6 +752,14 @@ def main():
     teaching_portfolio_check = check_teaching_portfolio()
     research_portfolio_peer_check = check_research_portfolio_peer()
     teaching_portfolio_peer_check = check_teaching_portfolio_peer()
+    v18_c01_check = check_v18_c01()
+    v18_c01_peer_check = check_v18_c01_peer()
+    v18_c02_check = check_v18_c02()
+    v18_c02_peer_check = check_v18_c02_peer()
+    v18_c03_check = check_v18_c03()
+    v18_c03_peer_check = check_v18_c03_peer()
+    v18_c04_check = check_v18_c04()
+    v18_c04_peer_check = check_v18_c04_peer()
     v17_c01_check = check_v17_c01()
     v17_c01_peer_check = check_v17_c01_peer()
     v17_c02_check = check_v17_c02()
@@ -919,6 +935,14 @@ def main():
               'teaching_portfolio_check': teaching_portfolio_check,
               'research_portfolio_peer_check': research_portfolio_peer_check,
               'teaching_portfolio_peer_check': teaching_portfolio_peer_check,
+              'v18_c01_check': v18_c01_check,
+              'v18_c01_peer_check': v18_c01_peer_check,
+              'v18_c02_check': v18_c02_check,
+              'v18_c02_peer_check': v18_c02_peer_check,
+              'v18_c03_check': v18_c03_check,
+              'v18_c03_peer_check': v18_c03_peer_check,
+              'v18_c04_check': v18_c04_check,
+              'v18_c04_peer_check': v18_c04_peer_check,
               'v17_c01_check': v17_c01_check,
               'v17_c01_peer_check': v17_c01_peer_check,
               'v17_c02_check': v17_c02_check,

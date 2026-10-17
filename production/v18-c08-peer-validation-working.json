@@ -1,0 +1,78 @@
+{
+  "chapter": "v18-c08",
+  "date": "2026-10-17",
+  "status": "passed",
+  "normal_quiet_APIs": 2,
+  "normal_payload_bytes_unchanged": true,
+  "exact_runtime_files": 6,
+  "optimized_flags": [
+    "-I",
+    "-B",
+    "-O"
+  ],
+  "cwd": "/",
+  "gates": [
+    {
+      "mode": "default API",
+      "quiet": true,
+      "unchanged": true
+    },
+    {
+      "mode": "default CLI",
+      "silent": true,
+      "unchanged": true
+    },
+    {
+      "mode": "explicit API",
+      "quiet": true,
+      "unchanged": true
+    },
+    {
+      "mode": "explicit CLI",
+      "silent": true,
+      "unchanged": true
+    }
+  ],
+  "exact_files_and_directories": {
+    "production": "directory",
+    "production/check_v18_c08_peer_working.py": {
+      "bytes": 14924,
+      "sha256": "046b090223b20f1d4e878da2984000cf4da3df82d4b26313f00162d38c5379b2"
+    },
+    "production/check_v18_c08_working.py": {
+      "bytes": 12883,
+      "sha256": "c6b13f6e776806cfe1b0a1c017d6570361a1584c405fc9abf503185124eaedb5"
+    },
+    "production/v18-c08-author-review-working.json": {
+      "bytes": 5885,
+      "sha256": "d22675e7cd1b47ab3c1afc23806d5f4ca877619b0020b2dd577a0f0a62e79e3c"
+    },
+    "production/v18-c08-peer-review-working.json": {
+      "bytes": 7277,
+      "sha256": "3d4213bcebd1cc06dc8c2768ec495d70fb20f3f30b50f8688f7f66f70829a4bc"
+    },
+    "production/v18-c08-sources-working.json": {
+      "bytes": 3640,
+      "sha256": "83be03a8430bee96da7b5a66c1b67d29d34a1adc4d7e5f23ec5da55a4ac83471"
+    },
+    "production/v18-c08-working.html": {
+      "bytes": 36818,
+      "sha256": "5a72499ff2f54a4f538d8e25d9f990c0bc5da6d91993f72bda463458b58a2be6"
+    }
+  },
+  "every_byte_and_membership_unchanged": true,
+  "summary": {
+    "chapter": "v18-c08",
+    "status": "passed",
+    "runtime_files": 6,
+    "worked_cases": 2,
+    "exercises": 8,
+    "result_groups": 15,
+    "comparisons": 2676,
+    "growth_worlds": 20,
+    "funding_worlds": 18,
+    "invalid_domains": 14,
+    "scope": "Independent one-dimensional frontier/funding elimination and transaction records; full proof/artifact review separate; author checker opaque."
+  },
+  "scope": "Independent peer gates; root acceptance separate. No learner observation or renderedUIclaim."
+}
