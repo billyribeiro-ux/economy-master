@@ -1,0 +1,80 @@
+{
+  "chapter": "v18-c09",
+  "date": "2026-10-17",
+  "status": "passed",
+  "normal_quiet_APIs": 2,
+  "normal_payload_bytes_unchanged": true,
+  "exact_runtime_files": 6,
+  "optimized_flags": [
+    "-I",
+    "-B",
+    "-O"
+  ],
+  "cwd": "/",
+  "gates": [
+    {
+      "mode": "default API",
+      "quiet": true,
+      "unchanged": true
+    },
+    {
+      "mode": "default CLI",
+      "silent": true,
+      "unchanged": true
+    },
+    {
+      "mode": "explicit API",
+      "quiet": true,
+      "unchanged": true
+    },
+    {
+      "mode": "explicit CLI",
+      "silent": true,
+      "unchanged": true
+    }
+  ],
+  "exact_files_and_directories": {
+    "production": "directory",
+    "production/check_v18_c09_peer_working.py": {
+      "bytes": 14358,
+      "sha256": "11213a0e39246235b438441a81f6a290de90a37c0d53a655b682b936a21e0596"
+    },
+    "production/check_v18_c09_working.py": {
+      "bytes": 14454,
+      "sha256": "26fde6d2cad423ec29512b742bdc5e1b849b729d3207d23689981c2e83629388"
+    },
+    "production/v18-c09-author-review-working.json": {
+      "bytes": 6657,
+      "sha256": "90dda5d98360fdba75e2934d3f7996f2e1d966934d8de199305b54ec0e4fd92a"
+    },
+    "production/v18-c09-peer-review-working.json": {
+      "bytes": 7987,
+      "sha256": "3cde5db33da51180cfc416ee408fdb1bc220d1be0a7e9c540d7557828df84aef"
+    },
+    "production/v18-c09-sources-working.json": {
+      "bytes": 2983,
+      "sha256": "d945c744b75ebbd675d4ea7105a3bae63b350b586e8a9f88f0e416372fe38724"
+    },
+    "production/v18-c09-working.html": {
+      "bytes": 41581,
+      "sha256": "a10e37af9cc220e48e27aa2950d8809f21c5c9298974b77258bcdf748e4d0ac6"
+    }
+  },
+  "every_byte_and_membership_unchanged": true,
+  "summary": {
+    "chapter": "v18-c09",
+    "status": "passed",
+    "runtime_files": 6,
+    "worked_cases": 2,
+    "exercises": 8,
+    "result_groups": 10,
+    "comparisons": 599,
+    "process_worlds": 48,
+    "pair_ATE_worlds": 16,
+    "randomized_assignments": 16,
+    "binomial_coverage_worlds": 20,
+    "invalid_domains": 15,
+    "scope": "Independent primitive workload, swapped pair labels, expanded casewise routing and binomial-tail oracle. Full qualitative/proof review separate; author checker opaque; no actual deployment or human leadership evaluation."
+  },
+  "scope": "Independent peer gates; root acceptance separate. No learner observation or renderedUIclaim."
+}
