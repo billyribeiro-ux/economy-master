@@ -1,0 +1,78 @@
+{
+  "chapter": "v17-c08",
+  "date": "2026-10-17",
+  "status": "passed",
+  "normal_quiet_APIs": 2,
+  "normal_payload_bytes_unchanged": true,
+  "exact_runtime_files": 6,
+  "optimized_flags": [
+    "-I",
+    "-B",
+    "-O"
+  ],
+  "cwd": "/",
+  "gates": [
+    {
+      "mode": "default API",
+      "quiet": true,
+      "unchanged": true
+    },
+    {
+      "mode": "default CLI",
+      "silent": true,
+      "unchanged": true
+    },
+    {
+      "mode": "explicit API",
+      "quiet": true,
+      "unchanged": true
+    },
+    {
+      "mode": "explicit CLI",
+      "silent": true,
+      "unchanged": true
+    }
+  ],
+  "exact_files_and_directories": {
+    "production": "directory",
+    "production/check_v17_c08_peer_working.py": {
+      "bytes": 11975,
+      "sha256": "8960aa13936632f779d67b8c14005aad68836f5ace44dd854e57691aa224b320"
+    },
+    "production/check_v17_c08_working.py": {
+      "bytes": 13698,
+      "sha256": "e76726497904213cfb93e1d1ffb24f79967eed7f91e107f5ffd5fcbcbff08dd8"
+    },
+    "production/v17-c08-author-review-working.json": {
+      "bytes": 8053,
+      "sha256": "6d41a59396464d884c5ef1ced82a21d7fd0b658b1dc730fb4e99daad849dc78b"
+    },
+    "production/v17-c08-peer-review-working.json": {
+      "bytes": 6133,
+      "sha256": "08d70bf0225c361a3e16bc651b2c143995eb47a3e42fede209536fffeceb28ba"
+    },
+    "production/v17-c08-sources-working.json": {
+      "bytes": 1949,
+      "sha256": "f68bd9fe072a3dd71d690ca24b8b9946b47c7925078b9477c0a01c68c8261e38"
+    },
+    "production/v17-c08-working.html": {
+      "bytes": 35145,
+      "sha256": "e7c0a2598965e5b59c1723fa1ad626723d86f6e4880393e7d497a45d13cca7e9"
+    }
+  },
+  "every_byte_and_membership_unchanged": true,
+  "summary": {
+    "chapter": "v17-c08",
+    "status": "passed",
+    "runtime_files": 6,
+    "worked_packets": 2,
+    "exercises": 8,
+    "result_groups": 19,
+    "comparisons": 124,
+    "integer_missing_completions": 9,
+    "assignment_worlds": 210,
+    "invalid_domains": 12,
+    "scope": "Independent full qualitative/proof review plus primitive oracles; no actual learner evidence or human certification."
+  },
+  "scope": "Independent peer gates; root acceptance separate. No learner observation or renderedUIclaim."
+}

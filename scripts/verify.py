@@ -211,6 +211,16 @@ from check_v17_c06 import check as check_v17_c06
 from check_v17_c06_peer import check as check_v17_c06_peer
 from check_v17_c07 import check as check_v17_c07
 from check_v17_c07_peer import check as check_v17_c07_peer
+from check_v17_c08 import check as check_v17_c08
+from check_v17_c08_peer import check as check_v17_c08_peer
+from check_v17_c09 import check as check_v17_c09
+from check_v17_c09_peer import check as check_v17_c09_peer
+from check_v17_c10 import check as check_v17_c10
+from check_v17_c10_peer import check as check_v17_c10_peer
+from check_v17_c11 import check as check_v17_c11
+from check_v17_c11_peer import check as check_v17_c11_peer
+from check_v17_c12 import check as check_v17_c12
+from check_v17_c12_peer import check as check_v17_c12_peer
 from check_integrated_case import check as check_integrated_case
 from check_integrated_case_peer import check as check_integrated_case_peer
 from check_v12_c01 import check as check_v12_c01
@@ -743,6 +753,16 @@ def main():
     v17_c06_peer_check = check_v17_c06_peer()
     v17_c07_check = check_v17_c07()
     v17_c07_peer_check = check_v17_c07_peer()
+    v17_c08_check = check_v17_c08()
+    v17_c08_peer_check = check_v17_c08_peer()
+    v17_c09_check = check_v17_c09()
+    v17_c09_peer_check = check_v17_c09_peer()
+    v17_c10_check = check_v17_c10()
+    v17_c10_peer_check = check_v17_c10_peer()
+    v17_c11_check = check_v17_c11()
+    v17_c11_peer_check = check_v17_c11_peer()
+    v17_c12_check = check_v17_c12()
+    v17_c12_peer_check = check_v17_c12_peer()
     integrated_case_check = check_integrated_case()
     integrated_case_peer_check = check_integrated_case_peer()
     v15_c02_check = check_v15_c02()
@@ -905,6 +925,16 @@ def main():
               'v17_c06_peer_check': v17_c06_peer_check,
               'v17_c07_check': v17_c07_check,
               'v17_c07_peer_check': v17_c07_peer_check,
+              'v17_c08_check': v17_c08_check,
+              'v17_c08_peer_check': v17_c08_peer_check,
+              'v17_c09_check': v17_c09_check,
+              'v17_c09_peer_check': v17_c09_peer_check,
+              'v17_c10_check': v17_c10_check,
+              'v17_c10_peer_check': v17_c10_peer_check,
+              'v17_c11_check': v17_c11_check,
+              'v17_c11_peer_check': v17_c11_peer_check,
+              'v17_c12_check': v17_c12_check,
+              'v17_c12_peer_check': v17_c12_peer_check,
               'integrated_case_check': integrated_case_check,
               'integrated_case_peer_check': integrated_case_peer_check,
               'v15_c02_check': v15_c02_check,
